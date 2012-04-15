@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -249,27 +250,27 @@
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="49"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="63"/>
         <source>Description:</source>
-        <translation type="unfinished">Descripción:</translation>
+        <translation>Descripción:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="73"/>
         <source>Enter a description</source>
-        <translation type="unfinished">Introduzca la descripción</translation>
+        <translation>Introduzca la descripción</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="80"/>
         <source>Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta:</translation>
     </message>
 </context>
 <context>
@@ -1287,37 +1288,37 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="26"/>
         <source>Bookmark Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Marcador</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="42"/>
         <source>Enter the name</source>
-        <translation type="unfinished">Introduzca el nombre</translation>
+        <translation>Introduzca el nombre</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="49"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="56"/>
         <source>Enter the address</source>
-        <translation type="unfinished">Introduzca la dirección</translation>
+        <translation>Introduzca la dirección</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="63"/>
         <source>Description:</source>
-        <translation type="unfinished">Descripción:</translation>
+        <translation>Descripción:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="73"/>
         <source>Enter a description</source>
-        <translation type="unfinished">Introduzca la descripción</translation>
+        <translation>Introduzca la descripción</translation>
     </message>
 </context>
 <context>
@@ -1594,7 +1595,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="155"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Propiedades...</translation>
+        <translation>&amp;Propiedades...</translation>
     </message>
 </context>
 <context>
@@ -1602,17 +1603,17 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="20"/>
         <source>Import Bookmarks</source>
-        <translation type="unfinished">Importar Marcadores</translation>
+        <translation>Importar Marcadores</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="36"/>
         <source>Choose source from which you want to import bookmarks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Elija la fuente desde la que desea importar los marcadores:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="43"/>
         <source>Choose the source to import from</source>
-        <translation type="unfinished"></translation>
+        <translation>Elegir la fuente desde la que importar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
@@ -1622,42 +1623,42 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="179"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="85"/>
         <source>Choose Directory ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Elegir Directorio ...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="95"/>
         <source>Choose File ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Elegir Archivo ...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="119"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Importando desde{0}&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="125"/>
         <source>Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="140"/>
         <source>Error importing bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al importar marcadores</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="124"/>
         <source>Shows the name of the bookmarks file or directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el nombre del archivoo directorio de marcadores</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
         <source>Next &gt;</source>
-        <translation type="unfinished">Siguiente &gt;</translation>
+        <translation>Siguiente &gt;</translation>
     </message>
 </context>
 <context>
@@ -1665,12 +1666,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
         <source>XBEL File</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo XBEL</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="46"/>
         <source>HTML File</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo HTML</translation>
     </message>
 </context>
 <context>
@@ -1797,7 +1798,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="351"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml);;HTML Bookmarks (*.html)</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcadores XBEL (*.xbel);;marcadores XBEL (*.xml);;Marcadores HTML (*.html)</translation>
     </message>
 </context>
 <context>
@@ -1814,8 +1815,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -1825,7 +1826,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Propiedades...</translation>
+        <translation>&amp;Propiedades...</translation>
     </message>
 </context>
 <context>
@@ -2056,13 +2057,13 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Propiedades...</translation>
+        <translation>&amp;Propiedades...</translation>
     </message>
 </context>
 <context>
@@ -2544,43 +2545,44 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="40"/>
         <source>Google Chrome stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Google Chrome almacena sus marcadores en el archivo de texto de &lt;b&gt;Bookmarks&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="57"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="57"/>
         <source>Chromium stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Chromium almacena sus marcadores en el archivo de texto de &lt;b&gt;Marcadores&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="103"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="120"/>
         <source>File &apos;{0}&apos; cannot be read.
 Reason: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede leer el archivo {0}:
+Razón: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="129"/>
         <source>Google Chrome Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Google Chrome</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="131"/>
         <source>Chromium Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Chromium</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="133"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
 </context>
 <context>
@@ -6023,24 +6025,27 @@ Not connected
         <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="68"/>
         <source>Error creating the shared directory.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al crear el directorio compartido.
+{0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="91"/>
         <source>Cannot read remote file.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede leer el archivo remoto.
+{0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="123"/>
         <source>Cannot write remote file.
 {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede escribir en el archivo remoto.
+{0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="190"/>
         <source>Synchronization finished</source>
-        <translation type="unfinished">Subiendo archivo local de marcadores...</translation>
+        <translation>Sincronización terminada</translation>
     </message>
 </context>
 <context>
@@ -12001,42 +12006,42 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="14"/>
         <source>Error Log Found</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha encontrado un registro de errores</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="34"/>
         <source>&lt;b&gt;An error log file was found. What should be done with it?&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Se ha encontrado un archivo de registro de errores. ¿Qué desea hacer con él?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="52"/>
         <source>Press to send an email</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para enviar un email</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="55"/>
         <source>Send Bug Email</source>
-        <translation type="unfinished">Enviar un Email de Bug</translation>
+        <translation>Enviar un Email de Bug</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="65"/>
         <source>Press to ignore the error and delete the log file</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para ignorar el error y borrar el archivo de log</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="68"/>
         <source>Ignore and Delete</source>
-        <translation type="unfinished">Ignorar y Borrar</translation>
+        <translation>Ignorar y Borrar</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="75"/>
         <source>Press to ignore the error but keep the log file</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para ignorar el error pero conservar el archivo de log</translation>
     </message>
     <message>
         <location filename="UI/ErrorLogDialog.ui" line="78"/>
         <source>Ignore but Keep</source>
-        <translation type="unfinished">Ignorar pero Conservar</translation>
+        <translation>Ignorar pero Conservar</translation>
     </message>
 </context>
 <context>
@@ -13166,33 +13171,34 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="40"/>
         <source>Mozilla Firefox stores its bookmarks in the &lt;b&gt;places.sqlite&lt;/b&gt; SQLite database. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Mozilla Firefox almacena sus marcadores en la base de datos SQLite &lt;b&gt;places.sqlite&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="40"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="87"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="160"/>
         <source>Unable to open database.
 Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha podido abrir la base de datos.
+Razón: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="166"/>
         <source>Mozilla Firefox Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Mozilla Firefox</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="168"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
 </context>
 <context>
@@ -13546,7 +13552,7 @@ Reason: {0}</source>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="909"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -14294,27 +14300,27 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="103"/>
         <source>Show a navigation menu for closed tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un menú de navegación para pestañas cerradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="181"/>
         <source>Reload All</source>
-        <translation type="unfinished"></translation>
+        <translation>Recargar Todo</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="186"/>
         <source>Restore Closed Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Pestaña Cerrada</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="906"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Todas las Pestañas Cerradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="908"/>
         <source>Clear List</source>
-        <translation type="unfinished">Borrar Lista</translation>
+        <translation>Borrar Lista</translation>
     </message>
 </context>
 <context>
@@ -22482,17 +22488,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/History/HistoryMenu.py" line="273"/>
         <source>Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Pestañas Cerradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryMenu.py" line="390"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Todas las Pestañas Cerradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/History/HistoryMenu.py" line="392"/>
         <source>Clear List</source>
-        <translation type="unfinished">Borrar Lista</translation>
+        <translation>Borrar Lista</translation>
     </message>
 </context>
 <context>
@@ -22529,32 +22535,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="31"/>
         <source>HTML Netscape Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcadores HTML de Netscape</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="31"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="79"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="95"/>
         <source>HTML Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de HTML</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="97"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="31"/>
         <source>You can import bookmarks from any browser that supports HTML exporting. This file has usually the extension .htm or .html.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puede importar marcadores desde cualquier navegador que soporte exportación como HTML. Este archivo tiene normalmente la extensión .htm o .html.</translation>
     </message>
 </context>
 <context>
@@ -22562,32 +22568,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
         <source>Internet Explorer stores its bookmarks in the &lt;b&gt;Favorites&lt;/b&gt; folder This folder is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Google Chrome almacena sus marcadores en la carpeta &lt;b&gt;Favoritos&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
         <source>Please choose the folder to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija la carpeta para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="82"/>
         <source>Folder &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>La capeta{0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="87"/>
         <source>&apos;{0}&apos; is not a folder.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;{0}&apos; no es una carpeta.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="136"/>
         <source>Internet Explorer Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Internet Explorer</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="138"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
 </context>
 <context>
@@ -27726,33 +27732,34 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="38"/>
         <source>Opera stores its bookmarks in the &lt;b&gt;bookmarks.adr&lt;/b&gt; text file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Opera almacena sus marcadores en el archivo de texto &lt;b&gt;bookmarks.adr&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="38"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="84"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="101"/>
         <source>File &apos;{0}&apos; cannot be read.
 Reason: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede leer el archivo {0}:
+Razón: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="125"/>
         <source>Opera Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Opera</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="127"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
 </context>
 <context>
@@ -28918,22 +28925,22 @@ Destination:
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.ui" line="167"/>
         <source>Repository URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL de Repositorio:</translation>
     </message>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.ui" line="174"/>
         <source>Shows the repository URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra la URL del repositorio</translation>
     </message>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.ui" line="184"/>
         <source>Press to edit the plugin repository URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para editar la URL de repositorio de plugin</translation>
     </message>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.ui" line="187"/>
         <source>Edit URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar URL</translation>
     </message>
 </context>
 <context>
@@ -29028,12 +29035,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="298"/>
         <source>Plugins Repository URL Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>La URL del Repositorio de Plugins Ha Cambiado</translation>
     </message>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="298"/>
         <source>The URL of the Plugins Repository has changed. Select the &quot;Update&quot; button to get the new repository file.</source>
-        <translation type="unfinished"></translation>
+        <translation>La URL del repositorio de plugins ha cambiado. Seleccionar el botón &apos;Actualizar&apos; para obtener el nuevo archivo del repositorio.</translation>
     </message>
 </context>
 <context>
@@ -34134,22 +34141,22 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="57"/>
         <source>Add Filter ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Filtro ...</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="67"/>
         <source>Remove Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Filtro</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="74"/>
         <source>Press to remove the selected attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar el atributo seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="77"/>
         <source>Remove Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Atributo</translation>
     </message>
 </context>
 <context>
@@ -35215,33 +35222,34 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="40"/>
         <source>Apple Safari stores its bookmarks in the &lt;b&gt;Bookmarks.plist&lt;/b&gt; file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Apple Safari almacena sus marcadores en el archivo &lt;b&gt;Bookmarks.plist&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="40"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="86"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="101"/>
         <source>Bookmarks file cannot be read.
 Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede leer el archivo {0}:
+Razón: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="111"/>
         <source>Apple Safari Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Apple Safari</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="113"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
 </context>
 <context>
@@ -36164,37 +36172,37 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
         <source>Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Bases de datos</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="254"/>
         <source>&lt;b&gt;Database details&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Detalles de la base de datos&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="263"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="322"/>
         <source>&lt;database not selected&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;base de datos no seleccionada&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="286"/>
         <source>Path:</source>
-        <translation type="unfinished">Ruta:</translation>
+        <translation>Ruta:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="133"/>
         <source>No databases are used by this page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esta página no utiliza bases de datos.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="247"/>
         <source>Shows a list of databases used by the site</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra una lista de bases de datos utilizadas por el site</translation>
     </message>
 </context>
 <context>
@@ -36202,214 +36210,214 @@ Not connected</source>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="482"/>
         <source>eric5 Snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantallazo de eric5 </translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Pantallazo:</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="67"/>
         <source>Select the snapshot mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el modo pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="74"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Retraso:</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="83"/>
         <source>Enter the delay before taking the snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el retraso antes de tomar el pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="156"/>
         <source>Press to save the snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para guardar el pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="159"/>
         <source>&amp;Save Snapshot ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Guardar Pantallazo ...</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="205"/>
         <source>Press to take a snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para tomar un pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="208"/>
         <source>&amp;Take Snapshot ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tomar Pantallazo ...</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="58"/>
         <source>Fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla completa</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="60"/>
         <source>Rectangular Selection</source>
-        <translation type="unfinished">Selección Rectangular</translation>
+        <translation>Selección Rectangular</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="112"/>
         <source>Windows Bitmap File (*.bmp)</source>
-        <translation type="unfinished">Archivo de Bitmap de Windows (*.bmp)</translation>
+        <translation>Archivo de Bitmap de Windows (*.bmp)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="113"/>
         <source>Graphic Interchange Format File (*.gif)</source>
-        <translation type="unfinished">Archivo de Formato Gráfico de Intercambio (*.gif)</translation>
+        <translation>Archivo de Formato Gráfico de Intercambio (*.gif)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="114"/>
         <source>Windows Icon File (*.ico)</source>
-        <translation type="unfinished">Archivo de Icono de Windows (*.ico)</translation>
+        <translation>Archivo de Icono de Windows (*.ico)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="115"/>
         <source>JPEG File (*.jpg)</source>
-        <translation type="unfinished">Archivo JPEG (*.jpg)</translation>
+        <translation>Archivo JPEG (*.jpg)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="116"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
-        <translation type="unfinished">Archivo de Multiple-Image Network Graphics (*.mng)</translation>
+        <translation>Archivo de Multiple-Image Network Graphics (*.mng)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="117"/>
         <source>Portable Bitmap File (*.pbm)</source>
-        <translation type="unfinished">Archivo de Bitmap Portable (*.pbm)</translation>
+        <translation>Archivo de Bitmap Portable (*.pbm)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="118"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
-        <translation type="unfinished">Archivo de Bitmap de Pincel (*.pcx)</translation>
+        <translation>Archivo de Bitmap de Pincel (*.pcx)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="119"/>
         <source>Portable Graymap File (*.pgm)</source>
-        <translation type="unfinished">Archivo de Portable Graymap (*.pgm)</translation>
+        <translation>Archivo de Portable Graymap (*.pgm)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="120"/>
         <source>Portable Network Graphics File (*.png)</source>
-        <translation type="unfinished">Archivo Portable Network Graphics (*.png)</translation>
+        <translation>Archivo Portable Network Graphics (*.png)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="121"/>
         <source>Portable Pixmap File (*.ppm)</source>
-        <translation type="unfinished">Archivo de Portable Pixmap (*.ppm)</translation>
+        <translation>Archivo de Portable Pixmap (*.ppm)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="122"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
-        <translation type="unfinished">Archivo de Silicon Graphics Image (*.sgi)</translation>
+        <translation>Archivo de Silicon Graphics Image (*.sgi)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="123"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
-        <translation type="unfinished">Archivo de Scalable Vector Graphics (*.svg)</translation>
+        <translation>Archivo de Scalable Vector Graphics (*.svg)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="124"/>
         <source>Targa Graphic File (*.tga)</source>
-        <translation type="unfinished">Archivo de Targa Graphic (*.tga)</translation>
+        <translation>Archivo de Targa Graphic (*.tga)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="125"/>
         <source>TIFF File (*.tif)</source>
-        <translation type="unfinished">Archivo TIFF (*.tif)</translation>
+        <translation>Archivo TIFF (*.tif)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="126"/>
         <source>X11 Bitmap File (*.xbm)</source>
-        <translation type="unfinished">Archivo de X11 Bitmap (*.xbm)</translation>
+        <translation>Archivo de X11 Bitmap (*.xbm)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="127"/>
         <source>X11 Pixmap File (*.xpm)</source>
-        <translation type="unfinished">Archivo de X11 Pixmap (*.xpm)</translation>
+        <translation>Archivo de X11 Pixmap (*.xpm)</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Save Snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="218"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
-        <translation type="unfinished">No se puede guardar el archivo {0}:
+        <translation>No se puede guardar el archivo {0}:
 {1}.</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="182"/>
         <source>Press to copy the snapshot to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para copiar el pantallazo al portapapeles</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="185"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished">&amp;Copiar</translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="89"/>
         <source> No delay</source>
-        <translation type="unfinished"></translation>
+        <translation> Sin retraso</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="92"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="125"/>
         <source>Path Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de Ruta:</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.ui" line="132"/>
         <source>Shows the name of the directory used for saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el nombre del directorio utilizado para guardar</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="62"/>
         <source>Ellipical Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selección Elíptica</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="64"/>
         <source>Freehand Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selección Libre</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="67"/>
         <source>Current Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla Actual</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="78"/>
         <source>snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>pantallazo</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="459"/>
         <source>The application contains an unsaved snapshot.</source>
-        <translation type="unfinished"></translation>
+        <translation>La aplicación contiene un pantallazo sin guardar.</translation>
     </message>
     <message>
         <location filename="Snapshot/SnapWidget.py" line="411"/>
         <source>Preview of the snapshot image ({0:n} x {1:n})</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista preliminar de la imagen del pantallazo ({0:n} x {1:n})</translation>
     </message>
 </context>
 <context>
@@ -36417,7 +36425,7 @@ Not connected</source>
     <message>
         <location filename="Snapshot/SnapshotFreehandGrabber.py" line="65"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar una región utilizando el ratón. Para tomar el pantallazo, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
     </message>
 </context>
 <context>
@@ -36425,7 +36433,7 @@ Not connected</source>
     <message>
         <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar una región utilizando el ratón. Para tomar el pantallazo, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
     </message>
 </context>
 <context>
@@ -36433,8 +36441,9 @@ Not connected</source>
     <message numerus="yes">
         <location filename="Snapshot/SnapshotTimer.py" line="99"/>
         <source>Snapshot will be taken in %n seconds</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translatorcomment>QtLinguist displays an warning (?)</translatorcomment>
+        <translation>
+            <numerusform>El pantallazo se tomará en %n segundos</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -36449,12 +36458,12 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
         <source>Saving Speed Dial data</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardando datos de Marcación Rápida</translation>
     </message>
     <message>
         <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Los datos de Marcación Rápido no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -36462,7 +36471,7 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="56"/>
         <source>The file is not a SpeedDial version 1.0 file.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo no es un archivo de versión 1.0 de Marcación Rápida.</translation>
     </message>
 </context>
 <context>
@@ -39441,7 +39450,7 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="90"/>
         <source>Replaced</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplazado</translation>
     </message>
 </context>
 <context>
@@ -42522,17 +42531,17 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncCheckPage.py" line="58"/>
         <source>Shared Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio Compartido</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncCheckPage.ui" line="170"/>
         <source>Speed Dial Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes de Marcación Rápida:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncCheckPage.py" line="59"/>
         <source>Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio:</translation>
     </message>
 </context>
 <context>
@@ -42605,12 +42614,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="82"/>
         <source>Select to synchronize the speed dial data</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para sincronizar los datos de marcación rápida</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="85"/>
         <source>Speed Dial Settings</source>
-        <translation type="unfinished">Ajustes de marcación rápida</translation>
+        <translation>Ajustes de Marcación Rápida</translation>
     </message>
 </context>
 <context>
@@ -42618,42 +42627,42 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="17"/>
         <source>Synchronize to a shared directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronizar en un directorio compartido</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="20"/>
         <source>Please enter the data for synchronization via a shared directory. All fields must be filled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, introduzca los datos para sincronización vía directorio compartido. Se deben llenar todos los campos.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="26"/>
         <source>Shared Directory Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes de Directorio Compartido</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="32"/>
         <source>Directory Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del Directorio:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="39"/>
         <source>Enter the full path of the shared directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la ruta completa del directorio compartido</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="46"/>
         <source>Select the shared directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el directorio compartido vía un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.py" line="65"/>
         <source>Shared Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio Compartido</translation>
     </message>
 </context>
 <context>
@@ -42761,12 +42770,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="137"/>
         <source>Select to encrypt only the passwords</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para encriptar solamente las contraseñas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="140"/>
         <source>Encrypt Passwords Only</source>
-        <translation type="unfinished"></translation>
+        <translation>Encriptar Solamente Contraseñas</translation>
     </message>
 </context>
 <context>
@@ -42867,127 +42876,127 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="57"/>
         <source>Remote bookmarks file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡El archivo remoto de marcadores existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="59"/>
         <source>Remote bookmarks file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo remoto de marcadores NO existe. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="61"/>
         <source>Local bookmarks file is NEWER. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de marcadores es MÁS RECIENTE. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="63"/>
         <source>Local bookmarks file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de marcadores NO existe. ¡Saltándose la sincronización!</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="65"/>
         <source>Uploading local bookmarks file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo el archivo local de marcadores...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="68"/>
         <source>Remote history file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡El archivo remoto de historial existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="70"/>
         <source>Remote history file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo remoto de historial NO existe. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="72"/>
         <source>Local history file is NEWER. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de historial es MÁS RECIENTE. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="74"/>
         <source>Local history file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de historial NO existe. ¡Saltándose la sincronización!</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="76"/>
         <source>Uploading local history file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo el archivo local de historial...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="79"/>
         <source>Remote logins file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡El archivo remoto de inicios de sesión existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="81"/>
         <source>Remote logins file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo remoto de inicios de sesión NO existe. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="83"/>
         <source>Local logins file is NEWER. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de inicios de sesión es MÁS RECIENTE. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="85"/>
         <source>Local logins file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de inicios de sesión NO existe. ¡Saltándose la sincronización!</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="87"/>
         <source>Uploading local logins file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo el archivo local de inicios de sesión ...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="90"/>
         <source>Remote user agent settings file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡El archivo remoto de ajustes de agente de usuario existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="92"/>
         <source>Remote user agent settings file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo remoto de ajustes de agente de usuario NO existe. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="95"/>
         <source>Local user agent settings file is NEWER. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de ajustes de agente de usuario es MÁS RECIENTE. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="97"/>
         <source>Local user agent settings file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de ajustes de agente de usuario NO existe. ¡Saltándose la sincronización!</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="100"/>
         <source>Uploading local user agent settings file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo el archivo local de ajustes de agente de usuario ...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="103"/>
         <source>Remote speed dial settings file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>¡El archivo remoto de ajustes de marcación rápida existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="105"/>
         <source>Remote speed dial settings file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo remoto de ajustes de marcación rápida NO existe. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="108"/>
         <source>Local speed dial settings file is NEWER. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de ajustes de marcación rápida es MÁS RECIENTE. Exportando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="110"/>
         <source>Local speed dial settings file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo local de ajustes de marcación rápida NO existe. ¡Saltándose la sincronización!</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHandler.py" line="113"/>
         <source>Uploading local speed dial settings file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Subiendo el archivo local de ajustes de marcación rápida...</translation>
     </message>
 </context>
 <context>
@@ -43030,7 +43039,7 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
         <source>Select to use a shared directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar un directorio compartido</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="42"/>
@@ -45672,12 +45681,12 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Tools/TrayStarter.py" line="101"/>
         <source>Snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantallazo</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="123"/>
         <source>Configure Tray Starter</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurar Lanzador de Bandeja de sistema</translation>
     </message>
 </context>
 <context>
@@ -48658,32 +48667,32 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1882"/>
         <source>Compare &amp;Files side by side...</source>
-        <translation type="unfinished"></translation>
+        <translation>Comparar &amp;Archivos uno al lado de otro...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1943"/>
         <source>Snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantallazo</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1943"/>
         <source>&amp;Snapshot...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pantallazo...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1947"/>
         <source>Take snapshots of a screen region</source>
-        <translation type="unfinished"></translation>
+        <translation>Tomar un pantallazo de una región de la pantalla</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1948"/>
         <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Pantallazo&lt;/b&gt;&lt;p&gt;Abre un diálogo para tomar pantallazos de una región de la pantalla.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4453"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Pantallazos.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -53011,22 +53020,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="33"/>
         <source>eric5 Web Browser stores its bookmarks in the &lt;b&gt;{0}&lt;/b&gt; XML file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>El navegador Web de eric5 almacena sus marcadores en el archivo de texto &lt;b&gt;bookmarks.adr&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>XBEL Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcadores XBEL</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="111"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo {0} no existe.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="109"/>
@@ -53038,38 +53047,39 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="136"/>
         <source>eric5 Web Browser Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="140"/>
         <source>XBEL Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de XBEL</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="142"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Importado {0}</translation>
+        <translation>Importado {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>You can import bookmarks from any browser that supports XBEL exporting. This file has usually the extension .xbel or .xml.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puede importar marcadores desde cualquier navegador que soporte exportación como XBEL . Este archivo tiene normalmente la extensión .xbel o .xml.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="52"/>
         <source>Konqueror stores its bookmarks in the &lt;b&gt;bookmarks.xml&lt;/b&gt; XML file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
+        <translation>Konqueror almacena sus marcadores en el archivo XML&lt;b&gt;bookmarks.xml&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="127"/>
         <source>Error when importing bookmarks on line {0}, column {1}:
 {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al importar marcadores en línea {0}, columna {1}:
+{2}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="138"/>
         <source>Konqueror Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de Konqueror</translation>
     </message>
 </context>
 <context>
