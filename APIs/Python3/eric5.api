@@ -4772,6 +4772,7 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizar
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.accept?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.getConfigurationPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.masterPasswordChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
@@ -4783,6 +4784,8 @@ eric5.Preferences.ConfigurationDialog.ConfigurationPageItem?1(parent, text, page
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.TrayStarterMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.accept?4()
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.accepted?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.calledFromEric?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getConfigurationPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getLexers?4()
@@ -4792,6 +4795,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_applyButton_clicked
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_buttonBox_clicked?4(button)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.preferencesChanged?7
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.rejected?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName, setCurrent=True)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent=None, fromEric=True, displayMode=DefaultMode)
