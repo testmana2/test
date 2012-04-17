@@ -154,7 +154,7 @@
   <customwidget>
    <class>SqlConnectionWidget</class>
    <extends>QTreeView</extends>
-   <header>.SqlConnectionWidget.h</header>
+   <header>SqlBrowser/SqlConnectionWidget.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
