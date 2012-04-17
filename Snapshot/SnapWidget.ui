@@ -217,7 +217,7 @@
   <customwidget>
    <class>SnapshotPreview</class>
    <extends>QLabel</extends>
-   <header>.SnapshotPreview.h</header>
+   <header>Snapshot/SnapshotPreview.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
