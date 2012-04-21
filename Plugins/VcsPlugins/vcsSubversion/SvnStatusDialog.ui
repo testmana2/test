@@ -230,9 +230,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -324,6 +321,7 @@
   <tabstop>diffButton</tabstop>
   <tabstop>revertButton</tabstop>
   <tabstop>restoreButton</tabstop>
+  <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>

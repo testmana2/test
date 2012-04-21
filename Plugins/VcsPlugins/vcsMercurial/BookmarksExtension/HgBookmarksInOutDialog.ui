@@ -25,9 +25,6 @@
        <verstretch>2</verstretch>
       </sizepolicy>
      </property>
-     <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
-     </property>
      <property name="whatsThis">
       <string>&lt;b&gt;Bookmarks List&lt;/b&gt;
 &lt;p&gt;This shows a list of the bookmarks.&lt;/p&gt;</string>
@@ -70,9 +67,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -160,6 +154,9 @@
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>
+  <tabstop>bookmarksList</tabstop>
+  <tabstop>errors</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

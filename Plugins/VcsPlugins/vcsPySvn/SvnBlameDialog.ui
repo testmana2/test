@@ -40,9 +40,6 @@
      <attribute name="headerStretchLastSection">
       <bool>false</bool>
      </attribute>
-     <attribute name="headerStretchLastSection">
-      <bool>false</bool>
-     </attribute>
      <column>
       <property name="text">
        <string>Revision</string>
@@ -74,9 +71,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -102,6 +96,8 @@
  </widget>
  <tabstops>
   <tabstop>blameList</tabstop>
+  <tabstop>errors</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>SvnLogDialog</class>
- <widget class="QWidget" name="SvnLogDialog" >
-  <property name="geometry" >
+ <widget class="QWidget" name="SvnLogDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,29 +10,26 @@
     <height>649</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Subversion Log</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout">
    <item>
-    <widget class="QGroupBox" name="contentsGroup" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <widget class="QGroupBox" name="contentsGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
        <verstretch>3</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Log</string>
      </property>
-     <layout class="QVBoxLayout" >
+     <layout class="QVBoxLayout">
       <item>
-       <widget class="QTextBrowser" name="contents" >
-        <property name="focusPolicy" >
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="whatsThis" >
-         <string>&lt;b>Subversion Log&lt;/b>&lt;p>This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p></string>
+       <widget class="QTextBrowser" name="contents">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Subversion Log&lt;/b&gt;&lt;p&gt;This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p&gt;</string>
         </property>
        </widget>
       </item>
@@ -39,29 +37,26 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="errorGroup" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Expanding" hsizetype="Preferred" >
+    <widget class="QGroupBox" name="errorGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>1</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Errors</string>
      </property>
-     <layout class="QVBoxLayout" >
+     <layout class="QVBoxLayout">
       <item>
-       <widget class="QTextEdit" name="errors" >
-        <property name="focusPolicy" >
-         <enum>Qt::NoFocus</enum>
+       <widget class="QTextEdit" name="errors">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Subversion log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the svn log command.&lt;/p&gt;</string>
         </property>
-        <property name="whatsThis" >
-         <string>&lt;b>Subversion log errors&lt;/b>&lt;p>This shows possible error messages of the svn log command.&lt;/p></string>
-        </property>
-        <property name="readOnly" >
+        <property name="readOnly">
          <bool>true</bool>
         </property>
-        <property name="acceptRichText" >
+        <property name="acceptRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -70,20 +65,20 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="inputGroup" >
-     <property name="title" >
+    <widget class="QGroupBox" name="inputGroup">
+     <property name="title">
       <string>Input</string>
      </property>
-     <layout class="QGridLayout" >
-      <item row="1" column="1" >
+     <layout class="QGridLayout">
+      <item row="1" column="1">
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeType" >
+        <property name="sizeType">
          <enum>QSizePolicy::Expanding</enum>
         </property>
-        <property name="sizeHint" stdset="0" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>327</width>
           <height>29</height>
@@ -91,35 +86,35 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="2" >
-       <widget class="QPushButton" name="sendButton" >
-        <property name="toolTip" >
+      <item row="1" column="2">
+       <widget class="QPushButton" name="sendButton">
+        <property name="toolTip">
          <string>Press to send the input to the subversion process</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>&amp;Send</string>
         </property>
-        <property name="shortcut" >
+        <property name="shortcut">
          <string>Alt+S</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="0" colspan="3" >
-       <widget class="QLineEdit" name="input" >
-        <property name="toolTip" >
+      <item row="0" column="0" colspan="3">
+       <widget class="QLineEdit" name="input">
+        <property name="toolTip">
          <string>Enter data to be sent to the subversion process</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" >
-       <widget class="QCheckBox" name="passwordCheckBox" >
-        <property name="toolTip" >
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="passwordCheckBox">
+        <property name="toolTip">
          <string>Select to switch the input field to password mode</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>&amp;Password Mode</string>
         </property>
-        <property name="shortcut" >
+        <property name="shortcut">
          <string>Alt+P</string>
         </property>
        </widget>
@@ -128,11 +123,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
@@ -140,9 +135,12 @@
   </layout>
  </widget>
  <tabstops>
+  <tabstop>contents</tabstop>
+  <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
-  <tabstop>sendButton</tabstop>
   <tabstop>passwordCheckBox</tabstop>
+  <tabstop>sendButton</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -152,11 +150,11 @@
    <receiver>SvnLogDialog</receiver>
    <slot>close()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>262</x>
      <y>624</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>271</x>
      <y>647</y>
     </hint>
