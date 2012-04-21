@@ -28,9 +28,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextBrowser" name="contents">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="whatsThis">
          <string>&lt;b&gt;Mercurial Log&lt;/b&gt;&lt;p&gt;This shows the output of the hg log command. By clicking on the links you may show the difference between revisions.&lt;/p&gt;</string>
         </property>
@@ -56,9 +53,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="whatsThis">
          <string>&lt;b&gt;Mercurial log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg log command.&lt;/p&gt;</string>
         </property>
@@ -144,9 +138,12 @@
   </layout>
  </widget>
  <tabstops>
+  <tabstop>contents</tabstop>
+  <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
-  <tabstop>sendButton</tabstop>
   <tabstop>passwordCheckBox</tabstop>
+  <tabstop>sendButton</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

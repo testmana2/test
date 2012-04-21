@@ -392,9 +392,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="whatsThis">
          <string>&lt;b&gt;Mercurial log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg log command.&lt;/p&gt;</string>
         </property>
@@ -496,6 +493,7 @@
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
   <tabstop>phaseButton</tabstop>
+  <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>

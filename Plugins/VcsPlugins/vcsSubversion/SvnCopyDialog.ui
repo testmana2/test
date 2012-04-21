@@ -21,9 +21,6 @@
     <layout class="QGridLayout">
      <item row="1" column="2">
       <widget class="QPushButton" name="dirButton">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
        <property name="toolTip">
         <string>Press to open a selection dialog</string>
        </property>
@@ -103,8 +100,10 @@
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
   <tabstop>targetEdit</tabstop>
+  <tabstop>dirButton</tabstop>
   <tabstop>forceCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
+  <tabstop>sourceEdit</tabstop>
  </tabstops>
  <resources/>
  <connections>

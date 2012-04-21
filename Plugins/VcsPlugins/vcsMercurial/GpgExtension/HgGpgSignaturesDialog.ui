@@ -146,9 +146,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="errors">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="whatsThis">
          <string>&lt;b&gt;Mercurial errors&lt;/b&gt;&lt;p&gt;This shows possible error messages.&lt;/p&gt;</string>
         </property>
@@ -239,6 +236,7 @@
   <tabstop>clearRxEditButton</tabstop>
   <tabstop>signaturesList</tabstop>
   <tabstop>verifyButton</tabstop>
+  <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>

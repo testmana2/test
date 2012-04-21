@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>SvnLogDialog</class>
- <widget class="QWidget" name="SvnLogDialog" >
-  <property name="geometry" >
+ <widget class="QWidget" name="SvnLogDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,29 +10,26 @@
     <height>649</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Subversion Log</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout">
    <item>
-    <widget class="QGroupBox" name="contentsGroup" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <widget class="QGroupBox" name="contentsGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
        <verstretch>4</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Log</string>
      </property>
-     <layout class="QVBoxLayout" >
+     <layout class="QVBoxLayout">
       <item>
-       <widget class="QTextBrowser" name="contents" >
-        <property name="focusPolicy" >
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="whatsThis" >
-         <string>&lt;b>Subversion Log&lt;/b>&lt;p>This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p></string>
+       <widget class="QTextBrowser" name="contents">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Subversion Log&lt;/b&gt;&lt;p&gt;This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p&gt;</string>
         </property>
        </widget>
       </item>
@@ -39,29 +37,26 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="errorGroup" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Expanding" hsizetype="Preferred" >
+    <widget class="QGroupBox" name="errorGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>1</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Errors</string>
      </property>
-     <layout class="QVBoxLayout" >
+     <layout class="QVBoxLayout">
       <item>
-       <widget class="QTextEdit" name="errors" >
-        <property name="focusPolicy" >
-         <enum>Qt::NoFocus</enum>
+       <widget class="QTextEdit" name="errors">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Subversion log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the svn log command.&lt;/p&gt;</string>
         </property>
-        <property name="whatsThis" >
-         <string>&lt;b>Subversion log errors&lt;/b>&lt;p>This shows possible error messages of the svn log command.&lt;/p></string>
-        </property>
-        <property name="readOnly" >
+        <property name="readOnly">
          <bool>true</bool>
         </property>
-        <property name="acceptRichText" >
+        <property name="acceptRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -70,17 +65,22 @@
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>contents</tabstop>
+  <tabstop>errors</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
