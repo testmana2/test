@@ -59,6 +59,7 @@ class EditorAssembly(QWidget):
         self.__parseTimer.setInterval(5 * 1000)
         self.__parseTimer.timeout.connect(self.__parseEditor)
         self.__editor.textChanged.connect(self.__resetParseTimer)
+        self.__editor.refreshed.connect(self.__resetParseTimer)
         
         self.__selectedGlobal = ""
         self.__selectedMember = ""
@@ -72,6 +73,7 @@ class EditorAssembly(QWidget):
         self.__parseTimer.stop()
         self.__parseTimer.timeout.disconnect(self.__parseEditor)
         self.__editor.textChanged.disconnect(self.__resetParseTimer)
+        self.__editor.refreshed.disconnect(self.__resetParseTimer)
     
     def getEditor(self):
         """

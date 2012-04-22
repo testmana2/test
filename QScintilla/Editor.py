@@ -83,6 +83,7 @@ class Editor(QsciScintillaCompat):
     @signal encodingChanged(str) emitted when the editors encoding was set. The
             encoding name is passed as a parameter.
     @signal lastEditPositionAvailable() emitted when a last edit position is available
+    @signal refreshed() emitted to signal a refresh of the editor contents
     """
     modificationStatusChanged = pyqtSignal(bool, QsciScintillaCompat)
     undoAvailable = pyqtSignal(bool)
@@ -103,6 +104,7 @@ class Editor(QsciScintillaCompat):
     eolChanged = pyqtSignal(str)
     encodingChanged = pyqtSignal(str)
     lastEditPositionAvailable = pyqtSignal()
+    refreshed = pyqtSignal()
     
     # Autocompletion icon definitions
     ClassID = 1
@@ -5557,6 +5559,8 @@ class Editor(QsciScintillaCompat):
         
         self.editorSaved.emit(self.fileName)
         self.__autoSyntaxCheck()
+        
+        self.refreshed.emit()
         
     def setMonospaced(self, on):
         """
