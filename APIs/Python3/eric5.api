@@ -5584,6 +5584,7 @@ eric5.QScintilla.Editor.Editor.receive?4(command)
 eric5.QScintilla.Editor.Editor.redo?4()
 eric5.QScintilla.Editor.Editor.redoAvailable?7
 eric5.QScintilla.Editor.Editor.refresh?4()
+eric5.QScintilla.Editor.Editor.refreshed?7
 eric5.QScintilla.Editor.Editor.removeClone?4(editor)
 eric5.QScintilla.Editor.Editor.revertToUnmodified?4()
 eric5.QScintilla.Editor.Editor.saveFile?4(saveas=False, path=None)
