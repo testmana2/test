@@ -145,7 +145,9 @@ class Hg(VersionControl):
         
         self.__iniWatcher = QFileSystemWatcher(self)
         self.__iniWatcher.fileChanged.connect(self.__iniFileChanged)
-        self.__iniWatcher.addPath(getConfigPath())
+        cfgFile = getConfigPath()
+        if os.path.exists(cfgFile):
+            self.__iniWatcher.addPath(cfgFile)
         
         self.__client = None
         
