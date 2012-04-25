@@ -187,9 +187,9 @@ class Prefs(object):
         "ProxyPassword/Ftp": "",
         
         "PluginRepositoryUrl5": \
-            "http://die-offenbachs.homelinux.org/eric/plugins5/repository.xml",
+            "http://eric-ide.python-projects.org/plugins5/repository.xml",
         "VersionsUrls5": [
-            "http://die-offenbachs.homelinux.org/eric/snapshots5/versions",
+            "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/versions",
             "http://eric-ide.python-projects.org/snapshots5/versions",
         ],
         
