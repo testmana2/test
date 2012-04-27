@@ -1300,27 +1300,30 @@ def py2compile(file, checkFlakes=False):
                     Preferences.getSystem("IOEncoding"),
                     'replace').splitlines()
         
-        syntaxerror = output[0] == "ERROR"
-        if syntaxerror:
-            fn = output[1]
-            line = output[2]
-            index = output[3]
-            code = output[4]
-            error = output[5]
-            return (True, fn, line, index, code, error, [])
+        if output:
+            syntaxerror = output[0] == "ERROR"
+            if syntaxerror:
+                fn = output[1]
+                line = output[2]
+                index = output[3]
+                code = output[4]
+                error = output[5]
+                return (True, fn, line, index, code, error, [])
+            else:
+                index = 6
+                warnings = []
+                while len(output) - index > 3:
+                    if output[index] == "FLAKES_ERROR":
+                        return (True, output[index + 1], output[index + 2], "",
+                                output[index + 3], [])
+                    else:
+                        warnings.append((output[index + 1], output[index + 2],
+                                         output[index + 3]))
+                    index += 4
+                
+                return (False, None, None, None, None, None, warnings)
         else:
-            index = 6
-            warnings = []
-            while len(output) - index > 3:
-                if output[index] == "FLAKES_ERROR":
-                    return (True, output[index + 1], output[index + 2], "",
-                            output[index + 3], [])
-                else:
-                    warnings.append((output[index + 1], output[index + 2],
-                                     output[index + 3]))
-                index += 4
-            
-            return (False, None, None, None, None, None, warnings)
+            return (False, "", "", "", "", "", [])
     
     return (True, file, "1", "0", "",
         QCoreApplication.translate("Utilities",
