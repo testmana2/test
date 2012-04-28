@@ -4736,10 +4736,11 @@ eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardRepeatDialog.PyRegExpWi
 eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardRepeatDialog.PyRegExpWizardRepeatDialog.on_lowerSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardRepeatDialog.PyRegExpWizardRepeatDialog.on_upperSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardRepeatDialog.PyRegExpWizardRepeatDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.RegExpMode?7
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.W3CMode?7
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.WildcardMode?7
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.getCharacters?4()
-eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.predefinedClasses?7
-eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog.specialChars?7
-eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.QRegExpWizardCharactersDialog?1(mode=RegExpMode, parent=None)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardDialog.getCode?4(indLevel, indString)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardDialog?1(parent=None, fromEric=True)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.getCode?4(indLevel, indString)
@@ -4761,7 +4762,16 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidge
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_regexpLineEdit_textChanged?4(txt)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_repeatButton_clicked?4()
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_saveButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_syntaxCombo_currentIndexChanged?4(index)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_validateButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_w3cAltnButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_w3cAnycharButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_w3cCharButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_w3cGroupButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_w3cRepeatButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_wildcardAnycharButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_wildcardCharButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_wildcardRepeatButton_clicked?4()
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget.on_wordboundButton_clicked?4()
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWidget?1(parent=None, fromEric=True)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.QRegExpWizardWindow?1(parent=None)
@@ -5895,6 +5905,7 @@ eric5.QScintilla.Editor.Editor.receive?4(command)
 eric5.QScintilla.Editor.Editor.redo?4()
 eric5.QScintilla.Editor.Editor.redoAvailable?7
 eric5.QScintilla.Editor.Editor.refresh?4()
+eric5.QScintilla.Editor.Editor.refreshed?7
 eric5.QScintilla.Editor.Editor.removeClone?4(editor)
 eric5.QScintilla.Editor.Editor.revertToUnmodified?4()
 eric5.QScintilla.Editor.Editor.saveFile?4(saveas=False, path=None)

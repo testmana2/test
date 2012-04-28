@@ -115,7 +115,7 @@ generated code (string)
     Class implementing the QRegExp wizard dialog.
 </p>
 <h3>Derived from</h3>
-QWidget, Ui_QRegExpWizardDialog
+QWidget, Ui_QRegExpWizardWidget
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -129,6 +129,9 @@ QWidget, Ui_QRegExpWizardDialog
 <tr>
 <td><a href="#QRegExpWizardWidget.__init__">QRegExpWizardWidget</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.__getPatternSyntaxCode">__getPatternSyntaxCode</a></td>
+<td>Private method to convert a pattern syntax value into a pattern syntax string.</td>
 </tr><tr>
 <td><a href="#QRegExpWizardWidget.__insertString">__insertString</a></td>
 <td>Private method to insert a string into line edit and move cursor.</td>
@@ -190,8 +193,35 @@ QWidget, Ui_QRegExpWizardDialog
 <td><a href="#QRegExpWizardWidget.on_saveButton_clicked">on_saveButton_clicked</a></td>
 <td>Private slot to save the regexp to a file.</td>
 </tr><tr>
+<td><a href="#QRegExpWizardWidget.on_syntaxCombo_currentIndexChanged">on_syntaxCombo_currentIndexChanged</a></td>
+<td>Private slot handling the selection of a pattern syntax.</td>
+</tr><tr>
 <td><a href="#QRegExpWizardWidget.on_validateButton_clicked">on_validateButton_clicked</a></td>
 <td>Private slot to validate the entered regexp.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_w3cAltnButton_clicked">on_w3cAltnButton_clicked</a></td>
+<td>Private slot to handle the alternatives toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_w3cAnycharButton_clicked">on_w3cAnycharButton_clicked</a></td>
+<td>Private slot to handle the W3C any character toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_w3cCharButton_clicked">on_w3cCharButton_clicked</a></td>
+<td>Private slot to handle the wildcard characters toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_w3cGroupButton_clicked">on_w3cGroupButton_clicked</a></td>
+<td>Private slot to handle the W3C group toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_w3cRepeatButton_clicked">on_w3cRepeatButton_clicked</a></td>
+<td>Private slot to handle the W3C repeat toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_wildcardAnycharButton_clicked">on_wildcardAnycharButton_clicked</a></td>
+<td>Private slot to handle the wildcard any character toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_wildcardCharButton_clicked">on_wildcardCharButton_clicked</a></td>
+<td>Private slot to handle the wildcard characters toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegExpWizardWidget.on_wildcardRepeatButton_clicked">on_wildcardRepeatButton_clicked</a></td>
+<td>Private slot to handle the wildcard multiple characters toolbutton.</td>
 </tr><tr>
 <td><a href="#QRegExpWizardWidget.on_wordboundButton_clicked">on_wordboundButton_clicked</a></td>
 <td>Private slot to handle the word boundary toolbutton.</td>
@@ -213,6 +243,21 @@ parent widget (QWidget)
 </dd><dt><i>fromEric</i></dt>
 <dd>
 flag indicating a call from within eric5
+</dd>
+</dl><a NAME="QRegExpWizardWidget.__getPatternSyntaxCode" ID="QRegExpWizardWidget.__getPatternSyntaxCode"></a>
+<h4>QRegExpWizardWidget.__getPatternSyntaxCode</h4>
+<b>__getPatternSyntaxCode</b>(<i>syntaxValue</i>)
+<p>
+        Private method to convert a pattern syntax value into a pattern syntax string.
+</p><dl>
+<dt><i>syntaxValue</i></dt>
+<dd>
+pattern syntax value (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+pattern syntax string (string)
 </dd>
 </dl><a NAME="QRegExpWizardWidget.__insertString" ID="QRegExpWizardWidget.__insertString"></a>
 <h4>QRegExpWizardWidget.__insertString</h4>
@@ -357,11 +402,61 @@ the new text of the line edit (string)
 <b>on_saveButton_clicked</b>(<i></i>)
 <p>
         Private slot to save the regexp to a file.
-</p><a NAME="QRegExpWizardWidget.on_validateButton_clicked" ID="QRegExpWizardWidget.on_validateButton_clicked"></a>
+</p><a NAME="QRegExpWizardWidget.on_syntaxCombo_currentIndexChanged" ID="QRegExpWizardWidget.on_syntaxCombo_currentIndexChanged"></a>
+<h4>QRegExpWizardWidget.on_syntaxCombo_currentIndexChanged</h4>
+<b>on_syntaxCombo_currentIndexChanged</b>(<i>index</i>)
+<p>
+        Private slot handling the selection of a pattern syntax.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the selected entry (integer)
+</dd>
+</dl><a NAME="QRegExpWizardWidget.on_validateButton_clicked" ID="QRegExpWizardWidget.on_validateButton_clicked"></a>
 <h4>QRegExpWizardWidget.on_validateButton_clicked</h4>
 <b>on_validateButton_clicked</b>(<i></i>)
 <p>
         Private slot to validate the entered regexp.
+</p><a NAME="QRegExpWizardWidget.on_w3cAltnButton_clicked" ID="QRegExpWizardWidget.on_w3cAltnButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_w3cAltnButton_clicked</h4>
+<b>on_w3cAltnButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the alternatives toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_w3cAnycharButton_clicked" ID="QRegExpWizardWidget.on_w3cAnycharButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_w3cAnycharButton_clicked</h4>
+<b>on_w3cAnycharButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the W3C any character toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_w3cCharButton_clicked" ID="QRegExpWizardWidget.on_w3cCharButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_w3cCharButton_clicked</h4>
+<b>on_w3cCharButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the wildcard characters toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_w3cGroupButton_clicked" ID="QRegExpWizardWidget.on_w3cGroupButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_w3cGroupButton_clicked</h4>
+<b>on_w3cGroupButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the W3C group toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_w3cRepeatButton_clicked" ID="QRegExpWizardWidget.on_w3cRepeatButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_w3cRepeatButton_clicked</h4>
+<b>on_w3cRepeatButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the W3C repeat toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_wildcardAnycharButton_clicked" ID="QRegExpWizardWidget.on_wildcardAnycharButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_wildcardAnycharButton_clicked</h4>
+<b>on_wildcardAnycharButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the wildcard any character toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_wildcardCharButton_clicked" ID="QRegExpWizardWidget.on_wildcardCharButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_wildcardCharButton_clicked</h4>
+<b>on_wildcardCharButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the wildcard characters toolbutton.
+</p><a NAME="QRegExpWizardWidget.on_wildcardRepeatButton_clicked" ID="QRegExpWizardWidget.on_wildcardRepeatButton_clicked"></a>
+<h4>QRegExpWizardWidget.on_wildcardRepeatButton_clicked</h4>
+<b>on_wildcardRepeatButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the wildcard multiple characters toolbutton.
 </p><a NAME="QRegExpWizardWidget.on_wordboundButton_clicked" ID="QRegExpWizardWidget.on_wordboundButton_clicked"></a>
 <h4>QRegExpWizardWidget.on_wordboundButton_clicked</h4>
 <b>on_wordboundButton_clicked</b>(<i></i>)

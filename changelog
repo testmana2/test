@@ -42,6 +42,9 @@ Version 5.3-snapshot-2012mmdd:
   -- extended bookmarks to hold a description and various timestamps
   -- added capability to manage the QtHelp filter attributes
   -- added a page to the site info dialog to show web databases of the site
+- Wizards
+  -- QRegExp
+     --- added support for the various pattern syntaxes
 - Third Party packages
   -- updated to Pygments 1.5
 

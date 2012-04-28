@@ -9,13 +9,13 @@ Module implementing the QRegExp wizard dialog.
 
 import os
 
-from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot
+from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot, qVersion
 from PyQt4.QtGui import QWidget, QDialog, QApplication, QClipboard, QTextCursor, \
     QDialogButtonBox, QMainWindow, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 
-from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardDialog
+from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardWidget
 
 from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
 from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
@@ -25,7 +25,7 @@ import UI.PixmapCache
 import Utilities
 
 
-class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
+class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
     """
     Class implementing the QRegExp wizard dialog.
     """
@@ -40,6 +40,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         self.setupUi(self)
         
         # initialize icons of the tool buttons
+        # regexp tool buttons
         self.charButton.setIcon(UI.PixmapCache.getIcon("characters.png"))
         self.anycharButton.setIcon(UI.PixmapCache.getIcon("anychar.png"))
         self.repeatButton.setIcon(UI.PixmapCache.getIcon("repeat.png"))
@@ -54,6 +55,26 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         self.neglookaheadButton.setIcon(UI.PixmapCache.getIcon("neglookahead.png"))
         self.undoButton.setIcon(UI.PixmapCache.getIcon("editUndo.png"))
         self.redoButton.setIcon(UI.PixmapCache.getIcon("editRedo.png"))
+        # wildcard tool buttons
+        self.wildcardCharButton.setIcon(UI.PixmapCache.getIcon("characters.png"))
+        self.wildcardAnycharButton.setIcon(UI.PixmapCache.getIcon("anychar.png"))
+        self.wildcardRepeatButton.setIcon(UI.PixmapCache.getIcon("repeat.png"))
+        # W3C tool buttons
+        self.w3cCharButton.setIcon(UI.PixmapCache.getIcon("characters.png"))
+        self.w3cAnycharButton.setIcon(UI.PixmapCache.getIcon("anychar.png"))
+        self.w3cRepeatButton.setIcon(UI.PixmapCache.getIcon("repeat.png"))
+        self.w3cGroupButton.setIcon(UI.PixmapCache.getIcon("group.png"))
+        self.w3cAltnButton.setIcon(UI.PixmapCache.getIcon("altn.png"))
+        
+        # initialize the syntax pattern combo
+        self.syntaxCombo.addItem("RegExp", QRegExp.RegExp)
+        self.syntaxCombo.addItem("RegExp2", QRegExp.RegExp2)
+        self.syntaxCombo.addItem("Wildcard", QRegExp.Wildcard)
+        self.syntaxCombo.addItem("Unix Wildcard", QRegExp.WildcardUnix)
+        self.syntaxCombo.addItem("Fixed String", QRegExp.FixedString)
+        self.syntaxCombo.addItem("W3C XML Schema 1.1", QRegExp.W3CXmlSchema11)
+        if qVersion() >= "5.0.0":
+            self.syntaxCombo.setCurrentIndex(1)
         
         self.saveButton = \
             self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
@@ -88,6 +109,25 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.variableLineEdit.hide()
             self.variableLine.hide()
             self.regexpLineEdit.setFocus()
+    
+    @pyqtSlot(int)
+    def on_syntaxCombo_currentIndexChanged(self, index):
+        """
+        Private slot handling the selection of a pattern syntax.
+        
+        @param index index of the selected entry (integer)
+        """
+        syntax = self.syntaxCombo.itemData(index)
+        self.regexpButtonsFrame.setVisible(syntax in [
+            QRegExp.RegExp, QRegExp.RegExp2])
+        self.regexpButtonsFrame.setEnabled(syntax in [
+            QRegExp.RegExp, QRegExp.RegExp2])
+        self.wildcardButtonsFrame.setVisible(syntax in [
+            QRegExp.Wildcard, QRegExp.WildcardUnix])
+        self.wildcardButtonsFrame.setEnabled(syntax in [
+            QRegExp.Wildcard, QRegExp.WildcardUnix])
+        self.w3cButtonsFrame.setVisible(syntax in [QRegExp.W3CXmlSchema11])
+        self.w3cButtonsFrame.setEnabled(syntax in [QRegExp.W3CXmlSchema11])
 
     def __insertString(self, s, steps=0):
         """
@@ -185,9 +225,74 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         Private slot to handle the characters toolbutton.
         """
-        dlg = QRegExpWizardCharactersDialog(self)
+        dlg = QRegExpWizardCharactersDialog(
+            mode=QRegExpWizardCharactersDialog.RegExpMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getCharacters())
+    
+    @pyqtSlot()
+    def on_wildcardCharButton_clicked(self):
+        """
+        Private slot to handle the wildcard characters toolbutton.
+        """
+        dlg = QRegExpWizardCharactersDialog(
+            mode=QRegExpWizardCharactersDialog.WildcardMode, parent=self)
+        if dlg.exec_() == QDialog.Accepted:
+            self.__insertString(dlg.getCharacters())
+    
+    @pyqtSlot()
+    def on_wildcardAnycharButton_clicked(self):
+        """
+        Private slot to handle the wildcard any character toolbutton.
+        """
+        self.__insertString("?")
+    
+    @pyqtSlot()
+    def on_wildcardRepeatButton_clicked(self):
+        """
+        Private slot to handle the wildcard multiple characters toolbutton.
+        """
+        self.__insertString("*")
+    
+    @pyqtSlot()
+    def on_w3cCharButton_clicked(self):
+        """
+        Private slot to handle the wildcard characters toolbutton.
+        """
+        dlg = QRegExpWizardCharactersDialog(
+            mode=QRegExpWizardCharactersDialog.W3CMode, parent=self)
+        if dlg.exec_() == QDialog.Accepted:
+            self.__insertString(dlg.getCharacters())
+    
+    @pyqtSlot()
+    def on_w3cAnycharButton_clicked(self):
+        """
+        Private slot to handle the W3C any character toolbutton.
+        """
+        self.__insertString(".")
+    
+    @pyqtSlot()
+    def on_w3cRepeatButton_clicked(self):
+        """
+        Private slot to handle the W3C repeat toolbutton.
+        """
+        dlg = QRegExpWizardRepeatDialog(self)
+        if dlg.exec_() == QDialog.Accepted:
+            self.__insertString(dlg.getRepeat())
+    
+    @pyqtSlot()
+    def on_w3cGroupButton_clicked(self):
+        """
+        Private slot to handle the W3C group toolbutton.
+        """
+        self.__insertString("()", -1)
+    
+    @pyqtSlot()
+    def on_w3cAltnButton_clicked(self):
+        """
+        Private slot to handle the alternatives toolbutton.
+        """
+        self.__insertString("(|)", -2)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -235,8 +340,10 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 if not res:
                     return
             
+            syntax = self.syntaxCombo.itemData(self.syntaxCombo.currentIndex())
             try:
                 f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
+                f.write("syntax={0}\n".format(syntax))
                 f.write(self.regexpLineEdit.text())
                 f.close()
             except IOError as err:
@@ -260,6 +367,12 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
+                if regexp.startswith("syntax="):
+                    lines = regexp.splitlines()
+                    syntax = int(lines[0].replace("syntax=", ""))
+                    index = self.syntaxCombo.findData(syntax)
+                    self.syntaxCombo.setCurrentIndex(index)
+                    regexp = lines[1]
                 self.regexpLineEdit.setText(regexp)
             except IOError as err:
                 E5MessageBox.information(self,
@@ -295,10 +408,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             else:
                 re.setCaseSensitivity(Qt.CaseInsensitive)
             re.setMinimal(self.minimalCheckBox.isChecked())
-            if self.wildcardCheckBox.isChecked():
-                re.setPatternSyntax(QRegExp.Wildcard)
-            else:
-                re.setPatternSyntax(QRegExp.RegExp)
+            re.setPatternSyntax(self.syntaxCombo.itemData(self.syntaxCombo.currentIndex()))
             if re.isValid():
                 E5MessageBox.information(self,
                     self.trUtf8("Validation"),
@@ -333,11 +443,9 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             else:
                 re.setCaseSensitivity(Qt.CaseInsensitive)
             re.setMinimal(self.minimalCheckBox.isChecked())
-            wildcard = self.wildcardCheckBox.isChecked()
-            if wildcard:
-                re.setPatternSyntax(QRegExp.Wildcard)
-            else:
-                re.setPatternSyntax(QRegExp.RegExp)
+            syntax = self.syntaxCombo.itemData(self.syntaxCombo.currentIndex())
+            wildcard = syntax in [QRegExp.Wildcard, QRegExp.WildcardUnix]
+            re.setPatternSyntax(syntax)
             if not re.isValid():
                 E5MessageBox.critical(self,
                     self.trUtf8("Error"),
@@ -442,6 +550,28 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         """
         self.nextButton.setEnabled(False)
         
+    def __getPatternSyntaxCode(self, syntaxValue):
+        """
+        Private method to convert a pattern syntax value into a pattern syntax string.
+        
+        @param syntaxValue pattern syntax value (integer)
+        @return pattern syntax string (string)
+        """
+        syntax = "QRegExp."
+        if syntaxValue == QRegExp.RegExp:
+            syntax += "RegExp"
+        elif syntaxValue == QRegExp.RegExp2:
+            syntax += "RegExp2"
+        elif syntaxValue == QRegExp.Wildcard:
+            syntax += "Wildcard"
+        elif syntaxValue == QRegExp.WildcardUnix:
+            syntax += "WildcardUnix"
+        elif syntaxValue == QRegExp.FixedString:
+            syntax += "FixedString"
+        elif syntaxValue == QRegExp.W3CXmlSchema11:
+            syntax += "W3CXmlSchema11"
+        return syntax
+        
     def getCode(self, indLevel, indString):
         """
         Public method to get the source code.
@@ -468,9 +598,15 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     istring, reVar, os.linesep)
         if self.minimalCheckBox.isChecked():
             code += '{0}{1}.setMinimal(True){2}'.format(istring, reVar, os.linesep)
-        if self.wildcardCheckBox.isChecked():
-            code += '{0}{1}.setPatternSyntax(QRegExp.Wildcard){2}'.format(
-                    istring, reVar, estring)
+        syntax = self.syntaxCombo.itemData(self.syntaxCombo.currentIndex())
+        needPatternSyntax = True
+        if qVersion() < "5.0.0" and syntax == QRegExp.RegExp or \
+           qVersion() >= "5.0.0" and syntax == QRegExp.RegExp2:
+            # default value selected
+            needPatternSyntax = False
+        if needPatternSyntax:
+            code += '{0}{1}.setPatternSyntax({2}){3}'.format(
+                    istring, reVar, self.__getPatternSyntaxCode(syntax), estring)
         return code
 
 
