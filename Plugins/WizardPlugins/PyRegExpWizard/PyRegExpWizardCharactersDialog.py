@@ -39,16 +39,17 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         self.setupUi(self)
         
         self.comboItems = []
+        self.singleComboItems = []      # these are in addition to the above
         self.comboItems.append(self.trUtf8("Normal character"))
         self.comboItems.append(self.trUtf8("Unicode character in hexadecimal notation"))
         self.comboItems.append(self.trUtf8("Unicode character in octal notation"))
-        self.comboItems.append(self.trUtf8("---"))
-        self.comboItems.append(self.trUtf8("Bell character (\\a)"))
-        self.comboItems.append(self.trUtf8("Page break (\\f)"))
-        self.comboItems.append(self.trUtf8("Line feed (\\n)"))
-        self.comboItems.append(self.trUtf8("Carriage return (\\r)"))
-        self.comboItems.append(self.trUtf8("Horizontal tabulator (\\t)"))
-        self.comboItems.append(self.trUtf8("Vertical tabulator (\\v)"))
+        self.singleComboItems.append(self.trUtf8("---"))
+        self.singleComboItems.append(self.trUtf8("Bell character (\\a)"))
+        self.singleComboItems.append(self.trUtf8("Page break (\\f)"))
+        self.singleComboItems.append(self.trUtf8("Line feed (\\n)"))
+        self.singleComboItems.append(self.trUtf8("Carriage return (\\r)"))
+        self.singleComboItems.append(self.trUtf8("Horizontal tabulator (\\t)"))
+        self.singleComboItems.append(self.trUtf8("Vertical tabulator (\\v)"))
         
         self.charValidator = QRegExpValidator(QRegExp(".{0,1}"), self)
         self.hexValidator = QRegExpValidator(QRegExp("[0-9a-fA-F]{0,4}"), self)
@@ -132,6 +133,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         cb1 = QComboBox(hbox)
         cb1.setEditable(False)
         cb1.addItems(self.comboItems)
+        cb1.addItems(self.singleComboItems)
         hboxLayout.addWidget(cb1)
         le1 = QLineEdit(hbox)
         le1.setValidator(self.charValidator)
@@ -139,6 +141,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         cb2 = QComboBox(hbox)
         cb2.setEditable(False)
         cb2.addItems(self.comboItems)
+        cb2.addItems(self.singleComboItems)
         hboxLayout.addWidget(cb2)
         le2 = QLineEdit(hbox)
         le2.setValidator(self.charValidator)
@@ -163,33 +166,29 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         hboxLayout.setMargin(0)
         hboxLayout.setSpacing(6)
         hbox.setLayout(hboxLayout)
-        l1 = QLabel(self.trUtf8("Between:"), hbox)
-        hboxLayout.addWidget(l1)
         cb1 = QComboBox(hbox)
         cb1.setEditable(False)
         cb1.addItems(self.comboItems)
         hboxLayout.addWidget(cb1)
+        l1 = QLabel(self.trUtf8("Between:"), hbox)
+        hboxLayout.addWidget(l1)
         le1 = QLineEdit(hbox)
         le1.setValidator(self.charValidator)
         hboxLayout.addWidget(le1)
         l2 = QLabel(self.trUtf8("And:"), hbox)
         hboxLayout.addWidget(l2)
-        cb2 = QComboBox(hbox)
-        cb2.setEditable(False)
-        cb2.addItems(self.comboItems)
-        hboxLayout.addWidget(cb2)
         le2 = QLineEdit(hbox)
         le2.setValidator(self.charValidator)
         hboxLayout.addWidget(le2)
         self.rangesItemsBoxLayout.addWidget(hbox)
         
         cb1.activated[int].connect(self.__rangesCharTypeSelected)
-        cb2.activated[int].connect(self.__rangesCharTypeSelected)
+        
         hbox.show()
         
         self.rangesItemsBox.adjustSize()
         
-        self.rangesEntries.append([cb1, le1, cb2, le2])
+        self.rangesEntries.append([cb1, le1, le2])
         
     def __performSelectedAction(self, index, lineedit):
         """
@@ -232,9 +231,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         for entriesList in self.rangesEntries:
             if combo == entriesList[0]:
                 self.__performSelectedAction(index, entriesList[1])
-                break
-            elif combo == entriesList[2]:
-                self.__performSelectedAction(index, entriesList[3])
+                self.__performSelectedAction(index, entriesList[2])
                 break
         
     def __formatCharacter(self, index, char):
@@ -292,14 +289,14 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
         # character ranges
         for entrieslist in self.rangesEntries:
             if entrieslist[1].text() == "" or \
-               entrieslist[3].text() == "":
+               entrieslist[2].text() == "":
                 continue
             index = entrieslist[0].currentIndex()
-            char = entrieslist[1].text()
-            regexp += "{0}-".format(self.__formatCharacter(index, char))
-            index = entrieslist[2].currentIndex()
-            char = entrieslist[3].text()
-            regexp += self.__formatCharacter(index, char)
+            char1 = entrieslist[1].text()
+            char2 = entrieslist[2].text()
+            regexp += "{0}-{1}".format(
+                self.__formatCharacter(index, char1),
+                self.__formatCharacter(index, char2))
         
         if regexp:
             if len(regexp) == 2 and regexp in self.predefinedClasses:
