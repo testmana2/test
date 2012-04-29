@@ -43,8 +43,8 @@ def _debugclient_start_new_thread(target, args, kwargs={}):
 _original_start_thread = thread.start_new_thread
 thread.start_new_thread = _debugclient_start_new_thread
 
-# NOTE: import threading here AFTER above hook, as threading cache's
-# thread._start_new_thread.
+# Note: import threading here AFTER above hook, as threading cache's
+#       thread._start_new_thread.
 from threading import RLock
 
 
