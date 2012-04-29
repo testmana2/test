@@ -811,13 +811,15 @@ class Prefs(object):
     
     # defaults for tasks related stuff
     tasksDefaults = {
-        "TasksMarkers": "TO" + "DO:",
-        "TasksMarkersBugfix": "FIX" + "ME:",
+        "TasksFixmeMarkers": "FIX" + "ME:",
+        "TasksWarningMarkers": "WARN" + "ING:",
+        "TasksTodoMarkers": "TO" + "DO:",
+        "TasksNoteMarkers": "NO" + "TE:",
         # needed to keep it from being recognized as a task
-        "TasksColour": QColor(Qt.black),
-        "TasksBugfixColour": QColor(Qt.red),
-        "TasksBgColour": QColor(Qt.white),
-        "TasksProjectBgColour": QColor(Qt.lightGray),
+        "TasksFixmeColor": QColor("#FFA0A0"),
+        "TasksWarningColor": QColor("#FFFFA0"),
+        "TasksTodoColor": QColor("#A0FFA0"),
+        "TasksNoteColor": QColor("#A0A0FF"),
         "ClearOnFileClose": True,
         "TasksProjectAutoSave": True,
     }
@@ -2300,8 +2302,8 @@ def getTasks(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested user setting
     """
-    if key in ["TasksColour", "TasksBugfixColour",
-               "TasksBgColour", "TasksProjectBgColour"]:
+    if key in ["TasksFixmeColor", "TasksWarningColor",
+               "TasksTodoColor", "TasksNoteColor"]:
         col = prefClass.settings.value("Tasks/" + key)
         if col is not None:
             return QColor(col)
@@ -2323,8 +2325,8 @@ def setTasks(key, value, prefClass=Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    if key in ["TasksColour", "TasksBugfixColour",
-               "TasksBgColour", "TasksProjectBgColour"]:
+    if key in ["TasksFixmeColor", "TasksWarningColor",
+               "TasksTodoColor", "TasksNoteColor"]:
         prefClass.settings.setValue("Tasks/" + key, value.name())
     else:
         prefClass.settings.setValue("Tasks/" + key, value)

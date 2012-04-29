@@ -14,6 +14,8 @@ from E5Gui.E5Application import e5App
 from .Config import tasksFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+from Tasks.Task import Task
+
 import Utilities
 
 
@@ -21,7 +23,7 @@ class TasksReader(XMLStreamReaderBase):
     """
     Class for reading an XML tasks file.
     """
-    supportedVersions = ["4.2", "5.0"]
+    supportedVersions = ["4.2", "5.0", "5.1"]
     
     def __init__(self, device, forProject=False, viewer=None):
         """
@@ -75,12 +77,17 @@ class TasksReader(XMLStreamReaderBase):
                 "created": 0,
                 "filename": "",
                 "linenumber": 0,
-                "bugfix": False,
+                "type": Task.TypeTodo,
                 "description": "",
                }
         task["priority"] = int(self.attribute("priority", "1"))
         task["completed"] = self.toBool(self.attribute("completed", "False"))
-        task["bugfix"] = self.toBool(self.attribute("bugfix", "False"))
+        if self.version in ["4.2", "5.0"]:
+            isBugfix = self.toBool(self.attribute("bugfix", "False"))
+            if isBugfix:
+                task["type"] = Task.TypeFixme
+        else:
+            task["type"] = int(self.attribute("type", str(Task.TypeTodo)))
         
         while not self.atEnd():
             self.readNext()
@@ -88,7 +95,7 @@ class TasksReader(XMLStreamReaderBase):
                 self.viewer.addTask(task["summary"], priority=task["priority"],
                     filename=task["filename"], lineno=task["linenumber"],
                     completed=task["completed"], _time=task["created"],
-                    isProjectTask=self.forProject, isBugfixTask=task["bugfix"],
+                    isProjectTask=self.forProject, taskType=task["type"],
                     longtext=task["description"])
                 break
             

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>586</width>
-    <height>443</height>
+    <height>475</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -36,23 +36,16 @@
      <property name="title">
       <string>Tasks Markers</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="tasksMarkerEdit">
-        <property name="toolTip">
-         <string>Enter the tasks markers separated by a space character.</string>
-        </property>
-       </widget>
-      </item>
+     <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <widget class="QLabel" name="textLabel4_3">
+       <widget class="QLabel" name="textLabel5_3">
         <property name="text">
-         <string>Standard tasks:</string>
+         <string>Bugfix tasks:</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="tasksMarkerBugfixEdit">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="tasksMarkerFixmeEdit">
         <property name="toolTip">
          <string>Enter the tasks markers separated by a space character.</string>
         </property>
@@ -62,9 +55,44 @@
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="textLabel5_3">
+       <widget class="QLabel" name="textLabel4_4">
         <property name="text">
-         <string>Bugfix tasks:</string>
+         <string>Warning tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="tasksMarkerWarningEdit">
+        <property name="toolTip">
+         <string>Enter the tasks markers separated by a space character.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="textLabel4_3">
+        <property name="text">
+         <string>Todo tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="tasksMarkerTodoEdit">
+        <property name="toolTip">
+         <string>Enter the tasks markers separated by a space character.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="textLabel4_5">
+        <property name="text">
+         <string>Note tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="tasksMarkerNoteEdit">
+        <property name="toolTip">
+         <string>Enter the tasks markers separated by a space character.</string>
         </property>
        </widget>
       </item>
@@ -74,59 +102,18 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Tasks Colours</string>
+      <string>Tasks Background Colours</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="3" column="1">
-       <widget class="QPushButton" name="tasksProjectBgColourButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Select the background colour for project tasks.</string>
-        </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="textLabel2_8">
         <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="tasksBgColourButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Select the background colour for global tasks.</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="tasksBugfixColourButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Select the colour for bugfix tasks.</string>
-        </property>
-        <property name="text">
-         <string/>
+         <string>Bugfix tasks:</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="tasksColourButton">
+       <widget class="QPushButton" name="tasksFixmeColourButton">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -134,42 +121,14 @@
          </size>
         </property>
         <property name="toolTip">
-         <string>Select the colour for standard tasks.</string>
+         <string>Select the background colour for these tasks.</string>
         </property>
         <property name="text">
          <string/>
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="textLabel2_8">
-        <property name="text">
-         <string>Bugfix tasks foreground colour:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="textLabel6_3">
-        <property name="text">
-         <string>Global tasks background colour:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="textLabel3_4">
-        <property name="text">
-         <string>Project tasks background colour:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="textLabel1_3">
-        <property name="text">
-         <string>Standard tasks foreground colour:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
+      <item row="0" column="2">
        <spacer>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -181,6 +140,75 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="textLabel6_3">
+        <property name="text">
+         <string>Warning tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="tasksWarningColourButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select the background colour for these tasks.</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="textLabel1_3">
+        <property name="text">
+         <string>Todo tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="tasksTodoColourButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select the background colour for these tasks.</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="textLabel3_4">
+        <property name="text">
+         <string>Note tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="tasksNoteColourButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select the background colour for these tasks.</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -220,12 +248,15 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>tasksMarkerEdit</tabstop>
-  <tabstop>tasksMarkerBugfixEdit</tabstop>
-  <tabstop>tasksColourButton</tabstop>
-  <tabstop>tasksBugfixColourButton</tabstop>
-  <tabstop>tasksBgColourButton</tabstop>
-  <tabstop>tasksProjectBgColourButton</tabstop>
+  <tabstop>tasksMarkerFixmeEdit</tabstop>
+  <tabstop>tasksMarkerWarningEdit</tabstop>
+  <tabstop>tasksMarkerTodoEdit</tabstop>
+  <tabstop>tasksMarkerNoteEdit</tabstop>
+  <tabstop>tasksFixmeColourButton</tabstop>
+  <tabstop>tasksWarningColourButton</tabstop>
+  <tabstop>tasksTodoColourButton</tabstop>
+  <tabstop>tasksNoteColourButton</tabstop>
+  <tabstop>clearCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

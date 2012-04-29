@@ -30,20 +30,26 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         self.tasksColours = {}
         
         # set initial values
-        self.tasksMarkerEdit.setText(Preferences.getTasks("TasksMarkers"))
-        self.tasksMarkerBugfixEdit.setText(
-            Preferences.getTasks("TasksMarkersBugfix"))
+        self.tasksMarkerFixmeEdit.setText(
+            Preferences.getTasks("TasksFixmeMarkers"))
+        self.tasksMarkerWarningEdit.setText(
+            Preferences.getTasks("TasksWarningMarkers"))
+        self.tasksMarkerTodoEdit.setText(
+            Preferences.getTasks("TasksTodoMarkers"))
+        self.tasksMarkerNoteEdit.setText(
+            Preferences.getTasks("TasksNoteMarkers"))
         
-        self.tasksColours["TasksColour"] = \
-            self.initColour("TasksColour", self.tasksColourButton, Preferences.getTasks)
-        self.tasksColours["TasksBugfixColour"] = \
-            self.initColour("TasksBugfixColour", self.tasksBugfixColourButton,
+        self.tasksColours["TasksFixmeColor"] = \
+            self.initColour("TasksFixmeColor", self.tasksFixmeColourButton,
                 Preferences.getTasks)
-        self.tasksColours["TasksBgColour"] = \
-            self.initColour("TasksBgColour", self.tasksBgColourButton,
+        self.tasksColours["TasksWarningColor"] = \
+            self.initColour("TasksWarningColor", self.tasksWarningColourButton,
                 Preferences.getTasks)
-        self.tasksColours["TasksProjectBgColour"] = \
-            self.initColour("TasksProjectBgColour", self.tasksProjectBgColourButton,
+        self.tasksColours["TasksTodoColor"] = \
+            self.initColour("TasksTodoColor", self.tasksTodoColourButton,
+                Preferences.getTasks)
+        self.tasksColours["TasksNoteColor"] = \
+            self.initColour("TasksNoteColor", self.tasksNoteColourButton,
                 Preferences.getTasks)
         
         self.clearCheckBox.setChecked(Preferences.getTasks("ClearOnFileClose"))
@@ -52,15 +58,20 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         """
         Public slot to save the Tasks configuration.
         """
-        Preferences.setTasks("TasksMarkers", self.tasksMarkerEdit.text())
-        Preferences.setTasks("TasksMarkersBugfix",
-            self.tasksMarkerBugfixEdit.text())
+        Preferences.setTasks("TasksFixmeMarkers",
+            self.tasksMarkerFixmeEdit.text())
+        Preferences.setTasks("TasksWarningMarkers",
+            self.tasksMarkerWarningEdit.text())
+        Preferences.setTasks("TasksTodoMarkers",
+            self.tasksMarkerTodoEdit.text())
+        Preferences.setTasks("TasksNoteMarkers",
+            self.tasksMarkerNoteEdit.text())
         for key in list(self.tasksColours.keys()):
             Preferences.setTasks(key, self.tasksColours[key])
         Preferences.setTasks("ClearOnFileClose", self.clearCheckBox.isChecked())
         
     @pyqtSlot()
-    def on_tasksColourButton_clicked(self):
+    def on_tasksFixmeColourButton_clicked(self):
         """
         Private slot to set the colour for standard tasks.
         """
@@ -68,7 +79,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
             self.selectColour(self.tasksColourButton, self.tasksColours["TasksColour"])
         
     @pyqtSlot()
-    def on_tasksBugfixColourButton_clicked(self):
+    def on_tasksWarningColourButton_clicked(self):
         """
         Private slot to set the colour for bugfix tasks.
         """
@@ -77,7 +88,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
                 self.tasksColours["TasksBugfixColour"])
         
     @pyqtSlot()
-    def on_tasksBgColourButton_clicked(self):
+    def on_tasksTodoColourButton_clicked(self):
         """
         Private slot to set the background colour for global tasks.
         """
@@ -86,7 +97,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
                 self.tasksColours["TasksBgColour"])
         
     @pyqtSlot()
-    def on_tasksProjectBgColourButton_clicked(self):
+    def on_tasksNoteColourButton_clicked(self):
         """
         Private slot to set the backgroundcolour for project tasks.
         """

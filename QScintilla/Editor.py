@@ -34,6 +34,8 @@ from DataViews.CodeMetricsDialog import CodeMetricsDialog
 from DataViews.PyCoverageDialog import PyCoverageDialog
 from DataViews.PyProfileDialog import PyProfileDialog
 
+from Tasks.Task import Task
+
 from .Printer import Printer
 
 import Preferences
@@ -2311,8 +2313,12 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to extract all tasks.
         """
-        todoMarkers = Preferences.getTasks("TasksMarkers").split()
-        bugfixMarkers = Preferences.getTasks("TasksMarkersBugfix").split()
+        markers = {
+            Task.TypeWarning: Preferences.getTasks("TasksWarningMarkers").split(),
+            Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
+            Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),
+            Task.TypeFixme: Preferences.getTasks("TasksFixmeMarkers").split(),
+        }
         txtList = self.text().split(self.getLineSeparator())
         
         # clear all task markers and tasks
@@ -2324,28 +2330,20 @@ class Editor(QsciScintillaCompat):
         lineIndex = -1
         for line in txtList:
             lineIndex += 1
-            shouldContinue = False
-            # normal tasks first
-            for tasksMarker in todoMarkers:
-                index = line.find(tasksMarker)
-                if index > -1:
-                    task = line[index:]
-                    self.markerAdd(lineIndex, self.taskmarker)
-                    self.taskViewer.addFileTask(task, self.fileName, lineIndex + 1, False)
-                    self.__hasTaskMarkers = True
-                    shouldContinue = True
-                    break
-            if shouldContinue:
-                continue
+            shouldBreak = False
             
-            # bugfix tasks second
-            for tasksMarker in bugfixMarkers:
-                index = line.find(tasksMarker)
-                if index > -1:
-                    task = line[index:]
-                    self.markerAdd(lineIndex, self.taskmarker)
-                    self.taskViewer.addFileTask(task, self.fileName, lineIndex + 1, True)
-                    self.__hasTaskMarkers = True
+            for taskType, taskMarkers in markers.items():
+                for taskMarker in taskMarkers:
+                    index = line.find(taskMarker)
+                    if index > -1:
+                        task = line[index:]
+                        self.markerAdd(lineIndex, self.taskmarker)
+                        self.taskViewer.addFileTask(task, self.fileName, lineIndex + 1,
+                                                    taskType)
+                        self.__hasTaskMarkers = True
+                        shouldBreak = True
+                        break
+                if shouldBreak:
                     break
         self.taskMarkersUpdated.emit(self)
     

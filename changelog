@@ -8,6 +8,8 @@ Version 5.3-snapshot-2012mmdd:
 - Project
   -- added capability to save project tasks automatically (configurable on
      project configuration page of configuration dialog)
+- Tasks
+  -- changed the tasks handling to allow for more fine grained task designations
 - Tools
   -- added a tool to take screenshots (fullscreen, selected screen, rectangular
      selection, elliptical selection or freehand selection)

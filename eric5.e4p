@@ -1009,6 +1009,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Snapshot/SnapshotPreview.py</Source>
     <Source>Snapshot/SnapshotTimer.py</Source>
     <Source>Snapshot/SnapshotFreehandGrabber.py</Source>
+    <Source>Tasks/Task.py</Source>
+    <Source>Tasks/TaskFilter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

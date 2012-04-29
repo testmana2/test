@@ -9,6 +9,8 @@ Module implementing the task filter configuration dialog.
 
 from PyQt4.QtGui import QDialog
 
+from .Task import Task
+
 from .Ui_TaskFilterConfigDialog import Ui_TaskFilterConfigDialog
 
 
@@ -26,6 +28,12 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.typeCombo.addItem("", Task.TypeNone)
+        self.typeCombo.addItem(self.trUtf8("Bugfix"), Task.TypeFixme)
+        self.typeCombo.addItem(self.trUtf8("Warning"), Task.TypeWarning)
+        self.typeCombo.addItem(self.trUtf8("ToDo"), Task.TypeTodo)
+        self.typeCombo.addItem(self.trUtf8("Note"), Task.TypeNote)
+        
         if taskFilter.descriptionFilter is None or \
            not taskFilter.descriptionFilter.pattern():
             self.descriptionGroup.setChecked(False)
@@ -42,15 +50,12 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
             self.filenameGroup.setChecked(True)
             self.filenameEdit.setText(taskFilter.filenameFilter.pattern())
         
-        if taskFilter.typeFilter is None:
+        if taskFilter.typeFilter == Task.TypeNone:
             self.typeGroup.setChecked(False)
-            self.standardRadioButton.setChecked(True)
+            self.typeCombo.setCurrentIndex(0)
         else:
             self.typeGroup.setChecked(True)
-            if taskFilter.typeFilter:
-                self.bugfixRadioButton.setChecked(True)
-            else:
-                self.standardRadioButton.setChecked(True)
+            self.typeCombo.setCurrentIndex(self.typeCombo.findData(taskFilter.typeFilter))
         
         if taskFilter.scopeFilter is None:
             self.scopeGroup.setChecked(False)
@@ -85,7 +90,7 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
     
     def configureTaskFilter(self, taskFilter):
         """
-        Public method to set the parameters of the task filter object..
+        Public method to set the parameters of the task filter object.
         
         @param taskFilter the task filter object to be configured
         """
@@ -100,12 +105,10 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
             taskFilter.setFileNameFilter(None)
         
         if self.typeGroup.isChecked():
-            if self.bugfixRadioButton.isChecked():
-                taskFilter.setTypeFilter(True)
-            else:
-                taskFilter.setTypeFilter(False)
+            taskFilter.setTypeFilter(
+                self.typeCombo.itemData(self.typeCombo.currentIndex()))
         else:
-            taskFilter.setTypeFilter(None)
+            taskFilter.setTypeFilter(Task.TypeNone)
         
         if self.scopeGroup.isChecked():
             if self.projectRadioButton.isChecked():

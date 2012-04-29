@@ -820,6 +820,8 @@
             <section title="eric5.SqlBrowser.SqlConnectionWidget" ref="eric5.SqlBrowser.SqlConnectionWidget.html" />
           </section>
           <section title="eric5.Tasks" ref="index-eric5.Tasks.html">
+            <section title="eric5.Tasks.Task" ref="eric5.Tasks.Task.html" />
+            <section title="eric5.Tasks.TaskFilter" ref="eric5.Tasks.TaskFilter.html" />
             <section title="eric5.Tasks.TaskFilterConfigDialog" ref="eric5.Tasks.TaskFilterConfigDialog.html" />
             <section title="eric5.Tasks.TaskPropertiesDialog" ref="eric5.Tasks.TaskPropertiesDialog.html" />
             <section title="eric5.Tasks.TaskViewer" ref="eric5.Tasks.TaskViewer.html" />
@@ -9837,29 +9839,31 @@
       <keyword name="Tabview.showWindowMenu" id="Tabview.showWindowMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.showWindowMenu" />
       <keyword name="Tabview.tile" id="Tabview.tile" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.tile" />
       <keyword name="TagError" id="TagError" ref="eric5.DocumentationTools.ModuleDocumentor.html#TagError" />
-      <keyword name="Task" id="Task" ref="eric5.Tasks.TaskViewer.html#Task" />
-      <keyword name="Task (Constructor)" id="Task (Constructor)" ref="eric5.Tasks.TaskViewer.html#Task.__init__" />
-      <keyword name="Task.colorizeTask" id="Task.colorizeTask" ref="eric5.Tasks.TaskViewer.html#Task.colorizeTask" />
-      <keyword name="Task.getFilename" id="Task.getFilename" ref="eric5.Tasks.TaskViewer.html#Task.getFilename" />
-      <keyword name="Task.getLineno" id="Task.getLineno" ref="eric5.Tasks.TaskViewer.html#Task.getLineno" />
-      <keyword name="Task.isCompleted" id="Task.isCompleted" ref="eric5.Tasks.TaskViewer.html#Task.isCompleted" />
-      <keyword name="Task.isProjectTask" id="Task.isProjectTask" ref="eric5.Tasks.TaskViewer.html#Task.isProjectTask" />
-      <keyword name="Task.setCompleted" id="Task.setCompleted" ref="eric5.Tasks.TaskViewer.html#Task.setCompleted" />
-      <keyword name="Task.setDescription" id="Task.setDescription" ref="eric5.Tasks.TaskViewer.html#Task.setDescription" />
-      <keyword name="Task.setLongText" id="Task.setLongText" ref="eric5.Tasks.TaskViewer.html#Task.setLongText" />
-      <keyword name="Task.setPriority" id="Task.setPriority" ref="eric5.Tasks.TaskViewer.html#Task.setPriority" />
-      <keyword name="Task.setProjectTask" id="Task.setProjectTask" ref="eric5.Tasks.TaskViewer.html#Task.setProjectTask" />
-      <keyword name="TaskFilter" id="TaskFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter" />
-      <keyword name="TaskFilter (Constructor)" id="TaskFilter (Constructor)" ref="eric5.Tasks.TaskViewer.html#TaskFilter.__init__" />
-      <keyword name="TaskFilter.hasActiveFilter" id="TaskFilter.hasActiveFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.hasActiveFilter" />
-      <keyword name="TaskFilter.setActive" id="TaskFilter.setActive" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setActive" />
-      <keyword name="TaskFilter.setDescriptionFilter" id="TaskFilter.setDescriptionFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setDescriptionFilter" />
-      <keyword name="TaskFilter.setFileNameFilter" id="TaskFilter.setFileNameFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setFileNameFilter" />
-      <keyword name="TaskFilter.setPrioritiesFilter" id="TaskFilter.setPrioritiesFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setPrioritiesFilter" />
-      <keyword name="TaskFilter.setScopeFilter" id="TaskFilter.setScopeFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setScopeFilter" />
-      <keyword name="TaskFilter.setStatusFilter" id="TaskFilter.setStatusFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setStatusFilter" />
-      <keyword name="TaskFilter.setTypeFilter" id="TaskFilter.setTypeFilter" ref="eric5.Tasks.TaskViewer.html#TaskFilter.setTypeFilter" />
-      <keyword name="TaskFilter.showTask" id="TaskFilter.showTask" ref="eric5.Tasks.TaskViewer.html#TaskFilter.showTask" />
+      <keyword name="Task" id="Task" ref="eric5.Tasks.Task.html#Task" />
+      <keyword name="Task (Constructor)" id="Task (Constructor)" ref="eric5.Tasks.Task.html#Task.__init__" />
+      <keyword name="Task (Module)" id="Task (Module)" ref="eric5.Tasks.Task.html" />
+      <keyword name="Task.colorizeTask" id="Task.colorizeTask" ref="eric5.Tasks.Task.html#Task.colorizeTask" />
+      <keyword name="Task.getFilename" id="Task.getFilename" ref="eric5.Tasks.Task.html#Task.getFilename" />
+      <keyword name="Task.getLineno" id="Task.getLineno" ref="eric5.Tasks.Task.html#Task.getLineno" />
+      <keyword name="Task.isCompleted" id="Task.isCompleted" ref="eric5.Tasks.Task.html#Task.isCompleted" />
+      <keyword name="Task.isProjectTask" id="Task.isProjectTask" ref="eric5.Tasks.Task.html#Task.isProjectTask" />
+      <keyword name="Task.setCompleted" id="Task.setCompleted" ref="eric5.Tasks.Task.html#Task.setCompleted" />
+      <keyword name="Task.setDescription" id="Task.setDescription" ref="eric5.Tasks.Task.html#Task.setDescription" />
+      <keyword name="Task.setLongText" id="Task.setLongText" ref="eric5.Tasks.Task.html#Task.setLongText" />
+      <keyword name="Task.setPriority" id="Task.setPriority" ref="eric5.Tasks.Task.html#Task.setPriority" />
+      <keyword name="Task.setProjectTask" id="Task.setProjectTask" ref="eric5.Tasks.Task.html#Task.setProjectTask" />
+      <keyword name="TaskFilter" id="TaskFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter" />
+      <keyword name="TaskFilter (Constructor)" id="TaskFilter (Constructor)" ref="eric5.Tasks.TaskFilter.html#TaskFilter.__init__" />
+      <keyword name="TaskFilter (Module)" id="TaskFilter (Module)" ref="eric5.Tasks.TaskFilter.html" />
+      <keyword name="TaskFilter.hasActiveFilter" id="TaskFilter.hasActiveFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.hasActiveFilter" />
+      <keyword name="TaskFilter.setActive" id="TaskFilter.setActive" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setActive" />
+      <keyword name="TaskFilter.setDescriptionFilter" id="TaskFilter.setDescriptionFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setDescriptionFilter" />
+      <keyword name="TaskFilter.setFileNameFilter" id="TaskFilter.setFileNameFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setFileNameFilter" />
+      <keyword name="TaskFilter.setPrioritiesFilter" id="TaskFilter.setPrioritiesFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setPrioritiesFilter" />
+      <keyword name="TaskFilter.setScopeFilter" id="TaskFilter.setScopeFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setScopeFilter" />
+      <keyword name="TaskFilter.setStatusFilter" id="TaskFilter.setStatusFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setStatusFilter" />
+      <keyword name="TaskFilter.setTypeFilter" id="TaskFilter.setTypeFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setTypeFilter" />
+      <keyword name="TaskFilter.showTask" id="TaskFilter.showTask" ref="eric5.Tasks.TaskFilter.html#TaskFilter.showTask" />
       <keyword name="TaskFilterConfigDialog" id="TaskFilterConfigDialog" ref="eric5.Tasks.TaskFilterConfigDialog.html#TaskFilterConfigDialog" />
       <keyword name="TaskFilterConfigDialog (Constructor)" id="TaskFilterConfigDialog (Constructor)" ref="eric5.Tasks.TaskFilterConfigDialog.html#TaskFilterConfigDialog.__init__" />
       <keyword name="TaskFilterConfigDialog (Module)" id="TaskFilterConfigDialog (Module)" ref="eric5.Tasks.TaskFilterConfigDialog.html" />
@@ -9904,10 +9908,10 @@
       <keyword name="TasksPage" id="TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage" />
       <keyword name="TasksPage (Constructor)" id="TasksPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.__init__" />
       <keyword name="TasksPage (Module)" id="TasksPage (Module)" ref="eric5.Preferences.ConfigurationPages.TasksPage.html" />
-      <keyword name="TasksPage.on_tasksBgColourButton_clicked" id="TasksPage.on_tasksBgColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksBgColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksBugfixColourButton_clicked" id="TasksPage.on_tasksBugfixColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksBugfixColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksColourButton_clicked" id="TasksPage.on_tasksColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksProjectBgColourButton_clicked" id="TasksPage.on_tasksProjectBgColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksProjectBgColourButton_clicked" />
+      <keyword name="TasksPage.on_tasksFixmeColourButton_clicked" id="TasksPage.on_tasksFixmeColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksFixmeColourButton_clicked" />
+      <keyword name="TasksPage.on_tasksNoteColourButton_clicked" id="TasksPage.on_tasksNoteColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksNoteColourButton_clicked" />
+      <keyword name="TasksPage.on_tasksTodoColourButton_clicked" id="TasksPage.on_tasksTodoColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksTodoColourButton_clicked" />
+      <keyword name="TasksPage.on_tasksWarningColourButton_clicked" id="TasksPage.on_tasksWarningColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksWarningColourButton_clicked" />
       <keyword name="TasksPage.save" id="TasksPage.save" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.save" />
       <keyword name="TasksReader" id="TasksReader" ref="eric5.E5XML.TasksReader.html#TasksReader" />
       <keyword name="TasksReader (Constructor)" id="TasksReader (Constructor)" ref="eric5.E5XML.TasksReader.html#TasksReader.__init__" />
@@ -12578,6 +12582,8 @@
       <file>eric5.SqlBrowser.SqlBrowserWidget.html</file>
       <file>eric5.SqlBrowser.SqlConnectionDialog.html</file>
       <file>eric5.SqlBrowser.SqlConnectionWidget.html</file>
+      <file>eric5.Tasks.Task.html</file>
+      <file>eric5.Tasks.TaskFilter.html</file>
       <file>eric5.Tasks.TaskFilterConfigDialog.html</file>
       <file>eric5.Tasks.TaskPropertiesDialog.html</file>
       <file>eric5.Tasks.TaskViewer.html</file>

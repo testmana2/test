@@ -12,17 +12,18 @@ introductory text. This text is configurable.
 """
 
 import os
-import time
 import fnmatch
 
-from PyQt4.QtCore import pyqtSignal, QRegExp, Qt
+from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QHeaderView, QLineEdit, QTreeWidget, QDialog, QInputDialog, \
     QApplication, QMenu, QAbstractItemView, QProgressDialog, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
+from .Task import Task
 from .TaskPropertiesDialog import TaskPropertiesDialog
+from .TaskFilter import TaskFilter
 from .TaskFilterConfigDialog import TaskFilterConfigDialog
 
 import UI.PixmapCache
@@ -31,323 +32,6 @@ import Preferences
 import Utilities
 
 from Utilities.AutoSaver import AutoSaver
-
-
-class Task(QTreeWidgetItem):
-    """
-    Class implementing the task data structure.
-    """
-    def __init__(self, description, priority=1, filename="", lineno=0,
-                 completed=False, _time=0, isProjectTask=False,
-                 isBugfixTask=False, project=None, longtext=""):
-        """
-        Constructor
-        
-        @param parent parent widget of the task (QWidget)
-        @param description descriptive text of the task (string)
-        @param priority priority of the task (0=high, 1=normal, 2=low)
-        @param filename filename containing the task (string)
-        @param lineno line number containing the task (integer)
-        @param completed flag indicating completion status (boolean)
-        @param _time creation time of the task (float, if 0 use current time)
-        @param isProjectTask flag indicating a task related to the current project
-            (boolean)
-        @param isBugfixTask flag indicating a bugfix task (boolean)
-        @param project reference to the project object (Project)
-        @param longtext explanatory text of the task (string)
-        """
-        super().__init__()
-        
-        self.description = description
-        self.longtext = longtext
-        if priority in [0, 1, 2]:
-            self.priority = priority
-        else:
-            self.priority = 1
-        self.filename = filename
-        self.lineno = lineno
-        self.completed = completed
-        self.created = _time and _time or time.time()
-        self._isProjectTask = isProjectTask
-        self.isBugfixTask = isBugfixTask
-        self.project = project
-        
-        if isProjectTask:
-            self.filename = self.project.getRelativePath(self.filename)
-            
-        self.setData(0, Qt.DisplayRole, "")
-        self.setData(1, Qt.DisplayRole, "")
-        self.setData(2, Qt.DisplayRole, self.description)
-        self.setData(3, Qt.DisplayRole, self.filename)
-        self.setData(4, Qt.DisplayRole, self.lineno or "")
-        
-        if self.completed:
-            self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
-            strikeOut = True
-        else:
-            self.setIcon(0, UI.PixmapCache.getIcon("empty.png"))
-            strikeOut = False
-        for column in range(2, 5):
-            f = self.font(column)
-            f.setStrikeOut(strikeOut)
-            self.setFont(column, f)
-        
-        if self.priority == 1:
-            self.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
-        elif self.priority == 0:
-            self.setIcon(1, UI.PixmapCache.getIcon("taskPrioHigh.png"))
-        elif self.priority == 2:
-            self.setIcon(1, UI.PixmapCache.getIcon("taskPrioLow.png"))
-        else:
-            self.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
-        
-        self.colorizeTask()
-        self.setTextAlignment(4, Qt.AlignRight)
-    
-    def colorizeTask(self):
-        """
-        Public slot to set the colors of the task item.
-        """
-        for col in range(5):
-            if self.isBugfixTask:
-                self.setTextColor(col, Preferences.getTasks("TasksBugfixColour"))
-            else:
-                self.setTextColor(col, Preferences.getTasks("TasksColour"))
-            if self._isProjectTask:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksProjectBgColour"))
-            else:
-                self.setBackgroundColor(col, Preferences.getTasks("TasksBgColour"))
-    
-    def setDescription(self, description):
-        """
-        Public slot to update the description.
-        
-        @param longtext explanatory text of the task (string)
-        """
-        self.description = description
-        self.setText(2, self.description)
-    
-    def setLongText(self, longtext):
-        """
-        Public slot to update the longtext field.
-        
-        @param longtext descriptive text of the task (string)
-        """
-        self.longtext = longtext
-    
-    def setPriority(self, priority):
-        """
-        Public slot to update the priority.
-        
-        @param priority priority of the task (0=high, 1=normal, 2=low)
-        """
-        if priority in [0, 1, 2]:
-            self.priority = priority
-        else:
-            self.priority = 1
-        
-        if self.priority == 1:
-            self.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
-        elif self.priority == 0:
-            self.setIcon(1, UI.PixmapCache.getIcon("taskPrioHigh.png"))
-        elif self.priority == 2:
-            self.setIcon(1, UI.PixmapCache.getIcon("taskPrioLow.png"))
-        else:
-            self.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
-    
-    def setCompleted(self, completed):
-        """
-        Public slot to update the completed flag.
-        
-        @param completed flag indicating completion status (boolean)
-        """
-        self.completed = completed
-        if self.completed:
-            self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
-            strikeOut = True
-        else:
-            self.setIcon(0, UI.PixmapCache.getIcon("empty.png"))
-            strikeOut = False
-        for column in range(2, 5):
-            f = self.font(column)
-            f.setStrikeOut(strikeOut)
-            self.setFont(column, f)
-    
-    def isCompleted(self):
-        """
-        Public slot to return the completion status.
-        
-        @return flag indicating the completion status (boolean)
-        """
-        return self.completed
-    
-    def getFilename(self):
-        """
-        Public method to retrieve the tasks filename.
-        
-        @return filename (string)
-        """
-        if self._isProjectTask and self.filename:
-            return os.path.join(self.project.getProjectPath(), self.filename)
-        else:
-            return self.filename
-    
-    def getLineno(self):
-        """
-        Public method to retrieve the tasks linenumber.
-        
-        @return linenumber (integer)
-        """
-        return self.lineno
-    
-    def setProjectTask(self, pt):
-        """
-        Public method to set the project relation flag.
-        
-        @param pt flag indicating a project task (boolean)
-        """
-        self._isProjectTask = pt
-        self.colorizeTask()
-    
-    def isProjectTask(self):
-        """
-        Public slot to return the project relation status.
-        
-        @return flag indicating the project relation status (boolean)
-        """
-        return self._isProjectTask
-
-
-class TaskFilter(object):
-    """
-    Class implementing a filter for tasks.
-    """
-    def __init__(self):
-        """
-        Constructor
-        """
-        self.active = False
-        
-        self.descriptionFilter = None
-        self.filenameFilter = None
-        self.typeFilter = None        # standard (False) or bugfix (True)
-        self.scopeFilter = None       # global (False) or project (True)
-        self.statusFilter = None      # uncompleted (False) or completed (True)
-        self.prioritiesFilter = None  # list of priorities [0 (high), 1 (normal), 2 (low)]
-    
-    def setActive(self, enabled):
-        """
-        Public method to activate the filter.
-        
-        @param enabled flag indicating the activation state (boolean)
-        """
-        self.active = enabled
-    
-    def setDescriptionFilter(self, filter):
-        """
-        Public method to set the description filter.
-        
-        @param filter a regular expression for the description filter
-            to set (string) or None
-        """
-        if not filter:
-            self.descriptionFilter = None
-        else:
-            self.descriptionFilter = QRegExp(filter)
-    
-    def setFileNameFilter(self, filter):
-        """
-        Public method to set the filename filter.
-        
-        @param filter a wildcard expression for the filename filter
-            to set (string) or None
-        """
-        if not filter:
-            self.filenameFilter = None
-        else:
-            self.filenameFilter = QRegExp(filter)
-            self.filenameFilter.setPatternSyntax(QRegExp.Wildcard)
-    
-    def setTypeFilter(self, type_):
-        """
-        Public method to set the type filter.
-        
-        @param type_ flag indicating a bugfix task (boolean) or None
-        """
-        self.typeFilter = type_
-        
-    def setScopeFilter(self, scope):
-        """
-        Public method to set the scope filter.
-        
-        @param scope flag indicating a project task (boolean) or None
-        """
-        self.scopeFilter = scope
-        
-    def setStatusFilter(self, status):
-        """
-        Public method to set the status filter.
-        
-        @param status flag indicating a completed task (boolean) or None
-        """
-        self.statusFilter = status
-        
-    def setPrioritiesFilter(self, priorities):
-        """
-        Public method to set the priorities filter.
-        
-        @param priorities list of task priorities (list of integer) or None
-        """
-        self.prioritiesFilter = priorities
-        
-    def hasActiveFilter(self):
-        """
-        Public method to check for active filters.
-        
-        @return flag indicating an active filter was found (boolean)
-        """
-        return self.descriptionFilter is not None or \
-               self.filenameFilter is not None or \
-               self.typeFilter is not None or \
-               self.scopeFilter is not None or \
-               self.statusFilter is not None or \
-               self.prioritiesFilter is not None
-        
-    def showTask(self, task):
-        """
-        Public method to check, if a task should be shown.
-        
-        @param task reference to the task object to check (Task)
-        @return flag indicating whether the task should be shown (boolean)
-        """
-        if not self.active:
-            return True
-        
-        if self.descriptionFilter and \
-           self.descriptionFilter.indexIn(task.description) == -1:
-            return False
-        
-        if self.filenameFilter and \
-           not self.filenameFilter.exactMatch(task.filename):
-            return False
-        
-        if self.typeFilter is not None and \
-           self.typeFilter != task.isBugfixTask:
-            return False
-        
-        if self.scopeFilter is not None and \
-           self.scopeFilter != task._isProjectTask:
-            return False
-        
-        if self.statusFilter is not None and \
-           self.statusFilter != task.completed:
-            return False
-        
-        if self.prioritiesFilter is not None and \
-           not task.priority in self.prioritiesFilter:
-            return False
-        
-        return True
     
 
 class TaskViewer(QTreeWidget):
@@ -546,7 +230,7 @@ class TaskViewer(QTreeWidget):
     
     def addTask(self, description, priority=1, filename="", lineno=0,
                 completed=False, _time=0, isProjectTask=False,
-                isBugfixTask=False, longtext=""):
+                taskType=Task.TypeTodo, longtext=""):
         """
         Public slot to add a task.
         
@@ -558,11 +242,12 @@ class TaskViewer(QTreeWidget):
         @param _time creation time of the task (float, if 0 use current time)
         @param isProjectTask flag indicating a task related to the current
             project (boolean)
-        @param isBugfixTask flag indicating a bugfix task (boolean)
+        @param taskType type of the task (one of Task.TypeFixme, Task.TypeTodo,
+            Task.TypeWarning, Task.TypeNote)
         @param longtext explanatory text of the task (string)
         """
         task = Task(description, priority, filename, lineno, completed,
-                   _time, isProjectTask, isBugfixTask,
+                   _time, isProjectTask, taskType,
                    self.project, longtext)
         self.tasks.append(task)
         if self.taskFilter.showTask(task):
@@ -573,7 +258,7 @@ class TaskViewer(QTreeWidget):
         if isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()
     
-    def addFileTask(self, description, filename, lineno, isBugfixTask=False,
+    def addFileTask(self, description, filename, lineno, taskType=Task.TypeTodo,
                     longtext=""):
         """
         Public slot to add a file related task.
@@ -581,13 +266,14 @@ class TaskViewer(QTreeWidget):
         @param description descriptive text of the task (string)
         @param filename filename containing the task (string)
         @param lineno line number containing the task (integer)
-        @param isBugfixTask flag indicating a bugfix task (boolean)
+        @param taskType type of the task (one of Task.TypeFixme, Task.TypeTodo,
+            Task.TypeWarning, Task.TypeNote)
         @param longtext explanatory text of the task (string)
         """
         self.addTask(description, filename=filename, lineno=lineno,
                      isProjectTask=(
                         self.project and self.project.isProjectSource(filename)),
-                     isBugfixTask=isBugfixTask, longtext=longtext)
+                     taskType=taskType, longtext=longtext)
         
     def getProjectTasks(self):
         """
@@ -806,8 +492,12 @@ class TaskViewer(QTreeWidget):
         """
         Private slot to handle the "Regenerated project tasks" context menu entry.
         """
-        todoMarkers = Preferences.getTasks("TasksMarkers").split()
-        bugfixMarkers = Preferences.getTasks("TasksMarkersBugfix").split()
+        markers = {
+            Task.TypeWarning: Preferences.getTasks("TasksWarningMarkers").split(),
+            Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
+            Task.TypeTodo: Preferences.getTasks("TasksTodoMarkers").split(),
+            Task.TypeFixme: Preferences.getTasks("TasksFixmeMarkers").split(),
+        }
         files = self.project.pdata["SOURCES"]
         
         # apply file filter
@@ -848,25 +538,17 @@ class TaskViewer(QTreeWidget):
             lineIndex = 0
             for line in lines:
                 lineIndex += 1
-                shouldContinue = False
-                # normal tasks first
-                for tasksMarker in todoMarkers:
-                    index = line.find(tasksMarker)
-                    if index > -1:
-                        task = line[index:]
-                        self.addFileTask(task, fn, lineIndex, False)
-                        shouldContinue = True
-                        break
-                if shouldContinue:
-                    continue
+                shouldBreak = False
                 
-                # bugfix tasks second
-                for tasksMarker in bugfixMarkers:
-                    index = line.find(tasksMarker)
-                    if index > -1:
-                        task = line[index:]
-                        self.addFileTask(task, fn, lineIndex, True)
-                        shouldContinue = True
+                for taskType, taskMarkers in markers.items():
+                    for taskMarker in taskMarkers:
+                        index = line.find(taskMarker)
+                        if index > -1:
+                            task = line[index:]
+                            self.addFileTask(task, fn, lineIndex, taskType)
+                            shouldBreak = True
+                            break
+                    if shouldBreak:
                         break
             
             count += 1

@@ -82,6 +82,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             except ImportError:
                 pass
         
+        # NOTE: improve parsing by recording unrecognized classes and allowing the
+        #       user to select one
         if self.__module is not None:
             self.filenameEdit.setText(self.srcFile)
             

@@ -72,7 +72,7 @@ class TasksWriter(XMLStreamWriterBase):
             self.writeStartElement("Task")
             self.writeAttribute("priority", str(task.priority))
             self.writeAttribute("completed", str(task.completed))
-            self.writeAttribute("bugfix", str(task.isBugfixTask))
+            self.writeAttribute("type", str(task.taskType))
             self.writeTextElement("Summary", task.description.strip())
             self.writeTextElement("Description", task.longtext.strip())
             self.writeTextElement("Created",
