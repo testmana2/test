@@ -1011,6 +1011,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Snapshot/SnapshotFreehandGrabber.py</Source>
     <Source>Tasks/Task.py</Source>
     <Source>Tasks/TaskFilter.py</Source>
+    <Source>UI/SearchWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1299,6 +1300,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>UI/ErrorLogDialog.ui</Form>
     <Form>Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui</Form>
     <Form>Snapshot/SnapWidget.ui</Form>
+    <Form>UI/SearchWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

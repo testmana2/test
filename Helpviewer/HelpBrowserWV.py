@@ -876,6 +876,7 @@ class HelpBrowser(QWebView):
         @param backwards flag indicating a backwards search (boolean)
         @param wrap flag indicating to wrap around (boolean)
         @param highlightAll flag indicating to highlight all occurrences (boolean)
+        @return flag indicating that a match was found (boolean)
         """
         findFlags = QWebPage.FindFlags()
         if case:

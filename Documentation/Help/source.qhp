@@ -855,6 +855,7 @@
             <section title="eric5.UI.LogView" ref="eric5.UI.LogView.html" />
             <section title="eric5.UI.NumbersWidget" ref="eric5.UI.NumbersWidget.html" />
             <section title="eric5.UI.PixmapCache" ref="eric5.UI.PixmapCache.html" />
+            <section title="eric5.UI.SearchWidget" ref="eric5.UI.SearchWidget.html" />
             <section title="eric5.UI.SplashScreen" ref="eric5.UI.SplashScreen.html" />
             <section title="eric5.UI.SymbolsWidget" ref="eric5.UI.SymbolsWidget.html" />
             <section title="eric5.UI.UserInterface" ref="eric5.UI.UserInterface.html" />
@@ -6331,12 +6332,22 @@
       <keyword name="LogView (Module)" id="LogView (Module)" ref="eric5.UI.LogView.html" />
       <keyword name="LogViewer" id="LogViewer" ref="eric5.UI.LogView.html#LogViewer" />
       <keyword name="LogViewer (Constructor)" id="LogViewer (Constructor)" ref="eric5.UI.LogView.html#LogViewer.__init__" />
-      <keyword name="LogViewer.__appendText" id="LogViewer.__appendText" ref="eric5.UI.LogView.html#LogViewer.__appendText" />
-      <keyword name="LogViewer.__configure" id="LogViewer.__configure" ref="eric5.UI.LogView.html#LogViewer.__configure" />
-      <keyword name="LogViewer.__handleShowContextMenu" id="LogViewer.__handleShowContextMenu" ref="eric5.UI.LogView.html#LogViewer.__handleShowContextMenu" />
       <keyword name="LogViewer.appendToStderr" id="LogViewer.appendToStderr" ref="eric5.UI.LogView.html#LogViewer.appendToStderr" />
       <keyword name="LogViewer.appendToStdout" id="LogViewer.appendToStdout" ref="eric5.UI.LogView.html#LogViewer.appendToStdout" />
       <keyword name="LogViewer.preferencesChanged" id="LogViewer.preferencesChanged" ref="eric5.UI.LogView.html#LogViewer.preferencesChanged" />
+      <keyword name="LogViewer.showFind" id="LogViewer.showFind" ref="eric5.UI.LogView.html#LogViewer.showFind" />
+      <keyword name="LogViewerEdit" id="LogViewerEdit" ref="eric5.UI.LogView.html#LogViewerEdit" />
+      <keyword name="LogViewerEdit (Constructor)" id="LogViewerEdit (Constructor)" ref="eric5.UI.LogView.html#LogViewerEdit.__init__" />
+      <keyword name="LogViewerEdit.__appendText" id="LogViewerEdit.__appendText" ref="eric5.UI.LogView.html#LogViewerEdit.__appendText" />
+      <keyword name="LogViewerEdit.__configure" id="LogViewerEdit.__configure" ref="eric5.UI.LogView.html#LogViewerEdit.__configure" />
+      <keyword name="LogViewerEdit.__find" id="LogViewerEdit.__find" ref="eric5.UI.LogView.html#LogViewerEdit.__find" />
+      <keyword name="LogViewerEdit.__handleShowContextMenu" id="LogViewerEdit.__handleShowContextMenu" ref="eric5.UI.LogView.html#LogViewerEdit.__handleShowContextMenu" />
+      <keyword name="LogViewerEdit.appendToStderr" id="LogViewerEdit.appendToStderr" ref="eric5.UI.LogView.html#LogViewerEdit.appendToStderr" />
+      <keyword name="LogViewerEdit.appendToStdout" id="LogViewerEdit.appendToStdout" ref="eric5.UI.LogView.html#LogViewerEdit.appendToStdout" />
+      <keyword name="LogViewerEdit.keyPressEvent" id="LogViewerEdit.keyPressEvent" ref="eric5.UI.LogView.html#LogViewerEdit.keyPressEvent" />
+      <keyword name="LogViewerEdit.preferencesChanged" id="LogViewerEdit.preferencesChanged" ref="eric5.UI.LogView.html#LogViewerEdit.preferencesChanged" />
+      <keyword name="LogViewerEdit.searchNext" id="LogViewerEdit.searchNext" ref="eric5.UI.LogView.html#LogViewerEdit.searchNext" />
+      <keyword name="LogViewerEdit.searchPrev" id="LogViewerEdit.searchPrev" ref="eric5.UI.LogView.html#LogViewerEdit.searchPrev" />
       <keyword name="LoginForm" id="LoginForm" ref="eric5.Helpviewer.Passwords.LoginForm.html#LoginForm" />
       <keyword name="LoginForm (Constructor)" id="LoginForm (Constructor)" ref="eric5.Helpviewer.Passwords.LoginForm.html#LoginForm.__init__" />
       <keyword name="LoginForm (Module)" id="LoginForm (Module)" ref="eric5.Helpviewer.Passwords.LoginForm.html" />
@@ -8293,21 +8304,32 @@
       <keyword name="SearchReplaceWidget.show" id="SearchReplaceWidget.show" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.show" />
       <keyword name="SearchReplaceWidget.updateSelectionCheckBox" id="SearchReplaceWidget.updateSelectionCheckBox" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.updateSelectionCheckBox" />
       <keyword name="SearchWidget" id="SearchWidget" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget" />
+      <keyword name="SearchWidget" id="SearchWidget" ref="eric5.UI.SearchWidget.html#SearchWidget" />
       <keyword name="SearchWidget (Constructor)" id="SearchWidget (Constructor)" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__init__" />
+      <keyword name="SearchWidget (Constructor)" id="SearchWidget (Constructor)" ref="eric5.UI.SearchWidget.html#SearchWidget.__init__" />
       <keyword name="SearchWidget (Module)" id="SearchWidget (Module)" ref="eric5.Helpviewer.SearchWidget.html" />
+      <keyword name="SearchWidget (Module)" id="SearchWidget (Module)" ref="eric5.UI.SearchWidget.html" />
       <keyword name="SearchWidget.__findByReturnPressed" id="SearchWidget.__findByReturnPressed" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__findByReturnPressed" />
+      <keyword name="SearchWidget.__findByReturnPressed" id="SearchWidget.__findByReturnPressed" ref="eric5.UI.SearchWidget.html#SearchWidget.__findByReturnPressed" />
       <keyword name="SearchWidget.__findNextPrev" id="SearchWidget.__findNextPrev" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__findNextPrev" />
       <keyword name="SearchWidget.__searchTextEdited" id="SearchWidget.__searchTextEdited" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__searchTextEdited" />
       <keyword name="SearchWidget.__setFindtextComboBackground" id="SearchWidget.__setFindtextComboBackground" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.__setFindtextComboBackground" />
+      <keyword name="SearchWidget.__setSearchButtons" id="SearchWidget.__setSearchButtons" ref="eric5.UI.SearchWidget.html#SearchWidget.__setSearchButtons" />
       <keyword name="SearchWidget.findNext" id="SearchWidget.findNext" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.findNext" />
       <keyword name="SearchWidget.findPrevious" id="SearchWidget.findPrevious" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.findPrevious" />
       <keyword name="SearchWidget.keyPressEvent" id="SearchWidget.keyPressEvent" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.keyPressEvent" />
+      <keyword name="SearchWidget.keyPressEvent" id="SearchWidget.keyPressEvent" ref="eric5.UI.SearchWidget.html#SearchWidget.keyPressEvent" />
       <keyword name="SearchWidget.on_closeButton_clicked" id="SearchWidget.on_closeButton_clicked" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_closeButton_clicked" />
+      <keyword name="SearchWidget.on_closeButton_clicked" id="SearchWidget.on_closeButton_clicked" ref="eric5.UI.SearchWidget.html#SearchWidget.on_closeButton_clicked" />
       <keyword name="SearchWidget.on_findNextButton_clicked" id="SearchWidget.on_findNextButton_clicked" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findNextButton_clicked" />
+      <keyword name="SearchWidget.on_findNextButton_clicked" id="SearchWidget.on_findNextButton_clicked" ref="eric5.UI.SearchWidget.html#SearchWidget.on_findNextButton_clicked" />
       <keyword name="SearchWidget.on_findPrevButton_clicked" id="SearchWidget.on_findPrevButton_clicked" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findPrevButton_clicked" />
+      <keyword name="SearchWidget.on_findPrevButton_clicked" id="SearchWidget.on_findPrevButton_clicked" ref="eric5.UI.SearchWidget.html#SearchWidget.on_findPrevButton_clicked" />
       <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
+      <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.UI.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
       <keyword name="SearchWidget.on_highlightAllCheckBox_toggled" id="SearchWidget.on_highlightAllCheckBox_toggled" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_highlightAllCheckBox_toggled" />
       <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.showFind" />
+      <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.UI.SearchWidget.html#SearchWidget.showFind" />
       <keyword name="SecurityPage" id="SecurityPage" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage" />
       <keyword name="SecurityPage (Constructor)" id="SecurityPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.__init__" />
       <keyword name="SecurityPage (Module)" id="SecurityPage (Module)" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html" />
@@ -12611,6 +12633,7 @@
       <file>eric5.UI.LogView.html</file>
       <file>eric5.UI.NumbersWidget.html</file>
       <file>eric5.UI.PixmapCache.html</file>
+      <file>eric5.UI.SearchWidget.html</file>
       <file>eric5.UI.SplashScreen.html</file>
       <file>eric5.UI.SymbolsWidget.html</file>
       <file>eric5.UI.UserInterface.html</file>

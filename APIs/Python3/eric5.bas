@@ -59,7 +59,7 @@ BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
@@ -368,7 +368,8 @@ LexerVHDL Lexer QsciLexerVHDL
 LexerXML Lexer QsciLexerXML
 LexerYAML Lexer QsciLexerYAML
 Listspace QSplitter ViewManager
-LogViewer QTextEdit
+LogViewer QWidget
+LogViewerEdit QTextEdit
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject
