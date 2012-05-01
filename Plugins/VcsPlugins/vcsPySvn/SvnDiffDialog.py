@@ -227,8 +227,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             revision1=rev1, revision2=rev2, recurse=recurse)
                 counter = 0
                 for line in diffText.splitlines():
-                    if line.startswith("---") or \
-                       line.startswith("+++"):
+                    if line.startswith("--- ") or \
+                       line.startswith("+++ "):
                         self.__processFileLine(line)
                     
                     self.__appendText("{0}{1}".format(line, os.linesep))
