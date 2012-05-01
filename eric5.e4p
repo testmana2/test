@@ -11,7 +11,7 @@
   <Description>eric5 is an integrated development environment for
 the Python and Ruby language. It uses the PyQt4
 bindings and the QScintilla2 editor widget.</Description>
-  <Version>5.2.2</Version>
+  <Version>5.2.3</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
