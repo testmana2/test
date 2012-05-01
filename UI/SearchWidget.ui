@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>343</width>
-    <height>76</height>
+    <width>274</width>
+    <height>114</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,20 +64,6 @@
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QToolButton" name="findPrevButton">
-       <property name="toolTip">
-        <string>Press to find the previous occurrence</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="findNextButton">
-       <property name="toolTip">
-        <string>Press to find the next occurrence</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>
@@ -93,6 +79,24 @@
       <widget class="QCheckBox" name="wordCheckBox">
        <property name="text">
         <string>Whole word</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QToolButton" name="findPrevButton">
+       <property name="toolTip">
+        <string>Press to find the previous occurrence</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="findNextButton">
+       <property name="toolTip">
+        <string>Press to find the next occurrence</string>
        </property>
       </widget>
      </item>
@@ -117,8 +121,8 @@
   <tabstop>findtextCombo</tabstop>
   <tabstop>caseCheckBox</tabstop>
   <tabstop>wordCheckBox</tabstop>
-  <tabstop>findNextButton</tabstop>
   <tabstop>findPrevButton</tabstop>
+  <tabstop>findNextButton</tabstop>
   <tabstop>closeButton</tabstop>
  </tabstops>
  <resources/>

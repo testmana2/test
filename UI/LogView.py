@@ -38,6 +38,7 @@ class LogViewer(QWidget):
         self.__searchWidget.hide()
         
         self.__layout = QHBoxLayout(self)
+        self.__layout.setContentsMargins(1, 1, 1, 1)
         self.__layout.addWidget(self.__logViewer)
         self.__layout.addWidget(self.__searchWidget)
         
