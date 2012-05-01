@@ -277,8 +277,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         @param line output line to be processed (string)
         """
-        if line.startswith("---") or \
-           line.startswith("+++"):
+        if line.startswith("--- ") or \
+           line.startswith("+++ "):
             self.__processFileLine(line)
         
         if line.startswith('+'):

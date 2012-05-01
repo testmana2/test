@@ -257,8 +257,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             if self.summaryPath:
                 line = line.replace(self.summaryPath + '/', '')
                 line = " ".join(line.split())
-            if line.startswith("---") or \
-                line.startswith("+++"):
+            if line.startswith("--- ") or \
+                line.startswith("+++ "):
                     self.__processFileLine(line)
                 
             if line.startswith('+') or line.startswith('>') or line.startswith('A '):
