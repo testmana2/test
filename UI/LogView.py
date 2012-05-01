@@ -7,7 +7,7 @@
 Module implementing the log viewer widget and the log widget.
 """
 
-from PyQt4.QtCore import Qt
+from PyQt4.QtCore import Qt, pyqtSignal
 from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, QWidget, \
     QHBoxLayout, QTextDocument
 
@@ -44,6 +44,7 @@ class LogViewer(QWidget):
         
         self.__searchWidget.searchNext.connect(self.__logViewer.searchNext)
         self.__searchWidget.searchPrevious.connect(self.__logViewer.searchPrev)
+        self.__logViewer.searchStringFound.connect(self.__searchWidget.searchStringFound)
         
     def appendToStdout(self, txt):
         """
@@ -73,13 +74,17 @@ class LogViewer(QWidget):
         
         @param txt text to be shown in the combo (string)
         """
-        self.__searchWidget.showFind()
+        self.__searchWidget.showFind(txt)
 
 
 class LogViewerEdit(QTextEdit):
     """
     Class providing a specialized text edit for displaying logging information.
+    
+    @signal searchStringFound(found) emitted to indicate the search result (boolean)
     """
+    searchStringFound = pyqtSignal(bool)
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -185,7 +190,8 @@ class LogViewerEdit(QTextEdit):
             flags |= QTextDocument.FindCaseSensitively
         if wholeWord:
             flags |= QTextDocument.FindWholeWords
-        self.find(txt, flags)
+        ok = self.find(txt, flags)
+        self.searchStringFound.emit(ok)
         
     def searchPrev(self, txt, caseSensitive, wholeWord):
         """
@@ -197,7 +203,8 @@ class LogViewerEdit(QTextEdit):
             flags |= QTextDocument.FindCaseSensitively
         if wholeWord:
             flags |= QTextDocument.FindWholeWords
-        self.find(txt, flags)
+        ok = self.find(txt, flags)
+        self.searchStringFound.emit(ok)
         
     def keyPressEvent(self, evt):
         """

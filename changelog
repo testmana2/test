@@ -4,6 +4,8 @@ Version 5.3-snapshot-2012mmdd:
 - bug fixes
 - Log Viewer
   -- added the capability to search in the recorded log
+- Terminal
+  -- added the capability to search in the output of the terminal window
 
 Version 5.3-snapshot-20120430:
 - bug fixes

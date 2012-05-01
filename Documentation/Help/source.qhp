@@ -8328,6 +8328,7 @@
       <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
       <keyword name="SearchWidget.on_findtextCombo_editTextChanged" id="SearchWidget.on_findtextCombo_editTextChanged" ref="eric5.UI.SearchWidget.html#SearchWidget.on_findtextCombo_editTextChanged" />
       <keyword name="SearchWidget.on_highlightAllCheckBox_toggled" id="SearchWidget.on_highlightAllCheckBox_toggled" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.on_highlightAllCheckBox_toggled" />
+      <keyword name="SearchWidget.searchStringFound" id="SearchWidget.searchStringFound" ref="eric5.UI.SearchWidget.html#SearchWidget.searchStringFound" />
       <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.Helpviewer.SearchWidget.html#SearchWidget.showFind" />
       <keyword name="SearchWidget.showFind" id="SearchWidget.showFind" ref="eric5.UI.SearchWidget.html#SearchWidget.showFind" />
       <keyword name="SecurityPage" id="SecurityPage" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage" />
@@ -10063,6 +10064,7 @@
       <keyword name="Terminal.__clearHistory" id="Terminal.__clearHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__clearHistory" />
       <keyword name="Terminal.__configure" id="Terminal.__configure" ref="eric5.QScintilla.Terminal.html#Terminal.__configure" />
       <keyword name="Terminal.__executeCommand" id="Terminal.__executeCommand" ref="eric5.QScintilla.Terminal.html#Terminal.__executeCommand" />
+      <keyword name="Terminal.__find" id="Terminal.__find" ref="eric5.QScintilla.Terminal.html#Terminal.__find" />
       <keyword name="Terminal.__finished" id="Terminal.__finished" ref="eric5.QScintilla.Terminal.html#Terminal.__finished" />
       <keyword name="Terminal.__getEndPos" id="Terminal.__getEndPos" ref="eric5.QScintilla.Terminal.html#Terminal.__getEndPos" />
       <keyword name="Terminal.__insertHistory" id="Terminal.__insertHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__insertHistory" />
@@ -10073,6 +10075,8 @@
       <keyword name="Terminal.__reset" id="Terminal.__reset" ref="eric5.QScintilla.Terminal.html#Terminal.__reset" />
       <keyword name="Terminal.__rsearchHistory" id="Terminal.__rsearchHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__rsearchHistory" />
       <keyword name="Terminal.__searchHistory" id="Terminal.__searchHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__searchHistory" />
+      <keyword name="Terminal.__searchNext" id="Terminal.__searchNext" ref="eric5.QScintilla.Terminal.html#Terminal.__searchNext" />
+      <keyword name="Terminal.__searchPrev" id="Terminal.__searchPrev" ref="eric5.QScintilla.Terminal.html#Terminal.__searchPrev" />
       <keyword name="Terminal.__selectHistory" id="Terminal.__selectHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__selectHistory" />
       <keyword name="Terminal.__send" id="Terminal.__send" ref="eric5.QScintilla.Terminal.html#Terminal.__send" />
       <keyword name="Terminal.__sendCtrl" id="Terminal.__sendCtrl" ref="eric5.QScintilla.Terminal.html#Terminal.__sendCtrl" />
@@ -10101,7 +10105,13 @@
       <keyword name="Terminal.mousePressEvent" id="Terminal.mousePressEvent" ref="eric5.QScintilla.Terminal.html#Terminal.mousePressEvent" />
       <keyword name="Terminal.reloadHistory" id="Terminal.reloadHistory" ref="eric5.QScintilla.Terminal.html#Terminal.reloadHistory" />
       <keyword name="Terminal.saveHistory" id="Terminal.saveHistory" ref="eric5.QScintilla.Terminal.html#Terminal.saveHistory" />
+      <keyword name="Terminal.searchNext" id="Terminal.searchNext" ref="eric5.QScintilla.Terminal.html#Terminal.searchNext" />
+      <keyword name="Terminal.searchPrev" id="Terminal.searchPrev" ref="eric5.QScintilla.Terminal.html#Terminal.searchPrev" />
       <keyword name="Terminal.wheelEvent" id="Terminal.wheelEvent" ref="eric5.QScintilla.Terminal.html#Terminal.wheelEvent" />
+      <keyword name="TerminalAssembly" id="TerminalAssembly" ref="eric5.QScintilla.Terminal.html#TerminalAssembly" />
+      <keyword name="TerminalAssembly (Constructor)" id="TerminalAssembly (Constructor)" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.__init__" />
+      <keyword name="TerminalAssembly.showFind" id="TerminalAssembly.showFind" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.showFind" />
+      <keyword name="TerminalAssembly.terminal" id="TerminalAssembly.terminal" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.terminal" />
       <keyword name="TerminalPage" id="TerminalPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage" />
       <keyword name="TerminalPage (Constructor)" id="TerminalPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.__init__" />
       <keyword name="TerminalPage (Module)" id="TerminalPage (Module)" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html" />

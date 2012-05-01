@@ -11,8 +11,10 @@ import sys
 import os
 import re
 
-from PyQt4.QtCore import QSignalMapper, QTimer, QByteArray, QProcess, Qt, QEvent
-from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
+from PyQt4.QtCore import pyqtSignal, QSignalMapper, QTimer, QByteArray, QProcess, Qt, \
+    QEvent
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QPalette, QFont, \
+    QWidget, QHBoxLayout, QShortcut
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
@@ -24,8 +26,54 @@ import Preferences
 import Utilities
 
 import UI.PixmapCache
+from UI.SearchWidget import SearchWidget
 
 from .ShellHistoryDialog import ShellHistoryDialog
+
+
+class TerminalAssembly(QWidget):
+    """
+    Class implementing the containing widget for the terminal.
+    """
+    def __init__(self, vm, parent=None):
+        """
+        Constructor
+        
+        @param vm reference to the viewmanager object
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__(parent)
+        
+        self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
+        
+        self.__terminal = Terminal(vm, self)
+        self.__searchWidget = SearchWidget(self.__terminal, self)
+        self.__searchWidget.hide()
+        
+        self.__layout = QHBoxLayout(self)
+        self.__layout.setContentsMargins(1, 1, 1, 1)
+        self.__layout.addWidget(self.__terminal)
+        self.__layout.addWidget(self.__searchWidget)
+        
+        self.__searchWidget.searchNext.connect(self.__terminal.searchNext)
+        self.__searchWidget.searchPrevious.connect(self.__terminal.searchPrev)
+        self.__terminal.searchStringFound.connect(self.__searchWidget.searchStringFound)
+    
+    def showFind(self, txt=""):
+        """
+        Public method to display the search widget.
+        
+        @param txt text to be shown in the combo (string)
+        """
+        self.__searchWidget.showFind(txt)
+    
+    def terminal(self):
+        """
+        Public method to get a reference to the terminal widget.
+        
+        @return reference to the terminal widget (Terminal)
+        """
+        return self.__terminal
 
 
 class Terminal(QsciScintillaCompat):
@@ -33,7 +81,11 @@ class Terminal(QsciScintillaCompat):
     Class implementing a simple terminal based on QScintilla.
     
     A user can enter commands that are executed by a shell process.
+    
+    @signal searchStringFound(found) emitted to indicate the search result (boolean)
     """
+    searchStringFound = pyqtSignal(bool)
+    
     def __init__(self, vm, parent=None):
         """
         Constructor
@@ -45,6 +97,8 @@ class Terminal(QsciScintillaCompat):
         self.setUtf8(True)
         
         self.vm = vm
+        self.__mainWindow = parent
+        self.__lastSearch = ()
         
         self.linesepRegExp = r"\r\n|\n|\r"
         
@@ -108,6 +162,9 @@ class Terminal(QsciScintillaCompat):
         self.menu.addAction(self.trUtf8('Cut'), self.cut)
         self.menu.addAction(self.trUtf8('Copy'), self.copy)
         self.menu.addAction(self.trUtf8('Paste'), self.paste)
+        self.menu.addSeparator()
+        self.menu.addAction(self.trUtf8('Find'), self.__find)
+        self.menu.addSeparator()
         self.menu.addMenu(self.hmenu)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Clear'), self.clear)
@@ -956,6 +1013,12 @@ class Terminal(QsciScintillaCompat):
             self.addActions(self.vm.editorActGrp.actions())
             self.addActions(self.vm.copyActGrp.actions())
             self.addActions(self.vm.viewActGrp.actions())
+            self.__searchShortcut = QShortcut(self.vm.searchAct.shortcut(), self,
+                self.__find, self.__find)
+            self.__searchNextShortcut = QShortcut(self.vm.searchNextAct.shortcut(), self,
+                self.__searchNext, self.__searchNext)
+            self.__searchPrevShortcut = QShortcut(self.vm.searchPrevAct.shortcut(), self,
+                self.__searchPrev, self.__searchPrev)
         
         try:
             self.vm.editActGrp.setEnabled(False)
@@ -1003,3 +1066,45 @@ class Terminal(QsciScintillaCompat):
         Private method to open the configuration dialog.
         """
         e5App().getObject("UserInterface").showPreferences("terminalPage")
+    
+    def __find(self):
+        """
+        Private slot to show the find widget.
+        """
+        txt = self.selectedText()
+        self.__mainWindow.showFind(txt)
+    
+    def __searchNext(self):
+        """
+        Private method to search for the next occurrence.
+        """
+        if self.__lastSearch:
+            self.searchNext(*self.__lastSearch)
+    
+    def searchNext(self, txt, caseSensitive, wholeWord):
+        """
+        Public method to search the next occurrence of the given text.
+        """
+        self.__lastSearch = (txt, caseSensitive, wholeWord)
+        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False, forward=True)
+        self.searchStringFound.emit(ok)
+    
+    def __searchPrev(self):
+        """
+        Private method to search for the next occurrence.
+        """
+        if self.__lastSearch:
+            self.searchPrev(*self.__lastSearch)
+    
+    def searchPrev(self, txt, caseSensitive, wholeWord):
+        """
+        Public method to search the previous occurrence of the given text.
+        """
+        self.__lastSearch = (txt, caseSensitive, wholeWord)
+        if self.hasSelectedText():
+            line, index = self.getSelection()[:2]
+        else:
+            line, index = -1, -1
+        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False, forward=False,
+                            line=line, index=index)
+        self.searchStringFound.emit(ok)

@@ -146,3 +146,15 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.__setSearchButtons(txt != "")
         
         self.show()
+    
+    def searchStringFound(self, found):
+        """
+        Public slot to indicate that the search string was found.
+        
+        @param found flag indicating success (boolean)
+        """
+        if found:
+            self.statusLabel.clear()
+        else:
+            txt = self.findtextCombo.currentText()
+            self.statusLabel.setText(self.trUtf8("'{0}' was not found.").format(txt))

@@ -620,6 +620,7 @@ TemplatesPage ConfigurationPageBase Ui_TemplatesPage
 TemplatesReader XMLStreamReaderBase
 TemplatesWriter XMLStreamWriterBase
 Terminal QsciScintillaCompat
+TerminalAssembly QWidget
 TerminalPage ConfigurationPageBase Ui_TerminalPage
 ToolConfigurationDialog QDialog Ui_ToolConfigurationDialog
 ToolGroupConfigurationDialog QDialog Ui_ToolGroupConfigurationDialog

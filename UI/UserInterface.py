@@ -31,7 +31,7 @@ from Debugger.DebugViewer import DebugViewer
 from Debugger.DebugClientCapabilities import HasUnittest
 
 from QScintilla.Shell import Shell
-from QScintilla.Terminal import Terminal
+from QScintilla.Terminal import TerminalAssembly
 from QScintilla.MiniEditor import MiniEditor
 from QScintilla.SpellChecker import SpellChecker
 
@@ -693,8 +693,9 @@ class UserInterface(QMainWindow):
         self.templateViewer.setWindowTitle(self.trUtf8("Template-Viewer"))
         
         # Create the terminal
-        self.terminal = Terminal(self.viewmanager)
-        self.terminal.setWindowTitle(self.trUtf8("Terminal"))
+        self.terminalAssembly = TerminalAssembly(self.viewmanager)
+        self.terminal = self.terminalAssembly.termina()
+        self.terminalAssembly.setWindowTitle(self.trUtf8("Terminal"))
 
         # Create the numbers viewer
         self.numbersViewer = NumbersWidget()
@@ -702,7 +703,7 @@ class UserInterface(QMainWindow):
         
         self.windows = [self.projectBrowser, None, self.debugViewer,
             None, self.logViewer, self.taskViewer, self.templateViewer,
-            self.multiProjectBrowser, self.terminal, self.cooperation,
+            self.multiProjectBrowser, self.terminalAssembly, self.cooperation,
             self.symbolsViewer, self.numbersViewer]
 
         if self.embeddedShell:
@@ -779,9 +780,10 @@ class UserInterface(QMainWindow):
 
         # Create the terminal
         self.terminalDock = self.__createDockWindow("TerminalDock")
-        self.terminal = Terminal(self.viewmanager, self.terminalDock)
+        self.terminalAssembly = TerminalAssembly(self.viewmanager, self.terminalDock)
+        self.terminal = self.terminalAssembly.termina()
         self.__setupDockWindow(self.terminalDock, Qt.BottomDockWidgetArea,
-                             self.terminal, self.trUtf8("Terminal"))
+                             self.terminalAssembly, self.trUtf8("Terminal"))
         
         self.windows = [self.projectBrowserDock, None, self.debugViewerDock,
             None, self.logViewerDock, self.taskViewerDock, self.templateViewerDock,
@@ -877,8 +879,9 @@ class UserInterface(QMainWindow):
                              self.cooperation, self.trUtf8("Cooperation"))
         
         # Create the terminal part of the user interface
-        self.terminal = Terminal(self.viewmanager)
-        self.hToolbox.addItem(self.terminal,
+        self.terminalAssembly = TerminalAssembly(self.viewmanager)
+        self.terminal = self.terminalAssembly.termina()
+        self.hToolbox.addItem(self.terminalAssembly,
                               UI.PixmapCache.getIcon("terminal.png"),
                               self.trUtf8("Terminal"))
 
@@ -984,8 +987,9 @@ class UserInterface(QMainWindow):
         
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
-        self.terminal = Terminal(self.viewmanager)
-        self.bottomSidebar.addTab(self.terminal,
+        self.terminalAssembly = TerminalAssembly(self.viewmanager)
+        self.terminal = self.terminalAssembly.terminal()
+        self.bottomSidebar.addTab(self.terminalAssembly,
                               UI.PixmapCache.getIcon("terminal.png"),
                               self.trUtf8("Terminal"))
 

@@ -33,6 +33,9 @@ Module implementing a simple terminal based on QScintilla.
 <tr>
 <td><a href="#Terminal">Terminal</a></td>
 <td>Class implementing a simple terminal based on QScintilla.</td>
+</tr><tr>
+<td><a href="#TerminalAssembly">TerminalAssembly</a></td>
+<td>Class implementing the containing widget for the terminal.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -46,7 +49,13 @@ Module implementing a simple terminal based on QScintilla.
     Class implementing a simple terminal based on QScintilla.
 </p><p>
     A user can enter commands that are executed by a shell process.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>searchStringFound(found)</dt>
+<dd>
+emitted to indicate the search result (boolean)
+</dd>
+</dl>
 <h3>Derived from</h3>
 QsciScintillaCompat
 <h3>Class Attributes</h3>
@@ -141,6 +150,9 @@ QsciScintillaCompat
 <td><a href="#Terminal.__executeCommand">__executeCommand</a></td>
 <td>Private slot to execute a command.</td>
 </tr><tr>
+<td><a href="#Terminal.__find">__find</a></td>
+<td>Private slot to show the find widget.</td>
+</tr><tr>
 <td><a href="#Terminal.__finished">__finished</a></td>
 <td>Private method called, when the shell process has finished.</td>
 </tr><tr>
@@ -170,6 +182,12 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Terminal.__searchHistory">__searchHistory</a></td>
 <td>Private method used to search the history.</td>
+</tr><tr>
+<td><a href="#Terminal.__searchNext">__searchNext</a></td>
+<td>Private method to search for the next occurrence.</td>
+</tr><tr>
+<td><a href="#Terminal.__searchPrev">__searchPrev</a></td>
+<td>Private method to search for the next occurrence.</td>
 </tr><tr>
 <td><a href="#Terminal.__selectHistory">__selectHistory</a></td>
 <td>Private slot to select a history entry to execute.</td>
@@ -254,6 +272,12 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Terminal.saveHistory">saveHistory</a></td>
 <td>Public method to save the history.</td>
+</tr><tr>
+<td><a href="#Terminal.searchNext">searchNext</a></td>
+<td>Public method to search the next occurrence of the given text.</td>
+</tr><tr>
+<td><a href="#Terminal.searchPrev">searchPrev</a></td>
+<td>Public method to search the previous occurrence of the given text.</td>
 </tr><tr>
 <td><a href="#Terminal.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -451,7 +475,12 @@ QScintilla command
 <dd>
 command to be executed by debug client (string)
 </dd>
-</dl><a NAME="Terminal.__finished" ID="Terminal.__finished"></a>
+</dl><a NAME="Terminal.__find" ID="Terminal.__find"></a>
+<h4>Terminal.__find</h4>
+<b>__find</b>(<i></i>)
+<p>
+        Private slot to show the find widget.
+</p><a NAME="Terminal.__finished" ID="Terminal.__finished"></a>
 <h4>Terminal.__finished</h4>
 <b>__finished</b>(<i></i>)
 <p>
@@ -547,7 +576,17 @@ index to start search from (integer)
 <dd>
 index of found entry (integer)
 </dd>
-</dl><a NAME="Terminal.__selectHistory" ID="Terminal.__selectHistory"></a>
+</dl><a NAME="Terminal.__searchNext" ID="Terminal.__searchNext"></a>
+<h4>Terminal.__searchNext</h4>
+<b>__searchNext</b>(<i></i>)
+<p>
+        Private method to search for the next occurrence.
+</p><a NAME="Terminal.__searchPrev" ID="Terminal.__searchPrev"></a>
+<h4>Terminal.__searchPrev</h4>
+<b>__searchPrev</b>(<i></i>)
+<p>
+        Private method to search for the next occurrence.
+</p><a NAME="Terminal.__selectHistory" ID="Terminal.__selectHistory"></a>
 <h4>Terminal.__selectHistory</h4>
 <b>__selectHistory</b>(<i></i>)
 <p>
@@ -764,6 +803,16 @@ the mouse press event (QMouseEvent)
 <b>saveHistory</b>(<i></i>)
 <p>
         Public method to save the history.
+</p><a NAME="Terminal.searchNext" ID="Terminal.searchNext"></a>
+<h4>Terminal.searchNext</h4>
+<b>searchNext</b>(<i>txt, caseSensitive, wholeWord</i>)
+<p>
+        Public method to search the next occurrence of the given text.
+</p><a NAME="Terminal.searchPrev" ID="Terminal.searchPrev"></a>
+<h4>Terminal.searchPrev</h4>
+<b>searchPrev</b>(<i>txt, caseSensitive, wholeWord</i>)
+<p>
+        Public method to search the previous occurrence of the given text.
 </p><a NAME="Terminal.wheelEvent" ID="Terminal.wheelEvent"></a>
 <h4>Terminal.wheelEvent</h4>
 <b>wheelEvent</b>(<i>evt</i>)
@@ -773,6 +822,74 @@ the mouse press event (QMouseEvent)
 <dt><i>evt</i></dt>
 <dd>
 reference to the wheel event (QWheelEvent)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="TerminalAssembly" ID="TerminalAssembly"></a>
+<h2>TerminalAssembly</h2>
+<p>
+    Class implementing the containing widget for the terminal.
+</p>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#TerminalAssembly.__init__">TerminalAssembly</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#TerminalAssembly.showFind">showFind</a></td>
+<td>Public method to display the search widget.</td>
+</tr><tr>
+<td><a href="#TerminalAssembly.terminal">terminal</a></td>
+<td>Public method to get a reference to the terminal widget.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="TerminalAssembly.__init__" ID="TerminalAssembly.__init__"></a>
+<h4>TerminalAssembly (Constructor)</h4>
+<b>TerminalAssembly</b>(<i>vm, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vm</i></dt>
+<dd>
+reference to the viewmanager object
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="TerminalAssembly.showFind" ID="TerminalAssembly.showFind"></a>
+<h4>TerminalAssembly.showFind</h4>
+<b>showFind</b>(<i>txt=""</i>)
+<p>
+        Public method to display the search widget.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be shown in the combo (string)
+</dd>
+</dl><a NAME="TerminalAssembly.terminal" ID="TerminalAssembly.terminal"></a>
+<h4>TerminalAssembly.terminal</h4>
+<b>terminal</b>(<i></i>)
+<p>
+        Public method to get a reference to the terminal widget.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the terminal widget (Terminal)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

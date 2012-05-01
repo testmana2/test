@@ -93,6 +93,9 @@ QWidget, Ui_SearchWidget
 <td><a href="#SearchWidget.on_findtextCombo_editTextChanged">on_findtextCombo_editTextChanged</a></td>
 <td>Private slot to enable/disable the find buttons.</td>
 </tr><tr>
+<td><a href="#SearchWidget.searchStringFound">searchStringFound</a></td>
+<td>Public slot to indicate that the search string was found.</td>
+</tr><tr>
 <td><a href="#SearchWidget.showFind">showFind</a></td>
 <td>Public method to display this widget.</td>
 </tr>
@@ -160,6 +163,16 @@ reference to the key press event (QKeyEvent)
 <dt><i>txt</i></dt>
 <dd>
 text of the combobox (string)
+</dd>
+</dl><a NAME="SearchWidget.searchStringFound" ID="SearchWidget.searchStringFound"></a>
+<h4>SearchWidget.searchStringFound</h4>
+<b>searchStringFound</b>(<i>found</i>)
+<p>
+        Public slot to indicate that the search string was found.
+</p><dl>
+<dt><i>found</i></dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="SearchWidget.showFind" ID="SearchWidget.showFind"></a>
 <h4>SearchWidget.showFind</h4>
