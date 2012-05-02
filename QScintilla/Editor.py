@@ -5363,10 +5363,10 @@ class Editor(QsciScintillaCompat):
            not self.inReopenPrompt and self.fileName and \
            QFileInfo(self.fileName).lastModified().toString() != \
                 self.lastModified.toString():
+            self.inReopenPrompt = True
             if Preferences.getEditor("AutoReopen") and not self.isModified():
                 self.refresh()
             else:
-                self.inReopenPrompt = True
                 msg = self.trUtf8(
                     """<p>The file <b>{0}</b> has been changed while it was opened in"""
                     """ eric5. Reread it?</p>""").format(self.fileName)
@@ -5385,7 +5385,7 @@ class Editor(QsciScintillaCompat):
                 else:
                     # do not prompt for this change again...
                     self.lastModified = QFileInfo(self.fileName).lastModified()
-                self.inReopenPrompt = False
+            self.inReopenPrompt = False
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
