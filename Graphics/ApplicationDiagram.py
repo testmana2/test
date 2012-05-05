@@ -19,6 +19,8 @@ from .AssociationItem import AssociationItem, Imports
 import Utilities.ModuleParser
 import Utilities
 
+import Preferences
+
 
 class ApplicationDiagram(UMLDialog):
     """
@@ -52,6 +54,8 @@ class ApplicationDiagram(UMLDialog):
         
         @return dictionary of modules contained in the application.
         """
+        extensions = Preferences.getPython("PythonExtensions") + \
+            Preferences.getPython("Python3Extensions") + ['.rb']
         moduleDict = {}
         mods = self.project.pdata["SOURCES"]
         modules = []
@@ -71,7 +75,7 @@ class ApplicationDiagram(UMLDialog):
                 if module.endswith("__init__.py"):
                     continue
                 try:
-                    mod = Utilities.ModuleParser.readModule(module)
+                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions)
                 except ImportError:
                     continue
                 else:

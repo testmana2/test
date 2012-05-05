@@ -12,6 +12,7 @@ import itertools
 from PyQt4.QtGui import QGraphicsTextItem
 
 import Utilities.ModuleParser
+import Preferences
 
 from .UMLDialog import UMLDialog
 from .ClassItem import ClassItem, ClassModel
@@ -63,7 +64,9 @@ class UMLClassDiagram(UMLDialog):
         The algorithm is borrowed from Boa Constructor.
         """
         try:
-            module = Utilities.ModuleParser.readModule(self.file)
+            extensions = Preferences.getPython("PythonExtensions") + \
+                Preferences.getPython("Python3Extensions") + ['.rb']
+            module = Utilities.ModuleParser.readModule(self.file, extensions=extensions)
         except ImportError:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(

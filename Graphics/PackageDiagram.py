@@ -68,6 +68,8 @@ class PackageDiagram(UMLDialog):
             ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
             ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
             ['*.rb']
+        extensions = Preferences.getPython("PythonExtensions") + \
+            Preferences.getPython("Python3Extensions") + ['.rb']
         
         moduleDict = {}
         modules = []
@@ -85,7 +87,7 @@ class PackageDiagram(UMLDialog):
                 QApplication.processEvents()
                 prog += 1
                 try:
-                    mod = Utilities.ModuleParser.readModule(module)
+                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions)
                 except ImportError:
                     continue
                 else:
