@@ -1334,37 +1334,6 @@ def setConfigDir(d):
     configDir = os.path.expanduser(d)
 
 
-def checkPyside():
-    """
-    Module function to check the presence of PySide.
-    
-    @return flag indicating the presence of PySide (boolean)
-    """
-    try:
-        # step 1: try Python3 variant of PySide
-        import PySide       # __IGNORE_EXCEPTION__
-        del PySide
-        return True
-    except ImportError:
-        # step 2: check for a Python2 variant
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-        if interpreter == "" or not isinpath(interpreter):
-            return False
-        
-        checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "PySideImporter.py")
-        args = [checker]
-        proc = QProcess()
-        proc.setProcessChannelMode(QProcess.MergedChannels)
-        proc.start(interpreter, args)
-        finished = proc.waitForFinished(30000)
-        if finished:
-            if proc.exitCode() == 0:
-                return True
-    
-    return False
-
-
 ################################################################################
 # functions for environment handling
 ################################################################################
@@ -1483,7 +1452,14 @@ def generatePySideToolPath(toolname):
     @return the PySide tool path with extension (string)
     """
     if isWindowsPlatform():
-        prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
+        try:
+            # step 1: try Python3 variant of PySide
+            import PySide       # __IGNORE_EXCEPTION__
+            del PySide
+            prefix = sys.prefix
+        except ImportError:
+            # step 2: check for a Python2 variant
+            prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
         if toolname == "pyside-uic":
             return os.path.join(prefix, "Scripts", toolname + '.exe')
         else:
@@ -1491,6 +1467,37 @@ def generatePySideToolPath(toolname):
                                 toolname + ".exe")
     else:
         return toolname
+
+
+def checkPyside():
+    """
+    Module function to check the presence of PySide.
+    
+    @return flag indicating the presence of PySide (boolean)
+    """
+    try:
+        # step 1: try Python3 variant of PySide
+        import PySide       # __IGNORE_EXCEPTION__
+        del PySide
+        return True
+    except ImportError:
+        # step 2: check for a Python2 variant
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+        if interpreter == "" or not isinpath(interpreter):
+            return False
+        
+        checker = os.path.join(getConfig('ericDir'),
+                               "UtilitiesPython2", "PySideImporter.py")
+        args = [checker]
+        proc = QProcess()
+        proc.setProcessChannelMode(QProcess.MergedChannels)
+        proc.start(interpreter, args)
+        finished = proc.waitForFinished(30000)
+        if finished:
+            if proc.exitCode() == 0:
+                return True
+    
+    return False
 
 ################################################################################
 # Other utility functions below
