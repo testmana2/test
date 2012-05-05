@@ -204,7 +204,7 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.exceptionLogger.windowTitle())
         
         if self.embeddedShell:
-            self.__tabWidget.setCurrentWidget(self.shell)
+            self.__tabWidget.setCurrentWidget(self.shellAssembly)
         else:
             if self.embeddedBrowser:
                 self.__tabWidget.setCurrentWidget(self.browser)
@@ -252,7 +252,7 @@ class DebugViewer(QWidget):
         self.currentStack = None
         self.__threadList.clear()
         if self.embeddedShell:
-            self.__tabWidget.setCurrentWidget(self.shell)
+            self.__tabWidget.setCurrentWidget(self.shellAssembly)
         else:
             if self.embeddedBrowser:
                 self.__tabWidget.setCurrentWidget(self.browser)
@@ -266,7 +266,7 @@ class DebugViewer(QWidget):
         """
         if self.embeddedShell:
             self.saveCurrentPage()
-            self.__tabWidget.setCurrentWidget(self.shell)
+            self.__tabWidget.setCurrentWidget(self.shellAssembly)
             
     def showVariables(self, vlist, globals):
         """

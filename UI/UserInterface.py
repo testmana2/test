@@ -3482,10 +3482,10 @@ class UserInterface(QMainWindow):
         self.setDebugProfile()
         if self.layout == "Toolboxes":
             if not self.embeddedShell:
-                self.hToolbox.setCurrentWidget(self.shell)
+                self.hToolbox.setCurrentWidget(self.shellAssembly)
         elif self.layout == "Sidebars":
             if not self.embeddedShell:
-                self.bottomSidebar.setCurrentWidget(self.shell)
+                self.bottomSidebar.setCurrentWidget(self.shellAssembly)
         
     def setDebugProfile(self, save=True):
         """
@@ -3622,17 +3622,17 @@ class UserInterface(QMainWindow):
                 self.debugViewerDock.raise_()
             else:
                 self.debugViewer.show()
-            self.debugViewer.setCurrentWidget(self.shell)
+            self.debugViewer.setCurrentWidget(self.shellAssembly)
         else:                               # separate window
             if self.layout == "DockWindows":
                 self.shellDock.show()
                 self.shellDock.raise_()
             elif self.layout == "Toolboxes":
                 self.hToolboxDock.show()
-                self.hToolbox.setCurrentWidget(self.shell)
+                self.hToolbox.setCurrentWidget(self.shellAssembly)
             elif self.layout == "Sidebars":
                 self.bottomSidebar.show()
-                self.bottomSidebar.setCurrentWidget(self.shell)
+                self.bottomSidebar.setCurrentWidget(self.shellAssembly)
             else:
                 self.shell.show()
         self.shell.setFocus(Qt.ActiveWindowFocusReason)
@@ -3661,10 +3661,10 @@ class UserInterface(QMainWindow):
             self.terminalDock.raise_()
         elif self.layout == "Toolboxes":
             self.hToolboxDock.show()
-            self.hToolbox.setCurrentWidget(self.terminal)
+            self.hToolbox.setCurrentWidget(self.terminalAssembly)
         elif self.layout == "Sidebars":
             self.bottomSidebar.show()
-            self.bottomSidebar.setCurrentWidget(self.terminal)
+            self.bottomSidebar.setCurrentWidget(self.terminalAssembly)
         else:
             self.terminal.show()
         self.terminal.setFocus(Qt.ActiveWindowFocusReason)
