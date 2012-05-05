@@ -1982,6 +1982,8 @@ class Subversion(VersionControl):
         url = url.replace('\\', '/')
         if url.endswith('/'):
             url = url[:-1]
+        if not url.startswith("/") and url[1] in [":", "|"]:
+            url = "/{0}".format(url)
         return "{0}://{1}".format(protocol, url)
 
     ############################################################################
