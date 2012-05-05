@@ -64,6 +64,8 @@ class ImportsDiagram(UMLDialog):
         
         @return dictionary of modules contained in the package.
         """
+        extensions = Preferences.getPython("PythonExtensions") + \
+                     Preferences.getPython("Python3Extensions")
         moduleDict = {}
         modules = []
         for ext in Preferences.getPython("PythonExtensions") + \
@@ -83,7 +85,8 @@ class ImportsDiagram(UMLDialog):
                 QApplication.processEvents()
                 prog = prog + 1
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, caching=False)
+                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
+                                                            caching=False)
                 except ImportError:
                     continue
                 else:
