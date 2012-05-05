@@ -78,7 +78,13 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 return
             
             try:
-                self.__module = ModuleParser.readModule(self.srcFile, caching=False)
+                splitExt = os.path.splitext(self.srcFile)
+                if len(splitExt) == 2:
+                    exts = [splitExt[1]]
+                else:
+                    exts = None
+                self.__module = ModuleParser.readModule(self.srcFile, extensions=exts,
+                                                        caching=False)
             except ImportError:
                 pass
         
