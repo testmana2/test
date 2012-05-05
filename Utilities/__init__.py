@@ -1368,20 +1368,27 @@ def checkPyside():
     
     @return flag indicating the presence of PySide (boolean)
     """
-    interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        return False
-    
-    checker = os.path.join(getConfig('ericDir'),
-                           "UtilitiesPython2", "PySideImporter.py")
-    args = [checker]
-    proc = QProcess()
-    proc.setProcessChannelMode(QProcess.MergedChannels)
-    proc.start(interpreter, args)
-    finished = proc.waitForFinished(30000)
-    if finished:
-        if proc.exitCode() == 0:
-            return True
+    try:
+        # step 1: try Python3 variant of PySide
+        import PySide       # __IGNORE_EXCEPTION__
+        del PySide
+        return True
+    except ImportError:
+        # step 2: check for a Python2 variant
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+        if interpreter == "" or not isinpath(interpreter):
+            return False
+        
+        checker = os.path.join(getConfig('ericDir'),
+                               "UtilitiesPython2", "PySideImporter.py")
+        args = [checker]
+        proc = QProcess()
+        proc.setProcessChannelMode(QProcess.MergedChannels)
+        proc.start(interpreter, args)
+        finished = proc.waitForFinished(30000)
+        if finished:
+            if proc.exitCode() == 0:
+                return True
     
     return False
 
