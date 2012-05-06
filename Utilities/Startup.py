@@ -203,7 +203,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
 
 
 def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
-    app=None):
+    app=None, raiseIt=True):
     """
     Module function to start up an application that doesn't need a specialized start up.
     
@@ -220,6 +220,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     @keyparam quitOnLastWindowClosed flag indicating to quit the application,
         if the last window was closed (boolean)
     @keyparam app reference to the application object (QApplication or None)
+    @keyparam raiseIt flag indicating to raise the generated application window (boolean)
     """
     handleArgs(argv, appinfo)
     if app is None:
@@ -243,6 +244,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     if quitOnLastWindowClosed:
         app.lastWindowClosed.connect(app.quit)
     w.show()
-    w.raise_()
+    if raiseIt:
+        w.raise_()
     
     return app.exec_()
