@@ -20,6 +20,7 @@ from .AdBlockRule import AdBlockRule
 import Helpviewer.HelpWindow
 
 import Utilities
+import Preferences
 
 
 class AdBlockSubscription(QObject):
@@ -228,8 +229,15 @@ class AdBlockSubscription(QObject):
                     self.__populateCache()
                     self.changed.emit()
         
+        self.checkForUpdate()
+    
+    def checkForUpdate(self):
+        """
+        Public method to check for an update.
+        """
         if not self.__lastUpdate.isValid() or \
-           self.__lastUpdate.addDays(7) < QDateTime.currentDateTime():
+           self.__lastUpdate.addDays(Preferences.getHelp("AdBlockUpdatePeriod")) < \
+                QDateTime.currentDateTime():
             self.updateNow()
     
     def updateNow(self):

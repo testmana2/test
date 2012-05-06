@@ -7,7 +7,7 @@
 Module implementing the AdBlock configuration dialog.
 """
 
-from PyQt4.QtCore import QUrl
+from PyQt4.QtCore import pyqtSlot, QUrl
 from PyQt4.QtGui import QDialog, QMenu, QToolButton, QApplication, QDesktopServices
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
@@ -20,6 +20,7 @@ from .AdBlockModel import AdBlockModel
 from .AdBlockRule import AdBlockRule
 
 import UI.PixmapCache
+import Preferences
 
 
 class AdBlockDialog(QDialog, Ui_AdBlockDialog):
@@ -35,6 +36,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus48.png"))
+        
+        self.updateSpinBox.setValue(Preferences.getHelp("AdBlockUpdatePeriod"))
         
         self.__adBlockModel = AdBlockModel(self)
         self.__proxyModel = E5TreeSortFilterProxyModel(self)
@@ -155,3 +158,17 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         subscription = self.__adBlockModel.subscription(idx)
         manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
         manager.removeSubscription(subscription)
+    
+    @pyqtSlot(int)
+    def on_updateSpinBox_valueChanged(self, value):
+        """
+        Private slot to handle changes of the update period.
+        
+        @param value update period (integer)
+        """
+        if value != Preferences.getHelp("AdBlockUpdatePeriod"):
+            Preferences.setHelp("AdBlockUpdatePeriod", value)
+            
+            manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+            for subscription in manager.subscriptions():
+                subscription.checkForUpdate()

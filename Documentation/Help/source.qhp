@@ -1033,6 +1033,7 @@
       <keyword name="AdBlockDialog.__updateSubscription" id="AdBlockDialog.__updateSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__updateSubscription" />
       <keyword name="AdBlockDialog.addCustomRule" id="AdBlockDialog.addCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.addCustomRule" />
       <keyword name="AdBlockDialog.model" id="AdBlockDialog.model" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.model" />
+      <keyword name="AdBlockDialog.on_updateSpinBox_valueChanged" id="AdBlockDialog.on_updateSpinBox_valueChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_updateSpinBox_valueChanged" />
       <keyword name="AdBlockDialog.setCurrentIndex" id="AdBlockDialog.setCurrentIndex" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.setCurrentIndex" />
       <keyword name="AdBlockManager" id="AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager" />
       <keyword name="AdBlockManager (Constructor)" id="AdBlockManager (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__init__" />
@@ -1101,6 +1102,7 @@
       <keyword name="AdBlockSubscription.allRules" id="AdBlockSubscription.allRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.allRules" />
       <keyword name="AdBlockSubscription.allow" id="AdBlockSubscription.allow" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.allow" />
       <keyword name="AdBlockSubscription.block" id="AdBlockSubscription.block" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.block" />
+      <keyword name="AdBlockSubscription.checkForUpdate" id="AdBlockSubscription.checkForUpdate" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.checkForUpdate" />
       <keyword name="AdBlockSubscription.isEnabled" id="AdBlockSubscription.isEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.isEnabled" />
       <keyword name="AdBlockSubscription.lastUpdate" id="AdBlockSubscription.lastUpdate" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.lastUpdate" />
       <keyword name="AdBlockSubscription.location" id="AdBlockSubscription.location" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.location" />

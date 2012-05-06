@@ -637,6 +637,7 @@ class Prefs(object):
         "DefaultScheme": "file://",
         "AdBlockEnabled": False,
         "AdBlockSubscriptions": [],
+        "AdBlockUpdatePeriod": 7,
         "OfflineStorageDatabaseQuota": 50,     # 50 MB
         "UserAgent": "",
         "ShowPreview": True,
@@ -2033,7 +2034,7 @@ def getHelp(key, prefClass=Prefs):
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
-                 "CachePolicy", "DownloadManagerRemovePolicy",
+                 "CachePolicy", "DownloadManagerRemovePolicy", "AdBlockUpdatePeriod",
                  "SearchLanguage", "SyncType", "SyncFtpPort", "SyncFtpIdleTimeout",
                  "SyncEncryptionKeyLength"]:
         return int(prefClass.settings.value("Help/" + key,

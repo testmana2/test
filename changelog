@@ -14,6 +14,7 @@ Version 5.3-snapshot-2012mmdd:
 - Web Browser
   -- extended the "Clear Private Data" dialog to clear flash cookies and
      to select a browsing history period to clear
+  -- made the AdBlock update period configurable between 1 and 14 days
 
 Version 5.3-snapshot-20120430:
 - bug fixes
