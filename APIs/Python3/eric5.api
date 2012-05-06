@@ -7184,7 +7184,7 @@ eric5.Utilities.Startup.loadTranslators?4(qtTransDir, app, translationFiles=())
 eric5.Utilities.Startup.loaded_translators?7
 eric5.Utilities.Startup.makeAppInfo?4(argv, name, arg, description, options=[])
 eric5.Utilities.Startup.setLibraryPaths?4()
-eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None)
+eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True)
 eric5.Utilities.Startup.usage?4(appinfo, optlen=12)
 eric5.Utilities.Startup.version?4(appinfo)
 eric5.Utilities._escape?8
