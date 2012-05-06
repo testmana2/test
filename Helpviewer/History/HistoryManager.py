@@ -328,15 +328,24 @@ class HistoryManager(QWebHistoryInterface):
         """
         self.setDaysToExpire(Preferences.getHelp("HistoryLimit"))
     
-    def clear(self):
+    def clear(self, period=0):
         """
         Public slot to clear the complete history.
+        
+        @param period history period in milliseconds to be cleared (integer)
         """
-        self.__history = []
+        if period == 0:
+            self.__history = []
+            self.historyReset.emit()
+        else:
+            breakMS = QDateTime.currentMSecsSinceEpoch() - period
+            while self.__history and \
+                  QDateTime(self.__history[0].dateTime).toMSecsSinceEpoch() > breakMS:
+                itm = self.__history.pop(0)
+                self.entryRemoved.emit(itm)
         self.__lastSavedUrl = ""
         self.__saveTimer.changeOccurred()
         self.__saveTimer.saveIfNeccessary()
-        self.historyReset.emit()
         self.historyCleared.emit()
     
     def getFileName(self):

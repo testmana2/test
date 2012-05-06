@@ -11,6 +11,9 @@ Version 5.3-snapshot-2012mmdd:
   -- added the capability to search in the output of the shell window
 - Terminal
   -- added the capability to search in the output of the terminal window
+- Web Browser
+  -- extended the "Clear Private Data" dialog to clear flash cookies and
+     to select a browsing history period to clear
 
 Version 5.3-snapshot-20120430:
 - bug fixes

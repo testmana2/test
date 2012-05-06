@@ -13979,73 +13979,113 @@ Reason: {0}</source>
         <translation>Gözatıcı Ge&amp;çmişi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="36"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="91"/>
         <source>Select to clear the search history</source>
         <translation>Arama geçmişini temizlemek için seçiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="39"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="94"/>
         <source>&amp;Search History</source>
         <translation>Arama Geçmi&amp;şi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="62"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="117"/>
         <source>Select to clear the cookies</source>
         <translation>Çerezleri temizlemek için seçiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="65"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="120"/>
         <source>&amp;Cookies</source>
         <translation>&amp;Çerezler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="75"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="130"/>
         <source>Select to clear the disk cache</source>
         <translation>Disk önbelleğini temizlemek için seçiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="78"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="133"/>
         <source>Cached &amp;Web Pages</source>
         <translation>&amp;Wep sayfaları Önbelleği</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="88"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="143"/>
         <source>Select to clear the website icons</source>
         <translation>Websitesi ikonlarını temizlemek için seç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="91"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="146"/>
         <source>Website &amp;Icons</source>
         <translation>Websitesi &amp;İconları</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="101"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="156"/>
         <source>Select to clear the saved passwords</source>
         <translation>Kaydedilmiş parolaları temizlemek için seçiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="104"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="159"/>
         <source>Saved &amp;Passwords</source>
         <translation>Kaydedilmiş &amp;Parolalar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="49"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="104"/>
         <source>Select to clear the download history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="52"/>
-        <source>Download History</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="114"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="169"/>
         <source>Select to delete all web databases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="117"/>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="172"/>
         <source>Web &amp;Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="57"/>
+        <source>Select the history period to be deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="61"/>
+        <source>Last Hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="66"/>
+        <source>Last Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="71"/>
+        <source>Last Week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="76"/>
+        <source>Last 4 Weeks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="81"/>
+        <source>Whole Period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="186"/>
+        <source>Select to clear cookies set by the Adobe Flash Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="107"/>
+        <source>Download &amp;History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="189"/>
+        <source>Cookies from Adobe &amp;Flash Player</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -16650,37 +16690,37 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2830"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2821"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2831"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2822"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2832"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2823"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2833"/>
         <source>Unicode</source>
         <translation>Evrensel kod</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2824"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2834"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2825"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2835"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2847"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2857"/>
         <source>Default Encoding</source>
         <translation>Varsayılan Kodlama</translation>
     </message>
@@ -16705,12 +16745,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3098"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3108"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3098"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3108"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -22491,27 +22531,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryManager</name>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="364"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="373"/>
         <source>Loading History</source>
         <translation>Geçmiş Yükleniyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="441"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="450"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="476"/>
         <source>Saving History</source>
         <translation>Geçmiş Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="461"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="470"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="476"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

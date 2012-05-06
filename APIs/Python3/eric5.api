@@ -2326,7 +2326,7 @@ eric5.Helpviewer.History.HistoryManager.HistoryEntry?1(url=None, dateTime=None, 
 eric5.Helpviewer.History.HistoryManager.HistoryManager._addHistoryEntry?5(itm)
 eric5.Helpviewer.History.HistoryManager.HistoryManager._removeHistoryEntry?5(itm)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.addHistoryEntry?4(url)
-eric5.Helpviewer.History.HistoryManager.HistoryManager.clear?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.clear?4(period=0)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.close?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.daysToExpire?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.entryAdded?7
