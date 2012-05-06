@@ -627,13 +627,8 @@ class UserInterface(QMainWindow):
         self.viewmanager.searchDlg.hide()
         self.viewmanager.replaceDlg.hide()
         
-        # Create layout with movable dock windows
-        if self.layout == "DockWindows":
-            logging.debug("Creating dockable windows...")
-            self.__createDockWindowsLayout(debugServer)
-        
         # Create layout with toolbox windows embedded in dock windows
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             logging.debug("Creating toolboxes...")
             self.__createToolboxesLayout(debugServer)
         
@@ -642,192 +637,10 @@ class UserInterface(QMainWindow):
             logging.debug("Creating sidebars...")
             self.__createSidebarsLayout(debugServer)
         
-        # Create layout with floating windows
-        elif self.layout == "FloatingWindows":
-            logging.debug("Creating floating windows...")
-            self.__createFloatingWindowsLayout(debugServer)
-        
         else:
-            raise RuntimeError("wrong layout type given ({0})".format(self.layout))
+            raise ValueError("Wrong layout type given ({0})".format(self.layout))
         logging.debug("Created Layout")
 
-    def __createFloatingWindowsLayout(self, debugServer):
-        """
-        Private method to create the FloatingWindows layout.
-        
-        @param debugServer reference to the debug server object
-        """
-        # Create the project browser
-        self.projectBrowser = ProjectBrowser(self.project, None,
-            embeddedBrowser=(self.embeddedFileBrowser == 2))
-        self.projectBrowser.setWindowTitle(self.trUtf8("Project-Viewer"))
-
-        # Create the multi project browser
-        self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
-        self.multiProjectBrowser.setWindowTitle(self.trUtf8("Multiproject-Viewer"))
-
-        # Create the debug viewer maybe without the embedded shell
-        self.debugViewer = DebugViewer(debugServer, False, self.viewmanager, None,
-            embeddedShell=self.embeddedShell,
-            embeddedBrowser=(self.embeddedFileBrowser == 1))
-        self.debugViewer.setWindowTitle(self.trUtf8("Debug-Viewer"))
-
-        # Create the chat part of the user interface
-        self.cooperation = ChatWidget()
-        self.cooperation.setWindowTitle(self.trUtf8("Cooperation"))
-        
-        # Create the symbols part of the user interface
-        self.symbolsViewer = SymbolsWidget()
-        self.symbolsViewer.setWindowTitle(self.trUtf8("Symbols"))
-        
-        # Create the log viewer part of the user interface
-        self.logViewer = LogViewer(None)
-        self.logViewer.setWindowTitle(self.trUtf8("Log-Viewer"))
-
-        # Create the task viewer part of the user interface
-        self.taskViewer = TaskViewer(None, self.project)
-        self.taskViewer.setWindowTitle(self.trUtf8("Task-Viewer"))
-
-        # Create the template viewer part of the user interface
-        self.templateViewer = TemplateViewer(None, self.viewmanager)
-        self.templateViewer.setWindowTitle(self.trUtf8("Template-Viewer"))
-        
-        # Create the terminal
-        self.terminalAssembly = TerminalAssembly(self.viewmanager)
-        self.terminal = self.terminalAssembly.termina()
-        self.terminalAssembly.setWindowTitle(self.trUtf8("Terminal"))
-
-        # Create the numbers viewer
-        self.numbersViewer = NumbersWidget()
-        self.numbersViewer.setWindowTitle(self.trUtf8("Numbers"))
-        
-        self.windows = [self.projectBrowser, None, self.debugViewer,
-            None, self.logViewer, self.taskViewer, self.templateViewer,
-            self.multiProjectBrowser, self.terminalAssembly, self.cooperation,
-            self.symbolsViewer, self.numbersViewer]
-
-        if self.embeddedShell:
-            self.shell = self.debugViewer.shell
-        else:
-            # Create the shell
-            self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True)
-            self.shell = self.shellAssembly.shell()
-            self.windows[3] = self.shellAssembly
-
-        if self.embeddedFileBrowser == 0:   # separate window
-            # Create the file browser
-            self.browser = Browser(None)
-            self.browser.setWindowTitle(self.trUtf8("File-Browser"))
-            self.windows[1] = self.browser
-        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
-            self.browser = self.debugViewer.browser
-        else:                               # embedded in project browser
-            self.browser = self.projectBrowser.fileBrowser
-
-    def __createDockWindowsLayout(self, debugServer):
-        """
-        Private method to create the DockWindows layout.
-        
-        @param debugServer reference to the debug server object
-        """
-        # Create the project browser
-        self.projectBrowserDock = self.__createDockWindow("ProjectBrowserDock")
-        self.projectBrowser = ProjectBrowser(self.project, self.projectBrowserDock,
-            embeddedBrowser=(self.embeddedFileBrowser == 2))
-        self.__setupDockWindow(self.projectBrowserDock, Qt.LeftDockWidgetArea,
-                             self.projectBrowser, self.trUtf8("Project-Viewer"))
-
-        # Create the multi project browser
-        self.multiProjectBrowserDock = \
-            self.__createDockWindow("MultiProjectBrowserDock")
-        self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
-        self.__setupDockWindow(self.multiProjectBrowserDock, Qt.LeftDockWidgetArea,
-                             self.multiProjectBrowser,
-                             self.trUtf8("Multiproject-Viewer"))
-
-        # Create the debug viewer maybe without the embedded shell
-        self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
-        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
-            self.debugViewerDock,
-            embeddedShell=self.embeddedShell,
-            embeddedBrowser=(self.embeddedFileBrowser == 1))
-        self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
-                             self.debugViewer, self.trUtf8("Debug-Viewer"))
-
-        # Create the chat part of the user interface
-        self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent=self.cooperationDock)
-        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
-                             self.cooperation, self.trUtf8("Cooperation"))
-        
-        # Create the log viewer part of the user interface
-        self.logViewerDock = self.__createDockWindow("LogViewerDock")
-        self.logViewer = LogViewer(self.logViewerDock)
-        self.__setupDockWindow(self.logViewerDock, Qt.BottomDockWidgetArea,
-                             self.logViewer, self.trUtf8("Log-Viewer"))
-
-        # Create the task viewer part of the user interface
-        self.taskViewerDock = self.__createDockWindow("TaskViewerDock")
-        self.taskViewer = TaskViewer(self.taskViewerDock, self.project)
-        self.__setupDockWindow(self.taskViewerDock, Qt.BottomDockWidgetArea,
-                             self.taskViewer, self.trUtf8("Task-Viewer"))
-
-        # Create the template viewer part of the user interface
-        self.templateViewerDock = self.__createDockWindow("TemplateViewerDock")
-        self.templateViewer = TemplateViewer(self.templateViewerDock,
-                                             self.viewmanager)
-        self.__setupDockWindow(self.templateViewerDock, Qt.RightDockWidgetArea,
-                             self.templateViewer, self.trUtf8("Template-Viewer"))
-
-        # Create the terminal
-        self.terminalDock = self.__createDockWindow("TerminalDock")
-        self.terminalAssembly = TerminalAssembly(self.viewmanager, self.terminalDock)
-        self.terminal = self.terminalAssembly.termina()
-        self.__setupDockWindow(self.terminalDock, Qt.BottomDockWidgetArea,
-                             self.terminalAssembly, self.trUtf8("Terminal"))
-        
-        self.windows = [self.projectBrowserDock, None, self.debugViewerDock,
-            None, self.logViewerDock, self.taskViewerDock, self.templateViewerDock,
-            self.multiProjectBrowserDock, self.terminalDock, self.cooperationDock]
-
-        if self.embeddedShell:
-            self.shell = self.debugViewer.shell
-        else:
-            # Create the shell
-            self.shellDock = self.__createDockWindow("ShellDock")
-            self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True,
-                                               self.shellDock)
-            self.shell = self.shellAssembly.shell()
-            self.__setupDockWindow(self.shellDock, Qt.BottomDockWidgetArea,
-                                   self.shellAssembly, self.trUtf8("Shell"))
-            self.windows[3] = self.shellDock
-
-        if self.embeddedFileBrowser == 0:   # separate window
-            # Create the file browser
-            self.browserDock = self.__createDockWindow("BrowserDock")
-            self.browser = Browser(self.browserDock)
-            self.__setupDockWindow(self.browserDock, Qt.RightDockWidgetArea,
-                                 self.browser, self.trUtf8("File-Browser"))
-            self.windows[1] = self.browserDock
-        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
-            self.browser = self.debugViewer.browser
-        else:                               # embedded in project browser
-            self.browser = self.projectBrowser.fileBrowser
-        
-        # Create the symbols viewer
-        self.symbolsDock = self.__createDockWindow("SymbolsDock")
-        self.symbolsViewer = SymbolsWidget()
-        self.__setupDockWindow(self.symbolsDock, Qt.LeftDockWidgetArea,
-                               self.symbolsViewer, self.trUtf8("Symbols"))
-        self.windows.append(self.symbolsDock)
-        
-        # Create the numbers viewer
-        self.numbersDock = self.__createDockWindow("NumbersDock")
-        self.numbersViewer = NumbersWidget()
-        self.__setupDockWindow(self.numbersDock, Qt.BottomDockWidgetArea,
-                               self.numbersViewer, self.trUtf8("Numbers"))
-        self.windows.append(self.numbersDock)
-        
     def __createToolboxesLayout(self, debugServer):
         """
         Private method to create the Toolboxes layout.
@@ -883,7 +696,7 @@ class UserInterface(QMainWindow):
         
         # Create the terminal part of the user interface
         self.terminalAssembly = TerminalAssembly(self.viewmanager)
-        self.terminal = self.terminalAssembly.termina()
+        self.terminal = self.terminalAssembly.terminal()
         self.hToolbox.addItem(self.terminalAssembly,
                               UI.PixmapCache.getIcon("terminal.png"),
                               self.trUtf8("Terminal"))
@@ -1093,10 +906,7 @@ class UserInterface(QMainWindow):
         @param tabname string naming the tab to be shown (string)
         """
         if Preferences.getUI("LogViewerAutoRaise"):
-            if self.layout == "DockWindows":
-                self.logViewerDock.show()
-                self.logViewerDock.raise_()
-            elif self.layout == "Toolboxes":
+            if self.layout == "Toolboxes":
                 self.hToolboxDock.show()
                 self.hToolbox.setCurrentWidget(self.logViewer)
                 self.hToolboxDock.raise_()
@@ -3229,72 +3039,39 @@ class UserInterface(QMainWindow):
         else:
             # Set the options according to what is being displayed.
             self.__menus["window"].addAction(self.pbAct)
-            if self.layout == "DockWindows":
-                self.pbAct.setChecked(not self.projectBrowserDock.isHidden())
-            else:
-                self.pbAct.setChecked(not self.projectBrowser.isHidden())
+            self.pbAct.setChecked(not self.projectBrowser.isHidden())
             
             self.__menus["window"].addAction(self.mpbAct)
-            if self.layout == "DockWindows":
-                self.mpbAct.setChecked(not self.multiProjectBrowserDock.isHidden())
-            else:
-                self.mpbAct.setChecked(not self.multiProjectBrowser.isHidden())
+            self.mpbAct.setChecked(not self.multiProjectBrowser.isHidden())
             
             if not self.embeddedFileBrowser:
                 self.__menus["window"].addAction(self.browserAct)
-                if self.layout == "DockWindows":
-                    self.browserAct.setChecked(not self.browserDock.isHidden())
-                else:
-                    self.browserAct.setChecked(not self.browser.isHidden())
+                self.browserAct.setChecked(not self.browser.isHidden())
                 
             self.__menus["window"].addAction(self.debugViewerAct)
-            if self.layout == "DockWindows":
-                self.debugViewerAct.setChecked(not self.debugViewerDock.isHidden())
-            else:
-                self.debugViewerAct.setChecked(not self.debugViewer.isHidden())
+            self.debugViewerAct.setChecked(not self.debugViewer.isHidden())
             
             if not self.embeddedShell:
                 self.__menus["window"].addAction(self.shellAct)
-                if self.layout == "DockWindows":
-                    self.shellAct.setChecked(not self.shellDock.isHidden())
-                else:
-                    self.shellAct.setChecked(not self.shell.isHidden())
+                self.shellAct.setChecked(not self.shell.isHidden())
             
             self.__menus["window"].addAction(self.terminalAct)
-            if self.layout == "DockWindows":
-                self.terminalAct.setChecked(not self.terminalDock.isHidden())
-            else:
-                self.terminalAct.setChecked(not self.terminal.isHidden())
+            self.terminalAct.setChecked(not self.terminal.isHidden())
             
             self.__menus["window"].addAction(self.logViewerAct)
-            if self.layout == "DockWindows":
-                self.logViewerAct.setChecked(not self.logViewerDock.isHidden())
-            else:
-                self.logViewerAct.setChecked(not self.logViewer.isHidden())
+            self.logViewerAct.setChecked(not self.logViewer.isHidden())
             
             self.__menus["window"].addAction(self.taskViewerAct)
-            if self.layout == "DockWindows":
-                self.taskViewerAct.setChecked(not self.taskViewerDock.isHidden())
-            else:
-                self.taskViewerAct.setChecked(not self.taskViewer.isHidden())
+            self.taskViewerAct.setChecked(not self.taskViewer.isHidden())
 
             self.__menus["window"].addAction(self.templateViewerAct)
-            if self.layout == "DockWindows":
-                self.templateViewerAct.setChecked(not self.templateViewerDock.isHidden())
-            else:
-                self.templateViewerAct.setChecked(not self.templateViewer.isHidden())
+            self.templateViewerAct.setChecked(not self.templateViewer.isHidden())
 
             self.__menus["window"].addAction(self.cooperationViewerAct)
-            if self.layout == "DockWindows":
-                self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
-            else:
-                self.cooperationViewerAct.setChecked(not self.cooperation.isHidden())
+            self.cooperationViewerAct.setChecked(not self.cooperation.isHidden())
             
             self.__menus["window"].addAction(self.symbolsViewerAct)
-            if self.layout == "DockWindows":
-                self.symbolsViewerAct.setChecked(not self.symbolsDock.isHidden())
-            else:
-                self.symbolsViewerAct.setChecked(not self.symbolsViewer.isHidden())
+            self.symbolsViewerAct.setChecked(not self.symbolsViewer.isHidden())
 
         # Insert menu entry for toolbar settings
         self.__menus["window"].addSeparator()
@@ -3361,10 +3138,7 @@ class UserInterface(QMainWindow):
         """
         if self.currentProfile and save:
             # step 1: save the window geometries of the active profile
-            if self.layout == "DockWindows":
-                state = self.saveState()
-                self.profiles[self.currentProfile][1] = bytes(state)
-            elif self.layout in ["Toolboxes", "Sidebars"]:
+            if self.layout in ["Toolboxes", "Sidebars"]:
                 state = self.saveState()
                 self.profiles[self.currentProfile][4] = bytes(state)
                 if self.layout == "Sidebars":
@@ -3376,13 +3150,6 @@ class UserInterface(QMainWindow):
                     self.profiles[self.currentProfile][6][2] = bytes(state)
                     state = self.bottomSidebar.saveState()
                     self.profiles[self.currentProfile][6][3] = bytes(state)
-            elif self.layout == "FloatingWindows":
-                state = self.saveState()
-                self.profiles[self.currentProfile][3] = bytes(state)
-                for window, i in zip(self.windows, list(range(len(self.windows)))):
-                    if window is not None:
-                        self.profiles[self.currentProfile][2][i] = \
-                            bytes(window.saveGeometry())
             # step 2: save the visibility of the windows of the active profile
             for window, i in zip(self.windows, list(range(len(self.windows)))):
                 if window is not None:
@@ -3408,12 +3175,7 @@ class UserInterface(QMainWindow):
             self.__saveCurrentViewProfile(save)
             
             # step 2: set the window geometries of the new profile
-            if self.layout == "DockWindows":
-                state = QByteArray(self.profiles[name][1])
-                if not state.isEmpty():
-                    self.restoreState(state)
-                self.__configureDockareaCornerUsage()
-            elif self.layout in ["Toolboxes", "Sidebars"]:
+            if self.layout in ["Toolboxes", "Sidebars"]:
                 state = QByteArray(self.profiles[name][4])
                 if not state.isEmpty():
                     self.restoreState(state)
@@ -3431,16 +3193,6 @@ class UserInterface(QMainWindow):
                     if not state.isEmpty():
                         self.bottomSidebar.restoreState(state)
                 self.__configureDockareaCornerUsage()
-            elif self.layout == "FloatingWindows":
-                state = QByteArray(self.profiles[name][3])
-                if not state.isEmpty():
-                    self.restoreState(state)
-                for window, i in zip(self.windows, list(range(len(self.windows)))):
-                    if window is not None:
-                        geo = QByteArray(self.profiles[name][2][i])
-                        if not geo.isEmpty():
-                            window.restoreGeometry(geo)
-                            pass
             
             # step 3: activate the windows of the new profile
             for window, visible in zip(self.windows, self.profiles[name][0]):
@@ -3512,10 +3264,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Project Browser window.
         """
         hasFocus = self.projectBrowser.currentWidget().hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.projectBrowserDock)
-        else:
-            shown = self.__toggleWindow(self.projectBrowser)
+        shown = self.__toggleWindow(self.projectBrowser)
         if shown:
             self.__activateProjectBrowser()
         else:
@@ -3526,10 +3275,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the project browser.
         """
-        if self.layout == "DockWindows":
-            self.projectBrowserDock.show()
-            self.projectBrowserDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.vToolboxDock.show()
             self.vToolbox.setCurrentWidget(self.projectBrowser)
         elif self.layout == "Sidebars":
@@ -3544,10 +3290,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Project Browser window.
         """
         hasFocus = self.multiProjectBrowser.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.multiProjectBrowserDock)
-        else:
-            shown = self.__toggleWindow(self.multiProjectBrowser)
+        shown = self.__toggleWindow(self.multiProjectBrowser)
         if shown:
             self.__activateMultiProjectBrowser()
         else:
@@ -3558,10 +3301,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the project browser.
         """
-        if self.layout == "DockWindows":
-            self.multiProjectBrowserDock.show()
-            self.multiProjectBrowserDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.vToolboxDock.show()
             self.vToolbox.setCurrentWidget(self.multiProjectBrowser)
         elif self.layout == "Sidebars":
@@ -3576,7 +3316,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the debug viewer.
         """
         hasFocus = self.debugViewer.currentWidget().hasFocus()
-        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+        if self.layout in ["Toolboxes", "Sidebars"]:
             shown = self.__toggleWindow(self.debugViewerDock)
         else:
             shown = self.__toggleWindow(self.debugViewer)
@@ -3590,7 +3330,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the debug viewer.
         """
-        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+        if self.layout in ["Toolboxes", "Sidebars"]:
             self.debugViewerDock.show()
             self.debugViewerDock.raise_()
         else:
@@ -3602,10 +3342,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Shell window .
         """
         hasFocus = self.shell.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.shellDock)
-        else:
-            shown = self.__toggleWindow(self.shell)
+        shown = self.__toggleWindow(self.shell)
         if shown:
             self.__activateShell()
         else:
@@ -3617,17 +3354,14 @@ class UserInterface(QMainWindow):
         Private slot to handle the activation of the Shell window.
         """
         if self.embeddedShell:              # embedded in debug browser
-            if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+            if self.layout in ["Toolboxes", "Sidebars"]:
                 self.debugViewerDock.show()
                 self.debugViewerDock.raise_()
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.shellAssembly)
         else:                               # separate window
-            if self.layout == "DockWindows":
-                self.shellDock.show()
-                self.shellDock.raise_()
-            elif self.layout == "Toolboxes":
+            if self.layout == "Toolboxes":
                 self.hToolboxDock.show()
                 self.hToolbox.setCurrentWidget(self.shellAssembly)
             elif self.layout == "Sidebars":
@@ -3642,10 +3376,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Terminal window .
         """
         hasFocus = self.terminal.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.terminalDock)
-        else:
-            shown = self.__toggleWindow(self.terminal)
+        shown = self.__toggleWindow(self.terminal)
         if shown:
             self.__activateTerminal()
         else:
@@ -3656,10 +3387,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Terminal window.
         """
-        if self.layout == "DockWindows":
-            self.terminalDock.show()
-            self.terminalDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolbox.setCurrentWidget(self.terminalAssembly)
         elif self.layout == "Sidebars":
@@ -3674,10 +3402,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Log Viewer window.
         """
         hasFocus = self.logViewer.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.logViewerDock)
-        else:
-            shown = self.__toggleWindow(self.logViewer)
+        shown = self.__toggleWindow(self.logViewer)
         if shown:
             self.__activateLogViewer()
         else:
@@ -3688,10 +3413,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Log Viewer.
         """
-        if self.layout == "DockWindows":
-            self.logViewerDock.show()
-            self.logViewerDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolbox.setCurrentWidget(self.logViewer)
         elif self.layout == "Sidebars":
@@ -3706,10 +3428,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Task Viewer window.
         """
         hasFocus = self.taskViewer.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.taskViewerDock)
-        else:
-            shown = self.__toggleWindow(self.taskViewer)
+        shown = self.__toggleWindow(self.taskViewer)
         if shown:
             self.__activateTaskViewer()
         else:
@@ -3720,10 +3439,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Task Viewer.
         """
-        if self.layout == "DockWindows":
-            self.taskViewerDock.show()
-            self.taskViewerDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolbox.setCurrentWidget(self.taskViewer)
         elif self.layout == "Sidebars":
@@ -3738,10 +3454,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Template Viewer window.
         """
         hasFocus = self.templateViewer.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.templateViewerDock)
-        else:
-            shown = self.__toggleWindow(self.templateViewer)
+        shown = self.__toggleWindow(self.templateViewer)
         if shown:
             self.__activateTemplateViewer()
         else:
@@ -3752,10 +3465,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Template Viewer.
         """
-        if self.layout == "DockWindows":
-            self.templateViewerDock.show()
-            self.templateViewerDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.vToolboxDock.show()
             self.vToolbox.setCurrentWidget(self.templateViewer)
         elif self.layout == "Sidebars":
@@ -3770,10 +3480,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the File Browser window.
         """
         hasFocus = self.browser.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.browserDock)
-        else:
-            shown = self.__toggleWindow(self.browser)
+        shown = self.__toggleWindow(self.browser)
         if shown:
             self.__activateBrowser()
         else:
@@ -3785,10 +3492,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the activation of the file browser.
         """
         if self.embeddedFileBrowser == 0:   # separate window
-            if self.layout == "DockWindows":
-                self.browserDock.show()
-                self.browserDock.raise_()
-            elif self.layout == "Toolboxes":
+            if self.layout == "Toolboxes":
                 self.vToolboxDock.show()
                 self.vToolbox.setCurrentWidget(self.browser)
             elif self.layout == "Sidebars":
@@ -3797,17 +3501,14 @@ class UserInterface(QMainWindow):
             else:
                 self.browser.show()
         elif self.embeddedFileBrowser == 1:  # embedded in debug browser
-            if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+            if self.layout in ["Toolboxes", "Sidebars"]:
                 self.debugViewerDock.show()
                 self.debugViewerDock.raise_()
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.browser)
         else:                               # embedded in project browser
-            if self.layout == "DockWindows":
-                self.projectBrowserDock.show()
-                self.projectBrowserDock.raise_()
-            elif self.layout == "Toolboxes":
+            if self.layout == "Toolboxes":
                 self.vToolboxDock.show()
                 self.vToolbox.setCurrentWidget(self.projectBrowser)
             elif self.layout == "Sidebars":
@@ -3871,7 +3572,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the cooperation window.
         """
         hasFocus = self.cooperation.hasFocus()
-        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+        if self.layout in ["Toolboxes", "Sidebars"]:
             shown = self.__toggleWindow(self.cooperationDock)
         else:
             shown = self.__toggleWindow(self.cooperation)
@@ -3885,7 +3586,7 @@ class UserInterface(QMainWindow):
         """
         Public slot to handle the activation of the cooperation window.
         """
-        if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
+        if self.layout in ["Toolboxes", "Sidebars"]:
             self.cooperationDock.show()
             self.cooperationDock.raise_()
         else:
@@ -3897,10 +3598,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Symbols Viewer window.
         """
         hasFocus = self.symbolsViewer.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.symbolsDock)
-        else:
-            shown = self.__toggleWindow(self.symbolsViewer)
+        shown = self.__toggleWindow(self.symbolsViewer)
         if shown:
             self.__activateSymbolsViewer()
         else:
@@ -3911,10 +3609,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Symbols Viewer.
         """
-        if self.layout == "DockWindows":
-            self.symbolsDock.show()
-            self.symbolsDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.vToolboxDock.show()
             self.vToolbox.setCurrentWidget(self.symbolsViewer)
         elif self.layout == "Sidebars":
@@ -3929,10 +3624,7 @@ class UserInterface(QMainWindow):
         Private slot to handle the toggle of the Numbers Viewer window.
         """
         hasFocus = self.numbersViewer.hasFocus()
-        if self.layout == "DockWindows":
-            shown = self.__toggleWindow(self.numbersDock)
-        else:
-            shown = self.__toggleWindow(self.numbersViewer)
+        shown = self.__toggleWindow(self.numbersViewer)
         if shown:
             self.__activateNumbersViewer()
         else:
@@ -3943,10 +3635,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the activation of the Numbers Viewer.
         """
-        if self.layout == "DockWindows":
-            self.numbersDock.show()
-            self.numbersDock.raise_()
-        elif self.layout == "Toolboxes":
+        if self.layout == "Toolboxes":
             self.vToolboxDock.show()
             self.vToolbox.setCurrentWidget(self.numbersViewer)
         elif self.layout == "Sidebars":
@@ -5565,26 +5254,6 @@ class UserInterface(QMainWindow):
         Preferences.setGeometry("MainMaximized", self.isMaximized())
         if not self.isMaximized():
             Preferences.setGeometry("MainGeometry", self.saveGeometry())
-        if self.layout == "FloatingWindows":      # floating windows
-            windows = {
-                "ProjectBrowser": self.projectBrowser,
-                "DebugViewer": self.debugViewer,
-                "LogViewer": self.logViewer,
-                "Shell": self.shell,
-                "FileBrowser": self.browser,
-                "TaskViewer": self.taskViewer,
-                "TemplateViewer": self.templateViewer,
-                "MultiProjectBrowser": self.multiProjectBrowser,
-            }
-            if self.embeddedShell:
-                del windows["Shell"]
-            if self.embeddedFileBrowser:
-                del windows["FileBrowser"]
-            for window, i in zip(self.windows, list(range(len(self.windows)))):
-                if window is not None:
-                    self.profiles[self.currentProfile][2][i] = \
-                        bytes(window.saveGeometry())
-
         self.browser.saveToplevelDirs()
         
         Preferences.setUI("ToolbarManagerState", self.toolbarManager.saveState())

@@ -10489,8 +10489,6 @@
       <keyword name="UserInterface.__configViewProfiles" id="UserInterface.__configViewProfiles" ref="eric5.UI.UserInterface.html#UserInterface.__configViewProfiles" />
       <keyword name="UserInterface.__configureDockareaCornerUsage" id="UserInterface.__configureDockareaCornerUsage" ref="eric5.UI.UserInterface.html#UserInterface.__configureDockareaCornerUsage" />
       <keyword name="UserInterface.__createDockWindow" id="UserInterface.__createDockWindow" ref="eric5.UI.UserInterface.html#UserInterface.__createDockWindow" />
-      <keyword name="UserInterface.__createDockWindowsLayout" id="UserInterface.__createDockWindowsLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createDockWindowsLayout" />
-      <keyword name="UserInterface.__createFloatingWindowsLayout" id="UserInterface.__createFloatingWindowsLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createFloatingWindowsLayout" />
       <keyword name="UserInterface.__createLayout" id="UserInterface.__createLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createLayout" />
       <keyword name="UserInterface.__createSidebarsLayout" id="UserInterface.__createSidebarsLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createSidebarsLayout" />
       <keyword name="UserInterface.__createToolboxesLayout" id="UserInterface.__createToolboxesLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createToolboxesLayout" />

@@ -1050,7 +1050,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Preferences/ConfigurationPages/EditorAPIsPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorHighlightersPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui</Form>
-    <Form>Preferences/ViewProfileDialog.ui</Form>
     <Form>Preferences/ShortcutsDialog.ui</Form>
     <Form>Preferences/ShortcutDialog.ui</Form>
     <Form>Preferences/ToolConfigurationDialog.ui</Form>

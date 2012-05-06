@@ -9,7 +9,6 @@ Module implementing a dialog to configure the various view profiles.
 
 from PyQt4.QtGui import QDialog
 
-from .Ui_ViewProfileDialog import Ui_ViewProfileDialog
 from .Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
 from .Ui_ViewProfileSidebarsDialog import Ui_ViewProfileSidebarsDialog
 
@@ -39,7 +38,7 @@ class ViewProfileDialog(QDialog):
         elif self.__layout == "Sidebars":
             self.ui = Ui_ViewProfileSidebarsDialog()
         else:
-            self.ui = Ui_ViewProfileDialog()
+            raise ValueError("Illegal layout given ({0}).".format(self.__layout))
         self.ui.setupUi(self)
         
         self.profiles = profiles
@@ -52,25 +51,6 @@ class ViewProfileDialog(QDialog):
             profile = self.profiles["edit"][5]
             self.ui.epvtCheckBox.setChecked(profile[0])
             self.ui.ephtCheckBox.setChecked(profile[1])
-        else:
-            self.ui.eppbCheckBox.setChecked(profile[0])
-            if separateBrowser:
-                self.ui.epfbCheckBox.setChecked(profile[1])
-            else:
-                self.ui.epfbCheckBox.setChecked(False)
-                self.ui.epfbCheckBox.setEnabled(False)
-            if separateShell:
-                self.ui.eppsCheckBox.setChecked(profile[3])
-            else:
-                self.ui.eppsCheckBox.setChecked(False)
-                self.ui.eppsCheckBox.setEnabled(False)
-            self.ui.eplvCheckBox.setChecked(profile[4])
-            self.ui.eptvCheckBox.setChecked(profile[5])
-            self.ui.eptevCheckBox.setChecked(profile[6])
-            self.ui.epmpbCheckBox.setChecked(profile[7])
-            self.ui.eptwCheckBox.setChecked(profile[8])
-            self.ui.epsyCheckBox.setChecked(profile[10])
-            self.ui.epnuCheckBox.setChecked(profile[11])
         
         # set the debug profile
         profile = self.profiles["debug"][0]
@@ -80,25 +60,6 @@ class ViewProfileDialog(QDialog):
             profile = self.profiles["edit"][5]
             self.ui.dpvtCheckBox.setChecked(profile[0])
             self.ui.dphtCheckBox.setChecked(profile[1])
-        else:
-            self.ui.dppbCheckBox.setChecked(profile[0])
-            if separateBrowser:
-                self.ui.dpfbCheckBox.setChecked(profile[1])
-            else:
-                self.ui.dpfbCheckBox.setChecked(False)
-                self.ui.dpfbCheckBox.setEnabled(False)
-            if separateShell:
-                self.ui.dppsCheckBox.setChecked(profile[3])
-            else:
-                self.ui.dppsCheckBox.setChecked(False)
-                self.ui.dppsCheckBox.setEnabled(False)
-            self.ui.dplvCheckBox.setChecked(profile[4])
-            self.ui.dptvCheckBox.setChecked(profile[5])
-            self.ui.dptevCheckBox.setChecked(profile[6])
-            self.ui.dpmpbCheckBox.setChecked(profile[7])
-            self.ui.dptwCheckBox.setChecked(profile[8])
-            self.ui.dpsyCheckBox.setChecked(profile[10])
-            self.ui.dpnuCheckBox.setChecked(profile[11])
     
     def getProfiles(self):
         """
@@ -111,48 +72,16 @@ class ViewProfileDialog(QDialog):
             # get the edit profile
             self.profiles["edit"][0][2] = self.ui.epdbCheckBox.isChecked()
             self.profiles["edit"][0][9] = self.ui.epcoCheckBox.isChecked()
-            self.profiles["edit"][5] = [\
+            self.profiles["edit"][5] = [
                 self.ui.epvtCheckBox.isChecked(),
                 self.ui.ephtCheckBox.isChecked(),
             ]
             # get the debug profile
             self.profiles["debug"][0][2] = self.ui.dpdbCheckBox.isChecked()
             self.profiles["debug"][0][9] = self.ui.dpcoCheckBox.isChecked()
-            self.profiles["debug"][5] = [\
+            self.profiles["debug"][5] = [
                 self.ui.dpvtCheckBox.isChecked(),
                 self.ui.dphtCheckBox.isChecked(),
-            ]
-        else:
-            # get the edit profile
-            self.profiles["edit"][0] = [\
-                self.ui.eppbCheckBox.isChecked(),
-                self.ui.epfbCheckBox.isChecked(),
-                self.ui.epdbCheckBox.isChecked(),
-                self.ui.eppsCheckBox.isChecked(),
-                self.ui.eplvCheckBox.isChecked(),
-                self.ui.eptvCheckBox.isChecked(),
-                self.ui.eptevCheckBox.isChecked(),
-                self.ui.epmpbCheckBox.isChecked(),
-                self.ui.eptwCheckBox.isChecked(),
-                self.ui.epcoCheckBox.isChecked(),
-                self.ui.epsyCheckBox.isChecked(),
-                self.ui.epnuCheckBox.isChecked(),
-            ]
-            
-            # get the debug profile
-            self.profiles["debug"][0] = [\
-                self.ui.dppbCheckBox.isChecked(),
-                self.ui.dpfbCheckBox.isChecked(),
-                self.ui.dpdbCheckBox.isChecked(),
-                self.ui.dppsCheckBox.isChecked(),
-                self.ui.dplvCheckBox.isChecked(),
-                self.ui.dptvCheckBox.isChecked(),
-                self.ui.dptevCheckBox.isChecked(),
-                self.ui.dpmpbCheckBox.isChecked(),
-                self.ui.dptwCheckBox.isChecked(),
-                self.ui.dpcoCheckBox.isChecked(),
-                self.ui.dpsyCheckBox.isChecked(),
-                self.ui.dpnuCheckBox.isChecked(),
             ]
         
         return self.profiles

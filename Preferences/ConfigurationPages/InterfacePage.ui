@@ -451,22 +451,12 @@
        </property>
        <item>
         <property name="text">
-         <string>Dock Windows</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Floating Windows </string>
+         <string>Sidebars</string>
         </property>
        </item>
        <item>
         <property name="text">
          <string>Toolboxes</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Sidebars</string>
         </property>
        </item>
       </widget>

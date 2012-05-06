@@ -97,10 +97,10 @@ class Prefs(object):
         "StyleSheet": "",
         "ViewManager": "tabview",
         "LayoutType": "Sidebars",
-        # allowed values are "DockWindows", "FloatingWindows", "Toolboxes" and "Sidebars"
-        "LayoutShellEmbedded": 0,          # 0 = separate
+        # allowed values are "Toolboxes" and "Sidebars"
+        "LayoutShellEmbedded": 0,           # 0 = separate
                                             # 1 = embedded in debug browser
-        "LayoutFileBrowserEmbedded": 1,    # 0 = separate
+        "LayoutFileBrowserEmbedded": 1,     # 0 = separate
                                             # 1 = embedded in debug browser
                                             # 2 = embedded in project browser
         "BrowsersListFoldersFirst": True,
@@ -128,11 +128,11 @@ class Prefs(object):
                     # visibility (0)
                     [True, False, False, True, True, True, True,  True,
                      True, True,  True,  True],
-                    # saved state main window with dock windows (1)
+                    # saved state main window with dock windows (1) OBSOLETE
                     b"",
-                    # saved states floating windows (2)
+                    # saved states floating windows (2) OBSOLETE
                     [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3)
+                    # saved state main window with floating windows (3) OBSOLETE
                     b"",
                     # saved state main window with toolbox windows (4)
                     b"",
@@ -146,11 +146,11 @@ class Prefs(object):
                     # visibility (0)
                     [False, False, True,  True, True, True, False, False,
                      True,  False, False, False],
-                    # saved state main window with dock windows (1)
+                    # saved state main window with dock windows (1) OBSOLETE
                     b"",
-                    # saved states floating windows (2)
+                    # saved states floating windows (2) OBSOLETE
                     [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3)
+                    # saved state main window with floating windows (3) OBSOLETE
                     b"",
                     # saved state main window with toolbox windows (4)
                     b"",
@@ -205,7 +205,7 @@ class Prefs(object):
         
         "LogStdErrColour": QColor(Qt.red),
     }
-    viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][2])
+    viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][0])
     
     iconsDefaults = {
         "Path": [],
@@ -1213,9 +1213,12 @@ def getUILayout(prefClass=Prefs):
     @return the UI layout as a tuple of main layout, flag for
         an embedded shell and a value for an embedded file browser
     """
-    layout = (
-        prefClass.settings.value("UI/LayoutType",
-            prefClass.uiDefaults["LayoutType"]),
+    layoutType = prefClass.settings.value("UI/LayoutType",
+            prefClass.uiDefaults["LayoutType"])
+    if layoutType in ["DockWindows", "FloatingWindows"]:
+        # change old fashioned layouts to the modern default
+        layoutType = prefClass.uiDefaults["LayoutType"]
+    layout = (layoutType,
         int(prefClass.settings.value("UI/LayoutShellEmbedded",
             prefClass.uiDefaults["LayoutShellEmbedded"])),
         int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded",
@@ -1300,22 +1303,13 @@ def getUI(key, prefClass=Prefs):
     elif key == "ViewProfiles":
         profiles = prefClass.settings.value("UI/ViewProfiles")
         if profiles is not None:
-            if isinstance(profiles, str):
-                # just in case of an old structure
-                viewProfiles = eval(profiles)
-            else:
-                viewProfiles = profiles
+            viewProfiles = profiles
             for name in ["edit", "debug"]:
                 # adjust entries for individual windows
                 vpLength = len(viewProfiles[name][0])
                 if vpLength < prefClass.viewProfilesLength:
                     viewProfiles[name][0].extend(
                         prefClass.uiDefaults["ViewProfiles"][name][0][vpLength:])
-                
-                vpLength = len(viewProfiles[name][2])
-                if vpLength < prefClass.viewProfilesLength:
-                    viewProfiles[name][2].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][2][vpLength:])
                 
                 # adjust profile
                 vpLength = len(viewProfiles[name])
