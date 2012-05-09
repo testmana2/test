@@ -2542,10 +2542,10 @@ class HelpWindow(QMainWindow):
             # browsing history, search history, favicons, disk cache, cookies,
             # passwords, web databases, downloads
             (history, searches, favicons, cache, cookies,
-             passwords, databases, downloads) = \
+             passwords, databases, downloads, flashCookies, historyPeriod) = \
                 dlg.getData()
             if history:
-                self.historyManager().clear()
+                self.historyManager().clear(historyPeriod)
             if searches:
                 self.searchEdit.clear()
             if downloads:
@@ -2569,6 +2569,16 @@ class HelpWindow(QMainWindow):
                     for securityOrigin in QWebSecurityOrigin.allOrigins():
                         for database in securityOrigin.databases():
                             QWebDatabase.removeDatabase(database)
+            if flashCookies:
+                languages = Preferences.toList(
+                    Preferences.Prefs.settings.value("Help/AcceptLanguages",
+                        HelpLanguagesDialog.defaultAcceptLanguages()))
+                if languages:
+                    language = languages[0]
+                    langCode = language.split("[")[1][:2]
+                self.newTab("http://www.macromedia.com/support/documentation/"
+                            "{0}/flashplayer/help/settings_manager07.html".format(
+                            langCode))
         
     def __showEnginesConfigurationDialog(self):
         """

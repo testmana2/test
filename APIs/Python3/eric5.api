@@ -1684,6 +1684,7 @@ eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.AdBlockBlockedNetworkReply.r
 eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.AdBlockBlockedNetworkReply?1(request, rule, parent=None)
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.addCustomRule?4(rule="")
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.model?4()
+eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.on_updateSpinBox_valueChanged?4(value)
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.setCurrentIndex?4(index)
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog?1(parent=None)
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.addSubscription?4(subscription)
@@ -1732,6 +1733,7 @@ eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allRules?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.allow?4(urlString)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.block?4(urlString)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.changed?7
+eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.checkForUpdate?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.isEnabled?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.lastUpdate?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.location?4()
@@ -2326,7 +2328,7 @@ eric5.Helpviewer.History.HistoryManager.HistoryEntry?1(url=None, dateTime=None, 
 eric5.Helpviewer.History.HistoryManager.HistoryManager._addHistoryEntry?5(itm)
 eric5.Helpviewer.History.HistoryManager.HistoryManager._removeHistoryEntry?5(itm)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.addHistoryEntry?4(url)
-eric5.Helpviewer.History.HistoryManager.HistoryManager.clear?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.clear?4(period=0)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.close?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.daysToExpire?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.entryAdded?7
@@ -7185,7 +7187,7 @@ eric5.Utilities.Startup.loadTranslators?4(qtTransDir, app, translationFiles=())
 eric5.Utilities.Startup.loaded_translators?7
 eric5.Utilities.Startup.makeAppInfo?4(argv, name, arg, description, options=[])
 eric5.Utilities.Startup.setLibraryPaths?4()
-eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None)
+eric5.Utilities.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True)
 eric5.Utilities.Startup.usage?4(appinfo, optlen=12)
 eric5.Utilities.Startup.version?4(appinfo)
 eric5.Utilities._escape?8

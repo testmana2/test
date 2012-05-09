@@ -52,7 +52,8 @@ def main():
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
                                    createMainWidget,
-                                   quitOnLastWindowClosed=False)
+                                   quitOnLastWindowClosed=False,
+                                   raiseIt=False)
     sys.exit(res)
 
 if __name__ == '__main__':

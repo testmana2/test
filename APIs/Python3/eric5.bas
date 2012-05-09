@@ -59,7 +59,7 @@ BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBaseClasses.Class VisibilityMixin
+Class ClbrBase
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>305</width>
-    <height>221</height>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,6 +31,61 @@
     </widget>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QComboBox" name="historyCombo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Select the history period to be deleted</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Last Hour</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Last Day</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Last Week</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Last 4 Weeks</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Whole Period</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QCheckBox" name="searchCheckBox">
      <property name="toolTip">
       <string>Select to clear the search history</string>
@@ -49,7 +104,7 @@
       <string>Select to clear the download history</string>
      </property>
      <property name="text">
-      <string>Download History</string>
+      <string>Download &amp;History</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -119,6 +174,23 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="flashCookiesCheckBox">
+     <property name="toolTip">
+      <string>Select to clear cookies set by the Adobe Flash Player</string>
+     </property>
+     <property name="text">
+      <string>Cookies from Adobe &amp;Flash Player</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -132,6 +204,7 @@
  </widget>
  <tabstops>
   <tabstop>historyCheckBox</tabstop>
+  <tabstop>historyCombo</tabstop>
   <tabstop>searchCheckBox</tabstop>
   <tabstop>downloadsCheckBox</tabstop>
   <tabstop>cookiesCheckBox</tabstop>
@@ -139,6 +212,7 @@
   <tabstop>iconsCheckBox</tabstop>
   <tabstop>passwordsCheckBox</tabstop>
   <tabstop>databasesCheckBox</tabstop>
+  <tabstop>flashCookiesCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
@@ -150,12 +224,12 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>257</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
-     <y>274</y>
+     <y>252</y>
     </hint>
    </hints>
   </connection>
@@ -166,12 +240,28 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>295</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
-     <y>274</y>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>historyCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>historyCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>45</y>
     </hint>
    </hints>
   </connection>

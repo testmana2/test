@@ -83,16 +83,12 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.brTopButton.setChecked(True)
         
         layout = Preferences.getUILayout()
-        if layout[0] == "DockWindows":
+        if layout[0] == "Sidebars":
             index = 0
-        elif layout[0] == "FloatingWindows":
-            index = 1
         elif layout[0] == "Toolboxes":
-            index = 2
-        elif layout[0] == "Sidebars":
-            index = 3
+            index = 1
         else:
-            index = 3   # default for bad values
+            index = 0   # default for bad values
         self.layoutComboBox.setCurrentIndex(index)
         if layout[1] == 0:
             self.separateShellButton.setChecked(True)
@@ -178,13 +174,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         else:
             layout3 = 2
         if self.layoutComboBox.currentIndex() == 0:
-            layout1 = "DockWindows"
-        elif self.layoutComboBox.currentIndex() == 1:
-            layout1 = "FloatingWindows"
-        elif self.layoutComboBox.currentIndex() == 2:
-            layout1 = "Toolboxes"
-        elif self.layoutComboBox.currentIndex() == 3:
             layout1 = "Sidebars"
+        elif self.layoutComboBox.currentIndex() == 1:
+            layout1 = "Toolboxes"
         else:
             layout1 = "Sidebars"    # just in case
         layout = (layout1, layout2, layout3)

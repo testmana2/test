@@ -40,6 +40,12 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         if spacer:
             spacerItem = QSpacerItem(20, 1, QSizePolicy.Minimum, QSizePolicy.Expanding)
             self.verticalLayout.addItem(spacerItem)
+        else:
+            # change the size policy of the search combo if the spacer is not wanted,
+            # i.e. it is below the to be searched widget
+            sizePolicy = self.findtextCombo.sizePolicy()
+            sizePolicy.setHorizontalPolicy(QSizePolicy.Expanding)
+            self.findtextCombo.setSizePolicy(sizePolicy)
         
         self.__mainWindow = mainWindow
         self.__findBackwards = True
