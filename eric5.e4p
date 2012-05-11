@@ -1209,6 +1209,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
     <Form>Helpviewer/SiteInfo/SiteInfoDialog.ui</Form>
     <Form>Helpviewer/SslInfoWidget.ui</Form>
+    <Form>Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
