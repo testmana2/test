@@ -184,7 +184,7 @@ dictionary describing the application
 <hr /><hr />
 <a NAME="simpleAppStartup" ID="simpleAppStartup"></a>
 <h2>simpleAppStartup</h2>
-<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None</i>)
+<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True</i>)
 <p>
     Module function to start up an application that doesn't need a specialized start up.
 </p><p>
@@ -211,6 +211,9 @@ flag indicating to quit the application,
 </dd><dt><i>app=</i></dt>
 <dd>
 reference to the application object (QApplication or None)
+</dd><dt><i>raiseIt=</i></dt>
+<dd>
+flag indicating to raise the generated application window (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
