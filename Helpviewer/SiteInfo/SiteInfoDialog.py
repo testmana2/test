@@ -16,7 +16,12 @@ from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui import E5MessageBox, E5FileDialog
 
-from .Ui_SiteInfoDialog import Ui_SiteInfoDialog
+try:
+    from .Ui_SiteInfoDialog import Ui_SiteInfoDialog        # __IGNORE_WARNING__
+    SSL = True
+except ImportError:
+    from .Ui_SiteInfoNoSslDialog import Ui_SiteInfoDialog   # __IGNORE_WARNING__
+    SSL = False
 
 from ..Download.DownloadUtilities import dataString
 
@@ -46,7 +51,8 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         self.tabWidget.setTabIcon(0, UI.PixmapCache.getIcon("siteinfo-general.png"))
         self.tabWidget.setTabIcon(1, UI.PixmapCache.getIcon("siteinfo-media.png"))
         self.tabWidget.setTabIcon(2, UI.PixmapCache.getIcon("siteinfo-databases.png"))
-        self.tabWidget.setTabIcon(3, UI.PixmapCache.getIcon("siteinfo-security.png"))
+        if SSL:
+            self.tabWidget.setTabIcon(3, UI.PixmapCache.getIcon("siteinfo-security.png"))
         
         self.__mainFrame = browser.page().mainFrame()
         title = browser.title()
@@ -85,8 +91,11 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         if sslInfo is not None and sslInfo.isValid():
             self.securityLabel.setStyleSheet(SiteInfoDialog.okStyle)
             self.securityLabel.setText('<b>Connection is encrypted.</b>')
-            self.sslWidget.showCertificate(sslInfo)
-            self.securityDetailsButton.setEnabled(True)
+            if SSL:
+                self.sslWidget.showCertificate(sslInfo)
+                self.securityDetailsButton.setEnabled(True)
+            else:
+                self.securityDetailsButton.setEnabled(False)
         else:
             self.securityLabel.setStyleSheet(SiteInfoDialog.nokStyle)
             self.securityLabel.setText('<b>Connection is not encrypted.</b>')

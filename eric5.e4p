@@ -1300,6 +1300,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui</Form>
     <Form>Snapshot/SnapWidget.ui</Form>
     <Form>UI/SearchWidget.ui</Form>
+    <Form>Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
