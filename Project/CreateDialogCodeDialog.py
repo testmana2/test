@@ -323,8 +323,12 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
                                                 "impl_pyqt.py2.tmpl")
                 else:
-                    tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
-                                            "impl_pyqt.py.tmpl")
+                    if self.project.getProjectType() == "PySide":
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyside.py.tmpl")
+                    else:
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyqt.py.tmpl")
                 tmplFile = open(tmplName, 'r', encoding="utf-8")
                 template = tmplFile.read()
                 tmplFile.close()
@@ -394,7 +398,10 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             else:
                 pyqtSignatureFormat = '@pyqtSignature("{0}")'
         else:
-            pyqtSignatureFormat = '@pyqtSlot({0})'
+            if self.project.getProjectType() == "PySide":
+                pyqtSignatureFormat = '@Slot({0})'
+            else:
+                pyqtSignatureFormat = '@pyqtSlot({0})'
         for row in range(self.slotsModel.rowCount()):
             topItem = self.slotsModel.item(row)
             for childRow in range(topItem.rowCount()):
