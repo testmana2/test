@@ -621,6 +621,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
+                self.project.projectFormCompiled.emit(self.compiledFile)
             except IOError as msg:
                 if not self.noDialog:
                     E5MessageBox.information(self,
