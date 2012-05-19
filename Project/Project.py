@@ -78,6 +78,7 @@ class Project(QObject):
     @signal projectLanguageRemoved(str) emitted after a language was removed
     @signal projectFormAdded(str) emitted after a new form was added
     @signal projectFormRemoved(str) emitted after a form was removed
+    @signal projectFormCompiled(str) emitted after a form was compiled
     @signal projectSourceAdded(str) emitted after a new source file was added
     @signal projectSourceRemoved(str) emitted after a source was removed
     @signal projectInterfaceAdded(str) emitted after a new IDL file was added
@@ -123,6 +124,7 @@ class Project(QObject):
     projectLanguageRemoved = pyqtSignal(str)
     projectFormAdded = pyqtSignal(str)
     projectFormRemoved = pyqtSignal(str)
+    projectFormCompiled = pyqtSignal(str)
     projectSourceAdded = pyqtSignal(str)
     projectSourceRemoved = pyqtSignal(str)
     projectInterfaceAdded = pyqtSignal(str)
