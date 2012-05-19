@@ -5493,6 +5493,7 @@ eric5.Project.Project.Project.projectClosed?7
 eric5.Project.Project.Project.projectClosedHooks?7
 eric5.Project.Project.Project.projectFileRenamed?7
 eric5.Project.Project.Project.projectFormAdded?7
+eric5.Project.Project.Project.projectFormCompiled?7
 eric5.Project.Project.Project.projectFormRemoved?7
 eric5.Project.Project.Project.projectInterfaceAdded?7
 eric5.Project.Project.Project.projectInterfaceRemoved?7
