@@ -35,7 +35,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     """
     Class implementing a dialog to generate code for a Qt4 dialog.
     """
-    DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizard"}
+    DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizardPage"}
     
     def __init__(self, formName, project, parent=None):
         """
