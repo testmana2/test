@@ -36,6 +36,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     Class implementing a dialog to generate code for a Qt4 dialog.
     """
     DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizard"}
+    Separator = 25 * "="
     
     def __init__(self, formName, project, parent=None):
         """
@@ -88,17 +89,22 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             except ImportError:
                 pass
         
-        # NOTE: improve parsing by recording unrecognized classes and allowing the
-        #       user to select one
         if self.__module is not None:
             self.filenameEdit.setText(self.srcFile)
             
             classesList = []
+            vagueClassesList = []
             for cls in list(self.__module.classes.values()):
                 if not set(cls.super).isdisjoint(CreateDialogCodeDialog.DialogClasses):
                     classesList.append(cls.name)
+                else:
+                    vagueClassesList.append(cls.name)
             classesList.sort()
             self.classNameCombo.addItems(classesList)
+            if vagueClassesList:
+                if classesList:
+                    self.classNameCombo.addItem(CreateDialogCodeDialog.Separator)
+                self.classNameCombo.addItems(sorted(vagueClassesList))
         
         if os.path.exists(self.srcFile) and \
            self.__module is not None and \
@@ -455,7 +461,14 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
         @param index index of the activated item (integer)
         """
-        self.__updateSlotsModel()
+        if self.classNameCombo.currentText() == CreateDialogCodeDialog.Separator:
+            self.okButton.setEnabled(False)
+            self.filterEdit.clear()
+            self.slotsModel.clear()
+            self.slotsModel.setHorizontalHeaderLabels([""])
+        else:
+            self.okButton.setEnabled(True)
+            self.__updateSlotsModel()
         
     def on_filterEdit_textChanged(self, text):
         """
