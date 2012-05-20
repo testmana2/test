@@ -1801,6 +1801,9 @@ class Project(QObject):
             return
             
         dlg = PropertiesDialog(self, True)
+        # TODO: add check box to dialog asking for a version controlled project
+        #       option should be disabled, if no VCS is available
+        #       create a separate function to determine availability of VCS systems
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
             dlg.storeData()
@@ -1924,6 +1927,7 @@ class Project(QObject):
                             vcsList = []
                             for vcsSystemStr, vcsSystemDisplay in vcsData:
                                 vcsList.append(vcsSystemDisplay)
+                            # TODO: only give the selection if there is more than one entry
                             res, vcs_ok = QInputDialog.getItem(
                                 None,
                                 self.trUtf8("New Project"),
@@ -1971,6 +1975,8 @@ class Project(QObject):
             
             # put the project under VCS control
             if self.vcs is None:
+                # TODO: only follow this path, if a VCS is available and user wants
+                #       a versioned project
                 vcsSystemsDict = e5App().getObject("PluginManager")\
                     .getPluginDisplayStrings("version_control")
                 vcsSystemsDisplay = [self.trUtf8("None")]
@@ -3756,6 +3762,7 @@ class Project(QObject):
             self.vcsProjectHelper = vcs.vcsGetProjectHelper(self)
             self.vcsBasicHelper = False
         if self.vcsMenu is not None:
+            # TODO: disable menu if no VCS is available
             self.vcsProjectHelper.initMenu(self.vcsMenu)
         return vcs
         

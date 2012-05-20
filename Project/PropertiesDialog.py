@@ -38,6 +38,9 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
+        # TODO: add a checkbox to select if project should be version controlled
+        #       only show the checkbox, if new is true
+        #       disable checkbox, if no VCS is available
         super().__init__(parent)
         if name:
             self.setObjectName(name)
