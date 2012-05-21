@@ -257,6 +257,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.project.pdata["PROJECTTYPE"] = [projectType]
         self.project.pdata["EOL"] = [self.eolComboBox.currentIndex()]
         
+        # TODO: store state of VCS checkbox to self.project.vcsRequested
+        
         if self.spellPropertiesDlg is not None:
             self.spellPropertiesDlg.storeData()
         

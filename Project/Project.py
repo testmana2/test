@@ -327,6 +327,7 @@ class Project(QObject):
         self.subdirs = [""]  # record the project dir as a relative path (i.e. empty path)
         self.otherssubdirs = []
         self.vcs = None
+        self.vcsRequested = False
         self.dbgCmdline = ''
         self.dbgWd = ''
         self.dbgEnv = ''
@@ -1927,7 +1928,6 @@ class Project(QObject):
                             vcsList = []
                             for vcsSystemStr, vcsSystemDisplay in vcsData:
                                 vcsList.append(vcsSystemDisplay)
-                            # TODO: only give the selection if there is more than one entry
                             res, vcs_ok = QInputDialog.getItem(
                                 None,
                                 self.trUtf8("New Project"),
@@ -1974,9 +1974,7 @@ class Project(QObject):
                         break
             
             # put the project under VCS control
-            if self.vcs is None:
-                # TODO: only follow this path, if a VCS is available and user wants
-                #       a versioned project
+            if self.vcs is None and self.vcsSoftwareAvailable() and self.vcsRequested:
                 vcsSystemsDict = e5App().getObject("PluginManager")\
                     .getPluginDisplayStrings("version_control")
                 vcsSystemsDisplay = [self.trUtf8("None")]
@@ -3312,6 +3310,7 @@ class Project(QObject):
         self.vcsMenu = QMenu(self.trUtf8('&Version Control'), menu)
         self.vcsMenu.setTearOffEnabled(True)
         self.vcsProjectHelper.initMenu(self.vcsMenu)
+        self.vcsMenu.setEnabled(self.vcsSoftwareAvailable())
         self.checksMenu = QMenu(self.trUtf8('Chec&k'), menu)
         self.checksMenu.setTearOffEnabled(True)
         self.menuShow = QMenu(self.trUtf8('Sho&w'), menu)
@@ -3762,8 +3761,8 @@ class Project(QObject):
             self.vcsProjectHelper = vcs.vcsGetProjectHelper(self)
             self.vcsBasicHelper = False
         if self.vcsMenu is not None:
-            # TODO: disable menu if no VCS is available
             self.vcsProjectHelper.initMenu(self.vcsMenu)
+            self.vcsMenu.setEnabled(self.vcsSoftwareAvailable())
         return vcs
         
     def __showContextMenuVCS(self):
@@ -3773,6 +3772,17 @@ class Project(QObject):
         self.vcsProjectHelper.showMenu()
         if self.vcsBasicHelper:
             self.showMenu.emit("VCS", self.vcsMenu)
+    
+    def vcsSoftwareAvailable(self):
+        """
+        Public method to check, if some supported VCS software is available
+        to the IDE.
+        
+        @return flag indicating availability of VCS software (boolean)
+        """
+        vcsSystemsDict = e5App().getObject("PluginManager")\
+            .getPluginDisplayStrings("version_control")
+        return len(vcsSystemsDict) != 0
     
     #########################################################################
     ## Below is the interface to the checker tools
