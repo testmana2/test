@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -144,12 +145,12 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="130"/>
         <source>Update Period (days):</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodo de Actualización (días):</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="137"/>
         <source>Enter the update period (1 to 14 days)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el periodo de actualización (1 a 14 días)</translation>
     </message>
 </context>
 <context>
@@ -1769,8 +1770,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2011,8 +2012,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -13374,7 +13375,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -13758,47 +13759,47 @@ Razón: {0}</translation>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="57"/>
         <source>Select the history period to be deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el período de historial a borrar</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="61"/>
         <source>Last Hour</source>
-        <translation type="unfinished"></translation>
+        <translation>Última Hora</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="66"/>
         <source>Last Day</source>
-        <translation type="unfinished"></translation>
+        <translation>Último Día</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="71"/>
         <source>Last Week</source>
-        <translation type="unfinished"></translation>
+        <translation>Última Semana</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="76"/>
         <source>Last 4 Weeks</source>
-        <translation type="unfinished"></translation>
+        <translation>Últimas 4 Semanas</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="81"/>
         <source>Whole Period</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodo Completo</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="186"/>
         <source>Select to clear cookies set by the Adobe Flash Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para borrar las cookies ubicadas por Adobe Flash Player</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="107"/>
         <source>Download &amp;History</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargar &amp;Historial</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="189"/>
         <source>Cookies from Adobe &amp;Flash Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies de Adobe &amp;Flash Player</translation>
     </message>
 </context>
 <context>
@@ -17627,12 +17628,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="60"/>
         <source>Select to amend the last commit (leave message empty to keep it)</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para enmendar el último commit (dejar sin mensaje para conservar el existente)</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="63"/>
         <source>Amend the last commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Enmendar último commit</translation>
     </message>
 </context>
 <context>
