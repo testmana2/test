@@ -38,9 +38,6 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        # TODO: add a checkbox to select if project should be version controlled
-        #       only show the checkbox, if new is true
-        #       disable checkbox, if no VCS is available
         super().__init__(parent)
         if name:
             self.setObjectName(name)
@@ -118,6 +115,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.vcsLabel.setText(
                     self.trUtf8("The project is not version controlled."))
                 self.vcsInfoButton.hide()
+            self.vcsCheckBox.hide()
         else:
             self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText("Python3"))
@@ -129,6 +127,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
             self.vcsInfoButton.hide()
+            if not self.project.vcsSoftwareAvailable():
+                self.vcsCheckBox.hide()
         
     @pyqtSlot()
     def on_dirButton_clicked(self):
@@ -257,7 +257,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.project.pdata["PROJECTTYPE"] = [projectType]
         self.project.pdata["EOL"] = [self.eolComboBox.currentIndex()]
         
-        # TODO: store state of VCS checkbox to self.project.vcsRequested
+        self.project.vcsRequested = self.vcsCheckBox.isChecked()
         
         if self.spellPropertiesDlg is not None:
             self.spellPropertiesDlg.storeData()

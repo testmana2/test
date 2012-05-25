@@ -1802,9 +1802,6 @@ class Project(QObject):
             return
             
         dlg = PropertiesDialog(self, True)
-        # TODO: add check box to dialog asking for a version controlled project
-        #       option should be disabled, if no VCS is available
-        #       create a separate function to determine availability of VCS systems
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
             dlg.storeData()

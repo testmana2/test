@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>559</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -323,6 +323,16 @@
     </layout>
    </item>
    <item>
+    <widget class="QCheckBox" name="vcsCheckBox">
+     <property name="toolTip">
+      <string>Select to create a version controlled project</string>
+     </property>
+     <property name="text">
+      <string>Version Controlled Project</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="_2">
      <item>
       <widget class="QLabel" name="vcsLabel">
@@ -363,6 +373,9 @@
     </widget>
    </item>
   </layout>
+  <zorder>buttonBox</zorder>
+  <zorder>vcsInfoButton</zorder>
+  <zorder>vcsCheckBox</zorder>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
@@ -382,6 +395,7 @@
   <tabstop>authorEdit</tabstop>
   <tabstop>emailEdit</tabstop>
   <tabstop>descriptionEdit</tabstop>
+  <tabstop>vcsCheckBox</tabstop>
   <tabstop>vcsInfoButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
