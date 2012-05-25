@@ -5364,6 +5364,7 @@ eric5.Project.AddFoundFilesDialog.AddFoundFilesDialog?1(files, parent=None, name
 eric5.Project.AddLanguageDialog.AddLanguageDialog.getSelectedLanguage?4()
 eric5.Project.AddLanguageDialog.AddLanguageDialog?1(parent=None, name=None)
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.DialogClasses?7
+eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.Separator?7
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.initError?4()
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_buttonBox_clicked?4(button)
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_classNameCombo_activated?4(index)
@@ -5537,6 +5538,7 @@ eric5.Project.Project.Project.unregisterProjectType?4(type_)
 eric5.Project.Project.Project.updateFileTypes?4()
 eric5.Project.Project.Project.useSystemEol?4()
 eric5.Project.Project.Project.userKeynames?7
+eric5.Project.Project.Project.vcsSoftwareAvailable?4()
 eric5.Project.Project.Project.vcsStatusMonitorStatus?7
 eric5.Project.Project.Project.writeTasks?4()
 eric5.Project.Project.Project?1(parent=None, filename=None)

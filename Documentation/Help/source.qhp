@@ -7483,6 +7483,7 @@
       <keyword name="Project.unregisterProjectType" id="Project.unregisterProjectType" ref="eric5.Project.Project.html#Project.unregisterProjectType" />
       <keyword name="Project.updateFileTypes" id="Project.updateFileTypes" ref="eric5.Project.Project.html#Project.updateFileTypes" />
       <keyword name="Project.useSystemEol" id="Project.useSystemEol" ref="eric5.Project.Project.html#Project.useSystemEol" />
+      <keyword name="Project.vcsSoftwareAvailable" id="Project.vcsSoftwareAvailable" ref="eric5.Project.Project.html#Project.vcsSoftwareAvailable" />
       <keyword name="Project.writeTasks" id="Project.writeTasks" ref="eric5.Project.Project.html#Project.writeTasks" />
       <keyword name="ProjectBaseBrowser" id="ProjectBaseBrowser" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser" />
       <keyword name="ProjectBaseBrowser (Constructor)" id="ProjectBaseBrowser (Constructor)" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__init__" />
