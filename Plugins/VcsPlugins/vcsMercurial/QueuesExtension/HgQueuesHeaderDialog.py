@@ -89,7 +89,8 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
             
-            out, err = self.__hgClient.runcommand(args)
+            out, err = self.__hgClient.runcommand(args,
+                output=self.__showOutput, error=self.__showError)
             if err:
                 self.__showError(err)
             if out:
