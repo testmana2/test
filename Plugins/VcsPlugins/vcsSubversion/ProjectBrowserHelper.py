@@ -270,6 +270,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsMenuActions.append(act)
+        # TODO: rename to "Conflict resolved (and subsequent occurrances)"
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
         if self.vcs.version >= (1, 2, 0):

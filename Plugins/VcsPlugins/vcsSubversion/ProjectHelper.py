@@ -86,6 +86,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
+        # TODO: remove this action from the menu
         self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
                 UI.PixmapCache.getIcon("vcsAdd.png"),
                 self.trUtf8('&Add to repository...'), 0, 0, self, 'subversion_add')
@@ -282,6 +283,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsSwitchAct.triggered[()].connect(self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
         
+        # TODO: rename to "Conflicts resolved"
         self.vcsResolveAct = E5Action(self.trUtf8('Resolve conflicts'),
                 self.trUtf8('Resolve con&flicts'),
                 0, 0, self, 'subversion_resolve')

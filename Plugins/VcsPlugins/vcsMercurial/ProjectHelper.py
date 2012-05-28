@@ -219,6 +219,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsExportAct.triggered[()].connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
+        # TODO: remove this action from the menu
         self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
                 UI.PixmapCache.getIcon("vcsAdd.png"),
                 self.trUtf8('&Add to repository...'), 0, 0, self, 'mercurial_add')
@@ -385,7 +386,8 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
-    
+        
+        # TODO: rename to "Conflicts resolved"
         self.vcsResolveAct = E5Action(self.trUtf8('Resolve conflicts'),
                 self.trUtf8('Resolve con&flicts'),
                 0, 0, self, 'mercurial_resolve')

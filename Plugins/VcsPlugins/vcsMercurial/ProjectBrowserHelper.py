@@ -241,6 +241,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
+        # TODO: rename to "Conflict resolved (and subsequent occurrances)"
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()

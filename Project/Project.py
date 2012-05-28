@@ -1946,6 +1946,7 @@ class Project(QObject):
                         self.vcs = self.initVCS()
                         self.setDirty(True)
                         if self.vcs is not None:
+                            # TODO: ensure a minimal VCS configuration (mgmt dir excluded)
                             # edit VCS command options
                             vcores = E5MessageBox.yesNo(self.ui,
                                 self.trUtf8("New Project"),
@@ -2003,6 +2004,7 @@ class Project(QObject):
                         self.vcs = self.initVCS()
                 self.setDirty(True)
                 if self.vcs is not None:
+                    # TODO: ensure a minimal VCS configuration (mgmt dir excluded)
                     # edit VCS command options
                     vcores = E5MessageBox.yesNo(self.ui,
                         self.trUtf8("New Project"),
