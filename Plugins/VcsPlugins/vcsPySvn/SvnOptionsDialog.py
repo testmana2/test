@@ -88,11 +88,13 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         if protocol == "file://":
             self.networkPath = self.vcsUrlEdit.text()
             self.vcsUrlEdit.setText(self.localPath)
+            self.vcsUrlLabel.setText(self.trUtf8("Pat&h:"))
             self.localProtocol = True
         else:
             if self.localProtocol:
                 self.localPath = self.vcsUrlEdit.text()
                 self.vcsUrlEdit.setText(self.networkPath)
+                self.vcsUrlLabel.setText(self.trUtf8("&URL:"))
                 self.localProtocol = False
         
     def getData(self):

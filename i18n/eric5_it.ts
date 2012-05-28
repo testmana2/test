@@ -21016,17 +21016,17 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished">Messaggio di commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="105"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="106"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="105"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="106"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="192"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="193"/>
         <source>Error: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -40622,12 +40622,12 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
         <translation>Seleziona la directory del progetto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="13"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="14"/>
         <source>New Project from Repository</source>
         <translation>Nuovo progetto dal repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="16"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;New Project from Repository Dialog&lt;/b&gt;
 &lt;p&gt;Enter the various repository infos into the entry fields. These values are used, when the new project is retrieved from the repository. If the checkbox is selected, the URL must end in the project name. A repository layout with project/tags, project/branches and project/trunk will be assumed. In this case, you may enter a tag or branch, which must look like tags/tagname or branches/branchname. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
 &lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
@@ -40636,44 +40636,44 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
 &lt;p&gt;Per repository remoti l&apos;URL deve contenere il nome dell&apos;host&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="29"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="30"/>
         <source>Enter the tag the new project should be generated from</source>
         <translation>Inserisci il tag dal quale deve essere generato il nuovo progetto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="32"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="33"/>
         <source>&lt;b&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Enter the tag name the new project shall be generated from. Leave empty to retrieve the latest data from the repository.&lt;/p&gt;</source>
         <translation>&lt;v&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Inserisci il nome del tag dal quale generare il nuovo progetto. Lascia vuoto per recuperare i dati più nuovi dal repository.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="118"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="119"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="50"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="51"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleziona il protocollo di accesso al repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="57"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocollo:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="77"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="121"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="87"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="88"/>
         <source>Enter the directory of the new project.</source>
         <translation>Inserisci la directory per il nuovo progetto.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="90"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="91"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -40682,49 +40682,54 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 a messo in questa directory.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="99"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="100"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
         <translation>Seleziona per indicare che il repository ha un layout standard (projectdir/trunk, projectdir/tags, projectdir/branches)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="103"/>
         <source>Repository has standard &amp;layout</source>
         <translation>Il repository ha un &amp;layout standard</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="105"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="125"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Project &amp;Directory:</source>
         <translation>&amp;Directory progetto:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="136"/>
         <source>&amp;Tag:</source>
         <translation>&amp;Tag:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="67"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
         <source>Enter the url path of the module in the repository</source>
         <translation>Inserisci il percorso dell&apos;url  del modulo nel repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="70"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Inserisci l&apos;URL per il modulo. Per un repository con un layout standard, non deve contenere la parte del trunk, tags o branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="115"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleziona l&apos;url con un dialogo o il browser dei repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="40"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
         <source>Select the project directory via a directory selection dialog</source>
         <translation>Seleziona la directory del progetto con un dialogo</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="115"/>
+        <source>Pat&amp;h:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -40735,12 +40740,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Seleziona la directory del Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="13"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="14"/>
         <source>Repository Infos</source>
         <translation>Informazioni sul repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="16"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
 &lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
 &lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
@@ -40749,76 +40754,81 @@ a messo in questa directory.&lt;/p&gt;</translation>
 &lt;p&gt;Per repository remoti, l&apos;URL deve contenere l&apos;hostname.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="29"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="30"/>
         <source>Log &amp;Message:</source>
         <translation>Log &amp;Messaggi:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="39"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="40"/>
         <source>Select, if the standard repository layout (projectdir/trunk, projectdir/tags, projectdir/branches) should be generated</source>
         <translation>Seleziona se il layout standard per il repository (projectdir/trunk, projectdir/tags, projectdir/branches) deve essere generato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="42"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="43"/>
         <source>Create standard repository &amp;layout</source>
         <translation>Crea un &amp;layout standard per il repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="45"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="46"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="55"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="56"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleziona il protocollo per accedere al repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="65"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="66"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="72"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="97"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="82"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="83"/>
         <source>Enter the log message for the new project.</source>
         <translation>Inserisci il messaggio di log per il nuovo progetto.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="86"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Messaggi di Log&lt;/b&gt;
 &lt;p&gt;Inserisci il messaggio di log da usare per il nuovo progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="90"/>
         <source>new project started</source>
         <translation>nuovo progetto avviato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="96"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocollo:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="62"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="63"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleziona l&apos;url del repository con un dialogo o con il browser dei repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="106"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
         <source>Enter the url path of the module in the repository</source>
         <translation>Inserisci il percorso dell&apos;url  del modulo nel repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="109"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Inserisci l&apos;URL per il modulo. Per un repository con un layout standard, non deve contenere la parte del trunk, tags o branches.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="91"/>
+        <source>Pat&amp;h:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
