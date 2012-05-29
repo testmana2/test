@@ -48,6 +48,7 @@ from .SvnRelocateDialog import SvnRelocateDialog
 from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
 from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .SvnStatusMonitorThread import SvnStatusMonitorThread
+from .SvnUtilities import getConfigPath, amendConfig, createDefaultConfig
 
 from .ProjectBrowserHelper import SvnProjectBrowserHelper
 
@@ -1493,6 +1494,20 @@ class Subversion(VersionControl):
         """
         self.statusCache = {}
         
+    def vcsInitConfig(self, project):
+        """
+        Public method to initialize the VCS configuration.
+        
+        This method ensures, that eric specific files and directories are ignored.
+        
+        @param project reference to the project (Project)
+        """
+        configPath = getConfigPath()
+        if os.path.exists(configPath):
+            amendConfig()
+        else:
+            createDefaultConfig()
+    
     def vcsName(self):
         """
         Public method returning the name of the vcs.

@@ -184,6 +184,9 @@ QObject
 <td><a href="#VersionControl.vcsInit">vcsInit</a></td>
 <td>Public method used to initialize the vcs.</td>
 </tr><tr>
+<td><a href="#VersionControl.vcsInitConfig">vcsInitConfig</a></td>
+<td>Public method to initialize the VCS configuration.</td>
+</tr><tr>
 <td><a href="#VersionControl.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory in the vcs.</td>
 </tr><tr>
@@ -831,6 +834,19 @@ flag indicating quiet operations (boolean)
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
 not implemented
+</dd>
+</dl><a NAME="VersionControl.vcsInitConfig" ID="VersionControl.vcsInitConfig"></a>
+<h4>VersionControl.vcsInitConfig</h4>
+<b>vcsInitConfig</b>(<i>project</i>)
+<p>
+        Public method to initialize the VCS configuration.
+</p><p>
+        This method could ensure, that certain files or directories are
+        exclude from being version controlled.
+</p><dl>
+<dt><i>project</i></dt>
+<dd>
+reference to the project (Project)
 </dd>
 </dl><a NAME="VersionControl.vcsLog" ID="VersionControl.vcsLog"></a>
 <h4>VersionControl.vcsLog</h4>

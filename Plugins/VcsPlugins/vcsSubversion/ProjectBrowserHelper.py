@@ -270,8 +270,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsMenuActions.append(act)
-        # TODO: rename to "Conflict resolved (and subsequent occurrances)"
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
         if self.vcs.version >= (1, 2, 0):
             menu.addSeparator()
@@ -379,7 +378,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self._VCSRevert)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsMultiMenuActions.append(act)
         if self.vcs.version >= (1, 2, 0):
             menu.addSeparator()
@@ -531,7 +530,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)
@@ -625,7 +624,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsMerge.png"),
             self.trUtf8('Merge changes'), self._VCSMerge)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__SVNResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.trUtf8('Set Property'), self.__SVNSetProp)

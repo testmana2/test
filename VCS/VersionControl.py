@@ -435,6 +435,17 @@ class VersionControl(QObject):
         """
         pass
         
+    def vcsInitConfig(self, project):
+        """
+        Public method to initialize the VCS configuration.
+        
+        This method could ensure, that certain files or directories are
+        exclude from being version controlled.
+        
+        @param project reference to the project (Project)
+        """
+        pass
+        
     def vcsDefaultOptions(self):
         """
         Public method used to retrieve the default options for the vcs.

@@ -78,6 +78,8 @@ class Hg(VersionControl):
     committed = pyqtSignal()
     activeExtensionsChanged = pyqtSignal()
     
+    IgnoreFileName = ".hgignore"
+    
     def __init__(self, plugin, parent=None, name=None):
         """
         Constructor
@@ -1114,6 +1116,18 @@ class Hg(VersionControl):
         """
         return "Mercurial"
     
+    def vcsInitConfig(self, project):
+        """
+        Public method to initialize the VCS configuration.
+        
+        This method ensures, that an ignore file exists.
+        
+        @param project reference to the project (Project)
+        """
+        ignoreName = os.path.join(project.getProjectPath(), Hg.IgnoreFileName)
+        if not os.path.exists(ignoreName):
+            self.hgCreateIgnoreFile(project.getProjectPath(), autoAdd=True)
+    
     def vcsCleanup(self, name):
         """
         Public method used to cleanup the working directory.
@@ -1990,6 +2004,8 @@ class Hg(VersionControl):
         ignorePatterns = [
             "glob:.eric5project",
             "glob:_eric5project",
+            "glob:.eric4project",
+            "glob:_eric4project",
             "glob:.ropeproject",
             "glob:_ropeproject",
             "glob:.directory",
@@ -1999,10 +2015,13 @@ class Hg(VersionControl):
             "glob:**.bak",
             "glob:**.rej",
             "glob:**~",
+            "glob:cur",
+            "glob:tmp",
             "glob:__pycache__",
+            "glob:**.DS_Store",
         ]
         
-        ignoreName = os.path.join(name, ".hgignore")
+        ignoreName = os.path.join(name, Hg.IgnoreFileName)
         if os.path.exists(ignoreName):
             res = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Create .hgignore file"),

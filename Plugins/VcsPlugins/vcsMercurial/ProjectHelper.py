@@ -219,20 +219,6 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsExportAct.triggered[()].connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
-        # TODO: remove this action from the menu
-        self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
-                UI.PixmapCache.getIcon("vcsAdd.png"),
-                self.trUtf8('&Add to repository...'), 0, 0, self, 'mercurial_add')
-        self.vcsAddAct.setStatusTip(self.trUtf8(
-            'Add the local project to the repository'
-        ))
-        self.vcsAddAct.setWhatsThis(self.trUtf8(
-            """<b>Add to repository</b>"""
-            """<p>This adds (imports) the local project to the repository.</p>"""
-        ))
-        self.vcsAddAct.triggered[()].connect(self._vcsImport)
-        self.actions.append(self.vcsAddAct)
-        
         self.vcsRemoveAct = E5Action(self.trUtf8('Remove from repository (and disk)'),
                 UI.PixmapCache.getIcon("vcsRemove.png"),
                 self.trUtf8('&Remove from repository (and disk)'),
@@ -387,16 +373,15 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsMergeAct.triggered[()].connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
         
-        # TODO: rename to "Conflicts resolved"
-        self.vcsResolveAct = E5Action(self.trUtf8('Resolve conflicts'),
-                self.trUtf8('Resolve con&flicts'),
+        self.vcsResolveAct = E5Action(self.trUtf8('Conflicts resolved'),
+                self.trUtf8('Con&flicts resolved'),
                 0, 0, self, 'mercurial_resolve')
         self.vcsResolveAct.setStatusTip(self.trUtf8(
-            'Resolve all conflicts of the local project'
+            'Mark all conflicts of the local project as resolved'
         ))
         self.vcsResolveAct.setWhatsThis(self.trUtf8(
-            """<b>Resolve conflicts</b>"""
-            """<p>This resolves all conflicts of the local project.</p>"""
+            """<b>Conflicts resolved</b>"""
+            """<p>This marks all conflicts of the local project as resolved.</p>"""
         ))
         self.vcsResolveAct.triggered[()].connect(self.__hgResolve)
         self.actions.append(self.vcsResolveAct)
@@ -1004,7 +989,6 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
         menu.addSeparator()
-        menu.addAction(self.vcsAddAct)
         menu.addAction(self.vcsRemoveAct)
         menu.addSeparator()
         menu.addAction(self.vcsTagAct)

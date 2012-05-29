@@ -4926,6 +4926,7 @@
       <keyword name="Hg.vcsGetProjectHelper" id="Hg.vcsGetProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsGetProjectHelper" />
       <keyword name="Hg.vcsImport" id="Hg.vcsImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsImport" />
       <keyword name="Hg.vcsInit" id="Hg.vcsInit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsInit" />
+      <keyword name="Hg.vcsInitConfig" id="Hg.vcsInitConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsInitConfig" />
       <keyword name="Hg.vcsLog" id="Hg.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsLog" />
       <keyword name="Hg.vcsMerge" id="Hg.vcsMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsMerge" />
       <keyword name="Hg.vcsMove" id="Hg.vcsMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsMove" />
@@ -8940,6 +8941,8 @@
       <keyword name="Subversion.vcsImport" id="Subversion.vcsImport" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsImport" />
       <keyword name="Subversion.vcsInit" id="Subversion.vcsInit" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsInit" />
       <keyword name="Subversion.vcsInit" id="Subversion.vcsInit" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsInit" />
+      <keyword name="Subversion.vcsInitConfig" id="Subversion.vcsInitConfig" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsInitConfig" />
+      <keyword name="Subversion.vcsInitConfig" id="Subversion.vcsInitConfig" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsInitConfig" />
       <keyword name="Subversion.vcsLog" id="Subversion.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsLog" />
       <keyword name="Subversion.vcsLog" id="Subversion.vcsLog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.vcsLog" />
       <keyword name="Subversion.vcsMerge" id="Subversion.vcsMerge" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.vcsMerge" />
@@ -10846,6 +10849,7 @@
       <keyword name="VersionControl.vcsHistory" id="VersionControl.vcsHistory" ref="eric5.VCS.VersionControl.html#VersionControl.vcsHistory" />
       <keyword name="VersionControl.vcsImport" id="VersionControl.vcsImport" ref="eric5.VCS.VersionControl.html#VersionControl.vcsImport" />
       <keyword name="VersionControl.vcsInit" id="VersionControl.vcsInit" ref="eric5.VCS.VersionControl.html#VersionControl.vcsInit" />
+      <keyword name="VersionControl.vcsInitConfig" id="VersionControl.vcsInitConfig" ref="eric5.VCS.VersionControl.html#VersionControl.vcsInitConfig" />
       <keyword name="VersionControl.vcsLog" id="VersionControl.vcsLog" ref="eric5.VCS.VersionControl.html#VersionControl.vcsLog" />
       <keyword name="VersionControl.vcsMerge" id="VersionControl.vcsMerge" ref="eric5.VCS.VersionControl.html#VersionControl.vcsMerge" />
       <keyword name="VersionControl.vcsMove" id="VersionControl.vcsMove" ref="eric5.VCS.VersionControl.html#VersionControl.vcsMove" />
@@ -11336,6 +11340,8 @@
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
       <keyword name="addActions" id="addActions" ref="eric5.E5Gui.E5Action.html#addActions" />
       <keyword name="addSearchPath" id="addSearchPath" ref="eric5.UI.PixmapCache.html#addSearchPath" />
+      <keyword name="amendConfig" id="amendConfig" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#amendConfig" />
+      <keyword name="amendConfig" id="amendConfig" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html#amendConfig" />
       <keyword name="analyze" id="analyze" ref="eric5.DataViews.CodeMetrics.html#analyze" />
       <keyword name="append_PKCS7_padding" id="append_PKCS7_padding" ref="eric5.Utilities.crypto.py3AES.html#append_PKCS7_padding" />
       <keyword name="binplistlib (Module)" id="binplistlib (Module)" ref="eric5.Utilities.binplistlib.html" />
@@ -11428,6 +11434,8 @@
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric5.Plugins.PluginVcsMercurial.html#createConfigurationPage" />
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric5.Plugins.PluginVcsPySvn.html#createConfigurationPage" />
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric5.Plugins.PluginVcsSubversion.html#createConfigurationPage" />
+      <keyword name="createDefaultConfig" id="createDefaultConfig" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#createDefaultConfig" />
+      <keyword name="createDefaultConfig" id="createDefaultConfig" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html#createDefaultConfig" />
       <keyword name="createGlobalPluginsDir" id="createGlobalPluginsDir" ref="eric5.install.html#createGlobalPluginsDir" />
       <keyword name="createInstallConfig" id="createInstallConfig" ref="eric5.install.html#createInstallConfig" />
       <keyword name="createMacAppBundle" id="createMacAppBundle" ref="eric5.install.html#createMacAppBundle" />

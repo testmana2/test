@@ -59,7 +59,7 @@ emitted after the commit action has completed
 VersionControl
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>IgnoreFileName</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -268,6 +268,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.vcsInit">vcsInit</a></td>
 <td>Public method used to initialize the mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.vcsInitConfig">vcsInitConfig</a></td>
+<td>Public method to initialize the VCS configuration.</td>
 </tr><tr>
 <td><a href="#Hg.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory from the Mercurial repository.</td>
@@ -1202,6 +1205,18 @@ flag indicating quiet operations (boolean)
 <dt>Returns:</dt>
 <dd>
 always TRUE
+</dd>
+</dl><a NAME="Hg.vcsInitConfig" ID="Hg.vcsInitConfig"></a>
+<h4>Hg.vcsInitConfig</h4>
+<b>vcsInitConfig</b>(<i>project</i>)
+<p>
+        Public method to initialize the VCS configuration.
+</p><p>
+        This method ensures, that an ignore file exists.
+</p><dl>
+<dt><i>project</i></dt>
+<dd>
+reference to the project (Project)
 </dd>
 </dl><a NAME="Hg.vcsLog" ID="Hg.vcsLog"></a>
 <h4>Hg.vcsLog</h4>

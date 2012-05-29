@@ -86,20 +86,6 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
-        # TODO: remove this action from the menu
-        self.vcsAddAct = E5Action(self.trUtf8('Add to repository'),
-                UI.PixmapCache.getIcon("vcsAdd.png"),
-                self.trUtf8('&Add to repository...'), 0, 0, self, 'subversion_add')
-        self.vcsAddAct.setStatusTip(self.trUtf8(
-            'Add the local project to the VCS repository'
-        ))
-        self.vcsAddAct.setWhatsThis(self.trUtf8(
-            """<b>Add to repository</b>"""
-            """<p>This adds (imports) the local project to the VCS repository.</p>"""
-        ))
-        self.vcsAddAct.triggered[()].connect(self._vcsImport)
-        self.actions.append(self.vcsAddAct)
-        
         self.vcsRemoveAct = E5Action(self.trUtf8('Remove from repository (and disk)'),
                 UI.PixmapCache.getIcon("vcsRemove.png"),
                 self.trUtf8('&Remove from repository (and disk)'),
@@ -298,16 +284,15 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsSwitchAct.triggered[()].connect(self._vcsSwitch)
         self.actions.append(self.vcsSwitchAct)
         
-        # TODO: rename to "Conflicts resolved"
-        self.vcsResolveAct = E5Action(self.trUtf8('Resolve conflicts'),
-                self.trUtf8('Resolve con&flicts'),
+        self.vcsResolveAct = E5Action(self.trUtf8('Conflicts resolved'),
+                self.trUtf8('Con&flicts resolved'),
                 0, 0, self, 'subversion_resolve')
         self.vcsResolveAct.setStatusTip(self.trUtf8(
-            'Resolve all conflicts of the local project'
+            'Mark all conflicts of the local project as resolved'
         ))
         self.vcsResolveAct.setWhatsThis(self.trUtf8(
-            """<b>Resolve conflicts</b>"""
-            """<p>This resolves all conflicts of the local project.</p>"""
+            """<b>Conflicts resolved</b>"""
+            """<p>This marks all conflicts of the local project as resolved.</p>"""
         ))
         self.vcsResolveAct.triggered[()].connect(self.__svnResolve)
         self.actions.append(self.vcsResolveAct)
@@ -480,7 +465,6 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
         menu.addSeparator()
-        menu.addAction(self.vcsAddAct)
         menu.addAction(self.vcsRemoveAct)
         menu.addSeparator()
         menu.addAction(self.vcsTagAct)

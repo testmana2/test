@@ -241,8 +241,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
-        # TODO: rename to "Conflict resolved (and subsequent occurrances)"
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -312,7 +311,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -423,7 +422,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),
@@ -491,7 +490,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
             self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
-        act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
+        act = menu.addAction(self.trUtf8('Conflict resolved'), self.__HgResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.trUtf8('Select all local file entries'),

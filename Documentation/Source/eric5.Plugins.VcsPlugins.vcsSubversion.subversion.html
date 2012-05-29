@@ -196,6 +196,9 @@ VersionControl
 <td><a href="#Subversion.vcsInit">vcsInit</a></td>
 <td>Public method used to initialize the subversion repository.</td>
 </tr><tr>
+<td><a href="#Subversion.vcsInitConfig">vcsInitConfig</a></td>
+<td>Public method to initialize the VCS configuration.</td>
+</tr><tr>
 <td><a href="#Subversion.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory from the Subversion repository.</td>
 </tr><tr>
@@ -913,6 +916,18 @@ flag indicating quiet operations (boolean)
 <dt>Returns:</dt>
 <dd>
 always TRUE
+</dd>
+</dl><a NAME="Subversion.vcsInitConfig" ID="Subversion.vcsInitConfig"></a>
+<h4>Subversion.vcsInitConfig</h4>
+<b>vcsInitConfig</b>(<i>project</i>)
+<p>
+        Public method to initialize the VCS configuration.
+</p><p>
+        This method ensures, that an ignore file exists.
+</p><dl>
+<dt><i>project</i></dt>
+<dd>
+reference to the project (Project)
 </dd>
 </dl><a NAME="Subversion.vcsLog" ID="Subversion.vcsLog"></a>
 <h4>Subversion.vcsLog</h4>
