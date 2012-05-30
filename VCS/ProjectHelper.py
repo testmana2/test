@@ -46,6 +46,8 @@ class VcsProjectHelper(QObject):
         
         self.actions = []
         
+        self.vcsAddAct = None
+        
         self.initActions()
         
     def setObjects(self, vcsObject, projectObject):
@@ -116,7 +118,8 @@ class VcsProjectHelper(QObject):
         """
         Public slot called before the vcs menu is shown.
         """
-        self.vcsAddAct.setEnabled(self.project.isOpen())
+        if self.vcsAddAct:
+            self.vcsAddAct.setEnabled(self.project.isOpen())
 
     def _vcsCheckout(self, export=False):
         """
