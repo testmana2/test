@@ -1124,9 +1124,11 @@ class Hg(VersionControl):
         
         @param project reference to the project (Project)
         """
-        ignoreName = os.path.join(project.getProjectPath(), Hg.IgnoreFileName)
-        if not os.path.exists(ignoreName):
-            self.hgCreateIgnoreFile(project.getProjectPath(), autoAdd=True)
+        ppath = project.getProjectPath()
+        if ppath:
+            ignoreName = os.path.join(ppath, Hg.IgnoreFileName)
+            if not os.path.exists(ignoreName):
+                self.hgCreateIgnoreFile(project.getProjectPath(), autoAdd=True)
     
     def vcsCleanup(self, name):
         """
