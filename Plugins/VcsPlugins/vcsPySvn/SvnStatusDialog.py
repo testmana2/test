@@ -344,8 +344,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                              file.entry.lock_token != file.repos_lock["token"]:
                             lockState = "S"
                     
-                    if file.path in changelistsDict:
-                        changelist = changelistsDict[file.path]
+                    fpath = os.path.join(self.dname, file.path)
+                    if fpath in changelistsDict:
+                        changelist = changelistsDict[fpath]
                     else:
                         changelist = ""
                     
