@@ -225,6 +225,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self._VCSRemove)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
+        # TODO: remove " in repository" because it is somewhat misleading (and later on)
         act = menu.addAction(self.trUtf8('Copy in repository'), self.__SVNCopy)
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Move in repository'), self.__SVNMove)

@@ -211,6 +211,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.__HgForget)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
+        # TODO: remove " in repository" because it is somewhat misleading (and later on)
         act = menu.addAction(self.trUtf8('Copy in repository'), self.__HgCopy)
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Move in repository'), self.__HgMove)

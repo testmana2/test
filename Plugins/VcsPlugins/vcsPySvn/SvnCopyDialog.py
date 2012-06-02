@@ -55,6 +55,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         @return the target name (string) and a flag indicating
             the operation should be enforced (boolean)
         """
+        # TODO: check if target is an absolute path. If not make it relative to source.
         return self.targetEdit.text(), self.forceCheckBox.isChecked()
         
     @pyqtSlot()
