@@ -15,6 +15,7 @@ Version 5.3-snapshot-2012mmdd:
   -- All
      --- added code to ensure, that some eric specific files and directories
          get ignored
+     --- improved the copy/move operation a bit
   -- Mercurial
      --- added support for amending commits as of Mercurial 2.2
 - Web Browser

@@ -10,7 +10,7 @@ Module implementing a dialog to enter the data for a copy operation.
 import os.path
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 from E5Gui import E5FileDialog
@@ -20,7 +20,7 @@ from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
     """
-    Class implementing a dialog to enter the data for a copy operation.
+    Class implementing a dialog to enter the data for a copy or rename operation.
     """
     def __init__(self, source, parent=None, move=False, force=False):
         """
@@ -48,6 +48,8 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         
         self.sourceEdit.setText(source)
         
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
     def getData(self):
         """
         Public method to retrieve the copy data.
@@ -55,8 +57,11 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         @return the target name (string) and a flag indicating
             the operation should be enforced (boolean)
         """
-        # TODO: check if target is an absolute path. If not make it relative to source.
-        return self.targetEdit.text(), self.forceCheckBox.isChecked()
+        target = self.targetEdit.text()
+        if not os.path.isabs(target):
+            sourceDir = os.path.dirname(self.sourceEdit.text())
+            target = os.path.join(sourceDir, target)
+        return target, self.forceCheckBox.isChecked()
         
     @pyqtSlot()
     def on_dirButton_clicked(self):
@@ -80,3 +85,13 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         
         if target:
             self.targetEdit.setText(target)
+    
+    @pyqtSlot(str)
+    def on_targetEdit_textChanged(self, txt):
+        """
+        Private slot to handle changes of the target.
+        
+        @param txt contents of the target edit (string)
+        """
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            os.path.isabs(txt) or os.path.dirname(txt) == "")

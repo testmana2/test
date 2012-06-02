@@ -5090,6 +5090,7 @@
       <keyword name="HgCopyDialog (Module)" id="HgCopyDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
       <keyword name="HgCopyDialog.getData" id="HgCopyDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.getData" />
       <keyword name="HgCopyDialog.on_dirButton_clicked" id="HgCopyDialog.on_dirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.on_dirButton_clicked" />
+      <keyword name="HgCopyDialog.on_targetEdit_textChanged" id="HgCopyDialog.on_targetEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.on_targetEdit_textChanged" />
       <keyword name="HgDialog" id="HgDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog" />
       <keyword name="HgDialog (Constructor)" id="HgDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog.__init__" />
       <keyword name="HgDialog (Module)" id="HgDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
@@ -9075,6 +9076,8 @@
       <keyword name="SvnCopyDialog.getData" id="SvnCopyDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.getData" />
       <keyword name="SvnCopyDialog.on_dirButton_clicked" id="SvnCopyDialog.on_dirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.on_dirButton_clicked" />
       <keyword name="SvnCopyDialog.on_dirButton_clicked" id="SvnCopyDialog.on_dirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.on_dirButton_clicked" />
+      <keyword name="SvnCopyDialog.on_targetEdit_textChanged" id="SvnCopyDialog.on_targetEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.on_targetEdit_textChanged" />
+      <keyword name="SvnCopyDialog.on_targetEdit_textChanged" id="SvnCopyDialog.on_targetEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.on_targetEdit_textChanged" />
       <keyword name="SvnDialog" id="SvnDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html#SvnDialog" />
       <keyword name="SvnDialog" id="SvnDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.html#SvnDialog" />
       <keyword name="SvnDialog (Constructor)" id="SvnDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html#SvnDialog.__init__" />

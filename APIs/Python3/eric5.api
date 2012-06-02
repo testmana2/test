@@ -3706,6 +3706,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.showEvent?4(
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog?1(vcs, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.on_dirButton_clicked?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog.on_targetEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.HgCopyDialog?1(source, parent=None, move=False, force=False)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.HgDialog.hasAddOrDelete?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.HgDialog.keyPressEvent?4(evt)
@@ -4175,6 +4176,7 @@ eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.svnNotifyActionMap?7
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.svnStatusMap?7
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.SvnCopyDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.SvnCopyDialog.on_dirButton_clicked?4()
+eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.SvnCopyDialog.on_targetEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.SvnCopyDialog?1(source, parent=None, move=False, force=False)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialog.SvnDialog._clientNotifyCallback?5(eventDict)
 eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialog.SvnDialog.finish?4()
@@ -4387,6 +4389,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog.showEvent
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.SvnCommitDialog?1(vcs, parent=None)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.SvnCopyDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.SvnCopyDialog.on_dirButton_clicked?4()
+eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.SvnCopyDialog.on_targetEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.SvnCopyDialog?1(source, parent=None, move=False, force=False)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.hasAddOrDelete?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.keyPressEvent?4(evt)

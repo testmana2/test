@@ -18071,12 +18071,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1176"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1178"/>
         <source>Mercurial command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1366"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1368"/>
         <source>Copying {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18086,147 +18086,147 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">选择要显示的条目数。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1611"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1613"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1664"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1666"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1783"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1785"/>
         <source>Resolving files/directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1804"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1806"/>
         <source>Create Branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1804"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1806"/>
         <source>Enter branch name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1815"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1817"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1896"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1921"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1923"/>
         <source>Showing the combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1944"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1946"/>
         <source>Showing aliases for remote repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1967"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1969"/>
         <source>Recovering from interrupted transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2210"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2212"/>
         <source>Shall the working directory be updated?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1839"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1841"/>
         <source>Showing current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2119"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2121"/>
         <source>Create changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2222"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2224"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2239"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2241"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2273"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2275"/>
         <source>Mercurial Bisect ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2171"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2173"/>
         <source>Preview changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1990"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1992"/>
         <source>Identifying project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2026"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2028"/>
         <source>Create .hgignore file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2026"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2028"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2305"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2307"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2077"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2079"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2204"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2206"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2181"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2183"/>
         <source>Identifying changegroup file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2361"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2363"/>
         <source>Backing out changeset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2341"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2343"/>
         <source>No revision given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2094"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2096"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2386"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2388"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2381"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2383"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18236,42 +18236,42 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2764"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2766"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2643"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2645"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2764"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2766"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2453"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2455"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2500"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2502"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2548"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2593"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2595"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2620"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2622"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19173,7 +19173,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;目标名&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标名&lt;/b&gt;
 &lt;p&gt;在该区域输入新名称。&lt;/p&gt;</translation>
     </message>
     <message>
@@ -19197,9 +19197,15 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="73"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="79"/>
         <source>Select target</source>
         <translation type="unfinished">选择目标</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
+        <source>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -20810,12 +20816,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="398"/>
         <source>Copy in repository</source>
-        <translation type="unfinished">在储存库中复制</translation>
+        <translation type="obsolete">在储存库中复制</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
         <source>Move in repository</source>
-        <translation type="unfinished">在储存库中移动</translation>
+        <translation type="obsolete">在储存库中移动</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="403"/>
@@ -20900,6 +20906,16 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="493"/>
         <source>Conflict resolved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="398"/>
+        <source>Copy</source>
+        <translation type="unfinished">复制</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
+        <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -42952,7 +42968,7 @@ directory selection dialog.&lt;/p&gt;</source>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;目标名&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标名&lt;/b&gt;
 &lt;p&gt;在该区域输入新名称。&lt;/p&gt;</translation>
     </message>
     <message>
@@ -42983,9 +42999,15 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation>版本控制移动</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="73"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="79"/>
         <source>Select target</source>
         <translation>选择目标</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
+        <source>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -44242,12 +44264,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="494"/>
         <source>Copy in repository</source>
-        <translation>在储存库中复制</translation>
+        <translation type="obsolete">在储存库中复制</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="496"/>
         <source>Move in repository</source>
-        <translation>在储存库中移动</translation>
+        <translation type="obsolete">在储存库中移动</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="604"/>
@@ -44382,6 +44404,16 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="633"/>
         <source>Conflict resolved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="494"/>
+        <source>Copy</source>
+        <translation type="unfinished">复制</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="496"/>
+        <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -54313,82 +54345,82 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VcsProjectHelper</name>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="65"/>
+        <location filename="VCS/ProjectHelper.py" line="67"/>
         <source>New from repository</source>
         <translation>从储存库新建</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="65"/>
+        <location filename="VCS/ProjectHelper.py" line="67"/>
         <source>&amp;New from repository...</source>
         <translation>从储存库新建(&amp;N)……</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="67"/>
+        <location filename="VCS/ProjectHelper.py" line="69"/>
         <source>Create a new project from the VCS repository</source>
         <translation>从版本控制系统储存库创建新项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="70"/>
+        <location filename="VCS/ProjectHelper.py" line="72"/>
         <source>&lt;b&gt;New from repository&lt;/b&gt;&lt;p&gt;This creates a new local project from the VCS repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;从储存库新建&lt;/b&gt;&lt;p&gt;从版本控制系统储存库中创建新的本地项目。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="77"/>
+        <location filename="VCS/ProjectHelper.py" line="79"/>
         <source>Export from repository</source>
         <translation>从储存库导出</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="77"/>
+        <location filename="VCS/ProjectHelper.py" line="79"/>
         <source>&amp;Export from repository...</source>
         <translation>从储存库导出(&amp;E)……</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="79"/>
+        <location filename="VCS/ProjectHelper.py" line="81"/>
         <source>Export a project from the repository</source>
         <translation>从储存库中导出一个项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="82"/>
+        <location filename="VCS/ProjectHelper.py" line="84"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;从储存库导出&lt;/b&gt;&lt;p&gt;从储存库导出一个项目。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="89"/>
+        <location filename="VCS/ProjectHelper.py" line="91"/>
         <source>Add to repository</source>
         <translation>添加到储存库</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="89"/>
+        <location filename="VCS/ProjectHelper.py" line="91"/>
         <source>&amp;Add to repository...</source>
         <translation>添加到储存库（&amp;A）……</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="91"/>
+        <location filename="VCS/ProjectHelper.py" line="93"/>
         <source>Add the local project to the VCS repository</source>
         <translation>将本地项目添加到版本控制系统储存库中</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="94"/>
+        <location filename="VCS/ProjectHelper.py" line="96"/>
         <source>&lt;b&gt;Add to repository&lt;/b&gt;&lt;p&gt;This adds (imports) the local project to the VCS repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;添加到储存库&lt;/b&gt;&lt;p&gt;将本地项目添加（导入）到版本控制系统储存库中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="163"/>
+        <location filename="VCS/ProjectHelper.py" line="166"/>
         <source>New Project</source>
         <translation>新建项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="305"/>
+        <location filename="VCS/ProjectHelper.py" line="308"/>
         <source>Select version control system for the project</source>
         <translation>为项目选择版本控制系统</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="324"/>
+        <location filename="VCS/ProjectHelper.py" line="327"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>是否编辑版本控制系统命令选项？</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="176"/>
+        <location filename="VCS/ProjectHelper.py" line="179"/>
         <source>Create project directory</source>
         <translation>创建项目文件夹</translation>
     </message>
@@ -54398,12 +54430,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法创建项目文件夹 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="251"/>
+        <location filename="VCS/ProjectHelper.py" line="254"/>
         <source>New project from repository</source>
         <translation>从储存库新建项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="201"/>
+        <location filename="VCS/ProjectHelper.py" line="204"/>
         <source>Select a project file to open.</source>
         <translation>选择要打开的项目文件</translation>
     </message>
@@ -54413,52 +54445,52 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">从储存库中检索到的项目不包含 Eric 项目文件 (*.e4p *.e4pz *.e3p *.e3pz)。是否创建？</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="243"/>
+        <location filename="VCS/ProjectHelper.py" line="246"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>是否将项目文件添加到储存库？</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="251"/>
+        <location filename="VCS/ProjectHelper.py" line="254"/>
         <source>The project could not be retrieved from the repository.</source>
         <translation>无法从储存库中检索项目。</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="324"/>
+        <location filename="VCS/ProjectHelper.py" line="327"/>
         <source>Import Project</source>
         <translation>导入项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="377"/>
+        <location filename="VCS/ProjectHelper.py" line="380"/>
         <source>Remove project from repository</source>
         <translation>从储存库中移除项目</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="377"/>
+        <location filename="VCS/ProjectHelper.py" line="380"/>
         <source>Dou you really want to remove this project from the repository (and disk)?</source>
         <translation>确定要从储存库（磁盘）中移除该项目？</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="353"/>
+        <location filename="VCS/ProjectHelper.py" line="356"/>
         <source>Update</source>
         <translation type="unfinished">更新</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="435"/>
+        <location filename="VCS/ProjectHelper.py" line="438"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="176"/>
+        <location filename="VCS/ProjectHelper.py" line="179"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="216"/>
+        <location filename="VCS/ProjectHelper.py" line="219"/>
         <source>The project retrieved from the repository does not contain an eric project file (*.e4p). Create it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="435"/>
+        <location filename="VCS/ProjectHelper.py" line="438"/>
         <source>Switch</source>
         <translation type="unfinished">转换</translation>
     </message>
@@ -58482,30 +58514,30 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1236"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1238"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1733"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1735"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1741"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1743"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1252"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1254"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1282"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1284"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -58516,23 +58548,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1727"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1729"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1729"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1731"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1745"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1747"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1748"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1750"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -58540,7 +58572,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1737"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1739"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>

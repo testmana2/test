@@ -61,7 +61,7 @@
        </property>
        <property name="whatsThis">
         <string>&lt;b&gt;Target name&lt;/b&gt;
-&lt;p&gt;Enter the new name in this field.&lt;/p&gt;</string>
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</string>
        </property>
       </widget>
      </item>
