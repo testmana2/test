@@ -2172,6 +2172,9 @@ class Subversion(VersionControl):
         locker.unlock()
         dlg.finish()
         dlg.exec_()
+    
+    # TODO: add a svnShowChangelists method to show the changelists
+    # TODO: add a svnGetChangelists method returning the changelists and their associated files
 
     ############################################################################
     ## Private Subversion specific methods are below.
