@@ -27,10 +27,11 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
     accepted = pyqtSignal()
     rejected = pyqtSignal()
     
-    def __init__(self, parent=None):
+    def __init__(self, changelists, parent=None):
         """
         Constructor
         
+        @param changelists list of available change lists (list of strings)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent, Qt.WindowFlags(Qt.Window))
@@ -38,6 +39,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         if pysvn.svn_version < (1, 5, 0) or pysvn.version < (1, 6, 0):
             self.changeListsGroup.hide()
+        else:
+            self.changeLists.addItems(sorted(changelists))
         
     def showEvent(self, evt):
         """
@@ -78,10 +81,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         @return flag indicating availability of changelists (boolean)
         """
-        listsTxt = self.changeListsEdit.text()
-        lists = listsTxt.split(';')
-        slists = [l.strip() for l in lists if l.strip() != ""]
-        return len(slists) > 0
+        return len(self.changeLists.selectedItems()) > 0
         
     def changelistsData(self):
         """
@@ -90,9 +90,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         @return tuple containing the changelists (list of strings) and a flag
             indicating to keep changelists (boolean)
         """
-        listsTxt = self.changeListsEdit.text()
-        lists = listsTxt.split(';')
-        slists = [l.strip() for l in lists if l.strip() != ""]
+        slists = [l.text().strip() for l in self.changeLists.selectedItems()
+                  if l.text().strip() != ""]
         
         if len(slists) == 0:
             return [], False

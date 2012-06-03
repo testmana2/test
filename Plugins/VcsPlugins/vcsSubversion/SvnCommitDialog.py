@@ -37,6 +37,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         if vcs.version < (1, 5, 0):
             self.changeListsGroup.hide()
+        else:
+            self.changeLists.addItems(sorted(vcs.svnGetChangelists()))
         
     def showEvent(self, evt):
         """
@@ -74,10 +76,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         @return flag indicating availability of changelists (boolean)
         """
-        listsTxt = self.changeListsEdit.text()
-        lists = listsTxt.split(';')
-        slists = [l.strip() for l in lists if l.strip() != ""]
-        return len(slists) > 0
+        return len(self.changeLists.selectedItems()) > 0
         
     def changelistsData(self):
         """
@@ -86,9 +85,8 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         @return tuple containing the changelists (list of strings) and a flag
             indicating to keep changelists (boolean)
         """
-        listsTxt = self.changeListsEdit.text()
-        lists = listsTxt.split(';')
-        slists = [l.strip() for l in lists if l.strip() != ""]
+        slists = [l.text().strip() for l in self.changeLists.selectedItems()
+                  if l.text().strip() != ""]
         
         if len(slists) == 0:
             return [], False

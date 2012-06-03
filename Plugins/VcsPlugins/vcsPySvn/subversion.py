@@ -47,6 +47,7 @@ from .SvnInfoDialog import SvnInfoDialog
 from .SvnRelocateDialog import SvnRelocateDialog
 from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
 from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+from .SvnChangeListsDialog import SvnChangeListsDialog
 from .SvnStatusMonitorThread import SvnStatusMonitorThread
 from .SvnUtilities import getConfigPath, amendConfig, createDefaultConfig
 
@@ -473,7 +474,7 @@ class Subversion(VersionControl):
         if not noDialog and not message:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
-                self.__commitDialog = SvnCommitDialog(self.__ui)
+                self.__commitDialog = SvnCommitDialog(self.svnGetChangelists(), self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
@@ -2149,11 +2150,12 @@ class Subversion(VersionControl):
         if not isinstance(names, list):
             names = [names]
         
-        clname, ok = QInputDialog.getText(
+        clname, ok = QInputDialog.getItem(
             None,
             self.trUtf8("Add to changelist"),
             self.trUtf8("Enter name of the changelist:"),
-            QLineEdit.Normal)
+            sorted(self.svnGetChangelists()),
+            0, True)
         if not ok or not clname:
             return
 
@@ -2173,8 +2175,39 @@ class Subversion(VersionControl):
         dlg.finish()
         dlg.exec_()
     
-    # TODO: add a svnShowChangelists method to show the changelists
-    # TODO: add a svnGetChangelists method returning the changelists and their associated files
+    def svnShowChangelists(self, path):
+        """
+        Public method used to inspect the change lists defined for the project.
+        
+        @param path directory name to show change lists for (string)
+        """
+        self.changeLists = SvnChangeListsDialog(self)
+        self.changeLists.show()
+        QApplication.processEvents()
+        self.changeLists.start(path)
+        
+    def svnGetChangelists(self):
+        """
+        Public method to get a list of all defined change lists.
+        
+        @return list of defined change list names (list of strings)
+        """
+        changelists = []
+        client = self.getClient()
+        if hasattr(client, 'get_changelist'):
+            ppath = e5App().getObject("Project").getProjectPath()
+            locker = QMutexLocker(self.vcsExecutionMutex)
+            try:
+                entries = client.get_changelist(ppath, depth=pysvn.depth.infinity)
+                for entry in entries:
+                    changelist = entry[1]
+                    if changelist not in changelists:
+                        changelists.append(changelist)
+            except pysvn.ClientError:
+                pass
+            locker.unlock()
+        
+        return changelists
 
     ############################################################################
     ## Private Subversion specific methods are below.

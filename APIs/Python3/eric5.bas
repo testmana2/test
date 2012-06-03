@@ -556,6 +556,7 @@ Subversion VersionControl
 SubversionPage ConfigurationPageBase Ui_SubversionPage
 SvgDiagram QMainWindow
 SvnBlameDialog QDialog Ui_SvnBlameDialog
+SvnChangeListsDialog QDialog Ui_SvnChangeListsDialog
 SvnCommandDialog QDialog Ui_SvnCommandDialog
 SvnCommitDialog QWidget Ui_SvnCommitDialog
 SvnCopyDialog QDialog Ui_SvnCopyDialog

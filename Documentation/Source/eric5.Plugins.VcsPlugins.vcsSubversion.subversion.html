@@ -109,6 +109,9 @@ VersionControl
 <td><a href="#Subversion.svnExtendedDiff">svnExtendedDiff</a></td>
 <td>Public method used to view the difference of a file/directory to the Subversion repository.</td>
 </tr><tr>
+<td><a href="#Subversion.svnGetChangelists">svnGetChangelists</a></td>
+<td>Public method to get a list of all defined change lists.</td>
+</tr><tr>
 <td><a href="#Subversion.svnGetReposName">svnGetReposName</a></td>
 <td>Public method used to retrieve the URL of the subversion repository path.</td>
 </tr><tr>
@@ -141,6 +144,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Subversion.svnSetProp">svnSetProp</a></td>
 <td>Public method used to add a property to a file/directory.</td>
+</tr><tr>
+<td><a href="#Subversion.svnShowChangelists">svnShowChangelists</a></td>
+<td>Public method used to inspect the change lists defined for the project.</td>
 </tr><tr>
 <td><a href="#Subversion.svnUnlock">svnUnlock</a></td>
 <td>Public method used to unlock a file in the Subversion repository.</td>
@@ -483,6 +489,16 @@ flag indicating a recursive list is requested
 <dd>
 file/directory name to be diffed (string)
 </dd>
+</dl><a NAME="Subversion.svnGetChangelists" ID="Subversion.svnGetChangelists"></a>
+<h4>Subversion.svnGetChangelists</h4>
+<b>svnGetChangelists</b>(<i></i>)
+<p>
+        Public method to get a list of all defined change lists.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of defined change list names (list of strings)
+</dd>
 </dl><a NAME="Subversion.svnGetReposName" ID="Subversion.svnGetReposName"></a>
 <h4>Subversion.svnGetReposName</h4>
 <b>svnGetReposName</b>(<i>path</i>)
@@ -622,6 +638,16 @@ file/directory name (string or list of strings)
 </dd><dt><i>recursive</i></dt>
 <dd>
 flag indicating a recursive list is requested
+</dd>
+</dl><a NAME="Subversion.svnShowChangelists" ID="Subversion.svnShowChangelists"></a>
+<h4>Subversion.svnShowChangelists</h4>
+<b>svnShowChangelists</b>(<i>path</i>)
+<p>
+        Public method used to inspect the change lists defined for the project.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name to show change lists for (string)
 </dd>
 </dl><a NAME="Subversion.svnUnlock" ID="Subversion.svnUnlock"></a>
 <h4>Subversion.svnUnlock</h4>

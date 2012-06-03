@@ -38160,202 +38160,202 @@ Not connected</source>
 <context>
     <name>Subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="195"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="196"/>
         <source>The svn process did not finish within 30s.</source>
         <translation>El proceso svn no terminó en un plazo de 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="197"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="198"/>
         <source>Could not start the svn executable.</source>
         <translation>No se ha podido ejecutar svn.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="222"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="223"/>
         <source>Create project in repository</source>
         <translation>Crear proyecto en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="222"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="223"/>
         <source>The project could not be created in the repository. Maybe the given repository doesn&apos;t exist or the repository server is down.</source>
         <translation>El proyecto no se ha podido crear en el repositorio. Quizá el repositorio proporcionado no existe o el servidor está caído.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="244"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="245"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="244"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="245"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
         <translation>No se ha podido hacer un checkout del proyecto en el repositorio.&lt;br/&gt;Restaurando los contenidos originales.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="314"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="315"/>
         <source>Importing project into Subversion repository</source>
         <translation>Importando proyecto al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="364"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="365"/>
         <source>Subversion Checkout</source>
         <translation>Checkout de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="426"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="427"/>
         <source>The tag must be a normal tag (tags) or a branch tag (branches). Please select from the list.</source>
         <translation>El tag debe ser una tag (tags) normal o branch (branches). Por favor, seleccione de la lista.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="385"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="386"/>
         <source>Checking project out of Subversion repository</source>
         <translation>Haciendo checkout del proyecto desde el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="426"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="427"/>
         <source>Subversion Export</source>
         <translation>Export de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="446"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="447"/>
         <source>Exporting project from Subversion repository</source>
         <translation>Exportando proyecto desde el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="530"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="531"/>
         <source>Commiting changes to Subversion repository</source>
         <translation>Haciendo commit de los cambios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="586"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="587"/>
         <source>Synchronizing with the Subversion repository</source>
         <translation>Sincronizando con el repositorio de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="687"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="688"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Añadiendo archivos/directorios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="786"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="787"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Añadiendo árboles de directorios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="821"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="822"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Eliminando archivos/directorios del repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1126"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1127"/>
         <source>Subversion Error</source>
         <translation>Error de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="987"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="988"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>La URL del repositorio del proyecto no ha podido recuperarse de la copia de trabajo. La operación tag se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1011"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1012"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>La URL del repositorio del proyecto tiene un formato no válido. La operación tag se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1075"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1076"/>
         <source>Reverting changes</source>
         <translation>Revirtiendo cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1102"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1103"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>La URL del repositorio del proyecto no ha podido recuperarse de la copia de trabajo. La operación switch se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1126"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1127"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>La URL del repositorio del proyecto tiene un formato no válido. La operación switch se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1563"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1564"/>
         <source>Subversion command</source>
         <translation>Comando de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1670"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1671"/>
         <source>Resolving conficts</source>
         <translation>Resolviendo conflictos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1776"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1777"/>
         <source>Subversion Set Property</source>
         <translation>Asignar Propiedad de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1809"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1810"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Tiene que proporcionar un nombre de propiedad. Abortando.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1827"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1828"/>
         <source>Subversion Delete Property</source>
         <translation>Borrar Propiedad de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1647"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1648"/>
         <source>Enter property name</source>
         <translation>Introducir nombre de la propiedad</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="923"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="924"/>
         <source>Subversion Log</source>
         <translation>Log de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="923"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="924"/>
         <source>Select number of entries to show.</source>
         <translation>Seleccionar número de entradas a mostrar.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1993"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1994"/>
         <source>Locking in the Subversion repository</source>
         <translation>Bloqueando en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2031"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2032"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Desbloqueando en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1792"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1793"/>
         <source>Property set.</source>
         <translation>Propiedad establecida.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1842"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1843"/>
         <source>Property deleted.</source>
         <translation>Propiedad borrada.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1973"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1974"/>
         <source>Subversion Lock</source>
         <translation>Bloqueo de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1973"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1974"/>
         <source>Enter lock comment</source>
         <translation>Introducir comentario para el bloqueo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2076"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2077"/>
         <source>Relocating</source>
         <translation>Realojando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2102"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2103"/>
         <source>Repository Browser</source>
         <translation>Navegador de Repositorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2102"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2103"/>
         <source>Enter the repository URL.</source>
         <translation>Introducir la URL del repositorio.</translation>
     </message>
@@ -38510,17 +38510,17 @@ Not connected</source>
         <translation>Sin versionar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2126"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2127"/>
         <source>Remove from changelist</source>
         <translation>Quitar de la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2162"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2164"/>
         <source>Add to changelist</source>
         <translation>Añadir a la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2152"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2153"/>
         <source>Enter name of the changelist:</source>
         <translation>Introduzca el nombre de la lista de cambios:</translation>
     </message>
@@ -38540,53 +38540,53 @@ Not connected</source>
         <translation>Lista de cambios movida</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="192"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="193"/>
         <source>The svn process finished with the exit code {0}</source>
         <translation>El proceso svn ha terminado con código de salida {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="883"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="884"/>
         <source>Moving {0}</source>
         <translation>Moviendo {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1046"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1047"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Haciendo un tag {0} en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1148"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1149"/>
         <source>Switching to {0}</source>
         <translation>Haciendo un switch a {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1250"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1251"/>
         <source>Merging {0}</source>
         <translation>Haciendo un merge de {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1527"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1528"/>
         <source>Cleaning up {0}</source>
         <translation>Limpiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1709"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1710"/>
         <source>Copying {0}</source>
         <translation>Copiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="330"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="331"/>
         <source>Imported revision {0}.
 </source>
         <translation>Importada revisión {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="555"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="556"/>
         <source>Committed revision {0}.</source>
         <translation>Commit realizado para revisión {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1155"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1156"/>
         <source>Revision {0}.
 </source>
         <translation>Revisión {0}.</translation>
@@ -38787,6 +38787,96 @@ Not connected</source>
     </message>
 </context>
 <context>
+    <name>SvnChangeListsDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="14"/>
+        <source>Subversion Change Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="23"/>
+        <source>Change Lists:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="36"/>
+        <source>&lt;b&gt;Change Lists&lt;/b&gt;
+&lt;p&gt;Select a change list here to see the associated files in the list below.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="63"/>
+        <source>&lt;b&gt;Files&lt;/b&gt;
+&lt;p&gt;This shows a list of files associated with the change list selected above.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="80"/>
+        <source>Errors</source>
+        <translation type="unfinished">Errores</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="99"/>
+        <source>Input</source>
+        <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="121"/>
+        <source>Press to send the input to the subversion process</source>
+        <translation type="unfinished">Pulsar para enviar el input al proceso de subversion</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="124"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished">&amp;Enviar</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="127"/>
+        <source>Alt+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="134"/>
+        <source>Enter data to be sent to the subversion process</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="141"/>
+        <source>Select to switch the input field to password mode</source>
+        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="144"/>
+        <source>&amp;Password Mode</source>
+        <translation type="unfinished">&amp;Modo de contraseña</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="147"/>
+        <source>Alt+P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="75"/>
+        <source>Files (relative to {0}):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="138"/>
+        <source>No changelists found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="109"/>
+        <source>Process Generation Error</source>
+        <translation type="unfinished">Error de Generación de Proceso</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="109"/>
+        <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
+        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+    </message>
+</context>
+<context>
     <name>SvnCommandDialog</name>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="14"/>
@@ -38877,56 +38967,61 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
 <context>
     <name>SvnCommitDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="25"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="26"/>
         <source>Enter the log message.</source>
         <translation>Introduzca el mensaje de log.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="28"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="29"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message for the commit action.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mensaje de Log&lt;/b&gt;
 &lt;p&gt;Introduzca el mensaje de log para la acción commit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="13"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="14"/>
         <source>Subversion</source>
         <translation>Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="42"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="43"/>
         <source>Recent commit messages</source>
         <translation>Mensajes recientes de commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="49"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="50"/>
         <source>Select a recent commit message to use</source>
         <translation>Seleccione un mensaje de commit reciente para reutilizar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="19"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="20"/>
         <source>Commit Message</source>
         <translation>Mensaje de Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="59"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="60"/>
         <source>Changelists</source>
         <translation>Listas de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="72"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="73"/>
         <source>Select to keep the changelists</source>
         <translation>Seleccionar para conservar las listas de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="75"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="76"/>
         <source>Keep changelists</source>
         <translation>Conservar listas de cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="65"/>
         <source>Enter the list of changelists separated by &apos;;&apos;</source>
-        <translation>Introduzca la lista de listas de cambios separadas por &apos;;&apos;</translation>
+        <translation type="obsolete">Introduzca la lista de listas de cambios separadas por &apos;;&apos;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="66"/>
+        <source>Select the change lists to limit the commit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -40431,122 +40526,122 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Mostrar estado&lt;/b&gt;&lt;p&gt;Muestra el estado del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="206"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="221"/>
         <source>Tag in repository</source>
         <translation>Crear un Tag en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="206"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="221"/>
         <source>&amp;Tag in repository...</source>
         <translation>Crear un &amp;Tag en el repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="210"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="225"/>
         <source>Tag the local project in the repository</source>
         <translation>Crea un tag del proyecto local en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="213"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="228"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un Tag en el repositorio&lt;/b&gt;&lt;p&gt;Crea un tag del proyecto local en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="220"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="235"/>
         <source>Export from repository</source>
         <translation>Exportar desde repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="220"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="235"/>
         <source>&amp;Export from repository...</source>
         <translation>&amp;Exportar desde repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="224"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="239"/>
         <source>Export a project from the repository</source>
         <translation>Exportar un proyecto desde el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="227"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="242"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exportar desde repositorio&lt;/b&gt;&lt;p&gt;Exporta un proyecto desde el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="249"/>
         <source>Command options</source>
         <translation>Opciones de comando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="249"/>
         <source>Command &amp;options...</source>
         <translation>&amp;Opciones de comando...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="237"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="252"/>
         <source>Show the VCS command options</source>
         <translation>Mostrar opciones de comando VCS</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="253"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the VCS command options.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Opciones de comando...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las opciones de comando VCS.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="245"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="260"/>
         <source>Revert changes</source>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="245"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="260"/>
         <source>Re&amp;vert changes</source>
         <translation>Re&amp;vertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="249"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="264"/>
         <source>Revert all changes made to the local project</source>
         <translation>Revertir todos los cambios hechos al proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="252"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="267"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Revertir cambios&lt;/b&gt;&lt;p&gt;Revierte todos los cambios hechos al proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="259"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="274"/>
         <source>Merge</source>
         <translation>Hacer merge</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="259"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="274"/>
         <source>Mer&amp;ge changes...</source>
         <translation>Hacer mer&amp;ge de los cambios...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="263"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="278"/>
         <source>Merge changes of a tag/revision into the local project</source>
         <translation>Hacer merge de los cambios de una tag/revision en el proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="266"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="281"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a tag/revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;Hace un merge de los cambios de una tag/revision al proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="273"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="288"/>
         <source>Switch</source>
         <translation>Hacer switch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="273"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="288"/>
         <source>S&amp;witch...</source>
         <translation>Hacer s&amp;witch...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="277"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="292"/>
         <source>Switch the local copy to another tag/branch</source>
         <translation>Hace un switch de la copia local a otra tag/branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="280"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="295"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the local copy to another tag/branch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer switch&lt;/b&gt;&lt;p&gt;Hace un switch de la copia local a otra tag/branch.&lt;/p&gt;</translation>
     </message>
@@ -40571,217 +40666,217 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation type="obsolete">&lt;b&gt;Resolver conflictos&lt;/b&gt;&lt;p&gt;Resuelve todos los conflictos del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
         <source>Cleanup</source>
         <translation>Limpiar (cleanup)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
         <source>Cleanu&amp;p</source>
         <translation>Lim&amp;piar  (cleanup)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="303"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="318"/>
         <source>Cleanup the local project</source>
         <translation>Hacer limpieza (cleanup) del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="306"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="321"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpieza (cleanup)&lt;/b&gt;&lt;p&gt;Ejecuta un cleanup del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="313"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="328"/>
         <source>Execute command</source>
         <translation>Ejecutar comando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="313"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="328"/>
         <source>E&amp;xecute command...</source>
         <translation>E&amp;jecutar comando...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="316"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="331"/>
         <source>Execute an arbitrary VCS command</source>
         <translation>Ejecuta un comando VCS arbitrario</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="319"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="334"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary VCS command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecutar comando&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir un comando VCS arbitrario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="326"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="341"/>
         <source>List tags</source>
         <translation>Listar tags</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="326"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="341"/>
         <source>List tags...</source>
         <translation>Listar tags...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="329"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="344"/>
         <source>List tags of the project</source>
         <translation>Lista los tags del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="332"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="347"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar tags&lt;/b&gt;&lt;p&gt;Lista los tags del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="339"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="354"/>
         <source>List branches</source>
         <translation>Listar branches</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="339"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="354"/>
         <source>List branches...</source>
         <translation>Listar branches...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="342"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="357"/>
         <source>List branches of the project</source>
         <translation>Lista las branches del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="345"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="360"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar branches&lt;/b&gt;&lt;p&gt;Lista las branches del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="352"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="367"/>
         <source>List repository contents</source>
         <translation>Listar contenido del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="352"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="367"/>
         <source>List repository contents...</source>
         <translation>Listar contenido del repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="355"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="370"/>
         <source>Lists the contents of the repository</source>
         <translation>Lista el contenido del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="358"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="373"/>
         <source>&lt;b&gt;List repository contents&lt;/b&gt;&lt;p&gt;This lists the contents of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar contenido del repositorio&lt;/b&gt;&lt;p&gt;Lista el contenido del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="365"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="380"/>
         <source>Set Property</source>
         <translation>Establecer propiedad</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="365"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="380"/>
         <source>Set Property...</source>
         <translation>Establecer propiedad...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="383"/>
         <source>Set a property for the project files</source>
         <translation>Establece una propiedad para los archivos del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="371"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="386"/>
         <source>&lt;b&gt;Set Property&lt;/b&gt;&lt;p&gt;This sets a property for the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Establecer Propiedad&lt;/b&gt;&lt;p&gt;Establece una propiedad para los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="378"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="393"/>
         <source>List Properties</source>
         <translation>Listar propiedades</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="378"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="393"/>
         <source>List Properties...</source>
         <translation>Listar propiedades...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="381"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="396"/>
         <source>List properties of the project files</source>
         <translation>Listar propiedades de los archivos del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="384"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="399"/>
         <source>&lt;b&gt;List Properties&lt;/b&gt;&lt;p&gt;This lists the properties of the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar Propiedades&lt;/b&gt;&lt;p&gt;Lista las propiedades de los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="391"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="406"/>
         <source>Delete Property</source>
         <translation>Borrar propiedad</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="391"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="406"/>
         <source>Delete Property...</source>
         <translation>Borrar propiedad...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="394"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="409"/>
         <source>Delete a property for the project files</source>
         <translation>Borrar una propiedad de los archivos del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="397"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="412"/>
         <source>&lt;b&gt;Delete Property&lt;/b&gt;&lt;p&gt;This deletes a property for the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Propiedad&lt;/b&gt;&lt;p&gt;Borra una propiedad de los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="191"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="206"/>
         <source>Show repository info</source>
         <translation>Mostrar informacion del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="195"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="210"/>
         <source>Show some repository related information for the local project</source>
         <translation>Mostrar información relacionada con el repositorio para el proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="198"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="213"/>
         <source>&lt;b&gt;Show repository info&lt;/b&gt;&lt;p&gt;This shows some repository related information for the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar información del repositorio&lt;/b&gt;&lt;p&gt;Muestra información relacionada con el repositorio para el proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="419"/>
         <source>Relocate</source>
         <translation>Trasladar (relocate)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="419"/>
         <source>Relocate...</source>
         <translation>Trasladar (relocate)...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="408"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="423"/>
         <source>Relocate the working copy to a new repository URL</source>
         <translation>Trasladar la copia de trabajo a una nueva URL de repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="411"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="426"/>
         <source>&lt;b&gt;Relocate&lt;/b&gt;&lt;p&gt;This relocates the working copy to a new repository URL.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Trasladar (relocate)&lt;/b&gt;&lt;p&gt;Traslada la copia de trabajo a una nueva URL de repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="418"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="433"/>
         <source>Repository Browser</source>
         <translation>Navegador de Repositorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="418"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="433"/>
         <source>Repository Browser...</source>
         <translation>Navegador de Repositorios...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="422"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="437"/>
         <source>Show the Repository Browser dialog</source>
         <translation>Mostrar diálogo de Navegador de Repositorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="425"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="440"/>
         <source>&lt;b&gt;Repository Browser&lt;/b&gt;&lt;p&gt;This shows the Repository Browser dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navegador de Repositorios&lt;/b&gt;&lt;p&gt;Muestra el diálogo de Navegador de Repositorios.&lt;/p&gt;</translation>
     </message>
@@ -40801,43 +40896,58 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Mostrar navegador de log&lt;/b&gt;&lt;p&gt;Muestra un diálogo para navegar el log del proyecto local. Al principio se muestra un número limitado de entradas. Se pueden recuperar más entradas despues.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="432"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="447"/>
         <source>Configure</source>
         <translation>Configurar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="432"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="447"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="435"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="450"/>
         <source>Show the configuration dialog with the Subversion page selected</source>
         <translation>Mostrar el diálogo de configuración con la página de Subversion seleccionada</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="438"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="453"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Subversion page selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Configurar&lt;/b&gt;&lt;p&gt;Mostrar el diálogo de configuración con la página de Subversion seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="302"/>
         <source>Conflicts resolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="302"/>
         <source>Con&amp;flicts resolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="290"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="305"/>
         <source>Mark all conflicts of the local project as resolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="293"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="308"/>
         <source>&lt;b&gt;Conflicts resolved&lt;/b&gt;&lt;p&gt;This marks all conflicts of the local project as resolved.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="191"/>
+        <source>Show change lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="195"/>
+        <source>Show the change lists and associated files of the local project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="198"/>
+        <source>&lt;b&gt;Show change lists&lt;/b&gt;&lt;p&gt;This shows the change lists and associated files of the local project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -41405,12 +41515,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
         <source>Lock</source>
         <translation>Bloquear</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="716"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="717"/>
         <source>Unlock</source>
         <translation>Desbloquear</translation>
     </message>
@@ -41525,47 +41635,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>No hay cambios pendientes de commit disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>No hay entradas sin versionar disponibles/seleccionadas.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
         <source>Revert</source>
         <translation>Revertir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>No hay archivos desbloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
         <source>There are no locked files available/selected.</source>
         <translation>No hay archivos bloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="734"/>
         <source>Break Lock</source>
         <translation>Romper Bloqueo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
         <source>Steal Lock</source>
         <translation>Robar Bloqueo</translation>
     </message>
@@ -41580,17 +41690,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Añadir a la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
         <source>Remove from Changelist</source>
         <translation>Quitar de la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="766"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que no pertenezcan a una lista de cambios.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que pertenezcan a una lista de cambios.</translation>
     </message>
@@ -41670,22 +41780,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Restaurar perdidas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="503"/>
         <source>all</source>
         <translation>todo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
         <source>Differences</source>
         <translation>Diferencias</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
         <source>There are no entries selected to be committed.</source>
         <translation>No hay entradas seleccionads sobre las que hacer commit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
         <source>There are no missing entries available/selected.</source>
         <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
@@ -53454,17 +53564,17 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1604"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1605"/>
         <source>unknown</source>
         <translation>desconocido</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1473"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1474"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Información del repositorio&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión actual&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión enviada&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Último autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1605"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1606"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Information del repositorio&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión enviada&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de envio&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Último autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>

@@ -18,6 +18,9 @@ Version 5.3-snapshot-2012mmdd:
      --- improved the copy/move operation a bit
   -- Mercurial
      --- added support for amending commits as of Mercurial 2.2
+  -- Subversion
+     --- added capability to select from existing change lists and added a
+         dialog to browse the change lists
 - Web Browser
   -- extended the "Clear Private Data" dialog to clear flash cookies and
      to select a browsing history period to clear

@@ -520,6 +520,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.SvnBlameDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnBlameDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.html" />
@@ -557,6 +558,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html" />
@@ -8883,6 +8885,8 @@
       <keyword name="Subversion.svnDelProp" id="Subversion.svnDelProp" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnDelProp" />
       <keyword name="Subversion.svnExtendedDiff" id="Subversion.svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnExtendedDiff" />
       <keyword name="Subversion.svnExtendedDiff" id="Subversion.svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnExtendedDiff" />
+      <keyword name="Subversion.svnGetChangelists" id="Subversion.svnGetChangelists" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnGetChangelists" />
+      <keyword name="Subversion.svnGetChangelists" id="Subversion.svnGetChangelists" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnGetChangelists" />
       <keyword name="Subversion.svnGetReposName" id="Subversion.svnGetReposName" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnGetReposName" />
       <keyword name="Subversion.svnGetReposName" id="Subversion.svnGetReposName" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnGetReposName" />
       <keyword name="Subversion.svnInfo" id="Subversion.svnInfo" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnInfo" />
@@ -8906,6 +8910,8 @@
       <keyword name="Subversion.svnResolve" id="Subversion.svnResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnResolve" />
       <keyword name="Subversion.svnSetProp" id="Subversion.svnSetProp" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnSetProp" />
       <keyword name="Subversion.svnSetProp" id="Subversion.svnSetProp" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnSetProp" />
+      <keyword name="Subversion.svnShowChangelists" id="Subversion.svnShowChangelists" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnShowChangelists" />
+      <keyword name="Subversion.svnShowChangelists" id="Subversion.svnShowChangelists" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnShowChangelists" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUnlock" />
       <keyword name="Subversion.svnUnlock" id="Subversion.svnUnlock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnUnlock" />
       <keyword name="Subversion.svnUrlDiff" id="Subversion.svnUrlDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnUrlDiff" />
@@ -9031,6 +9037,27 @@
       <keyword name="SvnBlameDialog.on_sendButton_clicked" id="SvnBlameDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog.html#SvnBlameDialog.on_sendButton_clicked" />
       <keyword name="SvnBlameDialog.start" id="SvnBlameDialog.start" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnBlameDialog.html#SvnBlameDialog.start" />
       <keyword name="SvnBlameDialog.start" id="SvnBlameDialog.start" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog.html#SvnBlameDialog.start" />
+      <keyword name="SvnChangeListsDialog" id="SvnChangeListsDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog" />
+      <keyword name="SvnChangeListsDialog" id="SvnChangeListsDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog" />
+      <keyword name="SvnChangeListsDialog (Constructor)" id="SvnChangeListsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog.__init__" />
+      <keyword name="SvnChangeListsDialog (Constructor)" id="SvnChangeListsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.__init__" />
+      <keyword name="SvnChangeListsDialog (Module)" id="SvnChangeListsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html" />
+      <keyword name="SvnChangeListsDialog (Module)" id="SvnChangeListsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html" />
+      <keyword name="SvnChangeListsDialog.__finish" id="SvnChangeListsDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog.__finish" />
+      <keyword name="SvnChangeListsDialog.__finish" id="SvnChangeListsDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.__finish" />
+      <keyword name="SvnChangeListsDialog.__procFinished" id="SvnChangeListsDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.__procFinished" />
+      <keyword name="SvnChangeListsDialog.__readStderr" id="SvnChangeListsDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.__readStderr" />
+      <keyword name="SvnChangeListsDialog.__readStdout" id="SvnChangeListsDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.__readStdout" />
+      <keyword name="SvnChangeListsDialog.keyPressEvent" id="SvnChangeListsDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.keyPressEvent" />
+      <keyword name="SvnChangeListsDialog.on_buttonBox_clicked" id="SvnChangeListsDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog.on_buttonBox_clicked" />
+      <keyword name="SvnChangeListsDialog.on_buttonBox_clicked" id="SvnChangeListsDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.on_buttonBox_clicked" />
+      <keyword name="SvnChangeListsDialog.on_changeLists_currentItemChanged" id="SvnChangeListsDialog.on_changeLists_currentItemChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog.on_changeLists_currentItemChanged" />
+      <keyword name="SvnChangeListsDialog.on_changeLists_currentItemChanged" id="SvnChangeListsDialog.on_changeLists_currentItemChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.on_changeLists_currentItemChanged" />
+      <keyword name="SvnChangeListsDialog.on_input_returnPressed" id="SvnChangeListsDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.on_input_returnPressed" />
+      <keyword name="SvnChangeListsDialog.on_passwordCheckBox_toggled" id="SvnChangeListsDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.on_passwordCheckBox_toggled" />
+      <keyword name="SvnChangeListsDialog.on_sendButton_clicked" id="SvnChangeListsDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.on_sendButton_clicked" />
+      <keyword name="SvnChangeListsDialog.start" id="SvnChangeListsDialog.start" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html#SvnChangeListsDialog.start" />
+      <keyword name="SvnChangeListsDialog.start" id="SvnChangeListsDialog.start" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html#SvnChangeListsDialog.start" />
       <keyword name="SvnCommandDialog" id="SvnCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html#SvnCommandDialog" />
       <keyword name="SvnCommandDialog" id="SvnCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html#SvnCommandDialog" />
       <keyword name="SvnCommandDialog (Constructor)" id="SvnCommandDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html#SvnCommandDialog.__init__" />
@@ -9344,6 +9371,8 @@
       <keyword name="SvnProjectHelper (Constructor)" id="SvnProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__init__" />
       <keyword name="SvnProjectHelper.__svnBranchList" id="SvnProjectHelper.__svnBranchList" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnBranchList" />
       <keyword name="SvnProjectHelper.__svnBranchList" id="SvnProjectHelper.__svnBranchList" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnBranchList" />
+      <keyword name="SvnProjectHelper.__svnChangeLists" id="SvnProjectHelper.__svnChangeLists" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnChangeLists" />
+      <keyword name="SvnProjectHelper.__svnChangeLists" id="SvnProjectHelper.__svnChangeLists" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnChangeLists" />
       <keyword name="SvnProjectHelper.__svnConfigure" id="SvnProjectHelper.__svnConfigure" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnConfigure" />
       <keyword name="SvnProjectHelper.__svnConfigure" id="SvnProjectHelper.__svnConfigure" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnConfigure" />
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
@@ -12407,6 +12436,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.SvnBlameDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsPySvn.SvnChangeListsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.html</file>
@@ -12440,6 +12470,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnBlameDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnChangeListsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html</file>

@@ -43,6 +43,7 @@ from .SvnBlameDialog import SvnBlameDialog
 from .SvnRelocateDialog import SvnRelocateDialog
 from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
 from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+from .SvnChangeListsDialog import SvnChangeListsDialog
 from .SvnStatusMonitorThread import SvnStatusMonitorThread
 from .SvnUtilities import getConfigPath, amendConfig, createDefaultConfig
 
@@ -1929,11 +1930,12 @@ class Subversion(VersionControl):
         @param names name or list of names of file or directory to add
             (string)
         """
-        clname, ok = QInputDialog.getText(
+        clname, ok = QInputDialog.getItem(
             None,
             self.trUtf8("Add to changelist"),
             self.trUtf8("Enter name of the changelist:"),
-            QLineEdit.Normal)
+            sorted(self.svnGetChangelists()),
+            0, True)
         if not ok or not clname:
             return
 
@@ -1953,6 +1955,55 @@ class Subversion(VersionControl):
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
+        
+    def svnShowChangelists(self, path):
+        """
+        Public method used to inspect the change lists defined for the project.
+        
+        @param path directory name to show change lists for (string)
+        """
+        self.changeLists = SvnChangeListsDialog(self)
+        self.changeLists.show()
+        QApplication.processEvents()
+        self.changeLists.start(path)
+        
+    def svnGetChangelists(self):
+        """
+        Public method to get a list of all defined change lists.
+        
+        @return list of defined change list names (list of strings)
+        """
+        changelists = []
+        rx_changelist = \
+            QRegExp('--- \\S+ .([\\w\\s]+).:\\s*')
+            # three dashes, Changelist (translated), quote,
+            # changelist name, quote, :
+        
+        args = []
+        args.append("status")
+        args.append("--non-interactive")
+        args.append(".")
+        
+        ppath = e5App().getObject("Project").getProjectPath()
+        process = QProcess()
+        process.setWorkingDirectory(ppath)
+        process.start('svn', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
+                        'replace')
+                if output:
+                    for line in output.splitlines():
+                        if rx_changelist.exactMatch(line):
+                            changelist = rx_changelist.cap(1)
+                            if changelist not in changelists:
+                                changelists.append(changelist)
+        
+        return changelists
 
     ############################################################################
     ## Private Subversion specific methods are below.

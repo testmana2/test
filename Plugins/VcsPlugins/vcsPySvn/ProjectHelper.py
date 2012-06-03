@@ -188,6 +188,21 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
         
+        self.svnChangeListsAct = E5Action(self.trUtf8('Show change lists'),
+                UI.PixmapCache.getIcon("vcsChangeLists.png"),
+                self.trUtf8('Show change lists'),
+                0, 0, self, 'subversion_changelists')
+        self.svnChangeListsAct.setStatusTip(self.trUtf8(
+            'Show the change lists and associated files of the local project'
+        ))
+        self.svnChangeListsAct.setWhatsThis(self.trUtf8(
+            """<b>Show change lists</b>"""
+            """<p>This shows the change lists and associated files of the"""
+            """ local project.</p>"""
+        ))
+        self.svnChangeListsAct.triggered[()].connect(self.__svnChangeLists)
+        self.actions.append(self.svnChangeListsAct)
+        
         self.svnRepoInfoAct = E5Action(self.trUtf8('Show repository info'),
                 UI.PixmapCache.getIcon("vcsRepo.png"),
                 self.trUtf8('Show repository info'),
@@ -478,6 +493,7 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addAction(self.svnLogBrowserAct)
         menu.addSeparator()
         menu.addAction(self.vcsStatusAct)
+        menu.addAction(self.svnChangeListsAct)
         menu.addAction(self.svnRepoInfoAct)
         menu.addSeparator()
         menu.addAction(self.vcsDiffAct)
@@ -578,6 +594,12 @@ class SvnProjectHelper(VcsProjectHelper):
         
     def __svnConfigure(self):
         """
-        Private method to open the configuration dialog.
+        Private slot to open the configuration dialog.
         """
         e5App().getObject("UserInterface").showPreferences("zzz_subversionPage")
+    
+    def __svnChangeLists(self):
+        """
+        Private slot used to show a list of change lists.
+        """
+        self.vcs.svnShowChangelists(self.project.ppath)

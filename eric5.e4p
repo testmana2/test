@@ -1012,6 +1012,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Tasks/Task.py</Source>
     <Source>Tasks/TaskFilter.py</Source>
     <Source>UI/SearchWidget.py</Source>
+    <Source>Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1301,6 +1303,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Snapshot/SnapWidget.ui</Form>
     <Form>UI/SearchWidget.ui</Form>
     <Form>Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
