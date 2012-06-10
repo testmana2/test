@@ -86,21 +86,6 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsCommitAct.triggered[()].connect(self._vcsCommit)
         self.actions.append(self.vcsCommitAct)
         
-        self.vcsRemoveAct = E5Action(self.trUtf8('Remove from repository (and disk)'),
-                UI.PixmapCache.getIcon("vcsRemove.png"),
-                self.trUtf8('&Remove from repository (and disk)'),
-                0, 0, self, 'subversion_remove')
-        self.vcsRemoveAct.setStatusTip(self.trUtf8(
-            'Remove the local project from the VCS repository (and  disk)'
-        ))
-        self.vcsRemoveAct.setWhatsThis(self.trUtf8(
-            """<b>Remove from repository</b>"""
-            """<p>This removes the local project from the VCS repository"""
-            """ (and disk).</p>"""
-        ))
-        self.vcsRemoveAct.triggered[()].connect(self._vcsRemove)
-        self.actions.append(self.vcsRemoveAct)
-        
         self.vcsLogAct = E5Action(self.trUtf8('Show log'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show &log'),
@@ -479,8 +464,6 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
-        menu.addSeparator()
-        menu.addAction(self.vcsRemoveAct)
         menu.addSeparator()
         menu.addAction(self.vcsTagAct)
         if self.vcs.otherData["standardLayout"]:

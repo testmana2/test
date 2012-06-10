@@ -219,21 +219,6 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsExportAct.triggered[()].connect(self._vcsExport)
         self.actions.append(self.vcsExportAct)
         
-        self.vcsRemoveAct = E5Action(self.trUtf8('Remove from repository (and disk)'),
-                UI.PixmapCache.getIcon("vcsRemove.png"),
-                self.trUtf8('&Remove from repository (and disk)'),
-                0, 0, self, 'mercurial_remove')
-        self.vcsRemoveAct.setStatusTip(self.trUtf8(
-            'Remove the local project from the repository (and  disk)'
-        ))
-        self.vcsRemoveAct.setWhatsThis(self.trUtf8(
-            """<b>Remove from repository</b>"""
-            """<p>This removes the local project from the repository"""
-            """ (and disk).</p>"""
-        ))
-        self.vcsRemoveAct.triggered[()].connect(self._vcsRemove)
-        self.actions.append(self.vcsRemoveAct)
-        
         self.vcsLogAct = E5Action(self.trUtf8('Show log'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show &log'),
@@ -988,8 +973,6 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
-        menu.addSeparator()
-        menu.addAction(self.vcsRemoveAct)
         menu.addSeparator()
         menu.addAction(self.vcsTagAct)
         menu.addAction(self.hgTagListAct)
