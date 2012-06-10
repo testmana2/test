@@ -7,9 +7,6 @@
 Module defining configuration variables for the subversion package
 """
 
-import os
-
-
 # Available protocols for the repository URL
 ConfigSvnProtocols = [
     'file://',
@@ -20,7 +17,7 @@ ConfigSvnProtocols = [
 ]
 
 
-DefaultConfig = os.linesep.join([
+DefaultConfig = "\n".join([
     "### This file configures various client-side behaviors.",
     "###",
     "### The commented-out examples below are intended to demonstrate",

@@ -128,7 +128,7 @@ def amendConfig():
     if newConfig != configList:
         try:
             f = open(config, "w")
-            f.write(os.linesep.join(newConfig))
+            f.write("\n".join(newConfig))
             f.close()
         except IOError:
             pass
