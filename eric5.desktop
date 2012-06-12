@@ -1,7 +1,8 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Type=Application
 Exec=eric5
-MimeType=application/x-eric5;
+MimeType=text/x-python;
 Icon=eric
 Terminal=false
 Name=eric5
