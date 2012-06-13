@@ -2697,9 +2697,7 @@ class Editor(QsciScintillaCompat):
         
         @param line line number to make visible
         """
-        topLine = self.firstVisibleLine()
-        linesToScroll = line - topLine
-        self.scrollVertical(linesToScroll)
+        self.setFirstVisibleLine(line - 1)
         
     def __marginClicked(self, margin, line, modifiers):
         """
@@ -3335,15 +3333,20 @@ class Editor(QsciScintillaCompat):
             else:
                 self.__indentLine(True)
         
-    def gotoLine(self, line, pos=1):
+    def gotoLine(self, line, pos=1, firstVisible=False):
         """
         Public slot to jump to the beginning of a line.
         
         @param line line number to go to (integer)
         @keyparam pos position in line to go to (integer)
+        @keyparam firstVisible flag indicating to make the line the first
+            visible line (boolean)
         """
         self.setCursorPosition(line - 1, pos - 1)
-        self.ensureVisible(line)
+        if firstVisible:
+            self.ensureVisibleTop(line)
+        else:
+            self.ensureVisible(line)
     
     def __textChanged(self):
         """

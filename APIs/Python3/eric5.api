@@ -5884,7 +5884,7 @@ eric5.QScintilla.Editor.Editor.getWordBoundaries?4(line, index, useWordChars=Tru
 eric5.QScintilla.Editor.Editor.getWordLeft?4(line, index)
 eric5.QScintilla.Editor.Editor.getWordRight?4(line, index)
 eric5.QScintilla.Editor.Editor.gotoLastEditPosition?4()
-eric5.QScintilla.Editor.Editor.gotoLine?4(line, pos=1)
+eric5.QScintilla.Editor.Editor.gotoLine?4(line, pos=1, firstVisible=False)
 eric5.QScintilla.Editor.Editor.gotoMethodClass?4(goUp=False)
 eric5.QScintilla.Editor.Editor.gotoSyntaxError?4()
 eric5.QScintilla.Editor.Editor.handleMonospacedEnable?4()

@@ -2729,7 +2729,7 @@ the word to the right of that position (string)
         Public method to move the cursor to the last edit position.
 </p><a NAME="Editor.gotoLine" ID="Editor.gotoLine"></a>
 <h4>Editor.gotoLine</h4>
-<b>gotoLine</b>(<i>line, pos=1</i>)
+<b>gotoLine</b>(<i>line, pos=1, firstVisible=False</i>)
 <p>
         Public slot to jump to the beginning of a line.
 </p><dl>
@@ -2739,6 +2739,10 @@ line number to go to (integer)
 </dd><dt><i>pos=</i></dt>
 <dd>
 position in line to go to (integer)
+</dd><dt><i>firstVisible=</i></dt>
+<dd>
+flag indicating to make the line the first
+            visible line (boolean)
 </dd>
 </dl><a NAME="Editor.gotoMethodClass" ID="Editor.gotoMethodClass"></a>
 <h4>Editor.gotoMethodClass</h4>
