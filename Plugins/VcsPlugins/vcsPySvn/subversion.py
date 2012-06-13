@@ -2251,6 +2251,8 @@ class Subversion(VersionControl):
             url = url[2:]
         if protocol == "file":
             url = os.path.normcase(url)
+            if url[1] == ":":
+                url = url.replace(":", "|", 1)
         url = url.replace('\\', '/')
         if url.endswith('/'):
             url = url[:-1]
