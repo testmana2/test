@@ -74,6 +74,14 @@ class HgProjectHelper(VcsProjectHelper):
         for extension in self.__extensions.values():
             extension.setObjects(vcsObject, projectObject)
     
+    def getProject(self):
+        """
+        Public method to get a reference to the project object.
+        
+        @return reference to the project object (Project)
+        """
+        return self.project
+    
     def getActions(self):
         """
         Public method to get a list of all actions.
@@ -864,6 +872,21 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgGraftContinueAct.triggered[()].connect(self.__hgGraftContinue)
         self.actions.append(self.hgGraftContinueAct)
+        
+        self.hgAddSubrepoAct = E5Action(
+                self.trUtf8('Add'),
+                UI.PixmapCache.getIcon("vcsAdd.png"),
+                self.trUtf8('Add'),
+                0, 0, self, 'mercurial_add_subrepo')
+        self.hgAddSubrepoAct.setStatusTip(self.trUtf8(
+            'Add a subrepository'
+        ))
+        self.hgAddSubrepoAct.setWhatsThis(self.trUtf8(
+            """<b>Add</b>"""
+            """<p>Add a subrepository to the project.</p>"""
+        ))
+        self.hgAddSubrepoAct.triggered[()].connect(self.__hgAddSubrepository)
+        self.actions.append(self.hgAddSubrepoAct)
     
     def initMenu(self, menu):
         """
@@ -946,6 +969,13 @@ class HgProjectHelper(VcsProjectHelper):
         else:
             graftMenu = None
         
+        if self.vcs.version >= (1, 8):
+            subrepoMenu = QMenu(self.trUtf8("Sub-Repository"), menu)
+            subrepoMenu.setTearOffEnabled(True)
+            subrepoMenu.addAction(self.hgAddSubrepoAct)
+        else:
+            subrepoMenu = None
+        
         act = menu.addAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
@@ -999,6 +1029,9 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
         menu.addSeparator()
+        if subrepoMenu is not None:
+            menu.addMenu(subrepoMenu)
+            menu.addSeparator()
         menu.addMenu(bisectMenu)
         menu.addSeparator()
         menu.addAction(self.vcsCleanupAct)
@@ -1349,3 +1382,9 @@ class HgProjectHelper(VcsProjectHelper):
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
+    
+    def __hgAddSubrepository(self):
+        """
+        Private slot used to add a sub-repository.
+        """
+        self.vcs.hgAddSubrepository()

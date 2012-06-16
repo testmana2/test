@@ -52,6 +52,7 @@ from .HgImportDialog import HgImportDialog
 from .HgExportDialog import HgExportDialog
 from .HgPhaseDialog import HgPhaseDialog
 from .HgGraftDialog import HgGraftDialog
+from .HgAddSubrepositoryDialog import HgAddSubrepositoryDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -315,6 +316,7 @@ class Hg(VersionControl):
         
         if status:
             status = self.hgCreateIgnoreFile(projectDir)
+            # TODO: only call this, if the file is not present
             
             if status:
                 args = []
@@ -2626,6 +2628,89 @@ class Hg(VersionControl):
             res = dia.hasAddOrDelete()
             self.checkVCSStatus()
         return res
+    
+    ############################################################################
+    ## Methods to deal with subrepositories are below.
+    ############################################################################
+    
+    def getHgSubPath(self):
+        """
+        Public method to get the path to the .hgsub file containing the definitions
+        of subrepositories.
+        
+        @return full path of the .hgsub file (string)
+        """
+        ppath = self.__projectHelper.getProject().getProjectPath()
+        return os.path.join(ppath, ".hgsub")
+    
+    def hasSubrepositories(self):
+        """
+        Public method to check, if the project might have subrepositories.
+        
+        @return flag indicating the existence of subrepositories (boolean)
+        """
+        hgsub = self.getHgSubPath()
+        return os.path.isfile(hgsub) and os.stat(hgsub).st_size > 0
+    
+    def hgAddSubrepository(self):
+        """
+        Public method to add a subrepository.
+        """
+        ppath = self.__projectHelper.getProject().getProjectPath()
+        hgsub = self.getHgSubPath()
+        dlg = HgAddSubrepositoryDialog(ppath)
+        if dlg.exec_() == QDialog.Accepted:
+            relPath, subrepoType, subrepoUrl = dlg.getData()
+            if subrepoType == "hg":
+                url = subrepoUrl
+            else:
+                url = "[{0}]{1}".format(subrepoType, subrepoUrl)
+            entry = "{0} = {1}\n".format(relPath, url)
+            
+            contents = []
+            if os.path.isfile(hgsub):
+                # file exists; check, if such an entry exists already
+                needsAdd = False
+                try:
+                    f = open(hgsub, "r")
+                    contents = f.readlines()
+                    f.close()
+                except IOError as err:
+                    E5MessageBox.critical(self.__ui,
+                        self.trUtf8("Add Subrepository"),
+                        self.trUtf8("""<p>The subrepositories file .hgsub could not"""
+                                    """ be read.</p><p>Reason: {0}</p>""")
+                                    .format(str(err)))
+                    return
+                
+                if entry in contents:
+                    E5MessageBox.critical(self.__ui,
+                        self.trUtf8("Add Subrepository"),
+                        self.trUtf8("""<p>The subrepositories file .hgsub already"""
+                                    """ contains an entry <b>{0}</b>. Aborting...</p>""")
+                                    .format(entry))
+                    return
+            else:
+                needsAdd = True
+            
+            if contents and not contents[-1].endswith("\n"):
+                contents[-1] = contents[-1] + "\n"
+            contents.append(entry)
+            try:
+                f = open(hgsub, "w")
+                f.writelines(contents)
+                f.close()
+            except IOError as err:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Add Subrepository"),
+                    self.trUtf8("""<p>The subrepositories file .hgsub could not"""
+                                """ be written to.</p><p>Reason: {0}</p>""")
+                                .format(str(err)))
+                return
+            
+            if needsAdd:
+                self.vcsAdd(hgsub)
+                self.__projectHelper.getProject().appendFile(hgsub)
     
     ############################################################################
     ## Methods to handle extensions are below.
