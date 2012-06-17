@@ -18,6 +18,7 @@ Version 5.3-snapshot-2012mmdd:
      --- improved the copy/move operation a bit
   -- Mercurial
      --- added support for amending commits as of Mercurial 2.2
+     --- added support for sub-repositories
   -- Subversion
      --- added capability to select from existing change lists and added a
          dialog to browse the change lists
