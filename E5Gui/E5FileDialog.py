@@ -13,6 +13,7 @@ from PyQt4.QtGui import QFileDialog
 import Globals
 
 Options = QFileDialog.Options
+Option = QFileDialog.Option
 
 ShowDirsOnly = QFileDialog.ShowDirsOnly
 DontResolveSymlinks = QFileDialog.DontResolveSymlinks

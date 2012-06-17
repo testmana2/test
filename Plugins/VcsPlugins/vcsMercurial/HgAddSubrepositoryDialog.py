@@ -84,9 +84,10 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
             E5FileDialog.Options(E5FileDialog.Option(0)))
         
         if path:
+            path = Utilities.toNativeSeparators(path)
             if path.startswith(self.__projectPath):
                 path = path.replace(self.__projectPath, "")[1:]
-                self.pathEdit.setText(Utilities.toNativeSeparators(path))
+                self.pathEdit.setText(path)
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Add Sub-repository"),
