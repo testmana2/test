@@ -98,8 +98,17 @@ VersionControl
 <td><a href="#Hg.getExtensionObject">getExtensionObject</a></td>
 <td>Public method to get a reference to an extension object.</td>
 </tr><tr>
+<td><a href="#Hg.getHgSubPath">getHgSubPath</a></td>
+<td>Public method to get the path to the .hgsub file containing the definitions of sub-repositories.</td>
+</tr><tr>
 <td><a href="#Hg.getPlugin">getPlugin</a></td>
 <td>Public method to get a reference to the plugin object.</td>
+</tr><tr>
+<td><a href="#Hg.hasSubrepositories">hasSubrepositories</a></td>
+<td>Public method to check, if the project might have sub-repositories.</td>
+</tr><tr>
+<td><a href="#Hg.hgAddSubrepository">hgAddSubrepository</a></td>
+<td>Public method to add a sub-repository.</td>
 </tr><tr>
 <td><a href="#Hg.hgAnnotate">hgAnnotate</a></td>
 <td>Public method to show the output of the hg annotate command.</td>
@@ -190,6 +199,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgRecover">hgRecover</a></td>
 <td>Public method to recover an interrupted transaction.</td>
+</tr><tr>
+<td><a href="#Hg.hgRemoveSubrepositories">hgRemoveSubrepositories</a></td>
+<td>Public method to remove sub-repositories.</td>
 </tr><tr>
 <td><a href="#Hg.hgResolve">hgResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
@@ -429,6 +441,17 @@ name of the extension (string)
 <dd>
 reference to the extension object (boolean)
 </dd>
+</dl><a NAME="Hg.getHgSubPath" ID="Hg.getHgSubPath"></a>
+<h4>Hg.getHgSubPath</h4>
+<b>getHgSubPath</b>(<i></i>)
+<p>
+        Public method to get the path to the .hgsub file containing the definitions
+        of sub-repositories.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+full path of the .hgsub file (string)
+</dd>
 </dl><a NAME="Hg.getPlugin" ID="Hg.getPlugin"></a>
 <h4>Hg.getPlugin</h4>
 <b>getPlugin</b>(<i></i>)
@@ -439,7 +462,22 @@ reference to the extension object (boolean)
 <dd>
 reference to the plugin object (VcsMercurialPlugin)
 </dd>
-</dl><a NAME="Hg.hgAnnotate" ID="Hg.hgAnnotate"></a>
+</dl><a NAME="Hg.hasSubrepositories" ID="Hg.hasSubrepositories"></a>
+<h4>Hg.hasSubrepositories</h4>
+<b>hasSubrepositories</b>(<i></i>)
+<p>
+        Public method to check, if the project might have sub-repositories.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the existence of sub-repositories (boolean)
+</dd>
+</dl><a NAME="Hg.hgAddSubrepository" ID="Hg.hgAddSubrepository"></a>
+<h4>Hg.hgAddSubrepository</h4>
+<b>hgAddSubrepository</b>(<i></i>)
+<p>
+        Public method to add a sub-repository.
+</p><a NAME="Hg.hgAnnotate" ID="Hg.hgAnnotate"></a>
 <h4>Hg.hgAnnotate</h4>
 <b>hgAnnotate</b>(<i>name</i>)
 <p>
@@ -826,7 +864,12 @@ flag indicating to push a new branch (boolean)
 <dd>
 file/directory name (string)
 </dd>
-</dl><a NAME="Hg.hgResolve" ID="Hg.hgResolve"></a>
+</dl><a NAME="Hg.hgRemoveSubrepositories" ID="Hg.hgRemoveSubrepositories"></a>
+<h4>Hg.hgRemoveSubrepositories</h4>
+<b>hgRemoveSubrepositories</b>(<i></i>)
+<p>
+        Public method to remove sub-repositories.
+</p><a NAME="Hg.hgResolve" ID="Hg.hgResolve"></a>
 <h4>Hg.hgResolve</h4>
 <b>hgResolve</b>(<i>name</i>)
 <p>

@@ -246,6 +246,7 @@ HelpWebSearchEdit E5LineEdit
 HelpWebSearchWidget QWidget
 HelpWindow QMainWindow
 Hg VersionControl
+HgAddSubrepositoryDialog QDialog Ui_HgAddSubrepositoryDialog
 HgAnnotateDialog QDialog Ui_HgAnnotateDialog
 HgBackoutDialog QDialog Ui_HgBackoutDialog
 HgBookmarkDialog QDialog Ui_HgBookmarkDialog
@@ -289,6 +290,7 @@ HgQueuesNewPatchDialog QDialog Ui_HgQueuesNewPatchDialog
 HgQueuesQueueManagementDialog QDialog Ui_HgQueuesQueueManagementDialog
 HgQueuesRenamePatchDialog QDialog Ui_HgQueuesRenamePatchDialog
 HgRebaseDialog QDialog Ui_HgRebaseDialog
+HgRemoveSubrepositoriesDialog QDialog Ui_HgRemoveSubrepositoriesDialog
 HgRevisionSelectionDialog QDialog Ui_HgRevisionSelectionDialog
 HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
 HgServeDialog QMainWindow

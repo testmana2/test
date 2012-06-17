@@ -61,6 +61,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__init__">HgProjectHelper</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgAddSubrepository">__hgAddSubrepository</a></td>
+<td>Private slot used to add a sub-repository.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgBackout">__hgBackout</a></td>
 <td>Private slot used to back out changes of a changeset.</td>
 </tr><tr>
@@ -157,6 +160,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgRecover">__hgRecover</a></td>
 <td>Private slot used to recover from an interrupted transaction.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgRemoveSubrepositories">__hgRemoveSubrepositories</a></td>
+<td>Private slot used to remove sub-repositories.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgResolve">__hgResolve</a></td>
 <td>Private slot used to resolve conflicts of the local project.</td>
 </tr><tr>
@@ -196,6 +202,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.getProject">getProject</a></td>
+<td>Public method to get a reference to the project object.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.initActions">initActions</a></td>
 <td>Public method to generate the action objects.</td>
 </tr><tr>
@@ -232,7 +241,12 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="HgProjectHelper.__hgBackout" ID="HgProjectHelper.__hgBackout"></a>
+</dl><a NAME="HgProjectHelper.__hgAddSubrepository" ID="HgProjectHelper.__hgAddSubrepository"></a>
+<h4>HgProjectHelper.__hgAddSubrepository</h4>
+<b>__hgAddSubrepository</b>(<i></i>)
+<p>
+        Private slot used to add a sub-repository.
+</p><a NAME="HgProjectHelper.__hgBackout" ID="HgProjectHelper.__hgBackout"></a>
 <h4>HgProjectHelper.__hgBackout</h4>
 <b>__hgBackout</b>(<i></i>)
 <p>
@@ -394,6 +408,11 @@ name of this object (string)
 <b>__hgRecover</b>(<i></i>)
 <p>
         Private slot used to recover from an interrupted transaction.
+</p><a NAME="HgProjectHelper.__hgRemoveSubrepositories" ID="HgProjectHelper.__hgRemoveSubrepositories"></a>
+<h4>HgProjectHelper.__hgRemoveSubrepositories</h4>
+<b>__hgRemoveSubrepositories</b>(<i></i>)
+<p>
+        Private slot used to remove sub-repositories.
 </p><a NAME="HgProjectHelper.__hgResolve" ID="HgProjectHelper.__hgResolve"></a>
 <h4>HgProjectHelper.__hgResolve</h4>
 <b>__hgResolve</b>(<i></i>)
@@ -463,6 +482,16 @@ name of this object (string)
 <dt>Returns:</dt>
 <dd>
 list of all actions (list of E5Action)
+</dd>
+</dl><a NAME="HgProjectHelper.getProject" ID="HgProjectHelper.getProject"></a>
+<h4>HgProjectHelper.getProject</h4>
+<b>getProject</b>(<i></i>)
+<p>
+        Public method to get a reference to the project object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the project object (Project)
 </dd>
 </dl><a NAME="HgProjectHelper.initActions" ID="HgProjectHelper.initActions"></a>
 <h4>HgProjectHelper.initActions</h4>

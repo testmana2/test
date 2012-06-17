@@ -478,6 +478,7 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.Config" ref="eric5.Plugins.VcsPlugins.vcsMercurial.Config.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
@@ -500,6 +501,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
@@ -4871,7 +4873,10 @@
       <keyword name="Hg.clearStatusCache" id="Hg.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.clearStatusCache" />
       <keyword name="Hg.getClient" id="Hg.getClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getClient" />
       <keyword name="Hg.getExtensionObject" id="Hg.getExtensionObject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getExtensionObject" />
+      <keyword name="Hg.getHgSubPath" id="Hg.getHgSubPath" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getHgSubPath" />
       <keyword name="Hg.getPlugin" id="Hg.getPlugin" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.getPlugin" />
+      <keyword name="Hg.hasSubrepositories" id="Hg.hasSubrepositories" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hasSubrepositories" />
+      <keyword name="Hg.hgAddSubrepository" id="Hg.hgAddSubrepository" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgAddSubrepository" />
       <keyword name="Hg.hgAnnotate" id="Hg.hgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgAnnotate" />
       <keyword name="Hg.hgBackout" id="Hg.hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBackout" />
       <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
@@ -4902,6 +4907,7 @@
       <keyword name="Hg.hgPull" id="Hg.hgPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPull" />
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
+      <keyword name="Hg.hgRemoveSubrepositories" id="Hg.hgRemoveSubrepositories" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRemoveSubrepositories" />
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
       <keyword name="Hg.hgRevert" id="Hg.hgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRevert" />
       <keyword name="Hg.hgRollback" id="Hg.hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRollback" />
@@ -4943,6 +4949,14 @@
       <keyword name="Hg.vcsSwitch" id="Hg.vcsSwitch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSwitch" />
       <keyword name="Hg.vcsTag" id="Hg.vcsTag" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsTag" />
       <keyword name="Hg.vcsUpdate" id="Hg.vcsUpdate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsUpdate" />
+      <keyword name="HgAddSubrepositoryDialog" id="HgAddSubrepositoryDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog" />
+      <keyword name="HgAddSubrepositoryDialog (Constructor)" id="HgAddSubrepositoryDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.__init__" />
+      <keyword name="HgAddSubrepositoryDialog (Module)" id="HgAddSubrepositoryDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html" />
+      <keyword name="HgAddSubrepositoryDialog.__updateOk" id="HgAddSubrepositoryDialog.__updateOk" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.__updateOk" />
+      <keyword name="HgAddSubrepositoryDialog.getData" id="HgAddSubrepositoryDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.getData" />
+      <keyword name="HgAddSubrepositoryDialog.on_pathButton_clicked" id="HgAddSubrepositoryDialog.on_pathButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathButton_clicked" />
+      <keyword name="HgAddSubrepositoryDialog.on_pathEdit_textChanged" id="HgAddSubrepositoryDialog.on_pathEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathEdit_textChanged" />
+      <keyword name="HgAddSubrepositoryDialog.on_urlEdit_textChanged" id="HgAddSubrepositoryDialog.on_urlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_urlEdit_textChanged" />
       <keyword name="HgAnnotateDialog" id="HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog" />
       <keyword name="HgAnnotateDialog (Constructor)" id="HgAnnotateDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog.__init__" />
       <keyword name="HgAnnotateDialog (Module)" id="HgAnnotateDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
@@ -5081,6 +5095,7 @@
       <keyword name="HgCommitDialog (Constructor)" id="HgCommitDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.__init__" />
       <keyword name="HgCommitDialog (Module)" id="HgCommitDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html" />
       <keyword name="HgCommitDialog.amend" id="HgCommitDialog.amend" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.amend" />
+      <keyword name="HgCommitDialog.commitSubrepositories" id="HgCommitDialog.commitSubrepositories" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.commitSubrepositories" />
       <keyword name="HgCommitDialog.logMessage" id="HgCommitDialog.logMessage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.logMessage" />
       <keyword name="HgCommitDialog.on_buttonBox_accepted" id="HgCommitDialog.on_buttonBox_accepted" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.on_buttonBox_accepted" />
       <keyword name="HgCommitDialog.on_buttonBox_clicked" id="HgCommitDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html#HgCommitDialog.on_buttonBox_clicked" />
@@ -5346,6 +5361,7 @@
       <keyword name="HgProjectBrowserHelper.showContextMenuMulti" id="HgProjectBrowserHelper.showContextMenuMulti" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.showContextMenuMulti" />
       <keyword name="HgProjectHelper" id="HgProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper" />
       <keyword name="HgProjectHelper (Constructor)" id="HgProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__init__" />
+      <keyword name="HgProjectHelper.__hgAddSubrepository" id="HgProjectHelper.__hgAddSubrepository" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgAddSubrepository" />
       <keyword name="HgProjectHelper.__hgBackout" id="HgProjectHelper.__hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBackout" />
       <keyword name="HgProjectHelper.__hgBisectBad" id="HgProjectHelper.__hgBisectBad" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectBad" />
       <keyword name="HgProjectHelper.__hgBisectGood" id="HgProjectHelper.__hgBisectGood" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectGood" />
@@ -5378,6 +5394,7 @@
       <keyword name="HgProjectHelper.__hgPushForced" id="HgProjectHelper.__hgPushForced" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPushForced" />
       <keyword name="HgProjectHelper.__hgPushNewBranch" id="HgProjectHelper.__hgPushNewBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPushNewBranch" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
+      <keyword name="HgProjectHelper.__hgRemoveSubrepositories" id="HgProjectHelper.__hgRemoveSubrepositories" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRemoveSubrepositories" />
       <keyword name="HgProjectHelper.__hgResolve" id="HgProjectHelper.__hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgResolve" />
       <keyword name="HgProjectHelper.__hgRevert" id="HgProjectHelper.__hgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRevert" />
       <keyword name="HgProjectHelper.__hgRollback" id="HgProjectHelper.__hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRollback" />
@@ -5391,6 +5408,7 @@
       <keyword name="HgProjectHelper.__hgVerify" id="HgProjectHelper.__hgVerify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgVerify" />
       <keyword name="HgProjectHelper.__showExtensionMenu" id="HgProjectHelper.__showExtensionMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__showExtensionMenu" />
       <keyword name="HgProjectHelper.getActions" id="HgProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.getActions" />
+      <keyword name="HgProjectHelper.getProject" id="HgProjectHelper.getProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.getProject" />
       <keyword name="HgProjectHelper.initActions" id="HgProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initActions" />
       <keyword name="HgProjectHelper.initMenu" id="HgProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initMenu" />
       <keyword name="HgProjectHelper.setObjects" id="HgProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.setObjects" />
@@ -5519,6 +5537,12 @@
       <keyword name="HgRebaseDialog.on_tag1Combo_editTextChanged" id="HgRebaseDialog.on_tag1Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag1Combo_editTextChanged" />
       <keyword name="HgRebaseDialog.on_tag2Button_toggled" id="HgRebaseDialog.on_tag2Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag2Button_toggled" />
       <keyword name="HgRebaseDialog.on_tag2Combo_editTextChanged" id="HgRebaseDialog.on_tag2Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag2Combo_editTextChanged" />
+      <keyword name="HgRemoveSubrepositoriesDialog" id="HgRemoveSubrepositoriesDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog" />
+      <keyword name="HgRemoveSubrepositoriesDialog (Constructor)" id="HgRemoveSubrepositoriesDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.__init__" />
+      <keyword name="HgRemoveSubrepositoriesDialog (Module)" id="HgRemoveSubrepositoriesDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html" />
+      <keyword name="HgRemoveSubrepositoriesDialog.getData" id="HgRemoveSubrepositoriesDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.getData" />
+      <keyword name="HgRemoveSubrepositoriesDialog.on_removeButton_clicked" id="HgRemoveSubrepositoriesDialog.on_removeButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.on_removeButton_clicked" />
+      <keyword name="HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" id="HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html#HgRemoveSubrepositoriesDialog.on_subrepositories_itemSelectionChanged" />
       <keyword name="HgRevisionSelectionDialog" id="HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog" />
       <keyword name="HgRevisionSelectionDialog (Constructor)" id="HgRevisionSelectionDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog.__init__" />
       <keyword name="HgRevisionSelectionDialog (Module)" id="HgRevisionSelectionDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
@@ -12377,6 +12401,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
@@ -12399,6 +12424,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRemoveSubrepositoriesDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html</file>
