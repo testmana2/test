@@ -199,6 +199,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['status'])
         
+        if self.vcs.hasSubrepositories():
+            args.append("--subrepos")
+        
         if isinstance(fn, list):
             self.dname, fnames = self.vcs.splitPathList(fn)
             self.vcs.addArguments(args, fn)

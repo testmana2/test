@@ -53,6 +53,7 @@ from .HgExportDialog import HgExportDialog
 from .HgPhaseDialog import HgPhaseDialog
 from .HgGraftDialog import HgGraftDialog
 from .HgAddSubrepositoryDialog import HgAddSubrepositoryDialog
+from .HgRemoveSubrepositoriesDialog import HgRemoveSubrepositoriesDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -315,8 +316,9 @@ class Hg(VersionControl):
         status = dia.normalExit()
         
         if status:
-            status = self.hgCreateIgnoreFile(projectDir)
-            # TODO: only call this, if the file is not present
+            ignoreName = os.path.join(projectDir, Hg.IgnoreFileName)
+            if not os.path.exists(ignoreName):
+                status = self.hgCreateIgnoreFile(projectDir)
             
             if status:
                 args = []
@@ -432,10 +434,12 @@ class Hg(VersionControl):
         if self.__commitDialog is not None:
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()
+            commitSubrepositories = self.__commitDialog.commitSubrepositories()
             self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
             self.__commitDialog = None
         else:
             amend = False
+            commitSubrepositories = False
         
         if not msg and not amend:
             msg = '***'
@@ -449,6 +453,8 @@ class Hg(VersionControl):
             args.append("--close-branch")
         if amend:
             args.append("--amend")
+        if commitSubrepositories:
+            args.append("--subrepos")
         if msg:
             args.append("--message")
             args.append(msg)
@@ -2636,7 +2642,7 @@ class Hg(VersionControl):
     def getHgSubPath(self):
         """
         Public method to get the path to the .hgsub file containing the definitions
-        of subrepositories.
+        of sub-repositories.
         
         @return full path of the .hgsub file (string)
         """
@@ -2645,16 +2651,16 @@ class Hg(VersionControl):
     
     def hasSubrepositories(self):
         """
-        Public method to check, if the project might have subrepositories.
+        Public method to check, if the project might have sub-repositories.
         
-        @return flag indicating the existence of subrepositories (boolean)
+        @return flag indicating the existence of sub-repositories (boolean)
         """
         hgsub = self.getHgSubPath()
         return os.path.isfile(hgsub) and os.stat(hgsub).st_size > 0
     
     def hgAddSubrepository(self):
         """
-        Public method to add a subrepository.
+        Public method to add a sub-repository.
         """
         ppath = self.__projectHelper.getProject().getProjectPath()
         hgsub = self.getHgSubPath()
@@ -2677,16 +2683,16 @@ class Hg(VersionControl):
                     f.close()
                 except IOError as err:
                     E5MessageBox.critical(self.__ui,
-                        self.trUtf8("Add Subrepository"),
-                        self.trUtf8("""<p>The subrepositories file .hgsub could not"""
+                        self.trUtf8("Add Sub-repository"),
+                        self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
                                     """ be read.</p><p>Reason: {0}</p>""")
                                     .format(str(err)))
                     return
                 
                 if entry in contents:
                     E5MessageBox.critical(self.__ui,
-                        self.trUtf8("Add Subrepository"),
-                        self.trUtf8("""<p>The subrepositories file .hgsub already"""
+                        self.trUtf8("Add Sub-repository"),
+                        self.trUtf8("""<p>The sub-repositories file .hgsub already"""
                                     """ contains an entry <b>{0}</b>. Aborting...</p>""")
                                     .format(entry))
                     return
@@ -2702,8 +2708,8 @@ class Hg(VersionControl):
                 f.close()
             except IOError as err:
                 E5MessageBox.critical(self.__ui,
-                    self.trUtf8("Add Subrepository"),
-                    self.trUtf8("""<p>The subrepositories file .hgsub could not"""
+                    self.trUtf8("Add Sub-repository"),
+                    self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
                                 """ be written to.</p><p>Reason: {0}</p>""")
                                 .format(str(err)))
                 return
@@ -2711,6 +2717,55 @@ class Hg(VersionControl):
             if needsAdd:
                 self.vcsAdd(hgsub)
                 self.__projectHelper.getProject().appendFile(hgsub)
+    
+    def hgRemoveSubrepositories(self):
+        """
+        Public method to remove sub-repositories.
+        """
+        hgsub = self.getHgSubPath()
+        
+        subrepositories = []
+        if not os.path.isfile(hgsub):
+            E5MessageBox.critical(self.__ui,
+                self.trUtf8("Remove Sub-repositories"),
+                self.trUtf8("""<p>The sub-repositories file .hgsub does not"""
+                            """ exist. Aborting...</p>"""))
+            return
+            
+        try:
+            f = open(hgsub, "r")
+            subrepositories = [line.strip() for line in f.readlines()]
+            f.close()
+        except IOError as err:
+            E5MessageBox.critical(self.__ui,
+                self.trUtf8("Remove Sub-repositories"),
+                self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
+                            """ be read.</p><p>Reason: {0}</p>""")
+                            .format(str(err)))
+            return
+        
+        dlg = HgRemoveSubrepositoriesDialog(subrepositories)
+        if dlg.exec_() == QDialog.Accepted:
+            subrepositories, removedSubrepos, deleteSubrepos = dlg.getData()
+            contents = "\n".join(subrepositories) + "\n"
+            try:
+                f = open(hgsub, "w")
+                f.write(contents)
+                f.close()
+            except IOError as err:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Remove Sub-repositories"),
+                    self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
+                                """ be written to.</p><p>Reason: {0}</p>""")
+                                .format(str(err)))
+                return
+            
+            if deleteSubrepos:
+                ppath = self.__projectHelper.getProject().getProjectPath()
+                for removedSubrepo in removedSubrepos:
+                    subrepoPath = removedSubrepo.split("=", 1)[0].strip()
+                    subrepoAbsPath = os.path.join(ppath, subrepoPath)
+                    shutil.rmtree(subrepoAbsPath, True)
     
     ############################################################################
     ## Methods to handle extensions are below.

@@ -128,6 +128,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             args.append(str(noEntries))
         if self.mode in ("incoming", "outgoing"):
             args.append("--newest-first")
+            if self.vcs.hasSubrepositories():
+                args.append("--subrepos")
         if self.mode == "log":
             args.append('--copies')
         args.append('--style')
@@ -143,7 +145,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if self.mode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
-            else:
+            elif not self.vcs.hasSubrepositories():
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")

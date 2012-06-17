@@ -118,6 +118,9 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.vcs.addArguments(args, self.vcs.options['global'])
             self.vcs.addArguments(args, self.vcs.options['diff'])
             
+            if self.vcs.hasSubrepositories():
+                args.append("--subrepos")
+            
             if bundle:
                 args.append('--repository')
                 args.append(bundle)

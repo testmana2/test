@@ -37,6 +37,8 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
         
         if vcs.version < (2, 2):
             self.amendCheckBox.setEnabled(False)
+        
+        self.subrepoCheckBox.setVisible(vcs.hasSubrepositories())
     
     def showEvent(self, evt):
         """
@@ -75,6 +77,14 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
         @return state of the amend flag (boolean)
         """
         return self.amendCheckBox.isChecked()
+    
+    def commitSubrepositories(self):
+        """
+        Public method to retrieve the state of the commit sub-repositories flag.
+        
+        @return state of the sub-repositories flag (boolean)
+        """
+        return self.subrepoCheckBox.isChecked()
     
     def on_buttonBox_clicked(self, button):
         """

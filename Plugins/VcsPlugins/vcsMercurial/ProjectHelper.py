@@ -876,17 +876,32 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgAddSubrepoAct = E5Action(
                 self.trUtf8('Add'),
                 UI.PixmapCache.getIcon("vcsAdd.png"),
-                self.trUtf8('Add'),
+                self.trUtf8('Add...'),
                 0, 0, self, 'mercurial_add_subrepo')
         self.hgAddSubrepoAct.setStatusTip(self.trUtf8(
-            'Add a subrepository'
+            'Add a sub-repository'
         ))
         self.hgAddSubrepoAct.setWhatsThis(self.trUtf8(
-            """<b>Add</b>"""
-            """<p>Add a subrepository to the project.</p>"""
+            """<b>Add...</b>"""
+            """<p>Add a sub-repository to the project.</p>"""
         ))
         self.hgAddSubrepoAct.triggered[()].connect(self.__hgAddSubrepository)
         self.actions.append(self.hgAddSubrepoAct)
+        
+        self.hgRemoveSubreposAct = E5Action(
+                self.trUtf8('Remove'),
+                UI.PixmapCache.getIcon("vcsRemove.png"),
+                self.trUtf8('Remove...'),
+                0, 0, self, 'mercurial_remove_subrepos')
+        self.hgRemoveSubreposAct.setStatusTip(self.trUtf8(
+            'Remove sub-repositories'
+        ))
+        self.hgRemoveSubreposAct.setWhatsThis(self.trUtf8(
+            """<b>Remove...</b>"""
+            """<p>Remove sub-repositories from the project.</p>"""
+        ))
+        self.hgRemoveSubreposAct.triggered[()].connect(self.__hgRemoveSubrepositories)
+        self.actions.append(self.hgRemoveSubreposAct)
     
     def initMenu(self, menu):
         """
@@ -973,6 +988,7 @@ class HgProjectHelper(VcsProjectHelper):
             subrepoMenu = QMenu(self.trUtf8("Sub-Repository"), menu)
             subrepoMenu.setTearOffEnabled(True)
             subrepoMenu.addAction(self.hgAddSubrepoAct)
+            subrepoMenu.addAction(self.hgRemoveSubreposAct)
         else:
             subrepoMenu = None
         
@@ -1388,3 +1404,9 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to add a sub-repository.
         """
         self.vcs.hgAddSubrepository()
+    
+    def __hgRemoveSubrepositories(self):
+        """
+        Private slot used to remove sub-repositories.
+        """
+        self.vcs.hgRemoveSubrepositories()

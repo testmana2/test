@@ -1015,6 +1015,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1307,6 +1308,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsPySvn/SvnChangeListsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

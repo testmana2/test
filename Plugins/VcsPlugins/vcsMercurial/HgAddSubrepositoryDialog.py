@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to add a subrepository.
+Module implementing a dialog to add a sub-repository.
 """
 
 import os
@@ -21,7 +21,7 @@ from .Ui_HgAddSubrepositoryDialog import Ui_HgAddSubrepositoryDialog
 
 class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
     """
-    Class implementing a dialog to add a subrepository.
+    Class implementing a dialog to add a sub-repository.
     """
     def __init__(self, projectPath, parent=None):
         """
@@ -79,7 +79,7 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         path = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Add Subrepository"),
+            self.trUtf8("Add Sub-repository"),
             os.path.join(self.__projectPath, self.pathEdit.text()),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         
@@ -89,16 +89,17 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
                 self.pathEdit.setText(Utilities.toNativeSeparators(path))
             else:
                 E5MessageBox.critical(self,
-                    self.trUtf8("Add Subrepository"),
-                    self.trUtf8("""The subrepository path must be inside the project."""))
+                    self.trUtf8("Add Sub-repository"),
+                    self.trUtf8("""The sub-repository path must be inside"""
+                                """ the project."""))
                 return
     
     def getData(self):
         """
         Public method to get the data.
         
-        @return tuple containing the relative path within the project, the subrepository
-            type and the subrepository URL (string, string, string)
+        @return tuple containing the relative path within the project, the sub-repository
+            type and the sub-repository URL (string, string, string)
         """
         return (
             self.pathEdit.text(),

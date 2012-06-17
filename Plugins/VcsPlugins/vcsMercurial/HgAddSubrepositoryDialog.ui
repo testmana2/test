@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add Subrepository</string>
+   <string>Add Sub-repository</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -32,14 +32,14 @@
      <item>
       <widget class="QLineEdit" name="pathEdit">
        <property name="toolTip">
-        <string>Enter the path of the subrepository relative to the project</string>
+        <string>Enter the path of the sub-repository relative to the project</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QToolButton" name="pathButton">
        <property name="toolTip">
-        <string>Select the path of the subrepository with a directory selection dialog</string>
+        <string>Select the path of the sub-repository with a directory selection dialog</string>
        </property>
        <property name="text">
         <string notr="true">...</string>
@@ -63,7 +63,7 @@
      <item>
       <widget class="QComboBox" name="typeCombo">
        <property name="toolTip">
-        <string>Select the type of the subrepository</string>
+        <string>Select the type of the sub-repository</string>
        </property>
       </widget>
      </item>
@@ -95,7 +95,7 @@
    <item row="2" column="1">
     <widget class="QLineEdit" name="urlEdit">
      <property name="toolTip">
-      <string>Enter the URL of the subrepository</string>
+      <string>Enter the URL of the sub-repository</string>
      </property>
     </widget>
    </item>

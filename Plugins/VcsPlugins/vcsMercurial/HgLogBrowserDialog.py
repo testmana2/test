@@ -634,6 +634,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append(str(self.limitSpinBox.value()))
         if self.commandMode in ("incoming", "outgoing"):
             args.append("--newest-first")
+            if self.vcs.hasSubrepositories():
+                args.append("--subrepos")
         if startRev is not None:
             args.append('--rev')
             args.append('{0}:0'.format(startRev))
@@ -656,7 +658,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.commandMode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
-            else:
+            elif not self.vcs.hasSubrepositories():
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")
