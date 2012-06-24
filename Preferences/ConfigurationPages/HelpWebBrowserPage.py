@@ -14,6 +14,8 @@ from PyQt4.QtWebKit import QWebSettings
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
 
+from Helpviewer.Network.SendRefererWhitelistDialog import SendRefererWhitelistDialog
+
 import Preferences
 import UI.PixmapCache
 
@@ -273,6 +275,13 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         self.homePageEdit.setEnabled(enable)
         self.defaultHomeButton.setEnabled(enable)
         self.setCurrentPageButton.setEnabled(enable)
+    
+    @pyqtSlot()
+    def on_refererWhitelistButton_clicked(self):
+        """
+        Private slot to edit the referer whitelist.
+        """
+        SendRefererWhitelistDialog(self).exec_()
 
 
 def create(dlg):

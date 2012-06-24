@@ -1162,6 +1162,7 @@ eric5.E5Gui.E5FileDialog.DontResolveSymlinks?7
 eric5.E5Gui.E5FileDialog.DontUseNativeDialog?7
 eric5.E5Gui.E5FileDialog.DontUseSheet?7
 eric5.E5Gui.E5FileDialog.HideNameFilterDetails?7
+eric5.E5Gui.E5FileDialog.Option?7
 eric5.E5Gui.E5FileDialog.Options?7
 eric5.E5Gui.E5FileDialog.ReadOnly?7
 eric5.E5Gui.E5FileDialog.ShowDirsOnly?7
@@ -2439,6 +2440,9 @@ eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler?1(engine, parent=None)
 eric5.Helpviewer.Network.SchemeAccessHandler.SchemeAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.SchemeAccessHandler.SchemeAccessHandler?1(parent=None)
+eric5.Helpviewer.Network.SendRefererWhitelistDialog.SendRefererWhitelistDialog.accept?4()
+eric5.Helpviewer.Network.SendRefererWhitelistDialog.SendRefererWhitelistDialog.on_addButton_clicked?4()
+eric5.Helpviewer.Network.SendRefererWhitelistDialog.SendRefererWhitelistDialog?1(parent=None)
 eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.OfflineStorageConfigDialog.on_showDatabasesButton_clicked?4()
 eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.OfflineStorageConfigDialog.storeData?4()
 eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.OfflineStorageConfigDialog?1(parent=None)
@@ -5074,6 +5078,7 @@ eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.save?
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage?1(parent=None)
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_defaultHomeButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_refererWhitelistButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_setCurrentPageButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_startupCombo_currentIndexChanged?4(index)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.save?4()

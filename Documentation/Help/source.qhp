@@ -268,6 +268,7 @@
               <section title="eric5.Helpviewer.Network.NetworkReply" ref="eric5.Helpviewer.Network.NetworkReply.html" />
               <section title="eric5.Helpviewer.Network.QtHelpAccessHandler" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.SchemeAccessHandler" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.SendRefererWhitelistDialog" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html" />
             </section>
             <section title="eric5.Helpviewer.OfflineStorage" ref="index-eric5.Helpviewer.OfflineStorage.html">
               <section title="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog" ref="eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html" />
@@ -4681,6 +4682,7 @@
       <keyword name="HelpWebBrowserPage (Constructor)" id="HelpWebBrowserPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.__init__" />
       <keyword name="HelpWebBrowserPage (Module)" id="HelpWebBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
       <keyword name="HelpWebBrowserPage.on_defaultHomeButton_clicked" id="HelpWebBrowserPage.on_defaultHomeButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_defaultHomeButton_clicked" />
+      <keyword name="HelpWebBrowserPage.on_refererWhitelistButton_clicked" id="HelpWebBrowserPage.on_refererWhitelistButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_refererWhitelistButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_setCurrentPageButton_clicked" id="HelpWebBrowserPage.on_setCurrentPageButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_setCurrentPageButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" id="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_startupCombo_currentIndexChanged" />
       <keyword name="HelpWebBrowserPage.save" id="HelpWebBrowserPage.save" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.save" />
@@ -8369,6 +8371,11 @@
       <keyword name="SecurityPage.on_masterPasswordButton_clicked" id="SecurityPage.on_masterPasswordButton_clicked" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.on_masterPasswordButton_clicked" />
       <keyword name="SecurityPage.on_masterPasswordCheckBox_clicked" id="SecurityPage.on_masterPasswordCheckBox_clicked" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.on_masterPasswordCheckBox_clicked" />
       <keyword name="SecurityPage.save" id="SecurityPage.save" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.save" />
+      <keyword name="SendRefererWhitelistDialog" id="SendRefererWhitelistDialog" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html#SendRefererWhitelistDialog" />
+      <keyword name="SendRefererWhitelistDialog (Constructor)" id="SendRefererWhitelistDialog (Constructor)" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html#SendRefererWhitelistDialog.__init__" />
+      <keyword name="SendRefererWhitelistDialog (Module)" id="SendRefererWhitelistDialog (Module)" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html" />
+      <keyword name="SendRefererWhitelistDialog.accept" id="SendRefererWhitelistDialog.accept" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html#SendRefererWhitelistDialog.accept" />
+      <keyword name="SendRefererWhitelistDialog.on_addButton_clicked" id="SendRefererWhitelistDialog.on_addButton_clicked" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html#SendRefererWhitelistDialog.on_addButton_clicked" />
       <keyword name="SessionReader" id="SessionReader" ref="eric5.E5XML.SessionReader.html#SessionReader" />
       <keyword name="SessionReader (Constructor)" id="SessionReader (Constructor)" ref="eric5.E5XML.SessionReader.html#SessionReader.__init__" />
       <keyword name="SessionReader (Module)" id="SessionReader (Module)" ref="eric5.E5XML.SessionReader.html" />
@@ -12274,6 +12281,7 @@
       <file>eric5.Helpviewer.Network.NetworkReply.html</file>
       <file>eric5.Helpviewer.Network.QtHelpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SchemeAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.SendRefererWhitelistDialog.html</file>
       <file>eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html</file>
       <file>eric5.Helpviewer.OfflineStorage.WebDatabasesDialog.html</file>
       <file>eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html</file>

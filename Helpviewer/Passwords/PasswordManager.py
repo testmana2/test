@@ -449,6 +449,8 @@ class PasswordManager(QObject):
             formHasPasswords = False
             formName = map["name"]
             formIndex = map["index"]
+            if type(formIndex) == type(0.0) and formIndex.is_integer():
+                formIndex = int(formIndex)
             elements = map["elements"]
             formElements = set()
             formElementTypes = {}

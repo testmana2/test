@@ -515,6 +515,7 @@ Scope dict
 SearchReplaceWidget QWidget
 SearchWidget QWidget Ui_SearchWidget
 SecurityPage ConfigurationPageBase Ui_SecurityPage
+SendRefererWhitelistDialog QDialog Ui_SendRefererWhitelistDialog
 SessionReader XMLStreamReaderBase
 SessionWriter XMLStreamWriterBase
 Shell QsciScintillaCompat
