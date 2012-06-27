@@ -40,6 +40,25 @@ BlackLists = {
     "PyQt4": ["4.7.5"],
     "QScintilla2": [],
 }
+PlatformsBlackLists = {
+    "windows": {
+        "sip": [],
+        "PyQt4": ["4.9.2", "4.9.3"],
+        "QScintilla2": [],
+    },
+    
+    "linux": {
+        "sip": [],
+        "PyQt4": [],
+        "QScintilla2": [],
+    },
+    
+    "mac": {
+        "sip": [],
+        "PyQt4": ["4.9.2", "4.9.3"],
+        "QScintilla2": [],
+    },
+}
 
 
 def exit(rcode=0):
@@ -753,6 +772,14 @@ def doDependancyChecks():
         exit(1)
     print("Found QScintilla2")
     
+    # determine the platform dependent black list
+    if sys.platform.startswith("win"):
+        PlatformBlackLists = PlatformsBlackLists["windows"]
+    elif sys.platform.startswith("linux"):
+        PlatformBlackLists = PlatformsBlackLists["linux"]
+    else:
+        PlatformBlackLists = PlatformsBlackLists["mac"]
+    
     # check version of Qt
     qtMajor = int(qVersion().split('.')[0])
     qtMinor = int(qVersion().split('.')[1])
@@ -768,7 +795,7 @@ def doDependancyChecks():
         # always assume, that snapshots are new enough
         if "snapshot" not in sipVersion:
             # check for blacklisted versions
-            for vers in BlackLists["sip"]:
+            for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
                     print('Sorry, sip version {0} is not compatible with eric5.'\
                           .format(vers))
@@ -793,7 +820,7 @@ def doDependancyChecks():
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
-        for vers in BlackLists["PyQt4"]:
+        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
             if vers == pyqtVersion:
                 print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
                       .format(vers))
@@ -817,7 +844,7 @@ def doDependancyChecks():
                   ' a recent snapshot release.')
             exit(5)
         # check for blacklisted versions
-        for vers in BlackLists["QScintilla2"]:
+        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
             if vers == scintillaVersion:
                 print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
                       .format(vers))

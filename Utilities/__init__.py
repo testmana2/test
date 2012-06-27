@@ -1596,7 +1596,15 @@ def checkBlacklistedVersions():
     
     @return flag indicating good versions were found (boolean)
     """
-    from install import BlackLists
+    from install import BlackLists, PlatformsBlackLists
+    
+    # determine the platform dependent black list
+    if isWindowsPlatform():
+        PlatformBlackLists = PlatformsBlackLists["windows"]
+    elif isLinuxPlatform():
+        PlatformBlackLists = PlatformsBlackLists["linux"]
+    else:
+        PlatformBlackLists = PlatformsBlackLists["mac"]
     
     # check version of sip
     try:
@@ -1605,7 +1613,7 @@ def checkBlacklistedVersions():
         # always assume, that snapshots are good
         if "snapshot" not in sipVersion:
             # check for blacklisted versions
-            for vers in BlackLists["sip"]:
+            for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
                     print('Sorry, sip version {0} is not compatible with eric5.'\
                           .format(vers))
@@ -1620,7 +1628,7 @@ def checkBlacklistedVersions():
     # always assume, that snapshots are good
     if "snapshot" not in pyqtVersion:
         # check for blacklisted versions
-        for vers in BlackLists["PyQt4"]:
+        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
             if vers == pyqtVersion:
                 print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
                       .format(vers))
@@ -1633,7 +1641,7 @@ def checkBlacklistedVersions():
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
         # check for blacklisted versions
-        for vers in BlackLists["QScintilla2"]:
+        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
             if vers == scintillaVersion:
                 print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
                       .format(vers))
