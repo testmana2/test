@@ -1446,7 +1446,7 @@ class HelpWindow(QMainWindow):
         forwardButton.setPopupMode(QToolButton.MenuButtonPopup)
         
         bookmarksModel = self.bookmarksManager().bookmarksModel()
-        self.bookmarksToolBar = BookmarksToolBar(self, bookmarksModel)
+        self.bookmarksToolBar = BookmarksToolBar(self, bookmarksModel, self)
         self.bookmarksToolBar.setObjectName("BookmarksToolBar")
         self.bookmarksToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.bookmarksToolBar.openUrl.connect(self.openUrl)
