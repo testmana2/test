@@ -652,6 +652,7 @@ class Prefs(object):
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
         "SendReferer": True,
+        "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"], 
         "RssFeeds": [],
         "SyncEnabled": False,
         "SyncBookmarks": True,
@@ -2056,7 +2057,7 @@ def getHelp(key, prefClass=Prefs):
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
-    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist"]:
+    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist", "SendRefererWhitelist"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

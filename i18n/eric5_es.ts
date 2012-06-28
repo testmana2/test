@@ -14455,42 +14455,42 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Habilitar Plugins</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="436"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="463"/>
         <source>Browser Cache</source>
         <translation>Caché del navegador</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="442"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="469"/>
         <source>Enable disk cache</source>
         <translation>Habilitar caché de disco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="488"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
         <source>Cache size:</source>
         <translation>Tamaño de Caché:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="495"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Introduzca el tamaño máximo del caché de disco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="528"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="569"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="596"/>
         <source>Printing</source>
         <translation>Imprimiendo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="575"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="602"/>
         <source>Select to print background colours and images</source>
         <translation>Seleccionar para imprimir los colores de fondo y las imágenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="578"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="605"/>
         <source>Print background colours and images</source>
         <translation>Imprimir colores de fondo e imágenes</translation>
     </message>
@@ -14540,52 +14540,52 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Establecer como página de inicio por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="372"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="399"/>
         <source>History</source>
         <translation>Historial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="378"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="405"/>
         <source>Remove history items:</source>
         <translation>Eliminar elementos de historial:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="391"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="418"/>
         <source>Select the period for expiration of history entries</source>
         <translation>Seleccionar el período de expiración de entradas de historial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="395"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="422"/>
         <source>After one day</source>
         <translation>Después de un día</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="400"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="427"/>
         <source>After one week</source>
         <translation>Después de una semana</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="405"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="432"/>
         <source>After two weeks</source>
         <translation>Después de dos semanas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="410"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="437"/>
         <source>After one month</source>
         <translation>Después de un mes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="415"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="442"/>
         <source>After one year</source>
         <translation>Después de un año</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="420"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="447"/>
         <source>Manually</source>
         <translation>Manual</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="425"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
         <source>On application exit</source>
         <translation>A la salida de la aplicación</translation>
     </message>
@@ -14610,42 +14610,42 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Esquema por Defecto&lt;/b&gt;&lt;p&gt;Seleccionar el esquema por defecto. Este esquema antecederá a las URLs que no contengan uno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="349"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
         <source>Security</source>
         <translation>Seguridad</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="449"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="476"/>
         <source>Policy</source>
         <translation>Política</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="455"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="482"/>
         <source>Select to prefer the network</source>
         <translation>Seleccionar para preferir la red</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="458"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="485"/>
         <source>Keep cache in sync</source>
         <translation>Mantener la caché sincronizada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="465"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="492"/>
         <source>Select to prefer cached data</source>
         <translation>Seleccionar para preferir datos de caché</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="468"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="495"/>
         <source>Use cache whenever possible</source>
         <translation>Utilizar datos de caché siempre que sea posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="475"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
         <source>Select to use cached data only</source>
         <translation>Seleccionar para utilizar datos en caché solamente</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="478"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
         <source>Offline browsing mode</source>
         <translation>Modo de navegación offline</translation>
     </message>
@@ -14660,27 +14660,27 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Mostrar presentación preliminar al pasar sobre la pestaña</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="622"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="649"/>
         <source>Select to enable support for access keys</source>
         <translation>Seleccionar para habilitar soporte para claves de acceso</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="625"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="652"/>
         <source>Enable access keys</source>
         <translation>Habilitar claves de acceso</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="530"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="557"/>
         <source>Web Search</source>
         <translation>Búsqueda en la Web</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="536"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="563"/>
         <source>Language:</source>
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="543"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="570"/>
         <source>Select the language to be used for web searches</source>
         <translation>Seleccione el idioma a utilizar para las búsqueads web</translation>
     </message>
@@ -14705,56 +14705,56 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Habilitar solución provisional para sitios rotos</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="355"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
         <source>Select to enable XSS auditing</source>
         <translation>Seleccionar para habilitar auditoría de XSS</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="362"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
         <source>Enable XSS Auditing</source>
         <translation>Habilitar Auditoría de XSS</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="588"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="615"/>
         <source>Navigation</source>
         <translation>Navegación</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="594"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="621"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation>Seleccionar para habilitar la característica de navegación especial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="624"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Habilitar Navegación Espacial&lt;/b&gt;
 &lt;p&gt;Habilita o deshabilita la característica de Navegación Espacial, que consiste en la capacidad de navegación entre elementos susceptibles de aceptar el foco en una página web, tal como hiperenlaces y controles de formulario, utilizando las teclas flecha Izquierda, Derecha, Arriba y Abajo. Por ejemplo, si un usuario pulsa la tecla Derecha, se determina heurísticamente si hay un elemento que el usuario podría estar intentando alcanzar hacia la derecha, y qué elemento es el que probablemente desea.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="601"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="628"/>
         <source>Enable Spatial Navigation</source>
         <translation>Habilitar Navegación Espacial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="608"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
         <source>Select to include links in focus chain</source>
         <translation>Seleccionar para incluir enlaces en la cadena de foco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="638"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Incluir Enlaces en la Cadena de Foco&lt;/b&gt;
 &lt;p&gt;Selecciona si los hiperenlaces deben ser incluidos en la cadena de foco del teclado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="615"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
         <source>Include Links in Focus Chain</source>
         <translation>Incluir Enlaces en la Cadena de Foco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="358"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="385"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Habilitar Auditoría de XSS&lt;/b&gt;
@@ -14771,12 +14771,12 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Usar ClickToFlash en los plugins de Flash</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="336"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="338"/>
         <source>Select to send referer headers to the server</source>
         <translation>Seleccionar para enviar encabezados de referer al servidor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="341"/>
         <source>Send Referer header to servers</source>
         <translation>Enviar encabezados de referer a los servidores</translation>
     </message>
@@ -14794,6 +14794,16 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="118"/>
         <source>Show Empty Page</source>
         <translation>Mostrar Página en Blanco</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
+        <source>Press to edit the list of whitelisted hosts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
+        <source>Edit Referer Whitelist ...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16829,7 +16839,7 @@ Tiene %n pestañas abiertas.</numerusform>
 <context>
     <name>HgAddSubrepositoryDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="91"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="92"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16869,7 +16879,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="91"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="92"/>
         <source>The sub-repository path must be inside the project.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26670,52 +26680,52 @@ puede estar entre -10 y +20, y es el incremento que se añade
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="238"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="239"/>
         <source>SSL Errors</source>
         <translation>Errores de SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="251"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="252"/>
         <source>Certificates</source>
         <translation>Certificados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="181"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="182"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="184"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="185"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;, reino {1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="238"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="239"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errores de SSL para &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="251"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="252"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Certificados:&lt;br/&gt;{0}&lt;br/&gt;¿Desea aceptar todos estos certificados?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="305"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="306"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Emisor: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="309"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="310"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="297"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="298"/>
         <source>Name: {0}</source>
         <translation>Nombre: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="301"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="302"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation>&lt;br/&gt;Organización: {0}</translation>
     </message>
@@ -27554,7 +27564,7 @@ Razón: {1}</translation>
         <translation>Almacenar contraseña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="581"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="583"/>
         <source>Re-encoding saved passwords...</source>
         <translation>Recodificando contraseñas almacenadas...</translation>
     </message>
@@ -28816,27 +28826,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1002"/>
+        <location filename="Preferences/__init__.py" line="1003"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1029"/>
+        <location filename="Preferences/__init__.py" line="1030"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1029"/>
+        <location filename="Preferences/__init__.py" line="1030"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1122"/>
+        <location filename="Preferences/__init__.py" line="1123"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1122"/>
+        <location filename="Preferences/__init__.py" line="1123"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -35883,6 +35893,59 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="17"/>
         <source>&lt;b&gt;Configure security settings&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar ajustes de seguridad&lt;/b&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>SendRefererWhitelistDialog</name>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.py" line="52"/>
+        <source>Send Referer Whitelist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="40"/>
+        <source>Enter search term for hosts</source>
+        <translation type="unfinished">Introducir término de búsqueda para hosts</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="47"/>
+        <source>Press to clear the search edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="87"/>
+        <source>Press to add site to the whitelist</source>
+        <translation type="unfinished">Pulsar para añadir el site a la lista blanca</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="90"/>
+        <source>&amp;Add...</source>
+        <translation type="unfinished">&amp;Añadir...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="104"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="107"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="114"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="117"/>
+        <source>R&amp;emove All</source>
+        <translation type="unfinished">Eliminar &amp;Todas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.py" line="52"/>
+        <source>Enter host name to add to the whitelist:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

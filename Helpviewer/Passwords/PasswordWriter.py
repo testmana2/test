@@ -91,7 +91,7 @@ class PasswordWriter(QXmlStreamWriter):
             self.writeStartElement("Form")
             self.writeAttribute("key", key)
             self.writeAttribute("url", form.url.toString())
-            self.writeAttribute("name", form.name)
+            self.writeAttribute("name", str(form.name))
             self.writeAttribute("password", "yes" if form.hasAPassword else "no")
             if form.elements:
                 self.writeStartElement("Elements")
