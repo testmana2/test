@@ -9,7 +9,7 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import QTimer, QProcess, pyqtSlot
+from PyQt4.QtCore import QTimer, QProcess, pyqtSlot, QProcessEnvironment
 from PyQt4.QtGui import QLineEdit, QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
@@ -90,12 +90,13 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.normal = (exitStatus == QProcess.NormalExit) and (exitCode == 0)
         self.__finish()
         
-    def startProcess(self, args, workingDir=None):
+    def startProcess(self, args, workingDir=None, setLanguage=False):
         """
         Public slot used to start the process.
         
         @param args list of arguments for the process (list of strings)
         @param workingDir working directory for the process (string)
+        @param setLanguage flag indicating to set the language to "C" (boolean)
         @return flag indicating a successful start of the process
         """
         self.errorGroup.hide()
@@ -105,6 +106,10 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.__hasAddOrDelete = False
         
         self.proc = QProcess()
+        if setLanguage:
+            env = QProcessEnvironment.systemEnvironment()
+            env.insert("LANG", "C")
+            self.proc.setProcessEnvironment(env)
         nargs = []
         lastWasPwd = False
         for arg in args:
@@ -167,7 +172,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
                     if '.e4p' in l:
                         self.__hasAddOrDelete = True
                         break
-                    if l and l[0].strip() in ['A', 'D']:
+                    if l and l[0:2].strip() in ['A', 'D']:
                         self.__hasAddOrDelete = True
                         break
         

@@ -537,7 +537,7 @@ class Subversion(VersionControl):
             res = False
         else:
             dia = SvnDialog(self.trUtf8('Synchronizing with the Subversion repository'))
-            res = dia.startProcess(args, dname)
+            res = dia.startProcess(args, dname, True)
             if res:
                 dia.exec_()
                 res = dia.hasAddOrDelete()
@@ -1031,7 +1031,7 @@ class Subversion(VersionControl):
         
         dia = SvnDialog(self.trUtf8('Switching to {0}')
             .format(tn))
-        res = dia.startProcess(args)
+        res = dia.startProcess(args, setLanguage=True)
         if res:
             dia.exec_()
             res = dia.hasAddOrDelete()
