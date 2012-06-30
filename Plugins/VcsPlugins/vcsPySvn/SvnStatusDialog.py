@@ -26,6 +26,7 @@ from .SvnDiffDialog import SvnDiffDialog
 from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
+import Utilities
 
 
 class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
@@ -310,8 +311,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     else:
                         depth = pysvn.depth.immediate
                     changelists = self.client.get_changelist(name, depth=depth)
-                    for entry in changelists:
-                        changelistsDict[entry[0]] = entry[1]
+                    for fpath, changelist in changelists:
+                        fpath = Utilities.normcasepath(fpath)
+                        changelistsDict[fpath] = changelist
                 hideChangelistColumn = hideChangelistColumn and \
                     len(changelistsDict) == 0
                 
@@ -344,7 +346,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                              file.entry.lock_token != file.repos_lock["token"]:
                             lockState = "S"
                     
-                    fpath = os.path.join(self.dname, file.path)
+                    fpath = Utilities.normcasepath(os.path.join(self.dname, file.path))
                     if fpath in changelistsDict:
                         changelist = changelistsDict[fpath]
                     else:
