@@ -4076,7 +4076,7 @@ eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.on_buttonBox_clicked?
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.on_input_returnPressed?4()
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.on_passwordCheckBox_toggled?4(isOn)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.on_sendButton_clicked?4()
-eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.startProcess?4(args, workingDir=None)
+eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog.startProcess?4(args, workingDir=None, setLanguage=False)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDialog.SvnDialog?1(text, parent=None)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.SvnDiffDialog.closeEvent?4(e)
 eric5.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.SvnDiffDialog.keyPressEvent?4(evt)
@@ -7459,6 +7459,7 @@ eric5.install-i18n.privateInstall?7
 eric5.install-i18n.progName?7
 eric5.install-i18n.usage?4(rcode=2)
 eric5.install.BlackLists?7
+eric5.install.PlatformsBlackLists?7
 eric5.install.apisDir?7
 eric5.install.cfg?7
 eric5.install.cleanUp?4()
