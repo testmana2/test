@@ -133,6 +133,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             Preferences.getDebugger("SuppressClientExit"))
         self.exceptionBreakCheckBox.setChecked(
             Preferences.getDebugger("BreakAlways"))
+        self.autoViewSourcecodeCheckBox.setChecked(
+            Preferences.getDebugger("AutoViewSourceCode"))
         
     def save(self):
         """
@@ -193,6 +195,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             self.dontShowClientExitCheckBox.isChecked())
         Preferences.setDebugger("BreakAlways",
             self.exceptionBreakCheckBox.isChecked())
+        Preferences.setDebugger("AutoViewSourceCode",
+            self.autoViewSourcecodeCheckBox.isChecked())
         
     def on_allowedHostsList_currentItemChanged(self, current, previous):
         """

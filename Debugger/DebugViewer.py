@@ -32,6 +32,7 @@ from .BreakPointViewer import BreakPointViewer
 from .WatchPointViewer import WatchPointViewer
 
 import UI.PixmapCache
+import Preferences
 
 from E5Gui.E5TabWidget import E5TabWidget
 
@@ -232,6 +233,16 @@ class DebugViewer(QWidget):
         
         self.debugServer.clientStack.connect(self.handleClientStack)
         
+        self.__autoViewSource = Preferences.getDebugger("AutoViewSourceCode")
+        self.sourceButton.setVisible(not self.__autoViewSource)
+        
+    def preferencesChanged(self):
+        """
+        Public slot to handle the preferencesChanged signal.
+        """
+        self.__autoViewSource = Preferences.getDebugger("AutoViewSourceCode")
+        self.sourceButton.setVisible(not self.__autoViewSource)
+        
     def setDebugger(self, debugUI):
         """
         Public method to set a reference to the Debug UI.
@@ -354,6 +365,9 @@ class DebugViewer(QWidget):
         """
         self.framenr = frmnr
         self.debugServer.remoteClientVariables(0, self.localsFilter, frmnr)
+        
+        if self.__autoViewSource:
+            self.__showSource()
         
     def __setGlobalsFilter(self):
         """

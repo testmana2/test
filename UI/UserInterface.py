@@ -429,6 +429,7 @@ class UserInterface(QMainWindow):
         self.preferencesChanged.connect(self.taskViewer.handlePreferencesChanged)
         self.preferencesChanged.connect(self.pluginManager.preferencesChanged)
         self.preferencesChanged.connect(debugServer.preferencesChanged)
+        self.preferencesChanged.connect(self.debugViewer.preferencesChanged)
         self.preferencesChanged.connect(self.cooperation.preferencesChanged)
         
         self.viewmanager.editorSaved.connect(self.project.repopulateItem)

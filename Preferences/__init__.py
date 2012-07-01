@@ -87,6 +87,7 @@ class Prefs(object):
         "PathTranslationRemote": "",
         "PathTranslationLocal": "",
         "NetworkInterface": "127.0.0.1",
+        "AutoViewSourceCode" : False, 
     }
     debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
     
@@ -1102,6 +1103,7 @@ def getDebugger(key, prefClass=Prefs):
                 "ConsoleDbgEnabled", "PathTranslation",
                 "Autosave", "ThreeStateBreakPoints",
                 "SuppressClientExit", "BreakAlways",
+                "AutoViewSourceCode",
               ]:
         return toBool(prefClass.settings.value("Debugger/" + key,
             prefClass.debuggerDefaults[key]))

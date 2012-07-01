@@ -2,6 +2,11 @@ Change Log
 ----------
 Version 5.3-snapshot-2012mmdd:
 - bug fixes
+- Debug Viewer
+  -- added the configurable capability to automatically show the source,
+     when the call frame is changed in the callstack viewer of the local
+     variables viewer
+
 
 Version 5.3-snapshot-20120624:
 - bug fixes

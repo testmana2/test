@@ -2798,6 +2798,7 @@
       <keyword name="DebugViewer.handleDebuggingStarted" id="DebugViewer.handleDebuggingStarted" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleDebuggingStarted" />
       <keyword name="DebugViewer.handleRawInput" id="DebugViewer.handleRawInput" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleRawInput" />
       <keyword name="DebugViewer.handleResetUI" id="DebugViewer.handleResetUI" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleResetUI" />
+      <keyword name="DebugViewer.preferencesChanged" id="DebugViewer.preferencesChanged" ref="eric5.Debugger.DebugViewer.html#DebugViewer.preferencesChanged" />
       <keyword name="DebugViewer.restoreCurrentPage" id="DebugViewer.restoreCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.restoreCurrentPage" />
       <keyword name="DebugViewer.saveCurrentPage" id="DebugViewer.saveCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.saveCurrentPage" />
       <keyword name="DebugViewer.setCurrentWidget" id="DebugViewer.setCurrentWidget" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setCurrentWidget" />
