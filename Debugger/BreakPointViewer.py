@@ -64,20 +64,18 @@ class BreakPointViewer(QTreeView):
         """
         self.__model = model
         
-        # TODO: Remove these comments once proven ok in daily use
-##        self.sortingModel = QSortFilterProxyModel()
-##        self.sortingModel.setDynamicSortFilter(True)
-##        self.sortingModel.setSourceModel(self.__model)
-##        super().setModel(self.sortingModel)
-        super().setModel(self.__model)
+        self.sortingModel = QSortFilterProxyModel()
+        self.sortingModel.setDynamicSortFilter(True)
+        self.sortingModel.setSourceModel(self.__model)
+        super().setModel(self.sortingModel)
         
-##        header = self.header()
-##        header.setSortIndicator(0, Qt.AscendingOrder)
-##        header.setSortIndicatorShown(True)
-##        header.setClickable(True)
-##        
-##        self.setSortingEnabled(True)
-##        
+        header = self.header()
+        header.setSortIndicator(0, Qt.AscendingOrder)
+        header.setSortIndicatorShown(True)
+        header.setClickable(True)
+        
+        self.setSortingEnabled(True)
+        
         self.__layoutDisplay()
         
     def __layoutDisplay(self):
@@ -107,8 +105,7 @@ class BreakPointViewer(QTreeView):
         
         @param index index to be converted (QModelIndex)
         """
-##        return self.sortingModel.mapToSource(index)
-        return index
+        return self.sortingModel.mapToSource(index)
         
     def __fromSourceIndex(self, sindex):
         """
@@ -116,8 +113,7 @@ class BreakPointViewer(QTreeView):
         
         @param sindex source index to be converted (QModelIndex)
         """
-##        return self.sortingModel.mapFromSource(sindex)
-        return sindex
+        return self.sortingModel.mapFromSource(sindex)
         
     def __setRowSelected(self, index, selected=True):
         """

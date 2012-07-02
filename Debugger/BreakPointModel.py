@@ -62,7 +62,7 @@ class BreakPointModel(QAbstractItemModel):
         else:
             return 0
     
-    def data(self, index, role):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get the requested data.
         
@@ -90,6 +90,25 @@ class BreakPointModel(QAbstractItemModel):
                 return self.alignments[index.column()]
         
         return None
+    
+    def setData(self, index, value, role=Qt.EditRole):
+        """
+        Public method to change data in the model.
+        
+        @param index index of the changed data (QModelIndex)
+        @param value value of the changed data
+        @param role role of the changed data (Qt.ItemDataRole)
+        @return flag indicating success (boolean)
+        """
+        if not index.isValid() or \
+           index.column() >= len(self.header) or \
+           index.row() >= len(self.breakpoints):
+            return False
+        
+        self.dataAboutToBeChanged.emit(index, index)
+        self.breakpoints[index.row()][index.column()] = value
+        self.dataChanged.emit(index, index)
+        return True
     
     def flags(self, index):
         """
