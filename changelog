@@ -1,0 +1,269 @@
+Change Log
+----------
+Version 5.2.4:
+- bug fixes
+
+Version 5.2.3:
+- bug fixes
+
+Version 5.2.2:
+- bug fixes
+
+Version 5.2.1:
+- bug fixes
+
+Version 5.2.0:
+- bug fixes
+- Cooperation Functions
+  -- added code to the cooperation functions to support IPv6
+- Debugger
+  -- extended debugger to show class variables
+  -- extended debugger to ignore exceptions occuring in lines having a
+     '__IGNORE_EXCEPTION__' line flag set
+- Editor
+  -- added an action to preview the file in the eric web browser. File name
+     extension to support this feature can be configured on the
+     Editor->Filehandling page
+  -- added an action to the editor context menu and to the tabview and listview
+     view managers to open an associated 'rejections' file (i.e. same file name
+     with '.rej' appended)
+  -- added an action to toggle block comments
+  -- added a syntax check while typing function
+  -- added source navigation function for Python 2, Python 3 and Ruby sources
+  -- added support for QScintilla 2.6 (and newer)
+  -- added capability to zoom by Ctrl + Mouse Wheel (same for the shell and terminal)
+  -- added capability to zoom by a pinch gesture (same for the shell and terminal)
+  -- added capability to go to method and class definitions by Shift + Mouse Wheel
+  -- added the capability to replace just the selected occurence of the search text
+- Plug-in Manager Tools
+  -- added code to download and install plug-ins
+- Source Browser
+  -- show class attributes, class methods and static methods with different icons
+  -- added context menu for attributes
+- Source Documentor
+  -- introduced separate sections for class methods and static methods
+- Tasks Manager
+  -- made tasks manager forget about global file tasks when file is closed
+     (configurable via configuration dialog)
+- Tools
+  -- API files generator
+     --- added code to write base class information to be used by the
+         eric assistant plug-in
+- Unit Test
+  -- extended the unit test module to allow to rerun only failed tests of the last
+- Version Control System Interfaces
+  -- all
+     --- made "Show Log" behave like "Show Limited Log" and removed the later
+     --- added context menu actions to select/deselect all commitable items
+         of the status dialogs
+     --- added a file selector to the top of the diff dialogs to quickly jump
+         to the diff for the selected file
+  -- Mercurial
+     --- added interface for the Mercurial command server (as of Mercurial 1.9)
+     --- added code to support multiple revisions where appropriate
+     --- modified pull such, that it will try to apply an existing changegroups
+         file first (created by an hg incoming)
+     --- added support for importing patches
+     --- added support for exporting patches
+     --- added configuration option to create backup files when reverting changes
+  -- Subversion
+     --- changed code to make the subversion plug-ins compatible with the new
+         generation working copy meta-data format
+- View Manager
+  -- added an action to reset the zoom factor
+- Web Browser
+  -- added the "Do Not Track" feature
+  -- added code to indicate invalid SSL certificates in the URL entry and the SSL
+     info dialog
+  -- added a dialog to show RSS feeds
+  -- added a dialog to show some information about the current site
+  -- added the capability to go through the history via Shift + Mouse Wheel
+  -- added capability to zoom by a pinch gesture
+- other enhancements
+  -- added an action to launch another instantiation of eric5
+  -- added capability to zoom by Ctrl + Mouse Wheel to various graphics related windows
+  -- added capability to zoom by a pinch gesture to various graphics related windows
+
+Version 5.2-snapshot-20110724:
+- bug fixes
+- enhancements of the Mercurial interface
+  -- added support for the Mercurial bookmarks extension
+  -- added support for the Mercurial queues extension
+  -- added support for the Mercurial fetch extension
+  -- added support for the Mercurial purge extension
+  -- added support for the Mercurial gpg extension
+  -- added support for the Mercurial transplant extension
+  -- added support for the Mercurial rebase extension
+  -- enhanced the Mercurial log browser dialog
+- enhancements of the web browser
+  -- added a pause button to the web browser download
+  -- added some more user agent strings to the web browser
+  -- added some more search engines to the web browser
+  -- added capability to encrypt saved passwords with a master password
+     and rearranged some configuration parameters related to security
+  -- improved the handling of mouse XButton1 and XButton2 handling in the web browser
+- enhancements of the configuration dialog
+  -- added function to test the login data to the Email config page
+- enhancements of the Unit Test module
+  -- extended the unit test interface to support skipped tests, expected failures
+     and unexpected successes and to better cope with Python2 scripts when run
+     from the eric IDE
+- enhancements of the editor
+  -- added editor actions to go to the last edit location and to the previous or
+     next Python or Ruby class or method definition
+
+Version 5.2-snapshot-20110501:
+- bug fixes
+- added menu entry for the icon editor to the tray starter
+- added capability to filter out unwanted items in the file browsers
+  (s. config dialog, interface page)
+- changed syntax check to report error position within the line
+- added functionality to the VCS status dialogs to make them more
+  general commit dialogs
+- extended the Mercurial log browser to indicate closed branches
+- changed the configuration dialog to remember the last show page name
+- added configuration options for visible whitespace (as of QScintilla 2.5)
+- added capability to configure the alpha channel for some colors
+  (as of QScintilla 2.5)
+- added support for new lexer properties (as of QScintilla 2.5)
+- added support for access keys and drag & drop to the web browser
+- added support for search schemes ("s:" or "search:") and "about:home" to
+  the web browser
+- added capability to the tasks viewer to ignore files based on a wildcard
+  during a project tasks scan
+- added an action to push a new named branch to the Mercurial plug-in
+- added an interface to VirusTotal to the web browser
+- changed algorithm to determine the debugger backend type to be used by
+  analysing a first line starting with '#!'
+- added support for the Matlab and Octave lexers for QScintilla >= 2.5.1
+- enhanced the autocompletion of templates to observe the language of the
+  current file
+- added support for "hg rollback" to the Mercurial interface
+
+Version 5.1-snapshot-20110123:
+- bug fixes
+- made the toolbars of the initial layout more minimalistic
+- merged "Save to Project" into "Save" and "Save As...".
+- added a checker for PEP 8 compliance (including a fixer for
+  most issues)
+
+Version 5.1-snapshot-20110106:
+- bug fixes
+- added support for the display of inline annotations (used to show
+  syntax errors and warnings)
+- added support for additional configurable file filters
+- added a certificate manager to the eric web browser
+- added display of suppressed client termination messages
+- changed the Mercurial log browser to show incoming/outgoing changesets
+  with the current log (by pressing the next button)
+- added a feature where flags can be given at the end of a source file.
+  The only flag supported is 'FileType' to overwrite the filetype detection
+  mechanism.
+- added a syntax checker function for Python 2 files
+- added a pyflakes checker function for Python 2 files
+- added a tabnanny checker function for Python 2 files
+- updated Pygments to version 1.4.0
+
+Version 5.1-snapshot-20101029:
+- bug fixes
+- added configuration options for the web browser cache policy
+- added tab previews to the web browser
+- added a line widget with embeddable buttons
+- changed the web browser to give it a more modern look
+- added code to show certificate info for https URLs
+- added a download manager to the web browser
+- added a check to the find and replace dialog to make sure,
+  that no external changes were done between the find run and
+  the replace run
+- added an option to configure the icon of the tray starter application
+- updated Pygments to version 1.3.1
+
+Version 5.1-snapshot-20100918:
+- bug fixes
+- converted all signal/slot code to use the new API
+- added action to copy the editor path to the clipboard to the tab context menu
+- added code to adjust the cursor flash time of the editor to the global
+  settings
+- added code to show hidden files in the various browsers
+- added an editor action to join the current line with the next one
+- added code to cope with Linux distributor's usage of KDE wrapper dialogs
+  for the Qt file dialogs
+- added a source code exporter for the Open Document Text (ODT) format
+- changed all calls to QMessageBox to some eric5 replacements and convenience
+  functions
+- added a wizard for the eric5 message box (E5MessageBox)
+- added filename filters to the code metrics, syntax checker and tabnanny
+  dialogs
+- changed XML handling code to use QXmlStreamReader and QXmlStreamWriter
+- added use of compositing modes to the icon editor
+- modified install script such, that it allows an installation from source as
+  well. The situation will be determined automatically.
+
+Version 5.1-snapshot-20100718:
+- bug fixes
+- added an action to perform a 'hg push -f' to the Mercurial plug-in
+- added a handler for ftp: URLs to the web browser
+- added action to start a Mercurial server to the Mercurial plug-in
+- added action to print to PDF to the web browser
+- added a branch filter to the Mercurial log browser
+- added additional fold styles
+- added capability to configure the colors of the foldmarkers
+- added option to use DNS prefetching to the web browser (needs Qt >= 4.6)
+- added support for Web SQL Databases to the web browser
+- added support for Web application caches and local web storage to the
+  web browser (needs Qt >= 4.6)
+- added a symbols viewer with capability to insert the selected symbol
+  by double-clicking it
+- added a numbers viewer to convert numbers into various formats
+- extended the Ad-Blocker of the web browser (needs Qt >= 4.6)
+- added capability to configure the text encoding of the web browser 
+  (needs Qt >= 4.6)
+- added capability to select the user agent string for the web browser
+
+Version 5.0-snapshot-20100523:
+- bug fixes
+- added code to save the editor zoom factor in the session file
+- added code to configure the zoom factor a file is opened with
+- added code to update the file browser window (mostly) automatically
+- added code to update the Others tab of the project browser (mostly)
+  automatically
+- added a menu to the highlighting styles config page to change individual
+  aspects of a font only
+- changed code to improve development on multiple platforms
+- added code to show the keyboard shortcut to the tooltip of an action
+- changed the Find in Files dialog to remember the history of the search
+  string, replace string and the search directory
+- added code to enhance the proxy configuration and removed the usage of QHttp
+
+Version 5.0-snapshot-20100508:
+- bug fixes
+- added administration actions to the Mercurial plug-in
+- added changegroup related actions to the Mercurial plug-in
+- added bisect commands to the Mercurial plug-in
+
+Version 5.0-snapshot-20100418:
+- bug fixes
+- added plugin for Mercurial version control system
+
+Version 5.0-snapshot-20100401:
+- bug fixes
+- added installation of a .desktop file for Linux systems
+- added shared editor functions and a simple chat system
+
+Version 5.0-snapshot-20100306:
+- bug fixes
+- added code to indicate directories and files being symbolic links
+- extendend the predefined template variables by "project_path",
+  "clipboard", "cur_select", "insertion", "select_start" and
+  "select_end"
+- added the auto fork options to the run dialog
+- added capability to change the keywords of a syntax highlighter
+
+Version 5.0-snapshot-20100206:
+- bug fixes
+- added code to use the PYTHONPATH environment setting in the debuggers
+- added my own Python3 port of pyflakes
+- integrated py3flakes into syntax checker dialog and editor
+
+Version 5.0-snapshot-20100116:
+- first snapshot of eric5
