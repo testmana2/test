@@ -544,7 +544,7 @@ eric5.DebugClients.Python3.getpass.unix_getpass?7
 eric5.DebugClients.Python3.getpass.win_getpass?7
 eric5.Debugger.BreakPointModel.BreakPointModel.addBreakPoint?4(fn, line, properties)
 eric5.Debugger.BreakPointModel.BreakPointModel.columnCount?4(parent=QModelIndex())
-eric5.Debugger.BreakPointModel.BreakPointModel.data?4(index, role)
+eric5.Debugger.BreakPointModel.BreakPointModel.data?4(index, role=Qt.DisplayRole)
 eric5.Debugger.BreakPointModel.BreakPointModel.dataAboutToBeChanged?7
 eric5.Debugger.BreakPointModel.BreakPointModel.deleteAll?4()
 eric5.Debugger.BreakPointModel.BreakPointModel.deleteBreakPointByIndex?4(index)
@@ -560,6 +560,7 @@ eric5.Debugger.BreakPointModel.BreakPointModel.parent?4(index)
 eric5.Debugger.BreakPointModel.BreakPointModel.rowCount?4(parent=QModelIndex())
 eric5.Debugger.BreakPointModel.BreakPointModel.setBreakPointByIndex?4(index, fn, line, properties)
 eric5.Debugger.BreakPointModel.BreakPointModel.setBreakPointEnabledByIndex?4(index, enabled)
+eric5.Debugger.BreakPointModel.BreakPointModel.setData?4(index, value, role=Qt.EditRole)
 eric5.Debugger.BreakPointModel.BreakPointModel?1(parent=None)
 eric5.Debugger.BreakPointViewer.BreakPointViewer.handleResetUI?4()
 eric5.Debugger.BreakPointViewer.BreakPointViewer.highlightBreakpoint?4(fn, lineno)
