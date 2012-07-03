@@ -1914,9 +1914,10 @@ class Editor(QsciScintillaCompat):
         else:
             marker = properties[1] and self.tbreakpoint or self.breakpoint
             
-        handle = self.markerAdd(line - 1, marker)
-        self.breaks[handle] = (line,) + properties
-        self.breakpointToggled.emit(self)
+        if self.markersAtLine(line - 1) & self.breakpointMask == 0:
+            handle = self.markerAdd(line - 1, marker)
+            self.breaks[handle] = (line,) + properties
+            self.breakpointToggled.emit(self)
         
     def __toggleBreakpoint(self, line, temporary=False):
         """
@@ -5292,7 +5293,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method called by the viewmanager to finally get rid of us.
         """
-        if Preferences.getEditor("ClearBreaksOnClose"):
+        if Preferences.getEditor("ClearBreaksOnClose") and not self.__clones:
             self.__menuClearBreakpoints()
         
         for clone in self.__clones[:]:
