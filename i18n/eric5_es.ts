@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1769,8 +1770,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2011,8 +2012,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -5222,17 +5223,17 @@ Not connected
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Local Variables Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Variables Locales</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="567"/>
         <source>Automatically view source code when user changes the callstack frame in the callstack viewer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaticamente ver código fuente cuando el usuario cambia el marco de pila de llamadas en el visor de pila de llamadas.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="570"/>
         <source>Automatically view source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaticamente ver código fuente</translation>
     </message>
 </context>
 <context>
@@ -13389,7 +13390,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -14813,12 +14814,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
         <source>Press to edit the list of whitelisted hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para editar la lista de hosts en la lista blanca</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
         <source>Edit Referer Whitelist ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Lista Blanca de Referers...</translation>
     </message>
 </context>
 <context>
@@ -16823,32 +16824,32 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2710"/>
         <source>Add Sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Sub-repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2740"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;No se ha podido leer el archivo .hgsub de sub-repositorios.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2693"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo .hgsub de sub-repositorios ya contiene una entrada.&lt;/p&gt;&lt;p&gt;Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2756"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;No se ha podido escribir al archivo .hgsub de sub-repositorios.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2756"/>
         <source>Remove Sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Sub-repositorios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2729"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de subrepositorios .hgsub no existe. Abortando...&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16856,47 +16857,47 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="92"/>
         <source>Add Sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Sub-repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="23"/>
         <source>&amp;Path within Project:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta dentro del &amp;Proyecto:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="35"/>
         <source>Enter the path of the sub-repository relative to the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la ruta del sub-repositorio relativa al proyecto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
         <source>Select the path of the sub-repository with a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar la ruta del sub-repositorio con un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="54"/>
         <source>&amp;Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tipo:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="66"/>
         <source>Select the type of the sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el tipo de sub-repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="88"/>
         <source>&amp;URL:</source>
-        <translation type="unfinished">&amp;URL:</translation>
+        <translation>&amp;URL:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="98"/>
         <source>Enter the URL of the sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la URL del sub-repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="92"/>
         <source>The sub-repository path must be inside the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>La ruta del sub-repositorio debe estar dentro del proyecto.</translation>
     </message>
 </context>
 <context>
@@ -17740,12 +17741,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="70"/>
         <source>Select to commit sub-repositories as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer commit de los sub-repositorios también</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="73"/>
         <source>Commit sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer commit de sub-repositorios</translation>
     </message>
 </context>
 <context>
@@ -17830,7 +17831,8 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nombre de destino&lt;/b&gt;
+&lt;p&gt;Introducir el nuevo nombre en este campo. El destino será el nuevo nombre o una ruta absoluta.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19527,17 +19529,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="493"/>
         <source>Conflict resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflicto resuelto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="398"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover</translation>
     </message>
 </context>
 <context>
@@ -20665,67 +20667,67 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="369"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflictos resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="369"/>
         <source>Con&amp;flicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Con&amp;flictos resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="372"/>
         <source>Mark all conflicts of the local project as resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar todos los conflictos del proyecto local como resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
         <source>&lt;b&gt;Conflicts resolved&lt;/b&gt;&lt;p&gt;This marks all conflicts of the local project as resolved.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conflictos resueltos&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como resueltos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="876"/>
         <source>Add</source>
-        <translation type="unfinished">Añadir</translation>
+        <translation>Añadir</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="876"/>
         <source>Add...</source>
-        <translation type="unfinished">Añadir...</translation>
+        <translation>Añadir...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="881"/>
         <source>Add a sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir un sub-repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="884"/>
         <source>&lt;b&gt;Add...&lt;/b&gt;&lt;p&gt;Add a sub-repository to the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Añadir...&lt;/b&gt;&lt;p&gt;Añadir un sub-repositorio al proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="891"/>
         <source>Remove</source>
-        <translation type="unfinished">Eliminar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="891"/>
         <source>Remove...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="896"/>
         <source>Remove sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar sub-repositorios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="899"/>
         <source>&lt;b&gt;Remove...&lt;/b&gt;&lt;p&gt;Remove sub-repositories from the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Eliminar...&lt;/b&gt;&lt;p&gt;Eliminar sub-repositorios del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="988"/>
         <source>Sub-Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Sub-repositorio</translation>
     </message>
 </context>
 <context>
@@ -21458,27 +21460,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="14"/>
         <source>Remove Sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Sub-repositorios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="36"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+        <translation>Pulse para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="39"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina&amp;r</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="46"/>
         <source>Select to delete the removed entries from disc</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para borrar las entradas eliminadas del disco</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="49"/>
         <source>Delete removed entries from disc</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar entradas eliminadas del disco</translation>
     </message>
 </context>
 <context>
@@ -31867,12 +31869,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="328"/>
         <source>Select to create a version controlled project</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para crear un proyecto con control de versiones</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="331"/>
         <source>Version Controlled Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Proyecto con Control de Versiones</translation>
     </message>
 </context>
 <context>
@@ -35915,52 +35917,52 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.py" line="52"/>
         <source>Send Referer Whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Lista Blanca de Referers</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="40"/>
         <source>Enter search term for hosts</source>
-        <translation type="unfinished">Introducir término de búsqueda para hosts</translation>
+        <translation>Introducir término de búsqueda para hosts</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="47"/>
         <source>Press to clear the search edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de búsqueda</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="87"/>
         <source>Press to add site to the whitelist</source>
-        <translation type="unfinished">Pulsar para añadir el site a la lista blanca</translation>
+        <translation>Pulsar para añadir el site a la lista blanca</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="90"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Añadir...</translation>
+        <translation>&amp;Añadir...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="104"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+        <translation>Pulse para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="107"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina&amp;r</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="114"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+        <translation>Pulse para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="117"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished">Eliminar &amp;Todas</translation>
+        <translation>&amp;Eliminar Todas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.py" line="52"/>
         <source>Enter host name to add to the whitelist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre de host a añadir a la lista blanca:</translation>
     </message>
 </context>
 <context>
@@ -39030,89 +39032,91 @@ Not connected</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="14"/>
         <source>Subversion Change Lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Listas de Cambios de Subversion</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="23"/>
         <source>Change Lists:</source>
-        <translation type="unfinished"></translation>
+        <translation>Listas de cambios:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="36"/>
         <source>&lt;b&gt;Change Lists&lt;/b&gt;
 &lt;p&gt;Select a change list here to see the associated files in the list below.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Listas de Cambios&lt;/b&gt;
+&lt;p&gt;Seleccionar una lista de cambios aquí para ver los archivos asociados en la lista de debajo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="63"/>
         <source>&lt;b&gt;Files&lt;/b&gt;
 &lt;p&gt;This shows a list of files associated with the change list selected above.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Archivos&lt;/b&gt;
+&lt;p&gt;Muestra una lista de archivos asociados con la lista de cambios seleccionada más arriba.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="80"/>
         <source>Errors</source>
-        <translation type="unfinished">Errores</translation>
+        <translation>Errores</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="99"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="121"/>
         <source>Press to send the input to the subversion process</source>
-        <translation type="unfinished">Pulsar para enviar el input al proceso de subversion</translation>
+        <translation>Pulsar para enviar el input al proceso de subversion</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="124"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Enviar</translation>
+        <translation>&amp;Enviar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="127"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="134"/>
         <source>Enter data to be sent to the subversion process</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca los datos a enviar al proceso de subversion</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="141"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+        <translation>Seleccionar para cambiar el campo de input a modo contraseña</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="144"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">&amp;Modo de contraseña</translation>
+        <translation>&amp;Modo de contraseña</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="147"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="75"/>
         <source>Files (relative to {0}):</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos (relativo a {0}):</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="138"/>
         <source>No changelists found</source>
-        <translation type="unfinished"></translation>
+        <translation>No se han encontrado listas de cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="109"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Error de Generación de Proceso</translation>
+        <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="109"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+        <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
 </context>
 <context>
@@ -39260,7 +39264,7 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="66"/>
         <source>Select the change lists to limit the commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar las listas de cambios para limitar el commit</translation>
     </message>
 </context>
 <context>
@@ -39349,7 +39353,8 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nombre de destino&lt;/b&gt;
+&lt;p&gt;Introducir el nuevo nombre en este campo. El destino debe ser el nuevo nombre o una ruta absoluta.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -40287,7 +40292,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="115"/>
         <source>Pat&amp;h:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ruta:</translation>
     </message>
 </context>
 <context>
@@ -40386,7 +40391,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="91"/>
         <source>Pat&amp;h:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ruta:</translation>
     </message>
 </context>
 <context>
@@ -40559,17 +40564,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="633"/>
         <source>Conflict resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflicto resuelto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="494"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="496"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover</translation>
     </message>
 </context>
 <context>
@@ -41157,37 +41162,37 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflictos resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
         <source>Con&amp;flicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Con&amp;flictos resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="290"/>
         <source>Mark all conflicts of the local project as resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar todos los conflictos del proyecto local como resueltos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="293"/>
         <source>&lt;b&gt;Conflicts resolved&lt;/b&gt;&lt;p&gt;This marks all conflicts of the local project as resolved.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conflictos resueltos&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como resueltos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="176"/>
         <source>Show change lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar listas de cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="180"/>
         <source>Show the change lists and associated files of the local project</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar las listas de cambios y los archivos asociados del proyecto local</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="183"/>
         <source>&lt;b&gt;Show change lists&lt;/b&gt;&lt;p&gt;This shows the change lists and associated files of the local project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar listas de cambios&lt;/b&gt;&lt;p&gt;Muestra las listas de cambios y los archivos asociados del proyecto local.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
