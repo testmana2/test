@@ -2249,67 +2249,67 @@ the button to the right.&lt;/p&gt;</source>
         <translation>断点</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="170"/>
+        <location filename="Debugger/BreakPointViewer.py" line="171"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="141"/>
+        <location filename="Debugger/BreakPointViewer.py" line="142"/>
         <source>Edit...</source>
         <translation>编辑……</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="143"/>
+        <location filename="Debugger/BreakPointViewer.py" line="144"/>
         <source>Enable</source>
         <translation>允许</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="174"/>
+        <location filename="Debugger/BreakPointViewer.py" line="175"/>
         <source>Enable all</source>
         <translation>允许所有</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="146"/>
+        <location filename="Debugger/BreakPointViewer.py" line="147"/>
         <source>Disable</source>
         <translation>禁止</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="178"/>
+        <location filename="Debugger/BreakPointViewer.py" line="179"/>
         <source>Disable all</source>
         <translation>禁止所有</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="149"/>
+        <location filename="Debugger/BreakPointViewer.py" line="150"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="182"/>
+        <location filename="Debugger/BreakPointViewer.py" line="183"/>
         <source>Delete all</source>
         <translation>全部删除</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="152"/>
+        <location filename="Debugger/BreakPointViewer.py" line="153"/>
         <source>Goto</source>
         <translation>跳转</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="184"/>
+        <location filename="Debugger/BreakPointViewer.py" line="185"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="172"/>
+        <location filename="Debugger/BreakPointViewer.py" line="173"/>
         <source>Enable selected</source>
         <translation>允许所选择的</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="176"/>
+        <location filename="Debugger/BreakPointViewer.py" line="177"/>
         <source>Disable selected</source>
         <translation>禁止所选择的</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="180"/>
+        <location filename="Debugger/BreakPointViewer.py" line="181"/>
         <source>Delete selected</source>
         <translation>删除所选择的</translation>
     </message>
@@ -7881,7 +7881,7 @@ whole selection.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2434"/>
+        <location filename="QScintilla/Editor.py" line="2447"/>
         <source>Open File</source>
         <translation>打开文件</translation>
     </message>
@@ -7971,7 +7971,7 @@ whole selection.&lt;/li&gt;
         <translation>全部取消选择</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6080"/>
+        <location filename="QScintilla/Editor.py" line="6093"/>
         <source>Check spelling...</source>
         <translation>正在进行拼写检查……</translation>
     </message>
@@ -8226,7 +8226,7 @@ whole selection.&lt;/li&gt;
         <translation>编辑断点……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4304"/>
+        <location filename="QScintilla/Editor.py" line="4317"/>
         <source>Enable breakpoint</source>
         <translation>允许断点</translation>
     </message>
@@ -8331,27 +8331,27 @@ whole selection.&lt;/li&gt;
         <translation>试图改变只读文件。请先保存到另一个文件中。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2217"/>
+        <location filename="QScintilla/Editor.py" line="2230"/>
         <source>Printing...</source>
         <translation>打印中……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2234"/>
+        <location filename="QScintilla/Editor.py" line="2247"/>
         <source>Printing completed</source>
         <translation>打印已完成</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2236"/>
+        <location filename="QScintilla/Editor.py" line="2249"/>
         <source>Error while printing</source>
         <translation>打印时出错</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2239"/>
+        <location filename="QScintilla/Editor.py" line="2252"/>
         <source>Printing aborted</source>
         <translation>打印失败</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2386"/>
+        <location filename="QScintilla/Editor.py" line="2399"/>
         <source>File Modified</source>
         <translation>文件已改变</translation>
     </message>
@@ -8366,7 +8366,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 无法打开。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2587"/>
+        <location filename="QScintilla/Editor.py" line="2600"/>
         <source>Save File</source>
         <translation>保存文件</translation>
     </message>
@@ -8381,52 +8381,52 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3814"/>
+        <location filename="QScintilla/Editor.py" line="3827"/>
         <source>Autocompletion</source>
         <translation>自动完成</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3814"/>
+        <location filename="QScintilla/Editor.py" line="3827"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>自动完成无效，没有设定自动完成源。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4307"/>
+        <location filename="QScintilla/Editor.py" line="4320"/>
         <source>Disable breakpoint</source>
         <translation>去除断点</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4624"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>Code Coverage</source>
         <translation>代码覆盖率</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4624"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>Please select a coverage file</source>
         <translation>请选择一个覆盖率文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4670"/>
+        <location filename="QScintilla/Editor.py" line="4683"/>
         <source>Show Code Coverage Annotations</source>
         <translation>显示代码覆盖率注解</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4666"/>
+        <location filename="QScintilla/Editor.py" line="4679"/>
         <source>All lines have been covered.</source>
         <translation>所有行均被已覆盖。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4670"/>
+        <location filename="QScintilla/Editor.py" line="4683"/>
         <source>There is no coverage file available.</source>
         <translation>没有有效的覆盖率文件。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4762"/>
+        <location filename="QScintilla/Editor.py" line="4775"/>
         <source>Profile Data</source>
         <translation>剖析数据</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4762"/>
+        <location filename="QScintilla/Editor.py" line="4775"/>
         <source>Please select a profile file</source>
         <translation>请选择一个剖析文件</translation>
     </message>
@@ -8451,37 +8451,37 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">请选择要移除的循环报告</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4892"/>
+        <location filename="QScintilla/Editor.py" line="4905"/>
         <source>Syntax Error</source>
         <translation>语法错误</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4892"/>
+        <location filename="QScintilla/Editor.py" line="4905"/>
         <source>No syntax error message available.</source>
         <translation>语法错误消息无效。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5117"/>
+        <location filename="QScintilla/Editor.py" line="5130"/>
         <source>Macro Name</source>
         <translation>宏名称</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5117"/>
+        <location filename="QScintilla/Editor.py" line="5130"/>
         <source>Select a macro name:</source>
         <translation>选择一个宏名称：</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5145"/>
+        <location filename="QScintilla/Editor.py" line="5158"/>
         <source>Load macro file</source>
         <translation>输入宏文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5185"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Macro files (*.macro)</source>
         <translation>宏文件 (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5179"/>
         <source>Error loading macro</source>
         <translation>载入宏文件出错</translation>
     </message>
@@ -8496,12 +8496,12 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;宏文件 &lt;b&gt;%1&lt;/b&gt; 已损坏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5185"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Save macro file</source>
         <translation>保存宏文件</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5202"/>
+        <location filename="QScintilla/Editor.py" line="5215"/>
         <source>Save macro</source>
         <translation>保存宏</translation>
     </message>
@@ -8511,7 +8511,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;宏文件 &lt;b&gt;%1&lt;/b&gt; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5217"/>
+        <location filename="QScintilla/Editor.py" line="5230"/>
         <source>Error saving macro</source>
         <translation>保存宏出错</translation>
     </message>
@@ -8521,22 +8521,22 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;无法写入宏文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5228"/>
+        <location filename="QScintilla/Editor.py" line="5241"/>
         <source>Start Macro Recording</source>
         <translation>开始宏录制</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5228"/>
+        <location filename="QScintilla/Editor.py" line="5241"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>宏录制已激活。开始录制新宏？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5253"/>
+        <location filename="QScintilla/Editor.py" line="5266"/>
         <source>Macro Recording</source>
         <translation>宏录制</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5253"/>
+        <location filename="QScintilla/Editor.py" line="5266"/>
         <source>Enter name of the macro:</source>
         <translation>输入宏名称：</translation>
     </message>
@@ -8551,7 +8551,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;警告：&lt;/b&gt; 重新打开将导致更改丢失。</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5382"/>
+        <location filename="QScintilla/Editor.py" line="5395"/>
         <source>File changed</source>
         <translation>文件已改变</translation>
     </message>
@@ -8561,7 +8561,7 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5639"/>
+        <location filename="QScintilla/Editor.py" line="5652"/>
         <source>Drop Error</source>
         <translation>降落误差</translation>
     </message>
@@ -8571,47 +8571,47 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; 不是一个文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5657"/>
+        <location filename="QScintilla/Editor.py" line="5670"/>
         <source>Resources</source>
         <translation>资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5659"/>
+        <location filename="QScintilla/Editor.py" line="5672"/>
         <source>Add file...</source>
         <translation>添加文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5661"/>
+        <location filename="QScintilla/Editor.py" line="5674"/>
         <source>Add files...</source>
         <translation>添加文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5663"/>
+        <location filename="QScintilla/Editor.py" line="5676"/>
         <source>Add aliased file...</source>
         <translation>添加别名文件……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5665"/>
+        <location filename="QScintilla/Editor.py" line="5678"/>
         <source>Add localized resource...</source>
         <translation>添加本地资源……</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5668"/>
+        <location filename="QScintilla/Editor.py" line="5681"/>
         <source>Add resource frame</source>
         <translation>添加资源结构</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5686"/>
+        <location filename="QScintilla/Editor.py" line="5699"/>
         <source>Add file resource</source>
         <translation>添加文件资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5702"/>
+        <location filename="QScintilla/Editor.py" line="5715"/>
         <source>Add file resources</source>
         <translation>添加多个文件资源</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5729"/>
+        <location filename="QScintilla/Editor.py" line="5742"/>
         <source>Add aliased file resource</source>
         <translation>添加别名文件资源</translation>
     </message>
@@ -8621,42 +8621,42 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">重命名文件 &lt;b&gt;%1&lt;/b&gt;：</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5790"/>
+        <location filename="QScintilla/Editor.py" line="5803"/>
         <source>Package Diagram</source>
         <translation>程序包图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5790"/>
+        <location filename="QScintilla/Editor.py" line="5803"/>
         <source>Include class attributes?</source>
         <translation>包含类属性？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5807"/>
+        <location filename="QScintilla/Editor.py" line="5820"/>
         <source>Imports Diagram</source>
         <translation>引用图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5807"/>
+        <location filename="QScintilla/Editor.py" line="5820"/>
         <source>Include imports from external modules?</source>
         <translation>从外部模块包含引用？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5819"/>
+        <location filename="QScintilla/Editor.py" line="5832"/>
         <source>Application Diagram</source>
         <translation>应用程序图</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5819"/>
+        <location filename="QScintilla/Editor.py" line="5832"/>
         <source>Include module names?</source>
         <translation>包含模块名？</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6082"/>
+        <location filename="QScintilla/Editor.py" line="6095"/>
         <source>Add to dictionary</source>
         <translation>添加到文件夹</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6084"/>
+        <location filename="QScintilla/Editor.py" line="6097"/>
         <source>Ignore All</source>
         <translation>全部忽略</translation>
     </message>
@@ -8681,52 +8681,52 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2386"/>
+        <location filename="QScintilla/Editor.py" line="2399"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2434"/>
+        <location filename="QScintilla/Editor.py" line="2447"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2535"/>
+        <location filename="QScintilla/Editor.py" line="2548"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5159"/>
+        <location filename="QScintilla/Editor.py" line="5172"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5166"/>
+        <location filename="QScintilla/Editor.py" line="5179"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5217"/>
+        <location filename="QScintilla/Editor.py" line="5230"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5373"/>
+        <location filename="QScintilla/Editor.py" line="5386"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5520"/>
+        <location filename="QScintilla/Editor.py" line="5533"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5639"/>
+        <location filename="QScintilla/Editor.py" line="5652"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5729"/>
+        <location filename="QScintilla/Editor.py" line="5742"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8751,57 +8751,57 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5018"/>
+        <location filename="QScintilla/Editor.py" line="5031"/>
         <source>py3flakes Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5018"/>
+        <location filename="QScintilla/Editor.py" line="5031"/>
         <source>No py3flakes warning message available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2587"/>
+        <location filename="QScintilla/Editor.py" line="2600"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5202"/>
+        <location filename="QScintilla/Editor.py" line="5215"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5061"/>
+        <location filename="QScintilla/Editor.py" line="5074"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5067"/>
+        <location filename="QScintilla/Editor.py" line="5080"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5378"/>
+        <location filename="QScintilla/Editor.py" line="5391"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3910"/>
+        <location filename="QScintilla/Editor.py" line="3923"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3910"/>
+        <location filename="QScintilla/Editor.py" line="3923"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4095"/>
+        <location filename="QScintilla/Editor.py" line="4108"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4095"/>
+        <location filename="QScintilla/Editor.py" line="4108"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14502,17 +14502,17 @@ Reason: {0}</source>
         <translation type="obsolete">&lt;p&gt;无法为文件 &lt;b&gt;%1&lt;/b&gt; 开启浏览器。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="965"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>在新选项卡中打开链接<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="511"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="557"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;帮助窗口&lt;/b&gt;&lt;p&gt;该窗口显示已选的帮助信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1070"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1158"/>
         <source>Web Inspector...</source>
         <translation>网络检查器……</translation>
     </message>
@@ -14522,57 +14522,57 @@ Reason: {0}</source>
         <translation type="obsolete">&lt;html&gt;&lt;head&gt;&lt;title&gt;帮助窗口&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;请求的 URL &lt;b&gt;%1&lt;/b&gt; 无法载入。&lt;/p&gt;&lt;p&gt;原因： %2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1647"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1765"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1651"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1769"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1654"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1772"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1001"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1089"/>
         <source>Bookmark this Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="914"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="969"/>
         <source>Save Lin&amp;k</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="916"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="971"/>
         <source>Bookmark this Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="920"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="975"/>
         <source>Copy Link to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="933"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="988"/>
         <source>Open Image in New Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="937"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
         <source>Save Image</source>
         <translation type="unfinished">保存图像</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="939"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="994"/>
         <source>Copy Image to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="940"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="995"/>
         <source>Copy Image Location to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14582,229 +14582,264 @@ Reason: {0}</source>
         <translation type="obsolete">网络浏览器</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="946"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1001"/>
         <source>Block Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1024"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1112"/>
         <source>Search with...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="702"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="748"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="739"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="785"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="722"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="768"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1627"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1745"/>
         <source>Error loading page: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1645"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1763"/>
         <source>When connecting to: {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1689"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1807"/>
         <source>Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1689"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1807"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1697"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1815"/>
         <source>New Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1717"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1835"/>
         <source>bytes</source>
         <translation type="unfinished">字节</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1720"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1838"/>
         <source>kB</source>
         <translation type="unfinished">千字节</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1723"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1841"/>
         <source>MB</source>
         <translation type="unfinished">兆字节</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1697"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1815"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1066"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1154"/>
         <source>Add to web search toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1211"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1329"/>
         <source>Method not supported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1211"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1329"/>
         <source>{0} method is not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>Search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1253"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>Choose the desired search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1270"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1388"/>
         <source>Engine name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1270"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1388"/>
         <source>Enter a name for the engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1658"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1776"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="926"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="981"/>
         <source>Scan Link with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="951"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1006"/>
         <source>Scan Image with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="2060"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2178"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="922"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
         <source>Send Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="943"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="998"/>
         <source>Send Image Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="972"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1060"/>
         <source>This Frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="975"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1063"/>
         <source>Show &amp;only this frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1065"/>
         <source>Show in new &amp;tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="981"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1069"/>
         <source>&amp;Print</source>
         <translation type="unfinished">打印(&amp;P)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="983"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1071"/>
         <source>Print Preview</source>
         <translation type="unfinished">打印预览</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="985"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1073"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="988"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1076"/>
         <source>Zoom &amp;in</source>
         <translation type="unfinished">放大(&amp;i)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="990"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1078"/>
         <source>Zoom &amp;reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1080"/>
         <source>Zoom &amp;out</source>
         <translation type="unfinished">缩小(&amp;o)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="995"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1083"/>
         <source>Show frame so&amp;urce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1003"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1091"/>
         <source>Send Page Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1019"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1107"/>
         <source>Send Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1044"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1132"/>
         <source>Google Translate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1050"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1138"/>
         <source>Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1057"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1145"/>
         <source>Go to web address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="2060"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2178"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;由于 PyQt4 中存在一个错误，导致无法打印。请升级。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1006"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1094"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1662"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1780"/>
         <source>Try Again</source>
         <translation type="unfinished">再试</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1023"/>
+        <source>Play</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1026"/>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1029"/>
+        <source>Unmute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1032"/>
+        <source>Mute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1035"/>
+        <source>Copy Media Address to Clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1038"/>
+        <source>Send Media Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1041"/>
+        <source>Save Media</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16140,42 +16175,42 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="298"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="329"/>
         <source>Error loading page: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="316"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="347"/>
         <source>When connecting to: {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="318"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="349"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="322"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="353"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="325"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="356"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="329"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="360"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="436"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="465"/>
         <source>SSL Certificate Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="436"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="465"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16190,18 +16225,23 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="333"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="364"/>
         <source>Try Again</source>
         <translation type="unfinished">再试</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="285"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="316"/>
         <source>Content blocked by AdBlock Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="286"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="317"/>
         <source>Blocked by rule: &lt;i&gt;{0}&lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="271"/>
+        <source>Select files to upload...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -58306,62 +58346,62 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>监视点</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="166"/>
+        <location filename="Debugger/WatchPointViewer.py" line="168"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="136"/>
+        <location filename="Debugger/WatchPointViewer.py" line="138"/>
         <source>Edit...</source>
         <translation>编辑……</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="138"/>
+        <location filename="Debugger/WatchPointViewer.py" line="140"/>
         <source>Enable</source>
         <translation>允许</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="170"/>
+        <location filename="Debugger/WatchPointViewer.py" line="172"/>
         <source>Enable all</source>
         <translation>允许所有</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="141"/>
+        <location filename="Debugger/WatchPointViewer.py" line="143"/>
         <source>Disable</source>
         <translation>禁止</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="174"/>
+        <location filename="Debugger/WatchPointViewer.py" line="176"/>
         <source>Disable all</source>
         <translation>禁止所有</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="144"/>
+        <location filename="Debugger/WatchPointViewer.py" line="146"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="178"/>
+        <location filename="Debugger/WatchPointViewer.py" line="180"/>
         <source>Delete all</source>
         <translation>全部删除</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="180"/>
+        <location filename="Debugger/WatchPointViewer.py" line="182"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="168"/>
+        <location filename="Debugger/WatchPointViewer.py" line="170"/>
         <source>Enable selected</source>
         <translation>允许所选择的</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="172"/>
+        <location filename="Debugger/WatchPointViewer.py" line="174"/>
         <source>Disable selected</source>
         <translation>禁止所选择的</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="176"/>
+        <location filename="Debugger/WatchPointViewer.py" line="178"/>
         <source>Delete selected</source>
         <translation>删除所选择的</translation>
     </message>
@@ -58376,17 +58416,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt; 变量 &lt;b&gt;%2&lt;/b&gt; 的监视表达式 &apos;&lt;b&gt;%1&lt;/b&gt;&apos; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="231"/>
+        <location filename="Debugger/WatchPointViewer.py" line="233"/>
         <source>Watch expression already exists</source>
         <translation>监视表达式已存在</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="224"/>
+        <location filename="Debugger/WatchPointViewer.py" line="226"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="228"/>
+        <location filename="Debugger/WatchPointViewer.py" line="230"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -2127,6 +2127,7 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomReset?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser?1(mainWindow, parent=None, name="")
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage._webPluginFactory?8
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.acceptNavigationRequest?4(frame, request, type_)
+eric5.Helpviewer.HelpBrowserWV.HelpWebPage.event?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.extension?4(extension, option, output)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslInfo?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.hasValidSslInfo?4()

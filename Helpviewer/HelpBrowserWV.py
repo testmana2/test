@@ -9,7 +9,7 @@ Module implementing the helpbrowser using QWebView.
 """
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
-    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile
+    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
@@ -22,7 +22,7 @@ except ImportError:
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 import sip
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 import Preferences
 import UI.PixmapCache
@@ -258,83 +258,112 @@ class HelpWebPage(QWebPage):
         @param output stores the output results (QWebPage.ExtensionReturn)
         @return flag indicating a successful call of the extension (boolean)
         """
-        try:
-            if extension == QWebPage.ErrorPageExtension:
-                info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
-                if info.error == 102:
-                    # this is something of a hack; hopefully it will work in the future
+        if extension == QWebPage.ChooseMultipleFilesExtension:
+            info = sip.cast(option, QWebPage.ChooseMultipleFilesExtensionOption)
+            files = sip.cast(output, QWebPage.ChooseMultipleFilesExtensionReturn)
+            if info is None or files is None:
+                return super().extension(extension, option, output)
+            
+            suggestedFileName = ""
+            if info.suggestedFileNames:
+                suggestedFileName = info.suggestedFileNames[0]
+            
+            files.fileNames = E5FileDialog.getOpenFileNames(
+                None,
+                self.trUtf8("Select files to upload..."),
+                suggestedFileName)
+            return True
+        
+##    if (extension == ChooseMultipleFilesExtension) {
+##        const QWebPage::ChooseMultipleFilesExtensionOption* exOption = static_cast<const QWebPage::ChooseMultipleFilesExtensionOption*>(option);
+##        QWebPage::ChooseMultipleFilesExtensionReturn* exReturn = static_cast<QWebPage::ChooseMultipleFilesExtensionReturn*>(output);
+##
+##        if (!exOption || !exReturn) {
+##            return QWebPage::extension(extension, option, output);
+##        }
+##
+##        QString suggestedFileName;
+##        if (!exOption->suggestedFileNames.isEmpty()) {
+##            suggestedFileName = exOption->suggestedFileNames.at(0);
+##        }
+##
+##        exReturn->fileNames = QFileDialog::getOpenFileNames(0, tr("Select files to upload..."), suggestedFileName);
+##        return true;
+##    }
+        if extension == QWebPage.ErrorPageExtension:
+            info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
+            if info.error == 102:
+                # this is something of a hack; hopefully it will work in the future
+                return False
+            
+            errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
+            urlString = bytes(info.url.toEncoded()).decode()
+            errorPage.baseUrl = info.url
+            if info.domain == QWebPage.QtNetwork and \
+               info.error == QNetworkReply.ContentAccessDenied and \
+               info.errorString.startswith("AdBlockRule:"):
+                if info.frame != info.frame.page().mainFrame():
+                    # content in <iframe>
+                    docElement = info.frame.page().mainFrame().documentElement()
+                    for element in docElement.findAll("iframe"):
+                        src = element.attribute("src")
+                        if src in info.url.toString():
+                            element.setAttribute("style", "display:none;")
                     return False
-                
-                errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
-                urlString = bytes(info.url.toEncoded()).decode()
-                errorPage.baseUrl = info.url
-                if info.domain == QWebPage.QtNetwork and \
-                   info.error == QNetworkReply.ContentAccessDenied and \
-                   info.errorString.startswith("AdBlockRule:"):
-                    if info.frame != info.frame.page().mainFrame():
-                        # content in <iframe>
-                        docElement = info.frame.page().mainFrame().documentElement()
-                        for element in docElement.findAll("iframe"):
-                            src = element.attribute("src")
-                            if src in info.url.toString():
-                                element.setAttribute("style", "display:none;")
-                        return False
-                    else:
-                        # the whole page is blocked
-                        rule = info.errorString.replace("AdBlockRule:", "")
-                        title = self.trUtf8("Content blocked by AdBlock Plus")
-                        message = self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
-                        
-                        htmlFile = QFile(":/html/adblockPage.html")
-                        htmlFile.open(QFile.ReadOnly)
-                        html = htmlFile.readAll()
-                        html = html.replace("@FAVICON@", "qrc:icons/adBlockPlus16.png")
-                        html = html.replace("@IMAGE@", "qrc:icons/adBlockPlus64.png")
-                        html = html.replace("@TITLE@", title.encode("utf8"))
-                        html = html.replace("@MESSAGE@", message.encode("utf8"))
-                        errorPage.content = html
-                        return True
-                
-                title = self.trUtf8("Error loading page: {0}").format(urlString)
-                htmlFile = QFile(":/html/notFoundPage.html")
-                htmlFile.open(QFile.ReadOnly)
-                html = htmlFile.readAll()
-                pixmap = qApp.style()\
-                         .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
-                imageBuffer = QBuffer()
-                imageBuffer.open(QIODevice.ReadWrite)
-                if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
-                pixmap = qApp.style()\
-                         .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
-                imageBuffer = QBuffer()
-                imageBuffer.open(QIODevice.ReadWrite)
-                if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
-                html = html.replace("@TITLE@", title.encode("utf8"))
-                html = html.replace("@H1@", info.errorString.encode("utf8"))
-                html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
-                    .format(urlString).encode("utf8"))
-                html = html.replace("@LI-1@",
-                    self.trUtf8("Check the address for errors such as "
-                                "<b>ww</b>.example.org instead of "
-                                "<b>www</b>.example.org").encode("utf8"))
-                html = html.replace("@LI-2@",
-                    self.trUtf8("If the address is correct, try checking the network "
-                                "connection.").encode("utf8"))
-                html = html.replace("@LI-3@",
-                    self.trUtf8("If your computer or network is protected by a firewall "
-                                "or proxy, make sure that the browser is permitted to "
-                                "access the network.").encode("utf8"))
-                html = html.replace("@LI-4@",
-                    self.trUtf8("If your cache policy is set to offline browsing,"
-                                "only pages in the local cache are available.")\
-                    .encode("utf8"))
-                html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
-                errorPage.content = html
-                return True
-        except AttributeError:
-            pass
+                else:
+                    # the whole page is blocked
+                    rule = info.errorString.replace("AdBlockRule:", "")
+                    title = self.trUtf8("Content blocked by AdBlock Plus")
+                    message = self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
+                    
+                    htmlFile = QFile(":/html/adblockPage.html")
+                    htmlFile.open(QFile.ReadOnly)
+                    html = htmlFile.readAll()
+                    html = html.replace("@FAVICON@", "qrc:icons/adBlockPlus16.png")
+                    html = html.replace("@IMAGE@", "qrc:icons/adBlockPlus64.png")
+                    html = html.replace("@TITLE@", title.encode("utf8"))
+                    html = html.replace("@MESSAGE@", message.encode("utf8"))
+                    errorPage.content = html
+                    return True
+            
+            title = self.trUtf8("Error loading page: {0}").format(urlString)
+            htmlFile = QFile(":/html/notFoundPage.html")
+            htmlFile.open(QFile.ReadOnly)
+            html = htmlFile.readAll()
+            pixmap = qApp.style()\
+                     .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
+            imageBuffer = QBuffer()
+            imageBuffer.open(QIODevice.ReadWrite)
+            if pixmap.save(imageBuffer, "PNG"):
+                html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
+            pixmap = qApp.style()\
+                     .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
+            imageBuffer = QBuffer()
+            imageBuffer.open(QIODevice.ReadWrite)
+            if pixmap.save(imageBuffer, "PNG"):
+                html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
+            html = html.replace("@TITLE@", title.encode("utf8"))
+            html = html.replace("@H1@", info.errorString.encode("utf8"))
+            html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
+                .format(urlString).encode("utf8"))
+            html = html.replace("@LI-1@",
+                self.trUtf8("Check the address for errors such as "
+                            "<b>ww</b>.example.org instead of "
+                            "<b>www</b>.example.org").encode("utf8"))
+            html = html.replace("@LI-2@",
+                self.trUtf8("If the address is correct, try checking the network "
+                            "connection.").encode("utf8"))
+            html = html.replace("@LI-3@",
+                self.trUtf8("If your computer or network is protected by a firewall "
+                            "or proxy, make sure that the browser is permitted to "
+                            "access the network.").encode("utf8"))
+            html = html.replace("@LI-4@",
+                self.trUtf8("If your cache policy is set to offline browsing,"
+                            "only pages in the local cache are available.")\
+                .encode("utf8"))
+            html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+            errorPage.content = html
+            return True
         
         return QWebPage.extension(self, extension, option, output)
     
@@ -475,6 +504,23 @@ class HelpWebPage(QWebPage):
             cls._webPluginFactory = WebPluginFactory()
         
         return cls._webPluginFactory
+    
+    def event(self, evt):
+        """
+        Protected method implementing the event handler.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating that the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Leave:
+            # Fake a mouse move event just outside of the widget to trigger
+            # the WebKit event handler's mouseMoved function. This implements
+            # the interesting mouse-out behavior like invalidating scrollbars.
+            fakeEvent = QMouseEvent(QEvent.MouseMove, QPoint(0, -1),
+                                    Qt.NoButton, Qt.NoButton, Qt.NoModifier)
+            return super().event(fakeEvent)
+        
+        return super().event(evt)
 
 ##########################################################################################
 
@@ -893,6 +939,15 @@ class HelpBrowser(QWebView):
         
         return self.findText(txt, findFlags)
     
+    def __isMediaElement(self, element):
+        """
+        Private method to check, if the given element is a media element.
+        
+        @param element element to be checked (QWebElement)
+        @return flag indicating a media element (boolean)
+        """
+        return element.tagName().lower() in ["video", "audio"]
+    
     def contextMenuEvent(self, evt):
         """
         Protected method called to create a context menu.
@@ -939,7 +994,7 @@ class HelpBrowser(QWebView):
             menu.addAction(self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
             menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy Image Location to Clipboard"),
-                self.__copyImageLocation).setData(hit.imageUrl().toString())
+                self.__copyLocation).setData(hit.imageUrl().toString())
             menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
                 self.trUtf8("Send Image Link"), self.__sendLink).setData(hit.imageUrl())
             menu.addSeparator()
@@ -953,11 +1008,44 @@ class HelpBrowser(QWebView):
                     .setData(hit.imageUrl())
         
         element = hit.element()
-        if not element.isNull() and \
-           element.tagName().lower() in ["input", "textarea", "video", "audio"]:
-            if menu.isEmpty():
-                self.page().createStandardContextMenu().exec_(evt.globalPos())
-                return
+        if not element.isNull():
+            if self.__isMediaElement(element):
+                if not menu.isEmpty():
+                    menu.addSeparator()
+                
+                self.__clickedMediaElement = element
+                
+                paused = element.evaluateJavaScript("this.paused")
+                muted = element.evaluateJavaScript("this.muted")
+                videoUrl = QUrl(element.evaluateJavaScript("this.currentSrc"))
+                
+                if paused:
+                    menu.addAction(UI.PixmapCache.getIcon("mediaPlaybackStart.png"),
+                        self.trUtf8("Play"), self.__pauseMedia)
+                else:
+                    menu.addAction(UI.PixmapCache.getIcon("mediaPlaybackPause.png"),
+                        self.trUtf8("Pause"), self.__pauseMedia)
+                if muted:
+                    menu.addAction(UI.PixmapCache.getIcon("audioVolumeHigh.png"),
+                        self.trUtf8("Unmute"), self.__muteMedia)
+                else:
+                    menu.addAction(UI.PixmapCache.getIcon("audioVolumeMuted.png"),
+                        self.trUtf8("Mute"), self.__muteMedia)
+                menu.addSeparator()
+                menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+                    self.trUtf8("Copy Media Address to Clipboard"),
+                    self.__copyLocation).setData(videoUrl.toString())
+                menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+                    self.trUtf8("Send Media Address"), self.__sendLink)\
+                    .setData(videoUrl)
+                menu.addAction(UI.PixmapCache.getIcon("download.png"),
+                    self.trUtf8("Save Media"), self.__downloadMedia)\
+                    .setData(videoUrl)
+            
+            if element.tagName().lower() in ["input", "textarea"]:
+                if menu.isEmpty():
+                    self.page().createStandardContextMenu().exec_(evt.globalPos())
+                    return
         
         if not menu.isEmpty():
             menu.addSeparator()
@@ -1147,9 +1235,9 @@ class HelpBrowser(QWebView):
         """
         self.pageAction(QWebPage.CopyImageToClipboard).trigger()
     
-    def __copyImageLocation(self):
+    def __copyLocation(self):
         """
-        Private slot to copy an image location to the clipboard.
+        Private slot to copy an image or media location to the clipboard.
         """
         act = self.sender()
         url = act.data()
@@ -1163,6 +1251,36 @@ class HelpBrowser(QWebView):
         url = act.data()
         dlg = Helpviewer.HelpWindow.HelpWindow.adblockManager().showDialog()
         dlg.addCustomRule(url)
+    
+    def __downloadMedia(self):
+        """
+        Private slot to download a media and save it to disk.
+        """
+        act = self.sender()
+        url = act.data()
+        self.mw.downloadManager().download(url, True, mainWindow=self.mw)
+    
+    def __pauseMedia(self):
+        """
+        Private slot to pause or play the selected media.
+        """
+        paused = self.__clickedMediaElement.evaluateJavaScript("this.paused")
+        
+        if paused:
+            self.__clickedMediaElement.evaluateJavaScript("this.play()")
+        else:
+            self.__clickedMediaElement.evaluateJavaScript("this.pause()")
+    
+    def __muteMedia(self):
+        """
+        Private slot to (un)mute the selected media.
+        """
+        muted = self.__clickedMediaElement.evaluateJavaScript("this.muted")
+        
+        if muted:
+            self.__clickedMediaElement.evaluateJavaScript("this.muted = false")
+        else:
+            self.__clickedMediaElement.evaluateJavaScript("this.muted = true")
     
     def __virusTotal(self):
         """

@@ -121,11 +121,11 @@ QWebView
 <td><a href="#HelpBrowser.__copyImage">__copyImage</a></td>
 <td>Private slot to copy an image to the clipboard.</td>
 </tr><tr>
-<td><a href="#HelpBrowser.__copyImageLocation">__copyImageLocation</a></td>
-<td>Private slot to copy an image location to the clipboard.</td>
-</tr><tr>
 <td><a href="#HelpBrowser.__copyLink">__copyLink</a></td>
 <td>Private slot to copy a link to the clipboard.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__copyLocation">__copyLocation</a></td>
+<td>Private slot to copy an image or media location to the clipboard.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__currentEngineChanged">__currentEngineChanged</a></td>
 <td>Private slot to track a change of the current search engine.</td>
@@ -142,6 +142,9 @@ QWebView
 <td><a href="#HelpBrowser.__downloadLink">__downloadLink</a></td>
 <td>Private slot to download a link and save it to disk.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__downloadMedia">__downloadMedia</a></td>
+<td>Private slot to download a media and save it to disk.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__downloadRequested">__downloadRequested</a></td>
 <td>Private slot to handle a download request.</td>
 </tr><tr>
@@ -150,6 +153,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.__hideAccessKeys">__hideAccessKeys</a></td>
 <td>Private slot to hide the access key labels.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__isMediaElement">__isMediaElement</a></td>
+<td>Private method to check, if the given element is a media element.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__isUrlValid">__isUrlValid</a></td>
 <td>Private method to check a URL for validity.</td>
@@ -175,8 +181,14 @@ QWebView
 <td><a href="#HelpBrowser.__makeAccessLabel">__makeAccessLabel</a></td>
 <td>Private method to generate the access label for an element.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__muteMedia">__muteMedia</a></td>
+<td>Private slot to (un)mute the selected media.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__openLinkInNewTab">__openLinkInNewTab</a></td>
 <td>Private method called by the context menu to open a link in a new window.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__pauseMedia">__pauseMedia</a></td>
+<td>Private slot to pause or play the selected media.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__printClickedFrame">__printClickedFrame</a></td>
 <td>Private slot to print the selected frame.</td>
@@ -414,16 +426,16 @@ flag indicating, if the event was handled (boolean)
 <b>__copyImage</b>(<i></i>)
 <p>
         Private slot to copy an image to the clipboard.
-</p><a NAME="HelpBrowser.__copyImageLocation" ID="HelpBrowser.__copyImageLocation"></a>
-<h4>HelpBrowser.__copyImageLocation</h4>
-<b>__copyImageLocation</b>(<i></i>)
-<p>
-        Private slot to copy an image location to the clipboard.
 </p><a NAME="HelpBrowser.__copyLink" ID="HelpBrowser.__copyLink"></a>
 <h4>HelpBrowser.__copyLink</h4>
 <b>__copyLink</b>(<i></i>)
 <p>
         Private slot to copy a link to the clipboard.
+</p><a NAME="HelpBrowser.__copyLocation" ID="HelpBrowser.__copyLocation"></a>
+<h4>HelpBrowser.__copyLocation</h4>
+<b>__copyLocation</b>(<i></i>)
+<p>
+        Private slot to copy an image or media location to the clipboard.
 </p><a NAME="HelpBrowser.__currentEngineChanged" ID="HelpBrowser.__currentEngineChanged"></a>
 <h4>HelpBrowser.__currentEngineChanged</h4>
 <b>__currentEngineChanged</b>(<i></i>)
@@ -467,6 +479,11 @@ name of the web database (string)
 <b>__downloadLink</b>(<i></i>)
 <p>
         Private slot to download a link and save it to disk.
+</p><a NAME="HelpBrowser.__downloadMedia" ID="HelpBrowser.__downloadMedia"></a>
+<h4>HelpBrowser.__downloadMedia</h4>
+<b>__downloadMedia</b>(<i></i>)
+<p>
+        Private slot to download a media and save it to disk.
 </p><a NAME="HelpBrowser.__downloadRequested" ID="HelpBrowser.__downloadRequested"></a>
 <h4>HelpBrowser.__downloadRequested</h4>
 <b>__downloadRequested</b>(<i>request</i>)
@@ -492,7 +509,22 @@ reference to the printer object (QPrinter)
 <b>__hideAccessKeys</b>(<i></i>)
 <p>
         Private slot to hide the access key labels.
-</p><a NAME="HelpBrowser.__isUrlValid" ID="HelpBrowser.__isUrlValid"></a>
+</p><a NAME="HelpBrowser.__isMediaElement" ID="HelpBrowser.__isMediaElement"></a>
+<h4>HelpBrowser.__isMediaElement</h4>
+<b>__isMediaElement</b>(<i>element</i>)
+<p>
+        Private method to check, if the given element is a media element.
+</p><dl>
+<dt><i>element</i></dt>
+<dd>
+element to be checked (QWebElement)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a media element (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.__isUrlValid" ID="HelpBrowser.__isUrlValid"></a>
 <h4>HelpBrowser.__isUrlValid</h4>
 <b>__isUrlValid</b>(<i>url</i>)
 <p>
@@ -582,11 +614,21 @@ access key to generate the label for (str)
 reference to the web element to create the label for
             (QWebElement)
 </dd>
-</dl><a NAME="HelpBrowser.__openLinkInNewTab" ID="HelpBrowser.__openLinkInNewTab"></a>
+</dl><a NAME="HelpBrowser.__muteMedia" ID="HelpBrowser.__muteMedia"></a>
+<h4>HelpBrowser.__muteMedia</h4>
+<b>__muteMedia</b>(<i></i>)
+<p>
+        Private slot to (un)mute the selected media.
+</p><a NAME="HelpBrowser.__openLinkInNewTab" ID="HelpBrowser.__openLinkInNewTab"></a>
 <h4>HelpBrowser.__openLinkInNewTab</h4>
 <b>__openLinkInNewTab</b>(<i></i>)
 <p>
         Private method called by the context menu to open a link in a new window.
+</p><a NAME="HelpBrowser.__pauseMedia" ID="HelpBrowser.__pauseMedia"></a>
+<h4>HelpBrowser.__pauseMedia</h4>
+<b>__pauseMedia</b>(<i></i>)
+<p>
+        Private slot to pause or play the selected media.
 </p><a NAME="HelpBrowser.__printClickedFrame" ID="HelpBrowser.__printClickedFrame"></a>
 <h4>HelpBrowser.__printClickedFrame</h4>
 <b>__printClickedFrame</b>(<i></i>)
@@ -1067,6 +1109,9 @@ QWebPage
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
 <td>Protected method to determine, if a request may be accepted.</td>
 </tr><tr>
+<td><a href="#HelpWebPage.event">event</a></td>
+<td>Protected method implementing the event handler.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.extension">extension</a></td>
 <td>Public method to implement a specific extension.</td>
 </tr><tr>
@@ -1154,6 +1199,21 @@ type of the navigation request (QWebPage.NavigationType)
 <dt>Returns:</dt>
 <dd>
 flag indicating acceptance (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.event" ID="HelpWebPage.event"></a>
+<h4>HelpWebPage.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method implementing the event handler.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the event was handled (boolean)
 </dd>
 </dl><a NAME="HelpWebPage.extension" ID="HelpWebPage.extension"></a>
 <h4>HelpWebPage.extension</h4>

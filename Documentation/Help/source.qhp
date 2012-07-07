@@ -4464,16 +4464,18 @@
       <keyword name="HelpBrowser.__bookmarkLink" id="HelpBrowser.__bookmarkLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__bookmarkLink" />
       <keyword name="HelpBrowser.__checkForAccessKey" id="HelpBrowser.__checkForAccessKey" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__checkForAccessKey" />
       <keyword name="HelpBrowser.__copyImage" id="HelpBrowser.__copyImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyImage" />
-      <keyword name="HelpBrowser.__copyImageLocation" id="HelpBrowser.__copyImageLocation" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyImageLocation" />
       <keyword name="HelpBrowser.__copyLink" id="HelpBrowser.__copyLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyLink" />
+      <keyword name="HelpBrowser.__copyLocation" id="HelpBrowser.__copyLocation" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyLocation" />
       <keyword name="HelpBrowser.__currentEngineChanged" id="HelpBrowser.__currentEngineChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__currentEngineChanged" />
       <keyword name="HelpBrowser.__dataString" id="HelpBrowser.__dataString" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__dataString" />
       <keyword name="HelpBrowser.__databaseQuotaExceeded" id="HelpBrowser.__databaseQuotaExceeded" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__databaseQuotaExceeded" />
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
+      <keyword name="HelpBrowser.__downloadMedia" id="HelpBrowser.__downloadMedia" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadMedia" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
       <keyword name="HelpBrowser.__generatePrintPreviewClickedFrame" id="HelpBrowser.__generatePrintPreviewClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__generatePrintPreviewClickedFrame" />
       <keyword name="HelpBrowser.__hideAccessKeys" id="HelpBrowser.__hideAccessKeys" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__hideAccessKeys" />
+      <keyword name="HelpBrowser.__isMediaElement" id="HelpBrowser.__isMediaElement" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__isMediaElement" />
       <keyword name="HelpBrowser.__isUrlValid" id="HelpBrowser.__isUrlValid" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__isUrlValid" />
       <keyword name="HelpBrowser.__levelForZoom" id="HelpBrowser.__levelForZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__levelForZoom" />
       <keyword name="HelpBrowser.__linkHovered" id="HelpBrowser.__linkHovered" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__linkHovered" />
@@ -4482,7 +4484,9 @@
       <keyword name="HelpBrowser.__loadProgress" id="HelpBrowser.__loadProgress" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadProgress" />
       <keyword name="HelpBrowser.__loadStarted" id="HelpBrowser.__loadStarted" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadStarted" />
       <keyword name="HelpBrowser.__makeAccessLabel" id="HelpBrowser.__makeAccessLabel" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__makeAccessLabel" />
+      <keyword name="HelpBrowser.__muteMedia" id="HelpBrowser.__muteMedia" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__muteMedia" />
       <keyword name="HelpBrowser.__openLinkInNewTab" id="HelpBrowser.__openLinkInNewTab" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__openLinkInNewTab" />
+      <keyword name="HelpBrowser.__pauseMedia" id="HelpBrowser.__pauseMedia" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__pauseMedia" />
       <keyword name="HelpBrowser.__printClickedFrame" id="HelpBrowser.__printClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printClickedFrame" />
       <keyword name="HelpBrowser.__printPdfClickedFrame" id="HelpBrowser.__printPdfClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printPdfClickedFrame" />
       <keyword name="HelpBrowser.__printPreviewClickedFrame" id="HelpBrowser.__printPreviewClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printPreviewClickedFrame" />
@@ -4692,6 +4696,7 @@
       <keyword name="HelpWebPage (Constructor)" id="HelpWebPage (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__init__" />
       <keyword name="HelpWebPage.__managerFinished" id="HelpWebPage.__managerFinished" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__managerFinished" />
       <keyword name="HelpWebPage.acceptNavigationRequest" id="HelpWebPage.acceptNavigationRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.acceptNavigationRequest" />
+      <keyword name="HelpWebPage.event" id="HelpWebPage.event" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.event" />
       <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
       <keyword name="HelpWebPage.getSslInfo" id="HelpWebPage.getSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslInfo" />
       <keyword name="HelpWebPage.hasValidSslInfo" id="HelpWebPage.hasValidSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.hasValidSslInfo" />

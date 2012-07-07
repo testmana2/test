@@ -6,7 +6,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added the configurable capability to automatically show the source,
      when the call frame is changed in the callstack viewer of the local
      variables viewer
-
+- Web Browser
+  -- added context menu entries for HTML5 media elements
 
 Version 5.3-snapshot-20120624:
 - bug fixes
