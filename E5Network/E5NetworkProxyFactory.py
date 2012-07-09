@@ -52,6 +52,7 @@ def proxyAuthenticationRequired(proxy, auth):
         .format(Qt.escape(proxy.hostName()))
     
     dlg = AuthenticationDialog(info, proxy.user(), True)
+    dlg.setData(proxy.user(), proxy.password())
     if dlg.exec_() == QDialog.Accepted:
         username, password = dlg.getData()
         auth.setUser(username)
@@ -61,8 +62,8 @@ def proxyAuthenticationRequired(proxy, auth):
             if scheme and scheme != "NoProxy":
                 Preferences.setUI("ProxyUser/{0}".format(scheme), username)
                 Preferences.setUI("ProxyPassword/{0}".format(scheme), password)
-        proxy.setUser(username)
-        proxy.setPassword(password)
+            proxy.setUser(username)
+            proxy.setPassword(password)
 
 
 class E5NetworkProxyFactory(QNetworkProxyFactory):
