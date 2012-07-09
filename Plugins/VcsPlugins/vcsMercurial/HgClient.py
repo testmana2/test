@@ -327,7 +327,11 @@ class HgClient(QObject):
             inputChannels["L"] = func
         else:
             def myprompt(size):
-                reply = self.__prompt(size, outputBuffer.getvalue())
+                if outputBuffer is None:
+                    msg = self.trUtf8("For message see output dialog.")
+                else:
+                    msg = outputBuffer.getvalue()
+                reply = self.__prompt(size, msg)
                 return reply
             inputChannels["L"] = myprompt
         if input is not None:
