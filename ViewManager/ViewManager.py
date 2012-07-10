@@ -5507,8 +5507,7 @@ class ViewManager(QObject):
             return e5App().getObject("Project").ppath
         
         else:
-            # None will cause open dialog to start with cwd
-            return ""
+            return Preferences.getMultiProject("Workspace")
         
     def _getOpenFileFilter(self):
         """

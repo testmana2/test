@@ -2251,7 +2251,7 @@ class Project(QObject):
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open project"),
-                "",
+                Preferences.getMultiProject("Workspace"),
                 self.trUtf8("Project Files (*.e4p)"))
         
         QApplication.processEvents()
@@ -2412,10 +2412,14 @@ class Project(QObject):
         @return flag indicating success (boolean)
         """
         defaultFilter = self.trUtf8("Project Files (*.e4p)")
+        if self.ppath:
+            defaultPath = self.ppath
+        else:
+            defaultPath = Preferences.getMultiProject("Workspace")
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save project as"),
-            self.ppath,
+            defaultPath,
             self.trUtf8("Project Files (*.e4p)"),
             defaultFilter,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))

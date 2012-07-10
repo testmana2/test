@@ -19,6 +19,7 @@ from .Ui_HgNewProjectOptionsDialog import Ui_HgNewProjectOptionsDialog
 from .Config import ConfigHgProtocols
 
 import Utilities
+import Preferences
 
 
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
@@ -49,6 +50,9 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.localPath = hd
         self.networkPath = "localhost/"
         self.localProtocol = True
+        
+        self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
+            Preferences.getMultiProject("Workspace")))
     
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):

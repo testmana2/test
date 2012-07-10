@@ -550,6 +550,7 @@ class Prefs(object):
         "OpenMasterAutomatically": True,
         "XMLTimestamp": True,
         "RecentNumber": 9,
+        "Workspace": "",
     }
     
     # defaults for the project browser flags settings
@@ -1941,9 +1942,12 @@ def getMultiProject(key, prefClass=Prefs):
     if key in ["RecentNumber"]:
         return int(prefClass.settings.value("MultiProject/" + key,
             prefClass.multiProjectDefaults[key]))
-    else:
+    elif key in ["OpenMasterAutomatically", "XMLTimestamp"]:
         return toBool(prefClass.settings.value("MultiProject/" + key,
             prefClass.multiProjectDefaults[key]))
+    else:
+        return prefClass.settings.value("MultiProject/" + key,
+            prefClass.multiProjectDefaults[key])
     
 
 def setMultiProject(key, value, prefClass=Prefs):

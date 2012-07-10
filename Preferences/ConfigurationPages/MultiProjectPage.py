@@ -7,10 +7,15 @@
 Module implementing the Multi Project configuration page.
 """
 
+from PyQt4.QtCore import pyqtSlot
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_MultiProjectPage import Ui_MultiProjectPage
 
+from E5Gui import E5FileDialog
+
 import Preferences
+import Utilities
 
 
 class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
@@ -32,6 +37,9 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             Preferences.getMultiProject("XMLTimestamp"))
         self.multiProjectRecentSpinBox.setValue(
             Preferences.getMultiProject("RecentNumber"))
+        self.workspaceEdit.setText(
+            Utilities.toNativeSeparators(
+                Preferences.getMultiProject("Workspace")))
         
     def save(self):
         """
@@ -43,6 +51,25 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             self.multiProjectTimestampCheckBox.isChecked())
         Preferences.setMultiProject("RecentNumber",
             self.multiProjectRecentSpinBox.value())
+        Preferences.setMultiProject("Workspace",
+            self.workspaceEdit.text())
+    
+    @pyqtSlot()
+    def on_workspaceButton_clicked(self):
+        """
+        Private slot to display a directory selection dialog.
+        """
+        default = self.workspaceEdit.text()
+        if default == "":
+            default = Utilities.getHomeDir()
+        directory = E5FileDialog.getExistingDirectory(
+            self,
+            self.trUtf8("Select Workspace Directory"),
+            default,
+            E5FileDialog.Options(0))
+        
+        if directory:
+            self.workspaceEdit.setText(Utilities.toNativeSeparators(directory))
     
 
 def create(dlg):

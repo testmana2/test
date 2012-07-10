@@ -2576,8 +2576,8 @@ class Editor(QsciScintillaCompat):
             
             if not path and self.fileName is not None:
                 path = os.path.dirname(self.fileName)
-            if path is None:
-                path = ""
+            if not path:
+                path = Preferences.getMultiProject("Workspace")
             defaultFilter = Preferences.getEditor("DefaultSaveFilter")
             fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,

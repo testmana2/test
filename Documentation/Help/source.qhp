@@ -6644,6 +6644,7 @@
       <keyword name="MultiProjectPage" id="MultiProjectPage" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage" />
       <keyword name="MultiProjectPage (Constructor)" id="MultiProjectPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.__init__" />
       <keyword name="MultiProjectPage (Module)" id="MultiProjectPage (Module)" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html" />
+      <keyword name="MultiProjectPage.on_workspaceButton_clicked" id="MultiProjectPage.on_workspaceButton_clicked" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.on_workspaceButton_clicked" />
       <keyword name="MultiProjectPage.save" id="MultiProjectPage.save" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.save" />
       <keyword name="MultiProjectReader" id="MultiProjectReader" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader" />
       <keyword name="MultiProjectReader (Constructor)" id="MultiProjectReader (Constructor)" ref="eric5.E5XML.MultiProjectReader.html#MultiProjectReader.__init__" />
@@ -10697,6 +10698,7 @@
       <keyword name="UserInterface.appendToStdout" id="UserInterface.appendToStdout" ref="eric5.UI.UserInterface.html#UserInterface.appendToStdout" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
       <keyword name="UserInterface.checkForErrorLog" id="UserInterface.checkForErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.checkForErrorLog" />
+      <keyword name="UserInterface.checkProjectsWorkspace" id="UserInterface.checkProjectsWorkspace" ref="eric5.UI.UserInterface.html#UserInterface.checkProjectsWorkspace" />
       <keyword name="UserInterface.closeEvent" id="UserInterface.closeEvent" ref="eric5.UI.UserInterface.html#UserInterface.closeEvent" />
       <keyword name="UserInterface.dragEnterEvent" id="UserInterface.dragEnterEvent" ref="eric5.UI.UserInterface.html#UserInterface.dragEnterEvent" />
       <keyword name="UserInterface.dragLeaveEvent" id="UserInterface.dragLeaveEvent" ref="eric5.UI.UserInterface.html#UserInterface.dragLeaveEvent" />

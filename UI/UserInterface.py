@@ -5534,6 +5534,25 @@ class UserInterface(QMainWindow):
                             """The configuration dialog will be started."""))
             self.showPreferences()
     
+    def checkProjectsWorkspace(self):
+        """
+        Public method to check, if a projects workspace has been configured. If
+        it has not, a dialog is shown.
+        """
+        if not Preferences.isConfigured():
+            # eric hasn't been configured at all
+            self.checkConfigurationStatus()
+        
+        workspace = Preferences.getMultiProject("Workspace")
+        if workspace == "":
+            default = Utilities.getHomeDir()
+            workspace = E5FileDialog.getExistingDirectory(
+                None,
+                self.trUtf8("Select Workspace Directory"),
+                default,
+                E5FileDialog.Options(E5FileDialog.Option(0)))
+            Preferences.setMultiProject("Workspace", workspace)
+    
     def versionIsNewer(self, required, snapshot=None):
         """
         Public method to check, if the eric5 version is good compared to

@@ -20,6 +20,7 @@ from .Ui_SvnNewProjectOptionsDialog import Ui_SvnNewProjectOptionsDialog
 from .Config import ConfigSvnProtocols
 
 import Utilities
+import Preferences
 
 
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
@@ -50,6 +51,9 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.localPath = hd
         self.networkPath = "localhost/"
         self.localProtocol = True
+        
+        self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
+            Preferences.getMultiProject("Workspace")))
         
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):

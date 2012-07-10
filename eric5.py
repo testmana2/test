@@ -145,6 +145,7 @@ def uiStartUp():
     mainWindow.checkForErrorLog()
     mainWindow.processArgs(args)
     mainWindow.performVersionCheck(False)
+    mainWindow.checkProjectsWorkspace()
     mainWindow.checkConfigurationStatus()
 
 

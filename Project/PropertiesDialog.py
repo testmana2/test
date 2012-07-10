@@ -23,6 +23,7 @@ from .SpellingPropertiesDialog import SpellingPropertiesDialog
 from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 import Utilities
+import Preferences
 
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
@@ -121,8 +122,10 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findText(projectTypes["Qt4"]))
-            hp = os.getcwd()
-            hp = hp + os.sep
+            hp = Preferences.getMultiProject("Workspace")
+            if not hp:
+                hp = os.getcwd()
+                hp = hp + os.sep
             self.dirEdit.setText(hp)
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
