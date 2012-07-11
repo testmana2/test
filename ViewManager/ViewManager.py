@@ -5507,7 +5507,7 @@ class ViewManager(QObject):
             return e5App().getObject("Project").ppath
         
         else:
-            return Preferences.getMultiProject("Workspace")
+            return Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
         
     def _getOpenFileFilter(self):
         """

@@ -122,10 +122,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findText(projectTypes["Qt4"]))
-            hp = Preferences.getMultiProject("Workspace")
-            if not hp:
-                hp = os.getcwd()
-                hp = hp + os.sep
+            hp = Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
             self.dirEdit.setText(hp)
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()

@@ -406,7 +406,7 @@ class MultiProject(QObject):
             fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open multiproject"),
-                Preferences.getMultiProject("Workspace"),
+                Preferences.getMultiProject("Workspace") or Utilities.getHomeDir(),
                 self.trUtf8("Multiproject Files (*.e4m)"))
             
             if fn == "":
@@ -460,7 +460,8 @@ class MultiProject(QObject):
         if self.ppath:
             defaultPath = self.ppath
         else:
-            defaultPath = Preferences.getMultiProject("Workspace")
+            defaultPath = Preferences.getMultiProject("Workspace") or \
+                          Utilities.getHomeDir()
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.parent(),
             self.trUtf8("Save multiproject as"),
