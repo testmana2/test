@@ -150,12 +150,14 @@ class VcsProjectHelper(QObject):
             if vcsSystemDisplay == vcsSelected:
                 break
         
+        if not self.project.closeProject():
+            return
+        
         self.project.pdata["VCS"] = [vcsSystem]
         self.project.vcs = self.project.initVCS(vcsSystem)
         if self.project.vcs is not None:
             vcsdlg = self.project.vcs.vcsNewProjectOptionsDialog()
             if vcsdlg.exec_() == QDialog.Accepted:
-                self.project.closeProject()
                 projectdir, vcsDataDict = vcsdlg.getData()
                 self.project.pdata["VCS"] = [vcsSystem]
                 self.project.vcs = self.project.initVCS(vcsSystem)
