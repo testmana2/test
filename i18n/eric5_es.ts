@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1769,8 +1770,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2011,8 +2012,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -13389,7 +13390,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="965"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -13685,37 +13686,37 @@ Razón: {0}</translation>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1023"/>
         <source>Play</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproducir</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1026"/>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1029"/>
         <source>Unmute</source>
-        <translation type="unfinished"></translation>
+        <translation>Con sonido</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1032"/>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin sonido</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1035"/>
         <source>Copy Media Address to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar Dirección del Medio al Portapapeles</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1038"/>
         <source>Send Media Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Dirección del Medio</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1041"/>
         <source>Save Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Medio</translation>
     </message>
 </context>
 <context>
@@ -14926,7 +14927,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="271"/>
         <source>Select files to upload...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar archivos a subir...</translation>
     </message>
 </context>
 <context>
@@ -17661,7 +17662,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="331"/>
         <source>For message see output dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Para mensaje ver el diálogo de output.</translation>
     </message>
 </context>
 <context>
@@ -26740,28 +26741,29 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Preferences/ConfigurationPages/MultiProjectPage.ui" line="37"/>
         <source>Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacio de Trabajo</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MultiProjectPage.ui" line="43"/>
         <source>Enter the name of the workspace directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre del directorio para el espacio de trabajo</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MultiProjectPage.ui" line="46"/>
         <source>&lt;b&gt;Workspace Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the workspace. This directory is used as the default for opening or saving new files or projects.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Directorio para el Espacio de Trabajo&lt;/b&gt;
+&lt;p&gt;Introducir el directorio para el espacio de trabajo. Este directorio se usará por defecto para abrir o guardar nuevos archivos o proyectos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MultiProjectPage.ui" line="54"/>
         <source>Select the workspace directory via a directory selection button</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el directorio para el espacio de trabajo a través de un botón de selección de directorios</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MultiProjectPage.py" line="65"/>
         <source>Select Workspace Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
 </context>
 <context>
@@ -49241,7 +49243,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="5549"/>
         <source>Select Workspace Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
 </context>
 <context>
