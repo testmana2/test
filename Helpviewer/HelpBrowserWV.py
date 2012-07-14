@@ -964,7 +964,7 @@ class HelpBrowser(QWebView):
         engineName = act.data()
         if engineName:
             engine = self.mw.openSearchManager().engine(engineName)
-            self.search.connect(engine.searchUrl(searchText))
+            self.search.emit(engine.searchUrl(searchText))
     
     def __addSearchEngine(self):
         """
