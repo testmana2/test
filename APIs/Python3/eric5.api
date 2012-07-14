@@ -2240,6 +2240,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._personalInformationManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._speedDial?8
 eric5.Helpviewer.HelpWindow.HelpWindow._syncManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
@@ -2274,6 +2275,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.openSearchManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.openUrl?4(url, title)
 eric5.Helpviewer.HelpWindow.HelpWindow.openUrlNewTab?4(url, title)
 eric5.Helpviewer.HelpWindow.HelpWindow.passwordManager?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.personalInformationManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.preferencesChanged?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.previewer?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.privacyChanged?7
@@ -2577,6 +2579,31 @@ eric5.Helpviewer.Passwords.PasswordWriter.PasswordWriter.write?4(fileNameOrDevic
 eric5.Helpviewer.Passwords.PasswordWriter.PasswordWriter?1()
 eric5.Helpviewer.Passwords.PasswordsDialog.PasswordsDialog.on_passwordsButton_clicked?4()
 eric5.Helpviewer.Passwords.PasswordsDialog.PasswordsDialog?1(parent=None)
+eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.PersonalDataDialog.storeData?4()
+eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.PersonalDataDialog?1(parent=None)
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Address?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.City?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Country?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Email?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.FirstName?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.FullName?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.HomePage?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Invalid?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.LastName?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Max?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Mobile?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Phone?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Special1?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Special2?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Special3?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Special4?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.State?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.Zip?7
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.connectPage?4(page)
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.createSubMenu?4(menu, view, hitTestResult)
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.showConfigurationDialog?4()
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager.viewKeyPressEvent?4(view, evt)
+eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.PersonalInformationManager?1(parent=None)
 eric5.Helpviewer.QtHelpDocumentationDialog.QtHelpDocumentationDialog.getTabsToClose?4()
 eric5.Helpviewer.QtHelpDocumentationDialog.QtHelpDocumentationDialog.hasChanges?4()
 eric5.Helpviewer.QtHelpDocumentationDialog.QtHelpDocumentationDialog.on_addButton_clicked?4()

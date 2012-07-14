@@ -424,6 +424,8 @@ Pep8CodeSelectionDialog QDialog Ui_Pep8CodeSelectionDialog
 Pep8Dialog QDialog Ui_Pep8Dialog
 Pep8Fixer QObject
 Pep8StatisticsDialog QDialog Ui_Pep8StatisticsDialog
+PersonalDataDialog QDialog Ui_PersonalDataDialog
+PersonalInformationManager QObject
 PixmapDiagram QMainWindow
 PluginActivationError PluginError
 PluginClassFormatError PluginError

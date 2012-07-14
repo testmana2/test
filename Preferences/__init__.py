@@ -677,6 +677,22 @@ class Prefs(object):
         "WarnOnMultipleClose": True,
         "ClickToFlashEnabled": False,
         "ClickToFlashWhitelist": [],
+        "PimFullName": "",
+        "PimFirstName": "",
+        "PimLastName": "",
+        "PimEmail": "",
+        "PimPhone": "",
+        "PimMobile": "",
+        "PimAddress": "",
+        "PimCity": "",
+        "PimZip": "",
+        "PimState": "",
+        "PimCountry": "",
+        "PimHomePage": "",
+        "PimSpecial1": "",
+        "PimSpecial2": "",
+        "PimSpecial3": "",
+        "PimSpecial4": "",
     }
     
     websettings = QWebSettings.globalSettings()

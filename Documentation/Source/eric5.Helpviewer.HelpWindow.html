@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -96,6 +96,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
 <td>Class method to get a reference to the password manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.personalInformationManager">personalInformationManager</a></td>
+<td>Class method to get a reference to the personal information manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.speedDial">speedDial</a></td>
 <td>Class methdo to get a reference to the speed dial.</td>
@@ -313,6 +316,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__showPasswordsDialog">__showPasswordsDialog</a></td>
 <td>Private slot to show the passwords management dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showPersonalInformationDialog">__showPersonalInformationDialog</a></td>
+<td>Private slot to show the Personal Information configuration dialog.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__showPreferences">__showPreferences</a></td>
 <td>Private slot to set the preferences.</td>
@@ -589,6 +595,16 @@ reference to the network access manager (NetworkAccessManager)
 <dt>Returns:</dt>
 <dd>
 reference to the password manager (PasswordManager)
+</dd>
+</dl><a NAME="HelpWindow.personalInformationManager" ID="HelpWindow.personalInformationManager"></a>
+<h4>HelpWindow.personalInformationManager (class method)</h4>
+<b>personalInformationManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the personal information manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the personal information manager (PersonalInformationManager)
 </dd>
 </dl><a NAME="HelpWindow.speedDial" ID="HelpWindow.speedDial"></a>
 <h4>HelpWindow.speedDial (class method)</h4>
@@ -1053,6 +1069,11 @@ message to be shown (string)
 <b>__showPasswordsDialog</b>(<i></i>)
 <p>
         Private slot to show the passwords management dialog.
+</p><a NAME="HelpWindow.__showPersonalInformationDialog" ID="HelpWindow.__showPersonalInformationDialog"></a>
+<h4>HelpWindow.__showPersonalInformationDialog</h4>
+<b>__showPersonalInformationDialog</b>(<i></i>)
+<p>
+        Private slot to show the Personal Information configuration dialog.
 </p><a NAME="HelpWindow.__showPreferences" ID="HelpWindow.__showPreferences"></a>
 <h4>HelpWindow.__showPreferences</h4>
 <b>__showPreferences</b>(<i></i>)

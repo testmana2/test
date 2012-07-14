@@ -1017,6 +1017,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.py</Source>
     <Source>Helpviewer/Network/SendRefererWhitelistDialog.py</Source>
+    <Source>Helpviewer/PersonalInformationManager/__init__.py</Source>
+    <Source>Helpviewer/PersonalInformationManager/PersonalDataDialog.py</Source>
+    <Source>Helpviewer/PersonalInformationManager/PersonalInformationManager.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1311,6 +1314,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui</Form>
     <Form>Helpviewer/Network/SendRefererWhitelistDialog.ui</Form>
+    <Form>Helpviewer/PersonalInformationManager/PersonalDataDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

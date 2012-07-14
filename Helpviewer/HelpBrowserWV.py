@@ -274,22 +274,6 @@ class HelpWebPage(QWebPage):
                 suggestedFileName)
             return True
         
-##    if (extension == ChooseMultipleFilesExtension) {
-##        const QWebPage::ChooseMultipleFilesExtensionOption* exOption = static_cast<const QWebPage::ChooseMultipleFilesExtensionOption*>(option);
-##        QWebPage::ChooseMultipleFilesExtensionReturn* exReturn = static_cast<QWebPage::ChooseMultipleFilesExtensionReturn*>(output);
-##
-##        if (!exOption || !exReturn) {
-##            return QWebPage::extension(extension, option, output);
-##        }
-##
-##        QString suggestedFileName;
-##        if (!exOption->suggestedFileNames.isEmpty()) {
-##            suggestedFileName = exOption->suggestedFileNames.at(0);
-##        }
-##
-##        exReturn->fileNames = QFileDialog::getOpenFileNames(0, tr("Select files to upload..."), suggestedFileName);
-##        return true;
-##    }
         if extension == QWebPage.ErrorPageExtension:
             info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
             if info.error == 102:
@@ -618,6 +602,8 @@ class HelpBrowser(QWebView):
         self.__rss = []
         
         self.__clickedFrame = None
+        
+        self.mw.personalInformationManager().connectPage(self.page())
         
         self.grabGesture(Qt.PinchGesture)
     
@@ -1044,11 +1030,32 @@ class HelpBrowser(QWebView):
             
             if element.tagName().lower() in ["input", "textarea"]:
                 if menu.isEmpty():
-                    self.page().createStandardContextMenu().exec_(evt.globalPos())
-                    return
+                    pageMenu = self.page().createStandardContextMenu()
+                    directionFound = False  # used to detect double direction entry
+                    for act in pageMenu.actions():
+                        if act.isSeparator():
+                            menu.addSeparator()
+                            continue
+                        if act.menu():
+                            if self.pageAction(QWebPage.SetTextDirectionDefault) in \
+                               act.menu().actions():
+                                if directionFound:
+                                    act.setVisible(False)
+                                directionFound = True
+                            elif self.pageAction(QWebPage.ToggleBold) in \
+                                 act.menu().actions():
+                                act.setVisible(False)
+                        elif act == self.pageAction(QWebPage.InspectElement):
+                            # we have our own inspect entry
+                            act.setVisible(False)
+                        menu.addAction(act)
+                    pageMenu = None
         
         if not menu.isEmpty():
             menu.addSeparator()
+        
+        self.mw.personalInformationManager().createSubMenu(menu, self, hit)
+        
         menu.addAction(self.mw.newTabAct)
         menu.addAction(self.mw.newAct)
         menu.addSeparator()
@@ -1114,8 +1121,9 @@ class HelpBrowser(QWebView):
             engineNames = self.mw.openSearchManager().allEnginesNames()
             for engineName in engineNames:
                 engine = self.mw.openSearchManager().engine(engineName)
-                self.__searchMenu.addAction(
-                    OpenSearchEngineAction(engine, self.__searchMenu).setData(engineName))
+                act = OpenSearchEngineAction(engine, self.__searchMenu)
+                act.setData(engineName)
+                self.__searchMenu.addAction(act)
             self.__searchMenu.triggered.connect(self.__searchRequested)
             
             menu.addSeparator()
@@ -1304,7 +1312,7 @@ class HelpBrowser(QWebView):
         engineName = act.data()
         if engineName:
             engine = self.mw.openSearchManager().engine(engineName)
-            self.search.connect(engine.searchUrl(searchText))
+            self.search.emit(engine.searchUrl(searchText))
     
     def __addSearchEngine(self):
         """
@@ -1530,6 +1538,9 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the key event (QKeyEvent)
         """
+        if self.mw.personalInformationManager().viewKeyPressEvent(self, evt):
+            return
+        
         if hasattr(QtWebKit, 'QWebElement'):
             if self.__enableAccessKeys:
                 self.__accessKeysPressed = (

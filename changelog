@@ -11,6 +11,8 @@ Version 5.3-snapshot-2012mmdd:
      variables viewer
 - Web Browser
   -- added context menu entries for HTML5 media elements
+  -- added a personal information manager to assist in completing form fields
+     through field context menu entries or by pressing Ctrl+Return or Ctrl+Enter
 
 Version 5.3-snapshot-20120624:
 - bug fixes

@@ -294,6 +294,10 @@
               <section title="eric5.Helpviewer.Passwords.PasswordWriter" ref="eric5.Helpviewer.Passwords.PasswordWriter.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordsDialog" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.PersonalInformationManager" ref="index-eric5.Helpviewer.PersonalInformationManager.html">
+              <section title="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog" ref="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html" />
+              <section title="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html" />
+            </section>
             <section title="eric5.Helpviewer.SiteInfo" ref="index-eric5.Helpviewer.SiteInfo.html">
               <section title="eric5.Helpviewer.SiteInfo.SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
             </section>
@@ -4805,6 +4809,7 @@
       <keyword name="HelpWindow.__showOfflineStorageConfiguration" id="HelpWindow.__showOfflineStorageConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showOfflineStorageConfiguration" />
       <keyword name="HelpWindow.__showPageSource" id="HelpWindow.__showPageSource" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPageSource" />
       <keyword name="HelpWindow.__showPasswordsDialog" id="HelpWindow.__showPasswordsDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPasswordsDialog" />
+      <keyword name="HelpWindow.__showPersonalInformationDialog" id="HelpWindow.__showPersonalInformationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPersonalInformationDialog" />
       <keyword name="HelpWindow.__showPreferences" id="HelpWindow.__showPreferences" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPreferences" />
       <keyword name="HelpWindow.__showSearchWindow" id="HelpWindow.__showSearchWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSearchWindow" />
       <keyword name="HelpWindow.__showSiteinfoDialog" id="HelpWindow.__showSiteinfoDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSiteinfoDialog" />
@@ -4856,6 +4861,7 @@
       <keyword name="HelpWindow.openUrl" id="HelpWindow.openUrl" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrl" />
       <keyword name="HelpWindow.openUrlNewTab" id="HelpWindow.openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrlNewTab" />
       <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
+      <keyword name="HelpWindow.personalInformationManager" id="HelpWindow.personalInformationManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.personalInformationManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.previewer" id="HelpWindow.previewer" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.previewer" />
       <keyword name="HelpWindow.requestVirusTotalScan" id="HelpWindow.requestVirusTotalScan" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.requestVirusTotalScan" />
@@ -7092,6 +7098,22 @@
       <keyword name="Pep8StatisticsDialog (Constructor)" id="Pep8StatisticsDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__init__" />
       <keyword name="Pep8StatisticsDialog (Module)" id="Pep8StatisticsDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html" />
       <keyword name="Pep8StatisticsDialog.__createItem" id="Pep8StatisticsDialog.__createItem" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__createItem" />
+      <keyword name="PersonalDataDialog" id="PersonalDataDialog" ref="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html#PersonalDataDialog" />
+      <keyword name="PersonalDataDialog (Constructor)" id="PersonalDataDialog (Constructor)" ref="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html#PersonalDataDialog.__init__" />
+      <keyword name="PersonalDataDialog (Module)" id="PersonalDataDialog (Module)" ref="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html" />
+      <keyword name="PersonalDataDialog.storeData" id="PersonalDataDialog.storeData" ref="eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html#PersonalDataDialog.storeData" />
+      <keyword name="PersonalInformationManager" id="PersonalInformationManager" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager" />
+      <keyword name="PersonalInformationManager (Constructor)" id="PersonalInformationManager (Constructor)" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.__init__" />
+      <keyword name="PersonalInformationManager (Module)" id="PersonalInformationManager (Module)" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html" />
+      <keyword name="PersonalInformationManager (Package)" id="PersonalInformationManager (Package)" ref="index-eric5.Helpviewer.PersonalInformationManager.html" />
+      <keyword name="PersonalInformationManager.__insertData" id="PersonalInformationManager.__insertData" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.__insertData" />
+      <keyword name="PersonalInformationManager.__loadSettings" id="PersonalInformationManager.__loadSettings" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.__loadSettings" />
+      <keyword name="PersonalInformationManager.__nameMatch" id="PersonalInformationManager.__nameMatch" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.__nameMatch" />
+      <keyword name="PersonalInformationManager.__pageLoadFinished" id="PersonalInformationManager.__pageLoadFinished" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.__pageLoadFinished" />
+      <keyword name="PersonalInformationManager.connectPage" id="PersonalInformationManager.connectPage" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.connectPage" />
+      <keyword name="PersonalInformationManager.createSubMenu" id="PersonalInformationManager.createSubMenu" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.createSubMenu" />
+      <keyword name="PersonalInformationManager.showConfigurationDialog" id="PersonalInformationManager.showConfigurationDialog" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.showConfigurationDialog" />
+      <keyword name="PersonalInformationManager.viewKeyPressEvent" id="PersonalInformationManager.viewKeyPressEvent" ref="eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html#PersonalInformationManager.viewKeyPressEvent" />
       <keyword name="PixmapCache" id="PixmapCache" ref="eric5.UI.PixmapCache.html#PixmapCache" />
       <keyword name="PixmapCache (Constructor)" id="PixmapCache (Constructor)" ref="eric5.UI.PixmapCache.html#PixmapCache.__init__" />
       <keyword name="PixmapCache (Module)" id="PixmapCache (Module)" ref="eric5.UI.PixmapCache.html" />
@@ -12310,6 +12332,8 @@
       <file>eric5.Helpviewer.Passwords.PasswordReader.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordWriter.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordsDialog.html</file>
+      <file>eric5.Helpviewer.PersonalInformationManager.PersonalDataDialog.html</file>
+      <file>eric5.Helpviewer.PersonalInformationManager.PersonalInformationManager.html</file>
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
@@ -12832,6 +12856,7 @@
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
+      <file>index-eric5.Helpviewer.PersonalInformationManager.html</file>
       <file>index-eric5.Helpviewer.SiteInfo.html</file>
       <file>index-eric5.Helpviewer.SpeedDial.html</file>
       <file>index-eric5.Helpviewer.Sync.html</file>

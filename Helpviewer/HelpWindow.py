@@ -53,6 +53,8 @@ from .Feeds.FeedsManager import FeedsManager
 from .SiteInfo.SiteInfoDialog import SiteInfoDialog
 from .Sync.SyncManager import SyncManager
 from .SpeedDial.SpeedDial import SpeedDial
+from .PersonalInformationManager.PersonalInformationManager import \
+    PersonalInformationManager
 
 from .data import icons_rc          # __IGNORE_WARNING__
 from .data import html_rc           # __IGNORE_WARNING__
@@ -102,6 +104,7 @@ class HelpWindow(QMainWindow):
     _userAgentsManager = None
     _syncManager = None
     _speedDial = None
+    _personalInformationManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -979,6 +982,23 @@ class HelpWindow(QMainWindow):
                 self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
+        self.personalDataAct = E5Action(self.trUtf8('Personal Information'),
+            UI.PixmapCache.getIcon("pim.png"),
+            self.trUtf8('Personal Information...'),
+            0, 0,
+            self, 'help_personal_information')
+        self.personalDataAct.setStatusTip(self.trUtf8(
+            'Configure personal information for completing form fields'))
+        self.personalDataAct.setWhatsThis(self.trUtf8(
+            """<b>Personal Information...</b>"""
+            """<p>Opens a dialog to configure the personal information used for"""
+            """ completing form fields.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.personalDataAct.triggered[()].connect(
+                self.__showPersonalInformationDialog)
+        self.__actions.append(self.personalDataAct)
+        
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
             UI.PixmapCache.getIcon("syncToc.png"),
             self.trUtf8('Sync with Table of Contents'),
@@ -1367,6 +1387,7 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.acceptedLanguagesAct)
         menu.addAction(self.cookiesAct)
         menu.addAction(self.offlineStorageAct)
+        menu.addAction(self.personalDataAct)
         menu.addSeparator()
         menu.addAction(self.searchEnginesAct)
         menu.addSeparator()
@@ -1475,6 +1496,7 @@ class HelpWindow(QMainWindow):
         settingstb.addAction(self.acceptedLanguagesAct)
         settingstb.addAction(self.cookiesAct)
         settingstb.addAction(self.offlineStorageAct)
+        settingstb.addAction(self.personalDataAct)
         
         toolstb = self.addToolBar(self.trUtf8("Tools"))
         toolstb.setObjectName("ToolsToolBar")
@@ -2628,6 +2650,12 @@ class HelpWindow(QMainWindow):
         from .HelpBrowserWV import HelpWebPage
         HelpWebPage.webPluginFactory().plugin("ClickToFlash").configure()
         
+    def __showPersonalInformationDialog(self):
+        """
+        Private slot to show the Personal Information configuration dialog.
+        """
+        self.personalInformationManager().showConfigurationDialog()
+        
     def __showNetworkMonitor(self):
         """
         Private slot to show the network monitor dialog.
@@ -2788,6 +2816,18 @@ class HelpWindow(QMainWindow):
             cls._downloadManager = DownloadManager()
         
         return cls._downloadManager
+        
+    @classmethod
+    def personalInformationManager(cls):
+        """
+        Class method to get a reference to the personal information manager.
+        
+        @return reference to the personal information manager (PersonalInformationManager)
+        """
+        if cls._personalInformationManager is None:
+            cls._personalInformationManager = PersonalInformationManager()
+        
+        return cls._personalInformationManager
         
     @classmethod
     def mainWindow(cls):
