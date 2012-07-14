@@ -13,7 +13,6 @@ from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl,
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
-from PyQt4 import QtWebKit
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
 try:
     from PyQt4.QtWebKit import QWebElement
@@ -29,7 +28,6 @@ import UI.PixmapCache
 
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .Bookmarks.BookmarkNode import BookmarkNode
-from .JavaScriptResources import fetchLinks_js
 try:
     from .SslInfoDialog import SslInfoDialog
     from PyQt4.QtNetwork import QSslCertificate
@@ -590,14 +588,13 @@ class HelpBrowser(QWebView):
         
         self.setAcceptDrops(True)
         
-        if hasattr(QtWebKit, 'QWebElement'):
-            self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
-            self.__accessKeysPressed = False
-            self.__accessKeyLabels = []
-            self.__accessKeyNodes = {}
-            
-            self.page().loadStarted.connect(self.__hideAccessKeys)
-            self.page().scrollRequested.connect(self.__hideAccessKeys)
+        self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
+        self.__accessKeysPressed = False
+        self.__accessKeyLabels = []
+        self.__accessKeyNodes = {}
+        
+        self.page().loadStarted.connect(self.__hideAccessKeys)
+        self.page().scrollRequested.connect(self.__hideAccessKeys)
         
         self.__rss = []
         
@@ -613,12 +610,6 @@ class HelpBrowser(QWebView):
         
         @param frame reference to the web frame (QWebFrame)
         """
-        if not hasattr(QtWebKit, 'QWebElement'):
-            # test this only for Qt < 4.6.0
-            if not QWebSettings.globalSettings()\
-                        .testAttribute(QWebSettings.JavascriptEnabled):
-                return
-        
         self.page().settings().setAttribute(QWebSettings.JavascriptEnabled, True)
         if self.__javaScriptBinding is None:
             self.__javaScriptBinding = JavaScriptExternalObject(self.mw, self)
@@ -649,52 +640,28 @@ class HelpBrowser(QWebView):
         """
         resources = []
         
-        if hasattr(QtWebKit, 'QWebElement'):
-            baseUrl = self.page().mainFrame().baseUrl()
+        baseUrl = self.page().mainFrame().baseUrl()
+        
+        linkElements = self.page().mainFrame().findAllElements("html > head > link")
+        
+        for linkElement in linkElements.toList():
+            rel = linkElement.attribute("rel")
+            href = linkElement.attribute("href")
+            type_ = linkElement.attribute("type")
+            title = linkElement.attribute("title")
             
-            linkElements = self.page().mainFrame().findAllElements("html > head > link")
+            if href == "" or type_ == "":
+                continue
+            if relation and rel != relation:
+                continue
             
-            for linkElement in linkElements.toList():
-                rel = linkElement.attribute("rel")
-                href = linkElement.attribute("href")
-                type_ = linkElement.attribute("type")
-                title = linkElement.attribute("title")
-                
-                if href == "" or type_ == "":
-                    continue
-                if relation and rel != relation:
-                    continue
-                
-                resource = LinkedResource()
-                resource.rel = rel
-                resource.type_ = type_
-                resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
-                resource.title = title
-                
-                resources.append(resource)
-        else:
-            baseUrlString = self.page().mainFrame().evaluateJavaScript("document.baseURI")
-            baseUrl = QUrl.fromEncoded(baseUrlString)
+            resource = LinkedResource()
+            resource.rel = rel
+            resource.type_ = type_
+            resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
+            resource.title = title
             
-            lst = self.page().mainFrame().evaluateJavaScript(fetchLinks_js)
-            for m in lst:
-                rel = m["rel"]
-                type_ = m["type"]
-                href = m["href"]
-                title = m["title"]
-                
-                if href == "" or type_ == "":
-                    continue
-                if relation and rel != relation:
-                    continue
-                
-                resource = LinkedResource()
-                resource.rel = rel
-                resource.type_ = type_
-                resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
-                resource.title = title
-                
-                resources.append(resource)
+            resources.append(resource)
         
         return resources
     
@@ -1154,14 +1121,13 @@ class HelpBrowser(QWebView):
                     .setData(guessedUrl)
                 menu.addSeparator()
         
-        if hasattr(QtWebKit, 'QWebElement'):
-            element = hit.element()
-            if not element.isNull() and \
-               element.tagName().lower() == "input" and \
-               element.attribute("type", "text") == "text":
-                menu.addAction(self.trUtf8("Add to web search toolbar"),
-                               self.__addSearchEngine).setData(element)
-                menu.addSeparator()
+        element = hit.element()
+        if not element.isNull() and \
+           element.tagName().lower() == "input" and \
+           element.attribute("type", "text") == "text":
+            menu.addAction(self.trUtf8("Add to web search toolbar"),
+                           self.__addSearchEngine).setData(element)
+            menu.addSeparator()
         
         menu.addAction(UI.PixmapCache.getIcon("webInspector.png"),
             self.trUtf8("Web Inspector..."), self.__webInspector)
@@ -1541,19 +1507,18 @@ class HelpBrowser(QWebView):
         if self.mw.personalInformationManager().viewKeyPressEvent(self, evt):
             return
         
-        if hasattr(QtWebKit, 'QWebElement'):
-            if self.__enableAccessKeys:
-                self.__accessKeysPressed = (
-                    evt.modifiers() == Qt.ControlModifier and \
-                    evt.key() == Qt.Key_Control)
-                if not self.__accessKeysPressed:
-                    if self.__checkForAccessKey(evt):
-                        self.__hideAccessKeys()
-                        evt.accept()
-                        return
+        if self.__enableAccessKeys:
+            self.__accessKeysPressed = (
+                evt.modifiers() == Qt.ControlModifier and \
+                evt.key() == Qt.Key_Control)
+            if not self.__accessKeysPressed:
+                if self.__checkForAccessKey(evt):
                     self.__hideAccessKeys()
-                else:
-                    QTimer.singleShot(300, self.__accessKeyShortcut)
+                    evt.accept()
+                    return
+                self.__hideAccessKeys()
+            else:
+                QTimer.singleShot(300, self.__accessKeyShortcut)
         
         self.ctrlPressed = (evt.key() == Qt.Key_Control)
         super().keyPressEvent(evt)
@@ -1564,9 +1529,8 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the key event (QKeyEvent)
         """
-        if hasattr(QtWebKit, 'QWebElement'):
-            if self.__enableAccessKeys:
-                self.__accessKeysPressed = evt.key() == Qt.Key_Control
+        if self.__enableAccessKeys:
+            self.__accessKeysPressed = evt.key() == Qt.Key_Control
         
         self.ctrlPressed = False
         super().keyReleaseEvent(evt)
@@ -1577,10 +1541,9 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the focus event (QFocusEvent)
         """
-        if hasattr(QtWebKit, 'QWebElement'):
-            if self.__accessKeysPressed:
-                self.__hideAccessKeys()
-                self.__accessKeysPressed = False
+        if self.__accessKeysPressed:
+            self.__hideAccessKeys()
+            self.__accessKeysPressed = False
         
         super().focusOutEvent(evt)
     
@@ -2026,10 +1989,9 @@ class HelpBrowser(QWebView):
         """
         Public method to indicate a change of the settings.
         """
-        if hasattr(QtWebKit, 'QWebElement'):
-            self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
-            if not self.__enableAccessKeys:
-                self.__hideAccessKeys()
+        self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
+        if not self.__enableAccessKeys:
+            self.__hideAccessKeys()
         
         self.reload()
     

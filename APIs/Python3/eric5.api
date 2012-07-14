@@ -2407,7 +2407,6 @@ eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel.removeRows?4(row, cou
 eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel.rowCount?4(parent=QModelIndex())
 eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel.setSourceModel?4(sourceModel)
 eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel?1(sourceModel, parent=None)
-eric5.Helpviewer.JavaScriptResources.fetchLinks_js?7
 eric5.Helpviewer.JavaScriptResources.parseForms_js?7
 eric5.Helpviewer.Network.AboutAccessHandler.AboutAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._homePage?8
