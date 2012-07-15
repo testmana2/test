@@ -308,6 +308,11 @@ class HelpWebPage(QWebPage):
                     errorPage.content = html
                     return True
             
+            if info.domain == QWebPage.QtNetwork and \
+               info.error == QNetworkReply.OperationCanceledError and \
+               info.errorString == "eric5:No Error":
+                return False
+            
             title = self.trUtf8("Error loading page: {0}").format(urlString)
             htmlFile = QFile(":/html/notFoundPage.html")
             htmlFile.open(QFile.ReadOnly)

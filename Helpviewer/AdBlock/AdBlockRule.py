@@ -177,7 +177,7 @@ class AdBlockRule(object):
         pattern = re.sub(r"\^\|$", "^", pattern)    # remove anchors following separator placeholder
         pattern = re.sub(r"^(\*)", "", pattern)     # remove leading wildcards
         pattern = re.sub(r"(\*)$", "", pattern)     # remove trailing wildcards
-        pattern = re.sub(r"(\W)", "", pattern)      # escape special symbols
+        pattern = re.sub(r"(\W)", r"\\\1", pattern)      # escape special symbols
         pattern = re.sub(r"^\\\|\\\|",
             r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern)  # process extended anchor at expression start
         pattern = re.sub(r"\\\^",
