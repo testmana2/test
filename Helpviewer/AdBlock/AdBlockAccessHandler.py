@@ -53,4 +53,4 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             dlg.setCurrentIndex(model.index(model.rowCount() - 1, 0))
             dlg.setFocus()
         
-        return EmptyNetworkReply()
+        return EmptyNetworkReply(self.parent())
