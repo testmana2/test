@@ -15,6 +15,7 @@ from .AdBlockSubscription import AdBlockSubscription
 
 import Helpviewer.HelpWindow
 from Helpviewer.Network.SchemeAccessHandler import SchemeAccessHandler
+from Helpviewer.Network.EmptyNetworkReply import EmptyNetworkReply
 
 
 class AdBlockAccessHandler(SchemeAccessHandler):
@@ -52,4 +53,4 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             dlg.setCurrentIndex(model.index(model.rowCount() - 1, 0))
             dlg.setFocus()
         
-        return None
+        return EmptyNetworkReply()

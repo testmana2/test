@@ -174,6 +174,7 @@ EditorSyntaxPage ConfigurationPageBase Ui_EditorSyntaxPage
 EditorTypingPage ConfigurationPageBase Ui_EditorTypingPage
 EmailDialog QDialog Ui_EmailDialog
 EmailPage ConfigurationPageBase Ui_EmailPage
+EmptyNetworkReply QNetworkReply
 EricapiConfigDialog QDialog Ui_EricapiConfigDialog
 EricapiExecDialog QDialog Ui_EricapiExecDialog
 EricapiPlugin QObject

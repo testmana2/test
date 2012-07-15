@@ -257,6 +257,11 @@ class HelpWebPage(QWebPage):
                     # this is something of a hack; hopefully it will work in the future
                     return False
                 
+                if info.domain == QWebPage.QtNetwork and \
+                    info.error == QNetworkReply.OperationCanceledError and \
+                    info.errorString == "eric5:No Error":
+                        return False
+                
                 errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
                 errorPage.baseUrl = info.url
                 urlString = bytes(info.url.toEncoded()).decode()

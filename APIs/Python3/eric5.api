@@ -2298,6 +2298,9 @@ eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel?1(sourceModel, parent
 eric5.Helpviewer.JavaScriptResources.fetchLinks_js?7
 eric5.Helpviewer.JavaScriptResources.parseForms_js?7
 eric5.Helpviewer.Network.AboutAccessHandler.AboutAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply.abort?4()
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply.readData?4(maxlen)
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply?1(parent=None)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()

@@ -938,6 +938,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/SiteInfo/__init__.py</Source>
     <Source>Helpviewer/SiteInfo/SiteInfoDialog.py</Source>
     <Source>Helpviewer/SslInfoWidget.py</Source>
+    <Source>Helpviewer/Network/EmptyNetworkReply.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
