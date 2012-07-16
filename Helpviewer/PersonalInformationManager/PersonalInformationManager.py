@@ -3,6 +3,10 @@
 # Copyright (c) 2012 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+"""
+Module implementing a personal information manager used to complete form fields.
+"""
+
 from PyQt4.QtCore import Qt, QObject
 from PyQt4.QtGui import QDialog, QMenu
 
