@@ -240,7 +240,8 @@ class HelpWebPage(QWebPage):
         @return flag indicating the support of extension (boolean)
         """
         try:
-            if extension == QWebPage.ErrorPageExtension:
+            if extension in [QWebPage.ErrorPageExtension,
+                              QWebPage.ChooseMultipleFilesExtension]:
                 return True
         except AttributeError:
             pass
