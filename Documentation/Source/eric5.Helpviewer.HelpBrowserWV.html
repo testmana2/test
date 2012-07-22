@@ -1033,13 +1033,17 @@ reference to the mouse event (QMouseEvent)
         Public method to save the current page to a file.
 </p><a NAME="HelpBrowser.setSource" ID="HelpBrowser.setSource"></a>
 <h4>HelpBrowser.setSource</h4>
-<b>setSource</b>(<i>name</i>)
+<b>setSource</b>(<i>name, requestData=None</i>)
 <p>
         Public method used to set the source to be displayed.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
 filename to be shown (QUrl)
+</dd><dt><i>requestData</i></dt>
+<dd>
+tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
 </dd>
 </dl><a NAME="HelpBrowser.source" ID="HelpBrowser.source"></a>
 <h4>HelpBrowser.source</h4>

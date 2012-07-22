@@ -9,7 +9,8 @@ Module implementing the helpbrowser using QWebView.
 """
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
-    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint
+    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint, \
+    QByteArray
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
@@ -191,7 +192,9 @@ class HelpWebPage(QWebPage):
         @return flag indicating acceptance (boolean)
         """
         self.__lastRequest = request
-        self.__lastRequestType = type_
+        if self.__lastRequest.url() != request.url() or \
+           type_ != QWebPage.NavigationTypeOther:
+            self.__lastRequestType = type_
         
         scheme = request.url().scheme()
         if scheme == "mailto":
@@ -220,7 +223,10 @@ class HelpWebPage(QWebPage):
         """
         try:
             request.setAttribute(QNetworkRequest.User + 100, self)
-            request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
+            if self.__lastRequest.url() == request.url():
+                request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
+                if self.__lastRequestType == QWebPage.NavigationTypeLinkClicked:
+                    request.setRawHeader("X-Eric5-UserLoadAction", QByteArray("1"))
         except TypeError:
             pass
     
@@ -607,6 +613,7 @@ class HelpBrowser(QWebView):
         self.__clickedFrame = None
         
         self.mw.personalInformationManager().connectPage(self.page())
+        self.mw.greaseMonkeyManager().connectPage(self.page())
         
         self.grabGesture(Qt.PinchGesture)
     
@@ -678,14 +685,19 @@ class HelpBrowser(QWebView):
         if self.url().toString() == "eric:home":
             self.reload()
     
-    def setSource(self, name):
+    def setSource(self, name, requestData=None):
         """
         Public method used to set the source to be displayed.
         
         @param name filename to be shown (QUrl)
+        @param requestData tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
         """
-        if name is None or not name.isValid():
+        if (name is None or not name.isValid()) and requestData is None:
             return
+        
+        if name is None and requestData is not None:
+            name = requestData[0].url()
         
         if self.ctrlPressed:
             # open in a new window
@@ -747,7 +759,10 @@ class HelpBrowser(QWebView):
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
                 return
         
-        self.load(name)
+        if requestData is not None:
+            self.load(*requestData)
+        else:
+            self.load(name)
 
     def source(self):
         """

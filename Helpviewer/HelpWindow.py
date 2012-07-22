@@ -15,6 +15,7 @@ from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWid
     QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
     QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
     QHBoxLayout, QProgressBar, QAction, QIcon
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
@@ -55,6 +56,7 @@ from .Sync.SyncManager import SyncManager
 from .SpeedDial.SpeedDial import SpeedDial
 from .PersonalInformationManager.PersonalInformationManager import \
     PersonalInformationManager
+from .GreaseMonkey.GreaseMonkeyManager import GreaseMonkeyManager
 
 from .data import icons_rc          # __IGNORE_WARNING__
 from .data import html_rc           # __IGNORE_WARNING__
@@ -105,6 +107,7 @@ class HelpWindow(QMainWindow):
     _syncManager = None
     _speedDial = None
     _personalInformationManager = None
+    _greaseMonkeyManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -999,6 +1002,22 @@ class HelpWindow(QMainWindow):
                 self.__showPersonalInformationDialog)
         self.__actions.append(self.personalDataAct)
         
+        self.greaseMonkeyAct = E5Action(self.trUtf8('GreaseMonkey Scripts'),
+            UI.PixmapCache.getIcon("greaseMonkey.png"),
+            self.trUtf8('GreaseMonkey Scripts...'),
+            0, 0,
+            self, 'help_greasemonkey')
+        self.greaseMonkeyAct.setStatusTip(self.trUtf8(
+            'Configure the GreaseMonkey Scripts'))
+        self.greaseMonkeyAct.setWhatsThis(self.trUtf8(
+            """<b>GreaseMonkey Scripts...</b>"""
+            """<p>Opens a dialog to configure the available GreaseMonkey Scripts.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.greaseMonkeyAct.triggered[()].connect(
+                self.__showGreaseMonkeyConfigDialog)
+        self.__actions.append(self.greaseMonkeyAct)
+        
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
             UI.PixmapCache.getIcon("syncToc.png"),
             self.trUtf8('Sync with Table of Contents'),
@@ -1388,6 +1407,7 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.cookiesAct)
         menu.addAction(self.offlineStorageAct)
         menu.addAction(self.personalDataAct)
+        menu.addAction(self.greaseMonkeyAct)
         menu.addSeparator()
         menu.addAction(self.searchEnginesAct)
         menu.addSeparator()
@@ -1497,6 +1517,7 @@ class HelpWindow(QMainWindow):
         settingstb.addAction(self.cookiesAct)
         settingstb.addAction(self.offlineStorageAct)
         settingstb.addAction(self.personalDataAct)
+        settingstb.addAction(self.greaseMonkeyAct)
         
         toolstb = self.addToolBar(self.trUtf8("Tools"))
         toolstb.setObjectName("ToolsToolBar")
@@ -2264,7 +2285,10 @@ class HelpWindow(QMainWindow):
         
         @param url URL to be shown (QUrl)
         """
-        self.currentBrowser().setSource(url)
+        req = QNetworkRequest(url)
+        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        self.currentBrowser().setSource(
+            None, (req, QNetworkAccessManager.GetOperation, b""))
         
     def __linksActivated(self, links, keyword):
         """
@@ -2656,6 +2680,12 @@ class HelpWindow(QMainWindow):
         """
         self.personalInformationManager().showConfigurationDialog()
         
+    def __showGreaseMonkeyConfigDialog(self):
+        """
+        Private slot to show the GreaseMonkey scripts configuration dialog.
+        """
+        self.greaseMonkeyManager().showConfigurationDialog()
+        
     def __showNetworkMonitor(self):
         """
         Private slot to show the network monitor dialog.
@@ -2767,7 +2797,9 @@ class HelpWindow(QMainWindow):
         @param url url to be opened (QUrl)
         @param title title of the bookmark (string)
         """
-        self.newTab(url)
+        req = QNetworkRequest(url)
+        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        self.newTab(None, (req, QNetworkAccessManager.GetOperation, b""))
         
     @classmethod
     def historyManager(cls):
@@ -2828,6 +2860,18 @@ class HelpWindow(QMainWindow):
             cls._personalInformationManager = PersonalInformationManager()
         
         return cls._personalInformationManager
+        
+    @classmethod
+    def greaseMonkeyManager(cls):
+        """
+        Class method to get a reference to the GreaseMonkey manager.
+        
+        @return reference to the GreaseMonkey manager (GreaseMonkeyManager)
+        """
+        if cls._greaseMonkeyManager is None:
+            cls._greaseMonkeyManager = GreaseMonkeyManager()
+        
+        return cls._greaseMonkeyManager
         
     @classmethod
     def mainWindow(cls):

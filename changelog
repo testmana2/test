@@ -13,6 +13,7 @@ Version 5.3-snapshot-2012mmdd:
   -- added context menu entries for HTML5 media elements
   -- added a personal information manager to assist in completing form fields
      through field context menu entries or by pressing Ctrl+Return or Ctrl+Enter
+  -- added support for GreaseMonkey scripts
 
 Version 5.3-snapshot-20120624:
 - bug fixes

@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -78,6 +78,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.feedsManager">feedsManager</a></td>
 <td>Class method to get a reference to the RSS feeds manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.greaseMonkeyManager">greaseMonkeyManager</a></td>
+<td>Class method to get a reference to the GreaseMonkey manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.helpEngine">helpEngine</a></td>
 <td>Class method to get a reference to the help engine.</td>
@@ -298,6 +301,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__showForwardMenu">__showForwardMenu</a></td>
 <td>Private slot showing the forwards navigation menu.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showGreaseMonkeyConfigDialog">__showGreaseMonkeyConfigDialog</a></td>
+<td>Private slot to show the GreaseMonkey scripts configuration dialog.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__showIndexWindow">__showIndexWindow</a></td>
 <td>Private method to show the index window.</td>
@@ -530,6 +536,16 @@ reference to the password manager (DownloadManager)
 <dt>Returns:</dt>
 <dd>
 reference to the RSS feeds manager (FeedsManager)
+</dd>
+</dl><a NAME="HelpWindow.greaseMonkeyManager" ID="HelpWindow.greaseMonkeyManager"></a>
+<h4>HelpWindow.greaseMonkeyManager (class method)</h4>
+<b>greaseMonkeyManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the GreaseMonkey manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the GreaseMonkey manager (GreaseMonkeyManager)
 </dd>
 </dl><a NAME="HelpWindow.helpEngine" ID="HelpWindow.helpEngine"></a>
 <h4>HelpWindow.helpEngine (class method)</h4>
@@ -1034,6 +1050,11 @@ reference to the selected action (QAction)
 <b>__showForwardMenu</b>(<i></i>)
 <p>
         Private slot showing the forwards navigation menu.
+</p><a NAME="HelpWindow.__showGreaseMonkeyConfigDialog" ID="HelpWindow.__showGreaseMonkeyConfigDialog"></a>
+<h4>HelpWindow.__showGreaseMonkeyConfigDialog</h4>
+<b>__showGreaseMonkeyConfigDialog</b>(<i></i>)
+<p>
+        Private slot to show the GreaseMonkey scripts configuration dialog.
 </p><a NAME="HelpWindow.__showIndexWindow" ID="HelpWindow.__showIndexWindow"></a>
 <h4>HelpWindow.__showIndexWindow</h4>
 <b>__showIndexWindow</b>(<i></i>)

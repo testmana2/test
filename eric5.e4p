@@ -1020,6 +1020,21 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/PersonalInformationManager/__init__.py</Source>
     <Source>Helpviewer/PersonalInformationManager/PersonalDataDialog.py</Source>
     <Source>Helpviewer/PersonalInformationManager/PersonalInformationManager.py</Source>
+    <Source>Helpviewer/GreaseMonkey/__init__.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyJavaScript.py</Source>
+    <Source>Helpviewer/Network/EmptyNetworkReply.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyManager.py</Source>
+    <Source>Helpviewer/Network/FollowRedirectReply.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyUrlMatcher.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyScript.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyDownloader.py</Source>
+    <Source>Helpviewer/HelpUtilities.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/__init__.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationListDelegate.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationListWidget.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py</Source>
+    <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1315,6 +1330,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui</Form>
     <Form>Helpviewer/Network/SendRefererWhitelistDialog.ui</Form>
     <Form>Helpviewer/PersonalInformationManager/PersonalDataDialog.ui</Form>
+    <Form>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui</Form>
+    <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui</Form>
+    <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

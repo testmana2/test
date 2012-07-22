@@ -135,7 +135,19 @@ class NetworkAccessManager(QNetworkAccessManager):
         if reply is not None:
             return reply
         
+        # give GreaseMonkey the chance to create a request
+        reply = Helpviewer.HelpWindow.HelpWindow.greaseMonkeyManager().createRequest(
+            op, request, outgoingData)
+        if reply is not None:
+            return reply
+        
         req = QNetworkRequest(request)
+        if req.rawHeader("X-Eric5-UserLoadAction") == QByteArray("1"):
+            req.setRawHeader("X-Eric5-UserLoadAction", QByteArray())
+            req.setAttribute(QNetworkRequest.User + 200, "")
+        else:
+            req.setAttribute(QNetworkRequest.User + 200, req.rawHeader("Referer"))
+        
         if hasattr(QNetworkRequest, 'HttpPipeliningAllowedAttribute'):
             req.setAttribute(QNetworkRequest.HttpPipeliningAllowedAttribute, True)
         if not self.__acceptLanguage.isEmpty():

@@ -693,6 +693,7 @@ class Prefs(object):
         "PimSpecial2": "",
         "PimSpecial3": "",
         "PimSpecial4": "",
+        "GreaseMonkeyDisabledScripts": [],
     }
     
     websettings = QWebSettings.globalSettings()
@@ -2079,7 +2080,8 @@ def getHelp(key, prefClass=Prefs):
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
-    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist", "SendRefererWhitelist"]:
+    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist", "SendRefererWhitelist",
+                 "GreaseMonkeyDisabledScripts"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

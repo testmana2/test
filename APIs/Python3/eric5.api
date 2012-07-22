@@ -2081,6 +2081,73 @@ eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadButton_clicked?4()
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.openUrl?7
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.show?4()
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager?1(parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.GreaseMonkeyAddScriptDialog.on_showScriptSourceButton_clicked?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.GreaseMonkeyAddScriptDialog?1(manager, script, parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.ScriptDescriptionRole?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.ScriptRole?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.ScriptVersionRole?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.on_downloadLabel_linkActivated?4(link)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.on_openDirectoryButton_clicked?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.on_scriptsList_itemDoubleClicked?4(item)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog?1(manager, parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.CheckBoxSize?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.IconSize?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.ItemWidth?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.MinPadding?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.RemoveIconSize?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.padding?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.paint?4(painter, option, index)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate.sizeHint?4(option, index)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.GreaseMonkeyConfigurationListDelegate?1(parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.GreaseMonkeyConfigurationListWidget.mouseDoubleClickEvent?4(evt)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.GreaseMonkeyConfigurationListWidget.mousePressEvent?4(evt)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.GreaseMonkeyConfigurationListWidget.removeItemRequested?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.GreaseMonkeyConfigurationListWidget?1(parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.GreaseMonkeyConfigurationScriptInfoDialog.on_showScriptSourceButton_clicked?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.GreaseMonkeyConfigurationScriptInfoDialog?1(script, parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.GreaseMonkeyDownloader.finished?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.GreaseMonkeyDownloader?1(request, manager)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyJavaScript.bootstrap_js?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.addScript?4(script)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.allScripts?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.canRunOnScheme?4(scheme)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.connectPage?4(page)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.containsScript?4(fullName)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.disableScript?4(script)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.downloadScript?4(request)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.enableScript?4(script)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.pageLoadStarted?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.removeScript?4(script)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.requireScripts?4(urlList)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.requireScriptsDirectory?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.saveConfiguration?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.scriptsChanged?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.scriptsDirectory?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager.showConfigurationDialog?4(parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.GreaseMonkeyManager?1(parent=None)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.DocumentEnd?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.DocumentStart?7
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.description?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.downloadUrl?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.exclude?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.fileName?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.fullName?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.include?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.isEnabled?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.isValid?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.match?4(urlString)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.name?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.nameSpace?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.script?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.setEnabled?4(enable)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.startAt?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript.version?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.GreaseMonkeyScript?1(manager, path)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher.match?4(urlString)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher.pattern?4()
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher?1(pattern)
+eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.wildcardMatch?4(string, pattern)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
@@ -2117,7 +2184,7 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.progress?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.search?7
-eric5.Helpviewer.HelpBrowserWV.HelpBrowser.setSource?4(name)
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.setSource?4(name, requestData=None)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.source?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.sourceChanged?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.wheelEvent?4(evt)
@@ -2222,6 +2289,9 @@ eric5.Helpviewer.HelpTocWidget.HelpTocWidget.syncToContent?4(url)
 eric5.Helpviewer.HelpTocWidget.HelpTocWidget?1(engine, mainWindow, parent=None)
 eric5.Helpviewer.HelpTopicDialog.HelpTopicDialog.link?4()
 eric5.Helpviewer.HelpTopicDialog.HelpTopicDialog?1(parent, keyword, links)
+eric5.Helpviewer.HelpUtilities.ensureUniqueFilename?4(name, appendFormat="({0})")
+eric5.Helpviewer.HelpUtilities.filterCharsFromFilename?4(name)
+eric5.Helpviewer.HelpUtilities.getFileNameFromUrl?4(url)
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchEdit.mousePressEvent?4(evt)
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchEdit?1(mainWindow, parent=None)
 eric5.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.clear?4()
@@ -2236,6 +2306,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
 eric5.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._feedsManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._greaseMonkeyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
@@ -2258,6 +2329,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.eventMouseButtons?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.feedsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.greaseMonkeyManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpClosed?7
 eric5.Helpviewer.HelpWindow.HelpWindow.helpEngine?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpwindows?7
@@ -2409,9 +2481,19 @@ eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel.setSourceModel?4(sour
 eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel?1(sourceModel, parent=None)
 eric5.Helpviewer.JavaScriptResources.parseForms_js?7
 eric5.Helpviewer.Network.AboutAccessHandler.AboutAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply.abort?4()
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply.readData?4(maxlen)
+eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply?1(parent=None)
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._homePage?8
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._speedDialPage?8
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.error?4()
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.finished?7
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.originalUrl?4()
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.readAll?4()
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.reply?4()
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.url?4()
+eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply?1(url, manager, maxRedirects=5)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()

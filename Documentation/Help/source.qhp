@@ -247,6 +247,20 @@
               <section title="eric5.Helpviewer.Feeds.FeedsDialog" ref="eric5.Helpviewer.Feeds.FeedsDialog.html" />
               <section title="eric5.Helpviewer.Feeds.FeedsManager" ref="eric5.Helpviewer.Feeds.FeedsManager.html" />
             </section>
+            <section title="eric5.Helpviewer.GreaseMonkey" ref="index-eric5.Helpviewer.GreaseMonkey.html">
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration" ref="index-eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.html">
+                <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html" />
+                <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html" />
+                <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html" />
+                <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html" />
+              </section>
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html" />
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html" />
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyJavaScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyJavaScript.html" />
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html" />
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html" />
+              <section title="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html" />
+            </section>
             <section title="eric5.Helpviewer.History" ref="index-eric5.Helpviewer.History.html">
               <section title="eric5.Helpviewer.History.HistoryCompleter" ref="eric5.Helpviewer.History.HistoryCompleter.html" />
               <section title="eric5.Helpviewer.History.HistoryDialog" ref="eric5.Helpviewer.History.HistoryDialog.html" />
@@ -258,7 +272,9 @@
             </section>
             <section title="eric5.Helpviewer.Network" ref="index-eric5.Helpviewer.Network.html">
               <section title="eric5.Helpviewer.Network.AboutAccessHandler" ref="eric5.Helpviewer.Network.AboutAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.EmptyNetworkReply" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html" />
               <section title="eric5.Helpviewer.Network.EricAccessHandler" ref="eric5.Helpviewer.Network.EricAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.FollowRedirectReply" ref="eric5.Helpviewer.Network.FollowRedirectReply.html" />
               <section title="eric5.Helpviewer.Network.FtpAccessHandler" ref="eric5.Helpviewer.Network.FtpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.FtpReply" ref="eric5.Helpviewer.Network.FtpReply.html" />
               <section title="eric5.Helpviewer.Network.NetworkAccessManager" ref="eric5.Helpviewer.Network.NetworkAccessManager.html" />
@@ -362,6 +378,7 @@
             <section title="eric5.Helpviewer.HelpTabWidget" ref="eric5.Helpviewer.HelpTabWidget.html" />
             <section title="eric5.Helpviewer.HelpTocWidget" ref="eric5.Helpviewer.HelpTocWidget.html" />
             <section title="eric5.Helpviewer.HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html" />
+            <section title="eric5.Helpviewer.HelpUtilities" ref="eric5.Helpviewer.HelpUtilities.html" />
             <section title="eric5.Helpviewer.HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
             <section title="eric5.Helpviewer.HelpWindow" ref="eric5.Helpviewer.HelpWindow.html" />
             <section title="eric5.Helpviewer.JavaScriptResources" ref="eric5.Helpviewer.JavaScriptResources.html" />
@@ -4075,6 +4092,11 @@
       <keyword name="EmailPage.on_mailUserEdit_textChanged" id="EmailPage.on_mailUserEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_mailUserEdit_textChanged" />
       <keyword name="EmailPage.on_testButton_clicked" id="EmailPage.on_testButton_clicked" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_testButton_clicked" />
       <keyword name="EmailPage.save" id="EmailPage.save" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.save" />
+      <keyword name="EmptyNetworkReply" id="EmptyNetworkReply" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html#EmptyNetworkReply" />
+      <keyword name="EmptyNetworkReply (Constructor)" id="EmptyNetworkReply (Constructor)" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html#EmptyNetworkReply.__init__" />
+      <keyword name="EmptyNetworkReply (Module)" id="EmptyNetworkReply (Module)" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html" />
+      <keyword name="EmptyNetworkReply.abort" id="EmptyNetworkReply.abort" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html#EmptyNetworkReply.abort" />
+      <keyword name="EmptyNetworkReply.readData" id="EmptyNetworkReply.readData" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html#EmptyNetworkReply.readData" />
       <keyword name="EricAccessHandler" id="EricAccessHandler" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler" />
       <keyword name="EricAccessHandler (Module)" id="EricAccessHandler (Module)" ref="eric5.Helpviewer.Network.EricAccessHandler.html" />
       <keyword name="EricAccessHandler.__createHomePage" id="EricAccessHandler.__createHomePage" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler.__createHomePage" />
@@ -4342,6 +4364,15 @@
       <keyword name="FirefoxImporter.setPath" id="FirefoxImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.setPath" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric5.DebugClients.Python.FlexCompleter.html" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric5.DebugClients.Python3.FlexCompleter.html" />
+      <keyword name="FollowRedirectReply" id="FollowRedirectReply" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply" />
+      <keyword name="FollowRedirectReply (Constructor)" id="FollowRedirectReply (Constructor)" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.__init__" />
+      <keyword name="FollowRedirectReply (Module)" id="FollowRedirectReply (Module)" ref="eric5.Helpviewer.Network.FollowRedirectReply.html" />
+      <keyword name="FollowRedirectReply.__replyFinished" id="FollowRedirectReply.__replyFinished" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.__replyFinished" />
+      <keyword name="FollowRedirectReply.error" id="FollowRedirectReply.error" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.error" />
+      <keyword name="FollowRedirectReply.originalUrl" id="FollowRedirectReply.originalUrl" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.originalUrl" />
+      <keyword name="FollowRedirectReply.readAll" id="FollowRedirectReply.readAll" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.readAll" />
+      <keyword name="FollowRedirectReply.reply" id="FollowRedirectReply.reply" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.reply" />
+      <keyword name="FollowRedirectReply.url" id="FollowRedirectReply.url" ref="eric5.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply.url" />
       <keyword name="FontDialogWizard" id="FontDialogWizard" ref="eric5.Plugins.PluginWizardQFontDialog.html#FontDialogWizard" />
       <keyword name="FontDialogWizard (Constructor)" id="FontDialogWizard (Constructor)" ref="eric5.Plugins.PluginWizardQFontDialog.html#FontDialogWizard.__init__" />
       <keyword name="FontDialogWizard (Package)" id="FontDialogWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.FontDialogWizard.html" />
@@ -4443,6 +4474,92 @@
       <keyword name="GraphicsPage.polishPage" id="GraphicsPage.polishPage" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html#GraphicsPage.polishPage" />
       <keyword name="GraphicsPage.save" id="GraphicsPage.save" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html#GraphicsPage.save" />
       <keyword name="GraphicsUtilities (Module)" id="GraphicsUtilities (Module)" ref="eric5.Graphics.GraphicsUtilities.html" />
+      <keyword name="GreaseMonkey (Package)" id="GreaseMonkey (Package)" ref="index-eric5.Helpviewer.GreaseMonkey.html" />
+      <keyword name="GreaseMonkeyAddScriptDialog" id="GreaseMonkeyAddScriptDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html#GreaseMonkeyAddScriptDialog" />
+      <keyword name="GreaseMonkeyAddScriptDialog (Constructor)" id="GreaseMonkeyAddScriptDialog (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html#GreaseMonkeyAddScriptDialog.__init__" />
+      <keyword name="GreaseMonkeyAddScriptDialog (Module)" id="GreaseMonkeyAddScriptDialog (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html" />
+      <keyword name="GreaseMonkeyAddScriptDialog.__accepted" id="GreaseMonkeyAddScriptDialog.__accepted" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html#GreaseMonkeyAddScriptDialog.__accepted" />
+      <keyword name="GreaseMonkeyAddScriptDialog.on_showScriptSourceButton_clicked" id="GreaseMonkeyAddScriptDialog.on_showScriptSourceButton_clicked" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html#GreaseMonkeyAddScriptDialog.on_showScriptSourceButton_clicked" />
+      <keyword name="GreaseMonkeyConfiguration (Package)" id="GreaseMonkeyConfiguration (Package)" ref="index-eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.html" />
+      <keyword name="GreaseMonkeyConfigurationDialog" id="GreaseMonkeyConfigurationDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog" />
+      <keyword name="GreaseMonkeyConfigurationDialog (Constructor)" id="GreaseMonkeyConfigurationDialog (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.__init__" />
+      <keyword name="GreaseMonkeyConfigurationDialog (Module)" id="GreaseMonkeyConfigurationDialog (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html" />
+      <keyword name="GreaseMonkeyConfigurationDialog.__getScript" id="GreaseMonkeyConfigurationDialog.__getScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.__getScript" />
+      <keyword name="GreaseMonkeyConfigurationDialog.__itemChanged" id="GreaseMonkeyConfigurationDialog.__itemChanged" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.__itemChanged" />
+      <keyword name="GreaseMonkeyConfigurationDialog.__loadScripts" id="GreaseMonkeyConfigurationDialog.__loadScripts" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.__loadScripts" />
+      <keyword name="GreaseMonkeyConfigurationDialog.__removeItem" id="GreaseMonkeyConfigurationDialog.__removeItem" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.__removeItem" />
+      <keyword name="GreaseMonkeyConfigurationDialog.on_downloadLabel_linkActivated" id="GreaseMonkeyConfigurationDialog.on_downloadLabel_linkActivated" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.on_downloadLabel_linkActivated" />
+      <keyword name="GreaseMonkeyConfigurationDialog.on_openDirectoryButton_clicked" id="GreaseMonkeyConfigurationDialog.on_openDirectoryButton_clicked" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.on_openDirectoryButton_clicked" />
+      <keyword name="GreaseMonkeyConfigurationDialog.on_scriptsList_itemDoubleClicked" id="GreaseMonkeyConfigurationDialog.on_scriptsList_itemDoubleClicked" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html#GreaseMonkeyConfigurationDialog.on_scriptsList_itemDoubleClicked" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate" id="GreaseMonkeyConfigurationListDelegate" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html#GreaseMonkeyConfigurationListDelegate" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate (Constructor)" id="GreaseMonkeyConfigurationListDelegate (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html#GreaseMonkeyConfigurationListDelegate.__init__" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate (Module)" id="GreaseMonkeyConfigurationListDelegate (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate.padding" id="GreaseMonkeyConfigurationListDelegate.padding" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html#GreaseMonkeyConfigurationListDelegate.padding" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate.paint" id="GreaseMonkeyConfigurationListDelegate.paint" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html#GreaseMonkeyConfigurationListDelegate.paint" />
+      <keyword name="GreaseMonkeyConfigurationListDelegate.sizeHint" id="GreaseMonkeyConfigurationListDelegate.sizeHint" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html#GreaseMonkeyConfigurationListDelegate.sizeHint" />
+      <keyword name="GreaseMonkeyConfigurationListWidget" id="GreaseMonkeyConfigurationListWidget" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html#GreaseMonkeyConfigurationListWidget" />
+      <keyword name="GreaseMonkeyConfigurationListWidget (Constructor)" id="GreaseMonkeyConfigurationListWidget (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html#GreaseMonkeyConfigurationListWidget.__init__" />
+      <keyword name="GreaseMonkeyConfigurationListWidget (Module)" id="GreaseMonkeyConfigurationListWidget (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html" />
+      <keyword name="GreaseMonkeyConfigurationListWidget.__containsRemoveIcon" id="GreaseMonkeyConfigurationListWidget.__containsRemoveIcon" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html#GreaseMonkeyConfigurationListWidget.__containsRemoveIcon" />
+      <keyword name="GreaseMonkeyConfigurationListWidget.mouseDoubleClickEvent" id="GreaseMonkeyConfigurationListWidget.mouseDoubleClickEvent" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html#GreaseMonkeyConfigurationListWidget.mouseDoubleClickEvent" />
+      <keyword name="GreaseMonkeyConfigurationListWidget.mousePressEvent" id="GreaseMonkeyConfigurationListWidget.mousePressEvent" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html#GreaseMonkeyConfigurationListWidget.mousePressEvent" />
+      <keyword name="GreaseMonkeyConfigurationScriptInfoDialog" id="GreaseMonkeyConfigurationScriptInfoDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html#GreaseMonkeyConfigurationScriptInfoDialog" />
+      <keyword name="GreaseMonkeyConfigurationScriptInfoDialog (Constructor)" id="GreaseMonkeyConfigurationScriptInfoDialog (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html#GreaseMonkeyConfigurationScriptInfoDialog.__init__" />
+      <keyword name="GreaseMonkeyConfigurationScriptInfoDialog (Module)" id="GreaseMonkeyConfigurationScriptInfoDialog (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html" />
+      <keyword name="GreaseMonkeyConfigurationScriptInfoDialog.on_showScriptSourceButton_clicked" id="GreaseMonkeyConfigurationScriptInfoDialog.on_showScriptSourceButton_clicked" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html#GreaseMonkeyConfigurationScriptInfoDialog.on_showScriptSourceButton_clicked" />
+      <keyword name="GreaseMonkeyDownloader" id="GreaseMonkeyDownloader" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html#GreaseMonkeyDownloader" />
+      <keyword name="GreaseMonkeyDownloader (Constructor)" id="GreaseMonkeyDownloader (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html#GreaseMonkeyDownloader.__init__" />
+      <keyword name="GreaseMonkeyDownloader (Module)" id="GreaseMonkeyDownloader (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html" />
+      <keyword name="GreaseMonkeyDownloader.__downloadRequires" id="GreaseMonkeyDownloader.__downloadRequires" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html#GreaseMonkeyDownloader.__downloadRequires" />
+      <keyword name="GreaseMonkeyDownloader.__requireDownloaded" id="GreaseMonkeyDownloader.__requireDownloaded" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html#GreaseMonkeyDownloader.__requireDownloaded" />
+      <keyword name="GreaseMonkeyDownloader.__scriptDownloaded" id="GreaseMonkeyDownloader.__scriptDownloaded" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html#GreaseMonkeyDownloader.__scriptDownloaded" />
+      <keyword name="GreaseMonkeyJavaScript (Module)" id="GreaseMonkeyJavaScript (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyJavaScript.html" />
+      <keyword name="GreaseMonkeyManager" id="GreaseMonkeyManager" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager" />
+      <keyword name="GreaseMonkeyManager (Constructor)" id="GreaseMonkeyManager (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.__init__" />
+      <keyword name="GreaseMonkeyManager (Module)" id="GreaseMonkeyManager (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html" />
+      <keyword name="GreaseMonkeyManager.__downloaderFinished" id="GreaseMonkeyManager.__downloaderFinished" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.__downloaderFinished" />
+      <keyword name="GreaseMonkeyManager.__load" id="GreaseMonkeyManager.__load" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.__load" />
+      <keyword name="GreaseMonkeyManager.addScript" id="GreaseMonkeyManager.addScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.addScript" />
+      <keyword name="GreaseMonkeyManager.allScripts" id="GreaseMonkeyManager.allScripts" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.allScripts" />
+      <keyword name="GreaseMonkeyManager.canRunOnScheme" id="GreaseMonkeyManager.canRunOnScheme" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.canRunOnScheme" />
+      <keyword name="GreaseMonkeyManager.connectPage" id="GreaseMonkeyManager.connectPage" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.connectPage" />
+      <keyword name="GreaseMonkeyManager.containsScript" id="GreaseMonkeyManager.containsScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.containsScript" />
+      <keyword name="GreaseMonkeyManager.createRequest" id="GreaseMonkeyManager.createRequest" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.createRequest" />
+      <keyword name="GreaseMonkeyManager.disableScript" id="GreaseMonkeyManager.disableScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.disableScript" />
+      <keyword name="GreaseMonkeyManager.downloadScript" id="GreaseMonkeyManager.downloadScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.downloadScript" />
+      <keyword name="GreaseMonkeyManager.enableScript" id="GreaseMonkeyManager.enableScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.enableScript" />
+      <keyword name="GreaseMonkeyManager.pageLoadStarted" id="GreaseMonkeyManager.pageLoadStarted" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.pageLoadStarted" />
+      <keyword name="GreaseMonkeyManager.removeScript" id="GreaseMonkeyManager.removeScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.removeScript" />
+      <keyword name="GreaseMonkeyManager.requireScripts" id="GreaseMonkeyManager.requireScripts" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.requireScripts" />
+      <keyword name="GreaseMonkeyManager.requireScriptsDirectory" id="GreaseMonkeyManager.requireScriptsDirectory" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.requireScriptsDirectory" />
+      <keyword name="GreaseMonkeyManager.saveConfiguration" id="GreaseMonkeyManager.saveConfiguration" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.saveConfiguration" />
+      <keyword name="GreaseMonkeyManager.scriptsDirectory" id="GreaseMonkeyManager.scriptsDirectory" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.scriptsDirectory" />
+      <keyword name="GreaseMonkeyManager.showConfigurationDialog" id="GreaseMonkeyManager.showConfigurationDialog" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html#GreaseMonkeyManager.showConfigurationDialog" />
+      <keyword name="GreaseMonkeyScript" id="GreaseMonkeyScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript" />
+      <keyword name="GreaseMonkeyScript (Constructor)" id="GreaseMonkeyScript (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.__init__" />
+      <keyword name="GreaseMonkeyScript (Module)" id="GreaseMonkeyScript (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html" />
+      <keyword name="GreaseMonkeyScript.__parseScript" id="GreaseMonkeyScript.__parseScript" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.__parseScript" />
+      <keyword name="GreaseMonkeyScript.description" id="GreaseMonkeyScript.description" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.description" />
+      <keyword name="GreaseMonkeyScript.downloadUrl" id="GreaseMonkeyScript.downloadUrl" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.downloadUrl" />
+      <keyword name="GreaseMonkeyScript.exclude" id="GreaseMonkeyScript.exclude" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.exclude" />
+      <keyword name="GreaseMonkeyScript.fileName" id="GreaseMonkeyScript.fileName" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.fileName" />
+      <keyword name="GreaseMonkeyScript.fullName" id="GreaseMonkeyScript.fullName" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.fullName" />
+      <keyword name="GreaseMonkeyScript.include" id="GreaseMonkeyScript.include" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.include" />
+      <keyword name="GreaseMonkeyScript.isEnabled" id="GreaseMonkeyScript.isEnabled" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.isEnabled" />
+      <keyword name="GreaseMonkeyScript.isValid" id="GreaseMonkeyScript.isValid" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.isValid" />
+      <keyword name="GreaseMonkeyScript.match" id="GreaseMonkeyScript.match" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.match" />
+      <keyword name="GreaseMonkeyScript.name" id="GreaseMonkeyScript.name" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.name" />
+      <keyword name="GreaseMonkeyScript.nameSpace" id="GreaseMonkeyScript.nameSpace" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.nameSpace" />
+      <keyword name="GreaseMonkeyScript.script" id="GreaseMonkeyScript.script" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.script" />
+      <keyword name="GreaseMonkeyScript.setEnabled" id="GreaseMonkeyScript.setEnabled" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.setEnabled" />
+      <keyword name="GreaseMonkeyScript.startAt" id="GreaseMonkeyScript.startAt" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.startAt" />
+      <keyword name="GreaseMonkeyScript.version" id="GreaseMonkeyScript.version" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html#GreaseMonkeyScript.version" />
+      <keyword name="GreaseMonkeyUrlMatcher" id="GreaseMonkeyUrlMatcher" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#GreaseMonkeyUrlMatcher" />
+      <keyword name="GreaseMonkeyUrlMatcher (Constructor)" id="GreaseMonkeyUrlMatcher (Constructor)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#GreaseMonkeyUrlMatcher.__init__" />
+      <keyword name="GreaseMonkeyUrlMatcher (Module)" id="GreaseMonkeyUrlMatcher (Module)" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html" />
+      <keyword name="GreaseMonkeyUrlMatcher.__parsePattern" id="GreaseMonkeyUrlMatcher.__parsePattern" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#GreaseMonkeyUrlMatcher.__parsePattern" />
+      <keyword name="GreaseMonkeyUrlMatcher.match" id="GreaseMonkeyUrlMatcher.match" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#GreaseMonkeyUrlMatcher.match" />
+      <keyword name="GreaseMonkeyUrlMatcher.pattern" id="GreaseMonkeyUrlMatcher.pattern" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#GreaseMonkeyUrlMatcher.pattern" />
       <keyword name="HTMLGenerator" id="HTMLGenerator" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator" />
       <keyword name="HTMLGenerator (Constructor)" id="HTMLGenerator (Constructor)" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.__init__" />
       <keyword name="HTMLGenerator.generate" id="HTMLGenerator.generate" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.generate" />
@@ -4673,6 +4790,7 @@
       <keyword name="HelpTopicDialog (Constructor)" id="HelpTopicDialog (Constructor)" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog.__init__" />
       <keyword name="HelpTopicDialog (Module)" id="HelpTopicDialog (Module)" ref="eric5.Helpviewer.HelpTopicDialog.html" />
       <keyword name="HelpTopicDialog.link" id="HelpTopicDialog.link" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog.link" />
+      <keyword name="HelpUtilities (Module)" id="HelpUtilities (Module)" ref="eric5.Helpviewer.HelpUtilities.html" />
       <keyword name="HelpViewersPage" id="HelpViewersPage" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage" />
       <keyword name="HelpViewersPage (Constructor)" id="HelpViewersPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.__init__" />
       <keyword name="HelpViewersPage (Module)" id="HelpViewersPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html" />
@@ -4803,6 +4921,7 @@
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showFeedsManager" id="HelpWindow.__showFeedsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showFeedsManager" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
+      <keyword name="HelpWindow.__showGreaseMonkeyConfigDialog" id="HelpWindow.__showGreaseMonkeyConfigDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showGreaseMonkeyConfigDialog" />
       <keyword name="HelpWindow.__showIndexWindow" id="HelpWindow.__showIndexWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showIndexWindow" />
       <keyword name="HelpWindow.__showInstallationError" id="HelpWindow.__showInstallationError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showInstallationError" />
       <keyword name="HelpWindow.__showNetworkMonitor" id="HelpWindow.__showNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNetworkMonitor" />
@@ -4847,6 +4966,7 @@
       <keyword name="HelpWindow.feedsManager" id="HelpWindow.feedsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.feedsManager" />
       <keyword name="HelpWindow.getActions" id="HelpWindow.getActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getActions" />
       <keyword name="HelpWindow.getSourceFileList" id="HelpWindow.getSourceFileList" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getSourceFileList" />
+      <keyword name="HelpWindow.greaseMonkeyManager" id="HelpWindow.greaseMonkeyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.greaseMonkeyManager" />
       <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
       <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
@@ -11574,6 +11694,7 @@
       <keyword name="drawRect" id="drawRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#drawRect" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="encryptData" id="encryptData" ref="eric5.Utilities.crypto.py3AES.html#encryptData" />
+      <keyword name="ensureUniqueFilename" id="ensureUniqueFilename" ref="eric5.Helpviewer.HelpUtilities.html#ensureUniqueFilename" />
       <keyword name="eric5 (Module)" id="eric5 (Module)" ref="eric5.eric5.html" />
       <keyword name="eric5 (Package)" id="eric5 (Package)" ref="index-eric5.html" />
       <keyword name="eric5_api (Module)" id="eric5_api (Module)" ref="eric5.eric5_api.html" />
@@ -11627,6 +11748,7 @@
       <keyword name="filename_match" id="filename_match" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#filename_match" />
       <keyword name="filename_match" id="filename_match" ref="eric5.UtilitiesPython2.pep8.html#filename_match" />
       <keyword name="fileno" id="fileno" ref="eric5.DebugClients.Ruby.AsyncFile.html#fileno" />
+      <keyword name="filterCharsFromFilename" id="filterCharsFromFilename" ref="eric5.Helpviewer.HelpUtilities.html#filterCharsFromFilename" />
       <keyword name="findPython2Interpreters" id="findPython2Interpreters" ref="eric5.Globals.__init__.html#findPython2Interpreters" />
       <keyword name="find_checks" id="find_checks" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#find_checks" />
       <keyword name="find_checks" id="find_checks" ref="eric5.UtilitiesPython2.pep8.html#find_checks" />
@@ -11671,6 +11793,7 @@
       <keyword name="getExecutablePath" id="getExecutablePath" ref="eric5.Utilities.__init__.html#getExecutablePath" />
       <keyword name="getExistingDirectory" id="getExistingDirectory" ref="eric5.E5Gui.E5FileDialog.html#getExistingDirectory" />
       <keyword name="getExporter" id="getExporter" ref="eric5.QScintilla.Exporters.__init__.html#getExporter" />
+      <keyword name="getFileNameFromUrl" id="getFileNameFromUrl" ref="eric5.Helpviewer.HelpUtilities.html#getFileNameFromUrl" />
       <keyword name="getFlakes" id="getFlakes" ref="eric5.Preferences.__init__.html#getFlakes" />
       <keyword name="getGeometry" id="getGeometry" ref="eric5.Preferences.__init__.html#getGeometry" />
       <keyword name="getGraphics" id="getGraphics" ref="eric5.Preferences.__init__.html#getGraphics" />
@@ -12074,6 +12197,7 @@
       <keyword name="whitespace_before_inline_comment" id="whitespace_before_inline_comment" ref="eric5.UtilitiesPython2.pep8.html#whitespace_before_inline_comment" />
       <keyword name="whitespace_before_parameters" id="whitespace_before_parameters" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_before_parameters" />
       <keyword name="whitespace_before_parameters" id="whitespace_before_parameters" ref="eric5.UtilitiesPython2.pep8.html#whitespace_before_parameters" />
+      <keyword name="wildcardMatch" id="wildcardMatch" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#wildcardMatch" />
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric5.Utilities.__init__.html#win32_GetUserName" />
       <keyword name="win32_Kill" id="win32_Kill" ref="eric5.Utilities.__init__.html#win32_Kill" />
       <keyword name="wrapperName" id="wrapperName" ref="eric5.install.html#wrapperName" />
@@ -12280,6 +12404,16 @@
       <file>eric5.Helpviewer.Feeds.FeedEditDialog.html</file>
       <file>eric5.Helpviewer.Feeds.FeedsDialog.html</file>
       <file>eric5.Helpviewer.Feeds.FeedsManager.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListWidget.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationScriptInfoDialog.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyDownloader.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyJavaScript.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyManager.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyScript.html</file>
+      <file>eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html</file>
       <file>eric5.Helpviewer.HelpBrowserWV.html</file>
       <file>eric5.Helpviewer.HelpClearPrivateDataDialog.html</file>
       <file>eric5.Helpviewer.HelpDocsInstaller.html</file>
@@ -12291,6 +12425,7 @@
       <file>eric5.Helpviewer.HelpTabWidget.html</file>
       <file>eric5.Helpviewer.HelpTocWidget.html</file>
       <file>eric5.Helpviewer.HelpTopicDialog.html</file>
+      <file>eric5.Helpviewer.HelpUtilities.html</file>
       <file>eric5.Helpviewer.HelpWebSearchWidget.html</file>
       <file>eric5.Helpviewer.HelpWindow.html</file>
       <file>eric5.Helpviewer.History.HistoryCompleter.html</file>
@@ -12302,7 +12437,9 @@
       <file>eric5.Helpviewer.History.HistoryTreeModel.html</file>
       <file>eric5.Helpviewer.JavaScriptResources.html</file>
       <file>eric5.Helpviewer.Network.AboutAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.EmptyNetworkReply.html</file>
       <file>eric5.Helpviewer.Network.EricAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.FollowRedirectReply.html</file>
       <file>eric5.Helpviewer.Network.FtpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.FtpReply.html</file>
       <file>eric5.Helpviewer.Network.NetworkAccessManager.html</file>
@@ -12851,6 +12988,8 @@
       <file>index-eric5.Helpviewer.CookieJar.html</file>
       <file>index-eric5.Helpviewer.Download.html</file>
       <file>index-eric5.Helpviewer.Feeds.html</file>
+      <file>index-eric5.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.html</file>
+      <file>index-eric5.Helpviewer.GreaseMonkey.html</file>
       <file>index-eric5.Helpviewer.History.html</file>
       <file>index-eric5.Helpviewer.Network.html</file>
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>

@@ -59,7 +59,6 @@ class WatchPointViewer(QTreeView):
         """
         self.__model = model
         
-        # TODO: Remove these comments once proven ok in daily use
         self.sortingModel = QSortFilterProxyModel()
         self.sortingModel.setDynamicSortFilter(True)
         self.sortingModel.setSourceModel(self.__model)

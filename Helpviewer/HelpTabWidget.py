@@ -12,6 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl
 from PyQt4.QtGui import QWidget, QHBoxLayout, QMenu, QToolButton, QPrinter, \
     QPrintDialog, QDialog, QIcon
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui import E5MessageBox
@@ -231,7 +232,9 @@ class HelpTabWidget(E5TabWidget):
         if idx < 0 or idx > self.count():
             return
         
-        self.newBrowser(self.widget(idx).url())
+        req = QNetworkRequest(self.widget(idx).url())
+        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        self.newBrowser(None, (req, QNetworkAccessManager.GetOperation, b""))
     
     def __tabContextMenuClose(self):
         """
@@ -788,10 +791,13 @@ class HelpTabWidget(E5TabWidget):
         """
         edit = self.sender()
         url = self.__guessUrlFromPath(edit.text())
+        request = QNetworkRequest(url)
+        request.setRawHeader("X-Eric5-UserLoadAction", b"1")
         if e5App().keyboardModifiers() == Qt.AltModifier:
-            self.newBrowser(url)
+            self.newBrowser(None, (request, QNetworkAccessManager.GetOperation, b""))
         else:
-            self.currentBrowser().setSource(url)
+            self.currentBrowser().setSource(None,
+                (request, QNetworkAccessManager.GetOperation, b""))
             self.currentBrowser().setFocus()
     
     def __pathSelected(self, path):
