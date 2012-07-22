@@ -112,7 +112,7 @@ class GreaseMonkeyManager(QObject):
             if settings.contains(url):
                 fileName = settings.value(url)
                 try:
-                    f = open(fileName, "r")
+                    f = open(fileName, "r", encoding="utf-8")
                     source = f.read()
                     f.close()
                 except (IOError, OSError):
