@@ -64,7 +64,7 @@ class GreaseMonkeyDownloader(QObject):
             self.__fileName = HelpUtilities.ensureUniqueFilename(filePath)
             
             try:
-                f = open(self.__fileName, "w")
+                f = open(self.__fileName, "w", encoding="utf-8")
             except (IOError, OSError) as err:
                 E5MessageBox.critical(None,
                     self.trUtf8("GreaseMonkey Download"),
@@ -111,7 +111,7 @@ class GreaseMonkeyDownloader(QObject):
             fileName = HelpUtilities.ensureUniqueFilename(filePath, "{0}")
             
             try:
-                f = open(fileName, "w")
+                f = open(fileName, "w", encoding="utf-8")
             except (IOError, OSError) as err:
                 E5MessageBox.critical(None,
                     self.trUtf8("GreaseMonkey Download"),
