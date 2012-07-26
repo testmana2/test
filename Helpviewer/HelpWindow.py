@@ -1945,6 +1945,7 @@ class HelpWindow(QMainWindow):
         
         self.cookieJar().close()
         
+        self.bookmarksToolBar.setModel(None)
         self.bookmarksManager().close()
         
         self.historyManager().close()
