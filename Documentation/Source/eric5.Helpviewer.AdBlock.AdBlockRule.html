@@ -37,7 +37,10 @@ Module implementing the AdBlock rule class.
 </table>
 <h3>Functions</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#toSecondLevelDomain">toSecondLevelDomain</a></td>
+<td>Module function to get a second level domain from the given URL.</td>
+</tr>
 </table>
 <hr /><hr />
 <a NAME="AdBlockRule" ID="AdBlockRule"></a>
@@ -64,11 +67,32 @@ object
 <td><a href="#AdBlockRule.__convertPatternToRegExp">__convertPatternToRegExp</a></td>
 <td>Private method to convert a wildcard pattern to a regular expression.</td>
 </tr><tr>
+<td><a href="#AdBlockRule.__parseDomains">__parseDomains</a></td>
+<td>Private method to parse a string with a domain list.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.__parseFilter">__parseFilter</a></td>
+<td>Private method to parse the filter pattern.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.cssSelector">cssSelector</a></td>
+<td>Public method to get the CSS selector of the rule.</td>
+</tr><tr>
 <td><a href="#AdBlockRule.filter">filter</a></td>
 <td>Public method to get the rule filter string.</td>
 </tr><tr>
 <td><a href="#AdBlockRule.isCSSRule">isCSSRule</a></td>
 <td>Public method to check, if the rule is a CSS rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.isComment">isComment</a></td>
+<td>Public method to check, if this is a comment.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.isDocument">isDocument</a></td>
+<td>Public method to check, if this is a document rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.isDomainRestricted">isDomainRestricted</a></td>
+<td>Public method to check, if this rule is restricted by domain.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.isElementHiding">isElementHiding</a></td>
+<td>Public method to check, if this is an element hiding rule.</td>
 </tr><tr>
 <td><a href="#AdBlockRule.isEnabled">isEnabled</a></td>
 <td>Public method to check, if the rule is enabled.</td>
@@ -76,11 +100,29 @@ object
 <td><a href="#AdBlockRule.isException">isException</a></td>
 <td>Public method to check, if the rule defines an exception.</td>
 </tr><tr>
+<td><a href="#AdBlockRule.isInternalDisabled">isInternalDisabled</a></td>
+<td>Public method to check, if this rule was disabled internally.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.isSlow">isSlow</a></td>
+<td>Public method to check, if this is a slow rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.matchDomain">matchDomain</a></td>
+<td>Public method to match a domain.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.matchObject">matchObject</a></td>
+<td>Public slot to match an object rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.matchSubdocument">matchSubdocument</a></td>
+<td>Public slot to match a sub-document rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.matchThirdParty">matchThirdParty</a></td>
+<td>Public slot to match a third-party rule.</td>
+</tr><tr>
+<td><a href="#AdBlockRule.matchXmlHttpRequest">matchXmlHttpRequest</a></td>
+<td>Public slot to match a XmlHttpRequest rule.</td>
+</tr><tr>
 <td><a href="#AdBlockRule.networkMatch">networkMatch</a></td>
 <td>Public method to check the rule for a match.</td>
-</tr><tr>
-<td><a href="#AdBlockRule.regExpPattern">regExpPattern</a></td>
-<td>Public method to get the regexp pattern of the rule.</td>
 </tr><tr>
 <td><a href="#AdBlockRule.setEnabled">setEnabled</a></td>
 <td>Public method to set the rule's enabled state.</td>
@@ -91,8 +133,8 @@ object
 <td><a href="#AdBlockRule.setFilter">setFilter</a></td>
 <td>Public method to set the rule filter string.</td>
 </tr><tr>
-<td><a href="#AdBlockRule.setPattern">setPattern</a></td>
-<td>Public method to set the rule pattern.</td>
+<td><a href="#AdBlockRule.urlMatch">urlMatch</a></td>
+<td>Public method to check an URL against the rule.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -119,6 +161,34 @@ string containing the wildcard pattern (string)
 <dd>
 string containing a regular expression (string)
 </dd>
+</dl><a NAME="AdBlockRule.__parseDomains" ID="AdBlockRule.__parseDomains"></a>
+<h4>AdBlockRule.__parseDomains</h4>
+<b>__parseDomains</b>(<i>domains, separator</i>)
+<p>
+        Private method to parse a string with a domain list.
+</p><dl>
+<dt><i>domains</i></dt>
+<dd>
+list of domains (string)
+</dd><dt><i>separator</i></dt>
+<dd>
+separator character used by the list (string)
+</dd>
+</dl><a NAME="AdBlockRule.__parseFilter" ID="AdBlockRule.__parseFilter"></a>
+<h4>AdBlockRule.__parseFilter</h4>
+<b>__parseFilter</b>(<i></i>)
+<p>
+        Private method to parse the filter pattern.
+</p><a NAME="AdBlockRule.cssSelector" ID="AdBlockRule.cssSelector"></a>
+<h4>AdBlockRule.cssSelector</h4>
+<b>cssSelector</b>(<i></i>)
+<p>
+        Public method to get the CSS selector of the rule.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+CSS selector (string)
+</dd>
 </dl><a NAME="AdBlockRule.filter" ID="AdBlockRule.filter"></a>
 <h4>AdBlockRule.filter</h4>
 <b>filter</b>(<i></i>)
@@ -138,6 +208,46 @@ rule filter string (string)
 <dt>Returns:</dt>
 <dd>
 flag indicating a CSS rule (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.isComment" ID="AdBlockRule.isComment"></a>
+<h4>AdBlockRule.isComment</h4>
+<b>isComment</b>(<i></i>)
+<p>
+        Public method to check, if this is a comment.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a comment (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.isDocument" ID="AdBlockRule.isDocument"></a>
+<h4>AdBlockRule.isDocument</h4>
+<b>isDocument</b>(<i></i>)
+<p>
+        Public method to check, if this is a document rule.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a document rule (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.isDomainRestricted" ID="AdBlockRule.isDomainRestricted"></a>
+<h4>AdBlockRule.isDomainRestricted</h4>
+<b>isDomainRestricted</b>(<i></i>)
+<p>
+        Public method to check, if this rule is restricted by domain.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a domain restriction (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.isElementHiding" ID="AdBlockRule.isElementHiding"></a>
+<h4>AdBlockRule.isElementHiding</h4>
+<b>isElementHiding</b>(<i></i>)
+<p>
+        Public method to check, if this is an element hiding rule.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an element hiding rule (boolean)
 </dd>
 </dl><a NAME="AdBlockRule.isEnabled" ID="AdBlockRule.isEnabled"></a>
 <h4>AdBlockRule.isEnabled</h4>
@@ -159,13 +269,114 @@ flag indicating enabled state (boolean)
 <dd>
 flag indicating an exception (boolean)
 </dd>
+</dl><a NAME="AdBlockRule.isInternalDisabled" ID="AdBlockRule.isInternalDisabled"></a>
+<h4>AdBlockRule.isInternalDisabled</h4>
+<b>isInternalDisabled</b>(<i></i>)
+<p>
+        Public method to check, if this rule was disabled internally.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an internally disabled rule (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.isSlow" ID="AdBlockRule.isSlow"></a>
+<h4>AdBlockRule.isSlow</h4>
+<b>isSlow</b>(<i></i>)
+<p>
+        Public method to check, if this is a slow rule.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a slow rule (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.matchDomain" ID="AdBlockRule.matchDomain"></a>
+<h4>AdBlockRule.matchDomain</h4>
+<b>matchDomain</b>(<i>domain</i>)
+<p>
+        Public method to match a domain.
+</p><dl>
+<dt><i>domain</i></dt>
+<dd>
+domain name to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a match (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.matchObject" ID="AdBlockRule.matchObject"></a>
+<h4>AdBlockRule.matchObject</h4>
+<b>matchObject</b>(<i>req</i>)
+<p>
+        Public slot to match an object rule.
+</p><dl>
+<dt><i>req</i></dt>
+<dd>
+request object to check (QNetworkRequest)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a match (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.matchSubdocument" ID="AdBlockRule.matchSubdocument"></a>
+<h4>AdBlockRule.matchSubdocument</h4>
+<b>matchSubdocument</b>(<i>req</i>)
+<p>
+        Public slot to match a sub-document rule.
+</p><dl>
+<dt><i>req</i></dt>
+<dd>
+request object to check (QNetworkRequest)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a match (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.matchThirdParty" ID="AdBlockRule.matchThirdParty"></a>
+<h4>AdBlockRule.matchThirdParty</h4>
+<b>matchThirdParty</b>(<i>req</i>)
+<p>
+        Public slot to match a third-party rule.
+</p><dl>
+<dt><i>req</i></dt>
+<dd>
+request object to check (QNetworkRequest)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a match (boolean)
+</dd>
+</dl><a NAME="AdBlockRule.matchXmlHttpRequest" ID="AdBlockRule.matchXmlHttpRequest"></a>
+<h4>AdBlockRule.matchXmlHttpRequest</h4>
+<b>matchXmlHttpRequest</b>(<i>req</i>)
+<p>
+        Public slot to match a XmlHttpRequest rule.
+</p><dl>
+<dt><i>req</i></dt>
+<dd>
+request object to check (QNetworkRequest)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a match (boolean)
+</dd>
 </dl><a NAME="AdBlockRule.networkMatch" ID="AdBlockRule.networkMatch"></a>
 <h4>AdBlockRule.networkMatch</h4>
-<b>networkMatch</b>(<i>encodedUrl</i>)
+<b>networkMatch</b>(<i>request, domain, encodedUrl</i>)
 <p>
         Public method to check the rule for a match.
 </p><dl>
-<dt><i>encodedUrl</i></dt>
+<dt><i>request</i></dt>
+<dd>
+reference to the network request (QNetworkRequest)
+</dd><dt><i>domain</i></dt>
+<dd>
+domain name (string)
+</dd><dt><i>encodedUrl</i></dt>
 <dd>
 string encoded URL to be checked (string)
 </dd>
@@ -173,16 +384,6 @@ string encoded URL to be checked (string)
 <dt>Returns:</dt>
 <dd>
 flag indicating a match (boolean)
-</dd>
-</dl><a NAME="AdBlockRule.regExpPattern" ID="AdBlockRule.regExpPattern"></a>
-<h4>AdBlockRule.regExpPattern</h4>
-<b>regExpPattern</b>(<i></i>)
-<p>
-        Public method to get the regexp pattern of the rule.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-regexp pattern (QRegExp)
 </dd>
 </dl><a NAME="AdBlockRule.setEnabled" ID="AdBlockRule.setEnabled"></a>
 <h4>AdBlockRule.setEnabled</h4>
@@ -214,18 +415,38 @@ flag indicating an exception rule (boolean)
 <dd>
 rule filter string (string)
 </dd>
-</dl><a NAME="AdBlockRule.setPattern" ID="AdBlockRule.setPattern"></a>
-<h4>AdBlockRule.setPattern</h4>
-<b>setPattern</b>(<i>pattern, isRegExp</i>)
+</dl><a NAME="AdBlockRule.urlMatch" ID="AdBlockRule.urlMatch"></a>
+<h4>AdBlockRule.urlMatch</h4>
+<b>urlMatch</b>(<i>url</i>)
 <p>
-        Public method to set the rule pattern.
+        Public method to check an URL against the rule.
 </p><dl>
-<dt><i>pattern</i></dt>
+<dt><i>url</i></dt>
 <dd>
-string containing the pattern (string)
-</dd><dt><i>isRegExp</i></dt>
+URL to check (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
 <dd>
-flag indicating a reg exp pattern (boolean)
+flag indicating a match (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="toSecondLevelDomain" ID="toSecondLevelDomain"></a>
+<h2>toSecondLevelDomain</h2>
+<b>toSecondLevelDomain</b>(<i>url</i>)
+<p>
+    Module function to get a second level domain from the given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to extract domain from (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+name of second level domain (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

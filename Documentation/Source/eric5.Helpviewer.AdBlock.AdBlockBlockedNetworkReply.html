@@ -77,19 +77,22 @@ QNetworkReply
 </table>
 <a NAME="AdBlockBlockedNetworkReply.__init__" ID="AdBlockBlockedNetworkReply.__init__"></a>
 <h4>AdBlockBlockedNetworkReply (Constructor)</h4>
-<b>AdBlockBlockedNetworkReply</b>(<i>request, rule, parent=None</i>)
+<b>AdBlockBlockedNetworkReply</b>(<i>request, subscription, rule, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>request</i></dt>
 <dd>
 reference to the request object (QNetworkRequest)
-</dd><dt><i>fileData</i></dt>
+</dd><dt><i>subscription</i></dt>
 <dd>
-reference to the data buffer (QByteArray)
-</dd><dt><i>mimeType</i></dt>
+subscription containing the matched rule (AdBlockSubscription)
+</dd><dt><i>rule</i></dt>
 <dd>
-for the reply (string)
+matching rule (AdBlockRule)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
 </dd>
 </dl><a NAME="AdBlockBlockedNetworkReply.__fireSignals" ID="AdBlockBlockedNetworkReply.__fireSignals"></a>
 <h4>AdBlockBlockedNetworkReply.__fireSignals</h4>

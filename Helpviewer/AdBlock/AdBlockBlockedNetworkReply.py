@@ -15,20 +15,21 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
     """
     Class implementing a QNetworkReply subclass reporting a blocked request.
     """
-    def __init__(self, request, rule, parent=None):
+    def __init__(self, request, subscription, rule, parent=None):
         """
         Constructor
         
         @param request reference to the request object (QNetworkRequest)
-        @param fileData reference to the data buffer (QByteArray)
-        @param mimeType for the reply (string)
+        @param subscription subscription containing the matched rule (AdBlockSubscription)
+        @param rule matching rule (AdBlockRule)
+        @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
         self.setOperation(QNetworkAccessManager.GetOperation)
         self.setRequest(request)
         self.setUrl(request.url())
         self.setError(QNetworkReply.ContentAccessDenied,
-                      "AdBlockRule:{0}".format(rule.filter()))
+                      "AdBlockRule:{0} ({1})".format(subscription.title(), rule.filter()))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):

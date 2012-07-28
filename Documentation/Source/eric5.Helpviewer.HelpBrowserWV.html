@@ -1107,17 +1107,26 @@ QWebPage
 <td><a href="#HelpWebPage.__init__">HelpWebPage</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpWebPage.__loadStarted">__loadStarted</a></td>
+<td>Private method to handle the loadStarted signal.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.__managerFinished">__managerFinished</a></td>
 <td>Private slot to handle a finished reply.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
 <td>Protected method to determine, if a request may be accepted.</td>
 </tr><tr>
+<td><a href="#HelpWebPage.addAdBlockRule">addAdBlockRule</a></td>
+<td>Public slot to add an AdBlock rule to the page.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.event">event</a></td>
 <td>Protected method implementing the event handler.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.extension">extension</a></td>
 <td>Public method to implement a specific extension.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.getAdBlockedPageEntries">getAdBlockedPageEntries</a></td>
+<td>Public method to get the list of AdBlock page entries.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.getSslInfo">getSslInfo</a></td>
 <td>Public method to get a reference to the SSL info object.</td>
@@ -1139,6 +1148,9 @@ QWebPage
 </tr><tr>
 <td><a href="#HelpWebPage.supportsExtension">supportsExtension</a></td>
 <td>Public method to check the support for an extension.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.url">url</a></td>
+<td>Public method to get the URL of the page.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.userAgent">userAgent</a></td>
 <td>Public method to get the global user agent setting.</td>
@@ -1171,7 +1183,12 @@ reference to the web plug-in factory instance (WebPluginFactory
 <dd>
 parent widget of this window (QWidget)
 </dd>
-</dl><a NAME="HelpWebPage.__managerFinished" ID="HelpWebPage.__managerFinished"></a>
+</dl><a NAME="HelpWebPage.__loadStarted" ID="HelpWebPage.__loadStarted"></a>
+<h4>HelpWebPage.__loadStarted</h4>
+<b>__loadStarted</b>(<i></i>)
+<p>
+        Private method to handle the loadStarted signal.
+</p><a NAME="HelpWebPage.__managerFinished" ID="HelpWebPage.__managerFinished"></a>
 <h4>HelpWebPage.__managerFinished</h4>
 <b>__managerFinished</b>(<i>reply</i>)
 <p>
@@ -1203,6 +1220,19 @@ type of the navigation request (QWebPage.NavigationType)
 <dt>Returns:</dt>
 <dd>
 flag indicating acceptance (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.addAdBlockRule" ID="HelpWebPage.addAdBlockRule"></a>
+<h4>HelpWebPage.addAdBlockRule</h4>
+<b>addAdBlockRule</b>(<i>rule, url</i>)
+<p>
+        Public slot to add an AdBlock rule to the page.
+</p><dl>
+<dt><i>rule</i></dt>
+<dd>
+AdBlock rule to add (AdBlockRule)
+</dd><dt><i>url</i></dt>
+<dd>
+URL that matched the rule (QUrl)
 </dd>
 </dl><a NAME="HelpWebPage.event" ID="HelpWebPage.event"></a>
 <h4>HelpWebPage.event</h4>
@@ -1239,6 +1269,16 @@ stores the output results (QWebPage.ExtensionReturn)
 <dt>Returns:</dt>
 <dd>
 flag indicating a successful call of the extension (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.getAdBlockedPageEntries" ID="HelpWebPage.getAdBlockedPageEntries"></a>
+<h4>HelpWebPage.getAdBlockedPageEntries</h4>
+<b>getAdBlockedPageEntries</b>(<i></i>)
+<p>
+        Public method to get the list of AdBlock page entries.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of AdBlock page entries (list of AdBlockedPageEntry)
 </dd>
 </dl><a NAME="HelpWebPage.getSslInfo" ID="HelpWebPage.getSslInfo"></a>
 <h4>HelpWebPage.getSslInfo</h4>
@@ -1309,6 +1349,16 @@ extension to test for (QWebPage.Extension)
 <dt>Returns:</dt>
 <dd>
 flag indicating the support of extension (boolean)
+</dd>
+</dl><a NAME="HelpWebPage.url" ID="HelpWebPage.url"></a>
+<h4>HelpWebPage.url</h4>
+<b>url</b>(<i></i>)
+<p>
+        Public method to get the URL of the page.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+URL of the page (QUrl)
 </dd>
 </dl><a NAME="HelpWebPage.userAgent" ID="HelpWebPage.userAgent"></a>
 <h4>HelpWebPage.userAgent</h4>

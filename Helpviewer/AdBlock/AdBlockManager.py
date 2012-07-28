@@ -249,3 +249,47 @@ class AdBlockManager(QObject):
         
         self.__adBlockDialog.show()
         return self.__adBlockDialog
+    
+    def elementHidingRules(self):
+        """
+        Public method to get the element hiding rules.
+        
+        @return element hiding rules (string)
+        """
+        if not self.__enabled:
+            return ""
+        
+        rules = ""
+        
+        for subscription in self.__subscriptions:
+            rules += subscription.elementHidingRules()
+        
+        if rules:
+            # remove last ",
+            rules = rules[:-1]
+        
+        return rules
+    
+    def elementHidingRulesForDomain(self, url):
+        """
+        Public method to get the element hiding rules for a domain.
+        
+        @param url URL to get hiding rules for (QUrl)
+        @return element hiding rules (string)
+        """
+        if not self.__enabled:
+            return ""
+        
+        rules = ""
+        
+        for subscription in self.__subscriptions:
+            if subscription.elemHideDisabledForUrl(url):
+                return ""
+            
+            rules += subscription.elementHidingRulesForDomain(url.host())
+        
+        if rules:
+            # remove last ",
+            rules = rules[:-1]
+        
+        return rules

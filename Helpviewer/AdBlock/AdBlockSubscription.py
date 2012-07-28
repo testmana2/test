@@ -57,7 +57,6 @@ class AdBlockSubscription(QObject):
         
         self.__networkExceptionRules = []
         self.__networkBlockRules = []
-        self.__pageRules = []
         
         self.__parseUrl(url)
     
@@ -88,7 +87,7 @@ class AdBlockSubscription(QObject):
     
     def url(self):
         """
-        Public method to generate the url for this subscription.
+        Public method to generate the URL for this subscription.
         
         @return AdBlock URL for the subscription (QUrl)
         """
@@ -324,37 +323,76 @@ class AdBlockSubscription(QObject):
         for rule in self.__rules:
             textStream << rule.filter() << "\n"
     
-    def pageRules(self):
+    def match(self, req, urlDomain, urlString):
         """
-        Public method to get the page rules of the subscription.
+        Public method to check the subscription for a matching rule.
         
-        @return list of rule objects (list of AdBlockRule)
-        """
-        return self.__pageRules[:]
-    
-    def allow(self, urlString):
-        """
-        Public method to check, if the given URL is allowed.
-        
+        @param req reference to the network request (QNetworkRequest)
+        @param urlDomain domain of the URL (string)
+        @param urlString URL (string)
         @return reference to the rule object or None (AdBlockRule)
         """
         for rule in self.__networkExceptionRules:
-            if rule.networkMatch(urlString):
+            if rule.networkMatch(req, urlDomain, urlString):
+                return None
+        
+        for rule in self.__networkBlockRules:
+            if rule.networkMatch(req, urlDomain, urlString):
                 return rule
         
         return None
     
-    def block(self, urlString):
+    def adBlockDisabledForUrl(self, url):
         """
-        Public method to check, if the given URL should be blocked.
+        Public method to check, if AdBlock is disabled for the given URL.
         
-        @return reference to the rule object or None (AdBlockRule)
+        @param url URL to check (QUrl)
+        @return flag indicating disabled state (boolean)
         """
-        for rule in self.__networkBlockRules:
-            if rule.networkMatch(urlString):
-                return rule
+        for rule in self.__documentRules:
+            if rule.urlMatch(url):
+                return True
         
-        return None
+        return False
+    
+    def elemHideDisabledForUrl(self, url):
+        """
+        Public method to check, if element hiding is disabled for the given URL.
+        
+        @param url URL to check (QUrl)
+        @return flag indicating disabled state (boolean)
+        """
+        if self.adBlockDisabledForUrl(url):
+            return True
+        
+        for rule in self.__elemhideRules:
+            if rule.urlMatch(url):
+                return True
+        
+        return False
+    
+    def elementHidingRules(self):
+        """
+        Public method to get the element hiding rules.
+        
+        @return element hiding rules (string)
+        """
+        return self.__elementHidingRules
+    
+    def elementHidingRulesForDomain(self, domain):
+        """
+        Public method to get the element hiding rules for the given domain.
+        
+        @param domain domain name (string)
+        @return element hiding rules (string)
+        """
+        rules = ""
+        
+        for rule in self.__domainRestrictedCssRules:
+            if rule.matchDomain(domain):
+                rules += rule.cssSelector() + ","
+        
+        return rules
     
     def allRules(self):
         """
@@ -402,18 +440,26 @@ class AdBlockSubscription(QObject):
         """
         Private method to populate the various rule caches.
         """
-        self.__networkBlockRules = []
         self.__networkExceptionRules = []
-        self.__pageRules = []
-        if not self.isEnabled():
-            return
+        self.__networkBlockRules = []
+        self.__domainRestrictedCssRules = []
+        self.__elementHidingRules = ""
+        self.__documentRules = []
+        self.__elemhideRules = []
         
         for rule in self.__rules:
             if not rule.isEnabled():
                 continue
             
             if rule.isCSSRule():
-                self.__pageRules.append(rule)
+                if rule.isDomainRestricted():
+                    self.__domainRestrictedCssRules.append(rule)
+                else:
+                    self.__elementHidingRules += rule.cssSelector() + ","
+            elif rule.isDocument():
+                self.__documentRules.append(rule)
+            elif rule.isElementHiding():
+                self.__elemhideRules.append(rule)
             elif rule.isException():
                 self.__networkExceptionRules.append(rule)
             else:

@@ -10,6 +10,7 @@ Module implementing the Flash blocker.
 
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray,  QTimer
 from PyQt4.QtGui import QWidget, QMenu, QCursor, QDialog, QLabel, QFormLayout
+from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebHitTestResult, QWebElement, QWebView, QWebElementCollection
 
 from .Ui_ClickToFlash import Ui_ClickToFlash
@@ -44,8 +45,11 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
         if manager.isEnabled():
             urlString = bytes(url.toEncoded()).decode()
+            urlDomain = url.host()
             for subscription in manager.subscriptions():
-                if not subscription.allow(urlString) and subscription.block(urlString):
+                blockedRule = subscription.match(
+                    QNetworkRequest(url), urlDomain, urlString)
+                if blockedRule:
                     QTimer.singleShot(200, self.__hideAdBlocked)
                     return
         
@@ -236,7 +240,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         """
         self.__findElement()
         if not self.__element.isNull():
-            self.__element.setStyleProperty("visibility", "hidden")
+            self.__element.setStyleProperty("display", "none")
         else:
             self.hide()
     

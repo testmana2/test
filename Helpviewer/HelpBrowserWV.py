@@ -45,6 +45,8 @@ from .OpenSearch.OpenSearchEngine import OpenSearchEngine
 
 from .WebPlugins.WebPluginFactory import WebPluginFactory
 
+from .AdBlock.AdBlockPage import AdBlockedPageEntry
+
 ##########################################################################################
 
 
@@ -181,6 +183,9 @@ class HelpWebPage(QWebPage):
         
         self.__sslConfiguration = None
         self.__proxy.finished.connect(self.__managerFinished)
+        
+        self.__adBlockedEntries = []
+        self.loadStarted.connect(self.__loadStarted)
     
     def acceptNavigationRequest(self, frame, request, type_):
         """
@@ -360,6 +365,39 @@ class HelpWebPage(QWebPage):
             return True
         
         return QWebPage.extension(self, extension, option, output)
+    
+    def __loadStarted(self):
+        """
+        Private method to handle the loadStarted signal.
+        """
+        self.__adBlockedEntries = []
+    
+    def addAdBlockRule(self, rule, url):
+        """
+        Public slot to add an AdBlock rule to the page.
+        
+        @param rule AdBlock rule to add (AdBlockRule)
+        @param url URL that matched the rule (QUrl)
+        """
+        entry = AdBlockedPageEntry(rule, url)
+        if entry not in self.__adBlockedEntries:
+            self.__adBlockedEntries.append(entry)
+    
+    def getAdBlockedPageEntries(self):
+        """
+        Public method to get the list of AdBlock page entries.
+        
+        @return list of AdBlock page entries (list of AdBlockedPageEntry)
+        """
+        return self.__adBlockedEntries
+    
+    def url(self):
+        """
+        Public method to get the URL of the page.
+        
+        @return URL of the page (QUrl)
+        """
+        return self.mainFrame().url()
     
     def userAgent(self, resolveEmpty=False):
         """
@@ -1671,7 +1709,7 @@ class HelpBrowser(QWebView):
             self.zoomOut()
         
         if ok:
-            self.mw.adblockManager().page().applyRulesToPage(self.page())
+            self.mw.adblockManager().page().hideBlockedPageEntries(self.page())
             self.mw.passwordManager().fill(self.page())
     
     def isLoading(self):

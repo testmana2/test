@@ -7,7 +7,7 @@
 Module implementing a class to apply AdBlock rules to a web page.
 """
 
-from PyQt4.QtCore import QObject
+from PyQt4.QtCore import QObject, QUrl
 
 import Helpviewer.HelpWindow
 
@@ -16,55 +16,11 @@ class AdBlockPage(QObject):
     """
     Class to apply AdBlock rules to a web page.
     """
-    def __checkRule(self, rule, page, host):
+    def hideBlockedPageEntries(self, page):
         """
-        Private method to check, if a rule applies to the given web page and host.
+        Public method to apply AdBlock rules to a web page.
         
-        @param rule reference to the rule to check (AdBlockRule)
-        @param page reference to the web page (QWebPage)
-        @param host host name (string)
-        """
-        if not rule.isEnabled():
-            return
-        
-        filter = rule.filter()
-        offset = filter.find("##")
-        if offset == -1:
-            return
-        
-        selectorQuery = ""
-        if offset > 0:
-            domainRules = filter[:offset]
-            selectorQuery = filter[offset + 2:]
-            domains = domainRules.split(",")
-            
-            match = False
-            for domain in domains:
-                reverse = domain[0] == '~'
-                if reverse:
-                    xdomain = domain[1:]
-                    if host.endswith(xdomain):
-                        return
-                    match = True
-                if host.endswith(domain):
-                    match = True
-            if not match:
-                return
-        
-        if offset == 0:
-            selectorQuery = filter[2:]
-        
-        document = page.mainFrame().documentElement()
-        elements = document.findAll(selectorQuery)
-        for element in elements.toList():
-            element.setStyleProperty("visibility", "hidden")
-            element.removeFromDocument()
-    
-    def applyRulesToPage(self, page):
-        """
-        Public method to applay AdBlock rules to a web page.
-        
-        @param page reference to the web page (QWebPage)
+        @param page reference to the web page (HelpWebPage)
         """
         if page is None or page.mainFrame() is None:
             return
@@ -73,9 +29,69 @@ class AdBlockPage(QObject):
         if not manager.isEnabled():
             return
         
-        host = page.mainFrame().url().host()
-        subscriptions = manager.subscriptions()
-        for subscription in subscriptions:
-            rules = subscription.pageRules()
-            for rule in rules:
-                self.__checkRule(rule, page, host)
+        docElement = page.mainFrame().documentElement()
+        
+        for entry in page.getAdBlockedPageEntries():
+            urlString = entry.urlString()
+            if urlString.endswith((".js", ".css")):
+                continue
+            
+            urlEnd = ""
+            pos = urlString.rfind("/")
+            if pos >= 0:
+                urlEnd = urlString[pos + 1:]
+            if urlString.endswith("/"):
+                urlEnd = urlString[:-1]
+            
+            selector = 'img[src$="{0}"], iframe[src$="{0}"], embed[src$="{0}"]'\
+                       .format(urlEnd)
+            elements = docElement.findAll(selector)
+            
+            for element in elements:
+                src = element.attribute("src")
+                src = src.replace("../", "")
+                if src in urlString:
+                    element.setStyleProperty("display", "none")
+        
+        # apply domain specific element hiding rules
+        elementHiding = manager.elementHidingRulesForDomain(page.url())
+        if not elementHiding:
+            return
+        
+        elementHiding += "{display: none !important;}\n</style>"
+        
+        bodyElement = docElement.findFirst("body")
+        bodyElement.appendInside('<style type="text/css">\n/* AdBlock for eric */\n' + 
+                                 elementHiding)
+
+
+class AdBlockedPageEntry(object):
+    """
+    Class implementing a data structure for web page rules.
+    """
+    def __init__(self, rule, url):
+        """
+        Constructor
+        
+        @param rule AdBlock rule to add (AdBlockRule)
+        @param url URL that matched the rule (QUrl)
+        """
+        self.rule = rule
+        self.url = QUrl(url)
+    
+    def __eq__(self, other):
+        """
+        Special method to test equality.
+        
+        @param other reference to the other entry (AdBlockedPageEntry)
+        @return flag indicating equality (boolean)
+        """
+        return self.rule == other.rule and self.url == other.url
+    
+    def urlString(self):
+        """
+        Public method to get the URL as a string.
+        
+        @return URL as a string (string)
+        """
+        return self.url.toString()

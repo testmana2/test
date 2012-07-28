@@ -85,6 +85,12 @@ QObject
 <td><a href="#AdBlockManager.customRules">customRules</a></td>
 <td>Public method to get a subscription for custom rules.</td>
 </tr><tr>
+<td><a href="#AdBlockManager.elementHidingRules">elementHidingRules</a></td>
+<td>Public method to get the element hiding rules.</td>
+</tr><tr>
+<td><a href="#AdBlockManager.elementHidingRulesForDomain">elementHidingRulesForDomain</a></td>
+<td>Public method to get the element hiding rules for a domain.</td>
+</tr><tr>
 <td><a href="#AdBlockManager.isEnabled">isEnabled</a></td>
 <td>Public method to check, if blocking ads is enabled.</td>
 </tr><tr>
@@ -176,6 +182,31 @@ AdBlock subscription to be added (AdBlockSubscription)
 <dt>Returns:</dt>
 <dd>
 subscription object for custom rules (AdBlockSubscription)
+</dd>
+</dl><a NAME="AdBlockManager.elementHidingRules" ID="AdBlockManager.elementHidingRules"></a>
+<h4>AdBlockManager.elementHidingRules</h4>
+<b>elementHidingRules</b>(<i></i>)
+<p>
+        Public method to get the element hiding rules.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+element hiding rules (string)
+</dd>
+</dl><a NAME="AdBlockManager.elementHidingRulesForDomain" ID="AdBlockManager.elementHidingRulesForDomain"></a>
+<h4>AdBlockManager.elementHidingRulesForDomain</h4>
+<b>elementHidingRulesForDomain</b>(<i>url</i>)
+<p>
+        Public method to get the element hiding rules for a domain.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to get hiding rules for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+element hiding rules (string)
 </dd>
 </dl><a NAME="AdBlockManager.isEnabled" ID="AdBlockManager.isEnabled"></a>
 <h4>AdBlockManager.isEnabled</h4>

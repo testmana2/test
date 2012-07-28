@@ -82,20 +82,26 @@ QObject
 <td><a href="#AdBlockSubscription.__rulesDownloaded">__rulesDownloaded</a></td>
 <td>Private slot to deal with the downloaded rules.</td>
 </tr><tr>
+<td><a href="#AdBlockSubscription.adBlockDisabledForUrl">adBlockDisabledForUrl</a></td>
+<td>Public method to check, if AdBlock is disabled for the given URL.</td>
+</tr><tr>
 <td><a href="#AdBlockSubscription.addRule">addRule</a></td>
 <td>Public method to add a rule.</td>
 </tr><tr>
 <td><a href="#AdBlockSubscription.allRules">allRules</a></td>
 <td>Public method to get the list of rules.</td>
 </tr><tr>
-<td><a href="#AdBlockSubscription.allow">allow</a></td>
-<td>Public method to check, if the given URL is allowed.</td>
-</tr><tr>
-<td><a href="#AdBlockSubscription.block">block</a></td>
-<td>Public method to check, if the given URL should be blocked.</td>
-</tr><tr>
 <td><a href="#AdBlockSubscription.checkForUpdate">checkForUpdate</a></td>
 <td>Public method to check for an update.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.elemHideDisabledForUrl">elemHideDisabledForUrl</a></td>
+<td>Public method to check, if element hiding is disabled for the given URL.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.elementHidingRules">elementHidingRules</a></td>
+<td>Public method to get the element hiding rules.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.elementHidingRulesForDomain">elementHidingRulesForDomain</a></td>
+<td>Public method to get the element hiding rules for the given domain.</td>
 </tr><tr>
 <td><a href="#AdBlockSubscription.isEnabled">isEnabled</a></td>
 <td>Public method to check, if the subscription is enabled.</td>
@@ -106,8 +112,8 @@ QObject
 <td><a href="#AdBlockSubscription.location">location</a></td>
 <td>Public method to get the subscription location.</td>
 </tr><tr>
-<td><a href="#AdBlockSubscription.pageRules">pageRules</a></td>
-<td>Public method to get the page rules of the subscription.</td>
+<td><a href="#AdBlockSubscription.match">match</a></td>
+<td>Public method to check the subscription for a matching rule.</td>
 </tr><tr>
 <td><a href="#AdBlockSubscription.removeRule">removeRule</a></td>
 <td>Public method to remove a rule given the offset.</td>
@@ -137,7 +143,7 @@ QObject
 <td>Public method to update the subscription immediately.</td>
 </tr><tr>
 <td><a href="#AdBlockSubscription.url">url</a></td>
-<td>Public method to generate the url for this subscription.</td>
+<td>Public method to generate the URL for this subscription.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -185,7 +191,22 @@ AdBlock URL for the subscription (QUrl)
 <b>__rulesDownloaded</b>(<i></i>)
 <p>
         Private slot to deal with the downloaded rules.
-</p><a NAME="AdBlockSubscription.addRule" ID="AdBlockSubscription.addRule"></a>
+</p><a NAME="AdBlockSubscription.adBlockDisabledForUrl" ID="AdBlockSubscription.adBlockDisabledForUrl"></a>
+<h4>AdBlockSubscription.adBlockDisabledForUrl</h4>
+<b>adBlockDisabledForUrl</b>(<i>url</i>)
+<p>
+        Public method to check, if AdBlock is disabled for the given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to check (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating disabled state (boolean)
+</dd>
+</dl><a NAME="AdBlockSubscription.addRule" ID="AdBlockSubscription.addRule"></a>
 <h4>AdBlockSubscription.addRule</h4>
 <b>addRule</b>(<i>rule</i>)
 <p>
@@ -205,32 +226,52 @@ reference to the rule to add (AdBlockRule)
 <dd>
 list of rules (list of AdBlockRule)
 </dd>
-</dl><a NAME="AdBlockSubscription.allow" ID="AdBlockSubscription.allow"></a>
-<h4>AdBlockSubscription.allow</h4>
-<b>allow</b>(<i>urlString</i>)
-<p>
-        Public method to check, if the given URL is allowed.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the rule object or None (AdBlockRule)
-</dd>
-</dl><a NAME="AdBlockSubscription.block" ID="AdBlockSubscription.block"></a>
-<h4>AdBlockSubscription.block</h4>
-<b>block</b>(<i>urlString</i>)
-<p>
-        Public method to check, if the given URL should be blocked.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the rule object or None (AdBlockRule)
-</dd>
 </dl><a NAME="AdBlockSubscription.checkForUpdate" ID="AdBlockSubscription.checkForUpdate"></a>
 <h4>AdBlockSubscription.checkForUpdate</h4>
 <b>checkForUpdate</b>(<i></i>)
 <p>
         Public method to check for an update.
-</p><a NAME="AdBlockSubscription.isEnabled" ID="AdBlockSubscription.isEnabled"></a>
+</p><a NAME="AdBlockSubscription.elemHideDisabledForUrl" ID="AdBlockSubscription.elemHideDisabledForUrl"></a>
+<h4>AdBlockSubscription.elemHideDisabledForUrl</h4>
+<b>elemHideDisabledForUrl</b>(<i>url</i>)
+<p>
+        Public method to check, if element hiding is disabled for the given URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to check (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating disabled state (boolean)
+</dd>
+</dl><a NAME="AdBlockSubscription.elementHidingRules" ID="AdBlockSubscription.elementHidingRules"></a>
+<h4>AdBlockSubscription.elementHidingRules</h4>
+<b>elementHidingRules</b>(<i></i>)
+<p>
+        Public method to get the element hiding rules.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+element hiding rules (string)
+</dd>
+</dl><a NAME="AdBlockSubscription.elementHidingRulesForDomain" ID="AdBlockSubscription.elementHidingRulesForDomain"></a>
+<h4>AdBlockSubscription.elementHidingRulesForDomain</h4>
+<b>elementHidingRulesForDomain</b>(<i>domain</i>)
+<p>
+        Public method to get the element hiding rules for the given domain.
+</p><dl>
+<dt><i>domain</i></dt>
+<dd>
+domain name (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+element hiding rules (string)
+</dd>
+</dl><a NAME="AdBlockSubscription.isEnabled" ID="AdBlockSubscription.isEnabled"></a>
 <h4>AdBlockSubscription.isEnabled</h4>
 <b>isEnabled</b>(<i></i>)
 <p>
@@ -260,15 +301,26 @@ date and time of the last update (QDateTime)
 <dd>
 URL of the subscription location (QUrl)
 </dd>
-</dl><a NAME="AdBlockSubscription.pageRules" ID="AdBlockSubscription.pageRules"></a>
-<h4>AdBlockSubscription.pageRules</h4>
-<b>pageRules</b>(<i></i>)
+</dl><a NAME="AdBlockSubscription.match" ID="AdBlockSubscription.match"></a>
+<h4>AdBlockSubscription.match</h4>
+<b>match</b>(<i>req, urlDomain, urlString</i>)
 <p>
-        Public method to get the page rules of the subscription.
+        Public method to check the subscription for a matching rule.
 </p><dl>
+<dt><i>req</i></dt>
+<dd>
+reference to the network request (QNetworkRequest)
+</dd><dt><i>urlDomain</i></dt>
+<dd>
+domain of the URL (string)
+</dd><dt><i>urlString</i></dt>
+<dd>
+URL (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
-list of rule objects (list of AdBlockRule)
+reference to the rule object or None (AdBlockRule)
 </dd>
 </dl><a NAME="AdBlockSubscription.removeRule" ID="AdBlockSubscription.removeRule"></a>
 <h4>AdBlockSubscription.removeRule</h4>
@@ -357,7 +409,7 @@ subscription title (string)
 <h4>AdBlockSubscription.url</h4>
 <b>url</b>(<i></i>)
 <p>
-        Public method to generate the url for this subscription.
+        Public method to generate the URL for this subscription.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
