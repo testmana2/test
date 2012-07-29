@@ -1156,6 +1156,10 @@ eric5.E5Gui.E5Application.E5Application.registerPluginObject?4(name, object, plu
 eric5.E5Gui.E5Application.E5Application.unregisterPluginObject?4(name)
 eric5.E5Gui.E5Application.E5Application?1(argv)
 eric5.E5Gui.E5Application.e5App?7
+eric5.E5Gui.E5ClickableLabel.E5ClickableLabel.clicked?7
+eric5.E5Gui.E5ClickableLabel.E5ClickableLabel.middleClicked?7
+eric5.E5Gui.E5ClickableLabel.E5ClickableLabel.mouseReleaseEvent?4(evt)
+eric5.E5Gui.E5ClickableLabel.E5ClickableLabel?1(parent=None)
 eric5.E5Gui.E5Completers.E5DirCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5FileCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5StringListCompleter?1(parent=None, strings=[], completionMode=QCompleter.PopupCompletion)
@@ -1689,7 +1693,11 @@ eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.addCustomRule?4(rule="")
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.model?4()
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.on_updateSpinBox_valueChanged?4(value)
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.setCurrentIndex?4(index)
+eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog.showRule?4(rule)
 eric5.Helpviewer.AdBlock.AdBlockDialog.AdBlockDialog?1(parent=None)
+eric5.Helpviewer.AdBlock.AdBlockIcon.AdBlockIcon.menuAction?4()
+eric5.Helpviewer.AdBlock.AdBlockIcon.AdBlockIcon.setEnabled?4(enabled)
+eric5.Helpviewer.AdBlock.AdBlockIcon.AdBlockIcon?1(parent)
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.addSubscription?4(subscription)
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.close?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.customRules?4()
@@ -1704,6 +1712,7 @@ eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.rulesChanged?7
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.save?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.setEnabled?4(enabled)
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.showDialog?4()
+eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.showRule?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager.subscriptions?4()
 eric5.Helpviewer.AdBlock.AdBlockManager.AdBlockManager?1(parent=None)
 eric5.Helpviewer.AdBlock.AdBlockModel.AdBlockModel.columnCount?4(parent=QModelIndex())
@@ -1745,8 +1754,9 @@ eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.networkMatch?4(request, domain,
 eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setEnabled?4(enabled)
 eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setException?4(exception)
 eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.setFilter?4(filter)
+eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.subscription?4()
 eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule.urlMatch?4(url)
-eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule?1(filter="")
+eric5.Helpviewer.AdBlock.AdBlockRule.AdBlockRule?1(filter="", subscription=None)
 eric5.Helpviewer.AdBlock.AdBlockRule.toSecondLevelDomain?4(url)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.adBlockDisabledForUrl?4(url)
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.addRule?4(rule)
@@ -2337,6 +2347,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._personalInformationManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._speedDial?8
 eric5.Helpviewer.HelpWindow.HelpWindow._syncManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow.adBlockIcon?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.adblockManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarkAll?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarksManager?4()
@@ -2359,6 +2370,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.historyManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.icon?4(url)
 eric5.Helpviewer.HelpWindow.HelpWindow.keyPressEvent?4(evt)
 eric5.Helpviewer.HelpWindow.HelpWindow.mainWindow?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.mainWindows?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.masterPasswordChanged?4(oldPassword, newPassword)
 eric5.Helpviewer.HelpWindow.HelpWindow.maxMenuFilePathLen?7
 eric5.Helpviewer.HelpWindow.HelpWindow.mousePressEvent?4(evt)

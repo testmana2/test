@@ -16,6 +16,8 @@ from .AdBlockPage import AdBlockPage
 from .AdBlockSubscription import AdBlockSubscription
 from .AdBlockDialog import AdBlockDialog
 
+import Helpviewer.HelpWindow
+
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
@@ -75,6 +77,8 @@ class AdBlockManager(QObject):
             return
         
         self.__enabled = enabled
+        for mainWindow in Helpviewer.HelpWindow.HelpWindow.mainWindows():
+            mainWindow.adBlockIcon().setEnabled(enabled)
         if enabled:
             self.__loadSubscriptions()
         self.rulesChanged.emit()
@@ -221,7 +225,8 @@ class AdBlockManager(QObject):
             return
         
         defaultSubscriptionUrl = \
-            "abp:subscribe?location=http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList"
+            "abp:subscribe?location=" \
+            "http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList"
         defaultSubscriptions = []
         defaultSubscriptions.append(
             bytes(self.__customSubscriptionUrl().toEncoded()).decode())
@@ -249,6 +254,16 @@ class AdBlockManager(QObject):
         
         self.__adBlockDialog.show()
         return self.__adBlockDialog
+    
+    def showRule(self):
+        """
+        Public slot to show an AdBlock rule.
+        """
+        act = self.sender()
+        if act is not None:
+            rule = act.data()
+            if rule:
+                self.showDialog().showRule(rule)
     
     def elementHidingRules(self):
         """

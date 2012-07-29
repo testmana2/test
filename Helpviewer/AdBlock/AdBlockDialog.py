@@ -7,7 +7,7 @@
 Module implementing the AdBlock configuration dialog.
 """
 
-from PyQt4.QtCore import pyqtSlot, QUrl
+from PyQt4.QtCore import pyqtSlot, Qt, QUrl
 from PyQt4.QtGui import QDialog, QMenu, QToolButton, QApplication, QDesktopServices
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
@@ -113,7 +113,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
         subscription = manager.customRules()
         assert subscription is not None
-        subscription.addRule(AdBlockRule(rule))
+        subscription.addRule(AdBlockRule(rule, subscription))
         QApplication.processEvents()
         
         parent = self.__adBlockModel.subscriptionIndex(subscription)
@@ -172,3 +172,31 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
             manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
             for subscription in manager.subscriptions():
                 subscription.checkForUpdate()
+    
+    def showRule(self, rule):
+        """
+        Public slot to show the given rule.
+        
+        @param rule rule to be shown (AdBlockRule)
+        """
+        if rule is None:
+            return
+        
+        subscription = rule.subscription()
+        if subscription is None:
+            return
+        
+        self.searchEdit.clear()
+        
+        subscriptionIndex = self.__adBlockModel.subscriptionIndex(subscription)
+        subscriptionProxyIndex = self.__proxyModel.mapFromSource(subscriptionIndex)
+        filter = rule.filter()
+        if filter:
+            indexes = self.__proxyModel.match(
+                subscriptionProxyIndex, Qt.DisplayRole, filter, 1,
+                Qt.MatchStartsWith | Qt.MatchRecursive)
+            if indexes:
+                self.subscriptionsTree.expand(subscriptionProxyIndex)
+                self.subscriptionsTree.scrollTo(indexes[0])
+                self.subscriptionsTree.setCurrentIndex(indexes[0])
+                self.raise_()

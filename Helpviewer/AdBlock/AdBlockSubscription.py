@@ -225,7 +225,7 @@ class AdBlockSubscription(QObject):
                     self.__rules = []
                     while not textStream.atEnd():
                         line = textStream.readLine()
-                        self.__rules.append(AdBlockRule(line))
+                        self.__rules.append(AdBlockRule(line, self))
                     self.__populateCache()
                     self.changed.emit()
         

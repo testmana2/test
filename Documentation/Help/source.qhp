@@ -114,6 +114,7 @@
           <section title="eric5.E5Gui" ref="index-eric5.E5Gui.html">
             <section title="eric5.E5Gui.E5Action" ref="eric5.E5Gui.E5Action.html" />
             <section title="eric5.E5Gui.E5Application" ref="eric5.E5Gui.E5Application.html" />
+            <section title="eric5.E5Gui.E5ClickableLabel" ref="eric5.E5Gui.E5ClickableLabel.html" />
             <section title="eric5.E5Gui.E5Completers" ref="eric5.E5Gui.E5Completers.html" />
             <section title="eric5.E5Gui.E5FileDialog" ref="eric5.E5Gui.E5FileDialog.html" />
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
@@ -192,6 +193,7 @@
               <section title="eric5.Helpviewer.AdBlock.AdBlockAccessHandler" ref="eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply" ref="eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockDialog" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html" />
+              <section title="eric5.Helpviewer.AdBlock.AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockModel" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockNetwork" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html" />
@@ -1061,6 +1063,15 @@
       <keyword name="AdBlockDialog.model" id="AdBlockDialog.model" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.model" />
       <keyword name="AdBlockDialog.on_updateSpinBox_valueChanged" id="AdBlockDialog.on_updateSpinBox_valueChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_updateSpinBox_valueChanged" />
       <keyword name="AdBlockDialog.setCurrentIndex" id="AdBlockDialog.setCurrentIndex" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.setCurrentIndex" />
+      <keyword name="AdBlockDialog.showRule" id="AdBlockDialog.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.showRule" />
+      <keyword name="AdBlockIcon" id="AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon" />
+      <keyword name="AdBlockIcon (Constructor)" id="AdBlockIcon (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__init__" />
+      <keyword name="AdBlockIcon (Module)" id="AdBlockIcon (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html" />
+      <keyword name="AdBlockIcon.__createMenu" id="AdBlockIcon.__createMenu" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__createMenu" />
+      <keyword name="AdBlockIcon.__enableAdBlock" id="AdBlockIcon.__enableAdBlock" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__enableAdBlock" />
+      <keyword name="AdBlockIcon.__showMenu" id="AdBlockIcon.__showMenu" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__showMenu" />
+      <keyword name="AdBlockIcon.menuAction" id="AdBlockIcon.menuAction" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.menuAction" />
+      <keyword name="AdBlockIcon.setEnabled" id="AdBlockIcon.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.setEnabled" />
       <keyword name="AdBlockManager" id="AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager" />
       <keyword name="AdBlockManager (Constructor)" id="AdBlockManager (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__init__" />
       <keyword name="AdBlockManager (Module)" id="AdBlockManager (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html" />
@@ -1080,6 +1091,7 @@
       <keyword name="AdBlockManager.save" id="AdBlockManager.save" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.save" />
       <keyword name="AdBlockManager.setEnabled" id="AdBlockManager.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.setEnabled" />
       <keyword name="AdBlockManager.showDialog" id="AdBlockManager.showDialog" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showDialog" />
+      <keyword name="AdBlockManager.showRule" id="AdBlockManager.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showRule" />
       <keyword name="AdBlockManager.subscriptions" id="AdBlockManager.subscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.subscriptions" />
       <keyword name="AdBlockModel" id="AdBlockModel" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel" />
       <keyword name="AdBlockModel (Constructor)" id="AdBlockModel (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.__init__" />
@@ -1132,6 +1144,7 @@
       <keyword name="AdBlockRule.setEnabled" id="AdBlockRule.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.setEnabled" />
       <keyword name="AdBlockRule.setException" id="AdBlockRule.setException" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.setException" />
       <keyword name="AdBlockRule.setFilter" id="AdBlockRule.setFilter" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.setFilter" />
+      <keyword name="AdBlockRule.subscription" id="AdBlockRule.subscription" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.subscription" />
       <keyword name="AdBlockRule.urlMatch" id="AdBlockRule.urlMatch" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.urlMatch" />
       <keyword name="AdBlockSubscription" id="AdBlockSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription" />
       <keyword name="AdBlockSubscription (Constructor)" id="AdBlockSubscription (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.__init__" />
@@ -3230,6 +3243,10 @@
       <keyword name="E5ArrowItem.setEndPoint" id="E5ArrowItem.setEndPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setEndPoint" />
       <keyword name="E5ArrowItem.setPoints" id="E5ArrowItem.setPoints" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setPoints" />
       <keyword name="E5ArrowItem.setStartPoint" id="E5ArrowItem.setStartPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setStartPoint" />
+      <keyword name="E5ClickableLabel" id="E5ClickableLabel" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel" />
+      <keyword name="E5ClickableLabel (Constructor)" id="E5ClickableLabel (Constructor)" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.__init__" />
+      <keyword name="E5ClickableLabel (Module)" id="E5ClickableLabel (Module)" ref="eric5.E5Gui.E5ClickableLabel.html" />
+      <keyword name="E5ClickableLabel.mouseReleaseEvent" id="E5ClickableLabel.mouseReleaseEvent" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.mouseReleaseEvent" />
       <keyword name="E5Completers (Module)" id="E5Completers (Module)" ref="eric5.E5Gui.E5Completers.html" />
       <keyword name="E5DirCompleter" id="E5DirCompleter" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter" />
       <keyword name="E5DirCompleter (Constructor)" id="E5DirCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter.__init__" />
@@ -4980,6 +4997,7 @@
       <keyword name="HelpWindow.__zoomOut" id="HelpWindow.__zoomOut" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomOut" />
       <keyword name="HelpWindow.__zoomReset" id="HelpWindow.__zoomReset" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomReset" />
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
+      <keyword name="HelpWindow.adBlockIcon" id="HelpWindow.adBlockIcon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adBlockIcon" />
       <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
       <keyword name="HelpWindow.bookmarkAll" id="HelpWindow.bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarkAll" />
       <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
@@ -5000,6 +5018,7 @@
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
       <keyword name="HelpWindow.keyPressEvent" id="HelpWindow.keyPressEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.keyPressEvent" />
       <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
+      <keyword name="HelpWindow.mainWindows" id="HelpWindow.mainWindows" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindows" />
       <keyword name="HelpWindow.masterPasswordChanged" id="HelpWindow.masterPasswordChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.masterPasswordChanged" />
       <keyword name="HelpWindow.mousePressEvent" id="HelpWindow.mousePressEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mousePressEvent" />
       <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
@@ -12321,6 +12340,7 @@
       <file>eric5.E5Graphics.E5GraphicsView.html</file>
       <file>eric5.E5Gui.E5Action.html</file>
       <file>eric5.E5Gui.E5Application.html</file>
+      <file>eric5.E5Gui.E5ClickableLabel.html</file>
       <file>eric5.E5Gui.E5Completers.html</file>
       <file>eric5.E5Gui.E5FileDialog.html</file>
       <file>eric5.E5Gui.E5Led.html</file>
@@ -12388,6 +12408,7 @@
       <file>eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockDialog.html</file>
+      <file>eric5.Helpviewer.AdBlock.AdBlockIcon.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockManager.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockModel.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockNetwork.html</file>

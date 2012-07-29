@@ -6,6 +6,7 @@ AboutPlugin QObject
 AdBlockAccessHandler SchemeAccessHandler
 AdBlockBlockedNetworkReply QNetworkReply
 AdBlockDialog QDialog Ui_AdBlockDialog
+AdBlockIcon E5ClickableLabel
 AdBlockManager QObject
 AdBlockModel QAbstractItemModel
 AdBlockNetwork QObject
@@ -127,6 +128,7 @@ DuplicateArgument Message
 E5Action QAction
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
+E5ClickableLabel QLabel
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
 E5FileCompleter QCompleter

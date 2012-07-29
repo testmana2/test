@@ -53,10 +53,12 @@ class AdBlockRule(object):
     """
     Class implementing the AdBlock rule.
     """
-    def __init__(self, filter=""):
+    def __init__(self, filter="", subscription=None):
         """
         Constructor
         """
+        self.__subscription = subscription
+        
         self.__regExp = QRegExp()
         self.__options = []
         self.__blockedDomains = []
@@ -83,6 +85,14 @@ class AdBlockRule(object):
         self.__caseSensitivity = Qt.CaseInsensitive
         
         self.setFilter(filter)
+    
+    def subscription(self):
+        """
+        Public method to get the subscription this rule belongs to.
+        
+        @return subscription of the rule (AdBlockSubscription)
+        """
+        return self.__subscription
     
     def filter(self):
         """

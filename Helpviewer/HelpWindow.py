@@ -44,6 +44,7 @@ from .History.HistoryMenu import HistoryMenu
 from .Passwords.PasswordManager import PasswordManager
 from .Network.NetworkAccessManager import NetworkAccessManager, SSL_AVAILABLE
 from .AdBlock.AdBlockManager import AdBlockManager
+from .AdBlock.AdBlockIcon import AdBlockIcon
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
 from .UserAgent.UserAgentManager import UserAgentManager
@@ -204,6 +205,10 @@ class HelpWindow(QMainWindow):
             
             self.__setIconDatabasePath()
             self.__initWebSettings()
+            
+            self.__adBlockIcon = AdBlockIcon(self)
+            self.statusBar().addPermanentWidget(self.__adBlockIcon)
+            self.__adBlockIcon.setEnabled(Preferences.getHelp("AdBlockEnabled"))
             
             self.__initActions()
             self.__initMenus()
@@ -2437,7 +2442,7 @@ class HelpWindow(QMainWindow):
             progressBar.setSizePolicy(sizePolicy)
             layout.addWidget(progressBar)
             
-            self.statusBar().addPermanentWidget(self.__indexingProgress)
+            self.statusBar().insertPermanentWidget(0, self.__indexingProgress)
         
     def __indexingFinished(self):
         """
@@ -2838,6 +2843,14 @@ class HelpWindow(QMainWindow):
         
         return cls._adblockManager
     
+    def adBlockIcon(self):
+        """
+        Public method to get a reference to the AdBlock icon.
+        
+        @return reference to the AdBlock icon (AdBlockIcon)
+        """
+        return self.__adBlockIcon
+    
     @classmethod
     def downloadManager(cls):
         """
@@ -2885,6 +2898,15 @@ class HelpWindow(QMainWindow):
             return cls.helpwindows[0]
         else:
             return None
+        
+    @classmethod
+    def mainWindows(cls):
+        """
+        Class method to get references to all main windows.
+        
+        @return references to all main window (list of HelpWindow)
+        """
+        return cls.helpwindows
         
     def openSearchManager(self):
         """

@@ -133,6 +133,9 @@ object
 <td><a href="#AdBlockRule.setFilter">setFilter</a></td>
 <td>Public method to set the rule filter string.</td>
 </tr><tr>
+<td><a href="#AdBlockRule.subscription">subscription</a></td>
+<td>Public method to get the subscription this rule belongs to.</td>
+</tr><tr>
 <td><a href="#AdBlockRule.urlMatch">urlMatch</a></td>
 <td>Public method to check an URL against the rule.</td>
 </tr>
@@ -143,7 +146,7 @@ object
 </table>
 <a NAME="AdBlockRule.__init__" ID="AdBlockRule.__init__"></a>
 <h4>AdBlockRule (Constructor)</h4>
-<b>AdBlockRule</b>(<i>filter=""</i>)
+<b>AdBlockRule</b>(<i>filter="", subscription=None</i>)
 <p>
         Constructor
 </p><a NAME="AdBlockRule.__convertPatternToRegExp" ID="AdBlockRule.__convertPatternToRegExp"></a>
@@ -414,6 +417,16 @@ flag indicating an exception rule (boolean)
 <dt><i>filter</i></dt>
 <dd>
 rule filter string (string)
+</dd>
+</dl><a NAME="AdBlockRule.subscription" ID="AdBlockRule.subscription"></a>
+<h4>AdBlockRule.subscription</h4>
+<b>subscription</b>(<i></i>)
+<p>
+        Public method to get the subscription this rule belongs to.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+subscription of the rule (AdBlockSubscription)
 </dd>
 </dl><a NAME="AdBlockRule.urlMatch" ID="AdBlockRule.urlMatch"></a>
 <h4>AdBlockRule.urlMatch</h4>
