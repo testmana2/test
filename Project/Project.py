@@ -1891,8 +1891,12 @@ class Project(QObject):
                 try:
                     ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
                     if not os.path.exists(ms):
-                        f = open(ms, "w")
-                        f.close()
+                        try:
+                            f = open(ms, "w")
+                            f.close()
+                        except IOError:
+                            # silently ignore it
+                            pass
                     self.appendFile(ms)
                 except IndexError:
                     ms = ""
