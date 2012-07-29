@@ -57,7 +57,7 @@ class HgRemoveSubrepositoriesDialog(QDialog, Ui_HgRemoveSubrepositoriesDialog):
             list of strings, boolean)
         """
         return (
-            [self.subrepositories.item(row).text() 
+            [self.subrepositories.item(row).text()
              for row in range(self.subrepositories.count())],
             self.__removed,
             self.deleteCheckBox.isChecked()

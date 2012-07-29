@@ -367,7 +367,7 @@ class HelpWindow(QMainWindow):
             settings.setAttribute(QWebSettings.SiteSpecificQuirksEnabled,
                 Preferences.getHelp("SiteSpecificQuirksEnabled"))
         
-        QWebSecurityOrigin.addLocalScheme("eric");
+        QWebSecurityOrigin.addLocalScheme("eric")
     
     def __initActions(self):
         """

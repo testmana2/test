@@ -25,7 +25,7 @@ class SnapshotTimer(QWidget):
         """
         super().__init__(None)
         
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint | 
+        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint |
                             Qt.X11BypassWindowManagerHint)
         
         self.__timer = QTimer()

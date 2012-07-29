@@ -70,7 +70,7 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
                 complete = False
             else:
                 if self.reencryptCheckBox.isChecked():
-                    complete = (self.encryptionKeyEdit.text() == 
+                    complete = (self.encryptionKeyEdit.text() ==
                                 self.encryptionKeyAgainEdit.text())
                 else:
                     complete = True

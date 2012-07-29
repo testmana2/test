@@ -9,6 +9,7 @@ Module implementing a base class for the bookmarks importers.
 
 from PyQt4.QtCore import QObject
 
+
 class BookmarksImporter(QObject):
     """
     Class implementing the base class for the bookmarks importers.

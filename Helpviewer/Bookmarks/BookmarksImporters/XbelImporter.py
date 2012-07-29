@@ -68,7 +68,7 @@ def getImporterInfo(id):
                 " (*.xbel *.xml)",
             QCoreApplication.translate("XbelImporter",
                 """You can import bookmarks from any browser that supports XBEL """
-                """exporting. This file has usually the extension .xbel or .xml.""" ),
+                """exporting. This file has usually the extension .xbel or .xml."""),
             QCoreApplication.translate("XbelImporter",
                 """Please choose the file to begin importing bookmarks."""),
             "",

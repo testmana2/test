@@ -868,7 +868,7 @@ class HelpTabWidget(E5TabWidget):
         act = self.sender()
         tab = self.__closedTabsManager.getClosedTabAt(act.data())
         
-        self.newBrowser(tab.url.toString(), position = tab.position)
+        self.newBrowser(tab.url.toString(), position=tab.position)
     
     def canRestoreClosedTab(self):
         """
@@ -886,7 +886,7 @@ class HelpTabWidget(E5TabWidget):
             return
         
         for tab in self.__closedTabsManager.allClosedTabs():
-            self.newBrowser(tab.url.toString(), position = tab.position)
+            self.newBrowser(tab.url.toString(), position=tab.position)
         self.__closedTabsManager.clearList()
     
     def clearClosedTabsList(self):
@@ -906,7 +906,7 @@ class HelpTabWidget(E5TabWidget):
         index = 0
         for tab in self.__closedTabsManager.allClosedTabs():
             title = fm.elidedText(tab.title, Qt.ElideRight, maxWidth)
-            self.__closedTabsMenu.addAction(self.__mainWindow.icon(tab.url), title, 
+            self.__closedTabsMenu.addAction(self.__mainWindow.icon(tab.url), title,
                 self.restoreClosedTab).setData(index)
             index += 1
         self.__closedTabsMenu.addSeparator()

@@ -87,7 +87,7 @@ class Prefs(object):
         "PathTranslationRemote": "",
         "PathTranslationLocal": "",
         "NetworkInterface": "127.0.0.1",
-        "AutoViewSourceCode" : False, 
+        "AutoViewSourceCode": False,
     }
     debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
     
@@ -654,7 +654,7 @@ class Prefs(object):
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
         "SendReferer": True,
-        "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"], 
+        "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"],
         "RssFeeds": [],
         "SyncEnabled": False,
         "SyncBookmarks": True,

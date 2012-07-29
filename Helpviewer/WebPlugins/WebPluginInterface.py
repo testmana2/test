@@ -7,6 +7,7 @@
 Module implementing the web plug-in interface.
 """
 
+
 class WebPluginInterface(object):
     """
     Class implementing the web plug-in interface.

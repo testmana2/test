@@ -147,9 +147,9 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
             substitute.setAttribute("type", self.__mimeType)
             self.__element.replace(substitute)
 
-            ClickToFlash._acceptedUrl = self.__url;
-            ClickToFlash._acceptedArgNames = self.__argumentNames;
-            ClickToFlash._acceptedArgValues = self.__argumentValues;
+            ClickToFlash._acceptedUrl = self.__url
+            ClickToFlash._acceptedArgNames = self.__argumentNames
+            ClickToFlash._acceptedArgValues = self.__argumentValues
     
     def __findElement(self):
         """

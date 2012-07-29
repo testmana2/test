@@ -23,47 +23,47 @@ class ClickToFlashPlugin(WebPluginInterface):
     Class implementing the flash blocker plug-in.
     """
     ClickToFlashData = {
-        "application/x-shockwave-flash" : {
+        "application/x-shockwave-flash": {
             "extensions": ["swf"],
             "icon": "flashBlock-flash.png"
         },
-        "application/futuresplash" : {
+        "application/futuresplash": {
             "extensions": ["spl"],
             "icon": "flashBlock-flash.png"
         },
-        "application/x-director" : {
+        "application/x-director": {
             "extensions": ["dir", "dcr", "dxr"],
             "icon": "flashBlock-director.png"
         },
-        "application/x-authorware-map" : {
+        "application/x-authorware-map": {
             "extensions": ["aam"],
             "icon": "flashBlock-authorware.png"
         },
-        "application/x-authorware-seg" : {
+        "application/x-authorware-seg": {
             "extensions": ["aas"],
             "icon": "flashBlock-authorware.png"
         },
-        "application/x-authorware-bin" : {
+        "application/x-authorware-bin": {
             "extensions": ["aab", "x32", "u32", "vox"],
             "icon": "flashBlock-authorware.png"
         },
-        "image/x-freehand" : {
+        "image/x-freehand": {
             "extensions": ["fh4", "fh7", "fh5", "fhc", "fh"],
             "icon": "flashBlock-freehand.png"
         },
-        "application/x-silverlight-app" : {
+        "application/x-silverlight-app": {
             "extensions": ["xap"],
             "icon": "flashBlock-silverlight.png"
         },
-        "application/xaml+xml" : {
+        "application/xaml+xml": {
             "extensions": ["xaml"],
             "icon": "flashBlock-silverlight.png"
         },
-        "application/x-ms-xbap" : {
+        "application/x-ms-xbap": {
             "extensions": ["xbap"],
             "icon": "flashBlock-silverlight.png"
         },
-        "application/x-java-applet" : {
+        "application/x-java-applet": {
             "extensions": [],
             "icon": "flashBlock-java.png"
         },

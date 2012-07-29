@@ -1094,7 +1094,7 @@ class Terminal(QsciScintillaCompat):
         @param txt text to search for (string)
         @param caseSensitive flag indicating to perform a case sensitive
             search (boolean)
-        @param wholeWord flag indicating to search for whole words 
+        @param wholeWord flag indicating to search for whole words
             only (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)
@@ -1115,7 +1115,7 @@ class Terminal(QsciScintillaCompat):
         @param txt text to search for (string)
         @param caseSensitive flag indicating to perform a case sensitive
             search (boolean)
-        @param wholeWord flag indicating to search for whole words 
+        @param wholeWord flag indicating to search for whole words
             only (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)

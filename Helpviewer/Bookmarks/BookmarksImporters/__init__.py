@@ -83,6 +83,7 @@ def getImporterInfo(id):
     else:
         raise ValueError("Invalid importer ID given ({0}).".format(id))
 
+
 def getImporter(id, parent=None):
     """
     Module function to get an importer for the given source id.

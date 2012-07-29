@@ -19,7 +19,7 @@ def getFileNameFromUrl(url):
     @param url URL (QUrl)
     @return file name (string)
     """
-    fileName = url.toString(QUrl.RemoveFragment | QUrl.RemoveQuery | 
+    fileName = url.toString(QUrl.RemoveFragment | QUrl.RemoveQuery |
                             QUrl.RemoveScheme | QUrl.RemovePort)
     if fileName.find("/") != -1:
         pos = fileName.rfind("/")

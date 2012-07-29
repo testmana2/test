@@ -88,7 +88,7 @@ class DirectorySyncHandler(SyncHandler):
             data = f.read()
             f.close()
         except IOError as err:
-            self.syncStatus.emit(type_, 
+            self.syncStatus.emit(type_,
                 self.trUtf8("Cannot read remote file.\n{0}").format(str(err)))
             self.syncFinished(type_, False, True)
             return

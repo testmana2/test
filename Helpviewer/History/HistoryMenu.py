@@ -383,7 +383,7 @@ class HistoryMenu(E5ModelMenu):
         for tab in self.__tabWidget.closedTabsManager().allClosedTabs():
             title = fm.elidedText(tab.title, Qt.ElideRight, maxWidth)
             self.__closedTabsMenu.addAction(
-                Helpviewer.HelpWindow.HelpWindow.icon(tab.url), title, 
+                Helpviewer.HelpWindow.HelpWindow.icon(tab.url), title,
                 self.__tabWidget.restoreClosedTab).setData(index)
             index += 1
         self.__closedTabsMenu.addSeparator()

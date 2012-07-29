@@ -72,10 +72,10 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             index = 0
         self.modeCombo.setCurrentIndex(index)
         
-        self.__delay = int(Preferences.Prefs.settings.value( "Snapshot/Delay", 0))
+        self.__delay = int(Preferences.Prefs.settings.value("Snapshot/Delay", 0))
         self.delaySpin.setValue(self.__delay)
         
-        self.__filename = Preferences.Prefs.settings.value( "Snapshot/Filename",
+        self.__filename = Preferences.Prefs.settings.value("Snapshot/Filename",
             os.path.join(
                 QDesktopServices.storageLocation(QDesktopServices.PicturesLocation),
                 self.trUtf8("snapshot") + "1.png"))
@@ -87,7 +87,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         self.__grabberWidget = QWidget(None, Qt.X11BypassWindowManagerHint)
         self.__grabberWidget.move(-10000, -10000)
-        self.__grabberWidget.installEventFilter(self);
+        self.__grabberWidget.installEventFilter(self)
         
         self.__initFileFilters()
         
@@ -259,13 +259,13 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             start = numSearch.pos(2)    # Only the second group is of interest.
             numAsStr = numSearch.capturedTexts()[2]
             number = "{0:0{width}d}".format(int(numAsStr) + 1, width=len(numAsStr))
-            name = name[:start] + number + name[start+len(numAsStr):]
+            name = name[:start] + number + name[start + len(numAsStr):]
         else:
             # no number
             start = name.rfind('.')
             if start != -1:
                 # has a '.' somewhere, e.g. it has an extension
-                name = name [:start] + '1' + name[start:]
+                name = name[:start] + '1' + name[start:]
             else:
                 # no extension, just tack it on to the end
                 name += '1'

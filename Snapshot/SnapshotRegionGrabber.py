@@ -58,7 +58,7 @@ class SnapshotRegionGrabber(QWidget):
             SnapshotRegionGrabber.Ellipse)
         """
         super().__init__(None,
-            Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint | 
+            Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)
         
         assert mode in [SnapshotRegionGrabber.Rectangle,
@@ -88,7 +88,7 @@ class SnapshotRegionGrabber(QWidget):
         self.__RHandle = QRect(0, 0, self.__handleSize, self.__handleSize)
         self.__BHandle = QRect(0, 0, self.__handleSize, self.__handleSize)
         self.__handles = [self.__TLHandle, self.__TRHandle, self.__BLHandle,
-                          self.__BRHandle, self.__LHandle, self.__THandle, 
+                          self.__BRHandle, self.__LHandle, self.__THandle,
                           self.__RHandle, self.__BHandle]
         self.__helpTextRect = QRect()
         self.__helpText = self.trUtf8(
@@ -441,7 +441,7 @@ class SnapshotRegionGrabber(QWidget):
         if r.width() <= 0:
             l = r.left()
             w = r.width()
-            r.setLeft(l + w -1)
+            r.setLeft(l + w - 1)
             r.setRight(l)
         if r.height() <= 0:
             t = r.top()

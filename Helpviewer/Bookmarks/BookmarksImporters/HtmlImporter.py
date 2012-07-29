@@ -35,7 +35,7 @@ def getImporterInfo(id):
                 "HTML Netscape Bookmarks") + " (*.htm *.html)",
             QCoreApplication.translate("HtmlImporter",
                 """You can import bookmarks from any browser that supports HTML """
-                """exporting. This file has usually the extension .htm or .html.""" ),
+                """exporting. This file has usually the extension .htm or .html."""),
             QCoreApplication.translate("HtmlImporter",
                 """Please choose the file to begin importing bookmarks."""),
             "",

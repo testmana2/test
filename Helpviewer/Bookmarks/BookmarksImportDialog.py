@@ -95,7 +95,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             path = E5FileDialog.getOpenFileName(
                 self,
                 self.trUtf8("Choose File ..."),
-                self.__sourceDir, 
+                self.__sourceDir,
                 filter)
         
         if path:

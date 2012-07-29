@@ -354,7 +354,7 @@ class TaskViewer(QTreeWidget):
             task.setCompleted(data[2])
             task.setProjectTask(data[3])
             task.setLongText(data[4])
-            self.__projectTasksSaveTimer.changeOccurred() 
+            self.__projectTasksSaveTimer.changeOccurred()
     
     def __newTask(self):
         """

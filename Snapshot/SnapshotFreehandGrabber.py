@@ -49,7 +49,7 @@ class SnapshotFreehandGrabber(QWidget):
         Constructor
         """
         super().__init__(None,
-            Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint | 
+            Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint |
             Qt.FramelessWindowHint | Qt.Tool)
         
         self.__selection = QPolygon()
