@@ -3304,239 +3304,239 @@ Reason: {1}</source>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="118"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
         <source>Application</source>
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="124"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="127"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
         <source>Email</source>
         <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="130"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
         <source>Graphics</source>
         <translation>Графика</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="133"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
         <source>Icons</source>
         <translation>Пиктограммы</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="139"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="141"/>
         <source>Plugin Manager</source>
         <translation>Менеджер плагинов</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="311"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="313"/>
         <source>Printer</source>
         <translation>Принтер</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="182"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="151"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="157"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
         <source>Shell</source>
         <translation>Оболочка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="160"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
         <source>Tasks</source>
         <translation>Задачи</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="163"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
         <source>Templates</source>
         <translation>Шаблоны</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="172"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
         <source>Version Control Systems</source>
         <translation>Системы контроля версий</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="176"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
         <source>Debugger</source>
         <translation>Отладчик</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="188"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="192"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="194"/>
         <source>Editor</source>
         <translation>Редактор</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="197"/>
         <source>APIs</source>
         <translation>API</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
         <source>Autocompletion</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="205"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="207"/>
         <source>Calltips</source>
         <translation>Подсказки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="211"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
         <source>General</source>
         <translation>Общее</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="229"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
         <source>Typing</source>
         <translation>Набор</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="232"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
         <source>Exporters</source>
         <translation>Экспортёры</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="236"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="238"/>
         <source>Highlighters</source>
         <translation>Подсветчики</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="239"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="241"/>
         <source>Filetype Associations</source>
         <translation>Ассоциации для типа файла</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="243"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="245"/>
         <source>Styles</source>
         <translation>Стили</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="318"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="320"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="324"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="326"/>
         <source>Help Documentation</source>
         <translation>Справка</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="264"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="266"/>
         <source>Help Viewers</source>
         <translation>Просмотрщики справки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="280"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="282"/>
         <source>Project</source>
         <translation>Проект</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="277"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="279"/>
         <source>Project Viewer</source>
         <translation>Просмотрщик проекта</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="283"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
         <source>Multiproject</source>
         <translation>Мултипроект</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="290"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="292"/>
         <source>Interface</source>
         <translation>Интерфейс</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="293"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="295"/>
         <source>Viewmanager</source>
         <translation>Управление видом</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="489"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="541"/>
         <source>Configuration Page Error</source>
         <translation>Ошибка страницы конфигурации</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="489"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="541"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Страница конфигурации &lt;b&gt;{0}&lt;/b&gt; не может быть загружена.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="214"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
         <source>Filehandling</source>
         <translation>Режим работы с файлами</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="217"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>Searching</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="321"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="323"/>
         <source>Appearance</source>
         <translation>Стили</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="208"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="223"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
         <source>Style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="250"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="252"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="449"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="467"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="454"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="472"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Выберите элемент в списке, чтобы 
 показать страницу конфигурации.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="166"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
         <source>Terminal</source>
         <translation>Терминал</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="308"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="310"/>
         <source>Network</source>
         <translation>Сеть</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="220"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Spell checking</source>
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="185"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="187"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
@@ -3546,43 +3546,48 @@ to display the configuration page.</source>
         <translation type="obsolete">Просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="249"/>
         <source>Keywords</source>
         <translation>Ключевые слова</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="121"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
         <source>Cooperation</source>
         <translation>Кооперация</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="343"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="345"/>
         <source>Tray Starter</source>
         <translation>Запуск Eric5 в системном лотке</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="145"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
         <source>PyFlakes</source>
         <translation>PyFlakes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="328"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="330"/>
         <source>VirusTotal Interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="314"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
         <source>Security</source>
         <translation type="unfinished">Безопасность</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="331"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="333"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="226"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
         <source>Syntax Checker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="403"/>
+        <source>Enter filter text...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

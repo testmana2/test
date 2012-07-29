@@ -3300,47 +3300,47 @@ Reason: {1}</source>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="118"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
         <source>Application</source>
         <translation>Uygulama</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="121"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
         <source>Cooperation</source>
         <translation>İşbirliği</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="124"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="127"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
         <source>Email</source>
         <translation>E-posta</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="130"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
         <source>Graphics</source>
         <translation>Grafik</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="133"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
         <source>Icons</source>
         <translation>İconlar</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="308"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="310"/>
         <source>Network</source>
         <translation>Ağ</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="139"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="141"/>
         <source>Plugin Manager</source>
         <translation>Eklenti Yöneticisi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="311"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="313"/>
         <source>Printer</source>
         <translation>Yazıcı</translation>
     </message>
@@ -3350,157 +3350,157 @@ Reason: {1}</source>
         <translation type="obsolete">Py3Parçaları</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="182"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="151"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="157"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
         <source>Shell</source>
         <translation>Kabuk</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="160"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
         <source>Tasks</source>
         <translation>Görevler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="163"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
         <source>Templates</source>
         <translation>Şablonlar</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="166"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="172"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
         <source>Version Control Systems</source>
         <translation>Sürüm Kontrol Sistemi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="176"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
         <source>Debugger</source>
         <translation>Hata Ayıklayıcı</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="211"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="185"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="187"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="188"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="192"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="194"/>
         <source>Editor</source>
         <translation>Düzenleyici</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="197"/>
         <source>APIs</source>
         <translation>API&apos;ler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="208"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="205"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="207"/>
         <source>Calltips</source>
         <translation>İpuçları</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="214"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
         <source>Filehandling</source>
         <translation>Dosyaişleme</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="217"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>Searching</source>
         <translation>Arıyor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="220"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Spell checking</source>
         <translation>Yazım Kontrolü</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="223"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="229"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
         <source>Typing</source>
         <translation>Yazıyor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="232"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
         <source>Exporters</source>
         <translation>Dışaaktarım</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="236"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="238"/>
         <source>Highlighters</source>
         <translation>Metin Vurgulayıcı</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="239"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="241"/>
         <source>Filetype Associations</source>
         <translation>Dosyatipi Birleştirme</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="243"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="245"/>
         <source>Styles</source>
         <translation>Stiller</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="249"/>
         <source>Keywords</source>
         <translation>Anahtar Sözcükler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="250"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="252"/>
         <source>Properties</source>
         <translation>Özellikler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="318"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="320"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="321"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="323"/>
         <source>Appearance</source>
         <translation>Görünüm</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="324"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="326"/>
         <source>Help Documentation</source>
         <translation>Yardım Belgeleri</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="264"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="266"/>
         <source>Help Viewers</source>
         <translation>Yardım Göstericiler</translation>
     </message>
@@ -3510,80 +3510,85 @@ Reason: {1}</source>
         <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="280"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="282"/>
         <source>Project</source>
         <translation>Proje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="277"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="279"/>
         <source>Project Viewer</source>
         <translation>Proje Görüntüleyici</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="283"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
         <source>Multiproject</source>
         <translation>Çokluproje</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="290"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="292"/>
         <source>Interface</source>
         <translation>Arayüz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="293"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="295"/>
         <source>Viewmanager</source>
         <translation>Görünüm Yönetcisi</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="449"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="467"/>
         <source>Preferences</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="454"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="472"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Lütfen ayarlama sayfasını 
 göstermek için gelen listeyi seçiniz.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="489"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="541"/>
         <source>Configuration Page Error</source>
         <translation>Ayarlama Sayfası Hatası</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="489"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="541"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;TAyarlama sayfası &lt;b&gt;{0}&lt;/b&gt; yüklenemiyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="145"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
         <source>PyFlakes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="343"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="345"/>
         <source>Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="328"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="330"/>
         <source>VirusTotal Interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="314"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
         <source>Security</source>
         <translation type="unfinished">Güvenlik</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="331"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="333"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="226"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
         <source>Syntax Checker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="403"/>
+        <source>Enter filter text...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -7,7 +7,7 @@
 Module implementing specialized line edits.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QEvent
+from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt4.QtGui import QLineEdit, QStyleOptionFrameV2, QStyle, QPainter, QPalette, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
 
@@ -56,7 +56,10 @@ class E5LineEdit(QLineEdit):
         
         self.setMinimumHeight(22)
         
-        self.__inactiveText = inactiveText
+        if qVersion() < "4.7.0":
+            self.__inactiveText = inactiveText
+        else:
+            self.setPlaceholderText(inactiveText)
         
         self.__leftWidget = SideWidget(self)
         self.__leftWidget.resize(0, 0)
@@ -116,21 +119,23 @@ class E5LineEdit(QLineEdit):
         """
         super().paintEvent(evt)
         
-        if not self.text() and \
-           self.__inactiveText and \
-           not self.hasFocus():
-            panel = QStyleOptionFrameV2()
-            self.initStyleOption(panel)
-            textRect = \
-                self.style().subElementRect(QStyle.SE_LineEditContents, panel, self)
-            textRect.adjust(2, 0, 0, 0)
-            left = self.textMargin(self.LeftSide)
-            right = self.textMargin(self.RightSide)
-            textRect.adjust(left, 0, -right, 0)
-            painter = QPainter(self)
-            painter.setPen(self.palette().brush(QPalette.Disabled, QPalette.Text).color())
-            painter.drawText(
-                textRect, Qt.AlignLeft | Qt.AlignVCenter, self.__inactiveText)
+        if qVersion() < "4.7.0":
+            if not self.text() and \
+               self.__inactiveText and \
+               not self.hasFocus():
+                panel = QStyleOptionFrameV2()
+                self.initStyleOption(panel)
+                textRect = \
+                    self.style().subElementRect(QStyle.SE_LineEditContents, panel, self)
+                textRect.adjust(2, 0, 0, 0)
+                left = self.textMargin(self.LeftSide)
+                right = self.textMargin(self.RightSide)
+                textRect.adjust(left, 0, -right, 0)
+                painter = QPainter(self)
+                painter.setPen(self.palette().brush(
+                    QPalette.Disabled, QPalette.Text).color())
+                painter.drawText(
+                    textRect, Qt.AlignLeft | Qt.AlignVCenter, self.__inactiveText)
     
     def __updateSideWidgetLocations(self):
         """
@@ -240,7 +245,10 @@ class E5LineEdit(QLineEdit):
         
         return inactive text (string)
         """
-        return self.__inactiveText
+        if qVersion() < "4.7.0":
+            return self.__inactiveText
+        else:
+            return self.placeholderText()
     
     def setInactiveText(self, inactiveText):
         """
@@ -248,5 +256,8 @@ class E5LineEdit(QLineEdit):
         
         @param inactiveText text to be shown on inactivity (string)
         """
-        self.__inactiveText = inactiveText
-        self.update()
+        if qVersion() < "4.7.0":
+            self.__inactiveText = inactiveText
+            self.update()
+        else:
+            self.setPlaceholderText(inactiveText)

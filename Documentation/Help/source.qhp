@@ -2182,6 +2182,8 @@
       <keyword name="ConfigurationPages (Package)" id="ConfigurationPages (Package)" ref="index-eric5.Preferences.ConfigurationPages.html" />
       <keyword name="ConfigurationWidget" id="ConfigurationWidget" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget" />
       <keyword name="ConfigurationWidget (Constructor)" id="ConfigurationWidget (Constructor)" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__init__" />
+      <keyword name="ConfigurationWidget.__filterChildItems" id="ConfigurationWidget.__filterChildItems" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__filterChildItems" />
+      <keyword name="ConfigurationWidget.__filterTextChanged" id="ConfigurationWidget.__filterTextChanged" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__filterTextChanged" />
       <keyword name="ConfigurationWidget.__importConfigurationPage" id="ConfigurationWidget.__importConfigurationPage" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__importConfigurationPage" />
       <keyword name="ConfigurationWidget.__initLexers" id="ConfigurationWidget.__initLexers" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__initLexers" />
       <keyword name="ConfigurationWidget.__initPage" id="ConfigurationWidget.__initPage" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__initPage" />

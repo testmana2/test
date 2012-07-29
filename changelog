@@ -9,6 +9,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added the configurable capability to automatically show the source,
      when the call frame is changed in the callstack viewer of the local
      variables viewer
+- Configuration Dialog
+  -- added a filter edit to filter the configuration tree
 - Web Browser
   -- added context menu entries for HTML5 media elements
   -- added a personal information manager to assist in completing form fields

@@ -274,6 +274,12 @@ QWidget
 <td><a href="#ConfigurationWidget.__init__">ConfigurationWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#ConfigurationWidget.__filterChildItems">__filterChildItems</a></td>
+<td>Private method to filter child items based on a filter string.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.__filterTextChanged">__filterTextChanged</a></td>
+<td>Private slot to handle a change of the filter.</td>
+</tr><tr>
 <td><a href="#ConfigurationWidget.__importConfigurationPage">__importConfigurationPage</a></td>
 <td>Private method to import a configuration page module.</td>
 </tr><tr>
@@ -341,6 +347,34 @@ flag indicating a dialog generation from within the
 <dd>
 mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
+</dd>
+</dl><a NAME="ConfigurationWidget.__filterChildItems" ID="ConfigurationWidget.__filterChildItems"></a>
+<h4>ConfigurationWidget.__filterChildItems</h4>
+<b>__filterChildItems</b>(<i>parent, filter</i>)
+<p>
+        Private method to filter child items based on a filter string.
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent item (QTreeWidgetItem)
+</dd><dt><i>filter</i></dt>
+<dd>
+filter string (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a visible child item (boolean)
+</dd>
+</dl><a NAME="ConfigurationWidget.__filterTextChanged" ID="ConfigurationWidget.__filterTextChanged"></a>
+<h4>ConfigurationWidget.__filterTextChanged</h4>
+<b>__filterTextChanged</b>(<i>filter</i>)
+<p>
+        Private slot to handle a change of the filter.
+</p><dl>
+<dt><i>filter</i></dt>
+<dd>
+text of the filter line edit (string)
 </dd>
 </dl><a NAME="ConfigurationWidget.__importConfigurationPage" ID="ConfigurationWidget.__importConfigurationPage"></a>
 <h4>ConfigurationWidget.__importConfigurationPage</h4>

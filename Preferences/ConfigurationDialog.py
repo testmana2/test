@@ -16,6 +16,8 @@ from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QPixmap, QTreeWidget,
     QFrame, QMainWindow, QVBoxLayout, QTreeWidgetItem, QLabel
 
 from E5Gui.E5Application import e5App
+from E5Gui.E5LineEdit import E5LineEdit
+from E5Gui.E5LineEditButton import E5LineEditButton
 from E5Gui import E5MessageBox
 
 import QScintilla.Lexers
@@ -393,8 +395,24 @@ class ConfigurationWidget(QWidget):
         self.configSplitter.setOrientation(Qt.Horizontal)
         self.configSplitter.setObjectName("configSplitter")
         
-        self.configList = QTreeWidget(self.configSplitter)
+        self.configListWidget = QWidget(self.configSplitter)
+        self.leftVBoxLayout = QVBoxLayout(self.configListWidget)
+        self.leftVBoxLayout.setMargin(0)
+        self.leftVBoxLayout.setSpacing(0)
+        self.leftVBoxLayout.setObjectName("leftVBoxLayout")
+        self.configListFilter = E5LineEdit(self, self.trUtf8("Enter filter text..."))
+        self.configListFilter.setObjectName("configListFilter")
+        self.leftVBoxLayout.addWidget(self.configListFilter)
+        self.configList = QTreeWidget()
         self.configList.setObjectName("configList")
+        self.leftVBoxLayout.addWidget(self.configList)
+        
+        self.__clearButton = E5LineEditButton(self)
+        self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
+        self.configListFilter.addWidget(self.__clearButton, E5LineEdit.RightSide)
+        self.__clearButton.setVisible(False)
+        self.__clearButton.clicked[()].connect(self.configListFilter.clear)
+        self.configListFilter.textChanged.connect(self.__filterTextChanged)
         
         self.scrollArea = QScrollArea(self.configSplitter)
         self.scrollArea.setFrameShape(QFrame.NoFrame)
@@ -458,6 +476,40 @@ class ConfigurationWidget(QWidget):
         self.setTabOrder(self.configList, self.configStack)
         
         self.configStack.setCurrentWidget(self.emptyPage)
+        
+        self.configList.setFocus()
+    
+    def __filterTextChanged(self, filter):
+        """
+        Private slot to handle a change of the filter.
+        
+        @param filter text of the filter line edit (string)
+        """
+        self.__clearButton.setVisible(filter != "")
+        
+        self.__filterChildItems(self.configList.invisibleRootItem(), filter)
+    
+    def __filterChildItems(self, parent, filter):
+        """
+        Private method to filter child items based on a filter string.
+        
+        @param parent reference to the parent item (QTreeWidgetItem)
+        @param filter filter string (string)
+        @return flag indicating a visible child item (boolean)
+        """
+        childVisible = False
+        filter = filter.lower()
+        for index in range(parent.childCount()):
+            itm = parent.child(index)
+            if itm.childCount() > 0:
+                visible = self.__filterChildItems(itm, filter)
+            else:
+                visible = filter == "" or filter in itm.text(0).lower()
+            if visible:
+                childVisible = True
+            itm.setHidden(not visible)
+        
+        return childVisible
     
     def __initLexers(self):
         """
