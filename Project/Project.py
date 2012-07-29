@@ -1892,8 +1892,15 @@ class Project(QObject):
                 try:
                     ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
                     if not os.path.exists(ms):
-                        f = open(ms, "w")
-                        f.close()
+                        try:
+                            f = open(ms, "w")
+                            f.close()
+                        except IOError as err:
+                            E5MessageBox.critical(self.ui,
+                                self.trUtf8("Create main script"),
+                                self.trUtf8("<p>The mainscript <b>{0}</b> could not"
+                                    " be created.<br/>Reason: {1}</p>")
+                                    .format(self.ppath, str(err)))
                     self.appendFile(ms)
                 except IndexError:
                     ms = ""
