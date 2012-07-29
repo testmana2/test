@@ -957,7 +957,7 @@ def main(argv):
     progName = os.path.basename(argv[0])
     
     if os.path.dirname(argv[0]):
-      os.chdir(os.path.dirname(argv[0]))
+        os.chdir(os.path.dirname(argv[0]))
 
     initGlobals()
 
