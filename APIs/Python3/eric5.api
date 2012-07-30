@@ -1478,6 +1478,24 @@ eric5.E5Gui.E5TreeSortFilterProxyModel.E5TreeSortFilterProxyModel?1(parent=None)
 eric5.E5Gui.E5TreeView.E5TreeView.keyPressEvent?4(evt)
 eric5.E5Gui.E5TreeView.E5TreeView.removeAll?4()
 eric5.E5Gui.E5TreeView.E5TreeView.removeSelected?4()
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.ItemsCollapsed?7
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.ItemsExpanded?7
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.addTopLevelItem?4(item)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.addTopLevelItems?4(items)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.allItems?4()
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.appendToParentItem?4(parent, item)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.clear?4()
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.deleteItem?4(item)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.deleteItems?4(items)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.filterString?4(filter)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.insertTopLevelItem?4(index, item)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.insertTopLevelItems?4(index, items)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.itemControlClicked?7
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.itemMiddleButtonClicked?7
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.mousePressEvent?4(evt)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.prependToParentItem?4(parent, item)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget.setDefaultItemShowMode?4(mode)
+eric5.E5Gui.E5TreeWidget.E5TreeWidget?1(parent=None)
 eric5.E5Network.E5NetworkHeaderDetailsDialog.E5NetworkHeaderDetailsDialog.setData?4(name, value)
 eric5.E5Network.E5NetworkHeaderDetailsDialog.E5NetworkHeaderDetailsDialog?1(parent=None)
 eric5.E5Network.E5NetworkMonitor.E5NetworkMonitor._monitor?8

@@ -137,6 +137,7 @@
             <section title="eric5.E5Gui.E5ToolBox" ref="eric5.E5Gui.E5ToolBox.html" />
             <section title="eric5.E5Gui.E5TreeSortFilterProxyModel" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html" />
             <section title="eric5.E5Gui.E5TreeView" ref="eric5.E5Gui.E5TreeView.html" />
+            <section title="eric5.E5Gui.E5TreeWidget" ref="eric5.E5Gui.E5TreeWidget.html" />
           </section>
           <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
@@ -3630,6 +3631,24 @@
       <keyword name="E5TreeView.keyPressEvent" id="E5TreeView.keyPressEvent" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.keyPressEvent" />
       <keyword name="E5TreeView.removeAll" id="E5TreeView.removeAll" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeAll" />
       <keyword name="E5TreeView.removeSelected" id="E5TreeView.removeSelected" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeSelected" />
+      <keyword name="E5TreeWidget" id="E5TreeWidget" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget" />
+      <keyword name="E5TreeWidget (Constructor)" id="E5TreeWidget (Constructor)" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.__init__" />
+      <keyword name="E5TreeWidget (Module)" id="E5TreeWidget (Module)" ref="eric5.E5Gui.E5TreeWidget.html" />
+      <keyword name="E5TreeWidget.__iterateAllItems" id="E5TreeWidget.__iterateAllItems" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.__iterateAllItems" />
+      <keyword name="E5TreeWidget.__scheduleRefresh" id="E5TreeWidget.__scheduleRefresh" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.__scheduleRefresh" />
+      <keyword name="E5TreeWidget.addTopLevelItem" id="E5TreeWidget.addTopLevelItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.addTopLevelItem" />
+      <keyword name="E5TreeWidget.addTopLevelItems" id="E5TreeWidget.addTopLevelItems" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.addTopLevelItems" />
+      <keyword name="E5TreeWidget.allItems" id="E5TreeWidget.allItems" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.allItems" />
+      <keyword name="E5TreeWidget.appendToParentItem" id="E5TreeWidget.appendToParentItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.appendToParentItem" />
+      <keyword name="E5TreeWidget.clear" id="E5TreeWidget.clear" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.clear" />
+      <keyword name="E5TreeWidget.deleteItem" id="E5TreeWidget.deleteItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.deleteItem" />
+      <keyword name="E5TreeWidget.deleteItems" id="E5TreeWidget.deleteItems" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.deleteItems" />
+      <keyword name="E5TreeWidget.filterString" id="E5TreeWidget.filterString" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.filterString" />
+      <keyword name="E5TreeWidget.insertTopLevelItem" id="E5TreeWidget.insertTopLevelItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.insertTopLevelItem" />
+      <keyword name="E5TreeWidget.insertTopLevelItems" id="E5TreeWidget.insertTopLevelItems" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.insertTopLevelItems" />
+      <keyword name="E5TreeWidget.mousePressEvent" id="E5TreeWidget.mousePressEvent" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.mousePressEvent" />
+      <keyword name="E5TreeWidget.prependToParentItem" id="E5TreeWidget.prependToParentItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.prependToParentItem" />
+      <keyword name="E5TreeWidget.setDefaultItemShowMode" id="E5TreeWidget.setDefaultItemShowMode" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.setDefaultItemShowMode" />
       <keyword name="E5VerticalToolBox" id="E5VerticalToolBox" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox" />
       <keyword name="E5VerticalToolBox (Constructor)" id="E5VerticalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.__init__" />
       <keyword name="E5WheelTabBar" id="E5WheelTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar" />
@@ -12365,6 +12384,7 @@
       <file>eric5.E5Gui.E5ToolBox.html</file>
       <file>eric5.E5Gui.E5TreeSortFilterProxyModel.html</file>
       <file>eric5.E5Gui.E5TreeView.html</file>
+      <file>eric5.E5Gui.E5TreeWidget.html</file>
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>

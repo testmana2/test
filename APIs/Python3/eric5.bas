@@ -162,6 +162,7 @@ E5ToolBarDialog QDialog Ui_E5ToolBarDialog
 E5ToolBarManager QObject
 E5TreeSortFilterProxyModel QSortFilterProxyModel
 E5TreeView QTreeView
+E5TreeWidget QTreeWidget
 E5VerticalToolBox QToolBox
 E5WheelTabBar QTabBar
 EditBreakpointDialog QDialog Ui_EditBreakpointDialog
