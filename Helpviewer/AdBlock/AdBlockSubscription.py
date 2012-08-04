@@ -30,9 +30,11 @@ class AdBlockSubscription(QObject):
     
     @signal changed() emitted after the subscription has changed
     @signal rulesChanged() emitted after the subscription's rules have changed
+    @signal enabledChanged(bool) emitted after the enabled state was changed
     """
     changed = pyqtSignal()
     rulesChanged = pyqtSignal()
+    enabledChanged = pyqtSignal(bool)
     
     def __init__(self, url, custom, parent=None, default=False):
         """
@@ -99,10 +101,6 @@ class AdBlockSubscription(QObject):
         lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
         lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
         self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
-##        if lastUpdateString:
-##            self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
-##        else:
-##            self.__lastUpdate = QDateTime.currentDateTime()
         
         self.__loadRules()
     
@@ -148,6 +146,7 @@ class AdBlockSubscription(QObject):
             return
         
         self.__enabled = enabled
+        self.enabledChanged.emit(enabled)
     
     def title(self):
         """
