@@ -2568,7 +2568,16 @@ class Editor(QsciScintillaCompat):
                 path = os.path.dirname(self.fileName)
             if path is None:
                 path = ""
-            defaultFilter = Preferences.getEditor("DefaultSaveFilter")
+            if self.fileName:
+                filterPattern = "(*{0})".format(os.path.splitext(self.fileName)[1])
+                for filter in Lexers.getSaveFileFiltersList(True):
+                    if filterPattern in filter:
+                        defaultFilter = filter
+                        break
+                else:
+                    defaultFilter = Preferences.getEditor("DefaultSaveFilter")
+            else:
+                defaultFilter = Preferences.getEditor("DefaultSaveFilter")
             fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("Save File"),
