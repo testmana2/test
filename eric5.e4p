@@ -666,7 +666,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/AdBlock/AdBlockManager.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockAccessHandler.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockDialog.py</Source>
-    <Source>Helpviewer/AdBlock/AdBlockModel.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockNetwork.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockPage.py</Source>
     <Source>compileUiFiles.py</Source>
@@ -1038,6 +1037,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Gui/E5ClickableLabel.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockIcon.py</Source>
     <Source>E5Gui/E5TreeWidget.py</Source>
+    <Source>Helpviewer/AdBlock/AdBlockTreeWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

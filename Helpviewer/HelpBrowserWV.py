@@ -1282,7 +1282,7 @@ class HelpBrowser(QWebView):
         """
         act = self.sender()
         url = act.data()
-        dlg = Helpviewer.HelpWindow.HelpWindow.adblockManager().showDialog()
+        dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager().showDialog()
         dlg.addCustomRule(url)
     
     def __downloadMedia(self):
@@ -1709,7 +1709,7 @@ class HelpBrowser(QWebView):
             self.zoomOut()
         
         if ok:
-            self.mw.adblockManager().page().hideBlockedPageEntries(self.page())
+            self.mw.adBlockManager().page().hideBlockedPageEntries(self.page())
             self.mw.passwordManager().fill(self.page())
     
     def isLoading(self):

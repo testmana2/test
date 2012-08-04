@@ -161,7 +161,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         if op == QNetworkAccessManager.GetOperation:
             if self.__adblockNetwork is None:
                 self.__adblockNetwork = \
-                    Helpviewer.HelpWindow.HelpWindow.adblockManager().network()
+                    Helpviewer.HelpWindow.HelpWindow.adBlockManager().network()
             reply = self.__adblockNetwork.block(req)
             if reply is not None:
                 reply.setParent(self)

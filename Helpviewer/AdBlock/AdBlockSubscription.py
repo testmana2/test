@@ -34,16 +34,18 @@ class AdBlockSubscription(QObject):
     changed = pyqtSignal()
     rulesChanged = pyqtSignal()
     
-    def __init__(self, url, parent=None, default=False):
+    def __init__(self, url, custom, parent=None, default=False):
         """
         Constructor
         
         @param url AdBlock URL for the subscription (QUrl)
+        @param custom flag indicating a custom subscription (boolean)
         @param parent reference to the parent object (QObject)
-        @param default flag indicating a default subscription (Boolean)
+        @param default flag indicating a default subscription (boolean)
         """
         super().__init__(parent)
         
+        self.__custom = custom
         self.__url = url.toEncoded()
         self.__enabled = False
         self.__downloading = None
@@ -52,11 +54,17 @@ class AdBlockSubscription(QObject):
         self.__title = ""
         self.__location = QByteArray()
         self.__lastUpdate = QDateTime()
+        self.__requiresLocation = ""
+        self.__requiresTitle = ""
         
         self.__rules = []   # list containing all AdBlock rules
         
         self.__networkExceptionRules = []
         self.__networkBlockRules = []
+        self.__domainRestrictedCssRules = []
+        self.__elementHidingRules = ""
+        self.__documentRules = []
+        self.__elemhideRules = []
         
         self.__parseUrl(url)
     
@@ -79,9 +87,22 @@ class AdBlockSubscription(QObject):
         self.__location = \
             QByteArray(QUrl.fromPercentEncoding(url.encodedQueryItemValue("location")))
         
+        # Check for required subscription
+        self.__requiresLocation = \
+            QUrl.fromPercentEncoding(url.encodedQueryItemValue("requiresLocation"))
+        self.__requiresTitle = \
+            QUrl.fromPercentEncoding(url.encodedQueryItemValue("requiresTitle"))
+        if self.__requiresLocation and self.__requiresTitle:
+            Helpviewer.HelpWindow.HelpWindow.adBlockManager().loadRequiredSubscription(
+                self.__requiresLocation, self.__requiresTitle)
+        
         lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
         lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
         self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
+##        if lastUpdateString:
+##            self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
+##        else:
+##            self.__lastUpdate = QDateTime.currentDateTime()
         
         self.__loadRules()
     
@@ -98,6 +119,9 @@ class AdBlockSubscription(QObject):
         queryItems = []
         queryItems.append(("location", bytes(self.__location).decode()))
         queryItems.append(("title", self.__title))
+        if self.__requiresLocation and self.__requiresTitle:
+            queryItems.append(("requiresLocation", self.__requiresLocation))
+            queryItems.append(("requiresTitle", self.__requiresTitle))
         if not self.__enabled:
             queryItems.append(("enabled", "false"))
         if self.__lastUpdate.isValid():
@@ -124,8 +148,6 @@ class AdBlockSubscription(QObject):
             return
         
         self.__enabled = enabled
-        self.__populateCache()
-        self.changed.emit()
     
     def title(self):
         """
@@ -167,6 +189,14 @@ class AdBlockSubscription(QObject):
         self.__location = url.toEncoded()
         self.__lastUpdate = QDateTime()
         self.changed.emit()
+    
+    def requiresLocation(self):
+        """
+        Public method to get the location of a required subscription.
+        
+        @return location of a required subscription (string)
+        """
+        return self.__requiresLocation
     
     def lastUpdate(self):
         """
@@ -253,7 +283,6 @@ class AdBlockSubscription(QObject):
         if self.location().scheme() == "file":
             self.__lastUpdate = QDateTime.currentDateTime()
             self.__loadRules()
-            self.changed.emit()
             return
         
         self.__downloading = FollowRedirectReply(self.location(),
@@ -299,7 +328,6 @@ class AdBlockSubscription(QObject):
         f.write(response)
         self.__lastUpdate = QDateTime.currentDateTime()
         self.__loadRules()
-        self.changed.emit()
         self.__downloading = None
     
     def saveRules(self):
@@ -319,7 +347,7 @@ class AdBlockSubscription(QObject):
             return
         
         textStream = QTextStream(f)
-        textStream << "[Adblock Plus 0.7.1]\n"
+        textStream << "[Adblock Plus 1.1.1]\n"
         for rule in self.__rules:
             textStream << rule.filter() << "\n"
     
@@ -394,6 +422,18 @@ class AdBlockSubscription(QObject):
         
         return rules
     
+    def rule(self, offset):
+        """
+        Public method to get a specific rule.
+        
+        @param offset offset of the rule (integer)
+        @return requested rule (AdBlockRule)
+        """
+        if offset >= len(self.__rules):
+            return None
+        
+        return self.__rules[offset]
+    
     def allRules(self):
         """
         Public method to get the list of rules.
@@ -407,10 +447,13 @@ class AdBlockSubscription(QObject):
         Public method to add a rule.
         
         @param rule reference to the rule to add (AdBlockRule)
+        @return offset of the rule (integer)
         """
         self.__rules.append(rule)
         self.__populateCache()
         self.rulesChanged.emit()
+        
+        return len(self.__rules) - 1
     
     def removeRule(self, offset):
         """
@@ -431,10 +474,16 @@ class AdBlockSubscription(QObject):
         
         @param rule reference to the rule to set (AdBlockRule)
         @param offset offset of the rule to remove (integer)
+        @return requested rule (AdBlockRule)
         """
+        if offset >= len(self.__rules):
+            return None
+        
         self.__rules[offset] = rule
         self.__populateCache()
         self.rulesChanged.emit()
+        
+        return self.__rules[offset]
     
     def __populateCache(self):
         """
@@ -464,3 +513,38 @@ class AdBlockSubscription(QObject):
                 self.__networkExceptionRules.append(rule)
             else:
                 self.__networkBlockRules.append(rule)
+    
+    def canEditRules(self):
+        """
+        Public method to check, if rules can be edited.
+        
+        @return flag indicating rules may be edited (boolean)
+        """
+        return self.__custom
+    
+    def canBeRemoved(self):
+        """
+        Public method to check, if the subscription can be removed.
+        
+        @return flag indicating removal is allowed (boolean)
+        """
+        return not self.__custom and not self.__defaultSubscription
+    
+    def setRuleEnabled(self, offset, enabled):
+        """
+        Public method to enable a specific rule.
+        
+        @param offset offset of the rule (integer)
+        @param enabled new enabled state (boolean)
+        @return reference to the changed rule (AdBlockRule)
+        """
+        if offset >= len(self.__rules):
+            return None
+        
+        rule = self.__rules[offset]
+        rule.setEnabled(enabled)
+        if rule.isCSSRule():
+            self.__populateCache()
+            Helpviewer.HelpWindow.HelpWindow.mainWindow().reloadUserStyleSheet()
+        
+        return rule

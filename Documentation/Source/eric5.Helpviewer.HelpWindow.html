@@ -64,7 +64,7 @@ QMainWindow
 <h3>Class Methods</h3>
 <table>
 <tr>
-<td><a href="#HelpWindow.adblockManager">adblockManager</a></td>
+<td><a href="#HelpWindow.adBlockManager">adBlockManager</a></td>
 <td>Class method to get a reference to the AdBlock manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.bookmarksManager">bookmarksManager</a></td>
@@ -359,6 +359,9 @@ QMainWindow
 <td><a href="#HelpWindow.__titleChanged">__titleChanged</a></td>
 <td>Private slot called to handle a change of s browser's title.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__userStyleSheet">__userStyleSheet</a></td>
+<td>Private method to generate the user style sheet.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__viewFullScreen">__viewFullScreen</a></td>
 <td>Private slot called to toggle fullscreen mode.</td>
 </tr><tr>
@@ -458,6 +461,9 @@ QMainWindow
 <td><a href="#HelpWindow.previewer">previewer</a></td>
 <td>Public method to get a reference to the previewer tab.</td>
 </tr><tr>
+<td><a href="#HelpWindow.reloadUserStyleSheet">reloadUserStyleSheet</a></td>
+<td>Public method to reload the user style sheet.</td>
+</tr><tr>
 <td><a href="#HelpWindow.requestVirusTotalScan">requestVirusTotalScan</a></td>
 <td>Public method to submit a request to scan an URL by VirusTotal.</td>
 </tr><tr>
@@ -493,9 +499,9 @@ QMainWindow
 <td>Private static method to fetch the icon for a URL.</td>
 </tr>
 </table>
-<a NAME="HelpWindow.adblockManager" ID="HelpWindow.adblockManager"></a>
-<h4>HelpWindow.adblockManager (class method)</h4>
-<b>adblockManager</b>(<i></i>)
+<a NAME="HelpWindow.adBlockManager" ID="HelpWindow.adBlockManager"></a>
+<h4>HelpWindow.adBlockManager (class method)</h4>
+<b>adBlockManager</b>(<i></i>)
 <p>
         Class method to get a reference to the AdBlock manager.
 </p><dl>
@@ -1169,6 +1175,21 @@ reference to the browser (HelpBrowser)
 <dd>
 new title (string)
 </dd>
+</dl><a NAME="HelpWindow.__userStyleSheet" ID="HelpWindow.__userStyleSheet"></a>
+<h4>HelpWindow.__userStyleSheet</h4>
+<b>__userStyleSheet</b>(<i>styleSheetFile</i>)
+<p>
+        Private method to generate the user style sheet.
+</p><dl>
+<dt><i>styleSheetFile</i></dt>
+<dd>
+name of the user style sheet file (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+style sheet (QUrl)
+</dd>
 </dl><a NAME="HelpWindow.__viewFullScreen" ID="HelpWindow.__viewFullScreen"></a>
 <h4>HelpWindow.__viewFullScreen</h4>
 <b>__viewFullScreen</b>(<i></i>)
@@ -1476,7 +1497,12 @@ title of the bookmark (string)
 <dd>
 reference to the previewer tab (HelpBrowserWV)
 </dd>
-</dl><a NAME="HelpWindow.requestVirusTotalScan" ID="HelpWindow.requestVirusTotalScan"></a>
+</dl><a NAME="HelpWindow.reloadUserStyleSheet" ID="HelpWindow.reloadUserStyleSheet"></a>
+<h4>HelpWindow.reloadUserStyleSheet</h4>
+<b>reloadUserStyleSheet</b>(<i></i>)
+<p>
+        Public method to reload the user style sheet.
+</p><a NAME="HelpWindow.requestVirusTotalScan" ID="HelpWindow.requestVirusTotalScan"></a>
 <h4>HelpWindow.requestVirusTotalScan</h4>
 <b>requestVirusTotalScan</b>(<i>url</i>)
 <p>

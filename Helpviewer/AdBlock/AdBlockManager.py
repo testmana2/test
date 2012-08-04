@@ -30,6 +30,7 @@ class AdBlockManager(QObject):
     @signal rulesChanged() emitted after some rule has changed
     """
     rulesChanged = pyqtSignal()
+    requiredSubscriptionLoaded = pyqtSignal(AdBlockSubscription)
     
     def __init__(self, parent=None):
         """
@@ -48,12 +49,20 @@ class AdBlockManager(QObject):
         self.__subscriptions = []
         self.__saveTimer = AutoSaver(self, self.save)
         
+        self.__defaultSubscriptionUrlString = \
+            "abp:subscribe?location=" \
+            "https://easylist-downloads.adblockplus.org/easylist.txt&title=EasyList"
+        self.__customSubscriptionUrlString = \
+            bytes(self.__customSubscriptionUrl().toEncoded()).decode()
+        
         self.rulesChanged.connect(self.__saveTimer.changeOccurred)
     
     def close(self):
         """
         Public method to close the open search engines manager.
         """
+        self.__adBlockDialog and self.__adBlockDialog.close()
+        
         self.__saveTimer.saveIfNeccessary()
     
     def isEnabled(self):
@@ -139,7 +148,7 @@ class AdBlockManager(QObject):
                 return subscription
         
         url = self.__customSubscriptionUrl()
-        customAdBlockSubscription = AdBlockSubscription(url, self)
+        customAdBlockSubscription = AdBlockSubscription(url, True, self)
         self.addSubscription(customAdBlockSubscription)
         return customAdBlockSubscription
     
@@ -154,20 +163,50 @@ class AdBlockManager(QObject):
         
         return self.__subscriptions[:]
     
-    def removeSubscription(self, subscription):
+    def subscription(self, location):
+        """
+        Public method to get a subscription based on it's location.
+        
+        @param location location of the subscription to search for (string)
+        @return subscription or None (AdBlockSubscription)
+        """
+        if location != "":
+            for subscription in self.__subscriptions:
+                if subscription.location().toString() == location:
+                    return subscription
+        
+        return None
+    
+    def updateAllSubscriptions(self):
+        """
+        Public method to update all subscriptions.
+        """
+        for subscription in self.__subscriptions:
+            subscription.updateNow()
+    
+    def removeSubscription(self, subscription, emitSignal=True):
         """
         Public method to remove an AdBlock subscription.
         
         @param subscription AdBlock subscription to be removed (AdBlockSubscription)
+        @param emitSignal flag indicating to send a signal (boolean)
         """
         if subscription is None:
+            return
+        
+        if subscription.url().toString().startswith(
+            (self.__defaultSubscriptionUrlString, self.__customSubscriptionUrlString)):
             return
         
         try:
             self.__subscriptions.remove(subscription)
             rulesFileName = subscription.rulesFileName()
             QFile.remove(rulesFileName)
-            self.rulesChanged.emit()
+            requiresSubscriptions = self.getRequiresSubscriptions(subscription)
+            for requiresSubscription in requiresSubscriptions:
+                self.removeSubscription(requiresSubscription, False)
+            if emitSignal:
+                self.rulesChanged.emit()
         except ValueError:
             pass
     
@@ -180,7 +219,7 @@ class AdBlockManager(QObject):
         if subscription is None:
             return
         
-        self.__subscriptions.append(subscription)
+        self.__subscriptions.insert(-1, subscription)
         
         subscription.rulesChanged.connect(self.rulesChanged)
         subscription.changed.connect(self.rulesChanged)
@@ -197,11 +236,19 @@ class AdBlockManager(QObject):
         Preferences.setHelp("AdBlockEnabled", self.__enabled)
         if self.__subscriptionsLoaded:
             subscriptions = []
+            requiresSubscriptions = [] # intermediate store for
+                                       # subscription requiring others
             for subscription in self.__subscriptions:
                 if subscription is None:
                     continue
-                subscriptions.append(bytes(subscription.url().toEncoded()).decode())
+                urlString = bytes(subscription.url().toEncoded()).decode()
+                if "requiresLocation" in urlString:
+                    requiresSubscriptions.append(urlString)
+                else:
+                    subscriptions.append(urlString)
                 subscription.saveRules()
+            for subscription in requiresSubscriptions:
+                subscriptions.insert(-1, subscription) # custom should be last
             Preferences.setHelp("AdBlockSubscriptions", subscriptions)
     
     def load(self):
@@ -224,26 +271,66 @@ class AdBlockManager(QObject):
         if self.__subscriptionsLoaded:
             return
         
-        defaultSubscriptionUrl = \
-            "abp:subscribe?location=" \
-            "http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList"
-        defaultSubscriptions = []
-        defaultSubscriptions.append(
-            bytes(self.__customSubscriptionUrl().toEncoded()).decode())
-        defaultSubscriptions.append(defaultSubscriptionUrl)
-        
         subscriptions = Preferences.getHelp("AdBlockSubscriptions")
-        if len(subscriptions) == 0:
-            subscriptions = defaultSubscriptions
+        if subscriptions:
+            for subscription in subscriptions:
+                if subscription.startswith(self.__defaultSubscriptionUrlString):
+                    break
+            else:
+                subscriptions.insert(0, self.__defaultSubscriptionUrlString)
+            for subscription in subscriptions:
+                if subscription.startswith(self.__customSubscriptionUrlString):
+                    break
+            else:
+                subscriptions.append(self.__customSubscriptionUrlString)
+        else:
+            subscriptions = [self.__defaultSubscriptionUrlString, self.__customSubscriptionUrlString]
         for subscription in subscriptions:
             url = QUrl.fromEncoded(subscription.encode())
-            adBlockSubscription = AdBlockSubscription(url, self,
-                subscription == defaultSubscriptionUrl)
+            adBlockSubscription = AdBlockSubscription(url,
+                subscription.startswith(self.__customSubscriptionUrlString),
+                self,
+                subscription.startswith(self.__defaultSubscriptionUrlString))
             adBlockSubscription.rulesChanged.connect(self.rulesChanged)
             adBlockSubscription.changed.connect(self.rulesChanged)
             self.__subscriptions.append(adBlockSubscription)
         
         self.__subscriptionsLoaded = True
+    
+    def loadRequiredSubscription(self, location, title):
+        """
+        Public method to load a subscription required by another one.
+        
+        @param location location of the required subscription (string)
+        @param title title of the required subscription (string)
+        """
+        # Step 1: check, if the subscription is in the list of subscriptions
+        urlString = "abp:subscribe?location={0}&title={1}".format(location, title)
+        for subscription in self.__subscriptions:
+            if subscription.url().toString().startswith(urlString):
+                # We found it!
+                return
+        
+        # Step 2: if it is not, get it
+        url = QUrl.fromEncoded(urlString.encode())
+        adBlockSubscription = AdBlockSubscription(url, False, self)
+        self.addSubscription(adBlockSubscription)
+        self.requiredSubscriptionLoaded.emit(adBlockSubscription)
+    
+    def getRequiresSubscriptions(self, subscription):
+        """
+        Public method to get a list of subscriptions, that require the given one.
+        
+        @param subscription subscription to check for (AdBlockSubscription)
+        @return list of subscription requiring the given one (list of AdBlockSubscription)
+        """
+        subscriptions = []
+        location = subscription.location().toString()
+        for subscription in self.__subscriptions:
+            if subscription.requiresLocation() == location:
+                subscriptions.append(subscription)
+        
+        return subscriptions
     
     def showDialog(self):
         """

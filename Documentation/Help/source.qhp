@@ -196,11 +196,11 @@
               <section title="eric5.Helpviewer.AdBlock.AdBlockDialog" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html" />
-              <section title="eric5.Helpviewer.AdBlock.AdBlockModel" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockNetwork" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockPage" ref="eric5.Helpviewer.AdBlock.AdBlockPage.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockRule" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html" />
+              <section title="eric5.Helpviewer.AdBlock.AdBlockTreeWidget" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html" />
             </section>
             <section title="eric5.Helpviewer.Bookmarks" ref="index-eric5.Helpviewer.Bookmarks.html">
               <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters" ref="index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html">
@@ -1056,14 +1056,22 @@
       <keyword name="AdBlockDialog (Constructor)" id="AdBlockDialog (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__init__" />
       <keyword name="AdBlockDialog (Module)" id="AdBlockDialog (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html" />
       <keyword name="AdBlockDialog.__aboutToShowActionMenu" id="AdBlockDialog.__aboutToShowActionMenu" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__aboutToShowActionMenu" />
+      <keyword name="AdBlockDialog.__addCustomRule" id="AdBlockDialog.__addCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__addCustomRule" />
       <keyword name="AdBlockDialog.__browseSubscriptions" id="AdBlockDialog.__browseSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__browseSubscriptions" />
       <keyword name="AdBlockDialog.__learnAboutWritingFilters" id="AdBlockDialog.__learnAboutWritingFilters" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__learnAboutWritingFilters" />
+      <keyword name="AdBlockDialog.__load" id="AdBlockDialog.__load" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__load" />
+      <keyword name="AdBlockDialog.__loadSubscriptions" id="AdBlockDialog.__loadSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__loadSubscriptions" />
+      <keyword name="AdBlockDialog.__removeCustomRule" id="AdBlockDialog.__removeCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__removeCustomRule" />
       <keyword name="AdBlockDialog.__removeSubscription" id="AdBlockDialog.__removeSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__removeSubscription" />
+      <keyword name="AdBlockDialog.__setSubscriptionEnabled" id="AdBlockDialog.__setSubscriptionEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__setSubscriptionEnabled" />
+      <keyword name="AdBlockDialog.__switchSubscriptionEnabled" id="AdBlockDialog.__switchSubscriptionEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__switchSubscriptionEnabled" />
+      <keyword name="AdBlockDialog.__updateAllSubscriptions" id="AdBlockDialog.__updateAllSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__updateAllSubscriptions" />
       <keyword name="AdBlockDialog.__updateSubscription" id="AdBlockDialog.__updateSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__updateSubscription" />
-      <keyword name="AdBlockDialog.addCustomRule" id="AdBlockDialog.addCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.addCustomRule" />
-      <keyword name="AdBlockDialog.model" id="AdBlockDialog.model" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.model" />
+      <keyword name="AdBlockDialog.addSubscription" id="AdBlockDialog.addSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.addSubscription" />
+      <keyword name="AdBlockDialog.on_adBlockGroup_toggled" id="AdBlockDialog.on_adBlockGroup_toggled" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_adBlockGroup_toggled" />
+      <keyword name="AdBlockDialog.on_searchEdit_textChanged" id="AdBlockDialog.on_searchEdit_textChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_searchEdit_textChanged" />
+      <keyword name="AdBlockDialog.on_subscriptionsTabWidget_currentChanged" id="AdBlockDialog.on_subscriptionsTabWidget_currentChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_subscriptionsTabWidget_currentChanged" />
       <keyword name="AdBlockDialog.on_updateSpinBox_valueChanged" id="AdBlockDialog.on_updateSpinBox_valueChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_updateSpinBox_valueChanged" />
-      <keyword name="AdBlockDialog.setCurrentIndex" id="AdBlockDialog.setCurrentIndex" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.setCurrentIndex" />
       <keyword name="AdBlockDialog.showRule" id="AdBlockDialog.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.showRule" />
       <keyword name="AdBlockIcon" id="AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon" />
       <keyword name="AdBlockIcon (Constructor)" id="AdBlockIcon (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__init__" />
@@ -1084,8 +1092,10 @@
       <keyword name="AdBlockManager.customRules" id="AdBlockManager.customRules" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.customRules" />
       <keyword name="AdBlockManager.elementHidingRules" id="AdBlockManager.elementHidingRules" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.elementHidingRules" />
       <keyword name="AdBlockManager.elementHidingRulesForDomain" id="AdBlockManager.elementHidingRulesForDomain" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.elementHidingRulesForDomain" />
+      <keyword name="AdBlockManager.getRequiresSubscriptions" id="AdBlockManager.getRequiresSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.getRequiresSubscriptions" />
       <keyword name="AdBlockManager.isEnabled" id="AdBlockManager.isEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.isEnabled" />
       <keyword name="AdBlockManager.load" id="AdBlockManager.load" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.load" />
+      <keyword name="AdBlockManager.loadRequiredSubscription" id="AdBlockManager.loadRequiredSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.loadRequiredSubscription" />
       <keyword name="AdBlockManager.network" id="AdBlockManager.network" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.network" />
       <keyword name="AdBlockManager.page" id="AdBlockManager.page" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.page" />
       <keyword name="AdBlockManager.removeSubscription" id="AdBlockManager.removeSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.removeSubscription" />
@@ -1093,24 +1103,9 @@
       <keyword name="AdBlockManager.setEnabled" id="AdBlockManager.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.setEnabled" />
       <keyword name="AdBlockManager.showDialog" id="AdBlockManager.showDialog" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showDialog" />
       <keyword name="AdBlockManager.showRule" id="AdBlockManager.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showRule" />
+      <keyword name="AdBlockManager.subscription" id="AdBlockManager.subscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.subscription" />
       <keyword name="AdBlockManager.subscriptions" id="AdBlockManager.subscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.subscriptions" />
-      <keyword name="AdBlockModel" id="AdBlockModel" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel" />
-      <keyword name="AdBlockModel (Constructor)" id="AdBlockModel (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.__init__" />
-      <keyword name="AdBlockModel (Module)" id="AdBlockModel (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html" />
-      <keyword name="AdBlockModel.__rulesChanged" id="AdBlockModel.__rulesChanged" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.__rulesChanged" />
-      <keyword name="AdBlockModel.columnCount" id="AdBlockModel.columnCount" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.columnCount" />
-      <keyword name="AdBlockModel.data" id="AdBlockModel.data" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.data" />
-      <keyword name="AdBlockModel.flags" id="AdBlockModel.flags" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.flags" />
-      <keyword name="AdBlockModel.hasChildren" id="AdBlockModel.hasChildren" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.hasChildren" />
-      <keyword name="AdBlockModel.headerData" id="AdBlockModel.headerData" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.headerData" />
-      <keyword name="AdBlockModel.index" id="AdBlockModel.index" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.index" />
-      <keyword name="AdBlockModel.parent" id="AdBlockModel.parent" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.parent" />
-      <keyword name="AdBlockModel.removeRows" id="AdBlockModel.removeRows" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.removeRows" />
-      <keyword name="AdBlockModel.rowCount" id="AdBlockModel.rowCount" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.rowCount" />
-      <keyword name="AdBlockModel.rule" id="AdBlockModel.rule" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.rule" />
-      <keyword name="AdBlockModel.setData" id="AdBlockModel.setData" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.setData" />
-      <keyword name="AdBlockModel.subscription" id="AdBlockModel.subscription" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.subscription" />
-      <keyword name="AdBlockModel.subscriptionIndex" id="AdBlockModel.subscriptionIndex" ref="eric5.Helpviewer.AdBlock.AdBlockModel.html#AdBlockModel.subscriptionIndex" />
+      <keyword name="AdBlockManager.updateAllSubscriptions" id="AdBlockManager.updateAllSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.updateAllSubscriptions" />
       <keyword name="AdBlockNetwork" id="AdBlockNetwork" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html#AdBlockNetwork" />
       <keyword name="AdBlockNetwork (Module)" id="AdBlockNetwork (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html" />
       <keyword name="AdBlockNetwork.__canBeBlocked" id="AdBlockNetwork.__canBeBlocked" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html#AdBlockNetwork.__canBeBlocked" />
@@ -1157,6 +1152,8 @@
       <keyword name="AdBlockSubscription.adBlockDisabledForUrl" id="AdBlockSubscription.adBlockDisabledForUrl" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.adBlockDisabledForUrl" />
       <keyword name="AdBlockSubscription.addRule" id="AdBlockSubscription.addRule" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.addRule" />
       <keyword name="AdBlockSubscription.allRules" id="AdBlockSubscription.allRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.allRules" />
+      <keyword name="AdBlockSubscription.canBeRemoved" id="AdBlockSubscription.canBeRemoved" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.canBeRemoved" />
+      <keyword name="AdBlockSubscription.canEditRules" id="AdBlockSubscription.canEditRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.canEditRules" />
       <keyword name="AdBlockSubscription.checkForUpdate" id="AdBlockSubscription.checkForUpdate" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.checkForUpdate" />
       <keyword name="AdBlockSubscription.elemHideDisabledForUrl" id="AdBlockSubscription.elemHideDisabledForUrl" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.elemHideDisabledForUrl" />
       <keyword name="AdBlockSubscription.elementHidingRules" id="AdBlockSubscription.elementHidingRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.elementHidingRules" />
@@ -1167,14 +1164,31 @@
       <keyword name="AdBlockSubscription.match" id="AdBlockSubscription.match" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.match" />
       <keyword name="AdBlockSubscription.removeRule" id="AdBlockSubscription.removeRule" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.removeRule" />
       <keyword name="AdBlockSubscription.replaceRule" id="AdBlockSubscription.replaceRule" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.replaceRule" />
+      <keyword name="AdBlockSubscription.requiresLocation" id="AdBlockSubscription.requiresLocation" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.requiresLocation" />
+      <keyword name="AdBlockSubscription.rule" id="AdBlockSubscription.rule" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.rule" />
       <keyword name="AdBlockSubscription.rulesFileName" id="AdBlockSubscription.rulesFileName" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.rulesFileName" />
       <keyword name="AdBlockSubscription.saveRules" id="AdBlockSubscription.saveRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.saveRules" />
       <keyword name="AdBlockSubscription.setEnabled" id="AdBlockSubscription.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.setEnabled" />
       <keyword name="AdBlockSubscription.setLocation" id="AdBlockSubscription.setLocation" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.setLocation" />
+      <keyword name="AdBlockSubscription.setRuleEnabled" id="AdBlockSubscription.setRuleEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.setRuleEnabled" />
       <keyword name="AdBlockSubscription.setTitle" id="AdBlockSubscription.setTitle" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.setTitle" />
       <keyword name="AdBlockSubscription.title" id="AdBlockSubscription.title" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.title" />
       <keyword name="AdBlockSubscription.updateNow" id="AdBlockSubscription.updateNow" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.updateNow" />
       <keyword name="AdBlockSubscription.url" id="AdBlockSubscription.url" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.url" />
+      <keyword name="AdBlockTreeWidget" id="AdBlockTreeWidget" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget" />
+      <keyword name="AdBlockTreeWidget (Constructor)" id="AdBlockTreeWidget (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__init__" />
+      <keyword name="AdBlockTreeWidget (Module)" id="AdBlockTreeWidget (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html" />
+      <keyword name="AdBlockTreeWidget.__adjustItemFeatures" id="AdBlockTreeWidget.__adjustItemFeatures" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__adjustItemFeatures" />
+      <keyword name="AdBlockTreeWidget.__contextMenuRequested" id="AdBlockTreeWidget.__contextMenuRequested" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__contextMenuRequested" />
+      <keyword name="AdBlockTreeWidget.__copyFilter" id="AdBlockTreeWidget.__copyFilter" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__copyFilter" />
+      <keyword name="AdBlockTreeWidget.__itemChanged" id="AdBlockTreeWidget.__itemChanged" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__itemChanged" />
+      <keyword name="AdBlockTreeWidget.__subscriptionChanged" id="AdBlockTreeWidget.__subscriptionChanged" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.__subscriptionChanged" />
+      <keyword name="AdBlockTreeWidget.addRule" id="AdBlockTreeWidget.addRule" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.addRule" />
+      <keyword name="AdBlockTreeWidget.keyPressEvent" id="AdBlockTreeWidget.keyPressEvent" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.keyPressEvent" />
+      <keyword name="AdBlockTreeWidget.refresh" id="AdBlockTreeWidget.refresh" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.refresh" />
+      <keyword name="AdBlockTreeWidget.removeRule" id="AdBlockTreeWidget.removeRule" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.removeRule" />
+      <keyword name="AdBlockTreeWidget.showRule" id="AdBlockTreeWidget.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.showRule" />
+      <keyword name="AdBlockTreeWidget.subscription" id="AdBlockTreeWidget.subscription" ref="eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html#AdBlockTreeWidget.subscription" />
       <keyword name="AdBlockedPageEntry" id="AdBlockedPageEntry" ref="eric5.Helpviewer.AdBlock.AdBlockPage.html#AdBlockedPageEntry" />
       <keyword name="AdBlockedPageEntry (Constructor)" id="AdBlockedPageEntry (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockPage.html#AdBlockedPageEntry.__init__" />
       <keyword name="AdBlockedPageEntry.__eq__" id="AdBlockedPageEntry.__eq__" ref="eric5.Helpviewer.AdBlock.AdBlockPage.html#AdBlockedPageEntry.__eq__" />
@@ -5005,6 +5019,7 @@
       <keyword name="HelpWindow.__switchTab" id="HelpWindow.__switchTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__switchTab" />
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
+      <keyword name="HelpWindow.__userStyleSheet" id="HelpWindow.__userStyleSheet" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__userStyleSheet" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />
       <keyword name="HelpWindow.__virusTotalFileScanReport" id="HelpWindow.__virusTotalFileScanReport" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalFileScanReport" />
       <keyword name="HelpWindow.__virusTotalScanCurrentSite" id="HelpWindow.__virusTotalScanCurrentSite" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalScanCurrentSite" />
@@ -5019,7 +5034,7 @@
       <keyword name="HelpWindow.__zoomReset" id="HelpWindow.__zoomReset" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomReset" />
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
       <keyword name="HelpWindow.adBlockIcon" id="HelpWindow.adBlockIcon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adBlockIcon" />
-      <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
+      <keyword name="HelpWindow.adBlockManager" id="HelpWindow.adBlockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adBlockManager" />
       <keyword name="HelpWindow.bookmarkAll" id="HelpWindow.bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarkAll" />
       <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
       <keyword name="HelpWindow.browserAt" id="HelpWindow.browserAt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browserAt" />
@@ -5052,6 +5067,7 @@
       <keyword name="HelpWindow.personalInformationManager" id="HelpWindow.personalInformationManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.personalInformationManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.previewer" id="HelpWindow.previewer" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.previewer" />
+      <keyword name="HelpWindow.reloadUserStyleSheet" id="HelpWindow.reloadUserStyleSheet" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.reloadUserStyleSheet" />
       <keyword name="HelpWindow.requestVirusTotalScan" id="HelpWindow.requestVirusTotalScan" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.requestVirusTotalScan" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
@@ -12432,11 +12448,11 @@
       <file>eric5.Helpviewer.AdBlock.AdBlockDialog.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockIcon.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockManager.html</file>
-      <file>eric5.Helpviewer.AdBlock.AdBlockModel.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockNetwork.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockPage.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockRule.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockSubscription.html</file>
+      <file>eric5.Helpviewer.AdBlock.AdBlockTreeWidget.html</file>
       <file>eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarkNode.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html</file>

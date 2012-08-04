@@ -17,6 +17,8 @@ Version 5.3-snapshot-2012mmdd:
      through field context menu entries or by pressing Ctrl+Return or Ctrl+Enter
   -- added support for GreaseMonkey scripts
   -- added an icon to the status bar to give direct access to AdBlock
+  -- rewrote huge part of AdBlock to speed up
+  -- added support for dependent AdBlock subscriptions
 
 Version 5.3-snapshot-20120624:
 - bug fixes

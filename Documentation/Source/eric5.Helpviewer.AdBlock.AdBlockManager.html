@@ -91,11 +91,17 @@ QObject
 <td><a href="#AdBlockManager.elementHidingRulesForDomain">elementHidingRulesForDomain</a></td>
 <td>Public method to get the element hiding rules for a domain.</td>
 </tr><tr>
+<td><a href="#AdBlockManager.getRequiresSubscriptions">getRequiresSubscriptions</a></td>
+<td>Public method to get a list of subscriptions, that require the given one.</td>
+</tr><tr>
 <td><a href="#AdBlockManager.isEnabled">isEnabled</a></td>
 <td>Public method to check, if blocking ads is enabled.</td>
 </tr><tr>
 <td><a href="#AdBlockManager.load">load</a></td>
 <td>Public method to load the AdBlock subscriptions.</td>
+</tr><tr>
+<td><a href="#AdBlockManager.loadRequiredSubscription">loadRequiredSubscription</a></td>
+<td>Public method to load a subscription required by another one.</td>
 </tr><tr>
 <td><a href="#AdBlockManager.network">network</a></td>
 <td>Public method to get a reference to the network block object.</td>
@@ -118,8 +124,14 @@ QObject
 <td><a href="#AdBlockManager.showRule">showRule</a></td>
 <td>Public slot to show an AdBlock rule.</td>
 </tr><tr>
+<td><a href="#AdBlockManager.subscription">subscription</a></td>
+<td>Public method to get a subscription based on it's location.</td>
+</tr><tr>
 <td><a href="#AdBlockManager.subscriptions">subscriptions</a></td>
 <td>Public method to get all subscriptions.</td>
+</tr><tr>
+<td><a href="#AdBlockManager.updateAllSubscriptions">updateAllSubscriptions</a></td>
+<td>Public method to update all subscriptions.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -211,6 +223,21 @@ URL to get hiding rules for (QUrl)
 <dd>
 element hiding rules (string)
 </dd>
+</dl><a NAME="AdBlockManager.getRequiresSubscriptions" ID="AdBlockManager.getRequiresSubscriptions"></a>
+<h4>AdBlockManager.getRequiresSubscriptions</h4>
+<b>getRequiresSubscriptions</b>(<i>subscription</i>)
+<p>
+        Public method to get a list of subscriptions, that require the given one.
+</p><dl>
+<dt><i>subscription</i></dt>
+<dd>
+subscription to check for (AdBlockSubscription)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of subscription requiring the given one (list of AdBlockSubscription)
+</dd>
 </dl><a NAME="AdBlockManager.isEnabled" ID="AdBlockManager.isEnabled"></a>
 <h4>AdBlockManager.isEnabled</h4>
 <b>isEnabled</b>(<i></i>)
@@ -226,7 +253,20 @@ flag indicating the enabled state (boolean)
 <b>load</b>(<i></i>)
 <p>
         Public method to load the AdBlock subscriptions.
-</p><a NAME="AdBlockManager.network" ID="AdBlockManager.network"></a>
+</p><a NAME="AdBlockManager.loadRequiredSubscription" ID="AdBlockManager.loadRequiredSubscription"></a>
+<h4>AdBlockManager.loadRequiredSubscription</h4>
+<b>loadRequiredSubscription</b>(<i>location, title</i>)
+<p>
+        Public method to load a subscription required by another one.
+</p><dl>
+<dt><i>location</i></dt>
+<dd>
+location of the required subscription (string)
+</dd><dt><i>title</i></dt>
+<dd>
+title of the required subscription (string)
+</dd>
+</dl><a NAME="AdBlockManager.network" ID="AdBlockManager.network"></a>
 <h4>AdBlockManager.network</h4>
 <b>network</b>(<i></i>)
 <p>
@@ -248,13 +288,16 @@ reference to the page block object (AdBlockPage)
 </dd>
 </dl><a NAME="AdBlockManager.removeSubscription" ID="AdBlockManager.removeSubscription"></a>
 <h4>AdBlockManager.removeSubscription</h4>
-<b>removeSubscription</b>(<i>subscription</i>)
+<b>removeSubscription</b>(<i>subscription, emitSignal=True</i>)
 <p>
         Public method to remove an AdBlock subscription.
 </p><dl>
 <dt><i>subscription</i></dt>
 <dd>
 AdBlock subscription to be removed (AdBlockSubscription)
+</dd><dt><i>emitSignal</i></dt>
+<dd>
+flag indicating to send a signal (boolean)
 </dd>
 </dl><a NAME="AdBlockManager.save" ID="AdBlockManager.save"></a>
 <h4>AdBlockManager.save</h4>
@@ -281,7 +324,22 @@ flag indicating the enabled state (boolean)
 <b>showRule</b>(<i></i>)
 <p>
         Public slot to show an AdBlock rule.
-</p><a NAME="AdBlockManager.subscriptions" ID="AdBlockManager.subscriptions"></a>
+</p><a NAME="AdBlockManager.subscription" ID="AdBlockManager.subscription"></a>
+<h4>AdBlockManager.subscription</h4>
+<b>subscription</b>(<i>location</i>)
+<p>
+        Public method to get a subscription based on it's location.
+</p><dl>
+<dt><i>location</i></dt>
+<dd>
+location of the subscription to search for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+subscription or None (AdBlockSubscription)
+</dd>
+</dl><a NAME="AdBlockManager.subscriptions" ID="AdBlockManager.subscriptions"></a>
 <h4>AdBlockManager.subscriptions</h4>
 <b>subscriptions</b>(<i></i>)
 <p>
@@ -291,7 +349,12 @@ flag indicating the enabled state (boolean)
 <dd>
 list of subscriptions (list of AdBlockSubscription)
 </dd>
-</dl>
+</dl><a NAME="AdBlockManager.updateAllSubscriptions" ID="AdBlockManager.updateAllSubscriptions"></a>
+<h4>AdBlockManager.updateAllSubscriptions</h4>
+<b>updateAllSubscriptions</b>(<i></i>)
+<p>
+        Public method to update all subscriptions.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

@@ -42,7 +42,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         super().__init__(parent)
         
         # Check AdBlock first
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         if manager.isEnabled():
             urlString = bytes(url.toEncoded()).decode()
             urlDomain = url.host()

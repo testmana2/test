@@ -289,8 +289,7 @@ class HelpWindow(QMainWindow):
         settings.setFontSize(QWebSettings.DefaultFixedFontSize, fixedFont.pointSize())
         
         styleSheet = Preferences.getHelp("UserStyleSheet")
-        if styleSheet:
-            settings.setUserStyleSheetUrl(QUrl(styleSheet))
+        settings.setUserStyleSheetUrl(self.__userStyleSheet(styleSheet))
         
         settings.setAttribute(QWebSettings.AutoLoadImages,
             Preferences.getHelp("AutoLoadImages"))
@@ -1957,7 +1956,7 @@ class HelpWindow(QMainWindow):
         
         self.passwordManager().close()
         
-        self.adblockManager().close()
+        self.adBlockManager().close()
         
         self.userAgentsManager().close()
         
@@ -2671,7 +2670,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show the AdBlock configuration dialog.
         """
-        self.adblockManager().showDialog()
+        self.adBlockManager().showDialog()
         
     def __showClickToFlashDialog(self):
         """
@@ -2832,7 +2831,7 @@ class HelpWindow(QMainWindow):
         return cls._passwordManager
         
     @classmethod
-    def adblockManager(cls):
+    def adBlockManager(cls):
         """
         Class method to get a reference to the AdBlock manager.
         
@@ -3232,3 +3231,36 @@ class HelpWindow(QMainWindow):
         @param url URL of the file scan report page (string)
         """
         self.newTab(url)
+    
+    def reloadUserStyleSheet(self):
+        """
+        Public method to reload the user style sheet.
+        """
+        settings = QWebSettings.globalSettings()
+        styleSheet = Preferences.getHelp("UserStyleSheet")
+        settings.setUserStyleSheetUrl(self.__userStyleSheet(styleSheet))
+    
+    def __userStyleSheet(self, styleSheetFile):
+        """
+        Private method to generate the user style sheet.
+        
+        @param styleSheetFile name of the user style sheet file (string)
+        @return style sheet (QUrl)
+        """
+        userStyle = self.adBlockManager().elementHidingRules() + \
+                    "{display:none !important;}"
+        
+        if styleSheetFile:
+            try:
+                f = open(styleSheetFile, "r")
+                fileData = f.read()
+                f.close()
+                fileData = fileData.replace("\n", "")
+                userStyle += fileData
+            except IOError:
+                pass
+        
+        encodedStyle = bytes(QByteArray(userStyle).toBase64()).decode()
+        dataString = "data:text/css;charset=utf-8;base64,{0}".format(encodedStyle)
+        
+        return QUrl(dataString)

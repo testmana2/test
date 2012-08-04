@@ -7,6 +7,7 @@
 Module implementing a scheme access handler for AdBlock URLs.
 """
 
+from PyQt4.QtCore import QUrl
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 from E5Gui import E5MessageBox
@@ -35,22 +36,25 @@ class AdBlockAccessHandler(SchemeAccessHandler):
         if op != QNetworkAccessManager.GetOperation:
             return None
         
-        if request.url().path() != "subscribe":
+        url = request.url()
+        if url.path() != "subscribe":
             return None
         
-        subscription = AdBlockSubscription(request.url(),
-                            Helpviewer.HelpWindow.HelpWindow.adblockManager())
-        
+        title = QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
+        if not title:
+            return None
         res = E5MessageBox.yesNo(None,
             self.trUtf8("Subscribe?"),
             self.trUtf8("""<p>Subscribe to this AdBlock subscription?</p><p>{0}</p>""")\
-                .format(subscription.title()))
+                .format(title))
         if res:
-            Helpviewer.HelpWindow.HelpWindow.adblockManager()\
+            dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager().showDialog()
+            subscription = AdBlockSubscription(url, False,
+                Helpviewer.HelpWindow.HelpWindow.adBlockManager())
+            Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
                 .addSubscription(subscription)
-            dlg = Helpviewer.HelpWindow.HelpWindow.adblockManager().showDialog()
-            model = dlg.model()
-            dlg.setCurrentIndex(model.index(model.rowCount() - 1, 0))
+            dlg.addSubscription(subscription, False)
             dlg.setFocus()
+            dlg.raise_()
         
         return EmptyNetworkReply(self.parent())

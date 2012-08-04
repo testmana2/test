@@ -91,6 +91,12 @@ QObject
 <td><a href="#AdBlockSubscription.allRules">allRules</a></td>
 <td>Public method to get the list of rules.</td>
 </tr><tr>
+<td><a href="#AdBlockSubscription.canBeRemoved">canBeRemoved</a></td>
+<td>Public method to check, if the subscription can be removed.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.canEditRules">canEditRules</a></td>
+<td>Public method to check, if rules can be edited.</td>
+</tr><tr>
 <td><a href="#AdBlockSubscription.checkForUpdate">checkForUpdate</a></td>
 <td>Public method to check for an update.</td>
 </tr><tr>
@@ -121,6 +127,12 @@ QObject
 <td><a href="#AdBlockSubscription.replaceRule">replaceRule</a></td>
 <td>Public method to replace a rule given the offset.</td>
 </tr><tr>
+<td><a href="#AdBlockSubscription.requiresLocation">requiresLocation</a></td>
+<td>Public method to get the location of a required subscription.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.rule">rule</a></td>
+<td>Public method to get a specific rule.</td>
+</tr><tr>
 <td><a href="#AdBlockSubscription.rulesFileName">rulesFileName</a></td>
 <td>Public method to get the name of the rules file.</td>
 </tr><tr>
@@ -132,6 +144,9 @@ QObject
 </tr><tr>
 <td><a href="#AdBlockSubscription.setLocation">setLocation</a></td>
 <td>Public method to set the subscription location.</td>
+</tr><tr>
+<td><a href="#AdBlockSubscription.setRuleEnabled">setRuleEnabled</a></td>
+<td>Public method to enable a specific rule.</td>
 </tr><tr>
 <td><a href="#AdBlockSubscription.setTitle">setTitle</a></td>
 <td>Public method to set the subscription title.</td>
@@ -152,19 +167,22 @@ QObject
 </table>
 <a NAME="AdBlockSubscription.__init__" ID="AdBlockSubscription.__init__"></a>
 <h4>AdBlockSubscription (Constructor)</h4>
-<b>AdBlockSubscription</b>(<i>url, parent=None, default=False</i>)
+<b>AdBlockSubscription</b>(<i>url, custom, parent=None, default=False</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
 AdBlock URL for the subscription (QUrl)
+</dd><dt><i>custom</i></dt>
+<dd>
+flag indicating a custom subscription (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent object (QObject)
 </dd><dt><i>default</i></dt>
 <dd>
-flag indicating a default subscription (Boolean)
+flag indicating a default subscription (boolean)
 </dd>
 </dl><a NAME="AdBlockSubscription.__loadRules" ID="AdBlockSubscription.__loadRules"></a>
 <h4>AdBlockSubscription.__loadRules</h4>
@@ -216,6 +234,11 @@ flag indicating disabled state (boolean)
 <dd>
 reference to the rule to add (AdBlockRule)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+offset of the rule (integer)
+</dd>
 </dl><a NAME="AdBlockSubscription.allRules" ID="AdBlockSubscription.allRules"></a>
 <h4>AdBlockSubscription.allRules</h4>
 <b>allRules</b>(<i></i>)
@@ -225,6 +248,26 @@ reference to the rule to add (AdBlockRule)
 <dt>Returns:</dt>
 <dd>
 list of rules (list of AdBlockRule)
+</dd>
+</dl><a NAME="AdBlockSubscription.canBeRemoved" ID="AdBlockSubscription.canBeRemoved"></a>
+<h4>AdBlockSubscription.canBeRemoved</h4>
+<b>canBeRemoved</b>(<i></i>)
+<p>
+        Public method to check, if the subscription can be removed.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating removal is allowed (boolean)
+</dd>
+</dl><a NAME="AdBlockSubscription.canEditRules" ID="AdBlockSubscription.canEditRules"></a>
+<h4>AdBlockSubscription.canEditRules</h4>
+<b>canEditRules</b>(<i></i>)
+<p>
+        Public method to check, if rules can be edited.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating rules may be edited (boolean)
 </dd>
 </dl><a NAME="AdBlockSubscription.checkForUpdate" ID="AdBlockSubscription.checkForUpdate"></a>
 <h4>AdBlockSubscription.checkForUpdate</h4>
@@ -345,6 +388,36 @@ reference to the rule to set (AdBlockRule)
 <dd>
 offset of the rule to remove (integer)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+requested rule (AdBlockRule)
+</dd>
+</dl><a NAME="AdBlockSubscription.requiresLocation" ID="AdBlockSubscription.requiresLocation"></a>
+<h4>AdBlockSubscription.requiresLocation</h4>
+<b>requiresLocation</b>(<i></i>)
+<p>
+        Public method to get the location of a required subscription.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+location of a required subscription (string)
+</dd>
+</dl><a NAME="AdBlockSubscription.rule" ID="AdBlockSubscription.rule"></a>
+<h4>AdBlockSubscription.rule</h4>
+<b>rule</b>(<i>offset</i>)
+<p>
+        Public method to get a specific rule.
+</p><dl>
+<dt><i>offset</i></dt>
+<dd>
+offset of the rule (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+requested rule (AdBlockRule)
+</dd>
 </dl><a NAME="AdBlockSubscription.rulesFileName" ID="AdBlockSubscription.rulesFileName"></a>
 <h4>AdBlockSubscription.rulesFileName</h4>
 <b>rulesFileName</b>(<i></i>)
@@ -379,6 +452,24 @@ flag indicating the enabled status (boolean)
 <dt><i>url</i></dt>
 <dd>
 URL of the subscription location (QUrl)
+</dd>
+</dl><a NAME="AdBlockSubscription.setRuleEnabled" ID="AdBlockSubscription.setRuleEnabled"></a>
+<h4>AdBlockSubscription.setRuleEnabled</h4>
+<b>setRuleEnabled</b>(<i>offset, enabled</i>)
+<p>
+        Public method to enable a specific rule.
+</p><dl>
+<dt><i>offset</i></dt>
+<dd>
+offset of the rule (integer)
+</dd><dt><i>enabled</i></dt>
+<dd>
+new enabled state (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the changed rule (AdBlockRule)
 </dd>
 </dl><a NAME="AdBlockSubscription.setTitle" ID="AdBlockSubscription.setTitle"></a>
 <h4>AdBlockSubscription.setTitle</h4>

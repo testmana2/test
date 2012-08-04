@@ -7,17 +7,18 @@
 Module implementing the AdBlock configuration dialog.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QUrl
-from PyQt4.QtGui import QDialog, QMenu, QToolButton, QApplication, QDesktopServices
+from PyQt4.QtCore import pyqtSlot, QTimer, QCoreApplication
+from PyQt4.QtGui import QDialog, QMenu, QToolButton
 
-from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
+from E5Gui.E5LineEditButton import E5LineEditButton
+from E5Gui.E5LineEdit import E5LineEdit
+from E5Gui import E5MessageBox
 
 import Helpviewer.HelpWindow
 
 from .Ui_AdBlockDialog import Ui_AdBlockDialog
 
-from .AdBlockModel import AdBlockModel
-from .AdBlockRule import AdBlockRule
+from .AdBlockTreeWidget import AdBlockTreeWidget
 
 import UI.PixmapCache
 import Preferences
@@ -34,21 +35,23 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus48.png"))
         
         self.updateSpinBox.setValue(Preferences.getHelp("AdBlockUpdatePeriod"))
         
-        self.__adBlockModel = AdBlockModel(self)
-        self.__proxyModel = E5TreeSortFilterProxyModel(self)
-        self.__proxyModel.setSourceModel(self.__adBlockModel)
-        self.subscriptionsTree.setModel(self.__proxyModel)
+        self.searchEdit.setInactiveText(self.trUtf8("Search..."))
+        self.__clearSearchButton = E5LineEditButton(self)
+        self.__clearSearchButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
+        self.searchEdit.addWidget(self.__clearSearchButton, E5LineEdit.RightSide)
+        self.__clearSearchButton.clicked[()].connect(self.searchEdit.clear)
         
-        self.searchEdit.textChanged.connect(self.__proxyModel.setFilterFixedString)
+        self.__manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
+        self.adBlockGroup.setChecked(self.__manager.isEnabled())
+        self.__manager.requiredSubscriptionLoaded.connect(self.addSubscription)
         
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
-        self.adBlockGroup.setChecked(manager.isEnabled())
-        self.adBlockGroup.toggled[bool].connect(manager.setEnabled)
+        self.__currentTreeWidget = None
+        self.__currentSubscription = None
+        self.__loaded = False
         
         menu = QMenu(self)
         menu.aboutToShow.connect(self.__aboutToShowActionMenu)
@@ -56,108 +59,200 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         self.actionButton.setIcon(UI.PixmapCache.getIcon("adBlockAction.png"))
         self.actionButton.setPopupMode(QToolButton.InstantPopup)
         
-        if self.adBlockGroup.isChecked():
-            subscription = manager.customRules()
-            subscriptionIndex = self.__adBlockModel.subscriptionIndex(subscription)
-            self.subscriptionsTree.expand(
-                self.__proxyModel.mapFromSource(subscriptionIndex))
-    
-    def model(self):
-        """
-        Public method to return a reference to the subscriptions tree model.
-        """
-        return self.subscriptionsTree.model()
-    
-    def setCurrentIndex(self, index):
-        """
-        Private slot to set the current index of the subscriptions tree.
+        self.__load()
         
-        @param index index to be set (QModelIndex)
+        self.buttonBox.setFocus()
+    
+    def __loadSubscriptions(self):
         """
-        self.subscriptionsTree.setCurrentIndex(index)
+        Private slot to load the AdBlock subscription rules.
+        """
+        for index in range(self.subscriptionsTabWidget.count()):
+            tree = self.subscriptionsTabWidget.widget(index)
+            tree.refresh()
+    
+    def __load(self):
+        """
+        Private slot to populate the tab widget with subscriptions.
+        """
+        if self.__loaded or not self.adBlockGroup.isChecked():
+            return
+        
+        for subscription in self.__manager.subscriptions():
+            tree = AdBlockTreeWidget(subscription, self.subscriptionsTabWidget)
+            if subscription.isEnabled():
+                icon = UI.PixmapCache.getIcon("adBlockPlus.png")
+            else:
+                icon = UI.PixmapCache.getIcon("adBlockPlusDisabled.png")
+            self.subscriptionsTabWidget.addTab(tree, icon, subscription.title())
+        
+        self.__loaded = True
+        QCoreApplication.processEvents()
+        
+        QTimer.singleShot(50, self.__loadSubscriptions)
+    
+    def addSubscription(self, subscription, refresh=True):
+        """
+        Public slot adding a subscription to the list.
+        
+        @param subscription reference to the subscription to be
+            added (AdBlockSubscription)
+        @param refresh flag indicating to refresh the tree (boolean)
+        """
+        tree = AdBlockTreeWidget(subscription, self.subscriptionsTabWidget)
+        index = self.subscriptionsTabWidget.insertTab(
+            self.subscriptionsTabWidget.count() - 1, tree, subscription.title())
+        self.subscriptionsTabWidget.setCurrentIndex(index)
+        QCoreApplication.processEvents()
+        if refresh:
+            tree.refresh()
+        self.__setSubscriptionEnabled(subscription, True)
     
     def __aboutToShowActionMenu(self):
         """
         Private slot to show the actions menu.
         """
+        subscriptionEditable = self.__currentSubscription and \
+                               self.__currentSubscription.canEditRules()
+        subscriptionRemovable = self.__currentSubscription and \
+                               self.__currentSubscription.canBeRemoved()
+        subscriptionEnabled = self.__currentSubscription and \
+                              self.__currentSubscription.isEnabled()
+        
         menu = self.actionButton.menu()
         menu.clear()
         
-        menu.addAction(self.trUtf8("Add Custom Rule"), self.addCustomRule)
-        
+        menu.addAction(self.trUtf8("Add Rule"), self.__addCustomRule)\
+            .setEnabled(subscriptionEditable)
+        menu.addAction(self.trUtf8("Remove Rule"), self.__removeCustomRule)\
+            .setEnabled(subscriptionEditable)
+        menu.addSeparator()
+        menu.addAction(self.trUtf8("Browse Subscriptions..."), self.__browseSubscriptions)
+        menu.addAction(self.trUtf8("Remove Subscription"), self.__removeSubscription)\
+            .setEnabled(subscriptionRemovable)
+        if self.__currentSubscription:
+            menu.addSeparator()
+            if subscriptionEnabled:
+                txt = self.trUtf8("Disable Subscription")
+            else:
+                txt = self.trUtf8("Enable Subscription")
+            menu.addAction(txt, self.__switchSubscriptionEnabled)
+        menu.addSeparator()
+        menu.addAction(self.trUtf8("Update Subscription"), self.__updateSubscription)\
+            .setEnabled(not subscriptionEditable)
+        menu.addAction(self.trUtf8("Update All Subscriptions"),
+            self.__updateAllSubscriptions)
+        menu.addSeparator()
         menu.addAction(self.trUtf8("Learn more about writing rules..."),
                        self.__learnAboutWritingFilters)
-        
-        menu.addSeparator()
-        
-        idx = self.__proxyModel.mapToSource(self.subscriptionsTree.currentIndex())
-        
-        act = menu.addAction(self.trUtf8("Update Subscription"),
-                             self.__updateSubscription)
-        act.setEnabled(idx.isValid())
-        
-        menu.addAction(self.trUtf8("Browse Subscriptions..."), self.__browseSubscriptions)
-        
-        menu.addSeparator()
-        
-        act = menu.addAction(self.trUtf8("Remove Subscription"),
-                             self.__removeSubscription)
-        act.setEnabled(idx.isValid())
     
-    def addCustomRule(self, rule=""):
+    def __addCustomRule(self):
         """
-        Public slot to add a custom AdBlock rule.
-        
-        @param rule string defining the rule to be added (string)
+        Private slot to add a custom AdBlock rule.
         """
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
-        subscription = manager.customRules()
-        assert subscription is not None
-        subscription.addRule(AdBlockRule(rule, subscription))
-        QApplication.processEvents()
-        
-        parent = self.__adBlockModel.subscriptionIndex(subscription)
-        cnt = self.__adBlockModel.rowCount(parent)
-        ruleIndex = self.__adBlockModel.index(cnt - 1, 0, parent)
-        self.subscriptionsTree.expand(self.__proxyModel.mapFromSource(parent))
-        self.subscriptionsTree.edit(self.__proxyModel.mapFromSource(ruleIndex))
+        self.__currentTreeWidget.addRule()
+    
+    def __removeCustomRule(self):
+        """
+        Private slot to remove a custom AdBlock rule.
+        """
+        self.__currentTreeWidget.removeRule()
     
     def __updateSubscription(self):
         """
         Private slot to update the selected subscription.
         """
-        idx = self.__proxyModel.mapToSource(self.subscriptionsTree.currentIndex())
-        if not idx.isValid():
-            return
-        if idx.parent().isValid():
-            idx = idx.parent()
-        subscription = self.__adBlockModel.subscription(idx)
-        subscription.updateNow()
+        self.__currentSubscription.updateNow()
+    
+    def __updateAllSubscriptions(self):
+        """
+        Private slot to update all subscriptions.
+        """
+        self.__manager.updateAllSubscriptions()
     
     def __browseSubscriptions(self):
         """
         Private slot to browse the list of available AdBlock subscriptions.
         """
-        QDesktopServices.openUrl(QUrl("http://adblockplus.org/en/subscriptions"))
+        mw = Helpviewer.HelpWindow.HelpWindow.mainWindow()
+        mw.newTab("http://adblockplus.org/en/subscriptions")
+        mw.raise_()
     
     def __learnAboutWritingFilters(self):
         """
         Private slot to show the web page about how to write filters.
         """
-        QDesktopServices.openUrl(QUrl("http://adblockplus.org/en/filters"))
+        mw = Helpviewer.HelpWindow.HelpWindow.mainWindow()
+        mw.newTab("http://adblockplus.org/en/filters")
+        mw.raise_()
     
     def __removeSubscription(self):
         """
         Private slot to remove the selected subscription.
         """
-        idx = self.__proxyModel.mapToSource(self.subscriptionsTree.currentIndex())
-        if not idx.isValid():
-            return
-        if idx.parent().isValid():
-            idx = idx.parent()
-        subscription = self.__adBlockModel.subscription(idx)
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
-        manager.removeSubscription(subscription)
+        requiresTitles = []
+        requiresSubscriptions = \
+            self.__manager.getRequiresSubscriptions(self.__currentSubscription)
+        for subscription in requiresSubscriptions:
+            requiresTitles.append(subscription.title())
+        if requiresTitles:
+            message = self.trUtf8("<p>Do you really want to remove subscription"
+                " <b>{0}</b> and all subscriptions requiring it?</p>"
+                "<ul><li>{1}</li></ul>").format(
+                    self.__currentSubscription.title(),
+                    "</li><li>".join(requiresTitles))
+        else:
+            message = self.trUtf8("<p>Do you really want to remove subscription"
+                " <b>{0}</b>?</p>").format(self.__currentSubscription.title())
+        res = E5MessageBox.yesNo(self,
+            self.trUtf8("Remove Subscription"),
+            message)
+        
+        if res:
+            removeSubscription = self.__currentSubscription
+            removeTrees = [self.__currentTreeWidget]
+            for index in range(self.subscriptionsTabWidget.count()):
+                tree = self.subscriptionsTabWidget.widget(index)
+                if tree.subscription() in requiresSubscriptions:
+                    removeTrees.append(tree)
+            for tree in removeTrees:
+                self.subscriptionsTabWidget.removeTab(
+                    self.subscriptionsTabWidget.indexOf(tree))
+            self.__manager.removeSubscription(removeSubscription)
+    
+    def __switchSubscriptionEnabled(self):
+        """
+        Private slot to switch the enabled state of the selected subscription
+        """
+        newState = not self.__currentSubscription.isEnabled()
+        self.__setSubscriptionEnabled(self.__currentSubscription, newState)
+    
+    def __setSubscriptionEnabled(self, subscription, enable):
+        """
+        Private slot to set the enabled state of a subscription.
+        
+        @param subscription subscription to set the state for (AdBlockSubscription)
+        @param enable state to set to (boolean)
+        """
+        if enable:
+            # enable required one as well
+            sub = self.__manager.subscription(subscription.requiresLocation())
+            requiresSubscriptions = [] if sub is None else [sub]
+            icon = UI.PixmapCache.getIcon("adBlockPlus.png")
+        else:
+            # disable dependent ones as well
+            requiresSubscriptions = \
+                self.__manager.getRequiresSubscriptions(subscription)
+            icon = UI.PixmapCache.getIcon("adBlockPlusDisabled.png")
+        requiresSubscriptions.append(subscription)
+        for sub in requiresSubscriptions:
+            sub.setEnabled(enable)
+        
+        for index in range(self.subscriptionsTabWidget.count()):
+            tree = self.subscriptionsTabWidget.widget(index)
+            if tree.subscription() in requiresSubscriptions:
+                self.subscriptionsTabWidget.setTabIcon(
+                    self.subscriptionsTabWidget.indexOf(tree), icon)
     
     @pyqtSlot(int)
     def on_updateSpinBox_valueChanged(self, value):
@@ -169,9 +264,42 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         if value != Preferences.getHelp("AdBlockUpdatePeriod"):
             Preferences.setHelp("AdBlockUpdatePeriod", value)
             
-            manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+            manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
             for subscription in manager.subscriptions():
                 subscription.checkForUpdate()
+    
+    @pyqtSlot(int)
+    def on_subscriptionsTabWidget_currentChanged(self, index):
+        """
+        Private slot handling the selection of another tab.
+        
+        @param index index of the new current tab (integer)
+        """
+        if index != -1:
+            self.__currentTreeWidget = self.subscriptionsTabWidget.widget(index)
+            self.__currentSubscription = self.__currentTreeWidget.subscription()
+    
+    @pyqtSlot(str)
+    def on_searchEdit_textChanged(self, filter):
+        """
+        Private slot to set a new filter on the current widget.
+        
+        @param filter filter to be set (string)
+        """
+        if self.__currentTreeWidget and self.adBlockGroup.isChecked():
+            self.__currentTreeWidget.filterString(filter)
+    
+    @pyqtSlot(bool)
+    def on_adBlockGroup_toggled(self, state):
+        """
+        Private slot handling the enabling/disabling of AdBlock.
+        
+        @param state state of the toggle (boolean)
+        """
+        self.__manager.setEnabled(state)
+        
+        if state:
+            self.__load()
     
     def showRule(self, rule):
         """
@@ -186,17 +314,10 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         if subscription is None:
             return
         
-        self.searchEdit.clear()
-        
-        subscriptionIndex = self.__adBlockModel.subscriptionIndex(subscription)
-        subscriptionProxyIndex = self.__proxyModel.mapFromSource(subscriptionIndex)
-        filter = rule.filter()
-        if filter:
-            indexes = self.__proxyModel.match(
-                subscriptionProxyIndex, Qt.DisplayRole, filter, 1,
-                Qt.MatchStartsWith | Qt.MatchRecursive)
-            if indexes:
-                self.subscriptionsTree.expand(subscriptionProxyIndex)
-                self.subscriptionsTree.scrollTo(indexes[0])
-                self.subscriptionsTree.setCurrentIndex(indexes[0])
+        for index in range(self.subscriptionsTabWidget.count()):
+            tree = self.subscriptionsTabWidget.widget(index)
+            if subscription == tree.subscription():
+                tree.showRule(rule)
+                self.subscriptionsTabWidget.setCurrentIndex(index)
                 self.raise_()
+                break

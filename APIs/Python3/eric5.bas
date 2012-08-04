@@ -8,10 +8,10 @@ AdBlockBlockedNetworkReply QNetworkReply
 AdBlockDialog QDialog Ui_AdBlockDialog
 AdBlockIcon E5ClickableLabel
 AdBlockManager QObject
-AdBlockModel QAbstractItemModel
 AdBlockNetwork QObject
 AdBlockPage QObject
 AdBlockSubscription QObject
+AdBlockTreeWidget E5TreeWidget
 AddBookmarkDialog QDialog Ui_AddBookmarkDialog
 AddBookmarkProxyModel QSortFilterProxyModel
 AddDirectoryDialog QDialog Ui_AddDirectoryDialog

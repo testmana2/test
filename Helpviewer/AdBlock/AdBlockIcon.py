@@ -65,7 +65,7 @@ class AdBlockIcon(E5ClickableLabel):
         
         menu.clear()
         
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         
         if manager.isEnabled():
             menu.addAction(UI.PixmapCache.getIcon("adBlockPlusDisabled.png"),
@@ -126,4 +126,4 @@ class AdBlockIcon(E5ClickableLabel):
         """
         act = self.sender()
         if act is not None:
-            Helpviewer.HelpWindow.HelpWindow.adblockManager().setEnabled(act.data())
+            Helpviewer.HelpWindow.HelpWindow.adBlockManager().setEnabled(act.data())

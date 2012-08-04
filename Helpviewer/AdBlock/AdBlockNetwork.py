@@ -30,22 +30,24 @@ class AdBlockNetwork(QObject):
         urlDomain = url.host()
         urlScheme = url.scheme()
         
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         if not manager.isEnabled() or not self.canRunOnScheme(urlScheme):
             return None
         
         for subscription in manager.subscriptions():
-            blockedRule = subscription.match(request, urlDomain, urlString)
-            if blockedRule:
-                webPage = request.attribute(QNetworkRequest.User + 100)
-                if  webPage is not None:
-                    if not self.__canBeBlocked(webPage.url()):
-                        return None
+            if subscription.isEnabled():
+                blockedRule = subscription.match(request, urlDomain, urlString)
+                if blockedRule:
+                    webPage = request.attribute(QNetworkRequest.User + 100)
+                    if  webPage is not None:
+                        if not self.__canBeBlocked(webPage.url()):
+                            return None
+                        
+                        webPage.addAdBlockRule(blockedRule, url)
                     
-                    webPage.addAdBlockRule(blockedRule, url)
-                
-                reply = AdBlockBlockedNetworkReply(request, subscription, blockedRule, self)
-                return reply
+                    reply = AdBlockBlockedNetworkReply(
+                        request, subscription, blockedRule, self)
+                    return reply
         
         return None
     
@@ -65,9 +67,9 @@ class AdBlockNetwork(QObject):
         @param url URL to be checked (QUrl)
         @return flag indicating, that the URL can be blocked (boolean)
         """
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         for subscription in manager.subscriptions():
-            if subscription.adBlockDisabledForUrl(url):
+            if subscription.isEnabled() and subscription.adBlockDisabledForUrl(url):
                 return False
         
         return True

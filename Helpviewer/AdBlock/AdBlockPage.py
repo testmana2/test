@@ -25,7 +25,7 @@ class AdBlockPage(QObject):
         if page is None or page.mainFrame() is None:
             return
         
-        manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         if not manager.isEnabled():
             return
         
