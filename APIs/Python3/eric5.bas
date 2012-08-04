@@ -6,6 +6,7 @@ AboutPlugin QObject
 AdBlockAccessHandler SchemeAccessHandler
 AdBlockBlockedNetworkReply QNetworkReply
 AdBlockDialog QDialog Ui_AdBlockDialog
+AdBlockExceptionsDialog QDialog Ui_AdBlockExceptionsDialog
 AdBlockIcon E5ClickableLabel
 AdBlockManager QObject
 AdBlockNetwork QObject

@@ -15,6 +15,7 @@ from .AdBlockNetwork import AdBlockNetwork
 from .AdBlockPage import AdBlockPage
 from .AdBlockSubscription import AdBlockSubscription
 from .AdBlockDialog import AdBlockDialog
+from .AdBlockExceptionsDialog import AdBlockExceptionsDialog
 
 import Helpviewer.HelpWindow
 
@@ -44,9 +45,11 @@ class AdBlockManager(QObject):
         self.__subscriptionsLoaded = False
         self.__enabled = False
         self.__adBlockDialog = None
+        self.__adBlockExceptionsDialog = None
         self.__adBlockNetwork = None
         self.__adBlockPage = None
         self.__subscriptions = []
+        self.__exceptedHosts = Preferences.getHelp("AdBlockExceptions")
         self.__saveTimer = AutoSaver(self, self.save)
         
         self.__defaultSubscriptionUrlString = \
@@ -62,6 +65,7 @@ class AdBlockManager(QObject):
         Public method to close the open search engines manager.
         """
         self.__adBlockDialog and self.__adBlockDialog.close()
+        self.__adBlockExceptionsDialog and self.__adBlockExceptionsDialog.close()
         
         self.__saveTimer.saveIfNeccessary()
     
@@ -338,6 +342,8 @@ class AdBlockManager(QObject):
     def showDialog(self):
         """
         Public slot to show the AdBlock subscription management dialog.
+        
+        @return reference to the dialog (AdBlockDialog)
         """
         if self.__adBlockDialog is None:
             self.__adBlockDialog = AdBlockDialog()
@@ -398,3 +404,62 @@ class AdBlockManager(QObject):
             rules = rules[:-1]
         
         return rules
+    
+    def exceptions(self):
+        """
+        Public method to get a list of excepted hosts.
+        
+        @return list of excepted hosts (list of string)
+        """
+        return self.__exceptedHosts
+    
+    def setExceptions(self, hosts):
+        """
+        Public method to set the list of excepted hosts.
+        
+        @param hosts list of excepted hosts (list of string)
+        """
+        self.__exceptedHosts = hosts[:]
+        Preferences.setHelp("AdBlockExceptions", self.__exceptedHosts)
+    
+    def addException(self, host):
+        """
+        Public method to add an exception.
+        
+        @param host to be excepted (string)
+        """
+        if host and host not in self.__exceptedHosts:
+            self.__exceptedHosts.append(host)
+            Preferences.setHelp("AdBlockExceptions", self.__exceptedHosts)
+    
+    def removeException(self, host):
+        """
+        Public method to remove an exception.
+        
+        @param host to be removed from the list of exceptions (string)
+        """
+        if host in self.__exceptedHosts:
+            self.__exceptedHosts.remove(host)
+            Preferences.setHelp("AdBlockExceptions", self.__exceptedHosts)
+    
+    def isHostExcepted(self, host):
+        """
+        Public slot to check, if a host is excepted.
+        
+        @param host host to check (string)
+        @return flag indicating an exception (boolean)
+        """
+        return host in self.__exceptedHosts
+    
+    def showExceptionsDialog(self):
+        """
+        Public method to show the AdBlock Exceptions dialog.
+        
+        @return reference to the exceptions dialog (AdBlockExceptionsDialog)
+        """
+        if self.__adBlockExceptionsDialog is None:
+            self.__adBlockExceptionsDialog = AdBlockExceptionsDialog()
+        
+        self.__adBlockExceptionsDialog.load(self.__exceptedHosts)
+        self.__adBlockExceptionsDialog.show()
+        return self.__adBlockExceptionsDialog

@@ -64,9 +64,6 @@ QDialog, Ui_AdBlockDialog
 <td><a href="#AdBlockDialog.__aboutToShowActionMenu">__aboutToShowActionMenu</a></td>
 <td>Private slot to show the actions menu.</td>
 </tr><tr>
-<td><a href="#AdBlockDialog.__addCustomRule">__addCustomRule</a></td>
-<td>Private slot to add a custom AdBlock rule.</td>
-</tr><tr>
 <td><a href="#AdBlockDialog.__browseSubscriptions">__browseSubscriptions</a></td>
 <td>Private slot to browse the list of available AdBlock subscriptions.</td>
 </tr><tr>
@@ -96,6 +93,9 @@ QDialog, Ui_AdBlockDialog
 </tr><tr>
 <td><a href="#AdBlockDialog.__updateSubscription">__updateSubscription</a></td>
 <td>Private slot to update the selected subscription.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.addCustomRule">addCustomRule</a></td>
+<td>Public slot to add a custom AdBlock rule.</td>
 </tr><tr>
 <td><a href="#AdBlockDialog.addSubscription">addSubscription</a></td>
 <td>Public slot adding a subscription to the list.</td>
@@ -130,11 +130,6 @@ QDialog, Ui_AdBlockDialog
 <b>__aboutToShowActionMenu</b>(<i></i>)
 <p>
         Private slot to show the actions menu.
-</p><a NAME="AdBlockDialog.__addCustomRule" ID="AdBlockDialog.__addCustomRule"></a>
-<h4>AdBlockDialog.__addCustomRule</h4>
-<b>__addCustomRule</b>(<i></i>)
-<p>
-        Private slot to add a custom AdBlock rule.
 </p><a NAME="AdBlockDialog.__browseSubscriptions" ID="AdBlockDialog.__browseSubscriptions"></a>
 <h4>AdBlockDialog.__browseSubscriptions</h4>
 <b>__browseSubscriptions</b>(<i></i>)
@@ -193,6 +188,11 @@ state to set to (boolean)
 <b>__updateSubscription</b>(<i></i>)
 <p>
         Private slot to update the selected subscription.
+</p><a NAME="AdBlockDialog.addCustomRule" ID="AdBlockDialog.addCustomRule"></a>
+<h4>AdBlockDialog.addCustomRule</h4>
+<b>addCustomRule</b>(<i></i>)
+<p>
+        Public slot to add a custom AdBlock rule.
 </p><a NAME="AdBlockDialog.addSubscription" ID="AdBlockDialog.addSubscription"></a>
 <h4>AdBlockDialog.addSubscription</h4>
 <b>addSubscription</b>(<i>subscription, refresh=True</i>)

@@ -67,14 +67,26 @@ E5ClickableLabel
 <td><a href="#AdBlockIcon.__enableAdBlock">__enableAdBlock</a></td>
 <td>Private slot to enable or disable AdBlock.</td>
 </tr><tr>
+<td><a href="#AdBlockIcon.__isCurrentHostExcepted">__isCurrentHostExcepted</a></td>
+<td>Private method to check, if the host of the current browser is excepted.</td>
+</tr><tr>
+<td><a href="#AdBlockIcon.__setException">__setException</a></td>
+<td>Private slot to add or remove the current host from the list of exceptions.</td>
+</tr><tr>
 <td><a href="#AdBlockIcon.__showMenu">__showMenu</a></td>
 <td>Private slot to show the context menu.</td>
+</tr><tr>
+<td><a href="#AdBlockIcon.currentChanged">currentChanged</a></td>
+<td>Public slot to handle a change of the current browser tab.</td>
 </tr><tr>
 <td><a href="#AdBlockIcon.menuAction">menuAction</a></td>
 <td>Public method to get a reference to the menu action.</td>
 </tr><tr>
 <td><a href="#AdBlockIcon.setEnabled">setEnabled</a></td>
 <td>Public slot to set the enabled state.</td>
+</tr><tr>
+<td><a href="#AdBlockIcon.sourceChanged">sourceChanged</a></td>
+<td>Public slot to handle URL changes.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -106,6 +118,21 @@ parent menu (QMenu)
 <b>__enableAdBlock</b>(<i></i>)
 <p>
         Private slot to enable or disable AdBlock.
+</p><a NAME="AdBlockIcon.__isCurrentHostExcepted" ID="AdBlockIcon.__isCurrentHostExcepted"></a>
+<h4>AdBlockIcon.__isCurrentHostExcepted</h4>
+<b>__isCurrentHostExcepted</b>(<i></i>)
+<p>
+        Private method to check, if the host of the current browser is excepted.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an exception (boolean)
+</dd>
+</dl><a NAME="AdBlockIcon.__setException" ID="AdBlockIcon.__setException"></a>
+<h4>AdBlockIcon.__setException</h4>
+<b>__setException</b>(<i></i>)
+<p>
+        Private slot to add or remove the current host from the list of exceptions.
 </p><a NAME="AdBlockIcon.__showMenu" ID="AdBlockIcon.__showMenu"></a>
 <h4>AdBlockIcon.__showMenu</h4>
 <b>__showMenu</b>(<i>pos</i>)
@@ -116,7 +143,12 @@ parent menu (QMenu)
 <dd>
 position the context menu should be shown (QPoint)
 </dd>
-</dl><a NAME="AdBlockIcon.menuAction" ID="AdBlockIcon.menuAction"></a>
+</dl><a NAME="AdBlockIcon.currentChanged" ID="AdBlockIcon.currentChanged"></a>
+<h4>AdBlockIcon.currentChanged</h4>
+<b>currentChanged</b>(<i></i>)
+<p>
+        Public slot to handle a change of the current browser tab.
+</p><a NAME="AdBlockIcon.menuAction" ID="AdBlockIcon.menuAction"></a>
 <h4>AdBlockIcon.menuAction</h4>
 <b>menuAction</b>(<i></i>)
 <p>
@@ -135,6 +167,19 @@ reference to the menu action (QAction)
 <dt><i>enabled</i></dt>
 <dd>
 enabled state (boolean)
+</dd>
+</dl><a NAME="AdBlockIcon.sourceChanged" ID="AdBlockIcon.sourceChanged"></a>
+<h4>AdBlockIcon.sourceChanged</h4>
+<b>sourceChanged</b>(<i>browser, url</i>)
+<p>
+        Public slot to handle URL changes.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser (HelpBrowser)
+</dd><dt><i>url</i></dt>
+<dd>
+new URL (QUrl)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -194,6 +194,7 @@
               <section title="eric5.Helpviewer.AdBlock.AdBlockAccessHandler" ref="eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply" ref="eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockDialog" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html" />
+              <section title="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html" />
               <section title="eric5.Helpviewer.AdBlock.AdBlockNetwork" ref="eric5.Helpviewer.AdBlock.AdBlockNetwork.html" />
@@ -1056,7 +1057,6 @@
       <keyword name="AdBlockDialog (Constructor)" id="AdBlockDialog (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__init__" />
       <keyword name="AdBlockDialog (Module)" id="AdBlockDialog (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html" />
       <keyword name="AdBlockDialog.__aboutToShowActionMenu" id="AdBlockDialog.__aboutToShowActionMenu" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__aboutToShowActionMenu" />
-      <keyword name="AdBlockDialog.__addCustomRule" id="AdBlockDialog.__addCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__addCustomRule" />
       <keyword name="AdBlockDialog.__browseSubscriptions" id="AdBlockDialog.__browseSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__browseSubscriptions" />
       <keyword name="AdBlockDialog.__learnAboutWritingFilters" id="AdBlockDialog.__learnAboutWritingFilters" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__learnAboutWritingFilters" />
       <keyword name="AdBlockDialog.__load" id="AdBlockDialog.__load" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__load" />
@@ -1067,41 +1067,61 @@
       <keyword name="AdBlockDialog.__switchSubscriptionEnabled" id="AdBlockDialog.__switchSubscriptionEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__switchSubscriptionEnabled" />
       <keyword name="AdBlockDialog.__updateAllSubscriptions" id="AdBlockDialog.__updateAllSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__updateAllSubscriptions" />
       <keyword name="AdBlockDialog.__updateSubscription" id="AdBlockDialog.__updateSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.__updateSubscription" />
+      <keyword name="AdBlockDialog.addCustomRule" id="AdBlockDialog.addCustomRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.addCustomRule" />
       <keyword name="AdBlockDialog.addSubscription" id="AdBlockDialog.addSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.addSubscription" />
       <keyword name="AdBlockDialog.on_adBlockGroup_toggled" id="AdBlockDialog.on_adBlockGroup_toggled" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_adBlockGroup_toggled" />
       <keyword name="AdBlockDialog.on_searchEdit_textChanged" id="AdBlockDialog.on_searchEdit_textChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_searchEdit_textChanged" />
       <keyword name="AdBlockDialog.on_subscriptionsTabWidget_currentChanged" id="AdBlockDialog.on_subscriptionsTabWidget_currentChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_subscriptionsTabWidget_currentChanged" />
       <keyword name="AdBlockDialog.on_updateSpinBox_valueChanged" id="AdBlockDialog.on_updateSpinBox_valueChanged" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.on_updateSpinBox_valueChanged" />
       <keyword name="AdBlockDialog.showRule" id="AdBlockDialog.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockDialog.html#AdBlockDialog.showRule" />
+      <keyword name="AdBlockExceptionsDialog" id="AdBlockExceptionsDialog" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog" />
+      <keyword name="AdBlockExceptionsDialog (Constructor)" id="AdBlockExceptionsDialog (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.__init__" />
+      <keyword name="AdBlockExceptionsDialog (Module)" id="AdBlockExceptionsDialog (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html" />
+      <keyword name="AdBlockExceptionsDialog.accept" id="AdBlockExceptionsDialog.accept" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.accept" />
+      <keyword name="AdBlockExceptionsDialog.load" id="AdBlockExceptionsDialog.load" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.load" />
+      <keyword name="AdBlockExceptionsDialog.on_addButton_clicked" id="AdBlockExceptionsDialog.on_addButton_clicked" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.on_addButton_clicked" />
+      <keyword name="AdBlockExceptionsDialog.on_deleteButton_clicked" id="AdBlockExceptionsDialog.on_deleteButton_clicked" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.on_deleteButton_clicked" />
+      <keyword name="AdBlockExceptionsDialog.on_hostEdit_textChanged" id="AdBlockExceptionsDialog.on_hostEdit_textChanged" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.on_hostEdit_textChanged" />
+      <keyword name="AdBlockExceptionsDialog.on_hostList_itemSelectionChanged" id="AdBlockExceptionsDialog.on_hostList_itemSelectionChanged" ref="eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html#AdBlockExceptionsDialog.on_hostList_itemSelectionChanged" />
       <keyword name="AdBlockIcon" id="AdBlockIcon" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon" />
       <keyword name="AdBlockIcon (Constructor)" id="AdBlockIcon (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__init__" />
       <keyword name="AdBlockIcon (Module)" id="AdBlockIcon (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html" />
       <keyword name="AdBlockIcon.__createMenu" id="AdBlockIcon.__createMenu" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__createMenu" />
       <keyword name="AdBlockIcon.__enableAdBlock" id="AdBlockIcon.__enableAdBlock" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__enableAdBlock" />
+      <keyword name="AdBlockIcon.__isCurrentHostExcepted" id="AdBlockIcon.__isCurrentHostExcepted" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__isCurrentHostExcepted" />
+      <keyword name="AdBlockIcon.__setException" id="AdBlockIcon.__setException" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__setException" />
       <keyword name="AdBlockIcon.__showMenu" id="AdBlockIcon.__showMenu" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.__showMenu" />
+      <keyword name="AdBlockIcon.currentChanged" id="AdBlockIcon.currentChanged" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.currentChanged" />
       <keyword name="AdBlockIcon.menuAction" id="AdBlockIcon.menuAction" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.menuAction" />
       <keyword name="AdBlockIcon.setEnabled" id="AdBlockIcon.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.setEnabled" />
+      <keyword name="AdBlockIcon.sourceChanged" id="AdBlockIcon.sourceChanged" ref="eric5.Helpviewer.AdBlock.AdBlockIcon.html#AdBlockIcon.sourceChanged" />
       <keyword name="AdBlockManager" id="AdBlockManager" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager" />
       <keyword name="AdBlockManager (Constructor)" id="AdBlockManager (Constructor)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__init__" />
       <keyword name="AdBlockManager (Module)" id="AdBlockManager (Module)" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html" />
       <keyword name="AdBlockManager.__customSubscriptionLocation" id="AdBlockManager.__customSubscriptionLocation" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__customSubscriptionLocation" />
       <keyword name="AdBlockManager.__customSubscriptionUrl" id="AdBlockManager.__customSubscriptionUrl" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__customSubscriptionUrl" />
       <keyword name="AdBlockManager.__loadSubscriptions" id="AdBlockManager.__loadSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.__loadSubscriptions" />
+      <keyword name="AdBlockManager.addException" id="AdBlockManager.addException" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.addException" />
       <keyword name="AdBlockManager.addSubscription" id="AdBlockManager.addSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.addSubscription" />
       <keyword name="AdBlockManager.close" id="AdBlockManager.close" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.close" />
       <keyword name="AdBlockManager.customRules" id="AdBlockManager.customRules" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.customRules" />
       <keyword name="AdBlockManager.elementHidingRules" id="AdBlockManager.elementHidingRules" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.elementHidingRules" />
       <keyword name="AdBlockManager.elementHidingRulesForDomain" id="AdBlockManager.elementHidingRulesForDomain" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.elementHidingRulesForDomain" />
+      <keyword name="AdBlockManager.exceptions" id="AdBlockManager.exceptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.exceptions" />
       <keyword name="AdBlockManager.getRequiresSubscriptions" id="AdBlockManager.getRequiresSubscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.getRequiresSubscriptions" />
       <keyword name="AdBlockManager.isEnabled" id="AdBlockManager.isEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.isEnabled" />
+      <keyword name="AdBlockManager.isHostExcepted" id="AdBlockManager.isHostExcepted" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.isHostExcepted" />
       <keyword name="AdBlockManager.load" id="AdBlockManager.load" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.load" />
       <keyword name="AdBlockManager.loadRequiredSubscription" id="AdBlockManager.loadRequiredSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.loadRequiredSubscription" />
       <keyword name="AdBlockManager.network" id="AdBlockManager.network" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.network" />
       <keyword name="AdBlockManager.page" id="AdBlockManager.page" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.page" />
+      <keyword name="AdBlockManager.removeException" id="AdBlockManager.removeException" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.removeException" />
       <keyword name="AdBlockManager.removeSubscription" id="AdBlockManager.removeSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.removeSubscription" />
       <keyword name="AdBlockManager.save" id="AdBlockManager.save" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.save" />
       <keyword name="AdBlockManager.setEnabled" id="AdBlockManager.setEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.setEnabled" />
+      <keyword name="AdBlockManager.setExceptions" id="AdBlockManager.setExceptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.setExceptions" />
       <keyword name="AdBlockManager.showDialog" id="AdBlockManager.showDialog" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showDialog" />
+      <keyword name="AdBlockManager.showExceptionsDialog" id="AdBlockManager.showExceptionsDialog" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showExceptionsDialog" />
       <keyword name="AdBlockManager.showRule" id="AdBlockManager.showRule" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.showRule" />
       <keyword name="AdBlockManager.subscription" id="AdBlockManager.subscription" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.subscription" />
       <keyword name="AdBlockManager.subscriptions" id="AdBlockManager.subscriptions" ref="eric5.Helpviewer.AdBlock.AdBlockManager.html#AdBlockManager.subscriptions" />
@@ -12446,6 +12466,7 @@
       <file>eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockDialog.html</file>
+      <file>eric5.Helpviewer.AdBlock.AdBlockExceptionsDialog.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockIcon.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockManager.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockNetwork.html</file>

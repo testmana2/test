@@ -19,6 +19,7 @@ Version 5.3-snapshot-2012mmdd:
   -- added an icon to the status bar to give direct access to AdBlock
   -- rewrote huge part of AdBlock to speed up
   -- added support for dependent AdBlock subscriptions
+  -- added support for AdBlock exceptions
 
 Version 5.3-snapshot-20120624:
 - bug fixes

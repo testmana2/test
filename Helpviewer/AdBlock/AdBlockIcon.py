@@ -46,11 +46,11 @@ class AdBlockIcon(E5ClickableLabel):
         
         @param enabled enabled state (boolean)
         """
+        self.__enabled = enabled
         if enabled:
-            self.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus16.png"))
+            self.currentChanged()
         else:
             self.setPixmap(UI.PixmapCache.getPixmap("adBlockPlusDisabled16.png"))
-        self.__enabled = enabled
     
     def __createMenu(self, menu=None):
         """
@@ -74,8 +74,21 @@ class AdBlockIcon(E5ClickableLabel):
             menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
                 self.trUtf8("Enable AdBlock"), self.__enableAdBlock).setData(True)
         menu.addSeparator()
+        if manager.isEnabled() and \
+           self.__mw.currentBrowser().page().url().host():
+            if self.__isCurrentHostExcepted():
+                menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
+                    self.trUtf8("Remove AdBlock Exception"),
+                    self.__setException).setData(False)
+            else:
+                menu.addAction(UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
+                    self.trUtf8("Add AdBlock Exception"),
+                    self.__setException).setData(True)
+        menu.addAction(UI.PixmapCache.getIcon("adBlockPlusGreen.png"),
+            self.trUtf8("AdBlock Exceptions..."), manager.showExceptionsDialog)
+        menu.addSeparator()
         menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
-            self.trUtf8("AdBlock Configuration"), manager.showDialog)
+            self.trUtf8("AdBlock Configuration..."), manager.showDialog)
         menu.addSeparator()
         
         entries = self.__mw.currentBrowser().page().getAdBlockedPageEntries()
@@ -127,3 +140,48 @@ class AdBlockIcon(E5ClickableLabel):
         act = self.sender()
         if act is not None:
             Helpviewer.HelpWindow.HelpWindow.adBlockManager().setEnabled(act.data())
+    
+    def __isCurrentHostExcepted(self):
+        """
+        Private method to check, if the host of the current browser is excepted.
+        
+        @return flag indicating an exception (boolean)
+        """
+        browser = self.__mw.currentBrowser()
+        urlHost = browser.page().url().host()
+        
+        return urlHost and \
+               Helpviewer.HelpWindow.HelpWindow.adBlockManager().isHostExcepted(urlHost)
+    
+    def currentChanged(self):
+        """
+        Public slot to handle a change of the current browser tab.
+        """
+        if self.__enabled:
+            if self.__isCurrentHostExcepted():
+                self.setPixmap(UI.PixmapCache.getPixmap("adBlockPlusGreen16.png"))
+            else:
+                self.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus16.png"))
+    
+    def __setException(self):
+        """
+        Private slot to add or remove the current host from the list of exceptions.
+        """
+        act = self.sender()
+        if act is not None:
+            urlHost = self.__mw.currentBrowser().page().url().host()
+            if act.data():
+                Helpviewer.HelpWindow.HelpWindow.adBlockManager().addException(urlHost)
+            else:
+                Helpviewer.HelpWindow.HelpWindow.adBlockManager().removeException(urlHost)
+            self.currentChanged()
+    
+    def sourceChanged(self, browser, url):
+        """
+        Public slot to handle URL changes.
+        
+        @param browser reference to the browser (HelpBrowser)
+        @param url new URL (QUrl)
+        """
+        if browser == self.__mw.currentBrowser():
+            self.currentChanged()
