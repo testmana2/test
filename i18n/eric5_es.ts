@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1638,8 +1637,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1857,8 +1856,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -12826,7 +12825,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="800"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -46525,11 +46524,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="570"/>
         <source>Save all</source>
         <translation>Guardar todo</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="570"/>
-        <source>Save a&amp;ll...</source>
-        <translation type="obsolete">Guardar &amp;Todo...</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="574"/>
