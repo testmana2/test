@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -197,37 +198,37 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="14"/>
         <source>AdBlock Exceptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Excepciones de AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="51"/>
         <source>Enter a host to block AdBlock for</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir un host para ser bloqueado por AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="61"/>
         <source>Press to add the host</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir el host</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="64"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Añadir</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="84"/>
         <source>Press to delete the selected hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para borrar los hosts seleccionados</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="87"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Borrar</translation>
+        <translation>&amp;Borrar</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.py" line="38"/>
         <source>Enter host to be added...</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir host a añadir...</translation>
     </message>
 </context>
 <context>
@@ -275,22 +276,22 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="80"/>
         <source>Remove AdBlock Exception</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Excepción de AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="84"/>
         <source>Add AdBlock Exception</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Excepción de AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="87"/>
         <source>AdBlock Exceptions...</source>
-        <translation type="unfinished"></translation>
+        <translation>Excepciones de AdBlock...</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="90"/>
         <source>AdBlock Configuration...</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración de AdBlock...</translation>
     </message>
 </context>
 <context>
@@ -1938,8 +1939,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2180,8 +2181,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -13740,7 +13741,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
