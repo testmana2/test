@@ -122,7 +122,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         menu = self.actionButton.menu()
         menu.clear()
         
-        menu.addAction(self.trUtf8("Add Rule"), self.__addCustomRule)\
+        menu.addAction(self.trUtf8("Add Rule"), self.addCustomRule)\
             .setEnabled(subscriptionEditable)
         menu.addAction(self.trUtf8("Remove Rule"), self.__removeCustomRule)\
             .setEnabled(subscriptionEditable)
@@ -146,9 +146,9 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         menu.addAction(self.trUtf8("Learn more about writing rules..."),
                        self.__learnAboutWritingFilters)
     
-    def __addCustomRule(self):
+    def addCustomRule(self):
         """
-        Private slot to add a custom AdBlock rule.
+        Public slot to add a custom AdBlock rule.
         """
         self.__currentTreeWidget.addRule()
     

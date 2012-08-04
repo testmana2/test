@@ -206,10 +206,6 @@ class HelpWindow(QMainWindow):
             self.__setIconDatabasePath()
             self.__initWebSettings()
             
-            self.__adBlockIcon = AdBlockIcon(self)
-            self.statusBar().addPermanentWidget(self.__adBlockIcon)
-            self.__adBlockIcon.setEnabled(Preferences.getHelp("AdBlockEnabled"))
-            
             self.__initActions()
             self.__initMenus()
             self.__initToolbars()
@@ -224,6 +220,12 @@ class HelpWindow(QMainWindow):
             self.tabWidget.currentBrowser().setFocus()
             
             self.__class__.helpwindows.append(self)
+            
+            self.__adBlockIcon = AdBlockIcon(self)
+            self.statusBar().addPermanentWidget(self.__adBlockIcon)
+            self.__adBlockIcon.setEnabled(Preferences.getHelp("AdBlockEnabled"))
+            self.tabWidget.currentChanged[int].connect(self.__adBlockIcon.currentChanged)
+            self.tabWidget.sourceChanged.connect(self.__adBlockIcon.sourceChanged)
             
             QDesktopServices.setUrlHandler("http", self.__linkActivated)
             QDesktopServices.setUrlHandler("https", self.__linkActivated)

@@ -640,6 +640,7 @@ class Prefs(object):
         "AdBlockEnabled": False,
         "AdBlockSubscriptions": [],
         "AdBlockUpdatePeriod": 7,
+        "AdBlockExceptions": [],
         "OfflineStorageDatabaseQuota": 50,     # 50 MB
         "UserAgent": "",
         "ShowPreview": True,
@@ -2080,8 +2081,8 @@ def getHelp(key, prefClass=Prefs):
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
-    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist", "SendRefererWhitelist",
-                 "GreaseMonkeyDisabledScripts"]:
+    elif key in ["AdBlockSubscriptions", "AdBlockExceptions", "ClickToFlashWhitelist",
+                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

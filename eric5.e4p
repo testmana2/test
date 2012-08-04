@@ -1038,6 +1038,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/AdBlock/AdBlockIcon.py</Source>
     <Source>E5Gui/E5TreeWidget.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockTreeWidget.py</Source>
+    <Source>Helpviewer/AdBlock/AdBlockExceptionsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1336,6 +1337,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui</Form>
+    <Form>Helpviewer/AdBlock/AdBlockExceptionsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

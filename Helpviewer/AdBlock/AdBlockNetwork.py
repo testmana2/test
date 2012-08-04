@@ -7,7 +7,7 @@
 Module implementing the network block class.
 """
 
-from PyQt4.QtCore import QObject
+from PyQt4.QtCore import QObject, QUrl
 from PyQt4.QtNetwork import QNetworkRequest
 
 import Helpviewer.HelpWindow
@@ -29,9 +29,13 @@ class AdBlockNetwork(QObject):
         urlString = bytes(url.toEncoded()).decode()
         urlDomain = url.host()
         urlScheme = url.scheme()
+        refererHost = QUrl.fromEncoded(request.rawHeader("Referer")).host()
         
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
-        if not manager.isEnabled() or not self.canRunOnScheme(urlScheme):
+        if not manager.isEnabled() or \
+           not self.canRunOnScheme(urlScheme) or \
+           manager.isHostExcepted(urlDomain) or \
+           manager.isHostExcepted(refererHost):
             return None
         
         for subscription in manager.subscriptions():
@@ -68,6 +72,8 @@ class AdBlockNetwork(QObject):
         @return flag indicating, that the URL can be blocked (boolean)
         """
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
+        if manager.isHostExcepted(url.host()):
+            return False
         for subscription in manager.subscriptions():
             if subscription.isEnabled() and subscription.adBlockDisabledForUrl(url):
                 return False
