@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2009 - 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing the network block class.
+"""
+
+from PyQt4.QtCore import QObject
+from PyQt4.QtNetwork import QNetworkRequest
+
+import Helpviewer.HelpWindow
+
+from .AdBlockBlockedNetworkReply import AdBlockBlockedNetworkReply
+
+
+class AdBlockNetwork(QObject):
+    """
+    Class implementing a network block.
+    """
+    def block(self, request):
+        """
+        Public method to check for a network block.
+        
+        @return reply object (QNetworkReply) or None
+        """
+        url = request.url()
+        urlString = bytes(url.toEncoded()).decode()
+        urlDomain = url.host()
+        urlScheme = url.scheme()
+        
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
+        if not manager.isEnabled() or not self.canRunOnScheme(urlScheme):
+            return None
+        
+        for subscription in manager.subscriptions():
+            if subscription.isEnabled():
+                blockedRule = subscription.match(request, urlDomain, urlString)
+                if blockedRule:
+                    webPage = request.attribute(QNetworkRequest.User + 100)
+                    if  webPage is not None:
+                        if not self.__canBeBlocked(webPage.url()):
+                            return None
+                        
+                        webPage.addAdBlockRule(blockedRule, url)
+                    
+                    reply = AdBlockBlockedNetworkReply(
+                        request, subscription, blockedRule, self)
+                    return reply
+        
+        return None
+    
+    def canRunOnScheme(self, scheme):
+        """
+        Public method to check, if AdBlock can be performed on the scheme.
+        
+        @param scheme scheme to check (string)
+        @return flag indicating, that AdBlock can be performed (boolean)
+        """
+        return scheme not in ["data", "eric", "qthelp", "qrc", "file", "abp"]
+    
+    def __canBeBlocked(self, url):
+        """
+        Private method to check, if an URL can be blocked.
+        
+        @param url URL to be checked (QUrl)
+        @return flag indicating, that the URL can be blocked (boolean)
+        """
+        manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
+        for subscription in manager.subscriptions():
+            if subscription.isEnabled() and subscription.adBlockDisabledForUrl(url):
+                return False
+        
+        return True
