@@ -569,7 +569,7 @@ class ViewManager(QObject):
         
         self.saveAllAct = E5Action(QApplication.translate('ViewManager', 'Save all'),
                 UI.PixmapCache.getIcon("fileSaveAll.png"),
-                QApplication.translate('ViewManager', 'Save a&ll...'),
+                QApplication.translate('ViewManager', 'Save a&ll'),
                 0, 0, self.saveActGrp, 'vm_file_save_all')
         self.saveAllAct.setStatusTip(QApplication.translate('ViewManager',
             'Save all files'))
