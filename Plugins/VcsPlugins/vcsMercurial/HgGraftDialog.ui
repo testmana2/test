@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>382</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,6 +143,29 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="logCheckBox">
+     <property name="toolTip">
+      <string>Select to append graft info to the log message</string>
+     </property>
+     <property name="text">
+      <string>Append Graft &amp;Info</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="dryRunCheckBox">
+     <property name="toolTip">
+      <string>Select to perform a dry-run of the graft operation</string>
+     </property>
+     <property name="text">
+      <string>Perform Dry-Run</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -162,6 +185,8 @@
   <tabstop>dateGroup</tabstop>
   <tabstop>currentDateCheckBox</tabstop>
   <tabstop>dateTimeEdit</tabstop>
+  <tabstop>logCheckBox</tabstop>
+  <tabstop>dryRunCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

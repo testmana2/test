@@ -11,6 +11,11 @@ Version 5.3-snapshot-2012mmdd:
      variables viewer
 - Configuration Dialog
   -- added a filter edit to filter the configuration tree
+- Version Control System Interfaces
+  -- Mercurial
+     --- added support for --log and --dry-run to the hg graft operation as of
+         Mercurial 2.3.0
+     --- added code to disable the (deprecated) transplant menu for Mercurial 2.3.0
 - Web Browser
   -- added context menu entries for HTML5 media elements
   -- added a personal information manager to assist in completing form fields

@@ -86,11 +86,14 @@ QDialog, Ui_HgGraftDialog
 </table>
 <a NAME="HgGraftDialog.__init__" ID="HgGraftDialog.__init__"></a>
 <h4>HgGraftDialog (Constructor)</h4>
-<b>HgGraftDialog</b>(<i>parent=None</i>)
+<b>HgGraftDialog</b>(<i>vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>vcs</i></dt>
+<dd>
+reference to the VCS object (Hg)
+</dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
@@ -109,10 +112,12 @@ reference to the parent widget (QWidget)
 <dd>
 tuple with list of revisions, a tuple giving a
             flag indicating to set the user, a flag indicating to use the
-            current user and the user name and another tuple giving a flag
+            current user and the user name, another tuple giving a flag
             indicating to set the date, a flag indicating to use the
-            current date and the date (list of strings, (boolean, boolean, string),
-            (boolean, boolean, string))
+            current date and the date, a flag indicating to append graft info
+            to the log message and a flag indicating a dry-run (list of strings,
+            (boolean, boolean, string), (boolean, boolean, string), boolean,
+            boolean)
 </dd>
 </dl><a NAME="HgGraftDialog.on_currentUserCheckBox_toggled" ID="HgGraftDialog.on_currentUserCheckBox_toggled"></a>
 <h4>HgGraftDialog.on_currentUserCheckBox_toggled</h4>
