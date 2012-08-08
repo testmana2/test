@@ -17,16 +17,22 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
     """
     Class implementing a dialog to enter the data for a graft session.
     """
-    def __init__(self, parent=None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
+        @param vcs reference to the VCS object (Hg)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
         
         self.dateTimeEdit.setDateTime(QDateTime.currentDateTime())
+        
+        if vcs.version < (2, 3):
+            self.logCheckBox.setEnabled(False)
+            self.logCheckBox.setChecked(False)
+            self.logCheckBox.setVisible(False)
        
         self.__updateOk()
     
@@ -82,10 +88,12 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
         
         @return tuple with list of revisions, a tuple giving a
             flag indicating to set the user, a flag indicating to use the
-            current user and the user name and another tuple giving a flag
+            current user and the user name, another tuple giving a flag
             indicating to set the date, a flag indicating to use the
-            current date and the date (list of strings, (boolean, boolean, string),
-            (boolean, boolean, string))
+            current date and the date, a flag indicating to append graft info
+            to the log message and a flag indicating a dry-run (list of strings,
+            (boolean, boolean, string), (boolean, boolean, string), boolean,
+            boolean)
         """
         userData = (self.userGroup.isChecked(),
                     self.currentUserCheckBox.isChecked(),
@@ -94,4 +102,6 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
                     self.currentDateCheckBox.isChecked(),
                     self.dateTimeEdit.dateTime().toString("yyyy-MM-dd hh:mm"))
         return (self.revisionsEdit.toPlainText().strip().splitlines(),
-            userData, dateData)
+            userData, dateData,
+            self.logCheckBox.isChecked(),
+            self.dryRunCheckBox.isChecked())

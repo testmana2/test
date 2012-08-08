@@ -2578,10 +2578,10 @@ class Hg(VersionControl):
                 return False
         
         res = False
-        dlg = HgGraftDialog()
+        dlg = HgGraftDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             revs, (userData, currentUser, userName), \
-            (dateData, currentDate, dateStr) = dlg.getData()
+            (dateData, currentDate, dateStr), log, dryrun = dlg.getData()
             
             args = []
             args.append("graft")
@@ -2598,6 +2598,10 @@ class Hg(VersionControl):
                 else:
                     args.append("--date")
                     args.append(dateStr)
+            if log:
+                args.append("--log")
+            if dryrun:
+                args.append("--dry-run")
             args.extend(revs)
             
             dia = HgDialog(self.trUtf8('Copy Changesets'), self)
@@ -2851,7 +2855,13 @@ class Hg(VersionControl):
         @param extensionName name of the extension to check for (string)
         @return flag indicating an active extension (boolean)
         """
-        return extensionName.strip() in self.__activeExtensions
+        extensionName = extensionName.strip()
+        isActive = extensionName in self.__activeExtensions
+        if isActive and extensionName == "transplant" and self.version >= (2, 3):
+            # transplant extension is deprecated as of Mercurial 2.3.0
+            isActive = False
+        
+        return isActive
     
     def getExtensionObject(self, extensionName):
         """
