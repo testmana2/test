@@ -10541,6 +10541,7 @@
       <keyword name="TransplantProjectHelper.initActions" id="TransplantProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initActions" />
       <keyword name="TransplantProjectHelper.initMenu" id="TransplantProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initMenu" />
       <keyword name="TransplantProjectHelper.menuTitle" id="TransplantProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.menuTitle" />
+      <keyword name="TransplantProjectHelper.setObjects" id="TransplantProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.setObjects" />
       <keyword name="TrayStarter" id="TrayStarter" ref="eric5.Tools.TrayStarter.html#TrayStarter" />
       <keyword name="TrayStarter (Constructor)" id="TrayStarter (Constructor)" ref="eric5.Tools.TrayStarter.html#TrayStarter.__init__" />
       <keyword name="TrayStarter (Module)" id="TrayStarter (Module)" ref="eric5.Tools.TrayStarter.html" />

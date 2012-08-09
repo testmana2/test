@@ -27,6 +27,20 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         """
         super().__init__()
     
+    def setObjects(self, vcsObject, projectObject):
+        """
+        Public method to set references to the vcs and project objects.
+        
+        @param vcsObject reference to the vcs object
+        @param projectObject reference to the project object
+        """
+        super().setObjects(vcsObject, projectObject)
+        
+        if self.vcs.version >= (2, 3):
+            # transplant is deprecated as of Mercurial 2.3
+            for act in self.actions:
+                act.setEnabled(False)
+    
     def initActions(self):
         """
         Public method to generate the action objects.
@@ -69,10 +83,14 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         """
         menu = QMenu(self.menuTitle(), mainMenu)
         menu.setIcon(UI.PixmapCache.getIcon("vcsTransplant.png"))
-        menu.setTearOffEnabled(True)
-        
-        menu.addAction(self.hgTransplantAct)
-        menu.addAction(self.hgTransplantContinueAct)
+        if self.vcs.version >= (2, 3):
+            # transplant is deprecated as of Mercurial 2.3
+            menu.addAction(self.trUtf8("Transplant is deprecated")).setEnabled(False)
+        else:
+            menu.setTearOffEnabled(True)
+            
+            menu.addAction(self.hgTransplantAct)
+            menu.addAction(self.hgTransplantContinueAct)
         
         return menu
     
