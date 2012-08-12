@@ -607,12 +607,16 @@ class TaskViewer(QTreeWidget):
         self.tasks = []
         self.clear()
         
-    def clearProjectTasks(self):
+    def clearProjectTasks(self, fileOnly=False):
         """
         Public slot to clear project related tasks.
+        
+        @keyparam fileOnly flag indicating to clear only file related
+            project tasks (boolean)
         """
         for task in self.tasks[:]:
-            if task.isProjectTask():
+            if (fileOnly and task.isProjectFileTask()) or \
+               (not fileOnly and task.isProjectTask()):
                 if self.copyTask == task:
                     self.copyTask = None
                 index = self.indexOfTopLevelItem(task)
@@ -804,7 +808,7 @@ class TaskViewer(QTreeWidget):
                 files = [f for f in files if not fnmatch.fnmatch(f, filter)]
         
         # remove all project tasks
-        self.clearProjectTasks()
+        self.clearProjectTasks(fileOnly=True)
         
         # now process them
         progress = QProgressDialog(self.trUtf8("Extracting project tasks..."),
