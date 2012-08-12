@@ -111,6 +111,9 @@ QAbstractItemModel
 </tr><tr>
 <td><a href="#BreakPointModel.setBreakPointEnabledByIndex">setBreakPointEnabledByIndex</a></td>
 <td>Public method to set the enabled state of a breakpoint given by index.</td>
+</tr><tr>
+<td><a href="#BreakPointModel.setData">setData</a></td>
+<td>Public method to change data in the model.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -157,7 +160,7 @@ column count (integer)
 </dd>
 </dl><a NAME="BreakPointModel.data" ID="BreakPointModel.data"></a>
 <h4>BreakPointModel.data</h4>
-<b>data</b>(<i>index, role</i>)
+<b>data</b>(<i>index, role=Qt.DisplayRole</i>)
 <p>
         Public method to get the requested data.
 </p><dl>
@@ -377,6 +380,27 @@ index of the breakpoint (QModelIndex)
 </dd><dt><i>enabled</i></dt>
 <dd>
 flag giving the enabled state (boolean)
+</dd>
+</dl><a NAME="BreakPointModel.setData" ID="BreakPointModel.setData"></a>
+<h4>BreakPointModel.setData</h4>
+<b>setData</b>(<i>index, value, role=Qt.EditRole</i>)
+<p>
+        Public method to change data in the model.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the changed data (QModelIndex)
+</dd><dt><i>value</i></dt>
+<dd>
+value of the changed data
+</dd><dt><i>role</i></dt>
+<dd>
+role of the changed data (Qt.ItemDataRole)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -335,9 +335,6 @@ QsciScintillaCompat
 <td><a href="#Editor.__languageMenuTriggered">__languageMenuTriggered</a></td>
 <td>Private method to handle the selection of a lexer language.</td>
 </tr><tr>
-<td><a href="#Editor.__linesChanged">__linesChanged</a></td>
-<td>Private method to track text changes.</td>
-</tr><tr>
 <td><a href="#Editor.__lmBbookmarks">__lmBbookmarks</a></td>
 <td>Private method to handle the 'LMB toggles bookmark' context menu action.</td>
 </tr><tr>
@@ -367,6 +364,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__modificationReadOnly">__modificationReadOnly</a></td>
 <td>Private slot to handle the modificationAttempted signal.</td>
+</tr><tr>
+<td><a href="#Editor.__modified">__modified</a></td>
+<td>Private method to handle changes of the number of lines.</td>
 </tr><tr>
 <td><a href="#Editor.__newView">__newView</a></td>
 <td>Private slot to create a new view to an open document.</td>
@@ -1583,15 +1583,7 @@ flag indicating to propagate the change (boolean)
 <dd>
 reference to the action that was triggered (QAction)
 </dd>
-</dl><a NAME="Editor.__linesChanged" ID="Editor.__linesChanged"></a>
-<h4>Editor.__linesChanged</h4>
-<b>__linesChanged</b>(<i></i>)
-<p>
-        Private method to track text changes.
-</p><p>
-        This method checks, if lines have been inserted or removed in order to
-        update the breakpoints.
-</p><a NAME="Editor.__lmBbookmarks" ID="Editor.__lmBbookmarks"></a>
+</dl><a NAME="Editor.__lmBbookmarks" ID="Editor.__lmBbookmarks"></a>
 <h4>Editor.__lmBbookmarks</h4>
 <b>__lmBbookmarks</b>(<i></i>)
 <p>
@@ -1670,7 +1662,44 @@ modification status
 <b>__modificationReadOnly</b>(<i></i>)
 <p>
         Private slot to handle the modificationAttempted signal.
-</p><a NAME="Editor.__newView" ID="Editor.__newView"></a>
+</p><a NAME="Editor.__modified" ID="Editor.__modified"></a>
+<h4>Editor.__modified</h4>
+<b>__modified</b>(<i>pos, mtype, text, length, linesAdded, line, foldNow, foldPrev, token, annotationLinesAdded</i>)
+<p>
+        Private method to handle changes of the number of lines.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+start position of change (integer)
+</dd><dt><i>mtype</i></dt>
+<dd>
+flags identifying the change (integer)
+</dd><dt><i>text</i></dt>
+<dd>
+text that is given to the Undo system (string)
+</dd><dt><i>length</i></dt>
+<dd>
+length of the change (integer)
+</dd><dt><i>linesAdded</i></dt>
+<dd>
+number of added/deleted lines (integer)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of a fold level or marker change (integer)
+</dd><dt><i>foldNow</i></dt>
+<dd>
+new fold level (integer)
+</dd><dt><i>foldPrev</i></dt>
+<dd>
+previous fold level (integer)
+</dd><dt><i>token</i></dt>
+<dd>
+???
+</dd><dt><i>annotationLinesAdded</i></dt>
+<dd>
+number of added/deleted annotation lines (integer)
+</dd>
+</dl><a NAME="Editor.__newView" ID="Editor.__newView"></a>
 <h4>Editor.__newView</h4>
 <b>__newView</b>(<i></i>)
 <p>

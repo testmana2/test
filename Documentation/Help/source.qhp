@@ -1421,6 +1421,7 @@
       <keyword name="BreakPointModel.rowCount" id="BreakPointModel.rowCount" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel.rowCount" />
       <keyword name="BreakPointModel.setBreakPointByIndex" id="BreakPointModel.setBreakPointByIndex" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel.setBreakPointByIndex" />
       <keyword name="BreakPointModel.setBreakPointEnabledByIndex" id="BreakPointModel.setBreakPointEnabledByIndex" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel.setBreakPointEnabledByIndex" />
+      <keyword name="BreakPointModel.setData" id="BreakPointModel.setData" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel.setData" />
       <keyword name="BreakPointViewer" id="BreakPointViewer" ref="eric5.Debugger.BreakPointViewer.html#BreakPointViewer" />
       <keyword name="BreakPointViewer (Constructor)" id="BreakPointViewer (Constructor)" ref="eric5.Debugger.BreakPointViewer.html#BreakPointViewer.__init__" />
       <keyword name="BreakPointViewer (Module)" id="BreakPointViewer (Module)" ref="eric5.Debugger.BreakPointViewer.html" />
@@ -3458,7 +3459,6 @@
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
       <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
-      <keyword name="Editor.__linesChanged" id="Editor.__linesChanged" ref="eric5.QScintilla.Editor.html#Editor.__linesChanged" />
       <keyword name="Editor.__lmBbookmarks" id="Editor.__lmBbookmarks" ref="eric5.QScintilla.Editor.html#Editor.__lmBbookmarks" />
       <keyword name="Editor.__lmBbreakpoints" id="Editor.__lmBbreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__lmBbreakpoints" />
       <keyword name="Editor.__marginClicked" id="Editor.__marginClicked" ref="eric5.QScintilla.Editor.html#Editor.__marginClicked" />
@@ -3469,6 +3469,7 @@
       <keyword name="Editor.__menuToggleTemporaryBreakpoint" id="Editor.__menuToggleTemporaryBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.__menuToggleTemporaryBreakpoint" />
       <keyword name="Editor.__modificationChanged" id="Editor.__modificationChanged" ref="eric5.QScintilla.Editor.html#Editor.__modificationChanged" />
       <keyword name="Editor.__modificationReadOnly" id="Editor.__modificationReadOnly" ref="eric5.QScintilla.Editor.html#Editor.__modificationReadOnly" />
+      <keyword name="Editor.__modified" id="Editor.__modified" ref="eric5.QScintilla.Editor.html#Editor.__modified" />
       <keyword name="Editor.__newView" id="Editor.__newView" ref="eric5.QScintilla.Editor.html#Editor.__newView" />
       <keyword name="Editor.__newViewNewSplit" id="Editor.__newViewNewSplit" ref="eric5.QScintilla.Editor.html#Editor.__newViewNewSplit" />
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric5.QScintilla.Editor.html#Editor.__normalizedEncoding" />
