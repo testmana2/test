@@ -1150,6 +1150,7 @@
       <keyword name="AdBlockRule.isElementHiding" id="AdBlockRule.isElementHiding" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isElementHiding" />
       <keyword name="AdBlockRule.isEnabled" id="AdBlockRule.isEnabled" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isEnabled" />
       <keyword name="AdBlockRule.isException" id="AdBlockRule.isException" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isException" />
+      <keyword name="AdBlockRule.isHeader" id="AdBlockRule.isHeader" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isHeader" />
       <keyword name="AdBlockRule.isInternalDisabled" id="AdBlockRule.isInternalDisabled" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isInternalDisabled" />
       <keyword name="AdBlockRule.isSlow" id="AdBlockRule.isSlow" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.isSlow" />
       <keyword name="AdBlockRule.matchDomain" id="AdBlockRule.matchDomain" ref="eric5.Helpviewer.AdBlock.AdBlockRule.html#AdBlockRule.matchDomain" />
@@ -1170,6 +1171,7 @@
       <keyword name="AdBlockSubscription.__parseUrl" id="AdBlockSubscription.__parseUrl" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.__parseUrl" />
       <keyword name="AdBlockSubscription.__populateCache" id="AdBlockSubscription.__populateCache" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.__populateCache" />
       <keyword name="AdBlockSubscription.__rulesDownloaded" id="AdBlockSubscription.__rulesDownloaded" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.__rulesDownloaded" />
+      <keyword name="AdBlockSubscription.__validateCheckSum" id="AdBlockSubscription.__validateCheckSum" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.__validateCheckSum" />
       <keyword name="AdBlockSubscription.adBlockDisabledForUrl" id="AdBlockSubscription.adBlockDisabledForUrl" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.adBlockDisabledForUrl" />
       <keyword name="AdBlockSubscription.addRule" id="AdBlockSubscription.addRule" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.addRule" />
       <keyword name="AdBlockSubscription.allRules" id="AdBlockSubscription.allRules" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html#AdBlockSubscription.allRules" />

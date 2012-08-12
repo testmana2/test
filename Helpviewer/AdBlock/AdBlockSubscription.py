@@ -8,6 +8,9 @@ Module implementing the AdBlock subscription class.
 """
 
 import os
+import re
+import hashlib
+import base64
 
 from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, QUrl, \
     QCryptographicHash, QFile, QIODevice, QTextStream
@@ -67,6 +70,10 @@ class AdBlockSubscription(QObject):
         self.__elementHidingRules = ""
         self.__documentRules = []
         self.__elemhideRules = []
+        
+        self.__checksumRe = re.compile(r"""^\s*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n""",
+            re.IGNORECASE | re.MULTILINE)
+        
         
         self.__parseUrl(url)
     
@@ -244,7 +251,7 @@ class AdBlockSubscription(QObject):
                 if not header.startswith("[Adblock"):
                     E5MessageBox.warning(None,
                         self.trUtf8("Load subscription rules"),
-                        self.trUtf8("""Adblock file '{0}' does not start"""
+                        self.trUtf8("""AdBlock file '{0}' does not start"""
                                     """ with [Adblock.""")\
                             .format(fileName))
                     f.close()
@@ -252,11 +259,14 @@ class AdBlockSubscription(QObject):
                     self.__lastUpdate = QDateTime()
                 else:
                     self.__rules = []
+                    self.__rules.append(AdBlockRule(header, self))
                     while not textStream.atEnd():
                         line = textStream.readLine()
                         self.__rules.append(AdBlockRule(line, self))
                     self.__populateCache()
                     self.changed.emit()
+        elif not fileName.endswith("_custom"):
+            self.__lastUpdate = QDateTime()
         
         self.checkForUpdate()
     
@@ -317,6 +327,7 @@ class AdBlockSubscription(QObject):
             return
         
         fileName = self.rulesFileName()
+        QFile.remove(fileName)
         f = QFile(fileName)
         if not f.open(QIODevice.ReadWrite):
             E5MessageBox.warning(None,
@@ -325,9 +336,58 @@ class AdBlockSubscription(QObject):
                     .file(fileName))
             return
         f.write(response)
+        f.close()
         self.__lastUpdate = QDateTime.currentDateTime()
-        self.__loadRules()
+        if self.__validateCheckSum(fileName):
+            self.__loadRules()
+        else:
+            QFile.remove(fileName)
         self.__downloading = None
+    
+    def __validateCheckSum(self, fileName):
+        """
+        Private method to check the subscription file's checksum.
+        
+        @param fileName name of the file containing the subscription (string)
+        @return flag indicating a valid file (boolean). A file is considered
+            valid, if the checksum is OK or the file does not contain a
+            checksum (i.e. cannot be checked).
+        """
+        try:
+            f = open(fileName, "r", encoding="utf-8")
+            data = f.read()
+            f.close()
+        except (IOError, OSError):
+            return False
+        
+        match = re.search(self.__checksumRe, data)
+        if match:
+            expectedChecksum = match.group(1)
+        else:
+            # consider it as valid
+            return True
+        
+        # normalize the data
+        data = re.sub(r"\r", "", data)              # normalize eol
+        data = re.sub(r"\n+", "\n", data)           # remove empty lines
+        data = re.sub(self.__checksumRe, "", data)  # remove checksum line
+        
+        # calculate checksum
+        md5 = hashlib.md5()
+        md5.update(data.encode("utf-8"))
+        calculatedChecksum = base64.b64encode(md5.digest()).decode().rstrip("=")
+        if calculatedChecksum == expectedChecksum:
+            return True
+        else:
+            res = E5MessageBox.yesNo(None,
+                self.trUtf8("Downloading subscription rules"),
+                self.trUtf8("""<p>AdBlock subscription <b>{0}</b> has a wrong"""
+                            """ checksum.<br/>"""
+                            """Found: {1}<br/>"""
+                            """Calculated: {2}<br/>"""
+                            """Use it anyway?</p>""")\
+                    .format(self.__title, expectedChecksum, calculatedChecksum))
+            return res
     
     def saveRules(self):
         """
@@ -346,7 +406,8 @@ class AdBlockSubscription(QObject):
             return
         
         textStream = QTextStream(f)
-        textStream << "[Adblock Plus 1.1.1]\n"
+        if not self.__rules or not self.__rules[0].isHeader():
+            textStream << "[Adblock Plus 1.1.1]\n"
         for rule in self.__rules:
             textStream << rule.filter() << "\n"
     

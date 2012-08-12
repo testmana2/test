@@ -85,6 +85,9 @@ QObject
 <td><a href="#AdBlockSubscription.__rulesDownloaded">__rulesDownloaded</a></td>
 <td>Private slot to deal with the downloaded rules.</td>
 </tr><tr>
+<td><a href="#AdBlockSubscription.__validateCheckSum">__validateCheckSum</a></td>
+<td>Private method to check the subscription file's checksum.</td>
+</tr><tr>
 <td><a href="#AdBlockSubscription.adBlockDisabledForUrl">adBlockDisabledForUrl</a></td>
 <td>Public method to check, if AdBlock is disabled for the given URL.</td>
 </tr><tr>
@@ -212,7 +215,24 @@ AdBlock URL for the subscription (QUrl)
 <b>__rulesDownloaded</b>(<i></i>)
 <p>
         Private slot to deal with the downloaded rules.
-</p><a NAME="AdBlockSubscription.adBlockDisabledForUrl" ID="AdBlockSubscription.adBlockDisabledForUrl"></a>
+</p><a NAME="AdBlockSubscription.__validateCheckSum" ID="AdBlockSubscription.__validateCheckSum"></a>
+<h4>AdBlockSubscription.__validateCheckSum</h4>
+<b>__validateCheckSum</b>(<i>fileName</i>)
+<p>
+        Private method to check the subscription file's checksum.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file containing the subscription (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a valid file (boolean). A file is considered
+            valid, if the checksum is OK or the file does not contain a
+            checksum (i.e. cannot be checked).
+</dd>
+</dl><a NAME="AdBlockSubscription.adBlockDisabledForUrl" ID="AdBlockSubscription.adBlockDisabledForUrl"></a>
 <h4>AdBlockSubscription.adBlockDisabledForUrl</h4>
 <b>adBlockDisabledForUrl</b>(<i>url</i>)
 <p>

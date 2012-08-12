@@ -118,7 +118,7 @@ class AdBlockRule(object):
         parsedLine = self.__filter
         
         # empty rule or just a comment
-        if not parsedLine.strip() or parsedLine.startswith("!"):
+        if not parsedLine.strip() or parsedLine.startswith(("!", "[Adblock")):
             self.__enabled = False
             return
         
@@ -504,6 +504,14 @@ class AdBlockRule(object):
         @return flag indicating a comment (boolean)
         """
         return self.__filter.startswith("!")
+    
+    def isHeader(self):
+        """
+        Public method to check, if this is a header.
+        
+        @return flag indicating a header (boolean)
+        """
+        return self.__filter.startswith("[Adblock")
     
     def isSlow(self):
         """

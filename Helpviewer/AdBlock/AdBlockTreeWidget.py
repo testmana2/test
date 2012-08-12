@@ -234,7 +234,7 @@ class AdBlockTreeWidget(E5TreeWidget):
             font.setItalic(True)
             itm.setForeground(0, QColor(Qt.gray))
             
-            if not rule.isComment():
+            if not rule.isComment() and not rule.isHeader():
                 itm.setFlags(itm.flags() | Qt.ItemIsUserCheckable)
                 itm.setCheckState(0, Qt.Unchecked)
                 itm.setFont(0, font)
