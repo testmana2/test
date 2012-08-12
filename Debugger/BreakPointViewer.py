@@ -65,6 +65,7 @@ class BreakPointViewer(QTreeView):
         self.__model = model
         
         self.sortingModel = QSortFilterProxyModel()
+        self.sortingModel.setDynamicSortFilter(True)
         self.sortingModel.setSourceModel(self.__model)
         super().setModel(self.sortingModel)
         
