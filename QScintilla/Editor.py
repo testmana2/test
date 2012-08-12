@@ -397,7 +397,7 @@ class Editor(QsciScintillaCompat):
             self.__changeBreakPoints)
         self.breakpointModel.rowsInserted.connect(
             self.__addBreakPoints)
-        self.linesChanged.connect(self.__linesChanged)
+        self.SCN_MODIFIED.connect(self.__modified)
         
         # establish connection to some ViewManager action groups
         self.addActions(self.vm.editorActGrp.actions())
@@ -1802,26 +1802,37 @@ class Editor(QsciScintillaCompat):
     ## Breakpoint handling methods below
     ############################################################################
 
-    def __linesChanged(self):
+    def __modified(self, pos, mtype, text, length, linesAdded, line, foldNow, foldPrev,
+                     token, annotationLinesAdded):
         """
-        Private method to track text changes.
+        Private method to handle changes of the number of lines.
         
-        This method checks, if lines have been inserted or removed in order to
-        update the breakpoints.
+        @param pos start position of change (integer)
+        @param mtype flags identifying the change (integer)
+        @param text text that is given to the Undo system (string)
+        @param length length of the change (integer)
+        @param linesAdded number of added/deleted lines (integer)
+        @param line line number of a fold level or marker change (integer)
+        @param foldNow new fold level (integer)
+        @param foldPrev previous fold level (integer)
+        @param token ???
+        @param annotationLinesAdded number of added/deleted annotation lines (integer)
         """
-        if self.breaks:
-            bps = []    # list of breakpoints
-            for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
-                line = self.markerLine(handle) + 1
-                bps.append((ln, line, (cond, temp, enabled, ignorecount)))
-                self.markerDeleteHandle(handle)
-            self.breaks = {}
-            self.inLinesChanged = True
-            for bp in bps:
-                index = self.breakpointModel.getBreakPointIndex(self.fileName, bp[0])
-                self.breakpointModel.setBreakPointByIndex(index,
-                    self.fileName, bp[1], bp[2])
-            self.inLinesChanged = False
+        if mtype & (self.SC_MOD_INSERTTEXT | self.SC_MOD_DELETETEXT) and \
+           linesAdded != 0:
+            if self.breaks:
+                bps = []    # list of breakpoints
+                for handle, (ln, cond, temp, enabled, ignorecount) in self.breaks.items():
+                    line = self.markerLine(handle) + 1
+                    if ln != line:
+                        bps.append((ln, line))
+                        self.breaks[handle] = (line, cond, temp, enabled, ignorecount)
+                self.inLinesChanged = True
+                for ln, line in sorted(bps, reverse=linesAdded > 0):
+                    index1 = self.breakpointModel.getBreakPointIndex(self.fileName, ln)
+                    index2 = self.breakpointModel.index(index1.row(), 1)
+                    self.breakpointModel.setData(index2, line)
+                self.inLinesChanged = False
         
     def __restoreBreakpoints(self):
         """
@@ -1851,7 +1862,8 @@ class Editor(QsciScintillaCompat):
         
         @param indexes indexes of changed breakpoints.
         """
-        self.__addBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
+        if not self.inLinesChanged:
+            self.__addBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
         
     def __breakPointDataAboutToBeChanged(self, startIndex, endIndex):
         """
