@@ -9249,6 +9249,7 @@
       <keyword name="Task.getFilename" id="Task.getFilename" ref="eric5.Tasks.TaskViewer.html#Task.getFilename" />
       <keyword name="Task.getLineno" id="Task.getLineno" ref="eric5.Tasks.TaskViewer.html#Task.getLineno" />
       <keyword name="Task.isCompleted" id="Task.isCompleted" ref="eric5.Tasks.TaskViewer.html#Task.isCompleted" />
+      <keyword name="Task.isProjectFileTask" id="Task.isProjectFileTask" ref="eric5.Tasks.TaskViewer.html#Task.isProjectFileTask" />
       <keyword name="Task.isProjectTask" id="Task.isProjectTask" ref="eric5.Tasks.TaskViewer.html#Task.isProjectTask" />
       <keyword name="Task.setCompleted" id="Task.setCompleted" ref="eric5.Tasks.TaskViewer.html#Task.setCompleted" />
       <keyword name="Task.setDescription" id="Task.setDescription" ref="eric5.Tasks.TaskViewer.html#Task.setDescription" />
