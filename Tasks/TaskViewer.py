@@ -214,6 +214,14 @@ class Task(QTreeWidgetItem):
         @return flag indicating the project relation status (boolean)
         """
         return self._isProjectTask
+    
+    def isProjectFileTask(self):
+        """
+        Public slot to get an indication, if this task is related to a project file.
+        
+        @return flag indicating a project file task (boolean)
+        """
+        return self._isProjectTask and self.filename != ""
 
 
 class TaskFilter(object):
