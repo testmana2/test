@@ -639,7 +639,7 @@ class Prefs(object):
         "DefaultScheme": "file://",
         "AdBlockEnabled": False,
         "AdBlockSubscriptions": [],
-        "AdBlockUpdatePeriod": 7,
+        "AdBlockUpdatePeriod": 1,
         "AdBlockExceptions": [],
         "OfflineStorageDatabaseQuota": 50,     # 50 MB
         "UserAgent": "",

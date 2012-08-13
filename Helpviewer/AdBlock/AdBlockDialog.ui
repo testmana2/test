@@ -98,7 +98,7 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Update Period (days):</string>
+           <string>Default Update Period (days):</string>
           </property>
          </widget>
         </item>

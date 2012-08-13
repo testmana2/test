@@ -132,11 +132,6 @@
         <translation>Gib den Suchtext für Abonnements und Regeln ein</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="101"/>
-        <source>Update Period (days):</source>
-        <translation>Aktualisierungsperiode (Tage):</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="108"/>
         <source>Enter the update period (1 to 14 days)</source>
         <translation>Gib die Aktualisierungsperiode ein (1 bis 14 Tage)</translation>
@@ -180,6 +175,11 @@
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="215"/>
         <source>&lt;p&gt;Do you really want to remove subscription &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soll das Abonnement &lt;b&gt;{0}&lt;/b&gt; wirklich gelöscht werden?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="101"/>
+        <source>Default Update Period (days):</source>
+        <translation>Standardaktualisierungsperiode (Tage):</translation>
     </message>
 </context>
 <context>
@@ -289,47 +289,47 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="252"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="258"/>
         <source>Load subscription rules</source>
         <translation>Abonnementregeln laden</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="244"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="250"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>Adblock Datei &apos;{0}&apos; konnte nicht zum Lesen geöffnet werden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="382"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="401"/>
         <source>Downloading subscription rules</source>
         <translation>Lade Abonnementregeln herunter</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="314"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="333"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Abonnementregeln konnten nicht heruntergeladen werden.&lt;/p&gt;&lt;p&gt;Fehler: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="324"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="343"/>
         <source>Got empty subscription rules.</source>
         <translation>Habe leere Abonnementregeln erhalten.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="402"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="421"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation>Adblock Datei &apos;{0}&apos; konnte nicht zum Schreiben geöffnet werden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="402"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="421"/>
         <source>Saving subscription rules</source>
         <translation>Speichern der Abonnementregeln</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="252"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="258"/>
         <source>AdBlock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation>AdBlock Datei &apos;{0}&apos; startet nicht mit [Adblock.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="382"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="401"/>
         <source>&lt;p&gt;AdBlock subscription &lt;b&gt;{0}&lt;/b&gt; has a wrong checksum.&lt;br/&gt;Found: {1}&lt;br/&gt;Calculated: {2}&lt;br/&gt;Use it anyway?&lt;/p&gt;</source>
         <translation>&lt;p&gt;AdBlock Abonnement &lt;b&gt;{0}&lt;/b&gt; hat eine falsche Prüfsumme.&lt;br/&gt;Gefunden: {1}&lt;br/&gt;Berechnet: {2}&lt;br/&gt;Trotzdem verwenden?&lt;/p&gt;</translation>
     </message>
@@ -45071,12 +45071,12 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Spaltenbreite an&amp;passen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="452"/>
+        <location filename="Tasks/TaskViewer.py" line="456"/>
         <source>Activate task filter</source>
         <translation>Aufgabenfilter aktivieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="452"/>
+        <location filename="Tasks/TaskViewer.py" line="456"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Der Aufgabenfilter hat keinen aktiven Filter. Soll die Filterkonfiguration erstellt werden?</translation>
     </message>
@@ -45086,17 +45086,17 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Projektaufgaben &amp;regenerieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="514"/>
+        <location filename="Tasks/TaskViewer.py" line="518"/>
         <source>Extracting project tasks...</source>
         <translation>Extrahiere Projektaufgaben...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="514"/>
+        <location filename="Tasks/TaskViewer.py" line="518"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="520"/>
+        <location filename="Tasks/TaskViewer.py" line="524"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Extrahiere Projektaufgaben...
@@ -45118,12 +45118,12 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Scanoptionen &amp;konfigurieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="481"/>
+        <location filename="Tasks/TaskViewer.py" line="485"/>
         <source>Scan Filter Patterns</source>
         <translation>Scanfiltermuster</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="481"/>
+        <location filename="Tasks/TaskViewer.py" line="485"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation>Gib Dateimuster getrennt durch Komma von Dateien ein, die ignoriert werden sollen:</translation>
     </message>

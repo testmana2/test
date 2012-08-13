@@ -26,6 +26,7 @@ Version 5.3-snapshot-2012mmdd:
   -- added support for dependent AdBlock subscriptions
   -- added support for AdBlock exceptions
   -- added support for AdBlock checksum checking when downloading a subscription
+  -- added support for variable AdBlock update periods (given in subscription)
 
 Version 5.3-snapshot-20120624:
 - bug fixes

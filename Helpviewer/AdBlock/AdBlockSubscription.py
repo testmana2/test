@@ -62,6 +62,8 @@ class AdBlockSubscription(QObject):
         self.__requiresLocation = ""
         self.__requiresTitle = ""
         
+        self.__updatePeriod = 0     # update period in hours, 0 = use default
+        
         self.__rules = []   # list containing all AdBlock rules
         
         self.__networkExceptionRules = []
@@ -73,6 +75,10 @@ class AdBlockSubscription(QObject):
         
         self.__checksumRe = re.compile(r"""^\s*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n""",
             re.IGNORECASE | re.MULTILINE)
+        self.__expiresRe = re.compile(
+            r"""(?:expires:|expires after)\s*(\d+)\s*(hour|h)?""", 
+            re.IGNORECASE)
+        
         
         
         self.__parseUrl(url)
@@ -263,6 +269,15 @@ class AdBlockSubscription(QObject):
                     while not textStream.atEnd():
                         line = textStream.readLine()
                         self.__rules.append(AdBlockRule(line, self))
+                        expires = self.__expiresRe.search(line)
+                        if expires:
+                            period, kind = expires.groups()
+                            if kind:
+                                # hours
+                                self.__updatePeriod = int(period)
+                            else:
+                                # days
+                                self.__updatePeriod = int(period) * 24
                     self.__populateCache()
                     self.changed.emit()
         elif not fileName.endswith("_custom"):
@@ -274,8 +289,12 @@ class AdBlockSubscription(QObject):
         """
         Public method to check for an update.
         """
+        if self.__updatePeriod:
+            updatePeriod = self.__updatePeriod
+        else:
+            updatePeriod = Preferences.getHelp("AdBlockUpdatePeriod") * 24
         if not self.__lastUpdate.isValid() or \
-           self.__lastUpdate.addDays(Preferences.getHelp("AdBlockUpdatePeriod")) < \
+           self.__lastUpdate.addSecs(updatePeriod * 3600) < \
                 QDateTime.currentDateTime():
             self.updateNow()
     
