@@ -173,21 +173,20 @@ class HelpTabWidget(E5TabWidget):
         self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('Reload All'), self.reloadAllBrowsers)
         self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(self.trUtf8('Bookmark All Tabs'),
-            self.__mainWindow.bookmarkAll)
+        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("addBookmark.png"),
+            self.trUtf8('Bookmark All Tabs'), self.__mainWindow.bookmarkAll)
         
         self.__tabBackContextMenu = QMenu(self)
         self.__tabBackContextMenu.addAction(self.trUtf8('Close All'),
             self.closeAllBrowsers)
         self.__tabBackContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
             self.trUtf8('Reload All'), self.reloadAllBrowsers)
-        self.__tabBackContextMenu.addAction(self.trUtf8('Bookmark All Tabs'),
-            self.__mainWindow.bookmarkAll)
+        self.__tabBackContextMenu.addAction(UI.PixmapCache.getIcon("addBookmark.png"),
+            self.trUtf8('Bookmark All Tabs'), self.__mainWindow.bookmarkAll)
         self.__tabBackContextMenu.addSeparator()
         self.__restoreClosedTabAct = self.__tabBackContextMenu.addAction(
             UI.PixmapCache.getIcon("trash.png"),
-            self.trUtf8('Restore Closed Tab'),
-            self.restoreClosedTab)
+            self.trUtf8('Restore Closed Tab'), self.restoreClosedTab)
         self.__restoreClosedTabAct.setEnabled(False)
         self.__restoreClosedTabAct.setData(0)
     
