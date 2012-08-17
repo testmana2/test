@@ -13,7 +13,7 @@ import hashlib
 import base64
 
 from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, QUrl, \
-    QCryptographicHash, QFile, QIODevice, QTextStream
+    QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime
 from PyQt4.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
@@ -63,6 +63,7 @@ class AdBlockSubscription(QObject):
         self.__requiresTitle = ""
         
         self.__updatePeriod = 0     # update period in hours, 0 = use default
+        self.__remoteModified = QDateTime()
         
         self.__rules = []   # list containing all AdBlock rules
         
@@ -78,7 +79,26 @@ class AdBlockSubscription(QObject):
         self.__expiresRe = re.compile(
             r"""(?:expires:|expires after)\s*(\d+)\s*(hour|h)?""", 
             re.IGNORECASE)
+        self.__remoteModifiedRe = re.compile(
+            r"""!\s*(?:Last modified|Updated):\s*(\d{1,2})\s*"""
+            r"""(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*"""
+            r"""(\d{2,4})\s*((\d{1,2}):(\d{2}))?""",
+            re.IGNORECASE)
         
+        self.__monthNameToNumber = {
+            "Jan": 1,
+            "Feb": 2,
+            "Mar": 3,
+            "Apr": 4,
+            "May": 5,
+            "Jun": 6,
+            "Jul": 7,
+            "Aug": 8,
+            "Sep": 9,
+            "Oct": 10,
+            "Nov": 11,
+            "Dec": 12
+        }
         
         
         self.__parseUrl(url)
@@ -264,6 +284,8 @@ class AdBlockSubscription(QObject):
                     f.remove()
                     self.__lastUpdate = QDateTime()
                 else:
+                    self.__updatePeriod = 0
+                    self.__remoteModified = QDateTime()
                     self.__rules = []
                     self.__rules.append(AdBlockRule(header, self))
                     while not textStream.atEnd():
@@ -278,6 +300,15 @@ class AdBlockSubscription(QObject):
                             else:
                                 # days
                                 self.__updatePeriod = int(period) * 24
+                        remoteModified = self.__remoteModifiedRe.search(line)
+                        if remoteModified:
+                            day, month, year, time, hour, minute = remoteModified.groups()
+                            self.__remoteModified.setDate(
+                                QDate(int(year), self.__monthNameToNumber[month],
+                                      int(day)))
+                            if time:
+                                self.__remoteModified.setTime(
+                                    QTime(int(hour), int(minute)))
                     self.__populateCache()
                     self.changed.emit()
         elif not fileName.endswith("_custom"):
@@ -294,6 +325,9 @@ class AdBlockSubscription(QObject):
         else:
             updatePeriod = Preferences.getHelp("AdBlockUpdatePeriod") * 24
         if not self.__lastUpdate.isValid() or \
+           (self.__remoteModified.isValid() and \
+            self.__remoteModified.addSecs(updatePeriod * 3600) < \
+                QDateTime.currentDateTime()) or \
            self.__lastUpdate.addSecs(updatePeriod * 3600) < \
                 QDateTime.currentDateTime():
             self.updateNow()
