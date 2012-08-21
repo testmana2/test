@@ -57,6 +57,10 @@ def usage():
     print("  -l language or --language=language")
     print("        Generate an API file for the given programming language.")
     print("        Supported programming languages are:")
+    for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
+        print("            * {0}".format(lang))
+    print("        The default is 'Python3'.")
+    print("        This option may be repeated multiple times.")
     print("  -o filename or --output=filename")
     print("        Write the API information to the named file. A '%L' placeholder")
     print("        is replaced by the language of the API file (see --language).")
@@ -71,10 +75,6 @@ def usage():
     print("        Show version information and exit.")
     print("  -x directory or --exclude=directory")
     print("        Specify a directory basename to be excluded.")
-    print("        This option may be repeated multiple times.")
-    for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
-        print("            * {0}".format(lang))
-    print("        The default is 'Python3'.")
     print("        This option may be repeated multiple times.")
     sys.exit(1)
 
