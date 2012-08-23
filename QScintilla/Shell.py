@@ -487,6 +487,7 @@ class Shell(QsciScintillaCompat):
         if clType != self.clientType:
             self.clientType = clType
             self.__bindLexer(clType)
+            self.__setTextDisplay()
             self.__setMargin0()
             self.__setAutoCompletion(clType)
             self.__setCallTips(clType)
