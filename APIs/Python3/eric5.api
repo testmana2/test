@@ -1243,6 +1243,7 @@ eric5.E5Gui.E5MessageBox.Information?7
 eric5.E5Gui.E5MessageBox.InvalidRole?7
 eric5.E5Gui.E5MessageBox.No?7
 eric5.E5Gui.E5MessageBox.NoButton?7
+eric5.E5Gui.E5MessageBox.NoIcon?7
 eric5.E5Gui.E5MessageBox.NoRole?7
 eric5.E5Gui.E5MessageBox.NoToAll?7
 eric5.E5Gui.E5MessageBox.Ok?7
