@@ -15,6 +15,7 @@ from PyQt4.QtGui import QMessageBox, QApplication
 ################################################################################
 
 # QMessageBox.Icon
+NoIcon = QMessageBox.NoIcon
 Critical = QMessageBox.Critical
 Information = QMessageBox.Information
 Question = QMessageBox.Question
