@@ -77,7 +77,7 @@ class AdBlockSubscription(QObject):
         self.__checksumRe = re.compile(r"""^\s*!\s*checksum[\s\-:]+([\w\+\/=]+).*\n""",
             re.IGNORECASE | re.MULTILINE)
         self.__expiresRe = re.compile(
-            r"""(?:expires:|expires after)\s*(\d+)\s*(hour|h)?""", 
+            r"""(?:expires:|expires after)\s*(\d+)\s*(hour|h)?""",
             re.IGNORECASE)
         self.__remoteModifiedRe = re.compile(
             r"""!\s*(?:Last modified|Updated):\s*(\d{1,2})\s*"""
@@ -99,7 +99,6 @@ class AdBlockSubscription(QObject):
             "Nov": 11,
             "Dec": 12
         }
-        
         
         self.__parseUrl(url)
     

@@ -69,7 +69,7 @@ class E5TreeWidget(QTreeWidget):
         """
         Public method to append an item to a parent item.
         
-        @param parent text of the parent item (string) or 
+        @param parent text of the parent item (string) or
             the parent item (QTreeWidgetItem)
         @param item item to be appended (QTreeWidgetItem)
         @return flag indicating success (boolean)
@@ -96,7 +96,7 @@ class E5TreeWidget(QTreeWidget):
         """
         Public method to prepend an item to a parent item.
         
-        @param parent text of the parent item (string) or 
+        @param parent text of the parent item (string) or
             the parent item (QTreeWidgetItem)
         @param item item to be prepended (QTreeWidgetItem)
         @return flag indicating success (boolean)

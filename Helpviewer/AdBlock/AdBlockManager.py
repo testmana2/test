@@ -241,7 +241,7 @@ class AdBlockManager(QObject):
         Preferences.setHelp("AdBlockEnabled", self.__enabled)
         if self.__subscriptionsLoaded:
             subscriptions = []
-            requiresSubscriptions = [] # intermediate store for
+            requiresSubscriptions = []  # intermediate store for
                                        # subscription requiring others
             for subscription in self.__subscriptions:
                 if subscription is None:
@@ -253,7 +253,7 @@ class AdBlockManager(QObject):
                     subscriptions.append(urlString)
                 subscription.saveRules()
             for subscription in requiresSubscriptions:
-                subscriptions.insert(-1, subscription) # custom should be last
+                subscriptions.insert(-1, subscription)  # custom should be last
             Preferences.setHelp("AdBlockSubscriptions", subscriptions)
     
     def load(self):
