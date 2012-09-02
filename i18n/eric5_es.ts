@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -194,7 +195,7 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="101"/>
         <source>Default Update Period (days):</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodo de Actualización por Defecto (días):</translation>
     </message>
 </context>
 <context>
@@ -359,12 +360,12 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="258"/>
         <source>AdBlock file &apos;{0}&apos; does not start with [Adblock.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo de AdBlock &apos;{0}&apos; no comienza con [Adblock.</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="401"/>
         <source>&lt;p&gt;AdBlock subscription &lt;b&gt;{0}&lt;/b&gt; has a wrong checksum.&lt;br/&gt;Found: {1}&lt;br/&gt;Calculated: {2}&lt;br/&gt;Use it anyway?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La suscripción de AdBlock&lt;b&gt;{0}&lt;/b&gt; tiene un checksum erróneo.&lt;br/&gt;Hallado: {1}&lt;br/&gt;Calculatado: {2}&lt;br/&gt;¿Usarlo de todos modos?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1953,8 +1954,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2195,8 +2196,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -13755,7 +13756,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -18919,22 +18920,22 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="148"/>
         <source>Select to append graft info to the log message</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para añadir graft al mensaje de log</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="151"/>
         <source>Append Graft &amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir &amp;Información de Graft</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="161"/>
         <source>Select to perform a dry-run of the graft operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para llevar a cabo un simulacro (dry-run) de la operación graft</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="164"/>
         <source>Perform Dry-Run</source>
-        <translation type="unfinished"></translation>
+        <translation>Llevar a cabo Simulacro (Dry-Run)</translation>
     </message>
 </context>
 <context>
@@ -46805,7 +46806,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="88"/>
         <source>Transplant is deprecated</source>
-        <translation type="unfinished"></translation>
+        <translation>El método Transplant está obsoleto</translation>
     </message>
 </context>
 <context>
