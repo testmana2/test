@@ -1022,7 +1022,8 @@ class DebugUI(QObject):
                     file, line = stackTrace[0]
                     source, encoding = Utilities.readEncodedFile(file)
                     source = source.splitlines(True)
-                    if "__IGNORE_EXCEPTION__" in Utilities.extractLineFlags(
+                    if len(source) >= line and \
+                       "__IGNORE_EXCEPTION__" in Utilities.extractLineFlags(
                             source[line - 1]):
                         res = E5MessageBox.No
                 except (UnicodeError, IOError):
