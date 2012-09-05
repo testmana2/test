@@ -70,6 +70,9 @@ E5ArrowItem
 <td><a href="#AssociationItem.__calculateEndingPoints_rectangle">__calculateEndingPoints_rectangle</a></td>
 <td>Private method to calculate the ending points of the association item.</td>
 </tr><tr>
+<td><a href="#AssociationItem.__calculateEndingPoints_topToBottom">__calculateEndingPoints_topToBottom</a></td>
+<td>Private method to calculate the ending points of the association item.</td>
+</tr><tr>
 <td><a href="#AssociationItem.__findIntersection">__findIntersection</a></td>
 <td>Method to calculate the intersection point of two lines.</td>
 </tr><tr>
@@ -98,7 +101,7 @@ E5ArrowItem
 </table>
 <a NAME="AssociationItem.__init__" ID="AssociationItem.__init__"></a>
 <h4>AssociationItem (Constructor)</h4>
-<b>AssociationItem</b>(<i>itemA, itemB, type=Normal, parent=None</i>)
+<b>AssociationItem</b>(<i>itemA, itemB, type=Normal, topToBottom=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -116,6 +119,10 @@ type of the association. This must be one of
             <li>Generalisation</li>
             <li>Imports</li>
             </ul>
+</dd><dt><i>topToBottom=</i></dt>
+<dd>
+flag indicating to draw the association
+            from item A top to item B bottom (boolean)
 </dd><dt><i>parent=</i></dt>
 <dd>
 reference to the parent object (QGraphicsItem)
@@ -162,6 +169,14 @@ reference to the parent object (QGraphicsItem)
 </p><p>
         To calculate the end point we repeat the above but in the opposite direction
         (from itemB to itemA)
+</p><a NAME="AssociationItem.__calculateEndingPoints_topToBottom" ID="AssociationItem.__calculateEndingPoints_topToBottom"></a>
+<h4>AssociationItem.__calculateEndingPoints_topToBottom</h4>
+<b>__calculateEndingPoints_topToBottom</b>(<i></i>)
+<p>
+        Private method to calculate the ending points of the association item.
+</p><p>
+        The ending points are calculated from the top center of the lower item
+        to the bottom center of the upper item.
 </p><a NAME="AssociationItem.__findIntersection" ID="AssociationItem.__findIntersection"></a>
 <h4>AssociationItem.__findIntersection</h4>
 <b>__findIntersection</b>(<i>p1, p2, p3, p4</i>)

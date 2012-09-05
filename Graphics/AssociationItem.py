@@ -35,7 +35,8 @@ class AssociationItem(E5ArrowItem):
     The association is drawn as an arrow starting at the first items and
     ending at the second.
     """
-    def __init__(self, itemA, itemB, type=Normal, parent=None):
+    def __init__(self, itemA, itemB, type=Normal, topToBottom=False,
+                 parent=None):
         """
         Constructor
         
@@ -47,6 +48,8 @@ class AssociationItem(E5ArrowItem):
             <li>Generalisation</li>
             <li>Imports</li>
             </ul>
+        @keyparam topToBottom flag indicating to draw the association
+            from item A top to item B bottom (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
         if type == Normal:
@@ -65,8 +68,11 @@ class AssociationItem(E5ArrowItem):
         self.setFlag(QGraphicsItem.ItemIsMovable, False)
         self.setFlag(QGraphicsItem.ItemIsSelectable, False)
         
-##        self.calculateEndingPoints = self.__calculateEndingPoints_center
-        self.calculateEndingPoints = self.__calculateEndingPoints_rectangle
+        if topToBottom:
+            self.calculateEndingPoints = self.__calculateEndingPoints_topToBottom
+        else:
+##            self.calculateEndingPoints = self.__calculateEndingPoints_center
+            self.calculateEndingPoints = self.__calculateEndingPoints_rectangle
         
         self.itemA = itemA
         self.itemB = itemB
@@ -91,6 +97,34 @@ class AssociationItem(E5ArrowItem):
         tl = self.mapFromItem(item, rect.topLeft())
         return QRectF(tl.x(), tl.y(), rect.width(), rect.height())
         
+    def __calculateEndingPoints_topToBottom(self):
+        """
+        Private method to calculate the ending points of the association item.
+        
+        The ending points are calculated from the top center of the lower item
+        to the bottom center of the upper item.
+        """
+        if self.itemA is None or self.itemB is None:
+            return
+        
+        self.prepareGeometryChange()
+        
+        rectA = self.__mapRectFromItem(self.itemA)
+        rectB = self.__mapRectFromItem(self.itemB)
+        midA = QPointF(rectA.x() + rectA.width() / 2.0,
+                       rectA.y() + rectA.height() / 2.0)
+        midB = QPointF(rectB.x() + rectB.width() / 2.0,
+                       rectB.y() + rectB.height() / 2.0)
+        if midA.y() > midB.y():
+            startP = QPointF(rectA.x() + rectA.width() / 2.0, rectA.y())
+            endP = QPointF(rectB.x() + rectB.width() / 2.0,
+                           rectB.y() + rectB.height())
+        else:
+            startP = QPointF(rectA.x() + rectA.width() / 2.0,
+                           rectA.y() + rectA.height())
+            endP = QPointF(rectB.x() + rectB.width() / 2.0, rectB.y())
+        self.setPoints(startP.x(), startP.y(), endP.x(), endP.y())
+    
     def __calculateEndingPoints_center(self):
         """
         Private method to calculate the ending points of the association item.

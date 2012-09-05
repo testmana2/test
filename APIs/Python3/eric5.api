@@ -1619,7 +1619,7 @@ eric5.Graphics.ApplicationDiagram.ApplicationDiagram.show?4()
 eric5.Graphics.ApplicationDiagram.ApplicationDiagram?1(project, parent=None, name=None, noModules=False)
 eric5.Graphics.AssociationItem.AssociationItem.unassociate?4()
 eric5.Graphics.AssociationItem.AssociationItem.widgetMoved?4()
-eric5.Graphics.AssociationItem.AssociationItem?1(itemA, itemB, type=Normal, parent=None)
+eric5.Graphics.AssociationItem.AssociationItem?1(itemA, itemB, type=Normal, topToBottom=False, parent=None)
 eric5.Graphics.AssociationItem.Center?7
 eric5.Graphics.AssociationItem.East?7
 eric5.Graphics.AssociationItem.Generalisation?7

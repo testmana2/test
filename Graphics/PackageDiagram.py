@@ -295,7 +295,8 @@ class PackageDiagram(UMLDialog):
                 assoc = AssociationItem(
                         self.__getCurrentShape(route[1]),
                         self.__getCurrentShape(route[0]),
-                        Generalisation)
+                        Generalisation,
+                        topToBottom=True)
                 self.scene.addItem(assoc)
         
     def show(self):

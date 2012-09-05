@@ -1301,6 +1301,7 @@
       <keyword name="AssociationItem (Module)" id="AssociationItem (Module)" ref="eric5.Graphics.AssociationItem.html" />
       <keyword name="AssociationItem.__calculateEndingPoints_center" id="AssociationItem.__calculateEndingPoints_center" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__calculateEndingPoints_center" />
       <keyword name="AssociationItem.__calculateEndingPoints_rectangle" id="AssociationItem.__calculateEndingPoints_rectangle" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__calculateEndingPoints_rectangle" />
+      <keyword name="AssociationItem.__calculateEndingPoints_topToBottom" id="AssociationItem.__calculateEndingPoints_topToBottom" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__calculateEndingPoints_topToBottom" />
       <keyword name="AssociationItem.__findIntersection" id="AssociationItem.__findIntersection" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__findIntersection" />
       <keyword name="AssociationItem.__findPointRegion" id="AssociationItem.__findPointRegion" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__findPointRegion" />
       <keyword name="AssociationItem.__findRectIntersectionPoint" id="AssociationItem.__findRectIntersectionPoint" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__findRectIntersectionPoint" />
