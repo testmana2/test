@@ -7712,6 +7712,7 @@
       <keyword name="Project.getProjectFile" id="Project.getProjectFile" ref="eric5.Project.Project.html#Project.getProjectFile" />
       <keyword name="Project.getProjectLanguage" id="Project.getProjectLanguage" ref="eric5.Project.Project.html#Project.getProjectLanguage" />
       <keyword name="Project.getProjectManagementDir" id="Project.getProjectManagementDir" ref="eric5.Project.Project.html#Project.getProjectManagementDir" />
+      <keyword name="Project.getProjectName" id="Project.getProjectName" ref="eric5.Project.Project.html#Project.getProjectName" />
       <keyword name="Project.getProjectPath" id="Project.getProjectPath" ref="eric5.Project.Project.html#Project.getProjectPath" />
       <keyword name="Project.getProjectSpellLanguage" id="Project.getProjectSpellLanguage" ref="eric5.Project.Project.html#Project.getProjectSpellLanguage" />
       <keyword name="Project.getProjectType" id="Project.getProjectType" ref="eric5.Project.Project.html#Project.getProjectType" />

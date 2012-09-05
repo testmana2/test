@@ -24,10 +24,11 @@ class UMLClassDiagram(UMLDialog):
     """
     Class implementing a dialog showing a UML like class diagram.
     """
-    def __init__(self, file, parent=None, name=None, noAttrs=False):
+    def __init__(self, project, file, parent=None, name=None, noAttrs=False):
         """
         Constructor
         
+        @param project reference to the project object
         @param file filename of a python module to be shown (string)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
@@ -36,7 +37,12 @@ class UMLClassDiagram(UMLDialog):
         self.file = file
         self.noAttrs = noAttrs
         
-        UMLDialog.__init__(self, self.file, parent)
+        pname = project.getProjectName()
+        if pname and project.isProjectSource(self.file):
+            name = "{0}: {1}".format(pname, project.getRelativePath(self.file))
+        else:
+            name = self.file
+        UMLDialog.__init__(self, name, parent)
         
         if not name:
             self.setObjectName("UMLClassDiagram")

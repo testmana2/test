@@ -418,7 +418,8 @@ class UMLGraphicsView(E5GraphicsView):
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         preview = QPrintPreviewDialog(printer, self)
-        preview.paintRequested[QPrinter].connect(self.printDiagram)
+        preview.paintRequested[QPrinter].connect(
+            lambda x: self.printDiagram(x, self.diagramName))
         preview.exec_()
         
     def __zoom(self):

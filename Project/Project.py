@@ -2760,6 +2760,20 @@ class Project(QObject):
         """
         return self.pfile
         
+    def getProjectName(self):
+        """
+        Public method to get the name of the project.
+        
+        The project name is determined from the name of the project file.
+        
+        @return name of the project (string)
+        """
+        if self.pfile:
+            name = os.path.splitext(self.pfile)[0]
+            return os.path.basename(name)
+        else:
+            return ""
+        
     def getProjectManagementDir(self):
         """
         Public method to get the path of the management directory.

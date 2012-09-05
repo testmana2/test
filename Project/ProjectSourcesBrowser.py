@@ -861,7 +861,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.classDiagram = UMLClassDiagram(fn, self, noAttrs=not res)
+        self.classDiagram = UMLClassDiagram(self.project, fn, self, noAttrs=not res)
         self.classDiagram.show()
         
     def __showImportsDiagram(self):
@@ -877,7 +877,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
-        self.importsDiagram = ImportsDiagram(package, self,
+        self.importsDiagram = ImportsDiagram(self.project, package, self,
             showExternalImports=res)
         self.importsDiagram.show()
         
@@ -895,7 +895,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.packageDiagram = PackageDiagram(package, self, noAttrs=not res)
+        self.packageDiagram = PackageDiagram(self.project, package, self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showApplicationDiagram(self):

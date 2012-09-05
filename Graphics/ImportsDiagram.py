@@ -28,10 +28,12 @@ class ImportsDiagram(UMLDialog):
     Note: Only package internal imports are show in order to maintain
     some readability.
     """
-    def __init__(self, package, parent=None, name=None, showExternalImports=False):
+    def __init__(self, project, package, parent=None, name=None,
+                 showExternalImports=False):
         """
         Constructor
         
+        @param project reference to the project object
         @param package name of a python package to show the import
             relationships (string)
         @param parent parent widget of the view (QWidget)
@@ -49,7 +51,12 @@ class ImportsDiagram(UMLDialog):
             hasInit = len(glob.glob(os.path.join(ppath, '__init__.*'))) > 0
         self.shortPackage = self.packagePath.replace(ppath, '').replace(os.sep, '.')[1:]
         
-        UMLDialog.__init__(self, self.packagePath, parent)
+        pname = project.getProjectName()
+        if pname:
+            name = "{0}: {1}".format(pname, project.getRelativePath(self.packagePath))
+        else:
+            name = self.packagePath
+        UMLDialog.__init__(self, name, parent)
         
         if not name:
             self.setObjectName("ImportsDiagram")

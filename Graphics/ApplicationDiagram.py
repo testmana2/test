@@ -39,7 +39,7 @@ class ApplicationDiagram(UMLDialog):
         self.project = project
         self.noModules = noModules
         
-        UMLDialog.__init__(self, self.project.ppath, parent)
+        UMLDialog.__init__(self, self.project.getProjectName(), parent)
         
         if not name:
             self.setObjectName("ApplicationDiagram")

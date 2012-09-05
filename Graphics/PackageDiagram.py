@@ -27,10 +27,11 @@ class PackageDiagram(UMLDialog):
     """
     Class implementing a dialog showing a UML like class diagram of a package.
     """
-    def __init__(self, package, parent=None, name=None, noAttrs=False):
+    def __init__(self, project, package, parent=None, name=None, noAttrs=False):
         """
         Constructor
         
+        @param project reference to the project object
         @param package name of a python package to be shown (string)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
@@ -40,7 +41,12 @@ class PackageDiagram(UMLDialog):
         self.allClasses = {}
         self.noAttrs = noAttrs
         
-        UMLDialog.__init__(self, self.package, parent)
+        pname = project.getProjectName()
+        if pname:
+            name = "{0}: {1}".format(pname, project.getRelativePath(self.package))
+        else:
+            name = self.package
+        UMLDialog.__init__(self, name, parent)
         
         if not name:
             self.setObjectName("PackageDiagram")

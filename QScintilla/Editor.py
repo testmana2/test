@@ -5796,7 +5796,8 @@ class Editor(QsciScintillaCompat):
         if not self.checkDirty():
             return
         
-        self.classDiagram = UMLClassDiagram(self.fileName, self, noAttrs=False)
+        self.classDiagram = UMLClassDiagram(self.project, self.fileName,
+            self, noAttrs=False)
         self.classDiagram.show()
         
     def __showPackageDiagram(self):
@@ -5813,7 +5814,7 @@ class Editor(QsciScintillaCompat):
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.packageDiagram = PackageDiagram(package, self, noAttrs=not res)
+        self.packageDiagram = PackageDiagram(self.project, package, self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showImportsDiagram(self):
@@ -5829,7 +5830,7 @@ class Editor(QsciScintillaCompat):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
-        self.importsDiagram = ImportsDiagram(package, self,
+        self.importsDiagram = ImportsDiagram(self.project, package, self,
             showExternalImports=res)
         self.importsDiagram.show()
         
