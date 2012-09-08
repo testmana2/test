@@ -234,9 +234,13 @@ class PackageDiagram(UMLDialog):
             
         # add in some whitespace
         width = width * whiteSpaceFactor
-        rawHeight = height
+##        rawHeight = height
         height = height * whiteSpaceFactor - 20
-        verticalWhiteSpace = (height - rawHeight) / (len(generations) - 1.0 or 2.0)
+##        verticalWhiteSpace = max(
+##            (height - rawHeight) / (len(generations) - 1.0 or 2.0),
+##            40.0
+##        )
+        verticalWhiteSpace = 40.0
         
         sceneRect = self.umlView.sceneRect()
         width += 50.0

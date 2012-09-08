@@ -383,8 +383,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to handle the re-layout context menu entry.
         """
-        scene = self.scene()
-        scene.clear()
+        self.scene().clear()
         self.relayout.emit()
         
     def __printDiagram(self):
