@@ -39,7 +39,9 @@ class ApplicationDiagram(UMLDialog):
         self.project = project
         self.noModules = noModules
         
-        UMLDialog.__init__(self, self.project.getProjectName(), parent)
+        UMLDialog.__init__(self, parent=parent)
+        self.setDiagramName(
+            self.trUtf8("Application Diagram {0}").format(project.getProjectName()))
         
         if not name:
             self.setObjectName("ApplicationDiagram")

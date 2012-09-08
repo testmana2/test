@@ -52,3 +52,11 @@ class UMLDialog(QMainWindow):
         self.addToolBar(Qt.TopToolBarArea, self.umlToolBar)
         
         self.setCentralWidget(self.umlView)
+    
+    def setDiagramName(self, name):
+        """
+        Public slot to set the diagram name.
+        
+        @param name diagram name (string)
+        """
+        self.umlView.setDiagramName(name)

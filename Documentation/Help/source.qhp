@@ -10622,6 +10622,7 @@
       <keyword name="UMLDialog" id="UMLDialog" ref="eric5.Graphics.UMLDialog.html#UMLDialog" />
       <keyword name="UMLDialog (Constructor)" id="UMLDialog (Constructor)" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__init__" />
       <keyword name="UMLDialog (Module)" id="UMLDialog (Module)" ref="eric5.Graphics.UMLDialog.html" />
+      <keyword name="UMLDialog.setDiagramName" id="UMLDialog.setDiagramName" ref="eric5.Graphics.UMLDialog.html#UMLDialog.setDiagramName" />
       <keyword name="UMLGraphicsView" id="UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView" />
       <keyword name="UMLGraphicsView (Constructor)" id="UMLGraphicsView (Constructor)" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__init__" />
       <keyword name="UMLGraphicsView (Module)" id="UMLGraphicsView (Module)" ref="eric5.Graphics.UMLGraphicsView.html" />

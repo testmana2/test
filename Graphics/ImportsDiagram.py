@@ -41,6 +41,8 @@ class ImportsDiagram(UMLDialog):
         @keyparam showExternalImports flag indicating to show exports from outside
             the package (boolean)
         """
+        UMLDialog.__init__(self, parent=parent)
+        
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
         self.package = os.path.splitdrive(self.packagePath)[1].replace(os.sep, '.')[1:]
@@ -53,10 +55,11 @@ class ImportsDiagram(UMLDialog):
         
         pname = project.getProjectName()
         if pname:
-            name = "{0}: {1}".format(pname, project.getRelativePath(self.packagePath))
+            name = self.trUtf8("Imports Diagramm {0}: {1}").format(
+                pname, project.getRelativePath(self.packagePath))
         else:
-            name = self.packagePath
-        UMLDialog.__init__(self, name, parent)
+            name = self.trUtf8("Imports Diagramm: {0}").format(self.packagePath)
+        self.setDiagramName(name)
         
         if not name:
             self.setObjectName("ImportsDiagram")

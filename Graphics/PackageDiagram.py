@@ -37,16 +37,19 @@ class PackageDiagram(UMLDialog):
         @param name name of the view widget (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
+        UMLDialog.__init__(self, parent=parent)
+        
         self.package = Utilities.normabspath(package)
         self.allClasses = {}
         self.noAttrs = noAttrs
         
         pname = project.getProjectName()
         if pname:
-            name = "{0}: {1}".format(pname, project.getRelativePath(self.package))
+            name = self.trUtf8("Package Diagram {0}: {1}").format(
+                pname, project.getRelativePath(self.package))
         else:
-            name = self.package
-        UMLDialog.__init__(self, name, parent)
+            name = self.trUtf8("Package Diagram: {0}").format(self.package)
+        self.setDiagramName(name)
         
         if not name:
             self.setObjectName("PackageDiagram")

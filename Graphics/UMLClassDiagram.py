@@ -34,15 +34,18 @@ class UMLClassDiagram(UMLDialog):
         @param name name of the view widget (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
+        UMLDialog.__init__(self, parent=parent)
+        
         self.file = file
         self.noAttrs = noAttrs
         
         pname = project.getProjectName()
         if pname and project.isProjectSource(self.file):
-            name = "{0}: {1}".format(pname, project.getRelativePath(self.file))
+            name = self.trUtf8("Class Diagram {0}: {1}").format(
+                pname, project.getRelativePath(self.file))
         else:
-            name = self.file
-        UMLDialog.__init__(self, name, parent)
+            name = self.trUtf8("Class Diagram: {0}").format(self.file)
+        self.setDiagramName(name)
         
         if not name:
             self.setObjectName("UMLClassDiagram")

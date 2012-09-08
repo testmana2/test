@@ -311,7 +311,7 @@ class E5GraphicsView(QGraphicsView):
             painter.drawPixmap(marginX, marginY, diagram,
                                offsetX, offsetY, widthX, heightY)
             # write a foot note
-            s = self.trUtf8("Diagram: {0}, Page {1}").format(diagramName, page + 1)
+            s = self.trUtf8("{0}, Page {1}").format(diagramName, page + 1)
             tc = QColor(50, 50, 50)
             painter.setPen(tc)
             painter.drawRect(marginX, marginY, width, height)
