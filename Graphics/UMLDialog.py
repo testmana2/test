@@ -24,6 +24,7 @@ class UMLDialog(QMainWindow):
         """
         Constructor
         
+        @param diagramName name of the diagram (string)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
