@@ -39,7 +39,7 @@ class ApplicationDiagram(UMLDialog):
         self.project = project
         self.noModules = noModules
         
-        UMLDialog.__init__(self, parent=parent)
+        UMLDialog.__init__(self, buildFunction=self.__buildPackages, parent=parent)
         self.setDiagramName(
             self.trUtf8("Application Diagram {0}").format(project.getProjectName()))
         
@@ -213,6 +213,7 @@ class ApplicationDiagram(UMLDialog):
         self.umlView.setSceneSize(sceneRect.width(), sceneRect.height())
         
         self.__createAssociations(shapes)
+        self.umlView.autoAdjustSceneSize(limit=True)
         
     def __addPackage(self, name, modules, x, y):
         """
@@ -241,13 +242,6 @@ class ApplicationDiagram(UMLDialog):
                         shapes[package][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
-        
-    def show(self):
-        """
-        Overriden method to show the dialog.
-        """
-        self.__buildPackages()
-        UMLDialog.show(self)
         
     def relayout(self):
         """

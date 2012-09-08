@@ -70,6 +70,9 @@ QGraphicsView
 <td><a href="#E5GraphicsView._getDiagramSize">_getDiagramSize</a></td>
 <td>Protected method to calculate the minimum size fitting the diagram.</td>
 </tr><tr>
+<td><a href="#E5GraphicsView.autoAdjustSceneSize">autoAdjustSceneSize</a></td>
+<td>Public method to adjust the scene size to the diagram size.</td>
+</tr><tr>
 <td><a href="#E5GraphicsView.filteredItems">filteredItems</a></td>
 <td>Public method to filter a list of items.</td>
 </tr><tr>
@@ -170,6 +173,17 @@ border width to include in the calculation (integer)
 <dd>
 the minimum size (QSizeF)
 </dd>
+</dl><a NAME="E5GraphicsView.autoAdjustSceneSize" ID="E5GraphicsView.autoAdjustSceneSize"></a>
+<h4>E5GraphicsView.autoAdjustSceneSize</h4>
+<b>autoAdjustSceneSize</b>(<i>limit=False</i>)
+<p>
+        Public method to adjust the scene size to the diagram size.
+</p><dl>
+<dt><i>limit</i></dt>
+<dd>
+flag indicating to limit the scene to the
+            initial size (boolean)
+</dd>
 </dl><a NAME="E5GraphicsView.filteredItems" ID="E5GraphicsView.filteredItems"></a>
 <h4>E5GraphicsView.filteredItems</h4>
 <b>filteredItems</b>(<i>items</i>)
@@ -238,10 +252,10 @@ flag indicating success (boolean)
 </p><dl>
 <dt><i>width</i></dt>
 <dd>
-width for the scene (integer)
+width for the scene (real)
 </dd><dt><i>height</i></dt>
 <dd>
-height for the scene (integer)
+height for the scene (real)
 </dd>
 </dl><a NAME="E5GraphicsView.setZoom" ID="E5GraphicsView.setZoom"></a>
 <h4>E5GraphicsView.setZoom</h4>

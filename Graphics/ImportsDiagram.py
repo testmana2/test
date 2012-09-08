@@ -41,7 +41,7 @@ class ImportsDiagram(UMLDialog):
         @keyparam showExternalImports flag indicating to show exports from outside
             the package (boolean)
         """
-        UMLDialog.__init__(self, parent=parent)
+        UMLDialog.__init__(self, buildFunction=self.__buildImports, parent=parent)
         
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
@@ -211,6 +211,7 @@ class ImportsDiagram(UMLDialog):
         self.umlView.setSceneSize(sceneRect.width(), sceneRect.height())
         
         self.__createAssociations(shapes)
+        self.umlView.autoAdjustSceneSize(limit=True)
         
     def __addModule(self, name, classes, x, y):
         """
@@ -239,13 +240,6 @@ class ImportsDiagram(UMLDialog):
                         shapes[module][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
-        
-    def show(self):
-        """
-        Overriden method to show the dialog.
-        """
-        self.__buildImports()
-        UMLDialog.show(self)
         
     def relayout(self):
         """

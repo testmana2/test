@@ -8,7 +8,7 @@ Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent
-from PyQt4.QtGui import QAction, QToolBar, QDialog, QPrinter, QPrintDialog
+from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
@@ -45,6 +45,7 @@ class UMLGraphicsView(E5GraphicsView):
         E5GraphicsView.__init__(self, scene, parent)
         if name:
             self.setObjectName(name)
+        self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         
         self.diagramName = diagramName
         
@@ -180,11 +181,11 @@ class UMLGraphicsView(E5GraphicsView):
         """
         diagramSize = self._getDiagramSize(10)
         sceneRect = self.scene().sceneRect()
-        if (sceneRect.width() - self.deltaSize) <= diagramSize.width():
+        if (sceneRect.width() - self.deltaSize) < diagramSize.width():
             self.decWidthAct.setEnabled(False)
         else:
             self.decWidthAct.setEnabled(True)
-        if (sceneRect.height() - self.deltaSize) <= diagramSize.height():
+        if (sceneRect.height() - self.deltaSize) < diagramSize.height():
             self.decHeightAct.setEnabled(False)
         else:
             self.decHeightAct.setEnabled(True)
@@ -199,6 +200,19 @@ class UMLGraphicsView(E5GraphicsView):
             self.deleteShapeAct.setEnabled(True)
         else:
             self.deleteShapeAct.setEnabled(False)
+        
+        sceneRect = self.scene().sceneRect()
+        newWidth = width = sceneRect.width()
+        newHeight = height = sceneRect.height()
+        rect = self._getDiagramRect(10)
+        if width < rect.width():
+            newWidth = rect.width()
+        if height < rect.height():
+            newHeight = rect.height()
+        
+        if newHeight != height or newWidth != width:
+            self.setSceneSize(newWidth, newHeight)
+            self.__checkSizeActions()
         
     def initToolBar(self):
         """
@@ -321,6 +335,16 @@ class UMLGraphicsView(E5GraphicsView):
             self.setSceneSize(width, height)
         self.__checkSizeActions()
         
+    def autoAdjustSceneSize(self, limit=False):
+        """
+        Public method to adjust the scene size to the diagram size.
+        
+        @param limit flag indicating to limit the scene to the
+            initial size (boolean)
+        """
+        super().autoAdjustSceneSize(limit=limit)
+        self.__checkSizeActions()
+        
     def __saveImage(self):
         """
         Private method to handle the save context menu entry.
@@ -360,9 +384,7 @@ class UMLGraphicsView(E5GraphicsView):
         Private method to handle the re-layout context menu entry.
         """
         scene = self.scene()
-        for itm in list(scene.items())[:]:
-            if itm.scene() == scene:
-                scene.removeItem(itm)
+        scene.clear()
         self.relayout.emit()
         
     def __printDiagram(self):

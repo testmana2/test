@@ -37,7 +37,7 @@ class PackageDiagram(UMLDialog):
         @param name name of the view widget (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        UMLDialog.__init__(self, parent=parent)
+        UMLDialog.__init__(self, buildFunction=self.__buildClasses, parent=parent)
         
         self.package = Utilities.normabspath(package)
         self.allClasses = {}
@@ -192,6 +192,7 @@ class PackageDiagram(UMLDialog):
             
         self.__arrangeClasses(nodes, routes[:])
         self.__createAssociations(routes)
+        self.umlView.autoAdjustSceneSize(limit=True)
         
     def __arrangeClasses(self, nodes, routes, whiteSpaceFactor=1.2):
         """
@@ -307,13 +308,6 @@ class PackageDiagram(UMLDialog):
                         Generalisation,
                         topToBottom=True)
                 self.scene.addItem(assoc)
-        
-    def show(self):
-        """
-        Overriden method to show the dialog.
-        """
-        self.__buildClasses()
-        UMLDialog.show(self)
         
     def relayout(self):
         """

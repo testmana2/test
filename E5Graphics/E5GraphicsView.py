@@ -29,18 +29,14 @@ class E5GraphicsView(QGraphicsView):
         super().__init__(scene, parent)
         self.setObjectName("E5GraphicsView")
         
+        self.__initialSceneSize = self.scene().sceneRect().size()
         self.setBackgroundBrush(QBrush(Qt.white))
         self.setRenderHint(QPainter.Antialiasing, True)
         self.setDragMode(QGraphicsView.RubberBandDrag)
         self.setAlignment(Qt.Alignment(Qt.AlignLeft | Qt.AlignTop))
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        
-        # available as of Qt 4.3
-        try:
-            self.setViewportUpdateMode(QGraphicsView.SmartViewportUpdate)
-        except AttributeError:
-            pass
+        self.setViewportUpdateMode(QGraphicsView.SmartViewportUpdate)
         
         self.setWhatsThis(self.trUtf8("<b>Graphics View</b>\n"
             "<p>This graphics view is used to show a diagram. \n"
@@ -119,13 +115,29 @@ class E5GraphicsView(QGraphicsView):
         """
         Public method to set the scene size.
         
-        @param width width for the scene (integer)
-        @param height height for the scene (integer)
+        @param width width for the scene (real)
+        @param height height for the scene (real)
         """
         rect = self.scene().sceneRect()
         rect.setHeight(height)
         rect.setWidth(width)
-        self.setSceneRect(rect)
+        self.scene().setSceneRect(rect)
+        
+    def autoAdjustSceneSize(self, limit=False):
+        """
+        Public method to adjust the scene size to the diagram size.
+        
+        @param limit flag indicating to limit the scene to the
+            initial size (boolean)
+        """
+        size = self._getDiagramSize(10)
+        if limit:
+            newWidth = max(size.width(), self.__initialSceneSize.width())
+            newHeight = max(size.height(), self.__initialSceneSize.height())
+        else:
+            newWidth = size.width()
+            newHeight = size.height()
+        self.setSceneSize(newWidth, newHeight)
         
     def _getDiagramRect(self, border=0):
         """

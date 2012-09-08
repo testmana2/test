@@ -1280,7 +1280,6 @@
       <keyword name="ApplicationDiagram.__buildPackages" id="ApplicationDiagram.__buildPackages" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__buildPackages" />
       <keyword name="ApplicationDiagram.__createAssociations" id="ApplicationDiagram.__createAssociations" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__createAssociations" />
       <keyword name="ApplicationDiagram.relayout" id="ApplicationDiagram.relayout" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.relayout" />
-      <keyword name="ApplicationDiagram.show" id="ApplicationDiagram.show" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.show" />
       <keyword name="ApplicationPage" id="ApplicationPage" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage" />
       <keyword name="ApplicationPage (Constructor)" id="ApplicationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.__init__" />
       <keyword name="ApplicationPage (Module)" id="ApplicationPage (Module)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html" />
@@ -3307,6 +3306,7 @@
       <keyword name="E5GraphicsView.__getDiagram" id="E5GraphicsView.__getDiagram" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__getDiagram" />
       <keyword name="E5GraphicsView._getDiagramRect" id="E5GraphicsView._getDiagramRect" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramRect" />
       <keyword name="E5GraphicsView._getDiagramSize" id="E5GraphicsView._getDiagramSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramSize" />
+      <keyword name="E5GraphicsView.autoAdjustSceneSize" id="E5GraphicsView.autoAdjustSceneSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.autoAdjustSceneSize" />
       <keyword name="E5GraphicsView.filteredItems" id="E5GraphicsView.filteredItems" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.filteredItems" />
       <keyword name="E5GraphicsView.printDiagram" id="E5GraphicsView.printDiagram" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.printDiagram" />
       <keyword name="E5GraphicsView.resizeScene" id="E5GraphicsView.resizeScene" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.resizeScene" />
@@ -6231,7 +6231,6 @@
       <keyword name="ImportsDiagram.__buildModulesDict" id="ImportsDiagram.__buildModulesDict" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__buildModulesDict" />
       <keyword name="ImportsDiagram.__createAssociations" id="ImportsDiagram.__createAssociations" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__createAssociations" />
       <keyword name="ImportsDiagram.relayout" id="ImportsDiagram.relayout" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.relayout" />
-      <keyword name="ImportsDiagram.show" id="ImportsDiagram.show" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.show" />
       <keyword name="IndexGenerator" id="IndexGenerator" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator" />
       <keyword name="IndexGenerator (Constructor)" id="IndexGenerator (Constructor)" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator.__init__" />
       <keyword name="IndexGenerator (Module)" id="IndexGenerator (Module)" ref="eric5.DocumentationTools.IndexGenerator.html" />
@@ -7146,7 +7145,6 @@
       <keyword name="PackageDiagram.__createAssociations" id="PackageDiagram.__createAssociations" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__createAssociations" />
       <keyword name="PackageDiagram.__getCurrentShape" id="PackageDiagram.__getCurrentShape" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__getCurrentShape" />
       <keyword name="PackageDiagram.relayout" id="PackageDiagram.relayout" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.relayout" />
-      <keyword name="PackageDiagram.show" id="PackageDiagram.show" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.show" />
       <keyword name="PackageItem" id="PackageItem" ref="eric5.Graphics.PackageItem.html#PackageItem" />
       <keyword name="PackageItem (Constructor)" id="PackageItem (Constructor)" ref="eric5.Graphics.PackageItem.html#PackageItem.__init__" />
       <keyword name="PackageItem (Module)" id="PackageItem (Module)" ref="eric5.Graphics.PackageItem.html" />
@@ -10618,11 +10616,11 @@
       <keyword name="UMLClassDiagram.__createAssociations" id="UMLClassDiagram.__createAssociations" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__createAssociations" />
       <keyword name="UMLClassDiagram.__getCurrentShape" id="UMLClassDiagram.__getCurrentShape" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__getCurrentShape" />
       <keyword name="UMLClassDiagram.relayout" id="UMLClassDiagram.relayout" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.relayout" />
-      <keyword name="UMLClassDiagram.show" id="UMLClassDiagram.show" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.show" />
       <keyword name="UMLDialog" id="UMLDialog" ref="eric5.Graphics.UMLDialog.html#UMLDialog" />
       <keyword name="UMLDialog (Constructor)" id="UMLDialog (Constructor)" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__init__" />
       <keyword name="UMLDialog (Module)" id="UMLDialog (Module)" ref="eric5.Graphics.UMLDialog.html" />
       <keyword name="UMLDialog.setDiagramName" id="UMLDialog.setDiagramName" ref="eric5.Graphics.UMLDialog.html#UMLDialog.setDiagramName" />
+      <keyword name="UMLDialog.show" id="UMLDialog.show" ref="eric5.Graphics.UMLDialog.html#UMLDialog.show" />
       <keyword name="UMLGraphicsView" id="UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView" />
       <keyword name="UMLGraphicsView (Constructor)" id="UMLGraphicsView (Constructor)" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__init__" />
       <keyword name="UMLGraphicsView (Module)" id="UMLGraphicsView (Module)" ref="eric5.Graphics.UMLGraphicsView.html" />
@@ -10641,6 +10639,7 @@
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
       <keyword name="UMLGraphicsView.__setSize" id="UMLGraphicsView.__setSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__setSize" />
       <keyword name="UMLGraphicsView.__zoom" id="UMLGraphicsView.__zoom" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__zoom" />
+      <keyword name="UMLGraphicsView.autoAdjustSceneSize" id="UMLGraphicsView.autoAdjustSceneSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.autoAdjustSceneSize" />
       <keyword name="UMLGraphicsView.event" id="UMLGraphicsView.event" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.event" />
       <keyword name="UMLGraphicsView.filteredItems" id="UMLGraphicsView.filteredItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.filteredItems" />
       <keyword name="UMLGraphicsView.gestureEvent" id="UMLGraphicsView.gestureEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.gestureEvent" />

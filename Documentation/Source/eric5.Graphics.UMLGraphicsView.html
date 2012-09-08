@@ -113,6 +113,9 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.__zoom">__zoom</a></td>
 <td>Private method to handle the zoom context menu action.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.autoAdjustSceneSize">autoAdjustSceneSize</a></td>
+<td>Public method to adjust the scene size to the diagram size.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.event">event</a></td>
 <td>Protected method handling events.</td>
 </tr><tr>
@@ -246,7 +249,18 @@ list of rectangles that contain changes (list of QRectF)
 <b>__zoom</b>(<i></i>)
 <p>
         Private method to handle the zoom context menu action.
-</p><a NAME="UMLGraphicsView.event" ID="UMLGraphicsView.event"></a>
+</p><a NAME="UMLGraphicsView.autoAdjustSceneSize" ID="UMLGraphicsView.autoAdjustSceneSize"></a>
+<h4>UMLGraphicsView.autoAdjustSceneSize</h4>
+<b>autoAdjustSceneSize</b>(<i>limit=False</i>)
+<p>
+        Public method to adjust the scene size to the diagram size.
+</p><dl>
+<dt><i>limit</i></dt>
+<dd>
+flag indicating to limit the scene to the
+            initial size (boolean)
+</dd>
+</dl><a NAME="UMLGraphicsView.event" ID="UMLGraphicsView.event"></a>
 <h4>UMLGraphicsView.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>

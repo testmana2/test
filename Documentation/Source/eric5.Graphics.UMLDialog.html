@@ -63,6 +63,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#UMLDialog.setDiagramName">setDiagramName</a></td>
 <td>Public slot to set the diagram name.</td>
+</tr><tr>
+<td><a href="#UMLDialog.show">show</a></td>
+<td>Overriden method to show the dialog.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -71,11 +74,17 @@ QMainWindow
 </table>
 <a NAME="UMLDialog.__init__" ID="UMLDialog.__init__"></a>
 <h4>UMLDialog (Constructor)</h4>
-<b>UMLDialog</b>(<i>diagramName="Unnamed", parent=None, name=None</i>)
+<b>UMLDialog</b>(<i>buildFunction=None, diagramName="Unnamed", parent=None, name=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>buildFunction</i></dt>
+<dd>
+function to build the diagram contents (function)
+</dd><dt><i>diagramName</i></dt>
+<dd>
+name of the diagram (string)
+</dd><dt><i>parent</i></dt>
 <dd>
 parent widget of the view (QWidget)
 </dd><dt><i>name</i></dt>
@@ -92,7 +101,12 @@ name of the view widget (string)
 <dd>
 diagram name (string)
 </dd>
-</dl>
+</dl><a NAME="UMLDialog.show" ID="UMLDialog.show"></a>
+<h4>UMLDialog.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Overriden method to show the dialog.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>
