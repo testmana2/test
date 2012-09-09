@@ -34,12 +34,11 @@ class UMLGraphicsView(E5GraphicsView):
     """
     relayout = pyqtSignal()
     
-    def __init__(self, scene, diagramType, parent=None):
+    def __init__(self, scene, parent=None):
         """
         Constructor
         
         @param scene reference to the scene object (QGraphicsScene)
-        @param diagramType type of the diagram (string)
         @param parent parent widget of the view (QWidget)
         """
         E5GraphicsView.__init__(self, scene, parent)
@@ -47,10 +46,6 @@ class UMLGraphicsView(E5GraphicsView):
         self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         
         self.diagramName = "Unnamed"
-        self.diagramType = diagramType
-        
-        self.persistenceData = ""
-        self.__fileName = ""
         self.__itemId = -1
         
         self.border = 10
@@ -73,31 +68,6 @@ class UMLGraphicsView(E5GraphicsView):
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
                     self.trUtf8("Delete shapes"), self)
         self.deleteShapeAct.triggered[()].connect(self.__deleteShape)
-        
-        self.saveAct = \
-            QAction(UI.PixmapCache.getIcon("fileSave.png"),
-                    self.trUtf8("Save"), self)
-        self.saveAct.triggered[()].connect(self.__save)
-        
-        self.saveAsAct = \
-            QAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
-                    self.trUtf8("Save As..."), self)
-        self.saveAsAct.triggered[()].connect(self.__saveAs)
-        
-        self.saveImageAct = \
-            QAction(UI.PixmapCache.getIcon("fileSavePixmap.png"),
-                    self.trUtf8("Save as PNG"), self)
-        self.saveImageAct.triggered[()].connect(self.__saveImage)
-        
-        self.printAct = \
-            QAction(UI.PixmapCache.getIcon("print.png"),
-                    self.trUtf8("Print"), self)
-        self.printAct.triggered[()].connect(self.__printDiagram)
-        
-        self.printPreviewAct = \
-            QAction(UI.PixmapCache.getIcon("printPreview.png"),
-                    self.trUtf8("Print Preview"), self)
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewDiagram)
         
         self.zoomInAct = \
             QAction(UI.PixmapCache.getIcon("zoomIn.png"),
@@ -238,13 +208,6 @@ class UMLGraphicsView(E5GraphicsView):
         toolBar.setIconSize(UI.Config.ToolBarIconSize)
         toolBar.addAction(self.deleteShapeAct)
         toolBar.addSeparator()
-        toolBar.addAction(self.saveAct)
-        toolBar.addAction(self.saveAsAct)
-        toolBar.addAction(self.saveImageAct)
-        toolBar.addSeparator()
-        toolBar.addAction(self.printPreviewAct)
-        toolBar.addAction(self.printAct)
-        toolBar.addSeparator()
         toolBar.addAction(self.zoomInAct)
         toolBar.addAction(self.zoomOutAct)
         toolBar.addAction(self.zoomAct)
@@ -362,9 +325,9 @@ class UMLGraphicsView(E5GraphicsView):
         super().autoAdjustSceneSize(limit=limit)
         self.__checkSizeActions()
         
-    def __saveImage(self):
+    def saveImage(self):
         """
-        Private method to handle the save context menu entry.
+        Public method to handle the save context menu entry.
         """
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
@@ -389,7 +352,7 @@ class UMLGraphicsView(E5GraphicsView):
                 if not res:
                     return
             
-            success = self.saveImage(fname, QFileInfo(fname).suffix().upper())
+            success = super().saveImage(fname, QFileInfo(fname).suffix().upper())
             if not success:
                 E5MessageBox.critical(self,
                     self.trUtf8("Save Diagram"),
@@ -404,9 +367,9 @@ class UMLGraphicsView(E5GraphicsView):
         self.scene().clear()
         self.relayout.emit()
         
-    def __printDiagram(self):
+    def printDiagram(self):
         """
-        Private slot called to print the diagram.
+        Public slot called to print the diagram.
         """
         printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
@@ -429,11 +392,11 @@ class UMLGraphicsView(E5GraphicsView):
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_():
-            self.printDiagram(printer, self.diagramName)
+            super().printDiagram(printer, self.diagramName)
         
-    def __printPreviewDiagram(self):
+    def printPreviewDiagram(self):
         """
-        Private slot called to show a print preview of the diagram.
+        Public slot called to show a print preview of the diagram.
         """
         from PyQt4.QtGui import QPrintPreviewDialog
         
@@ -457,9 +420,14 @@ class UMLGraphicsView(E5GraphicsView):
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         preview = QPrintPreviewDialog(printer, self)
-        preview.paintRequested[QPrinter].connect(
-            lambda x: self.printDiagram(x, self.diagramName))
+        preview.paintRequested[QPrinter].connect(self.__printPreviewPrint)
         preview.exec_()
+        
+    def __printPreviewPrint(self, printer):
+        """
+        Private slot to generate a print preview.
+        """
+        super().printDiagram(printer, self.diagramName)
         
     def __zoom(self):
         """
@@ -588,22 +556,6 @@ class UMLGraphicsView(E5GraphicsView):
                 self.setZoom(pinch.scaleFactor())
             evt.accept()
     
-    def setPersistenceData(self, data):
-        """
-        Public method to set additional persistence data.
-        
-        @param data string of additional data to be made persistent (string)
-        """
-        self.persistenceData = data
-    
-    def getPersistenceData(self):
-        """
-        Public method to get the additional persistence data.
-        
-        @return additional persistence data (string)
-        """
-        return self.persistenceData
-    
     def getItemId(self):
         """
         Public method to get the ID to be assigned to an item.
@@ -631,66 +583,31 @@ class UMLGraphicsView(E5GraphicsView):
         
         return None
     
-    def __save(self):
+    def getPersistenceData(self):
         """
-        Private slot to save the diagram with the current name.
-        """
-        self.__saveAs(self.__fileName)
-    
-    def __saveAs(self, filename=""):
-        """
-        Private slot to save the diagram.
+        Public method to get a list of data to be persisted.
         
-        @param filename name of the file to write to (string)
+        @return list of data to be persisted (list of strings)
         """
-        if not filename:
-            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
-                self,
-                self.trUtf8("Save Diagram"),
-                "",
-                self.trUtf8("Eric5 Graphics File (*.e5g);;All Files (*)"),
-                "",
-                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
-            if not fname:
-                return
-            ext = QFileInfo(fname).suffix()
-            if not ext:
-                ex = selectedFilter.split("(*")[1].split(")")[0]
-                if ex:
-                    fname += ex
-            if QFileInfo(fname).exists():
-                res = E5MessageBox.yesNo(self,
-                    self.trUtf8("Save Diagram"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fname),
-                    icon=E5MessageBox.Warning)
-                if not res:
-                    return
-            filename = fname
-        
         lines = [
-            "version: 1.0",
-            "diagram_type: {0} ({1})".format(self.diagramType,
-                self.parent().diagramTypeToString(self.diagramType)),
             "diagram_name: {0}".format(self.diagramName),
-            "scene_size: {0};{1}".format(self.scene().width(), self.scene().height()),
         ]
-        if self.persistenceData:
-            lines.append("diagram_data: {0}".format(self.persistenceData))
+        
         for item in self.filteredItems(self.scene().items(), UMLItem):
-            lines.append("item: id={0}, x={1}, y={2}{3}".format(
-                item.getId(), item.x(), item.y(), item.buildItemDataString()))
+            lines.append("item: id={0}, x={1}, y={2}, item_type={3}{4}".format(
+                item.getId(), item.x(), item.y(), item.getItemType(),
+                item.buildItemDataString()))
+        
         for item in self.filteredItems(self.scene().items(), AssociationItem):
             lines.append("association: {0}".format(item.buildAssociationItemDataString()))
         
-        try:
-            f = open(filename, "w", encoding="utf-8")
-            f.write("\n".join(lines))
-            f.close()
-        except (IOError, OSError) as err:
-            E5MessageBox.critical(self,
-                self.trUtf8("Save Diagram"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>"""
-                             """<p>Reason: {1}</p>""").format(fname, str(err)))
+        return lines
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
         
-        self.__fileName = filename
+        @param dat persisted data to be parsed (string)
+        """
+        # TODO: implement this
+        return

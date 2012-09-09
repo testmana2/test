@@ -39,13 +39,15 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         
         self.file = file
         self.noAttrs = noAttrs
-        
-        self.umlView.setPersistenceData("file={0}".format(file))
-        
+    
+    def initialize(self):
+        """
+        Public method to initialize the object.
+        """
         pname = self.project.getProjectName()
         if pname and self.project.isProjectSource(self.file):
             name = self.trUtf8("Class Diagram {0}: {1}").format(
-                pname, project.getRelativePath(self.file))
+                pname, self.project.getRelativePath(self.file))
         else:
             name = self.trUtf8("Class Diagram: {0}").format(self.file)
         self.umlView.setDiagramName(name)
@@ -264,3 +266,20 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
                         Generalisation,
                         topToBottom=True)
                 self.scene.addItem(assoc)
+    
+    def getPersistenceData(self):
+        """
+        Public method to get a string for data to be persisted.
+        
+        @return persisted data string (string)
+        """
+        return "file={0}, no_attributes={1}".format(self.file, self.noAttrs)
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
+        
+        @param dat persisted data to be parsed (string)
+        """
+        # TODO: implement this
+        return

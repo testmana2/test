@@ -49,7 +49,7 @@ Module implementing the UMLItem base class.
 QGraphicsRectItem
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ItemType</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -72,6 +72,9 @@ QGraphicsRectItem
 </tr><tr>
 <td><a href="#UMLItem.getId">getId</a></td>
 <td>Public method to get the item ID.</td>
+</tr><tr>
+<td><a href="#UMLItem.getItemType">getItemType</a></td>
+<td>Public method to get the item's type.</td>
 </tr><tr>
 <td><a href="#UMLItem.itemChange">itemChange</a></td>
 <td>Protected method called when an items state changes.</td>
@@ -162,6 +165,16 @@ persistence data (string)
 <dt>Returns:</dt>
 <dd>
 ID of the item (integer)
+</dd>
+</dl><a NAME="UMLItem.getItemType" ID="UMLItem.getItemType"></a>
+<h4>UMLItem.getItemType</h4>
+<b>getItemType</b>(<i></i>)
+<p>
+        Public method to get the item's type.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+item type (string)
 </dd>
 </dl><a NAME="UMLItem.itemChange" ID="UMLItem.itemChange"></a>
 <h4>UMLItem.itemChange</h4>

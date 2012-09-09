@@ -92,23 +92,11 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.__initActions">__initActions</a></td>
 <td>Private method to initialize the view actions.</td>
 </tr><tr>
-<td><a href="#UMLGraphicsView.__printDiagram">__printDiagram</a></td>
-<td>Private slot called to print the diagram.</td>
-</tr><tr>
-<td><a href="#UMLGraphicsView.__printPreviewDiagram">__printPreviewDiagram</a></td>
-<td>Private slot called to show a print preview of the diagram.</td>
+<td><a href="#UMLGraphicsView.__printPreviewPrint">__printPreviewPrint</a></td>
+<td>Private slot to generate a print preview.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.__relayout">__relayout</a></td>
 <td>Private method to handle the re-layout context menu entry.</td>
-</tr><tr>
-<td><a href="#UMLGraphicsView.__save">__save</a></td>
-<td>Private slot to save the diagram with the current name.</td>
-</tr><tr>
-<td><a href="#UMLGraphicsView.__saveAs">__saveAs</a></td>
-<td>Private slot to save the diagram.</td>
-</tr><tr>
-<td><a href="#UMLGraphicsView.__saveImage">__saveImage</a></td>
-<td>Private method to handle the save context menu entry.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.__sceneChanged">__sceneChanged</a></td>
 <td>Private slot called when the scene changes.</td>
@@ -138,10 +126,22 @@ E5GraphicsView
 <td>Public method to get the ID to be assigned to an item.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.getPersistenceData">getPersistenceData</a></td>
-<td>Public method to get the additional persistence data.</td>
+<td>Public method to get a list of data to be persisted.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.initToolBar">initToolBar</a></td>
 <td>Public method to populate a toolbar with our actions.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.parsePersistenceData">parsePersistenceData</a></td>
+<td>Public method to parse persisted data.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.printDiagram">printDiagram</a></td>
+<td>Public slot called to print the diagram.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.printPreviewDiagram">printPreviewDiagram</a></td>
+<td>Public slot called to show a print preview of the diagram.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.saveImage">saveImage</a></td>
+<td>Public method to handle the save context menu entry.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.selectItem">selectItem</a></td>
 <td>Public method to select an item.</td>
@@ -151,9 +151,6 @@ E5GraphicsView
 </tr><tr>
 <td><a href="#UMLGraphicsView.setDiagramName">setDiagramName</a></td>
 <td>Public slot to set the diagram name.</td>
-</tr><tr>
-<td><a href="#UMLGraphicsView.setPersistenceData">setPersistenceData</a></td>
-<td>Public method to set additional persistence data.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -165,16 +162,13 @@ E5GraphicsView
 </table>
 <a NAME="UMLGraphicsView.__init__" ID="UMLGraphicsView.__init__"></a>
 <h4>UMLGraphicsView (Constructor)</h4>
-<b>UMLGraphicsView</b>(<i>scene, diagramType, parent=None</i>)
+<b>UMLGraphicsView</b>(<i>scene, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>scene</i></dt>
 <dd>
 reference to the scene object (QGraphicsScene)
-</dd><dt><i>diagramType</i></dt>
-<dd>
-type of the diagram (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of the view (QWidget)
@@ -224,41 +218,16 @@ alignment type (Qt.AlignmentFlag)
 <b>__initActions</b>(<i></i>)
 <p>
         Private method to initialize the view actions.
-</p><a NAME="UMLGraphicsView.__printDiagram" ID="UMLGraphicsView.__printDiagram"></a>
-<h4>UMLGraphicsView.__printDiagram</h4>
-<b>__printDiagram</b>(<i></i>)
+</p><a NAME="UMLGraphicsView.__printPreviewPrint" ID="UMLGraphicsView.__printPreviewPrint"></a>
+<h4>UMLGraphicsView.__printPreviewPrint</h4>
+<b>__printPreviewPrint</b>(<i>printer</i>)
 <p>
-        Private slot called to print the diagram.
-</p><a NAME="UMLGraphicsView.__printPreviewDiagram" ID="UMLGraphicsView.__printPreviewDiagram"></a>
-<h4>UMLGraphicsView.__printPreviewDiagram</h4>
-<b>__printPreviewDiagram</b>(<i></i>)
-<p>
-        Private slot called to show a print preview of the diagram.
+        Private slot to generate a print preview.
 </p><a NAME="UMLGraphicsView.__relayout" ID="UMLGraphicsView.__relayout"></a>
 <h4>UMLGraphicsView.__relayout</h4>
 <b>__relayout</b>(<i></i>)
 <p>
         Private method to handle the re-layout context menu entry.
-</p><a NAME="UMLGraphicsView.__save" ID="UMLGraphicsView.__save"></a>
-<h4>UMLGraphicsView.__save</h4>
-<b>__save</b>(<i></i>)
-<p>
-        Private slot to save the diagram with the current name.
-</p><a NAME="UMLGraphicsView.__saveAs" ID="UMLGraphicsView.__saveAs"></a>
-<h4>UMLGraphicsView.__saveAs</h4>
-<b>__saveAs</b>(<i>filename=""</i>)
-<p>
-        Private slot to save the diagram.
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-name of the file to write to (string)
-</dd>
-</dl><a NAME="UMLGraphicsView.__saveImage" ID="UMLGraphicsView.__saveImage"></a>
-<h4>UMLGraphicsView.__saveImage</h4>
-<b>__saveImage</b>(<i></i>)
-<p>
-        Private method to handle the save context menu entry.
 </p><a NAME="UMLGraphicsView.__sceneChanged" ID="UMLGraphicsView.__sceneChanged"></a>
 <h4>UMLGraphicsView.__sceneChanged</h4>
 <b>__sceneChanged</b>(<i>areas</i>)
@@ -363,11 +332,11 @@ item ID (integer)
 <h4>UMLGraphicsView.getPersistenceData</h4>
 <b>getPersistenceData</b>(<i></i>)
 <p>
-        Public method to get the additional persistence data.
+        Public method to get a list of data to be persisted.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-additional persistence data (string)
+list of data to be persisted (list of strings)
 </dd>
 </dl><a NAME="UMLGraphicsView.initToolBar" ID="UMLGraphicsView.initToolBar"></a>
 <h4>UMLGraphicsView.initToolBar</h4>
@@ -379,7 +348,32 @@ additional persistence data (string)
 <dd>
 the populated toolBar (QToolBar)
 </dd>
-</dl><a NAME="UMLGraphicsView.selectItem" ID="UMLGraphicsView.selectItem"></a>
+</dl><a NAME="UMLGraphicsView.parsePersistenceData" ID="UMLGraphicsView.parsePersistenceData"></a>
+<h4>UMLGraphicsView.parsePersistenceData</h4>
+<b>parsePersistenceData</b>(<i>data</i>)
+<p>
+        Public method to parse persisted data.
+</p><dl>
+<dt><i>dat</i></dt>
+<dd>
+persisted data to be parsed (string)
+</dd>
+</dl><a NAME="UMLGraphicsView.printDiagram" ID="UMLGraphicsView.printDiagram"></a>
+<h4>UMLGraphicsView.printDiagram</h4>
+<b>printDiagram</b>(<i></i>)
+<p>
+        Public slot called to print the diagram.
+</p><a NAME="UMLGraphicsView.printPreviewDiagram" ID="UMLGraphicsView.printPreviewDiagram"></a>
+<h4>UMLGraphicsView.printPreviewDiagram</h4>
+<b>printPreviewDiagram</b>(<i></i>)
+<p>
+        Public slot called to show a print preview of the diagram.
+</p><a NAME="UMLGraphicsView.saveImage" ID="UMLGraphicsView.saveImage"></a>
+<h4>UMLGraphicsView.saveImage</h4>
+<b>saveImage</b>(<i></i>)
+<p>
+        Public method to handle the save context menu entry.
+</p><a NAME="UMLGraphicsView.selectItem" ID="UMLGraphicsView.selectItem"></a>
 <h4>UMLGraphicsView.selectItem</h4>
 <b>selectItem</b>(<i>item</i>)
 <p>
@@ -408,16 +402,6 @@ list of items to be selected (list of QGraphicsItemItem)
 <dt><i>name</i></dt>
 <dd>
 diagram name (string)
-</dd>
-</dl><a NAME="UMLGraphicsView.setPersistenceData" ID="UMLGraphicsView.setPersistenceData"></a>
-<h4>UMLGraphicsView.setPersistenceData</h4>
-<b>setPersistenceData</b>(<i>data</i>)
-<p>
-        Public method to set additional persistence data.
-</p><dl>
-<dt><i>data</i></dt>
-<dd>
-string of additional data to be made persistent (string)
 </dd>
 </dl><a NAME="UMLGraphicsView.wheelEvent" ID="UMLGraphicsView.wheelEvent"></a>
 <h4>UMLGraphicsView.wheelEvent</h4>

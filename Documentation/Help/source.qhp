@@ -1280,6 +1280,8 @@
       <keyword name="ApplicationDiagramBuilder.__buildModulesDict" id="ApplicationDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__buildModulesDict" />
       <keyword name="ApplicationDiagramBuilder.__createAssociations" id="ApplicationDiagramBuilder.__createAssociations" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__createAssociations" />
       <keyword name="ApplicationDiagramBuilder.buildDiagram" id="ApplicationDiagramBuilder.buildDiagram" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.buildDiagram" />
+      <keyword name="ApplicationDiagramBuilder.getPersistenceData" id="ApplicationDiagramBuilder.getPersistenceData" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.getPersistenceData" />
+      <keyword name="ApplicationDiagramBuilder.parsePersistenceData" id="ApplicationDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.parsePersistenceData" />
       <keyword name="ApplicationPage" id="ApplicationPage" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage" />
       <keyword name="ApplicationPage (Constructor)" id="ApplicationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.__init__" />
       <keyword name="ApplicationPage (Module)" id="ApplicationPage (Module)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html" />
@@ -6234,6 +6236,9 @@
       <keyword name="ImportsDiagramBuilder.__buildModulesDict" id="ImportsDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__buildModulesDict" />
       <keyword name="ImportsDiagramBuilder.__createAssociations" id="ImportsDiagramBuilder.__createAssociations" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__createAssociations" />
       <keyword name="ImportsDiagramBuilder.buildDiagram" id="ImportsDiagramBuilder.buildDiagram" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.buildDiagram" />
+      <keyword name="ImportsDiagramBuilder.getPersistenceData" id="ImportsDiagramBuilder.getPersistenceData" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.getPersistenceData" />
+      <keyword name="ImportsDiagramBuilder.initialize" id="ImportsDiagramBuilder.initialize" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.initialize" />
+      <keyword name="ImportsDiagramBuilder.parsePersistenceData" id="ImportsDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.parsePersistenceData" />
       <keyword name="IndexGenerator" id="IndexGenerator" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator" />
       <keyword name="IndexGenerator (Constructor)" id="IndexGenerator (Constructor)" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator.__init__" />
       <keyword name="IndexGenerator (Module)" id="IndexGenerator (Module)" ref="eric5.DocumentationTools.IndexGenerator.html" />
@@ -7149,6 +7154,9 @@
       <keyword name="PackageDiagramBuilder.__createAssociations" id="PackageDiagramBuilder.__createAssociations" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__createAssociations" />
       <keyword name="PackageDiagramBuilder.__getCurrentShape" id="PackageDiagramBuilder.__getCurrentShape" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__getCurrentShape" />
       <keyword name="PackageDiagramBuilder.buildDiagram" id="PackageDiagramBuilder.buildDiagram" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.buildDiagram" />
+      <keyword name="PackageDiagramBuilder.getPersistenceData" id="PackageDiagramBuilder.getPersistenceData" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.getPersistenceData" />
+      <keyword name="PackageDiagramBuilder.initialize" id="PackageDiagramBuilder.initialize" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.initialize" />
+      <keyword name="PackageDiagramBuilder.parsePersistenceData" id="PackageDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.parsePersistenceData" />
       <keyword name="PackageItem" id="PackageItem" ref="eric5.Graphics.PackageItem.html#PackageItem" />
       <keyword name="PackageItem (Constructor)" id="PackageItem (Constructor)" ref="eric5.Graphics.PackageItem.html#PackageItem.__init__" />
       <keyword name="PackageItem (Module)" id="PackageItem (Module)" ref="eric5.Graphics.PackageItem.html" />
@@ -10621,17 +10629,27 @@
       <keyword name="UMLClassDiagramBuilder.__createAssociations" id="UMLClassDiagramBuilder.__createAssociations" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__createAssociations" />
       <keyword name="UMLClassDiagramBuilder.__getCurrentShape" id="UMLClassDiagramBuilder.__getCurrentShape" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__getCurrentShape" />
       <keyword name="UMLClassDiagramBuilder.buildDiagram" id="UMLClassDiagramBuilder.buildDiagram" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.buildDiagram" />
+      <keyword name="UMLClassDiagramBuilder.getPersistenceData" id="UMLClassDiagramBuilder.getPersistenceData" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.getPersistenceData" />
+      <keyword name="UMLClassDiagramBuilder.initialize" id="UMLClassDiagramBuilder.initialize" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.initialize" />
+      <keyword name="UMLClassDiagramBuilder.parsePersistenceData" id="UMLClassDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.parsePersistenceData" />
       <keyword name="UMLDiagramBuilder" id="UMLDiagramBuilder" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder" />
       <keyword name="UMLDiagramBuilder (Constructor)" id="UMLDiagramBuilder (Constructor)" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.__init__" />
       <keyword name="UMLDiagramBuilder (Module)" id="UMLDiagramBuilder (Module)" ref="eric5.Graphics.UMLDiagramBuilder.html" />
       <keyword name="UMLDiagramBuilder.buildDiagram" id="UMLDiagramBuilder.buildDiagram" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.buildDiagram" />
+      <keyword name="UMLDiagramBuilder.getPersistenceData" id="UMLDiagramBuilder.getPersistenceData" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.getPersistenceData" />
+      <keyword name="UMLDiagramBuilder.initialize" id="UMLDiagramBuilder.initialize" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.initialize" />
       <keyword name="UMLDiagramBuilder.parsePersistenceData" id="UMLDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.parsePersistenceData" />
       <keyword name="UMLDialog" id="UMLDialog" ref="eric5.Graphics.UMLDialog.html#UMLDialog" />
       <keyword name="UMLDialog (Constructor)" id="UMLDialog (Constructor)" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__init__" />
       <keyword name="UMLDialog (Module)" id="UMLDialog (Module)" ref="eric5.Graphics.UMLDialog.html" />
       <keyword name="UMLDialog.__diagramBuilder" id="UMLDialog.__diagramBuilder" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__diagramBuilder" />
+      <keyword name="UMLDialog.__diagramTypeString" id="UMLDialog.__diagramTypeString" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__diagramTypeString" />
+      <keyword name="UMLDialog.__initActions" id="UMLDialog.__initActions" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__initActions" />
+      <keyword name="UMLDialog.__initToolBars" id="UMLDialog.__initToolBars" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__initToolBars" />
       <keyword name="UMLDialog.__relayout" id="UMLDialog.__relayout" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__relayout" />
-      <keyword name="UMLDialog.diagramTypeToString" id="UMLDialog.diagramTypeToString" ref="eric5.Graphics.UMLDialog.html#UMLDialog.diagramTypeToString" />
+      <keyword name="UMLDialog.__save" id="UMLDialog.__save" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__save" />
+      <keyword name="UMLDialog.__saveAs" id="UMLDialog.__saveAs" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__saveAs" />
+      <keyword name="UMLDialog.generateDialogFromFile" id="UMLDialog.generateDialogFromFile" ref="eric5.Graphics.UMLDialog.html#UMLDialog.generateDialogFromFile" />
       <keyword name="UMLDialog.show" id="UMLDialog.show" ref="eric5.Graphics.UMLDialog.html#UMLDialog.show" />
       <keyword name="UMLGraphicsView" id="UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView" />
       <keyword name="UMLGraphicsView (Constructor)" id="UMLGraphicsView (Constructor)" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__init__" />
@@ -10644,12 +10662,8 @@
       <keyword name="UMLGraphicsView.__incHeight" id="UMLGraphicsView.__incHeight" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__incHeight" />
       <keyword name="UMLGraphicsView.__incWidth" id="UMLGraphicsView.__incWidth" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__incWidth" />
       <keyword name="UMLGraphicsView.__initActions" id="UMLGraphicsView.__initActions" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__initActions" />
-      <keyword name="UMLGraphicsView.__printDiagram" id="UMLGraphicsView.__printDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printDiagram" />
-      <keyword name="UMLGraphicsView.__printPreviewDiagram" id="UMLGraphicsView.__printPreviewDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printPreviewDiagram" />
+      <keyword name="UMLGraphicsView.__printPreviewPrint" id="UMLGraphicsView.__printPreviewPrint" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printPreviewPrint" />
       <keyword name="UMLGraphicsView.__relayout" id="UMLGraphicsView.__relayout" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__relayout" />
-      <keyword name="UMLGraphicsView.__save" id="UMLGraphicsView.__save" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__save" />
-      <keyword name="UMLGraphicsView.__saveAs" id="UMLGraphicsView.__saveAs" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__saveAs" />
-      <keyword name="UMLGraphicsView.__saveImage" id="UMLGraphicsView.__saveImage" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__saveImage" />
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
       <keyword name="UMLGraphicsView.__setSize" id="UMLGraphicsView.__setSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__setSize" />
       <keyword name="UMLGraphicsView.__zoom" id="UMLGraphicsView.__zoom" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__zoom" />
@@ -10661,10 +10675,13 @@
       <keyword name="UMLGraphicsView.getItemId" id="UMLGraphicsView.getItemId" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getItemId" />
       <keyword name="UMLGraphicsView.getPersistenceData" id="UMLGraphicsView.getPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getPersistenceData" />
       <keyword name="UMLGraphicsView.initToolBar" id="UMLGraphicsView.initToolBar" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.initToolBar" />
+      <keyword name="UMLGraphicsView.parsePersistenceData" id="UMLGraphicsView.parsePersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.parsePersistenceData" />
+      <keyword name="UMLGraphicsView.printDiagram" id="UMLGraphicsView.printDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.printDiagram" />
+      <keyword name="UMLGraphicsView.printPreviewDiagram" id="UMLGraphicsView.printPreviewDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.printPreviewDiagram" />
+      <keyword name="UMLGraphicsView.saveImage" id="UMLGraphicsView.saveImage" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.saveImage" />
       <keyword name="UMLGraphicsView.selectItem" id="UMLGraphicsView.selectItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItem" />
       <keyword name="UMLGraphicsView.selectItems" id="UMLGraphicsView.selectItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItems" />
       <keyword name="UMLGraphicsView.setDiagramName" id="UMLGraphicsView.setDiagramName" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setDiagramName" />
-      <keyword name="UMLGraphicsView.setPersistenceData" id="UMLGraphicsView.setPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setPersistenceData" />
       <keyword name="UMLGraphicsView.wheelEvent" id="UMLGraphicsView.wheelEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.wheelEvent" />
       <keyword name="UMLItem" id="UMLItem" ref="eric5.Graphics.UMLItem.html#UMLItem" />
       <keyword name="UMLItem (Constructor)" id="UMLItem (Constructor)" ref="eric5.Graphics.UMLItem.html#UMLItem.__init__" />
@@ -10673,6 +10690,7 @@
       <keyword name="UMLItem.adjustAssociations" id="UMLItem.adjustAssociations" ref="eric5.Graphics.UMLItem.html#UMLItem.adjustAssociations" />
       <keyword name="UMLItem.buildItemDataString" id="UMLItem.buildItemDataString" ref="eric5.Graphics.UMLItem.html#UMLItem.buildItemDataString" />
       <keyword name="UMLItem.getId" id="UMLItem.getId" ref="eric5.Graphics.UMLItem.html#UMLItem.getId" />
+      <keyword name="UMLItem.getItemType" id="UMLItem.getItemType" ref="eric5.Graphics.UMLItem.html#UMLItem.getItemType" />
       <keyword name="UMLItem.itemChange" id="UMLItem.itemChange" ref="eric5.Graphics.UMLItem.html#UMLItem.itemChange" />
       <keyword name="UMLItem.moveBy" id="UMLItem.moveBy" ref="eric5.Graphics.UMLItem.html#UMLItem.moveBy" />
       <keyword name="UMLItem.paint" id="UMLItem.paint" ref="eric5.Graphics.UMLItem.html#UMLItem.paint" />

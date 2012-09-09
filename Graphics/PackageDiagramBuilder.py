@@ -42,17 +42,19 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         self.package = Utilities.normabspath(package)
         self.noAttrs = noAttrs
-        
-        self.umlView.setPersistenceData("package={0}".format(self.package))
-        
-        pname = project.getProjectName()
+    
+    def initialize(self):
+        """
+        Public method to initialize the object.
+        """
+        pname = self.project.getProjectName()
         if pname:
             name = self.trUtf8("Package Diagram {0}: {1}").format(
-                pname, project.getRelativePath(self.package))
+                pname, self.project.getRelativePath(self.package))
         else:
             name = self.trUtf8("Package Diagram: {0}").format(self.package)
         self.umlView.setDiagramName(name)
-        
+    
     def __getCurrentShape(self, name):
         """
         Private method to get the named shape.
@@ -61,7 +63,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @return shape (QCanvasItem)
         """
         return self.allClasses.get(name)
-        
+    
     def __buildModulesDict(self):
         """
         Private method to build a dictionary of modules contained in the package.
@@ -102,7 +104,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         finally:
             progress.setValue(tot)
         return moduleDict
-        
+    
     def buildDiagram(self):
         """
         Public method to build the class shapes of the package diagram.
@@ -190,7 +192,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         self.__arrangeClasses(nodes, routes[:])
         self.__createAssociations(routes)
         self.umlView.autoAdjustSceneSize(limit=True)
-        
+    
     def __arrangeClasses(self, nodes, routes, whiteSpaceFactor=1.2):
         """
         Private method to arrange the shapes on the canvas.
@@ -260,7 +262,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 rect = cw.sceneBoundingRect()
                 x = x + rect.width() + whiteSpace
             y = y + currentHeight + verticalWhiteSpace
-            
+    
     def __addLocalClass(self, className, _class, x, y, isRbModule=False):
         """
         Private method to add a class defined in the module.
@@ -280,7 +282,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         cw = ClassItem(cl, False, x, y, noAttrs=self.noAttrs, scene=self.scene)
         cw.setId(self.umlView.getItemId())
         self.allClasses[className] = cw
-        
+    
     def __addExternalClass(self, _class, x, y):
         """
         Private method to add a class defined outside the module.
@@ -296,7 +298,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         cw.setId(self.umlView.getItemId())
         self.allClasses[_class] = cw
-        
+    
     def __createAssociations(self, routes):
         """
         Private method to generate the associations between the class shapes.
@@ -311,3 +313,20 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                         Generalisation,
                         topToBottom=True)
                 self.scene.addItem(assoc)
+    
+    def getPersistenceData(self):
+        """
+        Public method to get a string for data to be persisted.
+        
+        @return persisted data string (string)
+        """
+        return "package={0}, no_attributes={1}".format(self.package, self.noAttrs)
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
+        
+        @param dat persisted data to be parsed (string)
+        """
+        # TODO: implement this
+        return

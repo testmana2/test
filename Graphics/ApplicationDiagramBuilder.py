@@ -39,14 +39,10 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         super().__init__(dialog, view, project)
         self.setObjectName("ApplicationDiagram")
         
-        self.project = project
         self.noModules = noModules
         
-        self.umlView.setDiagramName(
-            self.trUtf8("Application Diagram {0}").format(project.getProjectName()))
-        
-        self.umlView.setPersistenceData(
-            "project={0}".format(self.project.getProjectFile()))
+        self.umlView.setDiagramName( self.trUtf8("Application Diagram {0}").format(
+            self.project.getProjectName()))
         
     def __buildModulesDict(self):
         """
@@ -241,3 +237,21 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                         shapes[package][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
+    
+    def getPersistenceData(self):
+        """
+        Public method to get a string for data to be persisted.
+        
+        @return persisted data string (string)
+        """
+        return "project={0}, no_modules={1}".format(
+            self.project.getProjectFile(), self.noModules)
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
+        
+        @param dat persisted data to be parsed (string)
+        """
+        # TODO: implement this
+        return

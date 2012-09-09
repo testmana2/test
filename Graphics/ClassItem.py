@@ -229,7 +229,6 @@ class ClassItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type={0}".format(ClassItem.ItemType),
             "is_external={0}".format(self.external),
             "no_attributes={0}".format(self.noAttrs),
             "name={0}".format(self.model.getName()),

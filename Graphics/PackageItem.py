@@ -194,7 +194,6 @@ class PackageItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type={0}".format(PackageItem.ItemType),
             "no_modules={0}".format(self.noModules),
             "name={0}".format(self.model.getName()),
         ]

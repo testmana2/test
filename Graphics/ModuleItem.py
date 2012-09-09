@@ -175,7 +175,6 @@ class ModuleItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type={0}".format(ModuleItem.ItemType),
             "name={0}".format(self.model.getName()),
         ]
         classes = self.model.getClasses()

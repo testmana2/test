@@ -28,6 +28,12 @@ class UMLDiagramBuilder(QObject):
         self.scene = self.umlView.scene()
         self.project = project
     
+    def initialize(self):
+        """
+        Public method to initialize the object.
+        """
+        return
+    
     def buildDiagram(self):
         """
         Public method to build the diagram.
@@ -36,6 +42,14 @@ class UMLDiagramBuilder(QObject):
         """
         raise NotImplementedError(
             "Method 'buildDiagram' must be implemented in subclasses.")
+    
+    def getPersistenceData(self):
+        """
+        Public method to get a string for data to be persisted.
+        
+        @return persisted data string (string)
+        """
+        return ""
     
     def parsePersistenceData(self, data):
         """

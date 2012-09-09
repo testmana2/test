@@ -45,6 +45,11 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
+    
+    def initialize(self):
+        """
+        Public method to initialize the object.
+        """
         self.package = os.path.splitdrive(self.packagePath)[1].replace(os.sep, '.')[1:]
         hasInit = True
         ppath = self.packagePath
@@ -53,16 +58,14 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
             hasInit = len(glob.glob(os.path.join(ppath, '__init__.*'))) > 0
         self.shortPackage = self.packagePath.replace(ppath, '').replace(os.sep, '.')[1:]
         
-        self.umlView.setPersistenceData("package={0}".format(self.packagePath))
-        
-        pname = project.getProjectName()
+        pname = self.project.getProjectName()
         if pname:
             name = self.trUtf8("Imports Diagramm {0}: {1}").format(
-                pname, project.getRelativePath(self.packagePath))
+                pname, self.project.getRelativePath(self.packagePath))
         else:
             name = self.trUtf8("Imports Diagramm: {0}").format(self.packagePath)
         self.umlView.setDiagramName(name)
-        
+    
     def __buildModulesDict(self):
         """
         Private method to build a dictionary of modules contained in the package.
@@ -102,7 +105,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         finally:
             progress.setValue(tot)
         return moduleDict
-        
+    
     def buildDiagram(self):
         """
         Public method to build the modules shapes of the diagram.
@@ -207,7 +210,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         
         self.__createAssociations(shapes)
         self.umlView.autoAdjustSceneSize(limit=True)
-        
+    
     def __addModule(self, name, classes, x, y):
         """
         Private method to add a module to the diagram.
@@ -223,7 +226,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         impW = ModuleItem(impM, x, y, scene=self.scene)
         impW.setId(self.umlView.getItemId())
         return impW
-        
+    
     def __createAssociations(self, shapes):
         """
         Private method to generate the associations between the module shapes.
@@ -236,3 +239,21 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                         shapes[module][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
+    
+    def getPersistenceData(self):
+        """
+        Public method to get a string for data to be persisted.
+        
+        @return persisted data string (string)
+        """
+        return "package={0}, show_external={1}".format(
+            self.packagePath, self.showExternalImports)
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
+        
+        @param dat persisted data to be parsed (string)
+        """
+        # TODO: implement this
+        return

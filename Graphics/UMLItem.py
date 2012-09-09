@@ -17,6 +17,8 @@ class UMLItem(QGraphicsRectItem):
     """
     Class implementing the UMLItem base class.
     """
+    ItemType = "UMLItem"
+    
     def __init__(self, x=0, y=0, rounded=False, parent=None):
         """
         Constructor
@@ -161,6 +163,14 @@ class UMLItem(QGraphicsRectItem):
         @return ID of the item (integer)
         """
         return self.__id
+    
+    def getItemType(self):
+        """
+        Public method to get the item's type.
+        
+        @return item type (string)
+        """
+        return self.ItemType
     
     def buildItemDataString(self):
         """
