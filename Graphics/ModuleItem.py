@@ -55,6 +55,8 @@ class ModuleItem(UMLItem):
     """
     Class implementing a module item.
     """
+    ItemType = "module"
+    
     def __init__(self, model=None, x=0, y=0, rounded=False,
                  parent=None, scene=None):
         """
@@ -173,7 +175,7 @@ class ModuleItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type=module",
+            "item_type={0}".format(ModuleItem.ItemType),
             "name={0}".format(self.model.getName()),
         ]
         classes = self.model.getClasses()

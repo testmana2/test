@@ -75,6 +75,8 @@ class ClassItem(UMLItem):
     """
     Class implementing an UML like class item.
     """
+    ItemType = "class"
+    
     def __init__(self, model=None, external=False, x=0, y=0,
                  rounded=False, noAttrs=False, parent=None, scene=None):
         """
@@ -227,7 +229,7 @@ class ClassItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type=class",
+            "item_type={0}".format(ClassItem.ItemType),
             "is_external={0}".format(self.external),
             "no_attributes={0}".format(self.noAttrs),
             "name={0}".format(self.model.getName()),

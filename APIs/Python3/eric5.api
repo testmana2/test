@@ -1635,6 +1635,7 @@ eric5.Graphics.AssociationItem.South?7
 eric5.Graphics.AssociationItem.SouthEast?7
 eric5.Graphics.AssociationItem.SouthWest?7
 eric5.Graphics.AssociationItem.West?7
+eric5.Graphics.ClassItem.ClassItem.ItemType?7
 eric5.Graphics.ClassItem.ClassItem.buildItemDataString?4()
 eric5.Graphics.ClassItem.ClassItem.isExternal?4()
 eric5.Graphics.ClassItem.ClassItem.paint?4(painter, option, widget=None)
@@ -1651,6 +1652,7 @@ eric5.Graphics.GraphicsUtilities._buildChildrenLists?5(routes)
 eric5.Graphics.GraphicsUtilities.sort?4(nodes, routes, noRecursion=False)
 eric5.Graphics.ImportsDiagramBuilder.ImportsDiagramBuilder.buildDiagram?4()
 eric5.Graphics.ImportsDiagramBuilder.ImportsDiagramBuilder?1(dialog, view, project, package, showExternalImports=False)
+eric5.Graphics.ModuleItem.ModuleItem.ItemType?7
 eric5.Graphics.ModuleItem.ModuleItem.buildItemDataString?4()
 eric5.Graphics.ModuleItem.ModuleItem.paint?4(painter, option, widget=None)
 eric5.Graphics.ModuleItem.ModuleItem.parseItemDataString?4(data)
@@ -1662,6 +1664,7 @@ eric5.Graphics.ModuleItem.ModuleModel.getName?4()
 eric5.Graphics.ModuleItem.ModuleModel?1(name, classlist=[])
 eric5.Graphics.PackageDiagramBuilder.PackageDiagramBuilder.buildDiagram?4()
 eric5.Graphics.PackageDiagramBuilder.PackageDiagramBuilder?1(dialog, view, project, package, noAttrs=False)
+eric5.Graphics.PackageItem.PackageItem.ItemType?7
 eric5.Graphics.PackageItem.PackageItem.buildItemDataString?4()
 eric5.Graphics.PackageItem.PackageItem.paint?4(painter, option, widget=None)
 eric5.Graphics.PackageItem.PackageItem.parseItemDataString?4(data)

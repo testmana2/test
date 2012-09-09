@@ -55,6 +55,8 @@ class PackageItem(UMLItem):
     """
     Class implementing a package item.
     """
+    ItemType = "package"
+    
     def __init__(self, model=None, x=0, y=0, rounded=False,
                  noModules=False, parent=None, scene=None):
         """
@@ -192,7 +194,7 @@ class PackageItem(UMLItem):
         @return persistence data (string)
         """
         entries = [
-            "item_type=package",
+            "item_type={0}".format(PackageItem.ItemType),
             "no_modules={0}".format(self.noModules),
             "name={0}".format(self.model.getName()),
         ]
