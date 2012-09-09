@@ -56,7 +56,10 @@ E5ArrowItem
 </table>
 <h3>Class Methods</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#AssociationItem.parseAssociationItemDataString">parseAssociationItemDataString</a></td>
+<td>Class method to parse the given persistence data.</td>
+</tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -88,6 +91,9 @@ E5ArrowItem
 <td><a href="#AssociationItem.__updateEndPoint">__updateEndPoint</a></td>
 <td>Private method to update an endpoint.</td>
 </tr><tr>
+<td><a href="#AssociationItem.buildAssociationItemDataString">buildAssociationItemDataString</a></td>
+<td>Public method to build a string to persist the specific item data.</td>
+</tr><tr>
 <td><a href="#AssociationItem.unassociate">unassociate</a></td>
 <td>Public method to unassociate from the widgets.</td>
 </tr><tr>
@@ -99,7 +105,24 @@ E5ArrowItem
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="AssociationItem.__init__" ID="AssociationItem.__init__"></a>
+<a NAME="AssociationItem.parseAssociationItemDataString" ID="AssociationItem.parseAssociationItemDataString"></a>
+<h4>AssociationItem.parseAssociationItemDataString (class method)</h4>
+<b>parseAssociationItemDataString</b>(<i>data</i>)
+<p>
+        Class method to parse the given persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with the IDs of the source and destination items,
+            the association type and a flag indicating to associate from top
+            to bottom (integer, integer, integer, boolean)
+</dd>
+</dl><a NAME="AssociationItem.__init__" ID="AssociationItem.__init__"></a>
 <h4>AssociationItem (Constructor)</h4>
 <b>AssociationItem</b>(<i>itemA, itemB, type=Normal, topToBottom=False, parent=None</i>)
 <p>
@@ -299,6 +322,19 @@ the region for the endpoint (integer)
 </dd><dt><i>isWidgetA</i></dt>
 <dd>
 flag indicating update for itemA is done (boolean)
+</dd>
+</dl><a NAME="AssociationItem.buildAssociationItemDataString" ID="AssociationItem.buildAssociationItemDataString"></a>
+<h4>AssociationItem.buildAssociationItemDataString</h4>
+<b>buildAssociationItemDataString</b>(<i></i>)
+<p>
+        Public method to build a string to persist the specific item data.
+</p><p>
+        This string should be built like "attribute=value" with pairs separated
+        by ", ". value must not contain ", " or newlines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+persistence data (string)
 </dd>
 </dl><a NAME="AssociationItem.unassociate" ID="AssociationItem.unassociate"></a>
 <h4>AssociationItem.unassociate</h4>

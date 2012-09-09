@@ -164,10 +164,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Graphics/__init__.py</Source>
     <Source>Graphics/ZoomDialog.py</Source>
     <Source>Graphics/GraphicsUtilities.py</Source>
-    <Source>Graphics/UMLClassDiagram.py</Source>
-    <Source>Graphics/PackageDiagram.py</Source>
-    <Source>Graphics/ImportsDiagram.py</Source>
-    <Source>Graphics/ApplicationDiagram.py</Source>
     <Source>Project/ProjectResourcesBrowser.py</Source>
     <Source>Preferences/ToolGroupConfigurationDialog.py</Source>
     <Source>VCS/StatusMonitorThread.py</Source>
@@ -1039,6 +1035,11 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Gui/E5TreeWidget.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockTreeWidget.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockExceptionsDialog.py</Source>
+    <Source>Graphics/UMLDiagramBuilder.py</Source>
+    <Source>Graphics/UMLClassDiagramBuilder.py</Source>
+    <Source>Graphics/PackageDiagramBuilder.py</Source>
+    <Source>Graphics/ImportsDiagramBuilder.py</Source>
+    <Source>Graphics/ApplicationDiagramBuilder.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

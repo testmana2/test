@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Graphics.ImportsDiagram</title>
+<title>eric5.Graphics.ImportsDiagramBuilder</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Graphics.ImportsDiagram</h1>
+<h1>eric5.Graphics.ImportsDiagramBuilder</h1>
 <p>
 Module implementing a dialog showing an imports diagram of a package.
 </p>
@@ -31,8 +31,8 @@ Module implementing a dialog showing an imports diagram of a package.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#ImportsDiagram">ImportsDiagram</a></td>
-<td>Class implementing a dialog showing an imports diagram of a package.</td>
+<td><a href="#ImportsDiagramBuilder">ImportsDiagramBuilder</a></td>
+<td>Class implementing a builder for imports diagrams of a package.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -40,16 +40,16 @@ Module implementing a dialog showing an imports diagram of a package.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
-<a NAME="ImportsDiagram" ID="ImportsDiagram"></a>
-<h2>ImportsDiagram</h2>
+<a NAME="ImportsDiagramBuilder" ID="ImportsDiagramBuilder"></a>
+<h2>ImportsDiagramBuilder</h2>
 <p>
-    Class implementing a dialog showing an imports diagram of a package.
+    Class implementing a builder for imports diagrams of a package.
 </p><p>
-    Note: Only package internal imports are show in order to maintain
+    Note: Only package internal imports are shown in order to maintain
     some readability.
 </p>
 <h3>Derived from</h3>
-UMLDialog
+UMLDiagramBuilder
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -61,55 +61,52 @@ UMLDialog
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#ImportsDiagram.__init__">ImportsDiagram</a></td>
+<td><a href="#ImportsDiagramBuilder.__init__">ImportsDiagramBuilder</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#ImportsDiagram.__addModule">__addModule</a></td>
+<td><a href="#ImportsDiagramBuilder.__addModule">__addModule</a></td>
 <td>Private method to add a module to the diagram.</td>
 </tr><tr>
-<td><a href="#ImportsDiagram.__buildImports">__buildImports</a></td>
-<td>Private method to build the modules shapes of the diagram.</td>
-</tr><tr>
-<td><a href="#ImportsDiagram.__buildModulesDict">__buildModulesDict</a></td>
+<td><a href="#ImportsDiagramBuilder.__buildModulesDict">__buildModulesDict</a></td>
 <td>Private method to build a dictionary of modules contained in the package.</td>
 </tr><tr>
-<td><a href="#ImportsDiagram.__createAssociations">__createAssociations</a></td>
+<td><a href="#ImportsDiagramBuilder.__createAssociations">__createAssociations</a></td>
 <td>Private method to generate the associations between the module shapes.</td>
 </tr><tr>
-<td><a href="#ImportsDiagram.relayout">relayout</a></td>
-<td>Method to relayout the diagram.</td>
+<td><a href="#ImportsDiagramBuilder.buildDiagram">buildDiagram</a></td>
+<td>Public method to build the modules shapes of the diagram.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="ImportsDiagram.__init__" ID="ImportsDiagram.__init__"></a>
-<h4>ImportsDiagram (Constructor)</h4>
-<b>ImportsDiagram</b>(<i>project, package, parent=None, name=None, showExternalImports=False</i>)
+<a NAME="ImportsDiagramBuilder.__init__" ID="ImportsDiagramBuilder.__init__"></a>
+<h4>ImportsDiagramBuilder (Constructor)</h4>
+<b>ImportsDiagramBuilder</b>(<i>dialog, view, project, package, showExternalImports=False</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>project</i></dt>
+<dt><i>dialog</i></dt>
 <dd>
-reference to the project object
+reference to the UML dialog (UMLDialog)
+</dd><dt><i>view</i></dt>
+<dd>
+reference to the view object (UMLGraphicsView)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
 </dd><dt><i>package</i></dt>
 <dd>
 name of a python package to show the import
             relationships (string)
-</dd><dt><i>parent</i></dt>
-<dd>
-parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of the view widget (string)
 </dd><dt><i>showExternalImports=</i></dt>
 <dd>
 flag indicating to show exports from outside
             the package (boolean)
 </dd>
-</dl><a NAME="ImportsDiagram.__addModule" ID="ImportsDiagram.__addModule"></a>
-<h4>ImportsDiagram.__addModule</h4>
+</dl><a NAME="ImportsDiagramBuilder.__addModule" ID="ImportsDiagramBuilder.__addModule"></a>
+<h4>ImportsDiagramBuilder.__addModule</h4>
 <b>__addModule</b>(<i>name, classes, x, y</i>)
 <p>
         Private method to add a module to the diagram.
@@ -128,13 +125,8 @@ x-coordinate (float)
 <dd>
 y-coordinate (float)
 </dd>
-</dl><a NAME="ImportsDiagram.__buildImports" ID="ImportsDiagram.__buildImports"></a>
-<h4>ImportsDiagram.__buildImports</h4>
-<b>__buildImports</b>(<i></i>)
-<p>
-        Private method to build the modules shapes of the diagram.
-</p><a NAME="ImportsDiagram.__buildModulesDict" ID="ImportsDiagram.__buildModulesDict"></a>
-<h4>ImportsDiagram.__buildModulesDict</h4>
+</dl><a NAME="ImportsDiagramBuilder.__buildModulesDict" ID="ImportsDiagramBuilder.__buildModulesDict"></a>
+<h4>ImportsDiagramBuilder.__buildModulesDict</h4>
 <b>__buildModulesDict</b>(<i></i>)
 <p>
         Private method to build a dictionary of modules contained in the package.
@@ -143,8 +135,8 @@ y-coordinate (float)
 <dd>
 dictionary of modules contained in the package.
 </dd>
-</dl><a NAME="ImportsDiagram.__createAssociations" ID="ImportsDiagram.__createAssociations"></a>
-<h4>ImportsDiagram.__createAssociations</h4>
+</dl><a NAME="ImportsDiagramBuilder.__createAssociations" ID="ImportsDiagramBuilder.__createAssociations"></a>
+<h4>ImportsDiagramBuilder.__createAssociations</h4>
 <b>__createAssociations</b>(<i>shapes</i>)
 <p>
         Private method to generate the associations between the module shapes.
@@ -153,11 +145,11 @@ dictionary of modules contained in the package.
 <dd>
 list of shapes
 </dd>
-</dl><a NAME="ImportsDiagram.relayout" ID="ImportsDiagram.relayout"></a>
-<h4>ImportsDiagram.relayout</h4>
-<b>relayout</b>(<i></i>)
+</dl><a NAME="ImportsDiagramBuilder.buildDiagram" ID="ImportsDiagramBuilder.buildDiagram"></a>
+<h4>ImportsDiagramBuilder.buildDiagram</h4>
+<b>buildDiagram</b>(<i></i>)
 <p>
-        Method to relayout the diagram.
+        Public method to build the modules shapes of the diagram.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

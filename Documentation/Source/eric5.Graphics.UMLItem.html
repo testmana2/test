@@ -67,6 +67,12 @@ QGraphicsRectItem
 <td><a href="#UMLItem.adjustAssociations">adjustAssociations</a></td>
 <td>Method to adjust the associations to widget movements.</td>
 </tr><tr>
+<td><a href="#UMLItem.buildItemDataString">buildItemDataString</a></td>
+<td>Public method to build a string to persist the specific item data.</td>
+</tr><tr>
+<td><a href="#UMLItem.getId">getId</a></td>
+<td>Public method to get the item ID.</td>
+</tr><tr>
 <td><a href="#UMLItem.itemChange">itemChange</a></td>
 <td>Protected method called when an items state changes.</td>
 </tr><tr>
@@ -76,11 +82,17 @@ QGraphicsRectItem
 <td><a href="#UMLItem.paint">paint</a></td>
 <td>Public method to paint the item in local coordinates.</td>
 </tr><tr>
+<td><a href="#UMLItem.parseItemDataString">parseItemDataString</a></td>
+<td>Public method to parse the given persistence data.</td>
+</tr><tr>
 <td><a href="#UMLItem.removeAssociation">removeAssociation</a></td>
 <td>Method to remove an association to this widget.</td>
 </tr><tr>
 <td><a href="#UMLItem.removeAssociations">removeAssociations</a></td>
 <td>Method to remove all associations of this widget.</td>
+</tr><tr>
+<td><a href="#UMLItem.setId">setId</a></td>
+<td>Public method to assign an ID to the item.</td>
 </tr><tr>
 <td><a href="#UMLItem.setPos">setPos</a></td>
 <td>Overriden method to set the items position.</td>
@@ -127,7 +139,31 @@ association to be added (AssociationWidget)
 <b>adjustAssociations</b>(<i></i>)
 <p>
         Method to adjust the associations to widget movements.
-</p><a NAME="UMLItem.itemChange" ID="UMLItem.itemChange"></a>
+</p><a NAME="UMLItem.buildItemDataString" ID="UMLItem.buildItemDataString"></a>
+<h4>UMLItem.buildItemDataString</h4>
+<b>buildItemDataString</b>(<i></i>)
+<p>
+        Public method to build a string to persist the specific item data.
+</p><p>
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+persistence data (string)
+</dd>
+</dl><a NAME="UMLItem.getId" ID="UMLItem.getId"></a>
+<h4>UMLItem.getId</h4>
+<b>getId</b>(<i></i>)
+<p>
+        Public method to get the item ID.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+ID of the item (integer)
+</dd>
+</dl><a NAME="UMLItem.itemChange" ID="UMLItem.itemChange"></a>
 <h4>UMLItem.itemChange</h4>
 <b>itemChange</b>(<i>change, value</i>)
 <p>
@@ -174,6 +210,16 @@ style options (QStyleOptionGraphicsItem)
 <dd>
 optional reference to the widget painted on (QWidget)
 </dd>
+</dl><a NAME="UMLItem.parseItemDataString" ID="UMLItem.parseItemDataString"></a>
+<h4>UMLItem.parseItemDataString</h4>
+<b>parseItemDataString</b>(<i>data</i>)
+<p>
+        Public method to parse the given persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (string)
+</dd>
 </dl><a NAME="UMLItem.removeAssociation" ID="UMLItem.removeAssociation"></a>
 <h4>UMLItem.removeAssociation</h4>
 <b>removeAssociation</b>(<i>assoc</i>)
@@ -189,7 +235,17 @@ association to be removed (AssociationWidget)
 <b>removeAssociations</b>(<i></i>)
 <p>
         Method to remove all associations of this widget.
-</p><a NAME="UMLItem.setPos" ID="UMLItem.setPos"></a>
+</p><a NAME="UMLItem.setId" ID="UMLItem.setId"></a>
+<h4>UMLItem.setId</h4>
+<b>setId</b>(<i>id</i>)
+<p>
+        Public method to assign an ID to the item.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+assigned ID (integer)
+</dd>
+</dl><a NAME="UMLItem.setPos" ID="UMLItem.setPos"></a>
 <h4>UMLItem.setPos</h4>
 <b>setPos</b>(<i>x, y</i>)
 <p>

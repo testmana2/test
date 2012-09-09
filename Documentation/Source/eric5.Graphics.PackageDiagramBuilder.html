@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Graphics.PackageDiagram</title>
+<title>eric5.Graphics.PackageDiagramBuilder</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Graphics.PackageDiagram</h1>
+<h1>eric5.Graphics.PackageDiagramBuilder</h1>
 <p>
 Module implementing a dialog showing a UML like class diagram of a package.
 </p>
@@ -31,8 +31,8 @@ Module implementing a dialog showing a UML like class diagram of a package.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#PackageDiagram">PackageDiagram</a></td>
-<td>Class implementing a dialog showing a UML like class diagram of a package.</td>
+<td><a href="#PackageDiagramBuilder">PackageDiagramBuilder</a></td>
+<td>Class implementing a builder for UML like class diagrams of a package.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -40,13 +40,13 @@ Module implementing a dialog showing a UML like class diagram of a package.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
-<a NAME="PackageDiagram" ID="PackageDiagram"></a>
-<h2>PackageDiagram</h2>
+<a NAME="PackageDiagramBuilder" ID="PackageDiagramBuilder"></a>
+<h2>PackageDiagramBuilder</h2>
 <p>
-    Class implementing a dialog showing a UML like class diagram of a package.
+    Class implementing a builder for UML like class diagrams of a package.
 </p>
 <h3>Derived from</h3>
-UMLDialog
+UMLDiagramBuilder
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -58,62 +58,59 @@ UMLDialog
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#PackageDiagram.__init__">PackageDiagram</a></td>
+<td><a href="#PackageDiagramBuilder.__init__">PackageDiagramBuilder</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__addExternalClass">__addExternalClass</a></td>
+<td><a href="#PackageDiagramBuilder.__addExternalClass">__addExternalClass</a></td>
 <td>Private method to add a class defined outside the module.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__addLocalClass">__addLocalClass</a></td>
+<td><a href="#PackageDiagramBuilder.__addLocalClass">__addLocalClass</a></td>
 <td>Private method to add a class defined in the module.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__arrangeClasses">__arrangeClasses</a></td>
+<td><a href="#PackageDiagramBuilder.__arrangeClasses">__arrangeClasses</a></td>
 <td>Private method to arrange the shapes on the canvas.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__buildClasses">__buildClasses</a></td>
-<td>Private method to build the class shapes of the package diagram.</td>
-</tr><tr>
-<td><a href="#PackageDiagram.__buildModulesDict">__buildModulesDict</a></td>
+<td><a href="#PackageDiagramBuilder.__buildModulesDict">__buildModulesDict</a></td>
 <td>Private method to build a dictionary of modules contained in the package.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__createAssociations">__createAssociations</a></td>
+<td><a href="#PackageDiagramBuilder.__createAssociations">__createAssociations</a></td>
 <td>Private method to generate the associations between the class shapes.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.__getCurrentShape">__getCurrentShape</a></td>
+<td><a href="#PackageDiagramBuilder.__getCurrentShape">__getCurrentShape</a></td>
 <td>Private method to get the named shape.</td>
 </tr><tr>
-<td><a href="#PackageDiagram.relayout">relayout</a></td>
-<td>Method to relayout the diagram.</td>
+<td><a href="#PackageDiagramBuilder.buildDiagram">buildDiagram</a></td>
+<td>Public method to build the class shapes of the package diagram.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="PackageDiagram.__init__" ID="PackageDiagram.__init__"></a>
-<h4>PackageDiagram (Constructor)</h4>
-<b>PackageDiagram</b>(<i>project, package, parent=None, name=None, noAttrs=False</i>)
+<a NAME="PackageDiagramBuilder.__init__" ID="PackageDiagramBuilder.__init__"></a>
+<h4>PackageDiagramBuilder (Constructor)</h4>
+<b>PackageDiagramBuilder</b>(<i>dialog, view, project, package, noAttrs=False</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>project</i></dt>
+<dt><i>dialog</i></dt>
 <dd>
-reference to the project object
+reference to the UML dialog (UMLDialog)
+</dd><dt><i>view</i></dt>
+<dd>
+reference to the view object (UMLGraphicsView)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
 </dd><dt><i>package</i></dt>
 <dd>
 name of a python package to be shown (string)
-</dd><dt><i>parent</i></dt>
-<dd>
-parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of the view widget (string)
 </dd><dt><i>noAttrs=</i></dt>
 <dd>
 flag indicating, that no attributes should be shown (boolean)
 </dd>
-</dl><a NAME="PackageDiagram.__addExternalClass" ID="PackageDiagram.__addExternalClass"></a>
-<h4>PackageDiagram.__addExternalClass</h4>
+</dl><a NAME="PackageDiagramBuilder.__addExternalClass" ID="PackageDiagramBuilder.__addExternalClass"></a>
+<h4>PackageDiagramBuilder.__addExternalClass</h4>
 <b>__addExternalClass</b>(<i>_class, x, y</i>)
 <p>
         Private method to add a class defined outside the module.
@@ -131,8 +128,8 @@ x-coordinate (float)
 <dd>
 y-coordinate (float)
 </dd>
-</dl><a NAME="PackageDiagram.__addLocalClass" ID="PackageDiagram.__addLocalClass"></a>
-<h4>PackageDiagram.__addLocalClass</h4>
+</dl><a NAME="PackageDiagramBuilder.__addLocalClass" ID="PackageDiagramBuilder.__addLocalClass"></a>
+<h4>PackageDiagramBuilder.__addLocalClass</h4>
 <b>__addLocalClass</b>(<i>className, _class, x, y, isRbModule=False</i>)
 <p>
         Private method to add a class defined in the module.
@@ -153,22 +150,15 @@ y-coordinate (float)
 <dd>
 flag indicating a Ruby module (boolean)
 </dd>
-</dl><a NAME="PackageDiagram.__arrangeClasses" ID="PackageDiagram.__arrangeClasses"></a>
-<h4>PackageDiagram.__arrangeClasses</h4>
+</dl><a NAME="PackageDiagramBuilder.__arrangeClasses" ID="PackageDiagramBuilder.__arrangeClasses"></a>
+<h4>PackageDiagramBuilder.__arrangeClasses</h4>
 <b>__arrangeClasses</b>(<i>nodes, routes, whiteSpaceFactor=1.2</i>)
 <p>
         Private method to arrange the shapes on the canvas.
 </p><p>
         The algorithm is borrowed from Boa Constructor.
-</p><a NAME="PackageDiagram.__buildClasses" ID="PackageDiagram.__buildClasses"></a>
-<h4>PackageDiagram.__buildClasses</h4>
-<b>__buildClasses</b>(<i></i>)
-<p>
-        Private method to build the class shapes of the package diagram.
-</p><p>
-        The algorithm is borrowed from Boa Constructor.
-</p><a NAME="PackageDiagram.__buildModulesDict" ID="PackageDiagram.__buildModulesDict"></a>
-<h4>PackageDiagram.__buildModulesDict</h4>
+</p><a NAME="PackageDiagramBuilder.__buildModulesDict" ID="PackageDiagramBuilder.__buildModulesDict"></a>
+<h4>PackageDiagramBuilder.__buildModulesDict</h4>
 <b>__buildModulesDict</b>(<i></i>)
 <p>
         Private method to build a dictionary of modules contained in the package.
@@ -177,8 +167,8 @@ flag indicating a Ruby module (boolean)
 <dd>
 dictionary of modules contained in the package.
 </dd>
-</dl><a NAME="PackageDiagram.__createAssociations" ID="PackageDiagram.__createAssociations"></a>
-<h4>PackageDiagram.__createAssociations</h4>
+</dl><a NAME="PackageDiagramBuilder.__createAssociations" ID="PackageDiagramBuilder.__createAssociations"></a>
+<h4>PackageDiagramBuilder.__createAssociations</h4>
 <b>__createAssociations</b>(<i>routes</i>)
 <p>
         Private method to generate the associations between the class shapes.
@@ -187,8 +177,8 @@ dictionary of modules contained in the package.
 <dd>
 list of relationsships
 </dd>
-</dl><a NAME="PackageDiagram.__getCurrentShape" ID="PackageDiagram.__getCurrentShape"></a>
-<h4>PackageDiagram.__getCurrentShape</h4>
+</dl><a NAME="PackageDiagramBuilder.__getCurrentShape" ID="PackageDiagramBuilder.__getCurrentShape"></a>
+<h4>PackageDiagramBuilder.__getCurrentShape</h4>
 <b>__getCurrentShape</b>(<i>name</i>)
 <p>
         Private method to get the named shape.
@@ -202,11 +192,13 @@ name of the shape (string)
 <dd>
 shape (QCanvasItem)
 </dd>
-</dl><a NAME="PackageDiagram.relayout" ID="PackageDiagram.relayout"></a>
-<h4>PackageDiagram.relayout</h4>
-<b>relayout</b>(<i></i>)
+</dl><a NAME="PackageDiagramBuilder.buildDiagram" ID="PackageDiagramBuilder.buildDiagram"></a>
+<h4>PackageDiagramBuilder.buildDiagram</h4>
+<b>buildDiagram</b>(<i></i>)
 <p>
-        Method to relayout the diagram.
+        Public method to build the class shapes of the package diagram.
+</p><p>
+        The algorithm is borrowed from Boa Constructor.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

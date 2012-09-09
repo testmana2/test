@@ -22,10 +22,7 @@ from DataViews.CodeMetricsDialog import CodeMetricsDialog
 from DataViews.PyCoverageDialog import PyCoverageDialog
 from DataViews.PyProfileDialog import PyProfileDialog
 
-from Graphics.UMLClassDiagram import UMLClassDiagram
-from Graphics.ImportsDiagram import ImportsDiagram
-from Graphics.ApplicationDiagram import ApplicationDiagram
-from Graphics.PackageDiagram import PackageDiagram
+from Graphics.UMLDialog import UMLDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -861,7 +858,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.classDiagram = UMLClassDiagram(self.project, fn, self, noAttrs=not res)
+        self.classDiagram = UMLDialog(UMLDialog.ClassDiagram, self.project, fn,
+                                      self, noAttrs=not res)
         self.classDiagram.show()
         
     def __showImportsDiagram(self):
@@ -877,8 +875,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
-        self.importsDiagram = ImportsDiagram(self.project, package, self,
-            showExternalImports=res)
+        self.importsDiagram = UMLDialog(UMLDialog.ImportsDiagram, self.project, package,
+                                        self, showExternalImports=res)
         self.importsDiagram.show()
         
     def __showPackageDiagram(self):
@@ -895,7 +893,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.packageDiagram = PackageDiagram(self.project, package, self, noAttrs=not res)
+        self.packageDiagram = UMLDialog(UMLDialog.PackageDiagram, self.project, package,
+                                        self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showApplicationDiagram(self):
@@ -906,6 +905,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
-        self.applicationDiagram = ApplicationDiagram(self.project, self,
-            noModules=not res)
+        self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
+                                            self, noModules=not res)
         self.applicationDiagram.show()

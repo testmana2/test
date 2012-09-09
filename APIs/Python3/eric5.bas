@@ -20,7 +20,7 @@ AddFileDialog QDialog Ui_AddFileDialog
 AddFoundFilesDialog QDialog Ui_AddFoundFilesDialog
 AddLanguageDialog QDialog Ui_AddLanguageDialog
 AddProjectDialog QDialog Ui_AddProjectDialog
-ApplicationDiagram UMLDialog
+ApplicationDiagramBuilder UMLDiagramBuilder
 ApplicationPage ConfigurationPageBase Ui_ApplicationPage
 Argument Binding
 ArgumentsError RuntimeError
@@ -338,7 +338,7 @@ IconsPreviewDialog QDialog Ui_IconsPreviewDialog
 ImportShadowedByLoopVar Message
 ImportStarUsed Message
 Importation Binding
-ImportsDiagram UMLDialog
+ImportsDiagramBuilder UMLDiagramBuilder
 InputDialogWizard QObject
 InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
 InsertBookmarksCommand RemoveBookmarksCommand
@@ -422,7 +422,7 @@ OpenSearchManager QObject
 OpenSearchReader QXmlStreamReader
 OpenSearchWriter QXmlStreamWriter
 OperaImporter BookmarksImporter
-PackageDiagram UMLDialog
+PackageDiagramBuilder UMLDiagramBuilder
 PackageItem UMLItem
 PageScreenDialog QDialog Ui_PageScreenDialog
 PageThumbnailer QObject
@@ -652,7 +652,8 @@ TransplantProjectHelper HgExtensionProjectHelper
 TrayStarter QSystemTrayIcon
 TrayStarterPage ConfigurationPageBase Ui_TrayStarterPage
 UIPreviewer QMainWindow
-UMLClassDiagram UMLDialog
+UMLClassDiagramBuilder UMLDiagramBuilder
+UMLDiagramBuilder QObject
 UMLDialog QMainWindow
 UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem

@@ -20,28 +20,28 @@ class UMLDialog(QMainWindow):
     """
     Class implementing a dialog showing UML like diagrams.
     """
-    def __init__(self, diagramType, diagramName="Unnamed", buildFunction=None,
-                 parent=None, name=""):
+    ClassDiagram = 0
+    PackageDiagram = 1
+    ImportsDiagram = 2
+    ApplicationDiagram = 3
+    
+    def __init__(self, diagramType, project, path, parent=None, **kwargs):
         """
         Constructor
         
-        @param diagramType type of the diagram (string)
-        @param diagramName name of the diagram (string)
-        @param buildFunction function to build the diagram contents (function)
+        @param diagramType type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+        @param project reference to the project object (Project)
+        @param path file or directory path to build the diagram from (string)
         @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
+        @param kwargs diagram specific data
         """
         super().__init__(parent)
+        self.setObjectName("UMLDialog")
         
-        if not name:
-            self.setObjectName("UMLDialog")
-        else:
-            self.setObjectName(name)
-        
-        self.buildFunction = buildFunction
         self.scene = QGraphicsScene(0.0, 0.0, 800.0, 600.0)
-        self.umlView = UMLGraphicsView(self.scene, diagramType, diagramName,
-            self, "umlView")
+        self.umlView = UMLGraphicsView(self.scene, diagramType, parent=self)
+        self.builder = self.__diagramBuilder(diagramType, project, path, **kwargs)
         
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
@@ -58,19 +58,63 @@ class UMLDialog(QMainWindow):
         self.addToolBar(Qt.TopToolBarArea, self.umlToolBar)
         
         self.setCentralWidget(self.umlView)
-    
-    def setDiagramName(self, name):
-        """
-        Public slot to set the diagram name.
         
-        @param name diagram name (string)
-        """
-        self.umlView.setDiagramName(name)
+        self.umlView.relayout.connect(self.__relayout)
     
     def show(self):
         """
         Overriden method to show the dialog.
         """
-        if self.buildFunction:
-            self.buildFunction()
+        self.builder.buildDiagram()
         super().show()
+    
+    def __relayout(self):
+        """
+        Private method to relayout the diagram.
+        """
+        self.builder.buildDiagram()
+    
+    def __diagramBuilder(self, diagramType, project, path, **kwargs):
+        """
+        Private method to instantiate a diagram builder object.
+        
+        @param diagramType type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+        @param project reference to the project object (Project)
+        @param path file or directory path to build the diagram from (string)
+        @param kwargs diagram specific data
+        """
+        if diagramType == UMLDialog.ClassDiagram:
+            from .UMLClassDiagramBuilder import UMLClassDiagramBuilder
+            return UMLClassDiagramBuilder(self, self.umlView, project, path, **kwargs)
+        elif diagramType == UMLDialog.PackageDiagram:
+            from .PackageDiagramBuilder import PackageDiagramBuilder
+            return PackageDiagramBuilder(self, self.umlView, project, path, **kwargs)
+        elif diagramType == UMLDialog.ImportsDiagram:
+            from .ImportsDiagramBuilder import ImportsDiagramBuilder
+            return ImportsDiagramBuilder(self, self.umlView, project, path, **kwargs)
+        elif diagramType == UMLDialog.ApplicationDiagram:
+            from .ApplicationDiagramBuilder import ApplicationDiagramBuilder
+            return ApplicationDiagramBuilder(self, self.umlView, project, **kwargs)
+        else:
+            raise ValueError(
+                self.trUtf8("Illegal diagram type '{0}' given.").format(diagramType))
+    
+    def diagramTypeToString(self, diagramType):
+        """
+        Public method to convert the diagram type to a readable string.
+        
+        @param diagramType type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+        @return readable type string (string)
+        """
+        if diagramType == UMLDialog.ClassDiagram:
+            return "Class Diagram"
+        elif diagramType == UMLDialog.PackageDiagram:
+            return "Package Diagram"
+        elif diagramType == UMLDialog.ImportsDiagram:
+            return "Imports Diagram"
+        elif diagramType == UMLDialog.ApplicationDiagram:
+            return "Application Diagram"
+        else:
+            return "Illegal Diagram Type"

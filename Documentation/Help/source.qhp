@@ -172,17 +172,18 @@
             <section title="eric5.Globals.__init__" ref="eric5.Globals.__init__.html" />
           </section>
           <section title="eric5.Graphics" ref="index-eric5.Graphics.html">
-            <section title="eric5.Graphics.ApplicationDiagram" ref="eric5.Graphics.ApplicationDiagram.html" />
+            <section title="eric5.Graphics.ApplicationDiagramBuilder" ref="eric5.Graphics.ApplicationDiagramBuilder.html" />
             <section title="eric5.Graphics.AssociationItem" ref="eric5.Graphics.AssociationItem.html" />
             <section title="eric5.Graphics.ClassItem" ref="eric5.Graphics.ClassItem.html" />
             <section title="eric5.Graphics.GraphicsUtilities" ref="eric5.Graphics.GraphicsUtilities.html" />
-            <section title="eric5.Graphics.ImportsDiagram" ref="eric5.Graphics.ImportsDiagram.html" />
+            <section title="eric5.Graphics.ImportsDiagramBuilder" ref="eric5.Graphics.ImportsDiagramBuilder.html" />
             <section title="eric5.Graphics.ModuleItem" ref="eric5.Graphics.ModuleItem.html" />
-            <section title="eric5.Graphics.PackageDiagram" ref="eric5.Graphics.PackageDiagram.html" />
+            <section title="eric5.Graphics.PackageDiagramBuilder" ref="eric5.Graphics.PackageDiagramBuilder.html" />
             <section title="eric5.Graphics.PackageItem" ref="eric5.Graphics.PackageItem.html" />
             <section title="eric5.Graphics.PixmapDiagram" ref="eric5.Graphics.PixmapDiagram.html" />
             <section title="eric5.Graphics.SvgDiagram" ref="eric5.Graphics.SvgDiagram.html" />
-            <section title="eric5.Graphics.UMLClassDiagram" ref="eric5.Graphics.UMLClassDiagram.html" />
+            <section title="eric5.Graphics.UMLClassDiagramBuilder" ref="eric5.Graphics.UMLClassDiagramBuilder.html" />
+            <section title="eric5.Graphics.UMLDiagramBuilder" ref="eric5.Graphics.UMLDiagramBuilder.html" />
             <section title="eric5.Graphics.UMLDialog" ref="eric5.Graphics.UMLDialog.html" />
             <section title="eric5.Graphics.UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html" />
             <section title="eric5.Graphics.UMLItem" ref="eric5.Graphics.UMLItem.html" />
@@ -1272,14 +1273,13 @@
       <keyword name="AddProjectDialog.on_fileButton_clicked" id="AddProjectDialog.on_fileButton_clicked" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_fileButton_clicked" />
       <keyword name="AddProjectDialog.on_filenameEdit_textChanged" id="AddProjectDialog.on_filenameEdit_textChanged" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_filenameEdit_textChanged" />
       <keyword name="AddProjectDialog.on_nameEdit_textChanged" id="AddProjectDialog.on_nameEdit_textChanged" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_nameEdit_textChanged" />
-      <keyword name="ApplicationDiagram" id="ApplicationDiagram" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram" />
-      <keyword name="ApplicationDiagram (Constructor)" id="ApplicationDiagram (Constructor)" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__init__" />
-      <keyword name="ApplicationDiagram (Module)" id="ApplicationDiagram (Module)" ref="eric5.Graphics.ApplicationDiagram.html" />
-      <keyword name="ApplicationDiagram.__addPackage" id="ApplicationDiagram.__addPackage" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__addPackage" />
-      <keyword name="ApplicationDiagram.__buildModulesDict" id="ApplicationDiagram.__buildModulesDict" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__buildModulesDict" />
-      <keyword name="ApplicationDiagram.__buildPackages" id="ApplicationDiagram.__buildPackages" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__buildPackages" />
-      <keyword name="ApplicationDiagram.__createAssociations" id="ApplicationDiagram.__createAssociations" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.__createAssociations" />
-      <keyword name="ApplicationDiagram.relayout" id="ApplicationDiagram.relayout" ref="eric5.Graphics.ApplicationDiagram.html#ApplicationDiagram.relayout" />
+      <keyword name="ApplicationDiagramBuilder" id="ApplicationDiagramBuilder" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder" />
+      <keyword name="ApplicationDiagramBuilder (Constructor)" id="ApplicationDiagramBuilder (Constructor)" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__init__" />
+      <keyword name="ApplicationDiagramBuilder (Module)" id="ApplicationDiagramBuilder (Module)" ref="eric5.Graphics.ApplicationDiagramBuilder.html" />
+      <keyword name="ApplicationDiagramBuilder.__addPackage" id="ApplicationDiagramBuilder.__addPackage" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__addPackage" />
+      <keyword name="ApplicationDiagramBuilder.__buildModulesDict" id="ApplicationDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__buildModulesDict" />
+      <keyword name="ApplicationDiagramBuilder.__createAssociations" id="ApplicationDiagramBuilder.__createAssociations" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__createAssociations" />
+      <keyword name="ApplicationDiagramBuilder.buildDiagram" id="ApplicationDiagramBuilder.buildDiagram" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.buildDiagram" />
       <keyword name="ApplicationPage" id="ApplicationPage" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage" />
       <keyword name="ApplicationPage (Constructor)" id="ApplicationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.__init__" />
       <keyword name="ApplicationPage (Module)" id="ApplicationPage (Module)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html" />
@@ -1306,6 +1306,8 @@
       <keyword name="AssociationItem.__findRectIntersectionPoint" id="AssociationItem.__findRectIntersectionPoint" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__findRectIntersectionPoint" />
       <keyword name="AssociationItem.__mapRectFromItem" id="AssociationItem.__mapRectFromItem" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__mapRectFromItem" />
       <keyword name="AssociationItem.__updateEndPoint" id="AssociationItem.__updateEndPoint" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__updateEndPoint" />
+      <keyword name="AssociationItem.buildAssociationItemDataString" id="AssociationItem.buildAssociationItemDataString" ref="eric5.Graphics.AssociationItem.html#AssociationItem.buildAssociationItemDataString" />
+      <keyword name="AssociationItem.parseAssociationItemDataString" id="AssociationItem.parseAssociationItemDataString" ref="eric5.Graphics.AssociationItem.html#AssociationItem.parseAssociationItemDataString" />
       <keyword name="AssociationItem.unassociate" id="AssociationItem.unassociate" ref="eric5.Graphics.AssociationItem.html#AssociationItem.unassociate" />
       <keyword name="AssociationItem.widgetMoved" id="AssociationItem.widgetMoved" ref="eric5.Graphics.AssociationItem.html#AssociationItem.widgetMoved" />
       <keyword name="AsyncFile" id="AsyncFile" ref="eric5.DebugClients.Python.AsyncFile.html#AsyncFile" />
@@ -1982,8 +1984,10 @@
       <keyword name="ClassItem (Module)" id="ClassItem (Module)" ref="eric5.Graphics.ClassItem.html" />
       <keyword name="ClassItem.__calculateSize" id="ClassItem.__calculateSize" ref="eric5.Graphics.ClassItem.html#ClassItem.__calculateSize" />
       <keyword name="ClassItem.__createTexts" id="ClassItem.__createTexts" ref="eric5.Graphics.ClassItem.html#ClassItem.__createTexts" />
+      <keyword name="ClassItem.buildItemDataString" id="ClassItem.buildItemDataString" ref="eric5.Graphics.ClassItem.html#ClassItem.buildItemDataString" />
       <keyword name="ClassItem.isExternal" id="ClassItem.isExternal" ref="eric5.Graphics.ClassItem.html#ClassItem.isExternal" />
       <keyword name="ClassItem.paint" id="ClassItem.paint" ref="eric5.Graphics.ClassItem.html#ClassItem.paint" />
+      <keyword name="ClassItem.parseItemDataString" id="ClassItem.parseItemDataString" ref="eric5.Graphics.ClassItem.html#ClassItem.parseItemDataString" />
       <keyword name="ClassItem.setModel" id="ClassItem.setModel" ref="eric5.Graphics.ClassItem.html#ClassItem.setModel" />
       <keyword name="ClassModel" id="ClassModel" ref="eric5.Graphics.ClassItem.html#ClassModel" />
       <keyword name="ClassModel (Constructor)" id="ClassModel (Constructor)" ref="eric5.Graphics.ClassItem.html#ClassModel.__init__" />
@@ -6223,14 +6227,13 @@
       <keyword name="Importation" id="Importation" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Importation" />
       <keyword name="Importation (Constructor)" id="Importation (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Importation.__init__" />
       <keyword name="Importation (Constructor)" id="Importation (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Importation.__init__" />
-      <keyword name="ImportsDiagram" id="ImportsDiagram" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram" />
-      <keyword name="ImportsDiagram (Constructor)" id="ImportsDiagram (Constructor)" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__init__" />
-      <keyword name="ImportsDiagram (Module)" id="ImportsDiagram (Module)" ref="eric5.Graphics.ImportsDiagram.html" />
-      <keyword name="ImportsDiagram.__addModule" id="ImportsDiagram.__addModule" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__addModule" />
-      <keyword name="ImportsDiagram.__buildImports" id="ImportsDiagram.__buildImports" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__buildImports" />
-      <keyword name="ImportsDiagram.__buildModulesDict" id="ImportsDiagram.__buildModulesDict" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__buildModulesDict" />
-      <keyword name="ImportsDiagram.__createAssociations" id="ImportsDiagram.__createAssociations" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.__createAssociations" />
-      <keyword name="ImportsDiagram.relayout" id="ImportsDiagram.relayout" ref="eric5.Graphics.ImportsDiagram.html#ImportsDiagram.relayout" />
+      <keyword name="ImportsDiagramBuilder" id="ImportsDiagramBuilder" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder" />
+      <keyword name="ImportsDiagramBuilder (Constructor)" id="ImportsDiagramBuilder (Constructor)" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__init__" />
+      <keyword name="ImportsDiagramBuilder (Module)" id="ImportsDiagramBuilder (Module)" ref="eric5.Graphics.ImportsDiagramBuilder.html" />
+      <keyword name="ImportsDiagramBuilder.__addModule" id="ImportsDiagramBuilder.__addModule" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__addModule" />
+      <keyword name="ImportsDiagramBuilder.__buildModulesDict" id="ImportsDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__buildModulesDict" />
+      <keyword name="ImportsDiagramBuilder.__createAssociations" id="ImportsDiagramBuilder.__createAssociations" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__createAssociations" />
+      <keyword name="ImportsDiagramBuilder.buildDiagram" id="ImportsDiagramBuilder.buildDiagram" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.buildDiagram" />
       <keyword name="IndexGenerator" id="IndexGenerator" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator" />
       <keyword name="IndexGenerator (Constructor)" id="IndexGenerator (Constructor)" ref="eric5.DocumentationTools.IndexGenerator.html#IndexGenerator.__init__" />
       <keyword name="IndexGenerator (Module)" id="IndexGenerator (Module)" ref="eric5.DocumentationTools.IndexGenerator.html" />
@@ -6801,7 +6804,9 @@
       <keyword name="ModuleItem (Module)" id="ModuleItem (Module)" ref="eric5.Graphics.ModuleItem.html" />
       <keyword name="ModuleItem.__calculateSize" id="ModuleItem.__calculateSize" ref="eric5.Graphics.ModuleItem.html#ModuleItem.__calculateSize" />
       <keyword name="ModuleItem.__createTexts" id="ModuleItem.__createTexts" ref="eric5.Graphics.ModuleItem.html#ModuleItem.__createTexts" />
+      <keyword name="ModuleItem.buildItemDataString" id="ModuleItem.buildItemDataString" ref="eric5.Graphics.ModuleItem.html#ModuleItem.buildItemDataString" />
       <keyword name="ModuleItem.paint" id="ModuleItem.paint" ref="eric5.Graphics.ModuleItem.html#ModuleItem.paint" />
+      <keyword name="ModuleItem.parseItemDataString" id="ModuleItem.parseItemDataString" ref="eric5.Graphics.ModuleItem.html#ModuleItem.parseItemDataString" />
       <keyword name="ModuleItem.setModel" id="ModuleItem.setModel" ref="eric5.Graphics.ModuleItem.html#ModuleItem.setModel" />
       <keyword name="ModuleModel" id="ModuleModel" ref="eric5.Graphics.ModuleItem.html#ModuleModel" />
       <keyword name="ModuleModel (Constructor)" id="ModuleModel (Constructor)" ref="eric5.Graphics.ModuleItem.html#ModuleModel.__init__" />
@@ -7134,23 +7139,24 @@
       <keyword name="PDFRender.startPage" id="PDFRender.startPage" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFRender.startPage" />
       <keyword name="PDFStyle" id="PDFStyle" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFStyle" />
       <keyword name="PDFStyle (Constructor)" id="PDFStyle (Constructor)" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFStyle.__init__" />
-      <keyword name="PackageDiagram" id="PackageDiagram" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram" />
-      <keyword name="PackageDiagram (Constructor)" id="PackageDiagram (Constructor)" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__init__" />
-      <keyword name="PackageDiagram (Module)" id="PackageDiagram (Module)" ref="eric5.Graphics.PackageDiagram.html" />
-      <keyword name="PackageDiagram.__addExternalClass" id="PackageDiagram.__addExternalClass" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__addExternalClass" />
-      <keyword name="PackageDiagram.__addLocalClass" id="PackageDiagram.__addLocalClass" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__addLocalClass" />
-      <keyword name="PackageDiagram.__arrangeClasses" id="PackageDiagram.__arrangeClasses" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__arrangeClasses" />
-      <keyword name="PackageDiagram.__buildClasses" id="PackageDiagram.__buildClasses" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__buildClasses" />
-      <keyword name="PackageDiagram.__buildModulesDict" id="PackageDiagram.__buildModulesDict" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__buildModulesDict" />
-      <keyword name="PackageDiagram.__createAssociations" id="PackageDiagram.__createAssociations" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__createAssociations" />
-      <keyword name="PackageDiagram.__getCurrentShape" id="PackageDiagram.__getCurrentShape" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.__getCurrentShape" />
-      <keyword name="PackageDiagram.relayout" id="PackageDiagram.relayout" ref="eric5.Graphics.PackageDiagram.html#PackageDiagram.relayout" />
+      <keyword name="PackageDiagramBuilder" id="PackageDiagramBuilder" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder" />
+      <keyword name="PackageDiagramBuilder (Constructor)" id="PackageDiagramBuilder (Constructor)" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__init__" />
+      <keyword name="PackageDiagramBuilder (Module)" id="PackageDiagramBuilder (Module)" ref="eric5.Graphics.PackageDiagramBuilder.html" />
+      <keyword name="PackageDiagramBuilder.__addExternalClass" id="PackageDiagramBuilder.__addExternalClass" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__addExternalClass" />
+      <keyword name="PackageDiagramBuilder.__addLocalClass" id="PackageDiagramBuilder.__addLocalClass" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__addLocalClass" />
+      <keyword name="PackageDiagramBuilder.__arrangeClasses" id="PackageDiagramBuilder.__arrangeClasses" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__arrangeClasses" />
+      <keyword name="PackageDiagramBuilder.__buildModulesDict" id="PackageDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__buildModulesDict" />
+      <keyword name="PackageDiagramBuilder.__createAssociations" id="PackageDiagramBuilder.__createAssociations" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__createAssociations" />
+      <keyword name="PackageDiagramBuilder.__getCurrentShape" id="PackageDiagramBuilder.__getCurrentShape" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__getCurrentShape" />
+      <keyword name="PackageDiagramBuilder.buildDiagram" id="PackageDiagramBuilder.buildDiagram" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.buildDiagram" />
       <keyword name="PackageItem" id="PackageItem" ref="eric5.Graphics.PackageItem.html#PackageItem" />
       <keyword name="PackageItem (Constructor)" id="PackageItem (Constructor)" ref="eric5.Graphics.PackageItem.html#PackageItem.__init__" />
       <keyword name="PackageItem (Module)" id="PackageItem (Module)" ref="eric5.Graphics.PackageItem.html" />
       <keyword name="PackageItem.__calculateSize" id="PackageItem.__calculateSize" ref="eric5.Graphics.PackageItem.html#PackageItem.__calculateSize" />
       <keyword name="PackageItem.__createTexts" id="PackageItem.__createTexts" ref="eric5.Graphics.PackageItem.html#PackageItem.__createTexts" />
+      <keyword name="PackageItem.buildItemDataString" id="PackageItem.buildItemDataString" ref="eric5.Graphics.PackageItem.html#PackageItem.buildItemDataString" />
       <keyword name="PackageItem.paint" id="PackageItem.paint" ref="eric5.Graphics.PackageItem.html#PackageItem.paint" />
+      <keyword name="PackageItem.parseItemDataString" id="PackageItem.parseItemDataString" ref="eric5.Graphics.PackageItem.html#PackageItem.parseItemDataString" />
       <keyword name="PackageItem.setModel" id="PackageItem.setModel" ref="eric5.Graphics.PackageItem.html#PackageItem.setModel" />
       <keyword name="PackageModel" id="PackageModel" ref="eric5.Graphics.PackageItem.html#PackageModel" />
       <keyword name="PackageModel (Constructor)" id="PackageModel (Constructor)" ref="eric5.Graphics.PackageItem.html#PackageModel.__init__" />
@@ -10606,20 +10612,26 @@
       <keyword name="UIPreviewer.__whatsThis" id="UIPreviewer.__whatsThis" ref="eric5.Tools.UIPreviewer.html#UIPreviewer.__whatsThis" />
       <keyword name="UIPreviewer.eventFilter" id="UIPreviewer.eventFilter" ref="eric5.Tools.UIPreviewer.html#UIPreviewer.eventFilter" />
       <keyword name="UIPreviewer.show" id="UIPreviewer.show" ref="eric5.Tools.UIPreviewer.html#UIPreviewer.show" />
-      <keyword name="UMLClassDiagram" id="UMLClassDiagram" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram" />
-      <keyword name="UMLClassDiagram (Constructor)" id="UMLClassDiagram (Constructor)" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__init__" />
-      <keyword name="UMLClassDiagram (Module)" id="UMLClassDiagram (Module)" ref="eric5.Graphics.UMLClassDiagram.html" />
-      <keyword name="UMLClassDiagram.__addExternalClass" id="UMLClassDiagram.__addExternalClass" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__addExternalClass" />
-      <keyword name="UMLClassDiagram.__addLocalClass" id="UMLClassDiagram.__addLocalClass" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__addLocalClass" />
-      <keyword name="UMLClassDiagram.__arrangeClasses" id="UMLClassDiagram.__arrangeClasses" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__arrangeClasses" />
-      <keyword name="UMLClassDiagram.__buildClasses" id="UMLClassDiagram.__buildClasses" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__buildClasses" />
-      <keyword name="UMLClassDiagram.__createAssociations" id="UMLClassDiagram.__createAssociations" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__createAssociations" />
-      <keyword name="UMLClassDiagram.__getCurrentShape" id="UMLClassDiagram.__getCurrentShape" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.__getCurrentShape" />
-      <keyword name="UMLClassDiagram.relayout" id="UMLClassDiagram.relayout" ref="eric5.Graphics.UMLClassDiagram.html#UMLClassDiagram.relayout" />
+      <keyword name="UMLClassDiagramBuilder" id="UMLClassDiagramBuilder" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder" />
+      <keyword name="UMLClassDiagramBuilder (Constructor)" id="UMLClassDiagramBuilder (Constructor)" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__init__" />
+      <keyword name="UMLClassDiagramBuilder (Module)" id="UMLClassDiagramBuilder (Module)" ref="eric5.Graphics.UMLClassDiagramBuilder.html" />
+      <keyword name="UMLClassDiagramBuilder.__addExternalClass" id="UMLClassDiagramBuilder.__addExternalClass" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__addExternalClass" />
+      <keyword name="UMLClassDiagramBuilder.__addLocalClass" id="UMLClassDiagramBuilder.__addLocalClass" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__addLocalClass" />
+      <keyword name="UMLClassDiagramBuilder.__arrangeClasses" id="UMLClassDiagramBuilder.__arrangeClasses" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__arrangeClasses" />
+      <keyword name="UMLClassDiagramBuilder.__createAssociations" id="UMLClassDiagramBuilder.__createAssociations" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__createAssociations" />
+      <keyword name="UMLClassDiagramBuilder.__getCurrentShape" id="UMLClassDiagramBuilder.__getCurrentShape" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.__getCurrentShape" />
+      <keyword name="UMLClassDiagramBuilder.buildDiagram" id="UMLClassDiagramBuilder.buildDiagram" ref="eric5.Graphics.UMLClassDiagramBuilder.html#UMLClassDiagramBuilder.buildDiagram" />
+      <keyword name="UMLDiagramBuilder" id="UMLDiagramBuilder" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder" />
+      <keyword name="UMLDiagramBuilder (Constructor)" id="UMLDiagramBuilder (Constructor)" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.__init__" />
+      <keyword name="UMLDiagramBuilder (Module)" id="UMLDiagramBuilder (Module)" ref="eric5.Graphics.UMLDiagramBuilder.html" />
+      <keyword name="UMLDiagramBuilder.buildDiagram" id="UMLDiagramBuilder.buildDiagram" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.buildDiagram" />
+      <keyword name="UMLDiagramBuilder.parsePersistenceData" id="UMLDiagramBuilder.parsePersistenceData" ref="eric5.Graphics.UMLDiagramBuilder.html#UMLDiagramBuilder.parsePersistenceData" />
       <keyword name="UMLDialog" id="UMLDialog" ref="eric5.Graphics.UMLDialog.html#UMLDialog" />
       <keyword name="UMLDialog (Constructor)" id="UMLDialog (Constructor)" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__init__" />
       <keyword name="UMLDialog (Module)" id="UMLDialog (Module)" ref="eric5.Graphics.UMLDialog.html" />
-      <keyword name="UMLDialog.setDiagramName" id="UMLDialog.setDiagramName" ref="eric5.Graphics.UMLDialog.html#UMLDialog.setDiagramName" />
+      <keyword name="UMLDialog.__diagramBuilder" id="UMLDialog.__diagramBuilder" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__diagramBuilder" />
+      <keyword name="UMLDialog.__relayout" id="UMLDialog.__relayout" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__relayout" />
+      <keyword name="UMLDialog.diagramTypeToString" id="UMLDialog.diagramTypeToString" ref="eric5.Graphics.UMLDialog.html#UMLDialog.diagramTypeToString" />
       <keyword name="UMLDialog.show" id="UMLDialog.show" ref="eric5.Graphics.UMLDialog.html#UMLDialog.show" />
       <keyword name="UMLGraphicsView" id="UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView" />
       <keyword name="UMLGraphicsView (Constructor)" id="UMLGraphicsView (Constructor)" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__init__" />
@@ -10635,6 +10647,8 @@
       <keyword name="UMLGraphicsView.__printDiagram" id="UMLGraphicsView.__printDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printDiagram" />
       <keyword name="UMLGraphicsView.__printPreviewDiagram" id="UMLGraphicsView.__printPreviewDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printPreviewDiagram" />
       <keyword name="UMLGraphicsView.__relayout" id="UMLGraphicsView.__relayout" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__relayout" />
+      <keyword name="UMLGraphicsView.__save" id="UMLGraphicsView.__save" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__save" />
+      <keyword name="UMLGraphicsView.__saveAs" id="UMLGraphicsView.__saveAs" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__saveAs" />
       <keyword name="UMLGraphicsView.__saveImage" id="UMLGraphicsView.__saveImage" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__saveImage" />
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
       <keyword name="UMLGraphicsView.__setSize" id="UMLGraphicsView.__setSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__setSize" />
@@ -10642,22 +10656,30 @@
       <keyword name="UMLGraphicsView.autoAdjustSceneSize" id="UMLGraphicsView.autoAdjustSceneSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.autoAdjustSceneSize" />
       <keyword name="UMLGraphicsView.event" id="UMLGraphicsView.event" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.event" />
       <keyword name="UMLGraphicsView.filteredItems" id="UMLGraphicsView.filteredItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.filteredItems" />
+      <keyword name="UMLGraphicsView.findItem" id="UMLGraphicsView.findItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.findItem" />
       <keyword name="UMLGraphicsView.gestureEvent" id="UMLGraphicsView.gestureEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.gestureEvent" />
+      <keyword name="UMLGraphicsView.getItemId" id="UMLGraphicsView.getItemId" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getItemId" />
+      <keyword name="UMLGraphicsView.getPersistenceData" id="UMLGraphicsView.getPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getPersistenceData" />
       <keyword name="UMLGraphicsView.initToolBar" id="UMLGraphicsView.initToolBar" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.initToolBar" />
       <keyword name="UMLGraphicsView.selectItem" id="UMLGraphicsView.selectItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItem" />
       <keyword name="UMLGraphicsView.selectItems" id="UMLGraphicsView.selectItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItems" />
       <keyword name="UMLGraphicsView.setDiagramName" id="UMLGraphicsView.setDiagramName" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setDiagramName" />
+      <keyword name="UMLGraphicsView.setPersistenceData" id="UMLGraphicsView.setPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setPersistenceData" />
       <keyword name="UMLGraphicsView.wheelEvent" id="UMLGraphicsView.wheelEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.wheelEvent" />
       <keyword name="UMLItem" id="UMLItem" ref="eric5.Graphics.UMLItem.html#UMLItem" />
       <keyword name="UMLItem (Constructor)" id="UMLItem (Constructor)" ref="eric5.Graphics.UMLItem.html#UMLItem.__init__" />
       <keyword name="UMLItem (Module)" id="UMLItem (Module)" ref="eric5.Graphics.UMLItem.html" />
       <keyword name="UMLItem.addAssociation" id="UMLItem.addAssociation" ref="eric5.Graphics.UMLItem.html#UMLItem.addAssociation" />
       <keyword name="UMLItem.adjustAssociations" id="UMLItem.adjustAssociations" ref="eric5.Graphics.UMLItem.html#UMLItem.adjustAssociations" />
+      <keyword name="UMLItem.buildItemDataString" id="UMLItem.buildItemDataString" ref="eric5.Graphics.UMLItem.html#UMLItem.buildItemDataString" />
+      <keyword name="UMLItem.getId" id="UMLItem.getId" ref="eric5.Graphics.UMLItem.html#UMLItem.getId" />
       <keyword name="UMLItem.itemChange" id="UMLItem.itemChange" ref="eric5.Graphics.UMLItem.html#UMLItem.itemChange" />
       <keyword name="UMLItem.moveBy" id="UMLItem.moveBy" ref="eric5.Graphics.UMLItem.html#UMLItem.moveBy" />
       <keyword name="UMLItem.paint" id="UMLItem.paint" ref="eric5.Graphics.UMLItem.html#UMLItem.paint" />
+      <keyword name="UMLItem.parseItemDataString" id="UMLItem.parseItemDataString" ref="eric5.Graphics.UMLItem.html#UMLItem.parseItemDataString" />
       <keyword name="UMLItem.removeAssociation" id="UMLItem.removeAssociation" ref="eric5.Graphics.UMLItem.html#UMLItem.removeAssociation" />
       <keyword name="UMLItem.removeAssociations" id="UMLItem.removeAssociations" ref="eric5.Graphics.UMLItem.html#UMLItem.removeAssociations" />
+      <keyword name="UMLItem.setId" id="UMLItem.setId" ref="eric5.Graphics.UMLItem.html#UMLItem.setId" />
       <keyword name="UMLItem.setPos" id="UMLItem.setPos" ref="eric5.Graphics.UMLItem.html#UMLItem.setPos" />
       <keyword name="UMLItem.setSize" id="UMLItem.setSize" ref="eric5.Graphics.UMLItem.html#UMLItem.setSize" />
       <keyword name="UMLSceneSizeDialog" id="UMLSceneSizeDialog" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog" />
@@ -12263,6 +12285,7 @@
       <keyword name="thread_list_all" id="thread_list_all" ref="eric5.DebugClients.Ruby.Debuggee.html#thread_list_all" />
       <keyword name="timeString" id="timeString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#timeString" />
       <keyword name="toBool" id="toBool" ref="eric5.Preferences.__init__.html#toBool" />
+      <keyword name="toBool" id="toBool" ref="eric5.Utilities.__init__.html#toBool" />
       <keyword name="toByteArray" id="toByteArray" ref="eric5.Preferences.__init__.html#toByteArray" />
       <keyword name="toDict" id="toDict" ref="eric5.Preferences.__init__.html#toDict" />
       <keyword name="toList" id="toList" ref="eric5.Preferences.__init__.html#toList" />
@@ -12454,17 +12477,18 @@
       <file>eric5.E5XML.XMLStreamReaderBase.html</file>
       <file>eric5.E5XML.XMLStreamWriterBase.html</file>
       <file>eric5.Globals.__init__.html</file>
-      <file>eric5.Graphics.ApplicationDiagram.html</file>
+      <file>eric5.Graphics.ApplicationDiagramBuilder.html</file>
       <file>eric5.Graphics.AssociationItem.html</file>
       <file>eric5.Graphics.ClassItem.html</file>
       <file>eric5.Graphics.GraphicsUtilities.html</file>
-      <file>eric5.Graphics.ImportsDiagram.html</file>
+      <file>eric5.Graphics.ImportsDiagramBuilder.html</file>
       <file>eric5.Graphics.ModuleItem.html</file>
-      <file>eric5.Graphics.PackageDiagram.html</file>
+      <file>eric5.Graphics.PackageDiagramBuilder.html</file>
       <file>eric5.Graphics.PackageItem.html</file>
       <file>eric5.Graphics.PixmapDiagram.html</file>
       <file>eric5.Graphics.SvgDiagram.html</file>
-      <file>eric5.Graphics.UMLClassDiagram.html</file>
+      <file>eric5.Graphics.UMLClassDiagramBuilder.html</file>
+      <file>eric5.Graphics.UMLDiagramBuilder.html</file>
       <file>eric5.Graphics.UMLDialog.html</file>
       <file>eric5.Graphics.UMLGraphicsView.html</file>
       <file>eric5.Graphics.UMLItem.html</file>

@@ -49,7 +49,7 @@ Module implementing a dialog showing UML like diagrams.
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ApplicationDiagram</td></tr><tr><td>ClassDiagram</td></tr><tr><td>ImportsDiagram</td></tr><tr><td>PackageDiagram</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -61,8 +61,14 @@ QMainWindow
 <td><a href="#UMLDialog.__init__">UMLDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#UMLDialog.setDiagramName">setDiagramName</a></td>
-<td>Public slot to set the diagram name.</td>
+<td><a href="#UMLDialog.__diagramBuilder">__diagramBuilder</a></td>
+<td>Private method to instantiate a diagram builder object.</td>
+</tr><tr>
+<td><a href="#UMLDialog.__relayout">__relayout</a></td>
+<td>Private method to relayout the diagram.</td>
+</tr><tr>
+<td><a href="#UMLDialog.diagramTypeToString">diagramTypeToString</a></td>
+<td>Public method to convert the diagram type to a readable string.</td>
 </tr><tr>
 <td><a href="#UMLDialog.show">show</a></td>
 <td>Overriden method to show the dialog.</td>
@@ -74,32 +80,67 @@ QMainWindow
 </table>
 <a NAME="UMLDialog.__init__" ID="UMLDialog.__init__"></a>
 <h4>UMLDialog (Constructor)</h4>
-<b>UMLDialog</b>(<i>buildFunction=None, diagramName="Unnamed", parent=None, name=None</i>)
+<b>UMLDialog</b>(<i>diagramType, project, path, parent=None, **kwargs</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>buildFunction</i></dt>
+<dt><i>diagramType</i></dt>
 <dd>
-function to build the diagram contents (function)
-</dd><dt><i>diagramName</i></dt>
+type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+</dd><dt><i>project</i></dt>
 <dd>
-name of the diagram (string)
+reference to the project object (Project)
+</dd><dt><i>path</i></dt>
+<dd>
+file or directory path to build the diagram from (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
+</dd><dt><i>kwargs</i></dt>
 <dd>
-name of the view widget (string)
+diagram specific data
 </dd>
-</dl><a NAME="UMLDialog.setDiagramName" ID="UMLDialog.setDiagramName"></a>
-<h4>UMLDialog.setDiagramName</h4>
-<b>setDiagramName</b>(<i>name</i>)
+</dl><a NAME="UMLDialog.__diagramBuilder" ID="UMLDialog.__diagramBuilder"></a>
+<h4>UMLDialog.__diagramBuilder</h4>
+<b>__diagramBuilder</b>(<i>diagramType, project, path, **kwargs</i>)
 <p>
-        Public slot to set the diagram name.
+        Private method to instantiate a diagram builder object.
 </p><dl>
-<dt><i>name</i></dt>
+<dt><i>diagramType</i></dt>
 <dd>
-diagram name (string)
+type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
+</dd><dt><i>path</i></dt>
+<dd>
+file or directory path to build the diagram from (string)
+</dd><dt><i>kwargs</i></dt>
+<dd>
+diagram specific data
+</dd>
+</dl><a NAME="UMLDialog.__relayout" ID="UMLDialog.__relayout"></a>
+<h4>UMLDialog.__relayout</h4>
+<b>__relayout</b>(<i></i>)
+<p>
+        Private method to relayout the diagram.
+</p><a NAME="UMLDialog.diagramTypeToString" ID="UMLDialog.diagramTypeToString"></a>
+<h4>UMLDialog.diagramTypeToString</h4>
+<b>diagramTypeToString</b>(<i>diagramType</i>)
+<p>
+        Public method to convert the diagram type to a readable string.
+</p><dl>
+<dt><i>diagramType</i></dt>
+<dd>
+type of the diagram
+            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+readable type string (string)
 </dd>
 </dl><a NAME="UMLDialog.show" ID="UMLDialog.show"></a>
 <h4>UMLDialog.show</h4>

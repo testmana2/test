@@ -70,11 +70,17 @@ UMLItem
 <td><a href="#ClassItem.__createTexts">__createTexts</a></td>
 <td>Private method to create the text items of the class item.</td>
 </tr><tr>
+<td><a href="#ClassItem.buildItemDataString">buildItemDataString</a></td>
+<td>Public method to build a string to persist the specific item data.</td>
+</tr><tr>
 <td><a href="#ClassItem.isExternal">isExternal</a></td>
 <td>Method returning the external state.</td>
 </tr><tr>
 <td><a href="#ClassItem.paint">paint</a></td>
 <td>Public method to paint the item in local coordinates.</td>
+</tr><tr>
+<td><a href="#ClassItem.parseItemDataString">parseItemDataString</a></td>
+<td>Public method to parse the given persistence data.</td>
 </tr><tr>
 <td><a href="#ClassItem.setModel">setModel</a></td>
 <td>Method to set the class model.</td>
@@ -125,7 +131,21 @@ reference to the scene object (QGraphicsScene)
 <b>__createTexts</b>(<i></i>)
 <p>
         Private method to create the text items of the class item.
-</p><a NAME="ClassItem.isExternal" ID="ClassItem.isExternal"></a>
+</p><a NAME="ClassItem.buildItemDataString" ID="ClassItem.buildItemDataString"></a>
+<h4>ClassItem.buildItemDataString</h4>
+<b>buildItemDataString</b>(<i></i>)
+<p>
+        Public method to build a string to persist the specific item data.
+</p><p>
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+persistence data (string)
+</dd>
+</dl><a NAME="ClassItem.isExternal" ID="ClassItem.isExternal"></a>
 <h4>ClassItem.isExternal</h4>
 <b>isExternal</b>(<i></i>)
 <p>
@@ -150,6 +170,16 @@ style options (QStyleOptionGraphicsItem)
 </dd><dt><i>widget</i></dt>
 <dd>
 optional reference to the widget painted on (QWidget)
+</dd>
+</dl><a NAME="ClassItem.parseItemDataString" ID="ClassItem.parseItemDataString"></a>
+<h4>ClassItem.parseItemDataString</h4>
+<b>parseItemDataString</b>(<i>data</i>)
+<p>
+        Public method to parse the given persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (string)
 </dd>
 </dl><a NAME="ClassItem.setModel" ID="ClassItem.setModel"></a>
 <h4>ClassItem.setModel</h4>

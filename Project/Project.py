@@ -53,7 +53,7 @@ import VCS
 from VCS.CommandOptionsDialog import vcsCommandOptionsDialog
 from VCS.ProjectHelper import VcsProjectHelper
 
-from Graphics.ApplicationDiagram import ApplicationDiagram
+from Graphics.UMLDialog import UMLDialog
 
 from DataViews.CodeMetricsDialog import CodeMetricsDialog
 from DataViews.PyCoverageDialog import PyCoverageDialog
@@ -3984,8 +3984,8 @@ class Project(QObject):
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
         
-        self.applicationDiagram = ApplicationDiagram(self, self.parent(),
-            noModules=not res)
+        self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self,
+                                            self.parent(), noModules=not res)
         self.applicationDiagram.show()
     
     #########################################################################

@@ -5792,11 +5792,11 @@ class Editor(QsciScintillaCompat):
         """
         Private method to handle the Class Diagram context menu action.
         """
-        from Graphics.UMLClassDiagram import UMLClassDiagram
+        from Graphics.UMLDialog import UMLDialog
         if not self.checkDirty():
             return
         
-        self.classDiagram = UMLClassDiagram(self.project, self.fileName,
+        self.classDiagram = UMLDialog(UMLDialog.ClassDiagram, self.project, self.fileName,
             self, noAttrs=False)
         self.classDiagram.show()
         
@@ -5804,7 +5804,7 @@ class Editor(QsciScintillaCompat):
         """
         Private method to handle the Package Diagram context menu action.
         """
-        from Graphics.PackageDiagram import PackageDiagram
+        from Graphics.UMLDialog import UMLDialog
         if not self.checkDirty():
             return
         
@@ -5814,14 +5814,15 @@ class Editor(QsciScintillaCompat):
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
-        self.packageDiagram = PackageDiagram(self.project, package, self, noAttrs=not res)
+        self.packageDiagram = UMLDialog(UMLDialog.PackageDiagram, self.project, package,
+                                        self, noAttrs=not res)
         self.packageDiagram.show()
         
     def __showImportsDiagram(self):
         """
         Private method to handle the Imports Diagram context menu action.
         """
-        from Graphics.ImportsDiagram import ImportsDiagram
+        from Graphics.UMLDialog import UMLDialog
         if not self.checkDirty():
             return
         
@@ -5830,21 +5831,21 @@ class Editor(QsciScintillaCompat):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
-        self.importsDiagram = ImportsDiagram(self.project, package, self,
-            showExternalImports=res)
+        self.importsDiagram = UMLDialog(UMLDialog.ImportsDiagram, self.project, package,
+                                        self, showExternalImports=res)
         self.importsDiagram.show()
         
     def __showApplicationDiagram(self):
         """
         Private method to handle the Imports Diagram context menu action.
         """
-        from Graphics.ApplicationDiagram import ApplicationDiagram
+        from Graphics.UMLDialog import UMLDialog
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
-        self.applicationDiagram = ApplicationDiagram(self.project,
-                                    self, noModules=not res)
+        self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
+                                            self, noModules=not res)
         self.applicationDiagram.show()
     
     #######################################################################

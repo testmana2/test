@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing the UML diagram builder base class.
+"""
+
+from PyQt4.QtCore import QObject
+
+
+class UMLDiagramBuilder(QObject):
+    """
+    Class implementing the UML diagram builder base class.
+    """
+    def __init__(self, dialog, view, project):
+        """
+        Constructor
+        
+        @param dialog reference to the UML dialog (UMLDialog)
+        @param view reference to the view object (UMLGraphicsView)
+        @param project reference to the project object (Project)
+        """
+        super().__init__(dialog)
+        
+        self.umlView = view
+        self.scene = self.umlView.scene()
+        self.project = project
+    
+    def buildDiagram(self):
+        """
+        Public method to build the diagram.
+        
+        This class must be implemented in subclasses.
+        """
+        raise NotImplementedError(
+            "Method 'buildDiagram' must be implemented in subclasses.")
+    
+    def parsePersistenceData(self, data):
+        """
+        Public method to parse persisted data.
+        
+        @param dat persisted data to be parsed (string)
+        """
+        return

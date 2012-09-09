@@ -12,7 +12,7 @@ import glob
 
 from PyQt4.QtGui import QApplication, QProgressDialog
 
-from .UMLDialog import UMLDialog
+from .UMLDiagramBuilder import UMLDiagramBuilder
 from .PackageItem import PackageItem, PackageModel
 from .AssociationItem import AssociationItem, Imports
 
@@ -22,37 +22,31 @@ import Utilities
 import Preferences
 
 
-class ApplicationDiagram(UMLDialog):
+class ApplicationDiagramBuilder(UMLDiagramBuilder):
     """
-    Class implementing a dialog showing an imports diagram of the application.
+    Class implementing a builder for imports diagrams of the application.
     """
-    def __init__(self, project, parent=None, name=None,  noModules=False):
+    def __init__(self, dialog, view, project, noModules=False):
         """
         Constructor
         
-        @param project reference to the project object
-        @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
+        @param dialog reference to the UML dialog (UMLDialog)
+        @param view reference to the view object (UMLGraphicsView)
+        @param project reference to the project object (Project)
         @keyparam noModules flag indicating, that no module names should be
             shown (boolean)
         """
+        super().__init__(dialog, view, project)
+        self.setObjectName("ApplicationDiagram")
+        
         self.project = project
         self.noModules = noModules
         
-        UMLDialog.__init__(self, "ApplicationDiagram", buildFunction=self.__buildPackages,
-            parent=parent)
-        self.setDiagramName(
+        self.umlView.setDiagramName(
             self.trUtf8("Application Diagram {0}").format(project.getProjectName()))
-        
-        if not name:
-            self.setObjectName("ApplicationDiagram")
-        else:
-            self.setObjectName(name)
         
         self.umlView.setPersistenceData(
             "project={0}".format(self.project.getProjectFile()))
-        
-        self.umlView.relayout.connect(self.relayout)
         
     def __buildModulesDict(self):
         """
@@ -71,7 +65,7 @@ class ApplicationDiagram(UMLDialog):
         try:
             prog = 0
             progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self)
+                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:
@@ -91,9 +85,9 @@ class ApplicationDiagram(UMLDialog):
             progress.setValue(tot)
         return moduleDict
         
-    def __buildPackages(self):
+    def buildDiagram(self):
         """
-        Private method to build the packages shapes of the diagram.
+        Public method to build the packages shapes of the diagram.
         """
         project = os.path.splitdrive(self.project.getProjectPath())[1]\
             .replace(os.sep, '.')[1:]
@@ -247,9 +241,3 @@ class ApplicationDiagram(UMLDialog):
                         shapes[package][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
-        
-    def relayout(self):
-        """
-        Method to relayout the diagram.
-        """
-        self.__buildPackages()

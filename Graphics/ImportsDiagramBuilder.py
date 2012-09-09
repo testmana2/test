@@ -12,7 +12,7 @@ import os
 
 from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
-from .UMLDialog import UMLDialog
+from .UMLDiagramBuilder import UMLDiagramBuilder
 from .ModuleItem import ModuleItem, ModuleModel
 from .AssociationItem import AssociationItem, Imports
 
@@ -21,28 +21,27 @@ import Utilities
 import Preferences
 
 
-class ImportsDiagram(UMLDialog):
+class ImportsDiagramBuilder(UMLDiagramBuilder):
     """
-    Class implementing a dialog showing an imports diagram of a package.
+    Class implementing a builder for imports diagrams of a package.
     
-    Note: Only package internal imports are show in order to maintain
+    Note: Only package internal imports are shown in order to maintain
     some readability.
     """
-    def __init__(self, project, package, parent=None, name=None,
-                 showExternalImports=False):
+    def __init__(self, dialog, view, project, package, showExternalImports=False):
         """
         Constructor
         
-        @param project reference to the project object
+        @param dialog reference to the UML dialog (UMLDialog)
+        @param view reference to the view object (UMLGraphicsView)
+        @param project reference to the project object (Project)
         @param package name of a python package to show the import
             relationships (string)
-        @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
         @keyparam showExternalImports flag indicating to show exports from outside
             the package (boolean)
         """
-        UMLDialog.__init__(self, "ImportsDiagram", buildFunction=self.__buildImports,
-            parent=parent)
+        super().__init__(dialog, view, project)
+        self.setObjectName("ImportsDiagram")
         
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
@@ -62,14 +61,7 @@ class ImportsDiagram(UMLDialog):
                 pname, project.getRelativePath(self.packagePath))
         else:
             name = self.trUtf8("Imports Diagramm: {0}").format(self.packagePath)
-        self.setDiagramName(name)
-        
-        if not name:
-            self.setObjectName("ImportsDiagram")
-        else:
-            self.setObjectName(name)
-        
-        self.umlView.relayout.connect(self.relayout)
+        self.umlView.setDiagramName(name)
         
     def __buildModulesDict(self):
         """
@@ -90,7 +82,7 @@ class ImportsDiagram(UMLDialog):
         try:
             prog = 0
             progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self)
+                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:
@@ -111,9 +103,9 @@ class ImportsDiagram(UMLDialog):
             progress.setValue(tot)
         return moduleDict
         
-    def __buildImports(self):
+    def buildDiagram(self):
         """
-        Private method to build the modules shapes of the diagram.
+        Public method to build the modules shapes of the diagram.
         """
         initlist = glob.glob(os.path.join(self.packagePath, '__init__.*'))
         if len(initlist) == 0:
@@ -244,9 +236,3 @@ class ImportsDiagram(UMLDialog):
                         shapes[module][0], shapes[rel][0],
                         Imports)
                 self.scene.addItem(assoc)
-        
-    def relayout(self):
-        """
-        Method to relayout the diagram.
-        """
-        self.__buildImports()

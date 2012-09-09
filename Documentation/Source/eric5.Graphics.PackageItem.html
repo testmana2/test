@@ -70,8 +70,14 @@ UMLItem
 <td><a href="#PackageItem.__createTexts">__createTexts</a></td>
 <td>Private method to create the text items of the class item.</td>
 </tr><tr>
+<td><a href="#PackageItem.buildItemDataString">buildItemDataString</a></td>
+<td>Public method to build a string to persist the specific item data.</td>
+</tr><tr>
 <td><a href="#PackageItem.paint">paint</a></td>
 <td>Public method to paint the item in local coordinates.</td>
+</tr><tr>
+<td><a href="#PackageItem.parseItemDataString">parseItemDataString</a></td>
+<td>Public method to parse the given persistence data.</td>
 </tr><tr>
 <td><a href="#PackageItem.setModel">setModel</a></td>
 <td>Method to set the package model.</td>
@@ -120,7 +126,21 @@ reference to the scene object (QGraphicsScene)
 <b>__createTexts</b>(<i></i>)
 <p>
         Private method to create the text items of the class item.
-</p><a NAME="PackageItem.paint" ID="PackageItem.paint"></a>
+</p><a NAME="PackageItem.buildItemDataString" ID="PackageItem.buildItemDataString"></a>
+<h4>PackageItem.buildItemDataString</h4>
+<b>buildItemDataString</b>(<i></i>)
+<p>
+        Public method to build a string to persist the specific item data.
+</p><p>
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+persistence data (string)
+</dd>
+</dl><a NAME="PackageItem.paint" ID="PackageItem.paint"></a>
 <h4>PackageItem.paint</h4>
 <b>paint</b>(<i>painter, option, widget=None</i>)
 <p>
@@ -135,6 +155,16 @@ style options (QStyleOptionGraphicsItem)
 </dd><dt><i>widget</i></dt>
 <dd>
 optional reference to the widget painted on (QWidget)
+</dd>
+</dl><a NAME="PackageItem.parseItemDataString" ID="PackageItem.parseItemDataString"></a>
+<h4>PackageItem.parseItemDataString</h4>
+<b>parseItemDataString</b>(<i>data</i>)
+<p>
+        Public method to parse the given persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (string)
 </dd>
 </dl><a NAME="PackageItem.setModel" ID="PackageItem.setModel"></a>
 <h4>PackageItem.setModel</h4>

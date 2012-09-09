@@ -13,7 +13,7 @@ import itertools
 
 from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
-from .UMLDialog import UMLDialog
+from .UMLDiagramBuilder import UMLDiagramBuilder
 from .ClassItem import ClassItem, ClassModel
 from .AssociationItem import AssociationItem, Generalisation
 from . import GraphicsUtilities
@@ -23,25 +23,24 @@ import Utilities
 import Preferences
 
 
-class PackageDiagram(UMLDialog):
+class PackageDiagramBuilder(UMLDiagramBuilder):
     """
-    Class implementing a dialog showing a UML like class diagram of a package.
+    Class implementing a builder for UML like class diagrams of a package.
     """
-    def __init__(self, project, package, parent=None, name=None, noAttrs=False):
+    def __init__(self, dialog, view, project, package, noAttrs=False):
         """
         Constructor
         
-        @param project reference to the project object
+        @param dialog reference to the UML dialog (UMLDialog)
+        @param view reference to the view object (UMLGraphicsView)
+        @param project reference to the project object (Project)
         @param package name of a python package to be shown (string)
-        @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        UMLDialog.__init__(self, "PackageDiagram", buildFunction=self.__buildClasses,
-            parent=parent)
+        super().__init__(dialog, view, project)
+        self.setObjectName("PackageDiagram")
         
         self.package = Utilities.normabspath(package)
-        self.allClasses = {}
         self.noAttrs = noAttrs
         
         self.umlView.setPersistenceData("package={0}".format(self.package))
@@ -52,14 +51,7 @@ class PackageDiagram(UMLDialog):
                 pname, project.getRelativePath(self.package))
         else:
             name = self.trUtf8("Package Diagram: {0}").format(self.package)
-        self.setDiagramName(name)
-        
-        if not name:
-            self.setObjectName("PackageDiagram")
-        else:
-            self.setObjectName(name)
-        
-        self.umlView.relayout.connect(self.relayout)
+        self.umlView.setDiagramName(name)
         
     def __getCurrentShape(self, name):
         """
@@ -91,7 +83,7 @@ class PackageDiagram(UMLDialog):
         try:
             prog = 0
             progress = QProgressDialog(self.trUtf8("Parsing modules..."),
-                None, 0, tot, self)
+                None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
             for module in modules:
@@ -111,12 +103,14 @@ class PackageDiagram(UMLDialog):
             progress.setValue(tot)
         return moduleDict
         
-    def __buildClasses(self):
+    def buildDiagram(self):
         """
-        Private method to build the class shapes of the package diagram.
+        Public method to build the class shapes of the package diagram.
         
         The algorithm is borrowed from Boa Constructor.
         """
+        self.allClasses = {}
+        
         initlist = glob.glob(os.path.join(self.package, '__init__.*'))
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None, self.scene)
@@ -317,10 +311,3 @@ class PackageDiagram(UMLDialog):
                         Generalisation,
                         topToBottom=True)
                 self.scene.addItem(assoc)
-        
-    def relayout(self):
-        """
-        Method to relayout the diagram.
-        """
-        self.allClasses.clear()
-        self.__buildClasses()

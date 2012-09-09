@@ -14,51 +14,41 @@ from PyQt4.QtGui import QGraphicsTextItem
 import Utilities.ModuleParser
 import Preferences
 
-from .UMLDialog import UMLDialog
+from .UMLDiagramBuilder import UMLDiagramBuilder
 from .ClassItem import ClassItem, ClassModel
 from .AssociationItem import AssociationItem, Generalisation
 from . import GraphicsUtilities
 
 
-class UMLClassDiagram(UMLDialog):
+class UMLClassDiagramBuilder(UMLDiagramBuilder):
     """
-    Class implementing a dialog showing a UML like class diagram.
+    Class implementing a builder for UML like class diagrams.
     """
-    def __init__(self, project, file, parent=None, name=None, noAttrs=False):
+    def __init__(self, dialog, view, project, file, noAttrs=False):
         """
         Constructor
         
-        @param project reference to the project object
-        @param file filename of a python module to be shown (string)
-        @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
+        @param dialog reference to the UML dialog (UMLDialog)
+        @param view reference to the view object (UMLGraphicsView)
+        @param project reference to the project object (Project)
+        @param file file name of a python module to be shown (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        UMLDialog.__init__(self, "UMLClassDiagram", buildFunction=self.__buildClasses,
-            parent=parent)
+        super().__init__(dialog, view, project)
+        self.setObjectName("UMLClassDiagramBuilder")
         
         self.file = file
         self.noAttrs = noAttrs
         
         self.umlView.setPersistenceData("file={0}".format(file))
         
-        pname = project.getProjectName()
-        if pname and project.isProjectSource(self.file):
+        pname = self.project.getProjectName()
+        if pname and self.project.isProjectSource(self.file):
             name = self.trUtf8("Class Diagram {0}: {1}").format(
                 pname, project.getRelativePath(self.file))
         else:
             name = self.trUtf8("Class Diagram: {0}").format(self.file)
-        self.setDiagramName(name)
-        
-        if not name:
-            self.setObjectName("UMLClassDiagram")
-        else:
-            self.setObjectName(name)
-        
-        self.allClasses = {}
-        self.allModules = {}
-        
-        self.umlView.relayout.connect(self.relayout)
+        self.umlView.setDiagramName(name)
         
     def __getCurrentShape(self, name):
         """
@@ -69,12 +59,15 @@ class UMLClassDiagram(UMLDialog):
         """
         return self.allClasses.get(name)
         
-    def __buildClasses(self):
+    def buildDiagram(self):
         """
-        Private method to build the class shapes of the class diagram.
+        Public method to build the class shapes of the class diagram.
         
         The algorithm is borrowed from Boa Constructor.
         """
+        self.allClasses = {}
+        self.allModules = {}
+        
         try:
             extensions = Preferences.getPython("PythonExtensions") + \
                 Preferences.getPython("Python3Extensions") + ['.rb']
@@ -271,11 +264,3 @@ class UMLClassDiagram(UMLDialog):
                         Generalisation,
                         topToBottom=True)
                 self.scene.addItem(assoc)
-        
-    def relayout(self):
-        """
-        Public method to relayout the diagram.
-        """
-        self.allClasses.clear()
-        self.allModules.clear()
-        self.__buildClasses()

@@ -70,8 +70,14 @@ UMLItem
 <td><a href="#ModuleItem.__createTexts">__createTexts</a></td>
 <td>Private method to create the text items of the module item.</td>
 </tr><tr>
+<td><a href="#ModuleItem.buildItemDataString">buildItemDataString</a></td>
+<td>Public method to build a string to persist the specific item data.</td>
+</tr><tr>
 <td><a href="#ModuleItem.paint">paint</a></td>
 <td>Public method to paint the item in local coordinates.</td>
+</tr><tr>
+<td><a href="#ModuleItem.parseItemDataString">parseItemDataString</a></td>
+<td>Public method to parse the given persistence data.</td>
 </tr><tr>
 <td><a href="#ModuleItem.setModel">setModel</a></td>
 <td>Method to set the module model.</td>
@@ -116,7 +122,21 @@ reference to the scene object (QGraphicsScene)
 <b>__createTexts</b>(<i></i>)
 <p>
         Private method to create the text items of the module item.
-</p><a NAME="ModuleItem.paint" ID="ModuleItem.paint"></a>
+</p><a NAME="ModuleItem.buildItemDataString" ID="ModuleItem.buildItemDataString"></a>
+<h4>ModuleItem.buildItemDataString</h4>
+<b>buildItemDataString</b>(<i></i>)
+<p>
+        Public method to build a string to persist the specific item data.
+</p><p>
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+persistence data (string)
+</dd>
+</dl><a NAME="ModuleItem.paint" ID="ModuleItem.paint"></a>
 <h4>ModuleItem.paint</h4>
 <b>paint</b>(<i>painter, option, widget=None</i>)
 <p>
@@ -131,6 +151,16 @@ style options (QStyleOptionGraphicsItem)
 </dd><dt><i>widget</i></dt>
 <dd>
 optional reference to the widget painted on (QWidget)
+</dd>
+</dl><a NAME="ModuleItem.parseItemDataString" ID="ModuleItem.parseItemDataString"></a>
+<h4>ModuleItem.parseItemDataString</h4>
+<b>parseItemDataString</b>(<i>data</i>)
+<p>
+        Public method to parse the given persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (string)
 </dd>
 </dl><a NAME="ModuleItem.setModel" ID="ModuleItem.setModel"></a>
 <h4>ModuleItem.setModel</h4>

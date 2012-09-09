@@ -101,6 +101,12 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.__relayout">__relayout</a></td>
 <td>Private method to handle the re-layout context menu entry.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.__save">__save</a></td>
+<td>Private slot to save the diagram with the current name.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.__saveAs">__saveAs</a></td>
+<td>Private slot to save the diagram.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.__saveImage">__saveImage</a></td>
 <td>Private method to handle the save context menu entry.</td>
 </tr><tr>
@@ -122,8 +128,17 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.filteredItems">filteredItems</a></td>
 <td>Public method to filter a list of items.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.findItem">findItem</a></td>
+<td>Public method to find an UML item based on the ID.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.getItemId">getItemId</a></td>
+<td>Public method to get the ID to be assigned to an item.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.getPersistenceData">getPersistenceData</a></td>
+<td>Public method to get the additional persistence data.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.initToolBar">initToolBar</a></td>
 <td>Public method to populate a toolbar with our actions.</td>
@@ -137,6 +152,9 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.setDiagramName">setDiagramName</a></td>
 <td>Public slot to set the diagram name.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.setPersistenceData">setPersistenceData</a></td>
+<td>Public method to set additional persistence data.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
 </tr>
@@ -147,22 +165,19 @@ E5GraphicsView
 </table>
 <a NAME="UMLGraphicsView.__init__" ID="UMLGraphicsView.__init__"></a>
 <h4>UMLGraphicsView (Constructor)</h4>
-<b>UMLGraphicsView</b>(<i>scene, diagramName="Unnamed", parent=None, name=None</i>)
+<b>UMLGraphicsView</b>(<i>scene, diagramType, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>scene</i></dt>
 <dd>
 reference to the scene object (QGraphicsScene)
-</dd><dt><i>diagramName</i></dt>
+</dd><dt><i>diagramType</i></dt>
 <dd>
-name of the diagram (string)
+type of the diagram (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of the view widget (string)
 </dd>
 </dl><a NAME="UMLGraphicsView.__alignShapes" ID="UMLGraphicsView.__alignShapes"></a>
 <h4>UMLGraphicsView.__alignShapes</h4>
@@ -224,7 +239,22 @@ alignment type (Qt.AlignmentFlag)
 <b>__relayout</b>(<i></i>)
 <p>
         Private method to handle the re-layout context menu entry.
-</p><a NAME="UMLGraphicsView.__saveImage" ID="UMLGraphicsView.__saveImage"></a>
+</p><a NAME="UMLGraphicsView.__save" ID="UMLGraphicsView.__save"></a>
+<h4>UMLGraphicsView.__save</h4>
+<b>__save</b>(<i></i>)
+<p>
+        Private slot to save the diagram with the current name.
+</p><a NAME="UMLGraphicsView.__saveAs" ID="UMLGraphicsView.__saveAs"></a>
+<h4>UMLGraphicsView.__saveAs</h4>
+<b>__saveAs</b>(<i>filename=""</i>)
+<p>
+        Private slot to save the diagram.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file to write to (string)
+</dd>
+</dl><a NAME="UMLGraphicsView.__saveImage" ID="UMLGraphicsView.__saveImage"></a>
 <h4>UMLGraphicsView.__saveImage</h4>
 <b>__saveImage</b>(<i></i>)
 <p>
@@ -277,7 +307,7 @@ flag indicating, if the event was handled (boolean)
 </dd>
 </dl><a NAME="UMLGraphicsView.filteredItems" ID="UMLGraphicsView.filteredItems"></a>
 <h4>UMLGraphicsView.filteredItems</h4>
-<b>filteredItems</b>(<i>items</i>)
+<b>filteredItems</b>(<i>items, itemType=UMLItem</i>)
 <p>
         Public method to filter a list of items.
 </p><dl>
@@ -285,11 +315,29 @@ flag indicating, if the event was handled (boolean)
 <dd>
 list of items as returned by the scene object
             (QGraphicsItem)
+</dd><dt><i>itemType</i></dt>
+<dd>
+type to be filtered (class)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 list of interesting collision items (QGraphicsItem)
+</dd>
+</dl><a NAME="UMLGraphicsView.findItem" ID="UMLGraphicsView.findItem"></a>
+<h4>UMLGraphicsView.findItem</h4>
+<b>findItem</b>(<i>id</i>)
+<p>
+        Public method to find an UML item based on the ID.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+of the item to search for (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+item found (UMLItem) or None
 </dd>
 </dl><a NAME="UMLGraphicsView.gestureEvent" ID="UMLGraphicsView.gestureEvent"></a>
 <h4>UMLGraphicsView.gestureEvent</h4>
@@ -300,6 +348,26 @@ list of interesting collision items (QGraphicsItem)
 <dt><i>evt</i></dt>
 <dd>
 reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="UMLGraphicsView.getItemId" ID="UMLGraphicsView.getItemId"></a>
+<h4>UMLGraphicsView.getItemId</h4>
+<b>getItemId</b>(<i></i>)
+<p>
+        Public method to get the ID to be assigned to an item.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+item ID (integer)
+</dd>
+</dl><a NAME="UMLGraphicsView.getPersistenceData" ID="UMLGraphicsView.getPersistenceData"></a>
+<h4>UMLGraphicsView.getPersistenceData</h4>
+<b>getPersistenceData</b>(<i></i>)
+<p>
+        Public method to get the additional persistence data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+additional persistence data (string)
 </dd>
 </dl><a NAME="UMLGraphicsView.initToolBar" ID="UMLGraphicsView.initToolBar"></a>
 <h4>UMLGraphicsView.initToolBar</h4>
@@ -340,6 +408,16 @@ list of items to be selected (list of QGraphicsItemItem)
 <dt><i>name</i></dt>
 <dd>
 diagram name (string)
+</dd>
+</dl><a NAME="UMLGraphicsView.setPersistenceData" ID="UMLGraphicsView.setPersistenceData"></a>
+<h4>UMLGraphicsView.setPersistenceData</h4>
+<b>setPersistenceData</b>(<i>data</i>)
+<p>
+        Public method to set additional persistence data.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+string of additional data to be made persistent (string)
 </dd>
 </dl><a NAME="UMLGraphicsView.wheelEvent" ID="UMLGraphicsView.wheelEvent"></a>
 <h4>UMLGraphicsView.wheelEvent</h4>

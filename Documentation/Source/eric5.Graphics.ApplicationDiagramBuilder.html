@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Graphics.ApplicationDiagram</title>
+<title>eric5.Graphics.ApplicationDiagramBuilder</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Graphics.ApplicationDiagram</h1>
+<h1>eric5.Graphics.ApplicationDiagramBuilder</h1>
 <p>
 Module implementing a dialog showing an imports diagram of the application.
 </p>
@@ -31,8 +31,8 @@ Module implementing a dialog showing an imports diagram of the application.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#ApplicationDiagram">ApplicationDiagram</a></td>
-<td>Class implementing a dialog showing an imports diagram of the application.</td>
+<td><a href="#ApplicationDiagramBuilder">ApplicationDiagramBuilder</a></td>
+<td>Class implementing a builder for imports diagrams of the application.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -40,13 +40,13 @@ Module implementing a dialog showing an imports diagram of the application.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
-<a NAME="ApplicationDiagram" ID="ApplicationDiagram"></a>
-<h2>ApplicationDiagram</h2>
+<a NAME="ApplicationDiagramBuilder" ID="ApplicationDiagramBuilder"></a>
+<h2>ApplicationDiagramBuilder</h2>
 <p>
-    Class implementing a dialog showing an imports diagram of the application.
+    Class implementing a builder for imports diagrams of the application.
 </p>
 <h3>Derived from</h3>
-UMLDialog
+UMLDiagramBuilder
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -58,51 +58,48 @@ UMLDialog
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#ApplicationDiagram.__init__">ApplicationDiagram</a></td>
+<td><a href="#ApplicationDiagramBuilder.__init__">ApplicationDiagramBuilder</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#ApplicationDiagram.__addPackage">__addPackage</a></td>
+<td><a href="#ApplicationDiagramBuilder.__addPackage">__addPackage</a></td>
 <td>Private method to add a package to the diagram.</td>
 </tr><tr>
-<td><a href="#ApplicationDiagram.__buildModulesDict">__buildModulesDict</a></td>
+<td><a href="#ApplicationDiagramBuilder.__buildModulesDict">__buildModulesDict</a></td>
 <td>Private method to build a dictionary of modules contained in the application.</td>
 </tr><tr>
-<td><a href="#ApplicationDiagram.__buildPackages">__buildPackages</a></td>
-<td>Private method to build the packages shapes of the diagram.</td>
-</tr><tr>
-<td><a href="#ApplicationDiagram.__createAssociations">__createAssociations</a></td>
+<td><a href="#ApplicationDiagramBuilder.__createAssociations">__createAssociations</a></td>
 <td>Private method to generate the associations between the package shapes.</td>
 </tr><tr>
-<td><a href="#ApplicationDiagram.relayout">relayout</a></td>
-<td>Method to relayout the diagram.</td>
+<td><a href="#ApplicationDiagramBuilder.buildDiagram">buildDiagram</a></td>
+<td>Public method to build the packages shapes of the diagram.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="ApplicationDiagram.__init__" ID="ApplicationDiagram.__init__"></a>
-<h4>ApplicationDiagram (Constructor)</h4>
-<b>ApplicationDiagram</b>(<i>project, parent=None, name=None, noModules=False</i>)
+<a NAME="ApplicationDiagramBuilder.__init__" ID="ApplicationDiagramBuilder.__init__"></a>
+<h4>ApplicationDiagramBuilder (Constructor)</h4>
+<b>ApplicationDiagramBuilder</b>(<i>dialog, view, project, noModules=False</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>project</i></dt>
+<dt><i>dialog</i></dt>
 <dd>
-reference to the project object
-</dd><dt><i>parent</i></dt>
+reference to the UML dialog (UMLDialog)
+</dd><dt><i>view</i></dt>
 <dd>
-parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
+reference to the view object (UMLGraphicsView)
+</dd><dt><i>project</i></dt>
 <dd>
-name of the view widget (string)
+reference to the project object (Project)
 </dd><dt><i>noModules=</i></dt>
 <dd>
 flag indicating, that no module names should be
             shown (boolean)
 </dd>
-</dl><a NAME="ApplicationDiagram.__addPackage" ID="ApplicationDiagram.__addPackage"></a>
-<h4>ApplicationDiagram.__addPackage</h4>
+</dl><a NAME="ApplicationDiagramBuilder.__addPackage" ID="ApplicationDiagramBuilder.__addPackage"></a>
+<h4>ApplicationDiagramBuilder.__addPackage</h4>
 <b>__addPackage</b>(<i>name, modules, x, y</i>)
 <p>
         Private method to add a package to the diagram.
@@ -121,8 +118,8 @@ x-coordinate (float)
 <dd>
 y-coordinate (float)
 </dd>
-</dl><a NAME="ApplicationDiagram.__buildModulesDict" ID="ApplicationDiagram.__buildModulesDict"></a>
-<h4>ApplicationDiagram.__buildModulesDict</h4>
+</dl><a NAME="ApplicationDiagramBuilder.__buildModulesDict" ID="ApplicationDiagramBuilder.__buildModulesDict"></a>
+<h4>ApplicationDiagramBuilder.__buildModulesDict</h4>
 <b>__buildModulesDict</b>(<i></i>)
 <p>
         Private method to build a dictionary of modules contained in the application.
@@ -131,13 +128,8 @@ y-coordinate (float)
 <dd>
 dictionary of modules contained in the application.
 </dd>
-</dl><a NAME="ApplicationDiagram.__buildPackages" ID="ApplicationDiagram.__buildPackages"></a>
-<h4>ApplicationDiagram.__buildPackages</h4>
-<b>__buildPackages</b>(<i></i>)
-<p>
-        Private method to build the packages shapes of the diagram.
-</p><a NAME="ApplicationDiagram.__createAssociations" ID="ApplicationDiagram.__createAssociations"></a>
-<h4>ApplicationDiagram.__createAssociations</h4>
+</dl><a NAME="ApplicationDiagramBuilder.__createAssociations" ID="ApplicationDiagramBuilder.__createAssociations"></a>
+<h4>ApplicationDiagramBuilder.__createAssociations</h4>
 <b>__createAssociations</b>(<i>shapes</i>)
 <p>
         Private method to generate the associations between the package shapes.
@@ -146,11 +138,11 @@ dictionary of modules contained in the application.
 <dd>
 list of shapes
 </dd>
-</dl><a NAME="ApplicationDiagram.relayout" ID="ApplicationDiagram.relayout"></a>
-<h4>ApplicationDiagram.relayout</h4>
-<b>relayout</b>(<i></i>)
+</dl><a NAME="ApplicationDiagramBuilder.buildDiagram" ID="ApplicationDiagramBuilder.buildDiagram"></a>
+<h4>ApplicationDiagramBuilder.buildDiagram</h4>
+<b>buildDiagram</b>(<i></i>)
 <p>
-        Method to relayout the diagram.
+        Public method to build the packages shapes of the diagram.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

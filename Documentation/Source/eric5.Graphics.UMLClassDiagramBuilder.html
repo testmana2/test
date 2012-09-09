@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Graphics.UMLClassDiagram</title>
+<title>eric5.Graphics.UMLClassDiagramBuilder</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Graphics.UMLClassDiagram</h1>
+<h1>eric5.Graphics.UMLClassDiagramBuilder</h1>
 <p>
 Module implementing a dialog showing a UML like class diagram.
 </p>
@@ -31,8 +31,8 @@ Module implementing a dialog showing a UML like class diagram.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#UMLClassDiagram">UMLClassDiagram</a></td>
-<td>Class implementing a dialog showing a UML like class diagram.</td>
+<td><a href="#UMLClassDiagramBuilder">UMLClassDiagramBuilder</a></td>
+<td>Class implementing a builder for UML like class diagrams.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -40,13 +40,13 @@ Module implementing a dialog showing a UML like class diagram.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
-<a NAME="UMLClassDiagram" ID="UMLClassDiagram"></a>
-<h2>UMLClassDiagram</h2>
+<a NAME="UMLClassDiagramBuilder" ID="UMLClassDiagramBuilder"></a>
+<h2>UMLClassDiagramBuilder</h2>
 <p>
-    Class implementing a dialog showing a UML like class diagram.
+    Class implementing a builder for UML like class diagrams.
 </p>
 <h3>Derived from</h3>
-UMLDialog
+UMLDiagramBuilder
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -58,59 +58,56 @@ UMLDialog
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#UMLClassDiagram.__init__">UMLClassDiagram</a></td>
+<td><a href="#UMLClassDiagramBuilder.__init__">UMLClassDiagramBuilder</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.__addExternalClass">__addExternalClass</a></td>
+<td><a href="#UMLClassDiagramBuilder.__addExternalClass">__addExternalClass</a></td>
 <td>Private method to add a class defined outside the module.</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.__addLocalClass">__addLocalClass</a></td>
+<td><a href="#UMLClassDiagramBuilder.__addLocalClass">__addLocalClass</a></td>
 <td>Private method to add a class defined in the module.</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.__arrangeClasses">__arrangeClasses</a></td>
+<td><a href="#UMLClassDiagramBuilder.__arrangeClasses">__arrangeClasses</a></td>
 <td>Private method to arrange the shapes on the canvas.</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.__buildClasses">__buildClasses</a></td>
-<td>Private method to build the class shapes of the class diagram.</td>
-</tr><tr>
-<td><a href="#UMLClassDiagram.__createAssociations">__createAssociations</a></td>
+<td><a href="#UMLClassDiagramBuilder.__createAssociations">__createAssociations</a></td>
 <td>Private method to generate the associations between the class shapes.</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.__getCurrentShape">__getCurrentShape</a></td>
+<td><a href="#UMLClassDiagramBuilder.__getCurrentShape">__getCurrentShape</a></td>
 <td>Private method to get the named shape.</td>
 </tr><tr>
-<td><a href="#UMLClassDiagram.relayout">relayout</a></td>
-<td>Public method to relayout the diagram.</td>
+<td><a href="#UMLClassDiagramBuilder.buildDiagram">buildDiagram</a></td>
+<td>Public method to build the class shapes of the class diagram.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="UMLClassDiagram.__init__" ID="UMLClassDiagram.__init__"></a>
-<h4>UMLClassDiagram (Constructor)</h4>
-<b>UMLClassDiagram</b>(<i>project, file, parent=None, name=None, noAttrs=False</i>)
+<a NAME="UMLClassDiagramBuilder.__init__" ID="UMLClassDiagramBuilder.__init__"></a>
+<h4>UMLClassDiagramBuilder (Constructor)</h4>
+<b>UMLClassDiagramBuilder</b>(<i>dialog, view, project, file, noAttrs=False</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>project</i></dt>
+<dt><i>dialog</i></dt>
 <dd>
-reference to the project object
+reference to the UML dialog (UMLDialog)
+</dd><dt><i>view</i></dt>
+<dd>
+reference to the view object (UMLGraphicsView)
+</dd><dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
 </dd><dt><i>file</i></dt>
 <dd>
-filename of a python module to be shown (string)
-</dd><dt><i>parent</i></dt>
-<dd>
-parent widget of the view (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of the view widget (string)
+file name of a python module to be shown (string)
 </dd><dt><i>noAttrs=</i></dt>
 <dd>
 flag indicating, that no attributes should be shown (boolean)
 </dd>
-</dl><a NAME="UMLClassDiagram.__addExternalClass" ID="UMLClassDiagram.__addExternalClass"></a>
-<h4>UMLClassDiagram.__addExternalClass</h4>
+</dl><a NAME="UMLClassDiagramBuilder.__addExternalClass" ID="UMLClassDiagramBuilder.__addExternalClass"></a>
+<h4>UMLClassDiagramBuilder.__addExternalClass</h4>
 <b>__addExternalClass</b>(<i>_class, x, y</i>)
 <p>
         Private method to add a class defined outside the module.
@@ -128,8 +125,8 @@ x-coordinate (float)
 <dd>
 y-coordinate (float)
 </dd>
-</dl><a NAME="UMLClassDiagram.__addLocalClass" ID="UMLClassDiagram.__addLocalClass"></a>
-<h4>UMLClassDiagram.__addLocalClass</h4>
+</dl><a NAME="UMLClassDiagramBuilder.__addLocalClass" ID="UMLClassDiagramBuilder.__addLocalClass"></a>
+<h4>UMLClassDiagramBuilder.__addLocalClass</h4>
 <b>__addLocalClass</b>(<i>className, _class, x, y, isRbModule=False</i>)
 <p>
         Private method to add a class defined in the module.
@@ -150,22 +147,15 @@ y-coordinate (float)
 <dd>
 flag indicating a Ruby module (boolean)
 </dd>
-</dl><a NAME="UMLClassDiagram.__arrangeClasses" ID="UMLClassDiagram.__arrangeClasses"></a>
-<h4>UMLClassDiagram.__arrangeClasses</h4>
+</dl><a NAME="UMLClassDiagramBuilder.__arrangeClasses" ID="UMLClassDiagramBuilder.__arrangeClasses"></a>
+<h4>UMLClassDiagramBuilder.__arrangeClasses</h4>
 <b>__arrangeClasses</b>(<i>nodes, routes, whiteSpaceFactor=1.2</i>)
 <p>
         Private method to arrange the shapes on the canvas.
 </p><p>
         The algorithm is borrowed from Boa Constructor.
-</p><a NAME="UMLClassDiagram.__buildClasses" ID="UMLClassDiagram.__buildClasses"></a>
-<h4>UMLClassDiagram.__buildClasses</h4>
-<b>__buildClasses</b>(<i></i>)
-<p>
-        Private method to build the class shapes of the class diagram.
-</p><p>
-        The algorithm is borrowed from Boa Constructor.
-</p><a NAME="UMLClassDiagram.__createAssociations" ID="UMLClassDiagram.__createAssociations"></a>
-<h4>UMLClassDiagram.__createAssociations</h4>
+</p><a NAME="UMLClassDiagramBuilder.__createAssociations" ID="UMLClassDiagramBuilder.__createAssociations"></a>
+<h4>UMLClassDiagramBuilder.__createAssociations</h4>
 <b>__createAssociations</b>(<i>routes</i>)
 <p>
         Private method to generate the associations between the class shapes.
@@ -174,8 +164,8 @@ flag indicating a Ruby module (boolean)
 <dd>
 list of relationsships
 </dd>
-</dl><a NAME="UMLClassDiagram.__getCurrentShape" ID="UMLClassDiagram.__getCurrentShape"></a>
-<h4>UMLClassDiagram.__getCurrentShape</h4>
+</dl><a NAME="UMLClassDiagramBuilder.__getCurrentShape" ID="UMLClassDiagramBuilder.__getCurrentShape"></a>
+<h4>UMLClassDiagramBuilder.__getCurrentShape</h4>
 <b>__getCurrentShape</b>(<i>name</i>)
 <p>
         Private method to get the named shape.
@@ -189,11 +179,13 @@ name of the shape (string)
 <dd>
 shape (QGraphicsItem)
 </dd>
-</dl><a NAME="UMLClassDiagram.relayout" ID="UMLClassDiagram.relayout"></a>
-<h4>UMLClassDiagram.relayout</h4>
-<b>relayout</b>(<i></i>)
+</dl><a NAME="UMLClassDiagramBuilder.buildDiagram" ID="UMLClassDiagramBuilder.buildDiagram"></a>
+<h4>UMLClassDiagramBuilder.buildDiagram</h4>
+<b>buildDiagram</b>(<i></i>)
 <p>
-        Public method to relayout the diagram.
+        Public method to build the class shapes of the class diagram.
+</p><p>
+        The algorithm is borrowed from Boa Constructor.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

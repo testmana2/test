@@ -34,23 +34,19 @@ class UMLGraphicsView(E5GraphicsView):
     """
     relayout = pyqtSignal()
     
-    def __init__(self, scene, diagramType, diagramName="Unnamed", parent=None,
-                 name=None):
+    def __init__(self, scene, diagramType, parent=None):
         """
         Constructor
         
         @param scene reference to the scene object (QGraphicsScene)
         @param diagramType type of the diagram (string)
-        @param diagramName name of the diagram (string)
         @param parent parent widget of the view (QWidget)
-        @param name name of the view widget (string)
         """
         E5GraphicsView.__init__(self, scene, parent)
-        if name:
-            self.setObjectName(name)
+        self.setObjectName("UMLGraphicsView")
         self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         
-        self.diagramName = diagramName
+        self.diagramName = "Unnamed"
         self.diagramType = diagramType
         
         self.persistenceData = ""
@@ -674,7 +670,8 @@ class UMLGraphicsView(E5GraphicsView):
         
         lines = [
             "version: 1.0",
-            "diagram_type: {0}".format(self.diagramType),
+            "diagram_type: {0} ({1})".format(self.diagramType,
+                self.parent().diagramTypeToString(self.diagramType)),
             "diagram_name: {0}".format(self.diagramName),
             "scene_size: {0};{1}".format(self.scene().width(), self.scene().height()),
         ]
