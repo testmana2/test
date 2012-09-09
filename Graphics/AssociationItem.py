@@ -12,9 +12,13 @@ from PyQt4.QtGui import QGraphicsItem
 
 from E5Graphics.E5ArrowItem import E5ArrowItem, NormalArrow, WideArrow
 
+import Utilities
+
+
 Normal = 0
 Generalisation = 1
 Imports = 2
+
 
 NoRegion = 0
 West = 1
@@ -77,6 +81,7 @@ class AssociationItem(E5ArrowItem):
         self.itemA = itemA
         self.itemB = itemB
         self.assocType = type
+        self.topToBottom = topToBottom
         
         self.regionA = NoRegion
         self.regionB = NoRegion
@@ -504,3 +509,48 @@ class AssociationItem(E5ArrowItem):
         """
         self.itemA.removeAssociation(self)
         self.itemB.removeAssociation(self)
+    
+    def buildAssociationItemDataString(self):
+        """
+        Public method to build a string to persist the specific item data.
+        
+        This string should be built like "attribute=value" with pairs separated
+        by ", ". value must not contain ", " or newlines.
+        
+        @return persistence data (string)
+        """
+        entries = [
+            "src={0}".format(self.itemA.getId()),
+            "dst={0}".format(self.itemB.getId()),
+            "type={0}".format(self.assocType),
+            "topToBottom={0}".format(self.topToBottom)
+        ]
+        return ", ".join(entries)
+    
+    @classmethod
+    def parseAssociationItemDataString(cls, data):
+        """
+        Class method to parse the given persistence data.
+        
+        @param data persisted data to be parsed (string)
+        @return tuple with the IDs of the source and destination items,
+            the association type and a flag indicating to associate from top
+            to bottom (integer, integer, integer, boolean)
+        """
+        src = -1
+        dst = -1
+        assocType = Normal
+        topToBottom = False
+        for entry in data.split(", "):
+            if "=" in entry:
+                key, value = entry.split("=", 1)
+                if key == "src":
+                    src = int(value)
+                elif key == "dst":
+                    dst = int(value)
+                elif key == "type":
+                    assocType = value
+                elif key == "topToBottom":
+                    topToBottom = Utilities.toBool(value)
+        
+        return src, dst, assocType, topToBottom

@@ -39,7 +39,8 @@ class ApplicationDiagram(UMLDialog):
         self.project = project
         self.noModules = noModules
         
-        UMLDialog.__init__(self, buildFunction=self.__buildPackages, parent=parent)
+        UMLDialog.__init__(self, "ApplicationDiagram", buildFunction=self.__buildPackages,
+            parent=parent)
         self.setDiagramName(
             self.trUtf8("Application Diagram {0}").format(project.getProjectName()))
         
@@ -47,6 +48,9 @@ class ApplicationDiagram(UMLDialog):
             self.setObjectName("ApplicationDiagram")
         else:
             self.setObjectName(name)
+        
+        self.umlView.setPersistenceData(
+            "project={0}".format(self.project.getProjectFile()))
         
         self.umlView.relayout.connect(self.relayout)
         
@@ -228,6 +232,7 @@ class ApplicationDiagram(UMLDialog):
         modules.sort()
         pm = PackageModel(name, modules)
         pw = PackageItem(pm, x, y, noModules=self.noModules, scene=self.scene)
+        pw.setId(self.umlView.getItemId())
         return pw
         
     def __createAssociations(self, shapes):

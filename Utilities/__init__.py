@@ -1678,6 +1678,21 @@ def checkBlacklistedVersions():
     
     return True
 
+
+def toBool(dataStr):
+    """
+    Module function to convert a string to a boolean value.
+    
+    @param dataStr string to be converted (string)
+    @return converted boolean value (boolean)
+    """
+    if dataStr in [ "True", "true", "1", "Yes", "yes"]:
+        return True
+    elif dataStr in ["False", "false", "0", "No", "no"]:
+        return False
+    else:
+        return bool(dataStr)
+
 ################################################################################
 # posix compatibility functions below
 ################################################################################

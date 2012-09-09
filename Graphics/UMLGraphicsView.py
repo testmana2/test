@@ -15,6 +15,7 @@ from E5Graphics.E5GraphicsView import E5GraphicsView
 from E5Gui import E5MessageBox, E5FileDialog
 
 from .UMLItem import UMLItem
+from .AssociationItem import AssociationItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
 from .ZoomDialog import ZoomDialog
 
@@ -33,11 +34,13 @@ class UMLGraphicsView(E5GraphicsView):
     """
     relayout = pyqtSignal()
     
-    def __init__(self, scene, diagramName="Unnamed", parent=None, name=None):
+    def __init__(self, scene, diagramType, diagramName="Unnamed", parent=None,
+                 name=None):
         """
         Constructor
         
         @param scene reference to the scene object (QGraphicsScene)
+        @param diagramType type of the diagram (string)
         @param diagramName name of the diagram (string)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
@@ -48,6 +51,11 @@ class UMLGraphicsView(E5GraphicsView):
         self.setViewportUpdateMode(QGraphicsView.FullViewportUpdate)
         
         self.diagramName = diagramName
+        self.diagramType = diagramType
+        
+        self.persistenceData = ""
+        self.__fileName = ""
+        self.__itemId = -1
         
         self.border = 10
         self.deltaSize = 100.0
@@ -72,8 +80,18 @@ class UMLGraphicsView(E5GraphicsView):
         
         self.saveAct = \
             QAction(UI.PixmapCache.getIcon("fileSave.png"),
+                    self.trUtf8("Save"), self)
+        self.saveAct.triggered[()].connect(self.__save)
+        
+        self.saveAsAct = \
+            QAction(UI.PixmapCache.getIcon("fileSaveAs.png"),
+                    self.trUtf8("Save As..."), self)
+        self.saveAsAct.triggered[()].connect(self.__saveAs)
+        
+        self.saveImageAct = \
+            QAction(UI.PixmapCache.getIcon("fileSavePixmap.png"),
                     self.trUtf8("Save as PNG"), self)
-        self.saveAct.triggered[()].connect(self.__saveImage)
+        self.saveImageAct.triggered[()].connect(self.__saveImage)
         
         self.printAct = \
             QAction(UI.PixmapCache.getIcon("print.png"),
@@ -225,6 +243,8 @@ class UMLGraphicsView(E5GraphicsView):
         toolBar.addAction(self.deleteShapeAct)
         toolBar.addSeparator()
         toolBar.addAction(self.saveAct)
+        toolBar.addAction(self.saveAsAct)
+        toolBar.addAction(self.saveImageAct)
         toolBar.addSeparator()
         toolBar.addAction(self.printPreviewAct)
         toolBar.addAction(self.printAct)
@@ -251,15 +271,16 @@ class UMLGraphicsView(E5GraphicsView):
         
         return toolBar
         
-    def filteredItems(self, items):
+    def filteredItems(self, items, itemType=UMLItem):
         """
         Public method to filter a list of items.
         
         @param items list of items as returned by the scene object
             (QGraphicsItem)
+        @param itemType type to be filtered (class)
         @return list of interesting collision items (QGraphicsItem)
         """
-        return [itm for itm in items if isinstance(itm, UMLItem)]
+        return [itm for itm in items if isinstance(itm, itemType)]
         
     def selectItems(self, items):
         """
@@ -383,6 +404,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to handle the re-layout context menu entry.
         """
+        self.__itemId = -1
         self.scene().clear()
         self.relayout.emit()
         
@@ -569,3 +591,109 @@ class UMLGraphicsView(E5GraphicsView):
             else:
                 self.setZoom(pinch.scaleFactor())
             evt.accept()
+    
+    def setPersistenceData(self, data):
+        """
+        Public method to set additional persistence data.
+        
+        @param data string of additional data to be made persistent (string)
+        """
+        self.persistenceData = data
+    
+    def getPersistenceData(self):
+        """
+        Public method to get the additional persistence data.
+        
+        @return additional persistence data (string)
+        """
+        return self.persistenceData
+    
+    def getItemId(self):
+        """
+        Public method to get the ID to be assigned to an item.
+        
+        @return item ID (integer)
+        """
+        self.__itemId += 1
+        return self.__itemId
+
+    def findItem(self, id):
+        """
+        Public method to find an UML item based on the ID.
+        
+        @param id of the item to search for (integer)
+        @return item found (UMLItem) or None
+        """
+        for item in self.scene().items():
+            try:
+                itemID = item.getId()
+            except AttributeError:
+                continue
+            
+            if itemID == id:
+                return item
+        
+        return None
+    
+    def __save(self):
+        """
+        Private slot to save the diagram with the current name.
+        """
+        self.__saveAs(self.__fileName)
+    
+    def __saveAs(self, filename=""):
+        """
+        Private slot to save the diagram.
+        
+        @param filename name of the file to write to (string)
+        """
+        if not filename:
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                self.trUtf8("Save Diagram"),
+                "",
+                self.trUtf8("Eric5 Graphics File (*.e5g);;All Files (*)"),
+                "",
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            if not fname:
+                return
+            ext = QFileInfo(fname).suffix()
+            if not ext:
+                ex = selectedFilter.split("(*")[1].split(")")[0]
+                if ex:
+                    fname += ex
+            if QFileInfo(fname).exists():
+                res = E5MessageBox.yesNo(self,
+                    self.trUtf8("Save Diagram"),
+                    self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fname),
+                    icon=E5MessageBox.Warning)
+                if not res:
+                    return
+            filename = fname
+        
+        lines = [
+            "version: 1.0",
+            "diagram_type: {0}".format(self.diagramType),
+            "diagram_name: {0}".format(self.diagramName),
+            "scene_size: {0};{1}".format(self.scene().width(), self.scene().height()),
+        ]
+        if self.persistenceData:
+            lines.append("diagram_data: {0}".format(self.persistenceData))
+        for item in self.filteredItems(self.scene().items(), UMLItem):
+            lines.append("item: id={0}, x={1}, y={2}{3}".format(
+                item.getId(), item.x(), item.y(), item.buildItemDataString()))
+        for item in self.filteredItems(self.scene().items(), AssociationItem):
+            lines.append("association: {0}".format(item.buildAssociationItemDataString()))
+        
+        try:
+            f = open(filename, "w", encoding="utf-8")
+            f.write("\n".join(lines))
+            f.close()
+        except (IOError, OSError) as err:
+            E5MessageBox.critical(self,
+                self.trUtf8("Save Diagram"),
+                self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>"""
+                             """<p>Reason: {1}</p>""").format(fname, str(err)))
+        
+        self.__fileName = filename

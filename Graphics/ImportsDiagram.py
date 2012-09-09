@@ -41,7 +41,8 @@ class ImportsDiagram(UMLDialog):
         @keyparam showExternalImports flag indicating to show exports from outside
             the package (boolean)
         """
-        UMLDialog.__init__(self, buildFunction=self.__buildImports, parent=parent)
+        UMLDialog.__init__(self, "ImportsDiagram", buildFunction=self.__buildImports,
+            parent=parent)
         
         self.showExternalImports = showExternalImports
         self.packagePath = Utilities.normabspath(package)
@@ -52,6 +53,8 @@ class ImportsDiagram(UMLDialog):
             ppath = os.path.dirname(ppath)
             hasInit = len(glob.glob(os.path.join(ppath, '__init__.*'))) > 0
         self.shortPackage = self.packagePath.replace(ppath, '').replace(os.sep, '.')[1:]
+        
+        self.umlView.setPersistenceData("package={0}".format(self.packagePath))
         
         pname = project.getProjectName()
         if pname:
@@ -226,6 +229,7 @@ class ImportsDiagram(UMLDialog):
         classes.sort()
         impM = ModuleModel(name, classes)
         impW = ModuleItem(impM, x, y, scene=self.scene)
+        impW.setId(self.umlView.getItemId())
         return impW
         
     def __createAssociations(self, shapes):

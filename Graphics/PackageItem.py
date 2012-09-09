@@ -180,3 +180,32 @@ class PackageItem(UMLItem):
         painter.drawLine(offsetX, offsetY + y, offsetX + w - 1, offsetY + y)
         
         self.adjustAssociations()
+    
+    def buildItemDataString(self):
+        """
+        Public method to build a string to persist the specific item data.
+        
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+        
+        @return persistence data (string)
+        """
+        entries = [
+            "item_type=package",
+            "no_modules={0}".format(self.noModules),
+            "name={0}".format(self.model.getName()),
+        ]
+        modules = self.model.getModules()
+        if modules:
+            entries.append("modules={0}".format("||".join(modules)))
+        
+        return ", " + ", ".join(entries)
+    
+    def parseItemDataString(self, data):
+        """
+        Public method to parse the given persistence data.
+        
+        @param data persisted data to be parsed (string)
+        """
+        # TODO: implement this

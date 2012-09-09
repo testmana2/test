@@ -215,3 +215,36 @@ class ClassItem(UMLItem):
         @return external state (boolean)
         """
         return self.external
+    
+    def buildItemDataString(self):
+        """
+        Public method to build a string to persist the specific item data.
+        
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+        
+        @return persistence data (string)
+        """
+        entries = [
+            "item_type=class",
+            "is_external={0}".format(self.external),
+            "no_attributes={0}".format(self.noAttrs),
+            "name={0}".format(self.model.getName()),
+        ]
+        attributes = self.model.getAttributes()
+        if attributes:
+            entries.append("attributes={0}".format("||".join(attributes)))
+        methods = self.model.getMethods()
+        if methods:
+            entries.append("methods={0}".format("||".join(methods)))
+        
+        return ", " + ", ".join(entries)
+    
+    def parseItemDataString(self, data):
+        """
+        Public method to parse the given persistence data.
+        
+        @param data persisted data to be parsed (string)
+        """
+        # TODO: implement this

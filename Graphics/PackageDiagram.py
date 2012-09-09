@@ -37,11 +37,14 @@ class PackageDiagram(UMLDialog):
         @param name name of the view widget (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        UMLDialog.__init__(self, buildFunction=self.__buildClasses, parent=parent)
+        UMLDialog.__init__(self, "PackageDiagram", buildFunction=self.__buildClasses,
+            parent=parent)
         
         self.package = Utilities.normabspath(package)
         self.allClasses = {}
         self.noAttrs = noAttrs
+        
+        self.umlView.setPersistenceData("package={0}".format(self.package))
         
         pname = project.getProjectName()
         if pname:
@@ -281,6 +284,7 @@ class PackageDiagram(UMLDialog):
             name = "{0} (Module)".format(name)
         cl = ClassModel(name, meths[:], attrs[:])
         cw = ClassItem(cl, False, x, y, noAttrs=self.noAttrs, scene=self.scene)
+        cw.setId(self.umlView.getItemId())
         self.allClasses[className] = cw
         
     def __addExternalClass(self, _class, x, y):
@@ -296,6 +300,7 @@ class PackageDiagram(UMLDialog):
         """
         cl = ClassModel(_class)
         cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
+        cw.setId(self.umlView.getItemId())
         self.allClasses[_class] = cw
         
     def __createAssociations(self, routes):

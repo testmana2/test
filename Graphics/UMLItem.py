@@ -31,6 +31,7 @@ class UMLItem(QGraphicsRectItem):
         self.margin = 5
         self.associations = []
         self.shouldAdjustAssociations = False
+        self.__id = -1
         
         self.setRect(x, y, 60, 30)
         
@@ -144,3 +145,39 @@ class UMLItem(QGraphicsRectItem):
         painter.setBrush(self.brush())
         painter.drawRect(self.rect())
         self.adjustAssociations()
+        
+    def setId(self, id):
+        """
+        Public method to assign an ID to the item.
+        
+        @param id assigned ID (integer)
+        """
+        self.__id = id
+    
+    def getId(self):
+        """
+        Public method to get the item ID.
+        
+        @return ID of the item (integer)
+        """
+        return self.__id
+    
+    def buildItemDataString(self):
+        """
+        Public method to build a string to persist the specific item data.
+        
+        This string must start with ", " and should be built like
+        "attribute=value" with pairs separated by ", ". value must not contain ", "
+        or newlines.
+        
+        @return persistence data (string)
+        """
+        return ""
+    
+    def parseItemDataString(self, data):
+        """
+        Public method to parse the given persistence data.
+        
+        @param data persisted data to be parsed (string)
+        """
+        pass

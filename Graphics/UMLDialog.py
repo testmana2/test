@@ -20,12 +20,14 @@ class UMLDialog(QMainWindow):
     """
     Class implementing a dialog showing UML like diagrams.
     """
-    def __init__(self, buildFunction=None, diagramName="Unnamed", parent=None, name=None):
+    def __init__(self, diagramType, diagramName="Unnamed", buildFunction=None,
+                 parent=None, name=""):
         """
         Constructor
         
-        @param buildFunction function to build the diagram contents (function)
+        @param diagramType type of the diagram (string)
         @param diagramName name of the diagram (string)
+        @param buildFunction function to build the diagram contents (function)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
@@ -38,7 +40,8 @@ class UMLDialog(QMainWindow):
         
         self.buildFunction = buildFunction
         self.scene = QGraphicsScene(0.0, 0.0, 800.0, 600.0)
-        self.umlView = UMLGraphicsView(self.scene, diagramName, self, "umlView")
+        self.umlView = UMLGraphicsView(self.scene, diagramType, diagramName,
+            self, "umlView")
         
         self.closeAct = \
             QAction(UI.PixmapCache.getIcon("close.png"),
