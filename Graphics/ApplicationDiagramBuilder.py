@@ -12,6 +12,8 @@ import glob
 
 from PyQt4.QtGui import QApplication, QProgressDialog
 
+from E5Gui import E5MessageBox
+
 from .UMLDiagramBuilder import UMLDiagramBuilder
 from .PackageItem import PackageItem, PackageModel
 from .AssociationItem import AssociationItem, Imports
@@ -247,11 +249,32 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         return "project={0}, no_modules={1}".format(
             self.project.getProjectFile(), self.noModules)
     
-    def parsePersistenceData(self, data):
+    def parsePersistenceData(self, version, data):
         """
         Public method to parse persisted data.
         
-        @param dat persisted data to be parsed (string)
+        @param version version of the data (string)
+        @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        # TODO: implement this
-        return
+        parts = data.split(", ")
+        if len(parts) != 2 or \
+           not parts[0].startswith("project=") or \
+           not parts[1].startswith("no_modules="):
+            return False
+        
+        projectFile = parts[0].split("=", 1)[1].strip()
+        if projectFile != self.project.getProjectFile():
+            res = E5MessageBox.yesNo(None,
+                self.trUtf8("Load Diagram"),
+                self.trUtf8("""<p>The diagram belongs to the project <b>{0}</b>."""
+                             """ Shall this project be opened?</p>""").format(
+                    projectFile))
+            if res:
+                self.project.openProject(projectFile)
+            
+        self.noModules = Utilities.toBool(parts[1].split("=", 1)[1].strip())
+        
+        self.initialize()
+        
+        return True

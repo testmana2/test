@@ -184,10 +184,12 @@ class UMLItem(QGraphicsRectItem):
         """
         return ""
     
-    def parseItemDataString(self, data):
+    def parseItemDataString(self, version, data):
         """
         Public method to parse the given persistence data.
         
+        @param version version of the data (string)
         @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        pass
+        return True

@@ -11,6 +11,7 @@ import itertools
 
 from PyQt4.QtGui import QGraphicsTextItem
 
+import Utilities
 import Utilities.ModuleParser
 import Preferences
 
@@ -275,11 +276,23 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         """
         return "file={0}, no_attributes={1}".format(self.file, self.noAttrs)
     
-    def parsePersistenceData(self, data):
+    def parsePersistenceData(self, version, data):
         """
         Public method to parse persisted data.
         
-        @param dat persisted data to be parsed (string)
+        @param version version of the data (string)
+        @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        # TODO: implement this
-        return
+        parts = data.split(", ")
+        if len(parts) != 2 or \
+           not parts[0].startswith("file=") or \
+           not parts[1].startswith("no_attributes="):
+            return False
+        
+        self.file = parts[0].split("=", 1)[1].strip()
+        self.noAttrs = Utilities.toBool(parts[1].split("=", 1)[1].strip())
+        
+        self.initialize()
+        
+        return True

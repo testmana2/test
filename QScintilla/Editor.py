@@ -788,6 +788,9 @@ class Editor(QsciScintillaCompat):
         self.applicationDiagramMenuAct = \
             menu.addAction(self.trUtf8('Application Diagram...'),
                 self.__showApplicationDiagram)
+        menu.addSeparator()
+        menu.addAction(UI.PixmapCache.getIcon("open.png"),
+            self.trUtf8("Load Diagram..."), self.__loadDiagram)
         
         menu.aboutToShow.connect(self.__showContextMenuGraphics)
         
@@ -5847,6 +5850,17 @@ class Editor(QsciScintillaCompat):
         self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
                                             self, noModules=not res)
         self.applicationDiagram.show()
+    
+    def __loadDiagram(self):
+        """
+        Private slot to load a diagram from file.
+        """
+        from Graphics.UMLDialog import UMLDialog
+        self.loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self.project, parent=self)
+        if self.loadedDiagram.load():
+            self.loadedDiagram.show(fromFile=True)
+        else:
+            self.loadedDiagram = None
     
     #######################################################################
     ## Typing aids related methods below

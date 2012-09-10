@@ -549,7 +549,7 @@ class AssociationItem(E5ArrowItem):
                 elif key == "dst":
                     dst = int(value)
                 elif key == "type":
-                    assocType = value
+                    assocType = int(value)
                 elif key == "topToBottom":
                     topToBottom = Utilities.toBool(value)
         

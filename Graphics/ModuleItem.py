@@ -183,10 +183,32 @@ class ModuleItem(UMLItem):
         
         return ", " + ", ".join(entries)
     
-    def parseItemDataString(self, data):
+    def parseItemDataString(self, version, data):
         """
         Public method to parse the given persistence data.
         
+        @param version version of the data (string)
         @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        # TODO: implement this
+        parts = data.split(", ")
+        if len(parts) < 1:
+            return False
+        
+        name = ""
+        classes = []
+        
+        for part in parts:
+            key, value = part.split("=", 1)
+            if key == "name":
+                name = value.strip()
+            elif key == "classes":
+                classes = value.strip().split("||")
+            else:
+                return False
+        
+        self.model = ModuleModel(name, classes)
+        self.__createTexts()
+        self.__calculateSize()
+        
+        return True

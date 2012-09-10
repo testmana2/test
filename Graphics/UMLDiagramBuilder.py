@@ -51,10 +51,12 @@ class UMLDiagramBuilder(QObject):
         """
         return ""
     
-    def parsePersistenceData(self, data):
+    def parsePersistenceData(self, version, data):
         """
         Public method to parse persisted data.
         
-        @param dat persisted data to be parsed (string)
+        @param version version of the data (string)
+        @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        return
+        return True

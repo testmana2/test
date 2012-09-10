@@ -31,6 +31,7 @@ from .ProjectBaseBrowser import ProjectBaseBrowser
 from .NewPythonPackageDialog import NewPythonPackageDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class ProjectSourcesBrowser(ProjectBaseBrowser):
@@ -78,6 +79,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.importsDiagram = None
         self.packageDiagram = None
         self.applicationDiagram = None
+        self.loadedDiagram = None
         
     def __closeAllWindows(self):
         """
@@ -90,6 +92,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.importsDiagram     and self.importsDiagram.close()
         self.packageDiagram     and self.packageDiagram.close()
         self.applicationDiagram and self.applicationDiagram.close()
+        self.loadedDiagram      and self.loadedDiagram.close()
         
     def _projectClosed(self):
         """
@@ -134,6 +137,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Imports Diagram..."), self.__showImportsDiagram)
         self.graphicsMenu.addAction(
             self.trUtf8("Application Diagram..."), self.__showApplicationDiagram)
+        self.graphicsMenu.addSeparator()
+        self.graphicsMenu.addAction(UI.PixmapCache.getIcon("open.png"),
+            self.trUtf8("Load Diagram..."), self.__loadDiagram)
         self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
         
         self.unittestAction = self.sourceMenu.addAction(
@@ -287,6 +293,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.__showPackageDiagram)
         self.graphicsMenu.addAction(self.trUtf8("Application Diagram..."),
             self.__showApplicationDiagram)
+        self.graphicsMenu.addSeparator()
+        self.graphicsMenu.addAction(UI.PixmapCache.getIcon("fileOpen.png"),
+            self.trUtf8("Load Diagram..."), self.__loadDiagram)
         
         self.sourceMenu.addSeparator()
         act = self.sourceMenu.addAction(self.trUtf8('Rename file'), self._renameFile)
@@ -908,3 +917,13 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
                                             self, noModules=not res)
         self.applicationDiagram.show()
+    
+    def __loadDiagram(self):
+        """
+        Private slot to load a diagram from file.
+        """
+        self.loadedDiagram = None
+        loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self.project, parent=self)
+        if loadedDiagram.load():
+            self.loadedDiagram = loadedDiagram
+            self.loadedDiagram.show(fromFile=True)

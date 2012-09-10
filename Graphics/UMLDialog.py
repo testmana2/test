@@ -22,18 +22,21 @@ class UMLDialog(QMainWindow):
     """
     Class implementing a dialog showing UML like diagrams.
     """
+    NoDiagram = 255
     ClassDiagram = 0
     PackageDiagram = 1
     ImportsDiagram = 2
     ApplicationDiagram = 3
+    
+    FileVersions = ["1.0"]
     
     def __init__(self, diagramType, project, path="", parent=None, initBuilder=True,
                  **kwargs):
         """
         Constructor
         
-        @param diagramType type of the diagram
-            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+        @param diagramType type of the diagram (one of ApplicationDiagram, ClassDiagram,
+            ImportsDiagram, NoDiagram, PackageDiagram)
         @param project reference to the project object (Project)
         @param path file or directory path to build the diagram from (string)
         @param parent parent widget of the dialog (QWidget)
@@ -44,11 +47,12 @@ class UMLDialog(QMainWindow):
         self.setObjectName("UMLDialog")
         
         self.__diagramType = diagramType
+        self.__project = project
         
         self.scene = QGraphicsScene(0.0, 0.0, 800.0, 600.0)
         self.umlView = UMLGraphicsView(self.scene, parent=self)
-        self.builder = self.__diagramBuilder(self.__diagramType, project, path, **kwargs)
-        if initBuilder:
+        self.builder = self.__diagramBuilder(self.__diagramType, path, **kwargs)
+        if self.builder and initBuilder:
             self.builder.initialize()
         
         self.__fileName = ""
@@ -68,6 +72,11 @@ class UMLDialog(QMainWindow):
             QAction(UI.PixmapCache.getIcon("close.png"),
                     self.trUtf8("Close"), self)
         self.closeAct.triggered[()].connect(self.close)
+        
+        self.openAct = \
+            QAction(UI.PixmapCache.getIcon("open.png"),
+                    self.trUtf8("Load"), self)
+        self.openAct.triggered[()].connect(self.load)
         
         self.saveAct = \
             QAction(UI.PixmapCache.getIcon("fileSave.png"),
@@ -104,6 +113,8 @@ class UMLDialog(QMainWindow):
         
         self.fileToolBar = QToolBar(self.trUtf8("File"), self)
         self.fileToolBar.setIconSize(UI.Config.ToolBarIconSize)
+        self.fileToolBar.addAction(self.openAct)
+        self.fileToolBar.addSeparator()
         self.fileToolBar.addAction(self.saveAct)
         self.fileToolBar.addAction(self.saveAsAct)
         self.fileToolBar.addAction(self.saveImageAct)
@@ -117,41 +128,51 @@ class UMLDialog(QMainWindow):
         self.addToolBar(Qt.TopToolBarArea, self.windowToolBar)
         self.addToolBar(Qt.TopToolBarArea, self.umlToolBar)
     
-    def show(self):
+    def show(self, fromFile=False):
         """
-        Overriden method to show the dialog.
+        Public method to show the dialog.
+        
+        @keyparam fromFile flag indicating, that the diagram was loaded
+            from file (boolean)
         """
-        self.builder.buildDiagram()
+        if not fromFile and self.builder:
+            self.builder.buildDiagram()
         super().show()
     
     def __relayout(self):
         """
         Private method to relayout the diagram.
         """
-        self.builder.buildDiagram()
+        if self.builder:
+            self.builder.buildDiagram()
     
-    def __diagramBuilder(self, diagramType, project, path, **kwargs):
+    def __diagramBuilder(self, diagramType, path, **kwargs):
         """
         Private method to instantiate a diagram builder object.
         
         @param diagramType type of the diagram
             (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
-        @param project reference to the project object (Project)
         @param path file or directory path to build the diagram from (string)
         @param kwargs diagram specific data
         """
         if diagramType == UMLDialog.ClassDiagram:
             from .UMLClassDiagramBuilder import UMLClassDiagramBuilder
-            return UMLClassDiagramBuilder(self, self.umlView, project, path, **kwargs)
+            return UMLClassDiagramBuilder(self, self.umlView, self.__project, path,
+                                          **kwargs)
         elif diagramType == UMLDialog.PackageDiagram:
             from .PackageDiagramBuilder import PackageDiagramBuilder
-            return PackageDiagramBuilder(self, self.umlView, project, path, **kwargs)
+            return PackageDiagramBuilder(self, self.umlView, self.__project, path,
+                                         **kwargs)
         elif diagramType == UMLDialog.ImportsDiagram:
             from .ImportsDiagramBuilder import ImportsDiagramBuilder
-            return ImportsDiagramBuilder(self, self.umlView, project, path, **kwargs)
+            return ImportsDiagramBuilder(self, self.umlView, self.__project, path,
+                                         **kwargs)
         elif diagramType == UMLDialog.ApplicationDiagram:
             from .ApplicationDiagramBuilder import ApplicationDiagramBuilder
-            return ApplicationDiagramBuilder(self, self.umlView, project, **kwargs)
+            return ApplicationDiagramBuilder(self, self.umlView, self.__project,
+                                             **kwargs)
+        elif diagramType == UMLDialog.NoDiagram:
+            return None
         else:
             raise ValueError(
                 self.trUtf8("Illegal diagram type '{0}' given.").format(diagramType))
@@ -229,18 +250,115 @@ class UMLDialog(QMainWindow):
             E5MessageBox.critical(self,
                 self.trUtf8("Save Diagram"),
                 self.trUtf8("""<p>The file <b>{0}</b> could not be saved.</p>"""
-                             """<p>Reason: {1}</p>""").format(fname, str(err)))
+                             """<p>Reason: {1}</p>""").format(filename, str(err)))
+            return
         
         self.__fileName = filename
     
-    @classmethod
-    def generateDialogFromFile(cls, project, parent=None):
+    def load(self):
         """
-        Class method to generate a dialog reading data from a file.
+        Public method to load a diagram from a file.
         
-        @param project reference to the project object (Project)
-        @param parent parent widget of the dialog (QWidget)
-        @return generated dialog (UMLDialog)
+        @return flag indicating success (boolean)
         """
-        # TODO: implement this
-        return None
+        filename = E5FileDialog.getOpenFileName(
+            self,
+            self.trUtf8("Load Diagram"),
+            "",
+            self.trUtf8("Eric5 Graphics File (*.e5g);;All Files (*)"))
+        if not filename:
+            # Cancelled by user
+            return False
+        
+        try:
+            f = open(filename, "r", encoding="utf-8")
+            data = f.read()
+            f.close()
+        except (IOError, OSError) as err:
+            E5MessageBox.critical(self,
+                self.trUtf8("Load Diagram"),
+                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>"""
+                             """<p>Reason: {1}</p>""").format(filename, str(err)))
+            return False
+        
+        lines = data.splitlines()
+        if len(lines) < 3:
+            self.__showInvalidDataMessage(filename)
+            return False
+        
+        try:
+            # step 1: check version
+            linenum = 0
+            key, value = lines[linenum].split(": ", 1)
+            if key.strip() != "version" or value.strip() not in UMLDialog.FileVersions:
+                self.__showInvalidDataMessage(filename, linenum)
+                return False
+            else:
+                version = value
+            
+            # step 2: extract diagram type
+            linenum += 1
+            key, value = lines[linenum].split(": ", 1)
+            if key.strip() != "diagram_type":
+                self.__showInvalidDataMessage(filename, linenum)
+                return False
+            try:
+                self.__diagramType = int(value.strip().split(None, 1)[0])
+            except ValueError:
+                self.__showInvalidDataMessage(filename, linenum)
+                return False
+            self.scene.clear()
+            self.builder = self.__diagramBuilder(self.__diagramType, "")
+            
+            # step 3: extract scene size
+            linenum += 1
+            key, value = lines[linenum].split(": ", 1)
+            if key.strip() != "scene_size":
+                self.__showInvalidDataMessage(filename, linenum)
+                return False
+            try:
+                width, height = [float(v.strip()) for v in value.split(";")]
+            except ValueError:
+                self.__showInvalidDataMessage(filename, linenum)
+                return False
+            self.umlView.setSceneSize(width, height)
+            
+            # step 4: extract builder data if available
+            linenum += 1
+            key, value = lines[linenum].split(": ", 1)
+            if key.strip() == "builder_data":
+                ok = self.builder.parsePersistenceData(version, value)
+                if not ok:
+                    self.__showInvalidDataMessage(filename, linenum)
+                    return False
+                linenum += 1
+            
+            # step 5: extract the graphics items
+            ok, vlinenum = self.umlView.parsePersistenceData(version, lines[linenum:])
+            if not ok:
+                self.__showInvalidDataMessage(filename, linenum + vlinenum)
+                return False
+        
+        except IndexError:
+            self.__showInvalidDataMessage(filename)
+            return False
+        
+        # everything worked fine, so remember the file name
+        self.__fileName = filename
+        return True
+    
+    def __showInvalidDataMessage(self, filename, linenum=-1):
+        """
+        Private slot to show a message dialog indicating an invalid data file.
+        
+        @param filename name of the file containing the invalid data (string)
+        @param linenum number of the invalid line (integer)
+        """
+        if linenum < 0:
+            msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
+                               """ valid data.</p>""").format(filename)
+        else:
+            msg = self.trUtf8("""<p>The file <b>{0}</b> does not contain"""
+                               """ valid data.</p><p>Invalid line: {1}</p>"""
+                              ).format(filename, linenum + 1)
+        E5MessageBox.critical(self, self.trUtf8("Load Diagram"), msg)

@@ -233,6 +233,7 @@ class Project(QObject):
         self.codecoverage = None
         self.profiledata = None
         self.applicationDiagram = None
+        self.loadedDiagram = None
         
     def __initProjectTypes(self):
         """
@@ -2494,6 +2495,7 @@ class Project(QObject):
         self.codecoverage       and self.codecoverage.close()
         self.profiledata        and self.profiledata.close()
         self.applicationDiagram and self.applicationDiagram.close()
+        self.loadedDiagram      and self.loadedDiagram.close()
         
     def closeProject(self, reopen=False, noSave=False):
         """
@@ -3251,9 +3253,11 @@ class Project(QObject):
         self.codeProfileAct.triggered[()].connect(self.__showProfileData)
         self.actions.append(self.codeProfileAct)
 
+        self.graphicsGrp = createActionGroup(self)
+
         self.applicationDiagramAct = E5Action(self.trUtf8('Application Diagram'),
                 self.trUtf8('&Application Diagram...'), 0, 0,
-                self.chkGrp, 'project_application_diagram')
+                self.graphicsGrp, 'project_application_diagram')
         self.applicationDiagramAct.setStatusTip(
             self.trUtf8('Show a diagram of the project.'))
         self.applicationDiagramAct.setWhatsThis(self.trUtf8(
@@ -3262,6 +3266,18 @@ class Project(QObject):
         ))
         self.applicationDiagramAct.triggered[()].connect(self.handleApplicationDiagram)
         self.actions.append(self.applicationDiagramAct)
+
+        self.loadDiagramAct = E5Action(self.trUtf8('Load Diagram'),
+                self.trUtf8('&Load Diagram...'), 0, 0,
+                self.graphicsGrp, 'project_load_diagram')
+        self.loadDiagramAct.setStatusTip(
+            self.trUtf8('Load a diagram from file.'))
+        self.loadDiagramAct.setWhatsThis(self.trUtf8(
+            """<b>Load Diagram...</b>"""
+            """<p>This loads a diagram from file.</p>"""
+        ))
+        self.loadDiagramAct.triggered[()].connect(self.__loadDiagram)
+        self.actions.append(self.loadDiagramAct)
 
         self.pluginGrp = createActionGroup(self)
 
@@ -3378,6 +3394,8 @@ class Project(QObject):
         # build the diagrams menu
         self.graphicsMenu.setTearOffEnabled(True)
         self.graphicsMenu.addAction(self.applicationDiagramAct)
+        self.graphicsMenu.addSeparator()
+        self.graphicsMenu.addAction(self.loadDiagramAct)
         
         # build the session menu
         self.sessionMenu.setTearOffEnabled(True)
@@ -3987,6 +4005,16 @@ class Project(QObject):
         self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self,
                                             self.parent(), noModules=not res)
         self.applicationDiagram.show()
+    
+    def __loadDiagram(self):
+        """
+        Private slot to load a diagram from file.
+        """
+        self.loadedDiagram = None
+        loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self, parent=self.parent())
+        if loadedDiagram.load():
+            self.loadedDiagram = loadedDiagram
+            self.loadedDiagram.show(fromFile=True)
     
     #########################################################################
     ## Below is the interface to the VCS monitor thread

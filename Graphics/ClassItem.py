@@ -11,6 +11,8 @@ from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
 from .UMLItem import UMLItem
 
+import Utilities
+
 
 class ClassModel(object):
     """
@@ -242,10 +244,39 @@ class ClassItem(UMLItem):
         
         return ", " + ", ".join(entries)
     
-    def parseItemDataString(self, data):
+    def parseItemDataString(self, version, data):
         """
         Public method to parse the given persistence data.
         
+        @param version version of the data (string)
         @param data persisted data to be parsed (string)
+        @return flag indicating success (boolean)
         """
-        # TODO: implement this
+        parts = data.split(", ")
+        if len(parts) < 3:
+            return False
+        
+        name = ""
+        attributes = []
+        methods = []
+        
+        for part in parts:
+            key, value = part.split("=", 1)
+            if key == "is_external":
+                self.external = Utilities.toBool(value.strip())
+            elif key == "no_attributes":
+                self.noAttrs = Utilities.toBool(value.strip())
+            elif key == "name":
+                name = value.strip()
+            elif key == "attributes":
+                attributes = value.strip().split("||")
+            elif key == "methods":
+                methods = value.strip().split("||")
+            else:
+                return False
+        
+        self.model = ClassModel(name, methods, attributes)
+        self.__createTexts()
+        self.__calculateSize()
+        
+        return True

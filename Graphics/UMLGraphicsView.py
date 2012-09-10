@@ -16,6 +16,9 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from .UMLItem import UMLItem
 from .AssociationItem import AssociationItem
+from .ClassItem import ClassItem
+from .ModuleItem import ModuleItem
+from .PackageItem import PackageItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
 from .ZoomDialog import ZoomDialog
 
@@ -603,11 +606,52 @@ class UMLGraphicsView(E5GraphicsView):
         
         return lines
     
-    def parsePersistenceData(self, data):
+    def parsePersistenceData(self, version, data):
         """
         Public method to parse persisted data.
         
-        @param dat persisted data to be parsed (string)
+        @param version version of the data (string)
+        @param data persisted data to be parsed (list of string)
+        @return tuple of flag indicating success (boolean) and faulty line
+            number (integer)
         """
-        # TODO: implement this
-        return
+        umlItems = {}
+        
+        if not data[0].startswith("diagram_name:"):
+            return False, 0
+        self.diagramName = data[0].split(": ", 1)[1].strip()
+        
+        linenum = 0
+        for line in data[1:]:
+            linenum += 1
+            if not line.startswith(("item:", "association:")):
+                return False, linenum
+            
+            key, value = line.split(": ", 1)
+            if key == "item":
+                id, x, y, itemType, itemData = value.split(", ", 4)
+                try:
+                    id = int(id.split("=", 1)[1].strip())
+                    x = float(x.split("=", 1)[1].strip())
+                    y = float(y.split("=", 1)[1].strip())
+                    itemType = itemType.split("=", 1)[1].strip()
+                    if itemType == ClassItem.ItemType:
+                        itm = ClassItem(x=x, y=y, scene=self.scene())
+                    elif itemType == ModuleItem.ItemType:
+                        itm = ModuleItem(x=x, y=y, scene=self.scene())
+                    elif itemType == PackageItem.ItemType:
+                        itm = PackageItem(x=x, y=y, scene=self.scene())
+                    itm.setId(id)
+                    umlItems[id] = itm
+                    if not itm.parseItemDataString(version, itemData):
+                        return False, linenum
+                except ValueError:
+                    return False, linenum
+            elif key == "association":
+                srcId, dstId, assocType, topToBottom = \
+                    AssociationItem.parseAssociationItemDataString(value.strip())
+                assoc = AssociationItem(umlItems[srcId], umlItems[dstId],
+                    assocType, topToBottom)
+                self.scene().addItem(assoc)
+        
+        return True, -1
