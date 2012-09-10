@@ -3782,6 +3782,7 @@
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
       <keyword name="Editor.__lmBbookmarks" id="Editor.__lmBbookmarks" ref="eric5.QScintilla.Editor.html#Editor.__lmBbookmarks" />
       <keyword name="Editor.__lmBbreakpoints" id="Editor.__lmBbreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__lmBbreakpoints" />
+      <keyword name="Editor.__loadDiagram" id="Editor.__loadDiagram" ref="eric5.QScintilla.Editor.html#Editor.__loadDiagram" />
       <keyword name="Editor.__marginClicked" id="Editor.__marginClicked" ref="eric5.QScintilla.Editor.html#Editor.__marginClicked" />
       <keyword name="Editor.__marginNumber" id="Editor.__marginNumber" ref="eric5.QScintilla.Editor.html#Editor.__marginNumber" />
       <keyword name="Editor.__markOccurrences" id="Editor.__markOccurrences" ref="eric5.QScintilla.Editor.html#Editor.__markOccurrences" />
@@ -7645,6 +7646,7 @@
       <keyword name="Project.__initData" id="Project.__initData" ref="eric5.Project.Project.html#Project.__initData" />
       <keyword name="Project.__initDebugProperties" id="Project.__initDebugProperties" ref="eric5.Project.Project.html#Project.__initDebugProperties" />
       <keyword name="Project.__initProjectTypes" id="Project.__initProjectTypes" ref="eric5.Project.Project.html#Project.__initProjectTypes" />
+      <keyword name="Project.__loadDiagram" id="Project.__loadDiagram" ref="eric5.Project.Project.html#Project.__loadDiagram" />
       <keyword name="Project.__loadRecent" id="Project.__loadRecent" ref="eric5.Project.Project.html#Project.__loadRecent" />
       <keyword name="Project.__makePpathRe" id="Project.__makePpathRe" ref="eric5.Project.Project.html#Project.__makePpathRe" />
       <keyword name="Project.__openRecent" id="Project.__openRecent" ref="eric5.Project.Project.html#Project.__openRecent" />
@@ -8031,6 +8033,7 @@
       <keyword name="ProjectSourcesBrowser.__createPythonPopupMenus" id="ProjectSourcesBrowser.__createPythonPopupMenus" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__createPythonPopupMenus" />
       <keyword name="ProjectSourcesBrowser.__createRubyPopupMenus" id="ProjectSourcesBrowser.__createRubyPopupMenus" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__createRubyPopupMenus" />
       <keyword name="ProjectSourcesBrowser.__deleteFile" id="ProjectSourcesBrowser.__deleteFile" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__deleteFile" />
+      <keyword name="ProjectSourcesBrowser.__loadDiagram" id="ProjectSourcesBrowser.__loadDiagram" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__loadDiagram" />
       <keyword name="ProjectSourcesBrowser.__showApplicationDiagram" id="ProjectSourcesBrowser.__showApplicationDiagram" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__showApplicationDiagram" />
       <keyword name="ProjectSourcesBrowser.__showClassDiagram" id="ProjectSourcesBrowser.__showClassDiagram" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__showClassDiagram" />
       <keyword name="ProjectSourcesBrowser.__showCodeCoverage" id="ProjectSourcesBrowser.__showCodeCoverage" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__showCodeCoverage" />
@@ -10649,7 +10652,8 @@
       <keyword name="UMLDialog.__relayout" id="UMLDialog.__relayout" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__relayout" />
       <keyword name="UMLDialog.__save" id="UMLDialog.__save" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__save" />
       <keyword name="UMLDialog.__saveAs" id="UMLDialog.__saveAs" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__saveAs" />
-      <keyword name="UMLDialog.generateDialogFromFile" id="UMLDialog.generateDialogFromFile" ref="eric5.Graphics.UMLDialog.html#UMLDialog.generateDialogFromFile" />
+      <keyword name="UMLDialog.__showInvalidDataMessage" id="UMLDialog.__showInvalidDataMessage" ref="eric5.Graphics.UMLDialog.html#UMLDialog.__showInvalidDataMessage" />
+      <keyword name="UMLDialog.load" id="UMLDialog.load" ref="eric5.Graphics.UMLDialog.html#UMLDialog.load" />
       <keyword name="UMLDialog.show" id="UMLDialog.show" ref="eric5.Graphics.UMLDialog.html#UMLDialog.show" />
       <keyword name="UMLGraphicsView" id="UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView" />
       <keyword name="UMLGraphicsView (Constructor)" id="UMLGraphicsView (Constructor)" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__init__" />

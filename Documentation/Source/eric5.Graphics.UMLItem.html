@@ -225,13 +225,21 @@ optional reference to the widget painted on (QWidget)
 </dd>
 </dl><a NAME="UMLItem.parseItemDataString" ID="UMLItem.parseItemDataString"></a>
 <h4>UMLItem.parseItemDataString</h4>
-<b>parseItemDataString</b>(<i>data</i>)
+<b>parseItemDataString</b>(<i>version, data</i>)
 <p>
         Public method to parse the given persistence data.
 </p><dl>
-<dt><i>data</i></dt>
+<dt><i>version</i></dt>
+<dd>
+version of the data (string)
+</dd><dt><i>data</i></dt>
 <dd>
 persisted data to be parsed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="UMLItem.removeAssociation" ID="UMLItem.removeAssociation"></a>
 <h4>UMLItem.removeAssociation</h4>

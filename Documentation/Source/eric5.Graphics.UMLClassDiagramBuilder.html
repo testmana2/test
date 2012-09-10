@@ -212,13 +212,21 @@ persisted data string (string)
         Public method to initialize the object.
 </p><a NAME="UMLClassDiagramBuilder.parsePersistenceData" ID="UMLClassDiagramBuilder.parsePersistenceData"></a>
 <h4>UMLClassDiagramBuilder.parsePersistenceData</h4>
-<b>parsePersistenceData</b>(<i>data</i>)
+<b>parsePersistenceData</b>(<i>version, data</i>)
 <p>
         Public method to parse persisted data.
 </p><dl>
-<dt><i>dat</i></dt>
+<dt><i>version</i></dt>
+<dd>
+version of the data (string)
+</dd><dt><i>data</i></dt>
 <dd>
 persisted data to be parsed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

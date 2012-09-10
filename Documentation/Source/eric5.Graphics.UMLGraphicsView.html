@@ -350,13 +350,22 @@ the populated toolBar (QToolBar)
 </dd>
 </dl><a NAME="UMLGraphicsView.parsePersistenceData" ID="UMLGraphicsView.parsePersistenceData"></a>
 <h4>UMLGraphicsView.parsePersistenceData</h4>
-<b>parsePersistenceData</b>(<i>data</i>)
+<b>parsePersistenceData</b>(<i>version, data</i>)
 <p>
         Public method to parse persisted data.
 </p><dl>
-<dt><i>dat</i></dt>
+<dt><i>version</i></dt>
 <dd>
-persisted data to be parsed (string)
+version of the data (string)
+</dd><dt><i>data</i></dt>
+<dd>
+persisted data to be parsed (list of string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of flag indicating success (boolean) and faulty line
+            number (integer)
 </dd>
 </dl><a NAME="UMLGraphicsView.printDiagram" ID="UMLGraphicsView.printDiagram"></a>
 <h4>UMLGraphicsView.printDiagram</h4>

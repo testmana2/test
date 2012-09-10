@@ -49,14 +49,11 @@ Module implementing a dialog showing UML like diagrams.
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>ApplicationDiagram</td></tr><tr><td>ClassDiagram</td></tr><tr><td>ImportsDiagram</td></tr><tr><td>PackageDiagram</td></tr>
+<tr><td>ApplicationDiagram</td></tr><tr><td>ClassDiagram</td></tr><tr><td>FileVersions</td></tr><tr><td>ImportsDiagram</td></tr><tr><td>NoDiagram</td></tr><tr><td>PackageDiagram</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
-<tr>
-<td><a href="#UMLDialog.generateDialogFromFile">generateDialogFromFile</a></td>
-<td>Class method to generate a dialog reading data from a file.</td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -85,33 +82,21 @@ QMainWindow
 <td><a href="#UMLDialog.__saveAs">__saveAs</a></td>
 <td>Private slot to save the diagram.</td>
 </tr><tr>
+<td><a href="#UMLDialog.__showInvalidDataMessage">__showInvalidDataMessage</a></td>
+<td>Private slot to show a message dialog indicating an invalid data file.</td>
+</tr><tr>
+<td><a href="#UMLDialog.load">load</a></td>
+<td>Public method to load a diagram from a file.</td>
+</tr><tr>
 <td><a href="#UMLDialog.show">show</a></td>
-<td>Overriden method to show the dialog.</td>
+<td>Public method to show the dialog.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="UMLDialog.generateDialogFromFile" ID="UMLDialog.generateDialogFromFile"></a>
-<h4>UMLDialog.generateDialogFromFile (class method)</h4>
-<b>generateDialogFromFile</b>(<i>project, parent=None</i>)
-<p>
-        Class method to generate a dialog reading data from a file.
-</p><dl>
-<dt><i>project</i></dt>
-<dd>
-reference to the project object (Project)
-</dd><dt><i>parent</i></dt>
-<dd>
-parent widget of the dialog (QWidget)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-generated dialog (UMLDialog)
-</dd>
-</dl><a NAME="UMLDialog.__init__" ID="UMLDialog.__init__"></a>
+<a NAME="UMLDialog.__init__" ID="UMLDialog.__init__"></a>
 <h4>UMLDialog (Constructor)</h4>
 <b>UMLDialog</b>(<i>diagramType, project, path="", parent=None, initBuilder=True, **kwargs</i>)
 <p>
@@ -119,8 +104,8 @@ generated dialog (UMLDialog)
 </p><dl>
 <dt><i>diagramType</i></dt>
 <dd>
-type of the diagram
-            (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
+type of the diagram (one of ApplicationDiagram, ClassDiagram,
+            ImportsDiagram, NoDiagram, PackageDiagram)
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project object (Project)
@@ -139,7 +124,7 @@ diagram specific data
 </dd>
 </dl><a NAME="UMLDialog.__diagramBuilder" ID="UMLDialog.__diagramBuilder"></a>
 <h4>UMLDialog.__diagramBuilder</h4>
-<b>__diagramBuilder</b>(<i>diagramType, project, path, **kwargs</i>)
+<b>__diagramBuilder</b>(<i>diagramType, path, **kwargs</i>)
 <p>
         Private method to instantiate a diagram builder object.
 </p><dl>
@@ -147,9 +132,6 @@ diagram specific data
 <dd>
 type of the diagram
             (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
-</dd><dt><i>project</i></dt>
-<dd>
-reference to the project object (Project)
 </dd><dt><i>path</i></dt>
 <dd>
 file or directory path to build the diagram from (string)
@@ -197,12 +179,41 @@ readable type string (string)
 <dd>
 name of the file to write to (string)
 </dd>
+</dl><a NAME="UMLDialog.__showInvalidDataMessage" ID="UMLDialog.__showInvalidDataMessage"></a>
+<h4>UMLDialog.__showInvalidDataMessage</h4>
+<b>__showInvalidDataMessage</b>(<i>filename, linenum=-1</i>)
+<p>
+        Private slot to show a message dialog indicating an invalid data file.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file containing the invalid data (string)
+</dd><dt><i>linenum</i></dt>
+<dd>
+number of the invalid line (integer)
+</dd>
+</dl><a NAME="UMLDialog.load" ID="UMLDialog.load"></a>
+<h4>UMLDialog.load</h4>
+<b>load</b>(<i></i>)
+<p>
+        Public method to load a diagram from a file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
 </dl><a NAME="UMLDialog.show" ID="UMLDialog.show"></a>
 <h4>UMLDialog.show</h4>
-<b>show</b>(<i></i>)
+<b>show</b>(<i>fromFile=False</i>)
 <p>
-        Overriden method to show the dialog.
-</p>
+        Public method to show the dialog.
+</p><dl>
+<dt><i>fromFile=</i></dt>
+<dd>
+flag indicating, that the diagram was loaded
+            from file (boolean)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>
