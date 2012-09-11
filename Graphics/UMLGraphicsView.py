@@ -7,7 +7,7 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent
+from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, QRectF
 from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
@@ -191,11 +191,12 @@ class UMLGraphicsView(E5GraphicsView):
         sceneRect = self.scene().sceneRect()
         newWidth = width = sceneRect.width()
         newHeight = height = sceneRect.height()
-        rect = self._getDiagramRect(10)
-        if width < rect.width():
-            newWidth = rect.width()
-        if height < rect.height():
-            newHeight = rect.height()
+        rect = self.scene().itemsBoundingRect()
+        # calculate with 10 pixel border on each side
+        if sceneRect.right() - 10 < rect.right():
+            newWidth = rect.right() + 10
+        if sceneRect.bottom() - 10 < rect.bottom():
+            newHeight = rect.bottom() + 10
         
         if newHeight != height or newWidth != width:
             self.setSceneSize(newWidth, newHeight)
@@ -515,6 +516,59 @@ class UMLGraphicsView(E5GraphicsView):
             item.moveBy(xOffset, yOffset)
         
         self.scene().update()
+    
+    def __itemsBoundingRect(self, items):
+        """
+        Private method to calculate the bounding rectangle of the given items.
+        
+        @param items list of items to operate on (list of UMLItem)
+        @return bounding rectangle (QRectF)
+        """
+        rect = self.scene().sceneRect()
+        right = rect.left()
+        bottom = rect.top()
+        left = rect.right()
+        top = rect.bottom()
+        for item in items:
+            rect = item.sceneBoundingRect()
+            left = min(rect.left(), left)
+            right = max(rect.right(), right)
+            top = min(rect.top(), top)
+            bottom = max(rect.bottom(), bottom)
+        return QRectF(left, top, right - left, bottom - top)
+    
+    def keyPressEvent(self, evt):
+        """
+        Protected method handling key press events.
+        
+        @param evt reference to the key event (QKeyEvent)
+        """
+        key = evt.key()
+        if key in [Qt.Key_Up, Qt.Key_Down, Qt.Key_Left, Qt.Key_Right]:
+            items = self.filteredItems(self.scene().selectedItems())
+            if items:
+                if evt.modifiers() & Qt.ControlModifier:
+                    stepSize = 50
+                else:
+                    stepSize = 5
+                if key == Qt.Key_Up:
+                    dx = 0
+                    dy = -stepSize
+                elif key == Qt.Key_Down:
+                    dx = 0
+                    dy = stepSize
+                elif key == Qt.Key_Left:
+                    dx = -stepSize
+                    dy = 0
+                else:
+                    dx = stepSize
+                    dy = 0
+                for item in items:
+                    item.moveBy(dx, dy)
+                evt.accept()
+                return
+        
+        super().keyPressEvent(evt)
     
     def wheelEvent(self, evt):
         """

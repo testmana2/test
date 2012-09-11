@@ -92,6 +92,9 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.__initActions">__initActions</a></td>
 <td>Private method to initialize the view actions.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.__itemsBoundingRect">__itemsBoundingRect</a></td>
+<td>Private method to calculate the bounding rectangle of the given items.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.__printPreviewPrint">__printPreviewPrint</a></td>
 <td>Private slot to generate a print preview.</td>
 </tr><tr>
@@ -130,6 +133,9 @@ E5GraphicsView
 </tr><tr>
 <td><a href="#UMLGraphicsView.initToolBar">initToolBar</a></td>
 <td>Public method to populate a toolbar with our actions.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.keyPressEvent">keyPressEvent</a></td>
+<td>Protected method handling key press events.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.parsePersistenceData">parsePersistenceData</a></td>
 <td>Public method to parse persisted data.</td>
@@ -218,7 +224,22 @@ alignment type (Qt.AlignmentFlag)
 <b>__initActions</b>(<i></i>)
 <p>
         Private method to initialize the view actions.
-</p><a NAME="UMLGraphicsView.__printPreviewPrint" ID="UMLGraphicsView.__printPreviewPrint"></a>
+</p><a NAME="UMLGraphicsView.__itemsBoundingRect" ID="UMLGraphicsView.__itemsBoundingRect"></a>
+<h4>UMLGraphicsView.__itemsBoundingRect</h4>
+<b>__itemsBoundingRect</b>(<i>items</i>)
+<p>
+        Private method to calculate the bounding rectangle of the given items.
+</p><dl>
+<dt><i>items</i></dt>
+<dd>
+list of items to operate on (list of UMLItem)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+bounding rectangle (QRectF)
+</dd>
+</dl><a NAME="UMLGraphicsView.__printPreviewPrint" ID="UMLGraphicsView.__printPreviewPrint"></a>
 <h4>UMLGraphicsView.__printPreviewPrint</h4>
 <b>__printPreviewPrint</b>(<i>printer</i>)
 <p>
@@ -347,6 +368,16 @@ list of data to be persisted (list of strings)
 <dt>Returns:</dt>
 <dd>
 the populated toolBar (QToolBar)
+</dd>
+</dl><a NAME="UMLGraphicsView.keyPressEvent" ID="UMLGraphicsView.keyPressEvent"></a>
+<h4>UMLGraphicsView.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling key press events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the key event (QKeyEvent)
 </dd>
 </dl><a NAME="UMLGraphicsView.parsePersistenceData" ID="UMLGraphicsView.parsePersistenceData"></a>
 <h4>UMLGraphicsView.parsePersistenceData</h4>

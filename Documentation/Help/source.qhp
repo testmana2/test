@@ -10668,6 +10668,7 @@
       <keyword name="UMLGraphicsView.__incHeight" id="UMLGraphicsView.__incHeight" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__incHeight" />
       <keyword name="UMLGraphicsView.__incWidth" id="UMLGraphicsView.__incWidth" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__incWidth" />
       <keyword name="UMLGraphicsView.__initActions" id="UMLGraphicsView.__initActions" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__initActions" />
+      <keyword name="UMLGraphicsView.__itemsBoundingRect" id="UMLGraphicsView.__itemsBoundingRect" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__itemsBoundingRect" />
       <keyword name="UMLGraphicsView.__printPreviewPrint" id="UMLGraphicsView.__printPreviewPrint" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printPreviewPrint" />
       <keyword name="UMLGraphicsView.__relayout" id="UMLGraphicsView.__relayout" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__relayout" />
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
@@ -10681,6 +10682,7 @@
       <keyword name="UMLGraphicsView.getItemId" id="UMLGraphicsView.getItemId" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getItemId" />
       <keyword name="UMLGraphicsView.getPersistenceData" id="UMLGraphicsView.getPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getPersistenceData" />
       <keyword name="UMLGraphicsView.initToolBar" id="UMLGraphicsView.initToolBar" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.initToolBar" />
+      <keyword name="UMLGraphicsView.keyPressEvent" id="UMLGraphicsView.keyPressEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.keyPressEvent" />
       <keyword name="UMLGraphicsView.parsePersistenceData" id="UMLGraphicsView.parsePersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.parsePersistenceData" />
       <keyword name="UMLGraphicsView.printDiagram" id="UMLGraphicsView.printDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.printDiagram" />
       <keyword name="UMLGraphicsView.printPreviewDiagram" id="UMLGraphicsView.printPreviewDiagram" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.printPreviewDiagram" />

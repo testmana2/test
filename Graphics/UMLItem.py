@@ -126,7 +126,17 @@ class UMLItem(QGraphicsRectItem):
         @return adjusted values
         """
         if change == QGraphicsItem.ItemPositionChange:
+            # 1. remember to adjust associations
             self.shouldAdjustAssociations = True
+            
+            # 2. ensure the new position is inside the scene
+            rect = self.scene().sceneRect()
+            if not rect.contains(value):
+                # keep the item inside the scene
+                value.setX(min(rect.right(), max(value.x(), rect.left())))
+                value.setY(min(rect.bottom(), max(value.y(), rect.top())))
+                return value
+            
         return QGraphicsItem.itemChange(self, change, value)
         
     def paint(self, painter, option, widget=None):
