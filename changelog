@@ -11,6 +11,9 @@ Version 5.3-snapshot-2012mmdd:
      variables viewer
 - Configuration Dialog
   -- added a filter edit to filter the configuration tree
+- Graphics Dialogs
+  -- added capability to store and load diagrams to/from disk
+  -- improved the package diagram to include subpackages and their module names
 - Version Control System Interfaces
   -- Mercurial
      --- added support for --log and --dry-run to the hg graft operation as of

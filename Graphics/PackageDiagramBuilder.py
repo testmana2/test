@@ -15,6 +15,7 @@ from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
 from .ClassItem import ClassItem, ClassModel
+from .PackageItem import PackageItem, PackageModel
 from .AssociationItem import AssociationItem, Generalisation
 from . import GraphicsUtilities
 
@@ -105,6 +106,67 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             progress.setValue(tot)
         return moduleDict
     
+    def __buildSubpackagesDict(self):
+        """
+        Private method to build a dictionary of sub-packages contained in this package.
+        
+        @return dictionary of sub-packages contained in this package
+        """
+        supportedExt = \
+            ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
+            ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
+            ['*.rb']
+        extensions = Preferences.getPython("PythonExtensions") + \
+            Preferences.getPython("Python3Extensions") + ['.rb']
+        
+        subpackagesDict = {}
+        subpackagesList = []
+        
+        for subpackage in os.listdir(self.package):
+            subpackagePath = os.path.join(self.package, subpackage)
+            if os.path.isdir(subpackagePath) and \
+               len(glob.glob(os.path.join(subpackagePath, "__init__.*"))) != 0:
+                subpackagesList.append(subpackagePath)
+        
+        tot = 0
+        for ext in supportedExt:
+            for subpackage in subpackagesList:
+                tot += len(glob.glob(Utilities.normjoinpath(subpackage, ext)))
+        try:
+            prog = 0
+            progress = QProgressDialog(self.trUtf8("Parsing modules..."),
+                None, 0, tot, self.parent())
+            progress.show()
+            QApplication.processEvents()
+            for subpackage in subpackagesList:
+                packageName = os.path.basename(subpackage)
+                subpackagesDict[packageName] = []
+                modules = []
+                for ext in supportedExt:
+                    modules.extend(glob.glob(Utilities.normjoinpath(subpackage, ext)))
+                for module in modules:
+                    progress.setValue(prog)
+                    QApplication.processEvents()
+                    prog += 1
+                    try:
+                        mod = Utilities.ModuleParser.readModule(
+                            module, extensions=extensions)
+                    except ImportError:
+                        continue
+                    else:
+                        name = mod.name
+                        if "." in name:
+                            name = name.rsplit(".", 1)[1]
+                        subpackagesDict[packageName].append(name)
+                subpackagesDict[packageName].sort()
+                # move __init__ to the front
+                if "__init__" in subpackagesDict[packageName]:
+                    subpackagesDict[packageName].remove("__init__")
+                    subpackagesDict[packageName].insert(0, "__init__")
+        finally:
+            progress.setValue(tot)
+        return subpackagesDict
+    
     def buildDiagram(self):
         """
         Public method to build the class shapes of the package diagram.
@@ -188,7 +250,13 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                                 routes.append((className, child))
                 
                 del todo[0]
-            
+        
+        # step 3: build the subpackages
+        subpackages = self.__buildSubpackagesDict()
+        for subpackage in sorted(subpackages.keys()):
+            self.__addPackage(subpackage, subpackages[subpackage], 0, 0)
+            nodes.append(subpackage)
+        
         self.__arrangeClasses(nodes, routes[:])
         self.__createAssociations(routes)
         self.umlView.autoAdjustSceneSize(limit=True)
@@ -298,6 +366,21 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         cw.setId(self.umlView.getItemId())
         self.allClasses[_class] = cw
+    
+    def __addPackage(self, name, modules, x, y):
+        """
+        Private method to add a package to the diagram.
+        
+        @param name package name to be shown (string)
+        @param modules list of module names contained in the package
+            (list of strings)
+        @param x x-coordinate (float)
+        @param y y-coordinate (float)
+        """
+        pm = PackageModel(name, modules)
+        pw = PackageItem(pm, x, y, scene=self.scene)
+        pw.setId(self.umlView.getItemId())
+        self.allClasses[name] = pw
     
     def __createAssociations(self, routes):
         """

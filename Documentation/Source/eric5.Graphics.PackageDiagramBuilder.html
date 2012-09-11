@@ -67,11 +67,17 @@ UMLDiagramBuilder
 <td><a href="#PackageDiagramBuilder.__addLocalClass">__addLocalClass</a></td>
 <td>Private method to add a class defined in the module.</td>
 </tr><tr>
+<td><a href="#PackageDiagramBuilder.__addPackage">__addPackage</a></td>
+<td>Private method to add a package to the diagram.</td>
+</tr><tr>
 <td><a href="#PackageDiagramBuilder.__arrangeClasses">__arrangeClasses</a></td>
 <td>Private method to arrange the shapes on the canvas.</td>
 </tr><tr>
 <td><a href="#PackageDiagramBuilder.__buildModulesDict">__buildModulesDict</a></td>
 <td>Private method to build a dictionary of modules contained in the package.</td>
+</tr><tr>
+<td><a href="#PackageDiagramBuilder.__buildSubpackagesDict">__buildSubpackagesDict</a></td>
+<td>Private method to build a dictionary of sub-packages contained in this package.</td>
 </tr><tr>
 <td><a href="#PackageDiagramBuilder.__createAssociations">__createAssociations</a></td>
 <td>Private method to generate the associations between the class shapes.</td>
@@ -159,6 +165,26 @@ y-coordinate (float)
 <dd>
 flag indicating a Ruby module (boolean)
 </dd>
+</dl><a NAME="PackageDiagramBuilder.__addPackage" ID="PackageDiagramBuilder.__addPackage"></a>
+<h4>PackageDiagramBuilder.__addPackage</h4>
+<b>__addPackage</b>(<i>name, modules, x, y</i>)
+<p>
+        Private method to add a package to the diagram.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+package name to be shown (string)
+</dd><dt><i>modules</i></dt>
+<dd>
+list of module names contained in the package
+            (list of strings)
+</dd><dt><i>x</i></dt>
+<dd>
+x-coordinate (float)
+</dd><dt><i>y</i></dt>
+<dd>
+y-coordinate (float)
+</dd>
 </dl><a NAME="PackageDiagramBuilder.__arrangeClasses" ID="PackageDiagramBuilder.__arrangeClasses"></a>
 <h4>PackageDiagramBuilder.__arrangeClasses</h4>
 <b>__arrangeClasses</b>(<i>nodes, routes, whiteSpaceFactor=1.2</i>)
@@ -175,6 +201,16 @@ flag indicating a Ruby module (boolean)
 <dt>Returns:</dt>
 <dd>
 dictionary of modules contained in the package.
+</dd>
+</dl><a NAME="PackageDiagramBuilder.__buildSubpackagesDict" ID="PackageDiagramBuilder.__buildSubpackagesDict"></a>
+<h4>PackageDiagramBuilder.__buildSubpackagesDict</h4>
+<b>__buildSubpackagesDict</b>(<i></i>)
+<p>
+        Private method to build a dictionary of sub-packages contained in this package.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary of sub-packages contained in this package
 </dd>
 </dl><a NAME="PackageDiagramBuilder.__createAssociations" ID="PackageDiagramBuilder.__createAssociations"></a>
 <h4>PackageDiagramBuilder.__createAssociations</h4>

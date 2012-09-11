@@ -7150,8 +7150,10 @@
       <keyword name="PackageDiagramBuilder (Module)" id="PackageDiagramBuilder (Module)" ref="eric5.Graphics.PackageDiagramBuilder.html" />
       <keyword name="PackageDiagramBuilder.__addExternalClass" id="PackageDiagramBuilder.__addExternalClass" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__addExternalClass" />
       <keyword name="PackageDiagramBuilder.__addLocalClass" id="PackageDiagramBuilder.__addLocalClass" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__addLocalClass" />
+      <keyword name="PackageDiagramBuilder.__addPackage" id="PackageDiagramBuilder.__addPackage" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__addPackage" />
       <keyword name="PackageDiagramBuilder.__arrangeClasses" id="PackageDiagramBuilder.__arrangeClasses" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__arrangeClasses" />
       <keyword name="PackageDiagramBuilder.__buildModulesDict" id="PackageDiagramBuilder.__buildModulesDict" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__buildModulesDict" />
+      <keyword name="PackageDiagramBuilder.__buildSubpackagesDict" id="PackageDiagramBuilder.__buildSubpackagesDict" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__buildSubpackagesDict" />
       <keyword name="PackageDiagramBuilder.__createAssociations" id="PackageDiagramBuilder.__createAssociations" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__createAssociations" />
       <keyword name="PackageDiagramBuilder.__getCurrentShape" id="PackageDiagramBuilder.__getCurrentShape" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.__getCurrentShape" />
       <keyword name="PackageDiagramBuilder.buildDiagram" id="PackageDiagramBuilder.buildDiagram" ref="eric5.Graphics.PackageDiagramBuilder.html#PackageDiagramBuilder.buildDiagram" />
