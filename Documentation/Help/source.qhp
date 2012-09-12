@@ -1997,7 +1997,6 @@
       <keyword name="ClassModel.addMethod" id="ClassModel.addMethod" ref="eric5.Graphics.ClassItem.html#ClassModel.addMethod" />
       <keyword name="ClassModel.getAttributes" id="ClassModel.getAttributes" ref="eric5.Graphics.ClassItem.html#ClassModel.getAttributes" />
       <keyword name="ClassModel.getMethods" id="ClassModel.getMethods" ref="eric5.Graphics.ClassItem.html#ClassModel.getMethods" />
-      <keyword name="ClassModel.getName" id="ClassModel.getName" ref="eric5.Graphics.ClassItem.html#ClassModel.getName" />
       <keyword name="ClassScope" id="ClassScope" ref="eric5.Utilities.py3flakes.checker.html#ClassScope" />
       <keyword name="ClassScope" id="ClassScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ClassScope" />
       <keyword name="ClbrBase" id="ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase" />
@@ -6818,7 +6817,6 @@
       <keyword name="ModuleModel (Constructor)" id="ModuleModel (Constructor)" ref="eric5.Graphics.ModuleItem.html#ModuleModel.__init__" />
       <keyword name="ModuleModel.addClass" id="ModuleModel.addClass" ref="eric5.Graphics.ModuleItem.html#ModuleModel.addClass" />
       <keyword name="ModuleModel.getClasses" id="ModuleModel.getClasses" ref="eric5.Graphics.ModuleItem.html#ModuleModel.getClasses" />
-      <keyword name="ModuleModel.getName" id="ModuleModel.getName" ref="eric5.Graphics.ModuleItem.html#ModuleModel.getName" />
       <keyword name="ModuleParser (Module)" id="ModuleParser (Module)" ref="eric5.Utilities.ModuleParser.html" />
       <keyword name="ModuleScope" id="ModuleScope" ref="eric5.Utilities.py3flakes.checker.html#ModuleScope" />
       <keyword name="ModuleScope" id="ModuleScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ModuleScope" />
@@ -7173,7 +7171,6 @@
       <keyword name="PackageModel (Constructor)" id="PackageModel (Constructor)" ref="eric5.Graphics.PackageItem.html#PackageModel.__init__" />
       <keyword name="PackageModel.addModule" id="PackageModel.addModule" ref="eric5.Graphics.PackageItem.html#PackageModel.addModule" />
       <keyword name="PackageModel.getModules" id="PackageModel.getModules" ref="eric5.Graphics.PackageItem.html#PackageModel.getModules" />
-      <keyword name="PackageModel.getName" id="PackageModel.getName" ref="eric5.Graphics.PackageItem.html#PackageModel.getName" />
       <keyword name="Page" id="Page" ref="eric5.Helpviewer.SpeedDial.Page.html#Page" />
       <keyword name="Page (Constructor)" id="Page (Constructor)" ref="eric5.Helpviewer.SpeedDial.Page.html#Page.__init__" />
       <keyword name="Page (Module)" id="Page (Module)" ref="eric5.Helpviewer.SpeedDial.Page.html" />
@@ -10671,6 +10668,7 @@
       <keyword name="UMLGraphicsView.__itemsBoundingRect" id="UMLGraphicsView.__itemsBoundingRect" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__itemsBoundingRect" />
       <keyword name="UMLGraphicsView.__printPreviewPrint" id="UMLGraphicsView.__printPreviewPrint" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__printPreviewPrint" />
       <keyword name="UMLGraphicsView.__relayout" id="UMLGraphicsView.__relayout" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__relayout" />
+      <keyword name="UMLGraphicsView.__rescan" id="UMLGraphicsView.__rescan" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__rescan" />
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
       <keyword name="UMLGraphicsView.__setSize" id="UMLGraphicsView.__setSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__setSize" />
       <keyword name="UMLGraphicsView.__zoom" id="UMLGraphicsView.__zoom" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__zoom" />
@@ -10678,6 +10676,7 @@
       <keyword name="UMLGraphicsView.event" id="UMLGraphicsView.event" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.event" />
       <keyword name="UMLGraphicsView.filteredItems" id="UMLGraphicsView.filteredItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.filteredItems" />
       <keyword name="UMLGraphicsView.findItem" id="UMLGraphicsView.findItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.findItem" />
+      <keyword name="UMLGraphicsView.findItemByName" id="UMLGraphicsView.findItemByName" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.findItemByName" />
       <keyword name="UMLGraphicsView.gestureEvent" id="UMLGraphicsView.gestureEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.gestureEvent" />
       <keyword name="UMLGraphicsView.getItemId" id="UMLGraphicsView.getItemId" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getItemId" />
       <keyword name="UMLGraphicsView.getPersistenceData" id="UMLGraphicsView.getPersistenceData" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.getPersistenceData" />
@@ -10699,6 +10698,7 @@
       <keyword name="UMLItem.buildItemDataString" id="UMLItem.buildItemDataString" ref="eric5.Graphics.UMLItem.html#UMLItem.buildItemDataString" />
       <keyword name="UMLItem.getId" id="UMLItem.getId" ref="eric5.Graphics.UMLItem.html#UMLItem.getId" />
       <keyword name="UMLItem.getItemType" id="UMLItem.getItemType" ref="eric5.Graphics.UMLItem.html#UMLItem.getItemType" />
+      <keyword name="UMLItem.getName" id="UMLItem.getName" ref="eric5.Graphics.UMLItem.html#UMLItem.getName" />
       <keyword name="UMLItem.itemChange" id="UMLItem.itemChange" ref="eric5.Graphics.UMLItem.html#UMLItem.itemChange" />
       <keyword name="UMLItem.moveBy" id="UMLItem.moveBy" ref="eric5.Graphics.UMLItem.html#UMLItem.moveBy" />
       <keyword name="UMLItem.paint" id="UMLItem.paint" ref="eric5.Graphics.UMLItem.html#UMLItem.paint" />
@@ -10708,6 +10708,9 @@
       <keyword name="UMLItem.setId" id="UMLItem.setId" ref="eric5.Graphics.UMLItem.html#UMLItem.setId" />
       <keyword name="UMLItem.setPos" id="UMLItem.setPos" ref="eric5.Graphics.UMLItem.html#UMLItem.setPos" />
       <keyword name="UMLItem.setSize" id="UMLItem.setSize" ref="eric5.Graphics.UMLItem.html#UMLItem.setSize" />
+      <keyword name="UMLModel" id="UMLModel" ref="eric5.Graphics.UMLItem.html#UMLModel" />
+      <keyword name="UMLModel (Constructor)" id="UMLModel (Constructor)" ref="eric5.Graphics.UMLItem.html#UMLModel.__init__" />
+      <keyword name="UMLModel.getName" id="UMLModel.getName" ref="eric5.Graphics.UMLItem.html#UMLModel.getName" />
       <keyword name="UMLSceneSizeDialog" id="UMLSceneSizeDialog" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog" />
       <keyword name="UMLSceneSizeDialog (Constructor)" id="UMLSceneSizeDialog (Constructor)" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog.__init__" />
       <keyword name="UMLSceneSizeDialog (Module)" id="UMLSceneSizeDialog (Module)" ref="eric5.Graphics.UMLSceneSizeDialog.html" />

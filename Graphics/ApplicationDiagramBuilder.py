@@ -73,7 +73,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                 if module.endswith("__init__.py"):
                     continue
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions)
+                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
+                                                            caching=False)
                 except ImportError:
                     continue
                 else:

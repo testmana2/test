@@ -33,6 +33,9 @@ Module implementing the UMLItem base class.
 <tr>
 <td><a href="#UMLItem">UMLItem</a></td>
 <td>Class implementing the UMLItem base class.</td>
+</tr><tr>
+<td><a href="#UMLModel">UMLModel</a></td>
+<td>Class implementing the UMLModel base class.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -76,6 +79,9 @@ QGraphicsRectItem
 <td><a href="#UMLItem.getItemType">getItemType</a></td>
 <td>Public method to get the item's type.</td>
 </tr><tr>
+<td><a href="#UMLItem.getName">getName</a></td>
+<td>Method to retrieve the item name.</td>
+</tr><tr>
 <td><a href="#UMLItem.itemChange">itemChange</a></td>
 <td>Protected method called when an items state changes.</td>
 </tr><tr>
@@ -110,11 +116,14 @@ QGraphicsRectItem
 </table>
 <a NAME="UMLItem.__init__" ID="UMLItem.__init__"></a>
 <h4>UMLItem (Constructor)</h4>
-<b>UMLItem</b>(<i>x=0, y=0, rounded=False, parent=None</i>)
+<b>UMLItem</b>(<i>model=None, x=0, y=0, rounded=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>x</i></dt>
+<dt><i>model</i></dt>
+<dd>
+UML model containing the item data (UMLModel)
+</dd><dt><i>x</i></dt>
 <dd>
 x-coordinate (integer)
 </dd><dt><i>y</i></dt>
@@ -175,6 +184,16 @@ ID of the item (integer)
 <dt>Returns:</dt>
 <dd>
 item type (string)
+</dd>
+</dl><a NAME="UMLItem.getName" ID="UMLItem.getName"></a>
+<h4>UMLItem.getName</h4>
+<b>getName</b>(<i></i>)
+<p>
+        Method to retrieve the item name.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+item name (string)
 </dd>
 </dl><a NAME="UMLItem.itemChange" ID="UMLItem.itemChange"></a>
 <h4>UMLItem.itemChange</h4>
@@ -291,6 +310,58 @@ width of the rectangle (float)
 </dd><dt><i>height</i></dt>
 <dd>
 height of the rectangle (float)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="UMLModel" ID="UMLModel"></a>
+<h2>UMLModel</h2>
+<p>
+    Class implementing the UMLModel base class.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#UMLModel.__init__">UMLModel</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#UMLModel.getName">getName</a></td>
+<td>Method to retrieve the model name.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="UMLModel.__init__" ID="UMLModel.__init__"></a>
+<h4>UMLModel (Constructor)</h4>
+<b>UMLModel</b>(<i>name</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+package name (string)
+</dd>
+</dl><a NAME="UMLModel.getName" ID="UMLModel.getName"></a>
+<h4>UMLModel.getName</h4>
+<b>getName</b>(<i></i>)
+<p>
+        Method to retrieve the model name.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+model name (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

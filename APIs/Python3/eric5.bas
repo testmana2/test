@@ -63,6 +63,7 @@ ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
+ClassModel UMLModel
 ClassScope Scope
 ClbrBase _ClbrBase
 ClickToFlash QWidget Ui_ClickToFlash
@@ -393,6 +394,7 @@ MiniEditor QMainWindow
 MiniScintilla QsciScintillaCompat
 Module ClbrBaseClasses.Module VisibilityMixin
 ModuleItem UMLItem
+ModuleModel UMLModel
 ModuleScope Scope
 MultiProject QObject
 MultiProjectBrowser QListWidget
@@ -424,6 +426,7 @@ OpenSearchWriter QXmlStreamWriter
 OperaImporter BookmarksImporter
 PackageDiagramBuilder UMLDiagramBuilder
 PackageItem UMLItem
+PackageModel UMLModel
 PageScreenDialog QDialog Ui_PageScreenDialog
 PageThumbnailer QObject
 PasswordManager QObject

@@ -121,8 +121,13 @@ class UMLGraphicsView(E5GraphicsView):
                     self.trUtf8("Set size"), self)
         self.setSizeAct.triggered[()].connect(self.__setSize)
         
+        self.rescanAct = \
+            QAction(UI.PixmapCache.getIcon("rescan.png"),
+                    self.trUtf8("Re-Scan"), self)
+        self.rescanAct.triggered[()].connect(self.__rescan)
+        
         self.relayoutAct = \
-            QAction(UI.PixmapCache.getIcon("reload.png"),
+            QAction(UI.PixmapCache.getIcon("relayout.png"),
                     self.trUtf8("Re-Layout"), self)
         self.relayoutAct.triggered[()].connect(self.__relayout)
         
@@ -230,6 +235,7 @@ class UMLGraphicsView(E5GraphicsView):
         toolBar.addAction(self.decHeightAct)
         toolBar.addAction(self.setSizeAct)
         toolBar.addSeparator()
+        toolBar.addAction(self.rescanAct)
         toolBar.addAction(self.relayoutAct)
         
         return toolBar
@@ -365,11 +371,38 @@ class UMLGraphicsView(E5GraphicsView):
         
     def __relayout(self):
         """
-        Private method to handle the re-layout context menu entry.
+        Private slot to handle the re-layout context menu entry.
         """
         self.__itemId = -1
         self.scene().clear()
         self.relayout.emit()
+        
+    def __rescan(self):
+        """
+        Private slot to handle the re-scan context menu entry.
+        """
+        # 1. save positions of all items and names of selected items
+        itemPositions = {}
+        selectedItems = []
+        for item in self.filteredItems(self.scene().items(), UMLItem):
+            name = item.getName()
+            if name:
+                itemPositions[name] = (item.x(), item.y())
+                if item.isSelected():
+                    selectedItems.append(name)
+        
+        # 2. save 
+        
+        # 2. re-layout the diagram
+        self.__relayout()
+        
+        # 3. move known items to the saved positions
+        for item in self.filteredItems(self.scene().items(), UMLItem):
+            name = item.getName()
+            if name in itemPositions:
+                item.setPos(*itemPositions[name])
+            if name in selectedItems:
+                item.setSelected(True)
         
     def printDiagram(self):
         """
@@ -631,12 +664,26 @@ class UMLGraphicsView(E5GraphicsView):
         """
         for item in self.scene().items():
             try:
-                itemID = item.getId()
+                if item.getId() == id:
+                    return item
             except AttributeError:
                 continue
-            
-            if itemID == id:
-                return item
+        
+        return None
+    
+    def findItemByName(self, name):
+        """
+        Public method to find an UML item based on it's name.
+        
+        @param name name to look for (string)
+        @return item found (UMLItem) or None
+        """
+        for item in self.scene().items():
+            try:
+                if item.getName() == name:
+                    return item
+            except AttributeError:
+                continue
         
         return None
     

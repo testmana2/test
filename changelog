@@ -14,6 +14,8 @@ Version 5.3-snapshot-2012mmdd:
 - Graphics Dialogs
   -- added capability to store and load diagrams to/from disk
   -- improved the package diagram to include subpackages and their module names
+  -- added the capability to rebuild a diagram without losing the current item
+     positions
 - Version Control System Interfaces
   -- Mercurial
      --- added support for --log and --dry-run to the hg graft operation as of

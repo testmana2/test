@@ -9,10 +9,10 @@ Module implementing a module item.
 
 from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
-from .UMLItem import UMLItem
+from .UMLItem import UMLModel, UMLItem
 
 
-class ModuleModel(object):
+class ModuleModel(UMLModel):
     """
     Class implementing the module model.
     """
@@ -23,9 +23,10 @@ class ModuleModel(object):
         @param name the module name (string)
         @param classlist list of class names (list of strings)
         """
-        self.name = name
-        self.classlist = classlist
+        super().__init__(name)
         
+        self.classlist = classlist
+    
     def addClass(self, classname):
         """
         Method to add a class to the module model.
@@ -33,7 +34,7 @@ class ModuleModel(object):
         @param classname class name to be added (string)
         """
         self.classlist.append(classname)
-        
+    
     def getClasses(self):
         """
         Method to retrieve the classes of the module.
@@ -41,15 +42,7 @@ class ModuleModel(object):
         @return list of class names (list of strings)
         """
         return self.classlist[:]
-        
-    def getName(self):
-        """
-        Method to retrieve the module name.
-        
-        @return module name (string)
-        """
-        return self.name
-        
+
 
 class ModuleItem(UMLItem):
     """
@@ -69,8 +62,7 @@ class ModuleItem(UMLItem):
         @keyparam parent reference to the parent object (QGraphicsItem)
         @keyparam scene reference to the scene object (QGraphicsScene)
         """
-        UMLItem.__init__(self, x, y, rounded, parent)
-        self.model = model
+        UMLItem.__init__(self, model, x, y, rounded, parent)
         
         scene.addItem(self)
         

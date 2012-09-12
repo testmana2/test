@@ -9,12 +9,12 @@ Module implementing an UML like class item.
 
 from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
-from .UMLItem import UMLItem
+from .UMLItem import UMLModel, UMLItem
 
 import Utilities
 
 
-class ClassModel(object):
+class ClassModel(UMLModel):
     """
     Class implementing the class model.
     """
@@ -28,10 +28,11 @@ class ClassModel(object):
         @param attributes list of attribute names of the class
             (list of strings)
         """
-        self.name = name
+        super().__init__(name)
+        
         self.methods = methods
         self.attributes = attributes
-        
+    
     def addMethod(self, method):
         """
         Method to add a method to the class model.
@@ -39,7 +40,7 @@ class ClassModel(object):
         @param method method name to be added (string)
         """
         self.methods.append(method)
-        
+    
     def addAttribute(self, attribute):
         """
         Method to add an attribute to the class model.
@@ -47,7 +48,7 @@ class ClassModel(object):
         @param attribute attribute name to be added (string)
         """
         self.attributes.append(attribute)
-        
+    
     def getMethods(self):
         """
         Method to retrieve the methods of the class.
@@ -55,7 +56,7 @@ class ClassModel(object):
         @return list of class methods (list of strings)
         """
         return self.methods[:]
-        
+    
     def getAttributes(self):
         """
         Method to retrieve the attributes of the class.
@@ -63,14 +64,6 @@ class ClassModel(object):
         @return list of class attributes (list of strings)
         """
         return self.attributes[:]
-        
-    def getName(self):
-        """
-        Method to retrieve the class name.
-        
-        @return class name (string)
-        """
-        return self.name
     
 
 class ClassItem(UMLItem):
@@ -93,8 +86,8 @@ class ClassItem(UMLItem):
         @keyparam parent reference to the parent object (QGraphicsItem)
         @keyparam scene reference to the scene object (QGraphicsScene)
         """
-        UMLItem.__init__(self, x, y, rounded, parent)
-        self.model = model
+        UMLItem.__init__(self, model, x, y, rounded, parent)
+        
         self.external = external
         self.noAttrs = noAttrs
         

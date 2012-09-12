@@ -13,22 +13,46 @@ from PyQt4.QtGui import QGraphicsItem, QGraphicsRectItem, QStyle
 import Preferences
 
 
+class UMLModel(object):
+    """
+    Class implementing the UMLModel base class.
+    """
+    def __init__(self, name):
+        """
+        Constructor
+        
+        @param name package name (string)
+        """
+        self.name = name
+    
+    def getName(self):
+        """
+        Method to retrieve the model name.
+        
+        @return model name (string)
+        """
+        return self.name
+
+
 class UMLItem(QGraphicsRectItem):
     """
     Class implementing the UMLItem base class.
     """
     ItemType = "UMLItem"
     
-    def __init__(self, x=0, y=0, rounded=False, parent=None):
+    def __init__(self, model=None, x=0, y=0, rounded=False, parent=None):
         """
         Constructor
         
+        @param model UML model containing the item data (UMLModel)
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         @param rounded flag indicating a rounded corner (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
         super().__init__(parent)
+        self.model = model
+        
         self.font = Preferences.getGraphics("Font")
         self.margin = 5
         self.associations = []
@@ -49,7 +73,18 @@ class UMLItem(QGraphicsRectItem):
         except AttributeError:
             # only available for Qt 4.6.0 and newer
             pass
+    
+    def getName(self):
+        """
+        Method to retrieve the item name.
         
+        @return item name (string)
+        """
+        if self.model:
+            return self.model.name
+        else:
+            return ""
+    
     def setSize(self, width, height):
         """
         Public method to set the rectangles size.
@@ -60,7 +95,7 @@ class UMLItem(QGraphicsRectItem):
         rect = self.rect()
         rect.setSize(QSizeF(width, height))
         self.setRect(rect)
-        
+    
     def addAssociation(self, assoc):
         """
         Method to add an association to this widget.
@@ -69,7 +104,7 @@ class UMLItem(QGraphicsRectItem):
         """
         if assoc and not assoc in self.associations:
             self.associations.append(assoc)
-        
+    
     def removeAssociation(self, assoc):
         """
         Method to remove an association to this widget.
@@ -78,7 +113,7 @@ class UMLItem(QGraphicsRectItem):
         """
         if assoc and assoc in self.associations:
             self.associations.remove(assoc)
-        
+    
     def removeAssociations(self):
         """
         Method to remove all associations of this widget.
@@ -87,7 +122,7 @@ class UMLItem(QGraphicsRectItem):
             assoc.unassociate()
             assoc.hide()
             del assoc
-        
+    
     def adjustAssociations(self):
         """
         Method to adjust the associations to widget movements.
@@ -96,7 +131,7 @@ class UMLItem(QGraphicsRectItem):
             for assoc in self.associations:
                 assoc.widgetMoved()
             self.shouldAdjustAssociations = False
-        
+    
     def moveBy(self, dx, dy):
         """
         Overriden method to move the widget relative.
@@ -106,7 +141,7 @@ class UMLItem(QGraphicsRectItem):
         """
         super().moveBy(dx, dy)
         self.adjustAssociations()
-        
+    
     def setPos(self, x, y):
         """
         Overriden method to set the items position.
@@ -116,7 +151,7 @@ class UMLItem(QGraphicsRectItem):
         """
         super().setPos(x, y)
         self.adjustAssociations()
-        
+    
     def itemChange(self, change, value):
         """
         Protected method called when an items state changes.
@@ -138,7 +173,7 @@ class UMLItem(QGraphicsRectItem):
                 return value
             
         return QGraphicsItem.itemChange(self, change, value)
-        
+    
     def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
@@ -157,7 +192,7 @@ class UMLItem(QGraphicsRectItem):
         painter.setBrush(self.brush())
         painter.drawRect(self.rect())
         self.adjustAssociations()
-        
+    
     def setId(self, id):
         """
         Public method to assign an ID to the item.

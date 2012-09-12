@@ -1218,22 +1218,22 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation type="unfinished">Analisi moduli...</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="185"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="186"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
         <translation type="unfinished">&lt;&lt;Applicazione&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="187"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="188"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
         <translation type="unfinished">&lt;&lt;Altri&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="268"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
         <source>Load Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="268"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28551,32 +28551,32 @@ Reason: {1}</source>
 <context>
     <name>PackageDiagramBuilder</name>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="52"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="53"/>
         <source>Package Diagram {0}: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="55"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="56"/>
         <source>Package Diagram: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="87"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="138"/>
         <source>Parsing modules...</source>
         <translation type="unfinished">Analisi moduli...</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="119"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="182"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a package.</source>
         <translation type="unfinished">La direcotry &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non è un pacchetto.</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="127"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="190"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any modules.</source>
         <translation type="unfinished">La direcotry &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non contiene nessun modulo.</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="142"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="205"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
         <translation type="unfinished">Il pacchetto &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non contiene nessuna classe.</translation>
     </message>
@@ -48385,12 +48385,12 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLClassDiagramBuilder.py" line="80"/>
+        <location filename="Graphics/UMLClassDiagramBuilder.py" line="81"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; could not be found.</source>
         <translation type="unfinished">Il moduloe &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non può essere trovato.</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLClassDiagramBuilder.py" line="142"/>
+        <location filename="Graphics/UMLClassDiagramBuilder.py" line="143"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
         <translation type="unfinished">Il modulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; non contiene nessuna classe.</translation>
     </message>
@@ -48531,52 +48531,52 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Imposta dimensioni</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="125"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="130"/>
         <source>Re-Layout</source>
         <translation>Re-Layout</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="210"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="216"/>
         <source>Graphics</source>
         <translation>Grafica</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="360"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="367"/>
         <source>Save Diagram</source>
         <translation>Salva diagramma</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="130"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="135"/>
         <source>Align Left</source>
         <translation>Allinea a sinistra</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="136"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="141"/>
         <source>Align Center Horizontal</source>
         <translation>Allineamento orizzontare centrato</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="142"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="147"/>
         <source>Align Right</source>
         <translation>Allinea a destra</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="148"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="153"/>
         <source>Align Top</source>
         <translation>Allinea in alto</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="154"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="159"/>
         <source>Align Center Vertical</source>
         <translation>Allineamento verticale centrato</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="160"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="165"/>
         <source>Align Bottom</source>
         <translation>Allinea in basso</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="335"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="342"/>
         <source>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</source>
         <translation>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</translation>
     </message>
@@ -48606,14 +48606,19 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Diminuisci altezza di {0} punti</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="360"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="367"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="350"/>
+        <location filename="Graphics/UMLGraphicsView.py" line="357"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Graphics/UMLGraphicsView.py" line="125"/>
+        <source>Re-Scan</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

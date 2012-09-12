@@ -95,7 +95,7 @@ UMLItem
 </p><dl>
 <dt><i>model</i></dt>
 <dd>
-module model containing the module data (ModuleModel)
+package model containing the package data (PackageModel)
 </dd><dt><i>x</i></dt>
 <dd>
 x-coordinate (integer)
@@ -193,7 +193,7 @@ package model containing the package data (PackageModel)
     Class implementing the package model.
 </p>
 <h3>Derived from</h3>
-object
+UMLModel
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -213,9 +213,6 @@ object
 </tr><tr>
 <td><a href="#PackageModel.getModules">getModules</a></td>
 <td>Method to retrieve the modules of the package.</td>
-</tr><tr>
-<td><a href="#PackageModel.getName">getName</a></td>
-<td>Method to retrieve the package name.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -254,16 +251,6 @@ module name to be added (string)
 <dt>Returns:</dt>
 <dd>
 list of module names (list of strings)
-</dd>
-</dl><a NAME="PackageModel.getName" ID="PackageModel.getName"></a>
-<h4>PackageModel.getName</h4>
-<b>getName</b>(<i></i>)
-<p>
-        Method to retrieve the package name.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-package name (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

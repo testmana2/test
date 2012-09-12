@@ -94,7 +94,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 QApplication.processEvents()
                 prog += 1
                 try:
-                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions)
+                    mod = Utilities.ModuleParser.readModule(module, extensions=extensions,
+                                                            caching=False)
                 except ImportError:
                     continue
                 else:
@@ -150,7 +151,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                     prog += 1
                     try:
                         mod = Utilities.ModuleParser.readModule(
-                            module, extensions=extensions)
+                            module, extensions=extensions, caching=False)
                     except ImportError:
                         continue
                     else:

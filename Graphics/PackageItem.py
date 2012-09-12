@@ -9,12 +9,12 @@ Module implementing a package item.
 
 from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
-from .UMLItem import UMLItem
+from .UMLItem import UMLModel, UMLItem
 
 import Utilities
 
 
-class PackageModel(object):
+class PackageModel(UMLModel):
     """
     Class implementing the package model.
     """
@@ -25,9 +25,10 @@ class PackageModel(object):
         @param name package name (string)
         @param moduleslist list of module names (list of strings)
         """
-        self.name = name
-        self.moduleslist = moduleslist
+        super().__init__(name)
         
+        self.moduleslist = moduleslist
+    
     def addModule(self, modulename):
         """
         Method to add a module to the package model.
@@ -35,7 +36,7 @@ class PackageModel(object):
         @param modulename module name to be added (string)
         """
         self.moduleslist.append(modulename)
-        
+    
     def getModules(self):
         """
         Method to retrieve the modules of the package.
@@ -43,15 +44,7 @@ class PackageModel(object):
         @return list of module names (list of strings)
         """
         return self.moduleslist[:]
-        
-    def getName(self):
-        """
-        Method to retrieve the package name.
-        
-        @return package name (string)
-        """
-        return self.name
-        
+
 
 class PackageItem(UMLItem):
     """
@@ -64,7 +57,7 @@ class PackageItem(UMLItem):
         """
         Constructor
         
-        @param model module model containing the module data (ModuleModel)
+        @param model package model containing the package data (PackageModel)
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         @param rounded flag indicating a rounded corner (boolean)
@@ -73,8 +66,7 @@ class PackageItem(UMLItem):
         @keyparam parent reference to the parent object (QGraphicsItem)
         @keyparam scene reference to the scene object (QGraphicsScene)
         """
-        UMLItem.__init__(self, x, y, rounded, parent)
-        self.model = model
+        UMLItem.__init__(self, model, x, y, rounded, parent)
         self.noModules = noModules
         
         scene.addItem(self)

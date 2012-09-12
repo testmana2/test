@@ -74,7 +74,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         try:
             extensions = Preferences.getPython("PythonExtensions") + \
                 Preferences.getPython("Python3Extensions") + ['.rb']
-            module = Utilities.ModuleParser.readModule(self.file, extensions=extensions)
+            module = Utilities.ModuleParser.readModule(self.file, extensions=extensions,
+                                                       caching=False)
         except ImportError:
             ct = QGraphicsTextItem(None, self.scene)
             ct.setHtml(
