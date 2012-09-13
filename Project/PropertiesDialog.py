@@ -52,13 +52,12 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.dirCompleter = E5DirCompleter(self.dirEdit)
         self.mainscriptCompleter = E5FileCompleter(self.mainscriptEdit)
         
-        projectLanguages = sorted(
-            e5App().getObject("DebugServer").getSupportedLanguages())
-        self.languageComboBox.addItems(projectLanguages)
+        self.languageComboBox.addItems(project.getProgrammingLanguages())
         
         projectTypes = project.getProjectTypes()
-        for projectTypeKey in sorted(projectTypes.keys()):
-            self.projectTypeComboBox.addItem(projectTypes[projectTypeKey], projectTypeKey)
+        self.projectTypeComboBox.clear()
+        for projectType in sorted(projectTypes.keys()):
+            self.projectTypeComboBox.addItem(projectTypes[projectType], projectType)
         
         if not new:
             name = os.path.splitext(self.project.pfile)[0]
@@ -66,14 +65,10 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText(self.project.pdata["PROGLANGUAGE"][0]))
             self.mixedLanguageCheckBox.setChecked(self.project.pdata["MIXEDLANGUAGE"][0])
-            try:
-                curIndex = \
-                    self.projectTypeComboBox.findText(
-                        projectTypes[self.project.pdata["PROJECTTYPE"][0]])
-            except KeyError:
-                curIndex = -1
+            curIndex = self.projectTypeComboBox.findData(
+                self.project.pdata["PROJECTTYPE"][0])
             if curIndex == -1:
-                curIndex = self.projectTypeComboBox.findText(projectTypes["Qt4"])
+                curIndex = self.projectTypeComboBox.findData("Qt4")
             self.projectTypeComboBox.setCurrentIndex(curIndex)
             self.dirEdit.setText(self.project.ppath)
             try:
@@ -121,7 +116,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
-                self.projectTypeComboBox.findText(projectTypes["Qt4"]))
+                self.projectTypeComboBox.findData("Qt4"))
             hp = Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
             self.dirEdit.setText(hp)
             self.versionEdit.setText('0.1')
@@ -129,7 +124,24 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.vcsInfoButton.hide()
             if not self.project.vcsSoftwareAvailable():
                 self.vcsCheckBox.hide()
+    
+    @pyqtSlot(str)
+    def on_languageComboBox_currentIndexChanged(self, language):
+        """
+        Private slot handling the selection of a programming language.
         
+        @param language selected programming language (string)
+        """
+        curProjectType = self.getProjectType()
+        
+        self.projectTypeComboBox.clear()
+        projectTypes = self.project.getProjectTypes(language)
+        for projectType in sorted(projectTypes.keys()):
+            self.projectTypeComboBox.addItem(projectTypes[projectType], projectType)
+        
+        self.projectTypeComboBox.setCurrentIndex(
+            self.projectTypeComboBox.findData(curProjectType))
+    
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """
@@ -143,7 +155,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         if directory:
             self.dirEdit.setText(Utilities.toNativeSeparators(directory))
-        
+    
     @pyqtSlot()
     def on_spellPropertiesButton_clicked(self):
         """
@@ -155,7 +167,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         res = self.spellPropertiesDlg.exec_()
         if res == QDialog.Rejected:
             self.spellPropertiesDlg.initDialog()  # reset the dialogs contents
-        
+    
     @pyqtSlot()
     def on_transPropertiesButton_clicked(self):
         """
@@ -169,7 +181,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         res = self.transPropertiesDlg.exec_()
         if res == QDialog.Rejected:
             self.transPropertiesDlg.initDialog()  # reset the dialogs contents
-        
+    
     @pyqtSlot()
     def on_mainscriptButton_clicked(self):
         """
@@ -196,7 +208,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 ppath = QDir(ppath).absolutePath() + QDir.separator()
                 fn = fn.replace(ppath, "")
             self.mainscriptEdit.setText(Utilities.toNativeSeparators(fn))
-        
+    
     @pyqtSlot()
     def on_vcsInfoButton_clicked(self):
         """
@@ -208,7 +220,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         info = self.project.vcs.vcsRepositoryInfos(self.project.ppath)
         dlg = VcsRepositoryInfoDialog(self, info)
         dlg.exec_()
-        
+    
     def getProjectType(self):
         """
         Public method to get the selected project type.
@@ -216,7 +228,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @return selected UI type (string)
         """
         return self.projectTypeComboBox.itemData(self.projectTypeComboBox.currentIndex())
-        
+    
     def getPPath(self):
         """
         Public method to get the project path.
@@ -224,7 +236,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @return data of the project directory edit (string)
         """
         return os.path.abspath(self.dirEdit.text())
-        
+    
     def storeData(self):
         """
         Public method to store the entered/modified data.

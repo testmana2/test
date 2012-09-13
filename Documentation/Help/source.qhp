@@ -7721,6 +7721,7 @@
       <keyword name="Project.getMenu" id="Project.getMenu" ref="eric5.Project.Project.html#Project.getMenu" />
       <keyword name="Project.getModel" id="Project.getModel" ref="eric5.Project.Project.html#Project.getModel" />
       <keyword name="Project.getMostRecent" id="Project.getMostRecent" ref="eric5.Project.Project.html#Project.getMostRecent" />
+      <keyword name="Project.getProgrammingLanguages" id="Project.getProgrammingLanguages" ref="eric5.Project.Project.html#Project.getProgrammingLanguages" />
       <keyword name="Project.getProjectDictionaries" id="Project.getProjectDictionaries" ref="eric5.Project.Project.html#Project.getProjectDictionaries" />
       <keyword name="Project.getProjectFile" id="Project.getProjectFile" ref="eric5.Project.Project.html#Project.getProjectFile" />
       <keyword name="Project.getProjectLanguage" id="Project.getProjectLanguage" ref="eric5.Project.Project.html#Project.getProjectLanguage" />
@@ -8100,6 +8101,7 @@
       <keyword name="PropertiesDialog.getPPath" id="PropertiesDialog.getPPath" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.getPPath" />
       <keyword name="PropertiesDialog.getProjectType" id="PropertiesDialog.getProjectType" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.getProjectType" />
       <keyword name="PropertiesDialog.on_dirButton_clicked" id="PropertiesDialog.on_dirButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_dirButton_clicked" />
+      <keyword name="PropertiesDialog.on_languageComboBox_currentIndexChanged" id="PropertiesDialog.on_languageComboBox_currentIndexChanged" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_languageComboBox_currentIndexChanged" />
       <keyword name="PropertiesDialog.on_mainscriptButton_clicked" id="PropertiesDialog.on_mainscriptButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_mainscriptButton_clicked" />
       <keyword name="PropertiesDialog.on_spellPropertiesButton_clicked" id="PropertiesDialog.on_spellPropertiesButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_spellPropertiesButton_clicked" />
       <keyword name="PropertiesDialog.on_transPropertiesButton_clicked" id="PropertiesDialog.on_transPropertiesButton_clicked" ref="eric5.Project.PropertiesDialog.html#PropertiesDialog.on_transPropertiesButton_clicked" />

@@ -5,17 +5,20 @@ Version 5.3-snapshot-2012mmdd:
 - General
   -- introduced a "workspace" directory that is used as the default for opening
      or saving new files or projects (configurable on Multiproject config page)
+- Configuration Dialog
+  -- added a filter edit to filter the configuration tree
 - Debug Viewer
   -- added the configurable capability to automatically show the source,
      when the call frame is changed in the callstack viewer of the local
      variables viewer
-- Configuration Dialog
-  -- added a filter edit to filter the configuration tree
 - Graphics Dialogs
   -- added capability to store and load diagrams to/from disk
   -- improved the package diagram to include subpackages and their module names
   -- added the capability to rebuild a diagram without losing the current item
      positions
+- Project
+  -- made the selectable project types of the project properties dialog dependent
+     upon the selected programming language
 - Version Control System Interfaces
   -- Mercurial
      --- added support for --log and --dry-run to the hg graft operation as of

@@ -447,6 +447,9 @@ QObject
 <td><a href="#Project.getMostRecent">getMostRecent</a></td>
 <td>Public method to get the most recently opened project.</td>
 </tr><tr>
+<td><a href="#Project.getProgrammingLanguages">getProgrammingLanguages</a></td>
+<td>Public method to get the programming languages supported by project.</td>
+</tr><tr>
 <td><a href="#Project.getProjectDictionaries">getProjectDictionaries</a></td>
 <td>Public method to get the names of the project specific dictionaries.</td>
 </tr><tr>
@@ -1502,6 +1505,16 @@ reference to the project browser model (ProjectBrowserModel)
 <dd>
 path of the most recently opened project (string)
 </dd>
+</dl><a NAME="Project.getProgrammingLanguages" ID="Project.getProgrammingLanguages"></a>
+<h4>Project.getProgrammingLanguages</h4>
+<b>getProgrammingLanguages</b>(<i></i>)
+<p>
+        Public method to get the programming languages supported by project.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of supported programming languages (list of string)
+</dd>
 </dl><a NAME="Project.getProjectDictionaries" ID="Project.getProjectDictionaries"></a>
 <h4>Project.getProjectDictionaries</h4>
 <b>getProjectDictionaries</b>(<i></i>)
@@ -1587,10 +1600,15 @@ UI type of the project (string)
 </dd>
 </dl><a NAME="Project.getProjectTypes" ID="Project.getProjectTypes"></a>
 <h4>Project.getProjectTypes</h4>
-<b>getProjectTypes</b>(<i></i>)
+<b>getProjectTypes</b>(<i>progLanguage=""</i>)
 <p>
         Public method to get the list of supported project types.
 </p><dl>
+<dt><i>progLanguage</i></dt>
+<dd>
+programming language to get project types for (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 reference to the dictionary of project types.
@@ -1711,13 +1729,21 @@ flag indicating, if the project contains the file (boolean)
 </dd>
 </dl><a NAME="Project.hasProjectType" ID="Project.hasProjectType"></a>
 <h4>Project.hasProjectType</h4>
-<b>hasProjectType</b>(<i>type_</i>)
+<b>hasProjectType</b>(<i>type_, progLanguage=""</i>)
 <p>
         Public method to check, if a project type is already registered.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
-internal type designator to be unregistered (string)
+internal type designator (string)
+</dd><dt><i>progLanguage</i></dt>
+<dd>
+programming language of the project type (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating presence of the project type (boolean)
 </dd>
 </dl><a NAME="Project.initActions" ID="Project.initActions"></a>
 <h4>Project.initActions</h4>
@@ -1966,7 +1992,7 @@ flag indicating an update of the model is requested (boolean)
 </dd>
 </dl><a NAME="Project.registerProjectType" ID="Project.registerProjectType"></a>
 <h4>Project.registerProjectType</h4>
-<b>registerProjectType</b>(<i>type_, description, fileTypeCallback=None, binaryTranslationsCallback=None, lexerAssociationCallback=None</i>)
+<b>registerProjectType</b>(<i>type_, description, fileTypeCallback=None, binaryTranslationsCallback=None, lexerAssociationCallback=None, progLanguages=None</i>)
 <p>
         Public method to register a project type.
 </p><dl>
@@ -1990,6 +2016,10 @@ reference to a method returning the
 reference to a method returning the
             lexer type to be used for syntax highlighting given the name of
             a file
+</dd><dt><i>progLanguages=</i></dt>
+<dd>
+programming languages supported by the
+            project type (list of string)
 </dd>
 </dl><a NAME="Project.removeDirectory" ID="Project.removeDirectory"></a>
 <h4>Project.removeDirectory</h4>

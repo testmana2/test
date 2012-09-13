@@ -196,6 +196,12 @@ class Project(QObject):
         
         self.ui = parent
         
+        self.__progLanguages = [
+            "Python2",
+            "Python3",
+            "Ruby",
+        ]
+        
         self.sourceExtensions = {
             "Python2": Preferences.getPython("PythonExtensions"),
             "Python3": Preferences.getPython("Python3Extensions"),
@@ -235,6 +241,14 @@ class Project(QObject):
         self.applicationDiagram = None
         self.loadedDiagram = None
         
+    def getProgrammingLanguages(self):
+        """
+        Public method to get the programming languages supported by project.
+        
+        @return list of supported programming languages (list of string)
+        """
+        return self.__progLanguages[:]
+    
     def __initProjectTypes(self):
         """
         Private method to initialize the list of supported project types.
@@ -243,35 +257,59 @@ class Project(QObject):
         self.__fileTypeCallbacks = {}
         self.__lexerAssociationCallbacks = {}
         self.__binaryTranslationsCallbacks = {}
+        
         self.__projectTypes["Qt4"] = self.trUtf8("Qt4 GUI")
         self.__projectTypes["Qt4C"] = self.trUtf8("Qt4 Console")
         self.__projectTypes["E4Plugin"] = self.trUtf8("Eric Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")
+        
+        self.__projectProgLanguages = {
+            "Python2": ["Qt4", "Qt4C", "E4Plugin", "Console", "Other"],
+            "Python3": ["Qt4", "Qt4C", "E4Plugin", "Console", "Other"],
+            "Ruby": ["Qt4", "Qt4C", "Console", "Other"],
+        }
+        
         if Utilities.checkPyside():
             self.__projectTypes["PySide"] = self.trUtf8("PySide GUI")
             self.__projectTypes["PySideC"] = self.trUtf8("PySide Console")
+            self.__projectProgLanguages["Python2"].extend(["PySide", "PySideC"])
+            self.__projectProgLanguages["Python3"].extend(["PySide", "PySideC"])
         else:
             pass
         
-    def getProjectTypes(self):
+    def getProjectTypes(self, progLanguage=""):
         """
         Public method to get the list of supported project types.
         
+        @param progLanguage programming language to get project types for (string)
         @return reference to the dictionary of project types.
         """
-        return self.__projectTypes
+        if progLanguage and progLanguage in self.__projectProgLanguages:
+            ptypes = {}
+            for ptype in self.__projectProgLanguages[progLanguage]:
+                ptypes[ptype] = self.__projectTypes[ptype]
+            return ptypes
+        else:
+            return self.__projectTypes
         
-    def hasProjectType(self, type_):
+    def hasProjectType(self, type_, progLanguage=""):
         """
         Public method to check, if a project type is already registered.
         
-        @param type_ internal type designator to be unregistered (string)
+        @param type_ internal type designator (string)
+        @param progLanguage programming language of the project type (string)
+        @return flag indicating presence of the project type (boolean)
         """
-        return type_ in self.__projectTypes
+        if progLanguage:
+            return progLanguage in self.__projectProgLanguages and \
+                type_ in self.__projectProgLanguages[progLanguage]
+        else:
+            return type_ in self.__projectTypes
         
     def registerProjectType(self, type_, description, fileTypeCallback=None,
-        binaryTranslationsCallback=None, lexerAssociationCallback=None):
+        binaryTranslationsCallback=None, lexerAssociationCallback=None,
+        progLanguages=None):
         """
         Public method to register a project type.
         
@@ -285,18 +323,48 @@ class Project(QObject):
         @keyparam lexerAssociationCallback reference to a method returning the
             lexer type to be used for syntax highlighting given the name of
             a file
+        @keyparam progLanguages programming languages supported by the
+            project type (list of string)
         """
+        if progLanguages:
+            for progLanguage in progLanguages:
+                if progLanguage not in self.__projectProgLanguages:
+                    E5MessageBox.critical(self.ui,
+                        self.trUtf8("Registering Project Type"),
+                        self.trUtf8("""<p>The Programming Language <b>{0}</b> is not"""
+                                    """ supported.</p>""")\
+                            .format(progLanguage)
+                    )
+                    return
+                
+                if type_ in self.__projectProgLanguages[progLanguage]:
+                    E5MessageBox.critical(self.ui,
+                        self.trUtf8("Registering Project Type"),
+                        self.trUtf8("""<p>The Project type <b>{0}</b> is already"""
+                                    """ registered with Programmin Language"""
+                                    """ <b>{1}</b>.</p>""")\
+                            .format(type_, progLanguage)
+                    )
+                    return
+            
         if type_ in self.__projectTypes:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Registering Project Type"),
-                self.trUtf8("""<p>The Project type <b>{0}</b> already exists.</p>""")\
-                    .format(type_)
+                self.trUtf8("""<p>The Project type <b>{0}</b> is already"""
+                            """ registered.</p>""").format(type_)
             )
         else:
             self.__projectTypes[type_] = description
             self.__fileTypeCallbacks[type_] = fileTypeCallback
             self.__lexerAssociationCallbacks[type_] = lexerAssociationCallback
             self.__binaryTranslationsCallbacks[type_] = binaryTranslationsCallback
+            if progLanguages:
+                for progLanguage in progLanguages:
+                    self.__projectProgLanguages[progLanguage].append(type_)
+            else:
+                # no specific programming languages given -> add to all
+                for progLanguage in self.__projectProgLanguages:
+                    self.__projectProgLanguages[progLanguage].append(type_)
         
     def unregisterProjectType(self, type_):
         """
@@ -304,6 +372,9 @@ class Project(QObject):
         
         @param type_ internal type designator to be unregistered (string)
         """
+        for progLanguage in self.__projectProgLanguages:
+            if type in self.__projectProgLanguages[progLanguage]:
+                self.__projectProgLanguages[progLanguage].remove(type_)
         if type_ in self.__projectTypes:
             del self.__projectTypes[type_]
         if type_ in self.__fileTypeCallbacks:
