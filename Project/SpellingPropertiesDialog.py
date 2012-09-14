@@ -60,19 +60,21 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         self.spellingComboBox.setCurrentIndex(index)
         if self.project.pdata["SPELLWORDS"][0]:
             self.pwlEdit.setText(
-                os.path.join(self.project.ppath, self.project.pdata["SPELLWORDS"][0]))
+                Utilities.toNativeSeparators(self.project.pdata["SPELLWORDS"][0]))
         if self.project.pdata["SPELLEXCLUDES"][0]:
             self.pelEdit.setText(
-                os.path.join(self.project.ppath, self.project.pdata["SPELLEXCLUDES"][0]))
+                Utilities.toNativeSeparators(self.project.pdata["SPELLEXCLUDES"][0]))
     
     @pyqtSlot()
     def on_pwlButton_clicked(self):
         """
         Private slot to select the project word list file.
         """
-        pwl = self.pwlEdit.text()
+        pwl = Utilities.fromNativeSeparators(self.pwlEdit.text())
         if not pwl:
             pwl = self.project.ppath
+        elif not os.path.isabs(pwl):
+            pwl = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, pwl))
         file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project word list"),
@@ -80,16 +82,19 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
         
         if file:
-            self.pwlEdit.setText(Utilities.toNativeSeparators(file))
+            self.pwlEdit.setText(self.project.getRelativePath(
+                Utilities.toNativeSeparators(file)))
     
     @pyqtSlot()
     def on_pelButton_clicked(self):
         """
         Private slot to select the project exclude list file.
         """
-        pel = self.pelEdit.text()
+        pel = Utilities.fromNativeSeparators(self.pelEdit.text())
         if not pel:
             pel = self.project.ppath
+        elif not os.path.isabs(pel):
+            pel = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, pel))
         file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project exclude list"),
@@ -97,7 +102,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
-            self.pelEdit.setText(Utilities.toNativeSeparators(file))
+            self.pelEdit.setText(self.project.getRelativePath(
+                Utilities.toNativeSeparators(file)))
     
     def storeData(self):
         """
