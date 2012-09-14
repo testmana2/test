@@ -59,9 +59,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
                 patterns[filetype].append(pattern)
         self.filters = self.trUtf8("Source Files ({0});;")\
             .format(" ".join(patterns["SOURCES"]))
-        if self.parent.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            self.filters += self.trUtf8("Forms Files ({0});;")\
-                .format(" ".join(patterns["FORMS"]))
+        self.filters += self.trUtf8("Forms Files ({0});;")\
+            .format(" ".join(patterns["FORMS"]))
         self.filters += self.trUtf8("All Files (*)")
         
     def initDialog(self):
@@ -70,13 +69,13 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         try:
-            self.transPatternEdit.setText(os.path.join(
-                self.project.ppath, self.project.pdata["TRANSLATIONPATTERN"][0]))
+            self.transPatternEdit.setText(Utilities.toNativeSeparators(
+                self.project.pdata["TRANSLATIONPATTERN"][0]))
         except IndexError:
             pass
         try:
-            self.transBinPathEdit.setText(os.path.join(
-                self.project.ppath, self.project.pdata["TRANSLATIONSBINPATH"][0]))
+            self.transBinPathEdit.setText(Utilities.toNativeSeparators(
+                self.project.pdata["TRANSLATIONSBINPATH"][0]))
         except IndexError:
             pass
         self.exceptionsList.clear()
@@ -89,9 +88,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to display a file selection dialog.
         """
-        tp = self.transPatternEdit.text()
+        tp = Utilities.fromNativeSeparators(self.transPatternEdit.text())
         if "%language%" in tp:
             tp = tp.split("%language%")[0]
+        if not os.path.isabs(tp):
+            tp = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, tp))
         tsfile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select translation file"),
@@ -99,7 +100,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             "")
         
         if tsfile:
-            self.transPatternEdit.setText(Utilities.toNativeSeparators(tsfile))
+            self.transPatternEdit.setText(self.project.getRelativePath(
+                Utilities.toNativeSeparators(tsfile)))
         
     @pyqtSlot(str)
     def on_transPatternEdit_textChanged(self, txt):
@@ -116,13 +118,17 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to display a directory selection dialog.
         """
+        tbp = Utilities.fromNativeSeparators(self.transBinPathEdit.text())
+        if not os.path.isabs(tbp):
+            tbp = Utilities.fromNativeSeparators(os.path.join(self.project.ppath, tbp))
         directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory for binary translations"),
-            self.transBinPathEdit.text())
+            tbp)
         
         if directory:
-            self.transBinPathEdit.setText(Utilities.toNativeSeparators(directory))
+            self.transBinPathEdit.setText(self.project.getRelativePath(
+                Utilities.toNativeSeparators(directory)))
         
     @pyqtSlot()
     def on_deleteExceptionButton_clicked(self):
