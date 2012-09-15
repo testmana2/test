@@ -257,6 +257,8 @@ class FtpReply(QNetworkReply):
             else:
                 self.__setListContent()
         elif cmd == QFtp.Get:
+            self.__content.append(512 * b' ')
+            self.readyRead.emit()
             self.finished.emit()
             self.__ftp.close()
     
@@ -273,7 +275,6 @@ class FtpReply(QNetworkReply):
         Private slot to process data from the FTP server.
         """
         self.__content += self.__ftp.readAll()
-        self.readyRead.emit()
     
     def __setContent(self):
         """
@@ -401,6 +402,7 @@ class FtpReply(QNetworkReply):
             table
         )
         self.__content = QByteArray(content.encode("utf8"))
+        self.__content.append(512 * b' ')
         
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
         self.setHeader(QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
