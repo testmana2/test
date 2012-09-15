@@ -4502,13 +4502,10 @@
       <keyword name="FtpReply" id="FtpReply" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply" />
       <keyword name="FtpReply (Constructor)" id="FtpReply (Constructor)" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__init__" />
       <keyword name="FtpReply (Module)" id="FtpReply (Module)" ref="eric5.Helpviewer.Network.FtpReply.html" />
-      <keyword name="FtpReply.__commandStarted" id="FtpReply.__commandStarted" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__commandStarted" />
-      <keyword name="FtpReply.__connectToHost" id="FtpReply.__connectToHost" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__connectToHost" />
       <keyword name="FtpReply.__cssLinkClass" id="FtpReply.__cssLinkClass" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__cssLinkClass" />
-      <keyword name="FtpReply.__errorSignals" id="FtpReply.__errorSignals" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__errorSignals" />
-      <keyword name="FtpReply.__processCommand" id="FtpReply.__processCommand" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processCommand" />
-      <keyword name="FtpReply.__processData" id="FtpReply.__processData" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processData" />
-      <keyword name="FtpReply.__processListInfo" id="FtpReply.__processListInfo" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__processListInfo" />
+      <keyword name="FtpReply.__dirCallback" id="FtpReply.__dirCallback" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__dirCallback" />
+      <keyword name="FtpReply.__doFtpCommands" id="FtpReply.__doFtpCommands" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__doFtpCommands" />
+      <keyword name="FtpReply.__retrCallback" id="FtpReply.__retrCallback" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__retrCallback" />
       <keyword name="FtpReply.__setContent" id="FtpReply.__setContent" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__setContent" />
       <keyword name="FtpReply.__setListContent" id="FtpReply.__setListContent" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.__setListContent" />
       <keyword name="FtpReply.abort" id="FtpReply.abort" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.abort" />

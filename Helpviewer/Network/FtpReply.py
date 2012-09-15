@@ -7,10 +7,14 @@
 Module implementing a network reply class for FTP resources.
 """
 
-from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer
+import ftplib
+import socket
+import errno
+
+from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, QDate, QTime, \
+    QDateTime, QCoreApplication
 from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QFtp, QNetworkReply, QNetworkRequest, QUrlInfo, \
-    QNetworkProxyQuery, QNetworkProxy, QAuthenticator
+from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QUrlInfo
 from PyQt4.QtWebKit import QWebSettings
 
 import UI.PixmapCache
@@ -95,6 +99,21 @@ class FtpReply(QNetworkReply):
     """
     Class implementing a network reply for FTP resources.
     """
+    Monthnames2Int = {
+        "Jan": 1,
+        "Feb": 2,
+        "Mar": 3,
+        "Apr": 4,
+        "May": 5,
+        "Jun": 6,
+        "Jul": 7,
+        "Aug": 8,
+        "Sep": 9,
+        "Oct": 10,
+        "Nov": 11,
+        "Dec": 12,
+    }
+    
     def __init__(self, url, parent=None):
         """
         Constructor
@@ -106,12 +125,7 @@ class FtpReply(QNetworkReply):
         
         self.__manager = parent
         
-        self.__ftp = QFtp(self)
-        self.__ftp.listInfo.connect(self.__processListInfo)
-        self.__ftp.readyRead.connect(self.__processData)
-        self.__ftp.commandFinished.connect(self.__processCommand)
-        self.__ftp.commandStarted.connect(self.__commandStarted)
-        self.__ftp.dataTransferProgress.connect(self.downloadProgress)
+        self.__ftp = ftplib.FTP()
         
         self.__items = []
         self.__content = QByteArray()
@@ -120,33 +134,10 @@ class FtpReply(QNetworkReply):
         if url.path() == "":
             url.setPath("/")
         self.setUrl(url)
-        # do proxy setup
-        query = QNetworkProxyQuery(url)
-        proxyList = parent.proxyFactory().queryProxy(query)
-        ftpProxy = QNetworkProxy()
-        for proxy in proxyList:
-            if proxy.type() == QNetworkProxy.NoProxy or \
-               proxy.type() == QNetworkProxy.FtpCachingProxy:
-                ftpProxy = proxy
-                break
-        if ftpProxy.type() == QNetworkProxy.DefaultProxy:
-            self.setError(QNetworkReply.ProxyNotFoundError,
-                          self.trUtf8("No suitable proxy found."))
-            QTimer.singleShot(0, self.__errorSignals)
-            return
-        elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
-            self.__ftp.setProxy(ftpProxy.hostName(), ftpProxy.port())
         
         self.__loggingIn = False
         
-        QTimer.singleShot(0, self.__connectToHost)
-    
-    def __errorSignals(self):
-        """
-        Private slot to send signal for errors during initialisation.
-        """
-        self.error.emit(QNetworkReply.ProxyNotFoundError)
-        self.finished.emit()
+        QTimer.singleShot(0, self.__doFtpCommands)
     
     def abort(self):
         """
@@ -184,96 +175,96 @@ class FtpReply(QNetworkReply):
             self.__content.remove(0, len_)
             return buffer
     
-    def __connectToHost(self):
+    def __doFtpCommands(self):
         """
-        Private slot to start the FTP process by connecting to the host.
+        Private slot doing the sequence of FTP commands to get the requested result.
         """
-        self.__ftp.connectToHost(self.url().host())
-    
-    def __commandStarted(self, id):
-        """
-        Private slot to handle the start of FTP commands.
-        
-        @param id id of the command to be processed (integer) (ignored)
-        """
-        cmd = self.__ftp.currentCommand()
-        if cmd == QFtp.Get:
-            self.__setContent()
-    
-    def __processCommand(self, id, error):
-        """
-        Private slot to handle the end of FTP commands.
-        
-        @param id id of the command to be processed (integer) (ignored)
-        @param error flag indicating an error condition (boolean)
-        """
-        if error:
-            if self.__ftp.error() == QFtp.HostNotFound:
-                err = QNetworkReply.HostNotFoundError
-            elif self.__ftp.error() == QFtp.ConnectionRefused:
-                err = QNetworkReply.ConnectionRefusedError
-            else:
-                if self.__loggingIn and \
-                   self.__ftp.state() == QFtp.Connected:
-                    # authentication is required
-                    if "anonymous" in self.__ftp.errorString():
-                        self.__ftp.login()
-                        return
-                    
-                    newUrl = self.url()
-                    auth = QAuthenticator()
-                    self.__manager.authenticationRequired.emit(self, auth)
-                    if not auth.isNull():
-                        if auth.user():
-                            newUrl.setUserName(auth.user())
-                            newUrl.setPassword(auth.password())
-                            self.setUrl(newUrl)
-                        else:
-                            auth.setUser("anonymous")
-                            auth.setPassword("anonymous")
-                        if self.__ftp.state() == QFtp.Connected:
-                            self.__ftp.login(auth.user(), auth.password())
-                            return
-                
-                err = QNetworkReply.ProtocolFailure
-            self.setError(err, self.__ftp.errorString())
-            self.error.emit(err)
-            self.finished.emit()
-            if self.__ftp.state() not in [QFtp.Unconnected, QFtp.Closing]:
-                self.__ftp.close()
-            return
-        
-        cmd = self.__ftp.currentCommand()
-        if cmd == QFtp.ConnectToHost:
-            self.__loggingIn = True
+        try:
+            self.__ftp.connect(self.url().host(), timeout=10)
             self.__ftp.login(self.url().userName(), self.url().password())
-        elif cmd == QFtp.Login:
-            self.__loggingIn = False
-            self.__ftp.list(self.url().path())
-        elif cmd == QFtp.List:
+            self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
             if len(self.__items) == 1 and \
                self.__items[0].isFile():
-                self.__ftp.get(self.url().path())
+                self.__setContent()
+                self.__ftp.retrbinary("RETR " + self.url().path(), self.__retrCallback)
+                self.__content.append(512 * b' ')
+                self.readyRead.emit()
             else:
                 self.__setListContent()
-        elif cmd == QFtp.Get:
-            self.finished.emit()
-            self.__ftp.close()
+            self.__ftp.quit()
+        except ftplib.all_errors as err:
+            if isinstance(err, socket.gaierror):
+                errCode = QNetworkReply.HostNotFoundError
+            elif isinstance(err, socket.error) and err.errno == errno.ECONNREFUSED:
+                errCode = QNetworkReply.ConnectionRefusedError
+            else:
+                errCode = QNetworkReply.ProtocolFailure
+            self.setError(errCode, str(err))
+            self.error.emit(errCode)
+        self.finished.emit()
     
-    def __processListInfo(self, urlInfo):
+    def __dirCallback(self, line):
         """
-        Private slot to process list information from the FTP server.
+        Private slot handling the receipt of directory listings.
         
-        @param urlInfo reference to the information object (QUrlInfo)
+        @param line the received line of the directory listing (string)
         """
-        self.__items.append(QUrlInfo(urlInfo))
+        words = line.split(None, 8)
+        if len(words) < 6:
+            # skip short lines
+            return
+        filename = words[-1].lstrip()
+        i = filename.find(" -> ")
+        if i >= 0:
+            filename = filename[:i]
+        infostuff = words[-5:-1]
+        mode = words[0].strip()
+        
+        info = QUrlInfo()
+        # 1. type of item
+        if mode[0] == "d":
+            info.setDir(True)
+            info.setFile(False)
+        elif mode[0] == "l":
+            info.setSymLink(True)
+        elif mode[0] == "-":
+            info.setDir(False)
+            info.setFile(True)
+        # 2. name
+        info.setName(filename.strip())
+        # 3. size
+        if mode[0] == "-":
+            info.setSize(int(infostuff[0]))
+        # 4. last modified
+        if infostuff[1] in self.Monthnames2Int:
+            month = self.Monthnames2Int[infostuff[1]]
+        else:
+            month = 1
+        if ":" in infostuff[3]:
+            # year is current year
+            year = QDate.currentDate().year()
+            timeStr = infostuff[3]
+        else:
+            year = int(infostuff[3])
+            timeStr = "00:00"
+        date = QDate(year, month, int(infostuff[2]))
+        time = QTime.fromString(timeStr, "hh:mm")
+        lastModified = QDateTime(date, time)
+        info.setLastModified(lastModified)
+        
+        self.__items.append(info)
+        
+        QCoreApplication.processEvents()
     
-    def __processData(self):
+    def __retrCallback(self, data):
         """
-        Private slot to process data from the FTP server.
+        Private slot handling the reception of data.
+        
+        @param data data received from the FTP server (bytes)
         """
-        self.__content += self.__ftp.readAll()
-        self.readyRead.emit()
+        self.__content += QByteArray(data)
+        
+        QCoreApplication.processEvents()
     
     def __setContent(self):
         """
@@ -401,6 +392,7 @@ class FtpReply(QNetworkReply):
             table
         )
         self.__content = QByteArray(content.encode("utf8"))
+        self.__content.append(512 * b' ')
         
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
         self.setHeader(QNetworkRequest.ContentTypeHeader, "text/html; charset=UTF-8")
@@ -410,5 +402,3 @@ class FtpReply(QNetworkReply):
         self.metaDataChanged.emit()
         self.downloadProgress.emit(self.__content.size(), self.__content.size())
         self.readyRead.emit()
-        self.finished.emit()
-        self.__ftp.close()

@@ -2621,6 +2621,7 @@ eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.reply?4()
 eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.url?4()
 eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply?1(url, manager, maxRedirects=5)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.FtpReply.FtpReply.Monthnames2Int?7
 eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.isSequential?4()

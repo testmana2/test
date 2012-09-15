@@ -49,7 +49,7 @@ Module implementing a network reply class for FTP resources.
 QNetworkReply
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>Monthnames2Int</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -61,26 +61,17 @@ QNetworkReply
 <td><a href="#FtpReply.__init__">FtpReply</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#FtpReply.__commandStarted">__commandStarted</a></td>
-<td>Private slot to handle the start of FTP commands.</td>
-</tr><tr>
-<td><a href="#FtpReply.__connectToHost">__connectToHost</a></td>
-<td>Private slot to start the FTP process by connecting to the host.</td>
-</tr><tr>
 <td><a href="#FtpReply.__cssLinkClass">__cssLinkClass</a></td>
 <td>Private method to generate a link class with an icon.</td>
 </tr><tr>
-<td><a href="#FtpReply.__errorSignals">__errorSignals</a></td>
-<td>Private slot to send signal for errors during initialisation.</td>
+<td><a href="#FtpReply.__dirCallback">__dirCallback</a></td>
+<td>Private slot handling the receipt of directory listings.</td>
 </tr><tr>
-<td><a href="#FtpReply.__processCommand">__processCommand</a></td>
-<td>Private slot to handle the end of FTP commands.</td>
+<td><a href="#FtpReply.__doFtpCommands">__doFtpCommands</a></td>
+<td>Private slot doing the sequence of FTP commands to get the requested result.</td>
 </tr><tr>
-<td><a href="#FtpReply.__processData">__processData</a></td>
-<td>Private slot to process data from the FTP server.</td>
-</tr><tr>
-<td><a href="#FtpReply.__processListInfo">__processListInfo</a></td>
-<td>Private slot to process list information from the FTP server.</td>
+<td><a href="#FtpReply.__retrCallback">__retrCallback</a></td>
+<td>Private slot handling the reception of data.</td>
 </tr><tr>
 <td><a href="#FtpReply.__setContent">__setContent</a></td>
 <td>Private method to finish the setup of the data.</td>
@@ -118,22 +109,7 @@ requested FTP URL (QUrl)
 <dd>
 reference to the parent object (QObject)
 </dd>
-</dl><a NAME="FtpReply.__commandStarted" ID="FtpReply.__commandStarted"></a>
-<h4>FtpReply.__commandStarted</h4>
-<b>__commandStarted</b>(<i>id</i>)
-<p>
-        Private slot to handle the start of FTP commands.
-</p><dl>
-<dt><i>id</i></dt>
-<dd>
-id of the command to be processed (integer) (ignored)
-</dd>
-</dl><a NAME="FtpReply.__connectToHost" ID="FtpReply.__connectToHost"></a>
-<h4>FtpReply.__connectToHost</h4>
-<b>__connectToHost</b>(<i></i>)
-<p>
-        Private slot to start the FTP process by connecting to the host.
-</p><a NAME="FtpReply.__cssLinkClass" ID="FtpReply.__cssLinkClass"></a>
+</dl><a NAME="FtpReply.__cssLinkClass" ID="FtpReply.__cssLinkClass"></a>
 <h4>FtpReply.__cssLinkClass</h4>
 <b>__cssLinkClass</b>(<i>icon, size=32</i>)
 <p>
@@ -151,38 +127,30 @@ size of the icon to be generated (integer)
 <dd>
 CSS class string (string)
 </dd>
-</dl><a NAME="FtpReply.__errorSignals" ID="FtpReply.__errorSignals"></a>
-<h4>FtpReply.__errorSignals</h4>
-<b>__errorSignals</b>(<i></i>)
+</dl><a NAME="FtpReply.__dirCallback" ID="FtpReply.__dirCallback"></a>
+<h4>FtpReply.__dirCallback</h4>
+<b>__dirCallback</b>(<i>line</i>)
 <p>
-        Private slot to send signal for errors during initialisation.
-</p><a NAME="FtpReply.__processCommand" ID="FtpReply.__processCommand"></a>
-<h4>FtpReply.__processCommand</h4>
-<b>__processCommand</b>(<i>id, error</i>)
-<p>
-        Private slot to handle the end of FTP commands.
+        Private slot handling the receipt of directory listings.
 </p><dl>
-<dt><i>id</i></dt>
+<dt><i>line</i></dt>
 <dd>
-id of the command to be processed (integer) (ignored)
-</dd><dt><i>error</i></dt>
-<dd>
-flag indicating an error condition (boolean)
+the received line of the directory listing (string)
 </dd>
-</dl><a NAME="FtpReply.__processData" ID="FtpReply.__processData"></a>
-<h4>FtpReply.__processData</h4>
-<b>__processData</b>(<i></i>)
+</dl><a NAME="FtpReply.__doFtpCommands" ID="FtpReply.__doFtpCommands"></a>
+<h4>FtpReply.__doFtpCommands</h4>
+<b>__doFtpCommands</b>(<i></i>)
 <p>
-        Private slot to process data from the FTP server.
-</p><a NAME="FtpReply.__processListInfo" ID="FtpReply.__processListInfo"></a>
-<h4>FtpReply.__processListInfo</h4>
-<b>__processListInfo</b>(<i>urlInfo</i>)
+        Private slot doing the sequence of FTP commands to get the requested result.
+</p><a NAME="FtpReply.__retrCallback" ID="FtpReply.__retrCallback"></a>
+<h4>FtpReply.__retrCallback</h4>
+<b>__retrCallback</b>(<i>data</i>)
 <p>
-        Private slot to process list information from the FTP server.
+        Private slot handling the reception of data.
 </p><dl>
-<dt><i>urlInfo</i></dt>
+<dt><i>data</i></dt>
 <dd>
-reference to the information object (QUrlInfo)
+data received from the FTP server (bytes)
 </dd>
 </dl><a NAME="FtpReply.__setContent" ID="FtpReply.__setContent"></a>
 <h4>FtpReply.__setContent</h4>
