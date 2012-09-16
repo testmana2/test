@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1201,32 +1202,32 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="46"/>
         <source>Application Diagram {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de aplicación {0}</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="65"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizando módulos...</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="186"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Aplicación&gt;&gt;</translation>
+        <translation>&lt;&lt;Aplicación&gt;&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="188"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Otros&gt;&gt;</translation>
+        <translation>&lt;&lt;Otros&gt;&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
         <source>Load Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Diagrama</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El diagrama pertenece al proyecto &lt;b&gt;{0}&lt;/b&gt;. ¿Abrir proyecto?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1986,8 +1987,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2228,8 +2229,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -6568,7 +6569,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Graphics/E5GraphicsView.py" line="326"/>
         <source>{0}, Page {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0}, Página {1}</translation>
     </message>
 </context>
 <context>
@@ -8211,7 +8212,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="792"/>
         <source>Load Diagram...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Diagrama...</translation>
     </message>
 </context>
 <context>
@@ -13798,7 +13799,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -24376,22 +24377,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Graphics/ImportsDiagramBuilder.py" line="63"/>
         <source>Imports Diagramm {0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Imports {0}: {1}</translation>
     </message>
     <message>
         <location filename="Graphics/ImportsDiagramBuilder.py" line="66"/>
         <source>Imports Diagramm: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Imports: {0}</translation>
     </message>
     <message>
         <location filename="Graphics/ImportsDiagramBuilder.py" line="87"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizando módulos...</translation>
     </message>
     <message>
         <location filename="Graphics/ImportsDiagramBuilder.py" line="116"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a Python package.</source>
-        <translation type="unfinished">El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete Python.</translation>
+        <translation>El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete Python.</translation>
     </message>
 </context>
 <context>
@@ -28071,32 +28072,32 @@ Razón: {1}</translation>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="53"/>
         <source>Package Diagram {0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Paquetes {0}: {1}</translation>
     </message>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="56"/>
         <source>Package Diagram: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Paquetes: {0}</translation>
     </message>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="138"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizando módulos...</translation>
     </message>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="182"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a package.</source>
-        <translation type="unfinished">El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete.</translation>
+        <translation>El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete.</translation>
     </message>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="190"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any modules.</source>
-        <translation type="unfinished">El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ningún módulo.</translation>
+        <translation>El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ningún módulo.</translation>
     </message>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="205"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
-        <translation type="unfinished">El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
+        <translation>El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
     </message>
 </context>
 <context>
@@ -30980,37 +30981,37 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/Project.py" line="3341"/>
         <source>Load Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Diagrama</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3341"/>
         <source>&amp;Load Diagram...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cargar Diagrama...</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3344"/>
         <source>Load a diagram from file.</source>
-        <translation type="unfinished"></translation>
+        <translation>CArgar diagrama desde archivo.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3346"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cargar Diagrama...&lt;/b&gt;&lt;p&gt;Carga un diagrama desde un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="332"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El Lenguaje de Programación &lt;b&gt;{0}&lt;/b&gt; no está soportado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="341"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programmin Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado con el Lenguaje de Programación &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="351"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El Tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -32215,7 +32216,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/ProjectSourcesBrowser.py" line="297"/>
         <source>Load Diagram...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Diagrama...</translation>
     </message>
 </context>
 <context>
@@ -47429,22 +47430,22 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="50"/>
         <source>Class Diagram {0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Clases {0}: {1}</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="53"/>
         <source>Class Diagram: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Clases: {0}</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="81"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; could not be found.</source>
-        <translation type="unfinished">No se encuentra el módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt;.</translation>
+        <translation>No se encuentra el módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt;.</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="143"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
-        <translation type="unfinished">El módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
+        <translation>El módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
     </message>
 </context>
 <context>
@@ -47462,82 +47463,82 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Graphics/UMLDialog.py" line="77"/>
         <source>Load</source>
-        <translation type="unfinished">Cargar</translation>
+        <translation>Cargar</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="82"/>
         <source>Save</source>
-        <translation type="unfinished">Guardar</translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="87"/>
         <source>Save As...</source>
-        <translation type="unfinished">Guardar como...</translation>
+        <translation>Guardar como...</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="92"/>
         <source>Save as PNG</source>
-        <translation type="unfinished">Guardar como PNG</translation>
+        <translation>Guardar como PNG</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="97"/>
         <source>Print</source>
-        <translation type="unfinished">Imprimir</translation>
+        <translation>Imprimir</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="102"/>
         <source>Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista Previa de Impresión</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="114"/>
         <source>File</source>
-        <translation type="unfinished">Archivo</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="177"/>
         <source>Illegal diagram type &apos;{0}&apos; given.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha proporcionado un tipo ilegal de diagrama &apos;{0}&apos;.</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="250"/>
         <source>Save Diagram</source>
-        <translation type="unfinished">Guardar Diagrama</translation>
+        <translation>Guardar Diagrama</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="264"/>
         <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de Gráficos Eric5 (*.e5g);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="225"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="250"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="364"/>
         <source>Load Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Diagrama</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="278"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser leído.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="358"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no contiene datos válidos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="361"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;&lt;p&gt;Invalid line: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no contiene datos válidos.&lt;/p&gt;&lt;p&gt;Línea no válida: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -47670,7 +47671,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Graphics/UMLGraphicsView.py" line="125"/>
         <source>Re-Scan</source>
-        <translation type="unfinished"></translation>
+        <translation>Volver a Escanear</translation>
     </message>
 </context>
 <context>
