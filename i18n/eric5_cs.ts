@@ -13616,31 +13616,31 @@ Reason: {0}</source>
 <context>
     <name>FtpReply</name>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="133"/>
-        <source>No suitable proxy found.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="333"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="348"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="346"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="361"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="372"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="387"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="396"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="411"/>
         <source>Listing of {0}</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="237"/>
+        <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Zadejte uživatelské jméno a heslo pro &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -39111,17 +39111,17 @@ Not connected</source>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="76"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="78"/>
         <source>Select project word list</source>
         <translation>Vybrat seznam slov projektu</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Soubor slovníku (*.dic);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Select project exclude list</source>
         <translation>Vybrat seznam vyřazených v projektu</translation>
     </message>
@@ -47974,12 +47974,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Seznam cest nebo souborů pro provedení překladu formulářů</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="161"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="167"/>
         <source>Exempt file from translation</source>
         <translation>Vyjmout soubor z překladu</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="174"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="180"/>
         <source>Exempt directory from translation</source>
         <translation>Vyjmout adresář z překladu</translation>
     </message>
@@ -47989,7 +47989,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Stisknout pro odebrání vybraného záznamu ze seznamu</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="65"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="64"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
@@ -47999,12 +47999,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Zadejte vzorek cesty pro soubory s překlady</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="95"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="96"/>
         <source>Select translation file</source>
         <translation>Vybrat soubor s překladem</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="119"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="124"/>
         <source>Select directory for binary translations</source>
         <translation>Výběr adresáře pro binární překlady</translation>
     </message>
@@ -48034,7 +48034,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Zdrojové soubory ({0});;</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="63"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="62"/>
         <source>Forms Files ({0});;</source>
         <translation>Soubory s formuláři ({0});;</translation>
     </message>

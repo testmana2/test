@@ -70,6 +70,9 @@ QNetworkReply
 <td><a href="#FtpReply.__doFtpCommands">__doFtpCommands</a></td>
 <td>Private slot doing the sequence of FTP commands to get the requested result.</td>
 </tr><tr>
+<td><a href="#FtpReply.__doFtpLogin">__doFtpLogin</a></td>
+<td>Private method to do the FTP login with asking for a username and password, if the login fails with an error 530.</td>
+</tr><tr>
 <td><a href="#FtpReply.__retrCallback">__retrCallback</a></td>
 <td>Private slot handling the reception of data.</td>
 </tr><tr>
@@ -142,7 +145,27 @@ the received line of the directory listing (string)
 <b>__doFtpCommands</b>(<i></i>)
 <p>
         Private slot doing the sequence of FTP commands to get the requested result.
-</p><a NAME="FtpReply.__retrCallback" ID="FtpReply.__retrCallback"></a>
+</p><a NAME="FtpReply.__doFtpLogin" ID="FtpReply.__doFtpLogin"></a>
+<h4>FtpReply.__doFtpLogin</h4>
+<b>__doFtpLogin</b>(<i>username, password</i>)
+<p>
+        Private method to do the FTP login with asking for a username and password,
+        if the login fails with an error 530.
+</p><dl>
+<dt><i>username</i></dt>
+<dd>
+user name to use for the login (string)
+</dd><dt><i>password</i></dt>
+<dd>
+password to use for the login (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of two flags indicating a successful login and
+            if the login should be retried (boolean, boolean)
+</dd>
+</dl><a NAME="FtpReply.__retrCallback" ID="FtpReply.__retrCallback"></a>
 <h4>FtpReply.__retrCallback</h4>
 <b>__retrCallback</b>(<i>data</i>)
 <p>

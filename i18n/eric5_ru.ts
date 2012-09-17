@@ -13548,32 +13548,37 @@ Reason: {0}</source>
 <context>
     <name>FtpReply</name>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="333"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="348"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Перейти в родительский каталог&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="346"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="361"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
         <translation>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Имя&lt;/th&gt;&lt;th&gt;Размер&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Последнее изменение&lt;/th&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="372"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="387"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
         <translation>{0} {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="396"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="411"/>
         <source>Listing of {0}</source>
         <translation>Список {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/FtpReply.py" line="133"/>
         <source>No suitable proxy found.</source>
-        <translation>Не найдено подходящего прокси.</translation>
+        <translation type="obsolete">Не найдено подходящего прокси.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="237"/>
+        <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -38778,17 +38783,17 @@ Not connected</source>
         <translation>&lt;По умолчанию&gt;</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="76"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="78"/>
         <source>Select project word list</source>
         <translation>Выберите список слов проекта</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Файл словаря (*.dic);Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Select project exclude list</source>
         <translation>Выберите список исключений проекта</translation>
     </message>
@@ -47758,12 +47763,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Список файлов для исключения из переводов</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="161"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="167"/>
         <source>Exempt file from translation</source>
         <translation>Исключить файл из переводов</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="174"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="180"/>
         <source>Exempt directory from translation</source>
         <translation>Исключить каталог из переводов</translation>
     </message>
@@ -47783,12 +47788,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Файлы с исходниками ({0});;</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="63"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="62"/>
         <source>Forms Files ({0});;</source>
         <translation>Файлы с формами ({0});;</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="65"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="64"/>
         <source>All Files (*)</source>
         <translation>Все файлы(*)</translation>
     </message>
@@ -47798,12 +47803,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Задайте шаблон для каталога файлов переводов</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="95"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="96"/>
         <source>Select translation file</source>
         <translation>Выберите файл перевода</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="119"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="124"/>
         <source>Select directory for binary translations</source>
         <translation>Задайте путь для каталога двоичных переводов</translation>
     </message>

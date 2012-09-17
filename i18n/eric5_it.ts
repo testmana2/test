@@ -13452,30 +13452,35 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/Network/FtpReply.py" line="133"/>
         <source>No suitable proxy found.</source>
-        <translation>Nessun proxy utilizzabile trovato.</translation>
+        <translation type="obsolete">Nessun proxy utilizzabile trovato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="333"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="348"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Cambia alla directory superiore&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="346"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="361"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
         <translation>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Nome&lt;/th&gt;&lt;th&gt;Dimensione&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Ultima modifica&lt;/th&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="372"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="387"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
         <translation>{0} {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="396"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="411"/>
         <source>Listing of {0}</source>
         <translation>Elenco di {0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FtpReply.py" line="237"/>
+        <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Inserisci utente e password per &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -38659,17 +38664,17 @@ Non connesso</translation>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="76"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="78"/>
         <source>Select project word list</source>
         <translation>Seleziona la lista di parole del progetto</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>File Dizionario (*.dic);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="Project/SpellingPropertiesDialog.py" line="93"/>
+        <location filename="Project/SpellingPropertiesDialog.py" line="98"/>
         <source>Select project exclude list</source>
         <translation>Seleziona la lista di esclusione del progetto</translation>
     </message>
@@ -47662,12 +47667,12 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Elenca i path o i file da escludere dalla traduzione</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="161"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="167"/>
         <source>Exempt file from translation</source>
         <translation>Escludi file dalla traduzione</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="174"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="180"/>
         <source>Exempt directory from translation</source>
         <translation>Escludi directory dalla traduzione</translation>
     </message>
@@ -47677,7 +47682,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Premi per cancellare gli elementi selezionati dalla lista</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="65"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="64"/>
         <source>All Files (*)</source>
         <translation>Tutti i file (*)</translation>
     </message>
@@ -47694,12 +47699,12 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Inserisci il path per il file di traduzione</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="95"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="96"/>
         <source>Select translation file</source>
         <translation>Seleziona un file di traduzione</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="119"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="124"/>
         <source>Select directory for binary translations</source>
         <translation>Seleziona la directory per le traduzioni binarie</translation>
     </message>
@@ -47723,7 +47728,7 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Source Files ({0});;</translation>
     </message>
     <message>
-        <location filename="Project/TranslationPropertiesDialog.py" line="63"/>
+        <location filename="Project/TranslationPropertiesDialog.py" line="62"/>
         <source>Forms Files ({0});;</source>
         <translation>File Forms ({0});;</translation>
     </message>

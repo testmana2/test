@@ -1040,6 +1040,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Graphics/PackageDiagramBuilder.py</Source>
     <Source>Graphics/ImportsDiagramBuilder.py</Source>
     <Source>Graphics/ApplicationDiagramBuilder.py</Source>
+    <Source>Utilities/FtpUtilities.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

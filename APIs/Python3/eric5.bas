@@ -224,6 +224,8 @@ FollowRedirectReply QObject
 FontDialogWizard QObject
 FontDialogWizardDialog QDialog Ui_FontDialogWizardDialog
 FtpAccessHandler SchemeAccessHandler
+FtpDirLineParser QObject
+FtpDirLineParserError Exception
 FtpReply QNetworkReply
 FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin

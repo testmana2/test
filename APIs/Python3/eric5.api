@@ -7407,6 +7407,12 @@ eric5.Utilities.ClassBrowsers.rbclbr._modules?8
 eric5.Utilities.ClassBrowsers.rbclbr.readmodule_ex?4(module, path=[])
 eric5.Utilities.ClassBrowsers.readmodule?4(module, path=[], isPyFile=False)
 eric5.Utilities.CodingError?1(coding)
+eric5.Utilities.FtpUtilities.FtpDirLineParser.MacMode?7
+eric5.Utilities.FtpUtilities.FtpDirLineParser.MonthnamesNumbers?7
+eric5.Utilities.FtpUtilities.FtpDirLineParser.UnixMode?7
+eric5.Utilities.FtpUtilities.FtpDirLineParser.WindowsMode?7
+eric5.Utilities.FtpUtilities.FtpDirLineParser.parseLine?4(line)
+eric5.Utilities.FtpUtilities.FtpDirLineParser?1(parent=None)
 eric5.Utilities.ModuleParser.Attribute.addAssignment?4(lineno)
 eric5.Utilities.ModuleParser.Attribute?1(module, name, file, lineno, isSignal=False)
 eric5.Utilities.ModuleParser.Class.addAttribute?4(name, attr)

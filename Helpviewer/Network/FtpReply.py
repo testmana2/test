@@ -10,14 +10,21 @@ Module implementing a network reply class for FTP resources.
 import ftplib
 import socket
 import errno
+import mimetypes
 
-from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, QDate, QTime, \
-    QDateTime, QCoreApplication
-from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QUrlInfo
+from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, \
+    QCoreApplication
+from PyQt4.QtGui import QPixmap, QDialog
+from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
 
+import Helpviewer.HelpWindow
+
+from UI.AuthenticationDialog import AuthenticationDialog
+
+import Preferences
 import UI.PixmapCache
+from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
 
 ftpListPage_html = """\
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -130,6 +137,7 @@ class FtpReply(QNetworkReply):
         self.__items = []
         self.__content = QByteArray()
         self.__units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
+        self.__dirLineParser = FtpDirLineParser()
         
         if url.path() == "":
             url.setPath("/")
@@ -179,19 +187,23 @@ class FtpReply(QNetworkReply):
         """
         Private slot doing the sequence of FTP commands to get the requested result.
         """
+        retry = True
         try:
-            self.__ftp.connect(self.url().host(), timeout=10)
-            self.__ftp.login(self.url().userName(), self.url().password())
-            self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
-            if len(self.__items) == 1 and \
-               self.__items[0].isFile():
-                self.__setContent()
-                self.__ftp.retrbinary("RETR " + self.url().path(), self.__retrCallback)
-                self.__content.append(512 * b' ')
-                self.readyRead.emit()
-            else:
-                self.__setListContent()
-            self.__ftp.quit()
+            while retry:
+                self.__ftp.connect(self.url().host(), self.url().port(ftplib.FTP_PORT),
+                                   timeout=10)
+                ok, retry = self.__doFtpLogin(self.url().userName(), self.url().password())
+            if ok:
+                self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
+                if len(self.__items) == 1 and \
+                   self.__items[0].isFile():
+                    self.__setContent()
+                    self.__ftp.retrbinary("RETR " + self.url().path(), self.__retrCallback)
+                    self.__content.append(512 * b' ')
+                    self.readyRead.emit()
+                else:
+                    self.__setListContent()
+                self.__ftp.quit()
         except ftplib.all_errors as err:
             if isinstance(err, socket.gaierror):
                 errCode = QNetworkReply.HostNotFoundError
@@ -203,56 +215,65 @@ class FtpReply(QNetworkReply):
             self.error.emit(errCode)
         self.finished.emit()
     
+    def __doFtpLogin(self, username, password):
+        """
+        Private method to do the FTP login with asking for a username and password,
+        if the login fails with an error 530.
+        
+        @param username user name to use for the login (string)
+        @param password password to use for the login (string)
+        @return tuple of two flags indicating a successful login and
+            if the login should be retried (boolean, boolean)
+        """
+        try:
+            self.__ftp.login(username, password)
+            return True, False
+        except ftplib.error_perm as err:
+            code, msg = err.args[0].split(None, 1)
+            if code.strip() == "530":
+                # error 530 -> Login incorrect
+                urlRoot = "{0}://{1}"\
+                    .format(self.url().scheme(), self.url().authority())
+                info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
+                    .format(urlRoot)
+                dlg = AuthenticationDialog(info, self.url().userName(),
+                                           Preferences.getUser("SavePasswords"),
+                                           Preferences.getUser("SavePasswords"))
+                if Preferences.getUser("SavePasswords"):
+                    username, password = \
+                        Helpviewer.HelpWindow.HelpWindow.passwordManager().getLogin(
+                            self.url(), "")
+                    if username:
+                        dlg.setData(username, password)
+                if dlg.exec_() == QDialog.Accepted:
+                    username, password = dlg.getData()
+                    if Preferences.getUser("SavePasswords"):
+                        Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
+                            self.url(), "", username, password)
+                    url = self.url()
+                    url.setUserName(username)
+                    url.setPassword(password)
+                    self.setUrl(url)
+                    return False, True
+                else:
+                    return False, False
+            else:
+                raise
+    
     def __dirCallback(self, line):
         """
         Private slot handling the receipt of directory listings.
         
         @param line the received line of the directory listing (string)
         """
-        words = line.split(None, 8)
-        if len(words) < 6:
-            # skip short lines
-            return
-        filename = words[-1].lstrip()
-        i = filename.find(" -> ")
-        if i >= 0:
-            filename = filename[:i]
-        infostuff = words[-5:-1]
-        mode = words[0].strip()
+        try:
+            urlInfo = self.__dirLineParser.parseLine(line)
+        except FtpDirLineParserError:
+            # silently ignore parser errors
+            urlInfo = None
         
-        info = QUrlInfo()
-        # 1. type of item
-        if mode[0] == "d":
-            info.setDir(True)
-            info.setFile(False)
-        elif mode[0] == "l":
-            info.setSymLink(True)
-        elif mode[0] == "-":
-            info.setDir(False)
-            info.setFile(True)
-        # 2. name
-        info.setName(filename.strip())
-        # 3. size
-        if mode[0] == "-":
-            info.setSize(int(infostuff[0]))
-        # 4. last modified
-        if infostuff[1] in self.Monthnames2Int:
-            month = self.Monthnames2Int[infostuff[1]]
-        else:
-            month = 1
-        if ":" in infostuff[3]:
-            # year is current year
-            year = QDate.currentDate().year()
-            timeStr = infostuff[3]
-        else:
-            year = int(infostuff[3])
-            timeStr = "00:00"
-        date = QDate(year, month, int(infostuff[2]))
-        time = QTime.fromString(timeStr, "hh:mm")
-        lastModified = QDateTime(date, time)
-        info.setLastModified(lastModified)
-        
-        self.__items.append(info)
+        if urlInfo:
+            self.__items.append(urlInfo)
         
         QCoreApplication.processEvents()
     
@@ -270,8 +291,11 @@ class FtpReply(QNetworkReply):
         """
         Private method to finish the setup of the data.
         """
+        mtype, encoding = mimetypes.guess_type(self.url().toString())
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
         self.setHeader(QNetworkRequest.ContentLengthHeader, self.__items[0].size())
+        if mtype:
+            self.setHeader(QNetworkRequest.ContentTypeHeader, mtype)
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "Ok")
         self.metaDataChanged.emit()
