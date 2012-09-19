@@ -190,12 +190,15 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         urlRoot = "{0}://{1}"\
             .format(reply.url().scheme(), reply.url().authority())
-        if not auth.realm():
+        realm = auth.realm()
+        if not realm and 'realm' in auth.options():
+            realm = auth.option("realm")
+        if realm:
             info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
                 .format(urlRoot)
         else:
             info = self.trUtf8("<b>Enter username and password for '{0}', "
-                               "realm '{1}'</b>").format(urlRoot, auth.realm())
+                               "realm '{1}'</b>").format(urlRoot, realm)
         
         dlg = AuthenticationDialog(info, auth.user(),
                                    Preferences.getUser("SavePasswords"),
@@ -203,7 +206,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         if Preferences.getUser("SavePasswords"):
             username, password = \
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().getLogin(
-                    reply.url(), auth.realm())
+                    reply.url(), realm)
             if username:
                 dlg.setData(username, password)
         if dlg.exec_() == QDialog.Accepted:
@@ -212,7 +215,7 @@ class NetworkAccessManager(QNetworkAccessManager):
             auth.setPassword(password)
             if Preferences.getUser("SavePasswords"):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
-                    reply.url(), auth.realm(), username, password)
+                    reply.url(), realm, username, password)
     
     def __sslErrors(self, reply, errors):
         """

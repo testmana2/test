@@ -7,6 +7,8 @@
 Module implementing some FTP related utilities.
 """
 
+import os
+
 from PyQt4.QtCore import QObject, QDate, QDateTime, QTime
 from PyQt4.QtNetwork import QUrlInfo
 
@@ -99,11 +101,15 @@ class FtpDirLineParser(QObject):
         if modeString[0] == "d":
             urlInfo.setDir(True)
             urlInfo.setFile(False)
+            urlInfo.setSymLink(False)
         elif modeString[0] == "l":
+            urlInfo.setDir(False)
+            urlInfo.setFile(False)
             urlInfo.setSymLink(True)
         elif modeString[0] == "-":
-            urlInfo.setDir(False)
+            urlInfo.setDir(True)
             urlInfo.setFile(True)
+            urlInfo.setSymLink(False)
     
     def __parseUnixTime(self, monthAbbreviation, day, yearOrTime, urlInfo):
         """
@@ -270,6 +276,16 @@ class FtpDirLineParser(QObject):
             except ValueError:
                 raise FtpDirLineParserError("illegal size '{0}'".format(dirOrSize))
         urlInfo.setName(name)
+        
+        ext = os.path.splitext(name.lower())[1]
+        urlInfo.setSymLink(ext == ".lnk")
+        
+        permissions = (QUrlInfo.ReadOwner | QUrlInfo.WriteOwner
+                      | QUrlInfo.ReadGroup | QUrlInfo.WriteGroup
+                      | QUrlInfo.ReadOther | QUrlInfo.WriteOther)
+        if ext in [".exe", ".com", ".bat", ".cmd"]:
+            permissions |= QUrlInfo.ExeOwner | QUrlInfo.ExeGroup | QUrlInfo.ExeOther
+        urlInfo.setPermissions(permissions)
         
         return urlInfo
     

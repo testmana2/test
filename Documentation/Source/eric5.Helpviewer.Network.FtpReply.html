@@ -101,13 +101,16 @@ QNetworkReply
 </table>
 <a NAME="FtpReply.__init__" ID="FtpReply.__init__"></a>
 <h4>FtpReply (Constructor)</h4>
-<b>FtpReply</b>(<i>url, parent=None</i>)
+<b>FtpReply</b>(<i>url, accessHandler, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>url</i></dt>
 <dd>
 requested FTP URL (QUrl)
+</dd><dt><i>accessHandler</i></dt>
+<dd>
+reference to the access handler (FtpAccessHandler)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent object (QObject)
@@ -147,7 +150,7 @@ the received line of the directory listing (string)
         Private slot doing the sequence of FTP commands to get the requested result.
 </p><a NAME="FtpReply.__doFtpLogin" ID="FtpReply.__doFtpLogin"></a>
 <h4>FtpReply.__doFtpLogin</h4>
-<b>__doFtpLogin</b>(<i>username, password</i>)
+<b>__doFtpLogin</b>(<i>username, password, byAuth=False</i>)
 <p>
         Private method to do the FTP login with asking for a username and password,
         if the login fails with an error 530.
@@ -158,6 +161,10 @@ user name to use for the login (string)
 </dd><dt><i>password</i></dt>
 <dd>
 password to use for the login (string)
+</dd><dt><i>byAuth</i></dt>
+<dd>
+flag indicating that the login data was provided by an
+            authenticator (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

@@ -14,15 +14,11 @@ import mimetypes
 
 from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, \
     QCoreApplication
-from PyQt4.QtGui import QPixmap, QDialog
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
+from PyQt4.QtGui import QPixmap
+from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QNetworkProxyQuery, \
+    QNetworkProxy, QAuthenticator
 from PyQt4.QtWebKit import QWebSettings
 
-import Helpviewer.HelpWindow
-
-from UI.AuthenticationDialog import AuthenticationDialog
-
-import Preferences
 import UI.PixmapCache
 from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
 
@@ -121,16 +117,18 @@ class FtpReply(QNetworkReply):
         "Dec": 12,
     }
     
-    def __init__(self, url, parent=None):
+    def __init__(self, url, accessHandler, parent=None):
         """
         Constructor
         
         @param url requested FTP URL (QUrl)
+        @param accessHandler reference to the access handler (FtpAccessHandler)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
         
         self.__manager = parent
+        self.__handler = accessHandler
         
         self.__ftp = ftplib.FTP()
         
@@ -142,6 +140,24 @@ class FtpReply(QNetworkReply):
         if url.path() == "":
             url.setPath("/")
         self.setUrl(url)
+        
+        # do proxy setup
+        self.__proxy = None
+        query = QNetworkProxyQuery(url)
+        proxyList = parent.proxyFactory().queryProxy(query)
+        ftpProxy = QNetworkProxy()
+        for proxy in proxyList:
+            if proxy.type() == QNetworkProxy.NoProxy or \
+               proxy.type() == QNetworkProxy.FtpCachingProxy:
+                ftpProxy = proxy
+                break
+        if ftpProxy.type() == QNetworkProxy.DefaultProxy:
+            self.setError(QNetworkReply.ProxyNotFoundError,
+                          self.trUtf8("No suitable proxy found."))
+            QTimer.singleShot(0, self.__errorSignals)
+            return
+        elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
+            self.__proxy = ftpProxy
         
         self.__loggingIn = False
         
@@ -189,16 +205,31 @@ class FtpReply(QNetworkReply):
         """
         retry = True
         try:
+            username = self.url().userName()
+            password = self.url().password()
+            byAuth = False
             while retry:
-                self.__ftp.connect(self.url().host(), self.url().port(ftplib.FTP_PORT),
-                                   timeout=10)
-                ok, retry = self.__doFtpLogin(self.url().userName(), self.url().password())
+                if self.__proxy:
+                    self.__ftp.connect(self.__proxy.hostName(), self.__proxy.port())
+                else:
+                    self.__ftp.connect(
+                        self.url().host(), self.url().port(ftplib.FTP_PORT), timeout=10)
+                ok, retry = self.__doFtpLogin(username, password, byAuth)
+                if not ok and retry:
+                    auth = self.__handler.getAuthenticator(self.url().host())
+                    if auth and not auth.isNull() and auth.user():
+                        username = auth.user()
+                        password = auth.password()
+                        byAuth = True
+                    else:
+                        retry = False
             if ok:
                 self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
                 if len(self.__items) == 1 and \
                    self.__items[0].isFile():
                     self.__setContent()
-                    self.__ftp.retrbinary("RETR " + self.url().path(), self.__retrCallback)
+                    self.__ftp.retrbinary(
+                        "RETR " + self.url().path(), self.__retrCallback)
                     self.__content.append(512 * b' ')
                     self.readyRead.emit()
                 else:
@@ -215,48 +246,64 @@ class FtpReply(QNetworkReply):
             self.error.emit(errCode)
         self.finished.emit()
     
-    def __doFtpLogin(self, username, password):
+    def __doFtpLogin(self, username, password, byAuth=False):
         """
         Private method to do the FTP login with asking for a username and password,
         if the login fails with an error 530.
         
         @param username user name to use for the login (string)
         @param password password to use for the login (string)
+        @param byAuth flag indicating that the login data was provided by an
+            authenticator (boolean)
         @return tuple of two flags indicating a successful login and
             if the login should be retried (boolean, boolean)
         """
+        # 1. do proxy login, if a proxy is used
+        if self.__proxy:
+            try:
+                self.__ftp.login(self.__proxy.user(), self.__proxy.password())
+            except ftplib.error_perm as err:
+                code, msg = err.args[0].split(None, 1)
+                if code.strip() == "530":
+                    auth = QAuthenticator()
+                    auth.setOption("realm", self.__proxy.hostName())
+                    self.__manager.proxyAuthenticationRequired.emit(self.__proxy, auth)
+                    if not auth.isNull() and auth.user():
+                        self.__proxy.setUser(auth.user())
+                        self.__proxy.setPassword(auth.password())
+                        return False, True
+                return False, False
+        
+        # 2. do the real login
         try:
-            self.__ftp.login(username, password)
+            if self.__proxy:
+                loginName = "{0}@{1}".format(username, self.url().host())
+                if self.url().port(ftplib.FTP_PORT) != ftplib.FTP_PORT:
+                    loginName = "{0}:{1}".format(loginName, self.url().port())
+            else:
+                loginName = username
+            self.__ftp.login(loginName, password)
             return True, False
         except ftplib.error_perm as err:
             code, msg = err.args[0].split(None, 1)
             if code.strip() == "530":
                 # error 530 -> Login incorrect
-                urlRoot = "{0}://{1}"\
-                    .format(self.url().scheme(), self.url().authority())
-                info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
-                    .format(urlRoot)
-                dlg = AuthenticationDialog(info, self.url().userName(),
-                                           Preferences.getUser("SavePasswords"),
-                                           Preferences.getUser("SavePasswords"))
-                if Preferences.getUser("SavePasswords"):
-                    username, password = \
-                        Helpviewer.HelpWindow.HelpWindow.passwordManager().getLogin(
-                            self.url(), "")
-                    if username:
-                        dlg.setData(username, password)
-                if dlg.exec_() == QDialog.Accepted:
-                    username, password = dlg.getData()
-                    if Preferences.getUser("SavePasswords"):
-                        Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
-                            self.url(), "", username, password)
-                    url = self.url()
-                    url.setUserName(username)
-                    url.setPassword(password)
-                    self.setUrl(url)
-                    return False, True
+                if byAuth:
+                    self.__handler.setAuthenticator(self.url().host(), None)
+                    auth = None
                 else:
+                    auth = self.__handler.getAuthenticator(self.url().host())
+                if not auth or auth.isNull() or not auth.user():
+                    auth = QAuthenticator()
+                    auth.setOption("realm", self.url().host())
+                    self.__manager.authenticationRequired.emit(self, auth)
+                    if not auth.isNull():
+                        if auth.user():
+                            self.__handler.setAuthenticator(self.url().host(), auth)
+                            return False, True
                     return False, False
+                else:
+                    return False, True
             else:
                 raise
     

@@ -4498,8 +4498,13 @@
       <keyword name="FontDialogWizardDialog.on_eVariable_textChanged" id="FontDialogWizardDialog.on_eVariable_textChanged" ref="eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.html#FontDialogWizardDialog.on_eVariable_textChanged" />
       <keyword name="FontDialogWizardDialog.on_fontButton_clicked" id="FontDialogWizardDialog.on_fontButton_clicked" ref="eric5.Plugins.WizardPlugins.FontDialogWizard.FontDialogWizardDialog.html#FontDialogWizardDialog.on_fontButton_clicked" />
       <keyword name="FtpAccessHandler" id="FtpAccessHandler" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler" />
+      <keyword name="FtpAccessHandler (Constructor)" id="FtpAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.__init__" />
       <keyword name="FtpAccessHandler (Module)" id="FtpAccessHandler (Module)" ref="eric5.Helpviewer.Network.FtpAccessHandler.html" />
       <keyword name="FtpAccessHandler.createRequest" id="FtpAccessHandler.createRequest" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.createRequest" />
+      <keyword name="FtpAccessHandler.getAuthenticator" id="FtpAccessHandler.getAuthenticator" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.getAuthenticator" />
+      <keyword name="FtpAccessHandler.getProxyAuthenticator" id="FtpAccessHandler.getProxyAuthenticator" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.getProxyAuthenticator" />
+      <keyword name="FtpAccessHandler.setAuthenticator" id="FtpAccessHandler.setAuthenticator" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.setAuthenticator" />
+      <keyword name="FtpAccessHandler.setProxyAuthenticator" id="FtpAccessHandler.setProxyAuthenticator" ref="eric5.Helpviewer.Network.FtpAccessHandler.html#FtpAccessHandler.setProxyAuthenticator" />
       <keyword name="FtpDirLineParser" id="FtpDirLineParser" ref="eric5.Utilities.FtpUtilities.html#FtpDirLineParser" />
       <keyword name="FtpDirLineParser (Constructor)" id="FtpDirLineParser (Constructor)" ref="eric5.Utilities.FtpUtilities.html#FtpDirLineParser.__init__" />
       <keyword name="FtpDirLineParser.__ignoreLine" id="FtpDirLineParser.__ignoreLine" ref="eric5.Utilities.FtpUtilities.html#FtpDirLineParser.__ignoreLine" />
