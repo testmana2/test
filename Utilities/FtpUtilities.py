@@ -197,6 +197,9 @@ class FtpDirLineParser(QObject):
         modeString, nlink, user, group, size, month, day, \
           yearOrTime, name = self.__splitUnixLine(line)
         
+        if name in [".", ".."]:
+            return None
+        
         urlInfo = QUrlInfo()
         self.__parseUnixMode(modeString, urlInfo)
         self.__parseUnixTime(month, day, yearOrTime, urlInfo)
@@ -262,6 +265,9 @@ class FtpDirLineParser(QObject):
         except ValueError:
             # "unpack list of wrong size"
             raise FtpDirLineParserError("line '{0}' cannot be parsed".format(line))
+        
+        if name in [".", ".."]:
+            return None
         
         urlInfo = QUrlInfo()
         self.__parseWindowsTime(date, time, urlInfo)
