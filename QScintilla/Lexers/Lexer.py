@@ -210,7 +210,7 @@ class Lexer(object):
         @return string giving the keywords (string) or None
         """
         keywords_ = Preferences.getEditorKeywords(self.language())
-        if keywords_:
+        if keywords_ and len(keywords_) > kwSet:
             kw = keywords_[kwSet]
             if kw == "":
                 return None
