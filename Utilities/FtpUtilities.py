@@ -103,11 +103,11 @@ class FtpDirLineParser(QObject):
             urlInfo.setFile(False)
             urlInfo.setSymLink(False)
         elif modeString[0] == "l":
-            urlInfo.setDir(False)
+            urlInfo.setDir(True)
             urlInfo.setFile(False)
             urlInfo.setSymLink(True)
         elif modeString[0] == "-":
-            urlInfo.setDir(True)
+            urlInfo.setDir(False)
             urlInfo.setFile(True)
             urlInfo.setSymLink(False)
     
