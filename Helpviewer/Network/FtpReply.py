@@ -102,21 +102,6 @@ class FtpReply(QNetworkReply):
     """
     Class implementing a network reply for FTP resources.
     """
-    Monthnames2Int = {
-        "Jan": 1,
-        "Feb": 2,
-        "Mar": 3,
-        "Apr": 4,
-        "May": 5,
-        "Jun": 6,
-        "Jul": 7,
-        "Aug": 8,
-        "Sep": 9,
-        "Oct": 10,
-        "Nov": 11,
-        "Dec": 12,
-    }
-    
     def __init__(self, url, accessHandler, parent=None):
         """
         Constructor
@@ -136,6 +121,7 @@ class FtpReply(QNetworkReply):
         self.__content = QByteArray()
         self.__units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
         self.__dirLineParser = FtpDirLineParser()
+        self.__fileBytesReceived = 0
         
         if url.path() == "":
             url.setPath("/")
@@ -227,6 +213,7 @@ class FtpReply(QNetworkReply):
                 self.__ftp.retrlines("LIST " + self.url().path(), self.__dirCallback)
                 if len(self.__items) == 1 and \
                    self.__items[0].isFile():
+                    self.__fileBytesReceived = 0
                     self.__setContent()
                     self.__ftp.retrbinary(
                         "RETR " + self.url().path(), self.__retrCallback)
@@ -331,6 +318,9 @@ class FtpReply(QNetworkReply):
         @param data data received from the FTP server (bytes)
         """
         self.__content += QByteArray(data)
+        self.__fileBytesReceived += len(data)
+        self.downloadProgress.emit(self.__fileBytesReceived, self.__items[0].size())
+        self.readyRead.emit()
         
         QCoreApplication.processEvents()
     
