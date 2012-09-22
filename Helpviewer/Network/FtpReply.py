@@ -275,6 +275,7 @@ class FtpReply(QNetworkReply):
         Private slot to process data from the FTP server.
         """
         self.__content += self.__ftp.readAll()
+        self.readyRead.emit()
     
     def __setContent(self):
         """
