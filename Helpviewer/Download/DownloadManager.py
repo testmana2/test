@@ -215,7 +215,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.downloadsView.setIndexWidget(self.__model.index(row, 0), itm)
         icon = self.style().standardIcon(QStyle.SP_FileIcon)
         itm.setIcon(icon)
-        self.downloadsView.setRowHeight(row, itm.sizeHint().height())
+        self.downloadsView.setRowHeight(row, itm.sizeHint().height() * 1.5)
         # just in case the download finished before the constructor returned
         self.__updateRow(itm)
         self.changeOccurred()
@@ -245,7 +245,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         oldHeight = self.downloadsView.rowHeight(row)
         self.downloadsView.setRowHeight(row,
-            max(oldHeight, itm.minimumSizeHint().height()))
+            max(oldHeight, itm.minimumSizeHint().height() * 1.5))
         
         remove = False
         globalSettings = QWebSettings.globalSettings()
