@@ -194,11 +194,11 @@ class NetworkAccessManager(QNetworkAccessManager):
         if not realm and 'realm' in auth.options():
             realm = auth.option("realm")
         if realm:
-            info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
-                .format(urlRoot)
-        else:
             info = self.trUtf8("<b>Enter username and password for '{0}', "
                                "realm '{1}'</b>").format(urlRoot, realm)
+        else:
+            info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
+                .format(urlRoot)
         
         dlg = AuthenticationDialog(info, auth.user(),
                                    Preferences.getUser("SavePasswords"),
