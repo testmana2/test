@@ -2128,6 +2128,9 @@ eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.setDo
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog?1(cookieJar, parent=None)
 eric5.Helpviewer.Download.DownloadAskActionDialog.DownloadAskActionDialog.getAction?4()
 eric5.Helpviewer.Download.DownloadAskActionDialog.DownloadAskActionDialog?1(fileName, mimeType, baseUrl, parent=None)
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.DownloadCancelled?7
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.DownloadSuccessful?7
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.Downloading?7
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.absoluteFilePath?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesReceived?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesTotal?4()
@@ -2626,7 +2629,6 @@ eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.getProxyAuthenticator
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.setAuthenticator?4(realm, authenticator)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.setProxyAuthenticator?4(authenticator)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler?1(parent=None)
-eric5.Helpviewer.Network.FtpReply.FtpReply.Monthnames2Int?7
 eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.isSequential?4()

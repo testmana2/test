@@ -37,6 +37,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
     downloadFinished = pyqtSignal()
     progress = pyqtSignal(int, int)
     
+    Downloading = 0
+    DownloadSuccessful = 1
+    DownloadCancelled = 2
+    
     def __init__(self, reply=None, requestFilename=False, webPage=None,
                  download=False, parent=None, mainWindow=None):
         """
@@ -59,6 +63,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         self.progressBar.setMaximum(0)
         
+        self.__isFtpDownload = reply is not None and reply.url().scheme() == "ftp"
+        
         self.tryAgainButton.setIcon(UI.PixmapCache.getIcon("restart.png"))
         self.tryAgainButton.setEnabled(False)
         self.tryAgainButton.setVisible(False)
@@ -67,6 +73,13 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.openButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
+        if self.__isFtpDownload:
+            self.stopButton.setEnabled(False)
+            self.stopButton.setVisible(False)
+            self.pauseButton.setEnabled(False)
+            self.pauseButton.setVisible(False)
+        
+        self.__state = DownloadItem.Downloading
         
         icon = self.style().standardIcon(QStyle.SP_FileIcon)
         self.fileIcon.setPixmap(icon.pixmap(48, 48))
@@ -301,10 +314,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.tryAgainButton.setVisible(False)
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
-        self.stopButton.setEnabled(True)
-        self.stopButton.setVisible(True)
-        self.pauseButton.setEnabled(True)
-        self.pauseButton.setVisible(True)
+        if not self.__isFtpDownload:
+            self.stopButton.setEnabled(True)
+            self.stopButton.setVisible(True)
+            self.pauseButton.setEnabled(True)
+            self.pauseButton.setVisible(True)
         self.progressBar.setVisible(True)
         
         if self.__page:
@@ -317,6 +331,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__output = QFile()
         self.__reply = reply
         self.__initialize(tryAgain=True)
+        self.__state = DownloadItem.Downloading
         self.statusChanged.emit()
     
     @pyqtSlot(bool)
@@ -345,15 +360,17 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         Public slot to stop the download.
         """
         self.setUpdatesEnabled(False)
-        self.stopButton.setEnabled(False)
-        self.stopButton.setVisible(False)
-        self.pauseButton.setEnabled(False)
-        self.pauseButton.setVisible(False)
+        if not self.__isFtpDownload:
+            self.stopButton.setEnabled(False)
+            self.stopButton.setVisible(False)
+            self.pauseButton.setEnabled(False)
+            self.pauseButton.setVisible(False)
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
         self.setUpdatesEnabled(True)
+        self.__state = DownloadItem.DownloadCancelled
         self.__reply.abort()
         self.downloadFinished.emit()
     
@@ -549,7 +566,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return flag indicating a download is in progress (boolean)
         """
-        return self.stopButton.isEnabled()
+        return self.__state == DownloadItem.Downloading
     
     def downloadedSuccessfully(self):
         """
@@ -557,7 +574,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return flag indicating a successful download (boolean)
         """
-        return self.stopButton.isHidden() and self.tryAgainButton.isHidden()
+        return self.__state == DownloadItem.DownloadSuccessful
     
     def downloadCanceled(self):
         """
@@ -565,7 +582,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         @return flag indicating a canceled download (boolean)
         """
-        return self.tryAgainButton.isEnabled()
+        return self.__state == DownloadItem.DownloadCancelled
     
     def __finished(self):
         """
@@ -578,10 +595,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         noError = self.__reply.error() == QNetworkReply.NoError
         
         self.progressBar.setVisible(False)
-        self.stopButton.setEnabled(False)
-        self.stopButton.setVisible(False)
-        self.pauseButton.setEnabled(False)
-        self.pauseButton.setVisible(False)
+        if not self.__isFtpDownload:
+            self.stopButton.setEnabled(False)
+            self.stopButton.setVisible(False)
+            self.pauseButton.setEnabled(False)
+            self.pauseButton.setVisible(False)
         self.openButton.setEnabled(noError)
         self.openButton.setVisible(noError)
         self.__output.close()
@@ -589,6 +607,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             QFile.remove(self.__fileName)
         self.__output.rename(self.__fileName)
         self.__updateInfoLabel()
+        self.__state = DownloadItem.DownloadSuccessful
         self.statusChanged.emit()
         self.downloadFinished.emit()
         
@@ -647,6 +666,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__url = data[0]
         self.__fileName = data[1]
         self.__pageUrl = data[3]
+        self.__isFtpDownload = self.__url.scheme() == "ftp"
         
         self.filenameLabel.setText(QFileInfo(self.__fileName).fileName())
         self.infoLabel.setText(self.__fileName)
@@ -659,6 +679,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.openButton.setVisible(data[2])
         self.tryAgainButton.setEnabled(not data[2])
         self.tryAgainButton.setVisible(not data[2])
+        if data[2]:
+            self.__state = DownloadItem.DownloadSuccessful
+        else:
+            self.__state = DownloadItem.DownloadCancelled
         self.progressBar.setVisible(False)
     
     def getInfoData(self):
