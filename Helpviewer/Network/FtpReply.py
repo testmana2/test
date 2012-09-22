@@ -196,7 +196,8 @@ class FtpReply(QNetworkReply):
             byAuth = False
             while retry:
                 if self.__proxy:
-                    self.__ftp.connect(self.__proxy.hostName(), self.__proxy.port())
+                    self.__ftp.connect(self.__proxy.hostName(), self.__proxy.port(),
+                                       timeout=10)
                 else:
                     self.__ftp.connect(
                         self.url().host(), self.url().port(ftplib.FTP_PORT), timeout=10)
