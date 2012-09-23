@@ -4534,13 +4534,15 @@
       <keyword name="FtpSyncHandler (Constructor)" id="FtpSyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__init__" />
       <keyword name="FtpSyncHandler (Module)" id="FtpSyncHandler (Module)" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
       <keyword name="FtpSyncHandler.__changeToStore" id="FtpSyncHandler.__changeToStore" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__changeToStore" />
-      <keyword name="FtpSyncHandler.__checkSyncFiles" id="FtpSyncHandler.__checkSyncFiles" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__checkSyncFiles" />
-      <keyword name="FtpSyncHandler.__commandFinished" id="FtpSyncHandler.__commandFinished" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__commandFinished" />
+      <keyword name="FtpSyncHandler.__connectAndLogin" id="FtpSyncHandler.__connectAndLogin" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__connectAndLogin" />
+      <keyword name="FtpSyncHandler.__dirListCallback" id="FtpSyncHandler.__dirListCallback" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__dirListCallback" />
+      <keyword name="FtpSyncHandler.__doFtpCommands" id="FtpSyncHandler.__doFtpCommands" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__doFtpCommands" />
+      <keyword name="FtpSyncHandler.__doFtpLogin" id="FtpSyncHandler.__doFtpLogin" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__doFtpLogin" />
       <keyword name="FtpSyncHandler.__downloadFile" id="FtpSyncHandler.__downloadFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__downloadFile" />
+      <keyword name="FtpSyncHandler.__downloadFileCallback" id="FtpSyncHandler.__downloadFileCallback" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__downloadFileCallback" />
       <keyword name="FtpSyncHandler.__idleTimeout" id="FtpSyncHandler.__idleTimeout" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__idleTimeout" />
       <keyword name="FtpSyncHandler.__initialSync" id="FtpSyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSync" />
       <keyword name="FtpSyncHandler.__initialSyncFile" id="FtpSyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSyncFile" />
-      <keyword name="FtpSyncHandler.__storeReached" id="FtpSyncHandler.__storeReached" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__storeReached" />
       <keyword name="FtpSyncHandler.__syncFile" id="FtpSyncHandler.__syncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__syncFile" />
       <keyword name="FtpSyncHandler.__uploadFile" id="FtpSyncHandler.__uploadFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__uploadFile" />
       <keyword name="FtpSyncHandler.initialLoadAndCheck" id="FtpSyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.initialLoadAndCheck" />

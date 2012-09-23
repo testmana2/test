@@ -7,15 +7,22 @@
 Module implementing a synchronization handler using FTP.
 """
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QIODevice, QTime, QThread, QTimer, QBuffer, \
-    QFileInfo
-from PyQt4.QtNetwork import QFtp, QNetworkProxyQuery, QNetworkProxy, QNetworkProxyFactory
+import ftplib
+import io
+
+from PyQt4.QtCore import pyqtSignal, QUrl, QTimer, QFileInfo, QCoreApplication, QByteArray
+from PyQt4.QtNetwork import QNetworkProxyQuery, QNetworkProxy, QAuthenticator
+
+from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
+    proxyAuthenticationRequired
 
 from .SyncHandler import SyncHandler
 
 import Helpviewer.HelpWindow
 
 import Preferences
+
+from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
 
 
 class FtpSyncHandler(SyncHandler):
@@ -46,6 +53,7 @@ class FtpSyncHandler(SyncHandler):
         
         self.__state = "idle"
         self.__forceUpload = False
+        self.__connected = False
         
         self.__remoteFilesFound = {}
     
@@ -61,24 +69,23 @@ class FtpSyncHandler(SyncHandler):
         self.__state = "initializing"
         self.__forceUpload = forceUpload
         
+        self.__dirLineParser = FtpDirLineParser()
         self.__remoteFilesFound = {}
-        self.__syncIDs = {}
         
         self.__idleTimer = QTimer(self)
         self.__idleTimer.setInterval(Preferences.getHelp("SyncFtpIdleTimeout") * 1000)
         self.__idleTimer.timeout.connect(self.__idleTimeout)
         
-        self.__ftp = QFtp(self)
-        self.__ftp.commandFinished.connect(self.__commandFinished)
-        self.__ftp.listInfo.connect(self.__checkSyncFiles)
+        self.__ftp = ftplib.FTP()
         
         # do proxy setup
+        self.__proxy = None
         url = QUrl("ftp://{0}:{1}".format(
             Preferences.getHelp("SyncFtpServer"),
             Preferences.getHelp("SyncFtpPort")
         ))
         query = QNetworkProxyQuery(url)
-        proxyList = QNetworkProxyFactory.proxyForQuery(query)
+        proxyList = E5NetworkProxyFactory().queryProxy(query)
         ftpProxy = QNetworkProxy()
         for proxy in proxyList:
             if proxy.type() == QNetworkProxy.NoProxy or \
@@ -89,96 +96,133 @@ class FtpSyncHandler(SyncHandler):
             self.syncError.emit(self.trUtf8("No suitable proxy found."))
             return
         elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
-            self.__ftp.setProxy(ftpProxy.hostName(), ftpProxy.port())
+            self.__proxy = ftpProxy
         
-        self.__ftp.connectToHost(Preferences.getHelp("SyncFtpServer"),
-                                 Preferences.getHelp("SyncFtpPort"))
-        self.__ftp.login(Preferences.getHelp("SyncFtpUser"),
-                         Preferences.getHelp("SyncFtpPassword"))
+        QTimer.singleShot(0, self.__doFtpCommands)
+    
+    def __doFtpCommands(self):
+        """
+        Private slot executing the sequence of FTP commands.
+        """
+        try:
+            ok = self.__connectAndLogin()
+            if ok:
+                self.__changeToStore()
+                self.__ftp.retrlines("LIST", self.__dirListCallback)
+                self.__initialSync()
+                self.__state = "idle"
+                self.__idleTimer.start()
+        except ftplib.all_errors as err:
+            self.syncError.emit(str(err))
+    
+    def __connectAndLogin(self):
+        """
+        Private method to connect to the FTP server and log in.
+        
+        @return flag indicating a successful log in (boolean)
+        """
+        retry = True
+        while retry:
+            if self.__proxy:
+                self.__ftp.connect(
+                    self.__proxy.hostName(),
+                    self.__proxy.port(),
+                    timeout=10)
+            else:
+                self.__ftp.connect(
+                    Preferences.getHelp("SyncFtpServer"),
+                    Preferences.getHelp("SyncFtpPort"),
+                    timeout=10)
+            ok, retry = self.__doFtpLogin(
+                Preferences.getHelp("SyncFtpUser"),
+                Preferences.getHelp("SyncFtpPassword"))
+        self.__connected = ok
+        if not ok:
+            self.syncError.emit(self.trUtf8("Cannot log in to FTP host."))
+        
+        return ok
+    
+    def __doFtpLogin(self, username, password):
+        """
+        Private method to do the FTP login with asking for a username and password,
+        if the login fails with an error 530.
+        
+        @param username user name to use for the login (string)
+        @param password password to use for the login (string)
+        @return tuple of two flags indicating a successful login and
+            if the login should be retried (boolean, boolean)
+        """
+        # 1. do proxy login, if a proxy is used
+        if self.__proxy:
+            try:
+                self.__ftp.login(self.__proxy.user(), self.__proxy.password())
+            except ftplib.error_perm as err:
+                code, msg = err.args[0].split(None, 1)
+                if code.strip() == "530":
+                    auth = QAuthenticator()
+                    auth.setOption("realm", self.__proxy.hostName())
+                    proxyAuthenticationRequired(self.__proxy, auth)
+                    if not auth.isNull() and auth.user():
+                        self.__proxy.setUser(auth.user())
+                        self.__proxy.setPassword(auth.password())
+                        return False, True
+                return False, False
+        
+        # 2. do the real login
+        if self.__proxy:
+            loginName = "{0}@{1}".format(
+                username, Preferences.getHelp("SyncFtpServer"))
+            if Preferences.getHelp("SyncFtpPort") != ftplib.FTP_PORT:
+                loginName = "{0}:{1}".format(
+                    loginName, Preferences.getHelp("SyncFtpPort"))
+        else:
+            loginName = username
+        self.__ftp.login(loginName, password)
+        return True, False
     
     def __changeToStore(self):
         """
         Private slot to change to the storage directory.
         
-        This action might cause the storage path to be created on the server.
+        This action will create the storage path on the server, if it
+        does not exist. Upon return, the current directory of the server
+        is the sync directory.
         """
-        self.__storePathList = \
+        storePathList = \
             Preferences.getHelp("SyncFtpPath").replace("\\", "/").split("/")
-        if self.__storePathList[0] == "":
-            del self.__storePathList[0]
-            self.__ftp.cd(self.__storePathList[0])
-    
-    def __commandFinished(self, id, error):
-        """
-        Private slot handling the end of a command.
-        
-        @param id id of the finished command (integer)
-        @param error flag indicating an error situation (boolean)
-        """
-        if error:
-            if self.__ftp.currentCommand() in [
-                QFtp.ConnectToHost, QFtp.Login, QFtp.Mkdir, QFtp.List]:
-                self.syncError.emit(self.__ftp.errorString())
-            elif self.__ftp.currentCommand() == QFtp.Cd:
-                self.__ftp.mkdir(self.__storePathList[0])
-                self.__ftp.cd(self.__storePathList[0])
-            else:
-                if id in self.__syncIDs:
-                    if self.__ftp.currentCommand() == QFtp.Get:
-                        self.__syncIDs[id][1].close()
-                    self.syncStatus.emit(self.__syncIDs[id][0], self.__ftp.errorString())
-                    self.syncFinished.emit(self.__syncIDs[id][0], False,
-                        self.__syncIDs[id][2])
-                    del self.__syncIDs[id]
-                    if not self.__syncIDs:
-                        self.__state = "idle"
-                        self.syncMessage.emit(self.trUtf8("Synchronization finished"))
-        else:
-            if self.__ftp.currentCommand() == QFtp.Login:
-                self.__changeToStore()
-            elif self.__ftp.currentCommand() == QFtp.Cd:
-                del self.__storePathList[0]
-                if self.__storePathList:
-                    self.__ftp.cd(self.__storePathList[0])
+        if storePathList[0] == "":
+            storePathList.pop(0)
+        while storePathList:
+            path = storePathList[0]
+            try:
+                self.__ftp.cwd(path)
+            except ftplib.error_perm as err:
+                code, msg = err.args[0].split(None, 1)
+                if code.strip() == "550":
+                    # path does not exist, create it
+                    self.__ftp.mkd(path)
+                    self.__ftp.cwd(path)
                 else:
-                    self.__storeReached()
-            elif self.__ftp.currentCommand() == QFtp.List:
-                self.__initialSync()
-            else:
-                if id in self.__syncIDs:
-                    ok = True
-                    if self.__ftp.currentCommand() == QFtp.Get:
-                        self.__syncIDs[id][1].close()
-                        ok, error = self.writeFile(self.__syncIDs[id][1].buffer(),
-                                                   self.__syncIDs[id][3],
-                                                   self.__syncIDs[id][0],
-                                                   self.__syncIDs[id][4])
-                        if not ok:
-                            self.syncStatus.emit(self.__syncIDs[id][0], error)
-                    self.syncFinished.emit(self.__syncIDs[id][0], ok,
-                        self.__syncIDs[id][2])
-                    del self.__syncIDs[id]
-                    if not self.__syncIDs:
-                        self.__state = "idle"
-                        self.syncMessage.emit(self.trUtf8("Synchronization finished"))
+                    raise
+            storePathList.pop(0)
     
-    def __storeReached(self):
+    def __dirListCallback(self, line):
         """
-        Private slot executed, when the storage directory was reached.
-        """
-        if self.__state == "initializing":
-            self.__ftp.list()
-            self.__idleTimer.start()
-    
-    def __checkSyncFiles(self, info):
-        """
-        Private slot called for each entry sent by the FTP list command.
+        Private slot handling the receipt of directory listing lines.
         
-        @param info info about the entry (QUrlInfo)
+        @param line the received line of the directory listing (string)
         """
-        if info.isValid() and info.isFile():
-            if info.name() in self._remoteFiles.values():
-                self.__remoteFilesFound[info.name()] = info.lastModified()
+        try:
+            urlInfo = self.__dirLineParser.parseLine(line)
+        except FtpDirLineParserError:
+            # silently ignore parser errors
+            urlInfo = None
+        
+        if urlInfo and urlInfo.isValid() and urlInfo.isFile():
+            if urlInfo.name() in self._remoteFiles.values():
+                self.__remoteFilesFound[urlInfo.name()] = urlInfo.lastModified()
+        
+        QCoreApplication.processEvents()
     
     def __downloadFile(self, type_, fileName, timestamp):
         """
@@ -190,10 +234,31 @@ class FtpSyncHandler(SyncHandler):
         @param timestamp time stamp in seconds of the file to be downloaded (int)
         """
         self.syncStatus.emit(type_, self._messages[type_]["RemoteExists"])
-        buffer = QBuffer(self)
-        buffer.open(QIODevice.WriteOnly)
-        id = self.__ftp.get(self._remoteFiles[type_], buffer)
-        self.__syncIDs[id] = (type_, buffer, True, fileName, timestamp)
+        buffer = io.BytesIO()
+        try:
+            self.__ftp.retrbinary(
+                "RETR {0}".format(self._remoteFiles[type_]),
+                lambda x: self.__downloadFileCallback(buffer, x))
+            ok, error = self.writeFile(
+                QByteArray(buffer.getvalue()), fileName, type_, timestamp)
+            if not ok:
+                self.syncStatus.emit(type_, error)
+            self.syncFinished.emit(type_, ok, True)
+        except ftplib.all_errors as err:
+            self.syncStatus.emit(type_, str(err))
+            self.syncFinished.emit(type_, False, True)
+    
+    def __downloadFileCallback(self, buffer, data):
+        """
+        Private method receiving the downloaded data.
+        
+        @param buffer reference to the buffer (io.BytesIO)
+        @param data byte string to store in the buffer (bytes)
+        @return number of bytes written to the buffer (integer)
+        """
+        res = buffer.write(data)
+        QCoreApplication.processEvents()
+        return res
     
     def __uploadFile(self, type_, fileName):
         """
@@ -208,8 +273,16 @@ class FtpSyncHandler(SyncHandler):
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
             self.syncFinished(type_, False, False)
         else:
-            id = self.__ftp.put(data, self._remoteFiles[type_])
-            self.__syncIDs[id] = (type_, data, False)
+            buffer = io.BytesIO(data.data())
+            try:
+                self.__ftp.storbinary(
+                    "STOR {0}".format(self._remoteFiles[type_]),
+                    buffer,
+                    callback=lambda x: QCoreApplication.processEvents())
+                self.syncFinished.emit(type_, True, False)
+            except ftplib.all_errors as err:
+                self.syncStatus.emit(type_, str(err))
+                self.syncFinished.emit(type_, False, False)
     
     def __initialSyncFile(self, type_, fileName):
         """
@@ -220,11 +293,11 @@ class FtpSyncHandler(SyncHandler):
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
-           self._remoteFiles[type_] in self.__remoteFilesFound and \
-           QFileInfo(fileName).lastModified() <= \
-                self.__remoteFilesFound[self._remoteFiles[type_]]:
-            self.__downloadFile(type_, fileName,
-                self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
+           self._remoteFiles[type_] in self.__remoteFilesFound:
+            if QFileInfo(fileName).lastModified() < \
+               self.__remoteFilesFound[self._remoteFiles[type_]]:
+                self.__downloadFile(type_, fileName,
+                    self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
         else:
             if self._remoteFiles[type_] not in self.__remoteFilesFound:
                 self.syncStatus.emit(type_, self._messages[type_]["RemoteMissing"])
@@ -274,9 +347,21 @@ class FtpSyncHandler(SyncHandler):
         if self.__state == "initializing":
             return
         
+        # use idle timeout to check, if we are still connected
+        if self.__connected:
+            self.__idleTimeout()
+            if not self.__connected:
+                ok = self.__connectAndLogin()
+                if not ok:
+                    self.syncStatus.emit(type_, self.trUtf8("Cannot log in to FTP host."))
+                    return
+        
+        # upload the changed file
         self.__state = "uploading"
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])
         self.__uploadFile(type_, fileName)
+        self.syncStatus.emit(type_, self.trUtf8("Synchronization finished."))
+        self.__state = "idle"
     
     def syncBookmarks(self):
         """
@@ -320,17 +405,20 @@ class FtpSyncHandler(SyncHandler):
         if self.__idleTimer.isActive():
             self.__idleTimer.stop()
         
-        t = QTime.currentTime()
-        t.start()
-        while t.elapsed() < 5000 and self.__ftp.hasPendingCommands():
-            QThread.msleep(200)
-        if self.__ftp.hasPendingCommands():
-            self.__ftp.clearPendingCommands()
-        if self.__ftp.currentCommand() != 0:
-            self.__ftp.abort()
+        try:
+            self.__ftp.quit()
+        except ftplib.all_errors:
+            pass    # ignore FTP errors because we are shutting down anyway
+        self.__connected = False
     
     def __idleTimeout(self):
         """
         Private slot to prevent a disconnect from the server.
         """
-        self.__ftp.rawCommand("NOOP")
+        if self.__state == "idle" and self.__connected:
+            try:
+                self.__ftp.voidcmd("NOOP")
+            except ftplib.Error as err:
+                code, msg = err.args[0].split(None, 1)
+                if code.strip() == "421":
+                    self.__connected = False

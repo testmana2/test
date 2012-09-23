@@ -6812,7 +6812,7 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="63"/>
         <source>Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="obsolete">Info</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="78"/>
@@ -6835,47 +6835,47 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="206"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="219"/>
         <source>Download canceled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="196"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="209"/>
         <source>Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="225"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="238"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="395"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="412"/>
         <source>Error opening save file: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="407"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="424"/>
         <source>Error saving: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="419"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="436"/>
         <source>Network Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="545"/>
         <source>?</source>
         <translation type="unfinished">?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="541"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="558"/>
         <source>{0} of {1} - Stopped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="184"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="197"/>
         <source>VirusTotal scan scheduled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6885,13 +6885,13 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="527"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="544"/>
         <source>{0} of {1} ({2}/sec)
 {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="536"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="553"/>
         <source>{0} downloaded
 SHA1: {1}
 MD5: {2}</source>
@@ -14444,29 +14444,29 @@ Reason: {0}</source>
 <context>
     <name>FtpReply</name>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="395"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="386"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="408"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="399"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="434"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="425"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="458"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="449"/>
         <source>Listing of {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="155"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="141"/>
         <source>No suitable proxy found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14474,13 +14474,18 @@ Reason: {0}</source>
 <context>
     <name>FtpSyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="89"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="96"/>
         <source>No suitable proxy found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
-        <source>Synchronization finished</source>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="356"/>
+        <source>Cannot log in to FTP host.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="363"/>
+        <source>Synchronization finished.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -29399,12 +29404,12 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="197"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="200"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="200"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="197"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>

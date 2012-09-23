@@ -83,14 +83,23 @@ SyncHandler
 <td><a href="#FtpSyncHandler.__changeToStore">__changeToStore</a></td>
 <td>Private slot to change to the storage directory.</td>
 </tr><tr>
-<td><a href="#FtpSyncHandler.__checkSyncFiles">__checkSyncFiles</a></td>
-<td>Private slot called for each entry sent by the FTP list command.</td>
+<td><a href="#FtpSyncHandler.__connectAndLogin">__connectAndLogin</a></td>
+<td>Private method to connect to the FTP server and log in.</td>
 </tr><tr>
-<td><a href="#FtpSyncHandler.__commandFinished">__commandFinished</a></td>
-<td>Private slot handling the end of a command.</td>
+<td><a href="#FtpSyncHandler.__dirListCallback">__dirListCallback</a></td>
+<td>Private slot handling the receipt of directory listing lines.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__doFtpCommands">__doFtpCommands</a></td>
+<td>Private slot executing the sequence of FTP commands.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__doFtpLogin">__doFtpLogin</a></td>
+<td>Private method to do the FTP login with asking for a username and password, if the login fails with an error 530.</td>
 </tr><tr>
 <td><a href="#FtpSyncHandler.__downloadFile">__downloadFile</a></td>
 <td>Private method to downlaod the given file.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__downloadFileCallback">__downloadFileCallback</a></td>
+<td>Private method receiving the downloaded data.</td>
 </tr><tr>
 <td><a href="#FtpSyncHandler.__idleTimeout">__idleTimeout</a></td>
 <td>Private slot to prevent a disconnect from the server.</td>
@@ -100,9 +109,6 @@ SyncHandler
 </tr><tr>
 <td><a href="#FtpSyncHandler.__initialSyncFile">__initialSyncFile</a></td>
 <td>Private method to do the initial synchronization of the given file.</td>
-</tr><tr>
-<td><a href="#FtpSyncHandler.__storeReached">__storeReached</a></td>
-<td>Private slot executed, when the storage directory was reached.</td>
 </tr><tr>
 <td><a href="#FtpSyncHandler.__syncFile">__syncFile</a></td>
 <td>Private method to synchronize the given file.</td>
@@ -152,29 +158,53 @@ reference to the parent object (QObject)
 <p>
         Private slot to change to the storage directory.
 </p><p>
-        This action might cause the storage path to be created on the server.
-</p><a NAME="FtpSyncHandler.__checkSyncFiles" ID="FtpSyncHandler.__checkSyncFiles"></a>
-<h4>FtpSyncHandler.__checkSyncFiles</h4>
-<b>__checkSyncFiles</b>(<i>info</i>)
+        This action will create the storage path on the server, if it
+        does not exist. Upon return, the current directory of the server
+        is the sync directory.
+</p><a NAME="FtpSyncHandler.__connectAndLogin" ID="FtpSyncHandler.__connectAndLogin"></a>
+<h4>FtpSyncHandler.__connectAndLogin</h4>
+<b>__connectAndLogin</b>(<i></i>)
 <p>
-        Private slot called for each entry sent by the FTP list command.
+        Private method to connect to the FTP server and log in.
 </p><dl>
-<dt><i>info</i></dt>
+<dt>Returns:</dt>
 <dd>
-info about the entry (QUrlInfo)
+flag indicating a successful log in (boolean)
 </dd>
-</dl><a NAME="FtpSyncHandler.__commandFinished" ID="FtpSyncHandler.__commandFinished"></a>
-<h4>FtpSyncHandler.__commandFinished</h4>
-<b>__commandFinished</b>(<i>id, error</i>)
+</dl><a NAME="FtpSyncHandler.__dirListCallback" ID="FtpSyncHandler.__dirListCallback"></a>
+<h4>FtpSyncHandler.__dirListCallback</h4>
+<b>__dirListCallback</b>(<i>line</i>)
 <p>
-        Private slot handling the end of a command.
+        Private slot handling the receipt of directory listing lines.
 </p><dl>
-<dt><i>id</i></dt>
+<dt><i>line</i></dt>
 <dd>
-id of the finished command (integer)
-</dd><dt><i>error</i></dt>
+the received line of the directory listing (string)
+</dd>
+</dl><a NAME="FtpSyncHandler.__doFtpCommands" ID="FtpSyncHandler.__doFtpCommands"></a>
+<h4>FtpSyncHandler.__doFtpCommands</h4>
+<b>__doFtpCommands</b>(<i></i>)
+<p>
+        Private slot executing the sequence of FTP commands.
+</p><a NAME="FtpSyncHandler.__doFtpLogin" ID="FtpSyncHandler.__doFtpLogin"></a>
+<h4>FtpSyncHandler.__doFtpLogin</h4>
+<b>__doFtpLogin</b>(<i>username, password</i>)
+<p>
+        Private method to do the FTP login with asking for a username and password,
+        if the login fails with an error 530.
+</p><dl>
+<dt><i>username</i></dt>
 <dd>
-flag indicating an error situation (boolean)
+user name to use for the login (string)
+</dd><dt><i>password</i></dt>
+<dd>
+password to use for the login (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of two flags indicating a successful login and
+            if the login should be retried (boolean, boolean)
 </dd>
 </dl><a NAME="FtpSyncHandler.__downloadFile" ID="FtpSyncHandler.__downloadFile"></a>
 <h4>FtpSyncHandler.__downloadFile</h4>
@@ -192,6 +222,24 @@ name of the file to be downloaded (string)
 </dd><dt><i>timestamp</i></dt>
 <dd>
 time stamp in seconds of the file to be downloaded (int)
+</dd>
+</dl><a NAME="FtpSyncHandler.__downloadFileCallback" ID="FtpSyncHandler.__downloadFileCallback"></a>
+<h4>FtpSyncHandler.__downloadFileCallback</h4>
+<b>__downloadFileCallback</b>(<i>buffer, data</i>)
+<p>
+        Private method receiving the downloaded data.
+</p><dl>
+<dt><i>buffer</i></dt>
+<dd>
+reference to the buffer (io.BytesIO)
+</dd><dt><i>data</i></dt>
+<dd>
+byte string to store in the buffer (bytes)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+number of bytes written to the buffer (integer)
 </dd>
 </dl><a NAME="FtpSyncHandler.__idleTimeout" ID="FtpSyncHandler.__idleTimeout"></a>
 <h4>FtpSyncHandler.__idleTimeout</h4>
@@ -217,12 +265,7 @@ type of the synchronization event (string one
 <dd>
 name of the file to be synchronized (string)
 </dd>
-</dl><a NAME="FtpSyncHandler.__storeReached" ID="FtpSyncHandler.__storeReached"></a>
-<h4>FtpSyncHandler.__storeReached</h4>
-<b>__storeReached</b>(<i></i>)
-<p>
-        Private slot executed, when the storage directory was reached.
-</p><a NAME="FtpSyncHandler.__syncFile" ID="FtpSyncHandler.__syncFile"></a>
+</dl><a NAME="FtpSyncHandler.__syncFile" ID="FtpSyncHandler.__syncFile"></a>
 <h4>FtpSyncHandler.__syncFile</h4>
 <b>__syncFile</b>(<i>type_, fileName</i>)
 <p>

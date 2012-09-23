@@ -6313,7 +6313,7 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="63"/>
         <source>Info</source>
-        <translation>Información</translation>
+        <translation type="obsolete">Información</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="78"/>
@@ -6331,47 +6331,47 @@ Not connected
         <translation>Pulse para abrir el archivo descargado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="206"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="219"/>
         <source>Download canceled: {0}</source>
         <translation>Descarga cancelada: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="196"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="209"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="225"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="238"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation>El directorio de descargas ({0}) no ha podido ser creado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="395"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="412"/>
         <source>Error opening save file: {0}</source>
         <translation>Error al abrir el fichero a guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="407"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="424"/>
         <source>Error saving: {0}</source>
         <translation>Error al guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="419"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="436"/>
         <source>Network Error: {0}</source>
         <translation>Error de Red: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="545"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="541"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="558"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} de {1} - Parado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="184"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="197"/>
         <source>VirusTotal scan scheduled: {0}</source>
         <translation>Scan de VirusTotal programado: {0}</translation>
     </message>
@@ -6381,14 +6381,14 @@ Not connected
         <translation>Pulse para pausar la descarga</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="527"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="544"/>
         <source>{0} of {1} ({2}/sec)
 {3}</source>
         <translation>{0} de {1} ({2}/sec)
 {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="536"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="553"/>
         <source>{0} downloaded
 SHA1: {1}
 MD5: {2}</source>
@@ -13339,30 +13339,30 @@ Razón: {0}</translation>
 <context>
     <name>FtpReply</name>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="155"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="141"/>
         <source>No suitable proxy found.</source>
         <translation type="unfinished">No se ha encontrado ningún proxy adecuado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="395"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="386"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Cambiar al directorio superior&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="408"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="399"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
         <translation>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Nombre&lt;/th&gt;&lt;th&gt;Tamaño&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Última modificación&lt;/th&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="434"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="425"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
         <translation>{0} {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="458"/>
+        <location filename="Helpviewer/Network/FtpReply.py" line="449"/>
         <source>Listing of {0}</source>
         <translation>Listado de {0}</translation>
     </message>
@@ -13375,14 +13375,24 @@ Razón: {0}</translation>
 <context>
     <name>FtpSyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="89"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="96"/>
         <source>No suitable proxy found.</source>
         <translation>¡El archivo remoto de marcadores ya existe! Sincronizando copia local...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
         <source>Synchronization finished</source>
-        <translation>Subiendo archivo local de marcadores...</translation>
+        <translation type="obsolete">Subiendo archivo local de marcadores...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="356"/>
+        <source>Cannot log in to FTP host.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="363"/>
+        <source>Synchronization finished.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27275,12 +27285,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Certificados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="197"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="200"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="200"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="197"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;, reino {1}&apos;&lt;/b&gt;</translation>
     </message>
