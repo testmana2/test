@@ -298,6 +298,9 @@ class FtpSyncHandler(SyncHandler):
                self.__remoteFilesFound[self._remoteFiles[type_]]:
                 self.__downloadFile(type_, fileName,
                     self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
+            else:
+                self.syncStatus.emit(type_, self.trUtf8("No synchronization required."))
+                self.syncFinished.emit(type_, True, True)
         else:
             if self._remoteFiles[type_] not in self.__remoteFilesFound:
                 self.syncStatus.emit(type_, self._messages[type_]["RemoteMissing"])

@@ -13385,13 +13385,18 @@ Razón: {0}</translation>
         <translation type="obsolete">Subiendo archivo local de marcadores...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="356"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="359"/>
         <source>Cannot log in to FTP host.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="363"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="366"/>
         <source>Synchronization finished.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="302"/>
+        <source>No synchronization required.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
