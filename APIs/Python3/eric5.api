@@ -2614,6 +2614,14 @@ eric5.Helpviewer.Network.EmptyNetworkReply.EmptyNetworkReply?1(parent=None)
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._homePage?8
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._speedDialPage?8
 eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.FileAccessHandler.FileAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.FileAccessHandler.FileAccessHandler?1(parent=None)
+eric5.Helpviewer.Network.FileReply.FileReply.abort?4()
+eric5.Helpviewer.Network.FileReply.FileReply.bytesAvailable?4()
+eric5.Helpviewer.Network.FileReply.FileReply.isSequential?4()
+eric5.Helpviewer.Network.FileReply.FileReply.readData?4(maxlen)
+eric5.Helpviewer.Network.FileReply.FileReply?1(url, parent=None)
+eric5.Helpviewer.Network.FileReply.dirListPage_html?7
 eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.close?4()
 eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.error?4()
 eric5.Helpviewer.Network.FollowRedirectReply.FollowRedirectReply.errorString?4()

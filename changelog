@@ -37,6 +37,7 @@ Version 5.3-snapshot-2012mmdd:
   -- added support for variable AdBlock update periods (given in subscription)
   -- changed FTP support to use Python's ftplib instead of QFtp because the later
      is not supported in Qt5 anymore
+  -- added a handler for file: schemes to allow directory listings
 
 Version 5.3-snapshot-20120624:
 - bug fixes

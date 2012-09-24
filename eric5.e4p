@@ -1041,6 +1041,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Graphics/ImportsDiagramBuilder.py</Source>
     <Source>Graphics/ApplicationDiagramBuilder.py</Source>
     <Source>Utilities/FtpUtilities.py</Source>
+    <Source>Helpviewer/Network/FileReply.py</Source>
+    <Source>Helpviewer/Network/FileAccessHandler.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

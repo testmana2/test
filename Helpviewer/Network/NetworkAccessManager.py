@@ -36,6 +36,7 @@ from .QtHelpAccessHandler import QtHelpAccessHandler
 from .EricAccessHandler import EricAccessHandler
 from .AboutAccessHandler import AboutAccessHandler
 from .FtpAccessHandler import FtpAccessHandler
+from .FileAccessHandler import FileAccessHandler
 
 from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
 
@@ -99,6 +100,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.setSchemeHandler("about", AboutAccessHandler(self))
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
         self.setSchemeHandler("ftp", FtpAccessHandler(self))
+        self.setSchemeHandler("file", FileAccessHandler(self))
     
     def setSchemeHandler(self, scheme, handler):
         """

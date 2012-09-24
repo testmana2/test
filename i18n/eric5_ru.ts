@@ -12986,6 +12986,32 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>FileReply</name>
+    <message>
+        <location filename="Helpviewer/Network/FileReply.py" line="201"/>
+        <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
+        <translation type="unfinished">  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Перейти в родительский каталог&lt;/a&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FileReply.py" line="214"/>
+        <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
+</source>
+        <translation type="unfinished">    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Имя&lt;/th&gt;&lt;th&gt;Размер&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Последнее изменение&lt;/th&gt;&lt;/tr&gt;
+</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FileReply.py" line="240"/>
+        <source>{0} {1}</source>
+        <comment>size unit</comment>
+        <translation type="unfinished">{0} {1}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/FileReply.py" line="264"/>
+        <source>Listing of {0}</source>
+        <translation type="unfinished">Список {0}</translation>
+    </message>
+</context>
+<context>
     <name>FiletypeAssociationDialog</name>
     <message>
         <location filename="Project/FiletypeAssociationDialog.py" line="37"/>
@@ -27885,52 +27911,52 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="200"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="202"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="197"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;; realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="254"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="256"/>
         <source>SSL Errors</source>
         <translation>Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="254"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="256"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ошибки SSL для &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="267"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="269"/>
         <source>Certificates</source>
         <translation>Сертификаты</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="267"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="269"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Сертификаты:&lt;br/&gt;{0}&lt;br/&gt;Принять?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="321"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="323"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Эмитент: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="325"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="327"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Не действительны ранее: {0}&lt;br/&gt;Действительны до: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="313"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="315"/>
         <source>Name: {0}</source>
         <translation>Имя: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="317"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="319"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation>&lt;br/&gt;Организация: {0}</translation>
     </message>

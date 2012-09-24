@@ -279,6 +279,8 @@
               <section title="eric5.Helpviewer.Network.AboutAccessHandler" ref="eric5.Helpviewer.Network.AboutAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.EmptyNetworkReply" ref="eric5.Helpviewer.Network.EmptyNetworkReply.html" />
               <section title="eric5.Helpviewer.Network.EricAccessHandler" ref="eric5.Helpviewer.Network.EricAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.FileAccessHandler" ref="eric5.Helpviewer.Network.FileAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.FileReply" ref="eric5.Helpviewer.Network.FileReply.html" />
               <section title="eric5.Helpviewer.Network.FollowRedirectReply" ref="eric5.Helpviewer.Network.FollowRedirectReply.html" />
               <section title="eric5.Helpviewer.Network.FtpAccessHandler" ref="eric5.Helpviewer.Network.FtpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.FtpReply" ref="eric5.Helpviewer.Network.FtpReply.html" />
@@ -4390,6 +4392,10 @@
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
       <keyword name="FetchProjectHelper.menuTitle" id="FetchProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.menuTitle" />
+      <keyword name="FileAccessHandler" id="FileAccessHandler" ref="eric5.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler" />
+      <keyword name="FileAccessHandler (Constructor)" id="FileAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler.__init__" />
+      <keyword name="FileAccessHandler (Module)" id="FileAccessHandler (Module)" ref="eric5.Helpviewer.Network.FileAccessHandler.html" />
+      <keyword name="FileAccessHandler.createRequest" id="FileAccessHandler.createRequest" ref="eric5.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler.createRequest" />
       <keyword name="FileDialogWizard" id="FileDialogWizard" ref="eric5.Plugins.PluginWizardQFileDialog.html#FileDialogWizard" />
       <keyword name="FileDialogWizard (Constructor)" id="FileDialogWizard (Constructor)" ref="eric5.Plugins.PluginWizardQFileDialog.html#FileDialogWizard.__init__" />
       <keyword name="FileDialogWizard (Package)" id="FileDialogWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.FileDialogWizard.html" />
@@ -4409,6 +4415,15 @@
       <keyword name="FileDialogWizardDialog.getCode" id="FileDialogWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.getCode" />
       <keyword name="FileDialogWizardDialog.on_bTest_clicked" id="FileDialogWizardDialog.on_bTest_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_bTest_clicked" />
       <keyword name="FileDialogWizardDialog.on_buttonBox_clicked" id="FileDialogWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.on_buttonBox_clicked" />
+      <keyword name="FileReply" id="FileReply" ref="eric5.Helpviewer.Network.FileReply.html#FileReply" />
+      <keyword name="FileReply (Constructor)" id="FileReply (Constructor)" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.__init__" />
+      <keyword name="FileReply (Module)" id="FileReply (Module)" ref="eric5.Helpviewer.Network.FileReply.html" />
+      <keyword name="FileReply.__cssLinkClass" id="FileReply.__cssLinkClass" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.__cssLinkClass" />
+      <keyword name="FileReply.__loadDirectory" id="FileReply.__loadDirectory" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.__loadDirectory" />
+      <keyword name="FileReply.abort" id="FileReply.abort" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.abort" />
+      <keyword name="FileReply.bytesAvailable" id="FileReply.bytesAvailable" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.bytesAvailable" />
+      <keyword name="FileReply.isSequential" id="FileReply.isSequential" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.isSequential" />
+      <keyword name="FileReply.readData" id="FileReply.readData" ref="eric5.Helpviewer.Network.FileReply.html#FileReply.readData" />
       <keyword name="FiletypeAssociationDialog" id="FiletypeAssociationDialog" ref="eric5.Project.FiletypeAssociationDialog.html#FiletypeAssociationDialog" />
       <keyword name="FiletypeAssociationDialog (Constructor)" id="FiletypeAssociationDialog (Constructor)" ref="eric5.Project.FiletypeAssociationDialog.html#FiletypeAssociationDialog.__init__" />
       <keyword name="FiletypeAssociationDialog (Module)" id="FiletypeAssociationDialog (Module)" ref="eric5.Project.FiletypeAssociationDialog.html" />
@@ -12628,6 +12643,8 @@
       <file>eric5.Helpviewer.Network.AboutAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.EmptyNetworkReply.html</file>
       <file>eric5.Helpviewer.Network.EricAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.FileAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.FileReply.html</file>
       <file>eric5.Helpviewer.Network.FollowRedirectReply.html</file>
       <file>eric5.Helpviewer.Network.FtpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.FtpReply.html</file>
