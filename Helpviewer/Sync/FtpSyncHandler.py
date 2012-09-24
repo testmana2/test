@@ -409,7 +409,8 @@ class FtpSyncHandler(SyncHandler):
             self.__idleTimer.stop()
         
         try:
-            self.__ftp.quit()
+            if self.__connected:
+                self.__ftp.quit()
         except ftplib.all_errors:
             pass    # ignore FTP errors because we are shutting down anyway
         self.__connected = False
