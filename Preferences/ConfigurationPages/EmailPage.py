@@ -134,7 +134,10 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                 elif isinstance(e, socket.timeout):
                     errorStr = str(e)
                 elif isinstance(e, socket.error):
-                    errorStr = e[1]
+                    try:
+                        errorStr = e[1]
+                    except TypeError:
+                        errorStr = str(e)
                 else:
                     errorStr = str(e)
                 E5MessageBox.critical(self,
@@ -149,7 +152,10 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
             elif isinstance(e, socket.timeout):
                 errorStr = str(e)
             elif isinstance(e, socket.error):
-                errorStr = e[1]
+                try:
+                    errorStr = e[1]
+                except TypeError:
+                    errorStr = str(e)
             else:
                 errorStr = str(e)
             E5MessageBox.critical(self,
