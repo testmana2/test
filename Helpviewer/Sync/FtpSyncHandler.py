@@ -426,3 +426,5 @@ class FtpSyncHandler(SyncHandler):
                 code, msg = err.args[0].split(None, 1)
                 if code.strip() == "421":
                     self.__connected = False
+            except IOError:
+                self.__connected = False
