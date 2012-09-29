@@ -108,7 +108,6 @@ class HelpWindow(QMainWindow):
         """
         super().__init__(parent)
         self.setObjectName(name)
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.setWindowTitle(self.trUtf8("eric5 Web Browser"))
         
         self.fromEric = fromEric
