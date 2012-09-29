@@ -20,17 +20,17 @@ DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
         </bookmark>
         <folder folded="no">
             <title>Qt Web Sites</title>
-            <bookmark href="http://qt.nokia.com/">
+            <bookmark href="http://qt.digia.com/">
                 <title>Qt Web Site</title>
             </bookmark>
-            <bookmark href="http://qt.nokia.com/doc/">
+            <bookmark href="http://qt-project.org/">
+                <title>Qt Project</title>
+            </bookmark>
+            <bookmark href="http://qt-project.org/doc/">
                 <title>Qt Documentation</title>
             </bookmark>
-            <bookmark href="http://qt.nokia.com/doc/qq/">
-                <title>Qt Quarterly</title>
-            </bookmark>
-            <bookmark href="http://labs.trolltech.com/">
-                <title>Qt Labs</title>
+            <bookmark href="http://blog.qt.digia.com/">
+                <title>Qt Blog</title>
             </bookmark>
             <bookmark href="http://qtcentre.org/">
                 <title>Qt Centre</title>
