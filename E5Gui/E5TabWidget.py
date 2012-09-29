@@ -7,8 +7,8 @@
 Module implementing a TabWidget class substituting QTabWidget.
 """
 
-from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
 from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
+from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
 
 
 class E5WheelTabBar(QTabBar):
