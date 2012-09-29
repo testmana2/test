@@ -1043,6 +1043,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Utilities/FtpUtilities.py</Source>
     <Source>Helpviewer/Network/FileReply.py</Source>
     <Source>Helpviewer/Network/FileAccessHandler.py</Source>
+    <Source>E5Network/E5Ftp.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

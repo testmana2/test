@@ -14,13 +14,18 @@ import mimetypes
 
 from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, \
     QCoreApplication
-from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QNetworkProxyQuery, \
-    QNetworkProxy, QAuthenticator
+from PyQt4.QtGui import QPixmap, QDialog
+from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QAuthenticator
 from PyQt4.QtWebKit import QWebSettings
 
+from E5Network.E5Ftp import E5Ftp, E5FtpProxyError, E5FtpProxyType
+
+from UI.AuthenticationDialog import AuthenticationDialog
 import UI.PixmapCache
+
 from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
+
+import Preferences
 
 ftpListPage_html = """\
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -115,7 +120,7 @@ class FtpReply(QNetworkReply):
         self.__manager = parent
         self.__handler = accessHandler
         
-        self.__ftp = ftplib.FTP()
+        self.__ftp = E5Ftp()
         
         self.__items = []
         self.__content = QByteArray()
@@ -128,24 +133,19 @@ class FtpReply(QNetworkReply):
         self.setUrl(url)
         
         # do proxy setup
-        self.__proxy = None
-        query = QNetworkProxyQuery(url)
-        proxyList = parent.proxyFactory().queryProxy(query)
-        ftpProxy = QNetworkProxy()
-        for proxy in proxyList:
-            if proxy.type() == QNetworkProxy.NoProxy or \
-               proxy.type() == QNetworkProxy.FtpCachingProxy:
-                ftpProxy = proxy
-                break
-        if ftpProxy.type() == QNetworkProxy.DefaultProxy:
-            self.setError(QNetworkReply.ProxyNotFoundError,
-                          self.trUtf8("No suitable proxy found."))
-            QTimer.singleShot(0, self.__errorSignals)
-            return
-        elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
-            self.__proxy = ftpProxy
-        
-        self.__loggingIn = False
+        if not Preferences.getUI("UseProxy"):
+            proxyType = E5FtpProxyType.NoProxy
+        else:
+            proxyType = Preferences.getUI("ProxyType/Ftp")
+        if proxyType != E5FtpProxyType.NoProxy:
+            self.__ftp.setProxy(proxyType,
+                Preferences.getUI("ProxyHost/Ftp"),
+                Preferences.getUI("ProxyPort/Ftp"))
+            if proxyType != E5FtpProxyType.NonAuthorizing:
+                self.__ftp.setProxyAuthentication(
+                    Preferences.getUI("ProxyUser/Ftp"),
+                    Preferences.getUI("ProxyPassword/Ftp"),
+                    Preferences.getUI("ProxyAccount/Ftp"))
         
         QTimer.singleShot(0, self.__doFtpCommands)
     
@@ -194,13 +194,16 @@ class FtpReply(QNetworkReply):
             username = self.url().userName()
             password = self.url().password()
             byAuth = False
+            
             while retry:
-                if self.__proxy:
-                    self.__ftp.connect(self.__proxy.hostName(), self.__proxy.port(),
+                try:
+                    self.__ftp.connect(self.url().host(),
+                                       self.url().port(ftplib.FTP_PORT),
                                        timeout=10)
-                else:
-                    self.__ftp.connect(
-                        self.url().host(), self.url().port(ftplib.FTP_PORT), timeout=10)
+                except E5FtpProxyError as err:
+                    self.setError(QNetworkReply.ProxyNotFoundError, str(err))
+                    self.error.emit(QNetworkReply.ProxyNotFoundError)
+                    self.finished.emit()
                 ok, retry = self.__doFtpLogin(username, password, byAuth)
                 if not ok and retry:
                     auth = self.__handler.getAuthenticator(self.url().host())
@@ -246,36 +249,45 @@ class FtpReply(QNetworkReply):
         @return tuple of two flags indicating a successful login and
             if the login should be retried (boolean, boolean)
         """
-        # 1. do proxy login, if a proxy is used
-        if self.__proxy:
-            try:
-                self.__ftp.login(self.__proxy.user(), self.__proxy.password())
-            except ftplib.error_perm as err:
-                code, msg = err.args[0].split(None, 1)
-                if code.strip() == "530":
-                    auth = QAuthenticator()
-                    auth.setOption("realm", self.__proxy.hostName())
-                    self.__manager.proxyAuthenticationRequired.emit(self.__proxy, auth)
-                    if not auth.isNull() and auth.user():
-                        self.__proxy.setUser(auth.user())
-                        self.__proxy.setPassword(auth.password())
-                        return False, True
-                return False, False
-        
-        # 2. do the real login
         try:
-            if self.__proxy:
-                loginName = "{0}@{1}".format(username, self.url().host())
-                if self.url().port(ftplib.FTP_PORT) != ftplib.FTP_PORT:
-                    loginName = "{0}:{1}".format(loginName, self.url().port())
-            else:
-                loginName = username
-            self.__ftp.login(loginName, password)
+            self.__ftp.login(username, password)
             return True, False
+        except E5FtpProxyError as err:
+            code = str(err)[:3]
+            if code[1] == "5":
+                # could be a 530, check second line
+                lines = str(err).splitlines()
+                if lines[1][:3] == "530":
+                    if "usage" in "\n".join(lines[1:].lower()):
+                        # found a not supported proxy
+                        self.setError(QNetworkReply.ProxyConnectionRefusedError,
+                            self.trUtf8("The proxy type seems to be wrong."
+                                        " If it is not in the list of supported"
+                                        " proxy types please report it with the"
+                                        " instructions given by the proxy.\n{0}").format(
+                                "\n".join(lines[1:])))
+                        self.error.emit(QNetworkReply.ProxyConnectionRefusedError)
+                        return False, False
+                    else:
+                        info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
+                            .format(Qt.escape(Preferences.getUI("ProxyHost/Ftp")))
+                        dlg = AuthenticationDialog(info,
+                            Preferences.getUI("ProxyUser/Ftp"), True)
+                        dlg.setData(Preferences.getUI("ProxyUser/Ftp"),
+                                    Preferences.getUI("ProxyPassword/Ftp"))
+                        if dlg.exec_() == QDialog.Accepted:
+                            username, password = dlg.getData()
+                            if dlg.shallSave():
+                                Preferences.setUI("ProxyUser/Ftp", username)
+                                Preferences.setUI("ProxyPassword/Ftp", password)
+                            self.__ftp.setProxyAuthentication(username, password)
+                            return False, True
+            return False, False
         except ftplib.error_perm as err:
-            code, msg = err.args[0].split(None, 1)
-            if code.strip() == "530":
+            code = err.args[0].strip()[:3]
+            if code in ["530", "421"]:
                 # error 530 -> Login incorrect
+                # error 421 -> Login may be incorrect (reported by some proxies)
                 if byAuth:
                     self.__handler.setAuthenticator(self.url().host(), None)
                     auth = None
@@ -290,8 +302,7 @@ class FtpReply(QNetworkReply):
                             self.__handler.setAuthenticator(self.url().host(), auth)
                             return False, True
                     return False, False
-                else:
-                    return False, True
+                return False, True
             else:
                 raise
     

@@ -140,6 +140,7 @@
             <section title="eric5.E5Gui.E5TreeWidget" ref="eric5.E5Gui.E5TreeWidget.html" />
           </section>
           <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
+            <section title="eric5.E5Network.E5Ftp" ref="eric5.E5Network.E5Ftp.html" />
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
             <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
@@ -3307,6 +3308,15 @@
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric5.E5Gui.E5FileDialog.html" />
+      <keyword name="E5Ftp" id="E5Ftp" ref="eric5.E5Network.E5Ftp.html#E5Ftp" />
+      <keyword name="E5Ftp (Constructor)" id="E5Ftp (Constructor)" ref="eric5.E5Network.E5Ftp.html#E5Ftp.__init__" />
+      <keyword name="E5Ftp (Module)" id="E5Ftp (Module)" ref="eric5.E5Network.E5Ftp.html" />
+      <keyword name="E5Ftp.connect" id="E5Ftp.connect" ref="eric5.E5Network.E5Ftp.html#E5Ftp.connect" />
+      <keyword name="E5Ftp.login" id="E5Ftp.login" ref="eric5.E5Network.E5Ftp.html#E5Ftp.login" />
+      <keyword name="E5Ftp.setProxy" id="E5Ftp.setProxy" ref="eric5.E5Network.E5Ftp.html#E5Ftp.setProxy" />
+      <keyword name="E5Ftp.setProxyAuthentication" id="E5Ftp.setProxyAuthentication" ref="eric5.E5Network.E5Ftp.html#E5Ftp.setProxyAuthentication" />
+      <keyword name="E5FtpProxyError" id="E5FtpProxyError" ref="eric5.E5Network.E5Ftp.html#E5FtpProxyError" />
+      <keyword name="E5FtpProxyType" id="E5FtpProxyType" ref="eric5.E5Network.E5Ftp.html#E5FtpProxyType" />
       <keyword name="E5Graphics (Package)" id="E5Graphics (Package)" ref="index-eric5.E5Graphics.html" />
       <keyword name="E5GraphicsView" id="E5GraphicsView" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView" />
       <keyword name="E5GraphicsView (Constructor)" id="E5GraphicsView (Constructor)" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__init__" />
@@ -4552,7 +4562,6 @@
       <keyword name="FtpSyncHandler.__connectAndLogin" id="FtpSyncHandler.__connectAndLogin" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__connectAndLogin" />
       <keyword name="FtpSyncHandler.__dirListCallback" id="FtpSyncHandler.__dirListCallback" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__dirListCallback" />
       <keyword name="FtpSyncHandler.__doFtpCommands" id="FtpSyncHandler.__doFtpCommands" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__doFtpCommands" />
-      <keyword name="FtpSyncHandler.__doFtpLogin" id="FtpSyncHandler.__doFtpLogin" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__doFtpLogin" />
       <keyword name="FtpSyncHandler.__downloadFile" id="FtpSyncHandler.__downloadFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__downloadFile" />
       <keyword name="FtpSyncHandler.__downloadFileCallback" id="FtpSyncHandler.__downloadFileCallback" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__downloadFileCallback" />
       <keyword name="FtpSyncHandler.__idleTimeout" id="FtpSyncHandler.__idleTimeout" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__idleTimeout" />
@@ -6973,6 +6982,7 @@
       <keyword name="NetworkPage (Module)" id="NetworkPage (Module)" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html" />
       <keyword name="NetworkPage.on_clearProxyPasswordsButton_clicked" id="NetworkPage.on_clearProxyPasswordsButton_clicked" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_clearProxyPasswordsButton_clicked" />
       <keyword name="NetworkPage.on_downloadDirButton_clicked" id="NetworkPage.on_downloadDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_downloadDirButton_clicked" />
+      <keyword name="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" id="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" />
       <keyword name="NetworkPage.save" id="NetworkPage.save" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.save" />
       <keyword name="NetworkProtocolUnknownErrorReply" id="NetworkProtocolUnknownErrorReply" ref="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html#NetworkProtocolUnknownErrorReply" />
       <keyword name="NetworkProtocolUnknownErrorReply (Constructor)" id="NetworkProtocolUnknownErrorReply (Constructor)" ref="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html#NetworkProtocolUnknownErrorReply.__init__" />
@@ -12515,6 +12525,7 @@
       <file>eric5.E5Gui.E5TreeSortFilterProxyModel.html</file>
       <file>eric5.E5Gui.E5TreeView.html</file>
       <file>eric5.E5Gui.E5TreeWidget.html</file>
+      <file>eric5.E5Network.E5Ftp.html</file>
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>

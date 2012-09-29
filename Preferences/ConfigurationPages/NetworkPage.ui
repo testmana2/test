@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>589</width>
-    <height>554</height>
+    <height>698</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -129,7 +129,7 @@
       <bool>true</bool>
      </property>
      <property name="checked">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -169,11 +169,11 @@
         <property name="flat">
          <bool>false</bool>
         </property>
-        <layout class="QGridLayout" name="gridLayout">
+        <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>Http-Proxy:</string>
+            <string>HTTP-Proxy:</string>
            </property>
           </widget>
          </item>
@@ -223,7 +223,7 @@
          <item row="2" column="0">
           <widget class="QLabel" name="label_4">
            <property name="text">
-            <string>Https-Proxy:</string>
+            <string>HTTPS-Proxy:</string>
            </property>
           </widget>
          </item>
@@ -256,48 +256,116 @@
             <number>65535</number>
            </property>
            <property name="value">
-            <number>80</number>
+            <number>443</number>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>Ftp-Proxy:</string>
+         <item row="3" column="0" colspan="4">
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>FTP-Proxy</string>
            </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="ftpProxyHostEdit">
-           <property name="toolTip">
-            <string>Enter the name of the FTP proxy host</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QSpinBox" name="ftpProxyPortSpin">
-           <property name="toolTip">
-            <string>Enter the FTP proxy port</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight</set>
-           </property>
-           <property name="minimum">
-            <number>1</number>
-           </property>
-           <property name="maximum">
-            <number>65535</number>
-           </property>
-           <property name="value">
-            <number>80</number>
-           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Hostname:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="ftpProxyHostEdit">
+              <property name="toolTip">
+               <string>Enter the name of the FTP proxy host</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Port:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QSpinBox" name="ftpProxyPortSpin">
+              <property name="toolTip">
+               <string>Enter the FTP proxy port</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight</set>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+              <property name="value">
+               <number>21</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Proxy Type:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="3">
+             <widget class="QComboBox" name="ftpProxyTypeCombo">
+              <property name="toolTip">
+               <string>Select the type of the FTP proxy</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>User Name:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="3">
+             <widget class="QLineEdit" name="ftpProxyUserEdit">
+              <property name="toolTip">
+               <string>Enter the user name for the proxy authentication</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Password:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="3">
+             <widget class="QLineEdit" name="ftpProxyPasswordEdit">
+              <property name="toolTip">
+               <string>Enter the password for the proxy authentication</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Account:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1" colspan="3">
+             <widget class="QLineEdit" name="ftpProxyAccountEdit">
+              <property name="toolTip">
+               <string>Enter the account info for the proxy authentication</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
@@ -306,10 +374,10 @@
       <item>
        <widget class="QPushButton" name="clearProxyPasswordsButton">
         <property name="toolTip">
-         <string>Press to clear the saved proxy passwords</string>
+         <string>Press to clear the saved passwords for the Http(s) proxy</string>
         </property>
         <property name="text">
-         <string>Clear Proxy Passwords</string>
+         <string>Clear HTTP(S) Proxy Passwords</string>
         </property>
        </widget>
       </item>
@@ -348,6 +416,11 @@
   <tabstop>httpsProxyPortSpin</tabstop>
   <tabstop>ftpProxyHostEdit</tabstop>
   <tabstop>ftpProxyPortSpin</tabstop>
+  <tabstop>ftpProxyTypeCombo</tabstop>
+  <tabstop>ftpProxyUserEdit</tabstop>
+  <tabstop>ftpProxyPasswordEdit</tabstop>
+  <tabstop>ftpProxyAccountEdit</tabstop>
+  <tabstop>clearProxyPasswordsButton</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -358,12 +431,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>57</x>
-     <y>161</y>
+     <x>77</x>
+     <y>310</y>
     </hint>
     <hint type="destinationlabel">
-     <x>63</x>
-     <y>190</y>
+     <x>83</x>
+     <y>507</y>
     </hint>
    </hints>
   </connection>
@@ -374,12 +447,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>113</x>
-     <y>240</y>
+     <x>229</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>83</x>
-     <y>265</y>
+     <x>109</x>
+     <y>412</y>
     </hint>
    </hints>
   </connection>
@@ -390,12 +463,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>129</x>
-     <y>240</y>
+     <x>245</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>64</x>
-     <y>291</y>
+     <x>106</x>
+     <y>463</y>
     </hint>
    </hints>
   </connection>
@@ -406,12 +479,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>195</x>
-     <y>236</y>
+     <x>311</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>153</x>
-     <y>267</y>
+     <x>269</x>
+     <y>412</y>
     </hint>
    </hints>
   </connection>
@@ -422,12 +495,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>191</x>
-     <y>240</y>
+     <x>307</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>183</x>
-     <y>295</y>
+     <x>304</x>
+     <y>463</y>
     </hint>
    </hints>
   </connection>
@@ -438,12 +511,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>401</x>
-     <y>240</y>
+     <x>517</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>480</x>
-     <y>265</y>
+     <x>485</x>
+     <y>412</y>
     </hint>
    </hints>
   </connection>
@@ -454,12 +527,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>366</x>
-     <y>238</y>
+     <x>482</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
      <x>474</x>
-     <y>290</y>
+     <y>463</y>
     </hint>
    </hints>
   </connection>
@@ -470,12 +543,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>465</x>
-     <y>239</y>
+     <x>557</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>522</x>
-     <y>268</y>
+     <x>557</x>
+     <y>412</y>
     </hint>
    </hints>
   </connection>
@@ -486,12 +559,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>438</x>
-     <y>237</y>
+     <x>554</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>516</x>
-     <y>293</y>
+     <x>546</x>
+     <y>463</y>
     </hint>
    </hints>
   </connection>

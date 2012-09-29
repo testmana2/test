@@ -1498,6 +1498,20 @@ eric5.E5Gui.E5TreeWidget.E5TreeWidget.mousePressEvent?4(evt)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget.prependToParentItem?4(parent, item)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget.setDefaultItemShowMode?4(mode)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget?1(parent=None)
+eric5.E5Network.E5Ftp.E5Ftp.connect?4(host="", port=0, timeout=-999)
+eric5.E5Network.E5Ftp.E5Ftp.login?4(user="", password="", acct="")
+eric5.E5Network.E5Ftp.E5Ftp.setProxy?4(proxyType=E5FtpProxyType.NoProxy, proxyHost="", proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="", proxyAccount="")
+eric5.E5Network.E5Ftp.E5Ftp.setProxyAuthentication?4(proxyUser="", proxyPassword="", proxyAccount="")
+eric5.E5Network.E5Ftp.E5Ftp?1(host="", user="", password="", acct="", proxyType=E5FtpProxyType.NoProxy, proxyHost="", proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="", proxyAccount="", timeout=_GLOBAL_DEFAULT_TIMEOUT)
+eric5.E5Network.E5Ftp.E5FtpProxyType.AuthResp?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.Bluecoat?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.NoProxy?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.NonAuthorizing?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.Open?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.ProxyuserAtServer?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.Site?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.UserAtProxyuserAtServer?7
+eric5.E5Network.E5Ftp.E5FtpProxyType.UserAtServer?7
 eric5.E5Network.E5NetworkHeaderDetailsDialog.E5NetworkHeaderDetailsDialog.setData?4(name, value)
 eric5.E5Network.E5NetworkHeaderDetailsDialog.E5NetworkHeaderDetailsDialog?1(parent=None)
 eric5.E5Network.E5NetworkMonitor.E5NetworkMonitor._monitor?8
@@ -5368,6 +5382,7 @@ eric5.Preferences.ConfigurationPages.MultiProjectPage.MultiProjectPage?1()
 eric5.Preferences.ConfigurationPages.MultiProjectPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_clearProxyPasswordsButton_clicked?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_downloadDirButton_clicked?4()
+eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged?4(index)
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.save?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage?1()
 eric5.Preferences.ConfigurationPages.NetworkPage.create?4(dlg)

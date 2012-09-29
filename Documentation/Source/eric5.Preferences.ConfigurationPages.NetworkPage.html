@@ -65,10 +65,13 @@ ConfigurationPageBase, Ui_NetworkPage
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#NetworkPage.on_clearProxyPasswordsButton_clicked">on_clearProxyPasswordsButton_clicked</a></td>
-<td>Private slot to clear the saved proxy passwords.</td>
+<td>Private slot to clear the saved HTTP(S) proxy passwords.</td>
 </tr><tr>
 <td><a href="#NetworkPage.on_downloadDirButton_clicked">on_downloadDirButton_clicked</a></td>
 <td>Private slot to handle the directory selection via dialog.</td>
+</tr><tr>
+<td><a href="#NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged">on_ftpProxyTypeCombo_currentIndexChanged</a></td>
+<td>Private slot handling the selection of a proxy type.</td>
 </tr><tr>
 <td><a href="#NetworkPage.save">save</a></td>
 <td>Public slot to save the Application configuration.</td>
@@ -87,13 +90,23 @@ ConfigurationPageBase, Ui_NetworkPage
 <h4>NetworkPage.on_clearProxyPasswordsButton_clicked</h4>
 <b>on_clearProxyPasswordsButton_clicked</b>(<i></i>)
 <p>
-        Private slot to clear the saved proxy passwords.
+        Private slot to clear the saved HTTP(S) proxy passwords.
 </p><a NAME="NetworkPage.on_downloadDirButton_clicked" ID="NetworkPage.on_downloadDirButton_clicked"></a>
 <h4>NetworkPage.on_downloadDirButton_clicked</h4>
 <b>on_downloadDirButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the directory selection via dialog.
-</p><a NAME="NetworkPage.save" ID="NetworkPage.save"></a>
+</p><a NAME="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" ID="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged"></a>
+<h4>NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged</h4>
+<b>on_ftpProxyTypeCombo_currentIndexChanged</b>(<i>index</i>)
+<p>
+        Private slot handling the selection of a proxy type.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the selected item (integer)
+</dd>
+</dl><a NAME="NetworkPage.save" ID="NetworkPage.save"></a>
 <h4>NetworkPage.save</h4>
 <b>save</b>(<i></i>)
 <p>

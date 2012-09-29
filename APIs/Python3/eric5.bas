@@ -134,6 +134,8 @@ E5ClickableLabel QLabel
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
 E5FileCompleter QCompleter
+E5Ftp ftplib.FTP
+E5FtpProxyError ftplib.Error
 E5GraphicsView QGraphicsView
 E5HorizontalToolBox E5TabWidget
 E5Led QWidget

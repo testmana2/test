@@ -10,11 +10,9 @@ Module implementing a synchronization handler using FTP.
 import ftplib
 import io
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QTimer, QFileInfo, QCoreApplication, QByteArray
-from PyQt4.QtNetwork import QNetworkProxyQuery, QNetworkProxy, QAuthenticator
+from PyQt4.QtCore import pyqtSignal, QTimer, QFileInfo, QCoreApplication, QByteArray
 
-from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
-    proxyAuthenticationRequired
+from E5Network.E5Ftp import E5Ftp, E5FtpProxyType, E5FtpProxyError
 
 from .SyncHandler import SyncHandler
 
@@ -76,27 +74,22 @@ class FtpSyncHandler(SyncHandler):
         self.__idleTimer.setInterval(Preferences.getHelp("SyncFtpIdleTimeout") * 1000)
         self.__idleTimer.timeout.connect(self.__idleTimeout)
         
-        self.__ftp = ftplib.FTP()
+        self.__ftp = E5Ftp()
         
         # do proxy setup
-        self.__proxy = None
-        url = QUrl("ftp://{0}:{1}".format(
-            Preferences.getHelp("SyncFtpServer"),
-            Preferences.getHelp("SyncFtpPort")
-        ))
-        query = QNetworkProxyQuery(url)
-        proxyList = E5NetworkProxyFactory().queryProxy(query)
-        ftpProxy = QNetworkProxy()
-        for proxy in proxyList:
-            if proxy.type() == QNetworkProxy.NoProxy or \
-               proxy.type() == QNetworkProxy.FtpCachingProxy:
-                ftpProxy = proxy
-                break
-        if ftpProxy.type() == QNetworkProxy.DefaultProxy:
-            self.syncError.emit(self.trUtf8("No suitable proxy found."))
-            return
-        elif ftpProxy.type() == QNetworkProxy.FtpCachingProxy:
-            self.__proxy = ftpProxy
+        if not Preferences.getUI("UseProxy"):
+            proxyType = E5FtpProxyType.NoProxy
+        else:
+            proxyType = Preferences.getUI("ProxyType/Ftp")
+        if proxyType != E5FtpProxyType.NoProxy:
+            self.__ftp.setProxy(proxyType,
+                Preferences.getUI("ProxyHost/Ftp"),
+                Preferences.getUI("ProxyPort/Ftp"))
+            if proxyType != E5FtpProxyType.NonAuthorizing:
+                self.__ftp.setProxyAuthentication(
+                    Preferences.getUI("ProxyUser/Ftp"),
+                    Preferences.getUI("ProxyPassword/Ftp"),
+                    Preferences.getUI("ProxyAccount/Ftp"))
         
         QTimer.singleShot(0, self.__doFtpCommands)
     
@@ -112,7 +105,7 @@ class FtpSyncHandler(SyncHandler):
                 self.__initialSync()
                 self.__state = "idle"
                 self.__idleTimer.start()
-        except ftplib.all_errors as err:
+        except (ftplib.all_errors, E5FtpProxyError) as err:
             self.syncError.emit(str(err))
     
     def __connectAndLogin(self):
@@ -121,64 +114,15 @@ class FtpSyncHandler(SyncHandler):
         
         @return flag indicating a successful log in (boolean)
         """
-        retry = True
-        while retry:
-            if self.__proxy:
-                self.__ftp.connect(
-                    self.__proxy.hostName(),
-                    self.__proxy.port(),
-                    timeout=10)
-            else:
-                self.__ftp.connect(
-                    Preferences.getHelp("SyncFtpServer"),
-                    Preferences.getHelp("SyncFtpPort"),
-                    timeout=10)
-            ok, retry = self.__doFtpLogin(
-                Preferences.getHelp("SyncFtpUser"),
-                Preferences.getHelp("SyncFtpPassword"))
-        self.__connected = ok
-        if not ok:
-            self.syncError.emit(self.trUtf8("Cannot log in to FTP host."))
-        
-        return ok
-    
-    def __doFtpLogin(self, username, password):
-        """
-        Private method to do the FTP login with asking for a username and password,
-        if the login fails with an error 530.
-        
-        @param username user name to use for the login (string)
-        @param password password to use for the login (string)
-        @return tuple of two flags indicating a successful login and
-            if the login should be retried (boolean, boolean)
-        """
-        # 1. do proxy login, if a proxy is used
-        if self.__proxy:
-            try:
-                self.__ftp.login(self.__proxy.user(), self.__proxy.password())
-            except ftplib.error_perm as err:
-                code, msg = err.args[0].split(None, 1)
-                if code.strip() == "530":
-                    auth = QAuthenticator()
-                    auth.setOption("realm", self.__proxy.hostName())
-                    proxyAuthenticationRequired(self.__proxy, auth)
-                    if not auth.isNull() and auth.user():
-                        self.__proxy.setUser(auth.user())
-                        self.__proxy.setPassword(auth.password())
-                        return False, True
-                return False, False
-        
-        # 2. do the real login
-        if self.__proxy:
-            loginName = "{0}@{1}".format(
-                username, Preferences.getHelp("SyncFtpServer"))
-            if Preferences.getHelp("SyncFtpPort") != ftplib.FTP_PORT:
-                loginName = "{0}:{1}".format(
-                    loginName, Preferences.getHelp("SyncFtpPort"))
-        else:
-            loginName = username
-        self.__ftp.login(loginName, password)
-        return True, False
+        self.__ftp.connect(
+            Preferences.getHelp("SyncFtpServer"),
+            Preferences.getHelp("SyncFtpPort"),
+            timeout=5)
+        self.__ftp.login(
+            Preferences.getHelp("SyncFtpUser"),
+            Preferences.getHelp("SyncFtpPassword"))
+        self.__connected = True
+        return True
     
     def __changeToStore(self):
         """
@@ -197,8 +141,8 @@ class FtpSyncHandler(SyncHandler):
             try:
                 self.__ftp.cwd(path)
             except ftplib.error_perm as err:
-                code, msg = err.args[0].split(None, 1)
-                if code.strip() == "550":
+                code = err.args[0].strip()[:3]
+                if code == "550":
                     # path does not exist, create it
                     self.__ftp.mkd(path)
                     self.__ftp.cwd(path)
@@ -267,7 +211,9 @@ class FtpSyncHandler(SyncHandler):
         @param type_ type of the synchronization event (string one
             of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be uploaded (string)
+        @return flag indicating success (boolean)
         """
+        res = False
         data = self.readFile(fileName, type_)
         if data.isEmpty():
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
@@ -280,9 +226,11 @@ class FtpSyncHandler(SyncHandler):
                     buffer,
                     callback=lambda x: QCoreApplication.processEvents())
                 self.syncFinished.emit(type_, True, False)
+                res = True
             except ftplib.all_errors as err:
                 self.syncStatus.emit(type_, str(err))
                 self.syncFinished.emit(type_, False, False)
+        return res
     
     def __initialSyncFile(self, type_, fileName):
         """
@@ -362,8 +310,8 @@ class FtpSyncHandler(SyncHandler):
         # upload the changed file
         self.__state = "uploading"
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])
-        self.__uploadFile(type_, fileName)
-        self.syncStatus.emit(type_, self.trUtf8("Synchronization finished."))
+        if self.__uploadFile(type_, fileName):
+            self.syncStatus.emit(type_, self.trUtf8("Synchronization finished."))
         self.__state = "idle"
     
     def syncBookmarks(self):
@@ -423,8 +371,8 @@ class FtpSyncHandler(SyncHandler):
             try:
                 self.__ftp.voidcmd("NOOP")
             except ftplib.Error as err:
-                code, msg = err.args[0].split(None, 1)
-                if code.strip() == "421":
+                code = err.args[0].strip()[:3]
+                if code == "421":
                     self.__connected = False
             except IOError:
                 self.__connected = False

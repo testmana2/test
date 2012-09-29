@@ -28,6 +28,7 @@ from PyQt4.QtWebKit import QWebSettings
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui import E5FileDialog
+from E5Network.E5Ftp import E5FtpProxyType
 
 import QScintilla.Lexers
 
@@ -186,6 +187,8 @@ class Prefs(object):
         "ProxyPassword/Http": "",
         "ProxyPassword/Https": "",
         "ProxyPassword/Ftp": "",
+        "ProxyType/Ftp": E5FtpProxyType.NoProxy,
+        "ProxyAccount/Ftp": "",
         
         "PluginRepositoryUrl5": \
             "http://eric-ide.python-projects.org/plugins5/repository.xml",
@@ -1307,7 +1310,7 @@ def getUI(key, prefClass=Prefs):
             prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp",
-                 "OpenOnStartup",
+                 "ProxyType/Ftp", "OpenOnStartup",
                  "PerformVersionCheck", "RecentNumber", ]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))

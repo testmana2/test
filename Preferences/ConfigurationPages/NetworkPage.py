@@ -13,6 +13,7 @@ from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
+from E5Network.E5Ftp import E5FtpProxyType
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NetworkPage import Ui_NetworkPage
@@ -37,6 +38,25 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("No FTP Proxy"),
+                                       E5FtpProxyType.NoProxy)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("No Proxy Authentication required"),
+                                       E5FtpProxyType.NonAuthorizing)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("User@Server"),
+                                       E5FtpProxyType.UserAtServer)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("SITE"),
+                                       E5FtpProxyType.Site)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("OPEN"),
+                                       E5FtpProxyType.Open)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("User@Proxyuser@Server"),
+                                       E5FtpProxyType.UserAtProxyuserAtServer)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("Proxyuser@Server"),
+                                       E5FtpProxyType.ProxyuserAtServer)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("AUTH and RESP"),
+                                       E5FtpProxyType.AuthResp)
+        self.ftpProxyTypeCombo.addItem(self.trUtf8("Bluecoat Proxy"),
+                                       E5FtpProxyType.Bluecoat)
+        
         # set initial values
         self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
         self.requestFilenameCheckBox.setChecked(
@@ -49,27 +69,42 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         else:
             self.cleanupSuccessfulButton.setChecked(True)
         
-        self.proxyGroup.setChecked(
-            Preferences.getUI("UseProxy"))
+        # HTTP proxy
+        self.httpProxyHostEdit.setText(
+            Preferences.getUI("ProxyHost/Http"))
+        self.httpProxyPortSpin.setValue(
+            Preferences.getUI("ProxyPort/Http"))
+        
+        # HTTPS proxy
+        self.httpsProxyHostEdit.setText(
+            Preferences.getUI("ProxyHost/Https"))
+        self.httpsProxyPortSpin.setValue(
+            Preferences.getUI("ProxyPort/Https"))
+        
+        # FTP proxy
+        self.ftpProxyHostEdit.setText(
+            Preferences.getUI("ProxyHost/Ftp"))
+        self.ftpProxyPortSpin.setValue(
+            Preferences.getUI("ProxyPort/Ftp"))
+        self.ftpProxyTypeCombo.setCurrentIndex(
+            self.ftpProxyTypeCombo.findData(
+                Preferences.getUI("ProxyType/Ftp")))
+        self.ftpProxyUserEdit.setText(
+            Preferences.getUI("ProxyUser/Ftp"))
+        self.ftpProxyPasswordEdit.setText(
+            Preferences.getUI("ProxyPassword/Ftp"))
+        self.ftpProxyAccountEdit.setText(
+            Preferences.getUI("ProxyAccount/Ftp"))
+        
+        self.httpProxyForAllCheckBox.setChecked(
+            Preferences.getUI("UseHttpProxyForAll"))
         if Preferences.getUI("UseSystemProxy"):
             self.systemProxyButton.setChecked(True)
         else:
             self.manualProxyButton.setChecked(True)
-        self.httpProxyForAllCheckBox.setChecked(
-            Preferences.getUI("UseHttpProxyForAll"))
-        self.httpProxyHostEdit.setText(
-            Preferences.getUI("ProxyHost/Http"))
-        self.httpsProxyHostEdit.setText(
-            Preferences.getUI("ProxyHost/Https"))
-        self.ftpProxyHostEdit.setText(
-            Preferences.getUI("ProxyHost/Ftp"))
-        self.httpProxyPortSpin.setValue(
-            Preferences.getUI("ProxyPort/Http"))
-        self.httpsProxyPortSpin.setValue(
-            Preferences.getUI("ProxyPort/Https"))
-        self.ftpProxyPortSpin.setValue(
-            Preferences.getUI("ProxyPort/Ftp"))
-        
+        self.proxyGroup.setChecked(
+            Preferences.getUI("UseProxy"))
+    
     def save(self):
         """
         Public slot to save the Application configuration.
@@ -92,18 +127,33 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.systemProxyButton.isChecked())
         Preferences.setUI("UseHttpProxyForAll",
             self.httpProxyForAllCheckBox.isChecked())
+        
+        # HTTP proxy
         Preferences.setUI("ProxyHost/Http",
             self.httpProxyHostEdit.text())
-        Preferences.setUI("ProxyHost/Https",
-            self.httpsProxyHostEdit.text())
-        Preferences.setUI("ProxyHost/Ftp",
-            self.ftpProxyHostEdit.text())
         Preferences.setUI("ProxyPort/Http",
             self.httpProxyPortSpin.value())
+        
+        # HTTPS proxy
+        Preferences.setUI("ProxyHost/Https",
+            self.httpsProxyHostEdit.text())
         Preferences.setUI("ProxyPort/Https",
             self.httpsProxyPortSpin.value())
+        
+        # FTP proxy
+        Preferences.setUI("ProxyHost/Ftp",
+            self.ftpProxyHostEdit.text())
         Preferences.setUI("ProxyPort/Ftp",
             self.ftpProxyPortSpin.value())
+        Preferences.setUI("ProxyType/Ftp",
+            self.ftpProxyTypeCombo.itemData(
+                self.ftpProxyTypeCombo.currentIndex()))
+        Preferences.setUI("ProxyUser/Ftp",
+            self.ftpProxyUserEdit.text())
+        Preferences.setUI("ProxyPassword/Ftp",
+            self.ftpProxyPasswordEdit.text())
+        Preferences.setUI("ProxyAccount/Ftp",
+            self.ftpProxyAccountEdit.text())
     
     @pyqtSlot()
     def on_downloadDirButton_clicked(self):
@@ -125,11 +175,27 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
     @pyqtSlot()
     def on_clearProxyPasswordsButton_clicked(self):
         """
-        Private slot to clear the saved proxy passwords.
+        Private slot to clear the saved HTTP(S) proxy passwords.
         """
         Preferences.setUI("ProxyPassword/Http", "")
         Preferences.setUI("ProxyPassword/Https", "")
-        Preferences.setUI("ProxyPassword/Ftp", "")
+    
+    @pyqtSlot(int)
+    def on_ftpProxyTypeCombo_currentIndexChanged(self, index):
+        """
+        Private slot handling the selection of a proxy type.
+        
+        @param index index of the selected item (integer) 
+        """
+        proxyType = self.ftpProxyTypeCombo.itemData(index)
+        self.ftpProxyHostEdit.setEnabled(proxyType != E5FtpProxyType.NoProxy)
+        self.ftpProxyPortSpin.setEnabled(proxyType != E5FtpProxyType.NoProxy)
+        self.ftpProxyUserEdit.setEnabled(
+            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
+        self.ftpProxyPasswordEdit.setEnabled(
+            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
+        self.ftpProxyAccountEdit.setEnabled(
+            proxyType not in [E5FtpProxyType.NoProxy, E5FtpProxyType.NonAuthorizing])
     
 
 def create(dlg):
