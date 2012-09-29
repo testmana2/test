@@ -301,11 +301,11 @@ class FtpSyncHandler(SyncHandler):
         # use idle timeout to check, if we are still connected
         if self.__connected:
             self.__idleTimeout()
-            if not self.__connected:
-                ok = self.__connectAndLogin()
-                if not ok:
-                    self.syncStatus.emit(type_, self.trUtf8("Cannot log in to FTP host."))
-                    return
+        if not self.__connected or self.__ftp.sock is None:
+            ok = self.__connectAndLogin()
+            if not ok:
+                self.syncStatus.emit(type_, self.trUtf8("Cannot log in to FTP host."))
+                return
         
         # upload the changed file
         self.__state = "uploading"
