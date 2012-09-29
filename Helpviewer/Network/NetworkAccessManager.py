@@ -84,6 +84,10 @@ class NetworkAccessManager(QNetworkAccessManager):
             sslCfg = QSslConfiguration.defaultConfiguration()
             sslCfg.setCaCertificates(caList)
             sslCfg.setProtocol(QSsl.AnyProtocol)
+            try:
+                sslCfg.setSslOption(QSsl.SslOptionDisableCompression, True)
+            except AttributeError:
+                pass
             QSslConfiguration.setDefaultConfiguration(sslCfg)
             
             self.sslErrors.connect(self.__sslErrors)
