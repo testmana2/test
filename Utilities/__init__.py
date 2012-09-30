@@ -373,13 +373,14 @@ def decodeBytes(buffer):
     
     return str(buffer, encoding="utf-8", errors="ignore")
 
-_escape = re.compile("[&<>\"\u0080-\uffff]")
+_escape = re.compile("[&<>\"'\u0080-\uffff]")
 
 _escape_map = {
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
     '"': "&quot;",
+    "'": "&#x27;",
 }
 
 
