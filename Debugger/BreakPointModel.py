@@ -7,7 +7,7 @@
 Module implementing the Breakpoint model.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
+from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex, qVersion
 
 
 class BreakPointModel(QAbstractItemModel):
@@ -107,7 +107,10 @@ class BreakPointModel(QAbstractItemModel):
         
         self.dataAboutToBeChanged.emit(index, index)
         self.breakpoints[index.row()][index.column()] = value
-        self.dataChanged.emit(index, index)
+        if qVersion() >= "5.0.0":
+            self.dataChanged.emit(index, index, [])
+        else:
+            self.dataChanged.emit(index, index)
         return True
     
     def flags(self, index):
@@ -212,7 +215,10 @@ class BreakPointModel(QAbstractItemModel):
                      self.breakpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
             self.breakpoints[row] = [fn, line] + list(properties)
-            self.dataChanged.emit(index1, index2)
+            if qVersion() >= "5.0.0":
+                self.dataChanged.emit(index1, index2, [])
+            else:
+                self.dataChanged.emit(index1, index2)
 
     def setBreakPointEnabledByIndex(self, index, enabled):
         """
@@ -227,7 +233,10 @@ class BreakPointModel(QAbstractItemModel):
             index1 = self.createIndex(row, col, self.breakpoints[row])
             self.dataAboutToBeChanged.emit(index1, index1)
             self.breakpoints[row][col] = enabled
-            self.dataChanged.emit(index1, index1)
+            if qVersion() >= "5.0.0":
+                self.dataChanged.emit(index1, index1, [])
+            else:
+                self.dataChanged.emit(index1, index1)
     
     def deleteBreakPointByIndex(self, index):
         """

@@ -10,7 +10,7 @@ Module implementing the browser model.
 import os
 import re
 
-from PyQt4.QtCore import QDir, QModelIndex, pyqtSignal, QFileSystemWatcher, Qt
+from PyQt4.QtCore import QDir, QModelIndex, pyqtSignal, QFileSystemWatcher, Qt, qVersion
 from PyQt4.QtGui import QColor
 
 from UI.BrowserModel import BrowserModel, BrowserItem, BrowserDirectoryItem, \
@@ -473,7 +473,10 @@ class ProjectBrowserModel(BrowserModel):
                     if type_ and type_ not in itm.getProjectTypes():
                         itm.addProjectType(type_)
                         index = self.createIndex(itm.row(), 0, itm)
-                        self.dataChanged.emit(index, index)
+                        if qVersion() >= "5.0.0":
+                            self.dataChanged.emit(index, index, [])
+                        else:
+                            self.dataChanged.emit(index, index)
                 olditem = itm
             return (itm, pathlist[-1])
         else:
@@ -549,7 +552,10 @@ class ProjectBrowserModel(BrowserModel):
         
         index = self.createIndex(itm.row(), 0, itm)
         itm.setName(newFilename)
-        self.dataChanged.emit(index, index)
+        if qVersion() >= "5.0.0":
+            self.dataChanged.emit(index, index, [])
+        else:
+            self.dataChanged.emit(index, index)
         self.repopulateItem(newFilename)
     
     def findItem(self, name):
@@ -704,7 +710,10 @@ class ProjectBrowserModel(BrowserModel):
             item.setVcsStatus("")
         
         index = self.createIndex(item.row(), 0, item)
-        self.dataChanged.emit(index, index)
+        if qVersion() >= "5.0.0":
+            self.dataChanged.emit(index, index, [])
+        else:
+            self.dataChanged.emit(index, index)
     
     def updateVCSStatus(self, name, recursive=True):
         """
@@ -813,7 +822,10 @@ class ProjectBrowserModel(BrowserModel):
                 index1 = self.createIndex(itm.row(), 0, itm)
                 index2 = self.createIndex(itm.row(),
                     self.rootItem.columnCount(), itm)
-                self.dataChanged.emit(index1, index2)
+                if qVersion() >= "5.0.0":
+                    self.dataChanged.emit(index1, index2, [])
+                else:
+                    self.dataChanged.emit(index1, index2)
             
             head, tail = os.path.split(name)
             if head != lastHead:
@@ -853,7 +865,10 @@ class ProjectBrowserModel(BrowserModel):
                     index1 = self.createIndex(itm.row(), 0, itm)
                     index2 = self.createIndex(itm.row(),
                         self.rootItem.columnCount(), itm)
-                    self.dataChanged.emit(index1, index2)
+                    if qVersion() >= "5.0.0":
+                        self.dataChanged.emit(index1, index2, [])
+                    else:
+                        self.dataChanged.emit(index1, index2)
             path, tail = os.path.split(path)
     
     def preferencesChanged(self):

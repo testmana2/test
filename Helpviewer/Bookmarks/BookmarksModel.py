@@ -8,7 +8,7 @@ Module implementing the bookmark model class.
 """
 
 from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, QByteArray, \
-    QDataStream, QIODevice, QBuffer, QMimeData
+    QDataStream, QIODevice, QBuffer, QMimeData, qVersion
 
 from .BookmarkNode import BookmarkNode
 from .XbelWriter import XbelWriter
@@ -109,7 +109,10 @@ class BookmarksModel(QAbstractItemModel):
         @param node reference to the bookmark node to change (BookmarkNode)
         """
         idx = self.nodeIndex(node)
-        self.dataChanged.emit(idx, idx)
+        if qVersion() >= "5.0.0":
+            self.dataChanged.emit(idx, idx, [])
+        else:
+            self.dataChanged.emit(idx, idx)
     
     def removeRows(self, row, count, parent=QModelIndex()):
         """

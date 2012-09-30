@@ -7,7 +7,7 @@
 Module implementing a widget to show numbers in different formats.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, qVersion
 from PyQt4.QtGui import QWidget, QHeaderView
 
 from E5Gui.E5Application import e5App
@@ -141,7 +141,10 @@ class BinaryModel(QAbstractTableModel):
                 self.__value |= (1 << self.__bits - index.column() - 1)
             else:
                 self.__value &= ~(1 << self.__bits - index.column() - 1)
-            self.dataChanged.emit(index, index)
+            if qVersion() >= "5.0.0":
+                self.dataChanged.emit(index, index, [])
+            else:
+                self.dataChanged.emit(index, index)
             return True
         
         return False
