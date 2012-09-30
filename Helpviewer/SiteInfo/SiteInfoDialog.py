@@ -9,7 +9,7 @@ Module implementing a dialog to show some information about a site.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QFile
+from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QFile, qVersion
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QPixmap, QGraphicsScene, QMenu, \
     QCursor, QApplication, QListWidgetItem
 from PyQt4.QtWebKit import QWebSettings
@@ -88,7 +88,9 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         self.encodingLabel.setText(encoding)
         
         # populate the Security info and the Security tab
-        if sslInfo is not None and sslInfo.isValid():
+        if sslInfo is not None and \
+           ((qVersion() >= "5.0.0" and not sslInfo.isBlacklisted()) or \
+            (qVersion() < "5.0.0" and sslInfo.isValid())):
             self.securityLabel.setStyleSheet(SiteInfoDialog.okStyle)
             self.securityLabel.setText('<b>Connection is encrypted.</b>')
             if SSL:

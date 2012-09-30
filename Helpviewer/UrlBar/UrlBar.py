@@ -7,7 +7,7 @@
 Module implementing the URL bar widget.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime
+from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime, qVersion
 from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog
 try:
     from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
@@ -180,18 +180,31 @@ class UrlBar(E5LineEdit):
                QSslCertificate is not None:
                 sslInfo = self.__browser.page().getSslInfo()
                 if sslInfo is not None:
-                    org = Qt.escape(Utilities.decodeString(
-                        sslInfo.subjectInfo(QSslCertificate.Organization)))
+                    if qVersion() >= "5.0.0":
+                        org = Qt.escape(Utilities.decodeString(
+                            ", ".join(sslInfo.subjectInfo(QSslCertificate.Organization))))
+                    else:
+                        org = Qt.escape(Utilities.decodeString(
+                            sslInfo.subjectInfo(QSslCertificate.Organization)))
                     if org == "":
-                        cn = Qt.escape(Utilities.decodeString(
-                            sslInfo.subjectInfo(QSslCertificate.CommonName)))
+                        if qVersion() >= "5.0.0":
+                            cn = Qt.escape(Utilities.decodeString(
+                                ", ".join(
+                                    sslInfo.subjectInfo(QSslCertificate.CommonName))))
+                        else:
+                            cn = Qt.escape(Utilities.decodeString(
+                                sslInfo.subjectInfo(QSslCertificate.CommonName)))
                         if cn != "":
                             org = cn.split(".", 1)[1]
                         if org == "":
                             org = self.trUtf8("Unknown")
                     self.__sslLabel.setText(" {0} ".format(org))
                     self.__sslLabel.setVisible(True)
-                    self.__sslLabel.setValidity(sslInfo.isValid())
+                    if qVersion() >= "5.0.0":
+                        valid = not sslInfo.isBlacklisted()
+                    else:
+                        valid = sslInfo.isValid()
+                    self.__sslLabel.setValidity(valid)
                     return
             
             self.__sslLabel.setVisible(False)

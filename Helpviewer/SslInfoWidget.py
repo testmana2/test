@@ -7,7 +7,7 @@
 Module implementing a widget to show SSL certificate infos.
 """
 
-from PyQt4.QtCore import QCryptographicHash, QDateTime, Qt
+from PyQt4.QtCore import QCryptographicHash, QDateTime, Qt, qVersion
 from PyQt4.QtGui import QWidget
 from PyQt4.QtNetwork import QSslCertificate
 
@@ -42,19 +42,34 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
         self.expiredLabel.setStyleSheet(
             "QLabel { color : white; background-color : red; }")
         
-        self.subjectCommonNameLabel.setText(self.__certificateString(
-            certificate.subjectInfo(QSslCertificate.CommonName)))
-        self.subjectOrganizationLabel.setText(self.__certificateString(
-            certificate.subjectInfo(QSslCertificate.Organization)))
-        self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
-            certificate.subjectInfo(QSslCertificate.OrganizationalUnitName)))
+        if qVersion() >= "5.0.0":
+            self.subjectCommonNameLabel.setText(self.__certificateString(
+                ", ".join(certificate.subjectInfo(QSslCertificate.CommonName))))
+            self.subjectOrganizationLabel.setText(self.__certificateString(
+                ", ".join(certificate.subjectInfo(QSslCertificate.Organization))))
+            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
+                ", ".join(
+                    certificate.subjectInfo(QSslCertificate.OrganizationalUnitName))))
+            self.issuerCommonNameLabel.setText(self.__certificateString(
+                ", ".join(certificate.issuerInfo(QSslCertificate.CommonName))))
+            self.issuerOrganizationLabel.setText(self.__certificateString(
+                ", ".join(certificate.issuerInfo(QSslCertificate.Organization))))
+            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
+                ", ".join(certificate.issuerInfo(QSslCertificate.OrganizationalUnitName))))
+        else:
+            self.subjectCommonNameLabel.setText(self.__certificateString(
+                certificate.subjectInfo(QSslCertificate.CommonName)))
+            self.subjectOrganizationLabel.setText(self.__certificateString(
+                certificate.subjectInfo(QSslCertificate.Organization)))
+            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
+                certificate.subjectInfo(QSslCertificate.OrganizationalUnitName)))
+            self.issuerCommonNameLabel.setText(self.__certificateString(
+                certificate.issuerInfo(QSslCertificate.CommonName)))
+            self.issuerOrganizationLabel.setText(self.__certificateString(
+                certificate.issuerInfo(QSslCertificate.Organization)))
+            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
+                certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
         self.serialNumberLabel.setText(self.__serialNumber(certificate))
-        self.issuerCommonNameLabel.setText(self.__certificateString(
-            certificate.issuerInfo(QSslCertificate.CommonName)))
-        self.issuerOrganizationLabel.setText(self.__certificateString(
-            certificate.issuerInfo(QSslCertificate.Organization)))
-        self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
-            certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
         self.effectiveLabel.setText(Qt.escape(
             certificate.effectiveDate().toString("yyyy-MM-dd")))
         self.expiresLabel.setText(Qt.escape(
@@ -64,7 +79,8 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
         self.md5Label.setText(self.__formatHexString(
             str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding="ascii")))
         
-        if not certificate.isValid():
+        if (qVersion() >= "5.0.0" and certificate.isBlacklisted()) or \
+           (qVersion() < "5.0.0" and not certificate.isValid()):
             # something is wrong; indicate it to the user
             if self.__hasExpired(certificate.effectiveDate(), certificate.expiryDate()):
                 self.expiredLabel.setVisible(True)

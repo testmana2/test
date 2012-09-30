@@ -10,7 +10,7 @@ Module implementing the helpbrowser using QWebView.
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
     QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint, \
-    QByteArray
+    QByteArray, qVersion
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
@@ -519,9 +519,14 @@ class HelpWebPage(QWebPage):
                 if cert in localCAList:
                     return True
         
-        for cert in certList:
-            if not cert.isValid():
-                return False
+        if qVersion() >= "5.0.0":
+            for cert in certList:
+                if cert.isBlacklisted():
+                    return False
+        else:
+            for cert in certList:
+                if not cert.isValid():
+                    return False
         
         return True
     

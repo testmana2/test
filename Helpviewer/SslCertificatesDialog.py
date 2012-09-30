@@ -7,7 +7,8 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, QIODevice
+from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, QIODevice, \
+    qVersion
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
     from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration, QSsl
@@ -67,12 +68,18 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = Qt.escape(Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.Organization)))
+        if qVersion() >= "5.0.0":
+            organisation = Qt.escape(Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.Organization))))
+            commonName = Qt.escape(Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.CommonName))))
+        else:
+            organisation = Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization)))
+            commonName = Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName)))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = Qt.escape(Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.CommonName)))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
         expiryDate = Qt.escape(cert.expiryDate().toString("yyyy-MM-dd"))
@@ -174,12 +181,16 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             pems = QByteArray()
             for cert in certs:
                 if cert in sCerts:
+                    if qVersion() >= "5.0.0":
+                        commonStr = ", ".join(
+                            cert.subjectInfo(QSslCertificate.CommonName))
+                    else:
+                        commonStr = cert.subjectInfo(QSslCertificate.CommonName)
                     E5MessageBox.warning(self,
                         self.trUtf8("Import Certificate"),
                         self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
                                     """ Skipping.</p>""")
-                            .format(Utilities.decodeString(
-                                cert.subjectInfo(QSslCertificate.CommonName))))
+                            .format(Utilities.decodeString(commonStr)))
                 else:
                     pems.append(cert.toPem() + '\n')
             if server not in certificateDict:
@@ -249,12 +260,18 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = Qt.escape(Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.Organization)))
+        if qVersion() >= "5.0.0":
+            organisation = Qt.escape(Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.Organization))))
+            commonName = Qt.escape(Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.CommonName))))
+        else:
+            organisation = Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization)))
+            commonName = Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName)))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = Qt.escape(Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.CommonName)))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
         expiryDate = Qt.escape(cert.expiryDate().toString("yyyy-MM-dd"))
@@ -338,12 +355,16 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             caCerts = self.__getSystemCaCertificates()
             for cert in certs:
                 if cert in caCerts:
+                    if qVersion() >= "5.0.0":
+                        commonStr = ", ".join(
+                            cert.subjectInfo(QSslCertificate.CommonName))
+                    else:
+                        commonStr = cert.subjectInfo(QSslCertificate.CommonName)
                     E5MessageBox.warning(self,
                         self.trUtf8("Import Certificate"),
                         self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
                                     """ Skipping.</p>""")
-                            .format(Utilities.decodeString(
-                                cert.subjectInfo(QSslCertificate.CommonName))))
+                            .format(Utilities.decodeString(commonStr)))
                 else:
                     caCerts.append(cert)
             
