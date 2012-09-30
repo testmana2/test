@@ -1152,6 +1152,7 @@ eric5.E5Gui.E5Application.E5Application.getObject?4(name)
 eric5.E5Gui.E5Application.E5Application.getPluginObject?4(name)
 eric5.E5Gui.E5Application.E5Application.getPluginObjectType?4(name)
 eric5.E5Gui.E5Application.E5Application.getPluginObjects?4()
+eric5.E5Gui.E5Application.E5Application.palette?4()
 eric5.E5Gui.E5Application.E5Application.registerObject?4(name, object)
 eric5.E5Gui.E5Application.E5Application.registerPluginObject?4(name, object, pluginType=None)
 eric5.E5Gui.E5Application.E5Application.unregisterPluginObject?4(name)
@@ -1531,6 +1532,42 @@ eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory.queryProxy?4(query)
 eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory?1()
 eric5.E5Network.E5NetworkProxyFactory.proxyAuthenticationRequired?4(proxy, auth)
 eric5.E5Network.E5NetworkProxyFactory.schemeFromProxyType?4(proxyType)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeGroup?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOther?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOwner?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ReadGroup?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ReadOther?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.ReadOwner?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.WriteGroup?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.WriteOther?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.WriteOwner?7
+eric5.E5Network.E5UrlInfo.E5UrlInfo.group?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isDir?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isExecutable?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isFile?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isReadable?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isSymLink?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isValid?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.isWritable?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.lastModified?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.lastRead?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.name?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.owner?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.permissions?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setDir?4(isDir)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setFile?4(isFile)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setGroup?4(group)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setLastModified?4(dt)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setLastRead?4(dt)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setName?4(name)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setOwner?4(owner)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setPermissions?4(permissions)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setReadable?4(isReadable)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setSize?4(size)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setSymLink?4(isSymLink)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.setWritable?4(isWritable)
+eric5.E5Network.E5UrlInfo.E5UrlInfo.size?4()
+eric5.E5Network.E5UrlInfo.E5UrlInfo?1()
 eric5.E5XML.Config.debuggerPropertiesFileFormatVersion?7
 eric5.E5XML.Config.highlightingStylesFileFormatVersion?7
 eric5.E5XML.Config.multiProjectFileFormatVersion?7

@@ -105,7 +105,7 @@ class FtpSyncHandler(SyncHandler):
                 self.__initialSync()
                 self.__state = "idle"
                 self.__idleTimer.start()
-        except (ftplib.all_errors, E5FtpProxyError) as err:
+        except (ftplib.all_errors + (E5FtpProxyError,)) as err:
             self.syncError.emit(str(err))
     
     def __connectAndLogin(self):

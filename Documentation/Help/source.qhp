@@ -144,6 +144,7 @@
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
             <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
+            <section title="eric5.E5Network.E5UrlInfo" ref="eric5.E5Network.E5UrlInfo.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
             <section title="eric5.E5XML.Config" ref="eric5.E5XML.Config.html" />
@@ -3281,6 +3282,7 @@
       <keyword name="E5Application.getPluginObject" id="E5Application.getPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObject" />
       <keyword name="E5Application.getPluginObjectType" id="E5Application.getPluginObjectType" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjectType" />
       <keyword name="E5Application.getPluginObjects" id="E5Application.getPluginObjects" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjects" />
+      <keyword name="E5Application.palette" id="E5Application.palette" ref="eric5.E5Gui.E5Application.html#E5Application.palette" />
       <keyword name="E5Application.registerObject" id="E5Application.registerObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerObject" />
       <keyword name="E5Application.registerPluginObject" id="E5Application.registerPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerPluginObject" />
       <keyword name="E5Application.unregisterPluginObject" id="E5Application.unregisterPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.unregisterPluginObject" />
@@ -3705,6 +3707,35 @@
       <keyword name="E5TreeWidget.mousePressEvent" id="E5TreeWidget.mousePressEvent" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.mousePressEvent" />
       <keyword name="E5TreeWidget.prependToParentItem" id="E5TreeWidget.prependToParentItem" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.prependToParentItem" />
       <keyword name="E5TreeWidget.setDefaultItemShowMode" id="E5TreeWidget.setDefaultItemShowMode" ref="eric5.E5Gui.E5TreeWidget.html#E5TreeWidget.setDefaultItemShowMode" />
+      <keyword name="E5UrlInfo" id="E5UrlInfo" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo" />
+      <keyword name="E5UrlInfo (Constructor)" id="E5UrlInfo (Constructor)" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.__init__" />
+      <keyword name="E5UrlInfo (Module)" id="E5UrlInfo (Module)" ref="eric5.E5Network.E5UrlInfo.html" />
+      <keyword name="E5UrlInfo.group" id="E5UrlInfo.group" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.group" />
+      <keyword name="E5UrlInfo.isDir" id="E5UrlInfo.isDir" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isDir" />
+      <keyword name="E5UrlInfo.isExecutable" id="E5UrlInfo.isExecutable" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isExecutable" />
+      <keyword name="E5UrlInfo.isFile" id="E5UrlInfo.isFile" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isFile" />
+      <keyword name="E5UrlInfo.isReadable" id="E5UrlInfo.isReadable" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isReadable" />
+      <keyword name="E5UrlInfo.isSymLink" id="E5UrlInfo.isSymLink" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isSymLink" />
+      <keyword name="E5UrlInfo.isValid" id="E5UrlInfo.isValid" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isValid" />
+      <keyword name="E5UrlInfo.isWritable" id="E5UrlInfo.isWritable" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.isWritable" />
+      <keyword name="E5UrlInfo.lastModified" id="E5UrlInfo.lastModified" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.lastModified" />
+      <keyword name="E5UrlInfo.lastRead" id="E5UrlInfo.lastRead" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.lastRead" />
+      <keyword name="E5UrlInfo.name" id="E5UrlInfo.name" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.name" />
+      <keyword name="E5UrlInfo.owner" id="E5UrlInfo.owner" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.owner" />
+      <keyword name="E5UrlInfo.permissions" id="E5UrlInfo.permissions" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.permissions" />
+      <keyword name="E5UrlInfo.setDir" id="E5UrlInfo.setDir" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setDir" />
+      <keyword name="E5UrlInfo.setFile" id="E5UrlInfo.setFile" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setFile" />
+      <keyword name="E5UrlInfo.setGroup" id="E5UrlInfo.setGroup" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setGroup" />
+      <keyword name="E5UrlInfo.setLastModified" id="E5UrlInfo.setLastModified" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setLastModified" />
+      <keyword name="E5UrlInfo.setLastRead" id="E5UrlInfo.setLastRead" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setLastRead" />
+      <keyword name="E5UrlInfo.setName" id="E5UrlInfo.setName" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setName" />
+      <keyword name="E5UrlInfo.setOwner" id="E5UrlInfo.setOwner" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setOwner" />
+      <keyword name="E5UrlInfo.setPermissions" id="E5UrlInfo.setPermissions" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setPermissions" />
+      <keyword name="E5UrlInfo.setReadable" id="E5UrlInfo.setReadable" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setReadable" />
+      <keyword name="E5UrlInfo.setSize" id="E5UrlInfo.setSize" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setSize" />
+      <keyword name="E5UrlInfo.setSymLink" id="E5UrlInfo.setSymLink" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setSymLink" />
+      <keyword name="E5UrlInfo.setWritable" id="E5UrlInfo.setWritable" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.setWritable" />
+      <keyword name="E5UrlInfo.size" id="E5UrlInfo.size" ref="eric5.E5Network.E5UrlInfo.html#E5UrlInfo.size" />
       <keyword name="E5VerticalToolBox" id="E5VerticalToolBox" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox" />
       <keyword name="E5VerticalToolBox (Constructor)" id="E5VerticalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.__init__" />
       <keyword name="E5WheelTabBar" id="E5WheelTabBar" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar" />
@@ -12529,6 +12560,7 @@
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>
+      <file>eric5.E5Network.E5UrlInfo.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesReader.html</file>
       <file>eric5.E5XML.DebuggerPropertiesWriter.html</file>

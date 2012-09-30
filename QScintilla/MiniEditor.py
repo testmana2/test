@@ -19,6 +19,7 @@ from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5Application import E5Application
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -2165,7 +2166,7 @@ class MiniEditor(QMainWindow):
                 Preferences.getEditorColour("SelectionBackground"))
         else:
             self.__textEdit.setSelectionBackgroundColor(
-                QApplication.palette().color(QPalette.Highlight))
+                E5Application.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.__textEdit.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
@@ -2173,7 +2174,7 @@ class MiniEditor(QMainWindow):
                 Preferences.getEditorColour("SelectionForeground"))
         else:
             self.__textEdit.setSelectionForegroundColor(
-                QApplication.palette().color(QPalette.HighlightedText))
+                E5Application.palette().color(QPalette.HighlightedText))
         self.__textEdit.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.__textEdit.setCaretForegroundColor(
             Preferences.getEditorColour("CaretForeground"))

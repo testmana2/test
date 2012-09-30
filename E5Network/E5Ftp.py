@@ -172,24 +172,24 @@ class E5Ftp(ftplib.FTP):
         </table>
         
         <dl>
-          <dt>E5FtpProxyType.NoProxy</dt>
+          <dt>E5FtpProxyType.NoProxy:</dt>
           <dd>
             USER user<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.NonAuthorizing</dt>
+          <dt>E5FtpProxyType.NonAuthorizing:</dt>
           <dd>
             USER user@remote.host<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.UserAtServer</dt>
+          <dt>E5FtpProxyType.UserAtServer:</dt>
           <dd>
             USER pruser<br/>
             PASS prpass<br/>
             USER user@remote.host<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.Site</dt>
+          <dt>E5FtpProxyType.Site:</dt>
           <dd>
             USER pruser<br/>
             PASS prpass<br/>
@@ -197,7 +197,7 @@ class E5Ftp(ftplib.FTP):
             USER user<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.Open</dt>
+          <dt>E5FtpProxyType.Open:</dt>
           <dd>
             USER pruser<br/>
             PASS prpass<br/>
@@ -205,26 +205,26 @@ class E5Ftp(ftplib.FTP):
             USER user<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.UserAtProxyuserAtServer</dt>
+          <dt>E5FtpProxyType.UserAtProxyuserAtServer:</dt>
           <dd>
             USER user@pruser@remote.host<br/>
             PASS pass@prpass
           </dd>
-          <dt>E5FtpProxyType.ProxyuserAtServer</dt>
+          <dt>E5FtpProxyType.ProxyuserAtServer:</dt>
           <dd>
             USER pruser@remote.host<br/>
             PASS prpass<br/>
             USER user<br/>
             PASS pass
           </dd>
-          <dt>E5FtpProxyType.AuthResp</dt>
+          <dt>E5FtpProxyType.AuthResp:</dt>
           <dd>
             USER user@remote.host<br/>
             PASS pass<br/>
             AUTH pruser<br/>
             RESP prpass
           </dd>
-          <dt>E5FtpProxyType.Bluecoat</dt>
+          <dt>E5FtpProxyType.Bluecoat:</dt>
           <dd>
             USER user@remote.host pruser<br/>
             PASS pass<br/>

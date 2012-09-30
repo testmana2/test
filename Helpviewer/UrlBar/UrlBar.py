@@ -8,7 +8,7 @@ Module implementing the URL bar widget.
 """
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime
-from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon, QDialog
+from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog
 try:
     from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
 except ImportError:
@@ -17,6 +17,7 @@ from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
+from E5Gui.E5Application import E5Application
 
 import Helpviewer.HelpWindow
 
@@ -264,8 +265,8 @@ class UrlBar(E5LineEdit):
             backgroundColor = QColor(220, 220, 220)     # light gray
             foregroundColor = Qt.black
         else:
-            backgroundColor = QApplication.palette().color(QPalette.Base)
-            foregroundColor = QApplication.palette().color(QPalette.Text)
+            backgroundColor = E5Application.palette().color(QPalette.Base)
+            foregroundColor = E5Application.palette().color(QPalette.Text)
         
         if self.__browser is not None:
             p = self.palette()
@@ -286,7 +287,7 @@ class UrlBar(E5LineEdit):
                             backgroundColor = Preferences.getHelp("SaveUrlColor")
                     else:
                         backgroundColor = Preferences.getHelp("SaveUrlColor")
-                highlight = QApplication.palette().color(QPalette.Highlight)
+                highlight = E5Application.palette().color(QPalette.Highlight)
                 r = (highlight.red() + 2 * backgroundColor.red()) // 3
                 g = (highlight.green() + 2 * backgroundColor.green()) // 3
                 b = (highlight.blue() + 2 * backgroundColor.blue()) // 3

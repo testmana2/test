@@ -8,8 +8,12 @@ Module implementing specialized line edits.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
-from PyQt4.QtGui import QLineEdit, QStyleOptionFrameV2, QStyle, QPainter, QPalette, \
+from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
+try:
+    from PyQt4.QtGui import QStyleOptionFrameV2
+except ImportError:
+    from PyQt4.QtGui import QStyleOptionFrame as QStyleOptionFrameV2  # __IGNORE_WARNING__
 
 
 class SideWidget(QWidget):

@@ -8,13 +8,15 @@ Module implementing a compatability interface class to QsciScintilla.
 """
 
 from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QApplication, QPalette, QColor
+from PyQt4.QtGui import QPalette, QColor
 from PyQt4.Qsci import QsciScintilla, \
     QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR, \
     QsciScintillaBase
 
+from E5Gui.E5Application import E5Application
 
 ###############################################################################
+
 
 def QSCINTILLA_VERSION():
     """
@@ -78,7 +80,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to set the styles according the selected Qt style.
         """
-        palette = QApplication.palette()
+        palette = E5Application.palette()
         self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
             QsciScintilla.STYLE_DEFAULT, palette.color(QPalette.Text))
         self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,

@@ -18,7 +18,7 @@ import io
 import time
 import logging
 
-from PyQt4.QtCore import QTextCodec, qWarning, QLibraryInfo, QTimer
+from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer, qVersion
 from PyQt4.QtGui import QApplication, QErrorMessage
 
 # some global variables needed to start the application
@@ -49,6 +49,9 @@ except ImportError:
     sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
 from E5Gui.E5Application import E5Application
+# TODO: is this really needed for Qt5? At the moment it seems so.
+if qVersion() >= "5.0.0":
+    gapp = E5Application([])
 
 from UI.Info import BugAddress
 from UI.SplashScreen import SplashScreen, NoneSplashScreen
@@ -236,9 +239,6 @@ def main():
     
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
-    
-    QTextCodec.setCodecForCStrings(QTextCodec.codecForName(
-        str(Preferences.getSystem("StringEncoding"))))
     
     splash.showMessage(QApplication.translate("eric5", "Importing packages..."))
     # We can only import these after creating the E5Application because they

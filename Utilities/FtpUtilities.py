@@ -10,7 +10,8 @@ Module implementing some FTP related utilities.
 import os
 
 from PyQt4.QtCore import QObject, QDate, QDateTime, QTime
-from PyQt4.QtNetwork import QUrlInfo
+
+from E5Network.E5UrlInfo import E5UrlInfo
 
 
 class FtpDirLineParserError(Exception):
@@ -69,7 +70,7 @@ class FtpDirLineParser(QObject):
         given URL info object.
         
         @param modeString mode string to be parsed (string)
-        @param urlInfo reference to the URL info object (QUrlInfo)
+        @param urlInfo reference to the URL info object (E5UrlInfo)
         @exception FtpDirLineParserError Raised if the mode cannot be parsed.
         """
         if len(modeString) != 10:
@@ -79,23 +80,23 @@ class FtpDirLineParser(QObject):
         
         permission = 0
         if modeString[1] != '-':
-            permission |= QUrlInfo.ReadOwner
+            permission |= E5UrlInfo.ReadOwner
         if modeString[2] != '-':
-            permission |= QUrlInfo.WriteOwner
+            permission |= E5UrlInfo.WriteOwner
         if modeString[3] != '-':
-            permission |= QUrlInfo.ExeOwner
+            permission |= E5UrlInfo.ExeOwner
         if modeString[4] != '-':
-            permission |= QUrlInfo.ReadGroup
+            permission |= E5UrlInfo.ReadGroup
         if modeString[5] != '-':
-            permission |= QUrlInfo.WriteGroup
+            permission |= E5UrlInfo.WriteGroup
         if modeString[6] != '-':
-            permission |= QUrlInfo.ExeGroup
+            permission |= E5UrlInfo.ExeGroup
         if modeString[7] != '-':
-            permission |= QUrlInfo.ReadOther
+            permission |= E5UrlInfo.ReadOther
         if modeString[8] != '-':
-            permission |= QUrlInfo.WriteOther
+            permission |= E5UrlInfo.WriteOther
         if modeString[9] != '-':
-            permission |= QUrlInfo.ExeOther
+            permission |= E5UrlInfo.ExeOther
         urlInfo.setPermissions(permission)
         
         if modeString[0] == "d":
@@ -127,7 +128,7 @@ class FtpDirLineParser(QObject):
         @param monthAbbreviation abbreviation of the month name (string)
         @param day day of the month (string)
         @param yearOrTime string giving the year or a time (string)
-        @param urlInfo reference to the URL info object (QUrlInfo)
+        @param urlInfo reference to the URL info object (E5UrlInfo)
         @exception FtpDirLineParserError Raised if the month abbreviation is
             not recognized.
         """
@@ -190,7 +191,7 @@ class FtpDirLineParser(QObject):
         Private method to parse a Unix style directory listing line.
         
         @param line directory line to be parsed (string)
-        @return URL info object containing the valid data (QUrlInfo)
+        @return URL info object containing the valid data (E5UrlInfo)
         @exception FtpDirLineParserError Raised if the line is not of a
             recognized Unix format.
         """
@@ -200,7 +201,7 @@ class FtpDirLineParser(QObject):
         if name in [".", ".."]:
             return None
         
-        urlInfo = QUrlInfo()
+        urlInfo = E5UrlInfo()
         self.__parseUnixMode(modeString, urlInfo)
         self.__parseUnixTime(month, day, yearOrTime, urlInfo)
         urlInfo.setOwner(user)
@@ -225,7 +226,7 @@ class FtpDirLineParser(QObject):
         
         @param date date string (string)
         @param time time string (string)
-        @param urlInfo reference to the URL info object (QUrlInfo)
+        @param urlInfo reference to the URL info object (E5UrlInfo)
         @exception FtpDirLineParserError Raised if either of the strings is not
             recognized.
         """
@@ -256,7 +257,7 @@ class FtpDirLineParser(QObject):
         Private method to parse a Windows style directory listing line.
         
         @param line directory line to be parsed (string)
-        @return URL info object containing the valid data (QUrlInfo)
+        @return URL info object containing the valid data (E5UrlInfo)
         @exception FtpDirLineParserError Raised if the line is not of a
             recognized Windows format.
         """
@@ -269,7 +270,7 @@ class FtpDirLineParser(QObject):
         if name in [".", ".."]:
             return None
         
-        urlInfo = QUrlInfo()
+        urlInfo = E5UrlInfo()
         self.__parseWindowsTime(date, time, urlInfo)
         if dirOrSize.lower() == "<dir>":
             urlInfo.setDir(True)
@@ -286,11 +287,11 @@ class FtpDirLineParser(QObject):
         ext = os.path.splitext(name.lower())[1]
         urlInfo.setSymLink(ext == ".lnk")
         
-        permissions = (QUrlInfo.ReadOwner | QUrlInfo.WriteOwner
-                      | QUrlInfo.ReadGroup | QUrlInfo.WriteGroup
-                      | QUrlInfo.ReadOther | QUrlInfo.WriteOther)
+        permissions = (E5UrlInfo.ReadOwner | E5UrlInfo.WriteOwner
+                      | E5UrlInfo.ReadGroup | E5UrlInfo.WriteGroup
+                      | E5UrlInfo.ReadOther | E5UrlInfo.WriteOther)
         if ext in [".exe", ".com", ".bat", ".cmd"]:
-            permissions |= QUrlInfo.ExeOwner | QUrlInfo.ExeGroup | QUrlInfo.ExeOther
+            permissions |= E5UrlInfo.ExeOwner | E5UrlInfo.ExeGroup | E5UrlInfo.ExeOther
         urlInfo.setPermissions(permissions)
         
         return urlInfo
@@ -304,7 +305,7 @@ class FtpDirLineParser(QObject):
         to Windows style. If that fails as well, an exception is raised.
         
         @param line directory line to be parsed (string)
-        @return URL info object containing the valid data (QUrlInfo)
+        @return URL info object containing the valid data (E5UrlInfo)
         @exception FtpDirLineParserError Raised if the line is not of a
             recognized format.
         """

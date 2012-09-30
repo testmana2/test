@@ -112,5 +112,19 @@ class E5Application(QApplication):
             return self.__pluginObjectRegistry[name][1]
         else:
             raise KeyError('Pluginobject "{0}" is not registered.'.format(name))
+        
+    @staticmethod
+    def palette():
+        """
+        Static method to get compatibility between Qt4 QApplication and
+        Qt5 QGuiApplication.
+        
+        @return reference to the global palette (QPalette)
+        """
+        try:
+            from PyQt4.QtGui import QGuiApplication
+            return QGuiApplication.palette()
+        except ImportError:
+            return QApplication.palette()
 
 e5App = QCoreApplication.instance
