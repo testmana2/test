@@ -9,7 +9,7 @@ Module implementing a network proxy factory.
 
 import os
 
-from PyQt4.QtCore import QUrl, Qt, QCoreApplication
+from PyQt4.QtCore import QUrl, QCoreApplication
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, QNetworkProxyQuery
 
@@ -19,6 +19,7 @@ from UI.AuthenticationDialog import AuthenticationDialog
 
 import Preferences
 import Globals
+import Utilities
 
 
 def schemeFromProxyType(proxyType):
@@ -49,7 +50,7 @@ def proxyAuthenticationRequired(proxy, auth):
     """
     info = QCoreApplication.translate("E5NetworkProxyFactory",
         "<b>Connect to proxy '{0}' using:</b>")\
-        .format(Qt.escape(proxy.hostName()))
+        .format(Utilities.html_encode(proxy.hostName()))
     
     dlg = AuthenticationDialog(info, proxy.user(), True)
     dlg.setData(proxy.user(), proxy.password())

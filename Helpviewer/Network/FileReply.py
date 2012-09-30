@@ -14,6 +14,8 @@ from PyQt4.QtWebKit import QWebSettings
 
 import UI.PixmapCache
 
+import Utilities
+
 
 dirListPage_html = """\
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -255,14 +257,14 @@ class FileReply(QNetworkReply):
                 i == 0 and "odd" or "even",
                 linkClass,
                 child.toString(),
-                Qt.escape(item.fileName()),
+                Utilities.html_encode(item.fileName()),
                 sizeStr,
                 item.lastModified().toString("yyyy-MM-dd hh:mm"),
             )
             i = 1 - i
         
         content = dirListPage_html.format(
-            Qt.escape(baseUrl),
+            Utilities.html_encode(baseUrl),
             "".join(linkClasses.values()),
             self.trUtf8("Listing of {0}").format(basePath),
             parentStr,

@@ -9,7 +9,7 @@ Module implementing a QNetworkAccessManager subclass.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, Qt, qVersion
+from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
@@ -318,32 +318,32 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         if qVersion() >= "5.0.0":
             result += self.trUtf8("Name: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.subjectInfo(QSslCertificate.CommonName)))))
             
             result += self.trUtf8("<br/>Organization: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.subjectInfo(QSslCertificate.Organization)))))
             
             result += self.trUtf8("<br/>Issuer: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.issuerInfo(QSslCertificate.CommonName)))))
         else:
             result += self.trUtf8("Name: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     cert.subjectInfo(QSslCertificate.CommonName))))
             
             result += self.trUtf8("<br/>Organization: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     cert.subjectInfo(QSslCertificate.Organization))))
             
             result += self.trUtf8("<br/>Issuer: {0}")\
-                .format(Qt.escape(Utilities.decodeString(
+                .format(Utilities.html_encode(Utilities.decodeString(
                     cert.issuerInfo(QSslCertificate.CommonName))))
         
         result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(Qt.escape(cert.effectiveDate().toString("yyyy-MM-dd")),
-                    Qt.escape(cert.expiryDate().toString("yyyy-MM-dd")))
+            .format(Utilities.html_encode(cert.effectiveDate().toString("yyyy-MM-dd")),
+                    Utilities.html_encode(cert.expiryDate().toString("yyyy-MM-dd")))
         
         result += "</p>"
         

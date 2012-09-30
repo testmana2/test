@@ -181,18 +181,18 @@ class UrlBar(E5LineEdit):
                 sslInfo = self.__browser.page().getSslInfo()
                 if sslInfo is not None:
                     if qVersion() >= "5.0.0":
-                        org = Qt.escape(Utilities.decodeString(
+                        org = Utilities.html_encode(Utilities.decodeString(
                             ", ".join(sslInfo.subjectInfo(QSslCertificate.Organization))))
                     else:
-                        org = Qt.escape(Utilities.decodeString(
+                        org = Utilities.html_encode(Utilities.decodeString(
                             sslInfo.subjectInfo(QSslCertificate.Organization)))
                     if org == "":
                         if qVersion() >= "5.0.0":
-                            cn = Qt.escape(Utilities.decodeString(
+                            cn = Utilities.html_encode(Utilities.decodeString(
                                 ", ".join(
                                     sslInfo.subjectInfo(QSslCertificate.CommonName))))
                         else:
-                            cn = Qt.escape(Utilities.decodeString(
+                            cn = Utilities.html_encode(Utilities.decodeString(
                                 sslInfo.subjectInfo(QSslCertificate.CommonName)))
                         if cn != "":
                             org = cn.split(".", 1)[1]

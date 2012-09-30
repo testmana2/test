@@ -7,7 +7,7 @@
 Module implementing a widget to show SSL certificate infos.
 """
 
-from PyQt4.QtCore import QCryptographicHash, QDateTime, Qt, qVersion
+from PyQt4.QtCore import QCryptographicHash, QDateTime, qVersion
 from PyQt4.QtGui import QWidget
 from PyQt4.QtNetwork import QSslCertificate
 
@@ -70,9 +70,9 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
             self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
                 certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
         self.serialNumberLabel.setText(self.__serialNumber(certificate))
-        self.effectiveLabel.setText(Qt.escape(
+        self.effectiveLabel.setText(Utilities.html_encode(
             certificate.effectiveDate().toString("yyyy-MM-dd")))
-        self.expiresLabel.setText(Qt.escape(
+        self.expiresLabel.setText(Utilities.html_encode(
             certificate.expiryDate().toString("yyyy-MM-dd")))
         self.sha1Label.setText(self.__formatHexString(
             str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
@@ -97,7 +97,7 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
         if txt is None or txt == "":
             return self.trUtf8("<not part of the certificate>")
         
-        return Qt.escape(Utilities.decodeString(txt))
+        return Utilities.html_encode(Utilities.decodeString(txt))
     
     def __serialNumber(self, cert):
         """
@@ -133,7 +133,7 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
             hexList.append(hexString[:2])
             hexString = hexString[2:]
         
-        return Qt.escape(':'.join(hexList))
+        return Utilities.html_encode(':'.join(hexList))
     
     def __hasExpired(self, effectiveDate, expiryDate):
         """

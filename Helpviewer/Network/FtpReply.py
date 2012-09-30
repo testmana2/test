@@ -24,6 +24,7 @@ from UI.AuthenticationDialog import AuthenticationDialog
 import UI.PixmapCache
 
 from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
+import Utilities
 
 import Preferences
 
@@ -270,7 +271,8 @@ class FtpReply(QNetworkReply):
                         return False, False
                     else:
                         info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
-                            .format(Qt.escape(Preferences.getUI("ProxyHost/Ftp")))
+                            .format(Utilities.html_encode(
+                                Preferences.getUI("ProxyHost/Ftp")))
                         dlg = AuthenticationDialog(info,
                             Preferences.getUI("ProxyUser/Ftp"), True)
                         dlg.setData(Preferences.getUI("ProxyUser/Ftp"),
@@ -451,14 +453,14 @@ class FtpReply(QNetworkReply):
                 i == 0 and "odd" or "even",
                 linkClass,
                 child.toString(),
-                Qt.escape(item.name()),
+                Utilities.html_encode(item.name()),
                 sizeStr,
                 item.lastModified().toString("yyyy-MM-dd hh:mm"),
             )
             i = 1 - i
         
         content = ftpListPage_html.format(
-            Qt.escape(baseUrl),
+            Utilities.html_encode(baseUrl),
             "".join(linkClasses.values()),
             self.trUtf8("Listing of {0}").format(basePath),
             parentStr,
