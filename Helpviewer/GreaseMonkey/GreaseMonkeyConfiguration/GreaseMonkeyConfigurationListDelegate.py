@@ -9,11 +9,7 @@ Module implementing a delegate for the special list widget for GreaseMonkey scri
 
 from PyQt4.QtCore import Qt, QSize, QRect
 from PyQt4.QtGui import QStyle, QStyledItemDelegate, QApplication, QFontMetrics, \
-    QPalette, QFont
-try:
-    from PyQt4.QtGui import QStyleOptionViewItemV4
-except ImportError:
-    from PyQt4.QtGui import QStyleOptionViewItem as QStyleOptionViewItemV4  # __IGNORE_WARNING__
+    QPalette, QFont, QStyleOptionViewItemV4
 
 import UI.PixmapCache
 import Globals

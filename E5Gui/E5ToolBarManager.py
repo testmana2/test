@@ -10,6 +10,8 @@ Module implementing a toolbar manager class.
 from PyQt4.QtCore import QObject, QByteArray, QDataStream, QIODevice
 from PyQt4.QtGui import QToolBar
 
+import Utilities
+
 
 class E5ToolBarManager(QObject):
     """
@@ -510,11 +512,11 @@ class E5ToolBarManager(QObject):
         
         toolBarCount = stream.readUInt16()
         for i in range(toolBarCount):
-            objectName = stream.readString().decode()
+            objectName = Utilities.readStringFromStream(stream)
             actionCount = stream.readUInt16()
             actions = []
             for j in range(actionCount):
-                actionName = stream.readString().decode()
+                actionName = Utilities.readStringFromStream(stream)
                 if actionName:
                     action = self.__findAction(actionName)
                     if action is not None:
@@ -533,12 +535,12 @@ class E5ToolBarManager(QObject):
         
         toolBarCount = stream.readUInt16()
         for i in range(toolBarCount):
-            objectName = stream.readString().decode()
-            toolBarTitle = stream.readString().decode()
+            objectName = Utilities.readStringFromStream(stream)
+            toolBarTitle = Utilities.readStringFromStream(stream)
             actionCount = stream.readUInt16()
             actions = []
             for j in range(actionCount):
-                actionName = stream.readString().decode()
+                actionName = Utilities.readStringFromStream(stream)
                 if actionName:
                     action = self.__findAction(actionName)
                     if action is not None:

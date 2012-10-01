@@ -389,9 +389,9 @@ class HistoryManager(QWebHistoryInterface):
             if ver != HISTORY_VERSION:
                 continue
             itm = HistoryEntry()
-            itm.url = stream.readString().decode()
+            itm.url = Utilities.readStringFromStream(stream)
             stream >> itm.dateTime
-            itm.title = stream.readString().decode()
+            itm.title = Utilities.readStringFromStream(stream)
             
             if not itm.dateTime.isValid():
                 continue

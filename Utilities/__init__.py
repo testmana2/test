@@ -373,6 +373,20 @@ def decodeBytes(buffer):
     
     return str(buffer, encoding="utf-8", errors="ignore")
 
+
+def readStringFromStream(stream):
+    """
+    Module function to read a string from the given stream.
+    
+    @param stream data stream opened for reading (QDataStream)
+    @return string read from the stream (string)
+    """
+    data = stream.readString()
+    if data is None:
+        data = b""
+    return data.decode()
+
+
 _escape = re.compile("[&<>\"'\u0080-\uffff]")
 
 _escape_map = {

@@ -56,6 +56,7 @@ if qVersion() >= "5.0.0":
 from UI.Info import BugAddress
 from UI.SplashScreen import SplashScreen, NoneSplashScreen
 from E5Gui.E5SingleApplication import E5SingleApplicationClient
+##from E5Gui.E5Application import E5Application
 
 import Utilities
 from Utilities import Startup

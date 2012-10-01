@@ -17,7 +17,7 @@ from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QPalette, QF
     QWidget, QHBoxLayout, QShortcut
 from PyQt4.Qsci import QsciScintilla
 
-from E5Gui.E5Application import e5App, E5Application
+from E5Gui.E5Application import e5App
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -379,7 +379,7 @@ class Terminal(QsciScintillaCompat):
                 Preferences.getEditorColour("SelectionBackground"))
         else:
             self.setSelectionBackgroundColor(
-                E5Application.palette().color(QPalette.Highlight))
+                QApplication.palette().color(QPalette.Highlight))
         if Preferences.getEditor("ColourizeSelText"):
             self.resetSelectionForegroundColor()
         elif Preferences.getEditor("CustomSelectionColours"):
@@ -387,7 +387,7 @@ class Terminal(QsciScintillaCompat):
                 Preferences.getEditorColour("SelectionForeground"))
         else:
             self.setSelectionForegroundColor(
-                E5Application.palette().color(QPalette.HighlightedText))
+                QApplication.palette().color(QPalette.HighlightedText))
         self.setSelectionToEol(Preferences.getEditor("ExtendSelectionToEol"))
         self.setCaretForegroundColor(
             Preferences.getEditorColour("CaretForeground"))
