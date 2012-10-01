@@ -1291,7 +1291,7 @@ def py2compile(file, checkFlakes=False):
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isinpath(interpreter):
         return (False, "", "", "", "", "", [(
-            "", "1",
+            file, "1",
             QCoreApplication.translate("Utilities",
                                        "Python2 interpreter not configured.")
             )])
