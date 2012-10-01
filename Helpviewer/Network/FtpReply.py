@@ -285,7 +285,7 @@ class FtpReply(QNetworkReply):
                             self.__ftp.setProxyAuthentication(username, password)
                             return False, True
             return False, False
-        except ftplib.error_perm as err:
+        except (ftplib.error_perm, ftplib.error_temp) as err:
             code = err.args[0].strip()[:3]
             if code in ["530", "421"]:
                 # error 530 -> Login incorrect
@@ -297,7 +297,6 @@ class FtpReply(QNetworkReply):
                     auth = self.__handler.getAuthenticator(self.url().host())
                 if not auth or auth.isNull() or not auth.user():
                     auth = QAuthenticator()
-                    auth.setOption("realm", self.url().host())
                     self.__manager.authenticationRequired.emit(self, auth)
                     if not auth.isNull():
                         if auth.user():
