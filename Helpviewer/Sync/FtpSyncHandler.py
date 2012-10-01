@@ -217,7 +217,7 @@ class FtpSyncHandler(SyncHandler):
         data = self.readFile(fileName, type_)
         if data.isEmpty():
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
-            self.syncFinished(type_, False, False)
+            self.syncFinished.emit(type_, False, False)
         else:
             buffer = io.BytesIO(data.data())
             try:
