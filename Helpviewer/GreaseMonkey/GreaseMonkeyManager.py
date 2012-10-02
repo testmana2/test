@@ -10,7 +10,7 @@ Module implementing the manager for GreaseMonkey scripts.
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, QUrl, \
-    QByteArray
+    QByteArray, qVersion
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 from .GreaseMonkeyJavaScript import bootstrap_js
@@ -298,7 +298,11 @@ class GreaseMonkeyManager(QObject):
         """
         if op == QNetworkAccessManager.GetOperation and \
            request.rawHeader("X-Eric5-UserLoadAction") == QByteArray("1"):
-            urlString = request.url().toString(QUrl.RemoveFragment | QUrl.RemoveQuery)
+            if qVersion() >= "5.0.0":
+                urlString = request.url().toString(QUrl.ComponentFormattingOptions(
+                    QUrl.RemoveFragment | QUrl.RemoveQuery))
+            else:
+                urlString = request.url().toString(QUrl.RemoveFragment | QUrl.RemoveQuery)
             if urlString.endswith(".user.js"):
                 self.downloadScript(request)
                 return EmptyNetworkReply(self)

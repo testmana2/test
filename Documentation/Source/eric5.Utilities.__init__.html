@@ -44,9 +44,6 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#_percentReplacementFunc">_percentReplacementFunc</a></td>
 <td>Protected function called for replacing % codes.</td>
 </tr><tr>
-<td><a href="#checkBlacklistedVersions">checkBlacklistedVersions</a></td>
-<td>Module functions to check for blacklisted versions of the prerequisites.</td>
-</tr><tr>
 <td><a href="#checkPyside">checkPyside</a></td>
 <td>Module function to check the presence of PySide.</td>
 </tr><tr>
@@ -106,9 +103,6 @@ Package implementing various functions/classes needed everywhere within eric5.
 </tr><tr>
 <td><a href="#generateVersionInfo">generateVersionInfo</a></td>
 <td>Module function to generate a string with various version infos.</td>
-</tr><tr>
-<td><a href="#getConfigDir">getConfigDir</a></td>
-<td>Module function to get the name of the directory storing the config data.</td>
 </tr><tr>
 <td><a href="#getDirs">getDirs</a></td>
 <td>Function returning a list of all directories below path.</td>
@@ -212,14 +206,14 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#readEncodedFileWithHash">readEncodedFileWithHash</a></td>
 <td>Function to read a file, calculate a hash value and decode it's contents into proper text.</td>
 </tr><tr>
+<td><a href="#readStringFromStream">readStringFromStream</a></td>
+<td>Module function to read a string from the given stream.</td>
+</tr><tr>
 <td><a href="#relpath">relpath</a></td>
 <td>Return a relative version of a path.</td>
 </tr><tr>
 <td><a href="#samepath">samepath</a></td>
 <td>Function to compare two paths.</td>
-</tr><tr>
-<td><a href="#setConfigDir">setConfigDir</a></td>
-<td>Module function to set the name of the directory storing the config data.</td>
 </tr><tr>
 <td><a href="#splitPath">splitPath</a></td>
 <td>Function to split a pathname into a directory part and a file part.</td>
@@ -351,19 +345,6 @@ matchobject for the code
 <dt>Returns:</dt>
 <dd>
 replacement string
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="checkBlacklistedVersions" ID="checkBlacklistedVersions"></a>
-<h2>checkBlacklistedVersions</h2>
-<b>checkBlacklistedVersions</b>(<i></i>)
-<p>
-    Module functions to check for blacklisted versions of the prerequisites.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating good versions were found (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -768,19 +749,6 @@ string to be used to separate lines (string)
 <dt>Returns:</dt>
 <dd>
 string with version infos (string)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="getConfigDir" ID="getConfigDir"></a>
-<h2>getConfigDir</h2>
-<b>getConfigDir</b>(<i></i>)
-<p>
-    Module function to get the name of the directory storing the config data.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-directory name of the config dir (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1417,6 +1385,24 @@ tuple of decoded text, encoding and hash value (string, string, string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="readStringFromStream" ID="readStringFromStream"></a>
+<h2>readStringFromStream</h2>
+<b>readStringFromStream</b>(<i>stream</i>)
+<p>
+    Module function to read a string from the given stream.
+</p><dl>
+<dt><i>stream</i></dt>
+<dd>
+data stream opened for reading (QDataStream)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+string read from the stream (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="relpath" ID="relpath"></a>
 <h2>relpath</h2>
 <b>relpath</b>(<i>path, start=os.path.curdir</i>)
@@ -1451,19 +1437,6 @@ second path for the compare (string)
 <dd>
 flag indicating whether the two paths represent the
         same path on disk.
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="setConfigDir" ID="setConfigDir"></a>
-<h2>setConfigDir</h2>
-<b>setConfigDir</b>(<i>d</i>)
-<p>
-    Module function to set the name of the directory storing the config data.
-</p><dl>
-<dt><i>d</i></dt>
-<dd>
-name of an existing directory (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

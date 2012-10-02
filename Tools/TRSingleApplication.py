@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSignal
 
-from Utilities.SingleApplication import SingleApplicationClient, SingleApplicationServer
+from Toolbox.SingleApplication import SingleApplicationClient, SingleApplicationServer
 
 ###########################################################################
 # define some module global stuff

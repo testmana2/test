@@ -10,6 +10,8 @@ Module defining common data to be used by all modules.
 import sys
 import os
 
+from PyQt4.QtCore import QDir
+
 # names of the various settings objects
 settingsNameOrganization = "Eric5"
 settingsNameGlobal = "eric5"
@@ -20,6 +22,8 @@ recentNameMultiProject = "MultiProjects"
 recentNameProject = "Projects"
 recentNameFiles = "Files"
 recentNameHosts = "Hosts6"
+
+configDir = None
 
 
 def isWindowsPlatform():
@@ -47,6 +51,98 @@ def isLinuxPlatform():
     @return flag indicating Linux platform (boolean)
     """
     return sys.platform.startswith("linux")
+
+
+def checkBlacklistedVersions():
+    """
+    Module functions to check for blacklisted versions of the prerequisites.
+    
+    @return flag indicating good versions were found (boolean)
+    """
+    from install import BlackLists, PlatformsBlackLists
+    
+    # determine the platform dependent black list
+    if isWindowsPlatform():
+        PlatformBlackLists = PlatformsBlackLists["windows"]
+    elif isLinuxPlatform():
+        PlatformBlackLists = PlatformsBlackLists["linux"]
+    else:
+        PlatformBlackLists = PlatformsBlackLists["mac"]
+    
+    # check version of sip
+    try:
+        import sipconfig
+        sipVersion = sipconfig.Configuration().sip_version_str
+        # always assume, that snapshots are good
+        if "snapshot" not in sipVersion:
+            # check for blacklisted versions
+            for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
+                if vers == sipVersion:
+                    print('Sorry, sip version {0} is not compatible with eric5.'\
+                          .format(vers))
+                    print('Please install another version.')
+                    return False
+    except ImportError:
+        pass
+    
+    # check version of PyQt
+    from PyQt4.QtCore import PYQT_VERSION_STR
+    pyqtVersion = PYQT_VERSION_STR
+    # always assume, that snapshots are good
+    if "snapshot" not in pyqtVersion:
+        # check for blacklisted versions
+        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
+            if vers == pyqtVersion:
+                print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
+                      .format(vers))
+                print('Please install another version.')
+                return False
+    
+    # check version of QScintilla
+    from PyQt4.Qsci import QSCINTILLA_VERSION_STR
+    scintillaVersion = QSCINTILLA_VERSION_STR
+    # always assume, that snapshots are new enough
+    if "snapshot" not in scintillaVersion:
+        # check for blacklisted versions
+        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
+            if vers == scintillaVersion:
+                print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
+                      .format(vers))
+                print('Please install another version.')
+                return False
+    
+    return True
+
+
+def getConfigDir():
+    """
+    Module function to get the name of the directory storing the config data.
+    
+    @return directory name of the config dir (string)
+    """
+    if configDir is not None and os.path.exists(configDir):
+        hp = configDir
+    else:
+        if isWindowsPlatform():
+            cdn = "_eric5"
+        else:
+            cdn = ".eric5"
+            
+        hp = QDir.homePath()
+        dn = QDir(hp)
+        dn.mkdir(cdn)
+        hp += "/" + cdn
+    return QDir.toNativeSeparators(hp)
+
+
+def setConfigDir(d):
+    """
+    Module function to set the name of the directory storing the config data.
+    
+    @param d name of an existing directory (string)
+    """
+    global configDir
+    configDir = os.path.expanduser(d)
 
 
 ################################################################################

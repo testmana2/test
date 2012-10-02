@@ -10,42 +10,16 @@ Module implementing some startup helper funcions
 import os
 import sys
 
-from PyQt4.QtCore import QTranslator, QLocale, QLibraryInfo
+from PyQt4.QtCore import QTranslator, QLocale, QLibraryInfo, QDir
 from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import E5Application
 
-import Preferences
-import Utilities
-from UI.Info import Version
+import Globals
 
 import UI.PixmapCache
 
 from eric5config import getConfig
-
-
-def makeAppInfo(argv, name, arg, description, options=[]):
-    """
-    Module function to generate a dictionary describing the application.
-    
-    @param argv list of commandline parameters (list of strings)
-    @param name name of the application (string)
-    @param arg commandline arguments (string)
-    @param description text describing the application (string)
-    @param options list of additional commandline options
-        (list of tuples of two strings (commandline option, option description)).
-        The options --version, --help and -h are always present and must not
-        be repeated in this list.
-    @return dictionary describing the application
-    """
-    return {
-        "bin": argv[0],
-        "arg": arg,
-        "name": name,
-        "description": description,
-        "version": Version,
-        "options": options
-        }
 
 
 def usage(appinfo, optlen=12):
@@ -137,6 +111,8 @@ def initializeResourceSearchPath():
     """
     Module function to initialize the default mime source factory.
     """
+    import Preferences
+    
     defaultIconPath = os.path.join(getConfig('ericIconDir'), "default")
     iconPaths = Preferences.getIcons("Path")
     for iconPath in iconPaths:
@@ -150,11 +126,11 @@ def setLibraryPaths():
     """
     Module function to set the Qt library paths correctly for windows systems.
     """
-    if Utilities.isWindowsPlatform():
+    if Globals.isWindowsPlatform():
         from PyQt4 import pyqtconfig
         libPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "plugins")
         if os.path.exists(libPath):
-            libPath = Utilities.fromNativeSeparators(libPath)
+            libPath = QDir.fromNativeSeparators(libPath)
             libraryPaths = QApplication.libraryPaths()
             if libPath not in libraryPaths:
                 libraryPaths.insert(0, libPath)
@@ -174,7 +150,10 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
         be loaded (tuple of strings)
     @return the requested locale (string)
     """
+    import Preferences
+    
     global loaded_translators
+    
     translations = ("qt", "eric5") + translationFiles
     loc = Preferences.getUILanguage()
     if loc is None:
@@ -183,7 +162,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
     if loc == "System":
         loc = QLocale.system().name()
     if loc != "C":
-        dirs = [getConfig('ericTranslationsDir'), Utilities.getConfigDir()]
+        dirs = [getConfig('ericTranslationsDir'), Globals.getConfigDir()]
         if qtTransDir is not None:
             dirs.append(qtTransDir)
 
@@ -226,6 +205,9 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     if app is None:
         app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
+    
+    # the following code depends upon a valid application object
+    import Preferences
     
     setLibraryPaths()
     initializeResourceSearchPath()

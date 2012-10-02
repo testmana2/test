@@ -171,6 +171,7 @@
             <section title="eric5.E5XML.XMLStreamWriterBase" ref="eric5.E5XML.XMLStreamWriterBase.html" />
           </section>
           <section title="eric5.Globals" ref="index-eric5.Globals.html">
+            <section title="eric5.Globals.AppInfo" ref="eric5.Globals.AppInfo.html" />
             <section title="eric5.Globals.__init__" ref="eric5.Globals.__init__.html" />
           </section>
           <section title="eric5.Graphics" ref="index-eric5.Graphics.html">
@@ -867,6 +868,10 @@
             <section title="eric5.Templates.TemplateSingleVariableDialog" ref="eric5.Templates.TemplateSingleVariableDialog.html" />
             <section title="eric5.Templates.TemplateViewer" ref="eric5.Templates.TemplateViewer.html" />
           </section>
+          <section title="eric5.Toolbox" ref="index-eric5.Toolbox.html">
+            <section title="eric5.Toolbox.SingleApplication" ref="eric5.Toolbox.SingleApplication.html" />
+            <section title="eric5.Toolbox.Startup" ref="eric5.Toolbox.Startup.html" />
+          </section>
           <section title="eric5.Tools" ref="index-eric5.Tools.html">
             <section title="eric5.Tools.TRPreviewer" ref="eric5.Tools.TRPreviewer.html" />
             <section title="eric5.Tools.TRSingleApplication" ref="eric5.Tools.TRSingleApplication.html" />
@@ -916,8 +921,6 @@
             <section title="eric5.Utilities.FtpUtilities" ref="eric5.Utilities.FtpUtilities.html" />
             <section title="eric5.Utilities.ModuleParser" ref="eric5.Utilities.ModuleParser.html" />
             <section title="eric5.Utilities.PasswordChecker" ref="eric5.Utilities.PasswordChecker.html" />
-            <section title="eric5.Utilities.SingleApplication" ref="eric5.Utilities.SingleApplication.html" />
-            <section title="eric5.Utilities.Startup" ref="eric5.Utilities.Startup.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
             <section title="eric5.Utilities.binplistlib" ref="eric5.Utilities.binplistlib.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
@@ -1278,6 +1281,7 @@
       <keyword name="AddProjectDialog.on_fileButton_clicked" id="AddProjectDialog.on_fileButton_clicked" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_fileButton_clicked" />
       <keyword name="AddProjectDialog.on_filenameEdit_textChanged" id="AddProjectDialog.on_filenameEdit_textChanged" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_filenameEdit_textChanged" />
       <keyword name="AddProjectDialog.on_nameEdit_textChanged" id="AddProjectDialog.on_nameEdit_textChanged" ref="eric5.MultiProject.AddProjectDialog.html#AddProjectDialog.on_nameEdit_textChanged" />
+      <keyword name="AppInfo (Module)" id="AppInfo (Module)" ref="eric5.Globals.AppInfo.html" />
       <keyword name="ApplicationDiagramBuilder" id="ApplicationDiagramBuilder" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder" />
       <keyword name="ApplicationDiagramBuilder (Constructor)" id="ApplicationDiagramBuilder (Constructor)" ref="eric5.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder.__init__" />
       <keyword name="ApplicationDiagramBuilder (Module)" id="ApplicationDiagramBuilder (Module)" ref="eric5.Graphics.ApplicationDiagramBuilder.html" />
@@ -3282,7 +3286,6 @@
       <keyword name="E5Application.getPluginObject" id="E5Application.getPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObject" />
       <keyword name="E5Application.getPluginObjectType" id="E5Application.getPluginObjectType" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjectType" />
       <keyword name="E5Application.getPluginObjects" id="E5Application.getPluginObjects" ref="eric5.E5Gui.E5Application.html#E5Application.getPluginObjects" />
-      <keyword name="E5Application.palette" id="E5Application.palette" ref="eric5.E5Gui.E5Application.html#E5Application.palette" />
       <keyword name="E5Application.registerObject" id="E5Application.registerObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerObject" />
       <keyword name="E5Application.registerPluginObject" id="E5Application.registerPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerPluginObject" />
       <keyword name="E5Application.unregisterPluginObject" id="E5Application.unregisterPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.unregisterPluginObject" />
@@ -8903,21 +8906,21 @@
       <keyword name="SideWidget.event" id="SideWidget.event" ref="eric5.E5Gui.E5LineEdit.html#SideWidget.event" />
       <keyword name="SilentObject" id="SilentObject" ref="eric5.DebugClients.Ruby.Debuggee.html#SilentObject" />
       <keyword name="SilentObject.method_missing" id="SilentObject.method_missing" ref="eric5.DebugClients.Ruby.Debuggee.html#SilentObject.method_missing" />
-      <keyword name="SingleApplication (Module)" id="SingleApplication (Module)" ref="eric5.Utilities.SingleApplication.html" />
-      <keyword name="SingleApplicationClient" id="SingleApplicationClient" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient" />
-      <keyword name="SingleApplicationClient (Constructor)" id="SingleApplicationClient (Constructor)" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.__init__" />
-      <keyword name="SingleApplicationClient.connect" id="SingleApplicationClient.connect" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.connect" />
-      <keyword name="SingleApplicationClient.disconnect" id="SingleApplicationClient.disconnect" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.disconnect" />
-      <keyword name="SingleApplicationClient.errstr" id="SingleApplicationClient.errstr" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.errstr" />
-      <keyword name="SingleApplicationClient.processArgs" id="SingleApplicationClient.processArgs" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.processArgs" />
-      <keyword name="SingleApplicationClient.sendCommand" id="SingleApplicationClient.sendCommand" ref="eric5.Utilities.SingleApplication.html#SingleApplicationClient.sendCommand" />
-      <keyword name="SingleApplicationServer" id="SingleApplicationServer" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer" />
-      <keyword name="SingleApplicationServer (Constructor)" id="SingleApplicationServer (Constructor)" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.__init__" />
-      <keyword name="SingleApplicationServer.__disconnected" id="SingleApplicationServer.__disconnected" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.__disconnected" />
-      <keyword name="SingleApplicationServer.__newConnection" id="SingleApplicationServer.__newConnection" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.__newConnection" />
-      <keyword name="SingleApplicationServer.__parseLine" id="SingleApplicationServer.__parseLine" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.__parseLine" />
-      <keyword name="SingleApplicationServer.handleCommand" id="SingleApplicationServer.handleCommand" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.handleCommand" />
-      <keyword name="SingleApplicationServer.shutdown" id="SingleApplicationServer.shutdown" ref="eric5.Utilities.SingleApplication.html#SingleApplicationServer.shutdown" />
+      <keyword name="SingleApplication (Module)" id="SingleApplication (Module)" ref="eric5.Toolbox.SingleApplication.html" />
+      <keyword name="SingleApplicationClient" id="SingleApplicationClient" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient" />
+      <keyword name="SingleApplicationClient (Constructor)" id="SingleApplicationClient (Constructor)" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.__init__" />
+      <keyword name="SingleApplicationClient.connect" id="SingleApplicationClient.connect" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.connect" />
+      <keyword name="SingleApplicationClient.disconnect" id="SingleApplicationClient.disconnect" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.disconnect" />
+      <keyword name="SingleApplicationClient.errstr" id="SingleApplicationClient.errstr" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.errstr" />
+      <keyword name="SingleApplicationClient.processArgs" id="SingleApplicationClient.processArgs" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.processArgs" />
+      <keyword name="SingleApplicationClient.sendCommand" id="SingleApplicationClient.sendCommand" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationClient.sendCommand" />
+      <keyword name="SingleApplicationServer" id="SingleApplicationServer" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer" />
+      <keyword name="SingleApplicationServer (Constructor)" id="SingleApplicationServer (Constructor)" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.__init__" />
+      <keyword name="SingleApplicationServer.__disconnected" id="SingleApplicationServer.__disconnected" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.__disconnected" />
+      <keyword name="SingleApplicationServer.__newConnection" id="SingleApplicationServer.__newConnection" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.__newConnection" />
+      <keyword name="SingleApplicationServer.__parseLine" id="SingleApplicationServer.__parseLine" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.__parseLine" />
+      <keyword name="SingleApplicationServer.handleCommand" id="SingleApplicationServer.handleCommand" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.handleCommand" />
+      <keyword name="SingleApplicationServer.shutdown" id="SingleApplicationServer.shutdown" ref="eric5.Toolbox.SingleApplication.html#SingleApplicationServer.shutdown" />
       <keyword name="SiteInfo (Package)" id="SiteInfo (Package)" ref="index-eric5.Helpviewer.SiteInfo.html" />
       <keyword name="SiteInfoDialog" id="SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog" />
       <keyword name="SiteInfoDialog (Constructor)" id="SiteInfoDialog (Constructor)" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__init__" />
@@ -9220,7 +9223,7 @@
       <keyword name="StartDialog.on_buttonBox_clicked" id="StartDialog.on_buttonBox_clicked" ref="eric5.Debugger.StartDialog.html#StartDialog.on_buttonBox_clicked" />
       <keyword name="StartDialog.on_dirButton_clicked" id="StartDialog.on_dirButton_clicked" ref="eric5.Debugger.StartDialog.html#StartDialog.on_dirButton_clicked" />
       <keyword name="StartDialog.on_modFuncCombo_editTextChanged" id="StartDialog.on_modFuncCombo_editTextChanged" ref="eric5.Debugger.StartDialog.html#StartDialog.on_modFuncCombo_editTextChanged" />
-      <keyword name="Startup (Module)" id="Startup (Module)" ref="eric5.Utilities.Startup.html" />
+      <keyword name="Startup (Module)" id="Startup (Module)" ref="eric5.Toolbox.Startup.html" />
       <keyword name="StatusMonitorLed" id="StatusMonitorLed" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed" />
       <keyword name="StatusMonitorLed (Constructor)" id="StatusMonitorLed (Constructor)" ref="eric5.VCS.StatusMonitorLed.html#StatusMonitorLed.__init__" />
       <keyword name="StatusMonitorLed (Module)" id="StatusMonitorLed (Module)" ref="eric5.VCS.StatusMonitorLed.html" />
@@ -10584,6 +10587,7 @@
       <keyword name="ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" id="ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_groupsList_currentRowChanged" />
       <keyword name="ToolGroupConfigurationDialog.on_newButton_clicked" id="ToolGroupConfigurationDialog.on_newButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_newButton_clicked" />
       <keyword name="ToolGroupConfigurationDialog.on_upButton_clicked" id="ToolGroupConfigurationDialog.on_upButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_upButton_clicked" />
+      <keyword name="Toolbox (Package)" id="Toolbox (Package)" ref="index-eric5.Toolbox.html" />
       <keyword name="Tools (Module)" id="Tools (Module)" ref="eric5.UtilitiesPython2.Tools.html" />
       <keyword name="Tools (Package)" id="Tools (Package)" ref="index-eric5.Tools.html" />
       <keyword name="Translation" id="Translation" ref="eric5.Tools.TRPreviewer.html#Translation" />
@@ -11803,7 +11807,7 @@
       <keyword name="changeRememberedMaster" id="changeRememberedMaster" ref="eric5.Utilities.crypto.__init__.html#changeRememberedMaster" />
       <keyword name="check" id="check" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#check" />
       <keyword name="check" id="check" ref="eric5.UtilitiesPython2.Tabnanny.html#check" />
-      <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Utilities.__init__.html#checkBlacklistedVersions" />
+      <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Globals.__init__.html#checkBlacklistedVersions" />
       <keyword name="checkPyside" id="checkPyside" ref="eric5.Utilities.__init__.html#checkPyside" />
       <keyword name="checker (Module)" id="checker (Module)" ref="eric5.Utilities.py3flakes.checker.html" />
       <keyword name="checker (Module)" id="checker (Module)" ref="eric5.UtilitiesPython2.py2flakes.checker.html" />
@@ -12008,7 +12012,7 @@
       <keyword name="getConfigData" id="getConfigData" ref="eric5.Plugins.PluginVcsMercurial.html#getConfigData" />
       <keyword name="getConfigData" id="getConfigData" ref="eric5.Plugins.PluginVcsPySvn.html#getConfigData" />
       <keyword name="getConfigData" id="getConfigData" ref="eric5.Plugins.PluginVcsSubversion.html#getConfigData" />
-      <keyword name="getConfigDir" id="getConfigDir" ref="eric5.Utilities.__init__.html#getConfigDir" />
+      <keyword name="getConfigDir" id="getConfigDir" ref="eric5.Globals.__init__.html#getConfigDir" />
       <keyword name="getConfigDir" id="getConfigDir" ref="eric5.install-i18n.html#getConfigDir" />
       <keyword name="getConfigPath" id="getConfigPath" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html#getConfigPath" />
       <keyword name="getConfigPath" id="getConfigPath" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#getConfigPath" />
@@ -12128,7 +12132,7 @@
       <keyword name="getuser" id="getuser" ref="eric5.DebugClients.Python.getpass.html#getuser" />
       <keyword name="getuser" id="getuser" ref="eric5.DebugClients.Python3.getpass.html#getuser" />
       <keyword name="gpg (Module)" id="gpg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html" />
-      <keyword name="handleArgs" id="handleArgs" ref="eric5.Utilities.Startup.html#handleArgs" />
+      <keyword name="handleArgs" id="handleArgs" ref="eric5.Toolbox.Startup.html#handleArgs" />
       <keyword name="handleSingleApplication" id="handleSingleApplication" ref="eric5.eric5.html#handleSingleApplication" />
       <keyword name="hasEnvironmentEntry" id="hasEnvironmentEntry" ref="eric5.Utilities.__init__.html#hasEnvironmentEntry" />
       <keyword name="hashPassword" id="hashPassword" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPassword" />
@@ -12154,7 +12158,7 @@
       <keyword name="initGlobals" id="initGlobals" ref="eric5.uninstall.html#initGlobals" />
       <keyword name="initPreferences" id="initPreferences" ref="eric5.Preferences.__init__.html#initPreferences" />
       <keyword name="initRecentSettings" id="initRecentSettings" ref="eric5.Preferences.__init__.html#initRecentSettings" />
-      <keyword name="initializeResourceSearchPath" id="initializeResourceSearchPath" ref="eric5.Utilities.Startup.html#initializeResourceSearchPath" />
+      <keyword name="initializeResourceSearchPath" id="initializeResourceSearchPath" ref="eric5.Toolbox.Startup.html#initializeResourceSearchPath" />
       <keyword name="input_dir" id="input_dir" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#input_dir" />
       <keyword name="input_dir" id="input_dir" ref="eric5.UtilitiesPython2.pep8.html#input_dir" />
       <keyword name="input_file" id="input_file" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#input_file" />
@@ -12175,8 +12179,8 @@
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
-      <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric5.Utilities.Startup.html#loadTranslatorForLocale" />
-      <keyword name="loadTranslators" id="loadTranslators" ref="eric5.Utilities.Startup.html#loadTranslators" />
+      <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric5.Toolbox.Startup.html#loadTranslatorForLocale" />
+      <keyword name="loadTranslators" id="loadTranslators" ref="eric5.Toolbox.Startup.html#loadTranslators" />
       <keyword name="main" id="main" ref="eric5.DataViews.CodeMetrics.html#main" />
       <keyword name="main" id="main" ref="eric5.compileUiFiles.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5.html#main" />
@@ -12203,7 +12207,7 @@
       <keyword name="main" id="main" ref="eric5.install.html#main" />
       <keyword name="main" id="main" ref="eric5.patch_modpython.html#main" />
       <keyword name="main" id="main" ref="eric5.uninstall.html#main" />
-      <keyword name="makeAppInfo" id="makeAppInfo" ref="eric5.Utilities.Startup.html#makeAppInfo" />
+      <keyword name="makeAppInfo" id="makeAppInfo" ref="eric5.Globals.AppInfo.html#makeAppInfo" />
       <keyword name="make_thread_list" id="make_thread_list" ref="eric5.DebugClients.Ruby.Debuggee.html#make_thread_list" />
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#maximum_line_length" />
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.UtilitiesPython2.pep8.html#maximum_line_length" />
@@ -12287,6 +12291,7 @@
       <keyword name="readPlist" id="readPlist" ref="eric5.Utilities.binplistlib.html#readPlist" />
       <keyword name="readPlistFromBytes" id="readPlistFromBytes" ref="eric5.Utilities.binplistlib.html#readPlistFromBytes" />
       <keyword name="readShortcuts" id="readShortcuts" ref="eric5.Preferences.Shortcuts.html#readShortcuts" />
+      <keyword name="readStringFromStream" id="readStringFromStream" ref="eric5.Utilities.__init__.html#readStringFromStream" />
       <keyword name="readToolGroups" id="readToolGroups" ref="eric5.Preferences.__init__.html#readToolGroups" />
       <keyword name="readline" id="readline" ref="eric5.DebugClients.Ruby.AsyncFile.html#readline" />
       <keyword name="readlines" id="readlines" ref="eric5.DebugClients.Ruby.AsyncFile.html#readlines" />
@@ -12325,7 +12330,7 @@
       <keyword name="selftest" id="selftest" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#selftest" />
       <keyword name="selftest" id="selftest" ref="eric5.UtilitiesPython2.pep8.html#selftest" />
       <keyword name="setActions" id="setActions" ref="eric5.Preferences.Shortcuts.html#setActions" />
-      <keyword name="setConfigDir" id="setConfigDir" ref="eric5.Utilities.__init__.html#setConfigDir" />
+      <keyword name="setConfigDir" id="setConfigDir" ref="eric5.Globals.__init__.html#setConfigDir" />
       <keyword name="setCooperation" id="setCooperation" ref="eric5.Preferences.__init__.html#setCooperation" />
       <keyword name="setCorba" id="setCorba" ref="eric5.Preferences.__init__.html#setCorba" />
       <keyword name="setDebugger" id="setDebugger" ref="eric5.Preferences.__init__.html#setDebugger" />
@@ -12343,7 +12348,7 @@
       <keyword name="setHelp" id="setHelp" ref="eric5.Preferences.__init__.html#setHelp" />
       <keyword name="setIconEditor" id="setIconEditor" ref="eric5.Preferences.__init__.html#setIconEditor" />
       <keyword name="setIcons" id="setIcons" ref="eric5.Preferences.__init__.html#setIcons" />
-      <keyword name="setLibraryPaths" id="setLibraryPaths" ref="eric5.Utilities.Startup.html#setLibraryPaths" />
+      <keyword name="setLibraryPaths" id="setLibraryPaths" ref="eric5.Toolbox.Startup.html#setLibraryPaths" />
       <keyword name="setMultiProject" id="setMultiProject" ref="eric5.Preferences.__init__.html#setMultiProject" />
       <keyword name="setPluginManager" id="setPluginManager" ref="eric5.Preferences.__init__.html#setPluginManager" />
       <keyword name="setPrinter" id="setPrinter" ref="eric5.Preferences.__init__.html#setPrinter" />
@@ -12371,7 +12376,7 @@
       <keyword name="setVarFilters" id="setVarFilters" ref="eric5.Preferences.__init__.html#setVarFilters" />
       <keyword name="setViewManager" id="setViewManager" ref="eric5.Preferences.__init__.html#setViewManager" />
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric5.Preferences.__init__.html#shouldResetLayout" />
-      <keyword name="simpleAppStartup" id="simpleAppStartup" ref="eric5.Utilities.Startup.html#simpleAppStartup" />
+      <keyword name="simpleAppStartup" id="simpleAppStartup" ref="eric5.Toolbox.Startup.html#simpleAppStartup" />
       <keyword name="sort" id="sort" ref="eric5.Graphics.GraphicsUtilities.html#sort" />
       <keyword name="splitPath" id="splitPath" ref="eric5.Utilities.__init__.html#splitPath" />
       <keyword name="startDebugger" id="startDebugger" ref="eric5.DebugClients.Python.eric5dbgstub.html#startDebugger" />
@@ -12409,7 +12414,7 @@
       <keyword name="uninstall (Module)" id="uninstall (Module)" ref="eric5.uninstall.html" />
       <keyword name="uninstallEric" id="uninstallEric" ref="eric5.uninstall.html#uninstallEric" />
       <keyword name="unregisterLexer" id="unregisterLexer" ref="eric5.QScintilla.Lexers.__init__.html#unregisterLexer" />
-      <keyword name="usage" id="usage" ref="eric5.Utilities.Startup.html#usage" />
+      <keyword name="usage" id="usage" ref="eric5.Toolbox.Startup.html#usage" />
       <keyword name="usage" id="usage" ref="eric5.eric5_api.html#usage" />
       <keyword name="usage" id="usage" ref="eric5.eric5_doc.html#usage" />
       <keyword name="usage" id="usage" ref="eric5.install-i18n.html#usage" />
@@ -12423,7 +12428,7 @@
       <keyword name="vcsPySvn (Package)" id="vcsPySvn (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsPySvn.html" />
       <keyword name="vcsSubversion (Package)" id="vcsSubversion (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsSubversion.html" />
       <keyword name="verifyPassword" id="verifyPassword" ref="eric5.Utilities.crypto.py3PBKDF2.html#verifyPassword" />
-      <keyword name="version" id="version" ref="eric5.Utilities.Startup.html#version" />
+      <keyword name="version" id="version" ref="eric5.Toolbox.Startup.html#version" />
       <keyword name="version" id="version" ref="eric5.eric5_api.html#version" />
       <keyword name="version" id="version" ref="eric5.eric5_doc.html#version" />
       <keyword name="warning" id="warning" ref="eric5.E5Gui.E5MessageBox.html#warning" />
@@ -12583,6 +12588,7 @@
       <file>eric5.E5XML.UserProjectWriter.html</file>
       <file>eric5.E5XML.XMLStreamReaderBase.html</file>
       <file>eric5.E5XML.XMLStreamWriterBase.html</file>
+      <file>eric5.Globals.AppInfo.html</file>
       <file>eric5.Globals.__init__.html</file>
       <file>eric5.Graphics.ApplicationDiagramBuilder.html</file>
       <file>eric5.Graphics.AssociationItem.html</file>
@@ -13129,6 +13135,8 @@
       <file>eric5.Templates.TemplatePropertiesDialog.html</file>
       <file>eric5.Templates.TemplateSingleVariableDialog.html</file>
       <file>eric5.Templates.TemplateViewer.html</file>
+      <file>eric5.Toolbox.SingleApplication.html</file>
+      <file>eric5.Toolbox.Startup.html</file>
       <file>eric5.Tools.TRPreviewer.html</file>
       <file>eric5.Tools.TRSingleApplication.html</file>
       <file>eric5.Tools.TrayStarter.html</file>
@@ -13162,8 +13170,6 @@
       <file>eric5.Utilities.FtpUtilities.html</file>
       <file>eric5.Utilities.ModuleParser.html</file>
       <file>eric5.Utilities.PasswordChecker.html</file>
-      <file>eric5.Utilities.SingleApplication.html</file>
-      <file>eric5.Utilities.Startup.html</file>
       <file>eric5.Utilities.__init__.html</file>
       <file>eric5.Utilities.binplistlib.html</file>
       <file>eric5.Utilities.crypto.__init__.html</file>
@@ -13306,6 +13312,7 @@
       <file>index-eric5.SqlBrowser.html</file>
       <file>index-eric5.Tasks.html</file>
       <file>index-eric5.Templates.html</file>
+      <file>index-eric5.Toolbox.html</file>
       <file>index-eric5.Tools.html</file>
       <file>index-eric5.UI.html</file>
       <file>index-eric5.Utilities.ClassBrowsers.html</file>

@@ -43,6 +43,7 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
+from Globals import getConfigDir, setConfigDir  # __IGNORE_WARNING__
 # import these methods into the Utilities namespace
 
 from E5Gui.E5Application import e5App
@@ -1346,37 +1347,6 @@ def py2compile(file, checkFlakes=False):
         [])
 
 
-def getConfigDir():
-    """
-    Module function to get the name of the directory storing the config data.
-    
-    @return directory name of the config dir (string)
-    """
-    if configDir is not None and os.path.exists(configDir):
-        hp = configDir
-    else:
-        if isWindowsPlatform():
-            cdn = "_eric5"
-        else:
-            cdn = ".eric5"
-            
-        hp = QDir.homePath()
-        dn = QDir(hp)
-        dn.mkdir(cdn)
-        hp += "/" + cdn
-    return toNativeSeparators(hp)
-
-
-def setConfigDir(d):
-    """
-    Module function to set the name of the directory storing the config data.
-    
-    @param d name of an existing directory (string)
-    """
-    global configDir
-    configDir = os.path.expanduser(d)
-
-
 ################################################################################
 # functions for environment handling
 ################################################################################
@@ -1631,67 +1601,6 @@ def generateDistroInfo(linesep='\n'):
             infoStr += (linesep + linesep).join(infoParas)
     
     return infoStr
-
-
-def checkBlacklistedVersions():
-    """
-    Module functions to check for blacklisted versions of the prerequisites.
-    
-    @return flag indicating good versions were found (boolean)
-    """
-    from install import BlackLists, PlatformsBlackLists
-    
-    # determine the platform dependent black list
-    if isWindowsPlatform():
-        PlatformBlackLists = PlatformsBlackLists["windows"]
-    elif isLinuxPlatform():
-        PlatformBlackLists = PlatformsBlackLists["linux"]
-    else:
-        PlatformBlackLists = PlatformsBlackLists["mac"]
-    
-    # check version of sip
-    try:
-        import sipconfig
-        sipVersion = sipconfig.Configuration().sip_version_str
-        # always assume, that snapshots are good
-        if "snapshot" not in sipVersion:
-            # check for blacklisted versions
-            for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
-                if vers == sipVersion:
-                    print('Sorry, sip version {0} is not compatible with eric5.'\
-                          .format(vers))
-                    print('Please install another version.')
-                    return False
-    except ImportError:
-        pass
-    
-    # check version of PyQt
-    from PyQt4.QtCore import PYQT_VERSION_STR
-    pyqtVersion = PYQT_VERSION_STR
-    # always assume, that snapshots are good
-    if "snapshot" not in pyqtVersion:
-        # check for blacklisted versions
-        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
-            if vers == pyqtVersion:
-                print('Sorry, PyQt4 version {0} is not compatible with eric5.'\
-                      .format(vers))
-                print('Please install another version.')
-                return False
-    
-    # check version of QScintilla
-    from PyQt4.Qsci import QSCINTILLA_VERSION_STR
-    scintillaVersion = QSCINTILLA_VERSION_STR
-    # always assume, that snapshots are new enough
-    if "snapshot" not in scintillaVersion:
-        # check for blacklisted versions
-        for vers in BlackLists["QScintilla2"] + PlatformBlackLists["QScintilla2"]:
-            if vers == scintillaVersion:
-                print('Sorry, QScintilla2 version {0} is not compatible with eric5.'\
-                      .format(vers))
-                print('Please install another version.')
-                return False
-    
-    return True
 
 
 def toBool(dataStr):

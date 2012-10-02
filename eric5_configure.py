@@ -15,9 +15,9 @@ import os
 
 for arg in sys.argv:
     if arg.startswith("--config="):
-        import Utilities
+        import Globals
         configDir = arg.replace("--config=", "")
-        Utilities.setConfigDir(configDir)
+        Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
         break
 
@@ -27,7 +27,9 @@ try:
 except ImportError:
     sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
-from Utilities import Startup
+from Globals import AppInfo
+
+from Toolbox import Startup
 
 
 def createMainWidget(argv):
@@ -52,7 +54,7 @@ def main():
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
     ]
-    appinfo = Startup.makeAppInfo(sys.argv,
+    appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric5 Configure",
                                   "",
                                   "Configuration editor for eric5",

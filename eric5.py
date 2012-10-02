@@ -18,7 +18,7 @@ import io
 import time
 import logging
 
-from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer, qVersion
+from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer
 from PyQt4.QtGui import QApplication, QErrorMessage
 
 # some global variables needed to start the application
@@ -36,9 +36,9 @@ if "--debug" in sys.argv:
 
 for arg in sys.argv:
     if arg.startswith("--config="):
-        import Utilities
+        import Globals
         configDir = arg.replace("--config=", "")
-        Utilities.setConfigDir(configDir)
+        Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
         break
 
@@ -49,20 +49,6 @@ except ImportError:
     sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
 from E5Gui.E5Application import E5Application
-# TODO: is this really needed for Qt5? At the moment it seems so.
-if qVersion() >= "5.0.0":
-    gapp = E5Application([])
-
-from UI.Info import BugAddress
-from UI.SplashScreen import SplashScreen, NoneSplashScreen
-from E5Gui.E5SingleApplication import E5SingleApplicationClient
-##from E5Gui.E5Application import E5Application
-
-import Utilities
-from Utilities import Startup
-
-logging.debug("Importing Preferences")
-import Preferences
 
 
 def handleSingleApplication(ddindex):
@@ -71,6 +57,8 @@ def handleSingleApplication(ddindex):
     
     @param ddindex index of a '--' option in the options list
     """
+    from E5Gui.E5SingleApplication import E5SingleApplicationClient
+    
     client = E5SingleApplicationClient()
     res = client.connect()
     if res > 0:
@@ -100,8 +88,12 @@ def excepthook(excType, excValue, tracebackobj):
     @param excValue exception value
     @param tracebackobj traceback object
     """
+    from UI.Info import BugAddress
+    import Utilities
+    import Globals
+    
     separator = '-' * 80
-    logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
+    logFile = os.path.join(Globals.getConfigDir(), "eric5_error.log")
     notice = \
         """An unhandled exception occurred. Please report the problem\n"""\
         """using the error reporting dialog or via email to <{0}>.\n"""\
@@ -157,6 +149,9 @@ def main():
     """
     Main entry point into the application.
     """
+    from Globals import AppInfo
+    import Globals
+    
     global args, mainWindow, splash, restartArgs
     
     sys.excepthook = excepthook
@@ -172,17 +167,24 @@ def main():
         ("--", "indicate that there are options for the program to be debugged"),
         ("", "(everything after that is considered arguments for this program)")
     ]
-    appinfo = Startup.makeAppInfo(sys.argv,
+    appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric5",
                                   "[project | files... [--] [debug-options]]",
                                   "A Python IDE",
                                   options)
-    ddindex = Startup.handleArgs(sys.argv, appinfo)
     
-    if not Utilities.checkBlacklistedVersions():
+    if not Globals.checkBlacklistedVersions():
         sys.exit(100)
     
     app = E5Application(sys.argv)
+    
+    import Utilities
+    from Toolbox import Startup
+    
+    ddindex = Startup.handleArgs(sys.argv, appinfo)
+    
+    logging.debug("Importing Preferences")
+    import Preferences
     
     if Preferences.getUI("SingleApplicationMode"):
         handleSingleApplication(ddindex)
@@ -194,6 +196,7 @@ def main():
     Startup.initializeResourceSearchPath()
 
     # generate and show a splash window, if not suppressed
+    from UI.SplashScreen import SplashScreen, NoneSplashScreen
     if "--nosplash" in sys.argv and sys.argv.index("--nosplash") < ddindex:
         del sys.argv[sys.argv.index("--nosplash")]
         splash = NoneSplashScreen()

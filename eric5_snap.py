@@ -15,13 +15,15 @@ import sys
 
 for arg in sys.argv:
     if arg.startswith("--config="):
-        import Utilities
+        import Globals
         configDir = arg.replace("--config=", "")
-        Utilities.setConfigDir(configDir)
+        Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
         break
 
-from Utilities import Startup
+from Globals import AppInfo
+
+from Toolbox import Startup
 
 
 def createMainWidget(argv):
@@ -43,7 +45,7 @@ def main():
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
     ]
-    appinfo = Startup.makeAppInfo(sys.argv,
+    appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric5 Snap",
                                   "",
                                   "Simple utility to do snapshots of the screen.",

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Utilities.Startup</title>
+<title>eric5.Toolbox.Startup</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Utilities.Startup</h1>
+<h1>eric5.Toolbox.Startup</h1>
 <p>
 Module implementing some startup helper funcions
 </p>
@@ -46,9 +46,6 @@ Module implementing some startup helper funcions
 </tr><tr>
 <td><a href="#loadTranslators">loadTranslators</a></td>
 <td>Module function to load all required translations.</td>
-</tr><tr>
-<td><a href="#makeAppInfo">makeAppInfo</a></td>
-<td>Module function to generate a dictionary describing the application.</td>
 </tr><tr>
 <td><a href="#setLibraryPaths">setLibraryPaths</a></td>
 <td>Module function to set the Qt library paths correctly for windows systems.</td>
@@ -137,39 +134,6 @@ tuple of additional translations to
 <dt>Returns:</dt>
 <dd>
 the requested locale (string)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="makeAppInfo" ID="makeAppInfo"></a>
-<h2>makeAppInfo</h2>
-<b>makeAppInfo</b>(<i>argv, name, arg, description, options=[]</i>)
-<p>
-    Module function to generate a dictionary describing the application.
-</p><dl>
-<dt><i>argv</i></dt>
-<dd>
-list of commandline parameters (list of strings)
-</dd><dt><i>name</i></dt>
-<dd>
-name of the application (string)
-</dd><dt><i>arg</i></dt>
-<dd>
-commandline arguments (string)
-</dd><dt><i>description</i></dt>
-<dd>
-text describing the application (string)
-</dd><dt><i>options</i></dt>
-<dd>
-list of additional commandline options
-        (list of tuples of two strings (commandline option, option description)).
-        The options --version, --help and -h are always present and must not
-        be repeated in this list.
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-dictionary describing the application
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
