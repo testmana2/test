@@ -283,6 +283,8 @@ class Checker(object):
             try:
                 handler = getattr(self, nodeType)
                 handler(node)
+            except AttributeError:
+                print(nodeType, "not supported yet. Please report this.")
             finally:
                 self.nodeDepth -= 1
             if self.traceTree:
