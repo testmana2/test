@@ -137,6 +137,8 @@ class TaskViewer(QTreeWidget):
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
         
+        self.__activating = False
+        
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
         self.itemActivated.connect(self.__taskItemActivated)
@@ -180,11 +182,14 @@ class TaskViewer(QTreeWidget):
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
         """
-        fn = itm.getFilename()
-        if fn:
-            self.displayFile.emit(fn, itm.getLineno())
-        else:
-            self.__editTaskProperties()
+        if not self.__activating:
+            self.__activating = True
+            fn = itm.getFilename()
+            if fn:
+                self.displayFile.emit(fn, itm.getLineno())
+            else:
+                self.__editTaskProperties()
+            self.__activating = False
 
     def __showContextMenu(self, coord):
         """

@@ -416,6 +416,8 @@ class TemplateViewer(QTreeWidget):
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
         
+        self.__activating = False
+        
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
         self.itemActivated.connect(self.__templateItemActivated)
@@ -435,9 +437,12 @@ class TemplateViewer(QTreeWidget):
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
         """
-        itm = self.currentItem()
-        if isinstance(itm, TemplateEntry):
-            self.applyTemplate(itm)
+        if not self.__activating:
+            self.__activating = True
+            itm = self.currentItem()
+            if isinstance(itm, TemplateEntry):
+                self.applyTemplate(itm)
+            self.__activating = False
         
     def __showContextMenu(self, coord):
         """

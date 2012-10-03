@@ -55,6 +55,8 @@ class SqlConnectionWidget(QWidget):
         
         layout.addWidget(self.__connectionTree)
         
+        self.__activating = False
+        
         self.__connectionTree.itemActivated.connect(self.__itemActivated)
         self.__connectionTree.currentItemChanged.connect(self.__currentItemChanged)
         
@@ -107,11 +109,14 @@ class SqlConnectionWidget(QWidget):
         if itm is None:
             return
         
-        if itm.parent() is None:
-            self.__setActive(itm)
-        else:
-            self.__setActive(itm.parent())
-            self.tableActivated.emit(itm.text(0))
+        if not self.__activating:
+            self.__activating = True
+            if itm.parent() is None:
+                self.__setActive(itm)
+            else:
+                self.__setActive(itm.parent())
+                self.tableActivated.emit(itm.text(0))
+            self.__activating = False
     
     def __currentItemChanged(self, current, previous):
         """

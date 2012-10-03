@@ -34,6 +34,8 @@ class MultiProjectBrowser(QListWidget):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         self.setAlternatingRowColors(True)
         
+        self.__openingProject = False
+        
         self.multiProject.newMultiProject.connect(self.__newMultiProject)
         self.multiProject.multiProjectOpened.connect(self.__multiProjectOpened)
         self.multiProject.multiProjectClosed.connect(self.__multiProjectClosed)
@@ -141,9 +143,12 @@ class MultiProjectBrowser(QListWidget):
             if itm is None:
                 return
         
-        filename = itm.data(Qt.UserRole)
-        if filename:
-            self.multiProject.openProject(filename)
+        if not self.__openingProject:
+            filename = itm.data(Qt.UserRole)
+            if filename:
+                self.__openingProject = True
+                self.multiProject.openProject(filename)
+                self.__openingProject = False
     
     ############################################################################
     ## Private methods below

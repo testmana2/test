@@ -78,6 +78,8 @@ class Browser(QTreeView):
         
         self.selectedItemsFilter = [BrowserFileItem]
         
+        self._activating = False
+        
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._contextMenuRequested)
         self.activated.connect(self._openItem)
@@ -367,50 +369,53 @@ class Browser(QTreeView):
             [BrowserFileItem, BrowserClassItem,
              BrowserMethodItem, BrowserClassAttributeItem])
         
-        for itm in itmList:
-            if isinstance(itm, BrowserFileItem):
-                if itm.isPython2File():
-                    self.sourceFile[str].emit(itm.fileName())
-                elif itm.isPython3File():
-                    self.sourceFile[str].emit(itm.fileName())
-                elif itm.isRubyFile():
-                    self.sourceFile[str, int, str].emit(itm.fileName(), -1, "Ruby")
-                elif itm.isDFile():
-                    self.sourceFile[str, int, str].emit(itm.fileName(), -1, "D")
-                elif itm.isDesignerFile():
-                    self.designerFile.emit(itm.fileName())
-                elif itm.isLinguistFile():
-                    if itm.fileExt() == '.ts':
-                        self.linguistFile.emit(itm.fileName())
-                    else:
-                        self.trpreview.emit([itm.fileName()])
-                elif itm.isProjectFile():
-                    self.projectFile.emit(itm.fileName())
-                elif itm.isMultiProjectFile():
-                    self.multiProjectFile.emit(itm.fileName())
-                elif itm.isIdlFile():
-                    self.sourceFile[str].emit(itm.fileName())
-                elif itm.isResourcesFile():
-                    self.sourceFile[str].emit(itm.fileName())
-                elif itm.isPixmapFile():
-                    self.pixmapFile.emit(itm.fileName())
-                elif itm.isSvgFile():
-                    self.svgFile.emit(itm.fileName())
-                else:
-                    type_ = mimetypes.guess_type(itm.fileName())[0]
-                    if type_ is None or type_.split("/")[0] == "text":
+        if not self._activating:
+            self._activating = True
+            for itm in itmList:
+                if isinstance(itm, BrowserFileItem):
+                    if itm.isPython2File():
                         self.sourceFile[str].emit(itm.fileName())
+                    elif itm.isPython3File():
+                        self.sourceFile[str].emit(itm.fileName())
+                    elif itm.isRubyFile():
+                        self.sourceFile[str, int, str].emit(itm.fileName(), -1, "Ruby")
+                    elif itm.isDFile():
+                        self.sourceFile[str, int, str].emit(itm.fileName(), -1, "D")
+                    elif itm.isDesignerFile():
+                        self.designerFile.emit(itm.fileName())
+                    elif itm.isLinguistFile():
+                        if itm.fileExt() == '.ts':
+                            self.linguistFile.emit(itm.fileName())
+                        else:
+                            self.trpreview.emit([itm.fileName()])
+                    elif itm.isProjectFile():
+                        self.projectFile.emit(itm.fileName())
+                    elif itm.isMultiProjectFile():
+                        self.multiProjectFile.emit(itm.fileName())
+                    elif itm.isIdlFile():
+                        self.sourceFile[str].emit(itm.fileName())
+                    elif itm.isResourcesFile():
+                        self.sourceFile[str].emit(itm.fileName())
+                    elif itm.isPixmapFile():
+                        self.pixmapFile.emit(itm.fileName())
+                    elif itm.isSvgFile():
+                        self.svgFile.emit(itm.fileName())
                     else:
-                        QDesktopServices.openUrl(QUrl(itm.fileName()))
-            elif isinstance(itm, BrowserClassItem):
-                self.sourceFile[str, int].emit(itm.fileName(),
-                    itm.classObject().lineno)
-            elif isinstance(itm, BrowserMethodItem):
-                self.sourceFile[str, int].emit(itm.fileName(),
-                    itm.functionObject().lineno)
-            elif isinstance(itm, BrowserClassAttributeItem):
-                self.sourceFile[str, int].emit(itm.fileName(),
-                    itm.attributeObject().lineno)
+                        type_ = mimetypes.guess_type(itm.fileName())[0]
+                        if type_ is None or type_.split("/")[0] == "text":
+                            self.sourceFile[str].emit(itm.fileName())
+                        else:
+                            QDesktopServices.openUrl(QUrl(itm.fileName()))
+                elif isinstance(itm, BrowserClassItem):
+                    self.sourceFile[str, int].emit(itm.fileName(),
+                        itm.classObject().lineno)
+                elif isinstance(itm, BrowserMethodItem):
+                    self.sourceFile[str, int].emit(itm.fileName(),
+                        itm.functionObject().lineno)
+                elif isinstance(itm, BrowserClassAttributeItem):
+                    self.sourceFile[str, int].emit(itm.fileName(),
+                        itm.attributeObject().lineno)
+            self._activating = False
         
     def _editPixmap(self):
         """

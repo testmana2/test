@@ -61,6 +61,8 @@ class ProjectBaseBrowser(Browser):
         self.DeselectFlags = QItemSelectionModel.SelectionFlags(
             QItemSelectionModel.Deselect | QItemSelectionModel.Rows)
         
+        self._activating = False
+        
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self._contextMenuRequested)
         self.activated.connect(self._openItem)

@@ -230,6 +230,7 @@ class HelpWindow(QMainWindow):
             QDesktopServices.setUrlHandler("https", self.__linkActivated)
             
             # setup connections
+            self.__activating = False
             # TOC window
             self.__tocWindow.linkActivated.connect(self.__linkActivated)
             self.__tocWindow.escapePressed.connect(self.__activateCurrentBrowser)
@@ -2291,10 +2292,13 @@ class HelpWindow(QMainWindow):
         
         @param url URL to be shown (QUrl)
         """
-        req = QNetworkRequest(url)
-        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
-        self.currentBrowser().setSource(
-            None, (req, QNetworkAccessManager.GetOperation, b""))
+        if not self.__activating:
+            self.__activating = True
+            req = QNetworkRequest(url)
+            req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+            self.currentBrowser().setSource(
+                None, (req, QNetworkAccessManager.GetOperation, b""))
+            self.__activating = False
         
     def __linksActivated(self, links, keyword):
         """
@@ -2304,9 +2308,12 @@ class HelpWindow(QMainWindow):
             URL as value (QUrl)
         @param keyword keyword for the link set (string)
         """
-        dlg = HelpTopicDialog(self, keyword, links)
-        if dlg.exec_() == QDialog.Accepted:
-            self.currentBrowser().setSource(dlg.link())
+        if not self.__activating:
+            self.__activating = True
+            dlg = HelpTopicDialog(self, keyword, links)
+            if dlg.exec_() == QDialog.Accepted:
+                self.currentBrowser().setSource(dlg.link())
+            self.__activating = False
     
     def __activateCurrentBrowser(self):
         """
