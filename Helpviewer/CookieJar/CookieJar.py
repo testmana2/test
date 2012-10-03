@@ -65,6 +65,7 @@ class CookieJar(QNetworkCookieJar):
         """
         data = QByteArray()
         stream = QDataStream(data, QIODevice.WriteOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         stream.writeUInt16(self.JAR_VERSION)
         stream.writeUInt32(len(cookiesList))
         for cookie in cookiesList:
@@ -85,6 +86,7 @@ class CookieJar(QNetworkCookieJar):
         cookiesList = []
         data = QByteArray(cookies)
         stream = QDataStream(data, QIODevice.ReadOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         
         version = stream.readUInt16()
         if version != self.JAR_VERSION:

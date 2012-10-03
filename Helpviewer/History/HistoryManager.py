@@ -354,6 +354,7 @@ class HistoryManager(QWebHistoryInterface):
         lastInsertedItem = HistoryEntry()
         data = QByteArray(historyFile.readAll())
         stream = QDataStream(data, QIODevice.ReadOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         while not stream.atEnd():
             ver = stream.readUInt32()
             if ver != HISTORY_VERSION:
@@ -427,6 +428,7 @@ class HistoryManager(QWebHistoryInterface):
         for index in range(first, -1, -1):
             data = QByteArray()
             stream = QDataStream(data, QIODevice.WriteOnly)
+            stream.setVersion(QDataStream.Qt_4_6)
             itm = self.__history[index]
             stream.writeUInt32(HISTORY_VERSION)
             stream.writeString(itm.url.encode())

@@ -492,6 +492,7 @@ class E5SideBar(QWidget):
         
         data = QByteArray()
         stream = QDataStream(data, QIODevice.WriteOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         
         stream.writeUInt16(self.Version)
         stream.writeBool(self.__minimized)
@@ -524,6 +525,7 @@ class E5SideBar(QWidget):
         
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         stream.readUInt16()  # version
         minimized = stream.readBool()
         
