@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>CookiesDialog</class>
- <widget class="QDialog" name="CookiesDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="CookiesDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,21 +10,21 @@
     <height>350</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Cookies</string>
   </property>
-  <property name="sizeGripEnabled" >
+  <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QGridLayout" name="gridLayout" >
-   <item row="0" column="0" colspan="4" >
-    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <spacer name="horizontalSpacer" >
-       <property name="orientation" >
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeHint" stdset="0" >
+       <property name="sizeHint" stdset="0">
         <size>
          <width>40</width>
          <height>20</height>
@@ -32,23 +33,23 @@
       </spacer>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout" >
-       <property name="spacing" >
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="searchEdit" >
-         <property name="toolTip" >
+        <widget class="QLineEdit" name="searchEdit">
+         <property name="toolTip">
           <string>Enter search term for cookies</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="clearButton" >
-         <property name="toolTip" >
+        <widget class="QToolButton" name="clearButton">
+         <property name="toolTip">
           <string>Press to clear the search edit</string>
          </property>
-         <property name="text" >
+         <property name="text">
           <string/>
          </property>
         </widget>
@@ -57,61 +58,70 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="0" colspan="4" >
-    <widget class="E5TableView" name="cookiesTable" >
-     <property name="alternatingRowColors" >
+   <item row="1" column="0" colspan="4">
+    <widget class="E5TableView" name="cookiesTable">
+     <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
-     <property name="selectionBehavior" >
+     <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
      </property>
-     <property name="textElideMode" >
+     <property name="textElideMode">
       <enum>Qt::ElideMiddle</enum>
      </property>
-     <property name="showGrid" >
+     <property name="showGrid">
       <bool>false</bool>
      </property>
-     <property name="sortingEnabled" >
+     <property name="sortingEnabled">
       <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="2" column="0" >
-    <widget class="QPushButton" name="removeButton" >
-     <property name="toolTip" >
+   <item row="2" column="0">
+    <widget class="QPushButton" name="removeButton">
+     <property name="toolTip">
       <string>Press to remove the selected entries</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>&amp;Remove</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
-   <item row="2" column="1" >
-    <widget class="QPushButton" name="removeAllButton" >
-     <property name="toolTip" >
+   <item row="2" column="1">
+    <widget class="QPushButton" name="removeAllButton">
+     <property name="toolTip">
       <string>Press to remove all entries</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Remove &amp;All</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
-   <item row="2" column="2" >
-    <widget class="QPushButton" name="addButton" >
-     <property name="toolTip" >
+   <item row="2" column="2">
+    <widget class="QPushButton" name="addButton">
+     <property name="toolTip">
       <string>Press to open the cookies exceptions dialog to add a new rule</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Add R&amp;ule...</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
-   <item row="2" column="3" >
-    <spacer name="horizontalSpacer_2" >
-     <property name="orientation" >
+   <item row="2" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>208</width>
        <height>20</height>
@@ -119,12 +129,12 @@
      </property>
     </spacer>
    </item>
-   <item row="3" column="0" colspan="4" >
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+   <item row="3" column="0" colspan="4">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Close</set>
      </property>
     </widget>
@@ -155,11 +165,11 @@
    <receiver>CookiesDialog</receiver>
    <slot>accept()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>228</x>
      <y>274</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>157</x>
      <y>274</y>
     </hint>
@@ -171,11 +181,11 @@
    <receiver>CookiesDialog</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>316</x>
      <y>260</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
     </hint>
@@ -187,11 +197,11 @@
    <receiver>searchEdit</receiver>
    <slot>clear()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>376</x>
      <y>21</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>329</x>
      <y>23</y>
     </hint>

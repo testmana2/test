@@ -87,6 +87,9 @@
        <property name="text">
         <string>&amp;Delete</string>
        </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item>
@@ -96,6 +99,9 @@
        </property>
        <property name="text">
         <string>Add &amp;Folder</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
