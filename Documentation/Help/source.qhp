@@ -707,6 +707,7 @@
               <section title="eric5.Preferences.ConfigurationPages.GraphicsPage" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpAppearancePage" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpDocumentationPage" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.HelpInterfacePage" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpViewersPage" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
@@ -4874,6 +4875,12 @@
       <keyword name="HelpIndexWidget.__filterIndices" id="HelpIndexWidget.__filterIndices" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__filterIndices" />
       <keyword name="HelpIndexWidget.eventFilter" id="HelpIndexWidget.eventFilter" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.eventFilter" />
       <keyword name="HelpIndexWidget.focusInEvent" id="HelpIndexWidget.focusInEvent" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.focusInEvent" />
+      <keyword name="HelpInterfacePage" id="HelpInterfacePage" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage" />
+      <keyword name="HelpInterfacePage (Constructor)" id="HelpInterfacePage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.__init__" />
+      <keyword name="HelpInterfacePage (Module)" id="HelpInterfacePage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html" />
+      <keyword name="HelpInterfacePage.__populateStyleCombo" id="HelpInterfacePage.__populateStyleCombo" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.__populateStyleCombo" />
+      <keyword name="HelpInterfacePage.on_styleSheetButton_clicked" id="HelpInterfacePage.on_styleSheetButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.on_styleSheetButton_clicked" />
+      <keyword name="HelpInterfacePage.save" id="HelpInterfacePage.save" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.save" />
       <keyword name="HelpLanguagesDialog" id="HelpLanguagesDialog" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog" />
       <keyword name="HelpLanguagesDialog (Constructor)" id="HelpLanguagesDialog (Constructor)" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__init__" />
       <keyword name="HelpLanguagesDialog (Module)" id="HelpLanguagesDialog (Module)" ref="eric5.Helpviewer.HelpLanguagesDialog.html" />
@@ -5094,6 +5101,7 @@
       <keyword name="HelpWindow.__savePageScreen" id="HelpWindow.__savePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageScreen" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
+      <keyword name="HelpWindow.__setStyle" id="HelpWindow.__setStyle" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setStyle" />
       <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />
       <keyword name="HelpWindow.__setupFilterCombo" id="HelpWindow.__setupFilterCombo" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setupFilterCombo" />
       <keyword name="HelpWindow.__showAcceptedLanguages" id="HelpWindow.__showAcceptedLanguages" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAcceptedLanguages" />
@@ -11863,6 +11871,7 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#create" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpInterfacePage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#create" />
@@ -12997,6 +13006,7 @@
       <file>eric5.Preferences.ConfigurationPages.GraphicsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpAppearancePage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.HelpInterfacePage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpViewersPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html</file>

@@ -14,7 +14,7 @@ from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, QU
 from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
     QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
     QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
-    QHBoxLayout, QProgressBar, QAction, QIcon
+    QHBoxLayout, QProgressBar, QAction, QIcon, QStyleFactory
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
@@ -65,6 +65,7 @@ from .data import javascript_rc     # __IGNORE_WARNING__
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5Application import e5App
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -141,6 +142,9 @@ class HelpWindow(QMainWindow):
         if self.initShortcutsOnly:
             self.__initActions()
         else:
+            if not self.fromEric:
+                self.__setStyle()
+            
             self.__helpEngine = \
                 QHelpEngine(os.path.join(Utilities.getConfigDir(),
                                          "browser", "eric5help.qhc"), self)
@@ -2185,6 +2189,9 @@ class HelpWindow(QMainWindow):
         """
         Public slot to handle a change of preferences.
         """
+        if not self.fromEric:
+            self.__setStyle()
+        
         self.__initWebSettings()
         
         self.networkAccessManager().preferencesChanged()
@@ -3272,3 +3279,36 @@ class HelpWindow(QMainWindow):
         dataString = "data:text/css;charset=utf-8;base64,{0}".format(encodedStyle)
         
         return QUrl(dataString)
+    
+    def __setStyle(self):
+        """
+        Private slot to set the style of the interface.
+        """
+        # step 1: set the style
+        style = None
+        styleName = Preferences.getUI("Style")
+        if styleName != "System" and styleName in QStyleFactory.keys():
+            style = QStyleFactory.create(styleName)
+        if style is None:
+            style = QStyleFactory.create(self.defaultStyleName)
+        if style is not None:
+            QApplication.setStyle(style)
+        
+        # step 2: set a style sheet
+        styleSheetFile = Preferences.getUI("StyleSheet")
+        if styleSheetFile:
+            try:
+                f = open(styleSheetFile, "r", encoding="utf-8")
+                styleSheet = f.read()
+                f.close()
+            except IOError as msg:
+                E5MessageBox.warning(self,
+                    self.trUtf8("Loading Style Sheet"),
+                    self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
+                                """ not be read.<br>Reason: {1}</p>""")
+                        .format(styleSheetFile, str(msg)))
+                return
+        else:
+            styleSheet = ""
+        
+        e5App().setStyleSheet(styleSheet)

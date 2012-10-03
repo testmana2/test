@@ -1047,6 +1047,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Toolbox/__init__.py</Source>
     <Source>Toolbox/SingleApplication.py</Source>
     <Source>Toolbox/Startup.py</Source>
+    <Source>Preferences/ConfigurationPages/HelpInterfacePage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1346,6 +1347,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockExceptionsDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/HelpInterfacePage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

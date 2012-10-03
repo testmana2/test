@@ -252,6 +252,7 @@ HelpClearPrivateDataDialog QDialog Ui_HelpClearPrivateDataDialog
 HelpDocsInstaller QThread
 HelpDocumentationPage ConfigurationPageBase Ui_HelpDocumentationPage
 HelpIndexWidget QWidget
+HelpInterfacePage ConfigurationPageBase Ui_HelpInterfacePage
 HelpLanguagesDialog QDialog Ui_HelpLanguagesDialog
 HelpSearchWidget QWidget
 HelpTabBar E5WheelTabBar

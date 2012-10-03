@@ -306,6 +306,9 @@ class ConfigurationWidget(QWidget):
                 # The dialog module must have the module function create to create
                 # the configuration page. This must have the method save to save
                 # the settings.
+                "interfacePage": \
+                    [self.trUtf8("Interface"), "preferences-interface.png",
+                    "HelpInterfacePage", None, None],
                 "networkPage": \
                     [self.trUtf8("Network"), "preferences-network.png",
                      "NetworkPage", None, None],
