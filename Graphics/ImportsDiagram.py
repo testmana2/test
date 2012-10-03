@@ -104,10 +104,11 @@ class ImportsDiagram(UMLDialog):
         """
         initlist = glob.glob(os.path.join(self.packagePath, '__init__.*'))
         if len(initlist) == 0:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
             ct.setHtml(
                 self.trUtf8("The directory <b>'{0}'</b> is not a Python package.")\
                     .format(self.package))
+            self.scene.addItem(ct)
             return
         
         shapes = {}

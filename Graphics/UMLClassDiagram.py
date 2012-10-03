@@ -68,10 +68,11 @@ class UMLClassDiagram(UMLDialog):
                 Preferences.getPython("Python3Extensions") + ['.rb']
             module = Utilities.ModuleParser.readModule(self.file, extensions=extensions)
         except ImportError:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
             ct.setHtml(
                 self.trUtf8("The module <b>'{0}'</b> could not be found.")
                     .format(self.file))
+            self.scene.addItem(ct)
             return
         
         if self.file not in self.allModules:
@@ -129,10 +130,11 @@ class UMLClassDiagram(UMLDialog):
             self.__arrangeClasses(nodes, routes[:])
             self.__createAssociations(routes)
         else:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
             ct.setHtml(
                 self.trUtf8("The module <b>'{0}'</b> does not contain any classes.")\
                 .format(self.file))
+            self.scene.addItem(ct)
         
     def __arrangeClasses(self, nodes, routes, whiteSpaceFactor=1.2):
         """
