@@ -446,6 +446,7 @@ class E5ToolBarManager(QObject):
         """
         data = QByteArray()
         stream = QDataStream(data, QIODevice.WriteOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         stream.writeUInt16(E5ToolBarManager.VersionMarker)
         stream.writeUInt16(version)
         
@@ -501,6 +502,7 @@ class E5ToolBarManager(QObject):
         
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
+        stream.setVersion(QDataStream.Qt_4_6)
         marker = stream.readUInt16()
         vers = stream.readUInt16()
         if marker != E5ToolBarManager.VersionMarker or vers != version:
