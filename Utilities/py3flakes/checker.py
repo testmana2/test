@@ -74,7 +74,7 @@ class FunctionDefinition(Binding):
     """
     Represents a function definition.
     """
-    pass
+    is_property = False
 
 
 class ExportBinding(Binding):
@@ -302,8 +302,8 @@ class Checker(object):
     ISNOT = IN = NOTIN = ignore
 
     # "stmt" type nodes
-    RETURN = DELETE = PRINT = WHILE = IF = WITH = RAISE = TRYEXCEPT = \
-        TRYFINALLY = ASSERT = EXEC = EXPR = handleChildren
+    RETURN = DELETE = PRINT = WHILE = IF = WITH = WITHITEM = RAISE = \
+    TRYEXCEPT = TRYFINALLY = ASSERT = EXEC = EXPR = handleChildren
     
     # "expr" type nodes
     BOOLOP = BINOP = UNARYOP = IFEXP = DICT = SET = YIELD = COMPARE = \
@@ -326,7 +326,9 @@ class Checker(object):
             reported (boolean)
         '''
         if (isinstance(self.scope.get(value.name), FunctionDefinition)
-                    and isinstance(value, FunctionDefinition)):
+                    and isinstance(value, FunctionDefinition)
+                    and not self.scope.get(value.name).is_property
+                    and not value.is_property):
             self.report(messages.RedefinedFunction,
                         lineno, value.name, self.scope[value.name].source.lineno)
 
@@ -487,10 +489,17 @@ class Checker(object):
                 "Got impossible expression context: {0:r}".format(node.ctx,))
 
     def FUNCTIONDEF(self, node):
+        is_property = False
         if hasattr(node, "decorator_list"):
             for decorator in node.decorator_list:
                 self.handleNode(decorator, node)
-        self.addBinding(node.lineno, FunctionDefinition(node.name, node))
+                if getattr(decorator, 'id', None) == 'property':
+                    is_property = True
+                if getattr(decorator, 'attr', None) in ('setter', 'deleter'):
+                    is_property = True
+        funcdef = FunctionDefinition(node.name, node)
+        funcdef.is_property = is_property
+        self.addBinding(node.lineno, funcdef)
         self.LAMBDA(node)
 
     def LAMBDA(self, node):
