@@ -10,7 +10,7 @@ Module implementing a code metrics dialog.
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSlot, Qt, QLocale
+from PyQt4.QtCore import pyqtSlot, Qt, QLocale, qVersion
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
     QApplication
 
@@ -225,8 +225,12 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
-        self.resultList.header().setResizeMode(QHeaderView.Interactive)
-        self.summaryList.header().setResizeMode(QHeaderView.Interactive)
+        if qVersion() >= "5.0.0":
+            self.resultList.header().setSectionResizeMode(QHeaderView.Interactive)
+            self.summaryList.header().setSectionResizeMode(QHeaderView.Interactive)
+        else:
+            self.resultList.header().setResizeMode(QHeaderView.Interactive)
+            self.summaryList.header().setResizeMode(QHeaderView.Interactive)
         
     def on_buttonBox_clicked(self, button):
         """

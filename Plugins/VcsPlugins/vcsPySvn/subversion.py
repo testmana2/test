@@ -921,7 +921,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        noEntries, ok = QInputDialog.getInteger(
+        noEntries, ok = QInputDialog.getInt(
             None,
             self.trUtf8("Subversion Log"),
             self.trUtf8("Select number of entries to show."),

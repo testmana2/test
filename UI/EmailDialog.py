@@ -12,7 +12,7 @@ import mimetypes
 import smtplib
 import socket
 
-from PyQt4.QtCore import Qt, pyqtSlot
+from PyQt4.QtCore import Qt, pyqtSlot, qVersion
 from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, QInputDialog, \
     QApplication, QDialogButtonBox, QTreeWidgetItem
 
@@ -93,7 +93,10 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         self.mainSplitter.setSizes([int(0.7 * height), int(0.3 * height)])
         
         self.attachments.headerItem().setText(self.attachments.columnCount(), "")
-        self.attachments.header().setResizeMode(QHeaderView.Interactive)
+        if qVersion() >= "5.0.0":
+            self.attachments.header().setSectionResizeMode(QHeaderView.Interactive)
+        else:
+            self.attachments.header().setResizeMode(QHeaderView.Interactive)
         
         sig = Preferences.getUser("Signature")
         if sig:

@@ -5500,16 +5500,19 @@ class UserInterface(QMainWindow):
         @param errors list of SSL errors (list of QSslError)
         """
         errorStrings = []
-        for err in errors:
-            errorStrings.append(err.errorString())
-        errorString = '.<br />'.join(errorStrings)
-        ret = E5MessageBox.yesNo(self,
-            self.trUtf8("SSL Errors"),
-            self.trUtf8("""<p>SSL Errors:</p>"""
-                        """<p>{0}</p>"""
-                        """<p>Do you want to ignore these errors?</p>""")\
-                .format(errorString),
-            icon=E5MessageBox.Warning)
+        if errors:
+            for err in errors:
+                errorStrings.append(err.errorString())
+            errorString = '.<br />'.join(errorStrings)
+            ret = E5MessageBox.yesNo(self,
+                self.trUtf8("SSL Errors"),
+                self.trUtf8("""<p>SSL Errors:</p>"""
+                            """<p>{0}</p>"""
+                            """<p>Do you want to ignore these errors?</p>""")\
+                    .format(errorString),
+                icon=E5MessageBox.Warning)
+        else:
+            ret = True
         if ret:
             reply.ignoreSslErrors()
         else:

@@ -7,7 +7,7 @@
 Module implementing the variables viewer widget.
 """
 
-from PyQt4.QtCore import Qt, QRegExp
+from PyQt4.QtCore import Qt, QRegExp, qVersion
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
     QMenu
 
@@ -307,7 +307,10 @@ class VariablesViewer(QTreeWidget):
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)
         header.setSortIndicatorShown(True)
-        header.setClickable(True)
+        if qVersion() >= "5.0.0":
+            header.setSectionsClickable(True)
+        else:
+            header.setClickable(True)
         header.resizeSection(0, 120)    # variable column
         header.resizeSection(1, 150)    # value column
         

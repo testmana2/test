@@ -7,7 +7,7 @@
 Module implementing the Breakpoint viewer widget.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt
+from PyQt4.QtCore import pyqtSignal, Qt, qVersion
 from PyQt4.QtGui import QTreeView, QAbstractItemView, QSortFilterProxyModel, \
     QHeaderView, QItemSelectionModel, QMenu, QDialog
 
@@ -72,7 +72,10 @@ class BreakPointViewer(QTreeView):
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)
         header.setSortIndicatorShown(True)
-        header.setClickable(True)
+        if qVersion() >= "5.0.0":
+            header.setSectionsClickable(True)
+        else:
+            header.setClickable(True)
         
         self.setSortingEnabled(True)
         

@@ -242,16 +242,17 @@ class NetworkAccessManager(QNetworkAccessManager):
         server = url.host()
         if url.port() != -1:
             server += ":{0:d}".format(url.port())
-        for err in errors:
-            if err.error() == QSslError.NoError:
-                continue
-            if server in caMerge and err.certificate() in caMerge[server]:
-                continue
-            errorStrings.append(err.errorString())
-            if not err.certificate().isNull():
-                cert = err.certificate()
-                if cert not in caNew:
-                    caNew.append(cert)
+        if errors:
+            for err in errors:
+                if err.error() == QSslError.NoError:
+                    continue
+                if server in caMerge and err.certificate() in caMerge[server]:
+                    continue
+                errorStrings.append(err.errorString())
+                if not err.certificate().isNull():
+                    cert = err.certificate()
+                    if cert not in caNew:
+                        caNew.append(cert)
         if not errorStrings:
             reply.ignoreSslErrors()
             return

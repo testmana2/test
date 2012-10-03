@@ -11,7 +11,7 @@ import os
 
 from pygments.lexers import get_all_lexers
 
-from PyQt4.QtCore import Qt, pyqtSlot
+from PyQt4.QtCore import Qt, pyqtSlot, qVersion
 from PyQt4.QtGui import QHeaderView, QTreeWidgetItem, QDialog
 
 import QScintilla.Lexers
@@ -35,7 +35,10 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
 
         self.editorLexerList.headerItem().setText(self.editorLexerList.columnCount(), "")
         header = self.editorLexerList.header()
-        header.setResizeMode(QHeaderView.ResizeToContents)
+        if qVersion() >= "5.0.0":
+            header.setSectionResizeMode(QHeaderView.ResizeToContents)
+        else:
+            header.setResizeMode(QHeaderView.ResizeToContents)
         header.setSortIndicator(0, Qt.AscendingOrder)
         
         try:

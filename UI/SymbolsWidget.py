@@ -10,7 +10,8 @@ Module implementing a widget to select a symbol in various formats.
 import unicodedata
 import html.entities
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, QModelIndex, Qt
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, QModelIndex, Qt, \
+    qVersion
 from PyQt4.QtGui import QWidget, QHeaderView, QAbstractItemView, QColor, \
     QItemSelectionModel
 
@@ -354,7 +355,10 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         self.symbolsTable.selectionModel().currentRowChanged.connect(
             self.__currentRowChanged)
         
-        self.symbolsTable.horizontalHeader().setResizeMode(QHeaderView.Fixed)
+        if qVersion() >= "5.0.0":
+            self.symbolsTable.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        else:
+            self.symbolsTable.horizontalHeader().setResizeMode(QHeaderView.Fixed)
         fm = self.fontMetrics()
         em = fm.width("M")
         self.symbolsTable.horizontalHeader().resizeSection(0, em * 5)

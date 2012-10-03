@@ -7,7 +7,7 @@
 Module implementing the watch expression viewer widget.
 """
 
-from PyQt4.QtCore import Qt, QModelIndex
+from PyQt4.QtCore import Qt, QModelIndex, qVersion
 from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, QSortFilterProxyModel, \
     QHeaderView, QItemSelectionModel, QDialog
 
@@ -67,7 +67,10 @@ class WatchPointViewer(QTreeView):
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)
         header.setSortIndicatorShown(True)
-        header.setClickable(True)
+        if qVersion() >= "5.0.0":
+            header.setSectionsClickable(True)
+        else:
+            header.setClickable(True)
         
         self.setSortingEnabled(True)
         

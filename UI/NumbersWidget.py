@@ -198,7 +198,11 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         
         self.__model = BinaryModel(self)
         self.binTable.setModel(self.__model)
-        self.binTable.horizontalHeader().setResizeMode(QHeaderView.ResizeToContents)
+        if qVersion() >= "5.0.0":
+            self.binTable.horizontalHeader().setSectionResizeMode(
+                QHeaderView.ResizeToContents)
+        else:
+            self.binTable.horizontalHeader().setResizeMode(QHeaderView.ResizeToContents)
         self.__model.setBitsAndValue(self.__bytes * 8, self.__input)
         self.__model.dataChanged.connect(self.__binModelDataChanged)
     

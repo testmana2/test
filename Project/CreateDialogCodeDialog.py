@@ -9,7 +9,8 @@ Module implementing a dialog to generate code for a Qt4 dialog.
 
 import os
 
-from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, QMetaMethod
+from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, QMetaMethod, \
+    qVersion
 from PyQt4.QtGui import QWidget, QSortFilterProxyModel, QStandardItemModel, QDialog, \
     QBrush, QStandardItem, QDialogButtonBox, QAction
 from PyQt4 import uic
@@ -234,12 +235,21 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 for index in range(metaObject.methodCount()):
                     metaMethod = metaObject.method(index)
                     if metaMethod.methodType() == QMetaMethod.Signal:
-                        itm2 = QStandardItem("on_{0}_{1}".format(
-                            name, metaMethod.signature()))
+                        if qVersion() >= "5.0.0":
+                            itm2 = QStandardItem("on_{0}_{1}".format(
+                                name, bytes(metaMethod.methodSignature()).decode()))
+                        else:
+                            itm2 = QStandardItem("on_{0}_{1}".format(
+                                name, metaMethod.signature()))
                         itm.appendRow(itm2)
                         if self.__module is not None:
-                            method = "on_{0}_{1}".format(
-                                name, metaMethod.signature().split("(")[0])
+                            if qVersion() >= "5.0.0":
+                                method = "on_{0}_{1}".format(
+                                    name, bytes(metaMethod.methodSignature()).decode()\
+                                        .split("(")[0])
+                            else:
+                                method = "on_{0}_{1}".format(
+                                    name, metaMethod.signature().split("(")[0])
                             method2 = "{0}({1})".format(method,
                                 ", ".join([self.__mapType(t)
                                            for t in metaMethod.parameterTypes()]))
@@ -264,14 +274,27 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             ", ".join([bytes(n).decode() for n in parameterNames])
                         
                         if methNamesSig:
-                            pythonSignature = "on_{0}_{1}(self, {2})".format(
-                                name,
-                                metaMethod.signature().split("(")[0],
-                                methNamesSig)
+                            if qVersion() >= "5.0.0":
+                                pythonSignature = "on_{0}_{1}(self, {2})".format(
+                                    name,
+                                    bytes(metaMethod.methodSignature()).decode()\
+                                        .split("(")[0],
+                                    methNamesSig)
+                            else:
+                                pythonSignature = "on_{0}_{1}(self, {2})".format(
+                                    name,
+                                    metaMethod.signature().split("(")[0],
+                                    methNamesSig)
                         else:
-                            pythonSignature = "on_{0}_{1}(self)".format(
-                                name,
-                                metaMethod.signature().split("(")[0])
+                            if qVersion() >= "5.0.0":
+                                pythonSignature = "on_{0}_{1}(self)".format(
+                                    name,
+                                    bytes(metaMethod.methodSignature()).decode()\
+                                        .split("(")[0])
+                            else:
+                                pythonSignature = "on_{0}_{1}(self)".format(
+                                    name,
+                                    metaMethod.signature().split("(")[0])
                         itm2.setData(pyqtSignature, pyqtSignatureRole)
                         itm2.setData(pythonSignature, pythonSignatureRole)
                         
