@@ -285,21 +285,24 @@ class Checker(object):
                 isinstance(node.value, _ast.Str))
 
     def handleNode(self, node, parent):
-        node.parent = parent
-        if self.traceTree:
-            print '  ' * self.nodeDepth + node.__class__.__name__
-        self.nodeDepth += 1
-        if self.futuresAllowed and not \
-               (isinstance(node, _ast.ImportFrom) or self.isDocstring(node)):
-            self.futuresAllowed = False
-        nodeType = node.__class__.__name__.upper()
-        try:
-            handler = getattr(self, nodeType)
-            handler(node)
-        finally:
-            self.nodeDepth -= 1
-        if self.traceTree:
-            print '  ' * self.nodeDepth + 'end ' + node.__class__.__name__
+        if node:
+            node.parent = parent
+            if self.traceTree:
+                print '  ' * self.nodeDepth + node.__class__.__name__
+            self.nodeDepth += 1
+            if self.futuresAllowed and not \
+                   (isinstance(node, _ast.ImportFrom) or self.isDocstring(node)):
+                self.futuresAllowed = False
+            nodeType = node.__class__.__name__.upper()
+            try:
+                handler = getattr(self, nodeType)
+                handler(node)
+            except AttributeError:
+                print nodeType, "not supported yet. Please report this."
+            finally:
+                self.nodeDepth -= 1
+            if self.traceTree:
+                print '  ' * self.nodeDepth + 'end ' + node.__class__.__name__
 
     def ignore(self, node):
         pass
