@@ -33,6 +33,9 @@
        <property name="text">
         <string>Clear List</string>
        </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
       </widget>
      </item>
      <item>
