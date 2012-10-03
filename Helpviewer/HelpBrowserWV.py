@@ -1456,7 +1456,7 @@ class HelpBrowser(QWebView):
                 .format(self.__dataString(securityOrigin.databaseQuota()), databaseName),
             yesDefault=True)
         if res:
-            newQuota, ok = QInputDialog.getInteger(
+            newQuota, ok = QInputDialog.getInt(
                 self,
                 self.trUtf8("New Web Database Quota"),
                 self.trUtf8("Enter the new quota in MB (current = {0}, used = {1}; "

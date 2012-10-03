@@ -80,7 +80,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 echomode,
                 self.eTextDefault.text())
         elif self.rInteger.isChecked():
-            QInputDialog.getInteger(
+            QInputDialog.getInt(
                 None,
                 self.eCaption.text(),
                 self.eLabel.text(),
@@ -143,7 +143,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                     os.linesep, istring, self.eTextDefault.text())
             code += '){0}'.format(estring)
         elif self.rInteger.isChecked():
-            code += 'getInteger({0}{1}'.format(os.linesep, istring)
+            code += 'getInt({0}{1}'.format(os.linesep, istring)
             code += 'None,{0}{1}'.format(os.linesep, istring)
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
