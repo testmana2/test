@@ -16,9 +16,10 @@ import urllib.parse
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication, \
-    QDialog, QVBoxLayout, QMainWindow
+    QDialog, QVBoxLayout
 
 from E5Gui import E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .PluginManager import PluginManager
 from .Ui_PluginInstallDialog import Ui_PluginInstallDialog
@@ -544,7 +545,7 @@ class PluginInstallDialog(QDialog):
         return self.cw.restartNeeded()
 
 
-class PluginInstallWindow(QMainWindow):
+class PluginInstallWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -561,6 +562,8 @@ class PluginInstallWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

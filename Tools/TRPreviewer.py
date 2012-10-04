@@ -12,22 +12,24 @@ import os
 from PyQt4.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
     QTranslator, QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QKeySequence, \
-    QWhatsThis, QMdiArea, qApp, QApplication, QMainWindow, QComboBox, QVBoxLayout, \
-    QAction, QLabel
+    QWhatsThis, QMdiArea, qApp, QApplication, QComboBox, QVBoxLayout, QAction, QLabel
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .TRSingleApplication import TRSingleApplicationServer
 
 import UI.PixmapCache
 import UI.Config
 
+import Preferences
+
 
 noTranslationName = QApplication.translate("TRPreviewer", "<No translation>")
 
 
-class TRPreviewer(QMainWindow):
+class TRPreviewer(E5MainWindow):
     """
     Class implementing the UI Previewer main window.
     """
@@ -47,6 +49,9 @@ class TRPreviewer(QMainWindow):
             self.setObjectName("TRPreviewer")
         else:
             self.setObjectName(name)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        
         self.resize(QSize(800, 600).expandedTo(self.minimumSizeHint()))
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.statusBar()

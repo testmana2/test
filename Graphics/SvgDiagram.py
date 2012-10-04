@@ -8,9 +8,11 @@ Module implementing a dialog showing a SVG graphic.
 """
 
 from PyQt4.QtCore import Qt, QSize, QEvent
-from PyQt4.QtGui import QMainWindow, QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
-    QToolBar, QDialog, QPrinter, QPrintDialog, QPainter, QFont, QColor
+from PyQt4.QtGui import QPalette, QSizePolicy, QScrollArea, QAction, QMenu, QToolBar, \
+    QDialog, QPrinter, QPrintDialog, QPainter, QFont, QColor
 from PyQt4.QtSvg import QSvgWidget
+
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .ZoomDialog import ZoomDialog
 
@@ -19,7 +21,7 @@ import UI.Config
 import Preferences
 
 
-class SvgDiagram(QMainWindow):
+class SvgDiagram(E5MainWindow):
     """
     Class implementing a dialog showing a SVG graphic.
     """

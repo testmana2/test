@@ -13,12 +13,13 @@ import types
 from PyQt4.QtCore import QMetaObject, pyqtSignal, Qt, QRect, pyqtSlot
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QPixmap, QTreeWidget, \
     QStackedWidget, QDialog, QSplitter, QScrollArea, QApplication, QDialogButtonBox, \
-    QFrame, QMainWindow, QVBoxLayout, QTreeWidgetItem, QLabel
+    QFrame, QVBoxLayout, QTreeWidgetItem, QLabel
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 import QScintilla.Lexers
 
@@ -806,7 +807,7 @@ class ConfigurationDialog(QDialog):
         super().accept()
 
 
-class ConfigurationWindow(QMainWindow):
+class ConfigurationWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -822,6 +823,8 @@ class ConfigurationWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.accepted[()].connect(self.accept)
         self.cw.rejected[()].connect(self.close)

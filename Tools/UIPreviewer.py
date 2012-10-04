@@ -15,13 +15,14 @@ from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QCursor,
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 import Preferences
 import UI.PixmapCache
 import UI.Config
 
 
-class UIPreviewer(QMainWindow):
+class UIPreviewer(E5MainWindow):
     """
     Class implementing the UI Previewer main window.
     """
@@ -41,6 +42,9 @@ class UIPreviewer(QMainWindow):
             self.setObjectName("UIPreviewer")
         else:
             self.setObjectName(name)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        
         self.resize(QSize(600, 480).expandedTo(self.minimumSizeHint()))
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.statusBar()

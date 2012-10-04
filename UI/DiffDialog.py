@@ -12,13 +12,16 @@ import time
 
 from PyQt4.QtCore import QFileInfo, QEvent, pyqtSlot
 from PyQt4.QtGui import QWidget, QColor, QBrush, QApplication, QTextCursor, \
-    QDialogButtonBox, QMainWindow
+    QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_DiffDialog import Ui_DiffDialog
+
 import Utilities
+import Preferences
 
 from difflib import SequenceMatcher
 
@@ -487,7 +490,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.__selectFile(self.file2Edit)
 
 
-class DiffWindow(QMainWindow):
+class DiffWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -498,6 +501,9 @@ class DiffWindow(QMainWindow):
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        
         self.cw = DiffDialog(self)
         self.cw.installEventFilter(self)
         size = self.cw.size()

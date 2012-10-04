@@ -76,7 +76,7 @@ CodingError Exception
 ColorDialogWizard QObject
 ColorDialogWizardDialog QDialog Ui_ColorDialogWizardDialog
 CompareDialog QWidget Ui_CompareDialog
-CompareWindow QMainWindow
+CompareWindow E5MainWindow
 CompleterBase QObject
 CompleterPython CompleterBase
 CompleterRuby CompleterBase
@@ -84,7 +84,7 @@ ConfigurationDialog QDialog
 ConfigurationPageBase QWidget
 ConfigurationPageItem QTreeWidgetItem
 ConfigurationWidget QWidget
-ConfigurationWindow QMainWindow
+ConfigurationWindow E5MainWindow
 Connection QTcpSocket
 CookieDetailsDialog QDialog Ui_CookieDetailsDialog
 CookieExceptionsModel QAbstractTableModel
@@ -120,7 +120,7 @@ DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
-DiffWindow QMainWindow
+DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
@@ -142,6 +142,7 @@ E5Led QWidget
 E5LineEdit QLineEdit
 E5LineEditButton QAbstractButton
 E5ListView QListView
+E5MainWindow QMainWindow
 E5MessageBox QMessageBox
 E5MessageBoxWizard QObject
 E5MessageBoxWizardDialog QDialog Ui_E5MessageBoxWizardDialog
@@ -265,7 +266,7 @@ HelpWebBrowserPage ConfigurationPageBase Ui_HelpWebBrowserPage
 HelpWebPage QWebPage
 HelpWebSearchEdit E5LineEdit
 HelpWebSearchWidget QWidget
-HelpWindow QMainWindow
+HelpWindow E5MainWindow
 Hg VersionControl
 HgAddSubrepositoryDialog QDialog Ui_HgAddSubrepositoryDialog
 HgAnnotateDialog QDialog Ui_HgAnnotateDialog
@@ -314,7 +315,7 @@ HgRebaseDialog QDialog Ui_HgRebaseDialog
 HgRemoveSubrepositoriesDialog QDialog Ui_HgRemoveSubrepositoriesDialog
 HgRevisionSelectionDialog QDialog Ui_HgRevisionSelectionDialog
 HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
-HgServeDialog QMainWindow
+HgServeDialog E5MainWindow
 HgStatusDialog QWidget Ui_HgStatusDialog
 HgStatusMonitorThread VcsStatusMonitorThread
 HgTagBranchListDialog QDialog Ui_HgTagBranchListDialog
@@ -338,7 +339,7 @@ IExplorerImporter BookmarksImporter
 IconEditCommand QUndoCommand
 IconEditorGrid QWidget
 IconEditorPalette QWidget
-IconEditorWindow QMainWindow
+IconEditorWindow E5MainWindow
 IconSizeDialog QDialog Ui_IconSizeDialog
 IconZoomDialog QDialog Ui_IconZoomDialog
 IconsPage ConfigurationPageBase Ui_IconsPage
@@ -397,7 +398,7 @@ MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
-MiniEditor QMainWindow
+MiniEditor E5MainWindow
 MiniScintilla QsciScintillaCompat
 Module ClbrBaseClasses.Module VisibilityMixin
 ModuleItem UMLItem
@@ -449,7 +450,7 @@ Pep8Fixer QObject
 Pep8StatisticsDialog QDialog Ui_Pep8StatisticsDialog
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
-PixmapDiagram QMainWindow
+PixmapDiagram E5MainWindow
 PluginActivationError PluginError
 PluginClassFormatError PluginError
 PluginDetailsDialog QDialog Ui_PluginDetailsDialog
@@ -457,7 +458,7 @@ PluginError Exception
 PluginInfoDialog QDialog Ui_PluginInfoDialog
 PluginInstallDialog QDialog
 PluginInstallWidget QWidget Ui_PluginInstallDialog
-PluginInstallWindow QMainWindow
+PluginInstallWindow E5MainWindow
 PluginLoadError PluginError
 PluginManager QObject
 PluginManagerPage ConfigurationPageBase Ui_PluginManagerPage
@@ -467,10 +468,10 @@ PluginPathError PluginError
 PluginRepositoryDialog QDialog
 PluginRepositoryReader XMLStreamReaderBase
 PluginRepositoryWidget QWidget Ui_PluginRepositoryDialog
-PluginRepositoryWindow QMainWindow
+PluginRepositoryWindow E5MainWindow
 PluginUninstallDialog QDialog
 PluginUninstallWidget QWidget Ui_PluginUninstallDialog
-PluginUninstallWindow QMainWindow
+PluginUninstallWindow E5MainWindow
 PreferencesLexer QsciLexer
 PreferencesLexerError Exception
 PreferencesLexerLanguageError PreferencesLexerError
@@ -508,14 +509,14 @@ PyRegExpWizardCharactersDialog QDialog Ui_PyRegExpWizardCharactersDialog
 PyRegExpWizardDialog QDialog
 PyRegExpWizardRepeatDialog QDialog Ui_PyRegExpWizardRepeatDialog
 PyRegExpWizardWidget QWidget Ui_PyRegExpWizardDialog
-PyRegExpWizardWindow QMainWindow
+PyRegExpWizardWindow E5MainWindow
 PythonPage ConfigurationPageBase Ui_PythonPage
 QRegExpWizard QObject
 QRegExpWizardCharactersDialog QDialog Ui_QRegExpWizardCharactersDialog
 QRegExpWizardDialog QDialog
 QRegExpWizardRepeatDialog QDialog Ui_QRegExpWizardRepeatDialog
 QRegExpWizardWidget QWidget Ui_QRegExpWizardWidget
-QRegExpWizardWindow QMainWindow
+QRegExpWizardWindow E5MainWindow
 QsciScintillaCompat QsciScintilla
 QtHelpAccessHandler SchemeAccessHandler
 QtHelpDocumentationDialog QDialog Ui_QtHelpDocumentationDialog
@@ -568,7 +569,7 @@ SpellChecker QObject
 SpellCheckingDialog QDialog Ui_SpellCheckingDialog
 SpellingPropertiesDialog QDialog Ui_SpellingPropertiesDialog
 SplashScreen QSplashScreen
-SqlBrowser QMainWindow
+SqlBrowser E5MainWindow
 SqlBrowserWidget QWidget Ui_SqlBrowserWidget
 SqlConnectionDialog QDialog Ui_SqlConnectionDialog
 SqlConnectionWidget QWidget
@@ -582,7 +583,7 @@ StartDialog QDialog
 StatusMonitorLed E5Led
 Subversion VersionControl
 SubversionPage ConfigurationPageBase Ui_SubversionPage
-SvgDiagram QMainWindow
+SvgDiagram E5MainWindow
 SvnBlameDialog QDialog Ui_SvnBlameDialog
 SvnChangeListsDialog QDialog Ui_SvnChangeListsDialog
 SvnCommandDialog QDialog Ui_SvnCommandDialog
@@ -624,7 +625,7 @@ SyncHostTypePage QWizardPage Ui_SyncHostTypePage
 SyncManager QObject
 SyntaxCheckerDialog QDialog Ui_SyntaxCheckerDialog
 SyntaxCheckerPlugin QObject
-TRPreviewer QMainWindow
+TRPreviewer E5MainWindow
 TRSingleApplicationClient SingleApplicationClient
 TRSingleApplicationServer SingleApplicationServer
 TabBar E5WheelTabBar
@@ -661,10 +662,10 @@ TransplantDialog QDialog Ui_TransplantDialog
 TransplantProjectHelper HgExtensionProjectHelper
 TrayStarter QSystemTrayIcon
 TrayStarterPage ConfigurationPageBase Ui_TrayStarterPage
-UIPreviewer QMainWindow
+UIPreviewer E5MainWindow
 UMLClassDiagramBuilder UMLDiagramBuilder
 UMLDiagramBuilder QObject
-UMLDialog QMainWindow
+UMLDialog E5MainWindow
 UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
@@ -674,7 +675,7 @@ UndefinedExport Message
 UndefinedLocal Message
 UndefinedName Message
 UnittestDialog QWidget Ui_UnittestDialog
-UnittestWindow QMainWindow
+UnittestWindow E5MainWindow
 UnusedImport Message
 UnusedVariable Message
 UrlBar E5LineEdit
@@ -684,7 +685,7 @@ UserAgentModel QAbstractTableModel
 UserAgentReader QXmlStreamReader
 UserAgentWriter QXmlStreamWriter
 UserAgentsDialog QDialog Ui_UserAgentsDialog
-UserInterface QMainWindow
+UserInterface E5MainWindow
 UserProjectReader XMLStreamReaderBase
 UserProjectWriter XMLStreamWriterBase
 UserPropertiesDialog QDialog Ui_UserPropertiesDialog

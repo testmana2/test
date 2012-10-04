@@ -13,12 +13,15 @@ import imp
 import shutil
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal
-from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout, QMainWindow
+from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout
 
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .PluginManager import PluginManager
 from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
+
+import Preferences
 
 
 class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
@@ -182,7 +185,7 @@ class PluginUninstallDialog(QDialog):
         self.cw.buttonBox.rejected[()].connect(self.reject)
 
 
-class PluginUninstallWindow(QMainWindow):
+class PluginUninstallWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -197,6 +200,8 @@ class PluginUninstallWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

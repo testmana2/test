@@ -1048,6 +1048,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Toolbox/SingleApplication.py</Source>
     <Source>Toolbox/Startup.py</Source>
     <Source>Preferences/ConfigurationPages/HelpInterfacePage.py</Source>
+    <Source>E5Gui/E5MainWindow.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

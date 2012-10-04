@@ -8,19 +8,22 @@ Module implementing the SQL Browser main window.
 """
 
 from PyQt4.QtCore import QTimer, QUrl
-from PyQt4.QtGui import QKeySequence, qApp, QMainWindow
+from PyQt4.QtGui import QKeySequence, qApp
 from PyQt4.QtSql import QSqlError, QSqlDatabase
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .SqlBrowserWidget import SqlBrowserWidget
 
 import UI.PixmapCache
 import UI.Config
 
+import Preferences
 
-class SqlBrowser(QMainWindow):
+
+class SqlBrowser(E5MainWindow):
     """
     Class implementing the SQL Browser main window.
     """
@@ -36,6 +39,8 @@ class SqlBrowser(QMainWindow):
         
         self.setWindowTitle(self.trUtf8("SQL Browser"))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.__browser = SqlBrowserWidget(self)
         self.setCentralWidget(self.__browser)

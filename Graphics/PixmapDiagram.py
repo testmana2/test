@@ -8,11 +8,11 @@ Module implementing a dialog showing a pixmap.
 """
 
 from PyQt4.QtCore import Qt, QSize, QEvent
-from PyQt4.QtGui import QMainWindow, QLabel, QPalette, QSizePolicy, QScrollArea, \
-    QAction, QMenu, QToolBar, QImage, QPixmap, QDialog, QPrinter, QPrintDialog, \
-    QPainter, QFont, QColor
+from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
+    QToolBar, QImage, QPixmap, QDialog, QPrinter, QPrintDialog, QPainter, QFont, QColor
 
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .ZoomDialog import ZoomDialog
 
@@ -21,7 +21,7 @@ import UI.Config
 import Preferences
 
 
-class PixmapDiagram(QMainWindow):
+class PixmapDiagram(E5MainWindow):
     """
     Class implementing a dialog showing a pixmap.
     """

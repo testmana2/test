@@ -11,9 +11,10 @@ import os
 
 from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot, qVersion
 from PyQt4.QtGui import QWidget, QDialog, QApplication, QClipboard, QTextCursor, \
-    QDialogButtonBox, QMainWindow, QVBoxLayout, QTableWidgetItem
+    QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardWidget
 
@@ -23,6 +24,7 @@ from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
 import UI.PixmapCache
 
 import Utilities
+import Preferences
 
 
 class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
@@ -648,7 +650,7 @@ class QRegExpWizardDialog(QDialog):
         return self.cw.getCode(indLevel, indString)
 
 
-class QRegExpWizardWindow(QMainWindow):
+class QRegExpWizardWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -663,6 +665,8 @@ class QRegExpWizardWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

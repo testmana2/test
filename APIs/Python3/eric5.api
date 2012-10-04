@@ -1226,6 +1226,8 @@ eric5.E5Gui.E5LineEditButton.E5LineEditButton?1(parent=None)
 eric5.E5Gui.E5ListView.E5ListView.keyPressEvent?4(evt)
 eric5.E5Gui.E5ListView.E5ListView.removeAll?4()
 eric5.E5Gui.E5ListView.E5ListView.removeSelected?4()
+eric5.E5Gui.E5MainWindow.E5MainWindow.setStyle?4(styleName, styleSheetFile)
+eric5.E5Gui.E5MainWindow.E5MainWindow?1(parent=None)
 eric5.E5Gui.E5MessageBox.Abort?7
 eric5.E5Gui.E5MessageBox.AcceptRole?7
 eric5.E5Gui.E5MessageBox.ActionRole?7

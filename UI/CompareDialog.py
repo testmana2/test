@@ -12,16 +12,18 @@ from difflib import _mdiff, IS_CHARACTER_JUNK
 
 from PyQt4.QtCore import QTimer, QEvent, pyqtSlot
 from PyQt4.QtGui import QWidget, QColor, QFontMetrics, QBrush, QApplication, \
-    QTextCursor, QDialogButtonBox, QMainWindow
+    QTextCursor, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 import UI.PixmapCache
 
 from .Ui_CompareDialog import Ui_CompareDialog
 
 import Utilities
+import Preferences
 
 
 def sbsdiff(a, b, linenumberwidth=4):
@@ -423,7 +425,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             self.hsb2.valueChanged.disconnect(self.hsb1.setValue)
 
 
-class CompareWindow(QMainWindow):
+class CompareWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -436,6 +438,9 @@ class CompareWindow(QMainWindow):
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
+        
         self.cw = CompareDialog(files, self)
         self.cw.installEventFilter(self)
         size = self.cw.size()

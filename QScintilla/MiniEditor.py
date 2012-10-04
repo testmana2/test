@@ -14,11 +14,12 @@ from PyQt4.QtCore import QSignalMapper, QPoint, QTimer, QFileInfo, pyqtSignal, Q
     QRegExp, Qt
 from PyQt4.QtGui import QWidget, QCursor, QPrinter, QKeySequence, QPrintDialog, \
     QWhatsThis, QActionGroup, QDialog, QAbstractPrintDialog, QInputDialog, \
-    QApplication, QMenu, QPalette, QMainWindow, QFont, QVBoxLayout, QLabel
+    QApplication, QMenu, QPalette, QFont, QVBoxLayout, QLabel
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -91,7 +92,7 @@ class MiniScintilla(QsciScintillaCompat):
         super().focusOutEvent(event)
 
 
-class MiniEditor(QMainWindow):
+class MiniEditor(E5MainWindow):
     """
     Class implementing a minimalistic editor for simple editing tasks.
     
@@ -113,6 +114,8 @@ class MiniEditor(QMainWindow):
             self.setObjectName(name)
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.setWindowIcon(UI.PixmapCache.getIcon("editor.png"))
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.__textEdit = MiniScintilla(self)
         self.__textEdit.clearSearchIndicators = self.clearSearchIndicators

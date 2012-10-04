@@ -14,8 +14,8 @@ import logging
 from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
     QIODevice, QByteArray, qVersion, QProcess, QSize, QUrl, QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
-    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QStyleFactory, \
-    QMainWindow, QProgressDialog, QVBoxLayout, QDockWidget, QAction, QLabel
+    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QProgressDialog, \
+    QVBoxLayout, QDockWidget, QAction, QLabel
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
@@ -87,6 +87,7 @@ from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
+from E5Gui.E5MainWindow import E5MainWindow
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -170,7 +171,7 @@ class Redirector(QObject):
         self.__nWrite(self.__bufferedWrite())
 
 
-class UserInterface(QMainWindow):
+class UserInterface(E5MainWindow):
     """
     Class implementing the main user interface.
     
@@ -212,8 +213,7 @@ class UserInterface(QMainWindow):
         
         self.__restartArgs = restartArguments[:]
         
-        self.defaultStyleName = QApplication.style().objectName()
-        self.__setStyle()
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.maxEditorPathLen = Preferences.getUI("CaptionFilenameLength")
         self.locale = locale
@@ -572,39 +572,6 @@ class UserInterface(QMainWindow):
         
         # attribute for the last shown configuration page
         self.__lastConfigurationPageName = ""
-        
-    def __setStyle(self):
-        """
-        Private slot to set the style of the interface.
-        """
-        # step 1: set the style
-        style = None
-        styleName = Preferences.getUI("Style")
-        if styleName != "System" and styleName in list(QStyleFactory.keys()):
-            style = QStyleFactory.create(styleName)
-        if style is None:
-            style = QStyleFactory.create(self.defaultStyleName)
-        if style is not None:
-            QApplication.setStyle(style)
-        
-        # step 2: set a style sheet
-        styleSheetFile = Preferences.getUI("StyleSheet")
-        if styleSheetFile:
-            try:
-                f = open(styleSheetFile, "r", encoding="utf-8")
-                styleSheet = f.read()
-                f.close()
-            except IOError as msg:
-                E5MessageBox.warning(self,
-                    self.trUtf8("Loading Style Sheet"),
-                    self.trUtf8("""<p>The Qt Style Sheet file <b>{0}</b> could"""
-                                """ not be read.<br>Reason: {1}</p>""")
-                        .format(styleSheetFile, str(msg)))
-                return
-        else:
-            styleSheet = ""
-        
-        e5App().setStyleSheet(styleSheet)
         
     def __createLayout(self, debugServer):
         """
@@ -4722,7 +4689,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle a change of the preferences.
         """
-        self.__setStyle()
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         if Preferences.getUI("SingleApplicationMode"):
             if self.SAServer is None:

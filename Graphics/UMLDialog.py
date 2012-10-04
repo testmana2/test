@@ -8,9 +8,10 @@ Module implementing a dialog showing UML like diagrams.
 """
 
 from PyQt4.QtCore import Qt, QFileInfo
-from PyQt4.QtGui import QMainWindow, QAction, QToolBar, QGraphicsScene
+from PyQt4.QtGui import QAction, QToolBar, QGraphicsScene
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .UMLGraphicsView import UMLGraphicsView
 
@@ -18,7 +19,7 @@ import UI.Config
 import UI.PixmapCache
 
 
-class UMLDialog(QMainWindow):
+class UMLDialog(E5MainWindow):
     """
     Class implementing a dialog showing UML like diagrams.
     """

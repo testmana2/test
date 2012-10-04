@@ -15,11 +15,12 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, QEvent, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QColor, QDialog, QApplication, QDialogButtonBox, \
-    QMainWindow, QListWidgetItem
+    QListWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
 from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
@@ -728,7 +729,7 @@ class QtTestResult(unittest.TestResult):
         self.parent.testFinished()
 
 
-class UnittestWindow(QMainWindow):
+class UnittestWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -745,6 +746,8 @@ class UnittestWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
     
     def eventFilter(self, obj, event):
         """

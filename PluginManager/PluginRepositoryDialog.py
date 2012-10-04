@@ -14,7 +14,7 @@ import zipfile
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, QProcess
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QTreeWidgetItem, \
-    QDialog, QVBoxLayout, QMainWindow
+    QDialog, QVBoxLayout
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
     from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
@@ -25,6 +25,7 @@ except ImportError:
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 from E5XML.PluginRepositoryReader import PluginRepositoryReader
 
@@ -569,7 +570,7 @@ class PluginRepositoryDialog(QDialog):
         return self.cw.getDownloadedPlugins()
 
 
-class PluginRepositoryWindow(QMainWindow):
+class PluginRepositoryWindow(E5MainWindow):
     """
     Main window class for the standalone dialog.
     """
@@ -584,6 +585,8 @@ class PluginRepositoryWindow(QMainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        
+        self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)

@@ -10,18 +10,19 @@ Module implementing a dialog for the Mercurial server.
 import os
 
 from PyQt4.QtCore import QProcess, Qt, QSize
-from PyQt4.QtGui import QMainWindow, QAction, QToolBar, QPlainTextEdit, \
+from PyQt4.QtGui import QAction, QToolBar, QPlainTextEdit, \
     QTextCursor, QBrush, QSpinBox, QComboBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
+from E5Gui.E5MainWindow import E5MainWindow
 
 import UI.PixmapCache
 
 import Preferences
 
 
-class HgServeDialog(QMainWindow):
+class HgServeDialog(E5MainWindow):
     """
     Class implementing a dialog for the Mercurial server.
     """

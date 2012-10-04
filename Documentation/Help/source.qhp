@@ -121,6 +121,7 @@
             <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
             <section title="eric5.E5Gui.E5LineEditButton" ref="eric5.E5Gui.E5LineEditButton.html" />
             <section title="eric5.E5Gui.E5ListView" ref="eric5.E5Gui.E5ListView.html" />
+            <section title="eric5.E5Gui.E5MainWindow" ref="eric5.E5Gui.E5MainWindow.html" />
             <section title="eric5.E5Gui.E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html" />
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
@@ -3400,6 +3401,10 @@
       <keyword name="E5ListView.keyPressEvent" id="E5ListView.keyPressEvent" ref="eric5.E5Gui.E5ListView.html#E5ListView.keyPressEvent" />
       <keyword name="E5ListView.removeAll" id="E5ListView.removeAll" ref="eric5.E5Gui.E5ListView.html#E5ListView.removeAll" />
       <keyword name="E5ListView.removeSelected" id="E5ListView.removeSelected" ref="eric5.E5Gui.E5ListView.html#E5ListView.removeSelected" />
+      <keyword name="E5MainWindow" id="E5MainWindow" ref="eric5.E5Gui.E5MainWindow.html#E5MainWindow" />
+      <keyword name="E5MainWindow (Constructor)" id="E5MainWindow (Constructor)" ref="eric5.E5Gui.E5MainWindow.html#E5MainWindow.__init__" />
+      <keyword name="E5MainWindow (Module)" id="E5MainWindow (Module)" ref="eric5.E5Gui.E5MainWindow.html" />
+      <keyword name="E5MainWindow.setStyle" id="E5MainWindow.setStyle" ref="eric5.E5Gui.E5MainWindow.html#E5MainWindow.setStyle" />
       <keyword name="E5MessageBox" id="E5MessageBox" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox" />
       <keyword name="E5MessageBox (Constructor)" id="E5MessageBox (Constructor)" ref="eric5.E5Gui.E5MessageBox.html#E5MessageBox.__init__" />
       <keyword name="E5MessageBox (Module)" id="E5MessageBox (Module)" ref="eric5.E5Gui.E5MessageBox.html" />
@@ -5101,7 +5106,6 @@
       <keyword name="HelpWindow.__savePageScreen" id="HelpWindow.__savePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageScreen" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
-      <keyword name="HelpWindow.__setStyle" id="HelpWindow.__setStyle" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setStyle" />
       <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />
       <keyword name="HelpWindow.__setupFilterCombo" id="HelpWindow.__setupFilterCombo" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setupFilterCombo" />
       <keyword name="HelpWindow.__showAcceptedLanguages" id="HelpWindow.__showAcceptedLanguages" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAcceptedLanguages" />
@@ -11012,7 +11016,6 @@
       <keyword name="UserInterface.__restart" id="UserInterface.__restart" ref="eric5.UI.UserInterface.html#UserInterface.__restart" />
       <keyword name="UserInterface.__saveCurrentViewProfile" id="UserInterface.__saveCurrentViewProfile" ref="eric5.UI.UserInterface.html#UserInterface.__saveCurrentViewProfile" />
       <keyword name="UserInterface.__setEditProfile" id="UserInterface.__setEditProfile" ref="eric5.UI.UserInterface.html#UserInterface.__setEditProfile" />
-      <keyword name="UserInterface.__setStyle" id="UserInterface.__setStyle" ref="eric5.UI.UserInterface.html#UserInterface.__setStyle" />
       <keyword name="UserInterface.__setWindowCaption" id="UserInterface.__setWindowCaption" ref="eric5.UI.UserInterface.html#UserInterface.__setWindowCaption" />
       <keyword name="UserInterface.__setupDockWindow" id="UserInterface.__setupDockWindow" ref="eric5.UI.UserInterface.html#UserInterface.__setupDockWindow" />
       <keyword name="UserInterface.__showAvailableVersionInfos" id="UserInterface.__showAvailableVersionInfos" ref="eric5.UI.UserInterface.html#UserInterface.__showAvailableVersionInfos" />
@@ -12553,6 +12556,7 @@
       <file>eric5.E5Gui.E5LineEdit.html</file>
       <file>eric5.E5Gui.E5LineEditButton.html</file>
       <file>eric5.E5Gui.E5ListView.html</file>
+      <file>eric5.E5Gui.E5MainWindow.html</file>
       <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>
