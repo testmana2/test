@@ -5185,8 +5185,7 @@ class ViewManager(QObject):
             res = True
         
         if res:
-            e5App().focusChanged.disconnect(
-                self.viewmanager.appFocusChanged)
+            e5App().focusChanged.disconnect(self.appFocusChanged)
         
         return res
         
