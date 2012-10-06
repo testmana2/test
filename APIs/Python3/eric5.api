@@ -1364,6 +1364,7 @@ eric5.E5Gui.E5SideBar.E5SideBar.setTabText?4(index, text)
 eric5.E5Gui.E5SideBar.E5SideBar.setTabToolTip?4(index, tip)
 eric5.E5Gui.E5SideBar.E5SideBar.setTabWhatsThis?4(index, text)
 eric5.E5Gui.E5SideBar.E5SideBar.shrink?4()
+eric5.E5Gui.E5SideBar.E5SideBar.shutdown?4()
 eric5.E5Gui.E5SideBar.E5SideBar.tabIcon?4(index)
 eric5.E5Gui.E5SideBar.E5SideBar.tabText?4(index)
 eric5.E5Gui.E5SideBar.E5SideBar.tabToolTip?4(index)
@@ -6905,6 +6906,7 @@ eric5.Utilities.py3flakes.checker.Checker.RETURN?7
 eric5.Utilities.py3flakes.checker.Checker.SETCOMP?7
 eric5.Utilities.py3flakes.checker.Checker.SLICE?7
 eric5.Utilities.py3flakes.checker.Checker.STARRED?4(node)
+eric5.Utilities.py3flakes.checker.Checker.TRYEXCEPT?7
 eric5.Utilities.py3flakes.checker.Checker._runDeferred?5(deferred)
 eric5.Utilities.py3flakes.checker.Checker.addArgs?4()
 eric5.Utilities.py3flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
@@ -6930,6 +6932,7 @@ eric5.Utilities.py3flakes.checker.Checker.scope?7
 eric5.Utilities.py3flakes.checker.Checker.traceTree?7
 eric5.Utilities.py3flakes.checker.Checker?1(module, filename='(none)')
 eric5.Utilities.py3flakes.checker.ExportBinding.names?4()
+eric5.Utilities.py3flakes.checker.FunctionDefinition.is_property?7
 eric5.Utilities.py3flakes.checker.FunctionScope?1()
 eric5.Utilities.py3flakes.checker.Importation?1(name, source)
 eric5.Utilities.py3flakes.checker.Scope.importStarred?7
