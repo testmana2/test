@@ -744,7 +744,8 @@ class ViewManager(QObject):
                 QApplication.translate('ViewManager', '&Redo'),
                 QKeySequence(QApplication.translate('ViewManager',
                     "Ctrl+Shift+Z", "Edit|Redo")),
-                0, self.editActGrp, 'vm_edit_redo')
+                0,
+                self.editActGrp, 'vm_edit_redo')
         self.redoAct.setStatusTip(QApplication.translate('ViewManager',
             'Redo the last change'))
         self.redoAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -962,7 +963,8 @@ class ViewManager(QObject):
         self.streamCommentAct = E5Action(QApplication.translate('ViewManager',
                     'Stream Comment'),
                 QApplication.translate('ViewManager', 'Stream Comment'),
-                0, 0, self.editActGrp, 'vm_edit_stream_comment')
+                0, 0,
+                self.editActGrp, 'vm_edit_stream_comment')
         self.streamCommentAct.setStatusTip(QApplication.translate('ViewManager',
             'Stream Comment Line or Selection'))
         self.streamCommentAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -975,7 +977,8 @@ class ViewManager(QObject):
         self.boxCommentAct = E5Action(QApplication.translate('ViewManager',
                     'Box Comment'),
                 QApplication.translate('ViewManager', 'Box Comment'),
-                0, 0, self.editActGrp, 'vm_edit_box_comment')
+                0, 0,
+                self.editActGrp, 'vm_edit_box_comment')
         self.boxCommentAct.setStatusTip(QApplication.translate('ViewManager',
             'Box Comment Line or Selection'))
         self.boxCommentAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1036,7 +1039,8 @@ class ViewManager(QObject):
         self.convertEOLAct = E5Action(QApplication.translate('ViewManager',
                     'Convert Line End Characters'),
                 QApplication.translate('ViewManager', 'Convert &Line End Characters'),
-                0, 0, self.editActGrp, 'vm_edit_convert_eol')
+                0, 0,
+                self.editActGrp, 'vm_edit_convert_eol')
         self.convertEOLAct.setStatusTip(QApplication.translate('ViewManager',
             'Convert Line End Characters'))
         self.convertEOLAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1049,7 +1053,8 @@ class ViewManager(QObject):
         self.shortenEmptyAct = E5Action(QApplication.translate('ViewManager',
                     'Shorten empty lines'),
                 QApplication.translate('ViewManager', 'Shorten empty lines'),
-                0, 0, self.editActGrp, 'vm_edit_shorten_empty_lines')
+                0, 0,
+                self.editActGrp, 'vm_edit_shorten_empty_lines')
         self.shortenEmptyAct.setStatusTip(QApplication.translate('ViewManager',
             'Shorten empty lines'))
         self.shortenEmptyAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1080,7 +1085,8 @@ class ViewManager(QObject):
                 QApplication.translate('ViewManager', 'Autocomplete from Document'),
                 QKeySequence(QApplication.translate('ViewManager', "Ctrl+Shift+Space",
                              "Edit|Autocomplete from Document")),
-                0, self.editActGrp, 'vm_edit_autocomplete_from_document')
+                0,
+                self.editActGrp, 'vm_edit_autocomplete_from_document')
         self.autoCompleteFromDocAct.setStatusTip(QApplication.translate('ViewManager',
             'Autocomplete current word from Document'))
         self.autoCompleteFromDocAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1096,7 +1102,8 @@ class ViewManager(QObject):
                 QApplication.translate('ViewManager', 'Autocomplete from APIs'),
                 QKeySequence(QApplication.translate('ViewManager', "Ctrl+Alt+Space",
                              "Edit|Autocomplete from APIs")),
-                0, self.editActGrp, 'vm_edit_autocomplete_from_api')
+                0,
+                self.editActGrp, 'vm_edit_autocomplete_from_api')
         self.autoCompleteFromAPIsAct.setStatusTip(QApplication.translate('ViewManager',
             'Autocomplete current word from APIs'))
         self.autoCompleteFromAPIsAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -1114,7 +1121,8 @@ class ViewManager(QObject):
                     'Autocomplete from Document and APIs'),
                 QKeySequence(QApplication.translate('ViewManager', "Alt+Shift+Space",
                              "Edit|Autocomplete from Document and APIs")),
-                0, self.editActGrp, 'vm_edit_autocomplete_from_all')
+                0,
+                self.editActGrp, 'vm_edit_autocomplete_from_all')
         self.autoCompleteFromAllAct.setStatusTip(QApplication.translate('ViewManager',
             'Autocomplete current word from Document and APIs'))
         self.autoCompleteFromAllAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -5172,9 +5180,15 @@ class ViewManager(QObject):
         Preferences.Prefs.settings.setValue('Bookmarked/Sources', self.bookmarked)
         
         if len(self.editors):
-            return False
+            res = False
         else:
-            return True
+            res = True
+        
+        if res:
+            e5App().focusChanged.disconnect(
+                self.viewmanager.appFocusChanged)
+        
+        return res
         
     def __lastEditorClosed(self):
         """
