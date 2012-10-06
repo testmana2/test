@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>EditorAutocompletionPage</class>
- <widget class="QWidget" name="EditorAutocompletionPage" >
-  <property name="geometry" >
+ <widget class="QWidget" name="EditorAutocompletionPage">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,109 +10,109 @@
     <height>294</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="headerLabel" >
-     <property name="text" >
-      <string>&lt;b>Configure Autocompletion&lt;/b></string>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure Autocompletion&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line6" >
-     <property name="frameShape" >
+    <widget class="Line" name="line6">
+     <property name="frameShape">
       <enum>QFrame::HLine</enum>
      </property>
-     <property name="frameShadow" >
+     <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="acEnabledCheckBox" >
-     <property name="toolTip" >
+    <widget class="QCheckBox" name="acEnabledCheckBox">
+     <property name="toolTip">
       <string>Select this to enable autocompletion</string>
      </property>
-     <property name="whatsThis" >
-      <string>&lt;b>Autocompletion Enabled&lt;/b>&lt;p>Select to enable autocompletion. In order to get autocompletion from alternative autocompletion providers (if installed), these have to be enabled on their respective configuration page. Only one alternative provider might be enabled.&lt;/p></string>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Autocompletion Enabled&lt;/b&gt;&lt;p&gt;Select to enable autocompletion. In order to get autocompletion from alternative autocompletion providers (if installed), these have to be enabled on their respective configuration page. Only one alternative provider might be enabled.&lt;/p&gt;</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Autocompletion Enabled</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="enabled" >
+    <widget class="QGroupBox" name="groupBox">
+     <property name="enabled">
       <bool>false</bool>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>General</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout" >
-      <item row="0" column="0" >
-       <widget class="QCheckBox" name="acCaseSensitivityCheckBox" >
-        <property name="toolTip" >
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="acCaseSensitivityCheckBox">
+        <property name="toolTip">
          <string>Select this to have case sensitive auto-completion lists</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>Case sensitive</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1" >
-       <widget class="QCheckBox" name="acReplaceWordCheckBox" >
-        <property name="toolTip" >
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="acReplaceWordCheckBox">
+        <property name="toolTip">
          <string>Select this, if the word to the right should be replaced by the selected entry</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>Replace word</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2" >
-       <layout class="QHBoxLayout" name="_2" >
+      <item row="1" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="_2">
         <item>
-         <widget class="QLabel" name="textLabel1_2" >
-          <property name="text" >
+         <widget class="QLabel" name="textLabel1_2">
+          <property name="text">
            <string>Threshold:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSlider" name="acThresholdSlider" >
-          <property name="toolTip" >
+         <widget class="QSlider" name="acThresholdSlider">
+          <property name="toolTip">
            <string>Move to set the threshold for display of an autocompletion list</string>
           </property>
-          <property name="maximum" >
+          <property name="maximum">
            <number>10</number>
           </property>
-          <property name="value" >
+          <property name="value">
            <number>2</number>
           </property>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="tickInterval" >
+          <property name="tickInterval">
            <number>1</number>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLCDNumber" name="lCDNumber4" >
-          <property name="toolTip" >
+         <widget class="QLCDNumber" name="lCDNumber4">
+          <property name="toolTip">
            <string>Displays the selected autocompletion threshold</string>
           </property>
-          <property name="numDigits" >
+          <property name="digitCount">
            <number>2</number>
           </property>
-          <property name="segmentStyle" >
+          <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>
           </property>
-          <property name="value" stdset="0" >
+          <property name="value" stdset="0">
            <double>2.000000000000000</double>
           </property>
          </widget>
@@ -123,10 +124,10 @@
    </item>
    <item>
     <spacer>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>456</width>
        <height>51</height>
@@ -147,11 +148,11 @@
    <receiver>lCDNumber4</receiver>
    <slot>display(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>304</x>
      <y>114</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>465</x>
      <y>116</y>
     </hint>
@@ -163,11 +164,11 @@
    <receiver>groupBox</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>103</x>
      <y>43</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>114</x>
      <y>64</y>
     </hint>

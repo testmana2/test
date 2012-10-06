@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>EditorCalltipsPage</class>
- <widget class="QWidget" name="EditorCalltipsPage" >
-  <property name="geometry" >
+ <widget class="QWidget" name="EditorCalltipsPage">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,78 +10,78 @@
     <height>369</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" >
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <widget class="QLabel" name="headerLabel" >
-     <property name="text" >
-      <string>&lt;b>Configure Calltips&lt;/b></string>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure Calltips&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line18" >
-     <property name="frameShape" >
+    <widget class="Line" name="line18">
+     <property name="frameShape">
       <enum>QFrame::HLine</enum>
      </property>
-     <property name="frameShadow" >
+     <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="ctEnabledCheckBox" >
-     <property name="toolTip" >
+    <widget class="QCheckBox" name="ctEnabledCheckBox">
+     <property name="toolTip">
       <string>Select this to enable calltips</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>Calltips Enabled</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame" >
-     <property name="enabled" >
+    <widget class="QFrame" name="frame">
+     <property name="enabled">
       <bool>false</bool>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout" >
-      <property name="margin" >
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="margin">
        <number>0</number>
       </property>
       <item>
-       <widget class="QLabel" name="textLabel2" >
-        <property name="text" >
+       <widget class="QLabel" name="textLabel2">
+        <property name="text">
          <string>Visible calltips:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QSlider" name="ctVisibleSlider" >
-        <property name="toolTip" >
+       <widget class="QSlider" name="ctVisibleSlider">
+        <property name="toolTip">
          <string>Move to set the maximum number of calltips shown (0 = all available)</string>
         </property>
-        <property name="maximum" >
+        <property name="maximum">
          <number>20</number>
         </property>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="tickInterval" >
+        <property name="tickInterval">
          <number>1</number>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLCDNumber" name="lCDNumber5" >
-        <property name="toolTip" >
+       <widget class="QLCDNumber" name="lCDNumber5">
+        <property name="toolTip">
          <string>Displays the maximum number of calltips to be shown</string>
         </property>
-        <property name="numDigits" >
+        <property name="digitCount">
          <number>2</number>
         </property>
-        <property name="segmentStyle" >
+        <property name="segmentStyle">
          <enum>QLCDNumber::Flat</enum>
         </property>
        </widget>
@@ -89,43 +90,43 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_2" >
-     <property name="enabled" >
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="enabled">
       <bool>false</bool>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Colours</string>
      </property>
-     <layout class="QHBoxLayout" >
+     <layout class="QHBoxLayout">
       <item>
-       <widget class="QLabel" name="TextLabel2_2_2_2" >
-        <property name="text" >
+       <widget class="QLabel" name="TextLabel2_2_2_2">
+        <property name="text">
          <string>Background colour:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="calltipsBackgroundButton" >
-        <property name="minimumSize" >
+       <widget class="QPushButton" name="calltipsBackgroundButton">
+        <property name="minimumSize">
          <size>
           <width>100</width>
           <height>0</height>
          </size>
         </property>
-        <property name="toolTip" >
+        <property name="toolTip">
          <string>Select the background colour for calltips.</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string/>
         </property>
        </widget>
       </item>
       <item>
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" stdset="0" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>40</width>
           <height>20</height>
@@ -137,20 +138,20 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="title" >
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
       <string>Plug-In Behavior</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout" >
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QCheckBox" name="ctScintillaCheckBox" >
-        <property name="toolTip" >
+       <widget class="QCheckBox" name="ctScintillaCheckBox">
+        <property name="toolTip">
          <string>Select to show QScintilla provided calltips, if the selected plugin fails</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by a plug-in (see calltips sub-page of the plug-in) and the plugin-in doesn't deliver any calltips.</string>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>Show QScintilla calltips, if plug-in fails</string>
         </property>
        </widget>
@@ -160,10 +161,10 @@
    </item>
    <item>
     <spacer>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>388</width>
        <height>20</height>
@@ -187,11 +188,11 @@
    <receiver>groupBox_2</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>68</x>
      <y>48</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>77</x>
      <y>148</y>
     </hint>
@@ -203,11 +204,11 @@
    <receiver>frame</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>199</x>
      <y>47</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>199</x>
      <y>75</y>
     </hint>
@@ -219,11 +220,11 @@
    <receiver>lCDNumber5</receiver>
    <slot>display(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>285</x>
      <y>75</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>372</x>
      <y>77</y>
     </hint>
