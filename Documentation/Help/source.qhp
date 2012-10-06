@@ -3572,6 +3572,7 @@
       <keyword name="E5SideBar.setTabToolTip" id="E5SideBar.setTabToolTip" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabToolTip" />
       <keyword name="E5SideBar.setTabWhatsThis" id="E5SideBar.setTabWhatsThis" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabWhatsThis" />
       <keyword name="E5SideBar.shrink" id="E5SideBar.shrink" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.shrink" />
+      <keyword name="E5SideBar.shutdown" id="E5SideBar.shutdown" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.shutdown" />
       <keyword name="E5SideBar.tabIcon" id="E5SideBar.tabIcon" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabIcon" />
       <keyword name="E5SideBar.tabText" id="E5SideBar.tabText" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabText" />
       <keyword name="E5SideBar.tabToolTip" id="E5SideBar.tabToolTip" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.tabToolTip" />

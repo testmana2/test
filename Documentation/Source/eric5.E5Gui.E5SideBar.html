@@ -161,6 +161,9 @@ QWidget
 <td><a href="#E5SideBar.shrink">shrink</a></td>
 <td>Public method to shrink the sidebar.</td>
 </tr><tr>
+<td><a href="#E5SideBar.shutdown">shutdown</a></td>
+<td>Public method to shut down the object.</td>
+</tr><tr>
 <td><a href="#E5SideBar.tabIcon">tabIcon</a></td>
 <td>Public method to get the icon of a tab.</td>
 </tr><tr>
@@ -562,6 +565,15 @@ text text to set (string)
 <b>shrink</b>(<i></i>)
 <p>
         Public method to shrink the sidebar.
+</p><a NAME="E5SideBar.shutdown" ID="E5SideBar.shutdown"></a>
+<h4>E5SideBar.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to shut down the object.
+</p><p>
+        This method does some preparations so the object can be deleted properly.
+        It disconnects from the focusChanged signal in order to avoid trouble later
+        on.
 </p><a NAME="E5SideBar.tabIcon" ID="E5SideBar.tabIcon"></a>
 <h4>E5SideBar.tabIcon</h4>
 <b>tabIcon</b>(<i>index</i>)
