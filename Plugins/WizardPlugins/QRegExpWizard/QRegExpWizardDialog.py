@@ -345,7 +345,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                         .format(re.errorString()))
                 return
             offset = re.indexIn(text, startpos)
-            captures = re.numCaptures()
+            captures = re.captureCount()
             row = 0
             OFFSET = 5
             
