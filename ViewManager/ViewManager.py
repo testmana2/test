@@ -4594,10 +4594,7 @@ class ViewManager(QObject):
                                 lineFrom, indexFrom, lineTo, indexTo)
         while ok:
             tgtPos, tgtLen = aw.getFoundTarget()
-            try:
-                aw.setSearchIndicator(tgtPos, tgtLen)
-            except AttributeError:
-                self.viewmanager.setSearchIndicator(tgtPos, tgtLen)
+            aw.setSearchIndicator(tgtPos, tgtLen)
             ok = aw.findNextTarget()
         
     def __quickSearchInEditor(self, again, back):
