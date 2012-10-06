@@ -214,7 +214,7 @@
          <property name="toolTip">
           <string>Displays the selected magnification value</string>
          </property>
-         <property name="numDigits">
+         <property name="digitCount">
           <number>2</number>
          </property>
          <property name="segmentStyle">

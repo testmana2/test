@@ -191,8 +191,8 @@
           <property name="toolTip">
            <string>Displays the selected width of the linenumbers margin.</string>
           </property>
-          <property name="numDigits">
-           <number>2</number>
+          <property name="digitCount">
+           <number>1</number>
           </property>
           <property name="segmentStyle">
            <enum>QLCDNumber::Flat</enum>
@@ -948,7 +948,7 @@
            <property name="toolTip">
             <string>Displays the selected tab width.</string>
            </property>
-           <property name="numDigits">
+           <property name="digitCount">
             <number>3</number>
            </property>
            <property name="segmentStyle">
@@ -1047,7 +1047,7 @@
         <property name="toolTip">
          <string>Displays the selected initial zoom factor</string>
         </property>
-        <property name="numDigits">
+        <property name="digitCount">
          <number>3</number>
         </property>
         <property name="segmentStyle">

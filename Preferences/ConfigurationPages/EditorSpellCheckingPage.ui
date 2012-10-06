@@ -148,7 +148,7 @@
              <property name="toolTip">
               <string>Displays the minimum size of words to be checked</string>
              </property>
-             <property name="numDigits">
+             <property name="digitCount">
               <number>2</number>
              </property>
              <property name="segmentStyle">
