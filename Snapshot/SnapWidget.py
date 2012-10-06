@@ -14,9 +14,11 @@ Module implementing the snapshot widget.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, QMimeData, Qt, \
-    QEvent, QRegExp
+    QEvent, QRegExp, qVersion
 from PyQt4.QtGui import QWidget, QImageWriter, QApplication, QPixmap, QCursor, QDrag, \
     QShortcut, QKeySequence, QDesktopServices
+if qVersion() >= "5.0.0":
+    from PyQt4.QtGui import QScreen
 
 from E5Gui import E5FileDialog, E5MessageBox
 
@@ -350,16 +352,24 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         if self.__mode == SnapWidget.ModeFullscreen:
             desktop = QApplication.desktop()
-            self.__snapshot = QPixmap.grabWindow(desktop.winId(),
-                desktop.x(), desktop.y(), desktop.width(), desktop.height())
+            if qVersion() >= "5.0.0":
+                self.__snapshot = QScreen.grabWindow(desktop.winId(),
+                    desktop.x(), desktop.y(), desktop.width(), desktop.height())
+            else:
+                self.__snapshot = QPixmap.grabWindow(desktop.winId(),
+                    desktop.x(), desktop.y(), desktop.width(), desktop.height())
         elif self.__mode == SnapWidget.ModeScreen:
             desktop = QApplication.desktop()
             screenId = desktop.screenNumber(QCursor.pos())
             geom = desktop.screenGeometry(screenId)
             x = geom.x()
             y = geom.y()
-            self.__snapshot = QPixmap.grabWindow(
-                desktop.winId(), x, y, geom.width(), geom.height())
+            if qVersion() >= "5.0.0":
+                self.__snapshot = QScreen.grabWindow(
+                    desktop.winId(), x, y, geom.width(), geom.height())
+            else:
+                self.__snapshot = QPixmap.grabWindow(
+                    desktop.winId(), x, y, geom.width(), geom.height())
         else:
             self.__snapshot = QPixmap()
         

@@ -7,9 +7,11 @@
 Module implementing a grabber widget for a freehand snapshot region.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer
+from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, QPainter, \
     QPalette, QToolTip, QPolygon, QPen, QBrush, QPaintEngine
+if qVersion() >= "5.0.0":
+    from PyQt4.QtGui import QScreen
 
 
 def drawPolygon(painter, polygon, outline, fill=QColor()):
@@ -80,8 +82,12 @@ class SnapshotFreehandGrabber(QWidget):
         self.__desktop = QApplication.desktop()
         x = self.__desktop.x()
         y = self.__desktop.y()
-        self.__pixmap = QPixmap.grabWindow(self.__desktop.winId(), x, y,
-            self.__desktop.width(), self.__desktop.height())
+        if qVersion() >= "5.0.0":
+            self.__pixmap = QScreen.grabWindow(self.__desktop.winId(), x, y,
+                self.__desktop.width(), self.__desktop.height())
+        else:
+            self.__pixmap = QPixmap.grabWindow(self.__desktop.winId(), x, y,
+                self.__desktop.width(), self.__desktop.height())
         self.resize(self.__pixmap.size())
         self.move(x, y)
         self.setCursor(Qt.CrossCursor)
