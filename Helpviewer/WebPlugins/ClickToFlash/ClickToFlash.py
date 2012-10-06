@@ -8,7 +8,7 @@ Module implementing the Flash blocker.
 """
 
 
-from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray,  QTimer, qVersion
+from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray,  QTimer
 from PyQt4.QtGui import QWidget, QMenu, QCursor, QDialog, QLabel, QFormLayout
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebHitTestResult, QWebElement, QWebView, QWebElementCollection
@@ -215,12 +215,8 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         if checkString == "":
             checkString = element.attribute("value")
         
-        if qVersion() >= "5.0.0":
-            checkString = view.url().resolved(QUrl(checkString)).toString(
-                QUrl.ComponentFormattingOptions(QUrl.RemoveQuery))
-        else:
-            checkString = view.url().resolved(QUrl(checkString)).toString(
-                QUrl.RemoveQuery)
+        checkString = view.url().resolved(QUrl(checkString)).toString(
+            QUrl.RemoveQuery)
         return self.__url.toEncoded().contains(QByteArray(checkString.encode("utf-8")))
     
     def __checkElement(self, element):

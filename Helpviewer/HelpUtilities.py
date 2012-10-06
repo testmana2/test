@@ -9,7 +9,7 @@ Module implementing some global helper functions.
 
 import os
 
-from PyQt4.QtCore import QUrl, qVersion
+from PyQt4.QtCore import QUrl
 
 
 def getFileNameFromUrl(url):
@@ -19,12 +19,8 @@ def getFileNameFromUrl(url):
     @param url URL (QUrl)
     @return file name (string)
     """
-    if qVersion() >= "5.0.0":
-        fileName = url.toString(QUrl.ComponentFormattingOptions(
-            QUrl.RemoveFragment | QUrl.RemoveQuery | QUrl.RemoveScheme | QUrl.RemovePort))
-    else:
-        fileName = url.toString(QUrl.RemoveFragment | QUrl.RemoveQuery |
-                                QUrl.RemoveScheme | QUrl.RemovePort)
+    fileName = url.toString(QUrl.RemoveFragment | QUrl.RemoveQuery |
+                            QUrl.RemoveScheme | QUrl.RemovePort)
     if fileName.find("/") != -1:
         pos = fileName.rfind("/")
         fileName = fileName[pos:]

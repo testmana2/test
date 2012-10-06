@@ -789,13 +789,8 @@ class HelpBrowser(QWebView):
                     """ for URL <b>{0}</b>.</p>""").format(name.toString()))
             return
         elif name.scheme() == "javascript":
-            if qVersion() >= "5.0.0":
-                scriptSource = QUrl.fromPercentEncoding(name.toString(
-                    QUrl.ComponentFormattingOptions(
-                        QUrl.TolerantMode | QUrl.RemoveScheme)))
-            else:
-                scriptSource = QUrl.fromPercentEncoding(name.toString(
-                    QUrl.FormattingOptions(QUrl.TolerantMode | QUrl.RemoveScheme)))
+            scriptSource = QUrl.fromPercentEncoding(name.toString(
+                QUrl.FormattingOptions(QUrl.TolerantMode | QUrl.RemoveScheme)))
             self.page().mainFrame().evaluateJavaScript(scriptSource)
             return
         else:
