@@ -212,7 +212,9 @@ class HistoryManager(QWebHistoryInterface):
         """
         cleanurl = QUrl(url)
         if cleanurl.scheme() not in ["eric", "about"]:
-            cleanurl.setPassword("")
+            if cleanurl.password():
+                # don't save the password in the history
+                cleanurl.setPassword("")
             if cleanurl.host():
                 cleanurl.setHost(cleanurl.host().lower())
             itm = HistoryEntry(cleanurl.toString(), QDateTime.currentDateTime())
