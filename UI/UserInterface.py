@@ -5547,6 +5547,10 @@ class UserInterface(QMainWindow):
         
         self.pluginManager.doShutdown()
         
+        if self.layout == "Sidebars":
+            self.leftSidebar.shutdown()
+            self.bottomSidebar.shutdown()
+        
         if self.SAServer is not None:
             self.SAServer.shutdown()
             self.SAServer = None

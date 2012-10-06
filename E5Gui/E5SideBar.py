@@ -594,3 +594,13 @@ class E5SideBar(QWidget):
         """
         if self.__autoHide and not self.__hasFocus and not self.isMinimized():
             self.shrink()
+    
+    def shutdown(self):
+        """
+        Public method to shut down the object.
+        
+        This method does some preparations so the object can be deleted properly.
+        It disconnects from the focusChanged signal in order to avoid trouble later
+        on.
+        """
+        e5App().focusChanged[QWidget, QWidget].disconnect(self.__appFocusChanged)
