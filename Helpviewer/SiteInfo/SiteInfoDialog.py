@@ -99,6 +99,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             self.securityLabel.setStyleSheet(SiteInfoDialog.nokStyle)
             self.securityLabel.setText('<b>Connection is not encrypted.</b>')
             self.securityDetailsButton.setEnabled(False)
+            self.tabWidget.setTabEnabled(self.tabWidget.indexOf(self.securityTab), False)
         
         # populate Media tab
         images = frame.findAllElements("img")
@@ -132,7 +133,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         """
         Private slot to show security details.
         """
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(self.tabWidget.indexOf(self.securityTab))
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_imagesTree_currentItemChanged(self, current, previous):
