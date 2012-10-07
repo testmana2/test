@@ -194,15 +194,15 @@ class ProjectBaseBrowser(Browser):
         """
         self._resizeColumns(parent)
         
-    def __modelDataChanged(self, startIndex, endIndex):
-        """
-        Private slot called after data has been changed in the model.
-        
-        @param startIndex start index of the changed data (QModelIndex)
-        @param endIndex end index of the changed data (QModelIndex)
-        """
-        self._resizeColumns(startIndex)
-        
+##    def __modelDataChanged(self, startIndex, endIndex):
+##        """
+##        Private slot called after data has been changed in the model.
+##        
+##        @param startIndex start index of the changed data (QModelIndex)
+##        @param endIndex end index of the changed data (QModelIndex)
+##        """
+##        self._resizeColumns(startIndex)
+##        
     def _projectClosed(self):
         """
         Protected slot to handle the projectClosed signal.
