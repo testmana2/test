@@ -7076,7 +7076,6 @@
       <keyword name="ProjectBaseBrowser (Constructor)" id="ProjectBaseBrowser (Constructor)" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__init__" />
       <keyword name="ProjectBaseBrowser (Module)" id="ProjectBaseBrowser (Module)" ref="eric5.Project.ProjectBaseBrowser.html" />
       <keyword name="ProjectBaseBrowser.__checkHookKey" id="ProjectBaseBrowser.__checkHookKey" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__checkHookKey" />
-      <keyword name="ProjectBaseBrowser.__modelDataChanged" id="ProjectBaseBrowser.__modelDataChanged" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__modelDataChanged" />
       <keyword name="ProjectBaseBrowser.__modelRowsInserted" id="ProjectBaseBrowser.__modelRowsInserted" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__modelRowsInserted" />
       <keyword name="ProjectBaseBrowser._collapseAllDirs" id="ProjectBaseBrowser._collapseAllDirs" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._collapseAllDirs" />
       <keyword name="ProjectBaseBrowser._completeRepopulateItem" id="ProjectBaseBrowser._completeRepopulateItem" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._completeRepopulateItem" />
