@@ -76,7 +76,7 @@ def installTranslations():
     if privateInstall:
         targetDir = configDir
     else:
-        targetDir = getConfig('ericDir')
+        targetDir = getConfig('ericTranslationsDir')
     
     try:
         for fn in glob.glob(os.path.join('eric', 'i18n', '*.qm')):
