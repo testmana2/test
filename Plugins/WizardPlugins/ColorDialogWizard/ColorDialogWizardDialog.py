@@ -9,8 +9,8 @@ Module implementing the color dialog wizard dialog.
 
 import os
 
-from PyQt4.QtCore import qVersion, pyqtSlot
-from PyQt4.QtGui import QColor, QColorDialog, QDialog, qRgba, QDialogButtonBox
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QColor, QColorDialog, QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
 
@@ -35,11 +35,6 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         
         self.bTest = \
             self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
-        
-        if qVersion() < "4.5.0":
-            self.rQt40.setChecked(True)
-        else:
-            self.rQt45.setChecked(True)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -65,11 +60,9 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 else:
                     coStr = "QColor({0})".format(coStr)
                 try:
-                    if self.rQt45.isChecked():
-                        exec('QColorDialog.getColor({0}, None, "{1}")'.format(
-                            coStr, self.eTitle.text()))
-                    else:
-                        exec('QColorDialog.getColor({0})'.format(coStr))
+                    exec('from PyQt4.QtCore import Qt;'
+                         ' QColorDialog.getColor({0}, None, "{1}")'.format(
+                        coStr, self.eTitle.text()))
                 except:
                     E5MessageBox.critical(self,
                         self.trUtf8("QColorDialog Wizard Error"),
@@ -77,16 +70,11 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                             .format(coStr))
             
         elif self.rRGBA.isChecked():
-            if self.rQt45.isChecked():
-                QColorDialog.getColor(
-                    QColor(self.sRed.value(), self.sGreen.value(),
-                           self.sBlue.value(), self.sAlpha.value()),
-                    None, self.eTitle.text(),
-                    QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel))
-            else:
-                rgba = qRgba(self.sRed.value(), self.sGreen.value(),
-                    self.sBlue.value(), self.sAlpha.value())
-                QColorDialog.getRgba(rgba)
+            QColorDialog.getColor(
+                QColor(self.sRed.value(), self.sGreen.value(),
+                       self.sBlue.value(), self.sAlpha.value()),
+                None, self.eTitle.text(),
+                QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel))
         
     def on_eRGB_textChanged(self, text):
         """
@@ -118,14 +106,6 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         else:
             self.bTest.setEnabled(False)
     
-    def on_rQt45_toggled(self, on):
-        """
-        Private slot to handle the toggled signal of the rQt45 radio button.
-        
-        @param on toggle state (boolean) (ignored)
-        """
-        self.titleGroup.setEnabled(on)
-    
     def getCode(self, indLevel, indString):
         """
         Public method to get the source code.
@@ -149,38 +129,27 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                     code += 'QColor("{0}")'.format(col)
                 else:
                     code += 'QColor({0})'.format(col)
-            if self.rQt45.isChecked():
-                code += ', None,{0}'.format(os.linesep)
-                code += '{0}self.trUtf8("{1}"),{2}'.format(
-                    istring, self.eTitle.text(), os.linesep)
-                code += \
-                    '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
-                        .format(istring)
+            code += ', None,{0}'.format(os.linesep)
+            code += '{0}self.trUtf8("{1}"),{2}'.format(
+                istring, self.eTitle.text(), os.linesep)
+            code += \
+                '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
+                    .format(istring)
             code += '){0}'.format(estring)
         elif self.rRGBA.isChecked():
-            if self.rQt45.isChecked():
-                code += 'getColor('
-                if not self.eRGB.text():
-                    code += 'QColor({0:d}, {1:d}, {2:d}, {3:d}),{4}'.format(
-                        self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
-                        self.sAlpha.value(), os.linesep)
-                else:
-                    code += '{0},{1}'.format(self.eRGB.text(), os.linesep)
-                code += '{0}None,{1}'.format(istring, os.linesep)
-                code += '{0}self.trUtf8("{1}"),{2}'.format(
-                    istring, self.eTitle.text(), os.linesep)
-                code += \
-                    '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
-                        .format(istring)
-                code += '){0}'.format(estring)
+            code += 'getColor('
+            if not self.eRGB.text():
+                code += 'QColor({0:d}, {1:d}, {2:d}, {3:d}),{4}'.format(
+                    self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
+                    self.sAlpha.value(), os.linesep)
             else:
-                code += 'getRgba('
-                if not self.eRGB.text():
-                    code += 'qRgba({0:d}, {1:d}, {2:d}, {3:d})'.format(
-                        self.sRed.value(), self.sGreen.value(), self.sBlue.value(),
-                        self.sAlpha.value())
-                else:
-                    code += self.eRGB.text()
-                code += '){0}'.format(estring)
+                code += '{0},{1}'.format(self.eRGB.text(), os.linesep)
+            code += '{0}None,{1}'.format(istring, os.linesep)
+            code += '{0}self.trUtf8("{1}"),{2}'.format(
+                istring, self.eTitle.text(), os.linesep)
+            code += \
+                '{0}QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel)'\
+                    .format(istring)
+            code += '){0}'.format(estring)
         
         return code

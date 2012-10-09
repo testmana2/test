@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>367</width>
-    <height>469</height>
+    <width>381</width>
+    <height>338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,57 +17,6 @@
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
-    <widget class="QGroupBox" name="qtGroup">
-     <property name="title">
-      <string>Qt Version</string>
-     </property>
-     <layout class="QHBoxLayout" name="_2">
-      <item>
-       <widget class="QRadioButton" name="rQt40">
-        <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
-        </property>
-        <property name="toolTip">
-         <string>Select to generate code for Qt 4.0.0 but less than Qt 4.5.0</string>
-        </property>
-        <property name="text">
-         <string>Qt 4.0</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="rQt45">
-        <property name="focusPolicy">
-         <enum>Qt::TabFocus</enum>
-        </property>
-        <property name="toolTip">
-         <string>Select to generate code for Qt 4.5.0 or newer</string>
-        </property>
-        <property name="text">
-         <string>Qt 4.5</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>161</width>
-          <height>21</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -367,8 +316,6 @@
  <layoutdefault spacing="6" margin="11"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
-  <tabstop>rQt40</tabstop>
-  <tabstop>rQt45</tabstop>
   <tabstop>rColor</tabstop>
   <tabstop>rRGBA</tabstop>
   <tabstop>eTitle</tabstop>
