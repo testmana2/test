@@ -17,8 +17,6 @@ from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, QMimeData, 
     QEvent, QRegExp, qVersion
 from PyQt4.QtGui import QWidget, QImageWriter, QApplication, QPixmap, QCursor, QDrag, \
     QShortcut, QKeySequence, QDesktopServices
-if qVersion() >= "5.0.0":
-    from PyQt4.QtGui import QScreen
 
 from E5Gui import E5FileDialog, E5MessageBox
 
@@ -353,7 +351,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if self.__mode == SnapWidget.ModeFullscreen:
             desktop = QApplication.desktop()
             if qVersion() >= "5.0.0":
-                self.__snapshot = QScreen.grabWindow(desktop.winId(),
+                self.__snapshot = QApplication.screens()[0].grabWindow(desktop.winId(),
                     desktop.x(), desktop.y(), desktop.width(), desktop.height())
             else:
                 self.__snapshot = QPixmap.grabWindow(desktop.winId(),
@@ -365,7 +363,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             x = geom.x()
             y = geom.y()
             if qVersion() >= "5.0.0":
-                self.__snapshot = QScreen.grabWindow(
+                self.__snapshot = QApplication.screens()[0].grabWindow(
                     desktop.winId(), x, y, geom.width(), geom.height())
             else:
                 self.__snapshot = QPixmap.grabWindow(
