@@ -10,7 +10,7 @@ Module implementing the Interface configuration page.
 import glob
 import os
 
-from PyQt4.QtCore import pyqtSlot, QTranslator, qVersion
+from PyQt4.QtCore import pyqtSlot, QTranslator
 from PyQt4.QtGui import QStyleFactory
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -101,13 +101,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         else:
             self.projectEmbeddedFileBrowserButton.setChecked(True)
         
-        if qVersion() < '4.5.0':
-            self.tabsGroupBox.setEnabled(False)
-            self.tabsCloseButtonCheckBox.setChecked(True)
-        else:
-            self.tabsGroupBox.setEnabled(True)
-            self.tabsCloseButtonCheckBox.setChecked(
-                Preferences.getUI("SingleCloseButton"))
+        self.tabsGroupBox.setEnabled(True)
+        self.tabsCloseButtonCheckBox.setChecked(
+            Preferences.getUI("SingleCloseButton"))
         
         self.uiColours["LogStdErrColour"] = \
             self.initColour("LogStdErrColour", self.stderrTextColourButton,
