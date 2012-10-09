@@ -2127,7 +2127,6 @@
       <keyword name="ColorDialogWizardDialog.on_buttonBox_clicked" id="ColorDialogWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html#ColorDialogWizardDialog.on_buttonBox_clicked" />
       <keyword name="ColorDialogWizardDialog.on_eColor_editTextChanged" id="ColorDialogWizardDialog.on_eColor_editTextChanged" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html#ColorDialogWizardDialog.on_eColor_editTextChanged" />
       <keyword name="ColorDialogWizardDialog.on_eRGB_textChanged" id="ColorDialogWizardDialog.on_eRGB_textChanged" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html#ColorDialogWizardDialog.on_eRGB_textChanged" />
-      <keyword name="ColorDialogWizardDialog.on_rQt45_toggled" id="ColorDialogWizardDialog.on_rQt45_toggled" ref="eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html#ColorDialogWizardDialog.on_rQt45_toggled" />
       <keyword name="CommandOptionsDialog (Module)" id="CommandOptionsDialog (Module)" ref="eric5.VCS.CommandOptionsDialog.html" />
       <keyword name="CompareDialog" id="CompareDialog" ref="eric5.UI.CompareDialog.html#CompareDialog" />
       <keyword name="CompareDialog (Constructor)" id="CompareDialog (Constructor)" ref="eric5.UI.CompareDialog.html#CompareDialog.__init__" />

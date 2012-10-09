@@ -5023,7 +5023,6 @@ eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialo
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_eColor_editTextChanged?4(text)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_eRGB_textChanged?4(text)
-eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog.on_rQt45_toggled?4(on)
 eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.ColorDialogWizardDialog?1(parent=None)
 eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.getCode?4(indLevel, indString)
 eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.E5MessageBoxWizardDialog.on_bTest_clicked?4()
