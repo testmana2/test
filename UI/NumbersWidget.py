@@ -141,10 +141,7 @@ class BinaryModel(QAbstractTableModel):
                 self.__value |= (1 << self.__bits - index.column() - 1)
             else:
                 self.__value &= ~(1 << self.__bits - index.column() - 1)
-            if qVersion() >= "5.0.0":
-                self.dataChanged.emit(index, index, [])
-            else:
-                self.dataChanged.emit(index, index)
+            self.dataChanged.emit(index, index)
             return True
         
         return False

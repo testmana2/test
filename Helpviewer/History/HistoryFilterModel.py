@@ -7,7 +7,7 @@
 Module implementing the history filter model.
 """
 
-from PyQt4.QtCore import Qt, QDateTime, QModelIndex, qVersion
+from PyQt4.QtCore import Qt, QDateTime, QModelIndex
 from PyQt4.QtGui import QAbstractProxyModel
 
 from .HistoryModel import HistoryModel
@@ -139,12 +139,8 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param topLeft index of top left data element (QModelIndex)
         @param bottomRight index of bottom right data element (QModelIndex)
         """
-        if qVersion() >= "5.0.0":
-            self.dataChanged.emit(
-                self.mapFromSource(topLeft), self.mapFromSource(bottomRight), [])
-        else:
-            self.dataChanged.emit(
-                self.mapFromSource(topLeft), self.mapFromSource(bottomRight))
+        self.dataChanged.emit(
+            self.mapFromSource(topLeft), self.mapFromSource(bottomRight))
     
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         """

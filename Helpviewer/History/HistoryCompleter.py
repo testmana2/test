@@ -7,7 +7,7 @@
 Module implementing a special completer for the history.
 """
 
-from PyQt4.QtCore import Qt, QRegExp, QTimer, qVersion
+from PyQt4.QtCore import Qt, QRegExp, QTimer
 from PyQt4.QtGui import QTableView, QAbstractItemView, QSortFilterProxyModel, \
     QCompleter
 
@@ -147,11 +147,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         self.__isValid = valid
         
         # tell the history completer that the model has changed
-        if qVersion() >= "5.0.0":
-            self.dataChanged.emit(self.index(0, 0),
-                                  self.index(0, self.rowCount() - 1), [])
-        else:
-            self.dataChanged.emit(self.index(0, 0), self.index(0, self.rowCount() - 1))
+        self.dataChanged.emit(self.index(0, 0), self.index(0, self.rowCount() - 1))
     
     def filterAcceptsRow(self, sourceRow, sourceParent):
         """

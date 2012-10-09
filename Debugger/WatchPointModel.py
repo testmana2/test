@@ -7,7 +7,7 @@
 Module implementing the Watch expression model.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex, qVersion
+from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
 class WatchPointModel(QAbstractItemModel):
@@ -191,10 +191,7 @@ class WatchPointModel(QAbstractItemModel):
             for value in [cond, special] + list(properties):
                 self.watchpoints[row][i] = value
                 i += 1
-            if qVersion() >= "5.0.0":
-                self.dataChanged.emit(index1, index2, [])
-            else:
-                self.dataChanged.emit(index1, index2)
+            self.dataChanged.emit(index1, index2)
 
     def setWatchPointEnabledByIndex(self, index, enabled):
         """
@@ -209,10 +206,7 @@ class WatchPointModel(QAbstractItemModel):
             index1 = self.createIndex(row, col, self.watchpoints[row])
             self.dataAboutToBeChanged.emit(index1, index1)
             self.watchpoints[row][col] = enabled
-            if qVersion() >= "5.0.0":
-                self.dataChanged.emit(index1, index1, [])
-            else:
-                self.dataChanged.emit(index1, index1)
+            self.dataChanged.emit(index1, index1)
     
     def deleteWatchPointByIndex(self, index):
         """

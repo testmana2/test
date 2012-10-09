@@ -7,7 +7,7 @@
 Module implementing the history model.
 """
 
-from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl, qVersion
+from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 
 import Helpviewer.HelpWindow
 
@@ -64,10 +64,7 @@ class HistoryModel(QAbstractTableModel):
         @param row row number of the updated entry (integer)
         """
         idx = self.index(row, 0)
-        if qVersion() >= "5.0.0":
-            self.dataChanged.emit(idx, idx, [])
-        else:
-            self.dataChanged.emit(idx, idx)
+        self.dataChanged.emit(idx, idx)
     
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
