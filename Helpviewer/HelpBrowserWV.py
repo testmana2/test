@@ -10,7 +10,7 @@ Module implementing the helpbrowser using QWebView.
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
     QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, QPoint, \
-    QPointF, QByteArray, qVersion
+    QByteArray, qVersion
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
@@ -553,12 +553,8 @@ class HelpWebPage(QWebPage):
             # Fake a mouse move event just outside of the widget to trigger
             # the WebKit event handler's mouseMoved function. This implements
             # the interesting mouse-out behavior like invalidating scrollbars.
-            if qVersion() >= "5.0.0":
-                fakeEvent = QMouseEvent(QEvent.MouseMove, QPointF(0, -1),
-                                        Qt.NoButton, Qt.NoButton, Qt.NoModifier)
-            else:
-                fakeEvent = QMouseEvent(QEvent.MouseMove, QPoint(0, -1),
-                                        Qt.NoButton, Qt.NoButton, Qt.NoModifier)
+            fakeEvent = QMouseEvent(QEvent.MouseMove, QPoint(0, -1),
+                                    Qt.NoButton, Qt.NoButton, Qt.NoModifier)
             return super().event(fakeEvent)
         
         return super().event(evt)
@@ -1929,19 +1925,11 @@ class HelpBrowser(QWebView):
             while frame and frame != self.page().mainFrame():
                 p -= frame.scrollPosition()
                 frame = frame.parentFrame()
-            if qVersion() >= "5.0.0":
-                pevent = QMouseEvent(QEvent.MouseButtonPress, QPointF(p), Qt.LeftButton,
-                    Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
-            else:
-                pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton,
-                    Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton,
+                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, pevent)
-            if qVersion() >= "5.0.0":
-                revent = QMouseEvent(QEvent.MouseButtonRelease, QPointF(p), Qt.LeftButton,
-                    Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
-            else:
-                revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton,
-                    Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton,
+                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, revent)
             handled = True
         
