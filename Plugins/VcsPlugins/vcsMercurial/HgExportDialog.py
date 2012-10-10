@@ -10,7 +10,7 @@ Module implementing a dialog to enter data for the Mercurial export command.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFileDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui import E5FileDialog
 from E5Gui.E5Completers import E5DirCompleter
@@ -74,7 +74,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
             self,
             self.trUtf8("Export Patches"),
             self.directoryEdit.text(),
-            QFileDialog.Options(QFileDialog.Option(0)))
+            E5FileDialog.Options(E5FileDialog.Option(0)))
         
         if dn:
             self.directoryEdit.setText(Utilities.toNativeSeparators(dn))

@@ -8,7 +8,7 @@ Module implementing the synchronization shared directory settings wizard page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QWizardPage, QFileDialog
+from PyQt4.QtGui import QWizardPage
 
 from E5Gui import E5FileDialog
 
@@ -66,7 +66,7 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
             self,
             self.trUtf8("Shared Directory"),
             self.directoryEdit.text(),
-            QFileDialog.Options(QFileDialog.Option(0)))
+            E5FileDialog.Options(E5FileDialog.Option(0)))
         
         if directory:
             self.directoryEdit.setText(Utilities.toNativeSeparators(directory))
