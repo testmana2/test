@@ -303,7 +303,7 @@ class Checker(object):
 
     # "stmt" type nodes
     RETURN = DELETE = PRINT = WHILE = IF = WITH = WITHITEM = RAISE = \
-    TRYEXCEPT = TRYFINALLY = ASSERT = EXEC = EXPR = handleChildren
+    TRY = TRYEXCEPT = TRYFINALLY = ASSERT = EXEC = EXPR = handleChildren
     
     # "expr" type nodes
     BOOLOP = BINOP = UNARYOP = IFEXP = DICT = SET = YIELD = COMPARE = \
