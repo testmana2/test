@@ -16,6 +16,10 @@ Version 5.3-snapshot-2012mmdd:
   -- improved the package diagram to include subpackages and their module names
   -- added the capability to rebuild a diagram without losing the current item
      positions
+- Plug-ins
+  -- added the 'addSideWidget()' and 'removeSideWidget()' methods to the UserInterface
+     class to allow plug-in developers to add a plug-in widget to the left or bottom
+     side containers
 - Project
   -- made the selectable project types of the project properties dialog dependent
      upon the selected programming language

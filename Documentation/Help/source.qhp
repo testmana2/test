@@ -3346,6 +3346,7 @@
       <keyword name="E5HorizontalToolBox (Constructor)" id="E5HorizontalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.__init__" />
       <keyword name="E5HorizontalToolBox.addItem" id="E5HorizontalToolBox.addItem" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.addItem" />
       <keyword name="E5HorizontalToolBox.insertItem" id="E5HorizontalToolBox.insertItem" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.insertItem" />
+      <keyword name="E5HorizontalToolBox.removeItem" id="E5HorizontalToolBox.removeItem" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.removeItem" />
       <keyword name="E5HorizontalToolBox.setItemEnabled" id="E5HorizontalToolBox.setItemEnabled" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemEnabled" />
       <keyword name="E5HorizontalToolBox.setItemToolTip" id="E5HorizontalToolBox.setItemToolTip" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemToolTip" />
       <keyword name="E5Led" id="E5Led" ref="eric5.E5Gui.E5Led.html#E5Led" />
@@ -11088,6 +11089,7 @@
       <keyword name="UserInterface.__writeTasks" id="UserInterface.__writeTasks" ref="eric5.UI.UserInterface.html#UserInterface.__writeTasks" />
       <keyword name="UserInterface.activateCooperationViewer" id="UserInterface.activateCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.activateCooperationViewer" />
       <keyword name="UserInterface.addE5Actions" id="UserInterface.addE5Actions" ref="eric5.UI.UserInterface.html#UserInterface.addE5Actions" />
+      <keyword name="UserInterface.addSideWidget" id="UserInterface.addSideWidget" ref="eric5.UI.UserInterface.html#UserInterface.addSideWidget" />
       <keyword name="UserInterface.appendToStderr" id="UserInterface.appendToStderr" ref="eric5.UI.UserInterface.html#UserInterface.appendToStderr" />
       <keyword name="UserInterface.appendToStdout" id="UserInterface.appendToStdout" ref="eric5.UI.UserInterface.html#UserInterface.appendToStdout" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
@@ -11112,6 +11114,7 @@
       <keyword name="UserInterface.processArgs" id="UserInterface.processArgs" ref="eric5.UI.UserInterface.html#UserInterface.processArgs" />
       <keyword name="UserInterface.registerToolbar" id="UserInterface.registerToolbar" ref="eric5.UI.UserInterface.html#UserInterface.registerToolbar" />
       <keyword name="UserInterface.removeE5Actions" id="UserInterface.removeE5Actions" ref="eric5.UI.UserInterface.html#UserInterface.removeE5Actions" />
+      <keyword name="UserInterface.removeSideWidget" id="UserInterface.removeSideWidget" ref="eric5.UI.UserInterface.html#UserInterface.removeSideWidget" />
       <keyword name="UserInterface.reregisterToolbar" id="UserInterface.reregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.reregisterToolbar" />
       <keyword name="UserInterface.setDebugProfile" id="UserInterface.setDebugProfile" ref="eric5.UI.UserInterface.html#UserInterface.setDebugProfile" />
       <keyword name="UserInterface.showAvailableVersionsInfo" id="UserInterface.showAvailableVersionsInfo" ref="eric5.UI.UserInterface.html#UserInterface.showAvailableVersionsInfo" />

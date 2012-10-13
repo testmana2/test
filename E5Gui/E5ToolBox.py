@@ -66,6 +66,14 @@ class E5HorizontalToolBox(E5TabWidget):
         self.setTabToolTip(index, text)
         return index
     
+    def removeItem(self, index):
+        """
+        Public method to remove a widget from the toolbox.
+        
+        @param index index of the widget to remove (integer)
+        """
+        self.removeTab(index)
+    
     def setItemToolTip(self, index, toolTip):
         """
         Public method to set the tooltip of an item.

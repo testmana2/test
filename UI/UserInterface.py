@@ -195,6 +195,10 @@ class UserInterface(E5MainWindow):
     maxSbFilePathLen = 150
     maxMenuFilePathLen = 75
     
+    LeftSide = 1
+    BottomSide = 2
+    RightSide = 3
+    
     def __init__(self, app, locale, splash, plugin, noOpenAtStartup, restartArguments):
         """
         Constructor
@@ -866,6 +870,46 @@ class UserInterface(E5MainWindow):
             self.setCorner(Qt.BottomRightCorner, Qt.RightDockWidgetArea)
         else:
             self.setCorner(Qt.BottomRightCorner, Qt.BottomDockWidgetArea)
+        
+    def addSideWidget(self, side, widget, icon, label):
+        """
+        Public method to add a widget to the sides.
+        
+        @param side side to add the widget to (UserInterface.LeftSide,
+            UserInterface.BottomSide)
+        @param widget reference to the widget to add (QWidget)
+        @param icon icon to be used (QIcon)
+        @param label label text to be shown (string)
+        """
+        assert side in [UserInterface.LeftSide, UserInterface.BottomSide]
+        
+        if self.layout == "Toolboxes":
+            if side == UserInterface.LeftSide:
+                self.vToolbox.addItem(widget, icon, label)
+            elif side == UserInterface.BottomSide:
+                self.hToolbox.addItem(widget, icon, label)
+        elif self.layout == "Sidebars":
+            if side == UserInterface.LeftSide:
+                self.leftSidebar.addTab(widget, icon, label)
+            elif side == UserInterface.BottomSide:
+                self.bottomSidebar.addTab(widget, icon, label)
+        
+    def removeSideWidget(self, widget):
+        """
+        Public method to remove a widget added using addSideWidget().
+        
+        @param widget reference to the widget to remove (QWidget)
+        """
+        if self.layout == "Toolboxes":
+            for container in [self.vToolbox, self.hToolbox]:
+                index = container.indexOf(widget)
+                if index != -1:
+                    container.removeItem(index)
+        elif self.layout == "Sidebars":
+            for container in [self.leftSidebar, self.bottomSidebar]:
+                index = container.indexOf(widget)
+                if index != -1:
+                    container.removeTab(index)
         
     def showLogTab(self, tabname):
         """

@@ -170,7 +170,7 @@ emitted when a menu is about to be shown. The name
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>maxSbFilePathLen</td></tr>
+<tr><td>BottomSide</td></tr><tr><td>LeftSide</td></tr><tr><td>RightSide</td></tr><tr><td>maxFilePathLen</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>maxSbFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -641,6 +641,9 @@ E5MainWindow
 <td><a href="#UserInterface.addE5Actions">addE5Actions</a></td>
 <td>Public method to add actions to the list of actions.</td>
 </tr><tr>
+<td><a href="#UserInterface.addSideWidget">addSideWidget</a></td>
+<td>Public method to add a widget to the sides.</td>
+</tr><tr>
 <td><a href="#UserInterface.appendToStderr">appendToStderr</a></td>
 <td>Public slot to append text to the stderr log viewer tab.</td>
 </tr><tr>
@@ -712,6 +715,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.removeE5Actions">removeE5Actions</a></td>
 <td>Public method to remove actions from the list of actions.</td>
+</tr><tr>
+<td><a href="#UserInterface.removeSideWidget">removeSideWidget</a></td>
+<td>Public method to remove a widget added using addSideWidget().</td>
 </tr><tr>
 <td><a href="#UserInterface.reregisterToolbar">reregisterToolbar</a></td>
 <td>Public method to change the visible text for the named toolbar.</td>
@@ -1829,6 +1835,26 @@ string denoting the action set to get.
 <dd>
 list of actions to be added (list of E5Action)
 </dd>
+</dl><a NAME="UserInterface.addSideWidget" ID="UserInterface.addSideWidget"></a>
+<h4>UserInterface.addSideWidget</h4>
+<b>addSideWidget</b>(<i>side, widget, icon, label</i>)
+<p>
+        Public method to add a widget to the sides.
+</p><dl>
+<dt><i>side</i></dt>
+<dd>
+side to add the widget to (UserInterface.LeftSide,
+            UserInterface.BottomSide)
+</dd><dt><i>widget</i></dt>
+<dd>
+reference to the widget to add (QWidget)
+</dd><dt><i>icon</i></dt>
+<dd>
+icon to be used (QIcon)
+</dd><dt><i>label</i></dt>
+<dd>
+label text to be shown (string)
+</dd>
 </dl><a NAME="UserInterface.appendToStderr" ID="UserInterface.appendToStderr"></a>
 <h4>UserInterface.appendToStderr</h4>
 <b>appendToStderr</b>(<i>s</i>)
@@ -2121,6 +2147,16 @@ string denoting the action set to get.
 </dd><dt><i>actions</i></dt>
 <dd>
 list of actions (list of E5Action)
+</dd>
+</dl><a NAME="UserInterface.removeSideWidget" ID="UserInterface.removeSideWidget"></a>
+<h4>UserInterface.removeSideWidget</h4>
+<b>removeSideWidget</b>(<i>widget</i>)
+<p>
+        Public method to remove a widget added using addSideWidget().
+</p><dl>
+<dt><i>widget</i></dt>
+<dd>
+reference to the widget to remove (QWidget)
 </dd>
 </dl><a NAME="UserInterface.reregisterToolbar" ID="UserInterface.reregisterToolbar"></a>
 <h4>UserInterface.reregisterToolbar</h4>

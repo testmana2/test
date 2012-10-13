@@ -1473,6 +1473,7 @@ eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.toolBarsActions?4()
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager?1(ui=None, parent=None)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.addItem?4(widget, icon, text)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.insertItem?4(index, widget, icon, text)
+eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.removeItem?4(index)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.setItemEnabled?4(index, enabled)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.setItemToolTip?4(index, toolTip)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox?1(parent=None)
@@ -7383,8 +7384,12 @@ eric5.UI.UserInterface.Redirector.appendStdout?7
 eric5.UI.UserInterface.Redirector.flush?4()
 eric5.UI.UserInterface.Redirector.write?4(s)
 eric5.UI.UserInterface.Redirector?1(stderr)
+eric5.UI.UserInterface.UserInterface.BottomSide?7
+eric5.UI.UserInterface.UserInterface.LeftSide?7
+eric5.UI.UserInterface.UserInterface.RightSide?7
 eric5.UI.UserInterface.UserInterface.activateCooperationViewer?4()
 eric5.UI.UserInterface.UserInterface.addE5Actions?4(actions, type)
+eric5.UI.UserInterface.UserInterface.addSideWidget?4(side, widget, icon, label)
 eric5.UI.UserInterface.UserInterface.appendStderr?7
 eric5.UI.UserInterface.UserInterface.appendStdout?7
 eric5.UI.UserInterface.UserInterface.appendToStderr?4(s)
@@ -7417,6 +7422,7 @@ eric5.UI.UserInterface.UserInterface.processArgs?4(args)
 eric5.UI.UserInterface.UserInterface.registerToolbar?4(name, text, toolbar)
 eric5.UI.UserInterface.UserInterface.reloadAPIs?7
 eric5.UI.UserInterface.UserInterface.removeE5Actions?4(actions, type='ui')
+eric5.UI.UserInterface.UserInterface.removeSideWidget?4(widget)
 eric5.UI.UserInterface.UserInterface.reregisterToolbar?4(name, text)
 eric5.UI.UserInterface.UserInterface.setDebugProfile?4(save=True)
 eric5.UI.UserInterface.UserInterface.showAvailableVersionsInfo?4()
@@ -7753,7 +7759,7 @@ eric5.Utilities.py3flakes.checker.Checker.RETURN?7
 eric5.Utilities.py3flakes.checker.Checker.SETCOMP?7
 eric5.Utilities.py3flakes.checker.Checker.SLICE?7
 eric5.Utilities.py3flakes.checker.Checker.STARRED?4(node)
-eric5.Utilities.py3flakes.checker.Checker.TRYEXCEPT?7
+eric5.Utilities.py3flakes.checker.Checker.TRY?7
 eric5.Utilities.py3flakes.checker.Checker._runDeferred?5(deferred)
 eric5.Utilities.py3flakes.checker.Checker.addArgs?4()
 eric5.Utilities.py3flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
