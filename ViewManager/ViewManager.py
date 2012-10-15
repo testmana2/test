@@ -5168,6 +5168,8 @@ class ViewManager(QObject):
         
         @return flag indicating success (boolean)
         """
+        e5App().focusChanged.disconnect(self.appFocusChanged)
+        
         self.closeAllWindows()
         
         # save the list of recently opened projects
@@ -5181,8 +5183,8 @@ class ViewManager(QObject):
         else:
             res = True
         
-        if res:
-            e5App().focusChanged.disconnect(self.appFocusChanged)
+        if not res:
+            e5App().focusChanged.connect(self.appFocusChanged)
         
         return res
         
