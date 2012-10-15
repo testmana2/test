@@ -377,6 +377,8 @@ def cleanUp():
             # delete the Mac app bundle
             if os.path.exists("/Developer/Applications/Eric5"):
                 shutil.rmtree("/Developer/Applications/Eric5")
+            if os.path.exists("/Applications/Eric5"):
+                shutil.rmtree("/Applications/Eric5")
         
     except IOError as msg:
         sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
@@ -567,9 +569,9 @@ def createMacAppBundle(pydir):
     """
     global cfg, sourceDir
     
-    dirs = {"contents": "/Developer/Applications/Eric5/eric5.app/Contents/",
-            "exe": "/Developer/Applications/Eric5/eric5.app/Contents/MacOS",
-            "icns": "/Developer/Applications/Eric5/eric5.app/Contents/Resources"}
+    dirs = {"contents": "/Applications/Eric5/eric5.app/Contents/",
+            "exe": "/Applications/Eric5/eric5.app/Contents/MacOS",
+            "icns": "/Applications/Eric5/eric5.app/Contents/Resources"}
     os.makedirs(dirs["contents"])
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
