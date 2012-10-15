@@ -137,8 +137,8 @@ def uninstallEric():
         # delete the Mac app bundle
         if os.path.exists("/Developer/Applications/Eric5"):
             shutil.rmtree("/Developer/Applications/Eric5")
-        if os.path.exists("/Applications/Eric5"):
-            shutil.rmtree("/Applications/Eric5")
+        if os.path.exists("/Applications/eric5.app"):
+            shutil.rmtree("/Applications/eric5.app")
     
 
 def main(argv):
