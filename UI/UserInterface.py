@@ -5524,6 +5524,10 @@ class UserInterface(QMainWindow):
         if self.shutdownCalled:
             return True
         
+        if self.helpWindow is not None:
+            if not self.helpWindow.shutdown():
+                return False
+        
         self.__writeSession()
         
         if not self.project.closeProject():

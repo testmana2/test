@@ -224,6 +224,7 @@ class HelpWindow(QMainWindow):
             self.__virusTotal.fileScanReport.connect(self.__virusTotalFileScanReport)
             
             self.__previewer = None
+            self.__shutdownCalled = False
             
             QTimer.singleShot(0, self.__lookForNewDocumentation)
             if self.__searchWord is not None:
@@ -1786,13 +1787,28 @@ class HelpWindow(QMainWindow):
                 <br />This event is simply accepted after the history has been
                 saved and all window references have been deleted.
         """
+        if not self.__shutdownCalled:
+            res = self.shutdown()
+            
+            if res:
+                e.accept()
+                self.helpClosed.emit()
+            else:
+                e.ignore()
+        else:
+            e.accept()
+    
+    def shutdown(self):
+        """
+        Public method to shut down the web browser.
+        
+        @return flag indicating successful shutdown (boolean)
+        """
         if not self.tabWidget.shallShutDown():
-            e.ignore()
-            return
+            return False
         
         if not self.downloadManager().allowQuit():
-            e.ignore()
-            return
+            return False
         
         self.downloadManager().shutdown()
         
@@ -1836,8 +1852,8 @@ class HelpWindow(QMainWindow):
         if not self.fromEric:
             Preferences.syncPreferences()
         
-        e.accept()
-        self.helpClosed.emit()
+        self.__shutdownCalled = True
+        return True
 
     def __backward(self):
         """
