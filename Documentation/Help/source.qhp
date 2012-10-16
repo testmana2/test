@@ -4603,6 +4603,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.shutdown" id="HelpWindow.shutdown" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.shutdown" />
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric5.Helpviewer.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
@@ -11342,7 +11343,6 @@
       <file>eric5.E5Gui.E5LineEdit.html</file>
       <file>eric5.E5Gui.E5LineEditButton.html</file>
       <file>eric5.E5Gui.E5ListView.html</file>
-      <file>eric5.E5Gui.E5MainWindow.html</file>
       <file>eric5.E5Gui.E5MessageBox.html</file>
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>

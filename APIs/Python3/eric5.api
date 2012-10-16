@@ -2191,6 +2191,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.shutdown?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric5.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric=False, initShortcutsOnly=False, searchWord=None)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompleter.pathFromIndex?4(idx)
@@ -6906,7 +6907,7 @@ eric5.Utilities.py3flakes.checker.Checker.RETURN?7
 eric5.Utilities.py3flakes.checker.Checker.SETCOMP?7
 eric5.Utilities.py3flakes.checker.Checker.SLICE?7
 eric5.Utilities.py3flakes.checker.Checker.STARRED?4(node)
-eric5.Utilities.py3flakes.checker.Checker.TRYEXCEPT?7
+eric5.Utilities.py3flakes.checker.Checker.TRY?7
 eric5.Utilities.py3flakes.checker.Checker._runDeferred?5(deferred)
 eric5.Utilities.py3flakes.checker.Checker.addArgs?4()
 eric5.Utilities.py3flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
