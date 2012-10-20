@@ -5196,6 +5196,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.shutdown" id="HelpWindow.shutdown" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.shutdown" />
       <keyword name="HelpWindow.speedDial" id="HelpWindow.speedDial" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.speedDial" />
       <keyword name="HelpWindow.syncManager" id="HelpWindow.syncManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.syncManager" />
       <keyword name="HelpWindow.userAgentsManager" id="HelpWindow.userAgentsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.userAgentsManager" />
