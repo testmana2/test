@@ -4675,7 +4675,7 @@ class UserInterface(QMainWindow):
                     default = ""
                 pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR", default)
             else:
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR",
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR",
                     '/usr/share/doc/packages/python/html/python-docs-html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
