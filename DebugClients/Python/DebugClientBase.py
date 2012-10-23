@@ -1269,6 +1269,10 @@ class DebugClientBase(object):
             oaccess = ""
             odict = dict
             
+            qtVariable = False
+            qvar = None
+            qvtype = ""
+            
             while i < len(var):
                 if len(dict):
                     udict = dict
@@ -1333,12 +1337,16 @@ class DebugClientBase(object):
                         try:
                             exec 'mdict = dict%s.__dict__' % access
                             ndict.update(mdict)     # __IGNORE_WARNING__
+                            exec 'obj = dict%s' % access
+                            if "PyQt4." in str(type(obj)):
+                                qtVariable = True
+                                qvar = obj
+                                qvtype = ("%s" % type(qvar))[1:-1].split()[1][1:-1]
                         except:
                             pass
                         try:
                             exec 'mcdict = dict%s.__class__.__dict__' % access
                             ndict.update(mcdict)     # __IGNORE_WARNING__
-                            exec 'obj = dict%s' % access
                             if mdict and not "sipThis" in mdict.keys(): # __IGNORE_WARNING__
                                 del rvar[0:2]
                                 access = ""
@@ -1355,6 +1363,10 @@ class DebugClientBase(object):
                             ndict.update(cdict)
                             exec 'obj = dict%s' % access
                             access = ""
+                            if "PyQt4." in str(type(obj)):
+                                qtVariable = True
+                                qvar = obj
+                                qvtype = ("%s" % type(qvar))[1:-1].split()[1][1:-1]
                         except:
                             pass
                     else:
@@ -1363,6 +1375,10 @@ class DebugClientBase(object):
                             ndict.update(dict[var[i]].__class__.__dict__)
                             del rvar[0]
                             obj = dict[var[i]]
+                            if "PyQt4." in str(type(obj)):
+                                qtVariable = True
+                                qvar = obj
+                                qvtype = ("%s" % type(qvar))[1:-1].split()[1][1:-1]
                         except:
                             pass
                         try:
@@ -1375,13 +1391,19 @@ class DebugClientBase(object):
                                     pass
                             ndict.update(cdict)
                             obj = dict[var[i]]
+                            if "PyQt4." in str(type(obj)):
+                                qtVariable = True
+                                qvar = obj
+                                qvtype = ("%s" % type(qvar))[1:-1].split()[1][1:-1]
                         except:
                             pass
                     odict = dict
                     dict = ndict
                 i += 1
             
-            if ("sipThis" in dict.keys() and len(dict) == 1) or \
+            if qtVariable:
+                vlist = self.__formatQt4Variable(qvar, qvtype)
+            elif ("sipThis" in dict.keys() and len(dict) == 1) or \
                (len(dict) == 0 and len(udict) > 0):
                 if access:
                     exec 'qvar = udict%s' % access
@@ -1454,6 +1476,16 @@ class DebugClientBase(object):
         if qttype == 'QChar':
             varlist.append(("", "QChar", "%s" % unichr(value.unicode())))
             varlist.append(("", "int", "%d" % value.unicode()))
+        elif qttype == 'QByteArray':
+            varlist.append(("hex", "QByteArray", "%s" % value.toHex()))
+            varlist.append(("base64", "QByteArray", "%s" % value.toBase64()))
+            varlist.append(("percent encoding", "QByteArray",
+                            "%s" % value.toPercentEncoding()))
+        elif qttype == 'QString':
+            varlist.append(("", "QString", "%s" % value))
+        elif qttype == 'QStringList':
+            for i in range(value.count()):
+                varlist.append(("%d" % i, "QString", "%s" % value[i]))
         elif qttype == 'QPoint':
             varlist.append(("x", "int", "%d" % value.x()))
             varlist.append(("y", "int", "%d" % value.y()))
@@ -1624,6 +1656,9 @@ class DebugClientBase(object):
                                 continue
                         elif valtype == "sip.methoddescriptor":
                             if ConfigVarTypeStrings.index('instance method') in filter:
+                                continue
+                        elif valtype == "sip.enumtype":
+                            if ConfigVarTypeStrings.index('class') in filter:
                                 continue
                         elif not valtype.startswith("PySide") and \
                              ConfigVarTypeStrings.index('other') in filter:
