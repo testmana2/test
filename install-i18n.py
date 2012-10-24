@@ -81,6 +81,7 @@ def installTranslations():
     try:
         for fn in glob.glob(os.path.join('eric', 'i18n', '*.qm')):
             shutil.copy2(fn, targetDir)
+            os.chmod(os.path.join(targetDir, os.path.basename(fn)), 0o644)
     except IOError as msg:
         sys.stderr.write(
             'IOError: {0}\nTry install-i18n as root.\n'.format(msg))
