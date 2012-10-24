@@ -258,6 +258,7 @@ def copyTree(src, dst, filters, excludeDirs=[], excludePatterns=[]):
                     if not os.path.isdir(dst):
                         os.makedirs(dst)
                     shutil.copy2(srcname, dstname)
+                    os.chmod(dstname, 0o644)
                     break
             else:
                 if os.path.isdir(srcname) and not srcname in excludeDirs:
@@ -285,6 +286,7 @@ Package containing the global plugins.
 '''
         )
         f.close()
+        os.chmod(fname, 0o644)
 
 
 def cleanUp():
@@ -389,6 +391,19 @@ def cleanUp():
         exit(7)
 
 
+def shutilCopy(src, dst):
+    """
+    Wrapper function around shutil.copy() to ensure the permissions.
+    
+    @param src source file name (string)
+    @param dst destination file name or directory name (string)
+    """
+    shutil.copy(src, dst)
+    if os.path.isdir(dst):
+        dst = os.path.join(dst, os.path.basename(src))
+    os.chmod(dst, 0o644)
+
+
 def installEric():
     """
     Actually perform the installation steps.
@@ -431,13 +446,13 @@ def installEric():
         
         # copy the eric5 config file
         if distDir:
-            shutil.copy(configName, cfg['mdir'])
+            shutilCopy(configName, cfg['mdir'])
             if os.path.exists(configName + 'c'):
-                shutil.copy(configName + 'c', cfg['mdir'])
+                shutilCopy(configName + 'c', cfg['mdir'])
         else:
-            shutil.copy(configName, modDir)
+            shutilCopy(configName, modDir)
             if os.path.exists(configName + 'c'):
-                shutil.copy(configName + 'c', modDir)
+                shutilCopy(configName + 'c', modDir)
         
         # copy the various parts of eric5
         copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'],
@@ -473,11 +488,11 @@ def installEric():
         
         # copy the wrappers
         for wname in wnames:
-            shutil.copy(wname, cfg['bindir'])
+            shutilCopy(wname, cfg['bindir'])
             os.remove(wname)
         
         # copy the license file
-        shutil.copy('{1}{0}LICENSE.GPL3'.format(os.sep, sourceDir), cfg['ericDir'])
+        shutilCopy('{1}{0}LICENSE.GPL3'.format(os.sep, sourceDir), cfg['ericDir'])
         
         # create the global plugins directory
         createGlobalPluginsDir()
@@ -493,19 +508,19 @@ def installEric():
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
         try:
-            shutil.copy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericDocDir'])
+            shutilCopy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericDocDir'])
         except EnvironmentError:
             print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
     for name in glob.glob(os.path.join(sourceDir, 'README*.*')):
         try:
-            shutil.copy(name, cfg['ericDocDir'])
+            shutilCopy(name, cfg['ericDocDir'])
         except EnvironmentError:
             print("Could not install '{1}'.".format(name))
    
     # copy some more stuff
     for name in ['default.e4k', 'default_Mac.e4k']:
         try:
-            shutil.copy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericOthersDir'])
+            shutilCopy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericOthersDir'])
         except EnvironmentError:
             print("Could not install '{2}{0}{1}'.".format(os.sep, name, sourceDir))
     
@@ -516,24 +531,24 @@ def installEric():
             os.makedirs(apidir)
         for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
             try:
-                shutil.copy(apiName, apidir)
+                shutilCopy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
         for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.bas")):
             try:
-                shutil.copy(apiName, apidir)
+                shutilCopy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
         if progLanguage == "Python":
             # copy Python3 API files to the same destination
             for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
                 try:
-                    shutil.copy(apiName, apidir)
+                    shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
             for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.bas")):
                 try:
-                    shutil.copy(apiName, apidir)
+                    shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
     
@@ -543,16 +558,16 @@ def installEric():
             dst = os.path.normpath(os.path.join(distDir, "usr/share/pixmaps"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
-                        os.path.join(dst, "eric.png"))
+            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
+                       os.path.join(dst, "eric.png"))
             dst = os.path.normpath(os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutil.copy(os.path.join(sourceDir, "eric5.desktop"), dst)
+            shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
         else:
-            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
+            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
                 "/usr/share/pixmaps/eric.png")
-            shutil.copy(os.path.join(sourceDir, "eric5.desktop"),
+            shutilCopy(os.path.join(sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
     
     # Create a Mac application bundle
@@ -604,8 +619,8 @@ exec "{0}" "{1}/{2}.py" "$@"
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
-    shutil.copy(os.path.join(sourceDir, "pixmaps", "eric_2.icns"),
-                os.path.join(dirs["icns"], "eric.icns"))
+    shutilCopy(os.path.join(sourceDir, "pixmaps", "eric_2.icns"),
+               os.path.join(dirs["icns"], "eric.icns"))
     
     copyToFile(os.path.join(dirs["contents"], "Info.plist"),
 '''<?xml version="1.0" encoding="UTF-8"?>
