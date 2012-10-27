@@ -13,7 +13,8 @@ import difflib
 from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
     pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
 from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, QActionGroup, \
-    QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
+    QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont, \
+    QPixmap
 from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
@@ -75,6 +76,8 @@ class Editor(QsciScintillaCompat):
             shown or cleared
     @signal taskMarkersUpdated(QsciScintillaCompat) emitted when the task markers
             were updated
+    @signal changeMarkersUpdated(QsciScintillaCompat) emitted when the change markers
+            were updated
     @signal showMenu(str, QMenu, QsciScintillaCompat) emitted when a menu is about
             to be shown. The name of the menu, a reference to the menu and a reference
             to the editor are given.
@@ -101,6 +104,7 @@ class Editor(QsciScintillaCompat):
     autoCompletionAPIsAvailable = pyqtSignal(bool)
     coverageMarkersShown = pyqtSignal(bool)
     taskMarkersUpdated = pyqtSignal(QsciScintillaCompat)
+    changeMarkersUpdated = pyqtSignal(QsciScintillaCompat)
     showMenu = pyqtSignal(str, QMenu, QsciScintillaCompat)
     languageChanged = pyqtSignal(str)
     eolChanged = pyqtSignal(str)
@@ -244,6 +248,9 @@ class Editor(QsciScintillaCompat):
             self.__unifiedMargins = True
         
         # define the margins markers
+        changePixmap = QPixmap(16, 16)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarker"))
+        self.__changeMarker = self.markerDefine(changePixmap)
         self.breakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("break.png"))
         self.cbreakpoint = \
@@ -413,8 +420,11 @@ class Editor(QsciScintillaCompat):
         # connect signals after loading the text
         self.textChanged.connect(self.__textChanged)
         
-        # create the online syntax check timer
+        # initialize the online syntax check timer
         self.__initOnlineSyntaxCheck()
+        
+        # initialize the online change trace timer
+        self.__initOnlineChangeTrace()
         
         if self.fileName and \
            self.project.isOpen() and \
@@ -1003,6 +1013,13 @@ class Editor(QsciScintillaCompat):
         self.marginMenuActs["PreviousTaskMarker"] = \
             self.indicMarginMenu.addAction(self.trUtf8('Previous task'),
                 self.previousTask)
+        self.indicMarginMenu.addSeparator()
+        self.marginMenuActs["NextChangeMarker"] = \
+            self.indicMarginMenu.addAction(self.trUtf8('Next change'),
+                self.nextChange)
+        self.marginMenuActs["PreviousChangeMarker"] = \
+            self.indicMarginMenu.addAction(self.trUtf8('Previous change'),
+                self.previousChange)
         
         self.indicMarginMenu.aboutToShow.connect(self.__showContextMenuMargin)
         
@@ -1082,6 +1099,13 @@ class Editor(QsciScintillaCompat):
         self.marginMenuActs["PreviousTaskMarker"] = \
             self.marginMenu.addAction(self.trUtf8('Previous task'),
                 self.previousTask)
+        self.marginMenu.addSeparator()
+        self.marginMenuActs["NextChangeMarker"] = \
+            self.marginMenu.addAction(self.trUtf8('Next change'),
+                self.nextChange)
+        self.marginMenuActs["PreviousChangeMarker"] = \
+            self.marginMenu.addAction(self.trUtf8('Previous change'),
+                self.previousChange)
         self.marginMenu.addSeparator()
         self.marginMenuActs["LMBbookmarks"] = \
             self.marginMenu.addAction(self.trUtf8('LMB toggles bookmarks'),
@@ -2364,6 +2388,109 @@ class Editor(QsciScintillaCompat):
         self.taskMarkersUpdated.emit(self)
     
     ############################################################################
+    ## Change tracing methods below
+    ############################################################################
+
+    def __initOnlineChangeTrace(self):
+        """
+        Private slot to initialize the online change trace.
+        """
+        self.__hasChangeMarkers = False
+        self.__oldText = self.text()
+        self.__onlineChangeTraceTimer = QTimer(self)
+        self.__onlineChangeTraceTimer.setSingleShot(True)
+        self.__onlineChangeTraceTimer.setInterval(
+            Preferences.getEditor("OnlineChangeTraceInterval"))
+        self.__onlineChangeTraceTimer.timeout.connect(
+            self.__onlineChangeTraceTimerTimeout)
+        self.textChanged.connect(self.__resetOnlineChangeTraceTimer)
+        
+    def __resetOnlineChangeTraceTimer(self):
+        """
+        Private method to reset the online syntax check timer.
+        """
+        if Preferences.getEditor("OnlineChangeTrace"):
+            self.__onlineChangeTraceTimer.stop()
+            self.__onlineChangeTraceTimer.start()
+        
+    def __onlineChangeTraceTimerTimeout(self):
+        """
+        Private slot to mark added and changed lines.
+        """
+        self.__deleteAllChangeMarkers()
+        
+        oldL = self.__oldText.splitlines()
+        newL = self.text().splitlines()
+        matcher = difflib.SequenceMatcher(None, oldL, newL)
+        
+        for token, i1, i2, j1, j2 in matcher.get_opcodes():
+            if token in ["insert", "replace"]:
+                for lineNo in range(j1, j2):
+                    self.markerAdd(lineNo, self.__changeMarker)
+                    self.__hasChangeMarkers = True
+        
+        if self.__hasChangeMarkers:
+            self.changeMarkersUpdated.emit(self)
+        
+    def __resetOnlineChangeTraceInfo(self):
+        """
+        Private slot to reset the online change trace info.
+        """
+        self.__oldText = self.text()
+        self.__deleteAllChangeMarkers()
+        
+    def __deleteAllChangeMarkers(self):
+        """
+        Private slot to delete all change markers.
+        """
+        self.markerDeleteAll(self.__changeMarker)
+        self.__hasChangeMarkers = False
+        self.changeMarkersUpdated.emit(self)
+        
+    def hasChangeMarkers(self):
+        """
+        Public method to determine, if this editor contains any change markers.
+        
+        @return flag indicating the presence of change markers (boolean)
+        """
+        return self.__hasChangeMarkers
+        
+    def nextChange(self):
+        """
+        Public slot to handle the 'Next change' context menu action.
+        """
+        line, index = self.getCursorPosition()
+        if line == self.lines() - 1:
+            line = 0
+        else:
+            line += 1
+        changeline = self.markerFindNext(line, 1 << self.__changeMarker)
+        if changeline < 0:
+            # wrap around
+            changeline = self.markerFindNext(0, 1 << self.__changeMarker)
+        if changeline >= 0:
+            self.setCursorPosition(changeline, 0)
+            self.ensureLineVisible(changeline)
+        
+    def previousChange(self):
+        """
+        Public slot to handle the 'Previous task' context menu action.
+        """
+        line, index = self.getCursorPosition()
+        if line == 0:
+            line = self.lines() - 1
+        else:
+            line -= 1
+        changeline = self.markerFindPrevious(line, 1 << self.__changeMarker)
+        if changeline < 0:
+            # wrap around
+            changeline = self.markerFindPrevious(
+                self.lines() - 1, 1 << self.__changeMarker)
+        if changeline >= 0:
+            self.setCursorPosition(changeline, 0)
+            self.ensureLineVisible(changeline)
+    
+    ############################################################################
     ## Flags handling methods below
     ############################################################################
     
@@ -2657,6 +2784,7 @@ class Editor(QsciScintillaCompat):
             self.editorSaved.emit(self.fileName)
             self.__autoSyntaxCheck()
             self.extractTasks()
+            self.__resetOnlineChangeTraceInfo()
             return True
         else:
             self.lastModified = QFileInfo(fn).lastModified()
@@ -3523,6 +3651,16 @@ class Editor(QsciScintillaCompat):
         else:
             self.__onlineSyntaxCheckTimer.stop()
         
+        if Preferences.getEditor("OnlineChangeTrace"):
+            self.__onlineChangeTraceTimer.setInterval(
+                Preferences.getEditor("OnlineChangeTraceInterval"))
+        else:
+            self.__onlineChangeTraceTimer.stop()
+            self.__deleteAllChangeMarkers()
+        changePixmap = QPixmap(16, 16)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarker"))
+        self.markerDefine(changePixmap, self.__changeMarker)
+        
         # refresh the annotations display
         self.__refreshAnnotations()
     
@@ -3568,7 +3706,8 @@ class Editor(QsciScintillaCompat):
                           (1 << self.syntaxerror) | \
                           (1 << self.notcovered) | \
                           (1 << self.taskmarker) | \
-                          (1 << self.warning)
+                          (1 << self.warning) | \
+                          (1 << self.__changeMarker)
             self.setMarginWidth(1, 16)
             self.setMarginSensitivity(1, True)
             self.setMarginMarkerMask(1, margin1Mask)
@@ -3602,7 +3741,8 @@ class Editor(QsciScintillaCompat):
             marginIndicMask = (1 << self.syntaxerror) | \
                               (1 << self.notcovered) | \
                               (1 << self.taskmarker) | \
-                              (1 << self.warning)
+                              (1 << self.warning) | \
+                              (1 << self.__changeMarker)
             self.setMarginWidth(self.__indicMargin, 16)
             self.setMarginSensitivity(self.__indicMargin, True)
             self.setMarginMarkerMask(self.__indicMargin, marginIndicMask)
@@ -4396,6 +4536,13 @@ class Editor(QsciScintillaCompat):
         else:
             self.marginMenuActs["PreviousTaskMarker"].setEnabled(False)
             self.marginMenuActs["NextTaskMarker"].setEnabled(False)
+        
+        if self.__hasChangeMarkers:
+            self.marginMenuActs["PreviousChangeMarker"].setEnabled(True)
+            self.marginMenuActs["NextChangeMarker"].setEnabled(True)
+        else:
+            self.marginMenuActs["PreviousChangeMarker"].setEnabled(False)
+            self.marginMenuActs["NextChangeMarker"].setEnabled(False)
         
         self.showMenu.emit("Margin", self.sender(),  self)
         

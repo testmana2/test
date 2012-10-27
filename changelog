@@ -11,6 +11,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added the configurable capability to automatically show the source,
      when the call frame is changed in the callstack viewer of the local
      variables viewer
+- Editor
+  -- added capability to mark changed lines and to navigate between them
 - Graphics Dialogs
   -- added capability to store and load diagrams to/from disk
   -- improved the package diagram to include subpackages and their module names

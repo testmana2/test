@@ -284,6 +284,9 @@ class Prefs(object):
         "OnlineSyntaxCheck": True,
         "OnlineSyntaxCheckInterval": 5,
         
+        "OnlineChangeTrace": True,
+        "OnlineChangeTraceInterval": 500,      # 1000 milliseconds
+        
         "AutoReopen": False,
         
         "AnnotationsEnabled": True,
@@ -455,6 +458,7 @@ class Prefs(object):
             QApplication.palette().color(QPalette.Active, QPalette.Base),
         "EditAreaBackground":
             QApplication.palette().color(QPalette.Active, QPalette.Text),
+        "OnlineChangeTraceMarker": QColor("#8888ff"),
     }
     
     editorOtherFontsDefaults = {
@@ -1469,7 +1473,7 @@ def getEditor(key, prefClass=Prefs):
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
-                 "OnlineSyntaxCheckInterval"]:
+                 "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",

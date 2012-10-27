@@ -194,6 +194,9 @@ QObject
 <td><a href="#ViewManager.__breakpointToggled">__breakpointToggled</a></td>
 <td>Private slot to handle the breakpointToggled signal.</td>
 </tr><tr>
+<td><a href="#ViewManager.__changeMarkersUpdated">__changeMarkersUpdated</a></td>
+<td>Private slot to handle the changeMarkersUpdated signal.</td>
+</tr><tr>
 <td><a href="#ViewManager.__clearAllBookmarks">__clearAllBookmarks</a></td>
 <td>Private method to handle the clear all bookmarks action.</td>
 </tr><tr>
@@ -395,6 +398,9 @@ QObject
 <td><a href="#ViewManager.__nextBookmark">__nextBookmark</a></td>
 <td>Private method to handle the next bookmark action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__nextChange">__nextChange</a></td>
+<td>Private method to handle the next change action.</td>
+</tr><tr>
 <td><a href="#ViewManager.__nextTask">__nextTask</a></td>
 <td>Private method to handle the next task action.</td>
 </tr><tr>
@@ -412,6 +418,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__previousBookmark">__previousBookmark</a></td>
 <td>Private method to handle the previous bookmark action.</td>
+</tr><tr>
+<td><a href="#ViewManager.__previousChange">__previousChange</a></td>
+<td>Private method to handle the previous change action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__previousTask">__previousTask</a></td>
 <td>Private method to handle the previous task action.</td>
@@ -504,7 +513,7 @@ QObject
 <td>Private method to handle the split view action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__taskMarkersUpdated">__taskMarkersUpdated</a></td>
-<td>Protected slot to handle the taskMarkersUpdated signal.</td>
+<td>Private slot to handle the taskMarkersUpdated signal.</td>
 </tr><tr>
 <td><a href="#ViewManager.__toggleAll">__toggleAll</a></td>
 <td>Private method to handle the toggle all folds action.</td>
@@ -886,6 +895,16 @@ editor that sent the signal
 <dd>
 editor that sent the signal
 </dd>
+</dl><a NAME="ViewManager.__changeMarkersUpdated" ID="ViewManager.__changeMarkersUpdated"></a>
+<h4>ViewManager.__changeMarkersUpdated</h4>
+<b>__changeMarkersUpdated</b>(<i>editor</i>)
+<p>
+        Private slot to handle the changeMarkersUpdated signal.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+editor that sent the signal
+</dd>
 </dl><a NAME="ViewManager.__clearAllBookmarks" ID="ViewManager.__clearAllBookmarks"></a>
 <h4>ViewManager.__clearAllBookmarks</h4>
 <b>__clearAllBookmarks</b>(<i></i>)
@@ -1262,6 +1281,11 @@ reference to the action that was triggered (QAction)
 <b>__nextBookmark</b>(<i></i>)
 <p>
         Private method to handle the next bookmark action.
+</p><a NAME="ViewManager.__nextChange" ID="ViewManager.__nextChange"></a>
+<h4>ViewManager.__nextChange</h4>
+<b>__nextChange</b>(<i></i>)
+<p>
+        Private method to handle the next change action.
 </p><a NAME="ViewManager.__nextTask" ID="ViewManager.__nextTask"></a>
 <h4>ViewManager.__nextTask</h4>
 <b>__nextTask</b>(<i></i>)
@@ -1297,6 +1321,11 @@ reference to the action that triggered (QAction)
 <b>__previousBookmark</b>(<i></i>)
 <p>
         Private method to handle the previous bookmark action.
+</p><a NAME="ViewManager.__previousChange" ID="ViewManager.__previousChange"></a>
+<h4>ViewManager.__previousChange</h4>
+<b>__previousChange</b>(<i></i>)
+<p>
+        Private method to handle the previous change action.
 </p><a NAME="ViewManager.__previousTask" ID="ViewManager.__previousTask"></a>
 <h4>ViewManager.__previousTask</h4>
 <b>__previousTask</b>(<i></i>)
@@ -1491,7 +1520,7 @@ eol indicator to display (string)
 <h4>ViewManager.__taskMarkersUpdated</h4>
 <b>__taskMarkersUpdated</b>(<i>editor</i>)
 <p>
-        Protected slot to handle the taskMarkersUpdated signal.
+        Private slot to handle the taskMarkersUpdated signal.
 </p><dl>
 <dt><i>editor</i></dt>
 <dd>

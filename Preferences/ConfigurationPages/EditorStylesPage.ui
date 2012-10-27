@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>576</width>
+    <width>587</width>
     <height>1874</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -1248,6 +1248,120 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_13">
+     <property name="title">
+      <string>Change Tracing</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="enableChangeTraceCheckBox">
+        <property name="toolTip">
+         <string>Select to mark changed lines</string>
+        </property>
+        <property name="text">
+         <string>Mark changed lines</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_16">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Timeout for marking changed lines:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="changeTraceTimeoutSpinBox">
+          <property name="toolTip">
+           <string>Enter the time in milliseconds after which changed lines will be marked</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::PlusMinus</enum>
+          </property>
+          <property name="correctionMode">
+           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+          </property>
+          <property name="suffix">
+           <string> ms</string>
+          </property>
+          <property name="minimum">
+           <number>100</number>
+          </property>
+          <property name="maximum">
+           <number>5000</number>
+          </property>
+          <property name="singleStep">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="TextLabel13_3_2_3">
+          <property name="text">
+           <string>Marker colour:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changeMarkerColorButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the colour for the change marker.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="spacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>201</width>
+            <height>31</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_11">
      <property name="title">
       <string>Whitespace</string>
@@ -1435,6 +1549,9 @@
   <tabstop>annotationsWarningBgButton</tabstop>
   <tabstop>annotationsErrorFgButton</tabstop>
   <tabstop>annotationsErrorBgButton</tabstop>
+  <tabstop>enableChangeTraceCheckBox</tabstop>
+  <tabstop>changeTraceTimeoutSpinBox</tabstop>
+  <tabstop>changeMarkerColorButton</tabstop>
   <tabstop>whitespaceCheckBox</tabstop>
   <tabstop>whitespaceSizeSpinBox</tabstop>
   <tabstop>whitespaceForegroundButton</tabstop>

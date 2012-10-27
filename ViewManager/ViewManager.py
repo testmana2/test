@@ -3330,6 +3330,38 @@ class ViewManager(QObject):
         self.taskPreviousAct.triggered[()].connect(self.__previousTask)
         self.bookmarkActions.append(self.taskPreviousAct)
         
+        self.changeNextAct = E5Action(QApplication.translate('ViewManager',
+                                'Next Change'),
+                            UI.PixmapCache.getIcon("changeNext.png"),
+                            QApplication.translate('ViewManager', '&Next Change'),
+                            0, 0,
+                            self.bookmarkActGrp, 'vm_change_next')
+        self.changeNextAct.setStatusTip(QApplication.translate('ViewManager',
+            'Next Change'))
+        self.changeNextAct.setWhatsThis(QApplication.translate('ViewManager',
+                """<b>Next Change</b>"""
+                """<p>Go to next line of the current editor having a change marker.</p>"""
+                ))
+        self.changeNextAct.triggered[()].connect(self.__nextChange)
+        self.bookmarkActions.append(self.changeNextAct)
+        
+        self.changePreviousAct = E5Action(QApplication.translate('ViewManager',
+                                'Previous Change'),
+                            UI.PixmapCache.getIcon("changePrev.png"),
+                            QApplication.translate('ViewManager',
+                                '&Previous Change'),
+                            0, 0,
+                            self.bookmarkActGrp, 'vm_change_previous')
+        self.changePreviousAct.setStatusTip(QApplication.translate('ViewManager',
+            'Previous Change'))
+        self.changePreviousAct.setWhatsThis(QApplication.translate('ViewManager',
+                """<b>Previous Change</b>"""
+                """<p>Go to previous line of the current editor having"""
+                """ a change marker.</p>"""
+                ))
+        self.changePreviousAct.triggered[()].connect(self.__previousChange)
+        self.bookmarkActions.append(self.changePreviousAct)
+        
         self.bookmarkActGrp.setEnabled(False)
         
     def initBookmarkMenu(self):
@@ -3362,6 +3394,9 @@ class ViewManager(QObject):
         menu.addSeparator()
         menu.addAction(self.taskNextAct)
         menu.addAction(self.taskPreviousAct)
+        menu.addSeparator()
+        menu.addAction(self.changeNextAct)
+        menu.addAction(self.changePreviousAct)
         
         self.bookmarksMenu.aboutToShow.connect(self.__showBookmarksMenu)
         self.bookmarksMenu.triggered.connect(self.__bookmarkSelected)
@@ -3392,6 +3427,9 @@ class ViewManager(QObject):
         tb.addSeparator()
         tb.addAction(self.taskNextAct)
         tb.addAction(self.taskPreviousAct)
+        tb.addSeparator()
+        tb.addAction(self.changeNextAct)
+        tb.addAction(self.changePreviousAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.notcoveredNextAct, tb.windowTitle())
@@ -3707,6 +3745,7 @@ class ViewManager(QObject):
         editor.undoAvailable.connect(self.undoAct.setEnabled)
         editor.redoAvailable.connect(self.redoAct.setEnabled)
         editor.taskMarkersUpdated.connect(self.__taskMarkersUpdated)
+        editor.changeMarkersUpdated.connect(self.__changeMarkersUpdated)
         editor.languageChanged.connect(self.__editorConfigChanged)
         editor.eolChanged.connect(self.__editorConfigChanged)
         editor.encodingChanged.connect(self.__editorConfigChanged)
@@ -5098,7 +5137,7 @@ class ViewManager(QObject):
         
     def __taskMarkersUpdated(self, editor):
         """
-        Protected slot to handle the taskMarkersUpdated signal.
+        Private slot to handle the taskMarkersUpdated signal.
         
         @param editor editor that sent the signal
         """
@@ -5120,6 +5159,31 @@ class ViewManager(QObject):
         Private method to handle the previous task action.
         """
         self.activeWindow().previousTask()
+        
+    def __changeMarkersUpdated(self, editor):
+        """
+        Private slot to handle the changeMarkersUpdated signal.
+        
+        @param editor editor that sent the signal
+        """
+        if editor.hasChangeMarkers():
+            self.changeNextAct.setEnabled(True)
+            self.changePreviousAct.setEnabled(True)
+        else:
+            self.changeNextAct.setEnabled(False)
+            self.changePreviousAct.setEnabled(False)
+        
+    def __nextChange(self):
+        """
+        Private method to handle the next change action.
+        """
+        self.activeWindow().nextChange()
+        
+    def __previousChange(self):
+        """
+        Private method to handle the previous change action.
+        """
+        self.activeWindow().previousChange()
     
     ##################################################################
     ## Below are the action methods for the spell checking functions
@@ -5333,6 +5397,13 @@ class ViewManager(QObject):
             else:
                 self.taskNextAct.setEnabled(False)
                 self.taskPreviousAct.setEnabled(False)
+            
+            if editor.hasChangeMarkers():
+                self.changeNextAct.setEnabled(True)
+                self.changePreviousAct.setEnabled(True)
+            else:
+                self.changeNextAct.setEnabled(False)
+                self.changePreviousAct.setEnabled(False)
             
             if editor.canAutoCompleteFromAPIs():
                 self.autoCompleteFromAPIsAct.setEnabled(True)

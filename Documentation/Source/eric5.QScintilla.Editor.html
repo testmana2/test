@@ -60,6 +60,10 @@ emitted when a breakpoint is toggled
 <dd>
 emitted when the caption is
             updated. Typically due to a readOnly attribute change.
+</dd><dt>changeMarkersUpdated(QsciScintillaCompat)</dt>
+<dd>
+emitted when the change markers
+            were updated
 </dd><dt>coverageMarkersShown(bool)</dt>
 <dd>
 emitted after the coverage markers have been
@@ -242,6 +246,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__cursorPositionChanged">__cursorPositionChanged</a></td>
 <td>Private slot to handle the cursorPositionChanged signal.</td>
 </tr><tr>
+<td><a href="#Editor.__deleteAllChangeMarkers">__deleteAllChangeMarkers</a></td>
+<td>Private slot to delete all change markers.</td>
+</tr><tr>
 <td><a href="#Editor.__deleteBreakPoints">__deleteBreakPoints</a></td>
 <td>Private slot to delete breakpoints.</td>
 </tr><tr>
@@ -323,6 +330,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__initContextMenuUnifiedMargins">__initContextMenuUnifiedMargins</a></td>
 <td>Private method used to setup the context menu for the unified margins</td>
 </tr><tr>
+<td><a href="#Editor.__initOnlineChangeTrace">__initOnlineChangeTrace</a></td>
+<td>Private slot to initialize the online change trace.</td>
+</tr><tr>
 <td><a href="#Editor.__initOnlineSyntaxCheck">__initOnlineSyntaxCheck</a></td>
 <td>Private slot to initialize the online syntax check.</td>
 </tr><tr>
@@ -380,6 +390,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__normalizedEncoding">__normalizedEncoding</a></td>
 <td>Private method to calculate the normalized encoding string.</td>
 </tr><tr>
+<td><a href="#Editor.__onlineChangeTraceTimerTimeout">__onlineChangeTraceTimerTimeout</a></td>
+<td>Private slot to mark added and changed lines.</td>
+</tr><tr>
 <td><a href="#Editor.__printPreview">__printPreview</a></td>
 <td>Private slot to generate a print preview.</td>
 </tr><tr>
@@ -415,6 +428,12 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__resetLanguage">__resetLanguage</a></td>
 <td>Private method used to reset the language selection.</td>
+</tr><tr>
+<td><a href="#Editor.__resetOnlineChangeTraceInfo">__resetOnlineChangeTraceInfo</a></td>
+<td>Private slot to reset the online change trace info.</td>
+</tr><tr>
+<td><a href="#Editor.__resetOnlineChangeTraceTimer">__resetOnlineChangeTraceTimer</a></td>
+<td>Private method to reset the online syntax check timer.</td>
 </tr><tr>
 <td><a href="#Editor.__resetOnlineSyntaxCheckTimer">__resetOnlineSyntaxCheckTimer</a></td>
 <td>Private method to reset the online syntax check timer.</td>
@@ -758,6 +777,9 @@ QsciScintillaCompat
 <td><a href="#Editor.hasBreakpoints">hasBreakpoints</a></td>
 <td>Public method to check for the presence of breakpoints.</td>
 </tr><tr>
+<td><a href="#Editor.hasChangeMarkers">hasChangeMarkers</a></td>
+<td>Public method to determine, if this editor contains any change markers.</td>
+</tr><tr>
 <td><a href="#Editor.hasCoverageMarkers">hasCoverageMarkers</a></td>
 <td>Public method to test, if there are coverage markers.</td>
 </tr><tr>
@@ -848,6 +870,9 @@ QsciScintillaCompat
 <td><a href="#Editor.nextBookmark">nextBookmark</a></td>
 <td>Public slot to handle the 'Next bookmark' context menu action.</td>
 </tr><tr>
+<td><a href="#Editor.nextChange">nextChange</a></td>
+<td>Public slot to handle the 'Next change' context menu action.</td>
+</tr><tr>
 <td><a href="#Editor.nextFlakesWarning">nextFlakesWarning</a></td>
 <td>Public slot to handle the 'Next warning' context menu action.</td>
 </tr><tr>
@@ -859,6 +884,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.previousBookmark">previousBookmark</a></td>
 <td>Public slot to handle the 'Previous bookmark' context menu action.</td>
+</tr><tr>
+<td><a href="#Editor.previousChange">previousChange</a></td>
+<td>Public slot to handle the 'Previous task' context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.previousFlakesWarning">previousFlakesWarning</a></td>
 <td>Public slot to handle the 'Previous warning' context menu action.</td>
@@ -1335,7 +1363,12 @@ line number of the cursor
 <dd>
 position in line of the cursor
 </dd>
-</dl><a NAME="Editor.__deleteBreakPoints" ID="Editor.__deleteBreakPoints"></a>
+</dl><a NAME="Editor.__deleteAllChangeMarkers" ID="Editor.__deleteAllChangeMarkers"></a>
+<h4>Editor.__deleteAllChangeMarkers</h4>
+<b>__deleteAllChangeMarkers</b>(<i></i>)
+<p>
+        Private slot to delete all change markers.
+</p><a NAME="Editor.__deleteBreakPoints" ID="Editor.__deleteBreakPoints"></a>
 <h4>Editor.__deleteBreakPoints</h4>
 <b>__deleteBreakPoints</b>(<i>parentIndex, start, end</i>)
 <p>
@@ -1543,6 +1576,11 @@ flag indicating an indent operation (boolean)
 <b>__initContextMenuUnifiedMargins</b>(<i></i>)
 <p>
         Private method used to setup the context menu for the unified margins
+</p><a NAME="Editor.__initOnlineChangeTrace" ID="Editor.__initOnlineChangeTrace"></a>
+<h4>Editor.__initOnlineChangeTrace</h4>
+<b>__initOnlineChangeTrace</b>(<i></i>)
+<p>
+        Private slot to initialize the online change trace.
 </p><a NAME="Editor.__initOnlineSyntaxCheck" ID="Editor.__initOnlineSyntaxCheck"></a>
 <h4>Editor.__initOnlineSyntaxCheck</h4>
 <b>__initOnlineSyntaxCheck</b>(<i></i>)
@@ -1727,7 +1765,12 @@ number of added/deleted annotation lines (integer)
 <dd>
 normalized encoding (string)
 </dd>
-</dl><a NAME="Editor.__printPreview" ID="Editor.__printPreview"></a>
+</dl><a NAME="Editor.__onlineChangeTraceTimerTimeout" ID="Editor.__onlineChangeTraceTimerTimeout"></a>
+<h4>Editor.__onlineChangeTraceTimerTimeout</h4>
+<b>__onlineChangeTraceTimerTimeout</b>(<i></i>)
+<p>
+        Private slot to mark added and changed lines.
+</p><a NAME="Editor.__printPreview" ID="Editor.__printPreview"></a>
 <h4>Editor.__printPreview</h4>
 <b>__printPreview</b>(<i>printer</i>)
 <p>
@@ -1817,7 +1860,17 @@ string containing the command parameters (string)
 <dd>
 flag indicating to propagate the change (boolean)
 </dd>
-</dl><a NAME="Editor.__resetOnlineSyntaxCheckTimer" ID="Editor.__resetOnlineSyntaxCheckTimer"></a>
+</dl><a NAME="Editor.__resetOnlineChangeTraceInfo" ID="Editor.__resetOnlineChangeTraceInfo"></a>
+<h4>Editor.__resetOnlineChangeTraceInfo</h4>
+<b>__resetOnlineChangeTraceInfo</b>(<i></i>)
+<p>
+        Private slot to reset the online change trace info.
+</p><a NAME="Editor.__resetOnlineChangeTraceTimer" ID="Editor.__resetOnlineChangeTraceTimer"></a>
+<h4>Editor.__resetOnlineChangeTraceTimer</h4>
+<b>__resetOnlineChangeTraceTimer</b>(<i></i>)
+<p>
+        Private method to reset the online syntax check timer.
+</p><a NAME="Editor.__resetOnlineSyntaxCheckTimer" ID="Editor.__resetOnlineSyntaxCheckTimer"></a>
 <h4>Editor.__resetOnlineSyntaxCheckTimer</h4>
 <b>__resetOnlineSyntaxCheckTimer</b>(<i></i>)
 <p>
@@ -2826,6 +2879,16 @@ flag indicating the presence of bookmarks (boolean)
 <dd>
 flag indicating the presence of breakpoints (boolean)
 </dd>
+</dl><a NAME="Editor.hasChangeMarkers" ID="Editor.hasChangeMarkers"></a>
+<h4>Editor.hasChangeMarkers</h4>
+<b>hasChangeMarkers</b>(<i></i>)
+<p>
+        Public method to determine, if this editor contains any change markers.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of change markers (boolean)
+</dd>
 </dl><a NAME="Editor.hasCoverageMarkers" ID="Editor.hasCoverageMarkers"></a>
 <h4>Editor.hasCoverageMarkers</h4>
 <b>hasCoverageMarkers</b>(<i></i>)
@@ -3068,6 +3131,11 @@ properties for the breakpoint (tuple)
 <b>nextBookmark</b>(<i></i>)
 <p>
         Public slot to handle the 'Next bookmark' context menu action.
+</p><a NAME="Editor.nextChange" ID="Editor.nextChange"></a>
+<h4>Editor.nextChange</h4>
+<b>nextChange</b>(<i></i>)
+<p>
+        Public slot to handle the 'Next change' context menu action.
 </p><a NAME="Editor.nextFlakesWarning" ID="Editor.nextFlakesWarning"></a>
 <h4>Editor.nextFlakesWarning</h4>
 <b>nextFlakesWarning</b>(<i></i>)
@@ -3088,6 +3156,11 @@ properties for the breakpoint (tuple)
 <b>previousBookmark</b>(<i></i>)
 <p>
         Public slot to handle the 'Previous bookmark' context menu action.
+</p><a NAME="Editor.previousChange" ID="Editor.previousChange"></a>
+<h4>Editor.previousChange</h4>
+<b>previousChange</b>(<i></i>)
+<p>
+        Public slot to handle the 'Previous task' context menu action.
 </p><a NAME="Editor.previousFlakesWarning" ID="Editor.previousFlakesWarning"></a>
 <h4>Editor.previousFlakesWarning</h4>
 <b>previousFlakesWarning</b>(<i></i>)

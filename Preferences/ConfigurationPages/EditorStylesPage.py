@@ -185,6 +185,14 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.editorColours["EditAreaBackground"] = \
             self.initColour("EditAreaBackground", self.editAreaBackgroundButton,
                 Preferences.getEditorColour)
+        
+        self.enableChangeTraceCheckBox.setChecked(
+            Preferences.getEditor("OnlineChangeTrace"))
+        self.changeTraceTimeoutSpinBox.setValue(
+            Preferences.getEditor("OnlineChangeTraceInterval"))
+        self.editorColours["OnlineChangeTraceMarker"] = \
+            self.initColour("OnlineChangeTraceMarker", self.changeMarkerColorButton,
+                Preferences.getEditorColour)
     
     def save(self):
         """
@@ -247,6 +255,11 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor("OverrideEditAreaColours",
             self.editAreaOverrideCheckBox.isChecked())
+        
+        Preferences.setEditor("OnlineChangeTrace",
+            self.enableChangeTraceCheckBox.isChecked())
+        Preferences.setEditor("OnlineChangeTraceInterval",
+            self.changeTraceTimeoutSpinBox.value())
         
         for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
@@ -523,6 +536,15 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.editorColours["EditAreaBackground"] = \
             self.selectColour(self.editAreaBackgroundButton,
                 self.editorColours["EditAreaBackground"])
+    
+    @pyqtSlot()
+    def on_changeMarkerColorButton_clicked(self):
+        """
+        Private slot to set the colour of the change marker.
+        """
+        self.editorColours["OnlineChangeTraceMarker"] = \
+            self.selectColour(self.changeMarkerColorButton,
+                self.editorColours["OnlineChangeTraceMarker"])
 
 
 def create(dlg):

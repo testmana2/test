@@ -3802,6 +3802,7 @@
       <keyword name="Editor.__contextSave" id="Editor.__contextSave" ref="eric5.QScintilla.Editor.html#Editor.__contextSave" />
       <keyword name="Editor.__contextSaveAs" id="Editor.__contextSaveAs" ref="eric5.QScintilla.Editor.html#Editor.__contextSaveAs" />
       <keyword name="Editor.__cursorPositionChanged" id="Editor.__cursorPositionChanged" ref="eric5.QScintilla.Editor.html#Editor.__cursorPositionChanged" />
+      <keyword name="Editor.__deleteAllChangeMarkers" id="Editor.__deleteAllChangeMarkers" ref="eric5.QScintilla.Editor.html#Editor.__deleteAllChangeMarkers" />
       <keyword name="Editor.__deleteBreakPoints" id="Editor.__deleteBreakPoints" ref="eric5.QScintilla.Editor.html#Editor.__deleteBreakPoints" />
       <keyword name="Editor.__deselectAll" id="Editor.__deselectAll" ref="eric5.QScintilla.Editor.html#Editor.__deselectAll" />
       <keyword name="Editor.__dispatchCommand" id="Editor.__dispatchCommand" ref="eric5.QScintilla.Editor.html#Editor.__dispatchCommand" />
@@ -3829,6 +3830,7 @@
       <keyword name="Editor.__initContextMenuSeparateMargins" id="Editor.__initContextMenuSeparateMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuSeparateMargins" />
       <keyword name="Editor.__initContextMenuShow" id="Editor.__initContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuShow" />
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
+      <keyword name="Editor.__initOnlineChangeTrace" id="Editor.__initOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineChangeTrace" />
       <keyword name="Editor.__initOnlineSyntaxCheck" id="Editor.__initOnlineSyntaxCheck" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineSyntaxCheck" />
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
       <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
@@ -3848,6 +3850,7 @@
       <keyword name="Editor.__newView" id="Editor.__newView" ref="eric5.QScintilla.Editor.html#Editor.__newView" />
       <keyword name="Editor.__newViewNewSplit" id="Editor.__newViewNewSplit" ref="eric5.QScintilla.Editor.html#Editor.__newViewNewSplit" />
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric5.QScintilla.Editor.html#Editor.__normalizedEncoding" />
+      <keyword name="Editor.__onlineChangeTraceTimerTimeout" id="Editor.__onlineChangeTraceTimerTimeout" ref="eric5.QScintilla.Editor.html#Editor.__onlineChangeTraceTimerTimeout" />
       <keyword name="Editor.__printPreview" id="Editor.__printPreview" ref="eric5.QScintilla.Editor.html#Editor.__printPreview" />
       <keyword name="Editor.__processEndEditCommand" id="Editor.__processEndEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processEndEditCommand" />
       <keyword name="Editor.__processFlags" id="Editor.__processFlags" ref="eric5.QScintilla.Editor.html#Editor.__processFlags" />
@@ -3860,6 +3863,8 @@
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
       <keyword name="Editor.__resetLanguage" id="Editor.__resetLanguage" ref="eric5.QScintilla.Editor.html#Editor.__resetLanguage" />
+      <keyword name="Editor.__resetOnlineChangeTraceInfo" id="Editor.__resetOnlineChangeTraceInfo" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceInfo" />
+      <keyword name="Editor.__resetOnlineChangeTraceTimer" id="Editor.__resetOnlineChangeTraceTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceTimer" />
       <keyword name="Editor.__resetOnlineSyntaxCheckTimer" id="Editor.__resetOnlineSyntaxCheckTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineSyntaxCheckTimer" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
@@ -3974,6 +3979,7 @@
       <keyword name="Editor.handleRenamed" id="Editor.handleRenamed" ref="eric5.QScintilla.Editor.html#Editor.handleRenamed" />
       <keyword name="Editor.hasBookmarks" id="Editor.hasBookmarks" ref="eric5.QScintilla.Editor.html#Editor.hasBookmarks" />
       <keyword name="Editor.hasBreakpoints" id="Editor.hasBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.hasBreakpoints" />
+      <keyword name="Editor.hasChangeMarkers" id="Editor.hasChangeMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasChangeMarkers" />
       <keyword name="Editor.hasCoverageMarkers" id="Editor.hasCoverageMarkers" ref="eric5.QScintilla.Editor.html#Editor.hasCoverageMarkers" />
       <keyword name="Editor.hasFlakesWarnings" id="Editor.hasFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.hasFlakesWarnings" />
       <keyword name="Editor.hasMiniMenu" id="Editor.hasMiniMenu" ref="eric5.QScintilla.Editor.html#Editor.hasMiniMenu" />
@@ -4004,10 +4010,12 @@
       <keyword name="Editor.mousePressEvent" id="Editor.mousePressEvent" ref="eric5.QScintilla.Editor.html#Editor.mousePressEvent" />
       <keyword name="Editor.newBreakpointWithProperties" id="Editor.newBreakpointWithProperties" ref="eric5.QScintilla.Editor.html#Editor.newBreakpointWithProperties" />
       <keyword name="Editor.nextBookmark" id="Editor.nextBookmark" ref="eric5.QScintilla.Editor.html#Editor.nextBookmark" />
+      <keyword name="Editor.nextChange" id="Editor.nextChange" ref="eric5.QScintilla.Editor.html#Editor.nextChange" />
       <keyword name="Editor.nextFlakesWarning" id="Editor.nextFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.nextFlakesWarning" />
       <keyword name="Editor.nextTask" id="Editor.nextTask" ref="eric5.QScintilla.Editor.html#Editor.nextTask" />
       <keyword name="Editor.nextUncovered" id="Editor.nextUncovered" ref="eric5.QScintilla.Editor.html#Editor.nextUncovered" />
       <keyword name="Editor.previousBookmark" id="Editor.previousBookmark" ref="eric5.QScintilla.Editor.html#Editor.previousBookmark" />
+      <keyword name="Editor.previousChange" id="Editor.previousChange" ref="eric5.QScintilla.Editor.html#Editor.previousChange" />
       <keyword name="Editor.previousFlakesWarning" id="Editor.previousFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.previousFlakesWarning" />
       <keyword name="Editor.previousTask" id="Editor.previousTask" ref="eric5.QScintilla.Editor.html#Editor.previousTask" />
       <keyword name="Editor.previousUncovered" id="Editor.previousUncovered" ref="eric5.QScintilla.Editor.html#Editor.previousUncovered" />
@@ -4192,6 +4200,7 @@
       <keyword name="EditorStylesPage.on_annotationsWarningFgButton_clicked" id="EditorStylesPage.on_annotationsWarningFgButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_annotationsWarningFgButton_clicked" />
       <keyword name="EditorStylesPage.on_caretForegroundButton_clicked" id="EditorStylesPage.on_caretForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_caretForegroundButton_clicked" />
       <keyword name="EditorStylesPage.on_caretlineBackgroundButton_clicked" id="EditorStylesPage.on_caretlineBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_caretlineBackgroundButton_clicked" />
+      <keyword name="EditorStylesPage.on_changeMarkerColorButton_clicked" id="EditorStylesPage.on_changeMarkerColorButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_changeMarkerColorButton_clicked" />
       <keyword name="EditorStylesPage.on_currentLineMarkerButton_clicked" id="EditorStylesPage.on_currentLineMarkerButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_currentLineMarkerButton_clicked" />
       <keyword name="EditorStylesPage.on_defaultFontButton_clicked" id="EditorStylesPage.on_defaultFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_defaultFontButton_clicked" />
       <keyword name="EditorStylesPage.on_edgeBackgroundColorButton_clicked" id="EditorStylesPage.on_edgeBackgroundColorButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_edgeBackgroundColorButton_clicked" />
@@ -11348,6 +11357,7 @@
       <keyword name="ViewManager.__bookmarkSelected" id="ViewManager.__bookmarkSelected" ref="eric5.ViewManager.ViewManager.html#ViewManager.__bookmarkSelected" />
       <keyword name="ViewManager.__bookmarkToggled" id="ViewManager.__bookmarkToggled" ref="eric5.ViewManager.ViewManager.html#ViewManager.__bookmarkToggled" />
       <keyword name="ViewManager.__breakpointToggled" id="ViewManager.__breakpointToggled" ref="eric5.ViewManager.ViewManager.html#ViewManager.__breakpointToggled" />
+      <keyword name="ViewManager.__changeMarkersUpdated" id="ViewManager.__changeMarkersUpdated" ref="eric5.ViewManager.ViewManager.html#ViewManager.__changeMarkersUpdated" />
       <keyword name="ViewManager.__clearAllBookmarks" id="ViewManager.__clearAllBookmarks" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllBookmarks" />
       <keyword name="ViewManager.__clearAllSyntaxErrors" id="ViewManager.__clearAllSyntaxErrors" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllSyntaxErrors" />
       <keyword name="ViewManager.__clearAllWarnings" id="ViewManager.__clearAllWarnings" ref="eric5.ViewManager.ViewManager.html#ViewManager.__clearAllWarnings" />
@@ -11415,12 +11425,14 @@
       <keyword name="ViewManager.__macroStopRecording" id="ViewManager.__macroStopRecording" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroStopRecording" />
       <keyword name="ViewManager.__newLineBelow" id="ViewManager.__newLineBelow" ref="eric5.ViewManager.ViewManager.html#ViewManager.__newLineBelow" />
       <keyword name="ViewManager.__nextBookmark" id="ViewManager.__nextBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextBookmark" />
+      <keyword name="ViewManager.__nextChange" id="ViewManager.__nextChange" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextChange" />
       <keyword name="ViewManager.__nextTask" id="ViewManager.__nextTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextTask" />
       <keyword name="ViewManager.__nextUncovered" id="ViewManager.__nextUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextUncovered" />
       <keyword name="ViewManager.__nextWarning" id="ViewManager.__nextWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextWarning" />
       <keyword name="ViewManager.__openSourceFile" id="ViewManager.__openSourceFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.__openSourceFile" />
       <keyword name="ViewManager.__previewEditor" id="ViewManager.__previewEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previewEditor" />
       <keyword name="ViewManager.__previousBookmark" id="ViewManager.__previousBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousBookmark" />
+      <keyword name="ViewManager.__previousChange" id="ViewManager.__previousChange" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousChange" />
       <keyword name="ViewManager.__previousTask" id="ViewManager.__previousTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousTask" />
       <keyword name="ViewManager.__previousUncovered" id="ViewManager.__previousUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousUncovered" />
       <keyword name="ViewManager.__previousWarning" id="ViewManager.__previousWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousWarning" />
@@ -12391,6 +12403,7 @@
       <keyword name="setVarFilters" id="setVarFilters" ref="eric5.Preferences.__init__.html#setVarFilters" />
       <keyword name="setViewManager" id="setViewManager" ref="eric5.Preferences.__init__.html#setViewManager" />
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric5.Preferences.__init__.html#shouldResetLayout" />
+      <keyword name="shutilCopy" id="shutilCopy" ref="eric5.install.html#shutilCopy" />
       <keyword name="simpleAppStartup" id="simpleAppStartup" ref="eric5.Toolbox.Startup.html#simpleAppStartup" />
       <keyword name="sort" id="sort" ref="eric5.Graphics.GraphicsUtilities.html#sort" />
       <keyword name="splitPath" id="splitPath" ref="eric5.Utilities.__init__.html#splitPath" />
