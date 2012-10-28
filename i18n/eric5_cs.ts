@@ -34196,34 +34196,39 @@ Vyberte Obnovit.</translation>
         <translation>Zobrazuje průběh procesu analýzy pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="48"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
         <source>Annotate</source>
         <translation>Komentovat</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="56"/>
         <source>Annotate all</source>
         <translation>Komentovat vše</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="57"/>
         <source>Delete annotated files</source>
         <translation>Smazat komentované soubory</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="60"/>
         <source>Erase Coverage Info</source>
         <translation>Vymazat info pokrytí</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Annotating files...</source>
         <translation>Komentované soubory...</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
+    </message>
+    <message>
+        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <source>Open</source>
+        <translation type="unfinished">Otevřít</translation>
     </message>
 </context>
 <context>

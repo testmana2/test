@@ -3794,7 +3794,6 @@
       <keyword name="Editor.__checkSpellingWord" id="Editor.__checkSpellingWord" ref="eric5.QScintilla.Editor.html#Editor.__checkSpellingWord" />
       <keyword name="Editor.__clearBreakpoints" id="Editor.__clearBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__clearBreakpoints" />
       <keyword name="Editor.__codeCoverageHideAnnotations" id="Editor.__codeCoverageHideAnnotations" ref="eric5.QScintilla.Editor.html#Editor.__codeCoverageHideAnnotations" />
-      <keyword name="Editor.__codeCoverageShowAnnotations" id="Editor.__codeCoverageShowAnnotations" ref="eric5.QScintilla.Editor.html#Editor.__codeCoverageShowAnnotations" />
       <keyword name="Editor.__completionListSelected" id="Editor.__completionListSelected" ref="eric5.QScintilla.Editor.html#Editor.__completionListSelected" />
       <keyword name="Editor.__contextClose" id="Editor.__contextClose" ref="eric5.QScintilla.Editor.html#Editor.__contextClose" />
       <keyword name="Editor.__contextMenuSpellingTriggered" id="Editor.__contextMenuSpellingTriggered" ref="eric5.QScintilla.Editor.html#Editor.__contextMenuSpellingTriggered" />
@@ -3931,6 +3930,7 @@
       <keyword name="Editor.clearSyntaxError" id="Editor.clearSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.clearSyntaxError" />
       <keyword name="Editor.close" id="Editor.close" ref="eric5.QScintilla.Editor.html#Editor.close" />
       <keyword name="Editor.closeIt" id="Editor.closeIt" ref="eric5.QScintilla.Editor.html#Editor.closeIt" />
+      <keyword name="Editor.codeCoverageShowAnnotations" id="Editor.codeCoverageShowAnnotations" ref="eric5.QScintilla.Editor.html#Editor.codeCoverageShowAnnotations" />
       <keyword name="Editor.commentLine" id="Editor.commentLine" ref="eric5.QScintilla.Editor.html#Editor.commentLine" />
       <keyword name="Editor.commentLineOrSelection" id="Editor.commentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.commentLineOrSelection" />
       <keyword name="Editor.commentSelection" id="Editor.commentSelection" ref="eric5.QScintilla.Editor.html#Editor.commentSelection" />
@@ -8240,9 +8240,11 @@
       <keyword name="PyCoverageDialog.__erase" id="PyCoverageDialog.__erase" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__erase" />
       <keyword name="PyCoverageDialog.__finish" id="PyCoverageDialog.__finish" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__finish" />
       <keyword name="PyCoverageDialog.__format_lines" id="PyCoverageDialog.__format_lines" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__format_lines" />
+      <keyword name="PyCoverageDialog.__openFile" id="PyCoverageDialog.__openFile" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__openFile" />
       <keyword name="PyCoverageDialog.__showContextMenu" id="PyCoverageDialog.__showContextMenu" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__showContextMenu" />
       <keyword name="PyCoverageDialog.on_buttonBox_clicked" id="PyCoverageDialog.on_buttonBox_clicked" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.on_buttonBox_clicked" />
       <keyword name="PyCoverageDialog.on_reloadButton_clicked" id="PyCoverageDialog.on_reloadButton_clicked" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.on_reloadButton_clicked" />
+      <keyword name="PyCoverageDialog.on_resultList_itemActivated" id="PyCoverageDialog.on_resultList_itemActivated" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.on_resultList_itemActivated" />
       <keyword name="PyCoverageDialog.start" id="PyCoverageDialog.start" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.start" />
       <keyword name="PyCoverageDialog.stringify" id="PyCoverageDialog.stringify" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.stringify" />
       <keyword name="PyProfile" id="PyProfile" ref="eric5.DebugClients.Python.PyProfile.html#PyProfile" />

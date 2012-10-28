@@ -33240,34 +33240,39 @@ Seleccione Actualizar.</translation>
         <translation>Muestra el progreso de la acción de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="48"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
         <source>Annotate</source>
         <translation>Anotar</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="56"/>
         <source>Annotate all</source>
         <translation>Anotar todo</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="57"/>
         <source>Delete annotated files</source>
         <translation>Borrar archivos anotados</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="60"/>
         <source>Erase Coverage Info</source>
         <translation>Borrar Información de Cobertura</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Annotating files...</source>
         <translation>Anotando archivos...</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Abort</source>
         <translation>Abortar</translation>
+    </message>
+    <message>
+        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <source>Open</source>
+        <translation type="unfinished">Abrir</translation>
     </message>
 </context>
 <context>

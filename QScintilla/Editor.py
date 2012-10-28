@@ -772,7 +772,7 @@ class Editor(QsciScintillaCompat):
             menu.addAction(self.trUtf8('Code coverage...'), self.__showCodeCoverage)
         self.coverageShowAnnotationMenuAct = \
             menu.addAction(self.trUtf8('Show code coverage annotations'),
-                self.__codeCoverageShowAnnotations)
+                self.codeCoverageShowAnnotations)
         self.coverageHideAnnotationMenuAct = \
             menu.addAction(self.trUtf8('Hide code coverage annotations'),
                 self.__codeCoverageHideAnnotations)
@@ -4818,9 +4818,9 @@ class Editor(QsciScintillaCompat):
             self.codecoverage.show()
             self.codecoverage.start(fn, self.fileName)
         
-    def __codeCoverageShowAnnotations(self):
+    def codeCoverageShowAnnotations(self):
         """
-        Private method to handle the show code coverage annotations context menu action.
+        Public method to handle the show code coverage annotations context menu action.
         """
         fn = self.__getCodeCoverageFile()
         if fn:

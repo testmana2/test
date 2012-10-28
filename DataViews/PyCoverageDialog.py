@@ -13,6 +13,8 @@ from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
     QApplication, QProgressDialog
 
+from E5Gui.E5Application import e5App
+
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
 import Utilities
@@ -45,6 +47,10 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.excludeList = ['# *pragma[: ]*[nN][oO] *[cC][oO][vV][eE][rR]']
         
         self.__menu = QMenu(self)
+        self.__menu.addSeparator()
+        self.openAct = self.__menu.addAction(self.trUtf8("Open"),
+            self.__openFile)
+        self.__menu.addSeparator()
         self.annotate = self.__menu.addAction(self.trUtf8('Annotate'),
             self.__annotate)
         self.__menu.addAction(self.trUtf8('Annotate all'), self.__annotateAll)
@@ -119,6 +125,11 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         ])
         for col in range(1, 4):
             itm.setTextAlignment(col, Qt.AlignRight)
+        if statements != executed:
+            font = itm.font(0)
+            font.setBold(True)
+            for col in range(itm.columnCount()):
+                itm.setFont(col, font)
         
     def start(self, cfn, fn):
         """
@@ -245,9 +256,26 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         itm = self.resultList.itemAt(coord)
         if itm:
             self.annotate.setEnabled(True)
+            self.openAct.setEnabled(True)
         else:
             self.annotate.setEnabled(False)
+            self.openAct.setEnabled(False)
         self.__menu.popup(self.mapToGlobal(coord))
+        
+    def __openFile(self, itm=None):
+        """
+        Private slot to open the selected file.
+        
+        @param itm reference to the item to be opened (QTreeWidgetItem)
+        """
+        if itm is None:
+            itm = self.resultList.currentItem()
+        fn = itm.text(0)
+        
+        vm = e5App().getObject("ViewManager")
+        vm.openSourceFile(fn)
+        editor = vm.getOpenEditor(fn)
+        editor.codeCoverageShowAnnotations()
         
     def __annotate(self):
         """
@@ -349,3 +377,13 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         self.start(self.__cfn, self.__fn)
+    
+    @pyqtSlot(QTreeWidgetItem, int)
+    def on_resultList_itemActivated(self, item, column):
+        """
+        Private slot to handle the activation of an item.
+        
+        @param item reference to the activated item (QTreeWidgetItem)
+        @param column column the item was activated in (integer)
+        """
+        self.__openFile(item)

@@ -36043,34 +36043,39 @@ Select Update.</source>
         <translation>显示代码覆盖率行为的进程</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="48"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
         <source>Annotate</source>
         <translation>注解</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="56"/>
         <source>Annotate all</source>
         <translation>注解全部</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="57"/>
         <source>Delete annotated files</source>
         <translation>删除已注解的文件</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="60"/>
         <source>Erase Coverage Info</source>
         <translation>擦除覆盖率信息</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Annotating files...</source>
         <translation>正在注解文件……</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Abort</source>
         <translation>终止</translation>
+    </message>
+    <message>
+        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <source>Open</source>
+        <translation type="unfinished">打开</translation>
     </message>
 </context>
 <context>

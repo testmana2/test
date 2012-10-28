@@ -35987,32 +35987,32 @@ en cliquant sur le bouton à droite.&lt;/p&gt;</translation>
 <context>
     <name>PyCoverageDialog</name>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="48"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
         <source>Annotate</source>
         <translation>Annoter</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="56"/>
         <source>Annotate all</source>
         <translation>Annoter tous</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="57"/>
         <source>Delete annotated files</source>
         <translation>Supprimer les fichiers annotés</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="60"/>
         <source>Erase Coverage Info</source>
         <translation>Supprimer les infos de Coverage</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Annotating files...</source>
         <translation>Annotation des fichiers....</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Abort</source>
         <translation>Annuler</translation>
     </message>
@@ -36108,6 +36108,11 @@ en cliquant sur le bouton à droite.&lt;/p&gt;</translation>
         <location filename="DataViews/PyCoverageDialog.ui" line="183"/>
         <source>Shows the progress of the code coverage action</source>
         <translation>Affiche l&apos;état de progression du coverage de code</translation>
+    </message>
+    <message>
+        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <source>Open</source>
+        <translation type="unfinished">Ouvrir</translation>
     </message>
 </context>
 <context>

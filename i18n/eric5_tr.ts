@@ -34009,34 +34009,39 @@ Select Update.</source>
         <translation>Bu süreç kod koruma işlemini gösterir</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="48"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
         <source>Annotate</source>
         <translation>Açıklama</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="56"/>
         <source>Annotate all</source>
         <translation>Tüm Açıklamalar</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="57"/>
         <source>Delete annotated files</source>
         <translation>Açıklama dosyalarını sil</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="54"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="60"/>
         <source>Erase Coverage Info</source>
         <translation>Koruyucu Bilgisini Sil</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Annotating files...</source>
         <translation>Ek açıklama dosyaları...</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="291"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
         <source>Abort</source>
         <translation>Vazgeç</translation>
+    </message>
+    <message>
+        <location filename="DataViews/PyCoverageDialog.py" line="51"/>
+        <source>Open</source>
+        <translation type="unfinished">Aç</translation>
     </message>
 </context>
 <context>

@@ -5,6 +5,8 @@ Version 5.3-snapshot-2012mmdd:
 - General
   -- introduced a "workspace" directory that is used as the default for opening
      or saving new files or projects (configurable on Multiproject config page)
+- Code Coverage
+  -- enhanced the code coverage dialog functionality
 - Configuration Dialog
   -- added a filter edit to filter the configuration tree
 - Debug Viewer

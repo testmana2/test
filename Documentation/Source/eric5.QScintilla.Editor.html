@@ -222,9 +222,6 @@ QsciScintillaCompat
 <td><a href="#Editor.__codeCoverageHideAnnotations">__codeCoverageHideAnnotations</a></td>
 <td>Private method to handle the hide code coverage annotations context menu action.</td>
 </tr><tr>
-<td><a href="#Editor.__codeCoverageShowAnnotations">__codeCoverageShowAnnotations</a></td>
-<td>Private method to handle the show code coverage annotations context menu action.</td>
-</tr><tr>
 <td><a href="#Editor.__completionListSelected">__completionListSelected</a></td>
 <td>Private slot to handle the selection from the completion list.</td>
 </tr><tr>
@@ -632,6 +629,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.closeIt">closeIt</a></td>
 <td>Public method called by the viewmanager to finally get rid of us.</td>
+</tr><tr>
+<td><a href="#Editor.codeCoverageShowAnnotations">codeCoverageShowAnnotations</a></td>
+<td>Public method to handle the show code coverage annotations context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.commentLine">commentLine</a></td>
 <td>Public slot to comment the current line.</td>
@@ -1299,11 +1299,6 @@ value of the character entered (integer)
 <b>__codeCoverageHideAnnotations</b>(<i></i>)
 <p>
         Private method to handle the hide code coverage annotations context menu action.
-</p><a NAME="Editor.__codeCoverageShowAnnotations" ID="Editor.__codeCoverageShowAnnotations"></a>
-<h4>Editor.__codeCoverageShowAnnotations</h4>
-<b>__codeCoverageShowAnnotations</b>(<i></i>)
-<p>
-        Private method to handle the show code coverage annotations context menu action.
 </p><a NAME="Editor.__completionListSelected" ID="Editor.__completionListSelected"></a>
 <h4>Editor.__completionListSelected</h4>
 <b>__completionListSelected</b>(<i>id, txt</i>)
@@ -2349,6 +2344,11 @@ ignored
 <b>closeIt</b>(<i></i>)
 <p>
         Public method called by the viewmanager to finally get rid of us.
+</p><a NAME="Editor.codeCoverageShowAnnotations" ID="Editor.codeCoverageShowAnnotations"></a>
+<h4>Editor.codeCoverageShowAnnotations</h4>
+<b>codeCoverageShowAnnotations</b>(<i></i>)
+<p>
+        Public method to handle the show code coverage annotations context menu action.
 </p><a NAME="Editor.commentLine" ID="Editor.commentLine"></a>
 <h4>Editor.commentLine</h4>
 <b>commentLine</b>(<i></i>)

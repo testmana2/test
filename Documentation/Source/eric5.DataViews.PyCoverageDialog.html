@@ -82,6 +82,9 @@ QDialog, Ui_PyCoverageDialog
 <td><a href="#PyCoverageDialog.__format_lines">__format_lines</a></td>
 <td>Private method to format a list of integers into string by coalescing groups.</td>
 </tr><tr>
+<td><a href="#PyCoverageDialog.__openFile">__openFile</a></td>
+<td>Private slot to open the selected file.</td>
+</tr><tr>
 <td><a href="#PyCoverageDialog.__showContextMenu">__showContextMenu</a></td>
 <td>Private slot to show the context menu of the listview.</td>
 </tr><tr>
@@ -90,6 +93,9 @@ QDialog, Ui_PyCoverageDialog
 </tr><tr>
 <td><a href="#PyCoverageDialog.on_reloadButton_clicked">on_reloadButton_clicked</a></td>
 <td>Private slot to reload the coverage info.</td>
+</tr><tr>
+<td><a href="#PyCoverageDialog.on_resultList_itemActivated">on_resultList_itemActivated</a></td>
+<td>Private slot to handle the activation of an item.</td>
 </tr><tr>
 <td><a href="#PyCoverageDialog.start">start</a></td>
 <td>Public slot to start the coverage data evaluation.</td>
@@ -189,6 +195,16 @@ list of integers
 <dd>
 string representing the list
 </dd>
+</dl><a NAME="PyCoverageDialog.__openFile" ID="PyCoverageDialog.__openFile"></a>
+<h4>PyCoverageDialog.__openFile</h4>
+<b>__openFile</b>(<i>itm=None</i>)
+<p>
+        Private slot to open the selected file.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+reference to the item to be opened (QTreeWidgetItem)
+</dd>
 </dl><a NAME="PyCoverageDialog.__showContextMenu" ID="PyCoverageDialog.__showContextMenu"></a>
 <h4>PyCoverageDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
@@ -214,7 +230,20 @@ button that was clicked (QAbstractButton)
 <b>on_reloadButton_clicked</b>(<i></i>)
 <p>
         Private slot to reload the coverage info.
-</p><a NAME="PyCoverageDialog.start" ID="PyCoverageDialog.start"></a>
+</p><a NAME="PyCoverageDialog.on_resultList_itemActivated" ID="PyCoverageDialog.on_resultList_itemActivated"></a>
+<h4>PyCoverageDialog.on_resultList_itemActivated</h4>
+<b>on_resultList_itemActivated</b>(<i>item, column</i>)
+<p>
+        Private slot to handle the activation of an item.
+</p><dl>
+<dt><i>item</i></dt>
+<dd>
+reference to the activated item (QTreeWidgetItem)
+</dd><dt><i>column</i></dt>
+<dd>
+column the item was activated in (integer)
+</dd>
+</dl><a NAME="PyCoverageDialog.start" ID="PyCoverageDialog.start"></a>
 <h4>PyCoverageDialog.start</h4>
 <b>start</b>(<i>cfn, fn</i>)
 <p>
