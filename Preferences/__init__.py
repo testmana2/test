@@ -458,7 +458,8 @@ class Prefs(object):
             QApplication.palette().color(QPalette.Active, QPalette.Base),
         "EditAreaBackground":
             QApplication.palette().color(QPalette.Active, QPalette.Text),
-        "OnlineChangeTraceMarker": QColor("#8888ff"),
+        "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),
+        "OnlineChangeTraceMarkerSaved": QColor("#88ff88"),
     }
     
     editorOtherFontsDefaults = {

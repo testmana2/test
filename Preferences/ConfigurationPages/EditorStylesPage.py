@@ -190,8 +190,13 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             Preferences.getEditor("OnlineChangeTrace"))
         self.changeTraceTimeoutSpinBox.setValue(
             Preferences.getEditor("OnlineChangeTraceInterval"))
-        self.editorColours["OnlineChangeTraceMarker"] = \
-            self.initColour("OnlineChangeTraceMarker", self.changeMarkerColorButton,
+        self.editorColours["OnlineChangeTraceMarkerUnsaved"] = \
+            self.initColour("OnlineChangeTraceMarkerUnsaved",
+                self.changeMarkerUnsavedColorButton,
+                Preferences.getEditorColour)
+        self.editorColours["OnlineChangeTraceMarkerSaved"] = \
+            self.initColour("OnlineChangeTraceMarkerSaved",
+                self.changeMarkerSavedColorButton,
                 Preferences.getEditorColour)
     
     def save(self):
@@ -538,13 +543,22 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
                 self.editorColours["EditAreaBackground"])
     
     @pyqtSlot()
-    def on_changeMarkerColorButton_clicked(self):
+    def on_changeMarkerUnsavedColorButton_clicked(self):
         """
-        Private slot to set the colour of the change marker.
+        Private slot to set the colour of the change marker for unsaved changes.
         """
-        self.editorColours["OnlineChangeTraceMarker"] = \
-            self.selectColour(self.changeMarkerColorButton,
-                self.editorColours["OnlineChangeTraceMarker"])
+        self.editorColours["OnlineChangeTraceMarkerUnsaved"] = \
+            self.selectColour(self.changeMarkerUnsavedColorButton,
+                self.editorColours["OnlineChangeTraceMarkerUnsaved"])
+    
+    @pyqtSlot()
+    def on_changeMarkerSavedColorButton_clicked(self):
+        """
+        Private slot to set the colour of the change marker for saved changes.
+        """
+        self.editorColours["OnlineChangeTraceMarkerSaved"] = \
+            self.selectColour(self.changeMarkerSavedColorButton,
+                self.editorColours["OnlineChangeTraceMarkerSaved"])
 
 
 def create(dlg):

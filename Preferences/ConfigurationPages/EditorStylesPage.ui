@@ -1320,12 +1320,12 @@
         <item>
          <widget class="QLabel" name="TextLabel13_3_2_3">
           <property name="text">
-           <string>Marker colour:</string>
+           <string>Unsaved changes colour:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="changeMarkerColorButton">
+         <widget class="QPushButton" name="changeMarkerUnsavedColorButton">
           <property name="minimumSize">
            <size>
             <width>100</width>
@@ -1333,7 +1333,7 @@
            </size>
           </property>
           <property name="toolTip">
-           <string>Select the colour for the change marker.</string>
+           <string>Select the colour for the change marker for unsaved changes.</string>
           </property>
           <property name="text">
            <string/>
@@ -1341,20 +1341,27 @@
          </widget>
         </item>
         <item>
-         <spacer name="spacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="TextLabel13_3_2_4">
+          <property name="text">
+           <string>Saved changes colour:</string>
           </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changeMarkerSavedColorButton">
+          <property name="minimumSize">
            <size>
-            <width>201</width>
-            <height>31</height>
+            <width>100</width>
+            <height>0</height>
            </size>
           </property>
-         </spacer>
+          <property name="toolTip">
+           <string>Select the colour for the change marker for saved changes.</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -1551,7 +1558,8 @@
   <tabstop>annotationsErrorBgButton</tabstop>
   <tabstop>enableChangeTraceCheckBox</tabstop>
   <tabstop>changeTraceTimeoutSpinBox</tabstop>
-  <tabstop>changeMarkerColorButton</tabstop>
+  <tabstop>changeMarkerUnsavedColorButton</tabstop>
+  <tabstop>changeMarkerSavedColorButton</tabstop>
   <tabstop>whitespaceCheckBox</tabstop>
   <tabstop>whitespaceSizeSpinBox</tabstop>
   <tabstop>whitespaceForegroundButton</tabstop>

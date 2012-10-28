@@ -249,8 +249,11 @@ class Editor(QsciScintillaCompat):
         
         # define the margins markers
         changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarker"))
-        self.__changeMarker = self.markerDefine(changePixmap)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerSaved"))
+        self.__changeMarkerSaved = self.markerDefine(changePixmap)
+        changePixmap = QPixmap(16, 16)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerUnsaved"))
+        self.__changeMarkerUnsaved = self.markerDefine(changePixmap)
         self.breakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("break.png"))
         self.cbreakpoint = \
@@ -282,6 +285,9 @@ class Editor(QsciScintillaCompat):
                               (1 << self.tbreakpoint) | \
                               (1 << self.tcbreakpoint) | \
                               (1 << self.dbreakpoint)
+        
+        self.changeMarkersMask = (1 << self.__changeMarkerSaved) | \
+                                 (1 << self.__changeMarkerUnsaved)
         
         # configure the margins
         self.__setMarginsDisplay()
@@ -2397,6 +2403,7 @@ class Editor(QsciScintillaCompat):
         """
         self.__hasChangeMarkers = False
         self.__oldText = self.text()
+        self.__lastSavedText = self.text()
         self.__onlineChangeTraceTimer = QTimer(self)
         self.__onlineChangeTraceTimer.setSingleShot(True)
         self.__onlineChangeTraceTimer.setInterval(
@@ -2419,14 +2426,26 @@ class Editor(QsciScintillaCompat):
         """
         self.__deleteAllChangeMarkers()
         
+        # step 1: mark saved changes
         oldL = self.__oldText.splitlines()
+        newL = self.__lastSavedText.splitlines()
+        matcher = difflib.SequenceMatcher(None, oldL, newL)
+        
+        for token, i1, i2, j1, j2 in matcher.get_opcodes():
+            if token in ["insert", "replace"]:
+                for lineNo in range(j1, j2):
+                    self.markerAdd(lineNo, self.__changeMarkerSaved)
+                    self.__hasChangeMarkers = True
+        
+        # step 2: mark unsaved changes
+        oldL = self.__lastSavedText.splitlines()
         newL = self.text().splitlines()
         matcher = difflib.SequenceMatcher(None, oldL, newL)
         
         for token, i1, i2, j1, j2 in matcher.get_opcodes():
             if token in ["insert", "replace"]:
                 for lineNo in range(j1, j2):
-                    self.markerAdd(lineNo, self.__changeMarker)
+                    self.markerAdd(lineNo, self.__changeMarkerUnsaved)
                     self.__hasChangeMarkers = True
         
         if self.__hasChangeMarkers:
@@ -2436,14 +2455,26 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to reset the online change trace info.
         """
-        self.__oldText = self.text()
+        self.__lastSavedText = self.text()
         self.__deleteAllChangeMarkers()
+        
+        # mark saved changes
+        oldL = self.__oldText.splitlines()
+        newL = self.__lastSavedText.splitlines()
+        matcher = difflib.SequenceMatcher(None, oldL, newL)
+        
+        for token, i1, i2, j1, j2 in matcher.get_opcodes():
+            if token in ["insert", "replace"]:
+                for lineNo in range(j1, j2):
+                    self.markerAdd(lineNo, self.__changeMarkerSaved)
+                    self.__hasChangeMarkers = True
         
     def __deleteAllChangeMarkers(self):
         """
         Private slot to delete all change markers.
         """
-        self.markerDeleteAll(self.__changeMarker)
+        self.markerDeleteAll(self.__changeMarkerUnsaved)
+        self.markerDeleteAll(self.__changeMarkerSaved)
         self.__hasChangeMarkers = False
         self.changeMarkersUpdated.emit(self)
         
@@ -2464,10 +2495,10 @@ class Editor(QsciScintillaCompat):
             line = 0
         else:
             line += 1
-        changeline = self.markerFindNext(line, 1 << self.__changeMarker)
+        changeline = self.markerFindNext(line, self.changeMarkersMask)
         if changeline < 0:
             # wrap around
-            changeline = self.markerFindNext(0, 1 << self.__changeMarker)
+            changeline = self.markerFindNext(0, self.changeMarkersMask)
         if changeline >= 0:
             self.setCursorPosition(changeline, 0)
             self.ensureLineVisible(changeline)
@@ -2481,11 +2512,10 @@ class Editor(QsciScintillaCompat):
             line = self.lines() - 1
         else:
             line -= 1
-        changeline = self.markerFindPrevious(line, 1 << self.__changeMarker)
+        changeline = self.markerFindPrevious(line, self.changeMarkersMask)
         if changeline < 0:
             # wrap around
-            changeline = self.markerFindPrevious(
-                self.lines() - 1, 1 << self.__changeMarker)
+            changeline = self.markerFindPrevious(self.lines() - 1, self.changeMarkersMask)
         if changeline >= 0:
             self.setCursorPosition(changeline, 0)
             self.ensureLineVisible(changeline)
@@ -3658,8 +3688,11 @@ class Editor(QsciScintillaCompat):
             self.__onlineChangeTraceTimer.stop()
             self.__deleteAllChangeMarkers()
         changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarker"))
-        self.markerDefine(changePixmap, self.__changeMarker)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerUnsaved"))
+        self.markerDefine(changePixmap, self.__changeMarkerUnsaved)
+        changePixmap = QPixmap(16, 16)
+        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerSaved"))
+        self.markerDefine(changePixmap, self.__changeMarkerSaved)
         
         # refresh the annotations display
         self.__refreshAnnotations()
@@ -3707,7 +3740,8 @@ class Editor(QsciScintillaCompat):
                           (1 << self.notcovered) | \
                           (1 << self.taskmarker) | \
                           (1 << self.warning) | \
-                          (1 << self.__changeMarker)
+                          (1 << self.__changeMarkerUnsaved) | \
+                          (1 << self.__changeMarkerSaved)
             self.setMarginWidth(1, 16)
             self.setMarginSensitivity(1, True)
             self.setMarginMarkerMask(1, margin1Mask)
@@ -3742,7 +3776,8 @@ class Editor(QsciScintillaCompat):
                               (1 << self.notcovered) | \
                               (1 << self.taskmarker) | \
                               (1 << self.warning) | \
-                              (1 << self.__changeMarker)
+                              (1 << self.__changeMarkerUnsaved) | \
+                              (1 << self.__changeMarkerSaved)
             self.setMarginWidth(self.__indicMargin, 16)
             self.setMarginSensitivity(self.__indicMargin, True)
             self.setMarginMarkerMask(self.__indicMargin, marginIndicMask)
