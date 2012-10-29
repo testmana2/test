@@ -240,6 +240,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__contextSaveAs">__contextSaveAs</a></td>
 <td>Private slot handling the save as context menu entry.</td>
 </tr><tr>
+<td><a href="#Editor.__createChangeMarkerPixmap">__createChangeMarkerPixmap</a></td>
+<td>Private method to create a pixmap for the change markers.</td>
+</tr><tr>
 <td><a href="#Editor.__cursorPositionChanged">__cursorPositionChanged</a></td>
 <td>Private slot to handle the cursorPositionChanged signal.</td>
 </tr><tr>
@@ -1342,7 +1345,28 @@ reference to the action that was selected (QAction)
 <b>__contextSaveAs</b>(<i></i>)
 <p>
         Private slot handling the save as context menu entry.
-</p><a NAME="Editor.__cursorPositionChanged" ID="Editor.__cursorPositionChanged"></a>
+</p><a NAME="Editor.__createChangeMarkerPixmap" ID="Editor.__createChangeMarkerPixmap"></a>
+<h4>Editor.__createChangeMarkerPixmap</h4>
+<b>__createChangeMarkerPixmap</b>(<i>key, size=16, width=4</i>)
+<p>
+        Private method to create a pixmap for the change markers.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+key of the color to use (string)
+</dd><dt><i>size</i></dt>
+<dd>
+size of the pixmap (integer)
+</dd><dt><i>width</i></dt>
+<dd>
+width of the marker line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+create pixmap (QPixmap)
+</dd>
+</dl><a NAME="Editor.__cursorPositionChanged" ID="Editor.__cursorPositionChanged"></a>
 <h4>Editor.__cursorPositionChanged</h4>
 <b>__cursorPositionChanged</b>(<i>line, index</i>)
 <p>

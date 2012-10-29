@@ -68,7 +68,7 @@ thanksText = \
 """Phil Thompson for providing PyQt and QScintilla and pushing me into this business.
 
 Andrew Bushnell of Fluent Inc. for contributing the multithreading debugger
-and a bunch of fixes to enhance the platform independance.
+and a bunch of fixes to enhance the platform independence.
 
 Alexander Darovsky and Mikhail Terekhov for providing Russian translations.
 Julien Vienne for providing French translations.

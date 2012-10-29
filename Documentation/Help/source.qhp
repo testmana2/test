@@ -3800,6 +3800,7 @@
       <keyword name="Editor.__contextOpenRejections" id="Editor.__contextOpenRejections" ref="eric5.QScintilla.Editor.html#Editor.__contextOpenRejections" />
       <keyword name="Editor.__contextSave" id="Editor.__contextSave" ref="eric5.QScintilla.Editor.html#Editor.__contextSave" />
       <keyword name="Editor.__contextSaveAs" id="Editor.__contextSaveAs" ref="eric5.QScintilla.Editor.html#Editor.__contextSaveAs" />
+      <keyword name="Editor.__createChangeMarkerPixmap" id="Editor.__createChangeMarkerPixmap" ref="eric5.QScintilla.Editor.html#Editor.__createChangeMarkerPixmap" />
       <keyword name="Editor.__cursorPositionChanged" id="Editor.__cursorPositionChanged" ref="eric5.QScintilla.Editor.html#Editor.__cursorPositionChanged" />
       <keyword name="Editor.__deleteAllChangeMarkers" id="Editor.__deleteAllChangeMarkers" ref="eric5.QScintilla.Editor.html#Editor.__deleteAllChangeMarkers" />
       <keyword name="Editor.__deleteBreakPoints" id="Editor.__deleteBreakPoints" ref="eric5.QScintilla.Editor.html#Editor.__deleteBreakPoints" />
