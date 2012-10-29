@@ -14,7 +14,7 @@ from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
     pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
 from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, QActionGroup, \
     QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont, \
-    QPixmap
+    QPixmap, QPainter
 from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
@@ -248,12 +248,10 @@ class Editor(QsciScintillaCompat):
             self.__unifiedMargins = True
         
         # define the margins markers
-        changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerSaved"))
-        self.__changeMarkerSaved = self.markerDefine(changePixmap)
-        changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerUnsaved"))
-        self.__changeMarkerUnsaved = self.markerDefine(changePixmap)
+        self.__changeMarkerSaved = self.markerDefine(self.__createChangeMarkerPixmap(
+            "OnlineChangeTraceMarkerSaved"))
+        self.__changeMarkerUnsaved = self.markerDefine(self.__createChangeMarkerPixmap(
+            "OnlineChangeTraceMarkerUnsaved"))
         self.breakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("break.png"))
         self.cbreakpoint = \
@@ -2396,7 +2394,23 @@ class Editor(QsciScintillaCompat):
     ############################################################################
     ## Change tracing methods below
     ############################################################################
-
+    
+    def __createChangeMarkerPixmap(self, key, size=16, width=4):
+        """
+        Private method to create a pixmap for the change markers.
+        
+        @param key key of the color to use (string)
+        @param size size of the pixmap (integer)
+        @param width width of the marker line (integer)
+        @return create pixmap (QPixmap)
+        """
+        pixmap = QPixmap(size, size)
+        pixmap.fill(Qt.transparent)
+        painter = QPainter(pixmap)
+        painter.fillRect(size - 4, 0, 4, size, Preferences.getEditorColour(key))
+        painter.end()
+        return pixmap
+        
     def __initOnlineChangeTrace(self):
         """
         Private slot to initialize the online change trace.
@@ -2468,6 +2482,9 @@ class Editor(QsciScintillaCompat):
                 for lineNo in range(j1, j2):
                     self.markerAdd(lineNo, self.__changeMarkerSaved)
                     self.__hasChangeMarkers = True
+        
+        if self.__hasChangeMarkers:
+            self.changeMarkersUpdated.emit(self)
         
     def __deleteAllChangeMarkers(self):
         """
@@ -3687,12 +3704,10 @@ class Editor(QsciScintillaCompat):
         else:
             self.__onlineChangeTraceTimer.stop()
             self.__deleteAllChangeMarkers()
-        changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerUnsaved"))
-        self.markerDefine(changePixmap, self.__changeMarkerUnsaved)
-        changePixmap = QPixmap(16, 16)
-        changePixmap.fill(Preferences.getEditorColour("OnlineChangeTraceMarkerSaved"))
-        self.markerDefine(changePixmap, self.__changeMarkerSaved)
+        self.markerDefine(self.__createChangeMarkerPixmap(
+            "OnlineChangeTraceMarkerUnsaved"), self.__changeMarkerUnsaved)
+        self.markerDefine(self.__createChangeMarkerPixmap(
+            "OnlineChangeTraceMarkerSaved"), self.__changeMarkerSaved)
         
         # refresh the annotations display
         self.__refreshAnnotations()
