@@ -11182,6 +11182,7 @@
       <keyword name="setVarFilters" id="setVarFilters" ref="eric5.Preferences.__init__.html#setVarFilters" />
       <keyword name="setViewManager" id="setViewManager" ref="eric5.Preferences.__init__.html#setViewManager" />
       <keyword name="shouldResetLayout" id="shouldResetLayout" ref="eric5.Preferences.__init__.html#shouldResetLayout" />
+      <keyword name="shutilCopy" id="shutilCopy" ref="eric5.install.html#shutilCopy" />
       <keyword name="simpleAppStartup" id="simpleAppStartup" ref="eric5.Utilities.Startup.html#simpleAppStartup" />
       <keyword name="sort" id="sort" ref="eric5.Graphics.GraphicsUtilities.html#sort" />
       <keyword name="splitPath" id="splitPath" ref="eric5.Utilities.__init__.html#splitPath" />

@@ -143,7 +143,7 @@ class DebugBase(bdb.Bdb):
     
     def profile(self, frame, event, arg):
         """
-        Public method used to trace some stuff independant of the debugger
+        Public method used to trace some stuff independent of the debugger
         trace function.
         
         @param frame The current stack frame.
