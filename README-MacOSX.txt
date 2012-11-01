@@ -32,7 +32,7 @@ After you have been logged in follow the download link for Xcode 3. After you
 downloaded the package install it as described above. 
 
 
-1. Install Xcode 4 (for Lion)
+1. Install Xcode 4 (for Lion and Mountain Lion)
 ------------------
 Open the Mac App Store and enter "xcode" into the search entry at the top
 right of the window. From the list of results select the Xcode entry. Xcode 4
