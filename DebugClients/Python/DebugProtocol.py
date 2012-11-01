@@ -77,6 +77,9 @@ ResponseForkTo = RequestForkTo
 
 PassiveStartup = '>PassiveStartup<'
 
+RequestCallTrace = '>CallTrace<'
+CallTrace = '>CallTrace<'
+
 EOT = '>EOT<\n'
 
 #

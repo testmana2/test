@@ -190,6 +190,7 @@ class DebugViewer(QWidget):
         index = self.__tabWidget.addTab(self.callTraceViewer,
             UI.PixmapCache.getIcon("callTrace.png"), "")
         self.__tabWidget.setTabToolTip(index, self.callTraceViewer.windowTitle())
+        self.callTraceViewer.sourceFile.connect(self.sourceFile)
         
         # add the breakpoint viewer
         self.breakpointViewer = BreakPointViewer()
@@ -300,6 +301,17 @@ class DebugViewer(QWidget):
         Public method to clear the recorded call trace.
         """
         self.callTraceViewer.clear()
+        
+    def setCallTraceToProjectMode(self, enabled):
+        """
+        Public slot to set the call trace viewer to project mode.
+        
+        In project mode the call trace info is shown with project relative
+        path names.
+        
+        @param enabled flag indicating to enable the project mode (boolean)
+        """
+        self.callTraceViewer.setProjectMode(enabled)
         
     def showVariables(self, vlist, globals):
         """

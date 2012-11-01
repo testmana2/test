@@ -225,6 +225,9 @@ class DebugClientBase(object):
         self.errorstream = None
         self.pollingDisabled = False
         
+        self.callTraceEnabled = False
+        self.__newCallTraceEnabled = False
+        
         self.skipdirs = sys.path[:]
         
         self.variant = 'You should not see this'
@@ -456,6 +459,17 @@ class DebugClientBase(object):
                 self.pendingResponse = DebugProtocol.ResponseOK
                 return
 
+            if cmd == DebugProtocol.RequestCallTrace:
+                if arg.strip().lower() == "on":
+                    callTraceEnabled = True
+                else:
+                    callTraceEnabled = False
+                if self.debugging:
+                    self.callTraceEnabled = callTraceEnabled
+                else:
+                    self.__newCallTraceEnabled = callTraceEnabled   # remember for later
+                return
+            
             if cmd == DebugProtocol.RequestEnv:
                 env = eval(arg)
                 for key, value in env.items():
@@ -506,6 +520,7 @@ class DebugClientBase(object):
                 # IOErrors, if self.running is passed as a normal str.
                 self.debugMod.__dict__['__file__'] = self.running
                 sys.modules['__main__'] = self.debugMod
+                self.callTraceEnabled = self.__newCallTraceEnabled
                 res = self.mainThread.run('execfile(' + repr(self.running) + ')',
                                           self.debugMod.__dict__)
                 self.progTerminated(res)

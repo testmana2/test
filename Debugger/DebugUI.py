@@ -1778,8 +1778,8 @@ class DebugUI(QObject):
                 
                 # Ask the client to send call trace info
                 enableCallTrace = self.debugViewer.isCallTraceEnabled()
-                if enableCallTrace:
-                    self.debugViewer.clearCallTrace()
+                self.debugViewer.clearCallTrace()
+                self.debugViewer.setCallTraceToProjectMode(debugProject)
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteLoad(fn, argv, wd, env,
@@ -1835,8 +1835,8 @@ class DebugUI(QObject):
             if self.lastStartAction in [1, 2]:
                 # Ask the client to send call trace info
                 enableCallTrace = self.debugViewer.isCallTraceEnabled()
-                if enableCallTrace:
-                    self.debugViewer.clearCallTrace()
+                self.debugViewer.clearCallTrace()
+                self.debugViewer.setCallTraceToProjectMode(forProject)
                 
                 # Ask the client to debug the new program.
                 self.debugServer.remoteLoad(fn, argv, wd, env,

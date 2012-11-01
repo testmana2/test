@@ -7,13 +7,17 @@
 Module implementing the Call Trace viewer widget.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QRegExp, QFileInfo
 from PyQt4.QtGui import QWidget,  QTreeWidgetItem
+
+from E5Gui.E5Application import e5App
+from E5Gui import E5FileDialog, E5MessageBox
 
 from .Ui_CallTraceViewer import Ui_CallTraceViewer
 
 import UI.PixmapCache
 import Preferences
+import Utilities
 
 
 class CallTraceViewer(QWidget, Ui_CallTraceViewer):
@@ -48,36 +52,45 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         self.__callStack = []
         
         self.__entryFormat = "{0}:{1} ({2})"
+        self.__entryRe = QRegExp(r"""(.+):(\d+)\s\((.*)\)""")
+        
+        self.__projectMode = False
+        self.__project = None
         
         self.__callTraceEnabled = Preferences.toBool(
             Preferences.Prefs.settings.value("CallTrace/Enabled", False))
-        
         if self.__callTraceEnabled:
-            self.stopTraceButton.setEnabled(False)
-        else:
             self.startTraceButton.setEnabled(False)
+        else:
+            self.stopTraceButton.setEnabled(False)
         
         self.__dbs.callTraceInfo.connect(self.__addCallTraceInfo)
+    
+    def __setCallTraceEnabled(self, enabled):
+        """
+        Private slot to set the call trace enabled status.
+        
+        @param enabled flag indicating the new state (boolean)
+        """
+        self.__dbs.setCallTraceEnabled(enabled)
+        self.stopTraceButton.setEnabled(enabled)
+        self.startTraceButton.setEnabled(not enabled)
+        self.__callTraceEnabled = enabled
+        Preferences.Prefs.settings.setValue("CallTrace/Enabled", enabled)
     
     @pyqtSlot()
     def on_startTraceButton_clicked(self):
         """
         Private slot to start call tracing.
         """
-        self.__dbs.setCallTraceEnabled(True)
-        self.stopTraceButton.setEnabled(True)
-        self.startTraceButton.setEnabled(False)
-        Preferences.Prefs.settings.setValue("CallTrace/Enabled", True)
+        self.__setCallTraceEnabled(True)
     
     @pyqtSlot()
     def on_stopTraceButton_clicked(self):
         """
         Private slot to start call tracing.
         """
-        self.__dbs.setCallTraceEnabled(False)
-        self.stopTraceButton.setEnabled(False)
-        self.startTraceButton.setEnabled(True)
-        Preferences.Prefs.settings.setValue("CallTrace/Enabled", False)
+        self.__setCallTraceEnabled(False)
     
     @pyqtSlot()
     def on_resizeButton_clicked(self):
@@ -97,18 +110,72 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
     @pyqtSlot()
     def on_saveButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to save the call trace info to a file.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        if self.callTrace.topLevelItemCount() > 0:
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                self.trUtf8("Save Call Trace Info"),
+                "",
+                self.trUtf8("Text Files (*.txt);;All Files (*)"),
+                None,
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            if fname:
+                ext = QFileInfo(fname).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        fname += ex
+                if QFileInfo(fname).exists():
+                    res = E5MessageBox.yesNo(self,
+                        self.trUtf8("Save Call Trace Info"),
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fname),
+                        icon=E5MessageBox.Warning)
+                    if not res:
+                        return
+                    fname = Utilities.toNativeSeparators(fname)
+                
+                try:
+                    f = open(fname, "w", encoding="utf-8")
+                    itm = self.callTrace.topLevelItem(0)
+                    while itm is not None:
+                        isCall = itm.data(0, Qt.UserRole)
+                        if isCall:
+                            call = "->"
+                        else:
+                            call = "<-"
+                        f.write("{0} {1} || {2}\n".format(call,
+                            itm.text(1), itm.text(2)))
+                        itm = self.callTrace.itemBelow(itm)
+                    f.close()
+                except IOError as err:
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Error saving Call Trace Info"),
+                        self.trUtf8("""<p>The call trace info could not be written"""
+                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                            .format(fname, str(err)))
     
     @pyqtSlot(QTreeWidgetItem, int)
     def on_callTrace_itemDoubleClicked(self, item, column):
         """
-        Slot documentation goes here.
+        Private slot to open the double clicked file in an editor.
+        
+        @param item reference to the double clicked item (QTreeWidgetItem)
+        @param column column that was double clicked (integer)
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        if item is not None and column > 0:
+            columnStr = item.text(column)
+            if self.__entryRe.exactMatch(columnStr.strip()):
+                filename, lineno, func = self.__entryRe.capturedTexts()[1:]
+                try:
+                    lineno = int(lineno)
+                except ValueError:
+                    # do nothing, if the line info is not an integer
+                    return
+                if self.__projectMode:
+                    filename = self.__project.getAbsolutePath(filename)
+                self.sourceFile.emit(filename, lineno)
     
     def clear(self):
         """
@@ -116,6 +183,19 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         """
         self.callTrace.clear()
         self.__callStack = []
+    
+    def setProjectMode(self, enabled):
+        """
+        Public slot to set the call trace viewer to project mode.
+        
+        In project mode the call trace info is shown with project relative
+        path names.
+        
+        @param enabled flag indicating to enable the project mode (boolean)
+        """
+        self.__projectMode = enabled
+        if enabled and self.__project is None:
+            self.__project = e5App().getObject("Project")
     
     def __addCallTraceInfo(self, isCall, fromFile, fromLine, fromFunction,
                            toFile, toLine, toFunction):
@@ -136,16 +216,22 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
             icon = UI.PixmapCache.getIcon("back.png")
         parentItem = self.__callStack[-1] if self.__callStack else self.callTrace
         
+        if self.__projectMode:
+            fromFile = self.__project.getRelativePath(fromFile)
+            toFile = self.__project.getRelativePath(toFile)
+        
         itm = QTreeWidgetItem(parentItem, ["",
             self.__entryFormat.format(fromFile, fromLine, fromFunction),
             self.__entryFormat.format(toFile, toLine, toFunction)])
         itm.setIcon(0, icon)
+        itm.setData(0, Qt.UserRole, isCall)
         itm.setExpanded(True)
         
         if isCall:
             self.__callStack.append(itm)
         else:
-            self.__callStack.pop(-1)
+            if self.__callStack:
+                self.__callStack.pop(-1)
     
     def isCallTraceEnabled(self):
         """

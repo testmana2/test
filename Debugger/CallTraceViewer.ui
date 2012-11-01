@@ -86,9 +86,12 @@
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
+     <property name="expandsOnDoubleClick">
+      <bool>false</bool>
+     </property>
      <column>
       <property name="text">
-       <string> </string>
+       <string/>
       </property>
      </column>
      <column>

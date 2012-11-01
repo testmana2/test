@@ -622,6 +622,14 @@ class DebuggerInterfaceRuby(QObject):
         self.__sendCommand('{0}{1:d}, "{2}"\n'.format(
             DebugProtocol.RequestSetFilter, scope, filter))
         
+    def setCallTraceEnabled(self, on):
+        """
+        Public method to set the call trace state.
+        
+        @param on flag indicating to enable the call trace function (boolean)
+        """
+        return
+        
     def remoteEval(self, arg):
         """
         Public method to evaluate arg in the current context of the debugged program.

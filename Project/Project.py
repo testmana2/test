@@ -2894,6 +2894,18 @@ class Project(QObject):
         """
         return Utilities.fromNativeSeparators(self.getRelativePath(path))
         
+    def getAbsolutePath(self, fn):
+        """
+        Public method to convert a project relative file path to an absolute
+        file path.
+        
+        @param fn file or directory name to convert (string)
+        @return absolute path (string)
+        """
+        if not os.path.isabs(fn):
+            fn = os.path.join(self.ppath, fn)
+        return fn
+        
     def getAbsoluteUniversalPath(self, fn):
         """
         Public method to convert a project relative file path with universal
