@@ -914,7 +914,7 @@ class ModuleDocument(object):
                     inTagSection = True
                     m = _signal(desc, 0)
                     if m is None:
-                        raise TagError("Wrong format in {0} line.\n".format(parts[0]))
+                        raise TagError("Wrong format in @signal line.\n")
                     signalName = 1 and m.group("SignalName1") \
                                    or m.group("SignalName2")
                     signalDesc = 1 and m.group("SignalDescription1") \
