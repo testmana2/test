@@ -77,6 +77,7 @@
           <section title="eric5.Debugger" ref="index-eric5.Debugger.html">
             <section title="eric5.Debugger.BreakPointModel" ref="eric5.Debugger.BreakPointModel.html" />
             <section title="eric5.Debugger.BreakPointViewer" ref="eric5.Debugger.BreakPointViewer.html" />
+            <section title="eric5.Debugger.CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html" />
             <section title="eric5.Debugger.Config" ref="eric5.Debugger.Config.html" />
             <section title="eric5.Debugger.DebugClientCapabilities" ref="eric5.Debugger.DebugClientCapabilities.html" />
             <section title="eric5.Debugger.DebugProtocol" ref="eric5.Debugger.DebugProtocol.html" />
@@ -1833,6 +1834,20 @@
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
       <keyword name="BrowserSysPathItem" id="BrowserSysPathItem" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem" />
       <keyword name="BrowserSysPathItem (Constructor)" id="BrowserSysPathItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.__init__" />
+      <keyword name="CallTraceViewer" id="CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer" />
+      <keyword name="CallTraceViewer (Constructor)" id="CallTraceViewer (Constructor)" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.__init__" />
+      <keyword name="CallTraceViewer (Module)" id="CallTraceViewer (Module)" ref="eric5.Debugger.CallTraceViewer.html" />
+      <keyword name="CallTraceViewer.__addCallTraceInfo" id="CallTraceViewer.__addCallTraceInfo" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.__addCallTraceInfo" />
+      <keyword name="CallTraceViewer.__setCallTraceEnabled" id="CallTraceViewer.__setCallTraceEnabled" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.__setCallTraceEnabled" />
+      <keyword name="CallTraceViewer.clear" id="CallTraceViewer.clear" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.clear" />
+      <keyword name="CallTraceViewer.isCallTraceEnabled" id="CallTraceViewer.isCallTraceEnabled" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.isCallTraceEnabled" />
+      <keyword name="CallTraceViewer.on_callTrace_itemDoubleClicked" id="CallTraceViewer.on_callTrace_itemDoubleClicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_callTrace_itemDoubleClicked" />
+      <keyword name="CallTraceViewer.on_clearButton_clicked" id="CallTraceViewer.on_clearButton_clicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_clearButton_clicked" />
+      <keyword name="CallTraceViewer.on_resizeButton_clicked" id="CallTraceViewer.on_resizeButton_clicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_resizeButton_clicked" />
+      <keyword name="CallTraceViewer.on_saveButton_clicked" id="CallTraceViewer.on_saveButton_clicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_saveButton_clicked" />
+      <keyword name="CallTraceViewer.on_startTraceButton_clicked" id="CallTraceViewer.on_startTraceButton_clicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_startTraceButton_clicked" />
+      <keyword name="CallTraceViewer.on_stopTraceButton_clicked" id="CallTraceViewer.on_stopTraceButton_clicked" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.on_stopTraceButton_clicked" />
+      <keyword name="CallTraceViewer.setProjectMode" id="CallTraceViewer.setProjectMode" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.setProjectMode" />
       <keyword name="ChangeBookmarkCommand" id="ChangeBookmarkCommand" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand" />
       <keyword name="ChangeBookmarkCommand (Constructor)" id="ChangeBookmarkCommand (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand.__init__" />
       <keyword name="ChangeBookmarkCommand.redo" id="ChangeBookmarkCommand.redo" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand.redo" />
@@ -2501,6 +2516,8 @@
       <keyword name="DebugBase.__extractExceptionName" id="DebugBase.__extractExceptionName" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.__extractExceptionName" />
       <keyword name="DebugBase.__extract_stack" id="DebugBase.__extract_stack" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.__extract_stack" />
       <keyword name="DebugBase.__extract_stack" id="DebugBase.__extract_stack" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.__extract_stack" />
+      <keyword name="DebugBase.__sendCallTrace" id="DebugBase.__sendCallTrace" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.__sendCallTrace" />
+      <keyword name="DebugBase.__sendCallTrace" id="DebugBase.__sendCallTrace" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.__sendCallTrace" />
       <keyword name="DebugBase.__skip_it" id="DebugBase.__skip_it" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.__skip_it" />
       <keyword name="DebugBase.__skip_it" id="DebugBase.__skip_it" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.__skip_it" />
       <keyword name="DebugBase.break_anywhere" id="DebugBase.break_anywhere" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.break_anywhere" />
@@ -2783,9 +2800,11 @@
       <keyword name="DebugServer.remoteUTPrepare" id="DebugServer.remoteUTPrepare" ref="eric5.Debugger.DebugServer.html#DebugServer.remoteUTPrepare" />
       <keyword name="DebugServer.remoteUTRun" id="DebugServer.remoteUTRun" ref="eric5.Debugger.DebugServer.html#DebugServer.remoteUTRun" />
       <keyword name="DebugServer.remoteUTStop" id="DebugServer.remoteUTStop" ref="eric5.Debugger.DebugServer.html#DebugServer.remoteUTStop" />
+      <keyword name="DebugServer.setCallTraceEnabled" id="DebugServer.setCallTraceEnabled" ref="eric5.Debugger.DebugServer.html#DebugServer.setCallTraceEnabled" />
       <keyword name="DebugServer.shutdownServer" id="DebugServer.shutdownServer" ref="eric5.Debugger.DebugServer.html#DebugServer.shutdownServer" />
       <keyword name="DebugServer.signalClientBanner" id="DebugServer.signalClientBanner" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientBanner" />
       <keyword name="DebugServer.signalClientBreakConditionError" id="DebugServer.signalClientBreakConditionError" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientBreakConditionError" />
+      <keyword name="DebugServer.signalClientCallTrace" id="DebugServer.signalClientCallTrace" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientCallTrace" />
       <keyword name="DebugServer.signalClientCapabilities" id="DebugServer.signalClientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientCapabilities" />
       <keyword name="DebugServer.signalClientClearBreak" id="DebugServer.signalClientClearBreak" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientClearBreak" />
       <keyword name="DebugServer.signalClientClearWatch" id="DebugServer.signalClientClearWatch" ref="eric5.Debugger.DebugServer.html#DebugServer.signalClientClearWatch" />
@@ -2905,14 +2924,17 @@
       <keyword name="DebugViewer.__setLocalsFilter" id="DebugViewer.__setLocalsFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__setLocalsFilter" />
       <keyword name="DebugViewer.__showSource" id="DebugViewer.__showSource" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__showSource" />
       <keyword name="DebugViewer.__threadSelected" id="DebugViewer.__threadSelected" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__threadSelected" />
+      <keyword name="DebugViewer.clearCallTrace" id="DebugViewer.clearCallTrace" ref="eric5.Debugger.DebugViewer.html#DebugViewer.clearCallTrace" />
       <keyword name="DebugViewer.currentWidget" id="DebugViewer.currentWidget" ref="eric5.Debugger.DebugViewer.html#DebugViewer.currentWidget" />
       <keyword name="DebugViewer.handleClientStack" id="DebugViewer.handleClientStack" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleClientStack" />
       <keyword name="DebugViewer.handleDebuggingStarted" id="DebugViewer.handleDebuggingStarted" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleDebuggingStarted" />
       <keyword name="DebugViewer.handleRawInput" id="DebugViewer.handleRawInput" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleRawInput" />
       <keyword name="DebugViewer.handleResetUI" id="DebugViewer.handleResetUI" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleResetUI" />
+      <keyword name="DebugViewer.isCallTraceEnabled" id="DebugViewer.isCallTraceEnabled" ref="eric5.Debugger.DebugViewer.html#DebugViewer.isCallTraceEnabled" />
       <keyword name="DebugViewer.preferencesChanged" id="DebugViewer.preferencesChanged" ref="eric5.Debugger.DebugViewer.html#DebugViewer.preferencesChanged" />
       <keyword name="DebugViewer.restoreCurrentPage" id="DebugViewer.restoreCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.restoreCurrentPage" />
       <keyword name="DebugViewer.saveCurrentPage" id="DebugViewer.saveCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.saveCurrentPage" />
+      <keyword name="DebugViewer.setCallTraceToProjectMode" id="DebugViewer.setCallTraceToProjectMode" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setCallTraceToProjectMode" />
       <keyword name="DebugViewer.setCurrentWidget" id="DebugViewer.setCurrentWidget" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setCurrentWidget" />
       <keyword name="DebugViewer.setDebugger" id="DebugViewer.setDebugger" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setDebugger" />
       <keyword name="DebugViewer.setVariablesFilter" id="DebugViewer.setVariablesFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setVariablesFilter" />
@@ -2968,6 +2990,7 @@
       <keyword name="DebuggerInterfaceNone.remoteWatchpoint" id="DebuggerInterfaceNone.remoteWatchpoint" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.remoteWatchpoint" />
       <keyword name="DebuggerInterfaceNone.remoteWatchpointEnable" id="DebuggerInterfaceNone.remoteWatchpointEnable" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.remoteWatchpointEnable" />
       <keyword name="DebuggerInterfaceNone.remoteWatchpointIgnore" id="DebuggerInterfaceNone.remoteWatchpointIgnore" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.remoteWatchpointIgnore" />
+      <keyword name="DebuggerInterfaceNone.setCallTraceEnabled" id="DebuggerInterfaceNone.setCallTraceEnabled" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.setCallTraceEnabled" />
       <keyword name="DebuggerInterfaceNone.shutdown" id="DebuggerInterfaceNone.shutdown" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.shutdown" />
       <keyword name="DebuggerInterfaceNone.startRemote" id="DebuggerInterfaceNone.startRemote" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.startRemote" />
       <keyword name="DebuggerInterfaceNone.startRemoteForProject" id="DebuggerInterfaceNone.startRemoteForProject" ref="eric5.Debugger.DebuggerInterfaceNone.html#DebuggerInterfaceNone.startRemoteForProject" />
@@ -3015,6 +3038,7 @@
       <keyword name="DebuggerInterfacePython.remoteWatchpoint" id="DebuggerInterfacePython.remoteWatchpoint" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.remoteWatchpoint" />
       <keyword name="DebuggerInterfacePython.remoteWatchpointEnable" id="DebuggerInterfacePython.remoteWatchpointEnable" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.remoteWatchpointEnable" />
       <keyword name="DebuggerInterfacePython.remoteWatchpointIgnore" id="DebuggerInterfacePython.remoteWatchpointIgnore" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.remoteWatchpointIgnore" />
+      <keyword name="DebuggerInterfacePython.setCallTraceEnabled" id="DebuggerInterfacePython.setCallTraceEnabled" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.setCallTraceEnabled" />
       <keyword name="DebuggerInterfacePython.shutdown" id="DebuggerInterfacePython.shutdown" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.shutdown" />
       <keyword name="DebuggerInterfacePython.startRemote" id="DebuggerInterfacePython.startRemote" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.startRemote" />
       <keyword name="DebuggerInterfacePython.startRemoteForProject" id="DebuggerInterfacePython.startRemoteForProject" ref="eric5.Debugger.DebuggerInterfacePython.html#DebuggerInterfacePython.startRemoteForProject" />
@@ -3062,6 +3086,7 @@
       <keyword name="DebuggerInterfacePython3.remoteWatchpoint" id="DebuggerInterfacePython3.remoteWatchpoint" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.remoteWatchpoint" />
       <keyword name="DebuggerInterfacePython3.remoteWatchpointEnable" id="DebuggerInterfacePython3.remoteWatchpointEnable" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.remoteWatchpointEnable" />
       <keyword name="DebuggerInterfacePython3.remoteWatchpointIgnore" id="DebuggerInterfacePython3.remoteWatchpointIgnore" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.remoteWatchpointIgnore" />
+      <keyword name="DebuggerInterfacePython3.setCallTraceEnabled" id="DebuggerInterfacePython3.setCallTraceEnabled" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.setCallTraceEnabled" />
       <keyword name="DebuggerInterfacePython3.shutdown" id="DebuggerInterfacePython3.shutdown" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.shutdown" />
       <keyword name="DebuggerInterfacePython3.startRemote" id="DebuggerInterfacePython3.startRemote" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.startRemote" />
       <keyword name="DebuggerInterfacePython3.startRemoteForProject" id="DebuggerInterfacePython3.startRemoteForProject" ref="eric5.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.startRemoteForProject" />
@@ -3108,6 +3133,7 @@
       <keyword name="DebuggerInterfaceRuby.remoteWatchpoint" id="DebuggerInterfaceRuby.remoteWatchpoint" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpoint" />
       <keyword name="DebuggerInterfaceRuby.remoteWatchpointEnable" id="DebuggerInterfaceRuby.remoteWatchpointEnable" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpointEnable" />
       <keyword name="DebuggerInterfaceRuby.remoteWatchpointIgnore" id="DebuggerInterfaceRuby.remoteWatchpointIgnore" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpointIgnore" />
+      <keyword name="DebuggerInterfaceRuby.setCallTraceEnabled" id="DebuggerInterfaceRuby.setCallTraceEnabled" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.setCallTraceEnabled" />
       <keyword name="DebuggerInterfaceRuby.shutdown" id="DebuggerInterfaceRuby.shutdown" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.shutdown" />
       <keyword name="DebuggerInterfaceRuby.startRemote" id="DebuggerInterfaceRuby.startRemote" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.startRemote" />
       <keyword name="DebuggerInterfaceRuby.startRemoteForProject" id="DebuggerInterfaceRuby.startRemoteForProject" ref="eric5.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.startRemoteForProject" />
@@ -7810,6 +7836,7 @@
       <keyword name="Project.deleteDirectory" id="Project.deleteDirectory" ref="eric5.Project.Project.html#Project.deleteDirectory" />
       <keyword name="Project.deleteFile" id="Project.deleteFile" ref="eric5.Project.Project.html#Project.deleteFile" />
       <keyword name="Project.deleteLanguageFile" id="Project.deleteLanguageFile" ref="eric5.Project.Project.html#Project.deleteLanguageFile" />
+      <keyword name="Project.getAbsolutePath" id="Project.getAbsolutePath" ref="eric5.Project.Project.html#Project.getAbsolutePath" />
       <keyword name="Project.getAbsoluteUniversalPath" id="Project.getAbsoluteUniversalPath" ref="eric5.Project.Project.html#Project.getAbsoluteUniversalPath" />
       <keyword name="Project.getActions" id="Project.getActions" ref="eric5.Project.Project.html#Project.getActions" />
       <keyword name="Project.getData" id="Project.getData" ref="eric5.Project.Project.html#Project.getData" />
@@ -12538,6 +12565,7 @@
       <file>eric5.DebugClients.Ruby.__init__.html</file>
       <file>eric5.Debugger.BreakPointModel.html</file>
       <file>eric5.Debugger.BreakPointViewer.html</file>
+      <file>eric5.Debugger.CallTraceViewer.html</file>
       <file>eric5.Debugger.Config.html</file>
       <file>eric5.Debugger.DebugClientCapabilities.html</file>
       <file>eric5.Debugger.DebugProtocol.html</file>

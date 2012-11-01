@@ -95,8 +95,8 @@ class DebugServer(QTcpServer):
             an expected test failure
     @signal utTestSucceededUnexpected(testname, id) emitted after the client reported
             an unexpected test success
-    @signal callTraceInfo(isCall, fromFile, fromLine, fromFunction, toFile, toLine,
-            toFunction) emitted after the client reported the call trace data
+    @signal callTraceInfo(isCall, fromFile, fromLine, fromFunction, toFile, toLine, toFunction)
+            emitted after the client reported the call trace data
     """
     clientClearBreak = pyqtSignal(str, int)
     clientClearWatch = pyqtSignal(str)

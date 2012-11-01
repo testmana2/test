@@ -234,6 +234,7 @@ eric5.DebugClients.Python.DebugClientThreads.DebugClientThreads?1()
 eric5.DebugClients.Python.DebugClientThreads._debugclient_start_new_thread?5(target, args, kwargs={})
 eric5.DebugClients.Python.DebugClientThreads._original_start_thread?8
 eric5.DebugClients.Python.DebugConfig.ConfigVarTypeStrings?7
+eric5.DebugClients.Python.DebugProtocol.CallTrace?7
 eric5.DebugClients.Python.DebugProtocol.DebugAddress?7
 eric5.DebugClients.Python.DebugProtocol.EOT?7
 eric5.DebugClients.Python.DebugProtocol.PassiveStartup?7
@@ -241,6 +242,7 @@ eric5.DebugClients.Python.DebugProtocol.RequestBanner?7
 eric5.DebugClients.Python.DebugProtocol.RequestBreak?7
 eric5.DebugClients.Python.DebugProtocol.RequestBreakEnable?7
 eric5.DebugClients.Python.DebugProtocol.RequestBreakIgnore?7
+eric5.DebugClients.Python.DebugProtocol.RequestCallTrace?7
 eric5.DebugClients.Python.DebugProtocol.RequestCapabilities?7
 eric5.DebugClients.Python.DebugProtocol.RequestCompletion?7
 eric5.DebugClients.Python.DebugProtocol.RequestContinue?7
@@ -446,6 +448,7 @@ eric5.DebugClients.Python3.DebugClientThreads.DebugClientThreads?1()
 eric5.DebugClients.Python3.DebugClientThreads._debugclient_start_new_thread?5(target, args, kwargs={})
 eric5.DebugClients.Python3.DebugClientThreads._original_start_thread?8
 eric5.DebugClients.Python3.DebugConfig.ConfigVarTypeStrings?7
+eric5.DebugClients.Python3.DebugProtocol.CallTrace?7
 eric5.DebugClients.Python3.DebugProtocol.DebugAddress?7
 eric5.DebugClients.Python3.DebugProtocol.EOT?7
 eric5.DebugClients.Python3.DebugProtocol.PassiveStartup?7
@@ -453,6 +456,7 @@ eric5.DebugClients.Python3.DebugProtocol.RequestBanner?7
 eric5.DebugClients.Python3.DebugProtocol.RequestBreak?7
 eric5.DebugClients.Python3.DebugProtocol.RequestBreakEnable?7
 eric5.DebugClients.Python3.DebugProtocol.RequestBreakIgnore?7
+eric5.DebugClients.Python3.DebugProtocol.RequestCallTrace?7
 eric5.DebugClients.Python3.DebugProtocol.RequestCapabilities?7
 eric5.DebugClients.Python3.DebugProtocol.RequestCompletion?7
 eric5.DebugClients.Python3.DebugProtocol.RequestContinue?7
@@ -568,6 +572,17 @@ eric5.Debugger.BreakPointViewer.BreakPointViewer.highlightBreakpoint?4(fn, linen
 eric5.Debugger.BreakPointViewer.BreakPointViewer.setModel?4(model)
 eric5.Debugger.BreakPointViewer.BreakPointViewer.sourceFile?7
 eric5.Debugger.BreakPointViewer.BreakPointViewer?1(parent=None)
+eric5.Debugger.CallTraceViewer.CallTraceViewer.clear?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.isCallTraceEnabled?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_callTrace_itemDoubleClicked?4(item, column)
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_clearButton_clicked?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_resizeButton_clicked?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_saveButton_clicked?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_startTraceButton_clicked?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.on_stopTraceButton_clicked?4()
+eric5.Debugger.CallTraceViewer.CallTraceViewer.setProjectMode?4(enabled)
+eric5.Debugger.CallTraceViewer.CallTraceViewer.sourceFile?7
+eric5.Debugger.CallTraceViewer.CallTraceViewer?1(debugServer, parent=None)
 eric5.Debugger.DebugClientCapabilities.HasAll?7
 eric5.Debugger.DebugClientCapabilities.HasCompleter?7
 eric5.Debugger.DebugClientCapabilities.HasCoverage?7
@@ -576,12 +591,14 @@ eric5.Debugger.DebugClientCapabilities.HasInterpreter?7
 eric5.Debugger.DebugClientCapabilities.HasProfiler?7
 eric5.Debugger.DebugClientCapabilities.HasShell?7
 eric5.Debugger.DebugClientCapabilities.HasUnittest?7
+eric5.Debugger.DebugProtocol.CallTrace?7
 eric5.Debugger.DebugProtocol.EOT?7
 eric5.Debugger.DebugProtocol.PassiveStartup?7
 eric5.Debugger.DebugProtocol.RequestBanner?7
 eric5.Debugger.DebugProtocol.RequestBreak?7
 eric5.Debugger.DebugProtocol.RequestBreakEnable?7
 eric5.Debugger.DebugProtocol.RequestBreakIgnore?7
+eric5.Debugger.DebugProtocol.RequestCallTrace?7
 eric5.Debugger.DebugProtocol.RequestCapabilities?7
 eric5.Debugger.DebugProtocol.RequestCompletion?7
 eric5.Debugger.DebugProtocol.RequestContinue?7
@@ -640,6 +657,7 @@ eric5.Debugger.DebugProtocol.ResponseUTTestSucceededUnexpected?7
 eric5.Debugger.DebugProtocol.ResponseVariable?7
 eric5.Debugger.DebugProtocol.ResponseVariables?7
 eric5.Debugger.DebugProtocol.ResponseWPConditionError?7
+eric5.Debugger.DebugServer.DebugServer.callTraceInfo?7
 eric5.Debugger.DebugServer.DebugServer.clientBanner?7
 eric5.Debugger.DebugServer.DebugServer.clientBreakConditionError?7
 eric5.Debugger.DebugServer.DebugServer.clientCapabilities?7
@@ -694,7 +712,7 @@ eric5.Debugger.DebugServer.DebugServer.remoteCoverage?4(fn, argv, wd, env, autoC
 eric5.Debugger.DebugServer.DebugServer.remoteEnvironment?4(env)
 eric5.Debugger.DebugServer.DebugServer.remoteEval?4(arg)
 eric5.Debugger.DebugServer.DebugServer.remoteExec?4(stmt)
-eric5.Debugger.DebugServer.DebugServer.remoteLoad?4(fn, argv, wd, env, autoClearShell=True, tracePython=False, autoContinue=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType="")
+eric5.Debugger.DebugServer.DebugServer.remoteLoad?4(fn, argv, wd, env, autoClearShell=True, tracePython=False, autoContinue=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType="", enableCallTrace=False)
 eric5.Debugger.DebugServer.DebugServer.remoteProfile?4(fn, argv, wd, env, autoClearShell=True, erase=False, forProject=False, runInConsole=False, clientType="")
 eric5.Debugger.DebugServer.DebugServer.remoteRawInput?4(s)
 eric5.Debugger.DebugServer.DebugServer.remoteRun?4(fn, argv, wd, env, autoClearShell=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType="")
@@ -708,9 +726,11 @@ eric5.Debugger.DebugServer.DebugServer.remoteThreadList?4()
 eric5.Debugger.DebugServer.DebugServer.remoteUTPrepare?4(fn, tn, tfn, failed, cov, covname, coverase, clientType="")
 eric5.Debugger.DebugServer.DebugServer.remoteUTRun?4()
 eric5.Debugger.DebugServer.DebugServer.remoteUTStop?4()
+eric5.Debugger.DebugServer.DebugServer.setCallTraceEnabled?4(on)
 eric5.Debugger.DebugServer.DebugServer.shutdownServer?4()
 eric5.Debugger.DebugServer.DebugServer.signalClientBanner?4(version, platform, debugClient)
 eric5.Debugger.DebugServer.DebugServer.signalClientBreakConditionError?4(filename, lineno)
+eric5.Debugger.DebugServer.DebugServer.signalClientCallTrace?4(isCall, fromFile, fromLine, fromFunction, toFile, toLine, toFunction)
 eric5.Debugger.DebugServer.DebugServer.signalClientCapabilities?4(capabilities, clientType)
 eric5.Debugger.DebugServer.DebugServer.signalClientClearBreak?4(filename, lineno)
 eric5.Debugger.DebugServer.DebugServer.signalClientClearWatch?4(condition)
@@ -764,14 +784,17 @@ eric5.Debugger.DebugUI.DebugUI.shutdown?4()
 eric5.Debugger.DebugUI.DebugUI.shutdownServer?4()
 eric5.Debugger.DebugUI.DebugUI.variablesFilter?4(scope)
 eric5.Debugger.DebugUI.DebugUI?1(ui, vm, debugServer, debugViewer, project)
+eric5.Debugger.DebugViewer.DebugViewer.clearCallTrace?4()
 eric5.Debugger.DebugViewer.DebugViewer.currentWidget?4()
 eric5.Debugger.DebugViewer.DebugViewer.handleClientStack?4(stack)
 eric5.Debugger.DebugViewer.DebugViewer.handleDebuggingStarted?4()
 eric5.Debugger.DebugViewer.DebugViewer.handleRawInput?4()
 eric5.Debugger.DebugViewer.DebugViewer.handleResetUI?4()
+eric5.Debugger.DebugViewer.DebugViewer.isCallTraceEnabled?4()
 eric5.Debugger.DebugViewer.DebugViewer.preferencesChanged?4()
 eric5.Debugger.DebugViewer.DebugViewer.restoreCurrentPage?4()
 eric5.Debugger.DebugViewer.DebugViewer.saveCurrentPage?4()
+eric5.Debugger.DebugViewer.DebugViewer.setCallTraceToProjectMode?4(enabled)
 eric5.Debugger.DebugViewer.DebugViewer.setCurrentWidget?4(widget)
 eric5.Debugger.DebugViewer.DebugViewer.setDebugger?4(debugUI)
 eric5.Debugger.DebugViewer.DebugViewer.setVariablesFilter?4(globalsFilter, localsFilter)
@@ -818,6 +841,7 @@ eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.remoteUTStop?4()
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.remoteWatchpoint?4(cond, set, temp=False)
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.remoteWatchpointEnable?4(cond, enable)
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.remoteWatchpointIgnore?4(cond, count)
+eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.setCallTraceEnabled?4(on)
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.shutdown?4()
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.startRemote?4(port, runInConsole)
 eric5.Debugger.DebuggerInterfaceNone.DebuggerInterfaceNone.startRemoteForProject?4(port, runInConsole)
@@ -859,6 +883,7 @@ eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.remoteUTStop?4()
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.remoteWatchpoint?4(cond, set, temp=False)
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.remoteWatchpointEnable?4(cond, enable)
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.remoteWatchpointIgnore?4(cond, count)
+eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.setCallTraceEnabled?4(on)
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.shutdown?4()
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.startRemote?4(port, runInConsole)
 eric5.Debugger.DebuggerInterfacePython.DebuggerInterfacePython.startRemoteForProject?4(port, runInConsole)
@@ -900,6 +925,7 @@ eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.remoteUTStop?4(
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.remoteWatchpoint?4(cond, set, temp=False)
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.remoteWatchpointEnable?4(cond, enable)
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.remoteWatchpointIgnore?4(cond, count)
+eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.setCallTraceEnabled?4(on)
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.shutdown?4()
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.startRemote?4(port, runInConsole)
 eric5.Debugger.DebuggerInterfacePython3.DebuggerInterfacePython3.startRemoteForProject?4(port, runInConsole)
@@ -942,6 +968,7 @@ eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.remoteUTStop?4()
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.remoteWatchpoint?4(cond, set, temp=False)
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.remoteWatchpointEnable?4(cond, enable)
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.remoteWatchpointIgnore?4(cond, count)
+eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.setCallTraceEnabled?4(on)
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.shutdown?4()
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.startRemote?4(port, runInConsole)
 eric5.Debugger.DebuggerInterfaceRuby.DebuggerInterfaceRuby.startRemoteForProject?4(port, runInConsole)
@@ -5805,6 +5832,7 @@ eric5.Project.Project.Project.deleteLanguageFile?4(langFile)
 eric5.Project.Project.Project.directoryRemoved?7
 eric5.Project.Project.Project.dirty?7
 eric5.Project.Project.Project.eols?7
+eric5.Project.Project.Project.getAbsolutePath?4(fn)
 eric5.Project.Project.Project.getAbsoluteUniversalPath?4(fn)
 eric5.Project.Project.Project.getActions?4()
 eric5.Project.Project.Project.getData?4(category, key)

@@ -46,7 +46,10 @@ Module implementing the debug server.
     Class implementing the debug server embedded within the IDE.
 </p><h3>Signals</h3>
 <dl>
-<dt>clientBanner(banner)</dt>
+<dt>callTraceInfo(isCall, fromFile, fromLine, fromFunction, toFile, toLine, toFunction)</dt>
+<dd>
+            emitted after the client reported the call trace data
+</dd><dt>clientBanner(banner)</dt>
 <dd>
 emitted after the client banner was received
 </dd><dt>clientBreakConditionError(fn, lineno)</dt>
@@ -403,6 +406,9 @@ QTcpServer
 <td><a href="#DebugServer.remoteUTStop">remoteUTStop</a></td>
 <td>public method to stop a unittest run.</td>
 </tr><tr>
+<td><a href="#DebugServer.setCallTraceEnabled">setCallTraceEnabled</a></td>
+<td>Public method to set the call trace state.</td>
+</tr><tr>
 <td><a href="#DebugServer.shutdownServer">shutdownServer</a></td>
 <td>Public method to cleanly shut down.</td>
 </tr><tr>
@@ -411,6 +417,9 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.signalClientBreakConditionError">signalClientBreakConditionError</a></td>
 <td>Public method to process the client breakpoint condition error info.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientCallTrace">signalClientCallTrace</a></td>
+<td>Public method to process the client call trace data.</td>
 </tr><tr>
 <td><a href="#DebugServer.signalClientCapabilities">signalClientCapabilities</a></td>
 <td>Public method to process the client capabilities info.</td>
@@ -1185,7 +1194,7 @@ statement to execute (string)
 </dd>
 </dl><a NAME="DebugServer.remoteLoad" ID="DebugServer.remoteLoad"></a>
 <h4>DebugServer.remoteLoad</h4>
-<b>remoteLoad</b>(<i>fn, argv, wd, env, autoClearShell=True, tracePython=False, autoContinue=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType=""</i>)
+<b>remoteLoad</b>(<i>fn, argv, wd, env, autoClearShell=True, tracePython=False, autoContinue=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType="", enableCallTrace=False</i>)
 <p>
         Public method to load a new program to debug.
 </p><dl>
@@ -1229,6 +1238,10 @@ flag indicating to debug the child after forking (boolean)
 </dd><dt><i>clientType=</i></dt>
 <dd>
 client type to be used (string)
+</dd><dt><i>enableCallTrace=</i></dt>
+<dd>
+flag indicating to enable the call trace
+            function (boolean)
 </dd>
 </dl><a NAME="DebugServer.remoteProfile" ID="DebugServer.remoteProfile"></a>
 <h4>DebugServer.remoteProfile</h4>
@@ -1404,7 +1417,17 @@ client type to be used (string)
 <b>remoteUTStop</b>(<i></i>)
 <p>
         public method to stop a unittest run.
-</p><a NAME="DebugServer.shutdownServer" ID="DebugServer.shutdownServer"></a>
+</p><a NAME="DebugServer.setCallTraceEnabled" ID="DebugServer.setCallTraceEnabled"></a>
+<h4>DebugServer.setCallTraceEnabled</h4>
+<b>setCallTraceEnabled</b>(<i>on</i>)
+<p>
+        Public method to set the call trace state.
+</p><dl>
+<dt><i>on</i></dt>
+<dd>
+flag indicating to enable the call trace function (boolean)
+</dd>
+</dl><a NAME="DebugServer.shutdownServer" ID="DebugServer.shutdownServer"></a>
 <h4>DebugServer.shutdownServer</h4>
 <b>shutdownServer</b>(<i></i>)
 <p>
@@ -1440,6 +1463,34 @@ filename of the breakpoint (string)
 </dd><dt><i>lineno</i></dt>
 <dd>
 line umber of the breakpoint (integer)
+</dd>
+</dl><a NAME="DebugServer.signalClientCallTrace" ID="DebugServer.signalClientCallTrace"></a>
+<h4>DebugServer.signalClientCallTrace</h4>
+<b>signalClientCallTrace</b>(<i>isCall, fromFile, fromLine, fromFunction, toFile, toLine, toFunction</i>)
+<p>
+        Public method to process the client call trace data.
+</p><dl>
+<dt><i>isCall</i></dt>
+<dd>
+flag indicating a 'call' (boolean)
+</dd><dt><i>fromFile</i></dt>
+<dd>
+name of the originating file (string)
+</dd><dt><i>fromLine</i></dt>
+<dd>
+line number in the originating file (string)
+</dd><dt><i>fromFunction</i></dt>
+<dd>
+name of the originating function (string)
+</dd><dt><i>toFile</i></dt>
+<dd>
+name of the target file (string)
+</dd><dt><i>toLine</i></dt>
+<dd>
+line number in the target file (string)
+</dd><dt><i>toFunction</i></dt>
+<dd>
+name of the target function (string)
 </dd>
 </dl><a NAME="DebugServer.signalClientCapabilities" ID="DebugServer.signalClientCapabilities"></a>
 <h4>DebugServer.signalClientCapabilities</h4>

@@ -85,6 +85,9 @@ bdb.Bdb
 <td><a href="#DebugBase.__extract_stack">__extract_stack</a></td>
 <td>Private member to return a list of stack frames.</td>
 </tr><tr>
+<td><a href="#DebugBase.__sendCallTrace">__sendCallTrace</a></td>
+<td>Private method to send a call/return trace.</td>
+</tr><tr>
 <td><a href="#DebugBase.__skip_it">__skip_it</a></td>
 <td>Private method to filter out debugger files.</td>
 </tr><tr>
@@ -251,6 +254,22 @@ exception traceback
 <dt>Returns:</dt>
 <dd>
 list of stack frames
+</dd>
+</dl><a NAME="DebugBase.__sendCallTrace" ID="DebugBase.__sendCallTrace"></a>
+<h4>DebugBase.__sendCallTrace</h4>
+<b>__sendCallTrace</b>(<i>event, fromFrame, toFrame</i>)
+<p>
+        Private method to send a call/return trace.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+trace event (string)
+</dd><dt><i>fromFrame</i></dt>
+<dd>
+originating frame (frame)
+</dd><dt><i>toFrame</i></dt>
+<dd>
+destination frame (frame)
 </dd>
 </dl><a NAME="DebugBase.__skip_it" ID="DebugBase.__skip_it"></a>
 <h4>DebugBase.__skip_it</h4>

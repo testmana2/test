@@ -28,6 +28,7 @@ The views avaliable are:
 <ul>
   <li>variables viewer for global variables</li>
   <li>variables viewer for local variables</li>
+  <li>call trace viewer</li>
   <li>viewer for breakpoints</li>
   <li>viewer for watch expressions</li>
   <li>viewer for exceptions</li>
@@ -99,6 +100,9 @@ QWidget
 <td><a href="#DebugViewer.__threadSelected">__threadSelected</a></td>
 <td>Private slot to handle the selection of a thread in the thread list.</td>
 </tr><tr>
+<td><a href="#DebugViewer.clearCallTrace">clearCallTrace</a></td>
+<td>Public method to clear the recorded call trace.</td>
+</tr><tr>
 <td><a href="#DebugViewer.currentWidget">currentWidget</a></td>
 <td>Public method to get a reference to the current widget.</td>
 </tr><tr>
@@ -114,6 +118,9 @@ QWidget
 <td><a href="#DebugViewer.handleResetUI">handleResetUI</a></td>
 <td>Public method to reset the SBVviewer.</td>
 </tr><tr>
+<td><a href="#DebugViewer.isCallTraceEnabled">isCallTraceEnabled</a></td>
+<td>Public method to get the state of the call trace function.</td>
+</tr><tr>
 <td><a href="#DebugViewer.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle the preferencesChanged signal.</td>
 </tr><tr>
@@ -122,6 +129,9 @@ QWidget
 </tr><tr>
 <td><a href="#DebugViewer.saveCurrentPage">saveCurrentPage</a></td>
 <td>Public slot to save the current page.</td>
+</tr><tr>
+<td><a href="#DebugViewer.setCallTraceToProjectMode">setCallTraceToProjectMode</a></td>
+<td>Public slot to set the call trace viewer to project mode.</td>
 </tr><tr>
 <td><a href="#DebugViewer.setCurrentWidget">setCurrentWidget</a></td>
 <td>Public slot to set the current page based on the given widget.</td>
@@ -217,7 +227,12 @@ reference to the new current item (QTreeWidgetItem)
 <dd>
 reference to the previous current item (QTreeWidgetItem)
 </dd>
-</dl><a NAME="DebugViewer.currentWidget" ID="DebugViewer.currentWidget"></a>
+</dl><a NAME="DebugViewer.clearCallTrace" ID="DebugViewer.clearCallTrace"></a>
+<h4>DebugViewer.clearCallTrace</h4>
+<b>clearCallTrace</b>(<i></i>)
+<p>
+        Public method to clear the recorded call trace.
+</p><a NAME="DebugViewer.currentWidget" ID="DebugViewer.currentWidget"></a>
 <h4>DebugViewer.currentWidget</h4>
 <b>currentWidget</b>(<i></i>)
 <p>
@@ -249,7 +264,17 @@ reference to the current widget (QWidget)
 <b>handleResetUI</b>(<i></i>)
 <p>
         Public method to reset the SBVviewer.
-</p><a NAME="DebugViewer.preferencesChanged" ID="DebugViewer.preferencesChanged"></a>
+</p><a NAME="DebugViewer.isCallTraceEnabled" ID="DebugViewer.isCallTraceEnabled"></a>
+<h4>DebugViewer.isCallTraceEnabled</h4>
+<b>isCallTraceEnabled</b>(<i></i>)
+<p>
+        Public method to get the state of the call trace function.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the state of the call trace function (boolean)
+</dd>
+</dl><a NAME="DebugViewer.preferencesChanged" ID="DebugViewer.preferencesChanged"></a>
 <h4>DebugViewer.preferencesChanged</h4>
 <b>preferencesChanged</b>(<i></i>)
 <p>
@@ -264,7 +289,20 @@ reference to the current widget (QWidget)
 <b>saveCurrentPage</b>(<i></i>)
 <p>
         Public slot to save the current page.
-</p><a NAME="DebugViewer.setCurrentWidget" ID="DebugViewer.setCurrentWidget"></a>
+</p><a NAME="DebugViewer.setCallTraceToProjectMode" ID="DebugViewer.setCallTraceToProjectMode"></a>
+<h4>DebugViewer.setCallTraceToProjectMode</h4>
+<b>setCallTraceToProjectMode</b>(<i>enabled</i>)
+<p>
+        Public slot to set the call trace viewer to project mode.
+</p><p>
+        In project mode the call trace info is shown with project relative
+        path names.
+</p><dl>
+<dt><i>enabled</i></dt>
+<dd>
+flag indicating to enable the project mode (boolean)
+</dd>
+</dl><a NAME="DebugViewer.setCurrentWidget" ID="DebugViewer.setCurrentWidget"></a>
 <h4>DebugViewer.setCurrentWidget</h4>
 <b>setCurrentWidget</b>(<i>widget</i>)
 <p>

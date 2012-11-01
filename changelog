@@ -2,6 +2,11 @@ Change Log
 ----------
 Version 5.3-snapshot-2012mmdd:
 - bug fixes
+- Debugger
+  -- added the capability to trace function calls and returns to the
+     Python 2 and Python 3 debuggers
+- Debug Viewer
+  -- added a viewer for call trace logs
 
 Version 5.3-snapshot-20121101:
 - bug fixes
