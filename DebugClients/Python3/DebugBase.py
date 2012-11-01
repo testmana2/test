@@ -14,7 +14,7 @@ import atexit
 import inspect
 
 from DebugProtocol import ResponseClearWatch, ResponseClearBreak, ResponseLine, \
-    ResponseSyntax, ResponseException
+    ResponseSyntax, ResponseException, CallTrace
 
 gRecursionLimit = 64
 
@@ -153,12 +153,38 @@ class DebugBase(bdb.Bdb):
         if event == 'return':
             self.cFrame = frame.f_back
             self.__recursionDepth -= 1
+            self.__sendCallTrace(event, frame, self.cFrame)
         elif event == 'call':
+            self.__sendCallTrace(event, self.cFrame, frame)
             self.cFrame = frame
             self.__recursionDepth += 1
             if self.__recursionDepth > gRecursionLimit:
                 raise RuntimeError('maximum recursion depth exceeded\n'
                     '(offending frame is two down the stack)')
+    
+    def __sendCallTrace(self, event, fromFrame, toFrame):
+        """
+        Private method to send a call/return trace.
+        
+        @param event trace event (string)
+        @param fromFrame originating frame (frame)
+        @param toFrame destination frame (frame)
+        """
+        if self._dbgClient.callTraceEnabled:
+            if not self.__skip_it(fromFrame) and not self.__skip_it(toFrame):
+                if event in ["call", "return"]:
+                    fr = fromFrame
+                    fromStr = "{0}:{1}:{2}".format(
+                        self._dbgClient.absPath(self.fix_frame_filename(fr)),
+                        fr.f_lineno,
+                        fr.f_code.co_name)
+                    fr = toFrame
+                    toStr = "{0}:{1}:{2}".format(
+                        self._dbgClient.absPath(self.fix_frame_filename(fr)),
+                        fr.f_lineno,
+                        fr.f_code.co_name)
+                    self._dbgClient.write("{0}{1}@@{2}@@{3}\n".format(
+                        CallTrace, event[0], fromStr, toStr))
     
     def trace_dispatch(self, frame, event, arg):
         """
@@ -718,6 +744,9 @@ class DebugBase(bdb.Bdb):
         @param frame the frame object
         @return flag indicating whether the debugger should skip this frame
         """
+        if frame is None:
+            return True
+        
         fn = self.fix_frame_filename(frame)
 
         # Eliminate things like <string> and <stdin>.

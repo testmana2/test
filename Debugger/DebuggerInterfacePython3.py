@@ -666,6 +666,18 @@ class DebuggerInterfacePython3(QObject):
         self.__sendCommand('{0}{1:d}, "{2}"\n'.format(
             DebugProtocol.RequestSetFilter, scope, filter))
     
+    def setCallTraceEnabled(self, on):
+        """
+        Public method to set the call trace state.
+        
+        @param on flag indicating to enable the call trace function (boolean)
+        """
+        if on:
+            cmd = "on"
+        else:
+            cmd = "off"
+        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestCallTrace, cmd))
+    
     def remoteEval(self, arg):
         """
         Public method to evaluate arg in the current context of the debugged program.
@@ -798,6 +810,16 @@ class DebuggerInterfacePython3(QObject):
                         self.debugServer.signalClientLine(cf[0], int(cf[1]),
                                                     resp == DebugProtocol.ResponseStack)
                         self.debugServer.signalClientStack(stack)
+                    continue
+                
+                if resp == DebugProtocol.CallTrace:
+                    event, fromStr, toStr = line[eoc:-1].split("@@")
+                    isCall = event.lower() == "c"
+                    fromFile, fromLineno, fromFunc = fromStr.rsplit(":", 2)
+                    toFile, toLineno, toFunc = toStr.rsplit(":", 2)
+                    self.debugServer.signalClientCallTrace(isCall,
+                        fromFile, fromLineno, fromFunc,
+                        toFile, toLineno, toFunc)
                     continue
                 
                 if resp == DebugProtocol.ResponseThreadList:

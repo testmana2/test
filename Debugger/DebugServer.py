@@ -95,6 +95,8 @@ class DebugServer(QTcpServer):
             an expected test failure
     @signal utTestSucceededUnexpected(testname, id) emitted after the client reported
             an unexpected test success
+    @signal callTraceInfo(isCall, fromFile, fromLine, fromFunction, toFile, toLine,
+            toFunction) emitted after the client reported the call trace data
     """
     clientClearBreak = pyqtSignal(str, int)
     clientClearWatch = pyqtSignal(str)
@@ -129,6 +131,7 @@ class DebugServer(QTcpServer):
     utTestSucceededUnexpected = pyqtSignal(str, str)
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
+    callTraceInfo = pyqtSignal(bool, str, str, str, str, str, str)
     
     def __init__(self):
         """
@@ -665,7 +668,7 @@ class DebugServer(QTcpServer):
     def remoteLoad(self, fn, argv, wd, env, autoClearShell=True,
                    tracePython=False, autoContinue=True, forProject=False,
                    runInConsole=False, autoFork=False, forkChild=False,
-                   clientType=""):
+                   clientType="", enableCallTrace=False):
         """
         Public method to load a new program to debug.
         
@@ -685,6 +688,8 @@ class DebugServer(QTcpServer):
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
         @keyparam clientType client type to be used (string)
+        @keyparam enableCallTrace flag indicating to enable the call trace
+            function (boolean)
         """
         self.__autoClearShell = autoClearShell
         self.__autoContinue = autoContinue
@@ -699,6 +704,7 @@ class DebugServer(QTcpServer):
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject=forProject, runInConsole=runInConsole)
         
+        self.setCallTraceEnabled(enableCallTrace)
         self.remoteEnvironment(env)
         
         self.debuggerInterface.remoteLoad(fn, argv, wd, tracePython, autoContinue,
@@ -977,6 +983,18 @@ class DebugServer(QTcpServer):
         """
         self.debuggerInterface.remoteClientSetFilter(scope, filter)
         
+    def setCallTraceEnabled(self, on):
+        """
+        Public method to set the call trace state.
+        
+        @param on flag indicating to enable the call trace function (boolean)
+        """
+        # TODO: remove the try/except once all interface have been adjusted
+        try:
+            self.debuggerInterface.setCallTraceEnabled(on)
+        except AttributeError:
+            pass
+        
     def remoteEval(self, arg):
         """
         Public method to evaluate arg in the current context of the debugged program.
@@ -1237,6 +1255,22 @@ class DebugServer(QTcpServer):
         @param text the text to be completed (string)
         """
         self.clientCompletionList.emit(completionList, text)
+        
+    def signalClientCallTrace(self, isCall, fromFile, fromLine, fromFunction,
+                              toFile, toLine, toFunction):
+        """
+        Public method to process the client call trace data.
+        
+        @param isCall flag indicating a 'call' (boolean)
+        @param fromFile name of the originating file (string)
+        @param fromLine line number in the originating file (string)
+        @param fromFunction name of the originating function (string)
+        @param toFile name of the target file (string)
+        @param toLine line number in the target file (string)
+        @param toFunction name of the target function (string)
+        """
+        self.callTraceInfo.emit(isCall, fromFile, fromLine, fromFunction,
+            toFile, toLine, toFunction)
         
     def clientUtPrepared(self, result, exceptionType, exceptionValue):
         """

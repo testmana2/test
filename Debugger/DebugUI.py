@@ -1776,12 +1776,18 @@ class DebugUI(QObject):
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                     tracePython = True  # override flag because it must be true
                 
+                # Ask the client to send call trace info
+                enableCallTrace = self.debugViewer.isCallTraceEnabled()
+                if enableCallTrace:
+                    self.debugViewer.clearCallTrace()
+                
                 # Ask the client to open the new program.
                 self.debugServer.remoteLoad(fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, tracePython=tracePython,
                     autoContinue=autoContinue, forProject=debugProject,
                     runInConsole=console, autoFork=forkAutomatically,
-                    forkChild=forkIntoChild, clientType=self.clientType)
+                    forkChild=forkIntoChild, clientType=self.clientType,
+                    enableCallTrace=enableCallTrace)
                 
                 # Signal that we have started a debugging session
                 self.debuggingStarted.emit(fn)
@@ -1827,12 +1833,18 @@ class DebugUI(QObject):
                 fn = os.path.join(getConfig('ericDir'), "eric5.py")
             
             if self.lastStartAction in [1, 2]:
+                # Ask the client to send call trace info
+                enableCallTrace = self.debugViewer.isCallTraceEnabled()
+                if enableCallTrace:
+                    self.debugViewer.clearCallTrace()
+                
                 # Ask the client to debug the new program.
                 self.debugServer.remoteLoad(fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, tracePython=self.tracePython,
                     autoContinue=self.autoContinue, forProject=forProject,
                     runInConsole=self.runInConsole, autoFork=self.forkAutomatically,
-                    forkChild=self.forkIntoChild, clientType=self.clientType)
+                    forkChild=self.forkIntoChild, clientType=self.clientType,
+                    enableCallTrace=enableCallTrace)
                 
                 # Signal that we have started a debugging session
                 self.debuggingStarted.emit(fn)

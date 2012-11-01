@@ -10,6 +10,7 @@ The views avaliable are:
 <ul>
   <li>variables viewer for global variables</li>
   <li>variables viewer for local variables</li>
+  <li>call trace viewer</li>
   <li>viewer for breakpoints</li>
   <li>viewer for watch expressions</li>
   <li>viewer for exceptions</li>
@@ -30,6 +31,7 @@ from .VariablesViewer import VariablesViewer
 from .ExceptionLogger import ExceptionLogger
 from .BreakPointViewer import BreakPointViewer
 from .WatchPointViewer import WatchPointViewer
+from .CallTraceViewer import CallTraceViewer
 
 import UI.PixmapCache
 import Preferences
@@ -183,6 +185,12 @@ class DebugViewer(QWidget):
         self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
         self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
         
+        # add the call trace viewer
+        self.callTraceViewer = CallTraceViewer(self.debugServer)
+        index = self.__tabWidget.addTab(self.callTraceViewer,
+            UI.PixmapCache.getIcon("callTrace.png"), "")
+        self.__tabWidget.setTabToolTip(index, self.callTraceViewer.windowTitle())
+        
         # add the breakpoint viewer
         self.breakpointViewer = BreakPointViewer()
         self.breakpointViewer.setModel(self.debugServer.getBreakPointModel())
@@ -278,7 +286,21 @@ class DebugViewer(QWidget):
         if self.embeddedShell:
             self.saveCurrentPage()
             self.__tabWidget.setCurrentWidget(self.shellAssembly)
-            
+        
+    def isCallTraceEnabled(self):
+        """
+        Public method to get the state of the call trace function.
+        
+        @return flag indicating the state of the call trace function (boolean)
+        """
+        return self.callTraceViewer.isCallTraceEnabled()
+        
+    def clearCallTrace(self):
+        """
+        Public method to clear the recorded call trace.
+        """
+        self.callTraceViewer.clear()
+        
     def showVariables(self, vlist, globals):
         """
         Public method to show the variables in the respective window.
