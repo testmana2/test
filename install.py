@@ -392,17 +392,18 @@ def cleanUp():
         exit(7)
 
 
-def shutilCopy(src, dst):
+def shutilCopy(src, dst, perm=0o644):
     """
     Wrapper function around shutil.copy() to ensure the permissions.
     
     @param src source file name (string)
     @param dst destination file name or directory name (string)
+    @keyparam perm permissions to be set (integer)
     """
     shutil.copy(src, dst)
     if os.path.isdir(dst):
         dst = os.path.join(dst, os.path.basename(src))
-    os.chmod(dst, 0o644)
+    os.chmod(dst, perm)
 
 
 def installEric():
@@ -490,7 +491,7 @@ def installEric():
         
         # copy the wrappers
         for wname in wnames:
-            shutilCopy(wname, cfg['bindir'])
+            shutilCopy(wname, cfg['bindir'], perm=0o755)
             os.remove(wname)
         
         # copy the license file
