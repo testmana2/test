@@ -8394,7 +8394,7 @@ eric5.install.progLanguages?7
 eric5.install.progName?7
 eric5.install.pyModDir?7
 eric5.install.pyName?4(py_dir, py_file)
-eric5.install.shutilCopy?4(src, dst)
+eric5.install.shutilCopy?4(src, dst, perm=0o644)
 eric5.install.sourceDir?7
 eric5.install.usage?4(rcode=2)
 eric5.install.wrapperName?4(dname, wfile)

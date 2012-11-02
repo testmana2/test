@@ -335,7 +335,7 @@ tuple of directory name (string) and source file name (string)
 <hr /><hr />
 <a NAME="shutilCopy" ID="shutilCopy"></a>
 <h2>shutilCopy</h2>
-<b>shutilCopy</b>(<i>src, dst</i>)
+<b>shutilCopy</b>(<i>src, dst, perm=0o644</i>)
 <p>
     Wrapper function around shutil.copy() to ensure the permissions.
 </p><dl>
@@ -345,6 +345,9 @@ source file name (string)
 </dd><dt><i>dst</i></dt>
 <dd>
 destination file name or directory name (string)
+</dd><dt><i>perm=</i></dt>
+<dd>
+permissions to be set (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
