@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>608</width>
-    <height>201</height>
+    <height>177</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,11 +32,21 @@
      <property name="title">
       <string>&amp;Edit Profile</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QCheckBox" name="epvtCheckBox">
+       <widget class="QCheckBox" name="epltCheckBox">
         <property name="text">
-         <string>Vertical Toolbox</string>
+         <string>Left Toolbox</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="eprtCheckBox">
+        <property name="text">
+         <string>Right Toolbox</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -53,23 +63,6 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QCheckBox" name="epcoCheckBox">
-        <property name="text">
-         <string>Cooperation</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="epdbCheckBox">
-        <property name="text">
-         <string>Debug-Viewer</string>
-        </property>
-       </widget>
-      </item>
      </layout>
     </widget>
    </item>
@@ -78,18 +71,18 @@
      <property name="title">
       <string>&amp;Debug Profile</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QCheckBox" name="dpvtCheckBox">
+       <widget class="QCheckBox" name="dpltCheckBox">
         <property name="text">
-         <string>Vertical Toolbox</string>
+         <string>Left Toolbox</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="dphtCheckBox">
+       <widget class="QCheckBox" name="dprtCheckBox">
         <property name="text">
-         <string>Horizontal Toolbox</string>
+         <string>Right Toolbox</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -97,16 +90,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="dpcoCheckBox">
+       <widget class="QCheckBox" name="dphtCheckBox">
         <property name="text">
-         <string>Cooperation</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="dpdbCheckBox">
-        <property name="text">
-         <string>Debug-Viewer</string>
+         <string>Horizontal Toolbox</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -131,14 +117,12 @@
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
-  <tabstop>epvtCheckBox</tabstop>
+  <tabstop>epltCheckBox</tabstop>
+  <tabstop>eprtCheckBox</tabstop>
   <tabstop>ephtCheckBox</tabstop>
-  <tabstop>epcoCheckBox</tabstop>
-  <tabstop>epdbCheckBox</tabstop>
-  <tabstop>dpvtCheckBox</tabstop>
+  <tabstop>dpltCheckBox</tabstop>
+  <tabstop>dprtCheckBox</tabstop>
   <tabstop>dphtCheckBox</tabstop>
-  <tabstop>dpcoCheckBox</tabstop>
-  <tabstop>dpdbCheckBox</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

@@ -278,6 +278,9 @@ E5MainWindow
 <td><a href="#UserInterface.__customViewer">__customViewer</a></td>
 <td>Private slot to start a custom viewer.</td>
 </tr><tr>
+<td><a href="#UserInterface.__debuggingDone">__debuggingDone</a></td>
+<td>Private slot to handle the end of a debugging session.</td>
+</tr><tr>
 <td><a href="#UserInterface.__debuggingStarted">__debuggingStarted</a></td>
 <td>Private slot to handle the start of a debugging session.</td>
 </tr><tr>
@@ -476,6 +479,9 @@ E5MainWindow
 <td><a href="#UserInterface.__showQt4Doc">__showQt4Doc</a></td>
 <td>Private slot to show the Qt4 documentation.</td>
 </tr><tr>
+<td><a href="#UserInterface.__showSubWindowMenu">__showSubWindowMenu</a></td>
+<td>Private slot to display the Window menu of the Window menu.</td>
+</tr><tr>
 <td><a href="#UserInterface.__showSvg">__showSvg</a></td>
 <td>Private slot to show a SVG file in a dialog.</td>
 </tr><tr>
@@ -524,50 +530,20 @@ E5MainWindow
 <td><a href="#UserInterface.__toggleBottomSidebar">__toggleBottomSidebar</a></td>
 <td>Private slot to handle the toggle of the bottom sidebar window.</td>
 </tr><tr>
-<td><a href="#UserInterface.__toggleBrowser">__toggleBrowser</a></td>
-<td>Private slot to handle the toggle of the File Browser window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleCooperationViewer">__toggleCooperationViewer</a></td>
-<td>Private slot to handle the toggle of the cooperation window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleDebugViewer">__toggleDebugViewer</a></td>
-<td>Private slot to handle the toggle of the debug viewer.</td>
-</tr><tr>
 <td><a href="#UserInterface.__toggleHorizontalToolbox">__toggleHorizontalToolbox</a></td>
 <td>Private slot to handle the toggle of the Horizontal Toolbox window.</td>
 </tr><tr>
 <td><a href="#UserInterface.__toggleLeftSidebar">__toggleLeftSidebar</a></td>
 <td>Private slot to handle the toggle of the left sidebar window.</td>
 </tr><tr>
-<td><a href="#UserInterface.__toggleLogViewer">__toggleLogViewer</a></td>
-<td>Private slot to handle the toggle of the Log Viewer window.</td>
+<td><a href="#UserInterface.__toggleLeftToolbox">__toggleLeftToolbox</a></td>
+<td>Private slot to handle the toggle of the Left Toolbox window.</td>
 </tr><tr>
-<td><a href="#UserInterface.__toggleMultiProjectBrowser">__toggleMultiProjectBrowser</a></td>
-<td>Private slot to handle the toggle of the Project Browser window.</td>
+<td><a href="#UserInterface.__toggleRightSidebar">__toggleRightSidebar</a></td>
+<td>Private slot to handle the toggle of the right sidebar window.</td>
 </tr><tr>
-<td><a href="#UserInterface.__toggleNumbersViewer">__toggleNumbersViewer</a></td>
-<td>Private slot to handle the toggle of the Numbers Viewer window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleProjectBrowser">__toggleProjectBrowser</a></td>
-<td>Private slot to handle the toggle of the Project Browser window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleShell">__toggleShell</a></td>
-<td>Private slot to handle the toggle of the Shell window .</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleSymbolsViewer">__toggleSymbolsViewer</a></td>
-<td>Private slot to handle the toggle of the Symbols Viewer window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleTaskViewer">__toggleTaskViewer</a></td>
-<td>Private slot to handle the toggle of the Task Viewer window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleTemplateViewer">__toggleTemplateViewer</a></td>
-<td>Private slot to handle the toggle of the Template Viewer window.</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleTerminal">__toggleTerminal</a></td>
-<td>Private slot to handle the toggle of the Terminal window .</td>
-</tr><tr>
-<td><a href="#UserInterface.__toggleVerticalToolbox">__toggleVerticalToolbox</a></td>
-<td>Private slot to handle the toggle of the Vertical Toolbox window.</td>
+<td><a href="#UserInterface.__toggleRightToolbox">__toggleRightToolbox</a></td>
+<td>Private slot to handle the toggle of the Right Toolbox window.</td>
 </tr><tr>
 <td><a href="#UserInterface.__toggleWindow">__toggleWindow</a></td>
 <td>Private method to toggle a workspace editor window.</td>
@@ -1023,7 +999,12 @@ reference to the debug server object
 <dd>
 full pathname of a file to display (string)
 </dd>
-</dl><a NAME="UserInterface.__debuggingStarted" ID="UserInterface.__debuggingStarted"></a>
+</dl><a NAME="UserInterface.__debuggingDone" ID="UserInterface.__debuggingDone"></a>
+<h4>UserInterface.__debuggingDone</h4>
+<b>__debuggingDone</b>(<i></i>)
+<p>
+        Private slot to handle the end of a debugging session.
+</p><a NAME="UserInterface.__debuggingStarted" ID="UserInterface.__debuggingStarted"></a>
 <h4>UserInterface.__debuggingStarted</h4>
 <b>__debuggingStarted</b>(<i></i>)
 <p>
@@ -1465,6 +1446,11 @@ filename of the file to show (string)
 <b>__showQt4Doc</b>(<i></i>)
 <p>
         Private slot to show the Qt4 documentation.
+</p><a NAME="UserInterface.__showSubWindowMenu" ID="UserInterface.__showSubWindowMenu"></a>
+<h4>UserInterface.__showSubWindowMenu</h4>
+<b>__showSubWindowMenu</b>(<i></i>)
+<p>
+        Private slot to display the Window menu of the Window menu.
 </p><a NAME="UserInterface.__showSvg" ID="UserInterface.__showSvg"></a>
 <h4>UserInterface.__showSvg</h4>
 <b>__showSvg</b>(<i>fn</i>)
@@ -1581,21 +1567,6 @@ list of tool entries
 <b>__toggleBottomSidebar</b>(<i></i>)
 <p>
         Private slot to handle the toggle of the bottom sidebar window.
-</p><a NAME="UserInterface.__toggleBrowser" ID="UserInterface.__toggleBrowser"></a>
-<h4>UserInterface.__toggleBrowser</h4>
-<b>__toggleBrowser</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the File Browser window.
-</p><a NAME="UserInterface.__toggleCooperationViewer" ID="UserInterface.__toggleCooperationViewer"></a>
-<h4>UserInterface.__toggleCooperationViewer</h4>
-<b>__toggleCooperationViewer</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the cooperation window.
-</p><a NAME="UserInterface.__toggleDebugViewer" ID="UserInterface.__toggleDebugViewer"></a>
-<h4>UserInterface.__toggleDebugViewer</h4>
-<b>__toggleDebugViewer</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the debug viewer.
 </p><a NAME="UserInterface.__toggleHorizontalToolbox" ID="UserInterface.__toggleHorizontalToolbox"></a>
 <h4>UserInterface.__toggleHorizontalToolbox</h4>
 <b>__toggleHorizontalToolbox</b>(<i></i>)
@@ -1606,56 +1577,21 @@ list of tool entries
 <b>__toggleLeftSidebar</b>(<i></i>)
 <p>
         Private slot to handle the toggle of the left sidebar window.
-</p><a NAME="UserInterface.__toggleLogViewer" ID="UserInterface.__toggleLogViewer"></a>
-<h4>UserInterface.__toggleLogViewer</h4>
-<b>__toggleLogViewer</b>(<i></i>)
+</p><a NAME="UserInterface.__toggleLeftToolbox" ID="UserInterface.__toggleLeftToolbox"></a>
+<h4>UserInterface.__toggleLeftToolbox</h4>
+<b>__toggleLeftToolbox</b>(<i></i>)
 <p>
-        Private slot to handle the toggle of the Log Viewer window.
-</p><a NAME="UserInterface.__toggleMultiProjectBrowser" ID="UserInterface.__toggleMultiProjectBrowser"></a>
-<h4>UserInterface.__toggleMultiProjectBrowser</h4>
-<b>__toggleMultiProjectBrowser</b>(<i></i>)
+        Private slot to handle the toggle of the Left Toolbox window.
+</p><a NAME="UserInterface.__toggleRightSidebar" ID="UserInterface.__toggleRightSidebar"></a>
+<h4>UserInterface.__toggleRightSidebar</h4>
+<b>__toggleRightSidebar</b>(<i></i>)
 <p>
-        Private slot to handle the toggle of the Project Browser window.
-</p><a NAME="UserInterface.__toggleNumbersViewer" ID="UserInterface.__toggleNumbersViewer"></a>
-<h4>UserInterface.__toggleNumbersViewer</h4>
-<b>__toggleNumbersViewer</b>(<i></i>)
+        Private slot to handle the toggle of the right sidebar window.
+</p><a NAME="UserInterface.__toggleRightToolbox" ID="UserInterface.__toggleRightToolbox"></a>
+<h4>UserInterface.__toggleRightToolbox</h4>
+<b>__toggleRightToolbox</b>(<i></i>)
 <p>
-        Private slot to handle the toggle of the Numbers Viewer window.
-</p><a NAME="UserInterface.__toggleProjectBrowser" ID="UserInterface.__toggleProjectBrowser"></a>
-<h4>UserInterface.__toggleProjectBrowser</h4>
-<b>__toggleProjectBrowser</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Project Browser window.
-</p><a NAME="UserInterface.__toggleShell" ID="UserInterface.__toggleShell"></a>
-<h4>UserInterface.__toggleShell</h4>
-<b>__toggleShell</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Shell window .
-</p><a NAME="UserInterface.__toggleSymbolsViewer" ID="UserInterface.__toggleSymbolsViewer"></a>
-<h4>UserInterface.__toggleSymbolsViewer</h4>
-<b>__toggleSymbolsViewer</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Symbols Viewer window.
-</p><a NAME="UserInterface.__toggleTaskViewer" ID="UserInterface.__toggleTaskViewer"></a>
-<h4>UserInterface.__toggleTaskViewer</h4>
-<b>__toggleTaskViewer</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Task Viewer window.
-</p><a NAME="UserInterface.__toggleTemplateViewer" ID="UserInterface.__toggleTemplateViewer"></a>
-<h4>UserInterface.__toggleTemplateViewer</h4>
-<b>__toggleTemplateViewer</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Template Viewer window.
-</p><a NAME="UserInterface.__toggleTerminal" ID="UserInterface.__toggleTerminal"></a>
-<h4>UserInterface.__toggleTerminal</h4>
-<b>__toggleTerminal</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Terminal window .
-</p><a NAME="UserInterface.__toggleVerticalToolbox" ID="UserInterface.__toggleVerticalToolbox"></a>
-<h4>UserInterface.__toggleVerticalToolbox</h4>
-<b>__toggleVerticalToolbox</b>(<i></i>)
-<p>
-        Private slot to handle the toggle of the Vertical Toolbox window.
+        Private slot to handle the toggle of the Right Toolbox window.
 </p><a NAME="UserInterface.__toggleWindow" ID="UserInterface.__toggleWindow"></a>
 <h4>UserInterface.__toggleWindow</h4>
 <b>__toggleWindow</b>(<i>w</i>)

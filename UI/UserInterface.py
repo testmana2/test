@@ -267,6 +267,8 @@ class UserInterface(E5MainWindow):
         # Create the main window now so that we can connect QActions to it.
         logging.debug("Creating Layout...")
         self.__createLayout(debugServer)
+        self.__currentRightWidget = None
+        self.__currentBottomWidget = None
         
         # Generate the debugger part of the ui
         logging.debug("Creating Debugger UI...")
@@ -383,7 +385,7 @@ class UserInterface(E5MainWindow):
         
         self.debuggerUI.resetUI.connect(self.viewmanager.handleResetUI)
         self.debuggerUI.resetUI.connect(self.debugViewer.handleResetUI)
-        self.debuggerUI.resetUI.connect(self.__setEditProfile)
+        self.debuggerUI.resetUI.connect(self.__debuggingDone)
         self.debuggerUI.debuggingStarted.connect(self.browser.handleProgramChange)
         self.debuggerUI.debuggingStarted.connect(
             self.debugViewer.exceptionLogger.debuggingStarted)
@@ -619,11 +621,11 @@ class UserInterface(E5MainWindow):
         
         @param debugServer reference to the debug server object
         """
-        # Create the vertical toolbox
-        self.vToolboxDock = self.__createDockWindow("vToolboxDock")
-        self.vToolbox = E5VerticalToolBox(self.vToolboxDock)
-        self.__setupDockWindow(self.vToolboxDock, Qt.LeftDockWidgetArea,
-                               self.vToolbox, self.trUtf8("Vertical Toolbox"))
+        # Create the left toolbox
+        self.lToolboxDock = self.__createDockWindow("lToolboxDock")
+        self.lToolbox = E5VerticalToolBox(self.lToolboxDock)
+        self.__setupDockWindow(self.lToolboxDock, Qt.LeftDockWidgetArea,
+                               self.lToolbox, self.trUtf8("Left Toolbox"))
         
         # Create the horizontal toolbox
         self.hToolboxDock = self.__createDockWindow("hToolboxDock")
@@ -631,40 +633,46 @@ class UserInterface(E5MainWindow):
         self.__setupDockWindow(self.hToolboxDock, Qt.BottomDockWidgetArea,
                                self.hToolbox, self.trUtf8("Horizontal Toolbox"))
         
+        # Create the right toolbox
+        self.rToolboxDock = self.__createDockWindow("rToolboxDock")
+        self.rToolbox = E5VerticalToolBox(self.rToolboxDock)
+        self.__setupDockWindow(self.rToolboxDock, Qt.RightDockWidgetArea,
+                               self.rToolbox, self.trUtf8("Right Toolbox"))
+        
         # Create the project browser
         self.projectBrowser = ProjectBrowser(self.project, None,
             embeddedBrowser=(self.embeddedFileBrowser == 2))
-        self.vToolbox.addItem(self.projectBrowser,
+        self.lToolbox.addItem(self.projectBrowser,
                               UI.PixmapCache.getIcon("projectViewer.png"),
                               self.trUtf8("Project-Viewer"))
 
         # Create the multi project browser
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
-        self.vToolbox.addItem(self.multiProjectBrowser,
+        self.lToolbox.addItem(self.multiProjectBrowser,
                               UI.PixmapCache.getIcon("multiProjectViewer.png"),
                               self.trUtf8("Multiproject-Viewer"))
 
         # Create the template viewer part of the user interface
         self.templateViewer = TemplateViewer(None,
                                              self.viewmanager)
-        self.vToolbox.addItem(self.templateViewer,
+        self.lToolbox.addItem(self.templateViewer,
                               UI.PixmapCache.getIcon("templateViewer.png"),
                               self.trUtf8("Template-Viewer"))
 
         # Create the debug viewer maybe without the embedded shell
-        self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
         self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
-            self.debugViewerDock,
+            None,
             embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
-        self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
-                             self.debugViewer, self.trUtf8("Debug-Viewer"))
+        self.rToolbox.addItem(self.debugViewer,
+                              UI.PixmapCache.getIcon("debugViewer.png"),
+                              self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
-        self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent=self.cooperationDock)
-        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
-                             self.cooperation, self.trUtf8("Cooperation"))
+        self.cooperation = ChatWidget()
+        self.rToolbox.addItem(self.cooperation,
+                              UI.PixmapCache.getIcon("cooperation.png"),
+                              self.trUtf8("Cooperation"))
         
         # Create the terminal part of the user interface
         self.terminalAssembly = TerminalAssembly(self.viewmanager)
@@ -685,9 +693,6 @@ class UserInterface(E5MainWindow):
                               UI.PixmapCache.getIcon("logViewer.png"),
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, None, None,
-                        None, None, None, None, self.cooperationDock]
-
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
         else:
@@ -701,7 +706,7 @@ class UserInterface(E5MainWindow):
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
             self.browser = Browser()
-            self.vToolbox.addItem(self.browser,
+            self.lToolbox.addItem(self.browser,
                                   UI.PixmapCache.getIcon("browser.png"),
                                   self.trUtf8("File-Browser"))
         elif self.embeddedFileBrowser == 1:  # embedded in debug browser
@@ -711,7 +716,7 @@ class UserInterface(E5MainWindow):
         
         # Create the symbols viewer
         self.symbolsViewer = SymbolsWidget()
-        self.vToolbox.addItem(self.symbolsViewer,
+        self.lToolbox.addItem(self.symbolsViewer,
                               UI.PixmapCache.getIcon("symbols.png"),
                               self.trUtf8("Symbols"))
         
@@ -734,6 +739,9 @@ class UserInterface(E5MainWindow):
         
         # Create the bottom sidebar
         self.bottomSidebar = E5SideBar(E5SideBar.South)
+        
+        # Create the right sidebar
+        self.rightSidebar = E5SideBar(E5SideBar.East)
         
         # Create the project browser
         logging.debug("Creating Project Browser...")
@@ -760,19 +768,18 @@ class UserInterface(E5MainWindow):
 
         # Create the debug viewer maybe without the embedded shell
         logging.debug("Creating Debug Viewer...")
-        self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
         self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
-            self.debugViewerDock,
+            None,
             embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
-        self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
-                             self.debugViewer, self.trUtf8("Debug-Viewer"))
+        self.rightSidebar.addTab(self.debugViewer,
+            UI.PixmapCache.getIcon("debugViewer.png"), self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
-        self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent=self.cooperationDock)
-        self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
-                             self.cooperation, self.trUtf8("Cooperation"))
+        logging.debug("Creating Chat Widget...")
+        self.cooperation = ChatWidget()
+        self.rightSidebar.addTab(self.cooperation,
+            UI.PixmapCache.getIcon("cooperation.png"), self.trUtf8("Cooperation"))
         
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
@@ -795,9 +802,6 @@ class UserInterface(E5MainWindow):
         self.bottomSidebar.addTab(self.logViewer,
                               UI.PixmapCache.getIcon("logViewer.png"),
                               self.trUtf8("Log-Viewer"))
-
-        self.windows = [None, None, self.debugViewerDock, None, None,
-                        None, None, None, None, self.cooperationDock]
 
         if self.embeddedShell:
             self.shell = self.debugViewer.shell
@@ -839,15 +843,19 @@ class UserInterface(E5MainWindow):
         # create the central widget
         logging.debug("Creating central widget...")
         cw = self.centralWidget()   # save the current central widget
-        self.horizontalSplitter = QSplitter(Qt.Horizontal)
+        self.leftSplitter = QSplitter(Qt.Horizontal)
+        self.rightSplitter = QSplitter(Qt.Horizontal)
         self.verticalSplitter = QSplitter(Qt.Vertical)
         self.verticalSplitter.addWidget(cw)
         self.verticalSplitter.addWidget(self.bottomSidebar)
-        self.horizontalSplitter.addWidget(self.leftSidebar)
-        self.horizontalSplitter.addWidget(self.verticalSplitter)
-        self.setCentralWidget(self.horizontalSplitter)
+        self.rightSplitter.addWidget(self.verticalSplitter)
+        self.rightSplitter.addWidget(self.rightSidebar)
+        self.leftSplitter.addWidget(self.leftSidebar)
+        self.leftSplitter.addWidget(self.rightSplitter)
+        self.setCentralWidget(self.leftSplitter)
         
-        self.leftSidebar.setSplitter(self.horizontalSplitter)
+        self.leftSidebar.setSplitter(self.leftSplitter)
+        self.rightSidebar.setSplitter(self.rightSplitter)
         self.bottomSidebar.setSplitter(self.verticalSplitter)
         
     def __configureDockareaCornerUsage(self):
@@ -885,14 +893,18 @@ class UserInterface(E5MainWindow):
         
         if self.layout == "Toolboxes":
             if side == UserInterface.LeftSide:
-                self.vToolbox.addItem(widget, icon, label)
+                self.lToolbox.addItem(widget, icon, label)
             elif side == UserInterface.BottomSide:
                 self.hToolbox.addItem(widget, icon, label)
+            elif side == UserInterface.RightSide:
+                self.rToolbox.addItem(widget, icon, label)
         elif self.layout == "Sidebars":
             if side == UserInterface.LeftSide:
                 self.leftSidebar.addTab(widget, icon, label)
             elif side == UserInterface.BottomSide:
                 self.bottomSidebar.addTab(widget, icon, label)
+            elif side == UserInterface.RightSide:
+                self.rightSidebar.addTab(widget, icon, label)
         
     def removeSideWidget(self, widget):
         """
@@ -901,12 +913,12 @@ class UserInterface(E5MainWindow):
         @param widget reference to the widget to remove (QWidget)
         """
         if self.layout == "Toolboxes":
-            for container in [self.vToolbox, self.hToolbox]:
+            for container in [self.lToolbox, self.hToolbox, self.rToolbox]:
                 index = container.indexOf(widget)
                 if index != -1:
                     container.removeItem(index)
         elif self.layout == "Sidebars":
-            for container in [self.leftSidebar, self.bottomSidebar]:
+            for container in [self.leftSidebar, self.bottomSidebar, self.rightSidebar]:
                 index = container.indexOf(widget)
                 if index != -1:
                     container.removeTab(index)
@@ -1179,200 +1191,163 @@ class UserInterface(E5MainWindow):
         self.setDebugProfileAct.triggered[()].connect(self.setDebugProfile)
         self.actions.append(self.setDebugProfileAct)
         
-        self.pbAct = E5Action(self.trUtf8('Project-Viewer'),
-                self.trUtf8('&Project-Viewer'), 0, 0, self, 'project_viewer', True)
-        self.pbAct.setStatusTip(self.trUtf8('Toggle the Project-Viewer window'))
-        self.pbAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Project-Viewer window</b>"""
-            """<p>If the Project-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.pbAct.triggered[()].connect(self.__toggleProjectBrowser)
-        self.actions.append(self.pbAct)
-        
-        self.pbActivateAct = E5Action(self.trUtf8('Activate Project-Viewer'),
-                self.trUtf8('Activate Project-Viewer'),
+        self.pbActivateAct = E5Action(self.trUtf8('Project-Viewer'),
+                self.trUtf8('&Project-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+P")),
                 0, self,
-                'project_viewer_activate', True)
+                'project_viewer_activate')
+        self.pbActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Project-Viewer window."))
+        self.pbActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Project-Viewer</b>"""
+            """<p>This switches the input focus to the Project-Viewer window.</p>"""
+        ))
         self.pbActivateAct.triggered[()].connect(self.__activateProjectBrowser)
         self.actions.append(self.pbActivateAct)
         self.addAction(self.pbActivateAct)
 
-        self.mpbAct = E5Action(self.trUtf8('Multiproject-Viewer'),
-                self.trUtf8('&Multiproject-Viewer'), 0, 0, self,
-                'multi_project_viewer', True)
-        self.mpbAct.setStatusTip(self.trUtf8('Toggle the Multiproject-Viewer window'))
-        self.mpbAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Multiproject-Viewer window</b>"""
-            """<p>If the Multiproject-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.mpbAct.triggered[()].connect(self.__toggleMultiProjectBrowser)
-        self.actions.append(self.mpbAct)
-        
-        self.mpbActivateAct = E5Action(self.trUtf8('Activate Multiproject-Viewer'),
-                self.trUtf8('Activate Multiproject-Viewer'),
+        self.mpbActivateAct = E5Action(self.trUtf8('Multiproject-Viewer'),
+                self.trUtf8('&Multiproject-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+M")),
                 0, self,
-                'multi_project_viewer_activate', True)
+                'multi_project_viewer_activate')
+        self.mpbActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Multiproject-Viewer window."))
+        self.mpbActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Multiproject-Viewer</b>"""
+            """<p>This switches the input focus to the Multiproject-Viewer window.</p>"""
+        ))
         self.mpbActivateAct.triggered[()].connect(self.__activateMultiProjectBrowser)
         self.actions.append(self.mpbActivateAct)
         self.addAction(self.mpbActivateAct)
 
-        self.debugViewerAct = E5Action(self.trUtf8('Debug-Viewer'),
-                self.trUtf8('&Debug-Viewer'), 0, 0, self, 'debug_viewer', True)
-        self.debugViewerAct.setStatusTip(self.trUtf8('Toggle the Debug-Viewer window'))
-        self.debugViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Debug-Viewer window</b>"""
-            """<p>If the Debug-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.debugViewerAct.triggered[()].connect(self.__toggleDebugViewer)
-        self.actions.append(self.debugViewerAct)
-        
-        self.debugViewerActivateAct = E5Action(self.trUtf8('Activate Debug-Viewer'),
-                self.trUtf8('Activate Debug-Viewer'),
+        self.debugViewerActivateAct = E5Action(self.trUtf8('Debug-Viewer'),
+                self.trUtf8('&Debug-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+D")),
                 0, self,
-                'debug_viewer_activate', True)
+                'debug_viewer_activate')
+        self.debugViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Debug-Viewer window."))
+        self.debugViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Debug-Viewer</b>"""
+            """<p>This switches the input focus to the Debug-Viewer window.</p>"""
+        ))
         self.debugViewerActivateAct.triggered[()].connect(self.__activateDebugViewer)
         self.actions.append(self.debugViewerActivateAct)
         self.addAction(self.debugViewerActivateAct)
 
-        self.shellAct = E5Action(self.trUtf8('Shell'),
-                self.trUtf8('&Shell'), 0, 0, self, 'interpreter_shell', True)
-        self.shellAct.setStatusTip(self.trUtf8('Toggle the Shell window'))
-        self.shellAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Shell window</b>"""
-            """<p>If the Shell window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        if not self.embeddedShell:
-            self.shellAct.triggered[()].connect(self.__toggleShell)
-        self.actions.append(self.shellAct)
-
-        self.shellActivateAct = E5Action(self.trUtf8('Activate Shell'),
-                self.trUtf8('Activate Shell'),
+        self.shellActivateAct = E5Action(self.trUtf8('Shell'),
+                self.trUtf8('&Shell'),
                 QKeySequence(self.trUtf8("Alt+Shift+S")),
                 0, self,
-                'interprter_shell_activate', True)
+                'interprter_shell_activate')
+        self.shellActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Shell window."))
+        self.shellActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Shell</b>"""
+            """<p>This switches the input focus to the Shell window.</p>"""
+        ))
         self.shellActivateAct.triggered[()].connect(self.__activateShell)
         self.actions.append(self.shellActivateAct)
         self.addAction(self.shellActivateAct)
 
-        self.terminalAct = E5Action(self.trUtf8('Terminal'),
-                self.trUtf8('Te&rminal'), 0, 0, self, 'terminal', True)
-        self.terminalAct.setStatusTip(self.trUtf8('Toggle the Terminal window'))
-        self.terminalAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Terminal window</b>"""
-            """<p>If the Terminal window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.terminalAct.triggered[()].connect(self.__toggleTerminal)
-        self.actions.append(self.terminalAct)
-
-        self.terminalActivateAct = E5Action(self.trUtf8('Activate Terminal'),
-                self.trUtf8('Activate Terminal'),
+        self.terminalActivateAct = E5Action(self.trUtf8('Terminal'),
+                self.trUtf8('Te&rminal'),
                 QKeySequence(self.trUtf8("Alt+Shift+R")),
                 0, self,
-                'terminal_activate', True)
+                'terminal_activate')
+        self.terminalActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Terminal window."))
+        self.terminalActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Terminal</b>"""
+            """<p>This switches the input focus to the Terminal window.</p>"""
+        ))
         self.terminalActivateAct.triggered[()].connect(self.__activateTerminal)
         self.actions.append(self.terminalActivateAct)
         self.addAction(self.terminalActivateAct)
 
-        self.browserAct = E5Action(self.trUtf8('File-Browser'),
-                self.trUtf8('File-&Browser'), 0, 0, self, 'file_browser', True)
-        self.browserAct.setStatusTip(self.trUtf8('Toggle the File-Browser window'))
-        self.browserAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the File-Browser window</b>"""
-            """<p>If the File-Browser window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        if not self.embeddedFileBrowser:
-            self.browserAct.triggered[()].connect(self.__toggleBrowser)
-        self.actions.append(self.browserAct)
-
-        self.browserActivateAct = E5Action(self.trUtf8('Activate File-Browser'),
-                self.trUtf8('Activate File-Browser'),
+        self.browserActivateAct = E5Action(self.trUtf8('File-Browser'),
+                self.trUtf8('&File-Browser'),
                 QKeySequence(self.trUtf8("Alt+Shift+F")),
                 0, self,
-                'file_browser_activate', True)
+                'file_browser_activate')
+        self.browserActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the File-Browser window."))
+        self.browserActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate File-Browser</b>"""
+            """<p>This switches the input focus to the File-Browser window.</p>"""
+        ))
         self.browserActivateAct.triggered[()].connect(self.__activateBrowser)
         self.actions.append(self.browserActivateAct)
         self.addAction(self.browserActivateAct)
 
-        self.logViewerAct = E5Action(self.trUtf8('Log-Viewer'),
-                self.trUtf8('&Log-Viewer'), 0, 0, self, 'log_viewer', True)
-        self.logViewerAct.setStatusTip(self.trUtf8('Toggle the Log-Viewer window'))
-        self.logViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Log-Viewer window</b>"""
-            """<p>If the Log-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.logViewerAct.triggered[()].connect(self.__toggleLogViewer)
-        self.actions.append(self.logViewerAct)
-
-        self.logViewerActivateAct = E5Action(self.trUtf8('Activate Log-Viewer'),
-                self.trUtf8('Activate Log-Viewer'),
+        self.logViewerActivateAct = E5Action(self.trUtf8('Log-Viewer'),
+                self.trUtf8('Lo&g-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+G")),
                 0, self,
-                'log_viewer_activate', True)
+                'log_viewer_activate')
+        self.logViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Log-Viewer window."))
+        self.logViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Log-Viewer</b>"""
+            """<p>This switches the input focus to the Log-Viewer window.</p>"""
+        ))
         self.logViewerActivateAct.triggered[()].connect(self.__activateLogViewer)
         self.actions.append(self.logViewerActivateAct)
         self.addAction(self.logViewerActivateAct)
 
-        self.taskViewerAct = E5Action(self.trUtf8('Task-Viewer'),
-                self.trUtf8('T&ask-Viewer'), 0, 0, self, 'task_viewer', True)
-        self.taskViewerAct.setStatusTip(self.trUtf8('Toggle the Task-Viewer window'))
-        self.taskViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Task-Viewer window</b>"""
-            """<p>If the Task-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.taskViewerAct.triggered[()].connect(self.__toggleTaskViewer)
-        self.actions.append(self.taskViewerAct)
-
-        self.taskViewerActivateAct = E5Action(self.trUtf8('Activate Task-Viewer'),
-                self.trUtf8('Activate Task-Viewer'),
+        self.taskViewerActivateAct = E5Action(self.trUtf8('Task-Viewer'),
+                self.trUtf8('&Task-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+T")),
                 0, self,
-                'task_viewer_activate', 1)
+                'task_viewer_activate')
+        self.taskViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Task-Viewer window."))
+        self.taskViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Task-Viewer</b>"""
+            """<p>This switches the input focus to the Task-Viewer window.</p>"""
+        ))
         self.taskViewerActivateAct.triggered[()].connect(self.__activateTaskViewer)
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
 
-        self.templateViewerAct = E5Action(self.trUtf8('Template-Viewer'),
-                self.trUtf8('Temp&late-Viewer'), 0, 0, self, 'template_viewer', True)
-        self.templateViewerAct.setStatusTip(
-            self.trUtf8('Toggle the Template-Viewer window'))
-        self.templateViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Template-Viewer window</b>"""
-            """<p>If the Template-Viewer window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.templateViewerAct.triggered[()].connect(self.__toggleTemplateViewer)
-        self.actions.append(self.templateViewerAct)
-
-        self.templateViewerActivateAct = E5Action(self.trUtf8('Activate Template-Viewer'),
-                self.trUtf8('Activate Template-Viewer'),
+        self.templateViewerActivateAct = E5Action(self.trUtf8('Template-Viewer'),
+                self.trUtf8('Templ&ate-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+A")),
                 0, self,
-                'template_viewer_activate', 1)
-        self.templateViewerActivateAct.triggered[()].connect(self.__activateTemplateViewer)
+                'template_viewer_activate')
+        self.templateViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Template-Viewer window."))
+        self.templateViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Template-Viewer</b>"""
+            """<p>This switches the input focus to the Template-Viewer window.</p>"""
+        ))
+        self.templateViewerActivateAct.triggered[()].connect(
+            self.__activateTemplateViewer)
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
 
-        self.vtAct = E5Action(self.trUtf8('Vertical Toolbox'),
-                self.trUtf8('&Vertical Toolbox'), 0, 0, self, 'vertical_toolbox', True)
-        self.vtAct.setStatusTip(self.trUtf8('Toggle the Vertical Toolbox window'))
-        self.vtAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Vertical Toolbox window</b>"""
-            """<p>If the Vertical Toolbox window is hidden then display it."""
+        self.ltAct = E5Action(self.trUtf8('Left Toolbox'),
+                self.trUtf8('&Left Toolbox'), 0, 0, self, 'vertical_toolbox', True)
+        self.ltAct.setStatusTip(self.trUtf8('Toggle the Left Toolbox window'))
+        self.ltAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the Left Toolbox window</b>"""
+            """<p>If the Left Toolbox window is hidden then display it."""
             """ If it is displayed then close it.</p>"""
         ))
-        self.vtAct.triggered[()].connect(self.__toggleVerticalToolbox)
-        self.actions.append(self.vtAct)
+        self.ltAct.triggered[()].connect(self.__toggleLeftToolbox)
+        self.actions.append(self.ltAct)
+        
+        self.rtAct = E5Action(self.trUtf8('Right Toolbox'),
+                self.trUtf8('&Right Toolbox'), 0, 0, self, 'vertical_toolbox', True)
+        self.rtAct.setStatusTip(self.trUtf8('Toggle the Right Toolbox window'))
+        self.rtAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the Right Toolbox window</b>"""
+            """<p>If the Right Toolbox window is hidden then display it."""
+            """ If it is displayed then close it.</p>"""
+        ))
+        self.rtAct.triggered[()].connect(self.__toggleRightToolbox)
+        self.actions.append(self.rtAct)
         
         self.htAct = E5Action(self.trUtf8('Horizontal Toolbox'),
                 self.trUtf8('&Horizontal Toolbox'), 0, 0, self,
@@ -1397,6 +1372,17 @@ class UserInterface(E5MainWindow):
         self.lsbAct.triggered[()].connect(self.__toggleLeftSidebar)
         self.actions.append(self.lsbAct)
         
+        self.rsbAct = E5Action(self.trUtf8('Right Sidebar'),
+                self.trUtf8('&Right Sidebar'), 0, 0, self, 'right_sidebar', True)
+        self.rsbAct.setStatusTip(self.trUtf8('Toggle the right sidebar window'))
+        self.rsbAct.setWhatsThis(self.trUtf8(
+            """<b>Toggle the right sidebar window</b>"""
+            """<p>If the right sidebar window is hidden then display it."""
+            """ If it is displayed then close it.</p>"""
+        ))
+        self.rsbAct.triggered[()].connect(self.__toggleRightSidebar)
+        self.actions.append(self.rsbAct)
+        
         self.bsbAct = E5Action(self.trUtf8('Bottom Sidebar'),
                 self.trUtf8('&Bottom Sidebar'), 0, 0, self,
                 'bottom_sidebar', True)
@@ -1409,68 +1395,51 @@ class UserInterface(E5MainWindow):
         self.bsbAct.triggered[()].connect(self.__toggleBottomSidebar)
         self.actions.append(self.bsbAct)
         
-        self.cooperationViewerAct = E5Action(self.trUtf8('Cooperation'),
-                self.trUtf8('&Cooperation'), 0, 0, self, 'cooperation_viewer', True)
-        self.cooperationViewerAct.setStatusTip(self.trUtf8(
-            'Toggle the Cooperation window'))
-        self.cooperationViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Cooperation window</b>"""
-            """<p>If the Cooperation window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.cooperationViewerAct.triggered[()].connect(self.__toggleCooperationViewer)
-        self.actions.append(self.cooperationViewerAct)
-        
         self.cooperationViewerActivateAct = E5Action(
-                self.trUtf8('Activate Cooperation-Viewer'),
-                self.trUtf8('Activate Cooperation-Viewer'),
+                self.trUtf8('Cooperation-Viewer'),
+                self.trUtf8('Co&operation-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+O")),
                 0, self,
-                'cooperation_viewer_activate', True)
-        self.cooperationViewerActivateAct.triggered[()].connect(self.activateCooperationViewer)
+                'cooperation_viewer_activate')
+        self.cooperationViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Cooperation-Viewer window."))
+        self.cooperationViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Cooperation-Viewer</b>"""
+            """<p>This switches the input focus to the Cooperation-Viewer window.</p>"""
+        ))
+        self.cooperationViewerActivateAct.triggered[()].connect(
+            self.activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
 
-        self.symbolsViewerAct = E5Action(self.trUtf8('Symbols'),
-                self.trUtf8('&Symbols'), 0, 0, self, 'symbols_viewer', True)
-        self.symbolsViewerAct.setStatusTip(self.trUtf8(
-            'Toggle the Symbols window'))
-        self.symbolsViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Symbols window</b>"""
-            """<p>If the Symbols window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.symbolsViewerAct.triggered[()].connect(self.__toggleSymbolsViewer)
-        self.actions.append(self.symbolsViewerAct)
-        
         self.symbolsViewerActivateAct = E5Action(
-                self.trUtf8('Activate Symbols-Viewer'),
-                self.trUtf8('Activate Symbols-Viewer'),
+                self.trUtf8('Symbols-Viewer'),
+                self.trUtf8('S&ymbols-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+Y")),
                 0, self,
-                'symbols_viewer_activate', True)
+                'symbols_viewer_activate')
+        self.symbolsViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Symbols-Viewer window."))
+        self.symbolsViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Symbols-Viewer</b>"""
+            """<p>This switches the input focus to the Symbols-Viewer window.</p>"""
+        ))
         self.symbolsViewerActivateAct.triggered[()].connect(self.__activateSymbolsViewer)
         self.actions.append(self.symbolsViewerActivateAct)
         self.addAction(self.symbolsViewerActivateAct)
 
-        self.numbersViewerAct = E5Action(self.trUtf8('Numbers'),
-                self.trUtf8('&Numbers'), 0, 0, self, 'numbers_viewer', True)
-        self.numbersViewerAct.setStatusTip(self.trUtf8(
-            'Toggle the Numbers window'))
-        self.numbersViewerAct.setWhatsThis(self.trUtf8(
-            """<b>Toggle the Numbers window</b>"""
-            """<p>If the Numbers window is hidden then display it."""
-            """ If it is displayed then close it.</p>"""
-        ))
-        self.numbersViewerAct.triggered[()].connect(self.__toggleNumbersViewer)
-        self.actions.append(self.numbersViewerAct)
-        
         self.numbersViewerActivateAct = E5Action(
-                self.trUtf8('Activate Numbers-Viewer'),
-                self.trUtf8('Activate Numbers-Viewer'),
+                self.trUtf8('Numbers-Viewer'),
+                self.trUtf8('Num&bers-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+B")),
                 0, self,
-                'numbers_viewer_activate', True)
+                'numbers_viewer_activate')
+        self.numbersViewerActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the Numbers-Viewer window."))
+        self.numbersViewerActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Numbers-Viewer</b>"""
+            """<p>This switches the input focus to the Numbers-Viewer window.</p>"""
+        ))
         self.numbersViewerActivateAct.triggered[()].connect(self.__activateNumbersViewer)
         self.actions.append(self.numbersViewerActivateAct)
         self.addAction(self.numbersViewerActivateAct)
@@ -2180,6 +2149,21 @@ class UserInterface(E5MainWindow):
         mb.addMenu(self.__menus["window"])
         self.__menus["window"].setTearOffEnabled(True)
         self.__menus["window"].aboutToShow.connect(self.__showWindowMenu)
+        
+        self.__menus["subwindow"] = QMenu(self.trUtf8("&Windows"), self.__menus["window"])
+        self.__menus["subwindow"].setTearOffEnabled(True)
+        self.__menus["subwindow"].addAction(self.pbActivateAct)
+        self.__menus["subwindow"].addAction(self.mpbActivateAct)
+        self.__menus["subwindow"].addAction(self.browserActivateAct)
+        self.__menus["subwindow"].addAction(self.debugViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.shellActivateAct)
+        self.__menus["subwindow"].addAction(self.terminalActivateAct)
+        self.__menus["subwindow"].addAction(self.logViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.taskViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.templateViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.cooperationViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.symbolsViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.numbersViewerActivateAct)
         
         self.__menus["toolbars"] = \
             QMenu(self.trUtf8("&Toolbars"), self.__menus["window"])
@@ -3031,60 +3015,24 @@ class UserInterface(E5MainWindow):
         self.__menus["window"].addSeparator()
         
         if self.layout == "Toolboxes":
-            self.__menus["window"].addAction(self.vtAct)
-            self.vtAct.setChecked(not self.vToolboxDock.isHidden())
+            self.__menus["window"].addAction(self.ltAct)
+            self.ltAct.setChecked(not self.lToolboxDock.isHidden())
+            self.__menus["window"].addAction(self.rtAct)
+            self.rtAct.setChecked(not self.lToolboxDock.isHidden())
             self.__menus["window"].addAction(self.htAct)
             self.htAct.setChecked(not self.hToolboxDock.isHidden())
-            self.__menus["window"].addAction(self.cooperationViewerAct)
-            self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
-            self.__menus["window"].addAction(self.debugViewerAct)
-            self.debugViewerAct.setChecked(not self.debugViewerDock.isHidden())
         elif self.layout == "Sidebars":
             self.__menus["window"].addAction(self.lsbAct)
             self.lsbAct.setChecked(not self.leftSidebar.isHidden())
+            self.__menus["window"].addAction(self.rsbAct)
+            self.rsbAct.setChecked(not self.rightSidebar.isHidden())
             self.__menus["window"].addAction(self.bsbAct)
             self.bsbAct.setChecked(not self.bottomSidebar.isHidden())
-            self.__menus["window"].addAction(self.cooperationViewerAct)
-            self.cooperationViewerAct.setChecked(not self.cooperationDock.isHidden())
-            self.__menus["window"].addAction(self.debugViewerAct)
-            self.debugViewerAct.setChecked(not self.debugViewerDock.isHidden())
-        else:
-            # Set the options according to what is being displayed.
-            self.__menus["window"].addAction(self.pbAct)
-            self.pbAct.setChecked(not self.projectBrowser.isHidden())
-            
-            self.__menus["window"].addAction(self.mpbAct)
-            self.mpbAct.setChecked(not self.multiProjectBrowser.isHidden())
-            
-            if not self.embeddedFileBrowser:
-                self.__menus["window"].addAction(self.browserAct)
-                self.browserAct.setChecked(not self.browser.isHidden())
-                
-            self.__menus["window"].addAction(self.debugViewerAct)
-            self.debugViewerAct.setChecked(not self.debugViewer.isHidden())
-            
-            if not self.embeddedShell:
-                self.__menus["window"].addAction(self.shellAct)
-                self.shellAct.setChecked(not self.shell.isHidden())
-            
-            self.__menus["window"].addAction(self.terminalAct)
-            self.terminalAct.setChecked(not self.terminal.isHidden())
-            
-            self.__menus["window"].addAction(self.logViewerAct)
-            self.logViewerAct.setChecked(not self.logViewer.isHidden())
-            
-            self.__menus["window"].addAction(self.taskViewerAct)
-            self.taskViewerAct.setChecked(not self.taskViewer.isHidden())
-
-            self.__menus["window"].addAction(self.templateViewerAct)
-            self.templateViewerAct.setChecked(not self.templateViewer.isHidden())
-
-            self.__menus["window"].addAction(self.cooperationViewerAct)
-            self.cooperationViewerAct.setChecked(not self.cooperation.isHidden())
-            
-            self.__menus["window"].addAction(self.symbolsViewerAct)
-            self.symbolsViewerAct.setChecked(not self.symbolsViewer.isHidden())
-
+        
+        # Insert menu entry for sub-windows
+        self.__menus["window"].addSeparator()
+        self.__menus["window"].addMenu(self.__menus["subwindow"])
+        
         # Insert menu entry for toolbar settings
         self.__menus["window"].addSeparator()
         self.__menus["window"].addMenu(self.__menus["toolbars"])
@@ -3093,6 +3041,12 @@ class UserInterface(E5MainWindow):
         self.viewmanager.showWindowMenu(self.__menus["window"])
         
         self.showMenu.emit("Window", self.__menus["window"])
+        
+    def __showSubWindowMenu(self):
+        """
+        Private slot to display the Window menu of the Window menu.
+        """
+        self.showMenu.emit("Subwindows", self.__menus["subwindow"])
         
     def __showToolbarsMenu(self):
         """
@@ -3154,7 +3108,7 @@ class UserInterface(E5MainWindow):
                 state = self.saveState()
                 self.profiles[self.currentProfile][4] = bytes(state)
                 if self.layout == "Sidebars":
-                    state = self.horizontalSplitter.saveState()
+                    state = self.leftSplitter.saveState()
                     self.profiles[self.currentProfile][6][0] = bytes(state)
                     state = self.verticalSplitter.saveState()
                     self.profiles[self.currentProfile][6][1] = bytes(state)
@@ -3162,16 +3116,19 @@ class UserInterface(E5MainWindow):
                     self.profiles[self.currentProfile][6][2] = bytes(state)
                     state = self.bottomSidebar.saveState()
                     self.profiles[self.currentProfile][6][3] = bytes(state)
+                    state = self.rightSplitter.saveState()
+                    self.profiles[self.currentProfile][6][4] = bytes(state)
+                    state = self.rightSidebar.saveState()
+                    self.profiles[self.currentProfile][6][5] = bytes(state)
             # step 2: save the visibility of the windows of the active profile
-            for window, i in zip(self.windows, list(range(len(self.windows)))):
-                if window is not None:
-                    self.profiles[self.currentProfile][0][i] = window.isVisible()
             if self.layout == "Toolboxes":
-                self.profiles[self.currentProfile][5][0] = self.vToolboxDock.isVisible()
+                self.profiles[self.currentProfile][5][0] = self.lToolboxDock.isVisible()
                 self.profiles[self.currentProfile][5][1] = self.hToolboxDock.isVisible()
+                self.profiles[self.currentProfile][5][2] = self.rToolboxDock.isVisible()
             elif self.layout == "Sidebars":
                 self.profiles[self.currentProfile][5][0] = self.leftSidebar.isVisible()
                 self.profiles[self.currentProfile][5][1] = self.bottomSidebar.isVisible()
+                self.profiles[self.currentProfile][5][2] = self.rightSidebar.isVisible()
             Preferences.setUI("ViewProfiles", self.profiles)
     
     def __activateViewProfile(self, name, save=True):
@@ -3194,7 +3151,7 @@ class UserInterface(E5MainWindow):
                 if self.layout == "Sidebars":
                     state = QByteArray(self.profiles[name][6][0])
                     if not state.isEmpty():
-                        self.horizontalSplitter.restoreState(state)
+                        self.leftSplitter.restoreState(state)
                     state = QByteArray(self.profiles[name][6][1])
                     if not state.isEmpty():
                         self.verticalSplitter.restoreState(state)
@@ -3204,18 +3161,23 @@ class UserInterface(E5MainWindow):
                     state = QByteArray(self.profiles[name][6][3])
                     if not state.isEmpty():
                         self.bottomSidebar.restoreState(state)
+                    state = QByteArray(self.profiles[name][6][4])
+                    if not state.isEmpty():
+                        self.rightSplitter.restoreState(state)
+                    state = QByteArray(self.profiles[name][6][5])
+                    if not state.isEmpty():
+                        self.rightSidebar.restoreState(state)
                 self.__configureDockareaCornerUsage()
             
             # step 3: activate the windows of the new profile
-            for window, visible in zip(self.windows, self.profiles[name][0]):
-                if window is not None:
-                    window.setVisible(visible)
             if self.layout == "Toolboxes":
-                self.vToolboxDock.setVisible(self.profiles[name][5][0])
+                self.lToolboxDock.setVisible(self.profiles[name][5][0])
                 self.hToolboxDock.setVisible(self.profiles[name][5][1])
+                self.rToolboxDock.setVisible(self.profiles[name][5][2])
             elif self.layout == "Sidebars":
                 self.leftSidebar.setVisible(self.profiles[name][5][0])
                 self.bottomSidebar.setVisible(self.profiles[name][5][1])
+                self.rightSidebar.setVisible(self.profiles[name][5][2])
             
             # step 4: remember the new profile
             self.currentProfile = name
@@ -3229,6 +3191,43 @@ class UserInterface(E5MainWindow):
             if self.__menus["window"].isTearOffMenuVisible():
                 self.__showWindowMenu()
         
+    def __debuggingStarted(self):
+        """
+        Private slot to handle the start of a debugging session.
+        """
+        self.setDebugProfile()
+        if self.layout == "Toolboxes":
+            self.__currentRightWidget = self.rToolbox.currentWidget()
+            self.rToolbox.setCurrentWidget(self.debugViewer)
+            if not self.embeddedShell:
+                self.__currentBottomWidget = self.hToolbox.currentWidget()
+                self.hToolbox.setCurrentWidget(self.shellAssembly)
+        elif self.layout == "Sidebars":
+            self.__currentRightWidget = self.rightSidebar.currentWidget()
+            self.rightSidebar.setCurrentWidget(self.debugViewer)
+            if not self.embeddedShell:
+                self.__currentBottomWidget = self.bottomSidebar.currentWidget()
+                self.bottomSidebar.setCurrentWidget(self.shellAssembly)
+        
+    def __debuggingDone(self):
+        """
+        Private slot to handle the end of a debugging session.
+        """
+        self.__setEditProfile()
+        if self.layout == "Toolboxes":
+            if self.__currentRightWidget:
+                self.rToolbox.setCurrentWidget(self.__currentRightWidget)
+            if self.__currentBottomWidget:
+                self.hToolbox.setCurrentWidget(self.__currentBottomWidget)
+        elif self.layout == "Sidebars":
+            if self.__currentRightWidget:
+                self.rightSidebar.setCurrentWidget(self.__currentRightWidget)
+            if self.__currentBottomWidget:
+                self.bottomSidebar.setCurrentWidget(self.__currentBottomWidget)
+        self.__currentRightWidget = None
+        self.__currentBottomWidget = None
+        self.__activateViewmanager()
+        
     def __setEditProfile(self, save=True):
         """
         Private slot to activate the edit view profile.
@@ -3238,18 +3237,6 @@ class UserInterface(E5MainWindow):
         """
         self.__activateViewProfile("edit", save)
         self.setEditProfileAct.setChecked(True)
-        
-    def __debuggingStarted(self):
-        """
-        Private slot to handle the start of a debugging session.
-        """
-        self.setDebugProfile()
-        if self.layout == "Toolboxes":
-            if not self.embeddedShell:
-                self.hToolbox.setCurrentWidget(self.shellAssembly)
-        elif self.layout == "Sidebars":
-            if not self.embeddedShell:
-                self.bottomSidebar.setCurrentWidget(self.shellAssembly)
         
     def setDebugProfile(self, save=True):
         """
@@ -3271,25 +3258,13 @@ class UserInterface(E5MainWindow):
         """
         return self.currentProfile
         
-    def __toggleProjectBrowser(self):
-        """
-        Private slot to handle the toggle of the Project Browser window.
-        """
-        hasFocus = self.projectBrowser.currentWidget().hasFocus()
-        shown = self.__toggleWindow(self.projectBrowser)
-        if shown:
-            self.__activateProjectBrowser()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateProjectBrowser(self):
         """
         Private slot to handle the activation of the project browser.
         """
         if self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.projectBrowser)
+            self.lToolboxDock.show()
+            self.lToolbox.setCurrentWidget(self.projectBrowser)
         elif self.layout == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.projectBrowser)
@@ -3297,25 +3272,13 @@ class UserInterface(E5MainWindow):
             self.projectBrowser.show()
         self.projectBrowser.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleMultiProjectBrowser(self):
-        """
-        Private slot to handle the toggle of the Project Browser window.
-        """
-        hasFocus = self.multiProjectBrowser.hasFocus()
-        shown = self.__toggleWindow(self.multiProjectBrowser)
-        if shown:
-            self.__activateMultiProjectBrowser()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateMultiProjectBrowser(self):
         """
         Private slot to handle the activation of the project browser.
         """
         if self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.multiProjectBrowser)
+            self.lToolboxDock.show()
+            self.lToolbox.setCurrentWidget(self.multiProjectBrowser)
         elif self.layout == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.multiProjectBrowser)
@@ -3323,52 +3286,31 @@ class UserInterface(E5MainWindow):
             self.multiProjectBrowser.show()
         self.multiProjectBrowser.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleDebugViewer(self):
-        """
-        Private slot to handle the toggle of the debug viewer.
-        """
-        hasFocus = self.debugViewer.currentWidget().hasFocus()
-        if self.layout in ["Toolboxes", "Sidebars"]:
-            shown = self.__toggleWindow(self.debugViewerDock)
-        else:
-            shown = self.__toggleWindow(self.debugViewer)
-        if shown:
-            self.__activateDebugViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateDebugViewer(self):
         """
         Private slot to handle the activation of the debug viewer.
         """
-        if self.layout in ["Toolboxes", "Sidebars"]:
-            self.debugViewerDock.show()
-            self.debugViewerDock.raise_()
+        if self.layout == "Toolboxes":
+            self.rToolboxDock.show()
+            self.rToolbox.setCurrentWidget(self.debugViewer)
+        elif self.layout == "Sidebars":
+            self.rightSidebar.show()
+            self.rightSidebar.setCurrentWidget(self.debugViewer)
         else:
             self.debugViewer.show()
         self.debugViewer.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleShell(self):
-        """
-        Private slot to handle the toggle of the Shell window .
-        """
-        hasFocus = self.shell.hasFocus()
-        shown = self.__toggleWindow(self.shell)
-        if shown:
-            self.__activateShell()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateShell(self):
         """
         Private slot to handle the activation of the Shell window.
         """
         if self.embeddedShell:              # embedded in debug browser
-            if self.layout in ["Toolboxes", "Sidebars"]:
-                self.debugViewerDock.show()
-                self.debugViewerDock.raise_()
+            if self.layout == "Toolboxes":
+                self.rToolboxDock.show()
+                self.rToolbox.setCurrentWidget(self.debugViewer)
+            elif self.layout == "Sidebars":
+                self.rightSidebar.show()
+                self.rightSidebar.setCurrentWidget(self.debugViewer)
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.shellAssembly)
@@ -3383,18 +3325,6 @@ class UserInterface(E5MainWindow):
                 self.shell.show()
         self.shell.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleTerminal(self):
-        """
-        Private slot to handle the toggle of the Terminal window .
-        """
-        hasFocus = self.terminal.hasFocus()
-        shown = self.__toggleWindow(self.terminal)
-        if shown:
-            self.__activateTerminal()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateTerminal(self):
         """
         Private slot to handle the activation of the Terminal window.
@@ -3409,18 +3339,6 @@ class UserInterface(E5MainWindow):
             self.terminal.show()
         self.terminal.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleLogViewer(self):
-        """
-        Private slot to handle the toggle of the Log Viewer window.
-        """
-        hasFocus = self.logViewer.hasFocus()
-        shown = self.__toggleWindow(self.logViewer)
-        if shown:
-            self.__activateLogViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateLogViewer(self):
         """
         Private slot to handle the activation of the Log Viewer.
@@ -3435,18 +3353,6 @@ class UserInterface(E5MainWindow):
             self.logViewer.show()
         self.logViewer.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleTaskViewer(self):
-        """
-        Private slot to handle the toggle of the Task Viewer window.
-        """
-        hasFocus = self.taskViewer.hasFocus()
-        shown = self.__toggleWindow(self.taskViewer)
-        if shown:
-            self.__activateTaskViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateTaskViewer(self):
         """
         Private slot to handle the activation of the Task Viewer.
@@ -3461,25 +3367,13 @@ class UserInterface(E5MainWindow):
             self.taskViewer.show()
         self.taskViewer.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleTemplateViewer(self):
-        """
-        Private slot to handle the toggle of the Template Viewer window.
-        """
-        hasFocus = self.templateViewer.hasFocus()
-        shown = self.__toggleWindow(self.templateViewer)
-        if shown:
-            self.__activateTemplateViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateTemplateViewer(self):
         """
         Private slot to handle the activation of the Template Viewer.
         """
         if self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.templateViewer)
+            self.lToolboxDock.show()
+            self.lToolbox.setCurrentWidget(self.templateViewer)
         elif self.layout == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.templateViewer)
@@ -3487,42 +3381,33 @@ class UserInterface(E5MainWindow):
             self.templateViewer.show()
         self.templateViewer.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleBrowser(self):
-        """
-        Private slot to handle the toggle of the File Browser window.
-        """
-        hasFocus = self.browser.hasFocus()
-        shown = self.__toggleWindow(self.browser)
-        if shown:
-            self.__activateBrowser()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateBrowser(self):
         """
         Private slot to handle the activation of the file browser.
         """
         if self.embeddedFileBrowser == 0:   # separate window
             if self.layout == "Toolboxes":
-                self.vToolboxDock.show()
-                self.vToolbox.setCurrentWidget(self.browser)
+                self.lToolboxDock.show()
+                self.lToolbox.setCurrentWidget(self.browser)
             elif self.layout == "Sidebars":
                 self.leftSidebar.show()
                 self.leftSidebar.setCurrentWidget(self.browser)
             else:
                 self.browser.show()
         elif self.embeddedFileBrowser == 1:  # embedded in debug browser
-            if self.layout in ["Toolboxes", "Sidebars"]:
-                self.debugViewerDock.show()
-                self.debugViewerDock.raise_()
+            if self.layout == "Toolboxes":
+                self.rToolboxDock.show()
+                self.rToolbox.setCurrentWidget(self.debugViewer)
+            elif self.layout == "Sidebars":
+                self.rightSidebar.show()
+                self.rightSidebar.setCurrentWidget(self.debugViewer)
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.browser)
         else:                               # embedded in project browser
             if self.layout == "Toolboxes":
-                self.vToolboxDock.show()
-                self.vToolbox.setCurrentWidget(self.projectBrowser)
+                self.lToolboxDock.show()
+                self.lToolbox.setCurrentWidget(self.projectBrowser)
             elif self.layout == "Sidebars":
                 self.leftSidebar.show()
                 self.leftSidebar.setCurrentWidget(self.projectBrowser)
@@ -3531,14 +3416,26 @@ class UserInterface(E5MainWindow):
             self.projectBrowser.setCurrentWidget(self.browser)
         self.browser.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleVerticalToolbox(self):
+    def __toggleLeftToolbox(self):
         """
-        Private slot to handle the toggle of the Vertical Toolbox window.
+        Private slot to handle the toggle of the Left Toolbox window.
         """
-        hasFocus = self.vToolbox.currentWidget().hasFocus()
-        shown = self.__toggleWindow(self.vToolboxDock)
+        hasFocus = self.lToolbox.currentWidget().hasFocus()
+        shown = self.__toggleWindow(self.lToolboxDock)
         if shown:
-            self.vToolbox.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+            self.lToolbox.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+        else:
+            if hasFocus:
+                self.__activateViewmanager()
+        
+    def __toggleRightToolbox(self):
+        """
+        Private slot to handle the toggle of the Right Toolbox window.
+        """
+        hasFocus = self.rToolbox.currentWidget().hasFocus()
+        shown = self.__toggleWindow(self.rToolboxDock)
+        if shown:
+            self.rToolbox.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
         else:
             if hasFocus:
                 self.__activateViewmanager()
@@ -3567,6 +3464,18 @@ class UserInterface(E5MainWindow):
             if hasFocus:
                 self.__activateViewmanager()
         
+    def __toggleRightSidebar(self):
+        """
+        Private slot to handle the toggle of the right sidebar window.
+        """
+        hasFocus = self.rightSidebar.currentWidget().hasFocus()
+        shown = self.__toggleWindow(self.rightSidebar)
+        if shown:
+            self.rightSidebar.currentWidget().setFocus(Qt.ActiveWindowFocusReason)
+        else:
+            if hasFocus:
+                self.__activateViewmanager()
+        
     def __toggleBottomSidebar(self):
         """
         Private slot to handle the toggle of the bottom sidebar window.
@@ -3579,51 +3488,27 @@ class UserInterface(E5MainWindow):
             if hasFocus:
                 self.__activateViewmanager()
         
-    def __toggleCooperationViewer(self):
-        """
-        Private slot to handle the toggle of the cooperation window.
-        """
-        hasFocus = self.cooperation.hasFocus()
-        if self.layout in ["Toolboxes", "Sidebars"]:
-            shown = self.__toggleWindow(self.cooperationDock)
-        else:
-            shown = self.__toggleWindow(self.cooperation)
-        if shown:
-            self.activateCooperationViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-        
     def activateCooperationViewer(self):
         """
         Public slot to handle the activation of the cooperation window.
         """
-        if self.layout in ["Toolboxes", "Sidebars"]:
-            self.cooperationDock.show()
-            self.cooperationDock.raise_()
+        if self.layout == "Toolboxes":
+            self.rToolboxDock.show()
+            self.rToolbox.setCurrentWidget(self.cooperation)
+        elif self.layout == "Sidebars":
+            self.rightSidebar.show()
+            self.rightSidebar.setCurrentWidget(self.cooperation)
         else:
             self.cooperation.show()
         self.cooperation.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleSymbolsViewer(self):
-        """
-        Private slot to handle the toggle of the Symbols Viewer window.
-        """
-        hasFocus = self.symbolsViewer.hasFocus()
-        shown = self.__toggleWindow(self.symbolsViewer)
-        if shown:
-            self.__activateSymbolsViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateSymbolsViewer(self):
         """
         Private slot to handle the activation of the Symbols Viewer.
         """
         if self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.symbolsViewer)
+            self.lToolboxDock.show()
+            self.lToolbox.setCurrentWidget(self.symbolsViewer)
         elif self.layout == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.symbolsViewer)
@@ -3631,25 +3516,13 @@ class UserInterface(E5MainWindow):
             self.symbolsViewer.show()
         self.symbolsViewer.setFocus(Qt.ActiveWindowFocusReason)
         
-    def __toggleNumbersViewer(self):
-        """
-        Private slot to handle the toggle of the Numbers Viewer window.
-        """
-        hasFocus = self.numbersViewer.hasFocus()
-        shown = self.__toggleWindow(self.numbersViewer)
-        if shown:
-            self.__activateNumbersViewer()
-        else:
-            if hasFocus:
-                self.__activateViewmanager()
-
     def __activateNumbersViewer(self):
         """
         Private slot to handle the activation of the Numbers Viewer.
         """
         if self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.numbersViewer)
+            self.lToolboxDock.show()
+            self.lToolbox.setCurrentWidget(self.numbersViewer)
         elif self.layout == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.numbersViewer)
@@ -5266,6 +5139,7 @@ class UserInterface(E5MainWindow):
         if self.layout == "Sidebars":
             self.leftSidebar.shutdown()
             self.bottomSidebar.shutdown()
+            self.rightSidebar.shutdown()
         
         if self.SAServer is not None:
             self.SAServer.shutdown()

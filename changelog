@@ -7,6 +7,9 @@ Version 5.3-snapshot-2012mmdd:
      Python 2 and Python 3 debuggers
 - Debug Viewer
   -- added a viewer for call trace logs
+- User Interface
+  -- changed the layout of the right side widgets and added a sub menu
+     for the switching between the 'inner' windows.
 
 Version 5.3-snapshot-20121101:
 - bug fixes

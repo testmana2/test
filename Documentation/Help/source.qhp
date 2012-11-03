@@ -11009,6 +11009,7 @@
       <keyword name="UserInterface.__createToolboxesLayout" id="UserInterface.__createToolboxesLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createToolboxesLayout" />
       <keyword name="UserInterface.__createUnitTestDialog" id="UserInterface.__createUnitTestDialog" ref="eric5.UI.UserInterface.html#UserInterface.__createUnitTestDialog" />
       <keyword name="UserInterface.__customViewer" id="UserInterface.__customViewer" ref="eric5.UI.UserInterface.html#UserInterface.__customViewer" />
+      <keyword name="UserInterface.__debuggingDone" id="UserInterface.__debuggingDone" ref="eric5.UI.UserInterface.html#UserInterface.__debuggingDone" />
       <keyword name="UserInterface.__debuggingStarted" id="UserInterface.__debuggingStarted" ref="eric5.UI.UserInterface.html#UserInterface.__debuggingStarted" />
       <keyword name="UserInterface.__deinstallPlugin" id="UserInterface.__deinstallPlugin" ref="eric5.UI.UserInterface.html#UserInterface.__deinstallPlugin" />
       <keyword name="UserInterface.__designer" id="UserInterface.__designer" ref="eric5.UI.UserInterface.html#UserInterface.__designer" />
@@ -11075,6 +11076,7 @@
       <keyword name="UserInterface.__showPython2Doc" id="UserInterface.__showPython2Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPython2Doc" />
       <keyword name="UserInterface.__showPythonDoc" id="UserInterface.__showPythonDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showPythonDoc" />
       <keyword name="UserInterface.__showQt4Doc" id="UserInterface.__showQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showQt4Doc" />
+      <keyword name="UserInterface.__showSubWindowMenu" id="UserInterface.__showSubWindowMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showSubWindowMenu" />
       <keyword name="UserInterface.__showSvg" id="UserInterface.__showSvg" ref="eric5.UI.UserInterface.html#UserInterface.__showSvg" />
       <keyword name="UserInterface.__showSystemEmailClient" id="UserInterface.__showSystemEmailClient" ref="eric5.UI.UserInterface.html#UserInterface.__showSystemEmailClient" />
       <keyword name="UserInterface.__showToolGroupsMenu" id="UserInterface.__showToolGroupsMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showToolGroupsMenu" />
@@ -11091,21 +11093,11 @@
       <keyword name="UserInterface.__startWebBrowser" id="UserInterface.__startWebBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__startWebBrowser" />
       <keyword name="UserInterface.__switchTab" id="UserInterface.__switchTab" ref="eric5.UI.UserInterface.html#UserInterface.__switchTab" />
       <keyword name="UserInterface.__toggleBottomSidebar" id="UserInterface.__toggleBottomSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBottomSidebar" />
-      <keyword name="UserInterface.__toggleBrowser" id="UserInterface.__toggleBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleBrowser" />
-      <keyword name="UserInterface.__toggleCooperationViewer" id="UserInterface.__toggleCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleCooperationViewer" />
-      <keyword name="UserInterface.__toggleDebugViewer" id="UserInterface.__toggleDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleDebugViewer" />
       <keyword name="UserInterface.__toggleHorizontalToolbox" id="UserInterface.__toggleHorizontalToolbox" ref="eric5.UI.UserInterface.html#UserInterface.__toggleHorizontalToolbox" />
       <keyword name="UserInterface.__toggleLeftSidebar" id="UserInterface.__toggleLeftSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLeftSidebar" />
-      <keyword name="UserInterface.__toggleLogViewer" id="UserInterface.__toggleLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLogViewer" />
-      <keyword name="UserInterface.__toggleMultiProjectBrowser" id="UserInterface.__toggleMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleMultiProjectBrowser" />
-      <keyword name="UserInterface.__toggleNumbersViewer" id="UserInterface.__toggleNumbersViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleNumbersViewer" />
-      <keyword name="UserInterface.__toggleProjectBrowser" id="UserInterface.__toggleProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__toggleProjectBrowser" />
-      <keyword name="UserInterface.__toggleShell" id="UserInterface.__toggleShell" ref="eric5.UI.UserInterface.html#UserInterface.__toggleShell" />
-      <keyword name="UserInterface.__toggleSymbolsViewer" id="UserInterface.__toggleSymbolsViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleSymbolsViewer" />
-      <keyword name="UserInterface.__toggleTaskViewer" id="UserInterface.__toggleTaskViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleTaskViewer" />
-      <keyword name="UserInterface.__toggleTemplateViewer" id="UserInterface.__toggleTemplateViewer" ref="eric5.UI.UserInterface.html#UserInterface.__toggleTemplateViewer" />
-      <keyword name="UserInterface.__toggleTerminal" id="UserInterface.__toggleTerminal" ref="eric5.UI.UserInterface.html#UserInterface.__toggleTerminal" />
-      <keyword name="UserInterface.__toggleVerticalToolbox" id="UserInterface.__toggleVerticalToolbox" ref="eric5.UI.UserInterface.html#UserInterface.__toggleVerticalToolbox" />
+      <keyword name="UserInterface.__toggleLeftToolbox" id="UserInterface.__toggleLeftToolbox" ref="eric5.UI.UserInterface.html#UserInterface.__toggleLeftToolbox" />
+      <keyword name="UserInterface.__toggleRightSidebar" id="UserInterface.__toggleRightSidebar" ref="eric5.UI.UserInterface.html#UserInterface.__toggleRightSidebar" />
+      <keyword name="UserInterface.__toggleRightToolbox" id="UserInterface.__toggleRightToolbox" ref="eric5.UI.UserInterface.html#UserInterface.__toggleRightToolbox" />
       <keyword name="UserInterface.__toggleWindow" id="UserInterface.__toggleWindow" ref="eric5.UI.UserInterface.html#UserInterface.__toggleWindow" />
       <keyword name="UserInterface.__toolActionTriggered" id="UserInterface.__toolActionTriggered" ref="eric5.UI.UserInterface.html#UserInterface.__toolActionTriggered" />
       <keyword name="UserInterface.__toolExecute" id="UserInterface.__toolExecute" ref="eric5.UI.UserInterface.html#UserInterface.__toolExecute" />

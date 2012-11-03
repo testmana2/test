@@ -140,10 +140,13 @@ class Prefs(object):
                     # saved state main window with toolbox windows (4)
                     b"",
                     # visibility of the toolboxes/sidebars (5)
-                    [True,  True],
+                    # left, bottom, right
+                    [True,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (6)
-                    [b"", b"", b"", b""],
+                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
+                    # right splitter, right sidebar
+                    [b"", b"", b"", b"", b"", b""],
                 ],
             "debug": [
                     # visibility (0)
@@ -158,10 +161,13 @@ class Prefs(object):
                     # saved state main window with toolbox windows (4)
                     b"",
                     # visibility of the toolboxes/sidebars (5)
-                    [False,  True],
+                    # left, bottom, right
+                    [False,  True, True],
                     # saved states of the splitters and sidebars of the
                     # sidebars layout (6)
-                    [b"", b"", b"", b""],
+                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
+                    # right splitter, right sidebar
+                    [b"", b"", b"", b"", b"", b""],
                 ],
         },
         "ToolbarManagerState": QByteArray(),
