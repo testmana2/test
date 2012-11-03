@@ -3956,8 +3956,8 @@ class UserInterface(QMainWindow):
             self.numbersDock.show()
             self.numbersDock.raise_()
         elif self.layout == "Toolboxes":
-            self.vToolboxDock.show()
-            self.vToolbox.setCurrentWidget(self.numbersViewer)
+            self.hToolboxDock.show()
+            self.hToolbox.setCurrentWidget(self.numbersViewer)
         elif self.layout == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.numbersViewer)
