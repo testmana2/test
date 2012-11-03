@@ -1362,7 +1362,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Project-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+P")),
                 0, self,
-                'project_viewer_activate', True)
+                'project_viewer_activate')
         self.pbActivateAct.triggered[()].connect(self.__activateProjectBrowser)
         self.actions.append(self.pbActivateAct)
         self.addAction(self.pbActivateAct)
@@ -1383,7 +1383,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Multiproject-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+M")),
                 0, self,
-                'multi_project_viewer_activate', True)
+                'multi_project_viewer_activate')
         self.mpbActivateAct.triggered[()].connect(self.__activateMultiProjectBrowser)
         self.actions.append(self.mpbActivateAct)
         self.addAction(self.mpbActivateAct)
@@ -1403,7 +1403,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Debug-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+D")),
                 0, self,
-                'debug_viewer_activate', True)
+                'debug_viewer_activate')
         self.debugViewerActivateAct.triggered[()].connect(self.__activateDebugViewer)
         self.actions.append(self.debugViewerActivateAct)
         self.addAction(self.debugViewerActivateAct)
@@ -1424,7 +1424,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Shell'),
                 QKeySequence(self.trUtf8("Alt+Shift+S")),
                 0, self,
-                'interprter_shell_activate', True)
+                'interprter_shell_activate')
         self.shellActivateAct.triggered[()].connect(self.__activateShell)
         self.actions.append(self.shellActivateAct)
         self.addAction(self.shellActivateAct)
@@ -1444,7 +1444,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Terminal'),
                 QKeySequence(self.trUtf8("Alt+Shift+R")),
                 0, self,
-                'terminal_activate', True)
+                'terminal_activate')
         self.terminalActivateAct.triggered[()].connect(self.__activateTerminal)
         self.actions.append(self.terminalActivateAct)
         self.addAction(self.terminalActivateAct)
@@ -1465,7 +1465,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate File-Browser'),
                 QKeySequence(self.trUtf8("Alt+Shift+F")),
                 0, self,
-                'file_browser_activate', True)
+                'file_browser_activate')
         self.browserActivateAct.triggered[()].connect(self.__activateBrowser)
         self.actions.append(self.browserActivateAct)
         self.addAction(self.browserActivateAct)
@@ -1485,7 +1485,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Log-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+G")),
                 0, self,
-                'log_viewer_activate', True)
+                'log_viewer_activate')
         self.logViewerActivateAct.triggered[()].connect(self.__activateLogViewer)
         self.actions.append(self.logViewerActivateAct)
         self.addAction(self.logViewerActivateAct)
@@ -1505,7 +1505,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Task-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+T")),
                 0, self,
-                'task_viewer_activate', 1)
+                'task_viewer_activate')
         self.taskViewerActivateAct.triggered[()].connect(self.__activateTaskViewer)
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
@@ -1526,7 +1526,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Template-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+A")),
                 0, self,
-                'template_viewer_activate', 1)
+                'template_viewer_activate')
         self.templateViewerActivateAct.triggered[()].connect(self.__activateTemplateViewer)
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
@@ -1594,8 +1594,9 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Cooperation-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+O")),
                 0, self,
-                'cooperation_viewer_activate', True)
-        self.cooperationViewerActivateAct.triggered[()].connect(self.activateCooperationViewer)
+                'cooperation_viewer_activate')
+        self.cooperationViewerActivateAct.triggered[()].connect(
+            self.activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
 
@@ -1616,7 +1617,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Symbols-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+Y")),
                 0, self,
-                'symbols_viewer_activate', True)
+                'symbols_viewer_activate')
         self.symbolsViewerActivateAct.triggered[()].connect(self.__activateSymbolsViewer)
         self.actions.append(self.symbolsViewerActivateAct)
         self.addAction(self.symbolsViewerActivateAct)
@@ -1638,7 +1639,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Numbers-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+B")),
                 0, self,
-                'numbers_viewer_activate', True)
+                'numbers_viewer_activate')
         self.numbersViewerActivateAct.triggered[()].connect(self.__activateNumbersViewer)
         self.actions.append(self.numbersViewerActivateAct)
         self.addAction(self.numbersViewerActivateAct)
@@ -2063,7 +2064,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate current editor'),
                 QKeySequence(self.trUtf8("Alt+Shift+E")),
                 0, self,
-                'viewmanager_activate', 1)
+                'viewmanager_activate')
         self.viewmanagerActivateAct.triggered[()].connect(self.__activateViewmanager)
         self.actions.append(self.viewmanagerActivateAct)
         self.addAction(self.viewmanagerActivateAct)
