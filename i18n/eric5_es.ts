@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1986,8 +1987,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2228,8 +2229,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -2459,67 +2460,67 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="14"/>
         <source>Call Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Trazado de llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="22"/>
         <source>Press to start tracing calls and returns</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para comenzar trazado de llamadas y retornos</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="32"/>
         <source>Press to stop tracing calls and returns</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para detener trazado de llamadas y retornos</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="55"/>
         <source>Press to resize the columns to their contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para ajustar tamaño de columnas a sus contenidos</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="65"/>
         <source>Press to clear the call trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para limpiar el trazado de llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="75"/>
         <source>Press to save the call trace as a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para guardar el trazado de llamadas como archivo de texto</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="48"/>
         <source>From</source>
-        <translation type="unfinished">Desde</translation>
+        <translation>Desde</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="48"/>
         <source>To</source>
-        <translation type="unfinished">Hasta</translation>
+        <translation>Hasta</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="130"/>
         <source>Save Call Trace Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Información de Trazado de Llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="116"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
+        <translation>Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="130"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="153"/>
         <source>Error saving Call Trace Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al guardar Información de Trazado de Llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="153"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La información del trazado de llamadas no se ha podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -8297,12 +8298,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="1108"/>
         <source>Next change</source>
-        <translation type="unfinished"></translation>
+        <translation>Siguiente cambio</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="1111"/>
         <source>Previous change</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambio anterior</translation>
     </message>
 </context>
 <context>
@@ -10979,52 +10980,52 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
         <source>Change Tracing</source>
-        <translation type="unfinished"></translation>
+        <translation>Trazado de Cambios</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1259"/>
         <source>Select to mark changed lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para marcar las líneas cambiadas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1262"/>
         <source>Mark changed lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar líneas cambiadas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1271"/>
         <source>Timeout for marking changed lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo de espera para marcar líneas cambiadas:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1278"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el tiempo en milisegundos despues de transcurrido el cual las líneas cambiadas serán marcadas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1290"/>
         <source> ms</source>
-        <translation type="unfinished">ms</translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1323"/>
         <source>Unsaved changes colour:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color para cambios no guardados:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1336"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para el marcador de cambios para cambios sin guardar.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1346"/>
         <source>Saved changes colour:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color para cambios guardados:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1359"/>
         <source>Select the colour for the change marker for saved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para el marcador de cambios para cambios guardados.</translation>
     </message>
 </context>
 <context>
@@ -13997,7 +13998,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -33350,7 +33351,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="DataViews/PyCoverageDialog.py" line="51"/>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
 </context>
 <context>
@@ -50513,237 +50514,237 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1330"/>
         <source>Left Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de herramientas de la Izquierda</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1341"/>
         <source>Right Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de herramientas de la Derecha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1199"/>
         <source>Switch the input focus to the Project-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Proyecto.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1201"/>
         <source>&lt;b&gt;Activate Project-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Project-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Proyectos&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1214"/>
         <source>Switch the input focus to the Multiproject-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Multiproyecto.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1216"/>
         <source>&lt;b&gt;Activate Multiproject-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Multiproject-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Multiproyecto&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Multiproyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1229"/>
         <source>Switch the input focus to the Debug-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Depuración.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1231"/>
         <source>&lt;b&gt;Activate Debug-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Debug-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Depuración&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Depuración.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1244"/>
         <source>Switch the input focus to the Shell window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Shell.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1246"/>
         <source>&lt;b&gt;Activate Shell&lt;/b&gt;&lt;p&gt;This switches the input focus to the Shell window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Shell&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Shell.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1259"/>
         <source>Switch the input focus to the Terminal window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Terminal.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1261"/>
         <source>&lt;b&gt;Activate Terminal&lt;/b&gt;&lt;p&gt;This switches the input focus to the Terminal window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Terminal&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Terminal.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1269"/>
         <source>&amp;File-Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Na&amp;vegador de archivos</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1274"/>
         <source>Switch the input focus to the File-Browser window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Navegador de Archivos.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1276"/>
         <source>&lt;b&gt;Activate File-Browser&lt;/b&gt;&lt;p&gt;This switches the input focus to the File-Browser window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Navegador de Archivos&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Navegador de Archivos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1284"/>
         <source>Lo&amp;g-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Lo&amp;g</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1289"/>
         <source>Switch the input focus to the Log-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Log.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1291"/>
         <source>&lt;b&gt;Activate Log-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Log-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Log&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Log.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1299"/>
         <source>&amp;Task-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de &amp;Tareas</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1304"/>
         <source>Switch the input focus to the Task-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Tareas.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1314"/>
         <source>Templ&amp;ate-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Pl&amp;antillas</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1319"/>
         <source>Switch the input focus to the Template-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Plantillas.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1321"/>
         <source>&lt;b&gt;Activate Template-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Template-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Plantillas&lt;/b&gt;&lt;p&gt;Cambiar el foco de input a la ventana de Visor de Plantillas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1330"/>
         <source>&amp;Left Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de herramientas de &amp;la Izquierda</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1332"/>
         <source>Toggle the Left Toolbox window</source>
-        <translation type="unfinished"></translation>
+        <translation>Conmutar la ventana de Caja de Herramientas a la izquierda</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1333"/>
         <source>&lt;b&gt;Toggle the Left Toolbox window&lt;/b&gt;&lt;p&gt;If the Left Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conmutar la Caja de Herramientas de la izquierda&lt;/b&gt;&lt;p&gt;Si la ventana Caja de Herramientas de la izquierda está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1341"/>
         <source>&amp;Right Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de herramientas de la De&amp;recha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1343"/>
         <source>Toggle the Right Toolbox window</source>
-        <translation type="unfinished"></translation>
+        <translation>Conmutar la ventana de Caja de Herramientas a la derecha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1344"/>
         <source>&lt;b&gt;Toggle the Right Toolbox window&lt;/b&gt;&lt;p&gt;If the Right Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conmutar la Caja de Herramientas de la derecha&lt;/b&gt;&lt;p&gt;Si la ventana Caja de Herramientas de la derecha está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1375"/>
         <source>Right Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra Lateral a la Derecha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1375"/>
         <source>&amp;Right Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ba&amp;rra Lateral a la Derecha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1377"/>
         <source>Toggle the right sidebar window</source>
-        <translation type="unfinished"></translation>
+        <translation>Conmutar la ventana de barra lateral de la derecha</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1378"/>
         <source>&lt;b&gt;Toggle the right sidebar window&lt;/b&gt;&lt;p&gt;If the right sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conmutar la ventana de barra lateral de la derecha&lt;/b&gt;&lt;p&gt;Si la ventana de barra lateral a la derecha está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1398"/>
         <source>Cooperation-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Cooperación</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1398"/>
         <source>Co&amp;operation-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Co&amp;operación</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1404"/>
         <source>Switch the input focus to the Cooperation-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Cooperación.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1406"/>
         <source>&lt;b&gt;Activate Cooperation-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Cooperation-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Cooperación&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Cooperación.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1415"/>
         <source>Symbols-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Símbolos</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1415"/>
         <source>S&amp;ymbols-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de S&amp;ímbolos</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1421"/>
         <source>Switch the input focus to the Symbols-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Símbolos.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1423"/>
         <source>&lt;b&gt;Activate Symbols-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Symbols-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Símbolos&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Símbolos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1431"/>
         <source>Numbers-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Números</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1431"/>
         <source>Num&amp;bers-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de Nú&amp;meros</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1437"/>
         <source>Switch the input focus to the Numbers-Viewer window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el foco de input a la ventana de Visor de Números.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1439"/>
         <source>&lt;b&gt;Activate Numbers-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Numbers-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Números&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Números.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2153"/>
         <source>&amp;Windows</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ventanas</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1306"/>
         <source>&lt;b&gt;Activate Task-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Task-Viewer window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Activar Visor de Tareas&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Tareas.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -54438,32 +54439,32 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="3339"/>
         <source>Next Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Siguiente Cambio</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3333"/>
         <source>&amp;Next Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Siguie&amp;nte Cambio</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3341"/>
         <source>&lt;b&gt;Next Change&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a change marker.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Siguiente Cambio&lt;/b&gt;&lt;p&gt;Ir a la siguiente línea del editor actual que tiene un marcador de cambios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3355"/>
         <source>Previous Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambio Anterior</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3348"/>
         <source>&amp;Previous Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambio &amp;Anterior</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3357"/>
         <source>&lt;b&gt;Previous Change&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a change marker.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cambio Anterior&lt;/b&gt;&lt;p&gt;Ir a la anterior línea del editor actual que tiene un marcador de cambios.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -54594,7 +54595,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="85"/>
         <source>Right Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra Lateral a la Derecha</translation>
     </message>
 </context>
 <context>
@@ -54642,12 +54643,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="78"/>
         <source>Left Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de Herramientas de la Izquierda</translation>
     </message>
     <message>
         <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="85"/>
         <source>Right Toolbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Caja de Herramientas de la Derecha</translation>
     </message>
 </context>
 <context>
