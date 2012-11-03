@@ -3521,8 +3521,8 @@ class UserInterface(E5MainWindow):
         Private slot to handle the activation of the Numbers Viewer.
         """
         if self.layout == "Toolboxes":
-            self.lToolboxDock.show()
-            self.lToolbox.setCurrentWidget(self.numbersViewer)
+            self.hToolboxDock.show()
+            self.hToolboxDock.setCurrentWidget(self.numbersViewer)
         elif self.layout == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.numbersViewer)
