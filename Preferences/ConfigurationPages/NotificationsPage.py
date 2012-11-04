@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing the Notifications configuration page.
+"""
+
+from PyQt4.QtCore import pyqtSlot, QPoint
+from PyQt4.QtGui import QApplication
+
+from .ConfigurationPageBase import ConfigurationPageBase
+from .Ui_NotificationsPage import Ui_NotificationsPage
+
+from UI.NotificationWidget import NotificationWidget
+
+import Preferences
+import UI.PixmapCache
+
+
+class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
+    """
+    Class implementing the Notifications configuration page.
+    """
+    def __init__(self):
+        """
+        Constructor
+        
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__()
+        self.setupUi(self)
+        self.setObjectName("NotificationsPage")
+        
+        geom = QApplication.desktop().availableGeometry()
+        self.xSpinBox.setMaximum(geom.width())
+        self.ySpinBox.setMaximum(geom.height())
+        
+        self.__notification = None
+        
+        # set initial values
+        self.enableCheckBox.setChecked(Preferences.getUI("NotificationsEnabled"))
+        self.timeoutSpinBox.setValue(Preferences.getUI("NotificationTimeout"))
+        point = Preferences.getUI("NotificationPosition")
+        self.xSpinBox.setValue(point.x())
+        self.ySpinBox.setValue(point.y())
+    
+    def save(self):
+        """
+        Public slot to save the Notifications configuration.
+        """
+        Preferences.setUI("NotificationsEnabled", self.enableCheckBox.isChecked())
+        Preferences.setUI("NotificationTimeout", self.timeoutSpinBox.value())
+        Preferences.setUI("NotificationPosition", QPoint(
+            self.xSpinBox.value(), self.ySpinBox.value()))
+    
+    @pyqtSlot(bool)
+    def on_visualButton_clicked(self, checked):
+        """
+        Private slot to select the position visually.
+        
+        @param checked state of the button (boolean)
+        """
+        if checked:
+            self.__notification = NotificationWidget(parent=self, setPosition=True)
+            self.__notification.setPixmap(UI.PixmapCache.getPixmap("notification48.png"))
+            self.__notification.setHeading(self.trUtf8("Visual Selection"))
+            self.__notification.setText(self.trUtf8("Drag the notification window to"
+                " the desired place and release the button."))
+            self.__notification.move(QPoint(self.xSpinBox.value(), self.ySpinBox.value()))
+            self.__notification.show()
+        else:
+            # retrieve the position
+            point = self.__notification.frameGeometry().topLeft()
+            self.xSpinBox.setValue(point.x())
+            self.ySpinBox.setValue(point.y())
+            self.__notification.close()
+            self.__notification = None
+    
+
+def create(dlg):
+    """
+    Module function to create the configuration page.
+    
+    @param dlg reference to the configuration dialog
+    """
+    page = NotificationsPage()
+    return page

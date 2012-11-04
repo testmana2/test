@@ -77,6 +77,7 @@ from .FindFileDialog import FindFileDialog
 from .FindFileNameDialog import FindFileNameDialog
 from .SymbolsWidget import SymbolsWidget
 from .NumbersWidget import NumbersWidget
+from .NotificationWidget import NotificationWidget
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -290,6 +291,7 @@ class UserInterface(E5MainWindow):
         self.compareDlg = None
         self.findFilesDialog = None
         self.replaceFilesDialog = None
+        self.__notification = None
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
@@ -669,7 +671,7 @@ class UserInterface(E5MainWindow):
                               self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
-        self.cooperation = ChatWidget()
+        self.cooperation = ChatWidget(self)
         self.rToolbox.addItem(self.cooperation,
                               UI.PixmapCache.getIcon("cooperation.png"),
                               self.trUtf8("Cooperation"))
@@ -777,7 +779,7 @@ class UserInterface(E5MainWindow):
 
         # Create the chat part of the user interface
         logging.debug("Creating Chat Widget...")
-        self.cooperation = ChatWidget()
+        self.cooperation = ChatWidget(self)
         self.rightSidebar.addTab(self.cooperation,
             UI.PixmapCache.getIcon("cooperation.png"), self.trUtf8("Cooperation"))
         
@@ -5134,6 +5136,8 @@ class UserInterface(E5MainWindow):
             return False
         self.debuggerUI.shutdown()
         
+        self.cooperation.shutdown()
+        
         self.pluginManager.doShutdown()
         
         if self.layout == "Sidebars":
@@ -5502,3 +5506,33 @@ class UserInterface(E5MainWindow):
             if Preferences.getGeometry("MainMaximized"):
                 self.setWindowState(Qt.WindowStates(Qt.WindowMaximized))
             self.__startup = False
+    
+    ##########################################
+    ## Support for desktop notifications below
+    ##########################################
+    
+    def showNotification(self, icon, heading, text):
+        """
+        Public method to show a desktop notification.
+        
+        @param icon icon to be shown in the notification (QPixmap)
+        @param heading heading of the notification (string)
+        @param text text of the notification (string)
+        """
+        if Preferences.getUI("NotificationsEnabled"):
+            if self.__notification is None:
+                self.__notification = NotificationWidget(parent=self)
+            self.__notification.setPixmap(icon)
+            self.__notification.setHeading(heading)
+            self.__notification.setText(text)
+            self.__notification.setTimeout(Preferences.getUI("NotificationTimeout"))
+            self.__notification.move(Preferences.getUI("NotificationPosition"))
+            self.__notification.show()
+    
+    def notificationsEnabled(self):
+        """
+        Public method to check, if notifications are enabled.
+        
+        @return flag indicating, if notifications are enabled (boolean)
+        """
+        return Preferences.getUI("NotificationsEnabled")

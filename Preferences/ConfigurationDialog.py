@@ -138,6 +138,9 @@ class ConfigurationWidget(QWidget):
                 "networkPage": \
                     [self.trUtf8("Network"), "preferences-network.png",
                     "NetworkPage", None, None],
+                "notificationsPage": \
+                    [self.trUtf8("Notifications"), "preferences-notifications.png",
+                    "NotificationsPage", None, None],
                 "pluginManagerPage": \
                     [self.trUtf8("Plugin Manager"), "preferences-pluginmanager.png",
                     "PluginManagerPage", None, None],

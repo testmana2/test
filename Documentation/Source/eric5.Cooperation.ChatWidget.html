@@ -197,6 +197,9 @@ QWidget, Ui_ChatWidget
 </tr><tr>
 <td><a href="#ChatWidget.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
+</tr><tr>
+<td><a href="#ChatWidget.shutdown">shutdown</a></td>
+<td>Public method to shut down the cooperation system.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -205,11 +208,14 @@ QWidget, Ui_ChatWidget
 </table>
 <a NAME="ChatWidget.__init__" ID="ChatWidget.__init__"></a>
 <h4>ChatWidget (Constructor)</h4>
-<b>ChatWidget</b>(<i>port=-1, parent=None</i>)
+<b>ChatWidget</b>(<i>ui, port=-1, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>port</i></dt>
+<dt><i>ui</i></dt>
+<dd>
+reference to the user interface object (UserInterface)
+</dd><dt><i>port</i></dt>
 <dd>
 port to be used for the cooperation server (integer)
 </dd><dt><i>parent</i></dt>
@@ -490,6 +496,11 @@ the position of the mouse pointer (QPoint)
 <b>preferencesChanged</b>(<i></i>)
 <p>
         Public slot to handle a change of preferences.
+</p><a NAME="ChatWidget.shutdown" ID="ChatWidget.shutdown"></a>
+<h4>ChatWidget.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to shut down the cooperation system.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

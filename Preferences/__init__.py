@@ -215,6 +215,9 @@ class Prefs(object):
         "CheckErrorLog": True,
         
         "LogStdErrColour": QColor(Qt.red),
+        "NotificationsEnabled": True,
+        "NotificationTimeout": 5,      # time in seconds the notification is shown
+        "NotificationPosition": QPoint(10, 10),
     }
     viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][0])
     
@@ -1317,13 +1320,13 @@ def getUI(key, prefClass=Prefs):
                 "TopRightByRight", "BottomRightByRight",
                 "RequestDownloadFilename",
                 "LayoutShellEmbedded", "LayoutFileBrowserEmbedded",
-                "CheckErrorLog"]:
+                "CheckErrorLog", "NotificationsEnabled"]:
         return toBool(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp",
                  "ProxyType/Ftp", "OpenOnStartup",
-                 "PerformVersionCheck", "RecentNumber", ]:
+                 "PerformVersionCheck", "RecentNumber", "NotificationTimeout"]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",

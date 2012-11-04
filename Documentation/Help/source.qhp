@@ -719,6 +719,7 @@
               <section title="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
               <section title="eric5.Preferences.ConfigurationPages.MultiProjectPage" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.NetworkPage" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.NotificationsPage" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PluginManagerPage" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PrinterPage" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ProjectBrowserPage" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html" />
@@ -896,6 +897,7 @@
             <section title="eric5.UI.FindFileNameDialog" ref="eric5.UI.FindFileNameDialog.html" />
             <section title="eric5.UI.Info" ref="eric5.UI.Info.html" />
             <section title="eric5.UI.LogView" ref="eric5.UI.LogView.html" />
+            <section title="eric5.UI.NotificationWidget" ref="eric5.UI.NotificationWidget.html" />
             <section title="eric5.UI.NumbersWidget" ref="eric5.UI.NumbersWidget.html" />
             <section title="eric5.UI.PixmapCache" ref="eric5.UI.PixmapCache.html" />
             <section title="eric5.UI.SearchWidget" ref="eric5.UI.SearchWidget.html" />
@@ -1893,6 +1895,7 @@
       <keyword name="ChatWidget.on_startEditButton_clicked" id="ChatWidget.on_startEditButton_clicked" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_startEditButton_clicked" />
       <keyword name="ChatWidget.on_usersList_customContextMenuRequested" id="ChatWidget.on_usersList_customContextMenuRequested" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.on_usersList_customContextMenuRequested" />
       <keyword name="ChatWidget.preferencesChanged" id="ChatWidget.preferencesChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.preferencesChanged" />
+      <keyword name="ChatWidget.shutdown" id="ChatWidget.shutdown" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.shutdown" />
       <keyword name="Checker" id="Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker" />
       <keyword name="Checker" id="Checker" ref="eric5.Utilities.py3flakes.checker.html#Checker" />
       <keyword name="Checker" id="Checker" ref="eric5.UtilitiesPython2.pep8.html#Checker" />
@@ -3886,6 +3889,7 @@
       <keyword name="Editor.__projectPropertiesChanged" id="Editor.__projectPropertiesChanged" ref="eric5.QScintilla.Editor.html#Editor.__projectPropertiesChanged" />
       <keyword name="Editor.__refreshAnnotations" id="Editor.__refreshAnnotations" ref="eric5.QScintilla.Editor.html#Editor.__refreshAnnotations" />
       <keyword name="Editor.__registerImages" id="Editor.__registerImages" ref="eric5.QScintilla.Editor.html#Editor.__registerImages" />
+      <keyword name="Editor.__reinitOnlineChangeTrace" id="Editor.__reinitOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__reinitOnlineChangeTrace" />
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
       <keyword name="Editor.__resetLanguage" id="Editor.__resetLanguage" ref="eric5.QScintilla.Editor.html#Editor.__resetLanguage" />
@@ -7101,6 +7105,22 @@
       <keyword name="NoneSplashScreen.finish" id="NoneSplashScreen.finish" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.finish" />
       <keyword name="NoneSplashScreen.showMessage" id="NoneSplashScreen.showMessage" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.showMessage" />
       <keyword name="NotBinaryPlistException" id="NotBinaryPlistException" ref="eric5.Utilities.binplistlib.html#NotBinaryPlistException" />
+      <keyword name="NotificationWidget" id="NotificationWidget" ref="eric5.UI.NotificationWidget.html#NotificationWidget" />
+      <keyword name="NotificationWidget (Constructor)" id="NotificationWidget (Constructor)" ref="eric5.UI.NotificationWidget.html#NotificationWidget.__init__" />
+      <keyword name="NotificationWidget (Module)" id="NotificationWidget (Module)" ref="eric5.UI.NotificationWidget.html" />
+      <keyword name="NotificationWidget.mouseMoveEvent" id="NotificationWidget.mouseMoveEvent" ref="eric5.UI.NotificationWidget.html#NotificationWidget.mouseMoveEvent" />
+      <keyword name="NotificationWidget.mousePressEvent" id="NotificationWidget.mousePressEvent" ref="eric5.UI.NotificationWidget.html#NotificationWidget.mousePressEvent" />
+      <keyword name="NotificationWidget.mouseReleaseEvent" id="NotificationWidget.mouseReleaseEvent" ref="eric5.UI.NotificationWidget.html#NotificationWidget.mouseReleaseEvent" />
+      <keyword name="NotificationWidget.setHeading" id="NotificationWidget.setHeading" ref="eric5.UI.NotificationWidget.html#NotificationWidget.setHeading" />
+      <keyword name="NotificationWidget.setPixmap" id="NotificationWidget.setPixmap" ref="eric5.UI.NotificationWidget.html#NotificationWidget.setPixmap" />
+      <keyword name="NotificationWidget.setText" id="NotificationWidget.setText" ref="eric5.UI.NotificationWidget.html#NotificationWidget.setText" />
+      <keyword name="NotificationWidget.setTimeout" id="NotificationWidget.setTimeout" ref="eric5.UI.NotificationWidget.html#NotificationWidget.setTimeout" />
+      <keyword name="NotificationWidget.show" id="NotificationWidget.show" ref="eric5.UI.NotificationWidget.html#NotificationWidget.show" />
+      <keyword name="NotificationsPage" id="NotificationsPage" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#NotificationsPage" />
+      <keyword name="NotificationsPage (Constructor)" id="NotificationsPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#NotificationsPage.__init__" />
+      <keyword name="NotificationsPage (Module)" id="NotificationsPage (Module)" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html" />
+      <keyword name="NotificationsPage.on_visualButton_clicked" id="NotificationsPage.on_visualButton_clicked" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#NotificationsPage.on_visualButton_clicked" />
+      <keyword name="NotificationsPage.save" id="NotificationsPage.save" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#NotificationsPage.save" />
       <keyword name="NsHtmlReader" id="NsHtmlReader" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html#NsHtmlReader" />
       <keyword name="NsHtmlReader (Constructor)" id="NsHtmlReader (Constructor)" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html#NsHtmlReader.__init__" />
       <keyword name="NsHtmlReader (Module)" id="NsHtmlReader (Module)" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html" />
@@ -11143,6 +11163,7 @@
       <keyword name="UserInterface.getToolbar" id="UserInterface.getToolbar" ref="eric5.UI.UserInterface.html#UserInterface.getToolbar" />
       <keyword name="UserInterface.getViewProfile" id="UserInterface.getViewProfile" ref="eric5.UI.UserInterface.html#UserInterface.getViewProfile" />
       <keyword name="UserInterface.launchHelpViewer" id="UserInterface.launchHelpViewer" ref="eric5.UI.UserInterface.html#UserInterface.launchHelpViewer" />
+      <keyword name="UserInterface.notificationsEnabled" id="UserInterface.notificationsEnabled" ref="eric5.UI.UserInterface.html#UserInterface.notificationsEnabled" />
       <keyword name="UserInterface.performVersionCheck" id="UserInterface.performVersionCheck" ref="eric5.UI.UserInterface.html#UserInterface.performVersionCheck" />
       <keyword name="UserInterface.processArgs" id="UserInterface.processArgs" ref="eric5.UI.UserInterface.html#UserInterface.processArgs" />
       <keyword name="UserInterface.registerToolbar" id="UserInterface.registerToolbar" ref="eric5.UI.UserInterface.html#UserInterface.registerToolbar" />
@@ -11156,6 +11177,7 @@
       <keyword name="UserInterface.showFindFileByNameDialog" id="UserInterface.showFindFileByNameDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFileByNameDialog" />
       <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
       <keyword name="UserInterface.showLogTab" id="UserInterface.showLogTab" ref="eric5.UI.UserInterface.html#UserInterface.showLogTab" />
+      <keyword name="UserInterface.showNotification" id="UserInterface.showNotification" ref="eric5.UI.UserInterface.html#UserInterface.showNotification" />
       <keyword name="UserInterface.showPreferences" id="UserInterface.showPreferences" ref="eric5.UI.UserInterface.html#UserInterface.showPreferences" />
       <keyword name="UserInterface.showReplaceFilesDialog" id="UserInterface.showReplaceFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showReplaceFilesDialog" />
       <keyword name="UserInterface.unregisterToolbar" id="UserInterface.unregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.unregisterToolbar" />
@@ -11920,6 +11942,7 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#create" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#create" />
@@ -13060,6 +13083,7 @@
       <file>eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.MultiProjectPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.NetworkPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.NotificationsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PluginManagerPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PrinterPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html</file>
@@ -13209,6 +13233,7 @@
       <file>eric5.UI.FindFileNameDialog.html</file>
       <file>eric5.UI.Info.html</file>
       <file>eric5.UI.LogView.html</file>
+      <file>eric5.UI.NotificationWidget.html</file>
       <file>eric5.UI.NumbersWidget.html</file>
       <file>eric5.UI.PixmapCache.html</file>
       <file>eric5.UI.SearchWidget.html</file>

@@ -420,6 +420,8 @@ NetworkReply QNetworkReply
 NewDialogClassDialog QDialog Ui_NewDialogClassDialog
 NewPythonPackageDialog QDialog Ui_NewPythonPackageDialog
 NotBinaryPlistException Exception
+NotificationWidget QWidget Ui_NotificationWidget
+NotificationsPage ConfigurationPageBase Ui_NotificationsPage
 NsHtmlReader QObject
 NsHtmlWriter QObject
 NumbersWidget QWidget Ui_NumbersWidget

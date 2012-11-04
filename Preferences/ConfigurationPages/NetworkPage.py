@@ -107,7 +107,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
     
     def save(self):
         """
-        Public slot to save the Application configuration.
+        Public slot to save the Networj configuration.
         """
         Preferences.setUI("DownloadPath",
             self.downloadDirEdit.text())

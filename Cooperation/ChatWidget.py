@@ -47,10 +47,11 @@ class ChatWidget(QWidget, Ui_ChatWidget):
     sendEdit = pyqtSignal()
     cancelEdit = pyqtSignal()
     
-    def __init__(self, port=-1, parent=None):
+    def __init__(self, ui, port=-1, parent=None):
         """
         Constructor
         
+        @param ui reference to the user interface object (UserInterface)
         @param port port to be used for the cooperation server (integer)
         @param parent reference to the parent widget (QWidget)
         """
@@ -70,6 +71,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.clearHostButton.setIcon(
             UI.PixmapCache.getIcon("clearLeft.png"))
         
+        self.__ui = ui
         self.__client = CooperationClient(self)
         self.__myNickName = self.__client.nickName()
         
@@ -182,6 +184,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         if not self.__connected:
             self.__setConnected(True)
+        
+        if not self.isVisible():
+            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
+                self.trUtf8("New User"), self.trUtf8("{0} has joined.").format(nick))
     
     def __participantLeft(self, nick):
         """
@@ -206,6 +212,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         if not self.__client.hasConnections():
             self.__setConnected(False)
+        
+        if not self.isVisible():
+            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
+                self.trUtf8("User Left"), self.trUtf8("{0} has left.").format(nick))
     
     def appendMessage(self, from_, message):
         """
@@ -223,6 +233,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.append(message + "\n")
         bar = self.chatEdit.verticalScrollBar()
         bar.setValue(bar.maximum())
+        
+        if not self.isVisible():
+            self.__ui.showNotification(UI.PixmapCache.getPixmap("cooperation48.png"),
+                self.trUtf8("Message from <{0}>").format(from_), message)
     
     @pyqtSlot(str)
     def on_hostEdit_editTextChanged(self, host):
@@ -670,3 +684,10 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.append(self.trUtf8("* {0} has been banned and kicked.\n").format(
             itm.text().split(":")[0]))
         self.chatEdit.setTextColor(color)
+    
+    def shutdown(self):
+        """
+        Public method to shut down the cooperation system.
+        """
+        self.__client.disconnectConnections()
+        self.__setConnected(False)

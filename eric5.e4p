@@ -1050,6 +1050,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Preferences/ConfigurationPages/HelpInterfacePage.py</Source>
     <Source>E5Gui/E5MainWindow.py</Source>
     <Source>Debugger/CallTraceViewer.py</Source>
+    <Source>UI/NotificationWidget.py</Source>
+    <Source>Preferences/ConfigurationPages/NotificationsPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1351,6 +1353,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/AdBlock/AdBlockExceptionsDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpInterfacePage.ui</Form>
     <Form>Debugger/CallTraceViewer.ui</Form>
+    <Form>UI/NotificationWidget.ui</Form>
+    <Form>Preferences/ConfigurationPages/NotificationsPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

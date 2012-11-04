@@ -680,6 +680,9 @@ E5MainWindow
 <td><a href="#UserInterface.launchHelpViewer">launchHelpViewer</a></td>
 <td>Public slot to start the help viewer.</td>
 </tr><tr>
+<td><a href="#UserInterface.notificationsEnabled">notificationsEnabled</a></td>
+<td>Public method to check, if notifications are enabled.</td>
+</tr><tr>
 <td><a href="#UserInterface.performVersionCheck">performVersionCheck</a></td>
 <td>Public method to check the internet for an eric5 update.</td>
 </tr><tr>
@@ -718,6 +721,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.showLogTab">showLogTab</a></td>
 <td>Public method to show a particular Log-Viewer tab.</td>
+</tr><tr>
+<td><a href="#UserInterface.showNotification">showNotification</a></td>
+<td>Public method to show a desktop notification.</td>
 </tr><tr>
 <td><a href="#UserInterface.showPreferences">showPreferences</a></td>
 <td>Public slot to set the preferences.</td>
@@ -2012,6 +2018,16 @@ word to search for (string)
 <dd>
 flag indicating to use a single browser window (boolean)
 </dd>
+</dl><a NAME="UserInterface.notificationsEnabled" ID="UserInterface.notificationsEnabled"></a>
+<h4>UserInterface.notificationsEnabled</h4>
+<b>notificationsEnabled</b>(<i></i>)
+<p>
+        Public method to check, if notifications are enabled.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if notifications are enabled (boolean)
+</dd>
 </dl><a NAME="UserInterface.performVersionCheck" ID="UserInterface.performVersionCheck"></a>
 <h4>UserInterface.performVersionCheck</h4>
 <b>performVersionCheck</b>(<i>manual=True, alternative=0, showVersions=False</i>)
@@ -2177,6 +2193,22 @@ directory to search in (string)
 <dt><i>tabname</i></dt>
 <dd>
 string naming the tab to be shown (string)
+</dd>
+</dl><a NAME="UserInterface.showNotification" ID="UserInterface.showNotification"></a>
+<h4>UserInterface.showNotification</h4>
+<b>showNotification</b>(<i>icon, heading, text</i>)
+<p>
+        Public method to show a desktop notification.
+</p><dl>
+<dt><i>icon</i></dt>
+<dd>
+icon to be shown in the notification (QPixmap)
+</dd><dt><i>heading</i></dt>
+<dd>
+heading of the notification (string)
+</dd><dt><i>text</i></dt>
+<dd>
+text of the notification (string)
 </dd>
 </dl><a NAME="UserInterface.showPreferences" ID="UserInterface.showPreferences"></a>
 <h4>UserInterface.showPreferences</h4>

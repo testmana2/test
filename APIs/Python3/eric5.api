@@ -18,8 +18,9 @@ eric5.Cooperation.ChatWidget.ChatWidget.on_usersList_customContextMenuRequested?
 eric5.Cooperation.ChatWidget.ChatWidget.preferencesChanged?4()
 eric5.Cooperation.ChatWidget.ChatWidget.sendEdit?7
 eric5.Cooperation.ChatWidget.ChatWidget.shareEditor?7
+eric5.Cooperation.ChatWidget.ChatWidget.shutdown?4()
 eric5.Cooperation.ChatWidget.ChatWidget.startEdit?7
-eric5.Cooperation.ChatWidget.ChatWidget?1(port=-1, parent=None)
+eric5.Cooperation.ChatWidget.ChatWidget?1(ui, port=-1, parent=None)
 eric5.Cooperation.Connection.Connection.Editor?7
 eric5.Cooperation.Connection.Connection.GetParticipants?7
 eric5.Cooperation.Connection.Connection.Greeting?7
@@ -5465,6 +5466,10 @@ eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_ftpProxyTypeComb
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.save?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage?1()
 eric5.Preferences.ConfigurationPages.NetworkPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.NotificationsPage.NotificationsPage.on_visualButton_clicked?4(checked)
+eric5.Preferences.ConfigurationPages.NotificationsPage.NotificationsPage.save?4()
+eric5.Preferences.ConfigurationPages.NotificationsPage.NotificationsPage?1()
+eric5.Preferences.ConfigurationPages.NotificationsPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage.on_downloadDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage.save?4()
 eric5.Preferences.ConfigurationPages.PluginManagerPage.PluginManagerPage?1()
@@ -7350,6 +7355,15 @@ eric5.UI.LogView.LogViewerEdit.searchNext?4(txt, caseSensitive, wholeWord)
 eric5.UI.LogView.LogViewerEdit.searchPrev?4(txt, caseSensitive, wholeWord)
 eric5.UI.LogView.LogViewerEdit.searchStringFound?7
 eric5.UI.LogView.LogViewerEdit?1(parent=None)
+eric5.UI.NotificationWidget.NotificationWidget.mouseMoveEvent?4(evt)
+eric5.UI.NotificationWidget.NotificationWidget.mousePressEvent?4(evt)
+eric5.UI.NotificationWidget.NotificationWidget.mouseReleaseEvent?4(evt)
+eric5.UI.NotificationWidget.NotificationWidget.setHeading?4(heading)
+eric5.UI.NotificationWidget.NotificationWidget.setPixmap?4(icon)
+eric5.UI.NotificationWidget.NotificationWidget.setText?4(text)
+eric5.UI.NotificationWidget.NotificationWidget.setTimeout?4(timeout)
+eric5.UI.NotificationWidget.NotificationWidget.show?4()
+eric5.UI.NotificationWidget.NotificationWidget?1(parent=None, setPosition=False)
 eric5.UI.NumbersWidget.BinaryModel.columnCount?4(parent)
 eric5.UI.NumbersWidget.BinaryModel.data?4(index, role=Qt.DisplayRole)
 eric5.UI.NumbersWidget.BinaryModel.flags?4(index)
@@ -7453,6 +7467,7 @@ eric5.UI.UserInterface.UserInterface.masterPasswordChanged?7
 eric5.UI.UserInterface.UserInterface.maxFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxMenuFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxSbFilePathLen?7
+eric5.UI.UserInterface.UserInterface.notificationsEnabled?4()
 eric5.UI.UserInterface.UserInterface.performVersionCheck?4(manual=True, alternative=0, showVersions=False)
 eric5.UI.UserInterface.UserInterface.preferencesChanged?7
 eric5.UI.UserInterface.UserInterface.processArgs?4(args)
@@ -7469,6 +7484,7 @@ eric5.UI.UserInterface.UserInterface.showFindFileByNameDialog?4()
 eric5.UI.UserInterface.UserInterface.showFindFilesDialog?4(txt="", searchDir="")
 eric5.UI.UserInterface.UserInterface.showLogTab?4(tabname)
 eric5.UI.UserInterface.UserInterface.showMenu?7
+eric5.UI.UserInterface.UserInterface.showNotification?4(icon, heading, text)
 eric5.UI.UserInterface.UserInterface.showPreferences?4(pageName=None)
 eric5.UI.UserInterface.UserInterface.showReplaceFilesDialog?4(txt="", searchDir="")
 eric5.UI.UserInterface.UserInterface.unregisterToolbar?4(name)
