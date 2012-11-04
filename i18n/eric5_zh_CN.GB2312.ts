@@ -4701,7 +4701,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1587"/>
+        <location filename="Debugger/DebugUI.py" line="1598"/>
         <source>Run Script</source>
         <translation>运行脚本</translation>
     </message>
@@ -4721,7 +4721,7 @@ Not connected
         <translation>&lt;b&gt;运行脚本&lt;/b&gt;&lt;p&gt;设置命令行参数，并在调试器之外运行脚本。如果文件未对更改进行保存，则可能会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>Run Project</source>
         <translation>运行项目</translation>
     </message>
@@ -4861,7 +4861,7 @@ Not connected
         <translation type="obsolete">&lt;b&gt;循环项目&lt;/b&gt;&lt;p&gt;设置命令行参数，并通过循环运行当前项目。如果当前项目的文件未保存则会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1697"/>
+        <location filename="Debugger/DebugUI.py" line="1708"/>
         <source>Debug Script</source>
         <translation>调试脚本</translation>
     </message>
@@ -4881,7 +4881,7 @@ Not connected
         <translation>&lt;b&gt;调试脚本&lt;/b&gt;&lt;p&gt;设置命令行参数，并将当前行设为当前编辑窗口首先执行的 Python 声明。如果文件未保存则会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>Debug Project</source>
         <translation>调试项目</translation>
     </message>
@@ -5051,7 +5051,7 @@ Not connected
         <translation>&lt;b&gt;中止&lt;/b&gt;&lt;p&gt;中止正在运行中的调试会话。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Evaluate</source>
         <translation>赋值</translation>
     </message>
@@ -5071,7 +5071,7 @@ Not connected
         <translation>&lt;b&gt;赋值&lt;/b&gt;&lt;p&gt;在调试程序的当前上下文中为表达式赋值。结果显示在命令行窗口中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Execute</source>
         <translation>执行</translation>
     </message>
@@ -5259,7 +5259,7 @@ Not connected
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; 已终止于 %2 的退出状态。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="986"/>
+        <location filename="Debugger/DebugUI.py" line="997"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>被调试的程序包含一个未指定的语法错误。</translation>
     </message>
@@ -5269,7 +5269,7 @@ Not connected
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 包含语法错误 &lt;b&gt;%2&lt;/b&gt; ，位于第 &lt;b&gt;%3&lt;/b&gt; 行， 字符为 &lt;b&gt;%4&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1009"/>
+        <location filename="Debugger/DebugUI.py" line="1020"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>产生了一个未处理的异常。详细信息参见命令行窗口。</translation>
     </message>
@@ -5284,12 +5284,12 @@ Not connected
         <translation type="obsolete">&lt;p&gt;被调试的程序导致异常 &lt;b&gt;%1&lt;/b&gt;&lt;br&gt;“&lt;b&gt;%2&lt;/b&gt;”&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1092"/>
+        <location filename="Debugger/DebugUI.py" line="1103"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>被调试的程序意外终止。</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>Breakpoint Condition Error</source>
         <translation>断点条件错误</translation>
     </message>
@@ -5299,7 +5299,7 @@ Not connected
         <translation type="obsolete">&lt;p&gt;断点 &lt;b&gt;%1, %2&lt;/b&gt; 的条件中包含一个语法错误。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>Watch Expression Error</source>
         <translation>监视表达式出错</translation>
     </message>
@@ -5319,32 +5319,32 @@ Not connected
         <translation type="obsolete">&lt;p&gt; 变量 &lt;b&gt;%2&lt;/b&gt; 的监视表达式 &apos;&lt;b&gt;%1&lt;/b&gt;&apos; 已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1227"/>
+        <location filename="Debugger/DebugUI.py" line="1238"/>
         <source>Watch expression already exists</source>
         <translation>监视表达式已存在</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1384"/>
+        <location filename="Debugger/DebugUI.py" line="1395"/>
         <source>Coverage of Project</source>
         <translation>项目覆盖率</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1374"/>
+        <location filename="Debugger/DebugUI.py" line="1385"/>
         <source>Coverage of Script</source>
         <translation>脚本覆盖率</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>当前项目未定义主脚本。终止</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1491"/>
+        <location filename="Debugger/DebugUI.py" line="1502"/>
         <source>Profile of Project</source>
         <translation>项目轮廓</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1480"/>
+        <location filename="Debugger/DebugUI.py" line="1491"/>
         <source>Profile of Script</source>
         <translation>脚本轮廓</translation>
     </message>
@@ -5369,17 +5369,17 @@ Not connected
         <translation type="obsolete">&lt;p&gt;要循环一个模块，相应模块必须定义一个函数作为循环的进入点。模块 &lt;b&gt;%1&lt;/b&gt; 未定义函数 &lt;b&gt;%2&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>当前项目未定义主脚本。不能进行调试。</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Enter the statement to evaluate</source>
         <translation>输入赋值语句</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Enter the statement to execute</source>
         <translation>输入执行语句</translation>
     </message>
@@ -5406,50 +5406,55 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="992"/>
+        <location filename="Debugger/DebugUI.py" line="1003"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1047"/>
+        <location filename="Debugger/DebugUI.py" line="1058"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1058"/>
+        <location filename="Debugger/DebugUI.py" line="1069"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1219"/>
+        <location filename="Debugger/DebugUI.py" line="1230"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1223"/>
+        <location filename="Debugger/DebugUI.py" line="1234"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="963"/>
+        <location filename="Debugger/DebugUI.py" line="974"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="967"/>
+        <location filename="Debugger/DebugUI.py" line="978"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.
 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="970"/>
+        <source>Program terminated</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34338,27 +34343,27 @@ Select Update.</source>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="67"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="68"/>
         <source>Forms</source>
         <translation>窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="69"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="70"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;项目窗体浏览器&lt;/b&gt;&lt;p&gt;可以方便地观察当前项目中包含的所有窗体。可以通过上下文菜单执行多个动作。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="82"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
         <source>Dialog</source>
         <translation>对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
         <source>Wizard</source>
         <translation type="unfinished">向导</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
         <source>Widget</source>
         <translation>构件</translation>
     </message>
@@ -34368,12 +34373,12 @@ Select Update.</source>
         <translation type="obsolete">配置对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>带按钮（底部）的对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>带按钮（右侧）的对话框</translation>
     </message>
@@ -34383,37 +34388,37 @@ Select Update.</source>
         <translation type="obsolete">选项卡对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
         <source>Main Window</source>
         <translation>主窗口</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>带按钮盒（底部）的对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>带按钮盒（右侧）的对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>带按钮（底部居中）的对话框</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="122"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="123"/>
         <source>Compile form</source>
         <translation>编译窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="271"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="272"/>
         <source>Compile all forms</source>
         <translation>编译所有窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="131"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="132"/>
         <source>Generate Dialog Code...</source>
         <translation>生成对话框代码……</translation>
     </message>
@@ -34423,97 +34428,97 @@ Select Update.</source>
         <translation type="obsolete">生成子类</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="199"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="200"/>
         <source>Open in Qt-Designer</source>
         <translation>在 Qt 设计师中打开</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="201"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="202"/>
         <source>Open in Editor</source>
         <translation>在编辑器中打开</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="118"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="119"/>
         <source>Preview form</source>
         <translation>预览窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="204"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="205"/>
         <source>Preview translations</source>
         <translation>预览翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="213"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="214"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="141"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="142"/>
         <source>Rename file</source>
         <translation>重命名文件</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="240"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="241"/>
         <source>Remove from project</source>
         <translation>从项目移除</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="218"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="219"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="247"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="248"/>
         <source>New form...</source>
         <translation>新建窗体……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="276"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="277"/>
         <source>Add forms...</source>
         <translation>添加窗体……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="278"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="279"/>
         <source>Add forms directory...</source>
         <translation>添加窗体文件夹……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="281"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="282"/>
         <source>Expand all directories</source>
         <translation>展开所有文件夹</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="283"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="284"/>
         <source>Collapse all directories</source>
         <translation>折叠所有文件夹</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="286"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="287"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="208"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="209"/>
         <source>Compile forms</source>
         <translation>编译窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>New Form</source>
         <translation>新建窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="484"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="485"/>
         <source>Select a form type:</source>
         <translation>选择窗体类型：</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="498"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="499"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt 用户界面文件 (*.ui);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="517"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="518"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>文件已存在！是否覆盖？</translation>
     </message>
@@ -34523,22 +34528,22 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;无法创建新窗体 &lt;b&gt;%1&lt;/b&gt; 。&lt;br&gt;问题： %2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Delete forms</source>
         <translation>删除窗体</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>确定要从项目中删除这些窗体？</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>Form Compilation</source>
         <translation>窗体编译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="620"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
         <source>The compilation of the form file was successful.</source>
         <translation>窗体文件编译成功。</translation>
     </message>
@@ -34548,7 +34553,7 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;窗体文件编译失败。&lt;/p&gt;&lt;p&gt;原因： %1&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>The compilation of the form file failed.</source>
         <translation>窗体文件编译失败。</translation>
     </message>
@@ -34583,7 +34588,7 @@ Select Update.</source>
         <translation type="obsolete">输入子类名称：</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
@@ -34593,47 +34598,47 @@ Select Update.</source>
         <translation type="obsolete">无法开启 %1。&lt;br&gt;确保其在搜索路径中。</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Compiling forms...</source>
         <translation>正在编译窗体……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Abort</source>
         <translation>终止</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="825"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="841"/>
         <source>Determining changed forms...</source>
         <translation>正在确定更改的窗体……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="852"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="868"/>
         <source>Compiling changed forms...</source>
         <translation>正在编译更改的窗体……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="254"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="255"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="92"/>
         <source>Wizard Page</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35476,127 +35481,127 @@ Select Update.</source>
 <context>
     <name>ProjectTranslationsBrowser</name>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="65"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="69"/>
         <source>&lt;b&gt;Project Translations Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all translations contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;项目翻译浏览器&lt;/b&gt;&lt;p&gt;可以方便地观察在当前项目中包含的所有翻译。通过上下文菜单可以运行多个动作。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="153"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="155"/>
         <source>Generate translation</source>
         <translation>生成翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="160"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="162"/>
         <source>Generate translation (with obsolete)</source>
         <translation>生成翻译（包括不使用的翻译）</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="360"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="362"/>
         <source>Generate all translations</source>
         <translation>生成所有翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="366"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="368"/>
         <source>Generate all translations (with obsolete)</source>
         <translation>生成所有翻译（包括不使用的翻译）</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="277"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="279"/>
         <source>Open in Qt-Linguist</source>
         <translation>在 Qt 语言家中打开</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="315"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="317"/>
         <source>Open in Editor</source>
         <translation>在编辑器中打开</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="184"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="186"/>
         <source>Release translation</source>
         <translation>发布翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="372"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
         <source>Release all translations</source>
         <translation>发布所有翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="138"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="140"/>
         <source>Preview translation</source>
         <translation>预览翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="349"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="351"/>
         <source>Preview all translations</source>
         <translation>预览所有翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="327"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="329"/>
         <source>Remove from project</source>
         <translation>从项目移除</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="330"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="332"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="378"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
         <source>Add translation...</source>
         <translation>添加翻译……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
         <source>Add translation files...</source>
         <translation>添加翻译文件……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="386"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="388"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="301"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="303"/>
         <source>Generate translations</source>
         <translation>生成翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="308"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="310"/>
         <source>Generate translations (with obsolete)</source>
         <translation>生成翻译（包括过时的）</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="320"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="322"/>
         <source>Release translations</source>
         <translation>发布翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="289"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="291"/>
         <source>Preview translations</source>
         <translation>预览翻译</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Delete translation files</source>
         <translation>删除翻译文件</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>确定要从项目中删除这些翻译？</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>Write temporary project file</source>
         <translation>写入临时项目文件</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="710"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>未选择翻译文件 (*.ts)</translation>
     </message>
@@ -35606,22 +35611,22 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;无法写入临时项目文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>Translation file generation</source>
         <translation>翻译文件生成</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="836"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>翻译文件 (*.ts) 生成成功。</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>翻译文件 (*.ts) 生成失败。</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
@@ -35631,17 +35636,17 @@ Select Update.</source>
         <translation type="obsolete">无法开启 %1。&lt;br&gt;确保其在搜索路径中。</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>Translation file release</source>
         <translation>翻译文件发布</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="975"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>翻译文件 (*.qm) 发布成功。</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>翻译文件 (*.qm) 发布失败。</translation>
     </message>
@@ -35651,27 +35656,27 @@ Select Update.</source>
         <translation type="obsolete">&lt;p&gt;无法开始发布。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="353"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="355"/>
         <source>Extract messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="383"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="385"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="926"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -4534,7 +4534,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1587"/>
+        <location filename="Debugger/DebugUI.py" line="1598"/>
         <source>Run Script</source>
         <translation>Esegui Script</translation>
     </message>
@@ -4554,7 +4554,7 @@ Not connected
         <translation>&lt;b&gt;Esegui Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando ed esegue lo script al di fuori del debugger. Se il file non è stato salvato può essere salvato prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>Run Project</source>
         <translation>Esegui Progetto</translation>
     </message>
@@ -4654,7 +4654,7 @@ Not connected
         <translation>&lt;b&gt;Profila Progetto&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e profila il progetto. Se file del progetto corrente non sono stati salvati, è possibile salvarli prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1697"/>
+        <location filename="Debugger/DebugUI.py" line="1708"/>
         <source>Debug Script</source>
         <translation>Debug dello script</translation>
     </message>
@@ -4674,7 +4674,7 @@ Not connected
         <translation>&lt;b&gt;Debug dello Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e imposta la linea corrente per essere la prima istruzione eseguibile di Python della finestra dell&apos;editor. Se il file ha modifiche non salvate è possibile salvarle prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>Debug Project</source>
         <translation>Debug del Progetto</translation>
     </message>
@@ -4809,7 +4809,7 @@ Not connected
         <translation>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Ferma la sessione di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Evaluate</source>
         <translation>Valuta</translation>
     </message>
@@ -4824,7 +4824,7 @@ Not connected
         <translation>Valuta nel contesto corrente</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Execute</source>
         <translation>Esegui</translation>
     </message>
@@ -4924,57 +4924,57 @@ Not connected
         <translation>&amp;Breakpoints</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="986"/>
+        <location filename="Debugger/DebugUI.py" line="997"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>Il programma che viene debuggato contiene un errore di sintassi non specificato.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1009"/>
+        <location filename="Debugger/DebugUI.py" line="1020"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Un&apos;eccezione non gestita è occorso. Guarda la finestra di shell per dettagli.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1092"/>
+        <location filename="Debugger/DebugUI.py" line="1103"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Il programma debuggato è terminato in maniera inaspettata.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1384"/>
+        <location filename="Debugger/DebugUI.py" line="1395"/>
         <source>Coverage of Project</source>
         <translation>Analisi del Progetto</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1374"/>
+        <location filename="Debugger/DebugUI.py" line="1385"/>
         <source>Coverage of Script</source>
         <translation>Analisi delle Script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Non c&apos;è uno script principale definito per il progetto. Esco</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1491"/>
+        <location filename="Debugger/DebugUI.py" line="1502"/>
         <source>Profile of Project</source>
         <translation>Profilazione del progetto</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1480"/>
+        <location filename="Debugger/DebugUI.py" line="1491"/>
         <source>Profile of Script</source>
         <translation>Profilazione dello script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Non c&apos;è uno script principale per il progetto. Non è possibile il debug.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Enter the statement to evaluate</source>
         <translation>Inserisci l&apos;istruzione da valutare</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Enter the statement to execute</source>
         <translation>Inserisci l&apos;istruzione da eseguire</translation>
     </message>
@@ -5019,7 +5019,7 @@ Not connected
         <translation>&lt;b&gt;Filtro tipo variabili&lt;/b&gt;&lt;p&gt;Configura il filtro per i tipi variabile. Solo i tipi di variabile che non sono selezionati sono mostrati nella finestra delle variabili globali o locali durante una sessione di debug. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>Breakpoint Condition Error</source>
         <translation>Errore condizione di interruzione</translation>
     </message>
@@ -5082,12 +5082,12 @@ Not connected
         <translation>&lt;b&gt;Valuta&lt;/b&gt;&lt;p&gt;Valuta un&apos;espressione nel contesto corrente del programma debuggato. Il risultato è mostrato nella shell.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>Watch Expression Error</source>
         <translation>Errore espressione di watch</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1227"/>
+        <location filename="Debugger/DebugUI.py" line="1238"/>
         <source>Watch expression already exists</source>
         <translation>L&apos;espressione di controllo esiste già</translation>
     </message>
@@ -5134,51 +5134,56 @@ Not connected
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; è terminato con lo stato di uscita {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="992"/>
+        <location filename="Debugger/DebugUI.py" line="1003"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; contiene l&apos;errore di sintassi &lt;b&gt;{1}&lt;/b&gt; alla linea &lt;b&gt;{2}&lt;/b&gt;, carattere &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1047"/>
+        <location filename="Debugger/DebugUI.py" line="1058"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il programma in debug ha sollevato un&apos;eccezione &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Linea: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Interrompere qui ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1058"/>
+        <location filename="Debugger/DebugUI.py" line="1069"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il programma debuggato ha sollevato un&apos;eccezione &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La condizione del breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contiene un errore di sintassi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione  &lt;b&gt;{0}&lt;/b&gt; contiene un errore di sintassi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1219"/>
+        <location filename="Debugger/DebugUI.py" line="1230"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1223"/>
+        <location filename="Debugger/DebugUI.py" line="1234"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione  &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; per la variabile &lt;b&gt;{1}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="963"/>
+        <location filename="Debugger/DebugUI.py" line="974"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
         <translation>Il programma è terminato con uno stato di uscita di {0}.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="967"/>
+        <location filename="Debugger/DebugUI.py" line="978"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.
 </source>
         <translation>&quot;{0}&quot; è terminato con lo stato di uscita {1}.</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="970"/>
+        <source>Program terminated</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32170,242 +32175,242 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="67"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="68"/>
         <source>Forms</source>
         <translation>Forms</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="69"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="70"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Browser per le form del progetto&lt;/b&gt;&lt;p&gt;Consente di vedere facilmente tutte le form contenute nel progetto corrente. Diverse azioni possono essere eseguite con il menù contestuale.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="82"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
         <source>Dialog</source>
         <translation>Dialoghi</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Dialogo con pulsanti (in basso)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Dialogo con pulsanti (a destra)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="122"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="123"/>
         <source>Compile form</source>
         <translation>Compila la form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="271"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="272"/>
         <source>Compile all forms</source>
         <translation>Compila tutte le form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="199"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="200"/>
         <source>Open in Qt-Designer</source>
         <translation>Apri con Qt-Designer</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="240"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="241"/>
         <source>Remove from project</source>
         <translation>Rimuovi dal progetto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="218"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="219"/>
         <source>Delete</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="247"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="248"/>
         <source>New form...</source>
         <translation>Nuova form...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="278"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="279"/>
         <source>Add forms directory...</source>
         <translation>Affiungi directory delle forms...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="281"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="282"/>
         <source>Expand all directories</source>
         <translation>Espandi tutte le directory</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="283"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="284"/>
         <source>Collapse all directories</source>
         <translation>Riduci tutte le directory</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>New Form</source>
         <translation>Nuova form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="484"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="485"/>
         <source>Select a form type:</source>
         <translation>Seleziona tipo form:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>Form Compilation</source>
         <translation>Compilazione form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="620"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
         <source>The compilation of the form file was successful.</source>
         <translation>La compilazione della form è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>The compilation of the form file failed.</source>
         <translation>La compilazione della form è fallita.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Compiling forms...</source>
         <translation>Compilazione form in corso...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Abort</source>
         <translation>Termina</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="201"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="202"/>
         <source>Open in Editor</source>
         <translation>Apri con l&apos;editor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="141"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="142"/>
         <source>Rename file</source>
         <translation>Rinomina file</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="208"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="209"/>
         <source>Compile forms</source>
         <translation>Compila le form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Delete forms</source>
         <translation>Cancella le form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Vuoi veramente cancellare queste form dal progetto ?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="118"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="119"/>
         <source>Preview form</source>
         <translation>Anteprima form</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="204"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="205"/>
         <source>Preview translations</source>
         <translation>Anteprima traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="276"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="277"/>
         <source>Add forms...</source>
         <translation>Aggiungi form...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
         <source>Main Window</source>
         <translation>Main Window</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Dialogo con pulsanti (centrati in basso)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="825"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="841"/>
         <source>Determining changed forms...</source>
         <translation>Determina form modificate...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="852"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="868"/>
         <source>Compiling changed forms...</source>
         <translation>Compila le form modificate...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="517"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="518"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Il file esiste già! Sovrascriverlo ?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Dialogo con un Buttonbox (in basso)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Dialogo con un Buttonbox (a destra)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="131"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="132"/>
         <source>Generate Dialog Code...</source>
         <translation>Genera codice del dialogo...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="213"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="214"/>
         <source>Open</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="498"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="499"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>File interfaccia Qt (*.ui);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="286"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="287"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="254"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="255"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copia il path nella Clipboard</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il nuovo file della form &lt;b&gt;{0}&lt;/b&gt; non può essere creato.&lt;br&gt;Problema: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La compilazione del file form è fallita.&lt;/p&gt;&lt;p&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
         <source>Wizard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="92"/>
         <source>Wizard Page</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33173,187 +33178,187 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>ProjectTranslationsBrowser</name>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="65"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
         <source>Translations</source>
         <translation>Traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="69"/>
         <source>&lt;b&gt;Project Translations Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all translations contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Browser delle traduzioni del progetto&lt;/b&gt;&lt;p&gt;Consente di vedere facilmente tutte le traduzioni contenute nel progetto corrente. Diverse azioni posso essere eseguite dal menù contestuale.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="301"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="303"/>
         <source>Generate translations</source>
         <translation>Genera traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="308"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="310"/>
         <source>Generate translations (with obsolete)</source>
         <translation>Genera traduzioni (con deprecati)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="277"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="279"/>
         <source>Open in Qt-Linguist</source>
         <translation>Apri in Qt-Linguist</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="320"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="322"/>
         <source>Release translations</source>
         <translation>Rilascia traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="327"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="329"/>
         <source>Remove from project</source>
         <translation>Rimuovi dal progetto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="330"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="332"/>
         <source>Delete</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="378"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
         <source>Add translation...</source>
         <translation>Aggiungi traduzione...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>Write temporary project file</source>
         <translation>Scrivi un file progetto temporaneo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>Translation file generation</source>
         <translation>Generazione file traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="836"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>La generazione dei file di traduzione (*.ts) è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>La generazione dei file di traduzione (*.ts) è fallita.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>Translation file release</source>
         <translation>Rilascia file traduzione</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="975"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Il rilascio dei file traduzione (*.qm) è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La generazione dei file di traduzione (*.qm) è fallita.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="315"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="317"/>
         <source>Open in Editor</source>
         <translation>Apri con l&apos;editor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="153"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="155"/>
         <source>Generate translation</source>
         <translation>Genera traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="160"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="162"/>
         <source>Generate translation (with obsolete)</source>
         <translation>Genera traduzioni (con deprecati)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="360"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="362"/>
         <source>Generate all translations</source>
         <translation>Genera tutte le traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="366"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="368"/>
         <source>Generate all translations (with obsolete)</source>
         <translation>Genera tutte le traduzioni (con deprecati)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="184"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="186"/>
         <source>Release translation</source>
         <translation>Rilascia traduzione</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="372"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
         <source>Release all translations</source>
         <translation>Rilascia tutte le traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="138"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="140"/>
         <source>Preview translation</source>
         <translation>Anteprima traduzione</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="289"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="291"/>
         <source>Preview translations</source>
         <translation>Anteprima traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Delete translation files</source>
         <translation>Cancella file della traduzione</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>Vuoi veramente cancellare questi file traduzione del progetto ?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="710"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>Nessun file traduzione (*.ts) selezionato.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="349"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="351"/>
         <source>Preview all translations</source>
         <translation>Anteprima tutte le traduzioni</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
         <source>Add translation files...</source>
         <translation>Aggiungi file traduzione...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="386"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="388"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="353"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="355"/>
         <source>Extract messages</source>
         <translation>Estrai messaggi</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="383"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="385"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copia il path nella Clipboard</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file temporaneo &lt;b&gt;{0}&lt;/b&gt; del progetto non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="926"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare lrelease.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>

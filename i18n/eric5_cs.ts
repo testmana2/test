@@ -4545,7 +4545,7 @@ Nepřipojen
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1587"/>
+        <location filename="Debugger/DebugUI.py" line="1598"/>
         <source>Run Script</source>
         <translation>Spustit skript</translation>
     </message>
@@ -4565,7 +4565,7 @@ Nepřipojen
         <translation>&lt;b&gt;Spustit skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění skriptu bez debugeru. Pokud jsou v souboru neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>Run Project</source>
         <translation>Spustit projekt</translation>
     </message>
@@ -4665,7 +4665,7 @@ Nepřipojen
         <translation>&lt;b&gt;Profilovat projekt&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a spuštění projektu s profilováním kódu. Pokud jsou v projektu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1697"/>
+        <location filename="Debugger/DebugUI.py" line="1708"/>
         <source>Debug Script</source>
         <translation>Debugovat skript</translation>
     </message>
@@ -4685,7 +4685,7 @@ Nepřipojen
         <translation>&lt;b&gt;Debugovat skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a aktuální řádky jako první python příkaz v aktuálním editačním okně. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>Debug Project</source>
         <translation>Debugovat projekt</translation>
     </message>
@@ -4840,7 +4840,7 @@ Nepřipojen
         <translation>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stop běhu aktuální debug relace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Evaluate</source>
         <translation>Evaluate</translation>
     </message>
@@ -4855,7 +4855,7 @@ Nepřipojen
         <translation>Vyhodnotit aktuální kontext</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Execute</source>
         <translation>Vykonat</translation>
     </message>
@@ -5013,62 +5013,62 @@ Nepřipojen
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="986"/>
+        <location filename="Debugger/DebugUI.py" line="997"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>Program, který je právě debugován, obsahuje nespecifikovanou syntaktickou chybu.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1009"/>
+        <location filename="Debugger/DebugUI.py" line="1020"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Objevila se neošetřená výjimka. Detaily naleznete v shell okně.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1092"/>
+        <location filename="Debugger/DebugUI.py" line="1103"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Debugovaný program byl neočekávaně ukončen.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>Breakpoint Condition Error</source>
         <translation>Chyba v podmíněném breakpointu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1384"/>
+        <location filename="Debugger/DebugUI.py" line="1395"/>
         <source>Coverage of Project</source>
         <translation>Pokrytí projektu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1374"/>
+        <location filename="Debugger/DebugUI.py" line="1385"/>
         <source>Coverage of Script</source>
         <translation>Pokrytí skriptu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1600"/>
+        <location filename="Debugger/DebugUI.py" line="1611"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu není definován hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1491"/>
+        <location filename="Debugger/DebugUI.py" line="1502"/>
         <source>Profile of Project</source>
         <translation>Profilovat projekt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1480"/>
+        <location filename="Debugger/DebugUI.py" line="1491"/>
         <source>Profile of Script</source>
         <translation>Profilovat skript</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1710"/>
+        <location filename="Debugger/DebugUI.py" line="1721"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>V aktuálním projektu není definován hlavní skript. Debugování není možné.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1971"/>
+        <location filename="Debugger/DebugUI.py" line="1982"/>
         <source>Enter the statement to evaluate</source>
         <translation>Zadejte příkaz pro vyhodnocení</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2000"/>
+        <location filename="Debugger/DebugUI.py" line="2011"/>
         <source>Enter the statement to execute</source>
         <translation>Zadejte příkaz pro vykonání</translation>
     </message>
@@ -5093,12 +5093,12 @@ Nepřipojen
         <translation>&lt;b&gt;Vyhodnotit&lt;/b&gt;&lt;p&gt;Vyhodnotit výraz aktuálního kontextu debugovaného programu. Výsledek je zobrazen v shell okně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>Watch Expression Error</source>
         <translation>Chyba sledovacího bodu</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1227"/>
+        <location filename="Debugger/DebugUI.py" line="1238"/>
         <source>Watch expression already exists</source>
         <translation>Sledovací bod již existuje</translation>
     </message>
@@ -5145,50 +5145,55 @@ Nepřipojen
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; byl ukončen s exit statusem {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="992"/>
+        <location filename="Debugger/DebugUI.py" line="1003"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; na řádce &lt;b&gt;{1}&lt;/b&gt;, písmeno &lt;b&gt;{2}&lt;/b&gt;, obsahuje syntaktickou chybu &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1047"/>
+        <location filename="Debugger/DebugUI.py" line="1058"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovaný program vyvolal výjimku  &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;Soubor: &lt;b&gt;{2}&lt;/b&gt;, řádek: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zastavit zde?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1058"/>
+        <location filename="Debugger/DebugUI.py" line="1069"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovaný program vyvolal výjimku  &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1161"/>
+        <location filename="Debugger/DebugUI.py" line="1172"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Podmínka breakpointu &lt;b&gt;{0}, {1}&lt;/b&gt; obsahuje syntaktickou chybu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1192"/>
+        <location filename="Debugger/DebugUI.py" line="1203"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &lt;b&gt;{0}&lt;/b&gt; obsahuje syntaktickou chybu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1219"/>
+        <location filename="Debugger/DebugUI.py" line="1230"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1223"/>
+        <location filename="Debugger/DebugUI.py" line="1234"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sledovací bod &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; pro proměnnou &lt;b&gt;{1}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="963"/>
+        <location filename="Debugger/DebugUI.py" line="974"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="967"/>
+        <location filename="Debugger/DebugUI.py" line="978"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.
 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="970"/>
+        <source>Program terminated</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -32626,242 +32631,242 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="67"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="68"/>
         <source>Forms</source>
         <translation>Formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="69"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="70"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč formulářů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny formuláře aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="82"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="83"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Dialog s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Dialog s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="84"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
         <source>Main Window</source>
         <translation>Hlavní okno aplikace</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="85"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Dialog s boxem s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="86"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="87"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Dialog s boxem s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="88"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="89"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Dialog s tlačítky (dole uprostřed)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="122"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="123"/>
         <source>Compile form</source>
         <translation>Kompilovat formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="271"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="272"/>
         <source>Compile all forms</source>
         <translation>Kompilovat všechny formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="199"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="200"/>
         <source>Open in Qt-Designer</source>
         <translation>Otevřít v Qt-Designeru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="201"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="202"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="118"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="119"/>
         <source>Preview form</source>
         <translation>Náhled formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="204"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="205"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="141"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="142"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="240"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="241"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="218"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="219"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="247"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="248"/>
         <source>New form...</source>
         <translation>Nový formulář...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="276"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="277"/>
         <source>Add forms...</source>
         <translation>Přidat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="278"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="279"/>
         <source>Add forms directory...</source>
         <translation>Přidat adresář s formuláři...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="281"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="282"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="283"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="284"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="208"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="209"/>
         <source>Compile forms</source>
         <translation>Kompilovat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>New Form</source>
         <translation>Nový formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="484"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="485"/>
         <source>Select a form type:</source>
         <translation>Vybrat typ formuláře:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="517"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="518"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Delete forms</source>
         <translation>Smazat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="551"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Opravdu chcete odebrat tyto formuláře z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>Form Compilation</source>
         <translation>Kompilace formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="620"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Kompilace souboru s formulářem byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="633"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
         <source>The compilation of the form file failed.</source>
         <translation>Kompilace souboru s formulářem selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Compiling forms...</source>
         <translation>Kompilovat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="790"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="825"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="841"/>
         <source>Determining changed forms...</source>
         <translation>Určení změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="852"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="868"/>
         <source>Compiling changed forms...</source>
         <translation>Kompilování změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="131"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="132"/>
         <source>Generate Dialog Code...</source>
         <translation>Generovat kód Dialog...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="213"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="214"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="498"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="499"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt User-Interface soubory (*.ui);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="286"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="287"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="254"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="255"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="528"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s formulářem &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace formuláře se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="702"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
         <source>Wizard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="92"/>
         <source>Wizard Page</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33644,187 +33649,187 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectTranslationsBrowser</name>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="65"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
         <source>Translations</source>
         <translation>Překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="67"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="69"/>
         <source>&lt;b&gt;Project Translations Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all translations contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč jazykových překladů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny překlady aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="153"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="155"/>
         <source>Generate translation</source>
         <translation>Generovat překlad</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="160"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="162"/>
         <source>Generate translation (with obsolete)</source>
         <translation>Generovat překlad (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="360"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="362"/>
         <source>Generate all translations</source>
         <translation>Generovat všechny překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="366"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="368"/>
         <source>Generate all translations (with obsolete)</source>
         <translation>Generovat všechny překlady (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="277"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="279"/>
         <source>Open in Qt-Linguist</source>
         <translation>Otevřít v  Qt-Linguist</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="315"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="317"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="184"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="186"/>
         <source>Release translation</source>
         <translation>Zveřejnit překlad</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="372"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
         <source>Release all translations</source>
         <translation>Zveřejnit všechny překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="138"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="140"/>
         <source>Preview translation</source>
         <translation>Náhled překladu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="349"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="351"/>
         <source>Preview all translations</source>
         <translation>Náhled všech překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="327"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="329"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="330"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="332"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="378"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
         <source>Add translation...</source>
         <translation>Přidat překlad...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
         <source>Add translation files...</source>
         <translation>Přidat soubory s překladem...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="301"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="303"/>
         <source>Generate translations</source>
         <translation>Generovat překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="308"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="310"/>
         <source>Generate translations (with obsolete)</source>
         <translation>Generovat překlady (původní)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="320"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="322"/>
         <source>Release translations</source>
         <translation>Zveřejnit překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="289"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="291"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Delete translation files</source>
         <translation>Smazat soubory s překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="605"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>Opravdu chcete odebrat tyto soubory s překlady z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>Write temporary project file</source>
         <translation>Zapsat dočasný soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="710"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>Nebyly vybrány žádné soubory s překlady (*.ts).</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>Translation file generation</source>
         <translation>Generování souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="836"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>Generování souboru s překladem (*.ts) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="841"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>Generování souboru s překladem (*.ts) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>Translation file release</source>
         <translation>Zveřejnění souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="975"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="989"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="386"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="388"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="353"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="355"/>
         <source>Extract messages</source>
         <translation>Extrahovat zprávy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="383"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="385"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="737"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do dočasného souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="926"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1055"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit zveřejnění.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>

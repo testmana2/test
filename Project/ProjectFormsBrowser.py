@@ -23,6 +23,7 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+import UI.PixmapCache
 
 import Preferences
 import Utilities
@@ -603,6 +604,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         """
         self.compileRunning = False
         e5App().getObject("ViewManager").enableEditorsCheckFocusIn(True)
+        ui = e5App().getObject("UserInterface")
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
@@ -616,8 +618,13 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 f.close()
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
-                if not self.noDialog:
+                if not self.noDialog and not ui.notificationsEnabled():
                     E5MessageBox.information(self,
+                        self.trUtf8("Form Compilation"),
+                        self.trUtf8("The compilation of the form file"
+                            " was successful."))
+                else:
+                    ui.showNotification(UI.PixmapCache.getPixmap("designer48.png"),
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("The compilation of the form file"
                             " was successful."))
@@ -628,9 +635,18 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8("Form Compilation"),
                         self.trUtf8("<p>The compilation of the form file failed.</p>"
                             "<p>Reason: {0}</p>").format(str(msg)))
+                else:
+                    ui.showNotification(UI.PixmapCache.getPixmap("designer48.png"),
+                        self.trUtf8("Form Compilation"),
+                        self.trUtf8("<p>The compilation of the form file failed.</p>"
+                            "<p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 E5MessageBox.information(self,
+                    self.trUtf8("Form Compilation"),
+                    self.trUtf8("The compilation of the form file failed."))
+            else:
+                ui.showNotification(UI.PixmapCache.getPixmap("designer48.png"),
                     self.trUtf8("Form Compilation"),
                     self.trUtf8("The compilation of the form file failed."))
         self.compileProc = None

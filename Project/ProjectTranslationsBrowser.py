@@ -15,6 +15,7 @@ from PyQt4.QtCore import pyqtSignal, QProcess
 from PyQt4.QtGui import QDialog, QMenu
 
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -22,6 +23,7 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+import UI.PixmapCache
 
 import Preferences
 import Utilities
@@ -833,10 +835,17 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.pylupdateProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:
-            E5MessageBox.information(self,
-                self.trUtf8("Translation file generation"),
-                self.trUtf8("The generation of the translation files (*.ts)"
-                    " was successful."))
+            ui = e5App().getObject("UserInterface")
+            if ui.notificationsEnabled():
+                ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
+                    self.trUtf8("Translation file generation"),
+                    self.trUtf8("The generation of the translation files (*.ts)"
+                        " was successful."))
+            else:
+                E5MessageBox.information(self,
+                    self.trUtf8("Translation file generation"),
+                    self.trUtf8("The generation of the translation files (*.ts)"
+                        " was successful."))
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Translation file generation"),
@@ -972,10 +981,17 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         self.lreleaseProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:
-            E5MessageBox.information(self,
-                self.trUtf8("Translation file release"),
-                self.trUtf8("The release of the translation files (*.qm)"
-                    " was successful."))
+            ui = e5App().getObject("UserInterface")
+            if ui.notificationsEnabled():
+                ui.showNotification(UI.PixmapCache.getPixmap("linguist48.png"),
+                    self.trUtf8("Translation file release"),
+                    self.trUtf8("The release of the translation files (*.qm)"
+                        " was successful."))
+            else:
+                E5MessageBox.information(self,
+                    self.trUtf8("Translation file release"),
+                    self.trUtf8("The release of the translation files (*.qm)"
+                        " was successful."))
             if self.project.pdata["TRANSLATIONSBINPATH"]:
                 target = os.path.join(self.project.ppath,
                                       self.project.pdata["TRANSLATIONSBINPATH"][0])

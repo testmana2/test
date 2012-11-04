@@ -959,15 +959,26 @@ class DebugUI(QObject):
                                 ' status of {1}.</p>')
                         .format(Utilities.normabspath(self.ui.currentProg), status))
         else:
-            if self.ui.currentProg is None:
-                self.appendStdout.emit(
-                    self.trUtf8('The program has terminated with an exit'
-                                ' status of {0}.\n').format(status))
+            if self.ui.notificationsEnabled():
+                if self.ui.currentProg is None:
+                    msg = self.trUtf8('The program has terminated with an exit'
+                                      ' status of {0}.\n').format(status)
+                else:
+                    msg = self.trUtf8('"{0}" has terminated with an exit'
+                                      ' status of {1}.\n')\
+                            .format(Utilities.normabspath(self.ui.currentProg), status)
+                self.ui.showNotification(UI.PixmapCache.getPixmap("debug48.png"),
+                    self.trUtf8("Program terminated"), msg)
             else:
-                self.appendStdout.emit(
-                    self.trUtf8('"{0}" has terminated with an exit'
-                                ' status of {1}.\n')
-                        .format(Utilities.normabspath(self.ui.currentProg), status))
+                if self.ui.currentProg is None:
+                    self.appendStdout.emit(
+                        self.trUtf8('The program has terminated with an exit'
+                                    ' status of {0}.\n').format(status))
+                else:
+                    self.appendStdout.emit(
+                        self.trUtf8('"{0}" has terminated with an exit'
+                                    ' status of {1}.\n')
+                            .format(Utilities.normabspath(self.ui.currentProg), status))
 
     def __clientSyntaxError(self, message, filename, lineNo, characterNo):
         """
