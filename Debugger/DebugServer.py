@@ -989,11 +989,7 @@ class DebugServer(QTcpServer):
         
         @param on flag indicating to enable the call trace function (boolean)
         """
-        # TODO: remove the try/except once all interface have been adjusted
-        try:
-            self.debuggerInterface.setCallTraceEnabled(on)
-        except AttributeError:
-            pass
+        self.debuggerInterface.setCallTraceEnabled(on)
         
     def remoteEval(self, arg):
         """
