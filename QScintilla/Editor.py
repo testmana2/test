@@ -2426,6 +2426,14 @@ class Editor(QsciScintillaCompat):
             self.__onlineChangeTraceTimerTimeout)
         self.textChanged.connect(self.__resetOnlineChangeTraceTimer)
         
+    def __reinitOnlineChangeTrace(self):
+        """
+        Private slot to re-initialize the online change trace.
+        """
+        self.__oldText = self.text()
+        self.__lastSavedText = self.text()
+        self.__deleteAllChangeMarkers()
+        
     def __resetOnlineChangeTraceTimer(self):
         """
         Private method to reset the online syntax check timer.
@@ -5773,6 +5781,9 @@ class Editor(QsciScintillaCompat):
             # do not prompt for this change again...
             self.lastModified = QDateTime.currentDateTime()
         self.setModified(False)
+        
+        # re-initialize the online change tracer
+        self.__reinitOnlineChangeTrace()
         
         # reset cursor position
         self.setCursorPosition(cline, cindex)
