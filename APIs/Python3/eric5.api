@@ -2518,10 +2518,12 @@ eric5.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
 eric5.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._feedsManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._fromEric?8
 eric5.Helpviewer.HelpWindow.HelpWindow._greaseMonkeyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._notification?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._personalInformationManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._speedDial?8
@@ -2557,6 +2559,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.mousePressEvent?4(evt)
 eric5.Helpviewer.HelpWindow.HelpWindow.networkAccessManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.newTab?4(link=None, requestData=None)
 eric5.Helpviewer.HelpWindow.HelpWindow.newWindow?4(link=None)
+eric5.Helpviewer.HelpWindow.HelpWindow.notificationsEnabled?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.openSearchManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.openUrl?4(url, title)
 eric5.Helpviewer.HelpWindow.HelpWindow.openUrlNewTab?4(url, title)
@@ -2575,6 +2578,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.showNotification?4(icon, heading, text)
 eric5.Helpviewer.HelpWindow.HelpWindow.shutdown?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.speedDial?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.syncManager?4()
@@ -3385,7 +3389,7 @@ eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_buttonBox_c
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_currentItemChanged?4(current, previous)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_itemSelectionChanged?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryUrlEditButton_toggled?4(checked)
-eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget?1(parent=None)
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget?1(parent=None, external=False)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWindow?1(parent=None)
 eric5.PluginManager.PluginRepositoryDialog.authorRole?7
 eric5.PluginManager.PluginRepositoryDialog.descrRole?7

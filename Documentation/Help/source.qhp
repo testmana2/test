@@ -5220,6 +5220,7 @@
       <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
+      <keyword name="HelpWindow.notificationsEnabled" id="HelpWindow.notificationsEnabled" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.notificationsEnabled" />
       <keyword name="HelpWindow.openSearchManager" id="HelpWindow.openSearchManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openSearchManager" />
       <keyword name="HelpWindow.openUrl" id="HelpWindow.openUrl" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrl" />
       <keyword name="HelpWindow.openUrlNewTab" id="HelpWindow.openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrlNewTab" />
@@ -5237,6 +5238,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.showNotification" id="HelpWindow.showNotification" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.showNotification" />
       <keyword name="HelpWindow.shutdown" id="HelpWindow.shutdown" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.shutdown" />
       <keyword name="HelpWindow.speedDial" id="HelpWindow.speedDial" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.speedDial" />
       <keyword name="HelpWindow.syncManager" id="HelpWindow.syncManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.syncManager" />

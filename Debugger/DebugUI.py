@@ -962,11 +962,11 @@ class DebugUI(QObject):
             if self.ui.notificationsEnabled():
                 if self.ui.currentProg is None:
                     msg = self.trUtf8('The program has terminated with an exit'
-                                      ' status of {0}.\n').format(status)
+                                      ' status of {0}.').format(status)
                 else:
                     msg = self.trUtf8('"{0}" has terminated with an exit'
-                                      ' status of {1}.\n')\
-                            .format(Utilities.normabspath(self.ui.currentProg), status)
+                                      ' status of {1}.')\
+                            .format(os.path.basename(self.ui.currentProg), status)
                 self.ui.showNotification(UI.PixmapCache.getPixmap("debug48.png"),
                     self.trUtf8("Program terminated"), msg)
             else:

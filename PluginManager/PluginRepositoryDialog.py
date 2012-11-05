@@ -26,6 +26,7 @@ from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5Application import e5App
 
 from E5XML.PluginRepositoryReader import PluginRepositoryReader
 
@@ -52,7 +53,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
     closeAndInstall = pyqtSignal()
     
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, external=False):
         """
         Constructor
         
@@ -85,6 +86,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         self.pluginRepositoryFile = \
             os.path.join(Utilities.getConfigDir(), "PluginRepository")
+        
+        self.__external = external
         
         # attributes for the network objects
         self.__networkManager = QNetworkAccessManager(self)
@@ -253,12 +256,22 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
         self.__installButton.setEnabled(True)
         self.__doneMethod = None
+        if not self.__external:
+            ui = e5App().getObject("UserInterface")
+        else:
+            ui = None
+        if ui and ui.notificationsEnabled():
+            ui.showNotification(UI.PixmapCache.getPixmap("plugin48.png"),
+                self.trUtf8("Download Plugin Files"),
+                self.trUtf8("""The requested plugins were downloaded."""))
+        
         if self.__isDownloadInstall:
             self.closeAndInstall.emit()
         else:
-            E5MessageBox.information(self,
-                self.trUtf8("Download Plugin Files"),
-                self.trUtf8("""The requested plugins were downloaded."""))
+            if ui is None or not ui.notificationsEnabled():
+                E5MessageBox.information(self,
+                    self.trUtf8("Download Plugin Files"),
+                    self.trUtf8("""The requested plugins were downloaded."""))
             self.downloadProgress.setValue(0)
             
             # repopulate the list to update the refresh icons
@@ -581,7 +594,7 @@ class PluginRepositoryWindow(E5MainWindow):
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
-        self.cw = PluginRepositoryWidget(self)
+        self.cw = PluginRepositoryWidget(self, external=True)
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)

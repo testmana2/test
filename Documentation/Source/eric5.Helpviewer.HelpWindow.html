@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -100,11 +100,17 @@ E5MainWindow
 <td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
 <td>Class method to get a reference to the network access manager.</td>
 </tr><tr>
+<td><a href="#HelpWindow.notificationsEnabled">notificationsEnabled</a></td>
+<td>Clsss method to check, if notifications are enabled.</td>
+</tr><tr>
 <td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
 <td>Class method to get a reference to the password manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.personalInformationManager">personalInformationManager</a></td>
 <td>Class method to get a reference to the personal information manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.showNotification">showNotification</a></td>
+<td>Clsss method to show a desktop notification.</td>
 </tr><tr>
 <td><a href="#HelpWindow.speedDial">speedDial</a></td>
 <td>Class methdo to get a reference to the speed dial.</td>
@@ -627,6 +633,16 @@ references to all main window (list of HelpWindow)
 <dd>
 reference to the network access manager (NetworkAccessManager)
 </dd>
+</dl><a NAME="HelpWindow.notificationsEnabled" ID="HelpWindow.notificationsEnabled"></a>
+<h4>HelpWindow.notificationsEnabled (class method)</h4>
+<b>notificationsEnabled</b>(<i></i>)
+<p>
+        Clsss method to check, if notifications are enabled.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if notifications are enabled (boolean)
+</dd>
 </dl><a NAME="HelpWindow.passwordManager" ID="HelpWindow.passwordManager"></a>
 <h4>HelpWindow.passwordManager (class method)</h4>
 <b>passwordManager</b>(<i></i>)
@@ -646,6 +662,22 @@ reference to the password manager (PasswordManager)
 <dt>Returns:</dt>
 <dd>
 reference to the personal information manager (PersonalInformationManager)
+</dd>
+</dl><a NAME="HelpWindow.showNotification" ID="HelpWindow.showNotification"></a>
+<h4>HelpWindow.showNotification (class method)</h4>
+<b>showNotification</b>(<i>icon, heading, text</i>)
+<p>
+        Clsss method to show a desktop notification.
+</p><dl>
+<dt><i>icon</i></dt>
+<dd>
+icon to be shown in the notification (QPixmap)
+</dd><dt><i>heading</i></dt>
+<dd>
+heading of the notification (string)
+</dd><dt><i>text</i></dt>
+<dd>
+text of the notification (string)
 </dd>
 </dl><a NAME="HelpWindow.speedDial" ID="HelpWindow.speedDial"></a>
 <h4>HelpWindow.speedDial (class method)</h4>

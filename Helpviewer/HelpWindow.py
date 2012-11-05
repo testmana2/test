@@ -66,6 +66,7 @@ from .data import javascript_rc     # __IGNORE_WARNING__
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5Application import e5App
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -78,6 +79,7 @@ import Utilities
 import UI.PixmapCache
 import UI.Config
 from UI.Info import Version
+from UI.NotificationWidget import NotificationWidget
 
 
 class HelpWindow(E5MainWindow):
@@ -96,6 +98,8 @@ class HelpWindow(E5MainWindow):
 
     maxMenuFilePathLen = 75
     
+    _fromEric = False
+    
     _networkAccessManager = None
     _cookieJar = None
     _helpEngine = None
@@ -110,6 +114,7 @@ class HelpWindow(E5MainWindow):
     _speedDial = None
     _personalInformationManager = None
     _greaseMonkeyManager = None
+    _notification = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -130,6 +135,7 @@ class HelpWindow(E5MainWindow):
         self.setWindowTitle(self.trUtf8("eric5 Web Browser"))
         
         self.fromEric = fromEric
+        self.__class__._fromEric = fromEric
         self.initShortcutsOnly = initShortcutsOnly
         self.setWindowIcon(UI.PixmapCache.getIcon("ericWeb.png"))
 
@@ -3295,3 +3301,41 @@ class HelpWindow(E5MainWindow):
         dataString = "data:text/css;charset=utf-8;base64,{0}".format(encodedStyle)
         
         return QUrl(dataString)
+    
+    ##########################################
+    ## Support for desktop notifications below
+    ##########################################
+    
+    @classmethod
+    def showNotification(cls, icon, heading, text):
+        """
+        Clsss method to show a desktop notification.
+        
+        @param icon icon to be shown in the notification (QPixmap)
+        @param heading heading of the notification (string)
+        @param text text of the notification (string)
+        """
+        if cls._fromEric:
+            e5App().getObject("UserInterface").showNotification(icon, heading, text)
+        else:
+            if Preferences.getUI("NotificationsEnabled"):
+                if cls._notification is None:
+                    cls._notification = NotificationWidget()
+                cls._notification.setPixmap(icon)
+                cls._notification.setHeading(heading)
+                cls._notification.setText(text)
+                cls._notification.setTimeout(Preferences.getUI("NotificationTimeout"))
+                cls._notification.move(Preferences.getUI("NotificationPosition"))
+                cls._notification.show()
+    
+    @classmethod
+    def notificationsEnabled(cls):
+        """
+        Clsss method to check, if notifications are enabled.
+        
+        @return flag indicating, if notifications are enabled (boolean)
+        """
+        if cls._fromEric:
+            return e5App().getObject("UserInterface").notificationsEnabled
+        else:
+            return Preferences.getUI("NotificationsEnabled")

@@ -17,11 +17,13 @@ from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5Application import e5App
 
 from .PluginManager import PluginManager
 from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
 
 import Preferences
+import UI.PixmapCache
 
 
 class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
@@ -149,6 +151,16 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                             """ removed. Aborting...</p>"""
                             """<p>Reason: {1}</p>""").format(packageDir, str(err)))
             return False
+        
+        if not self.__external:
+            ui = e5App().getObject("UserInterface")
+            if ui.notificationsEnabled():
+                ui.showNotification(UI.PixmapCache.getPixmap("plugin48.png"),
+                self.trUtf8("Plugin Uninstallation"),
+                self.trUtf8("""<p>The plugin <b>{0}</b> was uninstalled successfully"""
+                            """ from {1}.</p>""")\
+                    .format(pluginName, pluginDirectory))
+                return True
         
         E5MessageBox.information(self,
             self.trUtf8("Plugin Uninstallation"),

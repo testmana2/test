@@ -4301,10 +4301,17 @@ class Project(QObject):
         if not archive in self.pdata["OTHERS"]:
             self.appendFile(archive)
         
-        E5MessageBox.information(self.ui,
-            self.trUtf8("Create Plugin Archive"),
-            self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
-                        """created successfully.</p>""").format(archive))
+        if self.ui.notificationsEnabled():
+            self.ui.showNotification(UI.PixmapCache.getPixmap("pluginArchive48.png"),
+                self.trUtf8("Create Plugin Archive"),
+                self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
+                            """created successfully.</p>""")\
+                    .format(os.path.basename(archive)))
+        else:
+            E5MessageBox.information(self.ui,
+                self.trUtf8("Create Plugin Archive"),
+                self.trUtf8("""<p>The eric5 plugin archive file <b>{0}</b> was """
+                            """created successfully.</p>""").format(archive))
     
     def __pluginCreateSnapshotArchive(self):
         """

@@ -24,6 +24,7 @@ from .ProjectBaseBrowser import ProjectBaseBrowser
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+import UI.PixmapCache
 
 import Preferences
 import Utilities
@@ -440,6 +441,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
         self.compileRunning = False
+        ui = e5App().getObject("UserInterface")
         if exitStatus == QProcess.NormalExit and exitCode == 0:
             path = os.path.dirname(self.idlFile)
             poaList = glob.glob(os.path.join(path, "*__POA"))
@@ -449,13 +451,21 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 fileList += Utilities.direntries(dir, True, "*.py")
             for file in fileList:
                 self.project.appendFile(file)
-            if not self.noDialog:
+            if not self.noDialog and not ui.notificationsEnabled():
                 E5MessageBox.information(self,
+                    self.trUtf8("Interface Compilation"),
+                    self.trUtf8("The compilation of the interface file was successful."))
+            else:
+                ui.showNotification(UI.PixmapCache.getPixmap("corba48.png"),
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8("The compilation of the interface file was successful."))
         else:
             if not self.noDialog:
                 E5MessageBox.information(self,
+                    self.trUtf8("Interface Compilation"),
+                    self.trUtf8("The compilation of the interface file failed."))
+            else:
+                ui.showNotification(UI.PixmapCache.getPixmap("corba48.png"),
                     self.trUtf8("Interface Compilation"),
                     self.trUtf8("The compilation of the interface file failed."))
         self.compileProc = None

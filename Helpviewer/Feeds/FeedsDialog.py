@@ -77,9 +77,15 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
         
         feedsManager = Helpviewer.HelpWindow.HelpWindow.feedsManager()
         if feedsManager.addFeed(urlString, title, self.__browser.icon()):
-            E5MessageBox.information(self,
-                self.trUtf8("Add RSS Feed"),
-                self.trUtf8("""The feed was added successfully."""))
+            if Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():
+                Helpviewer.HelpWindow.HelpWindow.showNotification(
+                    UI.PixmapCache.getPixmap("rss48.png"),
+                    self.trUtf8("Add RSS Feed"),
+                    self.trUtf8("""The feed was added successfully."""))
+            else:
+                E5MessageBox.information(self,
+                    self.trUtf8("Add RSS Feed"),
+                    self.trUtf8("""The feed was added successfully."""))
         else:
             E5MessageBox.warning(self,
                 self.trUtf8("Add RSS Feed"),

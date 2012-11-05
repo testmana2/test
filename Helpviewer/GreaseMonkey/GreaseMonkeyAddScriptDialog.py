@@ -20,6 +20,7 @@ from .Ui_GreaseMonkeyAddScriptDialog import Ui_GreaseMonkeyAddScriptDialog
 from QScintilla.MiniEditor import MiniEditor
 
 from Helpviewer import HelpUtilities
+import Helpviewer.HelpWindow
 
 import UI.PixmapCache
 
@@ -82,9 +83,17 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         if self.__manager.addScript(self.__script):
             msg = self.trUtf8("<p><b>{0}</b> installed successfully.</p>").format(
                 self.__script.name())
+            success = True
         else:
             msg = self.trUtf8("<p>Cannot install script.</p>")
+            success = False
         
-        E5MessageBox.information(self,
-            self.trUtf8("GreaseMonkey Script Installation"),
-            msg)
+        if success and Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():
+            Helpviewer.HelpWindow.HelpWindow.showNotification(
+                UI.PixmapCache.getPixmap("greaseMonkey48.png"),
+                self.trUtf8("GreaseMonkey Script Installation"),
+                msg)
+        else:
+            E5MessageBox.information(self,
+                self.trUtf8("GreaseMonkey Script Installation"),
+                msg)

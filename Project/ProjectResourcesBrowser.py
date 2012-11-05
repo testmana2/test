@@ -21,6 +21,7 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+import UI.PixmapCache
 
 import Preferences
 import Utilities
@@ -507,6 +508,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         """
         self.compileRunning = False
         e5App().getObject("ViewManager").enableEditorsCheckFocusIn(True)
+        ui = e5App().getObject("UserInterface")
         if exitStatus == QProcess.NormalExit and exitCode == 0 and self.buf:
             ofn = os.path.join(self.project.ppath, self.compiledFile)
             try:
@@ -520,8 +522,14 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 f.close()
                 if self.compiledFile not in self.project.pdata["SOURCES"]:
                     self.project.appendFile(ofn)
-                if not self.noDialog:
+                if not self.noDialog and not ui.notificationsEnabled():
                     E5MessageBox.information(self,
+                        self.trUtf8("Resource Compilation"),
+                        self.trUtf8("The compilation of the resource file"
+                            " was successful."))
+                else:
+                    ui.showNotification(
+                        UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
                         self.trUtf8("Resource Compilation"),
                         self.trUtf8("The compilation of the resource file"
                             " was successful."))
@@ -534,6 +542,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             if not self.noDialog:
                 E5MessageBox.information(self,
+                    self.trUtf8("Resource Compilation"),
+                    self.trUtf8("The compilation of the resource file failed."))
+            else:
+                ui.showNotification(UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
                     self.trUtf8("Resource Compilation"),
                     self.trUtf8("The compilation of the resource file failed."))
         self.compileProc = None
