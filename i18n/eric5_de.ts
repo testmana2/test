@@ -31222,12 +31222,17 @@ Bitte Aktualisieren.</translation>
     <message>
         <location filename="Project/Project.py" line="341"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programmin Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits für die Programmiersprache &lt;b&gt;{1}&lt;/b&gt; registriert.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits für die Programmiersprache &lt;b&gt;{1}&lt;/b&gt; registriert.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="351"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits registriert.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Project/Project.py" line="341"/>
+        <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits für die Programmiersprache &lt;b&gt;{1}&lt;/b&gt; registriert.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

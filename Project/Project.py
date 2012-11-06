@@ -341,7 +341,7 @@ class Project(QObject):
                     E5MessageBox.critical(self.ui,
                         self.trUtf8("Registering Project Type"),
                         self.trUtf8("""<p>The Project type <b>{0}</b> is already"""
-                                    """ registered with Programmin Language"""
+                                    """ registered with Programming Language"""
                                     """ <b>{1}</b>.</p>""")\
                             .format(type_, progLanguage)
                     )
@@ -373,7 +373,7 @@ class Project(QObject):
         @param type_ internal type designator to be unregistered (string)
         """
         for progLanguage in self.__projectProgLanguages:
-            if type in self.__projectProgLanguages[progLanguage]:
+            if type_ in self.__projectProgLanguages[progLanguage]:
                 self.__projectProgLanguages[progLanguage].remove(type_)
         if type_ in self.__projectTypes:
             del self.__projectTypes[type_]
