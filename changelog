@@ -7,6 +7,9 @@ Version 5.3-snapshot-2012mmdd:
      Python 2 and Python 3 debuggers
 - Debug Viewer
   -- added a viewer for call trace logs
+- Syntax Checker
+  -- added capability to the syntax checker dialog to show all errors/warnings
+     in an editor when the file entry is double activated
 - User Interface
   -- changed the layout of the right side widgets and added a sub menu
      for the switching between the 'inner' windows.

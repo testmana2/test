@@ -344,6 +344,20 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 editor.toggleFlakesWarning(lineno, True, error)
             else:
                 editor.toggleSyntaxError(lineno, index, True, error, show=True)
+        else:
+            fn = Utilities.normabspath(itm.data(0, self.filenameRole))
+            vm = e5App().getObject("ViewManager")
+            vm.openSourceFile(fn)
+            editor = vm.getOpenEditor(fn)
+            for index in range(itm.childCount()):
+                citm = itm.child(index)
+                lineno = citm.data(0, self.lineRole)
+                index = citm.data(0, self.indexRole)
+                error = citm.data(0, self.errorRole)
+                if citm.data(0, self.warningRole):
+                    editor.toggleFlakesWarning(lineno, True, error)
+                else:
+                    editor.toggleSyntaxError(lineno, index, True, error, show=True)
         
     @pyqtSlot()
     def on_showButton_clicked(self):
