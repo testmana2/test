@@ -391,7 +391,7 @@ class UMLGraphicsView(E5GraphicsView):
                 if item.isSelected():
                     selectedItems.append(name)
         
-        # 2. save 
+        # 2. save
         
         # 2. re-layout the diagram
         self.__relayout()

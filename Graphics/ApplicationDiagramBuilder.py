@@ -43,7 +43,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         self.noModules = noModules
         
-        self.umlView.setDiagramName( self.trUtf8("Application Diagram {0}").format(
+        self.umlView.setDiagramName(self.trUtf8("Application Diagram {0}").format(
             self.project.getProjectName()))
         
     def __buildModulesDict(self):

@@ -1610,7 +1610,7 @@ def toBool(dataStr):
     @param dataStr string to be converted (string)
     @return converted boolean value (boolean)
     """
-    if dataStr in [ "True", "true", "1", "Yes", "yes"]:
+    if dataStr in ["True", "true", "1", "Yes", "yes"]:
         return True
     elif dataStr in ["False", "false", "0", "No", "no"]:
         return False

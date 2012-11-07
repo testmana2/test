@@ -11,6 +11,7 @@ from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, QPainter, \
     QPalette, QToolTip, QPaintEngine, QPen, QBrush
 
+
 def drawRect(painter, rect, outline, fill=QColor()):
     """
     Module function to draw a rectangle with the given parameters.

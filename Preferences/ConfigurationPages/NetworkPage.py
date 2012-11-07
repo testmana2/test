@@ -185,7 +185,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Private slot handling the selection of a proxy type.
         
-        @param index index of the selected item (integer) 
+        @param index index of the selected item (integer)
         """
         proxyType = self.ftpProxyTypeCombo.itemData(index)
         self.ftpProxyHostEdit.setEnabled(proxyType != E5FtpProxyType.NoProxy)
