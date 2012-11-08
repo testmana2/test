@@ -56,6 +56,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         self.descriptionEdit.setReadOnly(True)
         self.completedCheckBox.setEnabled(False)
         self.priorityCombo.setEnabled(False)
+        self.projectCheckBox.setEnabled(False)
         
     def getData(self):
         """
