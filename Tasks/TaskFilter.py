@@ -22,7 +22,7 @@ class TaskFilter(object):
         """
         self.active = False
         
-        self.descriptionFilter = None
+        self.summaryFilter = None
         self.filenameFilter = None
         self.typeFilter = Task.TypeNone     # task type
         self.scopeFilter = None             # global (False) or project (True)
@@ -38,7 +38,7 @@ class TaskFilter(object):
         """
         self.active = enabled
     
-    def setDescriptionFilter(self, filter):
+    def setSummaryFilter(self, filter):
         """
         Public method to set the description filter.
         
@@ -46,9 +46,9 @@ class TaskFilter(object):
             to set (string) or None
         """
         if not filter:
-            self.descriptionFilter = None
+            self.summaryFilter = None
         else:
-            self.descriptionFilter = QRegExp(filter)
+            self.summaryFilter = QRegExp(filter)
     
     def setFileNameFilter(self, filter):
         """
@@ -102,7 +102,7 @@ class TaskFilter(object):
         
         @return flag indicating an active filter was found (boolean)
         """
-        return self.descriptionFilter is not None or \
+        return self.summaryFilter is not None or \
                self.filenameFilter is not None or \
                self.typeFilter != Task.TypeNone or \
                self.scopeFilter is not None or \
@@ -119,8 +119,8 @@ class TaskFilter(object):
         if not self.active:
             return True
         
-        if self.descriptionFilter and \
-           self.descriptionFilter.indexIn(task.description) == -1:
+        if self.summaryFilter and \
+           self.summaryFilter.indexIn(task.summary) == -1:
             return False
         
         if self.filenameFilter and \

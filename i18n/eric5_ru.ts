@@ -39073,7 +39073,7 @@ Not connected</source>
 <context>
     <name>SnapshotRegionGrabber</name>
     <message>
-        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46521,17 +46521,17 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
         <source>Select to filter on the task description</source>
-        <translation>Фильтровать по описанию задачи</translation>
+        <translation type="obsolete">Фильтровать по описанию задачи</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation type="obsolete">Описание</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
         <source>Enter the description filter as a regular expression.</source>
-        <translation>Задайте фильтр описания как регулярное выражение.</translation>
+        <translation type="obsolete">Задайте фильтр описания как регулярное выражение.</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="64"/>
@@ -46703,91 +46703,106 @@ the respective line.&lt;/p&gt;</source>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
+        <source>Select to filter on the task summary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
+        <source>Summary</source>
+        <translation type="unfinished">Итого</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
+        <source>Enter the summary filter as a regular expression.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TaskPropertiesDialog</name>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="13"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="14"/>
         <source>Task Properties</source>
         <translation>Свойства задачи</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="39"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="40"/>
         <source>&amp;Description:</source>
         <translation>&amp;Описание:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="52"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="53"/>
         <source>Enter the task description</source>
         <translation>Задайте описание задачи</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="59"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="60"/>
         <source>Creation Time:</source>
         <translation>Время создания:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="76"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="77"/>
         <source>&amp;Priority:</source>
         <translation>&amp;Приоритет:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="137"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="138"/>
         <source>Filename:</source>
         <translation>Имя файла:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="154"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="155"/>
         <source>Line:</source>
         <translation>Строка:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="127"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="128"/>
         <source>Select to mark this task as completed</source>
         <translation>Пометить задачу как завершённую</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="130"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="131"/>
         <source>T&amp;ask completed</source>
         <translation>З&amp;адача завершена</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="111"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="112"/>
         <source>Select to indicate a task related to the current project</source>
         <translation>Указать, что задача относится к текущему проекту</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="114"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="115"/>
         <source>Project &amp;Task</source>
         <translation>&amp;Задача проекта</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="86"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="87"/>
         <source>Select the task priority</source>
         <translation>Задайте приоритет задачи</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="93"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="94"/>
         <source>High</source>
         <translation>Высокий</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="98"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="99"/>
         <source>Normal</source>
         <translation>Нормальный</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="103"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="104"/>
         <source>Low</source>
         <translation>Низкий</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="22"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="23"/>
         <source>&amp;Summary:</source>
         <translation>&amp;Сводка:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="32"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="33"/>
         <source>Enter the task summary</source>
         <translation>Задайте краткое изложение задачи</translation>
     </message>

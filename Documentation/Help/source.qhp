@@ -10379,19 +10379,19 @@
       <keyword name="Task.isProjectTask" id="Task.isProjectTask" ref="eric5.Tasks.Task.html#Task.isProjectTask" />
       <keyword name="Task.setCompleted" id="Task.setCompleted" ref="eric5.Tasks.Task.html#Task.setCompleted" />
       <keyword name="Task.setDescription" id="Task.setDescription" ref="eric5.Tasks.Task.html#Task.setDescription" />
-      <keyword name="Task.setLongText" id="Task.setLongText" ref="eric5.Tasks.Task.html#Task.setLongText" />
       <keyword name="Task.setPriority" id="Task.setPriority" ref="eric5.Tasks.Task.html#Task.setPriority" />
       <keyword name="Task.setProjectTask" id="Task.setProjectTask" ref="eric5.Tasks.Task.html#Task.setProjectTask" />
+      <keyword name="Task.setSummary" id="Task.setSummary" ref="eric5.Tasks.Task.html#Task.setSummary" />
       <keyword name="TaskFilter" id="TaskFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter" />
       <keyword name="TaskFilter (Constructor)" id="TaskFilter (Constructor)" ref="eric5.Tasks.TaskFilter.html#TaskFilter.__init__" />
       <keyword name="TaskFilter (Module)" id="TaskFilter (Module)" ref="eric5.Tasks.TaskFilter.html" />
       <keyword name="TaskFilter.hasActiveFilter" id="TaskFilter.hasActiveFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.hasActiveFilter" />
       <keyword name="TaskFilter.setActive" id="TaskFilter.setActive" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setActive" />
-      <keyword name="TaskFilter.setDescriptionFilter" id="TaskFilter.setDescriptionFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setDescriptionFilter" />
       <keyword name="TaskFilter.setFileNameFilter" id="TaskFilter.setFileNameFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setFileNameFilter" />
       <keyword name="TaskFilter.setPrioritiesFilter" id="TaskFilter.setPrioritiesFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setPrioritiesFilter" />
       <keyword name="TaskFilter.setScopeFilter" id="TaskFilter.setScopeFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setScopeFilter" />
       <keyword name="TaskFilter.setStatusFilter" id="TaskFilter.setStatusFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setStatusFilter" />
+      <keyword name="TaskFilter.setSummaryFilter" id="TaskFilter.setSummaryFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setSummaryFilter" />
       <keyword name="TaskFilter.setTypeFilter" id="TaskFilter.setTypeFilter" ref="eric5.Tasks.TaskFilter.html#TaskFilter.setTypeFilter" />
       <keyword name="TaskFilter.showTask" id="TaskFilter.showTask" ref="eric5.Tasks.TaskFilter.html#TaskFilter.showTask" />
       <keyword name="TaskFilterConfigDialog" id="TaskFilterConfigDialog" ref="eric5.Tasks.TaskFilterConfigDialog.html#TaskFilterConfigDialog" />

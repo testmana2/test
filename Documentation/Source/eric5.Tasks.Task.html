@@ -83,16 +83,16 @@ QTreeWidgetItem
 <td>Public slot to update the completed flag.</td>
 </tr><tr>
 <td><a href="#Task.setDescription">setDescription</a></td>
-<td>Public slot to update the description.</td>
-</tr><tr>
-<td><a href="#Task.setLongText">setLongText</a></td>
-<td>Public slot to update the longtext field.</td>
+<td>Public slot to update the description field.</td>
 </tr><tr>
 <td><a href="#Task.setPriority">setPriority</a></td>
 <td>Public slot to update the priority.</td>
 </tr><tr>
 <td><a href="#Task.setProjectTask">setProjectTask</a></td>
 <td>Public method to set the project relation flag.</td>
+</tr><tr>
+<td><a href="#Task.setSummary">setSummary</a></td>
+<td>Public slot to update the description.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -101,16 +101,16 @@ QTreeWidgetItem
 </table>
 <a NAME="Task.__init__" ID="Task.__init__"></a>
 <h4>Task (Constructor)</h4>
-<b>Task</b>(<i>description, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=TypeTodo, project=None, longtext=""</i>)
+<b>Task</b>(<i>summary, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=TypeTodo, project=None, description=""</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
 parent widget of the task (QWidget)
-</dd><dt><i>description</i></dt>
+</dd><dt><i>summary</i></dt>
 <dd>
-descriptive text of the task (string)
+summary text of the task (string)
 </dd><dt><i>priority</i></dt>
 <dd>
 priority of the task (0=high, 1=normal, 2=low)
@@ -137,7 +137,7 @@ type of the task (one of TypeFixme, TypeTodo,
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project object (Project)
-</dd><dt><i>longtext</i></dt>
+</dd><dt><i>description</i></dt>
 <dd>
 explanatory text of the task (string)
 </dd>
@@ -210,19 +210,9 @@ flag indicating completion status (boolean)
 <h4>Task.setDescription</h4>
 <b>setDescription</b>(<i>description</i>)
 <p>
-        Public slot to update the description.
+        Public slot to update the description field.
 </p><dl>
-<dt><i>longtext</i></dt>
-<dd>
-explanatory text of the task (string)
-</dd>
-</dl><a NAME="Task.setLongText" ID="Task.setLongText"></a>
-<h4>Task.setLongText</h4>
-<b>setLongText</b>(<i>longtext</i>)
-<p>
-        Public slot to update the longtext field.
-</p><dl>
-<dt><i>longtext</i></dt>
+<dt><i>description</i></dt>
 <dd>
 descriptive text of the task (string)
 </dd>
@@ -245,6 +235,16 @@ priority of the task (0=high, 1=normal, 2=low)
 <dt><i>pt</i></dt>
 <dd>
 flag indicating a project task (boolean)
+</dd>
+</dl><a NAME="Task.setSummary" ID="Task.setSummary"></a>
+<h4>Task.setSummary</h4>
+<b>setSummary</b>(<i>summary</i>)
+<p>
+        Public slot to update the description.
+</p><dl>
+<dt><i>summary</i></dt>
+<dd>
+summary text of the task (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

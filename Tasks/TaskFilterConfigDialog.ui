@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>562</width>
-    <height>470</height>
+    <height>520</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
@@ -31,24 +31,24 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="descriptionGroup">
+    <widget class="QGroupBox" name="summaryGroup">
      <property name="focusPolicy">
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="toolTip">
-      <string>Select to filter on the task description</string>
+      <string>Select to filter on the task summary</string>
      </property>
      <property name="title">
-      <string>Description</string>
+      <string>Summary</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QVBoxLayout">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLineEdit" name="descriptionEdit">
+       <widget class="QLineEdit" name="summaryEdit">
         <property name="toolTip">
-         <string>Enter the description filter as a regular expression.</string>
+         <string>Enter the summary filter as a regular expression.</string>
         </property>
        </widget>
       </item>
@@ -69,7 +69,7 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QVBoxLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLineEdit" name="filenameEdit">
         <property name="toolTip">
@@ -94,7 +94,7 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QComboBox" name="typeCombo">
         <property name="toolTip">
@@ -119,7 +119,7 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QHBoxLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QRadioButton" name="globalRadioButton">
         <property name="toolTip">
@@ -157,7 +157,7 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QHBoxLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QRadioButton" name="uncompletedRadioButton">
         <property name="toolTip">
@@ -195,7 +195,7 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QHBoxLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QCheckBox" name="priorityHighCheckBox">
         <property name="toolTip">
@@ -230,6 +230,19 @@
     </widget>
    </item>
    <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>8</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -242,8 +255,8 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>descriptionGroup</tabstop>
-  <tabstop>descriptionEdit</tabstop>
+  <tabstop>summaryGroup</tabstop>
+  <tabstop>summaryEdit</tabstop>
   <tabstop>filenameGroup</tabstop>
   <tabstop>filenameEdit</tabstop>
   <tabstop>typeGroup</tabstop>

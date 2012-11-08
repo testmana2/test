@@ -27,14 +27,14 @@ class Task(QTreeWidgetItem):
     TypeWarning = 2
     TypeNote = 3
     
-    def __init__(self, description, priority=1, filename="", lineno=0,
+    def __init__(self, summary, priority=1, filename="", lineno=0,
                  completed=False, _time=0, isProjectTask=False,
-                 taskType=TypeTodo, project=None, longtext=""):
+                 taskType=TypeTodo, project=None, description=""):
         """
         Constructor
         
         @param parent parent widget of the task (QWidget)
-        @param description descriptive text of the task (string)
+        @param summary summary text of the task (string)
         @param priority priority of the task (0=high, 1=normal, 2=low)
         @param filename filename containing the task (string)
         @param lineno line number containing the task (integer)
@@ -45,12 +45,12 @@ class Task(QTreeWidgetItem):
         @param taskType type of the task (one of TypeFixme, TypeTodo,
             TypeWarning, TypeNote)
         @param project reference to the project object (Project)
-        @param longtext explanatory text of the task (string)
+        @param description explanatory text of the task (string)
         """
         super().__init__()
         
+        self.summary = summary
         self.description = description
-        self.longtext = longtext
         if priority in [0, 1, 2]:
             self.priority = priority
         else:
@@ -68,7 +68,7 @@ class Task(QTreeWidgetItem):
             
         self.setData(0, Qt.DisplayRole, "")
         self.setData(1, Qt.DisplayRole, "")
-        self.setData(2, Qt.DisplayRole, self.description)
+        self.setData(2, Qt.DisplayRole, self.summary)
         self.setData(3, Qt.DisplayRole, self.filename)
         self.setData(4, Qt.DisplayRole, self.lineno or "")
         
@@ -122,22 +122,22 @@ class Task(QTreeWidgetItem):
             if self._isProjectTask:
                 self.setFont(col, boldFont)
     
-    def setDescription(self, description):
+    def setSummary(self, summary):
         """
         Public slot to update the description.
         
-        @param longtext explanatory text of the task (string)
+        @param summary summary text of the task (string)
+        """
+        self.summary = summary
+        self.setText(2, self.summary)
+    
+    def setDescription(self, description):
+        """
+        Public slot to update the description field.
+        
+        @param description descriptive text of the task (string)
         """
         self.description = description
-        self.setText(2, self.description)
-    
-    def setLongText(self, longtext):
-        """
-        Public slot to update the longtext field.
-        
-        @param longtext descriptive text of the task (string)
-        """
-        self.longtext = longtext
     
     def setPriority(self, priority):
         """

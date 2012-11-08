@@ -233,13 +233,13 @@ class TaskViewer(QTreeWidget):
         """
         self.projectOpen = o
     
-    def addTask(self, description, priority=1, filename="", lineno=0,
+    def addTask(self, summary, priority=1, filename="", lineno=0,
                 completed=False, _time=0, isProjectTask=False,
-                taskType=Task.TypeTodo, longtext=""):
+                taskType=Task.TypeTodo, description=""):
         """
         Public slot to add a task.
         
-        @param description descriptive text of the task (string)
+        @param summary summary text of the task (string)
         @param priority priority of the task (0=high, 1=normal, 2=low)
         @param filename filename containing the task (string)
         @param lineno line number containing the task (integer)
@@ -249,11 +249,11 @@ class TaskViewer(QTreeWidget):
             project (boolean)
         @param taskType type of the task (one of Task.TypeFixme, Task.TypeTodo,
             Task.TypeWarning, Task.TypeNote)
-        @param longtext explanatory text of the task (string)
+        @param description explanatory text of the task (string)
         """
-        task = Task(description, priority, filename, lineno, completed,
+        task = Task(summary, priority, filename, lineno, completed,
                    _time, isProjectTask, taskType,
-                   self.project, longtext)
+                   self.project, description)
         self.tasks.append(task)
         if self.taskFilter.showTask(task):
             self.addTopLevelItem(task)
@@ -263,22 +263,22 @@ class TaskViewer(QTreeWidget):
         if isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()
     
-    def addFileTask(self, description, filename, lineno, taskType=Task.TypeTodo,
-                    longtext=""):
+    def addFileTask(self, summary, filename, lineno, taskType=Task.TypeTodo,
+                    description=""):
         """
         Public slot to add a file related task.
         
-        @param description descriptive text of the task (string)
+        @param summary summary text of the task (string)
         @param filename filename containing the task (string)
         @param lineno line number containing the task (integer)
         @param taskType type of the task (one of Task.TypeFixme, Task.TypeTodo,
             Task.TypeWarning, Task.TypeNote)
-        @param longtext explanatory text of the task (string)
+        @param description explanatory text of the task (string)
         """
-        self.addTask(description, filename=filename, lineno=lineno,
+        self.addTask(summary, filename=filename, lineno=lineno,
                      isProjectTask=(
                         self.project and self.project.isProjectSource(filename)),
-                     taskType=taskType, longtext=longtext)
+                     taskType=taskType, description=description)
         
     def getProjectTasks(self):
         """
@@ -358,11 +358,11 @@ class TaskViewer(QTreeWidget):
             dlg.setReadOnly()
         if dlg.exec_() == QDialog.Accepted and not ro:
             data = dlg.getData()
-            task.setDescription(data[0])
+            task.setSummary(data[0])
             task.setPriority(data[1])
             task.setCompleted(data[2])
             task.setProjectTask(data[3])
-            task.setLongText(data[4])
+            task.setDescription(data[4])
             self.__projectTasksSaveTimer.changeOccurred()
     
     def __newTask(self):
@@ -373,7 +373,7 @@ class TaskViewer(QTreeWidget):
         if dlg.exec_() == QDialog.Accepted:
             data = dlg.getData()
             self.addTask(data[0], data[1], completed=data[2], isProjectTask=data[3],
-                longtext=data[4])
+                description=data[4])
     
     def __markCompleted(self):
         """
@@ -413,10 +413,10 @@ class TaskViewer(QTreeWidget):
         Private slot to handle the "Paste" context menu entry.
         """
         if self.copyTask:
-            self.addTask(self.copyTask.description,
+            self.addTask(self.copyTask.summary,
                          priority=self.copyTask.priority,
                          completed=self.copyTask.completed,
-                         longtext=self.copyTask.longtext,
+                         description=self.copyTask.description,
                          isProjectTask=self.copyTask._isProjectTask)
     
     def __deleteTask(self):

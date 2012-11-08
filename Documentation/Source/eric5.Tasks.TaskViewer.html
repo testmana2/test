@@ -283,13 +283,13 @@ column the item was activated in (integer)
 </dd>
 </dl><a NAME="TaskViewer.addFileTask" ID="TaskViewer.addFileTask"></a>
 <h4>TaskViewer.addFileTask</h4>
-<b>addFileTask</b>(<i>description, filename, lineno, taskType=Task.TypeTodo, longtext=""</i>)
+<b>addFileTask</b>(<i>summary, filename, lineno, taskType=Task.TypeTodo, description=""</i>)
 <p>
         Public slot to add a file related task.
 </p><dl>
-<dt><i>description</i></dt>
+<dt><i>summary</i></dt>
 <dd>
-descriptive text of the task (string)
+summary text of the task (string)
 </dd><dt><i>filename</i></dt>
 <dd>
 filename containing the task (string)
@@ -300,19 +300,19 @@ line number containing the task (integer)
 <dd>
 type of the task (one of Task.TypeFixme, Task.TypeTodo,
             Task.TypeWarning, Task.TypeNote)
-</dd><dt><i>longtext</i></dt>
+</dd><dt><i>description</i></dt>
 <dd>
 explanatory text of the task (string)
 </dd>
 </dl><a NAME="TaskViewer.addTask" ID="TaskViewer.addTask"></a>
 <h4>TaskViewer.addTask</h4>
-<b>addTask</b>(<i>description, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=Task.TypeTodo, longtext=""</i>)
+<b>addTask</b>(<i>summary, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=Task.TypeTodo, description=""</i>)
 <p>
         Public slot to add a task.
 </p><dl>
-<dt><i>description</i></dt>
+<dt><i>summary</i></dt>
 <dd>
-descriptive text of the task (string)
+summary text of the task (string)
 </dd><dt><i>priority</i></dt>
 <dd>
 priority of the task (0=high, 1=normal, 2=low)
@@ -336,7 +336,7 @@ flag indicating a task related to the current
 <dd>
 type of the task (one of Task.TypeFixme, Task.TypeTodo,
             Task.TypeWarning, Task.TypeNote)
-</dd><dt><i>longtext</i></dt>
+</dd><dt><i>description</i></dt>
 <dd>
 explanatory text of the task (string)
 </dd>

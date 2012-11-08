@@ -41852,7 +41852,7 @@ Il s&apos;activent lorsqu&apos;on tape la parenthèse ouvrante d&apos;une foncti
 <context>
     <name>SnapshotRegionGrabber</name>
     <message>
-        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49719,17 +49719,17 @@ correspondante.&lt;/p&gt;</translation>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
         <source>Select to filter on the task description</source>
-        <translation>Cocher pour filtrer suivant la description de tâche</translation>
+        <translation type="obsolete">Cocher pour filtrer suivant la description de tâche</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
         <source>Description</source>
-        <translation>Description</translation>
+        <translation type="obsolete">Description</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
         <source>Enter the description filter as a regular expression.</source>
-        <translation>Entrer le filtre de description sous forme d&apos;expression régulière.</translation>
+        <translation type="obsolete">Entrer le filtre de description sous forme d&apos;expression régulière.</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="64"/>
@@ -49901,91 +49901,106 @@ correspondante.&lt;/p&gt;</translation>
         <source>Note</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
+        <source>Select to filter on the task summary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
+        <source>Summary</source>
+        <translation type="unfinished">Bilan</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
+        <source>Enter the summary filter as a regular expression.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TaskPropertiesDialog</name>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="13"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="14"/>
         <source>Task Properties</source>
         <translation>Propriétés des tâches</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="39"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="40"/>
         <source>&amp;Description:</source>
         <translation>&amp;Description:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="52"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="53"/>
         <source>Enter the task description</source>
         <translation>Entrer la decription de la tâche</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="59"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="60"/>
         <source>Creation Time:</source>
         <translation>Date de création:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="76"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="77"/>
         <source>&amp;Priority:</source>
         <translation>&amp;Priorité:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="137"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="138"/>
         <source>Filename:</source>
         <translation>Nom de fichier:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="154"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="155"/>
         <source>Line:</source>
         <translation>Ligne:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="127"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="128"/>
         <source>Select to mark this task as completed</source>
         <translation>Cocher pour marquer cette tâche comme complétée</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="130"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="131"/>
         <source>T&amp;ask completed</source>
         <translation>Ta&amp;che effectuée</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="111"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="112"/>
         <source>Select to indicate a task related to the current project</source>
         <translation>Cocher pour indiquer si cette tâche doit être rattachée au projet courant</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="114"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="115"/>
         <source>Project &amp;Task</source>
         <translation>&amp;Tâche de projet</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="86"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="87"/>
         <source>Select the task priority</source>
         <translation>Sélectionner la priorité de la tâche</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="93"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="94"/>
         <source>High</source>
         <translation>Haute</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="98"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="99"/>
         <source>Normal</source>
         <translation>Normale</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="103"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="104"/>
         <source>Low</source>
         <translation>Basse</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="22"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="23"/>
         <source>&amp;Summary:</source>
         <translation>&amp;Bilan:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="32"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="33"/>
         <source>Enter the task summary</source>
         <translation>Entrer le bilan des tâches</translation>
     </message>

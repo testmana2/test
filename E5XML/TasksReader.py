@@ -96,7 +96,7 @@ class TasksReader(XMLStreamReaderBase):
                     filename=task["filename"], lineno=task["linenumber"],
                     completed=task["completed"], _time=task["created"],
                     isProjectTask=self.forProject, taskType=task["type"],
-                    longtext=task["description"])
+                    description=task["description"])
                 break
             
             if self.isStartElement():

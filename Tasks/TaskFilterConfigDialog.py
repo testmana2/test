@@ -34,13 +34,13 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         self.typeCombo.addItem(self.trUtf8("ToDo"), Task.TypeTodo)
         self.typeCombo.addItem(self.trUtf8("Note"), Task.TypeNote)
         
-        if taskFilter.descriptionFilter is None or \
-           not taskFilter.descriptionFilter.pattern():
-            self.descriptionGroup.setChecked(False)
-            self.descriptionEdit.clear()
+        if taskFilter.summaryFilter is None or \
+           not taskFilter.summaryFilter.pattern():
+            self.summaryGroup.setChecked(False)
+            self.summaryEdit.clear()
         else:
-            self.descriptionGroup.setChecked(True)
-            self.descriptionEdit.setText(taskFilter.descriptionFilter.pattern())
+            self.summaryGroup.setChecked(True)
+            self.summaryEdit.setText(taskFilter.summaryFilter.pattern())
         
         if taskFilter.filenameFilter is None or \
            not taskFilter.filenameFilter.pattern():
@@ -94,10 +94,10 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         
         @param taskFilter the task filter object to be configured
         """
-        if self.descriptionGroup.isChecked():
-            taskFilter.setDescriptionFilter(self.descriptionEdit.text())
+        if self.summaryGroup.isChecked():
+            taskFilter.setSummaryFilter(self.summaryEdit.text())
         else:
-            taskFilter.setDescriptionFilter(None)
+            taskFilter.setSummaryFilter(None)
         
         if self.filenameGroup.isChecked():
             taskFilter.setFileNameFilter(self.filenameEdit.text())

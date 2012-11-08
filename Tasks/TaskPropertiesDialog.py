@@ -36,8 +36,8 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         if not projectOpen:
             self.projectCheckBox.setEnabled(False)
         if task is not None:
+            self.summaryEdit.setText(task.summary)
             self.descriptionEdit.setText(task.description)
-            self.longtextEdit.setText(task.longtext)
             self.creationLabel.setText(time.strftime("%Y-%m-%d, %H:%M:%S",
                                                      time.localtime(task.created)))
             self.priorityCombo.setCurrentIndex(task.priority)
@@ -53,7 +53,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         """
         Public slot to set the dialog to read only mode.
         """
-        self.descriptionEdit.setReadOnly(True)
+        self.summaryEdit.setReadOnly(True)
         self.completedCheckBox.setEnabled(False)
         self.priorityCombo.setEnabled(False)
         self.projectCheckBox.setEnabled(False)
@@ -65,6 +65,6 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         @return tuple of description, priority, completion flag,
                 project flag and long text (string, string, boolean, boolean, string)
         """
-        return (self.descriptionEdit.text(), self.priorityCombo.currentIndex(),
+        return (self.summaryEdit.text(), self.priorityCombo.currentIndex(),
                 self.completedCheckBox.isChecked(), self.projectCheckBox.isChecked(),
-                self.longtextEdit.toPlainText())
+                self.descriptionEdit.toPlainText())

@@ -31220,11 +31220,6 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;p&gt;Die Programmiersprache &lt;b&gt;{0}&lt;/b&gt; wird nicht unterstützt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="341"/>
-        <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programmin Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits für die Programmiersprache &lt;b&gt;{1}&lt;/b&gt; registriert.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="351"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Projekttyp &lt;b&gt;{0}&lt;/b&gt; ist bereits registriert.&lt;/p&gt;</translation>
@@ -37988,7 +37983,7 @@ nicht verbunden</translation>
 <context>
     <name>SnapshotRegionGrabber</name>
     <message>
-        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
         <translation>Wählen sie mit der Maus einen Bereich aus. Um das Bildschirmfoto aufzunehmen, drücken sie die Eingabetaste oder tätigen sie einen Doppelklick. Zum Abbrechen drücken sie Escape.</translation>
     </message>
@@ -45245,21 +45240,6 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Wähle die Kategorien, nach denen die Aufgabenliste gefiltert werden soll. Gib das Filterkriterium in jeder Kategorie ein. Die aktivierten Kategorien werden &quot;&lt;b&gt;und&lt;/b&gt;&quot; verknüpft.</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
-        <source>Select to filter on the task description</source>
-        <translation>Auswählen, um über die Aufgabenbeschreibung zu filtern</translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
-        <source>Description</source>
-        <translation>Beschreibung</translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
-        <source>Enter the description filter as a regular expression.</source>
-        <translation>Gib den Beschreibungsfilter als regulären Ausdruck ein.</translation>
-    </message>
-    <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="64"/>
         <source>Select to filter on the task filename</source>
         <translation>Auswählen, um über den Dateinamen der Aufgabe zu filtern</translation>
@@ -45409,91 +45389,106 @@ Zeile.&lt;/p&gt;</translation>
         <source>Note</source>
         <translation>Hinweis</translation>
     </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
+        <source>Select to filter on the task summary</source>
+        <translation>Auswählen, um über die Zusammenfassung der Aufgabe zu filtern</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
+        <source>Summary</source>
+        <translation>Zusammenfassung</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
+        <source>Enter the summary filter as a regular expression.</source>
+        <translation>Gib den Zusammenfassungsfilter als regulären Ausdruck ein.</translation>
+    </message>
 </context>
 <context>
     <name>TaskPropertiesDialog</name>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="13"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="14"/>
         <source>Task Properties</source>
         <translation>Aufgabeneigenschaften</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="39"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="40"/>
         <source>&amp;Description:</source>
         <translation>&amp;Beschreibung:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="52"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="53"/>
         <source>Enter the task description</source>
         <translation>Gib die Aufgabenbeschreibung ein</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="59"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="60"/>
         <source>Creation Time:</source>
         <translation>Erzeugungszeitpunkt:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="76"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="77"/>
         <source>&amp;Priority:</source>
         <translation>&amp;Wichtigkeit:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="137"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="138"/>
         <source>Filename:</source>
         <translation>Dateiname:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="154"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="155"/>
         <source>Line:</source>
         <translation>Zeile:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="127"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="128"/>
         <source>Select to mark this task as completed</source>
         <translation>Auswählen, um die Aufgabe als beendet zu markieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="130"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="131"/>
         <source>T&amp;ask completed</source>
         <translation>Aufgabe be&amp;endet</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="111"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="112"/>
         <source>Select to indicate a task related to the current project</source>
         <translation>Auswählen, um eine Aufgabe als zu einem Projekt gehörend zu markieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="114"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="115"/>
         <source>Project &amp;Task</source>
         <translation>&amp;Projektaufgabe</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="86"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="87"/>
         <source>Select the task priority</source>
         <translation>Wähle die Wichtigkeit der Aufgabe</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="93"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="94"/>
         <source>High</source>
         <translation>Hoch</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="98"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="99"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="103"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="104"/>
         <source>Low</source>
         <translation>Niedrig</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="22"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="23"/>
         <source>&amp;Summary:</source>
         <translation>&amp;Zusammenfassung:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskPropertiesDialog.ui" line="32"/>
+        <location filename="Tasks/TaskPropertiesDialog.ui" line="33"/>
         <source>Enter the task summary</source>
         <translation>Gib die Zusammenfassung der Aufgabe ein</translation>
     </message>

@@ -73,8 +73,8 @@ class TasksWriter(XMLStreamWriterBase):
             self.writeAttribute("priority", str(task.priority))
             self.writeAttribute("completed", str(task.completed))
             self.writeAttribute("type", str(task.taskType))
-            self.writeTextElement("Summary", task.description.strip())
-            self.writeTextElement("Description", task.longtext.strip())
+            self.writeTextElement("Summary", task.summary.strip())
+            self.writeTextElement("Description", task.description.strip())
             self.writeTextElement("Created",
                 time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
             if task.filename:
