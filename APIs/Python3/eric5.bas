@@ -116,6 +116,7 @@ DuplicateArgument Message
 E5Action QAction
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
+E5ClearableLineEdit E5LineEdit
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
 E5FileCompleter QCompleter
@@ -124,6 +125,7 @@ E5HorizontalToolBox E5TabWidget
 E5Led QWidget
 E5LineEdit QLineEdit
 E5LineEditButton QAbstractButton
+E5LineEditSideWidget QWidget
 E5ListView QListView
 E5MessageBox QMessageBox
 E5MessageBoxWizard QObject
@@ -228,8 +230,7 @@ HelpViewersPage ConfigurationPageBase Ui_HelpViewersPage
 HelpVirusTotalPage ConfigurationPageBase Ui_HelpVirusTotalPage
 HelpWebBrowserPage ConfigurationPageBase Ui_HelpWebBrowserPage
 HelpWebPage QWebPage
-HelpWebSearchEdit E5LineEdit
-HelpWebSearchWidget QWidget
+HelpWebSearchWidget E5ClearableLineEdit
 HelpWindow QMainWindow
 Hg VersionControl
 HgAnnotateDialog QDialog Ui_HgAnnotateDialog
@@ -492,7 +493,6 @@ ShortcutDialog QDialog Ui_ShortcutDialog
 ShortcutsDialog QDialog Ui_ShortcutsDialog
 ShortcutsReader XMLStreamReaderBase
 ShortcutsWriter XMLStreamWriterBase
-SideWidget QWidget
 SingleApplicationServer QLocalServer
 SiteInfoDialog QDialog Ui_SiteInfoDialog
 SpecialArrayElementVarItem SpecialVarItem

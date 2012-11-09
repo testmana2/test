@@ -62,6 +62,12 @@ QObject
 <td><a href="#SpellChecker.getAvailableLanguages">getAvailableLanguages</a></td>
 <td>Public classmethod to get all available languages.</td>
 </tr><tr>
+<td><a href="#SpellChecker.getDefaultPath">getDefaultPath</a></td>
+<td>Class method to get the default path names of the user dictionaries.</td>
+</tr><tr>
+<td><a href="#SpellChecker.getUserDictionaryPath">getUserDictionaryPath</a></td>
+<td>Class method to get the path name of a user dictionary file.</td>
+</tr><tr>
 <td><a href="#SpellChecker.isAvailable">isAvailable</a></td>
 <td>Public classmethod to check, if spellchecking is available.</td>
 </tr><tr>
@@ -186,6 +192,40 @@ reference to the dictionary (enchant.Dict)
 <dt>Returns:</dt>
 <dd>
 list of available languages (list of strings)
+</dd>
+</dl><a NAME="SpellChecker.getDefaultPath" ID="SpellChecker.getDefaultPath"></a>
+<h4>SpellChecker.getDefaultPath (class method)</h4>
+<b>getDefaultPath</b>(<i>isException=False</i>)
+<p>
+        Class method to get the default path names of the user dictionaries.
+</p><dl>
+<dt><i>isException</i></dt>
+<dd>
+flag indicating to return the name of the default
+            exception dictionary (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+file name of the default user dictionary or the default user
+            exception dictionary (string)
+</dd>
+</dl><a NAME="SpellChecker.getUserDictionaryPath" ID="SpellChecker.getUserDictionaryPath"></a>
+<h4>SpellChecker.getUserDictionaryPath (class method)</h4>
+<b>getUserDictionaryPath</b>(<i>isException</i>)
+<p>
+        Class method to get the path name of a user dictionary file.
+</p><dl>
+<dt><i>isException</i></dt>
+<dd>
+flag indicating to return the name of the user
+            exception dictionary (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+file name of the user dictionary or the user exception
+            dictionary (string)
 </dd>
 </dl><a NAME="SpellChecker.isAvailable" ID="SpellChecker.isAvailable"></a>
 <h4>SpellChecker.isAvailable (class method)</h4>
