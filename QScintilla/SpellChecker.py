@@ -84,6 +84,41 @@ class SpellChecker(QObject):
         return False
     
     @classmethod
+    def getDefaultPath(cls, isException=False):
+        """
+        Class method to get the default path names of the user dictionaries.
+        
+        @param isException flag indicating to return the name of the default 
+            exception dictionary (boolean)
+        @return file name of the default user dictionary or the default user
+            exception dictionary (string)
+        """
+        if isException:
+            return os.path.join(Utilities.getConfigDir(), "spelling", "pel.dic")
+        else:
+            return os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
+    
+    @classmethod
+    def getUserDictionaryPath(cls, isException):
+        """
+        Class method to get the path name of a user dictionary file.
+        
+        @param isException flag indicating to return the name of the user
+            exception dictionary (boolean)
+        @return file name of the user dictionary or the user exception
+            dictionary (string)
+        """
+        if isException:
+            dicFile = Preferences.getEditor("SpellCheckingPersonalExcludeList")
+            if not dicFile:
+                dicFile = SpellChecker.getDefaultPath(False)
+        else:
+            dicFile = Preferences.getEditor("SpellCheckingPersonalWordList")
+            if not dicFile:
+                dicFile = SpellChecker.getDefaultPath()
+        return dicFile
+    
+    @classmethod
     def _getDict(cls, lang, pwl="", pel=""):
         """
         Protected classmethod to get a new dictionary.
@@ -95,17 +130,13 @@ class SpellChecker(QObject):
         @return reference to the dictionary (enchant.Dict)
         """
         if not pwl:
-            pwl = Preferences.getEditor("SpellCheckingPersonalWordList")
-            if not pwl:
-                pwl = os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
+            pwl = SpellChecker.getUserDictionaryPath()
             d = os.path.dirname(pwl)
             if not os.path.exists(d):
                 os.makedirs(d)
         
         if not pel:
-            pel = Preferences.getEditor("SpellCheckingPersonalExcludeList")
-            if not pel:
-                pel = os.path.join(Utilities.getConfigDir(), "spelling", "pel.dic")
+            pel = SpellChecker.getUserDictionaryPath(False)
             d = os.path.dirname(pel)
             if not os.path.exists(d):
                 os.makedirs(d)
