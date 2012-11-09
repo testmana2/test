@@ -571,8 +571,7 @@ class TemplateViewer(QTreeWidget):
                         """<p><b>Template entries</b> are the actual templates."""
                         """ They are grouped by the template groups. Help about"""
                         """ how to define them is available in the template edit"""
-                        """ dialog. There is an example template available in the"""
-                        """ Examples subdirectory of the eric5 distribution.</p>"""))
+                        """ dialog.</p>"""))
 
     def __getPredefinedVars(self):
         """

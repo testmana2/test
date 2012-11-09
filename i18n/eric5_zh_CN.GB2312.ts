@@ -50486,7 +50486,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;模板组&lt;/b&gt; 表示成组的单个模板。组具有一个特殊属性，应用于编程语言。要添加模板条目，至少须要定义一个组。&lt;/p&gt;&lt;p&gt;&lt;b&gt;模板条目&lt;/b&gt; 就是实际的模板。模板条目以模板组进行分组。关于如何进行定义的帮助可以在模板编辑对话框中找到。在安装 Eric4 的 Examples 子文件夹中也可以找到模板的范例。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>编辑模板组</translation>
     </message>
@@ -50496,7 +50496,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;具有名称 &lt;b&gt;%1&lt;/b&gt; 的模板组已存在。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>保存模板</translation>
     </message>
@@ -50506,7 +50506,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;无法写入模板文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>写入模板</translation>
     </message>
@@ -50528,21 +50528,26 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;模板组&lt;/b&gt; 表示成组的单个模板。组具有一个特殊属性，应用于编程语言。要添加模板条目，至少须要定义一个组。&lt;/p&gt;&lt;p&gt;&lt;b&gt;模板条目&lt;/b&gt; 就是实际的模板。模板条目以模板组进行分组。关于如何进行定义的帮助可以在模板编辑对话框中找到。在安装 Eric4 的 Examples 子文件夹中也可以找到模板的范例。&lt;/p&gt; {5 ?}</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;模板组&lt;/b&gt; 表示成组的单个模板。组具有一个特殊属性，应用于编程语言。要添加模板条目，至少须要定义一个组。&lt;/p&gt;&lt;p&gt;&lt;b&gt;模板条目&lt;/b&gt; 就是实际的模板。模板条目以模板组进行分组。关于如何进行定义的帮助可以在模板编辑对话框中找到。在安装 Eric4 的 Examples 子文件夹中也可以找到模板的范例。&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

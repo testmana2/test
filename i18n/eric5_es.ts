@@ -46255,17 +46255,17 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Ayuda para la plantilla</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>Editar Grupo de Plantillas</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>Guardar plantillas</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>Leer plantillas</translation>
     </message>
@@ -46282,22 +46282,27 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Los rupos de plantillas&lt;/b&gt; son un medio para agrupar plantillas individuales. Los grupos tienen un atributo que especifica a qué lenguaje de programación se aplican. Para añadir entradas de plantillas tiene que haber definido al menos un grupo.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Las entradas de plantillas&lt;/b&gt; son las plantillas en si. Se agrupan en grupos de plantillas. En el diálogo de edición de plantilla hay disponible un texto de ayuda acerca de cómo definirlas. Hay un ejemplo de plantilla disponible en el subdirectorio Examples de la distribución de eric5.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Los rupos de plantillas&lt;/b&gt; son un medio para agrupar plantillas individuales. Los grupos tienen un atributo que especifica a qué lenguaje de programación se aplican. Para añadir entradas de plantillas tiene que haber definido al menos un grupo.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Las entradas de plantillas&lt;/b&gt; son las plantillas en si. Se agrupan en grupos de plantillas. En el diálogo de edición de plantilla hay disponible un texto de ayuda acerca de cómo definirlas. Hay un ejemplo de plantilla disponible en el subdirectorio Examples de la distribución de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Un grupo de plantillas con el nombre &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; no pudo ser leído.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

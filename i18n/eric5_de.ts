@@ -45842,7 +45842,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>Vorlagengruppe editieren</translation>
     </message>
@@ -45862,7 +45862,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Vorlagen exportieren</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eine Vorlagengruppe mit dem Namen &lt;b&gt;{0}&lt;/b&gt; existiert bereits.&lt;/p&gt;</translation>
     </message>
@@ -45927,22 +45927,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Vorlagen Dateien (*.e4c);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>Vorlagen speichern</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Vorlagendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>Vorlagen lesen</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Vorlagendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
@@ -45953,8 +45953,8 @@ be changed via the preferences dialog.&lt;/p&gt;
     </message>
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
-        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Vorlagen Gruppen&lt;/b&gt; sind ein Mittel, um einzelne Vorlagen zusammenzufassen. Gruppen haben ein Attribut, das angibt, für welche Programmiersprache sie gültig sind. Um Vorlagen hinzuzufügen, muß mindestens eine Vorlagengruppe angelegt werden.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vorlagen Einträge&lt;/b&gt; sind die eigentlichen Vorlagen. Sie werden durch Vorlagengruppen zusammengefaßt. Zusätzlich Hilfe zu Vorlagen ist im Editierdialog verfügbar. Im Unterverzeichnis &quot;Examples&quot; der eric5 Distribution findet sich eine Beispielvorlage.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Vorlagen Gruppen&lt;/b&gt; sind ein Mittel, um einzelne Vorlagen zusammenzufassen. Gruppen haben ein Attribut, das angibt, für welche Programmiersprache sie gültig sind. Um Vorlagen hinzuzufügen, muß mindestens eine Vorlagengruppe angelegt werden.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vorlagen Einträge&lt;/b&gt; sind die eigentlichen Vorlagen. Sie werden durch Vorlagengruppen zusammengefaßt. Zusätzlich Hilfe zu Vorlagen ist im Editierdialog verfügbar.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

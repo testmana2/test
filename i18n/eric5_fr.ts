@@ -50418,7 +50418,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>Edition du Groupe de gabarits</translation>
     </message>
@@ -50513,7 +50513,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Les &lt;b&gt;Groupes de gabarits&lt;/b&gt; sont des ensembles de gabarits individuels. Les groupes ont un attribut indiquant pour quel langage de programmation ils doivent être appliqués. Pour ajouter des nouveaux gabarits, au moins un groupe doit déjà exister.&lt;/p&gt;&lt;p&gt;Les entrées &lt;b&gt;Gabarits&lt;/b&gt; désignent les gabarits eux-mêmes; ils sont rassemblés dans les groupes de gabarits. Pour savoir comment les définir, consulter l&apos;aide dans la fenêtre d&apos;édition des gabarits. Il y a un exemple de gabarit dans le répertoire Examples du répertoire eric4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>Enregistrement des gabarits</translation>
     </message>
@@ -50523,7 +50523,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Impossible de d&apos;écrire le fichier gabarit &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>Lecture des gabarits</translation>
     </message>
@@ -50550,21 +50550,26 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Les &lt;b&gt;Groupes de gabarits&lt;/b&gt; sont des ensembles de gabarits individuels. Les groupes ont un attribut indiquant pour quel langage de programmation ils doivent être appliqués. Pour ajouter des nouveaux gabarits, au moins un groupe doit déjà exister.&lt;/p&gt;&lt;p&gt;Les entrées &lt;b&gt;Gabarits&lt;/b&gt; désignent les gabarits eux-mêmes; ils sont rassemblés dans les groupes de gabarits. Pour savoir comment les définir, consulter l&apos;aide dans la fenêtre d&apos;édition des gabarits. Il y a un exemple de gabarit dans le répertoire Examples du répertoire eric4.&lt;/p&gt; {5 ?}</translation>
+        <translation type="obsolete">&lt;p&gt;Les &lt;b&gt;Groupes de gabarits&lt;/b&gt; sont des ensembles de gabarits individuels. Les groupes ont un attribut indiquant pour quel langage de programmation ils doivent être appliqués. Pour ajouter des nouveaux gabarits, au moins un groupe doit déjà exister.&lt;/p&gt;&lt;p&gt;Les entrées &lt;b&gt;Gabarits&lt;/b&gt; désignent les gabarits eux-mêmes; ils sont rassemblés dans les groupes de gabarits. Pour savoir comment les définir, consulter l&apos;aide dans la fenêtre d&apos;édition des gabarits. Il y a un exemple de gabarit dans le répertoire Examples du répertoire eric4.&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

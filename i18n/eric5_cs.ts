@@ -47471,17 +47471,17 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Nápověda šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>Editovat skupinu šablon</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>Uložit šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>Načíst šablony</translation>
     </message>
@@ -47498,21 +47498,21 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Skupiny šablon&lt;/b&gt; znamenají seskupování jednotlivých šablon. Skupiny mají atributy, které specifikují použitý programovací jazyk. Aby se mohly zadat údaje šablony, musí být definována alespoň jedna šablona.&lt;/p&gt;
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Skupiny šablon&lt;/b&gt; znamenají seskupování jednotlivých šablon. Skupiny mají atributy, které specifikují použitý programovací jazyk. Aby se mohly zadat údaje šablony, musí být definována alespoň jedna šablona.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Eric5 je k prostudování jeden příklad šablony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Skupina šablon se jménem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -47520,6 +47520,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Templates/TemplateViewer.py" line="930"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

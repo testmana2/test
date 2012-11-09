@@ -47206,7 +47206,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>Edit Template Group</source>
         <translation>Редактировать группу шаблонов</translation>
     </message>
@@ -47226,7 +47226,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Экспорт шаблонов</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="798"/>
+        <location filename="Templates/TemplateViewer.py" line="797"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Группа шаблонов с именем &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
@@ -47291,22 +47291,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Файлы шаблонов (*.e4c);; Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>Save templates</source>
         <translation>Сохранить шаблоны</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="889"/>
+        <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл шаблонов: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>Read templates</source>
         <translation>Прочитать шаблоны</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="915"/>
+        <location filename="Templates/TemplateViewer.py" line="914"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл шаблонов: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -47318,7 +47318,12 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Группы шаблонов&lt;/b&gt; - группировка отдельных шаблонов. У групп имеются атрибуты, которые определяют, к какому языку программирования относятся шаблоны в данной группе. Для того, чтобы добавлять шаблоны, должна быть определена хотя бы одна группа.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Шаблоны&lt;/b&gt; - собственно шаблоны. Помошь по определению шаблонов находится в диалоге редактирования шаблона. В подкаталоге Examples дистрибутива eric5 есть пример шаблона.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Группы шаблонов&lt;/b&gt; - группировка отдельных шаблонов. У групп имеются атрибуты, которые определяют, к какому языку программирования относятся шаблоны в данной группе. Для того, чтобы добавлять шаблоны, должна быть определена хотя бы одна группа.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Шаблоны&lt;/b&gt; - собственно шаблоны. Помошь по определению шаблонов находится в диалоге редактирования шаблона. В подкаталоге Examples дистрибутива eric5 есть пример шаблона.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
