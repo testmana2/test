@@ -31,9 +31,6 @@ Module implementing a web search widget for the web browser.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#HelpWebSearchEdit">HelpWebSearchEdit</a></td>
-<td>Class implementing the web search line edit.</td>
-</tr><tr>
 <td><a href="#HelpWebSearchWidget">HelpWebSearchWidget</a></td>
 <td>Class implementing a web search widget for the web browser.</td>
 </tr>
@@ -42,61 +39,6 @@ Module implementing a web search widget for the web browser.
 <table>
 <tr><td>None</td></tr>
 </table>
-<hr /><hr />
-<a NAME="HelpWebSearchEdit" ID="HelpWebSearchEdit"></a>
-<h2>HelpWebSearchEdit</h2>
-<p>
-    Class implementing the web search line edit.
-</p>
-<h3>Derived from</h3>
-E5LineEdit
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Class Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr>
-<td><a href="#HelpWebSearchEdit.__init__">HelpWebSearchEdit</a></td>
-<td>Constructor</td>
-</tr><tr>
-<td><a href="#HelpWebSearchEdit.mousePressEvent">mousePressEvent</a></td>
-<td>Protected method called by a mouse press event.</td>
-</tr>
-</table>
-<h3>Static Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<a NAME="HelpWebSearchEdit.__init__" ID="HelpWebSearchEdit.__init__"></a>
-<h4>HelpWebSearchEdit (Constructor)</h4>
-<b>HelpWebSearchEdit</b>(<i>mainWindow, parent=None</i>)
-<p>
-        Constructor
-</p><dl>
-<dt><i>mainWindow</i></dt>
-<dd>
-reference to the main window (HelpWindow)
-</dd><dt><i>parent</i></dt>
-<dd>
-reference to the parent widget (QWidget)
-</dd>
-</dl><a NAME="HelpWebSearchEdit.mousePressEvent" ID="HelpWebSearchEdit.mousePressEvent"></a>
-<h4>HelpWebSearchEdit.mousePressEvent</h4>
-<b>mousePressEvent</b>(<i>evt</i>)
-<p>
-        Protected method called by a mouse press event.
-</p><dl>
-<dt><i>evt</i></dt>
-<dd>
-reference to the mouse event (QMouseEvent)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="HelpWebSearchWidget" ID="HelpWebSearchWidget"></a>
 <h2>HelpWebSearchWidget</h2>
@@ -110,7 +52,7 @@ emitted when the search should be done
 </dd>
 </dl>
 <h3>Derived from</h3>
-QWidget
+E5ClearableLineEdit
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -163,9 +105,6 @@ QWidget
 </tr><tr>
 <td><a href="#HelpWebSearchWidget.__showEnginesMenu">__showEnginesMenu</a></td>
 <td>Private slot to handle the display of the engines menu.</td>
-</tr><tr>
-<td><a href="#HelpWebSearchWidget.__textChanged">__textChanged</a></td>
-<td>Private slot to handle changes of the search text.</td>
 </tr><tr>
 <td><a href="#HelpWebSearchWidget.__textEdited">__textEdited</a></td>
 <td>Private slot to handle changes of the search text.</td>
@@ -280,17 +219,7 @@ list of suggestions (list of strings)
 <b>__showEnginesMenu</b>(<i></i>)
 <p>
         Private slot to handle the display of the engines menu.
-</p><a NAME="HelpWebSearchWidget.__textChanged" ID="HelpWebSearchWidget.__textChanged"></a>
-<h4>HelpWebSearchWidget.__textChanged</h4>
-<b>__textChanged</b>(<i>txt</i>)
-<p>
-        Private slot to handle changes of the search text.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-search text (string)
-</dd>
-</dl><a NAME="HelpWebSearchWidget.__textEdited" ID="HelpWebSearchWidget.__textEdited"></a>
+</p><a NAME="HelpWebSearchWidget.__textEdited" ID="HelpWebSearchWidget.__textEdited"></a>
 <h4>HelpWebSearchWidget.__textEdited</h4>
 <b>__textEdited</b>(<i>txt</i>)
 <p>

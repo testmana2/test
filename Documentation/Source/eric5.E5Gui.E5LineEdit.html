@@ -31,10 +31,13 @@ Module implementing specialized line edits.
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#E5ClearableLineEdit">E5ClearableLineEdit</a></td>
+<td>Class implementing a line edit widget showing some inactive text and a clear button, if it has some contents.</td>
+</tr><tr>
 <td><a href="#E5LineEdit">E5LineEdit</a></td>
 <td>Class implementing a line edit widget showing some inactive text.</td>
 </tr><tr>
-<td><a href="#SideWidget">SideWidget</a></td>
+<td><a href="#E5LineEditSideWidget">E5LineEditSideWidget</a></td>
 <td>Class implementing the side widgets for the line edit class.</td>
 </tr>
 </table>
@@ -42,6 +45,66 @@ Module implementing specialized line edits.
 <table>
 <tr><td>None</td></tr>
 </table>
+<hr /><hr />
+<a NAME="E5ClearableLineEdit" ID="E5ClearableLineEdit"></a>
+<h2>E5ClearableLineEdit</h2>
+<p>
+    Class implementing a line edit widget showing some inactive text and a clear button,
+    if it has some contents.
+</p>
+<h3>Derived from</h3>
+E5LineEdit
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E5ClearableLineEdit.__init__">E5ClearableLineEdit</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E5ClearableLineEdit.__textChanged">__textChanged</a></td>
+<td>Private slot to handle changes of the text.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5ClearableLineEdit.__init__" ID="E5ClearableLineEdit.__init__"></a>
+<h4>E5ClearableLineEdit (Constructor)</h4>
+<b>E5ClearableLineEdit</b>(<i>parent=None, inactiveText="", side=E5LineEdit.RightSide</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd><dt><i>inactiveText=</i></dt>
+<dd>
+text to be shown on inactivity (string)
+</dd><dt><i>side=</i></dt>
+<dd>
+side the clear button should be shown at (E5LineEdit.RightSide,
+            E5LineEdit.LeftSide)
+</dd>
+</dl><a NAME="E5ClearableLineEdit.__textChanged" ID="E5ClearableLineEdit.__textChanged"></a>
+<h4>E5ClearableLineEdit.__textChanged</h4>
+<b>__textChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle changes of the text.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="E5LineEdit" ID="E5LineEdit"></a>
 <h2>E5LineEdit</h2>
@@ -236,8 +299,8 @@ side widget spacing (integer)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="SideWidget" ID="SideWidget"></a>
-<h2>SideWidget</h2>
+<a NAME="E5LineEditSideWidget" ID="E5LineEditSideWidget"></a>
+<h2>E5LineEditSideWidget</h2>
 <p>
     Class implementing the side widgets for the line edit class.
 </p>
@@ -254,10 +317,10 @@ QWidget
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#SideWidget.__init__">SideWidget</a></td>
+<td><a href="#E5LineEditSideWidget.__init__">E5LineEditSideWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#SideWidget.event">event</a></td>
+<td><a href="#E5LineEditSideWidget.event">event</a></td>
 <td>Protected method to handle events.</td>
 </tr>
 </table>
@@ -265,9 +328,9 @@ QWidget
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="SideWidget.__init__" ID="SideWidget.__init__"></a>
-<h4>SideWidget (Constructor)</h4>
-<b>SideWidget</b>(<i>parent=None</i>)
+<a NAME="E5LineEditSideWidget.__init__" ID="E5LineEditSideWidget.__init__"></a>
+<h4>E5LineEditSideWidget (Constructor)</h4>
+<b>E5LineEditSideWidget</b>(<i>parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -275,8 +338,8 @@ QWidget
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="SideWidget.event" ID="SideWidget.event"></a>
-<h4>SideWidget.event</h4>
+</dl><a NAME="E5LineEditSideWidget.event" ID="E5LineEditSideWidget.event"></a>
+<h4>E5LineEditSideWidget.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
         Protected method to handle events.
