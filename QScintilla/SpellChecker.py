@@ -99,7 +99,7 @@ class SpellChecker(QObject):
             return os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
     
     @classmethod
-    def getUserDictionaryPath(cls, isException):
+    def getUserDictionaryPath(cls, isException=False):
         """
         Class method to get the path name of a user dictionary file.
         
@@ -412,12 +412,15 @@ class SpellChecker(QObject):
         @param word word to get suggestions for (string)
         @return list of suggestions (list of strings)
         """
+        suggestions = []
         spell = self._spelling_dict
         if spell and len(word) >= self.minimumWordSize:
-            suggestions = spell.suggest(word)
-            return suggestions
-        
-        return []
+            try:
+                suggestions = spell.suggest(word)
+            except enchant.errors.Error:
+                # ignore these
+                pass
+        return suggestions
     
     def add(self, word=None):
         """

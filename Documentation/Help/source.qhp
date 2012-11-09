@@ -3327,6 +3327,9 @@
       <keyword name="E5ArrowItem.setEndPoint" id="E5ArrowItem.setEndPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setEndPoint" />
       <keyword name="E5ArrowItem.setPoints" id="E5ArrowItem.setPoints" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setPoints" />
       <keyword name="E5ArrowItem.setStartPoint" id="E5ArrowItem.setStartPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setStartPoint" />
+      <keyword name="E5ClearableLineEdit" id="E5ClearableLineEdit" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit" />
+      <keyword name="E5ClearableLineEdit (Constructor)" id="E5ClearableLineEdit (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit.__init__" />
+      <keyword name="E5ClearableLineEdit.__textChanged" id="E5ClearableLineEdit.__textChanged" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit.__textChanged" />
       <keyword name="E5ClickableLabel" id="E5ClickableLabel" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel" />
       <keyword name="E5ClickableLabel (Constructor)" id="E5ClickableLabel (Constructor)" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.__init__" />
       <keyword name="E5ClickableLabel (Module)" id="E5ClickableLabel (Module)" ref="eric5.E5Gui.E5ClickableLabel.html" />
@@ -3425,6 +3428,9 @@
       <keyword name="E5LineEditButton.paintEvent" id="E5LineEditButton.paintEvent" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.paintEvent" />
       <keyword name="E5LineEditButton.setIcon" id="E5LineEditButton.setIcon" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.setIcon" />
       <keyword name="E5LineEditButton.setMenu" id="E5LineEditButton.setMenu" ref="eric5.E5Gui.E5LineEditButton.html#E5LineEditButton.setMenu" />
+      <keyword name="E5LineEditSideWidget" id="E5LineEditSideWidget" ref="eric5.E5Gui.E5LineEdit.html#E5LineEditSideWidget" />
+      <keyword name="E5LineEditSideWidget (Constructor)" id="E5LineEditSideWidget (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5LineEditSideWidget.__init__" />
+      <keyword name="E5LineEditSideWidget.event" id="E5LineEditSideWidget.event" ref="eric5.E5Gui.E5LineEdit.html#E5LineEditSideWidget.event" />
       <keyword name="E5ListView" id="E5ListView" ref="eric5.E5Gui.E5ListView.html#E5ListView" />
       <keyword name="E5ListView (Module)" id="E5ListView (Module)" ref="eric5.E5Gui.E5ListView.html" />
       <keyword name="E5ListView.keyPressEvent" id="E5ListView.keyPressEvent" ref="eric5.E5Gui.E5ListView.html#E5ListView.keyPressEvent" />
@@ -5070,9 +5076,6 @@
       <keyword name="HelpWebPage.userAgent" id="HelpWebPage.userAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgent" />
       <keyword name="HelpWebPage.userAgentForUrl" id="HelpWebPage.userAgentForUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgentForUrl" />
       <keyword name="HelpWebPage.webPluginFactory" id="HelpWebPage.webPluginFactory" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.webPluginFactory" />
-      <keyword name="HelpWebSearchEdit" id="HelpWebSearchEdit" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit" />
-      <keyword name="HelpWebSearchEdit (Constructor)" id="HelpWebSearchEdit (Constructor)" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.__init__" />
-      <keyword name="HelpWebSearchEdit.mousePressEvent" id="HelpWebSearchEdit.mousePressEvent" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.mousePressEvent" />
       <keyword name="HelpWebSearchWidget" id="HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget" />
       <keyword name="HelpWebSearchWidget (Constructor)" id="HelpWebSearchWidget (Constructor)" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__init__" />
       <keyword name="HelpWebSearchWidget (Module)" id="HelpWebSearchWidget (Module)" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
@@ -5089,7 +5092,6 @@
       <keyword name="HelpWebSearchWidget.__searchNow" id="HelpWebSearchWidget.__searchNow" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__searchNow" />
       <keyword name="HelpWebSearchWidget.__setupCompleterMenu" id="HelpWebSearchWidget.__setupCompleterMenu" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__setupCompleterMenu" />
       <keyword name="HelpWebSearchWidget.__showEnginesMenu" id="HelpWebSearchWidget.__showEnginesMenu" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__showEnginesMenu" />
-      <keyword name="HelpWebSearchWidget.__textChanged" id="HelpWebSearchWidget.__textChanged" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textChanged" />
       <keyword name="HelpWebSearchWidget.__textEdited" id="HelpWebSearchWidget.__textEdited" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textEdited" />
       <keyword name="HelpWebSearchWidget.clear" id="HelpWebSearchWidget.clear" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.clear" />
       <keyword name="HelpWebSearchWidget.mousePressEvent" id="HelpWebSearchWidget.mousePressEvent" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.mousePressEvent" />
@@ -8976,9 +8978,6 @@
       <keyword name="ShortcutsWriter (Module)" id="ShortcutsWriter (Module)" ref="eric5.E5XML.ShortcutsWriter.html" />
       <keyword name="ShortcutsWriter.__writeActions" id="ShortcutsWriter.__writeActions" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter.__writeActions" />
       <keyword name="ShortcutsWriter.writeXML" id="ShortcutsWriter.writeXML" ref="eric5.E5XML.ShortcutsWriter.html#ShortcutsWriter.writeXML" />
-      <keyword name="SideWidget" id="SideWidget" ref="eric5.E5Gui.E5LineEdit.html#SideWidget" />
-      <keyword name="SideWidget (Constructor)" id="SideWidget (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#SideWidget.__init__" />
-      <keyword name="SideWidget.event" id="SideWidget.event" ref="eric5.E5Gui.E5LineEdit.html#SideWidget.event" />
       <keyword name="SilentObject" id="SilentObject" ref="eric5.DebugClients.Ruby.Debuggee.html#SilentObject" />
       <keyword name="SilentObject.method_missing" id="SilentObject.method_missing" ref="eric5.DebugClients.Ruby.Debuggee.html#SilentObject.method_missing" />
       <keyword name="SingleApplication (Module)" id="SingleApplication (Module)" ref="eric5.Toolbox.SingleApplication.html" />
@@ -9146,9 +9145,11 @@
       <keyword name="SpellChecker.clearAll" id="SpellChecker.clearAll" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.clearAll" />
       <keyword name="SpellChecker.getAvailableLanguages" id="SpellChecker.getAvailableLanguages" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getAvailableLanguages" />
       <keyword name="SpellChecker.getContext" id="SpellChecker.getContext" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getContext" />
+      <keyword name="SpellChecker.getDefaultPath" id="SpellChecker.getDefaultPath" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getDefaultPath" />
       <keyword name="SpellChecker.getError" id="SpellChecker.getError" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getError" />
       <keyword name="SpellChecker.getLanguage" id="SpellChecker.getLanguage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getLanguage" />
       <keyword name="SpellChecker.getSuggestions" id="SpellChecker.getSuggestions" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getSuggestions" />
+      <keyword name="SpellChecker.getUserDictionaryPath" id="SpellChecker.getUserDictionaryPath" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getUserDictionaryPath" />
       <keyword name="SpellChecker.ignoreAlways" id="SpellChecker.ignoreAlways" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.ignoreAlways" />
       <keyword name="SpellChecker.initCheck" id="SpellChecker.initCheck" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.initCheck" />
       <keyword name="SpellChecker.isAvailable" id="SpellChecker.isAvailable" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.isAvailable" />
