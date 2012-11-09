@@ -8,7 +8,7 @@ Module implementing a web search widget for the web browser.
 """
 
 from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
-from PyQt4.QtGui import QWidget, QMenu, QHBoxLayout, QStandardItem, QStandardItemModel, \
+from PyQt4.QtGui import QMenu, QStandardItem, QStandardItemModel, \
     QCompleter, QFont, QIcon, QPixmap
 from PyQt4.QtWebKit import QWebSettings, QWebPage
 
@@ -16,43 +16,14 @@ import UI.PixmapCache
 
 import Preferences
 
-from E5Gui.E5LineEdit import E5LineEdit
+from E5Gui.E5LineEdit import E5LineEdit, E5ClearableLineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
 
 from .OpenSearch.OpenSearchManager import OpenSearchManager
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
 
 
-class HelpWebSearchEdit(E5LineEdit):
-    """
-    Class implementing the web search line edit.
-    """
-    def __init__(self, mainWindow, parent=None):
-        """
-        Constructor
-        
-        @param mainWindow reference to the main window (HelpWindow)
-        @param parent reference to the parent widget (QWidget)
-        """
-        super().__init__(parent)
-        
-        self.__mw = mainWindow
-    
-    def mousePressEvent(self, evt):
-        """
-        Protected method called by a mouse press event.
-        
-        @param evt reference to the mouse event (QMouseEvent)
-        """
-        if evt.button() == Qt.XButton1:
-            self.__mw.currentBrowser().pageAction(QWebPage.Back).trigger()
-        elif evt.button() == Qt.XButton2:
-            self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
-        else:
-            super().mousePressEvent(evt)
-
-
-class HelpWebSearchWidget(QWidget):
+class HelpWebSearchWidget(E5ClearableLineEdit):
     """
     Class implementing a web search widget for the web browser.
     
@@ -68,46 +39,31 @@ class HelpWebSearchWidget(QWidget):
         """
         super().__init__(parent)
         
-        self.mw = parent
+        self.__mw = parent
         
         self.__openSearchManager = OpenSearchManager(self)
         self.__openSearchManager.currentEngineChanged.connect(self.__currentEngineChanged)
         self.__currentEngine = ""
         
-        self.__layout = QHBoxLayout(self)
-        self.__layout.setMargin(0)
-        self.__layout.setSpacing(0)
-        self.setLayout(self.__layout)
-        
         self.__enginesMenu = QMenu(self)
-        
-        self.__searchEdit = HelpWebSearchEdit(self.mw, parent=self)
-        self.__layout.addWidget(self.__searchEdit)
         
         self.__engineButton = E5LineEditButton(self)
         self.__engineButton.setMenu(self.__enginesMenu)
-        self.__searchEdit.addWidget(self.__engineButton, E5LineEdit.LeftSide)
+        self.addWidget(self.__engineButton, E5LineEdit.LeftSide)
         
         self.__searchButton = E5LineEditButton(self)
         self.__searchButton.setIcon(UI.PixmapCache.getIcon("webSearch.png"))
-        self.__searchEdit.addWidget(self.__searchButton, E5LineEdit.LeftSide)
-        
-        self.__clearButton = E5LineEditButton(self)
-        self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.__searchEdit.addWidget(self.__clearButton, E5LineEdit.RightSide)
-        self.__clearButton.setVisible(False)
+        self.addWidget(self.__searchButton, E5LineEdit.LeftSide)
         
         self.__model = QStandardItemModel(self)
         self.__completer = QCompleter()
         self.__completer.setModel(self.__model)
         self.__completer.setCompletionMode(QCompleter.UnfilteredPopupCompletion)
-        self.__completer.setWidget(self.__searchEdit)
+        self.__completer.setWidget(self)
         
         self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
-        self.__clearButton.clicked[()].connect(self.__searchEdit.clear)
-        self.__searchEdit.textEdited.connect(self.__textEdited)
-        self.__searchEdit.textChanged.connect(self.__textChanged)
-        self.__searchEdit.returnPressed[()].connect(self.__searchNow)
+        self.textEdited.connect(self.__textEdited)
+        self.returnPressed[()].connect(self.__searchNow)
         self.__completer.activated[QModelIndex].connect(self.__completerActivated)
         self.__completer.highlighted[QModelIndex].connect(self.__completerHighlighted)
         self.__enginesMenu.aboutToShow.connect(self.__showEnginesMenu)
@@ -130,7 +86,7 @@ class HelpWebSearchWidget(QWidget):
         """
         Private slot to perform the web search.
         """
-        searchText = self.__searchEdit.text()
+        searchText = self.text()
         if not searchText:
             return
         
@@ -219,7 +175,7 @@ class HelpWebSearchWidget(QWidget):
            self.__recentSearchesItem.index().row() == index.row():
             return False
         
-        self.__searchEdit.setText(index.data())
+        self.setText(index.data())
         return True
     
     def __textEdited(self, txt):
@@ -239,19 +195,11 @@ class HelpWebSearchWidget(QWidget):
             self.__completer.setCompletionPrefix(txt)
             self.__completer.complete()
     
-    def __textChanged(self, txt):
-        """
-        Private slot to handle changes of the search text.
-        
-        @param txt search text (string)
-        """
-        self.__clearButton.setVisible(txt != "")
-    
     def __getSuggestions(self):
         """
         Private slot to get search suggestions from the configured search engine.
         """
-        searchText = self.__searchEdit.text()
+        searchText = self.text()
         if searchText:
             self.__openSearchManager.currentEngine().requestSuggestions(searchText)
     
@@ -283,7 +231,7 @@ class HelpWebSearchWidget(QWidget):
                 action.setCheckable(True)
                 action.setChecked(True)
         
-        ct = self.mw.currentBrowser()
+        ct = self.__mw.currentBrowser()
         linkedResources = ct.linkedResources("search")
         
         if len(linkedResources) > 0:
@@ -314,7 +262,7 @@ class HelpWebSearchWidget(QWidget):
             action.setIcon(ct.icon())
         
         self.__enginesMenu.addSeparator()
-        self.__enginesMenu.addAction(self.mw.searchEnginesAction())
+        self.__enginesMenu.addAction(self.__mw.searchEnginesAction())
         
         if self.__recentSearches:
             self.__enginesMenu.addAction(self.trUtf8("Clear Recent Searches"),
@@ -354,7 +302,7 @@ class HelpWebSearchWidget(QWidget):
         """
         self.__recentSearches = []
         self.__setupCompleterMenu()
-        self.__searchEdit.clear()
+        super().clear()
         self.clearFocus()
     
     def preferencesChanged(self):
@@ -401,12 +349,12 @@ class HelpWebSearchWidget(QWidget):
         
         newEngine = self.__openSearchManager.currentEngine()
         if newEngine.networkAccessManager() is None:
-            newEngine.setNetworkAccessManager(self.mw.networkAccessManager())
+            newEngine.setNetworkAccessManager(self.__mw.networkAccessManager())
         newEngine.imageChanged.connect(self.__engineImageChanged)
         if self.__suggestionsEnabled:
             newEngine.suggestions.connect(self.__newSuggestions)
         
-        self.__searchEdit.setInactiveText(self.__openSearchManager.currentEngineName())
+        self.setInactiveText(self.__openSearchManager.currentEngineName())
         self.__currentEngine = self.__openSearchManager.currentEngineName()
         self.__engineButton.setIcon(
             QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))
@@ -427,8 +375,8 @@ class HelpWebSearchWidget(QWidget):
         @param evt reference to the mouse event (QMouseEvent)
         """
         if evt.button() == Qt.XButton1:
-            self.mw.currentBrowser().pageAction(QWebPage.Back).trigger()
+            self.__mw.currentBrowser().pageAction(QWebPage.Back).trigger()
         elif evt.button() == Qt.XButton2:
-            self.mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
+            self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
         else:
             super().mousePressEvent(evt)
