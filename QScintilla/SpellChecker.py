@@ -99,7 +99,7 @@ class SpellChecker(QObject):
             return os.path.join(Utilities.getConfigDir(), "spelling", "pwl.dic")
     
     @classmethod
-    def getUserDictionaryPath(cls, isException):
+    def getUserDictionaryPath(cls, isException=False):
         """
         Class method to get the path name of a user dictionary file.
         
