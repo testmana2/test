@@ -11,8 +11,12 @@ from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, QStyleOptionFrameV2, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
 
+from E5Gui.E5LineEditButton import E5LineEditButton
 
-class SideWidget(QWidget):
+import UI.PixmapCache
+
+
+class E5LineEditSideWidget(QWidget):
     """
     Class implementing the side widgets for the line edit class.
     """
@@ -61,7 +65,7 @@ class E5LineEdit(QLineEdit):
         else:
             self.setPlaceholderText(inactiveText)
         
-        self.__leftWidget = SideWidget(self)
+        self.__leftWidget = E5LineEditSideWidget(self)
         self.__leftWidget.resize(0, 0)
         self.__leftLayout = QHBoxLayout(self.__leftWidget)
         self.__leftLayout.setContentsMargins(0, 0, 0, 0)
@@ -71,7 +75,7 @@ class E5LineEdit(QLineEdit):
             self.__leftLayout.setDirection(QBoxLayout.LeftToRight)
         self.__leftLayout.setSizeConstraint(QLayout.SetFixedSize)
         
-        self.__rightWidget = SideWidget(self)
+        self.__rightWidget = E5LineEditSideWidget(self)
         self.__rightWidget.resize(0, 0)
         self.__rightLayout = QHBoxLayout(self.__rightWidget)
         self.__rightLayout.setContentsMargins(0, 0, 0, 0)
@@ -261,3 +265,38 @@ class E5LineEdit(QLineEdit):
             self.update()
         else:
             self.setPlaceholderText(inactiveText)
+
+
+class E5ClearableLineEdit(E5LineEdit):
+    """
+    Class implementing a line edit widget showing some inactive text and a clear button,
+    if it has some contents.
+    """
+    def __init__(self, parent=None, inactiveText="", side=E5LineEdit.RightSide):
+        """
+        Constructor
+        
+        @param parent reference to the parent widget (QWidget)
+        @keyparam inactiveText text to be shown on inactivity (string)
+        @keyparam side side the clear button should be shown at (E5LineEdit.RightSide,
+            E5LineEdit.LeftSide)
+        """
+        assert side in [E5LineEdit.RightSide, E5LineEdit.LeftSide]
+        
+        super().__init__(parent, inactiveText)
+        
+        self.__clearButton = E5LineEditButton(self)
+        self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
+        self.addWidget(self.__clearButton, side)
+        self.__clearButton.setVisible(False)
+        
+        self.__clearButton.clicked[()].connect(self.clear)
+        self.textChanged.connect(self.__textChanged)
+    
+    def __textChanged(self, txt):
+        """
+        Private slot to handle changes of the text.
+        
+        @param txt text (string)
+        """
+        self.__clearButton.setVisible(txt != "")
