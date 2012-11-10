@@ -7,6 +7,8 @@ Version 5.3-snapshot-2012mmdd:
      Python 2 and Python 3 debuggers
 - Debug Viewer
   -- added a viewer for call trace logs
+- Spell Checker
+  -- added a dialog to edit the various spell checking dictionaries
 - Syntax Checker
   -- added capability to the syntax checker dialog to show all errors/warnings
      in an editor when the file entry is double activated
