@@ -6679,8 +6679,6 @@ class Editor(QsciScintillaCompat):
         wordStartPos = self.positionFromLineIndex(line, wordStart)
         wordEndPos = self.positionFromLineIndex(line, wordEnd)
         
-        print(word, wordStartPos, wordEndPos, "<"+self.text()[wordStartPos:wordEndPos]+">")
-        
         regExp = re.compile(r"\b{0}\b".format(word))
         if forward:
             startPos = wordEndPos
