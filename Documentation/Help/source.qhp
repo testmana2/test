@@ -4561,6 +4561,7 @@
       <keyword name="FindFileDialog.on_projectButton_clicked" id="FindFileDialog.on_projectButton_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_projectButton_clicked" />
       <keyword name="FindFileDialog.on_replaceButton_clicked" id="FindFileDialog.on_replaceButton_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_replaceButton_clicked" />
       <keyword name="FindFileDialog.on_replacetextCombo_editTextChanged" id="FindFileDialog.on_replacetextCombo_editTextChanged" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_replacetextCombo_editTextChanged" />
+      <keyword name="FindFileDialog.setOpenFiles" id="FindFileDialog.setOpenFiles" ref="eric5.UI.FindFileDialog.html#FindFileDialog.setOpenFiles" />
       <keyword name="FindFileDialog.setSearchDirectory" id="FindFileDialog.setSearchDirectory" ref="eric5.UI.FindFileDialog.html#FindFileDialog.setSearchDirectory" />
       <keyword name="FindFileDialog.show" id="FindFileDialog.show" ref="eric5.UI.FindFileDialog.html#FindFileDialog.show" />
       <keyword name="FindFileNameDialog" id="FindFileNameDialog" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog" />
@@ -11513,10 +11514,12 @@
       <keyword name="ViewManager.__quickSearchText" id="ViewManager.__quickSearchText" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchText" />
       <keyword name="ViewManager.__replace" id="ViewManager.__replace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__replace" />
       <keyword name="ViewManager.__replaceFiles" id="ViewManager.__replaceFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__replaceFiles" />
+      <keyword name="ViewManager.__replaceOpenFiles" id="ViewManager.__replaceOpenFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__replaceOpenFiles" />
       <keyword name="ViewManager.__saveRecent" id="ViewManager.__saveRecent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__saveRecent" />
       <keyword name="ViewManager.__search" id="ViewManager.__search" ref="eric5.ViewManager.ViewManager.html#ViewManager.__search" />
       <keyword name="ViewManager.__searchClearMarkers" id="ViewManager.__searchClearMarkers" ref="eric5.ViewManager.ViewManager.html#ViewManager.__searchClearMarkers" />
       <keyword name="ViewManager.__searchFiles" id="ViewManager.__searchFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__searchFiles" />
+      <keyword name="ViewManager.__searchOpenFiles" id="ViewManager.__searchOpenFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.__searchOpenFiles" />
       <keyword name="ViewManager.__setAutoSpellChecking" id="ViewManager.__setAutoSpellChecking" ref="eric5.ViewManager.ViewManager.html#ViewManager.__setAutoSpellChecking" />
       <keyword name="ViewManager.__setSbFile" id="ViewManager.__setSbFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.__setSbFile" />
       <keyword name="ViewManager.__shortenEmptyLines" id="ViewManager.__shortenEmptyLines" ref="eric5.ViewManager.ViewManager.html#ViewManager.__shortenEmptyLines" />

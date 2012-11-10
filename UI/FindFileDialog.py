@@ -340,7 +340,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 os.path.abspath(self.dirCombo.currentText()),
                 filterRe)
         elif self.openFilesButton.isChecked():
-            files = e5App().getObject("ViewManager").getOpenFilenames()
+            vm = e5App().getObject("ViewManager")
+            vm.checkAllDirty()
+            files = vm.getOpenFilenames()
         
         self.findList.clear()
         QApplication.processEvents()
@@ -564,6 +566,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         self.dirButton.setChecked(True)
         self.dirCombo.setEditText(Utilities.toNativeSeparators(searchDir))
+        
+    def setOpenFiles(self):
+        """
+        Public slot to set the mode to search in open files.
+        """
+        self.openFilesButton.setChecked(True)
         
     @pyqtSlot()
     def on_replaceButton_clicked(self):

@@ -2173,7 +2173,7 @@ reference to the show event (QShowEvent)
         Public slot to show the Find File by Name dialog.
 </p><a NAME="UserInterface.showFindFilesDialog" ID="UserInterface.showFindFilesDialog"></a>
 <h4>UserInterface.showFindFilesDialog</h4>
-<b>showFindFilesDialog</b>(<i>txt="", searchDir=""</i>)
+<b>showFindFilesDialog</b>(<i>txt="", searchDir="", openFiles=False</i>)
 <p>
         Public slot to show the Find In Files dialog.
 </p><dl>
@@ -2183,6 +2183,9 @@ text to search for (string)
 </dd><dt><i>searchDir=</i></dt>
 <dd>
 directory to search in (string)
+</dd><dt><i>openFiles=</i></dt>
+<dd>
+flag indicating to operate on open files (boolean)
 </dd>
 </dl><a NAME="UserInterface.showLogTab" ID="UserInterface.showLogTab"></a>
 <h4>UserInterface.showLogTab</h4>
@@ -2222,7 +2225,7 @@ name of the configuration page to show (string)
 </dd>
 </dl><a NAME="UserInterface.showReplaceFilesDialog" ID="UserInterface.showReplaceFilesDialog"></a>
 <h4>UserInterface.showReplaceFilesDialog</h4>
-<b>showReplaceFilesDialog</b>(<i>txt="", searchDir=""</i>)
+<b>showReplaceFilesDialog</b>(<i>txt="", searchDir="", openFiles=False</i>)
 <p>
         Public slot to show the Find & Replace In Files dialog.
 </p><dl>
@@ -2232,6 +2235,9 @@ text to search for (string)
 </dd><dt><i>searchDir=</i></dt>
 <dd>
 directory to search in (string)
+</dd><dt><i>openFiles=</i></dt>
+<dd>
+flag indicating to operate on open files (boolean)
 </dd>
 </dl><a NAME="UserInterface.unregisterToolbar" ID="UserInterface.unregisterToolbar"></a>
 <h4>UserInterface.unregisterToolbar</h4>

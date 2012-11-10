@@ -19,6 +19,9 @@ Version 5.3-snapshot-2012mmdd:
   -- changed the layout of the right side widgets and added a sub menu
      for the switching between the 'inner' windows.
   -- added a notification system
+- View Manager
+  -- added actions to open the find in files and replace in files dialogs in a mode
+     that searches open files only
 
 Version 5.3-snapshot-20121101:
 - bug fixes

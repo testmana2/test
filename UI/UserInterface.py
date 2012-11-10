@@ -4926,12 +4926,13 @@ class UserInterface(E5MainWindow):
         self.findFileNameDialog.raise_()
         self.findFileNameDialog.activateWindow()
     
-    def showFindFilesDialog(self, txt="", searchDir=""):
+    def showFindFilesDialog(self, txt="", searchDir="", openFiles=False):
         """
         Public slot to show the Find In Files dialog.
         
         @keyparam txt text to search for (string)
         @keyparam searchDir directory to search in (string)
+        @keyparam openFiles flag indicating to operate on open files (boolean)
         """
         if self.findFilesDialog is None:
             self.findFilesDialog = FindFileDialog(self.project)
@@ -4941,15 +4942,18 @@ class UserInterface(E5MainWindow):
         if searchDir:
             self.findFilesDialog.setSearchDirectory(searchDir)
         self.findFilesDialog.show(txt)
+        if openFiles:
+            self.findFilesDialog.setOpenFiles()
         self.findFilesDialog.raise_()
         self.findFilesDialog.activateWindow()
     
-    def showReplaceFilesDialog(self, txt="", searchDir=""):
+    def showReplaceFilesDialog(self, txt="", searchDir="", openFiles=False):
         """
         Public slot to show the Find & Replace In Files dialog.
         
         @keyparam txt text to search for (string)
         @keyparam searchDir directory to search in (string)
+        @keyparam openFiles flag indicating to operate on open files (boolean)
         """
         if self.replaceFilesDialog is None:
             self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
@@ -4959,6 +4963,8 @@ class UserInterface(E5MainWindow):
         if searchDir:
             self.replaceFilesDialog.setSearchDirectory(searchDir)
         self.replaceFilesDialog.show(txt)
+        if openFiles:
+            self.replaceFilesDialog.setOpenFiles()
         self.replaceFilesDialog.raise_()
         self.replaceFilesDialog.activateWindow()
     

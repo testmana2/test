@@ -2299,6 +2299,9 @@ class ViewManager(QObject):
         searchMenu.addSeparator()
         searchMenu.addAction(self.searchFilesAct)
         searchMenu.addAction(self.replaceFilesAct)
+        searchMenu.addSeparator()
+        searchMenu.addAction(self.searchOpenFilesAct)
+        searchMenu.addAction(self.replaceOpenFilesAct)
         
         menu = QMenu(QApplication.translate('ViewManager', '&Edit'), self.ui)
         menu.setTearOffEnabled(True)
@@ -2685,6 +2688,44 @@ class ViewManager(QObject):
         self.replaceFilesAct.triggered[()].connect(self.__replaceFiles)
         self.searchActions.append(self.replaceFilesAct)
         
+        self.searchOpenFilesAct = E5Action(QApplication.translate('ViewManager',
+                    'Search in Open Files'),
+                UI.PixmapCache.getIcon("documentFind.png"),
+                QApplication.translate('ViewManager', 'Search in Open Files...'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Meta+Ctrl+Alt+F", "Search|Search Open Files")),
+                0,
+                self.searchActGrp, 'vm_search_in_open_files')
+        self.searchOpenFilesAct.setStatusTip(QApplication.translate('ViewManager',
+            'Search for a text in open files'))
+        self.searchOpenFilesAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Search in Open Files</b>"""
+            """<p>Search for some text in the currently opened files."""
+            """ A dialog is shown to enter the searchtext"""
+            """ and options for the search and to display the result.</p>"""
+        ))
+        self.searchOpenFilesAct.triggered[()].connect(self.__searchOpenFiles)
+        self.searchActions.append(self.searchOpenFilesAct)
+        
+        self.replaceOpenFilesAct = E5Action(QApplication.translate('ViewManager',
+                    'Replace in Open Files'),
+                QApplication.translate('ViewManager', 'Replace in Open Files...'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Meta+Ctrl+Alt+R", "Search|Replace in Open Files")),
+                0,
+                self.searchActGrp, 'vm_replace_in_open_files')
+        self.replaceOpenFilesAct.setStatusTip(QApplication.translate('ViewManager',
+            'Search for a text in open files and replace it'))
+        self.replaceOpenFilesAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Replace in Open Files</b>"""
+            """<p>Search for some text in the currently opened files"""
+            """ and replace it. A dialog is shown to enter"""
+            """ the searchtext, the replacement text and options for the"""
+            """ search and to display the result.</p>"""
+        ))
+        self.replaceOpenFilesAct.triggered[()].connect(self.__replaceOpenFiles)
+        self.searchActions.append(self.replaceOpenFilesAct)
+        
     def initSearchToolbars(self, toolbarManager):
         """
         Public method to create the Search toolbars
@@ -2761,6 +2802,7 @@ class ViewManager(QObject):
         tb.addAction(self.searchClearMarkersAct)
         tb.addSeparator()
         tb.addAction(self.searchFilesAct)
+        tb.addAction(self.searchOpenFilesAct)
         tb.addSeparator()
         tb.addAction(self.gotoLastEditAct)
         
@@ -4872,6 +4914,18 @@ class ViewManager(QObject):
         Private method to handle the replace in files action.
         """
         self.ui.showReplaceFilesDialog(self.textForFind())
+        
+    def __searchOpenFiles(self):
+        """
+        Private method to handle the search in open files action.
+        """
+        self.ui.showFindFilesDialog(self.textForFind(), openFiles=True)
+        
+    def __replaceOpenFiles(self):
+        """
+        Private method to handle the replace in open files action.
+        """
+        self.ui.showReplaceFilesDialog(self.textForFind(), openFiles=True)
     
     ##################################################################
     ## Below are the action methods for the view menu
