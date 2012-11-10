@@ -2798,6 +2798,8 @@ class ViewManager(QObject):
         tb.addAction(self.searchAct)
         tb.addAction(self.searchNextAct)
         tb.addAction(self.searchPrevAct)
+        tb.addAction(self.searchNextWordAct)
+        tb.addAction(self.searchPrevWordAct)
         tb.addSeparator()
         tb.addAction(self.searchClearMarkersAct)
         tb.addSeparator()
