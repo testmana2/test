@@ -570,6 +570,7 @@ SpeedDialReader QXmlStreamReader
 SpeedDialWriter QXmlStreamWriter
 SpellChecker QObject
 SpellCheckingDialog QDialog Ui_SpellCheckingDialog
+SpellingDictionaryEditDialog QDialog Ui_SpellingDictionaryEditDialog
 SpellingPropertiesDialog QDialog Ui_SpellingPropertiesDialog
 SplashScreen QSplashScreen
 SqlBrowser E5MainWindow

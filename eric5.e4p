@@ -1052,6 +1052,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Debugger/CallTraceViewer.py</Source>
     <Source>UI/NotificationWidget.py</Source>
     <Source>Preferences/ConfigurationPages/NotificationsPage.py</Source>
+    <Source>QScintilla/SpellingDictionaryEditDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1355,6 +1356,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Debugger/CallTraceViewer.ui</Form>
     <Form>UI/NotificationWidget.ui</Form>
     <Form>Preferences/ConfigurationPages/NotificationsPage.ui</Form>
+    <Form>QScintilla/SpellingDictionaryEditDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -35,6 +35,7 @@ import QScintilla.Lexers
 import QScintilla.Exporters
 from QScintilla.Shell import Shell
 from QScintilla.Terminal import Terminal
+from QScintilla.SpellingDictionaryEditDialog import SpellingDictionaryEditDialog
 
 import Utilities
 
@@ -3448,10 +3449,10 @@ class ViewManager(QObject):
         self.spellingActGrp = createActionGroup(self)
         
         self.spellCheckAct = E5Action(QApplication.translate('ViewManager',
-                                'Spell check'),
+                                'Check spelling'),
                             UI.PixmapCache.getIcon("spellchecking.png"),
                             QApplication.translate('ViewManager',
-                                '&Spell Check...'),
+                                'Check &spelling...'),
                             QKeySequence(QApplication.translate('ViewManager',
                                 "Shift+F7", "Spelling|Spell Check")),
                             0,
@@ -3459,7 +3460,7 @@ class ViewManager(QObject):
         self.spellCheckAct.setStatusTip(QApplication.translate('ViewManager',
             'Perform spell check of current editor'))
         self.spellCheckAct.setWhatsThis(QApplication.translate('ViewManager',
-                """<b>Spell check</b>"""
+                """<b>Check spelling</b>"""
                 """<p>Perform a spell check of the current editor.</p>"""
                 ))
         self.spellCheckAct.triggered[()].connect(self.__spellCheck)
@@ -3500,8 +3501,27 @@ class ViewManager(QObject):
         """
         Public method to add some actions to the extras menu.
         """
+        self.__editSpellingMenu = QMenu(QApplication.translate('ViewManager',
+            "Edit Dictionary"))
+        self.__editProjectPwlAct = self.__editSpellingMenu.addAction(
+            QApplication.translate('ViewManager', "Project Word List"),
+            self.__editProjectPWL)
+        self.__editProjectPelAct = self.__editSpellingMenu.addAction(
+            QApplication.translate('ViewManager', "Project Exception List"),
+            self.__editProjectPEL)
+        self.__editSpellingMenu.addSeparator()
+        self.__editSpellingMenu.addAction(
+            QApplication.translate('ViewManager', "User Word List"),
+            self.__editUserPWL)
+        self.__editSpellingMenu.addAction(
+            QApplication.translate('ViewManager', "User Exception List"),
+            self.__editUserPEL)
+        self.__editProjectPwlAct.setEnabled(False)
+        self.__editProjectPelAct.setEnabled(False)
+        
         menu.addAction(self.spellCheckAct)
         menu.addAction(self.autoSpellCheckAct)
+        menu.addMenu(self.__editSpellingMenu)
         menu.addSeparator()
     
     def initSpellingToolbar(self, toolbarManager):
@@ -4239,6 +4259,9 @@ class ViewManager(QObject):
         """
         for editor in self.editors:
             editor.projectOpened()
+        
+        self.__editProjectPwlAct.setEnabled(True)
+        self.__editProjectPelAct.setEnabled(True)
     
     def projectClosed(self):
         """
@@ -4246,6 +4269,9 @@ class ViewManager(QObject):
         """
         for editor in self.editors:
             editor.projectClosed()
+        
+        self.__editProjectPwlAct.setEnabled(False)
+        self.__editProjectPelAct.setEnabled(False)
     
     def projectFileRenamed(self, oldfn, newfn):
         """
@@ -5205,6 +5231,91 @@ class ViewManager(QObject):
         aw = self.activeWindow()
         if aw:
             aw.checkSpelling()
+    
+    def __editProjectPWL(self):
+        """
+        Private slot to edit the project word list.
+        """
+        pwl = e5App().getObject("Project").getProjectDictionaries()[0]
+        if pwl:
+            self.__editSpellingDictionary(pwl)
+        else:
+            E5MessageBox.warning(self.ui,
+                QApplication.translate('ViewManager', "Edit Project Word List"),
+                QApplication.translate('ViewManager',
+                    """No word list defined for the current project."""))
+    
+    def __editProjectPEL(self):
+        """
+        Private slot to edit the project exception list.
+        """
+        pel = e5App().getObject("Project").getProjectDictionaries()[1]
+        if pel:
+            self.__editSpellingDictionary(pel)
+        else:
+            E5MessageBox.warning(self.ui,
+                QApplication.translate('ViewManager', "Edit Project Exception List"),
+                QApplication.translate('ViewManager',
+                    """No exception list defined for the current project."""))
+    
+    def __editUserPWL(self):
+        """
+        Private slot to edit the user word list.
+        """
+        pwl = SpellChecker.getUserDictionaryPath()
+        self.__editSpellingDictionary(pwl)
+    
+    def __editUserPEL(self):
+        """
+        Private slot to edit the user exception list.
+        """
+        pel = SpellChecker.getUserDictionaryPath(True)
+        self.__editSpellingDictionary(pel)
+    
+    def __editSpellingDictionary(self, dictionaryFile):
+        """
+        Private slot to edit the given spelling dictionary.
+        """
+        if os.path.exists(dictionaryFile):
+            try:
+                f = open(dictionaryFile, "r", encoding="utf-8")
+                data = f.read()
+                f.close()
+            except (IOError, OSError) as err:
+                E5MessageBox.critical(self.ui,
+                    QApplication.translate('ViewManager', "Edit Spelling Dictionary"),
+                    QApplication.translate('ViewManager',
+                        """<p>The spelling dictionary file <b>{0}</b> could"""
+                        """ not be read.</p><p>Reason: {1}</p>""").format(
+                        dictionaryFile, str(err)))
+                return
+            
+            fileInfo = dictionaryFile if len(dictionaryFile) < 40 \
+                       else "...{0}".format(dictionaryFile[-40:])
+            dlg = SpellingDictionaryEditDialog(data,
+                QApplication.translate('ViewManager', "Editing {0}").format(fileInfo), 
+                self.ui)
+            if dlg.exec_() == QDialog.Accepted:
+                data = dlg.getData()
+                try:
+                    f = open(dictionaryFile, "w", encoding="utf-8")
+                    f.write(data)
+                    f.close()
+                except (IOError, OSError) as err:
+                    E5MessageBox.critical(self.ui,
+                        QApplication.translate('ViewManager', "Edit Spelling Dictionary"),
+                        QApplication.translate('ViewManager',
+                            """<p>The spelling dictionary file <b>{0}</b> could"""
+                            """ not be written.</p><p>Reason: {1}</p>""").format(
+                            dictionaryFile, str(err)))
+                    return
+                
+                if self.ui.notificationsEnabled():
+                    self.ui.showNotification(
+                        UI.PixmapCache.getPixmap("spellchecking48.png"),
+                        QApplication.translate('ViewManager', "Edit Spelling Dictionary"),
+                        QApplication.translate('ViewManager',
+                            "The spelling dictionary was saved successfully."))
     
     ##################################################################
     ## Below are general utility methods

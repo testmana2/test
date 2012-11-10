@@ -843,6 +843,7 @@
             <section title="eric5.QScintilla.ShellHistoryDialog" ref="eric5.QScintilla.ShellHistoryDialog.html" />
             <section title="eric5.QScintilla.SpellChecker" ref="eric5.QScintilla.SpellChecker.html" />
             <section title="eric5.QScintilla.SpellCheckingDialog" ref="eric5.QScintilla.SpellCheckingDialog.html" />
+            <section title="eric5.QScintilla.SpellingDictionaryEditDialog" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html" />
             <section title="eric5.QScintilla.Terminal" ref="eric5.QScintilla.Terminal.html" />
             <section title="eric5.QScintilla.ZoomDialog" ref="eric5.QScintilla.ZoomDialog.html" />
           </section>
@@ -9172,6 +9173,11 @@
       <keyword name="SpellCheckingDialog.on_replaceAllButton_clicked" id="SpellCheckingDialog.on_replaceAllButton_clicked" ref="eric5.QScintilla.SpellCheckingDialog.html#SpellCheckingDialog.on_replaceAllButton_clicked" />
       <keyword name="SpellCheckingDialog.on_replaceButton_clicked" id="SpellCheckingDialog.on_replaceButton_clicked" ref="eric5.QScintilla.SpellCheckingDialog.html#SpellCheckingDialog.on_replaceButton_clicked" />
       <keyword name="SpellCheckingDialog.on_suggestionsList_currentTextChanged" id="SpellCheckingDialog.on_suggestionsList_currentTextChanged" ref="eric5.QScintilla.SpellCheckingDialog.html#SpellCheckingDialog.on_suggestionsList_currentTextChanged" />
+      <keyword name="SpellingDictionaryEditDialog" id="SpellingDictionaryEditDialog" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html#SpellingDictionaryEditDialog" />
+      <keyword name="SpellingDictionaryEditDialog (Constructor)" id="SpellingDictionaryEditDialog (Constructor)" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html#SpellingDictionaryEditDialog.__init__" />
+      <keyword name="SpellingDictionaryEditDialog (Module)" id="SpellingDictionaryEditDialog (Module)" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html" />
+      <keyword name="SpellingDictionaryEditDialog.getData" id="SpellingDictionaryEditDialog.getData" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html#SpellingDictionaryEditDialog.getData" />
+      <keyword name="SpellingDictionaryEditDialog.on_addButton_clicked" id="SpellingDictionaryEditDialog.on_addButton_clicked" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html#SpellingDictionaryEditDialog.on_addButton_clicked" />
       <keyword name="SpellingPropertiesDialog" id="SpellingPropertiesDialog" ref="eric5.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog" />
       <keyword name="SpellingPropertiesDialog (Constructor)" id="SpellingPropertiesDialog (Constructor)" ref="eric5.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.__init__" />
       <keyword name="SpellingPropertiesDialog (Module)" id="SpellingPropertiesDialog (Module)" ref="eric5.Project.SpellingPropertiesDialog.html" />
@@ -11429,17 +11435,22 @@
       <keyword name="ViewManager.__editIndent" id="ViewManager.__editIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editIndent" />
       <keyword name="ViewManager.__editJoin" id="ViewManager.__editJoin" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editJoin" />
       <keyword name="ViewManager.__editPaste" id="ViewManager.__editPaste" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editPaste" />
+      <keyword name="ViewManager.__editProjectPEL" id="ViewManager.__editProjectPEL" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editProjectPEL" />
+      <keyword name="ViewManager.__editProjectPWL" id="ViewManager.__editProjectPWL" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editProjectPWL" />
       <keyword name="ViewManager.__editRedo" id="ViewManager.__editRedo" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editRedo" />
       <keyword name="ViewManager.__editRevert" id="ViewManager.__editRevert" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editRevert" />
       <keyword name="ViewManager.__editSelectAll" id="ViewManager.__editSelectAll" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSelectAll" />
       <keyword name="ViewManager.__editSelectBrace" id="ViewManager.__editSelectBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSelectBrace" />
       <keyword name="ViewManager.__editShowCallTips" id="ViewManager.__editShowCallTips" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editShowCallTips" />
       <keyword name="ViewManager.__editSmartIndent" id="ViewManager.__editSmartIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSmartIndent" />
+      <keyword name="ViewManager.__editSpellingDictionary" id="ViewManager.__editSpellingDictionary" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSpellingDictionary" />
       <keyword name="ViewManager.__editStreamComment" id="ViewManager.__editStreamComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editStreamComment" />
       <keyword name="ViewManager.__editToggleComment" id="ViewManager.__editToggleComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editToggleComment" />
       <keyword name="ViewManager.__editUncomment" id="ViewManager.__editUncomment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUncomment" />
       <keyword name="ViewManager.__editUndo" id="ViewManager.__editUndo" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUndo" />
       <keyword name="ViewManager.__editUnindent" id="ViewManager.__editUnindent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUnindent" />
+      <keyword name="ViewManager.__editUserPEL" id="ViewManager.__editUserPEL" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUserPEL" />
+      <keyword name="ViewManager.__editUserPWL" id="ViewManager.__editUserPWL" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUserPWL" />
       <keyword name="ViewManager.__editorAutoCompletionAPIsAvailable" id="ViewManager.__editorAutoCompletionAPIsAvailable" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorAutoCompletionAPIsAvailable" />
       <keyword name="ViewManager.__editorCommand" id="ViewManager.__editorCommand" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorCommand" />
       <keyword name="ViewManager.__editorConfigChanged" id="ViewManager.__editorConfigChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorConfigChanged" />
@@ -13192,6 +13203,7 @@
       <file>eric5.QScintilla.ShellHistoryDialog.html</file>
       <file>eric5.QScintilla.SpellChecker.html</file>
       <file>eric5.QScintilla.SpellCheckingDialog.html</file>
+      <file>eric5.QScintilla.SpellingDictionaryEditDialog.html</file>
       <file>eric5.QScintilla.Terminal.html</file>
       <file>eric5.QScintilla.TypingCompleters.CompleterBase.html</file>
       <file>eric5.QScintilla.TypingCompleters.CompleterPython.html</file>

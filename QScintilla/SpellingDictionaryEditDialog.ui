@@ -1,57 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SendRefererWhitelistDialog</class>
- <widget class="QDialog" name="SendRefererWhitelistDialog">
+ <class>SpellingDictionaryEditDialog</class>
+ <widget class="QDialog" name="SpellingDictionaryEditDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>350</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Send Referer Whitelist</string>
+   <string>Edit Spelling Dictionary</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <property name="horizontalSpacing">
-      <number>0</number>
+    <widget class="QLabel" name="infoLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="searchEdit">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="toolTip">
-        <string>Enter search term for hosts</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QToolButton" name="clearButton">
-       <property name="toolTip">
-        <string>Press to clear the search edit</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
+     <property name="text">
+      <string notr="true"/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -64,40 +55,43 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="E5ClearableLineEdit" name="searchEdit">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Enter search term</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="4" column="1">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="addButton">
-       <property name="toolTip">
-        <string>Press to add site to the whitelist</string>
-       </property>
-       <property name="text">
-        <string>&amp;Add...</string>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="1">
       <widget class="Line" name="line">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="addButton">
+       <property name="toolTip">
+        <string>Press to add an entry</string>
+       </property>
+       <property name="text">
+        <string>&amp;Add</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -127,8 +121,21 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="1">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>28</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item row="0" column="0" rowspan="5">
-      <widget class="E5ListView" name="whitelist">
+      <widget class="E5ListView" name="wordList">
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
@@ -153,6 +160,11 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+  <customwidget>
    <class>E5ListView</class>
    <extends>QListView</extends>
    <header>E5Gui/E5ListView.h</header>
@@ -160,9 +172,7 @@
  </customwidgets>
  <tabstops>
   <tabstop>searchEdit</tabstop>
-  <tabstop>clearButton</tabstop>
-  <tabstop>whitelist</tabstop>
-  <tabstop>addButton</tabstop>
+  <tabstop>wordList</tabstop>
   <tabstop>removeButton</tabstop>
   <tabstop>removeAllButton</tabstop>
   <tabstop>buttonBox</tabstop>
@@ -172,12 +182,12 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>SendRefererWhitelistDialog</receiver>
+   <receiver>SpellingDictionaryEditDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>329</y>
+     <x>248</x>
+     <y>254</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -188,32 +198,16 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>SendRefererWhitelistDialog</receiver>
+   <receiver>SpellingDictionaryEditDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>335</y>
+     <x>316</x>
+     <y>260</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clearButton</sender>
-   <signal>clicked()</signal>
-   <receiver>searchEdit</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>478</x>
-     <y>24</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>437</x>
-     <y>22</y>
     </hint>
    </hints>
   </connection>
