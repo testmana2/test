@@ -447,6 +447,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__saveLastEditPosition">__saveLastEditPosition</a></td>
 <td>Private slot to record the last edit position.</td>
 </tr><tr>
+<td><a href="#Editor.__searchCurrentWord">__searchCurrentWord</a></td>
+<td>Public slot to search the next occurrence of the current word.</td>
+</tr><tr>
 <td><a href="#Editor.__selectAll">__selectAll</a></td>
 <td>Private slot handling the select all context menu action.</td>
 </tr><tr>
@@ -708,6 +711,9 @@ QsciScintillaCompat
 <td><a href="#Editor.getCurrentWord">getCurrentWord</a></td>
 <td>Public method to get the word at the current position.</td>
 </tr><tr>
+<td><a href="#Editor.getCurrentWordBoundaries">getCurrentWordBoundaries</a></td>
+<td>Public method to get the word boundaries at the current position.</td>
+</tr><tr>
 <td><a href="#Editor.getEncoding">getEncoding</a></td>
 <td>Public method to return the current encoding.</td>
 </tr><tr>
@@ -944,6 +950,12 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.saveFileAs">saveFileAs</a></td>
 <td>Public slot to save a file with a new name.</td>
+</tr><tr>
+<td><a href="#Editor.searchCurrentWordBackward">searchCurrentWordBackward</a></td>
+<td>Public slot to search the current word backward.</td>
+</tr><tr>
+<td><a href="#Editor.searchCurrentWordForward">searchCurrentWordForward</a></td>
+<td>Public slot to search the current word forward.</td>
 </tr><tr>
 <td><a href="#Editor.selectCurrentWord">selectCurrentWord</a></td>
 <td>Public method to select the current word.</td>
@@ -1912,7 +1924,17 @@ flag indicating to propagate the change (boolean)
 <b>__saveLastEditPosition</b>(<i></i>)
 <p>
         Private slot to record the last edit position.
-</p><a NAME="Editor.__selectAll" ID="Editor.__selectAll"></a>
+</p><a NAME="Editor.__searchCurrentWord" ID="Editor.__searchCurrentWord"></a>
+<h4>Editor.__searchCurrentWord</h4>
+<b>__searchCurrentWord</b>(<i>forward=True</i>)
+<p>
+        Public slot to search the next occurrence of the current word.
+</p><dl>
+<dt><i>forward</i></dt>
+<dd>
+flag indicating the search direction (boolean)
+</dd>
+</dl><a NAME="Editor.__selectAll" ID="Editor.__selectAll"></a>
 <h4>Editor.__selectAll</h4>
 <b>__selectAll</b>(<i></i>)
 <p>
@@ -2602,6 +2624,17 @@ the completer object (CompleterBase)
 <dd>
 the word at that current position (string)
 </dd>
+</dl><a NAME="Editor.getCurrentWordBoundaries" ID="Editor.getCurrentWordBoundaries"></a>
+<h4>Editor.getCurrentWordBoundaries</h4>
+<b>getCurrentWordBoundaries</b>(<i></i>)
+<p>
+        Public method to get the word boundaries at the current position.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start and end indexes of the current word
+            (integer, integer)
+</dd>
 </dl><a NAME="Editor.getEncoding" ID="Editor.getEncoding"></a>
 <h4>Editor.getEncoding</h4>
 <b>getEncoding</b>(<i></i>)
@@ -2805,7 +2838,7 @@ flag indicating to use the wordCharacters
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple with start and end indices of the word at the position
+tuple with start and end indexes of the word at the position
             (integer, integer)
 </dd>
 </dl><a NAME="Editor.getWordLeft" ID="Editor.getWordLeft"></a>
@@ -3324,7 +3357,17 @@ flag indicating a save to project operation (boolean)
 tuple of two values (boolean, string) giving a success indicator and
             the name of the saved file
 </dd>
-</dl><a NAME="Editor.selectCurrentWord" ID="Editor.selectCurrentWord"></a>
+</dl><a NAME="Editor.searchCurrentWordBackward" ID="Editor.searchCurrentWordBackward"></a>
+<h4>Editor.searchCurrentWordBackward</h4>
+<b>searchCurrentWordBackward</b>(<i></i>)
+<p>
+        Public slot to search the current word backward.
+</p><a NAME="Editor.searchCurrentWordForward" ID="Editor.searchCurrentWordForward"></a>
+<h4>Editor.searchCurrentWordForward</h4>
+<b>searchCurrentWordForward</b>(<i></i>)
+<p>
+        Public slot to search the current word forward.
+</p><a NAME="Editor.selectCurrentWord" ID="Editor.selectCurrentWord"></a>
 <h4>Editor.selectCurrentWord</h4>
 <b>selectCurrentWord</b>(<i></i>)
 <p>

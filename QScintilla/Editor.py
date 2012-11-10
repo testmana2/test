@@ -2964,7 +2964,7 @@ class Editor(QsciScintillaCompat):
         @param index position to look at (int)
         @keyparam useWordChars flag indicating to use the wordCharacters
             method (boolean)
-        @return tuple with start and end indices of the word at the position
+        @return tuple with start and end indexes of the word at the position
             (integer, integer)
         """
         text = self.text(line)
@@ -3041,6 +3041,16 @@ class Editor(QsciScintillaCompat):
         """
         line, index = self.getCursorPosition()
         return self.getWord(line, index)
+        
+    def getCurrentWordBoundaries(self):
+        """
+        Public method to get the word boundaries at the current position.
+        
+        @return tuple with start and end indexes of the current word
+            (integer, integer)
+        """
+        line, index = self.getCursorPosition()
+        return self.getWordBoundaries(line, index)
         
     def selectWord(self, line, index):
         """
@@ -6640,3 +6650,58 @@ class Editor(QsciScintillaCompat):
                 self.__dispatchCommand(command)
             
             self.__isSyncing = False
+    
+    #######################################################################
+    ## Special search related methods
+    #######################################################################
+    
+    def searchCurrentWordForward(self):
+        """
+        Public slot to search the current word forward.
+        """
+        self.__searchCurrentWord(forward=True)
+    
+    def searchCurrentWordBackward(self):
+        """
+        Public slot to search the current word backward.
+        """
+        self.__searchCurrentWord(forward=False)
+    
+    def __searchCurrentWord(self, forward=True):
+        """
+        Public slot to search the next occurrence of the current word.
+        
+        @param forward flag indicating the search direction (boolean)
+        """
+        line, index = self.getCursorPosition()
+        word = self.getCurrentWord()
+        wordStart, wordEnd = self.getCurrentWordBoundaries()
+        wordStartPos = self.positionFromLineIndex(line, wordStart)
+        wordEndPos = self.positionFromLineIndex(line, wordEnd)
+        
+        print(word, wordStartPos, wordEndPos, "<"+self.text()[wordStartPos:wordEndPos]+">")
+        
+        regExp = re.compile(r"\b{0}\b".format(word))
+        if forward:
+            startPos = wordEndPos
+        else:
+            startPos = wordStartPos
+        
+        matches = [m for m in regExp.finditer(self.text())]
+        if matches:
+            if forward:
+                matchesAfter = [m for m in matches if m.start() >= startPos]
+                if matchesAfter:
+                    match = matchesAfter[0]
+                else:
+                    # wrap around
+                    match = matches[0]
+            else:
+                matchesBefore = [m for m in matches if m.start() < startPos]
+                if matchesBefore:
+                    match = matchesBefore[-1]
+                else:
+                    # wrap around
+                    match = matches[-1]
+            line, index = self.lineIndexFromPosition(match.start())
+            self.setSelection(line, index + len(match.group(0)), line, index)

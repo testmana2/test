@@ -3905,6 +3905,7 @@
       <keyword name="Editor.__resetOnlineSyntaxCheckTimer" id="Editor.__resetOnlineSyntaxCheckTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineSyntaxCheckTimer" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
+      <keyword name="Editor.__searchCurrentWord" id="Editor.__searchCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.__searchCurrentWord" />
       <keyword name="Editor.__selectAll" id="Editor.__selectAll" ref="eric5.QScintilla.Editor.html#Editor.__selectAll" />
       <keyword name="Editor.__selectPygmentsLexer" id="Editor.__selectPygmentsLexer" ref="eric5.QScintilla.Editor.html#Editor.__selectPygmentsLexer" />
       <keyword name="Editor.__send" id="Editor.__send" ref="eric5.QScintilla.Editor.html#Editor.__send" />
@@ -3992,6 +3993,7 @@
       <keyword name="Editor.getBookmarks" id="Editor.getBookmarks" ref="eric5.QScintilla.Editor.html#Editor.getBookmarks" />
       <keyword name="Editor.getCompleter" id="Editor.getCompleter" ref="eric5.QScintilla.Editor.html#Editor.getCompleter" />
       <keyword name="Editor.getCurrentWord" id="Editor.getCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.getCurrentWord" />
+      <keyword name="Editor.getCurrentWordBoundaries" id="Editor.getCurrentWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getCurrentWordBoundaries" />
       <keyword name="Editor.getEncoding" id="Editor.getEncoding" ref="eric5.QScintilla.Editor.html#Editor.getEncoding" />
       <keyword name="Editor.getFileName" id="Editor.getFileName" ref="eric5.QScintilla.Editor.html#Editor.getFileName" />
       <keyword name="Editor.getFileType" id="Editor.getFileType" ref="eric5.QScintilla.Editor.html#Editor.getFileType" />
@@ -4071,6 +4073,8 @@
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric5.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric5.QScintilla.Editor.html#Editor.saveFile" />
       <keyword name="Editor.saveFileAs" id="Editor.saveFileAs" ref="eric5.QScintilla.Editor.html#Editor.saveFileAs" />
+      <keyword name="Editor.searchCurrentWordBackward" id="Editor.searchCurrentWordBackward" ref="eric5.QScintilla.Editor.html#Editor.searchCurrentWordBackward" />
+      <keyword name="Editor.searchCurrentWordForward" id="Editor.searchCurrentWordForward" ref="eric5.QScintilla.Editor.html#Editor.searchCurrentWordForward" />
       <keyword name="Editor.selectCurrentWord" id="Editor.selectCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.selectCurrentWord" />
       <keyword name="Editor.selectWord" id="Editor.selectWord" ref="eric5.QScintilla.Editor.html#Editor.selectWord" />
       <keyword name="Editor.sendSharedEdit" id="Editor.sendSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.sendSharedEdit" />
@@ -11459,6 +11463,8 @@
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
       <keyword name="ViewManager.__findFileName" id="ViewManager.__findFileName" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findFileName" />
+      <keyword name="ViewManager.__findNextWord" id="ViewManager.__findNextWord" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findNextWord" />
+      <keyword name="ViewManager.__findPrevWord" id="ViewManager.__findPrevWord" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findPrevWord" />
       <keyword name="ViewManager.__goto" id="ViewManager.__goto" ref="eric5.ViewManager.ViewManager.html#ViewManager.__goto" />
       <keyword name="ViewManager.__gotoBrace" id="ViewManager.__gotoBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoBrace" />
       <keyword name="ViewManager.__gotoLastEditPosition" id="ViewManager.__gotoLastEditPosition" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoLastEditPosition" />

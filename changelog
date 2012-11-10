@@ -7,6 +7,9 @@ Version 5.3-snapshot-2012mmdd:
      Python 2 and Python 3 debuggers
 - Debug Viewer
   -- added a viewer for call trace logs
+- Editor
+  -- added actions to search for the next/previous occurence of the current word
+     (default shortcuts Ctrl+. and Ctrl+,)
 - Spell Checker
   -- added a dialog to edit the various spell checking dictionaries
 - Syntax Checker

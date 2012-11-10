@@ -2291,6 +2291,8 @@ class ViewManager(QObject):
         searchMenu.addAction(self.searchAct)
         searchMenu.addAction(self.searchNextAct)
         searchMenu.addAction(self.searchPrevAct)
+        searchMenu.addAction(self.searchNextWordAct)
+        searchMenu.addAction(self.searchPrevWordAct)
         searchMenu.addAction(self.replaceAct)
         searchMenu.addSeparator()
         searchMenu.addAction(self.searchClearMarkersAct)
@@ -2450,6 +2452,42 @@ class ViewManager(QObject):
         ))
         self.searchClearMarkersAct.triggered[()].connect(self.__searchClearMarkers)
         self.searchActions.append(self.searchClearMarkersAct)
+        
+        self.searchNextWordAct = E5Action(QApplication.translate('ViewManager',
+                    'Search current word forward'),
+                UI.PixmapCache.getIcon("findWordNext.png"),
+                QApplication.translate('ViewManager', 'Search current word forward'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+.", "Search|Search current word forward")),
+                0,
+                self.searchActGrp, 'vm_search_word_next')
+        self.searchNextWordAct.setStatusTip(QApplication.translate('ViewManager',
+            'Search next occurrence of the current word'))
+        self.searchNextWordAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Search current word forward</b>"""
+            """<p>Search the next occurrence of the current word of the current"""
+            """ editor.</p>"""
+        ))
+        self.searchNextWordAct.triggered[()].connect(self.__findNextWord)
+        self.searchActions.append(self.searchNextWordAct)
+        
+        self.searchPrevWordAct = E5Action(QApplication.translate('ViewManager',
+                    'Search current word backward'),
+                UI.PixmapCache.getIcon("findWordPrev.png"),
+                QApplication.translate('ViewManager', 'Search current word backward'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+,", "Search|Search current word backward")),
+                0,
+                self.searchActGrp, 'vm_search_word_previous')
+        self.searchPrevWordAct.setStatusTip(QApplication.translate('ViewManager',
+            'Search previous occurrence of the current word'))
+        self.searchPrevWordAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Search current word backward</b>"""
+            """<p>Search the previous occurrence of the current word of the current"""
+            """ editor.</p>"""
+        ))
+        self.searchPrevWordAct.triggered[()].connect(self.__findPrevWord)
+        self.searchActions.append(self.searchPrevWordAct)
         
         self.replaceAct = E5Action(QApplication.translate('ViewManager', 'Replace'),
                 QApplication.translate('ViewManager', '&Replace...'),
@@ -4761,6 +4799,20 @@ class ViewManager(QObject):
         """
         self.searchDlg.close()
         self.replaceDlg.show(self.textForFind())
+        
+    def __findNextWord(self):
+        """
+        Private slot to find the next occurrence of the current word of the current
+        editor.
+        """
+        self.activeWindow().searchCurrentWordForward()
+        
+    def __findPrevWord(self):
+        """
+        Private slot to find the previous occurrence of the current word of the current
+        editor.
+        """
+        self.activeWindow().searchCurrentWordBackward()
         
     def __searchClearMarkers(self):
         """
