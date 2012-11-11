@@ -2348,8 +2348,10 @@ class MiniEditor(E5MainWindow):
         languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
-                self.supportedLanguages[language] = supportedLanguages[language][:]
-                act = menu.addAction(self.supportedLanguages[language][0])
+                self.supportedLanguages[language] = supportedLanguages[language][:2]
+                act = menu.addAction(
+                    UI.PixmapCache.getIcon(supportedLanguages[language][2]),
+                    self.supportedLanguages[language][0])
                 act.setCheckable(True)
                 act.setData(language)
                 self.supportedLanguages[language].append(act)

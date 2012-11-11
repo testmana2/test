@@ -41,6 +41,9 @@ Package implementing lexers for the various supported programming languages.
 <td><a href="#getDefaultLexerAssociations">getDefaultLexerAssociations</a></td>
 <td>Module function to get a dictionary with the default associations.</td>
 </tr><tr>
+<td><a href="#getLanguageIcon">getLanguageIcon</a></td>
+<td>Module function to get an icon for a language.</td>
+</tr><tr>
 <td><a href="#getLexer">getLexer</a></td>
 <td>Module function to instantiate a lexer object for a given language.</td>
 </tr><tr>
@@ -91,6 +94,27 @@ reference to the lexer (LexerPygments) or None
 <dt>Returns:</dt>
 <dd>
 dictionary with the default lexer associations
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getLanguageIcon" ID="getLanguageIcon"></a>
+<h2>getLanguageIcon</h2>
+<b>getLanguageIcon</b>(<i>language, pixmap</i>)
+<p>
+    Module function to get an icon for a language.
+</p><dl>
+<dt><i>language</i></dt>
+<dd>
+language of the lexer (string)
+</dd><dt><i>pixmap</i></dt>
+<dd>
+flag indicating to return a pixmap (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the language (QPixmap or QIcon)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -184,15 +208,16 @@ file filter list (list of strings or string)
 dictionary of supported lexer languages. The keys are the
         internal language names. The items are lists of two entries.
         The first is the display string for the language, the second
-        is a dummy file name, which can be used to derive the lexer.
-        (string, string)
+        is a dummy file name, which can be used to derive the lexer, and
+        the third is the name of an icon file.
+        (string, string, string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="registerLexer" ID="registerLexer"></a>
 <h2>registerLexer</h2>
-<b>registerLexer</b>(<i>name, displayString, filenameSample, getLexerFunc, openFilters=[], saveFilters=[], defaultAssocs=[]</i>)
+<b>registerLexer</b>(<i>name, displayString, filenameSample, getLexerFunc, openFilters=[], saveFilters=[], defaultAssocs=[], iconFileName=""</i>)
 <p>
     Module function to register a custom QScintilla lexer.
 </p><dl>
@@ -219,6 +244,9 @@ list of save file filters (list of strings)
 <dd>
 default lexer associations (list of strings of filename
         wildcard patterns to be associated with the lexer)
+</dd><dt><i>iconFileName=</i></dt>
+<dd>
+name of an icon file (string)
 </dd>
 </dl><dl>
 <dt>Raises <b>KeyError</b>:</dt>

@@ -113,13 +113,17 @@ def initializeResourceSearchPath():
     """
     import Preferences
     
-    defaultIconPath = os.path.join(getConfig('ericIconDir'), "default")
+    defaultIconPaths = [
+        os.path.join(getConfig('ericIconDir'), "default"),
+        os.path.join(getConfig('ericIconDir'), "default", "languages"),
+    ]
     iconPaths = Preferences.getIcons("Path")
     for iconPath in iconPaths:
         if iconPath:
             UI.PixmapCache.addSearchPath(iconPath)
-    if not defaultIconPath in iconPaths:
-        UI.PixmapCache.addSearchPath(defaultIconPath)
+    for defaultIconPath in defaultIconPaths:
+        if not defaultIconPath in iconPaths:
+            UI.PixmapCache.addSearchPath(defaultIconPath)
 
 
 def setLibraryPaths():

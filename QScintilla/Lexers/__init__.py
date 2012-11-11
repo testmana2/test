@@ -12,6 +12,7 @@ from PyQt4.QtGui import QApplication
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
 import Preferences
+import UI.PixmapCache
 
 # The lexer registry
 # Dictionary with the language name as key. Each entry is a list with
@@ -23,12 +24,13 @@ import Preferences
 #       4. list of save file filters (list of strings)
 #       5. default lexer associations (list of strings of filename wildcard patterns
 #          to be associated with the lexer)
+#       6. name of an icon file (string)
 LexerRegistry = {}
 
 
 def registerLexer(name, displayString, filenameSample, getLexerFunc,
                   openFilters=[], saveFilters=[],
-                  defaultAssocs=[]):
+                  defaultAssocs=[], iconFileName=""):
     """
     Module function to register a custom QScintilla lexer.
     
@@ -41,6 +43,7 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
     @keyparam saveFilters list of save file filters (list of strings)
     @keyparam defaultAssocs default lexer associations (list of strings of filename
         wildcard patterns to be associated with the lexer)
+    @keyparam iconFileName name of an icon file (string)
     @exception KeyError raised when the given name is already in use
     """
     global LexerRegistry
@@ -48,7 +51,8 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
         raise KeyError('Lexer "{0}" already registered.'.format(name))
     else:
         LexerRegistry[name] = [displayString, filenameSample, getLexerFunc,
-                               openFilters, saveFilters, defaultAssocs[:]]
+                               openFilters, saveFilters, defaultAssocs[:],
+                               iconFileName]
 
 
 def unregisterLexer(name):
@@ -68,55 +72,107 @@ def getSupportedLanguages():
     @return dictionary of supported lexer languages. The keys are the
         internal language names. The items are lists of two entries.
         The first is the display string for the language, the second
-        is a dummy file name, which can be used to derive the lexer.
-        (string, string)
+        is a dummy file name, which can be used to derive the lexer, and
+        the third is the name of an icon file.
+        (string, string, string)
     """
     supportedLanguages = {
-        "Bash": [QApplication.translate('Lexers', "Bash"), 'dummy.sh'],
-        "Batch": [QApplication.translate('Lexers', "Batch"), 'dummy.bat'],
-        "C++": [QApplication.translate('Lexers', "C/C++"), 'dummy.cpp'],
-        "C#": [QApplication.translate('Lexers', "C#"), 'dummy.cs'],
-        "CMake": [QApplication.translate('Lexers', "CMake"), 'dummy.cmake'],
-        "CSS": [QApplication.translate('Lexers', "CSS"), 'dummy.css'],
-        "D": [QApplication.translate('Lexers', "D"), 'dummy.d'],
-        "Diff": [QApplication.translate('Lexers', "Diff"), 'dummy.diff'],
-        "Fortran": [QApplication.translate('Lexers', "Fortran"), 'dummy.f95'],
-        "Fortran77": [QApplication.translate('Lexers', "Fortran77"), 'dummy.f'],
-        "HTML": [QApplication.translate('Lexers', "HTML/PHP/XML"), 'dummy.html'],
-        "IDL": [QApplication.translate('Lexers', "IDL"), 'dummy.idl'],
-        "Java": [QApplication.translate('Lexers', "Java"), 'dummy.java'],
-        "JavaScript": [QApplication.translate('Lexers', "JavaScript"), 'dummy.js'],
-        "Lua": [QApplication.translate('Lexers', "Lua"), 'dummy.lua'],
-        "Makefile": [QApplication.translate('Lexers', "Makefile"), 'dummy.mak'],
-        "Pascal": [QApplication.translate('Lexers', "Pascal"), 'dummy.pas'],
-        "Perl": [QApplication.translate('Lexers', "Perl"), 'dummy.pl'],
-        "PostScript": [QApplication.translate('Lexers', "PostScript"), 'dummy.ps'],
-        "Povray": [QApplication.translate('Lexers', "Povray"), 'dummy.pov'],
-        "Properties": [QApplication.translate('Lexers', "Properties"), 'dummy.ini'],
-        "Python2": [QApplication.translate('Lexers', "Python2"), 'dummy.py'],
-        "Python3": [QApplication.translate('Lexers', "Python3"), 'dummy.py'],
-        "Ruby": [QApplication.translate('Lexers', "Ruby"), 'dummy.rb'],
-        "SQL": [QApplication.translate('Lexers', "SQL"), 'dummy.sql'],
-        "TCL": [QApplication.translate('Lexers', "TCL"), 'dummy.tcl'],
-        "TeX": [QApplication.translate('Lexers', "TeX"), 'dummy.tex'],
-        "VHDL": [QApplication.translate('Lexers', "VHDL"), 'dummy.vhd'],
-        "XML": [QApplication.translate('Lexers', "XML"), 'dummy.xml'],
-        "YAML": [QApplication.translate('Lexers', "YAML"), 'dummy.yml'],
+        "Bash": [QApplication.translate('Lexers', "Bash"), 'dummy.sh',
+            "lexerBash.png"],
+        "Batch": [QApplication.translate('Lexers', "Batch"), 'dummy.bat',
+                "lexerBatch.png"],
+        "C++": [QApplication.translate('Lexers', "C/C++"), 'dummy.cpp',
+            "lexerCPP.png"],
+        "C#": [QApplication.translate('Lexers', "C#"), 'dummy.cs',
+            "lexerCsharp.png"],
+        "CMake": [QApplication.translate('Lexers', "CMake"), 'dummy.cmake',
+            "lexerCMake.png"],
+        "CSS": [QApplication.translate('Lexers', "CSS"), 'dummy.css',
+            "lexerCSS.png"],
+        "D": [QApplication.translate('Lexers', "D"), 'dummy.d',
+            "lexerD.png"],
+        "Diff": [QApplication.translate('Lexers', "Diff"), 'dummy.diff',
+            "lexerDiff.png"],
+        "Fortran": [QApplication.translate('Lexers', "Fortran"), 'dummy.f95',
+            "lexerFortran.png"],
+        "Fortran77": [QApplication.translate('Lexers', "Fortran77"), 'dummy.f',
+            "lexerFortran.png"],
+        "HTML": [QApplication.translate('Lexers', "HTML/PHP/XML"), 'dummy.html',
+            "lexerHTML.png"],
+        "IDL": [QApplication.translate('Lexers', "IDL"), 'dummy.idl',
+            "lexerIDL.png"],
+        "Java": [QApplication.translate('Lexers', "Java"), 'dummy.java',
+            "lexerJava.png"],
+        "JavaScript": [QApplication.translate('Lexers', "JavaScript"), 'dummy.js',
+            "lexerJavaScript.png"],
+        "Lua": [QApplication.translate('Lexers', "Lua"), 'dummy.lua',
+            "lexerLua.png"],
+        "Makefile": [QApplication.translate('Lexers', "Makefile"), 'dummy.mak',
+            "lexerMakefile.png"],
+        "Pascal": [QApplication.translate('Lexers', "Pascal"), 'dummy.pas',
+            "lexerPascal.png"],
+        "Perl": [QApplication.translate('Lexers', "Perl"), 'dummy.pl',
+            "lexerPerl.png"],
+        "PostScript": [QApplication.translate('Lexers', "PostScript"), 'dummy.ps',
+            "lexerPostscript.png"],
+        "Povray": [QApplication.translate('Lexers', "Povray"), 'dummy.pov',
+            "lexerPOV.png"],
+        "Properties": [QApplication.translate('Lexers', "Properties"), 'dummy.ini',
+            "lexerProperties.png"],
+        "Python2": [QApplication.translate('Lexers', "Python2"), 'dummy.py',
+            "lexerPython.png"],
+        "Python3": [QApplication.translate('Lexers', "Python3"), 'dummy.py',
+            "lexerPython.png"],
+        "Ruby": [QApplication.translate('Lexers', "Ruby"), 'dummy.rb',
+            "lexerRuby.png"],
+        "SQL": [QApplication.translate('Lexers', "SQL"), 'dummy.sql',
+            "lexerSQL.png"],
+        "TCL": [QApplication.translate('Lexers', "TCL"), 'dummy.tcl',
+            "lexerTCL.png"],
+        "TeX": [QApplication.translate('Lexers', "TeX"), 'dummy.tex',
+            "lexerTeX.png"],
+        "VHDL": [QApplication.translate('Lexers', "VHDL"), 'dummy.vhd',
+            "lexerVHDL.png"],
+        "XML": [QApplication.translate('Lexers', "XML"), 'dummy.xml',
+            "lexerXML.png"],
+        "YAML": [QApplication.translate('Lexers', "YAML"), 'dummy.yml',
+            "lexerYAML.png"],
     }
     
     if QSCINTILLA_VERSION() >= 0x020501:
         supportedLanguages.update({
-            "Matlab": [QApplication.translate('Lexers', "Matlab"), 'dummy.m.matlab'],
-            "Octave": [QApplication.translate('Lexers', "Octave"), 'dummy.m.octave'],
+            "Matlab": [QApplication.translate('Lexers', "Matlab"), 'dummy.m.matlab',
+                "lexerMatlab.png"],
+            "Octave": [QApplication.translate('Lexers', "Octave"), 'dummy.m.octave',
+                "lexerOctave.png"],
         })
     
     for name in LexerRegistry:
-        supportedLanguages[name] = LexerRegistry[name][:2]
+        supportedLanguages[name] = LexerRegistry[name][:2] + [LexerRegistry[name][6]]
     
     supportedLanguages["Guessed"] = \
-        [QApplication.translate('Lexers', "Pygments"), 'dummy.pygments']
+        [QApplication.translate('Lexers', "Pygments"), 'dummy.pygments', ""]
     
     return supportedLanguages
+
+
+def getLanguageIcon(language, pixmap):
+    """
+    Module function to get an icon for a language.
+    
+    @param language language of the lexer (string)
+    @param pixmap flag indicating to return a pixmap (boolean)
+    @return icon for the language (QPixmap or QIcon)
+    """
+    supportedLanguages = getSupportedLanguages()
+    if language in supportedLanguages:
+        iconFileName = supportedLanguages[language][2]
+    else:
+        iconFileName = ""
+    if pixmap:
+        return UI.PixmapCache.getPixmap(iconFileName)
+    else:
+        return UI.PixmapCache.getIcon(iconFileName)
 
 
 def getLexer(language, parent=None, pyname=""):

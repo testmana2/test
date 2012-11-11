@@ -10,6 +10,7 @@ Version 5.3-snapshot-2012mmdd:
 - Editor
   -- added actions to search for the next/previous occurence of the current word
      (default shortcuts Ctrl+. and Ctrl+,)
+  -- added some icons to the "Languages" and "End-of-Line Type" context menus
 - Spell Checker
   -- added a dialog to edit the various spell checking dictionaries
 - Syntax Checker
@@ -22,6 +23,8 @@ Version 5.3-snapshot-2012mmdd:
 - View Manager
   -- added actions to open the find in files and replace in files dialogs in a mode
      that searches open files only
+  -- change the status labels for programming language and end-of-line type to show
+     an icon
 
 Version 5.3-snapshot-20121101:
 - bug fixes

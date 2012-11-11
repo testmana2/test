@@ -828,8 +828,10 @@ class Editor(QsciScintillaCompat):
         languages = sorted(list(supportedLanguages.keys()))
         for language in languages:
             if language != "Guessed":
-                self.supportedLanguages[language] = supportedLanguages[language][:]
-                act = menu.addAction(self.supportedLanguages[language][0])
+                self.supportedLanguages[language] = supportedLanguages[language][:2]
+                act = menu.addAction(
+                    UI.PixmapCache.getIcon(supportedLanguages[language][2]),
+                    self.supportedLanguages[language][0])
                 act.setCheckable(True)
                 act.setData(language)
                 self.supportedLanguages[language].append(act)
@@ -880,19 +882,22 @@ class Editor(QsciScintillaCompat):
         
         self.eolActGrp = QActionGroup(self)
         
-        act = menu.addAction(self.trUtf8("Unix"))
+        act = menu.addAction(UI.PixmapCache.getIcon("eolLinux.png"),
+                             self.trUtf8("Unix"))
         act.setCheckable(True)
         act.setData('\n')
         self.supportedEols['\n'] = act
         self.eolActGrp.addAction(act)
         
-        act = menu.addAction(self.trUtf8("Windows"))
+        act = menu.addAction(UI.PixmapCache.getIcon("eolWindows.png"),
+                             self.trUtf8("Windows"))
         act.setCheckable(True)
         act.setData('\r\n')
         self.supportedEols['\r\n'] = act
         self.eolActGrp.addAction(act)
         
-        act = menu.addAction(self.trUtf8("Macintosh"))
+        act = menu.addAction(UI.PixmapCache.getIcon("eolMac.png"),
+                             self.trUtf8("Macintosh"))
         act.setCheckable(True)
         act.setData('\r')
         self.supportedEols['\r'] = act

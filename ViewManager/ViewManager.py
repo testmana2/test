@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import QSignalMapper, QTimer, QFileInfo, pyqtSignal, QRegExp, \
     QObject, Qt, QUrl
 from PyQt4.QtGui import QColor, QKeySequence, QLineEdit, QToolBar, QWidgetAction, \
-    QDialog, QApplication, QMenu, QPalette, QComboBox
+    QDialog, QApplication, QMenu, QPalette, QComboBox, QPixmap
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
@@ -3980,11 +3980,38 @@ class ViewManager(QObject):
         
         if language is None:
             language = ''
-        self.sbLang.setText(language)
+        pixmap = QScintilla.Lexers.getLanguageIcon(language, True)
+        self.sbLang.setPixmap(pixmap)
+        if pixmap.isNull():
+            self.sbLang.setText(language)
+            self.sbLang.setToolTip("")
+        else:
+            self.sbLang.setText("")
+            self.sbLang.setToolTip(QApplication.translate('ViewManager',
+                'Language: {0}'.format(language)))
         
         if eol is None:
             eol = ''
-        self.sbEol.setText(eol)
+        self.sbEol.setPixmap(self.__eolPixmap(eol))
+        self.sbEol.setToolTip(QApplication.translate('ViewManager',
+            'EOL Mode: {0}'.format(eol)))
+        
+    def __eolPixmap(self, eolIndicator):
+        """
+        Private method to get an EOL pixmap for an EOL string.
+        
+        @param eolIndicator eol indicator string (string)
+        @return pixmap for the eol indicator (QPixmap)
+        """
+        if eolIndicator == "LF":
+            pixmap = UI.PixmapCache.getPixmap("eolLinux.png")
+        elif eolIndicator == "CR":
+            pixmap = UI.PixmapCache.getPixmap("eolMac.png")
+        elif eolIndicator == "CRLF":
+            pixmap = UI.PixmapCache.getPixmap("eolWindows.png")
+        else:
+            pixmap = QPixmap()
+        return pixmap
         
     def unhighlight(self, current=False):
         """

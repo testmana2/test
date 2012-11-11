@@ -11462,6 +11462,7 @@
       <keyword name="ViewManager.__editorOpened" id="ViewManager.__editorOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorOpened" />
       <keyword name="ViewManager.__editorSaved" id="ViewManager.__editorSaved" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorSaved" />
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
+      <keyword name="ViewManager.__eolPixmap" id="ViewManager.__eolPixmap" ref="eric5.ViewManager.ViewManager.html#ViewManager.__eolPixmap" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
       <keyword name="ViewManager.__findFileName" id="ViewManager.__findFileName" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findFileName" />
       <keyword name="ViewManager.__findNextWord" id="ViewManager.__findNextWord" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findNextWord" />
@@ -12150,6 +12151,7 @@
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
       <keyword name="getImporters" id="getImporters" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporters" />
+      <keyword name="getLanguageIcon" id="getLanguageIcon" ref="eric5.QScintilla.Lexers.__init__.html#getLanguageIcon" />
       <keyword name="getLexer" id="getLexer" ref="eric5.QScintilla.Lexers.__init__.html#getLexer" />
       <keyword name="getMessage" id="getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#getMessage" />
       <keyword name="getMultiProject" id="getMultiProject" ref="eric5.Preferences.__init__.html#getMultiProject" />
