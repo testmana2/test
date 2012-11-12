@@ -7856,6 +7856,7 @@
       <keyword name="Project.addUiDir" id="Project.addUiDir" ref="eric5.Project.Project.html#Project.addUiDir" />
       <keyword name="Project.addUiFiles" id="Project.addUiFiles" ref="eric5.Project.Project.html#Project.addUiFiles" />
       <keyword name="Project.appendFile" id="Project.appendFile" ref="eric5.Project.Project.html#Project.appendFile" />
+      <keyword name="Project.checkAllScriptsDirty" id="Project.checkAllScriptsDirty" ref="eric5.Project.Project.html#Project.checkAllScriptsDirty" />
       <keyword name="Project.checkDirty" id="Project.checkDirty" ref="eric5.Project.Project.html#Project.checkDirty" />
       <keyword name="Project.checkLanguageFiles" id="Project.checkLanguageFiles" ref="eric5.Project.Project.html#Project.checkLanguageFiles" />
       <keyword name="Project.checkVCSStatus" id="Project.checkVCSStatus" ref="eric5.Project.Project.html#Project.checkVCSStatus" />

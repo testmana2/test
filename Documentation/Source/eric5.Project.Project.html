@@ -378,6 +378,9 @@ QObject
 <td><a href="#Project.appendFile">appendFile</a></td>
 <td>Public method to append a file to the project.</td>
 </tr><tr>
+<td><a href="#Project.checkAllScriptsDirty">checkAllScriptsDirty</a></td>
+<td>Public method to check all scripts belonging to the project for their dirty status.</td>
+</tr><tr>
 <td><a href="#Project.checkDirty">checkDirty</a></td>
 <td>Public method to check dirty status and open a message window.</td>
 </tr><tr>
@@ -1231,6 +1234,23 @@ flag indicating that this is a source file
 </dd><dt><i>updateModel</i></dt>
 <dd>
 flag indicating an update of the model is requested (boolean)
+</dd>
+</dl><a NAME="Project.checkAllScriptsDirty" ID="Project.checkAllScriptsDirty"></a>
+<h4>Project.checkAllScriptsDirty</h4>
+<b>checkAllScriptsDirty</b>(<i>reportSyntaxErrors=False</i>)
+<p>
+        Public method to check all scripts belonging to the project for
+        their dirty status.
+</p><dl>
+<dt><i>reportSyntaxErrors=</i></dt>
+<dd>
+flag indicating special reporting
+            for syntax errors (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="Project.checkDirty" ID="Project.checkDirty"></a>
 <h4>Project.checkDirty</h4>

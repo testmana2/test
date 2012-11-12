@@ -431,6 +431,37 @@ class Hg(VersionControl):
         noDialog = self.__commitData["noDialog"]
         closeBranch = self.__commitData["closeBranch"]
         
+        if not noDialog:
+            # check, if there are unsaved changes, that should be committed
+            if isinstance(name, list):
+                nameList = name
+            else:
+                nameList = [name]
+            ok = True
+            for nam in nameList:
+                # check for commit of the project
+                if os.path.isdir(nam):
+                    project = e5App().getObject("Project")
+                    if nam == project.getProjectPath():
+                        ok &= project.checkAllScriptsDirty(reportSyntaxErrors=True) and \
+                              project.checkDirty()
+                        continue
+                elif os.path.isfile(nam):
+                    editor = e5App().getObject("ViewManager").getOpenEditor(nam)
+                    if editor:
+                       ok &= editor.checkDirty()
+                if not ok:
+                    break
+            
+            if not ok:
+                res = E5MessageBox.yesNo(self.__ui,
+                    self.trUtf8("Commit Changes"),
+                    self.trUtf8("""The commit affects files, that have unsaved"""
+                                """ changes. Shall the commit be continued?"""),
+                    icon = E5MessageBox.Warning)
+                if not res:
+                    return
+        
         if self.__commitDialog is not None:
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()

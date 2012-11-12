@@ -2695,6 +2695,36 @@ class Project(QObject):
         else:
             return success
         
+    def checkAllScriptsDirty(self, reportSyntaxErrors=False):
+        """
+        Public method to check all scripts belonging to the project for
+        their dirty status.
+        
+        @keyparam reportSyntaxErrors flag indicating special reporting
+            for syntax errors (boolean)
+        @return flag indicating success (boolean)
+        """
+        vm = e5App().getObject("ViewManager")
+        success = True
+        filesWithSyntaxErrors = 0
+        for fn in vm.getOpenFilenames():
+            rfn = self.getRelativePath(fn)
+            if rfn in self.pdata["SOURCES"] or rfn in self.pdata["OTHERS"]:
+                editor = vm.getOpenEditor(fn)
+                success &= editor.checkDirty()
+                if reportSyntaxErrors and editor.hasSyntaxErrors():
+                    filesWithSyntaxErrors += 1
+        
+        if reportSyntaxErrors and filesWithSyntaxErrors > 0:
+            E5MessageBox.critical(self.ui,
+                self.trUtf8("Syntax errors detected"),
+                self.trUtf8("""The project contains %n file(s) with syntax errors.""",
+                    "", filesWithSyntaxErrors)
+            )
+            return False
+        else:
+            return success
+
     def getMainScript(self, normalized=False):
         """
         Public method to return the main script filename.
