@@ -122,7 +122,7 @@ def getSupportedLanguages():
         "Python2": [QApplication.translate('Lexers', "Python2"), 'dummy.py',
             "lexerPython.png"],
         "Python3": [QApplication.translate('Lexers', "Python3"), 'dummy.py',
-            "lexerPython.png"],
+            "lexerPython3.png"],
         "Ruby": [QApplication.translate('Lexers', "Ruby"), 'dummy.rb',
             "lexerRuby.png"],
         "SQL": [QApplication.translate('Lexers', "SQL"), 'dummy.sql',
