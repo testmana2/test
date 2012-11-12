@@ -38,19 +38,15 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="searchEdit">
+        <widget class="E5ClearableLineEdit" name="searchEdit">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="toolTip">
           <string>Enter search term for databases</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="clearButton">
-         <property name="toolTip">
-          <string>Press to clear the search edit</string>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -121,6 +117,11 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+  <customwidget>
    <class>E5TreeView</class>
    <extends>QTreeView</extends>
    <header>E5Gui/E5TreeView.h</header>
@@ -128,7 +129,6 @@
  </customwidgets>
  <tabstops>
   <tabstop>searchEdit</tabstop>
-  <tabstop>clearButton</tabstop>
   <tabstop>databasesTree</tabstop>
   <tabstop>removeButton</tabstop>
   <tabstop>removeAllButton</tabstop>

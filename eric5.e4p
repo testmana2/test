@@ -1053,6 +1053,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UI/NotificationWidget.py</Source>
     <Source>Preferences/ConfigurationPages/NotificationsPage.py</Source>
     <Source>QScintilla/SpellingDictionaryEditDialog.py</Source>
+    <Source>E5Gui/E5ComboBox.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

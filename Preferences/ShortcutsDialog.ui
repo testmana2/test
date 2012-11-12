@@ -27,19 +27,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="searchEdit">
+      <widget class="E5ClearableLineEdit" name="searchEdit">
        <property name="toolTip">
         <string>Enter the regular expression that should be contained in the shortcut action</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="clearSearchButton">
-       <property name="toolTip">
-        <string>Press to clear the search edit</string>
-       </property>
-       <property name="text">
-        <string/>
        </property>
       </widget>
      </item>
@@ -135,9 +125,15 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>searchEdit</tabstop>
-  <tabstop>clearSearchButton</tabstop>
   <tabstop>actionButton</tabstop>
   <tabstop>shortcutButton</tabstop>
   <tabstop>shortcutsList</tabstop>
@@ -152,8 +148,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>69</x>
-     <y>457</y>
+     <x>78</x>
+     <y>490</y>
     </hint>
     <hint type="destinationlabel">
      <x>77</x>

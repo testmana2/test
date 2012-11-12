@@ -10,9 +10,6 @@ Module implementing a dialog to configure the AdBlock exceptions.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
-from E5Gui.E5LineEditButton import E5LineEditButton
-from E5Gui.E5LineEdit import E5LineEdit
-
 from .Ui_AdBlockExceptionsDialog import Ui_AdBlockExceptionsDialog
 
 import Helpviewer.HelpWindow
@@ -36,10 +33,6 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlusGreen48.png"))
         
         self.hostEdit.setInactiveText(self.trUtf8("Enter host to be added..."))
-        self.__clearHostButton = E5LineEditButton(self)
-        self.__clearHostButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.hostEdit.addWidget(self.__clearHostButton, E5LineEdit.RightSide)
-        self.__clearHostButton.clicked[()].connect(self.hostEdit.clear)
         
         self.buttonBox.setFocus()
     

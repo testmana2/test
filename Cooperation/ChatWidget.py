@@ -66,10 +66,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             UI.PixmapCache.getIcon("sharedEditSend.png"))
         self.cancelEditButton.setIcon(
             UI.PixmapCache.getIcon("sharedEditCancel.png"))
-        self.clearMessageButton.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
-        self.clearHostButton.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__ui = ui
         self.__client = CooperationClient(self)

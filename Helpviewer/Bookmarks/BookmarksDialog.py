@@ -19,8 +19,6 @@ from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 from .Ui_BookmarksDialog import Ui_BookmarksDialog
 
-import UI.PixmapCache
-
 
 class BookmarksDialog(QDialog, Ui_BookmarksDialog):
     """
@@ -41,8 +39,6 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__bookmarksManager = manager
         if self.__bookmarksManager is None:

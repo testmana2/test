@@ -11,8 +11,6 @@ from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 from PyQt4.QtGui import QDialog, QStandardItemModel, QSortFilterProxyModel
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
-import UI.PixmapCache
-
 from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
 
 from .Ui_E5NetworkMonitor import Ui_E5NetworkMonitor
@@ -75,8 +73,6 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__requestHeaders = QStandardItemModel(self)
         self.__requestHeaders.setHorizontalHeaderLabels(

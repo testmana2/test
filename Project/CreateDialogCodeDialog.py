@@ -23,8 +23,6 @@ from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
 
 from Utilities import ModuleParser
 
-import UI.PixmapCache
-
 from eric5config import getConfig
 
 pyqtSignatureRole = Qt.UserRole + 1
@@ -65,8 +63,6 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         self.proxyModel.setDynamicSortFilter(True)
         self.proxyModel.setSourceModel(self.slotsModel)
         self.slotsView.setModel(self.proxyModel)
-        
-        self.clearFilterButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         # initialize some member variables
         self.__initError = False
@@ -501,13 +497,6 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         """
         re = QRegExp(text, Qt.CaseInsensitive, QRegExp.RegExp2)
         self.proxyModel.setFilterRegExp(re)
-        
-    @pyqtSlot()
-    def on_clearFilterButton_clicked(self):
-        """
-        Private slot called by a click of the clear filter button.
-        """
-        self.filterEdit.clear()
         
     @pyqtSlot()
     def on_newButton_clicked(self):

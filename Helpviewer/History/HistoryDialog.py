@@ -17,8 +17,6 @@ from .HistoryModel import HistoryModel
 
 from .Ui_HistoryDialog import Ui_HistoryDialog
 
-import UI.PixmapCache
-
 
 class HistoryDialog(QDialog, Ui_HistoryDialog):
     """
@@ -39,8 +37,6 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__historyManager = manager
         if self.__historyManager is None:

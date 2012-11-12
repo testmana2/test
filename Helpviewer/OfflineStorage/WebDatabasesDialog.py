@@ -16,8 +16,6 @@ from .Ui_WebDatabasesDialog import Ui_WebDatabasesDialog
 
 from .WebDatabasesModel import WebDatabasesModel
 
-import UI.PixmapCache
-
 
 class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
     """
@@ -31,8 +29,6 @@ class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.removeButton.clicked.connect(self.databasesTree.removeSelected)
         self.removeAllButton.clicked.connect(self.databasesTree.removeAll)

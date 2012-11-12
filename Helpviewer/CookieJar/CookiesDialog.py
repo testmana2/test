@@ -16,8 +16,6 @@ from .CookiesExceptionsDialog import CookiesExceptionsDialog
 
 from .Ui_CookiesDialog import Ui_CookiesDialog
 
-import UI.PixmapCache
-
 
 class CookiesDialog(QDialog, Ui_CookiesDialog):
     """
@@ -33,7 +31,6 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.addButton.setEnabled(False)
         
         self.__cookieJar = cookieJar

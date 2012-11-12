@@ -30,7 +30,6 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("flashBlock48.png"))
         
         self.__model = QStringListModel(whitelist[:], self)

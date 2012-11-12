@@ -10,8 +10,6 @@ Module implementing the AdBlock configuration dialog.
 from PyQt4.QtCore import pyqtSlot, QTimer, QCoreApplication
 from PyQt4.QtGui import QDialog, QMenu, QToolButton
 
-from E5Gui.E5LineEditButton import E5LineEditButton
-from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui import E5MessageBox
 
 import Helpviewer.HelpWindow
@@ -40,10 +38,6 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         self.updateSpinBox.setValue(Preferences.getHelp("AdBlockUpdatePeriod"))
         
         self.searchEdit.setInactiveText(self.trUtf8("Search..."))
-        self.__clearSearchButton = E5LineEditButton(self)
-        self.__clearSearchButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.searchEdit.addWidget(self.__clearSearchButton, E5LineEdit.RightSide)
-        self.__clearSearchButton.clicked[()].connect(self.searchEdit.clear)
         
         self.__manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         self.adBlockGroup.setChecked(self.__manager.isEnabled())

@@ -21,7 +21,6 @@ from .Ui_TabnannyDialog import Ui_TabnannyDialog
 from . import Tabnanny
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -50,7 +49,6 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         self.__fileList = []
         self.__project = None
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.filterFrame.setVisible(False)
         
     def __resort(self):

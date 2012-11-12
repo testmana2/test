@@ -23,8 +23,6 @@ from .SvnDiffDialog import SvnDiffDialog
 
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
-import UI.PixmapCache
-
 
 class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     """
@@ -58,7 +56,6 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
         self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(self.trUtf8("Message")))
-        self.clearRxEditButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences("LogLimit"))
         self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
         
@@ -502,13 +499,6 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                     if topItem is currentItem:
                         self.messageEdit.clear()
                         self.filesTree.clear()
-    
-    @pyqtSlot()
-    def on_clearRxEditButton_clicked(self):
-        """
-        Private slot called by a click of the clear RX edit button.
-        """
-        self.rxEdit.clear()
     
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):

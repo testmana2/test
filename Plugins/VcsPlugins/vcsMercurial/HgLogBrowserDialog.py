@@ -21,8 +21,6 @@ from E5Gui import E5MessageBox
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 from .HgDiffDialog import HgDiffDialog
 
-import UI.PixmapCache
-
 import Preferences
 
 COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
@@ -94,7 +92,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.toDate.setDate(QDate.currentDate())
         self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
             self.trUtf8("Message")))
-        self.clearRxEditButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
             "LogLimit"))
         self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
@@ -1203,13 +1200,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     if topItem is currentItem:
                         self.messageEdit.clear()
                         self.filesTree.clear()
-    
-    @pyqtSlot()
-    def on_clearRxEditButton_clicked(self):
-        """
-        Private slot called by a click of the clear RX edit button.
-        """
-        self.rxEdit.clear()
     
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):

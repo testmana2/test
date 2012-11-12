@@ -13,7 +13,6 @@ from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
 
 from .Ui_SendRefererWhitelistDialog import Ui_SendRefererWhitelistDialog
 
-import UI.PixmapCache
 import Preferences
 
 
@@ -29,8 +28,6 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__model = QStringListModel(Preferences.getHelp("SendRefererWhitelist"), self)
         self.__model.sort(0)

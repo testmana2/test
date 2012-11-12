@@ -76,14 +76,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.__data = {}
         self.__statistics = {}
         
-        self.clearButton.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
-        self.clearButtonExcludeMessages.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
-        self.clearButtonIncludeMessages.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
-        self.clearButtonFixIssues.setIcon(
-            UI.PixmapCache.getIcon("clearLeft.png"))
         self.on_loadDefaultButton_clicked()
     
     def __resort(self):

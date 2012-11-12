@@ -119,16 +119,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="rxEdit">
+      <widget class="E5ClearableLineEdit" name="rxEdit">
        <property name="toolTip">
         <string>Enter the regular expression to filter on</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="clearRxEditButton">
-       <property name="text">
-        <string/>
        </property>
       </widget>
      </item>
@@ -476,13 +469,19 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>fromDate</tabstop>
   <tabstop>toDate</tabstop>
   <tabstop>branchCombo</tabstop>
   <tabstop>fieldCombo</tabstop>
   <tabstop>rxEdit</tabstop>
-  <tabstop>clearRxEditButton</tabstop>
   <tabstop>logTree</tabstop>
   <tabstop>messageEdit</tabstop>
   <tabstop>filesTree</tabstop>

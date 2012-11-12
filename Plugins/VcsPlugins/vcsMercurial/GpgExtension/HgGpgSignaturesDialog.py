@@ -18,7 +18,6 @@ from E5Gui import E5MessageBox
 from .Ui_HgGpgSignaturesDialog import Ui_HgGpgSignaturesDialog
 
 import Preferences
-import UI.PixmapCache
 
 
 class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
@@ -34,8 +33,6 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearRxEditButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

@@ -18,8 +18,6 @@ from .PasswordModel import PasswordModel
 
 from .Ui_PasswordsDialog import Ui_PasswordsDialog
 
-import UI.PixmapCache
-
 
 class PasswordsDialog(QDialog, Ui_PasswordsDialog):
     """
@@ -33,8 +31,6 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.__showPasswordsText = self.trUtf8("Show Passwords")
         self.__hidePasswordsText = self.trUtf8("Hide Passwords")

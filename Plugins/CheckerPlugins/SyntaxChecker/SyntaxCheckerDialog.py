@@ -60,7 +60,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         self.__fileList = []
         self.__project = None
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.filterFrame.setVisible(False)
         
     def __resort(self):

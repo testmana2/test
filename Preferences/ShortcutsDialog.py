@@ -16,8 +16,6 @@ from E5Gui import E5MessageBox
 from .Ui_ShortcutsDialog import Ui_ShortcutsDialog
 from .ShortcutDialog import ShortcutDialog
 
-import UI.PixmapCache
-
 import Preferences
 from Preferences import Shortcuts
 
@@ -48,7 +46,6 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.setModal(modal)
         self.setupUi(self)
         
-        self.clearSearchButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.shortcutsList.headerItem().setText(self.shortcutsList.columnCount(), "")
         self.shortcutsList.header().setSortIndicator(0, Qt.AscendingOrder)
         
@@ -429,12 +426,6 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                     itm.setHidden(False)
             topItem.setHidden(childHiddenCount == topItem.childCount())
     
-    @pyqtSlot()
-    def on_clearSearchButton_clicked(self):
-        """
-        Private slot called by a click of the clear search button.
-        """
-        self.searchEdit.clear()
     
     @pyqtSlot(bool)
     def on_actionButton_toggled(self, checked):

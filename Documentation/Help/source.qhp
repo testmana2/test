@@ -116,6 +116,7 @@
             <section title="eric5.E5Gui.E5Action" ref="eric5.E5Gui.E5Action.html" />
             <section title="eric5.E5Gui.E5Application" ref="eric5.E5Gui.E5Application.html" />
             <section title="eric5.E5Gui.E5ClickableLabel" ref="eric5.E5Gui.E5ClickableLabel.html" />
+            <section title="eric5.E5Gui.E5ComboBox" ref="eric5.E5Gui.E5ComboBox.html" />
             <section title="eric5.E5Gui.E5Completers" ref="eric5.E5Gui.E5Completers.html" />
             <section title="eric5.E5Gui.E5FileDialog" ref="eric5.E5Gui.E5FileDialog.html" />
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
@@ -2445,7 +2446,6 @@
       <keyword name="CreateDialogCodeDialog.initError" id="CreateDialogCodeDialog.initError" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.initError" />
       <keyword name="CreateDialogCodeDialog.on_buttonBox_clicked" id="CreateDialogCodeDialog.on_buttonBox_clicked" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.on_buttonBox_clicked" />
       <keyword name="CreateDialogCodeDialog.on_classNameCombo_activated" id="CreateDialogCodeDialog.on_classNameCombo_activated" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.on_classNameCombo_activated" />
-      <keyword name="CreateDialogCodeDialog.on_clearFilterButton_clicked" id="CreateDialogCodeDialog.on_clearFilterButton_clicked" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.on_clearFilterButton_clicked" />
       <keyword name="CreateDialogCodeDialog.on_filterEdit_textChanged" id="CreateDialogCodeDialog.on_filterEdit_textChanged" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.on_filterEdit_textChanged" />
       <keyword name="CreateDialogCodeDialog.on_newButton_clicked" id="CreateDialogCodeDialog.on_newButton_clicked" ref="eric5.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.on_newButton_clicked" />
       <keyword name="DCTestResult" id="DCTestResult" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult" />
@@ -3328,6 +3328,8 @@
       <keyword name="E5ArrowItem.setEndPoint" id="E5ArrowItem.setEndPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setEndPoint" />
       <keyword name="E5ArrowItem.setPoints" id="E5ArrowItem.setPoints" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setPoints" />
       <keyword name="E5ArrowItem.setStartPoint" id="E5ArrowItem.setStartPoint" ref="eric5.E5Graphics.E5ArrowItem.html#E5ArrowItem.setStartPoint" />
+      <keyword name="E5ClearableComboBox" id="E5ClearableComboBox" ref="eric5.E5Gui.E5ComboBox.html#E5ClearableComboBox" />
+      <keyword name="E5ClearableComboBox (Constructor)" id="E5ClearableComboBox (Constructor)" ref="eric5.E5Gui.E5ComboBox.html#E5ClearableComboBox.__init__" />
       <keyword name="E5ClearableLineEdit" id="E5ClearableLineEdit" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit" />
       <keyword name="E5ClearableLineEdit (Constructor)" id="E5ClearableLineEdit (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit.__init__" />
       <keyword name="E5ClearableLineEdit.__textChanged" id="E5ClearableLineEdit.__textChanged" ref="eric5.E5Gui.E5LineEdit.html#E5ClearableLineEdit.__textChanged" />
@@ -3335,6 +3337,11 @@
       <keyword name="E5ClickableLabel (Constructor)" id="E5ClickableLabel (Constructor)" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.__init__" />
       <keyword name="E5ClickableLabel (Module)" id="E5ClickableLabel (Module)" ref="eric5.E5Gui.E5ClickableLabel.html" />
       <keyword name="E5ClickableLabel.mouseReleaseEvent" id="E5ClickableLabel.mouseReleaseEvent" ref="eric5.E5Gui.E5ClickableLabel.html#E5ClickableLabel.mouseReleaseEvent" />
+      <keyword name="E5ComboBox" id="E5ComboBox" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox" />
+      <keyword name="E5ComboBox (Constructor)" id="E5ComboBox (Constructor)" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox.__init__" />
+      <keyword name="E5ComboBox (Module)" id="E5ComboBox (Module)" ref="eric5.E5Gui.E5ComboBox.html" />
+      <keyword name="E5ComboBox.inactiveText" id="E5ComboBox.inactiveText" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox.inactiveText" />
+      <keyword name="E5ComboBox.setInactiveText" id="E5ComboBox.setInactiveText" ref="eric5.E5Gui.E5ComboBox.html#E5ComboBox.setInactiveText" />
       <keyword name="E5Completers (Module)" id="E5Completers (Module)" ref="eric5.E5Gui.E5Completers.html" />
       <keyword name="E5DirCompleter" id="E5DirCompleter" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter" />
       <keyword name="E5DirCompleter (Constructor)" id="E5DirCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5DirCompleter.__init__" />
@@ -5650,7 +5657,6 @@
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
       <keyword name="HgLogBrowserDialog.on_branchCombo_activated" id="HgLogBrowserDialog.on_branchCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_branchCombo_activated" />
       <keyword name="HgLogBrowserDialog.on_buttonBox_clicked" id="HgLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_buttonBox_clicked" />
-      <keyword name="HgLogBrowserDialog.on_clearRxEditButton_clicked" id="HgLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_clearRxEditButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_diffP1Button_clicked" id="HgLogBrowserDialog.on_diffP1Button_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffP1Button_clicked" />
       <keyword name="HgLogBrowserDialog.on_diffP2Button_clicked" id="HgLogBrowserDialog.on_diffP2Button_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffP2Button_clicked" />
       <keyword name="HgLogBrowserDialog.on_diffRevisionsButton_clicked" id="HgLogBrowserDialog.on_diffRevisionsButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffRevisionsButton_clicked" />
@@ -8967,7 +8973,6 @@
       <keyword name="ShortcutsDialog.__shortcutChanged" id="ShortcutsDialog.__shortcutChanged" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.__shortcutChanged" />
       <keyword name="ShortcutsDialog.on_actionButton_toggled" id="ShortcutsDialog.on_actionButton_toggled" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_actionButton_toggled" />
       <keyword name="ShortcutsDialog.on_buttonBox_accepted" id="ShortcutsDialog.on_buttonBox_accepted" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_buttonBox_accepted" />
-      <keyword name="ShortcutsDialog.on_clearSearchButton_clicked" id="ShortcutsDialog.on_clearSearchButton_clicked" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_clearSearchButton_clicked" />
       <keyword name="ShortcutsDialog.on_searchEdit_textChanged" id="ShortcutsDialog.on_searchEdit_textChanged" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_searchEdit_textChanged" />
       <keyword name="ShortcutsDialog.on_shortcutButton_toggled" id="ShortcutsDialog.on_shortcutButton_toggled" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_shortcutButton_toggled" />
       <keyword name="ShortcutsDialog.on_shortcutsList_itemChanged" id="ShortcutsDialog.on_shortcutsList_itemChanged" ref="eric5.Preferences.ShortcutsDialog.html#ShortcutsDialog.on_shortcutsList_itemChanged" />
@@ -9683,8 +9688,6 @@
       <keyword name="SvnLogBrowserDialog.keyPressEvent" id="SvnLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.keyPressEvent" />
       <keyword name="SvnLogBrowserDialog.on_buttonBox_clicked" id="SvnLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_buttonBox_clicked" />
       <keyword name="SvnLogBrowserDialog.on_buttonBox_clicked" id="SvnLogBrowserDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_buttonBox_clicked" />
-      <keyword name="SvnLogBrowserDialog.on_clearRxEditButton_clicked" id="SvnLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_clearRxEditButton_clicked" />
-      <keyword name="SvnLogBrowserDialog.on_clearRxEditButton_clicked" id="SvnLogBrowserDialog.on_clearRxEditButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_clearRxEditButton_clicked" />
       <keyword name="SvnLogBrowserDialog.on_diffPreviousButton_clicked" id="SvnLogBrowserDialog.on_diffPreviousButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_diffPreviousButton_clicked" />
       <keyword name="SvnLogBrowserDialog.on_diffPreviousButton_clicked" id="SvnLogBrowserDialog.on_diffPreviousButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_diffPreviousButton_clicked" />
       <keyword name="SvnLogBrowserDialog.on_diffRevisionsButton_clicked" id="SvnLogBrowserDialog.on_diffRevisionsButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html#SvnLogBrowserDialog.on_diffRevisionsButton_clicked" />
@@ -12639,6 +12642,7 @@
       <file>eric5.E5Gui.E5Action.html</file>
       <file>eric5.E5Gui.E5Application.html</file>
       <file>eric5.E5Gui.E5ClickableLabel.html</file>
+      <file>eric5.E5Gui.E5ComboBox.html</file>
       <file>eric5.E5Gui.E5Completers.html</file>
       <file>eric5.E5Gui.E5FileDialog.html</file>
       <file>eric5.E5Gui.E5Led.html</file>

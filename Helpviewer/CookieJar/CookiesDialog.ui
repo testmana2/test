@@ -38,19 +38,15 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="searchEdit">
+        <widget class="E5ClearableLineEdit" name="searchEdit">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="toolTip">
           <string>Enter search term for cookies</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="clearButton">
-         <property name="toolTip">
-          <string>Press to clear the search edit</string>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -143,6 +139,11 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+  <customwidget>
    <class>E5TableView</class>
    <extends>QTableView</extends>
    <header>E5Gui/E5TableView.h</header>
@@ -150,7 +151,6 @@
  </customwidgets>
  <tabstops>
   <tabstop>searchEdit</tabstop>
-  <tabstop>clearButton</tabstop>
   <tabstop>cookiesTable</tabstop>
   <tabstop>removeButton</tabstop>
   <tabstop>removeAllButton</tabstop>
@@ -188,22 +188,6 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clearButton</sender>
-   <signal>clicked()</signal>
-   <receiver>searchEdit</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>376</x>
-     <y>21</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>329</x>
-     <y>23</y>
     </hint>
    </hints>
   </connection>

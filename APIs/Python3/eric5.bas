@@ -131,8 +131,10 @@ DuplicateArgument Message
 E5Action QAction
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
+E5ClearableComboBox E5ComboBox
 E5ClearableLineEdit E5LineEdit
 E5ClickableLabel QLabel
+E5ComboBox QComboBox
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
 E5FileCompleter QCompleter

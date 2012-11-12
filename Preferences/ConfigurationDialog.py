@@ -16,8 +16,7 @@ from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QPixmap, QTreeWidget,
     QFrame, QVBoxLayout, QTreeWidgetItem, QLabel
 
 from E5Gui.E5Application import e5App
-from E5Gui.E5LineEdit import E5LineEdit
-from E5Gui.E5LineEditButton import E5LineEditButton
+from E5Gui.E5LineEdit import E5ClearableLineEdit
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
 
@@ -407,18 +406,13 @@ class ConfigurationWidget(QWidget):
         self.leftVBoxLayout.setMargin(0)
         self.leftVBoxLayout.setSpacing(0)
         self.leftVBoxLayout.setObjectName("leftVBoxLayout")
-        self.configListFilter = E5LineEdit(self, self.trUtf8("Enter filter text..."))
+        self.configListFilter = E5ClearableLineEdit(self,
+            self.trUtf8("Enter filter text..."))
         self.configListFilter.setObjectName("configListFilter")
         self.leftVBoxLayout.addWidget(self.configListFilter)
         self.configList = QTreeWidget()
         self.configList.setObjectName("configList")
         self.leftVBoxLayout.addWidget(self.configList)
-        
-        self.__clearButton = E5LineEditButton(self)
-        self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.configListFilter.addWidget(self.__clearButton, E5LineEdit.RightSide)
-        self.__clearButton.setVisible(False)
-        self.__clearButton.clicked[()].connect(self.configListFilter.clear)
         self.configListFilter.textChanged.connect(self.__filterTextChanged)
         
         self.scrollArea = QScrollArea(self.configSplitter)
@@ -492,8 +486,6 @@ class ConfigurationWidget(QWidget):
         
         @param filter text of the filter line edit (string)
         """
-        self.__clearButton.setVisible(filter != "")
-        
         self.__filterChildItems(self.configList.invisibleRootItem(), filter)
     
     def __filterChildItems(self, parent, filter):

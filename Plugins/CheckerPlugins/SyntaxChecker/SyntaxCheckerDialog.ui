@@ -42,19 +42,9 @@ entry will open an editor window and position the cursor at the respective line.
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="excludeFilesEdit">
+       <widget class="E5ClearableLineEdit" name="excludeFilesEdit">
         <property name="toolTip">
          <string>Enter filename patterns of files to be excluded separated by a comma</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="clearButton">
-        <property name="toolTip">
-         <string>Press to clear the filter edit</string>
-        </property>
-        <property name="text">
-         <string/>
         </property>
        </widget>
       </item>
@@ -139,30 +129,19 @@ the respective line.&lt;/p&gt;</string>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>startButton</tabstop>
   <tabstop>excludeFilesEdit</tabstop>
-  <tabstop>clearButton</tabstop>
   <tabstop>resultList</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>clearButton</sender>
-   <signal>clicked()</signal>
-   <receiver>excludeFilesEdit</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>527</x>
-     <y>22</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>492</x>
-     <y>19</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

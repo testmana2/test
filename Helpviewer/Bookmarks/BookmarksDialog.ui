@@ -38,19 +38,9 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="searchEdit">
+        <widget class="E5ClearableLineEdit" name="searchEdit">
          <property name="toolTip">
           <string>Enter search term for bookmarks</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="clearButton">
-         <property name="toolTip">
-          <string>Press to clear the search edit</string>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -134,14 +124,18 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>E5ClearableLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>E5Gui/E5LineEdit.h</header>
+  </customwidget>
+  <customwidget>
    <class>E5TreeView</class>
    <extends>QTreeView</extends>
-   <header>E5Gui/E5TreeView</header>
+   <header>E5Gui/E5TreeView.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>searchEdit</tabstop>
-  <tabstop>clearButton</tabstop>
   <tabstop>bookmarksTree</tabstop>
   <tabstop>removeButton</tabstop>
   <tabstop>addFolderButton</tabstop>
@@ -178,22 +172,6 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>clearButton</sender>
-   <signal>clicked()</signal>
-   <receiver>searchEdit</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>728</x>
-     <y>21</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>706</x>
-     <y>20</y>
     </hint>
    </hints>
   </connection>

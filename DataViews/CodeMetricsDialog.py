@@ -19,8 +19,6 @@ from . import CodeMetrics
 
 import Utilities
 
-import UI.PixmapCache
-
 
 class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
     """
@@ -54,7 +52,6 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         
         self.__fileList = []
         self.__project = None
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.filterFrame.setVisible(False)
         
     def __resizeResultColumns(self):

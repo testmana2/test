@@ -15,8 +15,6 @@ from .UserAgentModel import UserAgentModel
 
 from .Ui_UserAgentsDialog import Ui_UserAgentsDialog
 
-import UI.PixmapCache
-
 
 class UserAgentsDialog(QDialog, Ui_UserAgentsDialog):
     """
@@ -30,8 +28,6 @@ class UserAgentsDialog(QDialog, Ui_UserAgentsDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
-        
-        self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         
         self.removeButton.clicked[()].connect(self.userAgentsTable.removeSelected)
         self.removeAllButton.clicked[()].connect(self.userAgentsTable.removeAll)
