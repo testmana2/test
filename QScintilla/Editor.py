@@ -1175,8 +1175,8 @@ class Editor(QsciScintillaCompat):
         else:
             language = act.data()
             if language:
-                self.setLanguage(self.supportedLanguages[language][1])
                 self.filetype = language
+                self.setLanguage(self.supportedLanguages[language][1])
                 self.__autoSyntaxCheck()
         
     def __languageChanged(self, language, propagate=True):
@@ -1194,8 +1194,8 @@ class Editor(QsciScintillaCompat):
             pyname = language.split("|", 1)[1]
             self.setLanguage("dummy.pygments", pyname=pyname)
         else:
-            self.setLanguage(self.supportedLanguages[language][1], propagate=propagate)
             self.filetype = language
+            self.setLanguage(self.supportedLanguages[language][1], propagate=propagate)
             self.__autoSyntaxCheck()
         
     def __resetLanguage(self, propagate=True):
