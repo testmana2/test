@@ -501,10 +501,17 @@ class Editor(QsciScintillaCompat):
         @param line0 first line of text to use in the generation process (string)
         """
         bindName = ""
+        line0 = line0.lower()
         
-        if line0.startswith("<?xml"):
-            # override extension for XML files
+        # check first line if it does not start with #!
+        if line0.startswith(("<html", "<!doctype html", "<?php")):
+            bindName = "dummy.html"
+        elif line0.startswith(("<?xml", "<!doctype")):
             bindName = "dummy.xml"
+        elif line0.startswith("index: "):
+            bindName = "dummy.diff"
+        elif line0.startswith("\\documentclass"):
+            bindName = "dummy.tex"
         
         # check filetype
         if not bindName and self.filetype:
