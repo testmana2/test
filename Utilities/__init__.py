@@ -1090,6 +1090,8 @@ def getUserName():
     
     if not user and isWindowsPlatform():
         return win32_GetUserName()
+    
+    return user
 
 
 def getHomeDir():
