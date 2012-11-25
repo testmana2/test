@@ -50,8 +50,8 @@
      <property name="title">
       <string>Chat</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
        <widget class="QTextEdit" name="chatEdit">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
@@ -64,14 +64,14 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item>
        <widget class="E5ClearableLineEdit" name="messageEdit">
         <property name="toolTip">
          <string>Enter the text to send</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="2">
+      <item>
        <widget class="QPushButton" name="sendButton">
         <property name="toolTip">
          <string>Press to send the text above</string>

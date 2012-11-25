@@ -11,6 +11,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added actions to search for the next/previous occurence of the current word
      (default shortcuts Ctrl+. and Ctrl+,)
   -- added some icons to the "Languages" and "End-of-Line Type" context menus
+- IRC
+  -- added a simple IRC client
 - Spell Checker
   -- added a dialog to edit the various spell checking dictionaries
 - Syntax Checker

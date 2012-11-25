@@ -134,6 +134,9 @@ class ConfigurationWidget(QWidget):
                 "iconsPage": \
                     [self.trUtf8("Icons"), "preferences-icons.png",
                     "IconsPage", None, None],
+                "ircPage": \
+                    [self.trUtf8("IRC"), "irc.png",
+                    "IrcPage", None, None],
                 "networkPage": \
                     [self.trUtf8("Network"), "preferences-network.png",
                     "NetworkPage", None, None],

@@ -1054,6 +1054,14 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Preferences/ConfigurationPages/NotificationsPage.py</Source>
     <Source>QScintilla/SpellingDictionaryEditDialog.py</Source>
     <Source>E5Gui/E5ComboBox.py</Source>
+    <Source>Network/__init__.py</Source>
+    <Source>Network/IRC/__init__.py</Source>
+    <Source>Network/IRC/IrcNetworkManager.py</Source>
+    <Source>Network/IRC/IrcChannelWidget.py</Source>
+    <Source>Network/IRC/IrcNetworkWidget.py</Source>
+    <Source>Network/IRC/IrcWidget.py</Source>
+    <Source>Network/IRC/IrcUtilities.py</Source>
+    <Source>Preferences/ConfigurationPages/IrcPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1358,6 +1366,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>UI/NotificationWidget.ui</Form>
     <Form>Preferences/ConfigurationPages/NotificationsPage.ui</Form>
     <Form>QScintilla/SpellingDictionaryEditDialog.ui</Form>
+    <Form>Network/IRC/IrcChannelWidget.ui</Form>
+    <Form>Network/IRC/IrcWidget.ui</Form>
+    <Form>Network/IRC/IrcNetworkWidget.ui</Form>
+    <Form>Preferences/ConfigurationPages/IrcPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -911,6 +911,31 @@ class Prefs(object):
 
     # if true, revert layouts to factory defaults
     resetLayout = False
+    
+    # defaults for IRC
+    ircDefaults = {
+        "ShowTimestamps": True,
+        "TimestampIncludeDate": False,
+        "TimeFormat": "hh:mm",
+        "DateFormat": "yyyy-MM-dd",
+        
+        "NetworkMessageColour": "#0000FF",
+        "ServerMessageColour": "#91640A",
+        "ErrorMessageColour": "#FF0000",
+        "TimestampColour": "#709070",
+        "HyperlinkColour": "#0000FF",
+        "ChannelMessageColour": "#000000",
+        "OwnNickColour": "#000000",
+        "NickColour": "#18B33C",
+        "JoinChannelColour": "#72D672",
+        "LeaveChannelColour": "#B00000",
+        "ChannelInfoColour": "#9E54B3",
+        
+        "ShowNotifications": True,
+        "NotifyJoinPart": True,
+        "NotifyMessage": False,
+        "NotifyNick": False,
+    }
 
 
 def readToolGroups(prefClass=Prefs):
@@ -2534,6 +2559,33 @@ def setTrayStarter(key, value, prefClass=Prefs):
     """
     prefClass.settings.setValue("TrayStarter/" + key, value)
     
+
+def getIrc(key, prefClass=Prefs):
+    """
+    Module function to retrieve the IRC related settings.
+    
+    @param key the key of the value to get
+    @param prefClass preferences class used as the storage area
+    @return the requested user setting
+    """
+    if key in ["TimestampIncludeDate", "ShowTimestamps", "ShowNotifications",
+               "NotifyJoinPart", "NotifyMessage", "NotifyNick"]:
+        return toBool(prefClass.settings.value("IRC/" + key,
+                prefClass.ircDefaults[key]))
+    else:
+        return prefClass.settings.value("IRC/" + key, prefClass.ircDefaults[key])
+
+
+def setIrc(key, value, prefClass=Prefs):
+    """
+    Module function to store the IRC related settings.
+    
+    @param key the key of the setting to be set
+    @param value the value to be set
+    @param prefClass preferences class used as the storage area
+    """
+    prefClass.settings.setValue("IRC/" + key, value)
+
 
 def getGeometry(key, prefClass=Prefs):
     """

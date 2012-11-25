@@ -208,7 +208,7 @@ def pwConvert(pw, encode=True):
     
     @param pw password to encode (string)
     @param encode flag indicating an encode or decode function (boolean)
-    @return encode or decoded password (string)
+    @return encoded or decoded password (string)
     """
     if pw == "":
         return pw

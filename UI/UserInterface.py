@@ -66,6 +66,8 @@ from Templates.TemplateViewer import TemplateViewer
 
 from Cooperation.ChatWidget import ChatWidget
 
+from Network.IRC.IrcWidget import IrcWidget
+
 from .Browser import Browser
 from .Info import Version, BugAddress, Program, FeatureAddress
 from . import Config
@@ -490,6 +492,7 @@ class UserInterface(E5MainWindow):
         e5App().registerObject("ToolbarManager", self.toolbarManager)
         e5App().registerObject("Terminal", self.terminal)
         e5App().registerObject("Cooperation", self.cooperation)
+        e5App().registerObject("IRC", self.irc)
         e5App().registerObject("Symbols", self.symbolsViewer)
         e5App().registerObject("Numbers", self.numbersViewer)
         
@@ -676,6 +679,12 @@ class UserInterface(E5MainWindow):
                               UI.PixmapCache.getIcon("cooperation.png"),
                               self.trUtf8("Cooperation"))
         
+        # Create the IRC part of the user interface
+        self.irc = IrcWidget(self)
+        self.rToolbox.addItem(self.irc,
+                              UI.PixmapCache.getIcon("irc.png"),
+                              self.trUtf8("IRC"))
+        
         # Create the terminal part of the user interface
         self.terminalAssembly = TerminalAssembly(self.viewmanager)
         self.terminal = self.terminalAssembly.terminal()
@@ -782,6 +791,12 @@ class UserInterface(E5MainWindow):
         self.cooperation = ChatWidget(self)
         self.rightSidebar.addTab(self.cooperation,
             UI.PixmapCache.getIcon("cooperation.png"), self.trUtf8("Cooperation"))
+        
+        # Create the IRC part of the user interface
+        logging.debug("Creating IRC Widget...")
+        self.irc = IrcWidget(self)
+        self.rightSidebar.addTab(self.irc,
+            UI.PixmapCache.getIcon("irc.png"), self.trUtf8("IRC"))
         
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
@@ -1413,6 +1428,23 @@ class UserInterface(E5MainWindow):
             self.activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
+
+        self.ircActivateAct = E5Action(
+                self.trUtf8('IRC'),
+                self.trUtf8('&IRC'),
+                QKeySequence(self.trUtf8("Meta+Shift+I")),
+                0, self,
+                'irc_widget_activate')
+        self.ircActivateAct.setStatusTip(self.trUtf8(
+            "Switch the input focus to the IRC window."))
+        self.ircActivateAct.setWhatsThis(self.trUtf8(
+            """<b>Activate IRC</b>"""
+            """<p>This switches the input focus to the IRC window.</p>"""
+        ))
+        self.ircActivateAct.triggered[()].connect(
+            self.__activateIRC)
+        self.actions.append(self.ircActivateAct)
+        self.addAction(self.ircActivateAct)
 
         self.symbolsViewerActivateAct = E5Action(
                 self.trUtf8('Symbols-Viewer'),
@@ -2154,18 +2186,22 @@ class UserInterface(E5MainWindow):
         
         self.__menus["subwindow"] = QMenu(self.trUtf8("&Windows"), self.__menus["window"])
         self.__menus["subwindow"].setTearOffEnabled(True)
+        # left side
         self.__menus["subwindow"].addAction(self.pbActivateAct)
         self.__menus["subwindow"].addAction(self.mpbActivateAct)
+        self.__menus["subwindow"].addAction(self.templateViewerActivateAct)
         self.__menus["subwindow"].addAction(self.browserActivateAct)
-        self.__menus["subwindow"].addAction(self.debugViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.symbolsViewerActivateAct)
+        # bottom side
         self.__menus["subwindow"].addAction(self.shellActivateAct)
         self.__menus["subwindow"].addAction(self.terminalActivateAct)
-        self.__menus["subwindow"].addAction(self.logViewerActivateAct)
         self.__menus["subwindow"].addAction(self.taskViewerActivateAct)
-        self.__menus["subwindow"].addAction(self.templateViewerActivateAct)
-        self.__menus["subwindow"].addAction(self.cooperationViewerActivateAct)
-        self.__menus["subwindow"].addAction(self.symbolsViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.logViewerActivateAct)
         self.__menus["subwindow"].addAction(self.numbersViewerActivateAct)
+        # right side
+        self.__menus["subwindow"].addAction(self.debugViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.cooperationViewerActivateAct)
+        self.__menus["subwindow"].addAction(self.ircActivateAct)
         
         self.__menus["toolbars"] = \
             QMenu(self.trUtf8("&Toolbars"), self.__menus["window"])
@@ -3503,6 +3539,20 @@ class UserInterface(E5MainWindow):
         else:
             self.cooperation.show()
         self.cooperation.setFocus(Qt.ActiveWindowFocusReason)
+        
+    def __activateIRC(self):
+        """
+        Public slot to handle the activation of the IRC window.
+        """
+        if self.layout == "Toolboxes":
+            self.rToolboxDock.show()
+            self.rToolbox.setCurrentWidget(self.irc)
+        elif self.layout == "Sidebars":
+            self.rightSidebar.show()
+            self.rightSidebar.setCurrentWidget(self.irc)
+        else:
+            self.irc.show()
+        self.irc.setFocus(Qt.ActiveWindowFocusReason)
         
     def __activateSymbolsViewer(self):
         """
@@ -5130,6 +5180,9 @@ class UserInterface(E5MainWindow):
             return False
         
         if not self.viewmanager.closeViewManager():
+            return False
+        
+        if not self.irc.shutdown():
             return False
         
         self.shell.closeShell()
