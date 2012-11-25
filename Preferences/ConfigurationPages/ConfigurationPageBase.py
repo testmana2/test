@@ -40,14 +40,13 @@ class ConfigurationPageBase(QWidget):
         """
         return
         
-    def initColour(self, colourstr, button, prefMethod, selectSlot=None):
+    def initColour(self, colourstr, button, prefMethod):
         """
         Public method to initialize a colour selection button.
         
         @param colourstr colour to be set (string)
         @param button reference to a button to show the colour on (QPushButton)
         @param prefMethod preferences method to get the colour
-        @param selectSlot method to select the color
         @return reference to the created colour (QColor)
         """
         colour = QColor(prefMethod(colourstr))
@@ -56,10 +55,27 @@ class ConfigurationPageBase(QWidget):
         pm.fill(colour)
         button.setIconSize(pm.size())
         button.setIcon(QIcon(pm))
-        button.setProperty("colorName", colourstr)
-        if selectSlot is not None:
-            button.clicked[()].connect(selectSlot)
         return colour
+        
+    def initColour2(self, colourDict, colourstr, button, prefMethod, selectSlot):
+        """
+        Public method to initialize a colour selection button.
+        
+        @param colourDict reference to the dictionary storing the colors
+        @param colourstr colour to be set (string)
+        @param button reference to a button to show the colour on (QPushButton)
+        @param prefMethod preferences method to get the colour
+        @param selectSlot method to select the color
+        """
+        colour = QColor(prefMethod(colourstr))
+        size = button.size()
+        pm = QPixmap(size.width() / 2, size.height() / 2)
+        pm.fill(colour)
+        button.setIconSize(pm.size())
+        button.setIcon(QIcon(pm))
+        button.setProperty("colorName", colourstr)
+        button.clicked[()].connect(selectSlot)
+        colourDict[colourstr] = colour
         
     def selectColour(self, button, colourVar, showAlpha=False):
         """
