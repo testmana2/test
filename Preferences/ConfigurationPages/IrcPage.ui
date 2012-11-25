@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>501</width>
-    <height>651</height>
+    <height>853</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -34,7 +34,7 @@
    <item>
     <widget class="QGroupBox" name="timestampGroup">
      <property name="toolTip">
-      <string>Select to show timestamps</string>
+      <string>Enable to show timestamps</string>
      </property>
      <property name="title">
       <string>Show Timestamps</string>
@@ -359,7 +359,297 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="textColoursGroup">
+     <property name="toolTip">
+      <string>Enable to allow coloured text in IRC messages</string>
+     </property>
+     <property name="title">
+      <string>Allow Colored Text in IRC Messages</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string notr="true">0:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="ircColor0Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_19">
+        <property name="text">
+         <string notr="true">4:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="ircColor4Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_23">
+        <property name="text">
+         <string notr="true">8:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="ircColor8Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_27">
+        <property name="text">
+         <string notr="true">12:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QPushButton" name="ircColor12Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string notr="true">1:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="ircColor1Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_20">
+        <property name="text">
+         <string notr="true">5:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="ircColor5Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="label_24">
+        <property name="text">
+         <string notr="true">9:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QPushButton" name="ircColor9Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="label_28">
+        <property name="text">
+         <string notr="true">13:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QPushButton" name="ircColor13Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string notr="true">2:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="ircColor2Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_21">
+        <property name="text">
+         <string notr="true">6:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="ircColor6Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="label_25">
+        <property name="text">
+         <string notr="true">10:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QPushButton" name="ircColor10Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLabel" name="label_29">
+        <property name="text">
+         <string notr="true">14:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="7">
+       <widget class="QPushButton" name="ircColor14Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string notr="true">3:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="ircColor3Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_22">
+        <property name="text">
+         <string notr="true">7:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="ircColor7Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="label_26">
+        <property name="text">
+         <string notr="true">11:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QPushButton" name="ircColor11Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLabel" name="label_30">
+        <property name="text">
+         <string notr="true">15:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="7">
+       <widget class="QPushButton" name="ircColor15Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="notificationsGroup">
+     <property name="toolTip">
+      <string>Enable to show notifications</string>
+     </property>
      <property name="title">
       <string>Show Notifications</string>
      </property>
@@ -448,6 +738,23 @@
   <tabstop>joinButton</tabstop>
   <tabstop>leaveButton</tabstop>
   <tabstop>infoButton</tabstop>
+  <tabstop>textColoursGroup</tabstop>
+  <tabstop>ircColor0Button</tabstop>
+  <tabstop>ircColor1Button</tabstop>
+  <tabstop>ircColor2Button</tabstop>
+  <tabstop>ircColor3Button</tabstop>
+  <tabstop>ircColor4Button</tabstop>
+  <tabstop>ircColor5Button</tabstop>
+  <tabstop>ircColor6Button</tabstop>
+  <tabstop>ircColor7Button</tabstop>
+  <tabstop>ircColor8Button</tabstop>
+  <tabstop>ircColor9Button</tabstop>
+  <tabstop>ircColor10Button</tabstop>
+  <tabstop>ircColor11Button</tabstop>
+  <tabstop>ircColor12Button</tabstop>
+  <tabstop>ircColor13Button</tabstop>
+  <tabstop>ircColor14Button</tabstop>
+  <tabstop>ircColor15Button</tabstop>
   <tabstop>notificationsGroup</tabstop>
   <tabstop>joinLeaveCheckBox</tabstop>
   <tabstop>messageCheckBox</tabstop>

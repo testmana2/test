@@ -8,7 +8,6 @@ Module implementing the IRC configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-##from PyQt4.QtGui import QWidget
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_IrcPage import Ui_IrcPage
@@ -47,6 +46,7 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
             self.dateFormatCombo.findText(Preferences.getIrc("DateFormat")))
         
         # colours
+        # TODO: convert this to the code style below
         self.ircColours["NetworkMessageColour"] = \
             self.initColour("NetworkMessageColour", self.networkButton,
                 Preferences.getIrc)
@@ -86,6 +86,40 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         self.joinLeaveCheckBox.setChecked(Preferences.getIrc("NotifyJoinPart"))
         self.messageCheckBox.setChecked(Preferences.getIrc("NotifyMessage"))
         self.ownNickCheckBox.setChecked(Preferences.getIrc("NotifyNick"))
+        
+        # IRC text colors
+        self.ircColours["IrcColor0"] = self.initColour(
+            "IrcColor0", self.ircColor0Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor1"] = self.initColour(
+            "IrcColor1", self.ircColor1Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor2"] = self.initColour(
+            "IrcColor2", self.ircColor2Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor3"] = self.initColour(
+            "IrcColor3", self.ircColor3Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor4"] = self.initColour(
+            "IrcColor4", self.ircColor4Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor5"] = self.initColour(
+            "IrcColor5", self.ircColor5Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor6"] = self.initColour(
+            "IrcColor6", self.ircColor6Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor7"] = self.initColour(
+            "IrcColor7", self.ircColor7Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor8"] = self.initColour(
+            "IrcColor8", self.ircColor8Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor9"] = self.initColour(
+            "IrcColor9", self.ircColor9Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor10"] = self.initColour(
+            "IrcColor10", self.ircColor10Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor11"] = self.initColour(
+            "IrcColor11", self.ircColor11Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor12"] = self.initColour(
+            "IrcColor12", self.ircColor12Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor13"] = self.initColour(
+            "IrcColor13", self.ircColor13Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor14"] = self.initColour(
+            "IrcColor14", self.ircColor14Button, Preferences.getIrc, self.__selectColour)
+        self.ircColours["IrcColor15"] = self.initColour(
+            "IrcColor15", self.ircColor15Button, Preferences.getIrc, self.__selectColour)
     
     def save(self):
         """
@@ -205,6 +239,16 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         self.ircColours["HyperlinkColour"] = \
             self.selectColour(self.hyperlinkButton,
                 self.ircColours["HyperlinkColour"])
+    
+    @pyqtSlot()
+    def __selectColour(self):
+        """
+        Private slot to select a color.
+        """
+        button = self.sender()
+        colorKey = button.property("colorName")
+        self.ircColours[colorKey] = self.selectColour(
+            button, self.ircColours[colorKey])
 
 
 def create(dlg):

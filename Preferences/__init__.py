@@ -931,6 +931,24 @@ class Prefs(object):
         "LeaveChannelColour": "#B00000",
         "ChannelInfoColour": "#9E54B3",
         
+        "EnableIrcColours": True,
+        "IrcColor0": "#FFFF00",
+        "IrcColor1": "#000000",
+        "IrcColor2": "#000080",
+        "IrcColor3": "#008000",
+        "IrcColor4": "#FF0000",
+        "IrcColor5": "#A52A2A",
+        "IrcColor6": "#800080",
+        "IrcColor7": "#FF8000",
+        "IrcColor8": "#808000",
+        "IrcColor9": "#00FF00",
+        "IrcColor10": "#008080",
+        "IrcColor11": "#00FFFF",
+        "IrcColor12": "#0000FF",
+        "IrcColor13": "#FFC0CB",
+        "IrcColor14": "#A0A0A0",
+        "IrcColor15": "#C0C0C0",
+        
         "ShowNotifications": True,
         "NotifyJoinPart": True,
         "NotifyMessage": False,
@@ -2569,7 +2587,7 @@ def getIrc(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["TimestampIncludeDate", "ShowTimestamps", "ShowNotifications",
-               "NotifyJoinPart", "NotifyMessage", "NotifyNick"]:
+               "NotifyJoinPart", "NotifyMessage", "NotifyNick", "EnableIrcColours"]:
         return toBool(prefClass.settings.value("IRC/" + key,
                 prefClass.ircDefaults[key]))
     else:

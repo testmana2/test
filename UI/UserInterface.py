@@ -5171,6 +5171,9 @@ class UserInterface(E5MainWindow):
             if not self.helpWindow.shutdown():
                 return False
         
+        if not self.irc.shutdown():
+            return False
+        
         self.__writeSession()
         
         if not self.project.closeProject():
@@ -5180,9 +5183,6 @@ class UserInterface(E5MainWindow):
             return False
         
         if not self.viewmanager.closeViewManager():
-            return False
-        
-        if not self.irc.shutdown():
             return False
         
         self.shell.closeShell()

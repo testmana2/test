@@ -20,7 +20,7 @@ __UrlRe = re.compile(
     r"""((?:http|ftp|https):\/\/[\w\-_]+(?:\.[\w\-_]+)+"""
     r"""(?:[\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)""")
 __ColorRe = re.compile(
-    r"""((?:\x03(?:0[0-9]|1[0-5]|[0-9])?(?:,?(?:0[0-9]|1[0-5]|[0-9])))"""
+    r"""((?:\x03(?:0[0-9]|1[0-5]|[0-9])?(?:,(?:0[0-9]|1[0-5]|[0-9]))?)"""
     r"""|\x02|\x03|\x13|\x15|\x16|\x17|\x1d|\x1f)""")
 
 def ircTimestamp():
@@ -67,8 +67,13 @@ def ircFilter(msg):
                 msgParts.append("<b>")
                 openTags.append("b")
         elif part in ["\x03", "\x17"]:
-            # TODO: implement color reset
-            continue
+            if Preferences.getIrc("EnableIrcColours"):
+                if openTags and openTags[-1] == "span":
+                    msgParts.append("</" + openTags.pop(-1) +">")
+                else:
+                    continue
+            else:
+                continue
         elif part == "\x0f":                                # reset
             while openTags:
                 msgParts.append("</" + openTags.pop(-1) +">")
@@ -85,7 +90,7 @@ def ircFilter(msg):
                 msgParts.append("<u>")
                 openTags.append("u")
         elif part == "\x16":
-            # TODO: implement color reversal
+            # revert color not supported
             continue
         elif part == "\x1d":                                # italic
             if openTags and openTags[-1] == "i":
@@ -94,8 +99,26 @@ def ircFilter(msg):
                 msgParts.append("<i>")
                 openTags.append("i")
         elif part.startswith("\x03"):
-            # TODO: implement color support
-            continue
+            if Preferences.getIrc("EnableIrcColours"):
+                colors = part[1:].split(",", 1)
+                if len(colors) == 1:
+                    # foreground color only
+                    tag = '<span style="color:{0}">'.format(Preferences.getIrc(
+                        "IrcColor{0}".format(int(colors[0]))))
+                else:
+                    if colors[0]:
+                        # foreground and background
+                        tag = '<span style="background-color:{0};color={1}">'.format(
+                            Preferences.getIrc("IrcColor{0}".format(int(colors[0]))),
+                            Preferences.getIrc("IrcColor{0}".format(int(colors[1]))))
+                    else:
+                        # background only
+                        tag = '<span style="background-color:{0}">'.format(
+                            Preferences.getIrc("IrcColor{0}".format(int(colors[1]))))
+                msgParts.append(tag)
+                openTags.append("span")
+            else:
+                continue
         else:
             msgParts.append(part)
     msg = "".join(msgParts)
