@@ -33,8 +33,6 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         self.setupUi(self)
         self.setObjectName("EditorSpellCheckingPage")
         
-        self.editorColours = {}
-        
         languages = sorted(SpellChecker.getAvailableLanguages())
         self.defaultLanguageCombo.addItems(languages)
         if languages:
@@ -58,9 +56,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         self.minimumWordSizeSlider.setValue(
             Preferences.getEditor("SpellCheckingMinWordSize"))
         
-        self.editorColours["SpellingMarkers"] = \
-            self.initColour("SpellingMarkers", self.spellingMarkerButton,
-                Preferences.getEditorColour)
+        self.initColour("SpellingMarkers", self.spellingMarkerButton,
+            Preferences.getEditorColour, hasAlpha=True)
         
         self.pwlEdit.setText(Preferences.getEditor("SpellCheckingPersonalWordList"))
         self.pelEdit.setText(Preferences.getEditor("SpellCheckingPersonalExcludeList"))
@@ -87,8 +84,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Preferences.setEditor("SpellCheckingMinWordSize",
             self.minimumWordSizeSlider.value())
         
-        for key in list(self.editorColours.keys()):
-            Preferences.setEditorColour(key, self.editorColours[key])
+        self.saveColours(Preferences.setEditorColour)
         
         Preferences.setEditor("SpellCheckingPersonalWordList", self.pwlEdit.text())
         Preferences.setEditor("SpellCheckingPersonalExcludeList", self.pelEdit.text())
@@ -96,15 +92,6 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Preferences.setEditor("AutoSpellCheckingEnabled",
             self.enabledCheckBox.isChecked())
         Preferences.setEditor("AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
-        
-    @pyqtSlot()
-    def on_spellingMarkerButton_clicked(self):
-        """
-        Private slot to set the colour of the spelling markers.
-        """
-        self.editorColours["SpellingMarkers"] = \
-            self.selectColour(self.spellingMarkerButton,
-                self.editorColours["SpellingMarkers"], True)
     
     @pyqtSlot()
     def on_pwlButton_clicked(self):

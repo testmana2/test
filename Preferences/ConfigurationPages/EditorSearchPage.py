@@ -7,8 +7,6 @@
 Module implementing the Editor Search configuration page.
 """
 
-from PyQt4.QtCore import pyqtSlot
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSearchPage import Ui_EditorSearchPage
 
@@ -40,9 +38,8 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         self.markOccurrencesTimeoutSpinBox.setValue(
             Preferences.getEditor("MarkOccurrencesTimeout"))
         
-        self.editorColours["SearchMarkers"] = \
-            self.initColour("SearchMarkers", self.searchMarkerButton,
-                Preferences.getEditorColour)
+        self.initColour("SearchMarkers", self.searchMarkerButton,
+            Preferences.getEditorColour, hasAlpha=True)
         
     def save(self):
         """
@@ -58,17 +55,7 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         Preferences.setEditor("MarkOccurrencesTimeout",
             self.markOccurrencesTimeoutSpinBox.value())
         
-        for key in list(self.editorColours.keys()):
-            Preferences.setEditorColour(key, self.editorColours[key])
-        
-    @pyqtSlot()
-    def on_searchMarkerButton_clicked(self):
-        """
-        Private slot to set the colour of the search markers.
-        """
-        self.editorColours["SearchMarkers"] = \
-            self.selectColour(self.searchMarkerButton,
-                self.editorColours["SearchMarkers"], True)
+        self.saveColours(Preferences.setEditorColour)
 
 
 def create(dlg):

@@ -39,8 +39,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
-        self.uiColours = {}
-        
         # set initial values
         self.__populateStyleCombo()
         self.__populateLanguageCombo()
@@ -105,9 +103,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.tabsCloseButtonCheckBox.setChecked(
             Preferences.getUI("SingleCloseButton"))
         
-        self.uiColours["LogStdErrColour"] = \
-            self.initColour("LogStdErrColour", self.stderrTextColourButton,
-                Preferences.getUI)
+        self.initColour("LogStdErrColour", self.stderrTextColourButton,
+            Preferences.getUI)
         
     def save(self):
         """
@@ -181,8 +178,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Preferences.setUI("SingleCloseButton",
             self.tabsCloseButtonCheckBox.isChecked())
         
-        for key in list(self.uiColours.keys()):
-            Preferences.setUI(key, self.uiColours[key])
+        self.saveColours(Preferences.setUI)
         
     def __populateStyleCombo(self):
         """
@@ -258,15 +254,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Private method to reset layout to factory defaults
         """
         Preferences.resetLayout()
-        
-    @pyqtSlot()
-    def on_stderrTextColourButton_clicked(self):
-        """
-        Private slot to set the foreground colour of the caret.
-        """
-        self.uiColours["LogStdErrColour"] = \
-            self.selectColour(self.stderrTextColourButton,
-                self.uiColours["LogStdErrColour"])
     
 
 def create(dlg):

@@ -35,7 +35,6 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
-        self.helpColours = {}
         self.__displayMode = None
         
         # set initial values
@@ -51,9 +50,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
             .format(self.fixedFont.family(),
                     self.fixedFont.pointSize()))
         
-        self.helpColours["SaveUrlColor"] = \
-            self.initColour("SaveUrlColor", self.secureURLsColourButton,
-                            Preferences.getHelp)
+        self.initColour("SaveUrlColor", self.secureURLsColourButton,
+                         Preferences.getHelp)
         
         self.autoLoadImagesCheckBox.setChecked(Preferences.getHelp("AutoLoadImages"))
         
@@ -95,8 +93,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         Preferences.setHelp("UserStyleSheet", self.styleSheetEdit.text())
         
-        for key in list(self.helpColours.keys()):
-            Preferences.setHelp(key, self.helpColours[key])
+        self.saveColours(Preferences.setHelp)
         
         if self.__displayMode == ConfigurationWidget.HelpBrowserMode:
             Preferences.setUI("SingleCloseButton",
@@ -120,15 +117,6 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         self.fixedFont = \
             self.selectFont(self.fixedFontSample, self.fixedFont, True)
-    
-    @pyqtSlot()
-    def on_secureURLsColourButton_clicked(self):
-        """
-        Private slot to set the colour for secure URLs.
-        """
-        self.helpColours["SaveUrlColor"] = \
-            self.selectColour(self.secureURLsColourButton,
-                              self.helpColours["SaveUrlColor"])
     
     @pyqtSlot()
     def on_styleSheetButton_clicked(self):

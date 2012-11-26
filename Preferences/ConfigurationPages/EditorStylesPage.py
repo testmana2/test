@@ -47,8 +47,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QsciScintilla.EdgeBackground
         ]
         
-        self.editorColours = {}
-        
         # set initial values
         try:
             self.foldingStyleComboBox.setCurrentIndex(
@@ -83,40 +81,30 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.extentSelEolCheckBox.setChecked(
             Preferences.getEditor("ExtendSelectionToEol"))
         
-        self.editorColours["CaretForeground"] = \
-            self.initColour("CaretForeground", self.caretForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["CaretLineBackground"] = \
-            self.initColour("CaretLineBackground", self.caretlineBackgroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["SelectionForeground"] = \
-            self.initColour("SelectionForeground", self.selectionForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["SelectionBackground"] = \
-            self.initColour("SelectionBackground", self.selectionBackgroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["CurrentMarker"] = \
-            self.initColour("CurrentMarker", self.currentLineMarkerButton,
-                Preferences.getEditorColour)
-        self.editorColours["ErrorMarker"] = \
-            self.initColour("ErrorMarker", self.errorMarkerButton,
-                Preferences.getEditorColour)
-        self.editorColours["MarginsForeground"] = \
-            self.initColour("MarginsForeground", self.marginsForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["MarginsBackground"] = \
-            self.initColour("MarginsBackground", self.marginsBackgroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["FoldmarginBackground"] = \
-            self.initColour("FoldmarginBackground", self.foldmarginBackgroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["FoldMarkersForeground"] = \
-            self.initColour("FoldMarkersForeground", self.foldmarkersForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["FoldMarkersBackground"] = \
-            self.initColour("FoldMarkersBackground", self.foldmarkersBackgroundButton,
-                Preferences.getEditorColour)
+        self.initColour("CaretForeground", self.caretForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("CaretLineBackground", self.caretlineBackgroundButton,
+            Preferences.getEditorColour, hasAlpha=True)
+        self.initColour("SelectionForeground", self.selectionForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("SelectionBackground", self.selectionBackgroundButton,
+            Preferences.getEditorColour, hasAlpha=True)
+        self.initColour("CurrentMarker", self.currentLineMarkerButton,
+            Preferences.getEditorColour, hasAlpha=True)
+        self.initColour("ErrorMarker", self.errorMarkerButton,
+            Preferences.getEditorColour, hasAlpha=True)
+        self.initColour("MarginsForeground", self.marginsForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("MarginsBackground", self.marginsBackgroundButton,
+            Preferences.getEditorColour)
+        self.initColour("FoldmarginBackground", self.foldmarginBackgroundButton,
+            Preferences.getEditorColour)
+        self.initColour("FoldMarkersForeground", self.foldmarkersForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("FoldMarkersBackground", self.foldmarkersBackgroundButton,
+            Preferences.getEditorColour)
         
+        self.editorColours = {}
         self.editorColours["AnnotationsWarningForeground"] = \
             QColor(Preferences.getEditorColour("AnnotationsWarningForeground"))
         self.editorColours["AnnotationsWarningBackground"] = \
@@ -134,24 +122,19 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.edgeModes.index(Preferences.getEditor("EdgeMode")))
         self.edgeLineColumnSlider.setValue(
             Preferences.getEditor("EdgeColumn"))
-        self.editorColours["Edge"] = \
-            self.initColour("Edge", self.edgeBackgroundColorButton,
-                Preferences.getEditorColour)
+        self.initColour("Edge", self.edgeBackgroundColorButton,
+            Preferences.getEditorColour)
         
         self.bracehighlightingCheckBox.setChecked(
             Preferences.getEditor("BraceHighlighting"))
-        self.editorColours["MatchingBrace"] = \
-            self.initColour("MatchingBrace", self.matchingBracesButton,
-                Preferences.getEditorColour)
-        self.editorColours["MatchingBraceBack"] = \
-            self.initColour("MatchingBraceBack", self.matchingBracesBackButton,
-                Preferences.getEditorColour)
-        self.editorColours["NonmatchingBrace"] = \
-            self.initColour("NonmatchingBrace", self.nonmatchingBracesButton,
-                Preferences.getEditorColour)
-        self.editorColours["NonmatchingBraceBack"] = \
-            self.initColour("NonmatchingBraceBack", self.nonmatchingBracesBackButton,
-                Preferences.getEditorColour)
+        self.initColour("MatchingBrace", self.matchingBracesButton,
+            Preferences.getEditorColour)
+        self.initColour("MatchingBraceBack", self.matchingBracesBackButton,
+            Preferences.getEditorColour)
+        self.initColour("NonmatchingBrace", self.nonmatchingBracesButton,
+            Preferences.getEditorColour)
+        self.initColour("NonmatchingBraceBack", self.nonmatchingBracesBackButton,
+            Preferences.getEditorColour)
         
         self.zoomfactorSlider.setValue(
             Preferences.getEditor("ZoomFactor"))
@@ -160,12 +143,10 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             Preferences.getEditor("ShowWhitespace"))
         self.whitespaceSizeSpinBox.setValue(
             Preferences.getEditor("WhitespaceSize"))
-        self.editorColours["WhitespaceForeground"] = \
-            self.initColour("WhitespaceForeground", self.whitespaceForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["WhitespaceBackground"] = \
-            self.initColour("WhitespaceBackground", self.whitespaceBackgroundButton,
-                Preferences.getEditorColour)
+        self.initColour("WhitespaceForeground", self.whitespaceForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("WhitespaceBackground", self.whitespaceBackgroundButton,
+            Preferences.getEditorColour)
         if not hasattr(QsciScintilla, "setWhitespaceForegroundColor"):
             self.whitespaceSizeSpinBox.setEnabled(False)
             self.whitespaceForegroundButton.setEnabled(False)
@@ -179,25 +160,21 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         self.editAreaOverrideCheckBox.setChecked(
             Preferences.getEditor("OverrideEditAreaColours"))
-        self.editorColours["EditAreaForeground"] = \
-            self.initColour("EditAreaForeground", self.editAreaForegroundButton,
-                Preferences.getEditorColour)
-        self.editorColours["EditAreaBackground"] = \
-            self.initColour("EditAreaBackground", self.editAreaBackgroundButton,
-                Preferences.getEditorColour)
+        self.initColour("EditAreaForeground", self.editAreaForegroundButton,
+            Preferences.getEditorColour)
+        self.initColour("EditAreaBackground", self.editAreaBackgroundButton,
+            Preferences.getEditorColour)
         
         self.enableChangeTraceCheckBox.setChecked(
             Preferences.getEditor("OnlineChangeTrace"))
         self.changeTraceTimeoutSpinBox.setValue(
             Preferences.getEditor("OnlineChangeTraceInterval"))
-        self.editorColours["OnlineChangeTraceMarkerUnsaved"] = \
-            self.initColour("OnlineChangeTraceMarkerUnsaved",
-                self.changeMarkerUnsavedColorButton,
-                Preferences.getEditorColour)
-        self.editorColours["OnlineChangeTraceMarkerSaved"] = \
-            self.initColour("OnlineChangeTraceMarkerSaved",
-                self.changeMarkerSavedColorButton,
-                Preferences.getEditorColour)
+        self.initColour("OnlineChangeTraceMarkerUnsaved",
+            self.changeMarkerUnsavedColorButton,
+            Preferences.getEditorColour)
+        self.initColour("OnlineChangeTraceMarkerSaved",
+            self.changeMarkerSavedColorButton,
+            Preferences.getEditorColour)
     
     def save(self):
         """
@@ -266,6 +243,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         Preferences.setEditor("OnlineChangeTraceInterval",
             self.changeTraceTimeoutSpinBox.value())
         
+        self.saveColours(Preferences.setEditorColour)
         for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
         
@@ -290,149 +268,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         self.monospacedFont = \
             self.selectFont(self.monospacedFontSample, self.monospacedFont)
-        
-    @pyqtSlot()
-    def on_caretForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour of the caret.
-        """
-        self.editorColours["CaretForeground"] = \
-            self.selectColour(self.caretForegroundButton,
-                self.editorColours["CaretForeground"])
-        
-    @pyqtSlot()
-    def on_caretlineBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour of the caretline.
-        """
-        self.editorColours["CaretLineBackground"] = \
-            self.selectColour(self.caretlineBackgroundButton,
-                self.editorColours["CaretLineBackground"], True)
-        
-    @pyqtSlot()
-    def on_selectionForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour of the selection.
-        """
-        self.editorColours["SelectionForeground"] = \
-            self.selectColour(self.selectionForegroundButton,
-                self.editorColours["SelectionForeground"])
-        
-    @pyqtSlot()
-    def on_selectionBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour of the selection.
-        """
-        self.editorColours["SelectionBackground"] = \
-            self.selectColour(self.selectionBackgroundButton,
-                self.editorColours["SelectionBackground"], True)
-        
-    @pyqtSlot()
-    def on_currentLineMarkerButton_clicked(self):
-        """
-        Private slot to set the colour for the highlight of the current line.
-        """
-        self.editorColours["CurrentMarker"] = \
-            self.selectColour(self.currentLineMarkerButton,
-                self.editorColours["CurrentMarker"], True)
-        
-    @pyqtSlot()
-    def on_errorMarkerButton_clicked(self):
-        """
-        Private slot to set the colour for the highlight of the error line.
-        """
-        self.editorColours["ErrorMarker"] = \
-            self.selectColour(self.errorMarkerButton,
-                self.editorColours["ErrorMarker"], True)
-        
-    @pyqtSlot()
-    def on_marginsForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour for the margins.
-        """
-        self.editorColours["MarginsForeground"] = \
-            self.selectColour(self.marginsForegroundButton,
-                self.editorColours["MarginsForeground"])
-        
-    @pyqtSlot()
-    def on_marginsBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour for the margins.
-        """
-        self.editorColours["MarginsBackground"] = \
-            self.selectColour(self.marginsBackgroundButton,
-                self.editorColours["MarginsBackground"])
-        
-    @pyqtSlot()
-    def on_foldmarginBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour for the foldmargin.
-        """
-        self.editorColours["FoldmarginBackground"] = \
-            self.selectColour(self.foldmarginBackgroundButton,
-                self.editorColours["FoldmarginBackground"])
-        
-    @pyqtSlot()
-    def on_edgeBackgroundColorButton_clicked(self):
-        """
-        Private slot to set the colour for the edge background or line.
-        """
-        self.editorColours["Edge"] = \
-            self.selectColour(self.edgeBackgroundColorButton, self.editorColours["Edge"])
-        
-    @pyqtSlot()
-    def on_matchingBracesButton_clicked(self):
-        """
-        Private slot to set the colour for highlighting matching braces.
-        """
-        self.editorColours["MatchingBrace"] = \
-            self.selectColour(self.matchingBracesButton,
-                self.editorColours["MatchingBrace"])
-        
-    @pyqtSlot()
-    def on_matchingBracesBackButton_clicked(self):
-        """
-        Private slot to set the background colour for highlighting matching braces.
-        """
-        self.editorColours["MatchingBraceBack"] = \
-            self.selectColour(self.matchingBracesBackButton,
-                self.editorColours["MatchingBraceBack"])
-        
-    @pyqtSlot()
-    def on_nonmatchingBracesButton_clicked(self):
-        """
-        Private slot to set the colour for highlighting nonmatching braces.
-        """
-        self.editorColours["NonmatchingBrace"] = \
-            self.selectColour(self.nonmatchingBracesButton,
-                self.editorColours["NonmatchingBrace"])
-        
-    @pyqtSlot()
-    def on_nonmatchingBracesBackButton_clicked(self):
-        """
-        Private slot to set the background colour for highlighting nonmatching braces.
-        """
-        self.editorColours["NonmatchingBraceBack"] = \
-            self.selectColour(self.nonmatchingBracesBackButton,
-                self.editorColours["NonmatchingBraceBack"])
-        
-    @pyqtSlot()
-    def on_foldmarkersForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour for the foldmarkers.
-        """
-        self.editorColours["FoldMarkersForeground"] = \
-            self.selectColour(self.foldmarkersForegroundButton,
-                self.editorColours["FoldMarkersForeground"])
-        
-    @pyqtSlot()
-    def on_foldmarkersBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour for the margins.
-        """
-        self.editorColours["FoldMarkersBackground"] = \
-            self.selectColour(self.foldmarkersBackgroundButton,
-                self.editorColours["FoldMarkersBackground"])
         
     def polishPage(self):
         """
@@ -505,60 +340,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.annotationsErrorSample.setPalette(pl)
             self.annotationsErrorSample.repaint()
             self.editorColours["AnnotationsErrorBackground"] = colour
-    
-    @pyqtSlot()
-    def on_whitespaceForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour of visible whitespace.
-        """
-        self.editorColours["WhitespaceForeground"] = \
-            self.selectColour(self.whitespaceForegroundButton,
-                self.editorColours["WhitespaceForeground"])
-    
-    @pyqtSlot()
-    def on_whitespaceBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour of visible whitespace.
-        """
-        self.editorColours["WhitespaceBackground"] = \
-            self.selectColour(self.whitespaceBackgroundButton,
-                self.editorColours["WhitespaceBackground"])
-    
-    @pyqtSlot()
-    def on_editAreaForegroundButton_clicked(self):
-        """
-        Private slot to set the foreground colour of the edit area.
-        """
-        self.editorColours["EditAreaForeground"] = \
-            self.selectColour(self.editAreaForegroundButton,
-                self.editorColours["EditAreaForeground"])
-        
-    @pyqtSlot()
-    def on_editAreaBackgroundButton_clicked(self):
-        """
-        Private slot to set the background colour of the edit area.
-        """
-        self.editorColours["EditAreaBackground"] = \
-            self.selectColour(self.editAreaBackgroundButton,
-                self.editorColours["EditAreaBackground"])
-    
-    @pyqtSlot()
-    def on_changeMarkerUnsavedColorButton_clicked(self):
-        """
-        Private slot to set the colour of the change marker for unsaved changes.
-        """
-        self.editorColours["OnlineChangeTraceMarkerUnsaved"] = \
-            self.selectColour(self.changeMarkerUnsavedColorButton,
-                self.editorColours["OnlineChangeTraceMarkerUnsaved"])
-    
-    @pyqtSlot()
-    def on_changeMarkerSavedColorButton_clicked(self):
-        """
-        Private slot to set the colour of the change marker for saved changes.
-        """
-        self.editorColours["OnlineChangeTraceMarkerSaved"] = \
-            self.selectColour(self.changeMarkerSavedColorButton,
-                self.editorColours["OnlineChangeTraceMarkerSaved"])
 
 
 def create(dlg):

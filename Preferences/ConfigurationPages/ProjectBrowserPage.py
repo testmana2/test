@@ -33,7 +33,6 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         self.setupUi(self)
         self.setObjectName("ProjectBrowserPage")
         
-        self.projectBrowserColours = {}
         self.__currentProjectTypeIndex = 0
         
         # set initial values
@@ -49,9 +48,8 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         except KeyError:
             self.pbGroup.setEnabled(False)
         
-        self.projectBrowserColours["Highlighted"] = \
-            self.initColour("Highlighted", self.pbHighlightedButton,
-                Preferences.getProjectBrowserColour)
+        self.initColour("Highlighted", self.pbHighlightedButton,
+            Preferences.getProjectBrowserColour)
         
         self.followEditorCheckBox.setChecked(
             Preferences.getProject("FollowEditor"))
@@ -62,8 +60,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         """
         Public slot to save the Project Browser configuration.
         """
-        for key in list(self.projectBrowserColours.keys()):
-            Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])
+        self.saveColours(Preferences.setProjectBrowserColour)
         
         Preferences.setProject("FollowEditor",
             self.followEditorCheckBox.isChecked())
@@ -77,16 +74,6 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
                 if projectType != '':
                     Preferences.setProjectBrowserFlags(projectType, flags)
         
-    @pyqtSlot()
-    def on_pbHighlightedButton_clicked(self):
-        """
-        Private slot to set the colour for highlighted entries of the
-        project others browser.
-        """
-        self.projectBrowserColours["Highlighted"] = \
-            self.selectColour(self.pbHighlightedButton,
-                self.projectBrowserColours["Highlighted"])
-    
     def __storeProjectBrowserFlags(self, projectType):
         """
         Private method to store the flags for the selected project type.

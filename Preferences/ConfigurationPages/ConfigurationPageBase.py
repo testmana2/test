@@ -7,6 +7,7 @@
 Module implementing the base class for all configuration pages.
 """
 
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, QFontDialog
 
 
@@ -19,6 +20,8 @@ class ConfigurationPageBase(QWidget):
         Constructor
         """
         super().__init__()
+        
+        self.__coloursDict = {}
         
     def polishPage(self):
         """
@@ -40,66 +43,59 @@ class ConfigurationPageBase(QWidget):
         """
         return
         
-    def initColour(self, colourstr, button, prefMethod):
+    def initColour(self, colourKey, button, prefMethod, byName=False, hasAlpha=False):
         """
         Public method to initialize a colour selection button.
         
-        @param colourstr colour to be set (string)
+        @param colourKey key of the colour resource (string)
         @param button reference to a button to show the colour on (QPushButton)
         @param prefMethod preferences method to get the colour
-        @return reference to the created colour (QColor)
+        @keyparam byName flag indicating to retrieve/save by colour name (boolean)
+        @keyparam hasAlpha flag indicating to allow alpha channel (boolean)
         """
-        colour = QColor(prefMethod(colourstr))
+        colour = QColor(prefMethod(colourKey))
         size = button.size()
         pm = QPixmap(size.width() / 2, size.height() / 2)
         pm.fill(colour)
         button.setIconSize(pm.size())
         button.setIcon(QIcon(pm))
-        return colour
+        button.setProperty("colorKey", colourKey)
+        button.setProperty("hasAlpha", hasAlpha)
+        button.clicked[()].connect(self.__selectColourSlot)
+        self.__coloursDict[colourKey] = [colour, byName]
         
-    def initColour2(self, colourDict, colourstr, button, prefMethod, selectSlot):
+    @pyqtSlot()
+    def __selectColourSlot(self):
         """
-        Public method to initialize a colour selection button.
+        Private slot to select a color.
+        """
+        button = self.sender()
+        colorKey = button.property("colorKey")
+        hasAlpha = button.property("hasAlpha")
         
-        @param colourDict reference to the dictionary storing the colors
-        @param colourstr colour to be set (string)
-        @param button reference to a button to show the colour on (QPushButton)
-        @param prefMethod preferences method to get the colour
-        @param selectSlot method to select the color
-        """
-        colour = QColor(prefMethod(colourstr))
-        size = button.size()
-        pm = QPixmap(size.width() / 2, size.height() / 2)
-        pm.fill(colour)
-        button.setIconSize(pm.size())
-        button.setIcon(QIcon(pm))
-        button.setProperty("colorName", colourstr)
-        button.clicked[()].connect(selectSlot)
-        colourDict[colourstr] = colour
-        
-    def selectColour(self, button, colourVar, showAlpha=False):
-        """
-        Public method used by the colour selection buttons.
-        
-        @param button reference to a button to show the colour on (QPushButton)
-        @param colourVar reference to the variable containing the colour (QColor)
-        @param showAlpha flag indicating to show a selection for the alpha
-            channel (boolean)
-        @return selected colour (QColor)
-        """
-        if showAlpha:
-            colour = QColorDialog.getColor(colourVar, None, "",
+        if hasAlpha:
+            colour = QColorDialog.getColor(self.__coloursDict[colorKey][0], None, "",
                 QColorDialog.ShowAlphaChannel)
         else:
-            colour = QColorDialog.getColor(colourVar)
+            colour = QColorDialog.getColor(self.__coloursDict[colorKey][0])
         if colour.isValid():
             size = button.iconSize()
             pm = QPixmap(size.width(), size.height())
             pm.fill(colour)
             button.setIcon(QIcon(pm))
-        else:
-            colour = colourVar
-        return colour
+            self.__coloursDict[colorKey][0] = colour
+        
+    def saveColours(self, prefMethod):
+        """
+        Public method to save the colour selections.
+        
+        @param prefMethod preferences method to set the colour
+        """
+        for key in self.__coloursDict:
+            if self.__coloursDict[key][1]:
+                prefMethod(key, self.__coloursDict[key][0].name())
+            else:
+                prefMethod(key, self.__coloursDict[key][0])
         
     def selectFont(self, fontSample, fontVar, showFontInfo=False):
         """
