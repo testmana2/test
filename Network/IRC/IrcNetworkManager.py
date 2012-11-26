@@ -19,6 +19,8 @@ class IrcIdentity(QObject):
     """
     Class implementing the IRC identity object.
     """
+    DefaultIdentityName = "0default"
+    
     def __init__(self, name, parent=None):
         """
         Constructor
@@ -458,35 +460,43 @@ class IrcNetworkManager(QObject):
             # data structures got corrupted; load defaults
             self.__loadDefaults()
         
+        if IrcIdentity.DefaultIdentityName not in self.__identities:
+            self.__loadDefaults(identityOnly=True)
+        
         self.__loaded = True
     
-    def __loadDefaults(self):
+    def __loadDefaults(self, identityOnly=False):
         """
         Private method to load default values.
+        
+        @param identityOnly flag indicating to just load the default
+            identity (boolean)
         """
-        self.__networks = {}
-        self.__identities = {}
-        self.__servers = {}
+        if not identityOnly:
+            self.__networks = {}
+            self.__identities = {}
+            self.__servers = {}
         
         # identity
         userName = Utilities.getUserName()
-        identity = IrcIdentity(userName, self)
+        identity = IrcIdentity(IrcIdentity.DefaultIdentityName, self)
         identity.setNickNames([userName, userName + "_", userName + "__"])
-        self.__identities[userName] = identity
+        self.__identities[IrcIdentity.DefaultIdentityName] = identity
         
-        # server
-        serverName = "chat.freenode.net"
-        server = IrcServer(serverName, self)
-        server.setPort(8001)
-        self.__servers[serverName] = server
-        
-        # network
-        networkName = "Freenode"
-        network = IrcNetwork(networkName, self)
-        network.setIdentityName(userName)
-        network.setServerName(serverName)
-        network.setChannels(["#eric-ide"])
-        self.__networks[networkName] = network
+        if not identityOnly:
+            # server
+            serverName = "chat.freenode.net"
+            server = IrcServer(serverName, self)
+            server.setPort(8001)
+            self.__servers[serverName] = server
+            
+            # network
+            networkName = "Freenode"
+            network = IrcNetwork(networkName, self)
+            network.setIdentityName(IrcIdentity.DefaultIdentityName)
+            network.setServerName(serverName)
+            network.setChannels(["#eric-ide"])
+            self.__networks[networkName] = network
         
         self.dataChanged.emit()
     
@@ -516,6 +526,51 @@ class IrcNetworkManager(QObject):
             return id
         else:
             return None
+    
+    def getIdentityNames(self):
+        """
+        Public method to get the names of all identities.
+        
+        @return names of all identities (list of string)
+        """
+        return list(self.__identities.keys())
+    
+    def addIdentity(self, identity):
+        """
+        Public method to add a new identity.
+        
+        @param identity reference to the identity to add (IrcIdentity)
+        """
+        name = identity.getName()
+        self.__identities[name] = identity
+        self.dataChanged.emit()
+    
+    def deleteIdentity(self, name):
+        """
+        Public method to delete the given identity.
+        
+        @param name name of the identity to delete (string)
+        """
+        if name in self.__identities and name != IrcIdentity.DefaultIdentityName:
+            del self.__identities[name]
+            self.dataChanged.emit()
+    
+    def renameIdentity(self, oldName, newName):
+        """
+        Public method to rename an identity.
+        
+        @param oldName old name of the identity (string)
+        @param newName new name of the identity (string)
+        """
+        if oldName in self.__identities:
+            self.__identities[newName] = self.__identities[oldName] 
+            del self.__identities[oldName]
+            
+            for network in self.__networks:
+                if network.getIdentityName() == oldName:
+                    network.setIdentityName(newName)
+            
+            self.dataChanged.emit()
     
     def identityChanged(self):
         """
