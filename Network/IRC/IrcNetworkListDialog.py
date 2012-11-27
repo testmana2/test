@@ -1,0 +1,138 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing a dialog to list the configured IRC networks.
+"""
+
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QTreeWidgetItem
+
+from E5Gui import E5MessageBox
+
+from .Ui_IrcNetworkListDialog import Ui_IrcNetworkListDialog
+
+from .IrcNetworkManager import IrcIdentity
+
+
+class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
+    """
+    Class implementing a dialog to list the configured IRC networks.
+    """
+    def __init__(self, manager, parent=None):
+        """
+        Constructor
+        
+        @param manager reference to the IRC network manager (IrcNetworkManager)
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__(parent)
+        self.setupUi(self)
+        
+        self.__manager = manager
+        
+        networkNames = self.__manager.getNetworkNames()
+        for networkName in networkNames:
+            topitm = QTreeWidgetItem(self.networksList, [networkName])
+            network = self.__manager.getNetwork(networkName)
+            server = self.__manager.getServer(network.getServerName())
+            identityName = network.getIdentityName()
+            if identityName == IrcIdentity.DefaultIdentityName:
+                identityName = IrcIdentity.DefaultIdentityDisplay
+            QTreeWidgetItem(topitm,
+                [self.trUtf8("Identity"), identityName])
+            QTreeWidgetItem(topitm,
+                [self.trUtf8("Server"), "{0}:{1}".format(
+                 server.getServer(), server.getPort())])
+            QTreeWidgetItem(topitm,
+                [self.trUtf8("Channels"), ", ".join(network.getChannels())])
+            if network.autoJoinChannels():
+                autoJoin = self.trUtf8("Yes")
+            else:
+                autoJoin = self.trUtf8("No")
+            QTreeWidgetItem(topitm,
+                [self.trUtf8("Auto-join Channels"), autoJoin])
+            topitm.setExpanded(True)
+        self.__resizeColumns()
+        
+        self.__checkButtons()
+
+    def __resizeColumns(self):
+        """
+        Private slot to resize all columns to their contents.
+        """
+        for col in range(self.networksList.columnCount()):
+            self.networksList.resizeColumnToContents(col)
+    
+    def __checkButtons(self):
+        """
+        Public slot to set the enabled state of the buttons.
+        """
+        enable = True
+        selectedItems = self.networksList.selectedItems()
+        if len(selectedItems) == 0:
+            enable = False
+        else:
+            for itm in selectedItems:
+                enable &= itm.parent() is None
+        
+        self.editButton.setEnabled(enable)
+        self.deleteButton.setEnabled(enable)
+    
+    @pyqtSlot()
+    def on_networksList_itemSelectionChanged(self):
+        """
+        Slot documentation goes here.
+        """
+        self.__checkButtons()
+    
+    @pyqtSlot()
+    def on_newButton_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot()
+    def on_editButton_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot()
+    def on_deleteButton_clicked(self):
+        """
+        Private slot to delete the selected entry.
+        """
+        itm = self.networksList.selectedItems()[0]
+        if itm.parent() is None:
+            networkName = itm.text(0)
+            res = E5MessageBox.yesNo(self,
+                self.trUtf8("Delete Irc Network"),
+                self.trUtf8("""Do you really want to delete  IRC network <b>{0}</b>?""")\
+                    .format(networkName))
+            if res:
+                index = self.networksList.indexOfTopLevelItem(itm)
+                self.networksList.takeTopLevelItem(index)
+                del itm
+                
+                self.__manager.deleteNetwork(networkName)
+    
+    @pyqtSlot(QTreeWidgetItem)
+    def on_networksList_itemExpanded(self, item):
+        """
+        Private slot handling the expansion of a top level item.
+        """
+        self.__resizeColumns()
+    
+    @pyqtSlot(QTreeWidgetItem)
+    def on_networksList_itemCollapsed(self, item):
+        """
+        Private slot handling the collapse of a top level item.
+        """
+        self.__resizeColumns()

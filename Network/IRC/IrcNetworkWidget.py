@@ -58,6 +58,25 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.__manager = manager
         
         self.networkCombo.addItems(self.__manager.getNetworkNames())
+        
+        self.__manager.networksChanged.connect(self.__refreshNetworks)
+    
+    @pyqtSlot()
+    def __refreshNetworks(self):
+        """
+        Private slot to refresh all network related widgets.
+        """
+        currentNetwork = self.networkCombo.currentText()
+##        currentNick = self.nickCombo.currentText()
+##        currentChannel = self.channelCombo.currentText()
+        self.networkCombo.clear()
+        self.networkCombo.addItems(self.__manager.getNetworkNames())
+        row = self.networkCombo.findText(currentNetwork)
+        if row == -1:
+            row = 0
+        self.networkCombo.setCurrentIndex(row)
+##        self.nickCombo.setEditText(currentNick)
+##        self.channelCombo.setEditText(currentChannel)
     
     @pyqtSlot()
     def on_connectButton_clicked(self):
@@ -102,6 +121,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         network = self.__manager.getNetwork(networkName)
         self.channelCombo.clear()
+        self.nickCombo.clear()
+        self.channelCombo.clear()
         if network:
             channels = network.getChannels()
             self.channelCombo.addItems(channels)
@@ -110,8 +131,10 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 network.getIdentityName())
             if identity:
                 self.nickCombo.addItems(identity.getNickNames())
+            self.nickCombo.setEnabled(True)
         else:
             self.channelCombo.setEnabled(False)
+            self.nickCombo.setEnabled(False)
     
     @pyqtSlot(str)
     def on_nickCombo_activated(self, nick):

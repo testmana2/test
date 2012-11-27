@@ -7,7 +7,7 @@
 Module implementing the IRC data structures and their manager.
 """
 
-from PyQt4.QtCore import pyqtSignal, QObject
+from PyQt4.QtCore import pyqtSignal, QObject, QCoreApplication
 
 import Utilities
 from Utilities.AutoSaver import AutoSaver
@@ -20,6 +20,7 @@ class IrcIdentity(QObject):
     Class implementing the IRC identity object.
     """
     DefaultIdentityName = "0default"
+    DefaultIdentityDisplay = QCoreApplication.translate("IrcIdentity", "Default Identity")
     
     def __init__(self, name, parent=None):
         """
@@ -351,8 +352,12 @@ class IrcNetwork(QObject):
 class IrcNetworkManager(QObject):
     """
     Class implementing the IRC identity object.
+    
+    @signal dataChanged() emitted after some data has changed
+    @signal networksChanged() emitted after a network object has changed
     """
     dataChanged = pyqtSignal()
+    networksChanged = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -543,7 +548,7 @@ class IrcNetworkManager(QObject):
         """
         name = identity.getName()
         self.__identities[name] = identity
-        self.dataChanged.emit()
+        self.identityChanged()
     
     def deleteIdentity(self, name):
         """
@@ -553,7 +558,7 @@ class IrcNetworkManager(QObject):
         """
         if name in self.__identities and name != IrcIdentity.DefaultIdentityName:
             del self.__identities[name]
-            self.dataChanged.emit()
+            self.identityChanged()
     
     def renameIdentity(self, oldName, newName):
         """
@@ -570,7 +575,7 @@ class IrcNetworkManager(QObject):
                 if network.getIdentityName() == oldName:
                     network.setIdentityName(newName)
             
-            self.dataChanged.emit()
+            self.identityChanged()
     
     def identityChanged(self):
         """
@@ -658,11 +663,22 @@ class IrcNetworkManager(QObject):
         
         return network
     
+    def deleteNetwork(self, name):
+        """
+        Public method to delete the given network.
+        
+        @param name name of the network to delete (string)
+        """
+        if name in self.__networks:
+            del self.__networks[name]
+            self.networkChanged()
+    
     def networkChanged(self):
         """
         Public method to indicate a change of a network object.
         """
         self.dataChanged.emit()
+        self.networksChanged.emit()
     
     def getNetworkNames(self):
         """

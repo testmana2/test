@@ -20,6 +20,7 @@ from .Ui_IrcWidget import Ui_IrcWidget
 
 from .IrcNetworkManager import IrcNetworkManager
 from .IrcChannelWidget import IrcChannelWidget
+from .IrcNetworkListDialog import IrcNetworkListDialog
 
 import Preferences
 import UI.PixmapCache
@@ -125,14 +126,16 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         if connect:
             network = self.__ircNetworkManager.getNetwork(name)
-            self.__server = self.__ircNetworkManager.getServer(network.getServerName())
-            self.__userName = network.getIdentityName()
-            if self.__server:
-                self.networkWidget.addServerMessage(self.trUtf8("Info"),
-                    self.trUtf8("Looking for server {0} (port {1})...").format(
-                        self.__server.getServer(), self.__server.getPort()))
-                self.__socket.connectToHost(self.__server.getServer(),
-                                            self.__server.getPort())
+            if network:
+                self.__server = self.__ircNetworkManager.getServer(
+                    network.getServerName())
+                self.__userName = network.getIdentityName()
+                if self.__server:
+                    self.networkWidget.addServerMessage(self.trUtf8("Info"),
+                        self.trUtf8("Looking for server {0} (port {1})...").format(
+                            self.__server.getServer(), self.__server.getPort()))
+                    self.__socket.connectToHost(self.__server.getServer(),
+                                                self.__server.getPort())
         else:
             ok = E5MessageBox.yesNo(self,
                 self.trUtf8("Disconnect from Server"),
@@ -158,6 +161,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         @param name name of the network to edit (string)
         """
         # TODO: implement this
+        dlg = IrcNetworkListDialog(self.__ircNetworkManager, self)
+        dlg.exec_()
     
     def __joinChannel(self, name):
         """
