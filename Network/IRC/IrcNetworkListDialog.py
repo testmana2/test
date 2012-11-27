@@ -15,6 +15,7 @@ from E5Gui import E5MessageBox
 from .Ui_IrcNetworkListDialog import Ui_IrcNetworkListDialog
 
 from .IrcNetworkManager import IrcIdentity
+from .IrcNetworkEditDialog import IrcNetworkEditDialog
 
 
 class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
@@ -84,7 +85,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     @pyqtSlot()
     def on_networksList_itemSelectionChanged(self):
         """
-        Slot documentation goes here.
+        Privat slot to handle changes of the selection of networks.
         """
         self.__checkButtons()
     
@@ -99,10 +100,15 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     @pyqtSlot()
     def on_editButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to edit the selected network.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        itm = self.networksList.selectedItems()[0]
+        if itm:
+            networkName = itm.text(0)
+            dlg = IrcNetworkEditDialog(self.__manager, networkName, self)
+            if dlg.exec_() == QDialog.Accepted:
+                pass
+                # TODO: not implemented yet
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):
