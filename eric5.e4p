@@ -1064,6 +1064,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Preferences/ConfigurationPages/IrcPage.py</Source>
     <Source>Network/IRC/IrcNetworkListDialog.py</Source>
     <Source>Network/IRC/IrcNetworkEditDialog.py</Source>
+    <Source>Network/IRC/IrcChannelEditDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1374,6 +1375,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Preferences/ConfigurationPages/IrcPage.ui</Form>
     <Form>Network/IRC/IrcNetworkListDialog.ui</Form>
     <Form>Network/IRC/IrcNetworkEditDialog.ui</Form>
+    <Form>Network/IRC/IrcChannelEditDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

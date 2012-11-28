@@ -15,21 +15,20 @@ from Utilities.crypto import pwConvert
 import Preferences
 
 
-class IrcIdentity(QObject):
+class IrcIdentity(object):
     """
     Class implementing the IRC identity object.
     """
     DefaultIdentityName = "0default"
     DefaultIdentityDisplay = QCoreApplication.translate("IrcIdentity", "Default Identity")
     
-    def __init__(self, name, parent=None):
+    def __init__(self, name):
         """
         Constructor
         
         @param name name of the identity (string)
-        @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super().__init__()
         
         self.__name = name
         self.__realName = ""
@@ -133,20 +132,19 @@ class IrcIdentity(QObject):
         return pwConvert(self.__password, encode=False)
 
 
-class IrcServer(QObject):
+class IrcServer(object):
     """
     Class implementing the IRC identity object.
     """
     DefaultPort = 6667
     
-    def __init__(self, name, parent=None):
+    def __init__(self, name):
         """
         Constructor
         
         @param name name of the server (string)
-        @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super().__init__()
         
         self.__server = name
         self.__port = IrcServer.DefaultPort
@@ -231,18 +229,17 @@ class IrcServer(QObject):
         return pwConvert(self.__password, encode=False)
 
 
-class IrcChannel(QObject):
+class IrcChannel(object):
     """
     Class implementing the IRC channel object.
     """
-    def __init__(self, name, parent=None):
+    def __init__(self, name):
         """
         Constructor
         
         @param name name of the network (string)
-        @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super().__init__()
         
         self.__name = name
         self.__key = ""
@@ -310,18 +307,17 @@ class IrcChannel(QObject):
         self.__autoJoin = enable
 
 
-class IrcNetwork(QObject):
+class IrcNetwork(object):
     """
     Class implementing the IRC network object.
     """
-    def __init__(self, name, parent=None):
+    def __init__(self, name):
         """
         Constructor
         
         @param name name of the network (string)
-        @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super().__init__()
         
         self.__name = name
         self.__identity = ""
@@ -354,7 +350,7 @@ class IrcNetwork(QObject):
         self.__server = settings.value("Server", "")
         settings.beginGroup("Channels")
         for key in self.__channels:
-            self.__channels[key] = IrcChannel(key, self)
+            self.__channels[key] = IrcChannel(key)
             settings.beginGroup(key)
             self.__channels[key].load(settings)
             settings.endGroup()
@@ -446,7 +442,6 @@ class IrcNetwork(QObject):
         """
         channelName = channel.getName()
         if channelName in self.__channels:
-            channel.setParent(self)
             self.__channels[channelName] = channel
     
     def addChannel(self, channel):
@@ -457,7 +452,6 @@ class IrcNetwork(QObject):
         """
         channelName = channel.getName()
         if channelName not in self.__channels:
-            channel.setParent(self)
             self.__channels[channelName] = channel
 
 
@@ -545,7 +539,7 @@ class IrcNetworkManager(QObject):
         # identities
         self.__settings.beginGroup("Identities")
         for key in self.__settings.childKeys():
-            self.__identities[key] = IrcIdentity(key, self)
+            self.__identities[key] = IrcIdentity(key)
             self.__settings.beginGroup(key)
             self.__identities[key].load(self.__settings)
             self.__settings.endGroup()
@@ -554,7 +548,7 @@ class IrcNetworkManager(QObject):
         # servers
         self.__settings.beginGroup("Servers")
         for key in self.__settings.childKeys():
-            self.__servers[key] = IrcServer(key, self)
+            self.__servers[key] = IrcServer(key)
             self.__settings.beginGroup(key)
             self.__servers[key].load(self.__settings)
             self.__settings.endGroup()
@@ -563,7 +557,7 @@ class IrcNetworkManager(QObject):
         # networks
         self.__settings.beginGroup("Networks")
         for key in self.__settings.childKeys():
-            self.__networks[key] = IrcNetwork(key, self)
+            self.__networks[key] = IrcNetwork(key)
             self.__settings.beginGroup(key)
             self.__networks[key].load(self.__settings)
             self.__settings.endGroup()
@@ -596,23 +590,23 @@ class IrcNetworkManager(QObject):
         
         # identity
         userName = Utilities.getUserName()
-        identity = IrcIdentity(IrcIdentity.DefaultIdentityName, self)
+        identity = IrcIdentity(IrcIdentity.DefaultIdentityName)
         identity.setNickNames([userName, userName + "_", userName + "__"])
         self.__identities[IrcIdentity.DefaultIdentityName] = identity
         
         if not identityOnly:
             # server
             serverName = "chat.freenode.net"
-            server = IrcServer(serverName, self)
+            server = IrcServer(serverName)
             server.setPort(8001)
             self.__servers[serverName] = server
             
             # network
             networkName = "Freenode"
-            network = IrcNetwork(networkName, self)
+            network = IrcNetwork(networkName)
             network.setIdentityName(IrcIdentity.DefaultIdentityName)
             network.setServerName(serverName)
-            channel = IrcChannel("#eric-ide", network)
+            channel = IrcChannel("#eric-ide")
             channel.setAutoJoin(False)
             network.addChannel(channel)
             self.__networks[networkName] = network
@@ -637,7 +631,7 @@ class IrcNetworkManager(QObject):
         if name in self.__identities:
             return self.__identities[name]
         elif create:
-            id = IrcIdentity(name, self)
+            id = IrcIdentity(name)
             self.__identities[name] = id
             
             self.dataChanged.emit()
@@ -697,6 +691,7 @@ class IrcNetworkManager(QObject):
         """
         self.dataChanged.emit()
     
+    # TODO: move server to network because it belongs there
     def getServer(self, name, create=False):
         """
         Public method to get a server object.
@@ -715,7 +710,7 @@ class IrcNetworkManager(QObject):
         if name in self.__servers:
             return self.__servers[name]
         elif create:
-            server = IrcServer(name, self)
+            server = IrcServer(name)
             self.__servers[name] = server
             
             self.dataChanged.emit()
@@ -756,6 +751,7 @@ class IrcNetworkManager(QObject):
         else:
             return None
     
+    # TODO: check, if this method is needed
     def createNetwork(self, name, identity, server, channels=None):
         """
         Public method to create a new network object.
