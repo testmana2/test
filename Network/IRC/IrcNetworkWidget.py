@@ -45,6 +45,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
         self.editButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
         self.joinButton.setIcon(UI.PixmapCache.getIcon("ircJoinChannel.png"))
+        self.joinButton.setEnabled(False)
         
         self.__manager = None
         self.__connected = False
@@ -101,7 +102,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         
         @param txt current text of the channel combo (string)
         """
-        on = bool(txt)
+        on = bool(txt) and self.__connected
         self.joinButton.setEnabled(on)
     
     @pyqtSlot()
@@ -124,7 +125,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.nickCombo.clear()
         self.channelCombo.clear()
         if network:
-            channels = network.getChannels()
+            channels = network.getChannelNames()
             self.channelCombo.addItems(channels)
             self.channelCombo.setEnabled(True)
             identity = self.__manager.getIdentity(
@@ -135,6 +136,17 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         else:
             self.channelCombo.setEnabled(False)
             self.nickCombo.setEnabled(False)
+    
+    def getNetworkChannels(self):
+        """
+        Public method to get the list of channels associated with the
+        selected network.
+        
+        @return associated channels (list of IrcChannel)
+        """
+        networkName = self.networkCombo.currentText()
+        network = self.__manager.getNetwork(networkName)
+        return network.getChannels()
     
     @pyqtSlot(str)
     def on_nickCombo_activated(self, nick):
@@ -221,3 +233,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircDisconnect.png"))
         else:
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
+        
+        on = bool(self.channelCombo.currentText()) and self.__connected
+        self.joinButton.setEnabled(on)

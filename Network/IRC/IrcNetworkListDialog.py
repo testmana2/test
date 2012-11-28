@@ -48,13 +48,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
                 [self.trUtf8("Server"), "{0}:{1}".format(
                  server.getServer(), server.getPort())])
             QTreeWidgetItem(topitm,
-                [self.trUtf8("Channels"), ", ".join(network.getChannels())])
-            if network.autoJoinChannels():
-                autoJoin = self.trUtf8("Yes")
-            else:
-                autoJoin = self.trUtf8("No")
-            QTreeWidgetItem(topitm,
-                [self.trUtf8("Auto-join Channels"), autoJoin])
+                [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
             topitm.setExpanded(True)
         self.__resizeColumns()
         

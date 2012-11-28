@@ -231,9 +231,88 @@ class IrcServer(QObject):
         return pwConvert(self.__password, encode=False)
 
 
+class IrcChannel(QObject):
+    """
+    Class implementing the IRC channel object.
+    """
+    def __init__(self, name, parent=None):
+        """
+        Constructor
+        
+        @param name name of the network (string)
+        @param parent reference to the parent object (QObject)
+        """
+        super().__init__(parent)
+        
+        self.__name = name
+        self.__key = ""
+        self.__autoJoin = False
+    
+    def save(self, settings):
+        """
+        Public method to save the channel data.
+        
+        @param settings reference to the settings object (QSettings)
+        """
+        # no need to save the channel name because that is the group key
+        settings.setValue("Key", self.__key)
+        settings.setValue("AutoJoin", self.__autoJoin)
+    
+    def load(self, settings):
+        """
+        Public method to load the network data.
+        
+        @param settings reference to the settings object (QSettings)
+        """
+        self.__key = settings.value("Key", "")
+        self.__autoJoin = Preferences.toBool(settings.value("AutoJoin"), False)
+    
+    def getName(self):
+        """
+        Public method to get the channel name.
+        
+        @return channel name (string)
+        """
+        return self.__name
+    
+    def setKey(self, key):
+        """
+        Public method to set a new channel key.
+        
+        @param key channel key to set (string)
+        """
+        self.__key = pwConvert(key, encode=True)
+    
+    def getKey(self):
+        """
+        Public method to get the channel key.
+        
+        @return channel key (string)
+        """
+        return pwConvert(self.__key, encode=False)
+    
+    def autoJoin(self):
+        """
+        Public method to check the auto join status.
+        
+        @return flag indicating if the channel should be 
+            joined automatically (boolean)
+        """
+        return self.__autoJoin
+    
+    def setAutoJoin(self, enable):
+        """
+        Public method to set the auto join status of the channel.
+        
+        @param enable flag indicating if the channel should be 
+            joined automatically (boolean)
+        """
+        self.__autoJoin = enable
+
+
 class IrcNetwork(QObject):
     """
-    Class implementing the IRC identity object.
+    Class implementing the IRC network object.
     """
     def __init__(self, name, parent=None):
         """
@@ -247,8 +326,7 @@ class IrcNetwork(QObject):
         self.__name = name
         self.__identity = ""
         self.__server = ""
-        self.__channels = []
-        self.__autoJoinChannels = False
+        self.__channels = {}
     
     def save(self, settings):
         """
@@ -259,8 +337,12 @@ class IrcNetwork(QObject):
         # no need to save the network name because that is the group key
         settings.setValue("Identity", self.__identity)
         settings.setValue("Server", self.__server)
-        settings.setValue("Channels", self.__channels)
-        settings.setValue("AutoJoinChannels", self.__autoJoinChannels)
+        settings.beginGroup("Channels")
+        for key in self.__channels:
+            settings.beginGroup(key)
+            self.__channels[key].save(settings)
+            settings.endGroup()
+        settings.endGroup()
     
     def load(self, settings):
         """
@@ -270,9 +352,13 @@ class IrcNetwork(QObject):
         """
         self.__identity = settings.value("Identity", "")
         self.__server = settings.value("Server", "")
-        self.__channels = Preferences.toList(settings.value("Channels", []))
-        self.__autoJoinChannels = Preferences.toBool(
-            settings.value("AutoJoinChannels", False))
+        settings.beginGroup("Channels")
+        for key in self.__channels:
+            self.__channels[key] = IrcChannel(key, self)
+            settings.beginGroup(key)
+            self.__channels[key].load(settings)
+            settings.endGroup()
+        settings.endGroup()
     
     def getName(self):
         """
@@ -318,35 +404,61 @@ class IrcNetwork(QObject):
         """
         Public method to set the list of channels.
         
-        @param channels list of channels (list of string)
+        @param channels list of channels for the network (list of IrcChannel)
         """
-        self.__channels = channels[:]
+        self.__channels = {}
+        for channel in channels:
+            self.__channels[channel.getName()] = channel
     
     def getChannels(self):
         """
+        Public method to get the channels.
+        
+        @return list of channels for the network (list of IrcChannel)
+        """
+        return list(self.__channels.values())
+    
+    def getChannelNames(self):
+        """
         Public method to get the list of channels.
         
-        @return list of channels (list of string)
+        @return list of channel names (list of string)
         """
-        return self.__channels[:]
+        return list(sorted(self.__channels.keys()))
     
-    def setAutoJoinChannels(self, on):
+    def getChannel(self, channelName):
         """
-        Public method to enable channel auto joining.
+        Public method to get a channel.
         
-        @param on flag indicating to join the channels after connecting
-            to the server (boolean)
+        @param channelName name of the channel to retrieve (string)
+        @return reference to the channel (IrcChannel)
         """
-        self.__autoJoinChannels = on
+        if channelName in self.__channels:
+            return self.__channels[channelName]
+        else:
+            return None
     
-    def autoJoinChannels(self):
+    def setChannel(self, channel):
         """
-        Public method to check, if channel auto joining is enabled.
+        Public method to set a channel.
         
-        @return flag indicating to join the channels after connecting
-            to the server (boolean)
+        @param channel channel object to set (IrcChannel)
         """
-        return self.__autoJoinChannels
+        channelName = channel.getName()
+        if channelName in self.__channels:
+            channel.setParent(self)
+            self.__channels[channelName] = channel
+    
+    def addChannel(self, channel):
+        """
+        Public method to add a channel.
+        
+        @param channel channel object to add (IrcChannel)
+        """
+        channelName = channel.getName()
+        if channelName not in self.__channels:
+            channel.setParent(self)
+            self.__channels[channelName] = channel
 
 
 class IrcNetworkManager(QObject):
@@ -500,7 +612,9 @@ class IrcNetworkManager(QObject):
             network = IrcNetwork(networkName, self)
             network.setIdentityName(IrcIdentity.DefaultIdentityName)
             network.setServerName(serverName)
-            network.setChannels(["#eric-ide"])
+            channel = IrcChannel("#eric-ide", network)
+            channel.setAutoJoin(False)
+            network.addChannel(channel)
             self.__networks[networkName] = network
         
         self.dataChanged.emit()
@@ -616,6 +730,17 @@ class IrcNetworkManager(QObject):
         """
         self.dataChanged.emit()
     
+    def getServerNames(self):
+        """
+        Public method to get a list of all known server names.
+        
+        @return list of server names (list of string)
+        """
+        if not self.__loaded:
+            self.__load()
+        
+        return list(sorted(self.__servers.keys()))
+    
     def getNetwork(self, name):
         """
         Public method to get a network object.
@@ -631,8 +756,7 @@ class IrcNetworkManager(QObject):
         else:
             return None
     
-    def createNetwork(self, name, identity, server, channels=None,
-                      autoJoinChannels=False):
+    def createNetwork(self, name, identity, server, channels=None):
         """
         Public method to create a new network object.
         
@@ -641,9 +765,7 @@ class IrcNetworkManager(QObject):
             this network (IrcIdentity)
         @param server reference to a server object to associate with this
             network (IrcServer)
-        @param channels list of channels for the network (list of string)
-        @param autoJoinChannels flag indicating to join the channels
-            automatically (boolean)
+        @param channels list of channels for the network (list of IrcChannel)
         @return reference to the created network object (IrcNetwork)
         """
         if not self.__loaded:
@@ -655,8 +777,9 @@ class IrcNetworkManager(QObject):
         network = IrcNetwork(name)
         network.setIdentityName(identity.getName())
         network.setServerName(server.getServer())
+        # TODO: change this
         network.setChannels(channels[:])
-        network.setAutoJoinChannels(autoJoinChannels)
+##        network.setAutoJoinChannels(autoJoinChannels)
         self.__networks[name] = network
         
         self.networkChanged()
@@ -689,4 +812,4 @@ class IrcNetworkManager(QObject):
         if not self.__loaded:
             self.__load()
         
-        return sorted(self.__networks.keys())
+        return list(sorted(self.__networks.keys()))

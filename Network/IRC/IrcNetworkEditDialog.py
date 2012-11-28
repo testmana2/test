@@ -42,13 +42,44 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
+        self.__network = self.__manager.getNetwork(networkName)
+        
+        # network name
         self.networkEdit.setText(networkName)
+        
+        # identities
         identities = list(sorted(self.__manager.getIdentityNames()))
         identities[identities.index(IrcIdentity.DefaultIdentityName)] = \
             IrcIdentity.DefaultIdentityDisplay
         self.identityCombo.addItems(identities)
+        identity = self.__network.getIdentityName()
+        if identity == IrcIdentity.DefaultIdentityName:
+            identity = IrcIdentity.DefaultIdentityDisplay
+        index = self.identityCombo.findText(identity)
+        if index == -1:
+            index = 0
+        self.identityCombo.setCurrentIndex(index)
+        
+        # servers
+        self.serverCombo.addItems(self.__manager.getServerNames())
+        server = self.__network.getServerName()
+        index = self.serverCombo.findText(server)
+        if index == -1:
+            index = 0
+        self.serverCombo.setCurrentIndex(index)
+        
+        # channels
+        # TODO: change this to use channel objects
+        for channelName in sorted(self.__network.getChannelNames()):
+            channel = self.__network.getChannel(channelName)
+            if channel.autoJoin():
+                autoJoin = self.trUtf8("Yes")
+            else:
+                autoJoin = self.trUtf8("No")
+            QTreeWidgetItem(self.channelList, [channelName, autoJoin])
         
         self.__updateOkButton()
+        self.on_channelList_itemSelectionChanged()
     
     def __updateOkButton(self):
         """
@@ -105,10 +136,11 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
     @pyqtSlot()
     def on_editChannelButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to edit the selected channel.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        itm = self.channelList.selectedItems()[0]
+        if itm:
+            self.__editChannel(itm.text(0))
     
     @pyqtSlot()
     def on_deleteChannelButton_clicked(self):
@@ -121,15 +153,31 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
     @pyqtSlot(QTreeWidgetItem, int)
     def on_channelList_itemActivated(self, item, column):
         """
-        Slot documentation goes here.
+        Private slot to handle the activation of a channel entry.
+        
+        @param item reference to the activated item (QTreeWidgetItem)
+        @param column column the activation occurred in (integer)
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        self.__editChannel(item.text(0))
     
     @pyqtSlot()
     def on_channelList_itemSelectionChanged(self):
         """
-        Slot documentation goes here.
+        Private slot to handle changes of the selection of channels.
+        """
+        selectedItems = self.channelList.selectedItems()
+        if len(selectedItems) == 0:
+            enable = False
+        else:
+            enable = True
+        self.editChannelButton.setEnabled(enable)
+        self.deleteChannelButton.setEnabled(enable)
+    
+    def __editChannel(self, name):
+        """
+        Private method to edit a channel.
+        
+        @param name name of the channel (string)
         """
         # TODO: not implemented yet
         raise NotImplementedError

@@ -10,7 +10,7 @@ Module implementing the IRC window.
 import re
 import logging
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray
+from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QTimer
 from PyQt4.QtGui import QWidget, QToolButton, QLabel
 from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
 
@@ -164,11 +164,12 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         dlg = IrcNetworkListDialog(self.__ircNetworkManager, self)
         dlg.exec_()
     
-    def __joinChannel(self, name):
+    def __joinChannel(self, name, key=""):
         """
         Private slot to join a channel.
         
         @param name name of the channel (string)
+        @param key key of the channel (string)
         """
         # step 1: check, if this channel is already joined
         for channel in self.__channelList:
@@ -187,7 +188,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.channelsWidget.addTab(channel, name)
         self.__channelList.append(channel)
         
-        self.__send("JOIN " + name)
+        self.__send("JOIN " + name) # TODO: add channel key
         self.__send("MODE " + name)
         
         emptyIndex = self.channelsWidget.indexOf(self.__emptyLabel)
@@ -464,6 +465,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if code == 1:
             # register with services after the welcome message
             self.__registerWithServices()
+            QTimer.singleShot(1000, self.__autoJoinChannels)
         elif code == 5:
             # extract the user privilege prefixes
             # ... PREFIX=(ov)@+ ...
@@ -487,6 +489,16 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         password = identity.getPassword()
         if service and password:
             self.__send("PRIVMSG " + service + " :identify " + password)
+    
+    def __autoJoinChannels(self):
+        """
+        Private slot to join channels automatically once a server got connected.
+        """
+        for channel in self.networkWidget.getNetworkChannels():
+            if channel.autoJoin():
+                name = channel.getName()
+                key = channel.getKey()
+                self.__joinChannel(name, key)
     
     def __tcpError(self, error):
         """
