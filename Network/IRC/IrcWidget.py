@@ -58,6 +58,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__channelList = []
         self.__channelTypePrefixes = ""
         self.__userName = ""
+        self.__identityName = ""
         self.__nickIndex = -1
         self.__nickName = ""
         self.__server = None
@@ -103,7 +104,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.trUtf8("Disconnect from Server"),
                 self.trUtf8("""<p>Do you really want to disconnect from"""
                             """ <b>{0}</b>?</p><p>All channels will be closed.</p>""")\
-                    .format(self.__server.getServer()))
+                    .format(self.__server.getName()))
             if ok:
                 self.__socket.blockSignals(True)
                 
@@ -127,25 +128,26 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if connect:
             network = self.__ircNetworkManager.getNetwork(name)
             if network:
-                self.__server = self.__ircNetworkManager.getServer(
-                    network.getServerName())
-                self.__userName = network.getIdentityName()
+                self.__server = network.getServer(network.getServerNames()[0])
+                self.__identityName = network.getIdentityName()
+                identity = self.__ircNetworkManager.getIdentity(self.__identityName)
+                self.__userName = identity.getIdent()
                 if self.__server:
                     self.networkWidget.addServerMessage(self.trUtf8("Info"),
                         self.trUtf8("Looking for server {0} (port {1})...").format(
-                            self.__server.getServer(), self.__server.getPort()))
-                    self.__socket.connectToHost(self.__server.getServer(),
+                            self.__server.getName(), self.__server.getPort()))
+                    self.__socket.connectToHost(self.__server.getName(),
                                                 self.__server.getPort())
         else:
             ok = E5MessageBox.yesNo(self,
                 self.trUtf8("Disconnect from Server"),
                 self.trUtf8("""<p>Do you really want to disconnect from"""
                             """ <b>{0}</b>?</p><p>All channels will be closed.</p>""")\
-                    .format(self.__server.getServer()))
+                    .format(self.__server.getName()))
             if ok:
                 self.networkWidget.addServerMessage(self.trUtf8("Info"),
                     self.trUtf8("Disconnecting from server {0}...").format(
-                        self.__server.getServer()))
+                        self.__server.getName()))
                 while self.__channelList:
                     channel = self.__channelList.pop()
                     self.channelsWidget.removeTab(self.channelsWidget.indexOf(channel))
@@ -153,6 +155,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     channel = None
                 self.__send("QUIT :" + self.trUtf8("IRC for eric IDE"))
                 self.__socket.close()
+                self.__userName = ""
+                self.__identityName = ""
     
     def __editNetwork(self, name):
         """
@@ -160,7 +164,6 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param name name of the network to edit (string)
         """
-        # TODO: implement this
         dlg = IrcNetworkListDialog(self.__ircNetworkManager, self)
         dlg.exec_()
     
@@ -264,7 +267,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if not nick:
             self.__nickIndex = 0
             try:
-                nick = self.__ircNetworkManager.getIdentity(self.__userName)\
+                nick = self.__ircNetworkManager.getIdentity(self.__identityName)\
                     .getNickNames()[self.__nickIndex]
             except IndexError:
                 nick = ""
@@ -272,8 +275,11 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             nick = self.__userName
         self.__nickName = nick
         self.networkWidget.setNickName(nick)
+        realName = self.__ircNetworkManager.getIdentity(self.__identityName).getRealName()
+        if not realName:
+            realName = "eric IDE chat"
         self.__send("NICK " + nick)
-        self.__send("USER " + self.__userName + " 0 * :eric IDE chat")
+        self.__send("USER " + self.__userName + " 0 * :" + realName)
     
     def __hostDisconnected(self):
         """
@@ -484,7 +490,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to register to services.
         """
-        identity = self.__ircNetworkManager.getIdentity(self.__userName)
+        identity = self.__ircNetworkManager.getIdentity(self.__identityName)
         service = identity.getName()
         password = identity.getPassword()
         if service and password:
@@ -563,7 +569,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         self.__nickIndex += 1
         try:
-            nick = self.__ircNetworkManager.getIdentity(self.__userName)\
+            nick = self.__ircNetworkManager.getIdentity(self.__identityName)\
                 .getNickNames()[self.__nickIndex]
             self.__nickName = nick
         except IndexError:

@@ -67,6 +67,20 @@ class IrcIdentity(object):
         """
         return self.__name
     
+    def getIdent(self):
+        """
+        Public method to get the real identity name.
+        
+        Note: This methdo takes care of converting the default
+        identity name to the user's user name.
+        
+        @return real identity name (string)
+        """
+        if self.__name == IrcIdentity.DefaultIdentityName:
+            return Utilities.getUserName()
+        else:
+            return self.__name
+    
     def setRealName(self, name):
         """
         Public method to set the real name of the identity.
@@ -130,6 +144,19 @@ class IrcIdentity(object):
         @return password (string)
         """
         return pwConvert(self.__password, encode=False)
+    
+    @classmethod
+    def createDefaultIdentity(cls):
+        """
+        Class method to create the default identity.
+        
+        @return default identity (IrcIdentity)
+        """
+        userName = Utilities.getUserName()
+        identity = IrcIdentity(IrcIdentity.DefaultIdentityName)
+        identity.setNickNames([userName, userName + "_", userName + "__"])
+        identity.setRealName(userName)
+        return identity
 
 
 class IrcServer(object):
@@ -172,7 +199,7 @@ class IrcServer(object):
         self.__ssl = Preferences.toBool(settings.value("SSL", False))
         self.__password = settings.value("Password", "")
     
-    def getServer(self):
+    def getName(self):
         """
         Public method to get the server name.
         
@@ -321,7 +348,7 @@ class IrcNetwork(object):
         
         self.__name = name
         self.__identity = ""
-        self.__server = ""
+        self.__servers = {}
         self.__channels = {}
     
     def save(self, settings):
@@ -332,7 +359,14 @@ class IrcNetwork(object):
         """
         # no need to save the network name because that is the group key
         settings.setValue("Identity", self.__identity)
-        settings.setValue("Server", self.__server)
+        
+        settings.beginGroup("Servers")
+        for key in self.__servers:
+            settings.beginGroup(key)
+            self.__servers[key].save(settings)
+            settings.endGroup()
+        settings.endGroup()
+        
         settings.beginGroup("Channels")
         for key in self.__channels:
             settings.beginGroup(key)
@@ -347,7 +381,15 @@ class IrcNetwork(object):
         @param settings reference to the settings object (QSettings)
         """
         self.__identity = settings.value("Identity", "")
-        self.__server = settings.value("Server", "")
+        
+        settings.beginGroup("Servers")
+        for key in settings.childKeys():
+            self.__servers[key] = IrcServer(key)
+            settings.beginGroup(key)
+            self.__servers[key].load(settings)
+            settings.endGroup()
+        settings.endGroup()
+        
         settings.beginGroup("Channels")
         for key in self.__channels:
             self.__channels[key] = IrcChannel(key)
@@ -380,21 +422,63 @@ class IrcNetwork(object):
         """
         return self.__identity
     
-    def setServerName(self, name):
+    def setServers(self, servers):
         """
-        Public method to set the server name.
+        Public method to set the list of servers.
         
-        @param name server name (string)
+        @param servers list of servers for the network (list of IrcServer)
         """
-        self.__server = name
+        self.__servers = {}
+        for server in servers:
+            self.__servers[server.getName()] = server
     
-    def getServerName(self):
+    def getServers(self):
         """
-        Public method to get the server name.
+        Public method to get the servers.
         
-        @return server name (string)
+        @return list of servers for the network (list of IrcServer)
         """
-        return self.__server
+        return list(self.__servers.values())
+    
+    def getServerNames(self):
+        """
+        Public method to get a list of all known server names.
+        
+        @return list of server names (list of string)
+        """
+        return list(sorted(self.__servers.keys()))
+    
+    def getServer(self, name):
+        """
+        Public method to get a server object.
+        
+        @param name name of the server to get (string)
+        @return reference to the server (IrcServer)
+        """
+        if name in self.__servers:
+            return self.__servers[name]
+        else:
+            return None
+    
+    def setServer(self, server):
+        """
+        Public method to set a server.
+        
+        @param server server object to set (IrcServer)
+        """
+        serverName = server.getName()
+        if serverName in self.__servers:
+            self.__servers[serverName] = server
+    
+    def addServer(self, server):
+        """
+        Public method to add a server.
+        
+        @param server server object to add (IrcServer)
+        """
+        serverName = server.getName()
+        if serverName not in self.__servers:
+            self.__servers[serverName] = server
     
     def setChannels(self, channels):
         """
@@ -453,6 +537,40 @@ class IrcNetwork(object):
         channelName = channel.getName()
         if channelName not in self.__channels:
             self.__channels[channelName] = channel
+    
+    def deleteChannel(self, channelName):
+        """
+        Public method to delete the given channel.
+        
+        @param channelName name of the channel to be deleted (string)
+        """
+        if channelName in self.__channels:
+            del self.__channels[channelName]
+    
+    @classmethod
+    def createDefaultNetwork(cls):
+        """
+        Class method to create the default network.
+        
+        @return default network object (IrcNetwork)
+        """
+        # network
+        networkName = "Freenode"
+        network = IrcNetwork(networkName)
+        network.setIdentityName(IrcIdentity.DefaultIdentityName)
+        
+        # server
+        serverName = "chat.freenode.net"
+        server = IrcServer(serverName)
+        server.setPort(8001)
+        network.addServer(server)
+        
+        # channel
+        channel = IrcChannel("#eric-ide")
+        channel.setAutoJoin(False)
+        network.addChannel(channel)
+        
+        return network
 
 
 class IrcNetworkManager(QObject):
@@ -480,7 +598,6 @@ class IrcNetworkManager(QObject):
         
         self.__networks = {}
         self.__identities = {}
-        self.__servers = {}
         
         self.dataChanged.connect(self.__saveTimer.changeOccurred)
     
@@ -505,14 +622,6 @@ class IrcNetworkManager(QObject):
         for key in self.__identities:
             self.__settings.beginGroup(key)
             self.__identities[key].save(self.__settings)
-            self.__settings.endGroup()
-        self.__settings.endGroup()
-        
-        # servers
-        self.__settings.beginGroup("Servers")
-        for key in self.__servers:
-            self.__settings.beginGroup(key)
-            self.__servers[key].save(self.__settings)
             self.__settings.endGroup()
         self.__settings.endGroup()
         
@@ -542,15 +651,6 @@ class IrcNetworkManager(QObject):
             self.__identities[key] = IrcIdentity(key)
             self.__settings.beginGroup(key)
             self.__identities[key].load(self.__settings)
-            self.__settings.endGroup()
-        self.__settings.endGroup()
-        
-        # servers
-        self.__settings.beginGroup("Servers")
-        for key in self.__settings.childKeys():
-            self.__servers[key] = IrcServer(key)
-            self.__settings.beginGroup(key)
-            self.__servers[key].load(self.__settings)
             self.__settings.endGroup()
         self.__settings.endGroup()
         
@@ -589,29 +689,18 @@ class IrcNetworkManager(QObject):
             self.__servers = {}
         
         # identity
-        userName = Utilities.getUserName()
-        identity = IrcIdentity(IrcIdentity.DefaultIdentityName)
-        identity.setNickNames([userName, userName + "_", userName + "__"])
-        self.__identities[IrcIdentity.DefaultIdentityName] = identity
+        identity = IrcIdentity.createDefaultIdentity()
+        self.__identities[identity.getName()] = identity
         
         if not identityOnly:
-            # server
-            serverName = "chat.freenode.net"
-            server = IrcServer(serverName)
-            server.setPort(8001)
-            self.__servers[serverName] = server
-            
-            # network
-            networkName = "Freenode"
-            network = IrcNetwork(networkName)
-            network.setIdentityName(IrcIdentity.DefaultIdentityName)
-            network.setServerName(serverName)
-            channel = IrcChannel("#eric-ide")
-            channel.setAutoJoin(False)
-            network.addChannel(channel)
-            self.__networks[networkName] = network
+            network = IrcNetwork.createDefaultNetwork()
+            self.__networks[network.getName()] = network
         
         self.dataChanged.emit()
+    
+    ##################################################################
+    ## Identity related methods below
+    ##################################################################
     
     def getIdentity(self, name, create=False):
         """
@@ -691,50 +780,9 @@ class IrcNetworkManager(QObject):
         """
         self.dataChanged.emit()
     
-    # TODO: move server to network because it belongs there
-    def getServer(self, name, create=False):
-        """
-        Public method to get a server object.
-        
-        @param name name of the server to get (string)
-        @param create flag indicating to create a new object,
-            if none exists (boolean)
-        @return reference to the server (IrcServer)
-        """
-        if not name:
-            return None
-        
-        if not self.__loaded:
-            self.__load()
-        
-        if name in self.__servers:
-            return self.__servers[name]
-        elif create:
-            server = IrcServer(name)
-            self.__servers[name] = server
-            
-            self.dataChanged.emit()
-            
-            return server
-        else:
-            return None
-    
-    def serverChanged(self):
-        """
-        Public method to indicate a change of a server object.
-        """
-        self.dataChanged.emit()
-    
-    def getServerNames(self):
-        """
-        Public method to get a list of all known server names.
-        
-        @return list of server names (list of string)
-        """
-        if not self.__loaded:
-            self.__load()
-        
-        return list(sorted(self.__servers.keys()))
+    ##################################################################
+    ## Network related methods below
+    ##################################################################
     
     def getNetwork(self, name):
         """
@@ -751,37 +799,47 @@ class IrcNetworkManager(QObject):
         else:
             return None
     
-    # TODO: check, if this method is needed
-    def createNetwork(self, name, identity, server, channels=None):
+    def setNetwork(self, network):
         """
-        Public method to create a new network object.
+        Public method to set a network.
         
-        @param name name of the network (string)
-        @param identity reference to an identity object to associate with
-            this network (IrcIdentity)
-        @param server reference to a server object to associate with this
-            network (IrcServer)
-        @param channels list of channels for the network (list of IrcChannel)
-        @return reference to the created network object (IrcNetwork)
+        @param network network object to set (IrcNetwork)
         """
-        if not self.__loaded:
-            self.__load()
-        
+        name = network.getName()
         if name in self.__networks:
-            return None
-        
-        network = IrcNetwork(name)
-        network.setIdentityName(identity.getName())
-        network.setServerName(server.getServer())
-        # TODO: change this
-        network.setChannels(channels[:])
-##        network.setAutoJoinChannels(autoJoinChannels)
-        self.__networks[name] = network
-        
-        self.networkChanged()
-        
-        return network
+            self.__networks[name] = network
+            self.networkChanged()
     
+    # TODO: check, if this method is needed
+##    def createNetwork(self, name, identity, server, channels=None):
+##        """
+##        Public method to create a new network object.
+##        
+##        @param name name of the network (string)
+##        @param identity reference to an identity object to associate with
+##            this network (IrcIdentity)
+##        @param server reference to a server object to associate with this
+##            network (IrcServer)
+##        @param channels list of channels for the network (list of IrcChannel)
+##        @return reference to the created network object (IrcNetwork)
+##        """
+##        if not self.__loaded:
+##            self.__load()
+##        
+##        if name in self.__networks:
+##            return None
+##        
+##        network = IrcNetwork(name)
+##        network.setIdentityName(identity.getName())
+####        network.setServerName(server.getServer())
+####        network.setChannels(channels[:])
+####        network.setAutoJoinChannels(autoJoinChannels)
+##        self.__networks[name] = network
+##        
+##        self.networkChanged()
+##        
+##        return network
+##    
     def deleteNetwork(self, name):
         """
         Public method to delete the given network.

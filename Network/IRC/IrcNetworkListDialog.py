@@ -38,7 +38,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         for networkName in networkNames:
             topitm = QTreeWidgetItem(self.networksList, [networkName])
             network = self.__manager.getNetwork(networkName)
-            server = self.__manager.getServer(network.getServerName())
+            server = network.getServer(network.getServerNames()[0])
             identityName = network.getIdentityName()
             if identityName == IrcIdentity.DefaultIdentityName:
                 identityName = IrcIdentity.DefaultIdentityDisplay
@@ -46,7 +46,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
                 [self.trUtf8("Identity"), identityName])
             QTreeWidgetItem(topitm,
                 [self.trUtf8("Server"), "{0}:{1}".format(
-                 server.getServer(), server.getPort())])
+                 server.getName(), server.getPort())])
             QTreeWidgetItem(topitm,
                 [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
             topitm.setExpanded(True)
@@ -101,8 +101,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             networkName = itm.text(0)
             dlg = IrcNetworkEditDialog(self.__manager, networkName, self)
             if dlg.exec_() == QDialog.Accepted:
-                pass
-                # TODO: not implemented yet
+                self.__manager.setNetwork(dlg.getNetwork())
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):
@@ -114,7 +113,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             networkName = itm.text(0)
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Delete Irc Network"),
-                self.trUtf8("""Do you really want to delete  IRC network <b>{0}</b>?""")\
+                self.trUtf8("""Do you really want to delete IRC network <b>{0}</b>?""")\
                     .format(networkName))
             if res:
                 index = self.networksList.indexOfTopLevelItem(itm)
