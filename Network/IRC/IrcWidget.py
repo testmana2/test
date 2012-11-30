@@ -118,6 +118,12 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.__ircNetworkManager.close()
         return ok
     
+    def autoConnect(self):
+        """
+        Public method to initiate the IRC auto connection.
+        """
+        self.networkWidget.autoConnect()
+
     def __connectNetwork(self, name, connect):
         """
         Private slot to connect to or disconnect from the given network.
@@ -128,7 +134,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if connect:
             network = self.__ircNetworkManager.getNetwork(name)
             if network:
-                self.__server = network.getServer(network.getServerNames()[0])
+                self.__server = network.getServer()
                 self.__identityName = network.getIdentityName()
                 identity = self.__ircNetworkManager.getIdentity(self.__identityName)
                 self.__userName = identity.getIdent()

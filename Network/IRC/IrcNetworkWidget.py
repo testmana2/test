@@ -62,22 +62,33 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         
         self.__manager.networksChanged.connect(self.__refreshNetworks)
     
+    def autoConnect(self):
+        """
+        Public method to perform the IRC auto connection.
+        """
+        for networkName in self.__manager.getNetworkNames():
+            if self.__manager.getNetwork(networkName).autoConnect():
+                row = self.networkCombo.findText(networkName)
+                self.networkCombo.setCurrentIndex(row)
+                self.on_connectButton_clicked()
+                break
+    
     @pyqtSlot()
     def __refreshNetworks(self):
         """
         Private slot to refresh all network related widgets.
         """
         currentNetwork = self.networkCombo.currentText()
-##        currentNick = self.nickCombo.currentText()
-##        currentChannel = self.channelCombo.currentText()
+        currentNick = self.nickCombo.currentText()
+        currentChannel = self.channelCombo.currentText()
         self.networkCombo.clear()
         self.networkCombo.addItems(self.__manager.getNetworkNames())
         row = self.networkCombo.findText(currentNetwork)
         if row == -1:
             row = 0
         self.networkCombo.setCurrentIndex(row)
-##        self.nickCombo.setEditText(currentNick)
-##        self.channelCombo.setEditText(currentChannel)
+        self.nickCombo.setEditText(currentNick)
+        self.channelCombo.setEditText(currentChannel)
     
     @pyqtSlot()
     def on_connectButton_clicked(self):

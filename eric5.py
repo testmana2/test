@@ -143,6 +143,7 @@ def uiStartUp():
     mainWindow.performVersionCheck(False)
     mainWindow.checkProjectsWorkspace()
     mainWindow.checkConfigurationStatus()
+    mainWindow.autoConnectIrc()
 
 
 def main():

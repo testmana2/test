@@ -38,10 +38,13 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         for networkName in networkNames:
             topitm = QTreeWidgetItem(self.networksList, [networkName])
             network = self.__manager.getNetwork(networkName)
-            server = network.getServer(network.getServerNames()[0])
+            server = network.getServer()
             identityName = network.getIdentityName()
             if identityName == IrcIdentity.DefaultIdentityName:
                 identityName = IrcIdentity.DefaultIdentityDisplay
+            autoConnect = self.trUtf8("Yes") if network.autoConnect() \
+                          else self.trUtf8("No")
+            
             QTreeWidgetItem(topitm,
                 [self.trUtf8("Identity"), identityName])
             QTreeWidgetItem(topitm,
@@ -49,6 +52,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
                  server.getName(), server.getPort())])
             QTreeWidgetItem(topitm,
                 [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
+            QTreeWidgetItem(topitm,
+                [self.trUtf8("Auto-Connect"), autoConnect])
             topitm.setExpanded(True)
         self.__resizeColumns()
         
@@ -75,6 +80,12 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         
         self.editButton.setEnabled(enable)
         self.deleteButton.setEnabled(enable)
+        self.autoConnectButton.setEnabled(enable)
+        
+        if enable:
+            itm = self.networksList.selectedItems()[0]
+            check = self.__manager.getNetwork(itm.text(0)).autoConnect()
+            self.autoConnectButton.setChecked(check)
     
     @pyqtSlot()
     def on_networksList_itemSelectionChanged(self):
@@ -135,3 +146,53 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         Private slot handling the collapse of a top level item.
         """
         self.__resizeColumns()
+    
+    @pyqtSlot(bool)
+    def on_autoConnectButton_clicked(self, checked):
+        """
+        Private slot handling the auto-connect selection.
+        
+        @param checked flag indicating the state of the button (boolean)
+        """
+        itm = self.networksList.selectedItems()[0]
+        if itm.parent() is None:
+            networkName = itm.text(0)
+            if checked:
+                # enable the selected network, disable all others
+                # step 1: update network objects
+                for name in self.__manager.getNetworkNames():
+                    network = self.__manager.getNetwork(networkName)
+                    if name == networkName:
+                        network.setAutoConnect(True)
+                    else:
+                        network.setAutoConnect(False)
+                    self.__manager.networkChanged()
+                
+                # step 2: update list entries
+                for index in range(self.networksList.topLevelItemCount()):
+                    titm = self.networksList.topLevelItem(index)
+                    if titm.text(0) == networkName:
+                        self.__setAutoConnectEntry(titm, True)
+                    else:
+                        self.__setAutoConnectEntry(titm, False)
+            else:
+                # step 1: update network object
+                network = self.__manager.getNetwork(networkName)
+                network.setAutoConnect(False)
+                self.__manager.networkChanged()
+                
+                # step 2: update list entry
+                self.__setAutoConnectEntry(itm, False)
+    
+    def __setAutoConnectEntry(self, itm, on):
+        """
+        Private method to set the auto-connect entry of a network item.
+        
+        @param itm reference to the network item (QTreeWidgetItem)
+        @param on flag indicating the auto-connect state (boolean)
+        """
+        autoConnect = self.trUtf8("Yes") if on else self.trUtf8("No")
+        for index in range(itm.childCount()):
+            citm = itm.child(index)
+            if citm.text(0) == self.trUtf8("Auto-Connect"):
+                citm.setText(1, autoConnect)

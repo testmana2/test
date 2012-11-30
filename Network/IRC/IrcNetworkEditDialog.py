@@ -67,7 +67,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         self.identityCombo.setCurrentIndex(index)
         
         # servers
-        self.serverEdit.setText(self.__network.getServerNames()[0])
+        self.serverEdit.setText(self.__network.getServerName())
         
         # channels
         for channelName in sorted(self.__network.getChannelNames()):

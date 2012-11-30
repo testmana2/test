@@ -5595,3 +5595,13 @@ class UserInterface(E5MainWindow):
         @return flag indicating, if notifications are enabled (boolean)
         """
         return Preferences.getUI("NotificationsEnabled")
+    
+    #########################
+    ## Support for IRC  below
+    #########################
+    
+    def autoConnectIrc(self):
+        """
+        Public method to initiate the IRC auto connection.
+        """
+        self.irc.autoConnect()

@@ -76,6 +76,19 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="autoConnectButton">
+       <property name="toolTip">
+        <string>Press to  toggle the auto-connect flag of the selected network</string>
+       </property>
+       <property name="text">
+        <string>Auto-Connect</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
@@ -107,6 +120,7 @@
   <tabstop>newButton</tabstop>
   <tabstop>editButton</tabstop>
   <tabstop>deleteButton</tabstop>
+  <tabstop>autoConnectButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
