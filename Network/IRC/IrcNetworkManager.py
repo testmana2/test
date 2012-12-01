@@ -404,6 +404,14 @@ class IrcNetwork(object):
             settings.endGroup()
         settings.endGroup()
     
+    def setName(self, name):
+        """
+        Public method to set the network name.
+        
+        @param network name (string)
+        """
+        self.__name = name
+    
     def getName(self):
         """
         Public method to get the network name.
@@ -791,14 +799,30 @@ class IrcNetworkManager(QObject):
         else:
             return None
     
-    def setNetwork(self, network):
+    def setNetwork(self, network, networkName=""):
         """
         Public method to set a network.
         
         @param network network object to set (IrcNetwork)
+        @param networkName name the network was known for (string)
         """
         name = network.getName()
-        if name in self.__networks:
+        if networkName and name != networkName:
+            # the network name has changed
+            self.deleteNetwork(networkName)
+            self.addNetwork(network)
+        elif name in self.__networks:
+            self.__networks[name] = network
+            self.networkChanged()
+    
+    def addNetwork(self, network):
+        """
+        Public method to add a network.
+        
+        @param network network object to add (IrcNetwork)
+        """
+        name = network.getName()
+        if name not in self.__networks:
             self.__networks[name] = network
             self.networkChanged()
     

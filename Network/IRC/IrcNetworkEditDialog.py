@@ -18,6 +18,7 @@ from .Ui_IrcNetworkEditDialog import Ui_IrcNetworkEditDialog
 
 from .IrcNetworkManager import IrcIdentity, IrcChannel
 from .IrcChannelEditDialog import IrcChannelEditDialog
+from .IrcServerEditDialog import IrcServerEditDialog
 
 import UI.PixmapCache
 
@@ -40,7 +41,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         self.__manager = manager
         
         self.editIdentitiesButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
-        self.editServersButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
+        self.editServerButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
         self.editChannelButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
         self.addChannelButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
         self.deleteChannelButton.setIcon(UI.PixmapCache.getIcon("minus.png"))
@@ -66,7 +67,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
             index = 0
         self.identityCombo.setCurrentIndex(index)
         
-        # servers
+        # server
         self.serverEdit.setText(self.__network.getServerName())
         
         # channels
@@ -100,6 +101,15 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         self.__updateOkButton()
     
+    @pyqtSlot(str)
+    def on_identityCombo_activated(self, identity):
+        """
+        Private slot to handle the selection of an identity.
+        
+        @param identity selected entity (string)
+        """
+        self.__network.setIdentityName(identity)
+    
     @pyqtSlot()
     def on_editIdentitiesButton_clicked(self):
         """
@@ -109,12 +119,14 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         raise NotImplementedError
     
     @pyqtSlot()
-    def on_editServersButton_clicked(self):
+    def on_editServerButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to edit the server configuration.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        dlg = IrcServerEditDialog(self.__network.getServer())
+        if dlg.exec_() == QDialog.Accepted:
+            self.__network.setServer(dlg.getServer())
+            self.serverEdit.setText(self.__network.getServerName())
     
     @pyqtSlot()
     def on_addChannelButton_clicked(self):
@@ -216,4 +228,5 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         
         @return edited network object (IrcNetwork)
         """
+        self.__network.setName(self.networkEdit.text())
         return self.__network

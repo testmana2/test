@@ -37,23 +37,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         networkNames = self.__manager.getNetworkNames()
         for networkName in networkNames:
             topitm = QTreeWidgetItem(self.networksList, [networkName])
-            network = self.__manager.getNetwork(networkName)
-            server = network.getServer()
-            identityName = network.getIdentityName()
-            if identityName == IrcIdentity.DefaultIdentityName:
-                identityName = IrcIdentity.DefaultIdentityDisplay
-            autoConnect = self.trUtf8("Yes") if network.autoConnect() \
-                          else self.trUtf8("No")
-            
-            QTreeWidgetItem(topitm,
-                [self.trUtf8("Identity"), identityName])
-            QTreeWidgetItem(topitm,
-                [self.trUtf8("Server"), "{0}:{1}".format(
-                 server.getName(), server.getPort())])
-            QTreeWidgetItem(topitm,
-                [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
-            QTreeWidgetItem(topitm,
-                [self.trUtf8("Auto-Connect"), autoConnect])
+            self.__refreshNetworkEntry(topitm)
             topitm.setExpanded(True)
         self.__resizeColumns()
         
@@ -87,6 +71,39 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             check = self.__manager.getNetwork(itm.text(0)).autoConnect()
             self.autoConnectButton.setChecked(check)
     
+    def __refreshNetworkEntry(self, itm):
+        """
+        Private method to (re-)set the data of a network entry.
+        
+        @oaram itm reference to the network entry (QTreeWidgetItem)
+        """
+        # step 1: delete all child entries
+        children = itm.takeChildren()
+        for child in children:
+            del child
+        
+        # step 2: (re-)add the child entries
+        networkName = itm.text(0)
+        network = self.__manager.getNetwork(networkName)
+        server = network.getServer()
+        identityName = network.getIdentityName()
+        if identityName == IrcIdentity.DefaultIdentityName:
+            identityName = IrcIdentity.DefaultIdentityDisplay
+        autoConnect = self.trUtf8("Yes") if network.autoConnect() \
+                      else self.trUtf8("No")
+        
+        QTreeWidgetItem(itm,
+            [self.trUtf8("Identity"), identityName])
+        QTreeWidgetItem(itm,
+            [self.trUtf8("Server"), "{0}:{1}".format(
+             server.getName(), server.getPort())])
+        QTreeWidgetItem(itm,
+            [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
+        QTreeWidgetItem(itm,
+            [self.trUtf8("Auto-Connect"), autoConnect])
+        
+        self.__resizeColumns()
+    
     @pyqtSlot()
     def on_networksList_itemSelectionChanged(self):
         """
@@ -112,7 +129,11 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             networkName = itm.text(0)
             dlg = IrcNetworkEditDialog(self.__manager, networkName, self)
             if dlg.exec_() == QDialog.Accepted:
-                self.__manager.setNetwork(dlg.getNetwork())
+                network = dlg.getNetwork()
+                self.__manager.setNetwork(network, networkName)
+                if network.getName() != networkName:
+                    itm.setText(0, network.getName())
+                self.__refreshNetworkEntry(itm)
     
     @pyqtSlot()
     def on_deleteButton_clicked(self):

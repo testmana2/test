@@ -63,9 +63,9 @@
     </widget>
    </item>
    <item row="2" column="2">
-    <widget class="QToolButton" name="editServersButton">
+    <widget class="QToolButton" name="editServerButton">
      <property name="toolTip">
-      <string>Press to edit the servers</string>
+      <string>Press to edit the server configuration</string>
      </property>
      <property name="text">
       <string/>
@@ -182,7 +182,7 @@
   <tabstop>identityCombo</tabstop>
   <tabstop>editIdentitiesButton</tabstop>
   <tabstop>serverEdit</tabstop>
-  <tabstop>editServersButton</tabstop>
+  <tabstop>editServerButton</tabstop>
   <tabstop>channelList</tabstop>
   <tabstop>addChannelButton</tabstop>
   <tabstop>editChannelButton</tabstop>
