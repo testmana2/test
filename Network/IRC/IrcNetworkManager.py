@@ -7,6 +7,8 @@
 Module implementing the IRC data structures and their manager.
 """
 
+import copy
+
 from PyQt4.QtCore import pyqtSignal, QObject, QCoreApplication
 
 import Utilities
@@ -35,6 +37,7 @@ class IrcIdentity(object):
         self.__nickNames = []
         self.__serviceName = ""
         self.__password = ""
+        self.__ident = Utilities.getUserName()
     
     def save(self, settings):
         """
@@ -43,6 +46,7 @@ class IrcIdentity(object):
         @param settings reference to the settings object (QSettings)
         """
         # no need to save the name because that is the group key
+        settings.setValue("Ident", self.__ident)
         settings.setValue("RealName", self.__realName)
         settings.setValue("NickNames", self.__nickNames)
         settings.setValue("ServiceName", self.__serviceName)
@@ -54,10 +58,19 @@ class IrcIdentity(object):
         
         @param settings reference to the settings object (QSettings)
         """
+        self.__ident = settings.value("Ident", Utilities.getUserName())
         self.__realName = settings.value("RealName", "")
         self.__nickNames = Preferences.toList(settings.value("NickNames", []))
         self.__serviceName = settings.value("ServiceName", "")
         self.__password = settings.value("Password", "")
+    
+    def setName(self, name):
+        """
+        Public method to set the identity name.
+        
+        @param identity name (string)
+        """
+        self.__name = name
     
     def getName(self):
         """
@@ -67,19 +80,21 @@ class IrcIdentity(object):
         """
         return self.__name
     
+    def setIdent(self, name):
+        """
+        Public method to set the real identity name.
+        
+        @param name real identity name (string)
+        """
+        self.__ident = name
+    
     def getIdent(self):
         """
         Public method to get the real identity name.
         
-        Note: This methdo takes care of converting the default
-        identity name to the user's user name.
-        
         @return real identity name (string)
         """
-        if self.__name == IrcIdentity.DefaultIdentityName:
-            return Utilities.getUserName()
-        else:
-            return self.__name
+        return self.__ident
     
     def setRealName(self, name):
         """
@@ -153,9 +168,13 @@ class IrcIdentity(object):
         @return default identity (IrcIdentity)
         """
         userName = Utilities.getUserName()
+        realName = Utilities.getRealName()
+        if not realName:
+            realName = "eric IDE chat"
         identity = IrcIdentity(IrcIdentity.DefaultIdentityName)
         identity.setNickNames([userName, userName + "_", userName + "__"])
-        identity.setRealName(userName)
+        identity.setRealName(realName)
+        identity.setIdent(userName)
         return identity
 
 
@@ -479,7 +498,7 @@ class IrcNetwork(object):
         
         @return list of channels for the network (list of IrcChannel)
         """
-        return list(self.__channels.values())
+        return list(copy.deepcopy(self.__channels).values())
     
     def getChannelNames(self):
         """
@@ -620,6 +639,7 @@ class IrcNetworkManager(QObject):
         self.__settings.beginGroup("IRC")
         
         # identities
+        self.__settings.remove("Identities")
         self.__settings.beginGroup("Identities")
         for key in self.__identities:
             self.__settings.beginGroup(key)
@@ -628,6 +648,7 @@ class IrcNetworkManager(QObject):
         self.__settings.endGroup()
         
         # networks
+        self.__settings.remove("Networks")
         self.__settings.beginGroup("Networks")
         for key in self.__networks:
             self.__settings.beginGroup(key)
@@ -729,6 +750,29 @@ class IrcNetworkManager(QObject):
         else:
             return None
     
+    def getIdentities(self):
+        """
+        Public method to get a copy of all identities.
+        
+        @return dictionary of all identities (dict of IrcIdentity)
+        """
+        return copy.deepcopy(self.__identities)
+    
+    def setIdentities(self, identities):
+        """
+        Public method to set the identities.
+        
+        @param identities dictionary of all identities (dict of IrcIdentity)
+        """
+        self.__identities = copy.deepcopy(identities)
+        self.identityChanged()
+        
+        # Check all networks, if the identity they use is still available.
+        # If it isn't, change them to use the default identity.
+        for network in self.__networks.values():
+            if network.getIdentityName() not in self.__identities:
+                network.setIdentityName(IrcIdentity.DefaultIdentityName)
+    
     def getIdentityNames(self):
         """
         Public method to get the names of all identities.
@@ -826,36 +870,6 @@ class IrcNetworkManager(QObject):
             self.__networks[name] = network
             self.networkChanged()
     
-    # TODO: check, if this method is needed
-##    def createNetwork(self, name, identity, server, channels=None):
-##        """
-##        Public method to create a new network object.
-##        
-##        @param name name of the network (string)
-##        @param identity reference to an identity object to associate with
-##            this network (IrcIdentity)
-##        @param server reference to a server object to associate with this
-##            network (IrcServer)
-##        @param channels list of channels for the network (list of IrcChannel)
-##        @return reference to the created network object (IrcNetwork)
-##        """
-##        if not self.__loaded:
-##            self.__load()
-##        
-##        if name in self.__networks:
-##            return None
-##        
-##        network = IrcNetwork(name)
-##        network.setIdentityName(identity.getName())
-####        network.setServerName(server.getServer())
-####        network.setChannels(channels[:])
-####        network.setAutoJoinChannels(autoJoinChannels)
-##        self.__networks[name] = network
-##        
-##        self.networkChanged()
-##        
-##        return network
-##    
     def deleteNetwork(self, name):
         """
         Public method to delete the given network.

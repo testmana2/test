@@ -1138,6 +1138,20 @@ def getUserName():
     return user
 
 
+def getRealName():
+    """
+    Function to get the real name of the user.
+    
+    @return real name of the user (string)
+    """
+    if isWindowsPlatform():
+        return win32_getRealName()
+    else:
+        import pwd
+        user = getpass.getuser()
+        return pwd.getpwnam(user).pw_gecos
+
+
 def getHomeDir():
     """
     Function to get a users home directory
@@ -1656,3 +1670,22 @@ def win32_GetUserName():
         except KeyError:
             u = getEnvironmentEntry('username', None)
         return u
+
+
+def win32_getRealName():
+    """
+    Function to get the user's real name (aka. display name) under Win32.
+    
+    @return real name of the current user (string)
+    """
+    import ctypes
+    
+    GetUserNameEx = ctypes.windll.secur32.GetUserNameExW
+    NameDisplay = 3
+
+    size = ctypes.pointer(ctypes.c_ulong(0))
+    GetUserNameEx(NameDisplay, None, size)
+
+    nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
+    GetUserNameEx(NameDisplay, nameBuffer, size)
+    return nameBuffer.value

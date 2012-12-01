@@ -81,10 +81,30 @@
         <string>Press to  toggle the auto-connect flag of the selected network</string>
        </property>
        <property name="text">
-        <string>Auto-Connect</string>
+        <string>&amp;Auto-Connect</string>
        </property>
        <property name="checkable">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="editIdentitiesButton">
+       <property name="toolTip">
+        <string>Press to edit the identities</string>
+       </property>
+       <property name="text">
+        <string>Edit &amp;Identities...</string>
        </property>
       </widget>
      </item>
@@ -121,6 +141,7 @@
   <tabstop>editButton</tabstop>
   <tabstop>deleteButton</tabstop>
   <tabstop>autoConnectButton</tabstop>
+  <tabstop>editIdentitiesButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

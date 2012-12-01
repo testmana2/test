@@ -19,6 +19,7 @@ from .Ui_IrcNetworkEditDialog import Ui_IrcNetworkEditDialog
 from .IrcNetworkManager import IrcIdentity, IrcChannel
 from .IrcChannelEditDialog import IrcChannelEditDialog
 from .IrcServerEditDialog import IrcServerEditDialog
+from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
 
 import UI.PixmapCache
 
@@ -55,17 +56,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         self.networkEdit.setText(networkName)
         
         # identities
-        identities = list(sorted(self.__manager.getIdentityNames()))
-        identities[identities.index(IrcIdentity.DefaultIdentityName)] = \
-            IrcIdentity.DefaultIdentityDisplay
-        self.identityCombo.addItems(identities)
-        identity = self.__network.getIdentityName()
-        if identity == IrcIdentity.DefaultIdentityName:
-            identity = IrcIdentity.DefaultIdentityDisplay
-        index = self.identityCombo.findText(identity)
-        if index == -1:
-            index = 0
-        self.identityCombo.setCurrentIndex(index)
+        self.__refreshIdentityCombo(self.__network.getIdentityName())
         
         # server
         self.serverEdit.setText(self.__network.getServerName())
@@ -101,22 +92,45 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         self.__updateOkButton()
     
+    def __refreshIdentityCombo(self, currentIdentity):
+        """
+        Private method to refresh the identity combo.
+        
+        @param currentIdentity name of the identity to select (string)
+        """
+        self.identityCombo.clear()
+        
+        identities = list(sorted(self.__manager.getIdentityNames()))
+        identities[identities.index(IrcIdentity.DefaultIdentityName)] = \
+            IrcIdentity.DefaultIdentityDisplay
+        self.identityCombo.addItems(identities)
+        if currentIdentity == IrcIdentity.DefaultIdentityName:
+            currentIdentity = IrcIdentity.DefaultIdentityDisplay
+        index = self.identityCombo.findText(currentIdentity)
+        if index == -1:
+            index = 0
+        self.identityCombo.setCurrentIndex(index)
+    
     @pyqtSlot(str)
-    def on_identityCombo_activated(self, identity):
+    def on_identityCombo_currentIndexChanged(self, identity):
         """
         Private slot to handle the selection of an identity.
         
         @param identity selected entity (string)
         """
+        if identity == IrcIdentity.DefaultIdentityDisplay:
+            identity = IrcIdentity.DefaultIdentityName
         self.__network.setIdentityName(identity)
     
     @pyqtSlot()
     def on_editIdentitiesButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to edit the identities.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        currentIdentity = self.identityCombo.currentText()
+        dlg = IrcIdentitiesEditDialog(self.__manager, currentIdentity, self)
+        dlg.exec_()
+        self.__refreshIdentityCombo(currentIdentity)
     
     @pyqtSlot()
     def on_editServerButton_clicked(self):

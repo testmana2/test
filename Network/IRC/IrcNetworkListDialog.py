@@ -16,6 +16,7 @@ from .Ui_IrcNetworkListDialog import Ui_IrcNetworkListDialog
 
 from .IrcNetworkManager import IrcIdentity
 from .IrcNetworkEditDialog import IrcNetworkEditDialog
+from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
 
 
 class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
@@ -34,14 +35,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         
         self.__manager = manager
         
-        networkNames = self.__manager.getNetworkNames()
-        for networkName in networkNames:
-            topitm = QTreeWidgetItem(self.networksList, [networkName])
-            self.__refreshNetworkEntry(topitm)
-            topitm.setExpanded(True)
-        self.__resizeColumns()
-        
-        self.__checkButtons()
+        self.__refreshNetworksList()
 
     def __resizeColumns(self):
         """
@@ -103,6 +97,21 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             [self.trUtf8("Auto-Connect"), autoConnect])
         
         self.__resizeColumns()
+    
+    def __refreshNetworksList(self):
+        """
+        Private method to refresh the complete networks list.
+        """
+        self.networksList.clear()
+        
+        networkNames = self.__manager.getNetworkNames()
+        for networkName in networkNames:
+            topitm = QTreeWidgetItem(self.networksList, [networkName])
+            self.__refreshNetworkEntry(topitm)
+            topitm.setExpanded(True)
+        self.__resizeColumns()
+        
+        self.__checkButtons()
     
     @pyqtSlot()
     def on_networksList_itemSelectionChanged(self):
@@ -217,3 +226,24 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             citm = itm.child(index)
             if citm.text(0) == self.trUtf8("Auto-Connect"):
                 citm.setText(1, autoConnect)
+    
+    @pyqtSlot()
+    def on_editIdentitiesButton_clicked(self):
+        """
+        Private slot to edit the identities.
+        """
+        dlg = IrcIdentitiesEditDialog(self.__manager, "", self)
+        dlg.exec_()
+        
+        selectedNetwork = self.networksList.selectedItems()
+        if selectedNetwork:
+            selectedNetworkName = selectedNetwork[0].text(0)
+        else:
+            selectedNetworkName = ""
+        self.__refreshNetworksList()
+        if selectedNetworkName:
+            for index in range(self.networksList.topLevelItemCount()):
+                itm = self.networksList.topLevelItem(index)
+                if itm.text(0) == selectedNetworkName:
+                    itm.setSelected(True)
+                    break
