@@ -33,6 +33,13 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     nickChanged = pyqtSignal(str)
     
     
+    # TODO: add context menu to messages pane with these entries:
+    #       Copy
+    #       Copy Link Location
+    #       Copy All
+    #       Clear
+    #       Save
+    # TODO: add AWAY support (toolbutton in widget)
     def __init__(self, parent=None):
         """
         Constructor

@@ -150,6 +150,20 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     LeaveIndicator = "&lt;--"
     MessageIndicator = "***"
     
+    # TODO: add context menu to users list with these entries:
+    #       Whois
+    #       Private Message
+    # TODO: add context menu to messages pane with these entries:
+    #       Copy
+    #       Copy Link Location
+    #       Copy All
+    #       Clear
+    #       Save
+    #       Remember Position
+    # TODO: Remember current position with <hr/> when widget is invisible
+    # TODO: Remember current position with <hr/> upon user request (only one such line)
+    # TODO: Remember current position with <hr/> when away and configured accordingly
+    # TODO: Check away indication in the user list
     def __init__(self, parent=None):
         """
         Constructor
