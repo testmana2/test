@@ -13,7 +13,6 @@ from PyQt4.QtCore import pyqtSlot, Qt, QEvent
 from PyQt4.QtGui import QDialog, QInputDialog, QLineEdit, QItemSelectionModel
 
 from E5Gui import E5MessageBox
-##from E5Gui.E5Application import e5App
 
 from .Ui_IrcIdentitiesEditDialog import Ui_IrcIdentitiesEditDialog
 
@@ -23,7 +22,6 @@ import Utilities
 import UI.PixmapCache
 
 
-# TODO: implement "Away" page
 class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     """
     Class implementing the identities management dialog.
@@ -108,13 +106,22 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         
         self.__currentIdentity = self.__identities[identity]
         
-        # TODO: update of tab widget not implemented yet
+        # General Tab
         self.realnameEdit.setText(self.__currentIdentity.getRealName())
         self.nicknamesList.clear()
         self.nicknamesList.addItems(self.__currentIdentity.getNickNames())
         self.serviceEdit.setText(self.__currentIdentity.getServiceName())
         self.passwordEdit.setText(self.__currentIdentity.getPassword())
         
+        # Away Tab
+        self.rememberPosOnAwayCheckBox.setChecked(
+            self.__currentIdentity.rememberAwayPosition())
+        self.awayEdit.setText(self.__currentIdentity.getAwayMessage())
+        self.autoAwayGroup.setChecked(self.__currentIdentity.autoAway())
+        self.inactivitySpinBox.setValue(self.__currentIdentity.getAutoAwayTimeout())
+        self.autoReturnCheckBox.setChecked(self.__currentIdentity.autoReturn())
+        
+        # Advanced Tab
         self.identEdit.setText(self.__currentIdentity.getIdent())
         self.quitEdit.setText(self.__currentIdentity.getQuitMessage())
         self.partEdit.setText(self.__currentIdentity.getPartMessage())
@@ -124,18 +131,6 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.__updateNicknameButtons()
         
         self.identityTabWidget.setCurrentIndex(0)
-##    void IdentityDialog::updateIdentity(int index)
-##    {
-##        m_insertRememberLineOnAwayChBox->setChecked(m_currentIdentity->getInsertRememberLineOnAway());
-##        m_awayMessageEdit->setText(m_currentIdentity->getAwayMessage());
-##        m_awayNickEdit->setText(m_currentIdentity->getAwayNickname());
-##        awayCommandsGroup->setChecked(m_currentIdentity->getRunAwayCommands());
-##        m_awayEdit->setText(m_currentIdentity->getAwayCommand());
-##        m_unAwayEdit->setText(m_currentIdentity->getReturnCommand());
-##        automaticAwayGroup->setChecked(m_currentIdentity->getAutomaticAway());
-##        m_awayInactivitySpin->setValue(m_currentIdentity->getAwayInactivity());
-##        m_automaticUnawayChBox->setChecked(m_currentIdentity->getAutomaticUnaway());
-##    }
     
     def __refreshCurrentIdentity(self):
         """
@@ -144,29 +139,25 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         if self.__currentIdentity is None:
             return
         
+        # General Tab
         self.__currentIdentity.setRealName(self.realnameEdit.text())
         self.__currentIdentity.setNickNames([self.nicknamesList.item(row).text()
             for row in range(self.nicknamesList.count())])
         self.__currentIdentity.setServiceName(self.serviceEdit.text())
         self.__currentIdentity.setPassword(self.passwordEdit.text())
         
+        # Away Tab
+        self.__currentIdentity.setRememberAwayPosition(
+            self.rememberPosOnAwayCheckBox.isChecked())
+        self.__currentIdentity.setAwayMessage(self.awayEdit.text())
+        self.__currentIdentity.setAutoAway(self.autoAwayGroup.isChecked())
+        self.__currentIdentity.setAutoAwayTimeout(self.inactivitySpinBox.value())
+        self.__currentIdentity.setAutoReturn(self.autoReturnCheckBox.isChecked())
+        
+        # Advanced Tab
         self.__currentIdentity.setIdent(self.identEdit.text())
         self.__currentIdentity.setQuitMessage(self.quitEdit.text())
         self.__currentIdentity.setPartMessage(self.partEdit.text())
-##
-##    void IdentityDialog::refreshCurrentIdentity()
-##    {
-##        m_currentIdentity->setInsertRememberLineOnAway(m_insertRememberLineOnAwayChBox->isChecked());
-##        m_currentIdentity->setAwayMessage(m_awayMessageEdit->text());
-##        m_currentIdentity->setAwayNickname(m_awayNickEdit->text());
-##        m_currentIdentity->setRunAwayCommands(awayCommandsGroup->isChecked());
-##        m_currentIdentity->setAwayCommand(m_awayEdit->text());
-##        m_currentIdentity->setReturnCommand(m_unAwayEdit->text());
-##        m_currentIdentity->setAutomaticAway(automaticAwayGroup->isChecked());
-##        m_currentIdentity->setAwayInactivity(m_awayInactivitySpin->value());
-##        m_currentIdentity->setAutomaticUnaway(m_automaticUnawayChBox->isChecked());
-##    }
-##
     
     def __checkCurrentIdentity(self):
         """

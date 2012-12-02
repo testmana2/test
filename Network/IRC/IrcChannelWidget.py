@@ -153,6 +153,13 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     # TODO: add context menu to users list with these entries:
     #       Whois
     #       Private Message
+    # TODO: add "Auto WHO" functionality (WHO <channel> %nf)
+    #       The possible combinations for this field are listed below:
+    #       H The user is not away.
+    #       G The user is set away.
+    #       * The user is an IRC operator.
+    #       @ The user is a channel op in the channel listed in the first field.
+    #       + The user is voiced in the channel listed.
     # TODO: add context menu to messages pane with these entries:
     #       Copy
     #       Copy Link Location

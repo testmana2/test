@@ -24,6 +24,7 @@ class IrcIdentity(object):
     DefaultIdentityName = "0default"
     DefaultIdentityDisplay = QCoreApplication.translate("IrcIdentity", "Default Identity")
     
+    DefaultAwayMessage = QCoreApplication.translate("IrcIdentity", "Gone away for now.")
     DefaultQuitMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
     DefaultPartMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
     
@@ -42,7 +43,11 @@ class IrcIdentity(object):
         self.__password = ""
         self.__ident = Utilities.getUserName()
         
-        # TODO: add AWAY handling
+        self.__rememberPosOnAway = True
+        self.__awayMessage = IrcIdentity.DefaultAwayMessage
+        self.__autoAway = False
+        self.__autoAwayTimeout = 1
+        self.__autoReturn = False
         
         self.__quitMessage = IrcIdentity.DefaultQuitMessage
         self.__partMessage = IrcIdentity.DefaultPartMessage
@@ -61,6 +66,11 @@ class IrcIdentity(object):
         settings.setValue("Password", self.__password)
         settings.setValue("QuitMessage", self.__quitMessage)
         settings.setValue("PartMessage", self.__partMessage)
+        settings.setValue("RememberAwayPosition", self.__rememberPosOnAway)
+        settings.setValue("AwayMessage", self.__awayMessage)
+        settings.setValue("AutoAway", self.__autoAway)
+        settings.setValue("AwayTimeout", self.__autoAwayTimeout)
+        settings.setValue("AutoReturn", self.__autoReturn)
     
     def load(self, settings):
         """
@@ -75,6 +85,12 @@ class IrcIdentity(object):
         self.__password = settings.value("Password", "")
         self.__quitMessage = settings.value("QuitMessage", IrcIdentity.DefaultQuitMessage)
         self.__partMessage = settings.value("PartMessage", IrcIdentity.DefaultPartMessage)
+        self.__rememberPosOnAway = Preferences.toBool(
+            settings.value("RememberAwayPosition", True))
+        self.__awayMessage = settings.value("AwayMessage", IrcIdentity.DefaultAwayMessage)
+        self.__autoAway = Preferences.toBool(settings.value("AutoAway", False))
+        self.__autoAwayTimeout = int(settings.value("AwayTimeout", 1))
+        self.__autoReturn = Preferences.toBool(settings.value("AutoReturn", False))
     
     def setName(self, name):
         """
@@ -209,6 +225,89 @@ class IrcIdentity(object):
         @return PART message (string)
         """
         return self.__partMessage
+    
+    def setRememberAwayPosition(self, remember):
+        """
+        Public method to set to remember the chat position upon AWAY.
+        
+        @param remember flag indicating to remember the chat position (boolean)
+        """
+        self.__rememberPosOnAway = remember
+    
+    def rememberAwayPosition(self):
+        """
+        Public method to get a flag indicating to remember the chat position upon AWAY.
+        
+        @return flag indicating to remember the chat position (boolean)
+        """
+        return self.__rememberPosOnAway
+    
+    def setAwayMessage(self, message):
+        """
+        Public method to set the AWAY message.
+        
+        @param message AWAY message (string)
+        """
+        if message:
+            self.__awayMessage = message
+        else:
+            self.__awayMessage = IrcIdentity.DefaultAwayMessage
+    
+    def getAwayMessage(self):
+        """
+        Public method to get the AWAY message.
+        
+        @return AWAY message (string)
+        """
+        return self.__awayMessage
+    
+    def setAutoAway(self, on):
+        """
+        Public method to set the auto away function.
+        
+        @param on flag indicating to enable the auto away function (boolean)
+        """
+        self.__autoAway = on
+    
+    def autoAway(self):
+        """
+        Public method to get the auto away flag.
+        
+        @return auto away flag (boolean)
+        """
+        return self.__autoAway
+    
+    def setAutoAwayTimeout(self, minutes):
+        """
+        Public method to set the auto away timeout.
+        
+        @param minutes auto away timeout in minutes (integer)
+        """
+        self.__autoAwayTimeout = minutes
+    
+    def getAutoAwayTimeout(self):
+        """
+        Public method to get the auto away timeout.
+        
+        @return auto away timeout in minutes (integer)
+        """
+        return self.__autoAwayTimeout
+    
+    def setAutoReturn(self, on):
+        """
+        Public method to set the auto return function.
+        
+        @param on flag indicating to enable the auto return function (boolean)
+        """
+        self.__autoReturn = on
+    
+    def autoReturn(self):
+        """
+        Public method to get the auto return flag.
+        
+        @return auto return flag (boolean)
+        """
+        return self.__autoReturn
     
     @classmethod
     def createDefaultIdentity(cls):

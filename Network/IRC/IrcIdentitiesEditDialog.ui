@@ -209,6 +209,112 @@
       <attribute name="title">
        <string>Away</string>
       </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0" colspan="2">
+        <widget class="QCheckBox" name="rememberPosOnAwayCheckBox">
+         <property name="toolTip">
+          <string>Select to mark the current position in the chat with a horizontal line, when you send an AWAY command.</string>
+         </property>
+         <property name="whatsThis">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Mark the current position in chat windows when going away</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Away Message:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="awayEdit">
+         <property name="toolTip">
+          <string>Enter the message to be sent when going away</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QGroupBox" name="autoAwayGroup">
+         <property name="toolTip">
+          <string>Select to send an AWAY message when inactive</string>
+         </property>
+         <property name="title">
+          <string>Auto Away</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Time of Inactivity:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="inactivitySpinBox">
+            <property name="toolTip">
+             <string>Enter the time of inactivity to send the automatic AWAY message</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="suffix">
+             <string> min</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>120</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>321</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QCheckBox" name="autoReturnCheckBox">
+            <property name="toolTip">
+             <string>Select to return automatically when activity is detected</string>
+            </property>
+            <property name="text">
+             <string>Automatically return on activity</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>219</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="advancedTab">
       <attribute name="title">
@@ -302,6 +408,11 @@
   <tabstop>nicknameDownButton</tabstop>
   <tabstop>serviceEdit</tabstop>
   <tabstop>passwordEdit</tabstop>
+  <tabstop>rememberPosOnAwayCheckBox</tabstop>
+  <tabstop>awayEdit</tabstop>
+  <tabstop>autoAwayGroup</tabstop>
+  <tabstop>inactivitySpinBox</tabstop>
+  <tabstop>autoReturnCheckBox</tabstop>
   <tabstop>identEdit</tabstop>
   <tabstop>quitEdit</tabstop>
   <tabstop>partEdit</tabstop>

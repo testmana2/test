@@ -39,6 +39,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
     ServerConnected = 2
     ServerConnecting = 3
     
+    # TODO: Implement the Auto Away functionality
     def __init__(self, parent=None):
         """
         Constructor
@@ -140,7 +141,6 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         @param connect flag indicating to connect (boolean)
         """
         if connect:
-            # TODO: support SSL connection
             network = self.__ircNetworkManager.getNetwork(name)
             if network:
                 self.__server = network.getServer()
