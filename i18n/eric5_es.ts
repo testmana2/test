@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1986,8 +1987,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2228,8 +2229,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -2776,27 +2777,27 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="189"/>
         <source>New User</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Usuario</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="189"/>
         <source>{0} has joined.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} se ha unido.</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="217"/>
         <source>User Left</source>
-        <translation type="unfinished"></translation>
+        <translation>El Usuario Se Ha Ido</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="217"/>
         <source>{0} has left.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} se ha ido.</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="238"/>
         <source>Message from &lt;{0}&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensaje de &lt;{0}&gt;</translation>
     </message>
 </context>
 <context>
@@ -3783,7 +3784,7 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="142"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Notificaciones</translation>
     </message>
 </context>
 <context>
@@ -5115,17 +5116,17 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="970"/>
         <source>Program terminated</source>
-        <translation type="unfinished"></translation>
+        <translation>Programa terminado</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="964"/>
         <source>The program has terminated with an exit status of {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>El programa ha terminado con un estado de salida de {0}.</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="967"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;{0}&quot; ha terminado con un estado de salida de {1}.</translation>
     </message>
 </context>
 <context>
@@ -14042,7 +14043,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -17649,12 +17650,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="457"/>
         <source>Commit Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Commit de Cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="457"/>
         <source>The commit affects files, that have unsaved changes. Shall the commit be continued?</source>
-        <translation type="unfinished"></translation>
+        <translation>La operación de commit afecta a archivos que tienen cambios sin guardar. ¿Continuar con la operación de commit?</translation>
     </message>
 </context>
 <context>
@@ -28014,72 +28015,72 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="20"/>
         <source>&lt;b&gt;Configure notification settings&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar ajustes de notificación&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="40"/>
         <source>Select to enable notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar notificaciones</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="43"/>
         <source>Enable Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Notificaciones</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="52"/>
         <source>Auto Close Timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de tiempo para Auto Cerrar:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="59"/>
         <source>Enter the timeout for closing the notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el intervalo de tiempo para cerrar la notificación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="65"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="104"/>
         <source>Enter the X-position the notification should be shown at</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la posición X para mostrar la notificación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="124"/>
         <source>Enter the Y-position the notification should be shown at</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la posición Y para mostrar la notificación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="91"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Posición</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="97"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="117"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="137"/>
         <source>Press to select the position visually, release to get it</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para seleccionar la posición visualmente, soltar para asignar</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="68"/>
         <source>Visual Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selección Visual</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="69"/>
         <source>Drag the notification window to the desired place and release the button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastrar la ventana de notificación a la ubicación deseada y soltar el botón.</translation>
     </message>
 </context>
 <context>
@@ -31520,7 +31521,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/Project.py" line="341"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado con el Lenguaje de Programación &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -38384,42 +38385,42 @@ Not connected</source>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="14"/>
         <source>Edit Spelling Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Diccionario Ortográfico</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="70"/>
         <source>Enter search term</source>
-        <translation type="unfinished">Introduzca el término de búsqueda</translation>
+        <translation>Introduzca el término de búsqueda</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="88"/>
         <source>Press to add an entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir una entrada</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="91"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Añadir</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="101"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+        <translation>Pulse¡ar para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="104"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina&amp;r</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="114"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+        <translation>Pulsar para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="117"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar Todas</translation>
     </message>
 </context>
 <context>
@@ -40235,12 +40236,12 @@ Not connected</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="521"/>
         <source>Commit Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Commit de Cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="521"/>
         <source>The commit affects files, that have unsaved changes. Shall the commit be continued?</source>
-        <translation type="unfinished"></translation>
+        <translation>La operación de commit afecta a archivos que tienen cambios sin guardar. ¿Continuar con la operación de commit?</translation>
     </message>
 </context>
 <context>
@@ -45797,17 +45798,17 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
         <source>Select to filter on the task summary</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para filtrar en el resumen de tareas</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
         <source>Summary</source>
-        <translation type="unfinished">Resumen</translation>
+        <translation>Resumen</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
         <source>Enter the summary filter as a regular expression.</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el filtro para el resumen como expresión regular.</translation>
     </message>
 </context>
 <context>
@@ -46365,7 +46366,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Templates/TemplateViewer.py" line="564"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;Los grupos de plantillas&lt;/b&gt; son una manera de agrupar plantillas individuales. Los grupos tienen un atributo que especifica a qué lenguaje de programación se aplican. Para añadir entradas de plantillas. al menos un grupo tiene que haber sido definido.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Las entradas de plantilla&lt;/b&gt; son las plantillas reales. Se agrupan en grupos de plantillas. Se puede encontrar ayuda sobre como definirlas en el diálogo de edición de plantilla.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -54674,181 +54675,185 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="3533"/>
         <source>Check spelling</source>
-        <translation type="unfinished">Corrección ortográfica</translation>
+        <translation>Corrección ortográfica</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3533"/>
         <source>Check &amp;spelling...</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrección &amp;ortográfica...</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3544"/>
         <source>&lt;b&gt;Check spelling&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Corrección ortográfica&lt;/b&gt;&lt;p&gt;Lleva a cabo la corrección ortográfica del editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3586"/>
         <source>Edit Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Diccionario</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3588"/>
         <source>Project Word List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de Palabras del Proyecto</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3591"/>
         <source>Project Exception List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de Excepciones del Proyecto</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3595"/>
         <source>User Word List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de Palabras del Usuario</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3598"/>
         <source>User Exception List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de Excepciones del Usuario</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5378"/>
         <source>Edit Project Word List</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Lista de Palabras del Proyecto</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5378"/>
         <source>No word list defined for the current project.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha definido una lista de palabras para el proyecto actual.</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5391"/>
         <source>Edit Project Exception List</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Lista de Excepciones del Proyecto</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5391"/>
         <source>No exception list defined for the current project.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha definido una lista de excepciones para el proyecto actual.</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5449"/>
         <source>Edit Spelling Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Diccionario Ortográfico</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5430"/>
         <source>Editing {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Editando {0}</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5420"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de diccionario ortográfico &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5440"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo de diccionario ortográfico &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="5449"/>
         <source>The spelling dictionary was saved successfully.</source>
-        <translation type="unfinished"></translation>
+        <translation>El diccionario ortográfico se ha guardado con éxito.</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2459"/>
         <source>Search current word forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar palabra actual hacia adelante</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2459"/>
         <source>Ctrl+.</source>
         <comment>Search|Search current word forward</comment>
-        <translation type="unfinished">Ctrl+.</translation>
+        <translatorcomment>Buscar|Buscar palabra actual hacia adelante</translatorcomment>
+        <translation>Ctrl+.</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2467"/>
         <source>Search next occurrence of the current word</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar siguiente ocurrencia de la palabra actual</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2469"/>
         <source>&lt;b&gt;Search current word forward&lt;/b&gt;&lt;p&gt;Search the next occurrence of the current word of the current editor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Buscar palabra actual hacia adelante&lt;/b&gt;&lt;p&gt;Buscar la siguiente ocurrencia de la palabra actual en el editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2477"/>
         <source>Search current word backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar palabra actual hacia atrás</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2477"/>
         <source>Ctrl+,</source>
         <comment>Search|Search current word backward</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Buscar|Buscar palabra actual hacia atrás</translatorcomment>
+        <translation>Ctrl+,</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2485"/>
         <source>Search previous occurrence of the current word</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar ocurrencia anterior de la palabra actual</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2487"/>
         <source>&lt;b&gt;Search current word backward&lt;/b&gt;&lt;p&gt;Search the previous occurrence of the current word of the current editor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Buscar palabra actual hacia atrás&lt;/b&gt;&lt;p&gt;Buscar la ocurrencia anterior de la palabra actual en el editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2691"/>
         <source>Search in Open Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar en los Archivos Abiertos</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2691"/>
         <source>Search in Open Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar en los Archivos Abiertos...</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2691"/>
         <source>Meta+Ctrl+Alt+F</source>
         <comment>Search|Search Open Files</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Buscar|Buscar en los Archivos Abiertos</translatorcomment>
+        <translation>Meta+Ctrl+Alt+F</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2699"/>
         <source>Search for a text in open files</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar un texto en los archivos abiertos</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2701"/>
         <source>&lt;b&gt;Search in Open Files&lt;/b&gt;&lt;p&gt;Search for some text in the currently opened files. A dialog is shown to enter the searchtext and options for the search and to display the result.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Buscar en los Archivos Abiertos&lt;/b&gt;&lt;p&gt;Buscar un texto en los archivos actualmente abiertos. Se muestra un diálogo para introducir el texto de búsqueda y opciones de búsqueda, y para mostrar el resultado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2710"/>
         <source>Replace in Open Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplazar en los Archivos Abiertos</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2710"/>
         <source>Meta+Ctrl+Alt+R</source>
         <comment>Search|Replace in Open Files</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Buscar|Reemplazar en los Archivos Abiertos</translatorcomment>
+        <translation>Meta+Ctrl+Alt+R</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2717"/>
         <source>Search for a text in open files and replace it</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar un texto en los archivos abiertos y reemplazarlo</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2719"/>
         <source>&lt;b&gt;Replace in Open Files&lt;/b&gt;&lt;p&gt;Search for some text in the currently opened files and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and to display the result.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Reemplazar en los Archivos Abiertos&lt;/b&gt;&lt;p&gt;Buscar un texto en los archivos actualmente abiertos y reemplazarlo. Se muestra un diálogo para introducir el texto de búsqueda, el texto de reemplazo y opciones para la búsqueda y visualización del resultado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2710"/>
         <source>Replace in Open Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplazar en los Archivos Abiertos...</translation>
     </message>
 </context>
 <context>
