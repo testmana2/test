@@ -365,16 +365,18 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             if match.lastindex == 2:
                 msg = self.trUtf8("{0} has left {1}.").format(
                     match.group(1), self.__name)
+                nmsg = msg
                 self.__addManagementMessage(IrcChannelWidget.LeaveIndicator, msg)
             else:
                 msg = self.trUtf8("{0} has left {1}: {2}.").format(
-                    match.group(1), self.__name,
-                    ircFilter(match.group(3)))
+                    match.group(1), self.__name, ircFilter(match.group(3)))
+                nmsg = self.trUtf8("{0} has left {1}: {2}.").format(
+                    match.group(1), self.__name, match.group(3))
                 self.__addManagementMessage(IrcChannelWidget.LeaveIndicator, msg)
             if Preferences.getIrc("ShowNotifications") and \
                Preferences.getIrc("NotifyJoinPart"):
                 self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
-                    self.trUtf8("Leave Channel"), msg)
+                    self.trUtf8("Leave Channel"), nmsg)
             return True
         
         return False

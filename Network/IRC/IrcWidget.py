@@ -40,6 +40,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.setupUi(self)
         
         self.__ircNetworkManager = IrcNetworkManager(self)
+        self.__ircNetworkManager.dataChanged.connect(self.__networkDataChanged)
         
         self.__leaveButton = QToolButton(self)
         self.__leaveButton.setIcon(UI.PixmapCache.getIcon("ircCloseChannel.png"))
@@ -59,6 +60,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__channelTypePrefixes = ""
         self.__userName = ""
         self.__identityName = ""
+        self.__quitMessage = ""
         self.__nickIndex = -1
         self.__nickName = ""
         self.__server = None
@@ -108,7 +110,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             if ok:
                 self.__socket.blockSignals(True)
                 
-                self.__send("QUIT :" + self.trUtf8("IRC for eric IDE"))
+                self.__send("QUIT :" + self.__quitMessage)
                 self.__socket.close()
                 self.__socket.deleteLater()
         else:
@@ -132,12 +134,14 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         @param connect flag indicating to connect (boolean)
         """
         if connect:
+            # TODO: support SSL connection
             network = self.__ircNetworkManager.getNetwork(name)
             if network:
                 self.__server = network.getServer()
                 self.__identityName = network.getIdentityName()
                 identity = self.__ircNetworkManager.getIdentity(self.__identityName)
                 self.__userName = identity.getIdent()
+                self.__quitMessage = identity.getQuitMessage()
                 if self.__server:
                     self.networkWidget.addServerMessage(self.trUtf8("Info"),
                         self.trUtf8("Looking for server {0} (port {1})...").format(
@@ -159,10 +163,11 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     self.channelsWidget.removeTab(self.channelsWidget.indexOf(channel))
                     channel.deleteLater()
                     channel = None
-                self.__send("QUIT :" + self.trUtf8("IRC for eric IDE"))
+                self.__send("QUIT :" + self.__quitMessage)
                 self.__socket.close()
                 self.__userName = ""
                 self.__identityName = ""
+                self.__quitMessage = ""
     
     def __editNetwork(self, name):
         """
@@ -172,6 +177,16 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         dlg = IrcNetworkListDialog(self.__ircNetworkManager, self)
         dlg.exec_()
+    
+    def __networkDataChanged(self):
+        """
+        Private slot handling changes of the network and identity definitions.
+        """
+        identity = self.__ircNetworkManager.getIdentity(self.__identityName)
+        if identity:
+            partMsg = identity.getPartMessage()
+            for channel in self.__channelList:
+                channel.setPartMessage(partMsg)
     
     def __joinChannel(self, name, key=""):
         """
@@ -188,7 +203,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         channel = IrcChannelWidget(self)
         channel.setName(name)
         channel.setUserName(self.__nickName)
-        channel.setPartMessage(self.trUtf8("IRC for eric IDE"))
+        identity = self.__ircNetworkManager.getIdentity(self.__identityName)
+        channel.setPartMessage(identity.getPartMessage())
         channel.setUserPrivilegePrefix(self.__userPrefix)
         
         channel.sendData.connect(self.__send)
@@ -197,7 +213,10 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.channelsWidget.addTab(channel, name)
         self.__channelList.append(channel)
         
-        self.__send("JOIN " + name) # TODO: add channel key
+        joinCommand = ["JOIN", name]
+        if key:
+            joinCommand.append(key)
+        self.__send(" ".join(joinCommand))
         self.__send("MODE " + name)
         
         emptyIndex = self.channelsWidget.indexOf(self.__emptyLabel)
@@ -378,6 +397,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.networkWidget.addMessage(
                     self.trUtf8("You have left channel {0}.").format(channel))
                 return True
+        elif name == "QUIT":
+            # don't do anything with it here
+            return True
         elif name == "NICK":
             # :foo_!n=foo@foohost.bar.net NICK :newnick
             oldNick = match.group(1).split("!", 1)[0]
@@ -497,7 +519,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         Private method to register to services.
         """
         identity = self.__ircNetworkManager.getIdentity(self.__identityName)
-        service = identity.getName()
+        service = identity.getServiceName()
         password = identity.getPassword()
         if service and password:
             self.__send("PRIVMSG " + service + " :identify " + password)

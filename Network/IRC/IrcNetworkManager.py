@@ -24,6 +24,9 @@ class IrcIdentity(object):
     DefaultIdentityName = "0default"
     DefaultIdentityDisplay = QCoreApplication.translate("IrcIdentity", "Default Identity")
     
+    DefaultQuitMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
+    DefaultPartMessage = QCoreApplication.translate("IrcIdentity", "IRC for eric5 IDE")
+    
     def __init__(self, name):
         """
         Constructor
@@ -38,6 +41,11 @@ class IrcIdentity(object):
         self.__serviceName = ""
         self.__password = ""
         self.__ident = Utilities.getUserName()
+        
+        # TODO: add AWAY handling
+        
+        self.__quitMessage = IrcIdentity.DefaultQuitMessage
+        self.__partMessage = IrcIdentity.DefaultPartMessage
     
     def save(self, settings):
         """
@@ -51,6 +59,8 @@ class IrcIdentity(object):
         settings.setValue("NickNames", self.__nickNames)
         settings.setValue("ServiceName", self.__serviceName)
         settings.setValue("Password", self.__password)
+        settings.setValue("QuitMessage", self.__quitMessage)
+        settings.setValue("PartMessage", self.__partMessage)
     
     def load(self, settings):
         """
@@ -63,6 +73,8 @@ class IrcIdentity(object):
         self.__nickNames = Preferences.toList(settings.value("NickNames", []))
         self.__serviceName = settings.value("ServiceName", "")
         self.__password = settings.value("Password", "")
+        self.__quitMessage = settings.value("QuitMessage", IrcIdentity.DefaultQuitMessage)
+        self.__partMessage = settings.value("PartMessage", IrcIdentity.DefaultPartMessage)
     
     def setName(self, name):
         """
@@ -159,6 +171,44 @@ class IrcIdentity(object):
         @return password (string)
         """
         return pwConvert(self.__password, encode=False)
+    
+    def setQuitMessage(self, message):
+        """
+        Public method to set the QUIT message.
+        
+        @param message QUIT message (string)
+        """
+        if message:
+            self.__quitMessage = message
+        else:
+            self.__quitMessage = IrcIdentity.DefaultQuitMessage
+    
+    def getQuitMessage(self):
+        """
+        Public method to get the QUIT message.
+        
+        @return QUIT message (string)
+        """
+        return self.__quitMessage
+    
+    def setPartMessage(self, message):
+        """
+        Public method to set the PART message.
+        
+        @param message PART message (string)
+        """
+        if message:
+            self.__partMessage = message
+        else:
+            self.__partMessage = IrcIdentity.DefaultPartMessage
+    
+    def getPartMessage(self):
+        """
+        Public method to get the PART message.
+        
+        @return PART message (string)
+        """
+        return self.__partMessage
     
     @classmethod
     def createDefaultIdentity(cls):

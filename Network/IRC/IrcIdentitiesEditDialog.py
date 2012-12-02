@@ -9,11 +9,11 @@ Module implementing the identities management dialog.
 
 import copy
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtCore import pyqtSlot, Qt, QEvent
 from PyQt4.QtGui import QDialog, QInputDialog, QLineEdit, QItemSelectionModel
 
 from E5Gui import E5MessageBox
-from E5Gui.E5Application import e5App
+##from E5Gui.E5Application import e5App
 
 from .Ui_IrcIdentitiesEditDialog import Ui_IrcIdentitiesEditDialog
 
@@ -24,7 +24,6 @@ import UI.PixmapCache
 
 
 # TODO: implement "Away" page
-# TODO: implement "Advanced" page
 class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     """
     Class implementing the identities management dialog.
@@ -67,6 +66,23 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.identitiesCombo.setCurrentIndex(index)
         
         self.on_identitiesCombo_currentIndexChanged(identityName)
+        
+        self.nicknameEdit.installEventFilter(self)
+    
+    def eventFilter(self, obj, evt):
+        """
+        Public method to handle events for other objects.
+        
+        @param obj reference to the object (QObject)
+        @param evt reference to the event (QEvent)
+        @return flag indicating that the event should be filtered out (boolean)
+        """
+        if obj == self.nicknameEdit and evt.type() == QEvent.KeyPress:
+            if evt.key() in [Qt.Key_Enter, Qt.Key_Return]:
+                self.on_nicknameAddButton_clicked()
+                return True
+        
+        return super().eventFilter(obj, evt)
 
     def __updateIdentitiesButtons(self):
         """
@@ -99,9 +115,15 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.serviceEdit.setText(self.__currentIdentity.getServiceName())
         self.passwordEdit.setText(self.__currentIdentity.getPassword())
         
+        self.identEdit.setText(self.__currentIdentity.getIdent())
+        self.quitEdit.setText(self.__currentIdentity.getQuitMessage())
+        self.partEdit.setText(self.__currentIdentity.getPartMessage())
+        
         self.__updateIdentitiesButtons()
         self.__updateNicknameUpDownButtons()
         self.__updateNicknameButtons()
+        
+        self.identityTabWidget.setCurrentIndex(0)
 ##    void IdentityDialog::updateIdentity(int index)
 ##    {
 ##        m_insertRememberLineOnAwayChBox->setChecked(m_currentIdentity->getInsertRememberLineOnAway());
@@ -113,13 +135,6 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
 ##        automaticAwayGroup->setChecked(m_currentIdentity->getAutomaticAway());
 ##        m_awayInactivitySpin->setValue(m_currentIdentity->getAwayInactivity());
 ##        m_automaticUnawayChBox->setChecked(m_currentIdentity->getAutomaticUnaway());
-##
-##        m_sCommandEdit->setText(m_currentIdentity->getShellCommand());
-##        m_codecCBox->setCurrentIndex(Konversation::IRCCharsets::self()->shortNameToIndex(m_currentIdentity->getCodecName()));
-##        m_loginEdit->setText(m_currentIdentity->getIdent());
-##        m_quitEdit->setText(m_currentIdentity->getQuitReason());
-##        m_partEdit->setText(m_currentIdentity->getPartReason());
-##        m_kickEdit->setText(m_currentIdentity->getKickReason());
 ##    }
     
     def __refreshCurrentIdentity(self):
@@ -134,6 +149,10 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
             for row in range(self.nicknamesList.count())])
         self.__currentIdentity.setServiceName(self.serviceEdit.text())
         self.__currentIdentity.setPassword(self.passwordEdit.text())
+        
+        self.__currentIdentity.setIdent(self.identEdit.text())
+        self.__currentIdentity.setQuitMessage(self.quitEdit.text())
+        self.__currentIdentity.setPartMessage(self.partEdit.text())
 ##
 ##    void IdentityDialog::refreshCurrentIdentity()
 ##    {
@@ -146,14 +165,6 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
 ##        m_currentIdentity->setAutomaticAway(automaticAwayGroup->isChecked());
 ##        m_currentIdentity->setAwayInactivity(m_awayInactivitySpin->value());
 ##        m_currentIdentity->setAutomaticUnaway(m_automaticUnawayChBox->isChecked());
-##
-##        m_currentIdentity->setShellCommand(m_sCommandEdit->text());
-##        if(m_codecCBox->currentIndex() >= 0 && m_codecCBox->currentIndex() < Konversation::IRCCharsets::self()->availableEncodingShortNames().count())
-##            m_currentIdentity->setCodecName(Konversation::IRCCharsets::self()->availableEncodingShortNames()[m_codecCBox->currentIndex()]);
-##        m_currentIdentity->setIdent(m_loginEdit->text());
-##        m_currentIdentity->setQuitReason(m_quitEdit->text());
-##        m_currentIdentity->setPartReason(m_partEdit->text());
-##        m_currentIdentity->setKickReason(m_kickEdit->text());
 ##    }
 ##
     
@@ -359,9 +370,9 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         """
         Private slot handling a change of the nick name.
         """
-        itm = self.nicknamesList.currentItem()
-        if itm:
-            itm.setText(nick)
+        sel = self.nicknamesList.selectedItems()
+        if sel:
+            sel[0].setText(nick)
         
         self.__updateNicknameButtons()
     
