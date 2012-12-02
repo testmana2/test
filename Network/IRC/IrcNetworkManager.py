@@ -233,6 +233,7 @@ class IrcServer(object):
     Class implementing the IRC identity object.
     """
     DefaultPort = 6667
+    DefaultSslPort = 6697
     
     def __init__(self, name):
         """
@@ -616,21 +617,29 @@ class IrcNetwork(object):
         return self.__autoConnect
     
     @classmethod
-    def createDefaultNetwork(cls):
+    def createDefaultNetwork(cls, ssl=False):
         """
         Class method to create the default network.
         
+        @param ssl flag indicating to create a SSL network configuration (boolean)
         @return default network object (IrcNetwork)
         """
         # network
-        networkName = "Freenode"
+        if ssl:
+            networkName = "Freenode (SSL)"
+        else:
+            networkName = "Freenode"
         network = IrcNetwork(networkName)
         network.setIdentityName(IrcIdentity.DefaultIdentityName)
         
         # server
         serverName = "chat.freenode.net"
         server = IrcServer(serverName)
-        server.setPort(8001)
+        if ssl:
+            server.setPort(IrcServer.DefaultSslPort)
+            server.setUseSSL(True)
+        else:
+            server.setPort(IrcServer.DefaultPort)
         network.setServer(server)
         
         # channel
@@ -765,6 +774,8 @@ class IrcNetworkManager(QObject):
         
         if not identityOnly:
             network = IrcNetwork.createDefaultNetwork()
+            self.__networks[network.getName()] = network
+            network = IrcNetwork.createDefaultNetwork(True)
             self.__networks[network.getName()] = network
         
         self.dataChanged.emit()

@@ -31,10 +31,11 @@ class IrcServerEditDialog(QDialog, Ui_IrcServerEditDialog):
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
-        self.serverEdit.setText(server.getName())
-        self.portSpinBox.setValue(server.getPort())
-        self.passwordEdit.setText(server.getPassword())
-        self.sslCheckBox.setChecked(server.useSSL())
+        if server:
+            self.serverEdit.setText(server.getName())
+            self.portSpinBox.setValue(server.getPort())
+            self.passwordEdit.setText(server.getPassword())
+            self.sslCheckBox.setChecked(server.useSSL())
         
         self.__updateOkButton()
     

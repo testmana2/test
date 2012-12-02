@@ -123,10 +123,13 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     @pyqtSlot()
     def on_newButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to add a new network entry.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        dlg = IrcNetworkEditDialog(self.__manager, "", self)
+        if dlg.exec_() == QDialog.Accepted:
+            network = dlg.getNetwork()
+            self.__manager.addNetwork(network)
+            self.__refreshNetworksList()
     
     @pyqtSlot()
     def on_editButton_clicked(self):

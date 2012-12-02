@@ -16,7 +16,7 @@ from E5Gui import E5MessageBox
 
 from .Ui_IrcNetworkEditDialog import Ui_IrcNetworkEditDialog
 
-from .IrcNetworkManager import IrcIdentity, IrcChannel
+from .IrcNetworkManager import IrcIdentity, IrcNetwork, IrcChannel
 from .IrcChannelEditDialog import IrcChannelEditDialog
 from .IrcServerEditDialog import IrcServerEditDialog
 from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
@@ -49,8 +49,10 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
-        # TODO: add the ADD mode
-        self.__network = copy.deepcopy(self.__manager.getNetwork(networkName))
+        if networkName:
+            self.__network = copy.deepcopy(self.__manager.getNetwork(networkName))
+        else:
+            self.__network = IrcNetwork("")
         
         # network name
         self.networkEdit.setText(networkName)
@@ -131,6 +133,15 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         dlg = IrcIdentitiesEditDialog(self.__manager, currentIdentity, self)
         dlg.exec_()
         self.__refreshIdentityCombo(currentIdentity)
+    
+    @pyqtSlot(str)
+    def on_serverEdit_textChanged(self, txt):
+        """
+        Private slot to handle changes of the server name.
+        
+        @param txt text entered into the server name edit (string)
+        """
+        self.__updateOkButton()
     
     @pyqtSlot()
     def on_editServerButton_clicked(self):

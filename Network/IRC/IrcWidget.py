@@ -13,6 +13,11 @@ import logging
 from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QTimer
 from PyQt4.QtGui import QWidget, QToolButton, QLabel
 from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
+try:
+    from PyQt4.QtNetwork import QSslSocket, QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from E5Gui import E5MessageBox
 
@@ -30,6 +35,10 @@ class IrcWidget(QWidget, Ui_IrcWidget):
     """
     Class implementing the IRC window.
     """
+    ServerDisconnected = 1
+    ServerConnected = 2
+    ServerConnecting = 3
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -66,16 +75,13 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__server = None
         self.__registering = False
         
+        self.__connectionState = IrcWidget.ServerDisconnected
+        self.__sslErrorLock = False
+        
         self.__buffer = ""
         self.__userPrefix = {}
         
-        # create TCP socket
-        self.__socket = QTcpSocket(self)
-        self.__socket.hostFound.connect(self.__hostFound)
-        self.__socket.connected.connect(self.__hostConnected)
-        self.__socket.disconnected.connect(self.__hostDisconnected)
-        self.__socket.readyRead.connect(self.__readyRead)
-        self.__socket.error.connect(self.__tcpError)
+        self.__socket = None
         
         self.__patterns = [
             # :foo.bar.net COMMAND some message
@@ -143,11 +149,43 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.__userName = identity.getIdent()
                 self.__quitMessage = identity.getQuitMessage()
                 if self.__server:
-                    self.networkWidget.addServerMessage(self.trUtf8("Info"),
-                        self.trUtf8("Looking for server {0} (port {1})...").format(
-                            self.__server.getName(), self.__server.getPort()))
-                    self.__socket.connectToHost(self.__server.getName(),
-                                                self.__server.getPort())
+                    useSSL = self.__server.useSSL()
+                    if useSSL and not SSL_AVAILABLE:
+                        E5MessageBox.critical(self,
+                            self.trUtf8("SSL Connection"),
+                            self.trUtf8("""An encrypted connection to the IRC network"""
+                                        """ was requested but SSL is not available."""
+                                        """ Please change the server configuration."""))
+                        return
+                    
+                    if useSSL:
+                        # create SSL socket
+                        self.__socket = QSslSocket(self)
+                        self.__socket.encrypted.connect(self.__hostConnected)
+                        self.__socket.sslErrors.connect(self.__sslErrors)
+                    else:
+                        # create TCP socket
+                        self.__socket = QTcpSocket(self)
+                        self.__socket.connected.connect(self.__hostConnected)
+                    self.__socket.hostFound.connect(self.__hostFound)
+                    self.__socket.disconnected.connect(self.__hostDisconnected)
+                    self.__socket.readyRead.connect(self.__readyRead)
+                    self.__socket.error.connect(self.__tcpError)
+                    
+                    self.__connectionState = IrcWidget.ServerConnecting
+                    if useSSL:
+                        self.networkWidget.addServerMessage(self.trUtf8("Info"),
+                            self.trUtf8("Looking for server {0} (port {1}) using"
+                                        " an SSL encrypted connection...").format(
+                                self.__server.getName(), self.__server.getPort()))
+                        self.__socket.connectToHostEncrypted(self.__server.getName(),
+                                                             self.__server.getPort())
+                    else:
+                        self.networkWidget.addServerMessage(self.trUtf8("Info"),
+                            self.trUtf8("Looking for server {0} (port {1})...").format(
+                                self.__server.getName(), self.__server.getPort()))
+                        self.__socket.connectToHost(self.__server.getName(),
+                                                    self.__server.getPort())
         else:
             ok = E5MessageBox.yesNo(self,
                 self.trUtf8("Disconnect from Server"),
@@ -164,7 +202,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     channel.deleteLater()
                     channel = None
                 self.__send("QUIT :" + self.__quitMessage)
-                self.__socket.close()
+                self.__socket and self.__socket.close()
                 self.__userName = ""
                 self.__identityName = ""
                 self.__quitMessage = ""
@@ -267,7 +305,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param data data to be sent (string)
         """
-        self.__socket.write(QByteArray("{0}\r\n".format(data).encode("utf-8")))
+        if self.__socket:
+            self.__socket.write(QByteArray("{0}\r\n".format(data).encode("utf-8")))
     
     def __hostFound(self):
         """
@@ -317,6 +356,12 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__nickName = ""
         self.__nickIndex = -1
         self.__channelTypePrefixes = ""
+        
+        self.__socket.deleteLater()
+        self.__socket = None
+        
+        self.__connectionState = IrcWidget.ServerDisconnected
+        self.__sslErrorLock = False
     
     def __readyRead(self):
         """
@@ -498,6 +543,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         if code == 1:
             # register with services after the welcome message
+            self.__connectionState = IrcWidget.ServerConnected
             self.__registerWithServices()
             QTimer.singleShot(1000, self.__autoJoinChannels)
         elif code == 5:
@@ -543,7 +589,12 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         if error == QAbstractSocket.RemoteHostClosedError:
             # ignore this one, it's a disconnect
-            pass
+            if self.__sslErrorLock:
+                self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
+                    self.trUtf8("""Connection to server {0} (port {1}) lost while"""
+                                """ waiting for user response to an SSL error.""").format(
+                    self.__server.getName(), self.__server.getPort()))
+                self.__connectionState = IrcWidget.ServerDisconnected
         elif error == QAbstractSocket.HostNotFoundError:
             self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
                 self.trUtf8("The host was not found. Please check the host name"
@@ -556,6 +607,45 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
                 self.trUtf8("The following network error occurred:<br/>{0}").format(
                 self.__socket.errorString()))
+    
+    def __sslErrors(self, errors):
+        """
+        Private slot to handle SSL errors.
+        
+        @param errors list of SSL errors (list of QSslError)
+        """
+        errorString = ""
+        if errors:
+            self.__sslErrorLock = True
+            errorStrings = []
+            for err in errors:
+                errorStrings.append(err.errorString())
+            errorString = '.<br/>'.join(errorStrings)
+            ret = E5MessageBox.yesNo(self,
+                self.trUtf8("SSL Errors"),
+                self.trUtf8("""<p>SSL Errors:</p>"""
+                            """<p>{0}</p>"""
+                            """<p>Do you want to ignore these errors?</p>""")\
+                    .format(errorString),
+                icon=E5MessageBox.Warning)
+            self.__sslErrorLock = False
+        else:
+            ret = True
+        if ret:
+            self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
+                self.trUtf8("""The SSL certificate for the server {0} (port {1})"""
+                            """ failed the authenticity check.""").format(
+                self.__server.getName(), self.__server.getPort()))
+            if self.__connectionState == IrcWidget.ServerConnecting:
+                self.__socket.ignoreSslErrors()
+        else:
+            self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
+                self.trUtf8("""Could not connect to {0} (port {1}) using an SSL"""
+                            """ encrypted connection. Either the server does not"""
+                            """ support SSL (did you use the correct port?) or"""
+                            """ you rejected the certificate.<br/>{2}""").format(
+                self.__server.getName(), self.__server.getPort(), errorString))
+            self.__socket.close()
     
     def __setUserPrivilegePrefix(self, prefix1, prefix2):
         """
