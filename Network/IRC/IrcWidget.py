@@ -65,6 +65,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.networkWidget.editNetwork.connect(self.__editNetwork)
         self.networkWidget.joinChannel.connect(self.__joinChannel)
         self.networkWidget.nickChanged.connect(self.__changeNick)
+        self.networkWidget.sendData.connect(self.__send)
         
         self.__channelList = []
         self.__channelTypePrefixes = ""
@@ -513,6 +514,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             msgType = self.trUtf8("User")
         elif code in [372, 375, 376]:
             msgType = self.trUtf8("MOTD")
+        elif code in [305, 306]:
+            msgType = self.trUtf8("Away")
         else:
             msgType = self.trUtf8("Info ({0})").format(code)
         
@@ -533,6 +536,10 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             parts = message.strip().split()
             message = self.trUtf8("Current users on the network: {0}, max. {1}").format(
                 parts[1], parts[2])
+        elif code == 305:
+            message = self.trUtf8("You are no longer marked as being away.")
+        elif code == 306:
+            message = self.trUtf8("You have been marked as being away.")
         else:
             first, message = message.split(None, 1)
             if message.startswith(":"):

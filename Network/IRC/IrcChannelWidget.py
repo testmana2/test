@@ -139,6 +139,9 @@ class IrcUserItem(QListWidgetItem):
 class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     """
     Class implementing the IRC channel widget.
+    
+    @signal sendData(str) emitted to send a message to the channel
+    @signal channelClosed(str) emitted after the user has left the channel
     """
     sendData = pyqtSignal(str)
     channelClosed = pyqtSignal(str)
@@ -168,7 +171,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     #       Save
     #       Remember Position
     # TODO: Remember current position with <hr/> when widget is invisible
-    # TODO: Remember current position with <hr/> upon user request (only one such line)
     # TODO: Remember current position with <hr/> when away and configured accordingly
     # TODO: Check away indication in the user list
     def __init__(self, parent=None):

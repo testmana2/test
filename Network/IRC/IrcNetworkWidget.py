@@ -26,11 +26,13 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     @signal editNetwork(str) emitted to edit a network configuration
     @signal joinChannel(str) emitted to join a channel
     @signal nickChanged(str) emitted to change the nick name
+    @signal sendData(str) emitted to send a message to the channel
     """
     connectNetwork = pyqtSignal(str, bool)
     editNetwork = pyqtSignal(str)
     joinChannel = pyqtSignal(str)
     nickChanged = pyqtSignal(str)
+    sendData = pyqtSignal(str)
     
     
     # TODO: add context menu to messages pane with these entries:
@@ -39,7 +41,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     #       Copy All
     #       Clear
     #       Save
-    # TODO: add AWAY support (toolbutton in widget)
     def __init__(self, parent=None):
         """
         Constructor
@@ -52,13 +53,16 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
         self.editButton.setIcon(UI.PixmapCache.getIcon("ircConfigure.png"))
         self.joinButton.setIcon(UI.PixmapCache.getIcon("ircJoinChannel.png"))
+        self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
         
         self.joinButton.setEnabled(False)
         self.nickCombo.setEnabled(False)
+        self.awayButton.setEnabled(False)
         
         self.__manager = None
         self.__connected = False
         self.__registered = False
+        self.__away = False
     
     def initialize(self, manager):
         """
@@ -107,6 +111,23 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         network = self.networkCombo.currentText()
         self.connectNetwork.emit(network, not self.__connected)
+    
+    @pyqtSlot()
+    def on_awayButton_clicked(self):
+        """
+        Private slot to toggle the away status.
+        """
+        if self.__away:
+            self.sendData.emit("AWAY")
+            self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
+            self.__away = False
+        else:
+            networkName = self.networkCombo.currentText()
+            identityName = self.__manager.getNetwork(networkName).getIdentityName()
+            awayMessage = self.__manager.getIdentity(identityName).getAwayMessage()
+            self.sendData.emit("AWAY :" + awayMessage)
+            self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserAway.png"))
+            self.__away = True
     
     @pyqtSlot()
     def on_editButton_clicked(self):
@@ -263,3 +284,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         on = bool(self.channelCombo.currentText()) and self.__registered
         self.joinButton.setEnabled(on)
         self.nickCombo.setEnabled(registered)
+        self.awayButton.setEnabled(registered)
+        if registered:
+            self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
+            self.__away = False
