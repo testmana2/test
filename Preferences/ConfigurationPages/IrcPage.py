@@ -21,7 +21,6 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
     DateFormats = ["yyyy-MM-dd", "dd.MM.yyyy", "MM/dd/yyyy",
                    "yyyy MMM. dd", "dd MMM. yyyy", "MMM. dd, yyyy"]
     
-    # TODO: add config entries for auto WHO
     def __init__(self):
         """
         Constructor
