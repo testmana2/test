@@ -713,7 +713,7 @@
       <string>Select this to enable the automatic lookup of user information for joined channels</string>
      </property>
      <property name="title">
-      <string>Enable Automatic User Information Look Up (/WHO)</string>
+      <string>Enable Automatic User Information Lookup (/WHO)</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
