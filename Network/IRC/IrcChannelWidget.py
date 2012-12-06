@@ -171,7 +171,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     #       Save
     #       Remember Position
     # TODO: Remember current position with <hr/> when widget is invisible
-    # TODO: Remember current position with <hr/> when away and configured accordingly
     # TODO: Check away indication in the user list
     def __init__(self, parent=None):
         """

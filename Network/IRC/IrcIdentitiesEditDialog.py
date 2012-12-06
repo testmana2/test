@@ -117,9 +117,6 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.rememberPosOnAwayCheckBox.setChecked(
             self.__currentIdentity.rememberAwayPosition())
         self.awayEdit.setText(self.__currentIdentity.getAwayMessage())
-        self.autoAwayGroup.setChecked(self.__currentIdentity.autoAway())
-        self.inactivitySpinBox.setValue(self.__currentIdentity.getAutoAwayTimeout())
-        self.autoReturnCheckBox.setChecked(self.__currentIdentity.autoReturn())
         
         # Advanced Tab
         self.identEdit.setText(self.__currentIdentity.getIdent())
@@ -150,9 +147,6 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.__currentIdentity.setRememberAwayPosition(
             self.rememberPosOnAwayCheckBox.isChecked())
         self.__currentIdentity.setAwayMessage(self.awayEdit.text())
-        self.__currentIdentity.setAutoAway(self.autoAwayGroup.isChecked())
-        self.__currentIdentity.setAutoAwayTimeout(self.inactivitySpinBox.value())
-        self.__currentIdentity.setAutoReturn(self.autoReturnCheckBox.isChecked())
         
         # Advanced Tab
         self.__currentIdentity.setIdent(self.identEdit.text())

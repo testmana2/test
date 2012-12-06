@@ -27,12 +27,14 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     @signal joinChannel(str) emitted to join a channel
     @signal nickChanged(str) emitted to change the nick name
     @signal sendData(str) emitted to send a message to the channel
+    @signal away(bool) emitted to indicate the away status
     """
     connectNetwork = pyqtSignal(str, bool)
     editNetwork = pyqtSignal(str)
     joinChannel = pyqtSignal(str)
     nickChanged = pyqtSignal(str)
     sendData = pyqtSignal(str)
+    away = pyqtSignal(bool)
     
     
     # TODO: add context menu to messages pane with these entries:
@@ -128,6 +130,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
             self.sendData.emit("AWAY :" + awayMessage)
             self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserAway.png"))
             self.__away = True
+        self.away.emit(self.__away)
     
     @pyqtSlot()
     def on_editButton_clicked(self):

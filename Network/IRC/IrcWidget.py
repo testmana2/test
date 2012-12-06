@@ -39,7 +39,6 @@ class IrcWidget(QWidget, Ui_IrcWidget):
     ServerConnected = 2
     ServerConnecting = 3
     
-    # TODO: Implement the Auto Away functionality
     def __init__(self, parent=None):
         """
         Constructor
@@ -66,6 +65,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.networkWidget.joinChannel.connect(self.__joinChannel)
         self.networkWidget.nickChanged.connect(self.__changeNick)
         self.networkWidget.sendData.connect(self.__send)
+        self.networkWidget.away.connect(self.__away)
         
         self.__channelList = []
         self.__channelTypePrefixes = ""
@@ -747,3 +747,15 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             return name[0] in self.__channelTypePrefixes
         else:
             return name[0] in "#&"
+    
+    def __away(self, isAway):
+        """
+        Private slot handling the change of the away state.
+        
+        @param isAway flag indicating the current away state (boolean)
+        """
+        if isAway and self.__identityName:
+            identity = self.__ircNetworkManager.getIdentity(self.__identityName)
+            if identity.rememberAwayPosition():
+                for channel in self.__channelList:
+                    channel.setMarkerLine()
