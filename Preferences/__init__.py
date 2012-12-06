@@ -953,6 +953,10 @@ class Prefs(object):
         "NotifyJoinPart": True,
         "NotifyMessage": False,
         "NotifyNick": False,
+        
+        "AutoUserInfoLookup": True,
+        "AutoUserInfoMax": 200,
+        "AutoUserInfoInterval": 90,
     }
 
 
@@ -2587,8 +2591,12 @@ def getIrc(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key in ["TimestampIncludeDate", "ShowTimestamps", "ShowNotifications",
-               "NotifyJoinPart", "NotifyMessage", "NotifyNick", "EnableIrcColours"]:
+               "NotifyJoinPart", "NotifyMessage", "NotifyNick", "EnableIrcColours",
+               "AutoUserInfoLookup"]:
         return toBool(prefClass.settings.value("IRC/" + key,
+                prefClass.ircDefaults[key]))
+    elif key in ["AutoUserInfoMax", "AutoUserInfoInterval"]:
+        return int(prefClass.settings.value("IRC/" + key,
                 prefClass.ircDefaults[key]))
     else:
         return prefClass.settings.value("IRC/" + key, prefClass.ircDefaults[key])

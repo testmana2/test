@@ -105,6 +105,11 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
                          Preferences.getIrc, byName=True)
         self.initColour("IrcColor15", self.ircColor15Button,
                          Preferences.getIrc, byName=True)
+        
+        # Automatic User Information Lookup
+        self.whoGroup.setChecked(Preferences.getIrc("AutoUserInfoLookup"))
+        self.whoUsersSpinBox.setValue(Preferences.getIrc("AutoUserInfoMax"))
+        self.whoIntervalSpinBox.setValue(Preferences.getIrc("AutoUserInfoInterval"))
     
     def save(self):
         """
@@ -121,6 +126,11 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         Preferences.setIrc("NotifyJoinPart", self.joinLeaveCheckBox.isChecked())
         Preferences.setIrc("NotifyMessage", self.messageCheckBox.isChecked())
         Preferences.setIrc("NotifyNick", self.ownNickCheckBox.isChecked())
+        
+        # Automatic User Information Lookup
+        Preferences.setIrc("AutoUserInfoLookup", self.whoGroup.isChecked())
+        Preferences.setIrc("AutoUserInfoMax", self.whoUsersSpinBox.value())
+        Preferences.setIrc("AutoUserInfoInterval", self.whoIntervalSpinBox.value())
         
         # colours
         self.saveColours(Preferences.setIrc)
