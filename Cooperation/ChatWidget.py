@@ -494,6 +494,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             self.__chatMenu.addAction(
                 UI.PixmapCache.getIcon("fileSave.png"),
                 self.trUtf8("Save"), self.__saveChat)
+        
+        self.on_chatEdit_copyAvailable(False)
     
     @pyqtSlot(bool)
     def on_chatEdit_copyAvailable(self, yes):
