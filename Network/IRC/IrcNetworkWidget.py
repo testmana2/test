@@ -7,8 +7,10 @@
 Module implementing the network part of the IRC widget.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal
-from PyQt4.QtGui import QWidget
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QPoint, QFileInfo
+from PyQt4.QtGui import QWidget, QApplication, QMenu
+
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_IrcNetworkWidget import Ui_IrcNetworkWidget
 
@@ -16,6 +18,7 @@ from .IrcUtilities import ircFilter, ircTimestamp
 
 import UI.PixmapCache
 import Preferences
+import Utilities
 
 
 class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
@@ -37,12 +40,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     away = pyqtSignal(bool)
     
     
-    # TODO: add context menu to messages pane with these entries:
-    #       Copy
-    #       Copy Link Location
-    #       Copy All
-    #       Clear
-    #       Save
     def __init__(self, parent=None):
         """
         Constructor
@@ -60,6 +57,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.joinButton.setEnabled(False)
         self.nickCombo.setEnabled(False)
         self.awayButton.setEnabled(False)
+        
+        self.__initMessagesMenu()
         
         self.__manager = None
         self.__connected = False
@@ -291,3 +290,147 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         if registered:
             self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
             self.__away = False
+    
+    def __clearMessages(self):
+        """
+        Private slot to clear the contents of the messages display.
+        """
+        self.messages.clear()
+    
+    def __copyMessages(self):
+        """
+        Private slot to copy the selection of the messages display to the clipboard.
+        """
+        self.messages.copy()
+    
+    def __cutMessages(self):
+        """
+        Private slot to cut the selection of the messages display to the clipboard.
+        """
+        self.messages.cut()
+    
+    def __copyAllMessages(self):
+        """
+        Private slot to copy the contents of the messages display to the clipboard.
+        """
+        txt = self.messages.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)
+    
+    def __cutAllMessages(self):
+        """
+        Private slot to cut the contents of the messages display to the clipboard.
+        """
+        txt = self.messages.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)
+        self.messages.clear()
+    
+    def __saveMessages(self):
+        """
+        Private slot to save the contents of the messages display.
+        """
+        hasText = not self.messages.document().isEmpty()
+        if hasText:
+            if Utilities.isWindowsPlatform():
+                htmlExtension = "htm"
+            else:
+                htmlExtension = "html"
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                self.trUtf8("Save Messages"),
+                "",
+                self.trUtf8(
+                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)").format(
+                    htmlExtension),
+                None,
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            if fname:
+                ext = QFileInfo(fname).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        fname += ex
+                    ext = QFileInfo(fname).suffix()
+                if QFileInfo(fname).exists():
+                    res = E5MessageBox.yesNo(self,
+                        self.trUtf8("Save Messages"),
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fname),
+                        icon=E5MessageBox.Warning)
+                    if not res:
+                        return
+                    fname = Utilities.toNativeSeparators(fname)
+                
+                try:
+                    if ext.lower() in ["htm", "html"]:
+                        txt = self.messages.toHtml()
+                    else:
+                        txt = self.messages.toPlainText()
+                    f = open(fname, "w", encoding="utf-8")
+                    f.write(txt)
+                    f.close()
+                except IOError as err:
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Error saving Messages"),
+                        self.trUtf8("""<p>The messages contents could not be written"""
+                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                            .format(fname, str(err)))
+    
+    def __initMessagesMenu(self):
+        """
+        Private slot to initialize the context menu of the messages pane.
+        """
+        self.__messagesMenu = QMenu(self)
+        self.__cutMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"),
+                self.trUtf8("Cut"), self.__cutMessages)
+        self.__copyMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy"), self.__copyMessages)
+        self.__messagesMenu.addSeparator()
+        self.__cutAllMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"),
+                self.trUtf8("Cut all"), self.__cutAllMessages)
+        self.__copyAllMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy all"), self.__copyAllMessages)
+        self.__messagesMenu.addSeparator()
+        self.__clearMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editDelete.png"),
+                self.trUtf8("Clear"), self.__clearMessages)
+        self.__messagesMenu.addSeparator()
+        self.__saveMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("fileSave.png"),
+                self.trUtf8("Save"), self.__saveMessages)
+        
+        self.on_messages_copyAvailable(False)
+    
+    @pyqtSlot(bool)
+    def on_messages_copyAvailable(self, yes):
+        """
+        Private slot to react to text selection/deselection of the messages edit.
+        
+        @param yes flag signaling the availability of selected text (boolean)
+        """
+        self.__copyMessagesAct.setEnabled(yes)
+        self.__cutMessagesAct.setEnabled(yes)
+    
+    @pyqtSlot(QPoint)
+    def on_messages_customContextMenuRequested(self, pos):
+        """
+        Private slot to show the context menu of the messages pane.
+        """
+        enable = not self.messages.document().isEmpty()
+        self.__cutAllMessagesAct.setEnabled(enable)
+        self.__copyAllMessagesAct.setEnabled(enable)
+        self.__saveMessagesAct.setEnabled(enable)
+        self.__messagesMenu.popup(self.messages.mapToGlobal(pos))

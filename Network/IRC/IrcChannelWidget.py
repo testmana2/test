@@ -9,10 +9,10 @@ Module implementing the IRC channel widget.
 
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint
-from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
+from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
 
 from .Ui_IrcChannelWidget import Ui_IrcChannelWidget
@@ -142,9 +142,11 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     
     @signal sendData(str) emitted to send a message to the channel
     @signal channelClosed(str) emitted after the user has left the channel
+    @signal openPrivateChat(str) emitted to open a "channel" for private messages
     """
     sendData = pyqtSignal(str)
     channelClosed = pyqtSignal(str)
+    openPrivateChat = pyqtSignal(str)
     
     UrlRe = re.compile(r"""((?:http|ftp|https):\/\/[\w\-_]+(?:\.[\w\-_]+)+"""
         r"""(?:[\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)""")
@@ -163,14 +165,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     #       * The user is an IRC operator.
     #       @ The user is a channel op in the channel listed in the first field.
     #       + The user is voiced in the channel listed.
-    # TODO: add context menu to messages pane with these entries:
-    #       Copy
-    #       Copy Link Location
-    #       Copy All
-    #       Clear
-    #       Save
-    #       Remember Position
-    # TODO: Remember current position with <hr/> when widget is invisible
     # TODO: Check away indication in the user list
     def __init__(self, parent=None):
         """
@@ -184,13 +178,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__ui = e5App().getObject("UserInterface")
         
         self.__initMessagesMenu()
+        self.__initUsersMenu()
         
         self.__name = ""
         self.__userName = ""
         self.__partMessage = ""
         self.__prefixToPrivilege = {}
+        self.__private = False
+        self.__privatePartner = ""
         
         self.__markerLine = ""
+        self.__hidden = True
         
         self.__patterns = [
             # :foo_!n=foo@foohost.bar.net PRIVMSG #eric-ide :some long message
@@ -211,6 +209,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             # :barty!n=foo@foohost.bar.net MODE #eric-ide +o foo_
             (re.compile(r":([^!]+).*\sMODE\s([^ ]+)\s([^ ]+)\s([^ ]+).*"),
                 self.__setUserPrivilege),
+            # :sturgeon.freenode.net 301 foo_ bar :Gone away for now
+            (re.compile(r":.*\s301\s([^ ]+)\s([^ ]+)\s:(.+)"), self.__userAway),
             # :zelazny.freenode.net 324 foo_ #eric-ide +cnt
             (re.compile(r":.*\s324\s.*\s([^ ]+)\s(.+)"), self.__channelModes),
             # :zelazny.freenode.net 328 foo_ #eric-ide :http://www.buggeroff.com/
@@ -225,6 +225,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             (re.compile(r":.*\s353\s.*\s.\s([^ ]+)\s:(.*)"), self.__userList),
             # :zelazny.freenode.net 366 foo_ #eric-ide :End of /NAMES list.
             (re.compile(r":.*\s366\s.*\s([^ ]+)\s:(.*)"), self.__ignore),
+            # :sturgeon.freenode.net 704 foo_ index :Help topics available to users:
+            (re.compile(r":.*\s70[456]\s[^ ]+\s([^ ]+)\s:(.*)"), self.__help),
         ]
     
     @pyqtSlot()
@@ -240,7 +242,24 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 Preferences.getIrc("ChannelMessageColour"),
                 Preferences.getIrc("OwnNickColour"),
                 ircTimestamp(), self.__userName, Utilities.html_encode(msg)))
-            self.sendData.emit("PRIVMSG " + self.__name + " :" + msg)
+            if msg.startswith("/"):
+                if self.__private:
+                    E5MessageBox.information(self,
+                        self.trUtf8("Send Message"),
+                        self.trUtf8("""Messages starting with a '/' are not allowed"""
+                                    """ in private chats."""))
+                else:
+                    msgList = msg.split(None, 1)
+                    cmd = msgList[0][1:].upper()
+                    if cmd == "MSG":
+                        cmd = "PRIVMSG"
+                    msgList[0] = cmd
+                    self.sendData.emit(" ".join(msgList))
+            else:
+                if self.__private:
+                    self.sendData.emit("PRIVMSG " + self.__privatePartner + " :" + msg)
+                else:
+                    self.sendData.emit("PRIVMSG " + self.__name + " :" + msg)
             self.messageEdit.clear()
     
     def requestLeave(self):
@@ -311,6 +330,16 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         self.__partMessage = message
     
+    def setPrivate(self, private, partner=""):
+        """
+        Public method to set the private chat mode.
+        
+        @param private flag indicating private chat mode (boolean)
+        @param partner name of the partner user (string)
+        """
+        self.__private = private
+        self.__privatePartner = partner
+    
     def handleMessage(self, line):
         """
         Public method to handle the message sent by the server.
@@ -335,7 +364,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         if match.group(2).lower() == self.__name:
             msg = ircFilter(match.group(3))
-            self.messages.append(
+            self.__appendMessage(
                 '<font color="{0}">{2} <b>&lt;</b><font color="{1}">{3}</font>'
                 '<b>&gt;</b> {4}</font>'.format(
                 Preferences.getIrc("ChannelMessageColour"),
@@ -352,6 +381,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             return True
         
         return False
+    
+    def addUsers(self, users):
+        """
+        Public method to add users to the channel.
+        
+        @param users list of user names to add (list of string)
+        """
+        for user in users:
+            itm = self.__findUser(user)
+            if itm is None:
+                IrcUserItem(user, self.usersList)
     
     def __userJoin(self, match):
         """
@@ -474,6 +514,20 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     itm = IrcUserItem(userName, self.usersList)
                 for privilege in userPrivileges:
                     itm.changePrivilege(privilege)
+            return True
+        
+        return False
+    
+    def __userAway(self, match):
+        """
+        Private method to handle a topic change of the channel.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        if match.group(1).lower() == self.__name:
+            self.__addManagementMessage(self.trUtf8("Away"),
+                self.trUtf8("{0} is away: {1}").format(match.group(2), match.group(3)))
             return True
         
         return False
@@ -605,6 +659,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         return False
     
+    def __help(self, match):
+        """
+        Private method to handle a help message.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        self.__addManagementMessage(self.trUtf8("Help"),
+            "{0} {1}".format(match.group(1), ircFilter(match.group(2))))
+        return True
+    
     def setUserPrivilegePrefix(self, prefixes):
         """
         Public method to set the user privilege to prefix mapping.
@@ -661,9 +726,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             color = Preferences.getIrc("LeaveChannelColour")
         else:
             color = Preferences.getIrc("ChannelInfoColour")
-        self.messages.append(
+        self.__appendMessage(
             '<font color="{0}">{1} <b>[</b>{2}<b>]</b> {3}</font>'.format(
             color, ircTimestamp(), indicator, message))
+    
+    def __appendMessage(self, message):
+        """
+        Private slot to append a message.
+        """
+        if self.__hidden and self.__markerLine == "":
+            self.setMarkerLine()
+        self.messages.append(message)
     
     def setMarkerLine(self):
         """
@@ -691,58 +764,209 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.messages.setHtml(txt)
             self.__markerLine = ""
     
+    def __clearMessages(self):
+        """
+        Private slot to clear the contents of the messages display.
+        """
+        self.messages.clear()
+    
+    def __copyMessages(self):
+        """
+        Private slot to copy the selection of the messages display to the clipboard.
+        """
+        self.messages.copy()
+    
+    def __cutMessages(self):
+        """
+        Private slot to cut the selection of the messages display to the clipboard.
+        """
+        self.messages.cut()
+    
+    def __copyAllMessages(self):
+        """
+        Private slot to copy the contents of the messages display to the clipboard.
+        """
+        txt = self.messages.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)
+    
+    def __cutAllMessages(self):
+        """
+        Private slot to cut the contents of the messages display to the clipboard.
+        """
+        txt = self.messages.toPlainText()
+        if txt:
+            cb = QApplication.clipboard()
+            cb.setText(txt)
+        self.messages.clear()
+    
+    def __saveMessages(self):
+        """
+        Private slot to save the contents of the messages display.
+        """
+        hasText = not self.messages.document().isEmpty()
+        if hasText:
+            if Utilities.isWindowsPlatform():
+                htmlExtension = "htm"
+            else:
+                htmlExtension = "html"
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                self.trUtf8("Save Messages"),
+                "",
+                self.trUtf8(
+                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)").format(
+                    htmlExtension),
+                None,
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            if fname:
+                ext = QFileInfo(fname).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        fname += ex
+                    ext = QFileInfo(fname).suffix()
+                if QFileInfo(fname).exists():
+                    res = E5MessageBox.yesNo(self,
+                        self.trUtf8("Save Messages"),
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fname),
+                        icon=E5MessageBox.Warning)
+                    if not res:
+                        return
+                    fname = Utilities.toNativeSeparators(fname)
+                
+                try:
+                    if ext.lower() in ["htm", "html"]:
+                        txt = self.messages.toHtml()
+                    else:
+                        txt = self.messages.toPlainText()
+                    f = open(fname, "w", encoding="utf-8")
+                    f.write(txt)
+                    f.close()
+                except IOError as err:
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Error saving Messages"),
+                        self.trUtf8("""<p>The messages contents could not be written"""
+                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                            .format(fname, str(err)))
+    
     def __initMessagesMenu(self):
         """
         Private slot to initialize the context menu of the messages pane.
         """
         self.__messagesMenu = QMenu(self)
-##        self.__cutMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("editCut.png"),
-##                self.trUtf8("Cut"), self.__cutMessages)
-##        self.__copyMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("editCopy.png"),
-##                self.trUtf8("Copy"), self.__copyMessages)
-##        self.__messagesMenu.addSeparator()
-##        self.__cutAllMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("editCut.png"),
-##                self.trUtf8("Cut all"), self.__cutAllMessages)
-##        self.__copyAllMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("editCopy.png"),
-##                self.trUtf8("Copy all"), self.__copyAllMessages)
-##        self.__messagesMenu.addSeparator()
-##        self.__clearMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("editDelete.png"),
-##                self.trUtf8("Clear"), self.__clearMessages)
-##        self.__messagesMenu.addSeparator()
-##        self.__saveMessagesAct = \
-##            self.__messagesMenu.addAction(
-##                UI.PixmapCache.getIcon("fileSave.png"),
-##                self.trUtf8("Save"), self.__saveMessages)
+        self.__cutMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"),
+                self.trUtf8("Cut"), self.__cutMessages)
+        self.__copyMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy"), self.__copyMessages)
+        self.__messagesMenu.addSeparator()
+        self.__cutAllMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCut.png"),
+                self.trUtf8("Cut all"), self.__cutAllMessages)
+        self.__copyAllMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy all"), self.__copyAllMessages)
+        self.__messagesMenu.addSeparator()
+        self.__clearMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("editDelete.png"),
+                self.trUtf8("Clear"), self.__clearMessages)
+        self.__messagesMenu.addSeparator()
+        self.__saveMessagesAct = \
+            self.__messagesMenu.addAction(
+                UI.PixmapCache.getIcon("fileSave.png"),
+                self.trUtf8("Save"), self.__saveMessages)
+        self.__messagesMenu.addSeparator()
         self.__setMarkerMessagesAct = \
             self.__messagesMenu.addAction(self.trUtf8("Mark Current Position"),
                 self.setMarkerLine)
         self.__unsetMarkerMessagesAct = \
             self.__messagesMenu.addAction(self.trUtf8("Remove Position Marker"),
                 self.unsetMarkerLine)
+        
+        self.on_messages_copyAvailable(False)
+    
+    @pyqtSlot(bool)
+    def on_messages_copyAvailable(self, yes):
+        """
+        Private slot to react to text selection/deselection of the messages edit.
+        
+        @param yes flag signaling the availability of selected text (boolean)
+        """
+        self.__copyMessagesAct.setEnabled(yes)
+        self.__cutMessagesAct.setEnabled(yes)
     
     @pyqtSlot(QPoint)
     def on_messages_customContextMenuRequested(self, pos):
         """
         Private slot to show the context menu of the messages pane.
+        
+        @param pos the position of the mouse pointer (QPoint)
         """
+        enable = not self.messages.document().isEmpty()
+        self.__cutAllMessagesAct.setEnabled(enable)
+        self.__copyAllMessagesAct.setEnabled(enable)
+        self.__saveMessagesAct.setEnabled(enable)
         self.__setMarkerMessagesAct.setEnabled(self.__markerLine == "")
         self.__unsetMarkerMessagesAct.setEnabled(self.__markerLine != "")
         self.__messagesMenu.popup(self.messages.mapToGlobal(pos))
+    
+    def __whoIs(self):
+        """
+        Private slot to get information about the selected user.
+        """
+        # TODO: not implemented yet
+        return
+    
+    def __openPrivateChat(self):
+        """
+        Private slot to open a chat with the selected user.
+        """
+        user = self.usersList.selectedItems()[0].text()
+        self.openPrivateChat.emit(user)
+    
+    def __initUsersMenu(self):
+        """
+        Private slot to initialize the users list context menu.
+        """
+        self.__usersMenu = QMenu(self)
+        self.__usersMenu.addAction(self.trUtf8("Who Is"), self.__whoIs)
+        self.__usersMenu.addSeparator()
+        self.__privateChatAct = \
+            self.__usersMenu.addAction(self.trUtf8("Private Chat"),
+            self.__openPrivateChat)
     
     @pyqtSlot(QPoint)
     def on_usersList_customContextMenuRequested(self, pos):
         """
         Private slot to show the context menu of the users list.
+        
+        @param pos the position of the mouse pointer (QPoint)
         """
-        # TODO: not implemented yet
-        return
+        self.__privateChatAct.setEnabled(not self.__private)
+        if len(self.usersList.selectedItems()) > 0:
+            self.__usersMenu.popup(self.usersList.mapToGlobal(pos))
+    
+    def hideEvent(self, evt):
+        """
+        Protected method handling hide events.
+        
+        @param evt reference to the hide event (QHideEvent)
+        """
+        self.__hidden = True
+    
+    def showEvent(self, evt):
+        """
+        Protected method handling show events.
+        
+        @param evt reference to the show event (QShowEvent)
+        """
+        self.__hidden = False

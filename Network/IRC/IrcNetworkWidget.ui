@@ -19,6 +19,9 @@
    </property>
    <item>
     <widget class="QTextBrowser" name="messages">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
      <property name="toolTip">
       <string>Shows the network messages</string>
      </property>

@@ -248,6 +248,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         channel.sendData.connect(self.__send)
         channel.channelClosed.connect(self.__closeChannel)
+        channel.openPrivateChat.connect(self.__openPrivate)
         
         self.channelsWidget.addTab(channel, name)
         self.__channelList.append(channel)
@@ -263,6 +264,28 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.channelsWidget.removeTab(emptyIndex)
             self.__leaveButton.setEnabled(True)
         self.channelsWidget.setTabsClosable(True)
+    
+    @pyqtSlot(str)
+    def __openPrivate(self, name):
+        """
+        Private slot to open a private chat with the given user.
+        
+        @param name name of the user (string)
+        """
+        channel = IrcChannelWidget(self)
+        channel.setName(self.__nickName)
+        channel.setUserName(self.__nickName)
+        identity = self.__ircNetworkManager.getIdentity(self.__identityName)
+        channel.setPartMessage(identity.getPartMessage())
+        channel.setUserPrivilegePrefix(self.__userPrefix)
+        channel.setPrivate(True, name)
+        channel.addUsers([name, self.__nickName])
+        
+        channel.sendData.connect(self.__send)
+        channel.channelClosed.connect(self.__closeChannel)
+        
+        self.channelsWidget.addTab(channel, name)
+        self.__channelList.append(channel)
     
     @pyqtSlot()
     def __leaveChannel(self):
@@ -460,6 +483,10 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.networkWidget.addMessage(
                     self.trUtf8("User {0} is now known as {1}.").format(
                     oldNick, newNick))
+            return True
+        elif name == "ERROR":
+            self.networkWidget.addErrorMessage(
+                self.trUtf8("Server Error"), match.group(3).split(":", 1)[1])
             return True
         
         return False
