@@ -471,7 +471,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 # :detlev_ MODE detlev_ :+i
                 name, modes = match.group(3).split(" :")
                 sourceNick = match.group(1)
-                if not self.__isChannelName(name):
+                if not self.isChannelName(name):
                     if name == self.__nickName:
                         if sourceNick == self.__nickName:
                             msg = self.trUtf8(
@@ -785,9 +785,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         self.__channelTypePrefixes = prefixes
     
-    def __isChannelName(self, name):
+    def isChannelName(self, name):
         """
-        Private method to check, if the given name is a channel name.
+        PublicisChannelName method to check, if the given name is a channel name.
         
         @return flag indicating a channel name (boolean)
         """

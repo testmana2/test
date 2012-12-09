@@ -189,6 +189,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.setupUi(self)
         
         self.__ui = e5App().getObject("UserInterface")
+        self.__ircWidget = parent
         
         self.__initMessagesMenu()
         self.__initUsersMenu()
@@ -199,6 +200,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__prefixToPrivilege = {}
         self.__private = False
         self.__privatePartner = ""
+        self.__whoIsNick = ""
         
         self.__markerLine = ""
         self.__hidden = True
@@ -249,7 +251,44 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             (re.compile(r":.*\s366\s.*\s([^ ]+)\s:(.*)"), self.__ignore),
             # :sturgeon.freenode.net 704 foo_ index :Help topics available to users:
             (re.compile(r":.*\s70[456]\s[^ ]+\s([^ ]+)\s:(.*)"), self.__help),
+            
+            # WHOIS replies
+            # :sturgeon.freenode.net 311 foo_ bar ~bar barhost.foo.net * :Bar User
+            (re.compile(r":.*\s311\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s\*\s:(.*)"),
+                self.__whoIsUser),
+            # :sturgeon.freenode.net 319 foo_ bar :@#eric-ide
+            (re.compile(r":.*\s319\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsChannels),
+            # :sturgeon.freenode.net 312 foo_ bar sturgeon.freenode.net :London, UK
+            (re.compile(r":.*\s312\s[^ ]+\s([^ ]+)\s([^ ]+)\s:(.*)"), self.__whoIsServer),
+            # :sturgeon.freenode.net 671 foo_ bar :is using a secure connection
+            (re.compile(r":.*\s671\s[^ ]+\s([^ ]+)\s:.*"), self.__whoIsSecure),
+            # :sturgeon.freenode.net 317 foo_ bar 3758 1355046912 :seconds idle, signon time
+            (re.compile(r":.*\s317\s[^ ]+\s([^ ]+)\s(\d+)\s(\d+)\s:.*"),
+                self.__whoIsIdle),
+            # :sturgeon.freenode.net 330 foo_ bar bar :is logged in as
+            (re.compile(r":.*\s330\s[^ ]+\s([^ ]+)\s([^ ]+)\s:.*"), self.__whoIsAccount),
+            # :sturgeon.freenode.net 318 foo_ bar :End of /WHOIS list.
+            (re.compile(r":.*\s318\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsEnd),
+            # :sturgeon.freenode.net 307 foo_ bar :is an identified user
+            (re.compile(r":.*\s307\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsIdentify),
+            # :sturgeon.freenode.net 320 foo_ bar :is an identified user
+            (re.compile(r":.*\s320\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsIdentify),
+            # :sturgeon.freenode.net 310 foo_ bar :is available for help
+            (re.compile(r":.*\s310\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsHelper),
+            # :sturgeon.freenode.net 338 foo_ bar real.ident@real.host 12.34.56.78 :Actual user@host, Actual IP
+            (re.compile(r":.*\s338\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s:.*"),
+                self.__whoIsActually),
+            # :sturgeon.freenode.net 313 foo_ bar :is an IRC Operator
+            (re.compile(r":.*\s313\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsOperator),
+            # :sturgeon.freenode.net 378 foo_ bar :is connecting from *@mnch-4d044d5a.pool.mediaWays.net 77.4.77.90
+            (re.compile(r":.*\s311\s[^ ]+\s([^ ]+)\s:.*\s([^ ]+)\s([^ ]+)"),
+                self.__whoIsConnection),
         ]
+        # group(1)   nick
+        # group(2)   host name
+        # group(3)   IP
+        # group(4)   real name
+        # group(5)   
         
         self.__autoWhoTemplate = "WHO {0} %tnf,42"
         self.__autoWhoTimer = QTimer()
@@ -1121,8 +1160,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         Private slot to get information about the selected user.
         """
-        # TODO: not implemented yet
-        return
+        self.__whoIsNick = self.usersList.selectedItems()[0].text()
+        self.sendData.emit("WHOIS " + self.__whoIsNick)
     
     def __openPrivateChat(self):
         """
@@ -1218,7 +1257,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 self.initAutoWho()
             else:
                 self.__addManagementMessage(self.trUtf8("Who"),
-                    self.trUtf8("End of /WHO list for {0}.").format(match.group(1)))
+                    self.trUtf8("End of WHO list for {0}.").format(match.group(1)))
             return True
         
         return False
@@ -1245,4 +1284,304 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             return True
         
         return False
-
+    
+    def __whoIsUser(self, match):
+        """
+        Private method to handle the WHOIS user reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   user
+        # group(3)   host
+        # group(4)   real name
+        if match.group(1) == self.__whoIsNick:
+            realName = match.group(4).replace("<", "&lt;").replace(">", "&gt;")
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is {1}@{2} ({3}).").format(match.group(1),
+                match.group(2), match.group(3), realName))
+            return True
+        
+        return False
+    
+    def __whoIsChannels(self, match):
+        """
+        Private method to handle the WHOIS channels reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   channels
+        if match.group(1) == self.__whoIsNick:
+            userChannels = []
+            voiceChannels = []
+            opChannels = []
+            halfopChannels = []
+            ownerChannels = []
+            adminChannels = []
+            
+            # generate the list of channels the user is in
+            channelList = match.group(2).split()
+            for channel in channelList:
+                if channel.startswith(("*", "&")):
+                    adminChannels.append(channel[1:])
+                elif channel.startswith(("!", "~")) and \
+                     self.__ircWidget.isChannelName(channel[1:]):
+                    ownerChannels.append(channel[1:])
+                elif channel.startswith("@+"):
+                    opChannels.append(channel[2:])
+                elif channel.startswith("@"):
+                    opChannels.append(channel[1:])
+                elif channel.startswith("%"):
+                    halfopChannels.append(channel[1:])
+                elif channel.startswith("+"):
+                    voiceChannels.append(channel[1:])
+                else:
+                    userChannels.append(channel)
+            
+            # show messages
+            if userChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is a user on channels: {1}").format(
+                    match.group(1), " ".join(userChannels)))
+            if voiceChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has voice on channels: {1}").format(
+                    match.group(1), " ".join(voiceChannels)))
+            if halfopChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is a halfop on channels: {1}").format(
+                    match.group(1), " ".join(halfopChannels)))
+            if opChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is an operator on channels: {1}").format(
+                    match.group(1), " ".join(opChannels)))
+            if ownerChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is owner of channels: {1}").format(
+                    match.group(1), " ".join(ownerChannels)))
+            if adminChannels:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is admin on channels: {1}").format(
+                    match.group(1), " ".join(adminChannels)))
+            return True
+        
+        return False
+    
+    def __whoIsServer(self, match):
+        """
+        Private method to handle the WHOIS server reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   server
+        # group(3)   server info
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is online via {1} ({2}).").format(match.group(1),
+                match.group(2), match.group(3)))
+            return True
+        
+        return False
+    
+    def __whoIsOperator(self, match):
+        """
+        Private method to handle the WHOIS operator reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   message
+        if match.group(1) == self.__whoIsNick:
+            if match.group(2).lower().startswith("is an irc operator"):
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} is an IRC Operator.").format(match.group(1)))
+            else:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    "{0} {1}".format(match.group(1), match.group(2)))
+            return True
+        
+        return False
+    
+    def __whoIsIdle(self, match):
+        """
+        Private method to handle the WHOIS idle reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   idle seconds
+        # group(3)   signon time
+        if match.group(1) == self.__whoIsNick:
+            seconds = int(match.group(2))
+            minutes = seconds // 60
+            hours = minutes // 60
+            days = hours // 24
+            
+            signonTimestamp = int(match.group(3))
+            signonTime = QDateTime()
+            signonTime.setTime_t(signonTimestamp)
+            
+            if days:
+                daysString = self.trUtf8("%n day(s)", "", days)
+                hoursString = self.trUtf8("%n hour(s)", "", hours)
+                minutesString = self.trUtf8("%n minute(s)", "", minutes)
+                secondsString = self.trUtf8("%n second(s)", "", seconds)
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has been idle for {1}, {2}, {3}, and {4}.",
+                                "{0} = name of person, {1} = (x days), {2} = (x hours),"
+                                " {3} = (x minutes), {4} = (x seconds)").format(
+                    match.group(1), daysString, hoursString, minutesString,
+                    secondsString))
+            elif hours:
+                hoursString = self.trUtf8("%n hour(s)", "", hours)
+                minutesString = self.trUtf8("%n minute(s)", "", minutes)
+                secondsString = self.trUtf8("%n second(s)", "", seconds)
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has been idle for {1}, {2}, and {3}.",
+                                "{0} = name of person, {1} = (x hours), "
+                                "{2} = (x minutes), {3} = (x seconds)").format(
+                    match.group(1), hoursString, minutesString, secondsString))
+            elif minutes:
+                minutesString = self.trUtf8("%n minute(s)", "", minutes)
+                secondsString = self.trUtf8("%n second(s)", "", seconds)
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has been idle for {1} and {2}.",
+                                "{0} = name of person, {1} = (x minutes), "
+                                "{3} = (x seconds)").format(
+                    match.group(1), minutesString, secondsString))
+            else:
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has been idle for %n second(s).", "",
+                        seconds).format(match.group(1)))
+            
+            if not signonTime.isNull():
+                self.__addManagementMessage(self.trUtf8("Whois"),
+                    self.trUtf8("{0} has been online since {1}.").format(
+                    match.group(1), signonTime.toString("yyyy-MM-dd, hh:mm:ss")))
+            return True
+        
+        return False
+    
+    def __whoIsEnd(self, match):
+        """
+        Private method to handle the end of WHOIS reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   end message
+        if match.group(1) == self.__whoIsNick:
+            self.__whoIsNick = ""
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("End of WHOIS list for {0}.").format(match.group(1)))
+            return True
+        
+        return False
+    
+    def __whoIsIdentify(self, match):
+        """
+        Private method to handle the WHOIS identify and identified replies.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   identified message
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is an identified user.").format(match.group(1)))
+            return True
+        
+        return False
+    
+    def __whoIsHelper(self, match):
+        """
+        Private method to handle the WHOIS helper reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   helper message
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is available for help.").format(match.group(1)))
+            return True
+        
+        return False
+    
+    def __whoIsAccount(self, match):
+        """
+        Private method to handle the WHOIS account reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   login name
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is logged in as {1}.").format(match.group(1),
+                match.group(2)))
+            return True
+        
+        return False
+    
+    def __whoIsActually(self, match):
+        """
+        Private method to handle the WHOIS actually reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   actual user@host
+        # group(3)   actual IP
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is actually using the host {1} (IP: {2}).").format(
+                match.group(1), match.group(2), match.group(3)))
+            return True
+        
+        return False
+    
+    def __whoIsSecure(self, match):
+        """
+        Private method to handle the WHOIS secure reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is using a secure connection.").format(match.group(1)))
+            return True
+        
+        return False
+    
+    def __whoIsConnection(self, match):
+        """
+        Private method to handle the WHOIS connection reply.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)   nick
+        # group(2)   host name
+        # group(3)   IP
+        if match.group(1) == self.__whoIsNick:
+            self.__addManagementMessage(self.trUtf8("Whois"),
+                self.trUtf8("{0} is connecting from {1} (IP: {2}).").format(
+                match.group(1), match.group(2), match.group(3)))
+            return True
+        
+        return False
