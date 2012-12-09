@@ -340,7 +340,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         @param name user name for the channel (string)
         """
-        self.__userName = name.lower()
+        self.__userName = name
     
     def partMessage(self):
         """
@@ -403,7 +403,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 if Preferences.getIrc("NotifyMessage"):
                     self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
                         self.trUtf8("Channel Message"), msg)
-                elif Preferences.getIrc("NotifyNick") and self.__userName in msg:
+                elif Preferences.getIrc("NotifyNick") and \
+                     self.__userName.lower() in msg.lower():
                     self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
                         self.trUtf8("Nick mentioned"), msg)
             return True
