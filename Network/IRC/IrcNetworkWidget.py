@@ -39,7 +39,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     sendData = pyqtSignal(str)
     away = pyqtSignal(bool)
     
-    
     def __init__(self, parent=None):
         """
         Constructor
@@ -57,6 +56,10 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.joinButton.setEnabled(False)
         self.nickCombo.setEnabled(False)
         self.awayButton.setEnabled(False)
+        
+        self.channelCombo.lineEdit().returnPressed.connect(self.on_joinButton_clicked)
+        self.nickCombo.lineEdit().returnPressed.connect(
+            self.on_nickCombo_currentIndexChanged)
         
         self.__initMessagesMenu()
         
@@ -191,7 +194,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         return network.getChannels()
     
     @pyqtSlot(str)
-    def on_nickCombo_currentIndexChanged(self, nick):
+    def on_nickCombo_currentIndexChanged(self, nick=""):
         """
         Private slot to use another nick name.
         

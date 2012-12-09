@@ -146,16 +146,21 @@ def __initChannelModesDict():
     global __channelModesDict
     
     modesDict = {
-        "t": QCoreApplication.translate("IrcUtilities", "topic protection"),
-        "n": QCoreApplication.translate("IrcUtilities", "no messages from outside"),
-        "s": QCoreApplication.translate("IrcUtilities", "secret"),
-        "i": QCoreApplication.translate("IrcUtilities", "invite only"),
-        "p": QCoreApplication.translate("IrcUtilities", "private"),
-        "m": QCoreApplication.translate("IrcUtilities", "moderated"),
-        "k": QCoreApplication.translate("IrcUtilities", "password protected"),
         "a": QCoreApplication.translate("IrcUtilities", "anonymous"),
+        "b": QCoreApplication.translate("IrcUtilities", "ban mask"),
         "c": QCoreApplication.translate("IrcUtilities", "no colors allowed"),
+        "e": QCoreApplication.translate("IrcUtilities", "ban exception mask"),
+        "i": QCoreApplication.translate("IrcUtilities", "invite only"),
+        "k": QCoreApplication.translate("IrcUtilities", "password protected"),
         "l": QCoreApplication.translate("IrcUtilities", "user limit"),
+        "m": QCoreApplication.translate("IrcUtilities", "moderated"),
+        "n": QCoreApplication.translate("IrcUtilities", "no messages from outside"),
+        "p": QCoreApplication.translate("IrcUtilities", "private"),
+        "q": QCoreApplication.translate("IrcUtilities", "quit"),
+        "r": QCoreApplication.translate("IrcUtilities", "reop channel"),
+        "s": QCoreApplication.translate("IrcUtilities", "secret"),
+        "t": QCoreApplication.translate("IrcUtilities", "topic protection"),
+        "I": QCoreApplication.translate("IrcUtilities", "invitation mask"),
     }
     __channelModesDict = modesDict
 

@@ -9,7 +9,7 @@ Module implementing the IRC channel widget.
 
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer
 from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -134,6 +134,30 @@ class IrcUserItem(QListWidgetItem):
         painter.drawPixmap(0, 0, pix2)
         painter.end()
         return QIcon(pix1)
+    
+    def parseWhoFlags(self, flags):
+        """
+        Public method to parse the user flags reported by a WHO command.
+        
+        @param flags user flags as reported by WHO (string)
+        """
+        # H The user is not away.
+        # G The user is set away.
+        # * The user is an IRC operator.
+        # @ The user is a channel op in the channel listed in the first field.
+        # + The user is voiced in the channel listed.
+        if flags.endswith("@"):
+            privilege = IrcUserItem.Operator
+        elif flags.endswith("+"):
+            privilege = IrcUserItem.Voice
+        else:
+            privilege = IrcUserItem.Normal
+        if "*" in flags:
+            privilege = IrcUserItem.Admin
+        if flags.startswith("G"):
+            privilege |= IrcUserItem.Away
+        self.__privilege = privilege
+        self.__setIcon()
 
 
 class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
@@ -155,17 +179,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     LeaveIndicator = "&lt;--"
     MessageIndicator = "***"
     
-    # TODO: add context menu to users list with these entries:
-    #       Whois
-    #       Private Message
-    # TODO: add "Auto WHO" functionality (WHO <channel> %nf)
-    #       The possible combinations for this field are listed below:
-    #       H The user is not away.
-    #       G The user is set away.
-    #       * The user is an IRC operator.
-    #       @ The user is a channel op in the channel listed in the first field.
-    #       + The user is voiced in the channel listed.
-    # TODO: Check away indication in the user list
     def __init__(self, parent=None):
         """
         Constructor
@@ -194,7 +207,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             # :foo_!n=foo@foohost.bar.net PRIVMSG #eric-ide :some long message
             (re.compile(r":([^!]+).*\sPRIVMSG\s([^ ]+)\s:(.*)"), self.__message),
             # :foo_!n=foo@foohost.bar.net JOIN :#eric-ide
-            # :detlev_!~detlev@mnch-5d876cfa.pool.mediaWays.net JOIN #eric-ide
             (re.compile(r":([^!]+)!([^ ]+)\sJOIN\s:?([^ ]+)"), self.__userJoin),
             # :foo_!n=foo@foohost.bar.net PART #eric-ide :part message
             (re.compile(r":([^!]+).*\sPART\s([^ ]+)\s:(.*)"), self.__userPart),
@@ -206,11 +218,15 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             (re.compile(r":([^!]+).*\sQUIT\s*"), self.__userQuit),
             # :foo_!n=foo@foohost.bar.net NICK :newnick
             (re.compile(r":([^!]+).*\sNICK\s:(.*)"), self.__userNickChange),
-            # :barty!n=foo@foohost.bar.net MODE #eric-ide +o foo_
-            (re.compile(r":([^!]+).*\sMODE\s([^ ]+)\s([^ ]+)\s([^ ]+).*"),
+            # :foo_!n=foo@foohost.bar.net MODE #eric-ide +o foo_
+            (re.compile(r":([^!]+).*\sMODE\s([^ ]+)\s([+-][ovO]+)\s([^ ]+).*"),
                 self.__setUserPrivilege),
+            # :cameron.freenode.net MODE #testeric +ns
+            (re.compile(r":([^ ]+)\sMODE\s([^ ]+)\s(.+)"), self.__updateChannelModes),
             # :sturgeon.freenode.net 301 foo_ bar :Gone away for now
             (re.compile(r":.*\s301\s([^ ]+)\s([^ ]+)\s:(.+)"), self.__userAway),
+            # :sturgeon.freenode.net 315 foo_ #eric-ide :End of /WHO list.
+            (re.compile(r":.*\s315\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoEnd),
             # :zelazny.freenode.net 324 foo_ #eric-ide +cnt
             (re.compile(r":.*\s324\s.*\s([^ ]+)\s(.+)"), self.__channelModes),
             # :zelazny.freenode.net 328 foo_ #eric-ide :http://www.buggeroff.com/
@@ -221,13 +237,24 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             (re.compile(r":.*\s332\s.*\s([^ ]+)\s:(.*)"), self.__setTopic),
             # :zelazny.freenode.net foo_ 333 #eric-ide foo 1353089020
             (re.compile(r":.*\s333\s.*\s([^ ]+)\s([^ ]+)\s(\d+)"), self.__topicCreated), 
+            # :cameron.freenode.net 352 detlev_ #eric-ide ~foo foohost.bar.net cameron.freenode.net foo_ H :0 Foo Bar
+            (re.compile(r":.*\s352\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s[^ ]+\s([^ ]+)"
+                        r"\s([^ ]+)\s:\d+\s(.*)"), self.__whoEntry),
             # :zelazny.freenode.net 353 foo_ @ #eric-ide :@user1 +user2 user3
             (re.compile(r":.*\s353\s.*\s.\s([^ ]+)\s:(.*)"), self.__userList),
+            # :sturgeon.freenode.net 354 foo_ 42 ChanServ H@
+            (re.compile(r":.*\s354\s[^ ]+\s42\s([^ ]+)\s(.*)"), self.__autoWhoEntry),
             # :zelazny.freenode.net 366 foo_ #eric-ide :End of /NAMES list.
             (re.compile(r":.*\s366\s.*\s([^ ]+)\s:(.*)"), self.__ignore),
             # :sturgeon.freenode.net 704 foo_ index :Help topics available to users:
             (re.compile(r":.*\s70[456]\s[^ ]+\s([^ ]+)\s:(.*)"), self.__help),
         ]
+        
+        self.__autoWhoTemplate = "WHO {0} %tnf,42"
+        self.__autoWhoTimer = QTimer()
+        self.__autoWhoTimer.setSingleShot(True)
+        self.__autoWhoTimer.timeout.connect(self.__sendAutoWhoCommand)
+        self.__autoWhoRequested = False
     
     @pyqtSlot()
     def on_messageEdit_returnPressed(self):
@@ -261,6 +288,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 else:
                     self.sendData.emit("PRIVMSG " + self.__name + " :" + msg)
             self.messageEdit.clear()
+            self.unsetMarkerLine()
     
     def requestLeave(self):
         """
@@ -629,6 +657,151 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         return False
     
+    def __updateChannelModes(self, match):
+        """
+        Private method to handle a message reporting the channel modes.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)  user or server
+        # group(2)  channel
+        # group(3)  modes and parameter list
+        if match.group(2).lower() == self.__name:
+            nick = match.group(1)
+            modesParameters = match.group(3).split()
+            modeString = modesParameters.pop(0)
+            isPlus = True
+            message = ""
+            for mode in modeString:
+                if mode == "+":
+                    isPlus = True
+                    continue
+                elif mode == "-":
+                    isPlus = False
+                    continue
+                elif mode == "a":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'anonymous'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the 'anonymous' mode from the channel.").format(
+                            nick)
+                elif mode == "b":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets a ban on {1}.").format(
+                            nick, modesParameters.pop(0))
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the ban on {1}.").format(
+                            nick, modesParameters.pop(0))
+                elif mode == "c":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'no colors allowed'.").format(
+                            nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'allow color codes'.").format(
+                            nick)
+                elif mode == "e":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets a ban exception on {1}.").format(
+                            nick, modesParameters.pop(0))
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the ban exception on {1}.").format(
+                            nick, modesParameters.pop(0))
+                elif mode == "i":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'invite only'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the 'invite only' mode from the channel."
+                            ).format(nick)
+                elif mode == "k":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel key to '{1}'.").format(
+                            nick, modesParameters.pop(0))
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the channel key.").format(nick)
+                elif mode == "l":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel limit to %n nick(s).", "",
+                            int(modesParameters.pop(0))).format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the channel limit.").format(nick)
+                elif mode == "m":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'moderated'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'unmoderated'.").format(nick)
+                elif mode == "n":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'no messages from outside'."
+                            ).format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'allow messages from outside'."
+                            ).format(nick)
+                elif mode == "p":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'private'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'public'.").format(nick)
+                elif mode == "q":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'quiet'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the 'quiet' mode from the channel.").format(
+                            nick)
+                elif mode == "r":
+                    continue
+                elif mode == "s":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'secret'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} sets the channel mode to 'visible'.").format(nick)
+                elif mode == "t":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} switches on 'topic protection'.").format(nick)
+                    else:
+                        message = self.trUtf8(
+                            "{0} switches off 'topic protection'.").format(nick)
+                elif mode == "I":
+                    if isPlus:
+                        message = self.trUtf8(
+                            "{0} sets invitation mask {1}.").format(
+                            nick, modesParameters.pop(0))
+                    else:
+                        message = self.trUtf8(
+                            "{0} removes the invitation mask {1}.").format(
+                            nick, modesParameters.pop(0))
+                
+                self.__addManagementMessage(self.trUtf8("Mode"), message)
+            
+            return True
+        
+        return False
+    
     def __setUserPrivilege(self, match):
         """
         Private method to handle a change of user privileges for the channel.
@@ -640,9 +813,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             itm = self.__findUser(match.group(4))
             if itm:
                 itm.changePrivilege(match.group(3))
-                self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
-                    self.trUtf8("{0} sets mode for {1}: {2}.").format(
-                        match.group(1), match.group(4), match.group(3)))
+            self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
+                self.trUtf8("{0} sets mode for {1}: {2}.").format(
+                    match.group(1), match.group(4), match.group(3)))
             return True
         
         return False
@@ -970,3 +1143,81 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param evt reference to the show event (QShowEvent)
         """
         self.__hidden = False
+    
+    def initAutoWho(self):
+        """
+        Public method to initialize the Auto Who system.
+        """
+        if Preferences.getIrc("AutoUserInfoLookup"):
+            self.__autoWhoTimer.setInterval(
+                Preferences.getIrc("AutoUserInfoInterval") * 1000)
+            self.__autoWhoTimer.start()
+    
+    @pyqtSlot()
+    def __sendAutoWhoCommand(self):
+        """
+        Private slot to send the WHO command to update the users list.
+        """
+        if self.usersList.count() <= Preferences.getIrc("AutoUserInfoMax"):
+            self.__autoWhoRequested = True
+            self.sendData.emit(self.__autoWhoTemplate.format(self.__name))
+    
+    def __autoWhoEntry(self, match):
+        """
+        Private method to handle a WHO entry returned by the server as requested
+        automatically.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)  nick
+        # group(2)  user flags
+        if self.__autoWhoRequested:
+            itm = self.__findUser(match.group(1))
+            if itm:
+                itm.parseWhoFlags(match.group(2))
+            return True
+        
+        return False
+    
+    def __whoEnd(self, match):
+        """
+        Private method to handle the end of the WHO list.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        if match.group(1).lower() == self.__name:
+            if self.__autoWhoRequested:
+                self.__autoWhoRequested = False
+                self.initAutoWho()
+            else:
+                self.__addManagementMessage(self.trUtf8("Who"),
+                    self.trUtf8("End of /WHO list for {0}.").format(match.group(1)))
+            return True
+        
+        return False
+    
+    def __whoEntry(self, match):
+        """
+        Private method to handle a WHO entry returned by the server as requested
+        manually.
+        
+        @param match match object that matched the pattern
+        @return flag indicating whether the message was handled (boolean)
+        """
+        # group(1)  channel
+        # group(2)  user
+        # group(3)  host
+        # group(4)  nick
+        # group(5)  user flags
+        # group(6)  real name
+        if match.group(2).lower() == self.__name:
+            away = self.trUtf8(" (Away)") if match.group(5).startswith("G") else ""
+            self.__addManagementMessage(self.trUtf8("Who"),
+                self.trUtf8("{0} is {1}@{2} ({3}){4}").format(
+                    match.group(4), match.group(2), match.group(3), match.group(6), away))
+            return True
+        
+        return False
+

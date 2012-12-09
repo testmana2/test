@@ -49,7 +49,6 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.setupUi(self)
         
         self.__ircNetworkManager = IrcNetworkManager(self)
-        self.__ircNetworkManager.dataChanged.connect(self.__networkDataChanged)
         
         self.__leaveButton = QToolButton(self)
         self.__leaveButton.setIcon(UI.PixmapCache.getIcon("ircCloseChannel.png"))
@@ -58,14 +57,6 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__leaveButton.setEnabled(False)
         self.channelsWidget.setCornerWidget(self.__leaveButton, Qt.BottomRightCorner)
         self.channelsWidget.setTabsClosable(False)
-        
-        self.networkWidget.initialize(self.__ircNetworkManager)
-        self.networkWidget.connectNetwork.connect(self.__connectNetwork)
-        self.networkWidget.editNetwork.connect(self.__editNetwork)
-        self.networkWidget.joinChannel.connect(self.__joinChannel)
-        self.networkWidget.nickChanged.connect(self.__changeNick)
-        self.networkWidget.sendData.connect(self.__send)
-        self.networkWidget.away.connect(self.__away)
         
         self.__channelList = []
         self.__channelTypePrefixes = ""
@@ -102,6 +93,15 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__emptyLabel.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
         self.channelsWidget.addTab(self.__emptyLabel, "")
         
+        # all initialized, do connections now
+        self.__ircNetworkManager.dataChanged.connect(self.__networkDataChanged)
+        self.networkWidget.initialize(self.__ircNetworkManager)
+        self.networkWidget.connectNetwork.connect(self.__connectNetwork)
+        self.networkWidget.editNetwork.connect(self.__editNetwork)
+        self.networkWidget.joinChannel.connect(self.__joinChannel)
+        self.networkWidget.nickChanged.connect(self.__changeNick)
+        self.networkWidget.sendData.connect(self.__send)
+        self.networkWidget.away.connect(self.__away)
     
     def shutdown(self):
         """
@@ -245,6 +245,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         identity = self.__ircNetworkManager.getIdentity(self.__identityName)
         channel.setPartMessage(identity.getPartMessage())
         channel.setUserPrivilegePrefix(self.__userPrefix)
+        channel.initAutoWho()
         
         channel.sendData.connect(self.__send)
         channel.channelClosed.connect(self.__closeChannel)
@@ -252,6 +253,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         self.channelsWidget.addTab(channel, name)
         self.__channelList.append(channel)
+        self.channelsWidget.setCurrentWidget(channel)
         
         joinCommand = ["JOIN", name]
         if key:
@@ -286,6 +288,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         self.channelsWidget.addTab(channel, name)
         self.__channelList.append(channel)
+        self.channelsWidget.setCurrentWidget(channel)
     
     @pyqtSlot()
     def __leaveChannel(self):
