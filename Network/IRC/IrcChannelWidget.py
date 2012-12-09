@@ -205,7 +205,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         self.__patterns = [
             # :foo_!n=foo@foohost.bar.net PRIVMSG #eric-ide :some long message
-            (re.compile(r":([^!]+).*\sPRIVMSG\s([^ ]+)\s:(.*)"), self.__message),
+            # :foo_!n=foo@foohost.bar.net PRIVMSG bar_ :some long message
+            (re.compile(r":([^!]+)!([^ ]+)\sPRIVMSG\s([^ ]+)\s:(.*)"), self.__message),
             # :foo_!n=foo@foohost.bar.net JOIN :#eric-ide
             (re.compile(r":([^!]+)!([^ ]+)\sJOIN\s:?([^ ]+)"), self.__userJoin),
             # :foo_!n=foo@foohost.bar.net PART #eric-ide :part message
@@ -299,7 +300,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             self.trUtf8("""Do you really want to leave the IRC channel <b>{0}</b>?""")\
                 .format(self.__name))
         if ok:
-            self.sendData.emit("PART " + self.__name + " :" + self.__partMessage)
+            if not self.__private:
+                self.sendData.emit("PART " + self.__name + " :" + self.__partMessage)
             self.channelClosed.emit(self.__name)
     
     def name(self):
@@ -368,6 +370,15 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__private = private
         self.__privatePartner = partner
     
+    def setPrivateInfo(self, infoText):
+        """
+        Public method to set some info text for private chat mode.
+        
+        @param infoText info text to be shown (string)
+        """
+        if self.__private:
+            self.topicLabel.setText(infoText)
+    
     def handleMessage(self, line):
         """
         Public method to handle the message sent by the server.
@@ -390,26 +401,39 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(2).lower() == self.__name:
-            msg = ircFilter(match.group(3))
-            self.__appendMessage(
-                '<font color="{0}">{2} <b>&lt;</b><font color="{1}">{3}</font>'
-                '<b>&gt;</b> {4}</font>'.format(
-                Preferences.getIrc("ChannelMessageColour"),
-                Preferences.getIrc("NickColour"),
-                ircTimestamp(), match.group(1),
-                msg))
-            if Preferences.getIrc("ShowNotifications"):
-                if Preferences.getIrc("NotifyMessage"):
-                    self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
-                        self.trUtf8("Channel Message"), msg)
-                elif Preferences.getIrc("NotifyNick") and \
-                     self.__userName.lower() in msg.lower():
-                    self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
-                        self.trUtf8("Nick mentioned"), msg)
+        # group(1)   sender user name
+        # group(2)   sender user@host
+        # group(3)   target nick
+        # group(4)   message
+        if match.group(3).lower() == self.__name:
+            self.addMessage(match.group(1), match.group(4))
+            if self.__private and not self.topicLabel.text():
+                self.setPrivateInfo("{0} - {1}".format(match.group(1), match.group(2)))
             return True
         
         return False
+    
+    def addMessage(self, sender, msg):
+        """
+        Public method to add a message from external.
+        
+        @param sender nick name of the sender (string)
+        @param msg message received from sender (string)
+        """
+        self.__appendMessage(
+            '<font color="{0}">{2} <b>&lt;</b><font color="{1}">{3}</font>'
+            '<b>&gt;</b> {4}</font>'.format(
+            Preferences.getIrc("ChannelMessageColour"),
+            Preferences.getIrc("NickColour"),
+            ircTimestamp(), sender, ircFilter(msg)))
+        if Preferences.getIrc("ShowNotifications"):
+            if Preferences.getIrc("NotifyMessage"):
+                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                    self.trUtf8("Channel Message"), msg)
+            elif Preferences.getIrc("NotifyNick") and \
+                 self.__userName.lower() in msg.lower():
+                self.__ui.showNotification(UI.PixmapCache.getPixmap("irc48.png"),
+                    self.trUtf8("Nick mentioned"), msg)
     
     def addUsers(self, users):
         """

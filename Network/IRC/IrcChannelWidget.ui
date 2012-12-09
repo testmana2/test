@@ -69,7 +69,7 @@
     </widget>
    </item>
    <item>
-    <widget class="E5ClearableLineEdit" name="messageEdit">
+    <widget class="IrcMessageEdit" name="messageEdit">
      <property name="toolTip">
       <string>Enter a message, send by pressing Return or Enter</string>
      </property>
@@ -82,9 +82,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E5ClearableLineEdit</class>
+   <class>IrcMessageEdit</class>
    <extends>QLineEdit</extends>
-   <header>E5Gui/E5LineEdit.h</header>
+   <header>Network/IRC/IrcMessageEdit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

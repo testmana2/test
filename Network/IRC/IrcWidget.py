@@ -77,6 +77,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__socket = None
         
         self.__patterns = [
+            # :foo_!n=foo@foohost.bar.net PRIVMSG bar_ :some long message
+            (re.compile(r":([^!]+)!([^ ]+)\sPRIVMSG\s([^ ]+)\s:(.*)"), self.__query),
             # :foo.bar.net COMMAND some message
             (re.compile(r""":([^ ]+)\s+([A-Z]+)\s+(.+)"""), self.__handleNamedMessage),
             # :foo.bar.net 123 * :info
@@ -266,6 +268,25 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.channelsWidget.removeTab(emptyIndex)
             self.__leaveButton.setEnabled(True)
         self.channelsWidget.setTabsClosable(True)
+    
+    def __query(self, match):
+        """
+        Private method to handle a new private connection.
+        
+        @param reference to the match object
+        @return flag indicating, if the message was handled (boolean)
+        """
+        # group(1)   sender user name
+        # group(2)   sender user@host
+        # group(3)   target nick
+        # group(4)   message
+        self.__openPrivate(match.group(1))
+        # the above call sets the new channel as the current widget
+        channel = self.channelsWidget.currentWidget()
+        channel.addMessage(match.group(1), match.group(4))
+        channel.setPrivateInfo("{0} - {1}".format(match.group(1), match.group(2)))
+        
+        return True
     
     @pyqtSlot(str)
     def __openPrivate(self, name):
