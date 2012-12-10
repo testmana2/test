@@ -10,7 +10,7 @@ Module implementing the IRC window.
 import re
 import logging
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QTimer
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QTimer
 from PyQt4.QtGui import QWidget, QToolButton, QLabel
 from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
 try:
@@ -34,7 +34,11 @@ import UI.PixmapCache
 class IrcWidget(QWidget, Ui_IrcWidget):
     """
     Class implementing the IRC window.
+    
+    @signal autoConnected() emitted after an automatic connection was initiated
     """
+    autoConnected = pyqtSignal()
+    
     ServerDisconnected = 1
     ServerConnected = 2
     ServerConnecting = 3
@@ -104,6 +108,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.networkWidget.nickChanged.connect(self.__changeNick)
         self.networkWidget.sendData.connect(self.__send)
         self.networkWidget.away.connect(self.__away)
+        self.networkWidget.autoConnected.connect(self.autoConnected)
     
     def shutdown(self):
         """

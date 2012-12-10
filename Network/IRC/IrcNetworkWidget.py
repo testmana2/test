@@ -31,6 +31,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     @signal nickChanged(str) emitted to change the nick name
     @signal sendData(str) emitted to send a message to the channel
     @signal away(bool) emitted to indicate the away status
+    @signal autoConnected() emitted after an automatic connection was initiated
     """
     connectNetwork = pyqtSignal(str, bool)
     editNetwork = pyqtSignal(str)
@@ -38,6 +39,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     nickChanged = pyqtSignal(str)
     sendData = pyqtSignal(str)
     away = pyqtSignal(bool)
+    autoConnected = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -89,6 +91,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 row = self.networkCombo.findText(networkName)
                 self.networkCombo.setCurrentIndex(row)
                 self.on_connectButton_clicked()
+                self.autoConnected.emit()
                 break
     
     @pyqtSlot()

@@ -462,6 +462,8 @@ class UserInterface(E5MainWindow):
         
         self.numbersViewer.insertNumber.connect(self.viewmanager.insertNumber)
         
+        self.irc.autoConnected.connect(self.__ircAutoConnected)
+        
         # create the toolbar manager object
         self.toolbarManager = E5ToolBarManager(self, self)
         self.toolbarManager.setMainWindow(self)
@@ -5605,3 +5607,9 @@ class UserInterface(E5MainWindow):
         Public method to initiate the IRC auto connection.
         """
         self.irc.autoConnect()
+    
+    def __ircAutoConnected(self):
+        """
+        Private slot handling the automatic connection of the IRC client.
+        """
+        self.__activateIRC()
