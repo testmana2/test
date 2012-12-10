@@ -69,10 +69,26 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 Preferences.getEditor("CppHighlightTripleQuotedStrings"))
         else:
             self.cppHighlightTripleQuotedCheckBox.setEnabled(False)
+        if QSCINTILLA_VERSION() >= 0x020700:
+            self.cppHighlightHashQuotedCheckBox.setChecked(
+                Preferences.getEditor("CppHighlightHashQuotedStrings"))
+        else:
+            self.cppHighlightHashQuotedCheckBox.setEnabled(False)
         
         # CSS
         self.foldCssCommentCheckBox.setChecked(
             Preferences.getEditor("CssFoldComment"))
+        if QSCINTILLA_VERSION() >= 0x020700:
+            self.cssHssCheckBox.setChecked(
+                Preferences.getEditor("CssHssSupport"))
+            self.cssLessCheckBox.setChecked(
+                Preferences.getEditor("CssLessSupport"))
+            self.cssSassyCheckBox.setChecked(
+                Preferences.getEditor("CssSassySupport"))
+        else:
+            self.cssHssCheckBox.setEnabled(False)
+            self.cssLessCheckBox.setEnabled(False)
+            self.cssSassyCheckBox.setEnabled(False)
         
         # D
         self.foldDCommentCheckBox.setChecked(
@@ -293,10 +309,20 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         if QSCINTILLA_VERSION() >= 0x020600:
             Preferences.setEditor("CppHighlightTripleQuotedStrings",
                 self.cppHighlightTripleQuotedCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020700:
+            Preferences.setEditor("CppHighlightHashQuotedStrings",
+                self.cppHighlightHashQuotedCheckBox.isChecked())
         
         # CSS
         Preferences.setEditor("CssFoldComment",
             self.foldCssCommentCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020700:
+            Preferences.setEditor("CssHssSupport",
+                self.cssHssCheckBox.isChecked())
+            Preferences.setEditor("CssLessSupport",
+                self.cssLessCheckBox.isChecked())
+            Preferences.setEditor("CssSassySupport",
+                self.cssSassyCheckBox.isChecked())
         
         # D
         Preferences.setEditor("DFoldComment",

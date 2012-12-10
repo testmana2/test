@@ -38,6 +38,15 @@ class LexerCSS(QsciLexerCSS, Lexer):
         """
         self.setFoldComments(Preferences.getEditor("CssFoldComment"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+        try:
+            self.setHSSLanguage(
+                Preferences.getEditor("CssHssSupport"))
+            self.setLessLanguage(
+                Preferences.getEditor("CssLessSupport"))
+            self.setSCSSLanguage(
+                Preferences.getEditor("CssSassySupport"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

@@ -2194,14 +2194,13 @@ class MiniEditor(E5MainWindow):
             self.__textEdit.setEdgeColumn(Preferences.getEditor("EdgeColumn"))
             self.__textEdit.setEdgeColor(Preferences.getEditorColour("Edge"))
         
-        if Preferences.getEditor("WrapLongLines"):
-            self.__textEdit.setWrapMode(QsciScintilla.WrapWord)
-            self.__textEdit.setWrapVisualFlags(
-                QsciScintilla.WrapFlagByBorder, QsciScintilla.WrapFlagByBorder)
-        else:
+        wrapFlag = Preferences.getEditor("WrapLongLinesMode")
+        if wrapFlag == QsciScintilla.WrapFlagNone:
             self.__textEdit.setWrapMode(QsciScintilla.WrapNone)
-            self.__textEdit.setWrapVisualFlags(
-                QsciScintilla.WrapFlagNone, QsciScintilla.WrapFlagNone)
+            self.__textEdit.setWrapVisualFlags(wrapFlag, wrapFlag)
+        else:
+            self.__textEdit.setWrapMode(QsciScintilla.WrapWord)
+            self.__textEdit.setWrapVisualFlags(wrapFlag, wrapFlag)
         
         self.searchIndicator = QsciScintilla.INDIC_CONTAINER
         self.__textEdit.indicatorDefine(self.searchIndicator, QsciScintilla.INDIC_BOX,

@@ -11,7 +11,8 @@ from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QColor, QPalette, QColorDialog
 from PyQt4.Qsci import QsciScintilla
 
-from QScintilla.QsciScintillaCompat import QsciScintillaCompat
+from QScintilla.QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage
@@ -46,6 +47,16 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QsciScintilla.EdgeLine,
             QsciScintilla.EdgeBackground
         ]
+        
+        self.wrapModeComboBox.addItem(self.trUtf8("Disabled"),
+            QsciScintilla.WrapFlagNone)
+        self.wrapModeComboBox.addItem(self.trUtf8("Show Flag by Text"),
+            QsciScintilla.WrapFlagByText)
+        self.wrapModeComboBox.addItem(self.trUtf8("Show Flag by Margin"),
+            QsciScintilla.WrapFlagByBorder)
+        if QSCINTILLA_VERSION() >= 0x020700:
+            self.wrapModeComboBox.addItem(self.trUtf8("Show Flag in Linenumber Margin"),
+                QsciScintilla.WrapFlagInMargin)
         
         # set initial values
         try:
@@ -115,8 +126,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QColor(Preferences.getEditorColour("AnnotationsErrorBackground"))
         
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
-        self.wrapLongLinesCheckBox.setChecked(
-            Preferences.getEditor("WrapLongLines"))
+        self.wrapModeComboBox.setCurrentIndex(self.wrapModeComboBox.findData(
+            Preferences.getEditor("WrapLongLinesMode")))
         
         self.edgeModeCombo.setCurrentIndex(
             self.edgeModes.index(Preferences.getEditor("EdgeMode")))
@@ -211,8 +222,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor("ShowEOL",
             self.eolCheckBox.isChecked())
-        Preferences.setEditor("WrapLongLines",
-            self.wrapLongLinesCheckBox.isChecked())
+        Preferences.setEditor("WrapLongLinesMode",
+            self.wrapModeComboBox.itemData(self.wrapModeComboBox.currentIndex()))
         Preferences.setEditor("EdgeMode",
             self.edgeModes[self.edgeModeCombo.currentIndex()])
         Preferences.setEditor("EdgeColumn",

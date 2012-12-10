@@ -64,6 +64,11 @@ class LexerCPP(QsciLexerCPP, Lexer):
                 Preferences.getEditor("CppHighlightTripleQuotedStrings"))
         except AttributeError:
             pass
+        try:
+            self.setHighlightHashQuotedStrings(
+                Preferences.getEditor("CppHighlightHashQuotedStrings"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

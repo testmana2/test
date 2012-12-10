@@ -254,7 +254,7 @@ class Prefs(object):
         "WhitespaceSize": 1,
         "ShowEOL": False,
         "UseMonospacedFont": False,
-        "WrapLongLines": False,
+        "WrapLongLinesMode": QsciScintilla.WrapFlagNone,
         "WarnFilesize": 512,
         "ClearBreaksOnClose": True,
         "StripTrailingWhitespace": False,
@@ -346,9 +346,13 @@ class Prefs(object):
         "CppDollarsAllowed": True,
         "CppStylePreprocessor": False,
         "CppHighlightTripleQuotedStrings": False,
+        "CppHighlightHashQuotedStrings": False,
         
         # CSS specifics
         "CssFoldComment": True,
+        "CssHssSupport": False,
+        "CssLessSupport": False,
+        "CssSassySupport": False,
         
         # D specifics
         "DFoldComment": True,
@@ -1534,7 +1538,8 @@ def getEditor(key, prefClass=Prefs):
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
-                 "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval"]:
+                 "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
+                 "WrapLongLinesMode"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",

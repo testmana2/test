@@ -3927,14 +3927,13 @@ class Editor(QsciScintillaCompat):
             self.setEdgeColumn(Preferences.getEditor("EdgeColumn"))
             self.setEdgeColor(Preferences.getEditorColour("Edge"))
         
-        if Preferences.getEditor("WrapLongLines"):
-            self.setWrapMode(QsciScintilla.WrapWord)
-            self.setWrapVisualFlags(
-                QsciScintilla.WrapFlagByBorder, QsciScintilla.WrapFlagByBorder)
-        else:
+        wrapFlag = Preferences.getEditor("WrapLongLinesMode")
+        if wrapFlag == QsciScintilla.WrapFlagNone:
             self.setWrapMode(QsciScintilla.WrapNone)
-            self.setWrapVisualFlags(
-                QsciScintilla.WrapFlagNone, QsciScintilla.WrapFlagNone)
+            self.setWrapVisualFlags(wrapFlag, wrapFlag)
+        else:
+            self.setWrapMode(QsciScintilla.WrapWord)
+            self.setWrapVisualFlags(wrapFlag, wrapFlag)
         
         self.zoomTo(Preferences.getEditor("ZoomFactor"))
         

@@ -155,13 +155,23 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
+      <item row="5" column="0">
        <widget class="QCheckBox" name="cppHighlightTripleQuotedCheckBox">
         <property name="toolTip">
          <string>Select to highlight triple quoted strings</string>
         </property>
         <property name="text">
          <string>Highlight triple quoted strings</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QCheckBox" name="cppHighlightHashQuotedCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight hash quoted strings</string>
+        </property>
+        <property name="text">
+         <string>Highlight hash quoted strings</string>
         </property>
        </widget>
       </item>
@@ -192,14 +202,44 @@
      <property name="title">
       <string>CSS Lexer Properties</string>
      </property>
-     <layout class="QVBoxLayout">
-      <item>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="0" column="0">
        <widget class="QCheckBox" name="foldCssCommentCheckBox">
         <property name="toolTip">
          <string>Select whether folding of comments shall be possible</string>
         </property>
         <property name="text">
          <string>Fold comments</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="cssHssCheckBox">
+        <property name="toolTip">
+         <string>Select to activate HSS support</string>
+        </property>
+        <property name="text">
+         <string>HSS support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="cssLessCheckBox">
+        <property name="toolTip">
+         <string>Select to activate Less CSS support</string>
+        </property>
+        <property name="text">
+         <string>Less CSS support</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="cssSassyCheckBox">
+        <property name="toolTip">
+         <string>Select to activate Sassy CSS support</string>
+        </property>
+        <property name="text">
+         <string>Sassy CSS support</string>
         </property>
        </widget>
       </item>
@@ -911,8 +951,12 @@
   <tabstop>cppDollarAllowedCheckBox</tabstop>
   <tabstop>cppStylePreprocessorCheckBox</tabstop>
   <tabstop>cppHighlightTripleQuotedCheckBox</tabstop>
+  <tabstop>cppHighlightHashQuotedCheckBox</tabstop>
   <tabstop>cmakeFoldAtElseCheckBox</tabstop>
   <tabstop>foldCssCommentCheckBox</tabstop>
+  <tabstop>cssHssCheckBox</tabstop>
+  <tabstop>cssLessCheckBox</tabstop>
+  <tabstop>cssSassyCheckBox</tabstop>
   <tabstop>foldDCommentCheckBox</tabstop>
   <tabstop>foldDAtElseCheckBox</tabstop>
   <tabstop>dIndentOpeningBraceCheckBox</tabstop>
