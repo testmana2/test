@@ -957,6 +957,10 @@ class Prefs(object):
         "AutoUserInfoLookup": True,
         "AutoUserInfoMax": 200,
         "AutoUserInfoInterval": 90,
+        
+        "MarkPositionWhenHidden": True,
+        "MarkerLineForegroundColour": "#000000",    # Black on
+        "MarkerLineBackgroundColour": "#ffff00",    # Yellow
     }
 
 
@@ -2592,7 +2596,7 @@ def getIrc(key, prefClass=Prefs):
     """
     if key in ["TimestampIncludeDate", "ShowTimestamps", "ShowNotifications",
                "NotifyJoinPart", "NotifyMessage", "NotifyNick", "EnableIrcColours",
-               "AutoUserInfoLookup"]:
+               "AutoUserInfoLookup", "MarkPositionWhenHidden"]:
         return toBool(prefClass.settings.value("IRC/" + key,
                 prefClass.ircDefaults[key]))
     elif key in ["AutoUserInfoMax", "AutoUserInfoInterval"]:

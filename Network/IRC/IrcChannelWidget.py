@@ -971,7 +971,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         Private slot to append a message.
         """
-        if self.__hidden and self.__markerLine == "":
+        if self.__hidden and \
+           self.__markerLine == "" and \
+           Preferences.getIrc("MarkPositionWhenHidden"):
             self.setMarkerLine()
         self.messages.append(message)
     
@@ -980,9 +982,10 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         Public method to draw a line to mark the current position.
         """
         self.unsetMarkerLine()
-        # TODO: make colors configurable
         self.__markerLine = \
-            '<span style=" color:#000000; background-color:#ffff00;">{0}</span>'.format(
+            '<span style=" color:{0}; background-color:{1};">{2}</span>'.format(
+            Preferences.getIrc("MarkerLineForegroundColour"),
+            Preferences.getIrc("MarkerLineBackgroundColour"),
             self.trUtf8('--- New From Here ---'))
         self.messages.append(self.__markerLine)
     

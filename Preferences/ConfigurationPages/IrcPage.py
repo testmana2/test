@@ -109,6 +109,14 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         self.whoGroup.setChecked(Preferences.getIrc("AutoUserInfoLookup"))
         self.whoUsersSpinBox.setValue(Preferences.getIrc("AutoUserInfoMax"))
         self.whoIntervalSpinBox.setValue(Preferences.getIrc("AutoUserInfoInterval"))
+        
+        # Markers
+        self.markWhenHiddenCheckBox.setChecked(
+            Preferences.getIrc("MarkPositionWhenHidden"))
+        self.initColour("MarkerLineForegroundColour", self.markerForegroundButton,
+                         Preferences.getIrc, byName=True)
+        self.initColour("MarkerLineBackgroundColour", self.markerBackgroundButton,
+                         Preferences.getIrc, byName=True)
     
     def save(self):
         """
@@ -130,6 +138,10 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         Preferences.setIrc("AutoUserInfoLookup", self.whoGroup.isChecked())
         Preferences.setIrc("AutoUserInfoMax", self.whoUsersSpinBox.value())
         Preferences.setIrc("AutoUserInfoInterval", self.whoIntervalSpinBox.value())
+        
+        # Markers
+        Preferences.setIrc("MarkPositionWhenHidden",
+            self.markWhenHiddenCheckBox.isChecked())
         
         # colours
         self.saveColours(Preferences.setIrc)
