@@ -2610,22 +2610,22 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="557"/>
+        <location filename="Cooperation/ChatWidget.py" line="559"/>
         <source>Save Chat</source>
         <translation>Chat speichern</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="543"/>
+        <location filename="Cooperation/ChatWidget.py" line="545"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="571"/>
+        <location filename="Cooperation/ChatWidget.py" line="573"/>
         <source>Error saving Chat</source>
         <translation>Fehlr beim Speichern</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="571"/>
+        <location filename="Cooperation/ChatWidget.py" line="573"/>
         <source>&lt;p&gt;The chat contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Inhalt des Chats konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; geschrieben werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
@@ -2670,40 +2670,40 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Alles kopieren</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="614"/>
+        <location filename="Cooperation/ChatWidget.py" line="616"/>
         <source>Kick User</source>
         <translation>Nutzer ausschließen</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="618"/>
+        <location filename="Cooperation/ChatWidget.py" line="620"/>
         <source>Ban User</source>
         <translation>Nutzer bannen</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="622"/>
+        <location filename="Cooperation/ChatWidget.py" line="624"/>
         <source>Ban and Kick User</source>
         <translation>Nutzer bannen und ausschließen</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="650"/>
+        <location filename="Cooperation/ChatWidget.py" line="652"/>
         <source>* {0} has been kicked.
 </source>
         <translation>* {0} wurde ausgeschlossen.</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="665"/>
+        <location filename="Cooperation/ChatWidget.py" line="667"/>
         <source>* {0} has been banned.
 </source>
         <translation>* {0} wurde gebannt.</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="680"/>
+        <location filename="Cooperation/ChatWidget.py" line="682"/>
         <source>* {0} has been banned and kicked.
 </source>
         <translation>* {0} wurde gebannt und ausgeschlossen.</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="557"/>
+        <location filename="Cooperation/ChatWidget.py" line="559"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
@@ -3423,219 +3423,219 @@ Ursache: {1}</translation>
         <translation>Symbole</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
         <source>Plugin Manager</source>
         <translation>Plugin Manager</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="319"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="322"/>
         <source>Printer</source>
         <translation>Drucker</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="187"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="156"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
         <source>Tasks</source>
         <translation>Aufgaben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
         <source>Templates</source>
         <translation>Vorlagen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="177"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="180"/>
         <source>Version Control Systems</source>
         <translation>Versionskontrollsysteme</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="181"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="196"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="197"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
         <source>Autocompletion</source>
         <translation>Autom. Vervollständigung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
         <source>Calltips</source>
         <translation>Calltips</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="237"/>
         <source>Typing</source>
         <translation>Eingabe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="237"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="240"/>
         <source>Exporters</source>
         <translation>Exporter</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="241"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
         <source>Highlighters</source>
         <translation>Syntax-Hervorhebung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
         <source>Filetype Associations</source>
         <translation>Dateitypzuordnungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="248"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="251"/>
         <source>Styles</source>
         <translation>Stile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="326"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="329"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="332"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="335"/>
         <source>Help Documentation</source>
         <translation>Hilfe Dokumentation</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="269"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="272"/>
         <source>Help Viewers</source>
         <translation>Hilfeanzeiger</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="282"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
         <source>Project Viewer</source>
         <translation>Projektanzeige</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="291"/>
         <source>Multiproject</source>
         <translation>Mehrfachprojekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="313"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
         <source>Interface</source>
         <translation>Oberfläche</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="298"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="301"/>
         <source>Viewmanager</source>
         <translation>Ansichtenmanager</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="540"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
         <source>Configuration Page Error</source>
         <translation>Konfigurationsseitenfehler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="540"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Konfigurationsseite &lt;b&gt;{0}&lt;/b&gt; konnte nicht geladen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Filehandling</source>
         <translation>Dateibehandlung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
         <source>Searching</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="329"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="332"/>
         <source>Appearance</source>
         <translation>Erscheinung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="255"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="258"/>
         <source>Properties</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="468"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="471"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="473"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="476"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Wähle einen Listeneintrag aus,
 um die Konfigurationsseite anzuzeigen.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="319"/>
         <source>Network</source>
         <translation>Netzwerk</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
         <source>Spell checking</source>
         <translation>Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="252"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="255"/>
         <source>Keywords</source>
         <translation>Schlüsselwörter</translation>
     </message>
@@ -3645,44 +3645,49 @@ um die Konfigurationsseite anzuzeigen.</translation>
         <translation>Zusammenarbeit</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="351"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="354"/>
         <source>Tray Starter</source>
         <translation>Systemstarter</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="150"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
         <source>PyFlakes</source>
         <translation>PyFlakes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="336"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="339"/>
         <source>VirusTotal Interface</source>
         <translation>VirusTotal Schnittstelle</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="322"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="325"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="339"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="342"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 Web-Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
         <source>Syntax Checker</source>
         <translation>Syntaxprüfer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="409"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="412"/>
         <source>Enter filter text...</source>
         <translation>Filtertext...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="141"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="138"/>
+        <source>IRC</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7502,7 +7507,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Drucken abgebrochen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5634"/>
+        <location filename="QScintilla/Editor.py" line="5633"/>
         <source>File changed</source>
         <translation>Datei geändert</translation>
     </message>
@@ -7567,57 +7572,57 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zurück zum letzten gesichert Zustand</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5369"/>
+        <location filename="QScintilla/Editor.py" line="5368"/>
         <source>Macro Name</source>
         <translation>Makro Name</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5369"/>
+        <location filename="QScintilla/Editor.py" line="5368"/>
         <source>Select a macro name:</source>
         <translation>Wähle einen Makro Namen:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5437"/>
+        <location filename="QScintilla/Editor.py" line="5436"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro Dateien (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5397"/>
+        <location filename="QScintilla/Editor.py" line="5396"/>
         <source>Load macro file</source>
         <translation>Lade Makro Datei</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5417"/>
         <source>Error loading macro</source>
         <translation>Fehler beim Makro Laden</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5437"/>
+        <location filename="QScintilla/Editor.py" line="5436"/>
         <source>Save macro file</source>
         <translation>Makro Datei schreiben</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5454"/>
+        <location filename="QScintilla/Editor.py" line="5453"/>
         <source>Save macro</source>
         <translation>Makro speichern</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5469"/>
+        <location filename="QScintilla/Editor.py" line="5468"/>
         <source>Error saving macro</source>
         <translation>Fehler beim Makro speichern</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5480"/>
+        <location filename="QScintilla/Editor.py" line="5479"/>
         <source>Start Macro Recording</source>
         <translation>Makroaufzeichnung starten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5505"/>
+        <location filename="QScintilla/Editor.py" line="5504"/>
         <source>Macro Recording</source>
         <translation>Makroaufzeichnung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5505"/>
+        <location filename="QScintilla/Editor.py" line="5504"/>
         <source>Enter name of the macro:</source>
         <translation>Gib einen Namen für das Makro ein:</translation>
     </message>
@@ -7677,32 +7682,32 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Haltepunkt bearbeiten...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4549"/>
+        <location filename="QScintilla/Editor.py" line="4548"/>
         <source>Enable breakpoint</source>
         <translation>Haltepunkt aktivieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4552"/>
+        <location filename="QScintilla/Editor.py" line="4551"/>
         <source>Disable breakpoint</source>
         <translation>Haltepunkt deaktivieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4876"/>
+        <location filename="QScintilla/Editor.py" line="4875"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4876"/>
+        <location filename="QScintilla/Editor.py" line="4875"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5014"/>
+        <location filename="QScintilla/Editor.py" line="5013"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5014"/>
+        <location filename="QScintilla/Editor.py" line="5013"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen sie eine Datei mit Profildaten</translation>
     </message>
@@ -7712,12 +7717,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Autom. Vervollständigung aktiv</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4059"/>
+        <location filename="QScintilla/Editor.py" line="4058"/>
         <source>Autocompletion</source>
         <translation>Autom. Vervollständigung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4059"/>
+        <location filename="QScintilla/Editor.py" line="4058"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Die automatische Vervollständigung ist nicht verfügbar, da keine Quelle gesetzt ist.</translation>
     </message>
@@ -7752,7 +7757,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Autom. Speicherung aktiv</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5894"/>
+        <location filename="QScintilla/Editor.py" line="5893"/>
         <source>Drop Error</source>
         <translation>Drop Fehler</translation>
     </message>
@@ -7762,12 +7767,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeige Syntaxfehlermeldung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5144"/>
+        <location filename="QScintilla/Editor.py" line="5143"/>
         <source>Syntax Error</source>
         <translation>Syntaxfehler</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5144"/>
+        <location filename="QScintilla/Editor.py" line="5143"/>
         <source>No syntax error message available.</source>
         <translation>Keine Syntaxfehlermeldung verfügbar.</translation>
     </message>
@@ -7797,17 +7802,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Vorige nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4922"/>
+        <location filename="QScintilla/Editor.py" line="4921"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zeilen ohne Abdeckung Markieren</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4918"/>
+        <location filename="QScintilla/Editor.py" line="4917"/>
         <source>All lines have been covered.</source>
         <translation>Alle Zeilen sind abgedeckt.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4922"/>
+        <location filename="QScintilla/Editor.py" line="4921"/>
         <source>There is no coverage file available.</source>
         <translation>Es gibt keine Datei mit Abdeckungsinformationen.</translation>
     </message>
@@ -7817,22 +7822,22 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält ungesicherte Änderungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5411"/>
+        <location filename="QScintilla/Editor.py" line="5410"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; kann nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5417"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; ist zerstört.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5469"/>
+        <location filename="QScintilla/Editor.py" line="5468"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; kann nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5894"/>
+        <location filename="QScintilla/Editor.py" line="5893"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ist keine Datei.&lt;/p&gt;</translation>
     </message>
@@ -7877,82 +7882,82 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Keine Sprache</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5772"/>
+        <location filename="QScintilla/Editor.py" line="5771"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5912"/>
+        <location filename="QScintilla/Editor.py" line="5911"/>
         <source>Resources</source>
         <translation>Resourcen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5914"/>
+        <location filename="QScintilla/Editor.py" line="5913"/>
         <source>Add file...</source>
         <translation>Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5916"/>
+        <location filename="QScintilla/Editor.py" line="5915"/>
         <source>Add files...</source>
         <translation>Dateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5918"/>
+        <location filename="QScintilla/Editor.py" line="5917"/>
         <source>Add aliased file...</source>
         <translation>Aliased Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5920"/>
+        <location filename="QScintilla/Editor.py" line="5919"/>
         <source>Add localized resource...</source>
         <translation>Lokalisierte Resource hinzufügen...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5941"/>
+        <location filename="QScintilla/Editor.py" line="5940"/>
         <source>Add file resource</source>
         <translation>Dateiresource hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5957"/>
+        <location filename="QScintilla/Editor.py" line="5956"/>
         <source>Add file resources</source>
         <translation>Dateiresourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5984"/>
+        <location filename="QScintilla/Editor.py" line="5983"/>
         <source>Add aliased file resource</source>
         <translation>Aliased Dateiresourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5984"/>
+        <location filename="QScintilla/Editor.py" line="5983"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias für Datei &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6046"/>
+        <location filename="QScintilla/Editor.py" line="6045"/>
         <source>Package Diagram</source>
         <translation>Package-Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6046"/>
+        <location filename="QScintilla/Editor.py" line="6045"/>
         <source>Include class attributes?</source>
         <translation>Klassenattribute anzeigen?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6076"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6076"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5923"/>
+        <location filename="QScintilla/Editor.py" line="5922"/>
         <source>Add resource frame</source>
         <translation>Resource Rahmen hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5480"/>
+        <location filename="QScintilla/Editor.py" line="5479"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Eine Makroaufzeichnung ist bereits aktiv. Neu starten?</translation>
     </message>
@@ -8007,12 +8012,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Kein Exportformat angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6064"/>
+        <location filename="QScintilla/Editor.py" line="6063"/>
         <source>Imports Diagram</source>
         <translation>Imports Diagramm</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6064"/>
+        <location filename="QScintilla/Editor.py" line="6063"/>
         <source>Include imports from external modules?</source>
         <translation>Imports externer Module anzeigen?</translation>
     </message>
@@ -8092,7 +8097,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6348"/>
+        <location filename="QScintilla/Editor.py" line="6347"/>
         <source>Check spelling...</source>
         <translation>Rechtschreibprüfung...</translation>
     </message>
@@ -8102,12 +8107,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Rechtschreibprüfung für Auswahl...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6350"/>
+        <location filename="QScintilla/Editor.py" line="6349"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6352"/>
+        <location filename="QScintilla/Editor.py" line="6351"/>
         <source>Ignore All</source>
         <translation>Alle ignorieren</translation>
     </message>
@@ -8127,7 +8132,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gesichert werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5625"/>
+        <location filename="QScintilla/Editor.py" line="5624"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; wurde geändert, während sie in eric5 geöffnet war. Neu einlesen?&lt;/p&gt;</translation>
     </message>
@@ -8152,12 +8157,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Warnungen löschen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5270"/>
+        <location filename="QScintilla/Editor.py" line="5269"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes Warnung</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5270"/>
+        <location filename="QScintilla/Editor.py" line="5269"/>
         <source>No py3flakes warning message available.</source>
         <translation>Keine Py3flakes Warnung verfügbar.</translation>
     </message>
@@ -8167,42 +8172,42 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5454"/>
+        <location filename="QScintilla/Editor.py" line="5453"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makro Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5313"/>
+        <location filename="QScintilla/Editor.py" line="5312"/>
         <source>Warning: {0}</source>
         <translation>Warnung: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5319"/>
+        <location filename="QScintilla/Editor.py" line="5318"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5630"/>
+        <location filename="QScintilla/Editor.py" line="5629"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Warnung:&lt;/b&gt; Vorgenommenen Änderungen gehen beim neu einlesen verloren.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4155"/>
+        <location filename="QScintilla/Editor.py" line="4154"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Aktivierung eines Providers für automatische Vervollständigungen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4155"/>
+        <location filename="QScintilla/Editor.py" line="4154"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Ein Providers für automatische Vervollständigungen kann nicht angebunden werden, da bereits ein anderer aktiv ist. Bitte überprüfen sie ihre Konfiguration.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4340"/>
+        <location filename="QScintilla/Editor.py" line="4339"/>
         <source>Activating Calltip Provider</source>
         <translation>Aktivierung eines Providers für Calltips</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4340"/>
+        <location filename="QScintilla/Editor.py" line="4339"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Ein Providers für Calltips kann nicht angebunden werden, da bereits ein anderer aktiv ist. Bitte überprüfen sie ihre Konfiguration.</translation>
     </message>
@@ -8509,54 +8514,79 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;b&gt;Calltips einstellen&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="98"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="122"/>
         <source>Colours</source>
         <translation>Farben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="104"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="128"/>
         <source>Background colour:</source>
         <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="117"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="141"/>
         <source>Select the background colour for calltips.</source>
         <translation>Wähle die Hintergrundfarbe für Calltips.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="56"/>
         <source>Visible calltips:</source>
-        <translation>Sichtbare Calltips:</translation>
+        <translation type="obsolete">Sichtbare Calltips:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="63"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="68"/>
         <source>Move to set the maximum number of calltips shown (0 = all available)</source>
         <translation>Verschieben, um die Anzahl der angezeigten Calltips zu wählen (0 = alle verfügbaren)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="84"/>
         <source>Displays the maximum number of calltips to be shown</source>
         <translation>Zeigt die gewählte Maximalzahl der angezeigten Calltips an</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="143"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="170"/>
         <source>Plug-In Behavior</source>
         <translation>Plugin Verhalten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="149"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="176"/>
         <source>Select to show QScintilla provided calltips, if the selected plugin fails</source>
         <translation>Auswählen, um QScintilla Calltips anzuzeigen, wenn das ausgewählte Plugin keine liefert</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="152"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="179"/>
         <source>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by a plug-in (see calltips sub-page of the plug-in) and the plugin-in doesn&apos;t deliver any calltips.</source>
         <translation>QScintilla Calltips werden angezeigt, wenn diese Option angewählt ist unf Calltips durch ein Plugin erzeugt werden sollen (siehe Unterseite des Plugins) und dieses Plugin aber keine liefert.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="155"/>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="182"/>
         <source>Show QScintilla calltips, if plug-in fails</source>
         <translation>Zeige QScintilla Calltips, falls das Plugin keine liefert</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="62"/>
+        <source>Visible Calltips</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="103"/>
+        <source>Calltips Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="109"/>
+        <source>Select the position for the calltips</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.py" line="33"/>
+        <source>Below Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.py" line="35"/>
+        <source>Above Text</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9495,12 +9525,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Bash Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="877"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="917"/>
         <source>Select whether folding of comments shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Kommentaren möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="880"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="920"/>
         <source>Fold comments</source>
         <translation>Kommentare falten</translation>
     </message>
@@ -9520,202 +9550,202 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Schreibweisenunabhängige Schlüsselwörter (nur C/C++)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="268"/>
         <source>Select, whether the line containing the opening brace should be indented</source>
         <translation>Wähle, ob die Zeile, die die öffnende geschweifte Klammer enthält, eingerückt werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="271"/>
         <source>Indent opening brace</source>
         <translation>Öffnende geschweifte Klammer einrücken</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="848"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="888"/>
         <source>Select whether folding at else statement should be possible</source>
         <translation>Wähle aus, ob die Faltung bei Else möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="851"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="891"/>
         <source>Fold at else</source>
         <translation>Bei Else falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="365"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="405"/>
         <source>Select whether folding of preprocessor directives shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Präprozessor Anweisungen möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="368"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="408"/>
         <source>Fold preprocessor directives</source>
         <translation>Falte Preprozessor Anweisungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="218"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="258"/>
         <source>Select, whether the line containing the closing brace should be indented</source>
         <translation>Wähle, ob die Zeile, die die schließende geschweifte Klammer enthält, eingerückt werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="261"/>
         <source>Indent closing brace</source>
         <translation>Schließende geschweifte Klammer einrücken</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="174"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="184"/>
         <source>CMake Lexer Properties</source>
         <translation>CMake Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="193"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="203"/>
         <source>CSS Lexer Properties</source>
         <translation>CSS Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="212"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="252"/>
         <source>D Lexer Properties</source>
         <translation>D Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="261"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="301"/>
         <source>HTML Lexer Properties</source>
         <translation>HTML Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="297"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="337"/>
         <source>Select whether HTML tags should be case sensitive</source>
         <translation>Wähle aus, ob die Schreibweise der Tags beachtet werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="340"/>
         <source>Case sensitive tags</source>
         <translation>Schreibweise der Tags beachten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="388"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="428"/>
         <source>Perl Lexer Properties</source>
         <translation>Perl Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="509"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="549"/>
         <source>Povray Lexer Properties</source>
         <translation>Povray Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="515"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="555"/>
         <source>Select whether folding of directives shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Direktiven möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="518"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="558"/>
         <source>Fold directives</source>
         <translation>Direktiven falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="557"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="597"/>
         <source>Python Lexer Properties</source>
         <translation>Python Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="593"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="633"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation>Wähle aus, ob fehlerhafte Einrückungen hervorgehoben werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="596"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
         <source>Highlight bad indentation</source>
         <translation>Fehlerhafte Einrückung hervorheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="613"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="653"/>
         <source>Select whether text should be autoindented after a &apos;:&apos;</source>
         <translation>Wähle aus, ob Text nach einem &apos;:&apos; automatisch eingerückt werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="656"/>
         <source>Auto indentation after &apos;:&apos;</source>
         <translation>Automatische Einrückung nach &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="573"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="613"/>
         <source>Select whether folding of strings shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Zeichenketten möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="576"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
         <source>Fold strings</source>
         <translation>Zeichenketten falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="685"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="725"/>
         <source>SQL Lexer Properties</source>
         <translation>SQL Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="761"/>
         <source>Select to enable Backslash Escapes</source>
         <translation>Auswählen, um &apos;Backslash Escapes&apos; zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
         <source>Backslash Escapes</source>
         <translation>Backslash Escapes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="822"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="862"/>
         <source>VHDL Lexer Properties</source>
         <translation>VHDL Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="828"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="868"/>
         <source>Select whether folding of blocks at a parenthesis shall be possible</source>
         <translation>Wähle aus, ob di Faltung von Blöcken an einer Klammer möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="831"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="871"/>
         <source>Fold at parenthesis</source>
         <translation>Bei Klammer falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="838"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="878"/>
         <source>Select whether folding of begin blocks shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Begin Blöcken möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="841"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="881"/>
         <source>Fold at begin</source>
         <translation>Bei Begin falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="349"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="389"/>
         <source>Pascal Lexer Properties</source>
         <translation>Pascal Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="437"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="477"/>
         <source>PostScript Lexer Properties</source>
         <translation>PostScript Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="453"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="493"/>
         <source>Select to mark tokens</source>
         <translation>Auswählen, um Tokens zu markieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="456"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="496"/>
         <source>Mark Tokens</source>
         <translation>Tokens markieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="465"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="505"/>
         <source>PostScript Level:</source>
         <translation>PostScript Level:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="472"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="512"/>
         <source>Select the PostScript level</source>
         <translation>Wähle das PostScript Level aus</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="871"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="911"/>
         <source>YAML Lexer Properties</source>
         <translation>YAML Lexer Einstellungen</translation>
     </message>
@@ -9730,97 +9760,97 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&apos;$&apos;-Zeichen in Namen zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="317"/>
         <source>Select to enable folding of script comments</source>
         <translation>Auswählen, um Skript Kommentare zu falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="280"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="320"/>
         <source>Fold script comments</source>
         <translation>Skript Kommentare falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="327"/>
         <source>Select to enable folding of script heredocs</source>
         <translation>Auswählen, um Skript Heredocs zu falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="290"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="330"/>
         <source>Fold script heredocs</source>
         <translation>Skript Heredocs falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="327"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="367"/>
         <source>XML Lexer Properties</source>
         <translation>XML Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="333"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="373"/>
         <source>Select to enable styling of scripts</source>
         <translation>Auswählen, um Skripts einzufärben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="336"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="376"/>
         <source>Style scripts</source>
         <translation>Skripts einfärben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="375"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="415"/>
         <source>Select to enable smart highlighting of keywords</source>
         <translation>Auswählen, um Smart Highlighting von Schlüsselwörtern zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="378"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="418"/>
         <source>Smart Highlighting</source>
         <translation>Smart Highlighting</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="404"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="444"/>
         <source>Select to enable folding of Perl packages</source>
         <translation>Auswählen, um Perl Pakete zu falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="407"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="447"/>
         <source>Fold packages</source>
         <translation>Pakete falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="414"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="454"/>
         <source>Select to enable folding of Perl POD blocks</source>
         <translation>Auswählen, um Perl POD Blöcke zu falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="417"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="457"/>
         <source>Fold POD blocks</source>
         <translation>POD Blöcke falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="633"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="673"/>
         <source>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</source>
         <translation>Auswählen, um Python v2 Unicode Zeichenketten (z.B. u&quot;utf8&quot;) zuzulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="676"/>
         <source>Allow v2 unicode string literals</source>
         <translation>v2 Unicode Zeichenketten zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="643"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="683"/>
         <source>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</source>
         <translation>Auswählen, um Python v3 Binär- und Oktalzahlen (z.B. 0b1011, 0o712) zuzulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="646"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="686"/>
         <source>Allow v3 binary and octal literals</source>
         <translation>v3 Binär- und Oktalzahlen zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="653"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="693"/>
         <source>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</source>
         <translation>Auswählen, um Python v3 Bytes Zeichenketten (z.B. b&quot;bytes&quot;) zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="656"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="696"/>
         <source>Allow v3 bytes string literals</source>
         <translation>v3 Bytes Zeichenketten zulassen</translation>
     </message>
@@ -9835,132 +9865,132 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Präprozessorzeilen einfärben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="307"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="347"/>
         <source>Select to enable support for Django templates</source>
         <translation>Auswählen, um die Unterstützung für Django Schablonen zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="350"/>
         <source>Enable Django templates</source>
         <translation>Aktiviere Django Schablonen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="317"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="357"/>
         <source>Select to enable support for Mako templates</source>
         <translation>Auswählen, um die Unterstützung für Mako Schablonen zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="320"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="360"/>
         <source>Enable Mako templates</source>
         <translation>Aktiviere Mako Schablonen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="538"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="578"/>
         <source>Properties Lexer Properties</source>
         <translation>Properties Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="544"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="584"/>
         <source>Select to allow initial spaces in a line</source>
         <translation>Auswählen, um führende Leerzeichen in einer Zeile zuzulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="547"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="587"/>
         <source>Allow initial spaces</source>
         <translation>führende Leerzeichen zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="583"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
         <source>Select whether folding of triple quoted strings shall be possible</source>
         <translation>Wähle aus, ob die Faltung von Zeichenketten in dreifachen Anführungszeichen möglich sein soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="586"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
         <source>Fold triple quoted strings</source>
         <translation>Zeichenketten in dreifachen Anführungszeichen falten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="663"/>
         <source>Select to allow strings to span newline characters</source>
         <translation>Auswählen, wenn Zeichenketten über das Zeilenendezeichen hinausgehen dürfen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="666"/>
         <source>Strings may span newline characters</source>
         <translation>Zeichenketten können Zeilenendezeichen überspannen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="666"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="706"/>
         <source>Ruby Lexer Properties</source>
         <translation>Ruby Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
         <source>Select whether only BEGIN blocks can be folded</source>
         <translation>Auswählen, wenn nur BEGIN Blöcke gefaltet werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
         <source>Only BEGIN blocks can be folded</source>
         <translation>Faltung nur für BEGIN Blöcke</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="771"/>
         <source>Select if words may contain dots</source>
         <translation>Auswählen, wenn Worte Punkte enthalten dürfen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="774"/>
         <source>Words may contain dots</source>
         <translation>Worte dürfen Punkte enthalten</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="781"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
         <translation>Auswählen, um &apos;#&apos; als Kommentarzeichen zuzulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="784"/>
         <source>Allow &apos;#&apos; as comment character</source>
         <translation>&apos;#&apos; als Kommentarzeichen zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="791"/>
         <source>Select to enable quoted identifiers</source>
         <translation>Auswählen, um Bezeichner in Anführungszeichen zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="794"/>
         <source>Enable quoted identifiers</source>
         <translation>Bezeichner in Anführungszeichen zulassen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="804"/>
         <source>TCL Lexer Properties</source>
         <translation>TCL Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="783"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
         <source>TeX Lexer Properties</source>
         <translation>TeX Lexer Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="799"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="839"/>
         <source>Select to treat comments as TeX source</source>
         <translation>Auswählen, um Kommentare wie TeX Quelltext zu behandeln</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="802"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
         <source>Treat comments as TeX source</source>
         <translation>Behandle Kommentare als TeX Quelltext</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="809"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="849"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
         <translation>Auswählen, um \if&lt;unknown&gt; als Kommando zu behandeln</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="812"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="852"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
         <translation>Behandle \if&lt;unknown&gt; als Kommando</translation>
     </message>
@@ -9970,7 +10000,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeichenketten in dreifachen Anführungszeichen hervorheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="646"/>
         <source>Highlight sub-identifiers</source>
         <translation>Unteridentifizierer hervorheben</translation>
     </message>
@@ -9980,9 +10010,49 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Auswählen, um Zeichenketten in dreifachen Anführungszeichen hervorzuheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="643"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
         <translation>Auswählen, um in Schlüsselwortgruppe 2 definierte Unteridentifizierer hervorzuheben</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="171"/>
+        <source>Select to highlight hash quoted strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="174"/>
+        <source>Highlight hash quoted strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="219"/>
+        <source>Select to activate HSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="222"/>
+        <source>HSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="229"/>
+        <source>Select to activate Less CSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="232"/>
+        <source>Less CSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="239"/>
+        <source>Select to activate Sassy CSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="242"/>
+        <source>Sassy CSS support</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10201,17 +10271,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Gib die Anzahl Zeilen ein, die pro Durchgang geprüft werden. Größere Werte erhöhen die Prüfgeschwindigkeit, verringern jedoch die Reaktion der Oberfläche</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="114"/>
+        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="101"/>
         <source>Select personal word list</source>
         <translation>Wähle persönliche Wörterliste</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="128"/>
+        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="115"/>
         <source>Select personal exclude list</source>
         <translation>Wähle persönliche Ausnahmenliste</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="128"/>
+        <location filename="Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="115"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Wörterbuch (*.dic);;Alle Dateien(*)</translation>
     </message>
@@ -10569,97 +10639,97 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeilenende</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="907"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Wähle aus, ob die Zeilenendemarkierung angezeigt werden soll</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="912"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="910"/>
         <source>Show End of Line</source>
         <translation>Zeige Zeilenendemarkierung</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
         <source>Select, whether long lines should be wrapped</source>
-        <translation>Auswählen, wenn lange Zeilen umbrochen werden sollen</translation>
+        <translation type="obsolete">Auswählen, wenn lange Zeilen umbrochen werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="922"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
         <source>Wrap long lines</source>
         <translation>Lange Zeilen umbrechen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="931"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="973"/>
         <source>Edge Mode</source>
         <translation>Seitenrand</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="975"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Wähle die Farbe für den Seitenrand.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="985"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
         <source>Background colour:</source>
         <translation>Hintergrundfarbe:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="998"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1040"/>
         <source>Move to set the edge column.</source>
         <translation>Bewegen sie den Schieber, um die Seitenbreite zu setzen.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1026"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1068"/>
         <source>Displays the selected tab width.</source>
         <translation>Zeigt die gewählte Tabulatorweite an.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1042"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1084"/>
         <source>Column number:</source>
         <translation>Seitenbreite:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1049"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1091"/>
         <source>Mode:</source>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="50"/>
         <source>Disabled</source>
         <translation>Ausgeschaltet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1068"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1110"/>
         <source>Draw Line</source>
         <translation>Zeichne Linie</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1115"/>
         <source>Change Background Colour</source>
         <translation>Ändere Hintergrundfarbe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1525"/>
         <source>Various</source>
         <translation>Verschiedenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1380"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1422"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Wähle aus, ob Leerzeichen angezeigt werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1383"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1425"/>
         <source>Show Whitespace</source>
         <translation>Zeige Leerzeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1489"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1531"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Auswählen, um ein minimales Kontextmenü anzuzeigen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1492"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1534"/>
         <source>Show minimal context menu</source>
         <translation>Zeige minimales Kontextmenü</translation>
     </message>
@@ -10709,22 +10779,22 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeilenmarkierungen zum Debuggen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1087"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1129"/>
         <source>Zoom</source>
         <translation>Vergrößerung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1093"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1135"/>
         <source>Initial zoom factor:</source>
         <translation>Anfangsvergrößerungsfaktor:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1103"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1145"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Verschiebe den Regler zur Auswahl des Anfangsvergrößerungsfaktors</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1125"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1167"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Zeigt den gewählten Anfangsvergrößerungsfaktor an</translation>
     </message>
@@ -10764,92 +10834,92 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;b&gt;Hinweis:&lt;/b&gt;Schriftarten und Farben der Syntax Hervorhebungen müssen auf der Seite &quot;Syntax-Hervorhebung, Stile&quot; konfiguriert werden.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1144"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1186"/>
         <source>Annotations</source>
         <translation>Anmerkungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1150"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1192"/>
         <source>Select to enable the display of annotations</source>
         <translation>Auswählen, um die Anzeige von Anmerkungen zu aktivieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1153"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1195"/>
         <source>Show annotations</source>
         <translation>Anmerkungen anzeigen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1160"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1202"/>
         <source>Warnings</source>
         <translation>Warnungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1211"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
         <source>Press to select the foreground colour</source>
         <translation>Drücken, um die Vordergrundfarbe zu wählen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1214"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1256"/>
         <source>Foreground</source>
         <translation>Vordergrund</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1263"/>
         <source>Press to select the background colour</source>
         <translation>Drücken, um die Hintergrundfarbe zu wählen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1224"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1266"/>
         <source>Background</source>
         <translation>Hintergrund</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1189"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1231"/>
         <source>Warning: There might be an error.</source>
         <translation>Warnung: Es kann fehlerhaft sein.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1205"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1247"/>
         <source>Errors</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1234"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1276"/>
         <source>Error: There  is an error.</source>
         <translation>Fehler: Es ist fehlerhaft.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1374"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1416"/>
         <source>Whitespace</source>
         <translation>Leerzeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1392"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1434"/>
         <source>Whitespace size:</source>
         <translation>Leerzeichengröße:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1399"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1441"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
         <translation>Wähle die Größe der Punkte zum Anzeigen von sichtbaren Leerzeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1432"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1474"/>
         <source>Whitespace foreground:</source>
         <translation>Leerzeichenvordergrund:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1445"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1487"/>
         <source>Select the foreground colour for visible whitespace</source>
         <translation>Wähle die Vordergrundfarbe für sichtbare Leerzeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1455"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1497"/>
         <source>Whitespace background:</source>
         <translation>Leerzeichenhintergrund:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1468"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1510"/>
         <source>Select the background colour for visible whitespace</source>
         <translation>Wähle die Hintergrundfarbe für sichtbare Leerzeichen</translation>
     </message>
@@ -10889,54 +10959,99 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Farben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1295"/>
         <source>Change Tracing</source>
         <translation>Änderungsverfolgung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1259"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1301"/>
         <source>Select to mark changed lines</source>
         <translation>Auswählen, um geänderte Zeilen zu markieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1262"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1304"/>
         <source>Mark changed lines</source>
         <translation>Geänderte Zeilen markieren</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1271"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1313"/>
         <source>Timeout for marking changed lines:</source>
         <translation>Timeout für das Markieren geänderter Zeilen:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1278"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1320"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
         <translation>Gib die Zeit in Millisekunden an, nach der geänderte Zeilen markiert werden sollen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1290"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1332"/>
         <source> ms</source>
         <translation> ms</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1323"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1365"/>
         <source>Unsaved changes colour:</source>
         <translation>Farbe für ungesicherte Änderungen:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1336"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1378"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
         <translation>Wähle die Farbe für die Änderungsmarkierung für ungesicherte Änderungen.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1346"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1388"/>
         <source>Saved changes colour:</source>
         <translation>Farbe für gesicherte Änderungen:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1359"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1401"/>
         <source>Select the colour for the change marker for saved changes.</source>
         <translation>Wähle die Farbe für die Änderungsmarkierung für gesicherte Änderungen.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="936"/>
+        <source>Select the wrap mode for long lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="956"/>
+        <source>Indication:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="963"/>
+        <source>Select, how wrapped lines are indicated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="52"/>
+        <source>Word Boundary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="54"/>
+        <source>Character Boundary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="56"/>
+        <source>No Indicator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="58"/>
+        <source>Indicator by Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="60"/>
+        <source>Indicator by Margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="63"/>
+        <source>Indicator in Line Number Margin</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13852,7 +13967,7 @@ Ursache: {0}</translation>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="138"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="126"/>
         <source>Select Style Sheet</source>
         <translation>Wähle Style Sheet</translation>
     </message>
@@ -24602,7 +24717,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>InterfacePage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="218"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="214"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>Deutsch</translation>
@@ -24828,17 +24943,17 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Layout auf Standardwerte zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="235"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="231"/>
         <source>System</source>
         <translation>System</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="245"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="241"/>
         <source>Select style sheet file</source>
         <translation>Wähle ein Qt Style Sheet</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="245"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="241"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;Alle Dateien (*)</translation>
     </message>
@@ -24946,6 +25061,1814 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
         <source>Enter wildcard file patterns separated by semicolon. Files matching these patterns will not be shown by the file browsers.</source>
         <translation>Gib ein Wildcard Dateisuchmuster durch Semicolon getrennt ein. Dateien, die diese Suchmuster erfüllen, werden von den dateibrowsern nicht angezeigt.</translation>
+    </message>
+</context>
+<context>
+    <name>IrcChannelEditDialog</name>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="14"/>
+        <source>IRC Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="23"/>
+        <source>Name:</source>
+        <translation type="unfinished">Name:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="30"/>
+        <source>Enter the channel name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="37"/>
+        <source>Key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="44"/>
+        <source>Enter the channel key/password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="54"/>
+        <source>Select to join this channel automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelEditDialog.ui" line="57"/>
+        <source>Join channel automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcChannelWidget</name>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="40"/>
+        <source>Shows the list of users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="60"/>
+        <source>Shows the channel messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="77"/>
+        <source>Enter a message, send by pressing Return or Enter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="314"/>
+        <source>Send Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="314"/>
+        <source>Messages starting with a &apos;/&apos; are not allowed in private chats.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="337"/>
+        <source>Leave IRC channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="337"/>
+        <source>Do you really want to leave the IRC channel &lt;b&gt;{0}&lt;/b&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="470"/>
+        <source>Channel Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="474"/>
+        <source>Nick mentioned</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="498"/>
+        <source>{0} has joined the channel {1} ({2}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="502"/>
+        <source>You have joined the channel {0} ({1}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="507"/>
+        <source>Join Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="525"/>
+        <source>{0} has left {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="532"/>
+        <source>{0} has left {1}: {2}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="537"/>
+        <source>Leave Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="555"/>
+        <source>{0} has quit {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="559"/>
+        <source>{0} has quit {1}: {2}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="564"/>
+        <source>Quit</source>
+        <translation type="unfinished">Beenden</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="581"/>
+        <source>You are now known as {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="586"/>
+        <source>User {0} is now known as {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="621"/>
+        <source>Away</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="621"/>
+        <source>{0} is away: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="636"/>
+        <source>The channel topic is: &quot;{0}&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="651"/>
+        <source>The topic was set by {0} on {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="667"/>
+        <source>Channel URL: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="690"/>
+        <source>password protected ({0})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="694"/>
+        <source>limited to %n user(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="701"/>
+        <source>Channel modes: {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="716"/>
+        <source>This channel was created on {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="749"/>
+        <source>{0} sets the channel mode to &apos;anonymous&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="752"/>
+        <source>{0} removes the &apos;anonymous&apos; mode from the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="757"/>
+        <source>{0} sets a ban on {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="761"/>
+        <source>{0} removes the ban on {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="766"/>
+        <source>{0} sets the channel mode to &apos;no colors allowed&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="770"/>
+        <source>{0} sets the channel mode to &apos;allow color codes&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="775"/>
+        <source>{0} sets a ban exception on {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="779"/>
+        <source>{0} removes the ban exception on {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="784"/>
+        <source>{0} sets the channel mode to &apos;invite only&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="787"/>
+        <source>{0} removes the &apos;invite only&apos; mode from the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="792"/>
+        <source>{0} sets the channel key to &apos;{1}&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="796"/>
+        <source>{0} removes the channel key.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="800"/>
+        <source>{0} sets the channel limit to %n nick(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="804"/>
+        <source>{0} removes the channel limit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="808"/>
+        <source>{0} sets the channel mode to &apos;moderated&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
+        <source>{0} sets the channel mode to &apos;unmoderated&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="815"/>
+        <source>{0} sets the channel mode to &apos;no messages from outside&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="819"/>
+        <source>{0} sets the channel mode to &apos;allow messages from outside&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="824"/>
+        <source>{0} sets the channel mode to &apos;private&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="827"/>
+        <source>{0} sets the channel mode to &apos;public&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="831"/>
+        <source>{0} sets the channel mode to &apos;quiet&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="834"/>
+        <source>{0} removes the &apos;quiet&apos; mode from the channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="841"/>
+        <source>{0} sets the channel mode to &apos;secret&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="844"/>
+        <source>{0} sets the channel mode to &apos;visible&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="848"/>
+        <source>{0} switches on &apos;topic protection&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="851"/>
+        <source>{0} switches off &apos;topic protection&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
+        <source>{0} sets invitation mask {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="859"/>
+        <source>{0} removes the invitation mask {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="863"/>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="880"/>
+        <source>{0} sets mode for {1}: {2}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="906"/>
+        <source>Help</source>
+        <translation type="unfinished">Hilfe</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="986"/>
+        <source>--- New From Here ---</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1071"/>
+        <source>Save Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1054"/>
+        <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1071"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1089"/>
+        <source>Error saving Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1089"/>
+        <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1101"/>
+        <source>Cut</source>
+        <translation type="unfinished">Ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1105"/>
+        <source>Copy</source>
+        <translation type="unfinished">Kopieren</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1110"/>
+        <source>Cut all</source>
+        <translation type="unfinished">Alles ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1114"/>
+        <source>Copy all</source>
+        <translation type="unfinished">Alles kopieren</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1119"/>
+        <source>Clear</source>
+        <translation type="unfinished">Löschen</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1124"/>
+        <source>Save</source>
+        <translation type="unfinished">Speichern</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1129"/>
+        <source>Mark Current Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1132"/>
+        <source>Remove Position Marker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1181"/>
+        <source>Who Is</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1184"/>
+        <source>Private Chat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1284"/>
+        <source>Who</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1262"/>
+        <source>End of WHO list for {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1283"/>
+        <source> (Away)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1284"/>
+        <source>{0} is {1}@{2} ({3}){4}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
+        <source>Whois</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1304"/>
+        <source>{0} is {1}@{2} ({3}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1349"/>
+        <source>{0} is a user on channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
+        <source>{0} has voice on channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
+        <source>{0} is a halfop on channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1361"/>
+        <source>{0} is an operator on channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1365"/>
+        <source>{0} is owner of channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1369"/>
+        <source>{0} is admin on channels: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1387"/>
+        <source>{0} is online via {1} ({2}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1405"/>
+        <source>{0} is an IRC Operator.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1435"/>
+        <source>%n day(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1446"/>
+        <source>%n hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1455"/>
+        <source>%n minute(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1456"/>
+        <source>%n second(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1439"/>
+        <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
+        <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1449"/>
+        <source>{0} has been idle for {1}, {2}, and {3}.</source>
+        <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1457"/>
+        <source>{0} has been idle for {1} and {2}.</source>
+        <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1463"/>
+        <source>{0} has been idle for %n second(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1468"/>
+        <source>{0} has been online since {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1486"/>
+        <source>End of WHOIS list for {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1502"/>
+        <source>{0} is an identified user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1518"/>
+        <source>{0} is available for help.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1534"/>
+        <source>{0} is logged in as {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1552"/>
+        <source>{0} is actually using the host {1} (IP: {2}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1568"/>
+        <source>{0} is using a secure connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
+        <source>{0} is connecting from {1} (IP: {2}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcIdentitiesEditDialog</name>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="14"/>
+        <source>IRC Identities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="25"/>
+        <source>Identity:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="38"/>
+        <source>Select the identity to work on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="45"/>
+        <source>Press to add a new identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="52"/>
+        <source>Press to copy the selected identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="59"/>
+        <source>Press to rename the selected identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="66"/>
+        <source>Press to delete the selected identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="79"/>
+        <source>General</source>
+        <translation type="unfinished">Allgemein</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="85"/>
+        <source>Real Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="92"/>
+        <source>Enter the real name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="99"/>
+        <source>Nick Names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="105"/>
+        <source>Enter a nick name to add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="119"/>
+        <source>Press to add the entered nick name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="126"/>
+        <source>Press to delete the selected nick name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="136"/>
+        <source>Press to move the selected nick name up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="143"/>
+        <source>Press to move the selected nick name down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="166"/>
+        <source>Auto Identify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="172"/>
+        <source>Service:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="179"/>
+        <source>Enter the name of the service to identify against</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="182"/>
+        <source>Service name can be &lt;b&gt;&lt;i&gt;nickserv&lt;/i&gt;&lt;/b&gt; or a network-dependent name such as &lt;b&gt;&lt;i&gt;nickserv@services.dal.net&lt;/i&gt;&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="189"/>
+        <source>Password:</source>
+        <translation type="unfinished">Kennwort:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="196"/>
+        <source>Enter the password</source>
+        <translation type="unfinished">Gib das Kennwort ein</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="210"/>
+        <source>Away</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="216"/>
+        <source>Select to mark the current position in the chat with a horizontal line, when you send an AWAY command.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="222"/>
+        <source>Mark the current position in chat windows when going away</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="229"/>
+        <source>Away Message:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="236"/>
+        <source>Enter the message to be sent when going away</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="257"/>
+        <source>Advanced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="263"/>
+        <source>Ident:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="270"/>
+        <source>Enter the identity to be used to log-on to the server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="277"/>
+        <source>Reason for Quit:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="284"/>
+        <source>Enter a message to be sent when quitting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="291"/>
+        <source>Reason for Part:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="298"/>
+        <source>Enter message to be sent when leaving a channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="177"/>
+        <source>Edit Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="163"/>
+        <source>The identity must contain at least one nick name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="177"/>
+        <source>The identity must have a real name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="220"/>
+        <source>Add Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="265"/>
+        <source>Identity Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="275"/>
+        <source>An identity named &lt;b&gt;{0}&lt;/b&gt; already exists. You must provide a different name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="288"/>
+        <source>The identity has to have a name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="288"/>
+        <source>Copy Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="275"/>
+        <source>Rename Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="311"/>
+        <source>This identity is in use. If you remove it, the network settings using it will fall back to the default identity. Should it be deleted anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="315"/>
+        <source>Do you really want to delete all information for this identity?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="317"/>
+        <source>Delete Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcIdentity</name>
+    <message>
+        <location filename="Network/IRC/IrcNetworkManager.py" line="25"/>
+        <source>Default Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkManager.py" line="27"/>
+        <source>Gone away for now.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkManager.py" line="29"/>
+        <source>IRC for eric5 IDE</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcNetworkEditDialog</name>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="14"/>
+        <source>IRC Network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="23"/>
+        <source>Network Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="30"/>
+        <source>Enter the name of the IRC network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="37"/>
+        <source>Identity:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="44"/>
+        <source>Select the identity to be used for the IRC network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="51"/>
+        <source>Press to edit the identities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="61"/>
+        <source>Server:</source>
+        <translation type="unfinished">Server:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="68"/>
+        <source>Press to edit the server configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="78"/>
+        <source>Channels:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="101"/>
+        <source>Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="106"/>
+        <source>Join Automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="116"/>
+        <source>Press to add a new channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="126"/>
+        <source>Press to edit the selected channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="136"/>
+        <source>Press to delete the selected channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="171"/>
+        <source>Shows the name of the server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.py" line="244"/>
+        <source>Yes</source>
+        <translation type="unfinished">Ja</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.py" line="246"/>
+        <source>No</source>
+        <translation type="unfinished">Nein</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.py" line="179"/>
+        <source>Delete Channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkEditDialog.py" line="179"/>
+        <source>Do you really want to delete channel &lt;b&gt;{0}&lt;/b&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcNetworkListDialog</name>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="14"/>
+        <source>IRC Networks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="51"/>
+        <source>Press to define a new network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="54"/>
+        <source>&amp;New...</source>
+        <translation type="unfinished">&amp;Neu...</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="61"/>
+        <source>Press to edit the selected network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="64"/>
+        <source>&amp;Edit...</source>
+        <translation type="unfinished">&amp;Bearbeiten...</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="71"/>
+        <source>Press to delete the selected network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="74"/>
+        <source>&amp;Delete</source>
+        <translation type="unfinished">&amp;Löschen</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="81"/>
+        <source>Press to  toggle the auto-connect flag of the selected network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="84"/>
+        <source>&amp;Auto-Connect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="104"/>
+        <source>Press to edit the identities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.ui" line="107"/>
+        <source>Edit &amp;Identities...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="227"/>
+        <source>Yes</source>
+        <translation type="unfinished">Ja</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="227"/>
+        <source>No</source>
+        <translation type="unfinished">Nein</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="89"/>
+        <source>Identity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="91"/>
+        <source>Server</source>
+        <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="94"/>
+        <source>Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="230"/>
+        <source>Auto-Connect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="158"/>
+        <source>Delete Irc Network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkListDialog.py" line="158"/>
+        <source>Do you really want to delete IRC network &lt;b&gt;{0}&lt;/b&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcNetworkWidget</name>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="26"/>
+        <source>Shows the network messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="41"/>
+        <source>Select a network to connect to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="48"/>
+        <source>Press to connect to the selected network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="58"/>
+        <source>Press to set the user status to AWAY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="68"/>
+        <source>Press to edit the networks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="88"/>
+        <source>Select a nick name for the channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="114"/>
+        <source>Enter the channel to join</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="127"/>
+        <source>Press to join the channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
+        <source>Save Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="347"/>
+        <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
+        <source>Error saving Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
+        <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
+        <source>Cut</source>
+        <translation type="unfinished">Ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
+        <source>Copy</source>
+        <translation type="unfinished">Kopieren</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="403"/>
+        <source>Cut all</source>
+        <translation type="unfinished">Alles ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="407"/>
+        <source>Copy all</source>
+        <translation type="unfinished">Alles kopieren</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="412"/>
+        <source>Clear</source>
+        <translation type="unfinished">Löschen</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="417"/>
+        <source>Save</source>
+        <translation type="unfinished">Speichern</translation>
+    </message>
+</context>
+<context>
+    <name>IrcPage</name>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="17"/>
+        <source>&lt;b&gt;Configure IRC&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="37"/>
+        <source>Enable to show timestamps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="40"/>
+        <source>Show Timestamps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="49"/>
+        <source>Time Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="62"/>
+        <source>Select the time format to use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="69"/>
+        <source>Date Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="82"/>
+        <source>Select the date format to use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="89"/>
+        <source>Select to show the date in timestamps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="92"/>
+        <source>Show Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="102"/>
+        <source>Colours</source>
+        <translation type="unfinished">Farben</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="108"/>
+        <source>Network Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="121"/>
+        <source>Select the colour for network messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="131"/>
+        <source>Nick Names:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="144"/>
+        <source>Select the colour for nick names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="154"/>
+        <source>Server Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="167"/>
+        <source>Select the colour for server messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="177"/>
+        <source>Own Nick Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="190"/>
+        <source>Select the colour for own nick name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="200"/>
+        <source>Channel Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="213"/>
+        <source>Select the colour for channel messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="223"/>
+        <source>Join Channel:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="236"/>
+        <source>Select the colour for join channel messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="246"/>
+        <source>Error Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="259"/>
+        <source>Select the colour for error messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="269"/>
+        <source>Leave Channel:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="282"/>
+        <source>Select the colour for leave channel messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="292"/>
+        <source>Timestamp:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="305"/>
+        <source>Select the colour for timestamps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="315"/>
+        <source>Channel Info:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="328"/>
+        <source>Select the colour for channel info messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="338"/>
+        <source>Hyperlink:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="351"/>
+        <source>Select the colour for hyperlinks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="364"/>
+        <source>Enable to allow coloured text in IRC messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="367"/>
+        <source>Allow Colored Text in IRC Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="651"/>
+        <source>Enable to show notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="654"/>
+        <source>Show Notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="663"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Notifications will only be shown, if the global usage of notifications is enabled on the notifications configuration page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="680"/>
+        <source>Select to show a notification for join and leave events</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="683"/>
+        <source>Join/Leave Event</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="690"/>
+        <source>Select to show a notification for every mentioning of your nick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="693"/>
+        <source>Mentioning of Own Nick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="700"/>
+        <source>Select to show a notification for every message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="703"/>
+        <source>Every Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="713"/>
+        <source>Select this to enable the automatic lookup of user information for joined channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="716"/>
+        <source>Enable Automatic User Information Lookup (/WHO)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="728"/>
+        <source>Max. Number of Users in Channel:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="735"/>
+        <source>Enter the maximum numbers of users in a channel allowed for this function</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="761"/>
+        <source>Update Interval:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="768"/>
+        <source>Enter the user information update interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="774"/>
+        <source> s</source>
+        <translation type="unfinished"> s</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="793"/>
+        <source>Marker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="799"/>
+        <source>Select to mark the current position, when the chat window is hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="802"/>
+        <source>Mark Current Position When Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="811"/>
+        <source>Marker Foreground:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="824"/>
+        <source>Select the foreground colour for the marker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="834"/>
+        <source>Marker Background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="847"/>
+        <source>Select the background colour for the marker</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcServerEditDialog</name>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="14"/>
+        <source>IRC Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="23"/>
+        <source>Server:</source>
+        <translation type="unfinished">Server:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="30"/>
+        <source>Enter the host name of the IRC server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="37"/>
+        <source>Port:</source>
+        <translation type="unfinished">Port:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="44"/>
+        <source>Enter the port number</source>
+        <translation type="unfinished">Gib die Portnummer ein</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="76"/>
+        <source>Password:</source>
+        <translation type="unfinished">Kennwort:</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="83"/>
+        <source>Enter the server password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="93"/>
+        <source>Select to use an SSL encrypted connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcServerEditDialog.ui" line="96"/>
+        <source>Use Encrypted Connection (SSL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcUtilities</name>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="149"/>
+        <source>anonymous</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="150"/>
+        <source>ban mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="151"/>
+        <source>no colors allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="152"/>
+        <source>ban exception mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="153"/>
+        <source>invite only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="154"/>
+        <source>password protected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="155"/>
+        <source>user limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="156"/>
+        <source>moderated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="157"/>
+        <source>no messages from outside</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="158"/>
+        <source>private</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="159"/>
+        <source>quit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="160"/>
+        <source>reop channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="161"/>
+        <source>secret</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="162"/>
+        <source>topic protection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="163"/>
+        <source>invitation mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IrcWidget</name>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="59"/>
+        <source>Press to leave the current channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="198"/>
+        <source>Disconnect from Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="198"/>
+        <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="162"/>
+        <source>SSL Connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="162"/>
+        <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <source>Info</source>
+        <translation type="unfinished">Info</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="185"/>
+        <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="192"/>
+        <source>Looking for server {0} (port {1})...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="204"/>
+        <source>Disconnecting from server {0}...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="368"/>
+        <source>Server found,connecting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="375"/>
+        <source>Connected,logging in...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <source>Server disconnected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
+        <source>Message Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
+        <source>Unknown message received from server:&lt;br/&gt;{0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="471"/>
+        <source>Notice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="482"/>
+        <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="486"/>
+        <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="496"/>
+        <source>You have left channel {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="507"/>
+        <source>You are now known as {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <source>User {0} is now known as {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="517"/>
+        <source>Server Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="551"/>
+        <source>Error</source>
+        <translation type="unfinished">Fehler</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="566"/>
+        <source>Welcome</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="568"/>
+        <source>Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="570"/>
+        <source>User</source>
+        <translation type="unfinished">Nutzer</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="572"/>
+        <source>MOTD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="574"/>
+        <source>Away</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="576"/>
+        <source>Info ({0})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="580"/>
+        <source>Message of the day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="582"/>
+        <source>End of message of the day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="585"/>
+        <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="589"/>
+        <source>Current users on {0}: {1}, max. {2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="593"/>
+        <source>Current users on the network: {0}, max. {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="596"/>
+        <source>You are no longer marked as being away.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <source>You have been marked as being away.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <source>SSL Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="658"/>
+        <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="672"/>
+        <source>Socket Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="664"/>
+        <source>The host was not found. Please check the host name and port settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="668"/>
+        <source>The connection was refused by the peer. Please check the host name and port settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="672"/>
+        <source>The following network error occurred:&lt;br/&gt;{0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="689"/>
+        <source>SSL Errors</source>
+        <translation type="unfinished">SSL Fehler</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="689"/>
+        <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="700"/>
+        <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="745"/>
+        <source>{0} ({1})</source>
+        <comment>channel name, users count</comment>
+        <translation type="unfinished">{0} ({1})</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="774"/>
+        <source>Critical</source>
+        <translation type="unfinished">Kritischer Fehler</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="759"/>
+        <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="774"/>
+        <source>The given nickname is already in use.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -26763,7 +28686,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Datei geladen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2285"/>
+        <location filename="QScintilla/MiniEditor.py" line="2280"/>
         <source>Untitled</source>
         <translation>Unbenannt</translation>
     </message>
@@ -26778,22 +28701,22 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2325"/>
+        <location filename="QScintilla/MiniEditor.py" line="2320"/>
         <source>Select all</source>
         <translation>Alles auswählen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2326"/>
+        <location filename="QScintilla/MiniEditor.py" line="2321"/>
         <source>Deselect all</source>
         <translation>Auswahl aufheben</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2337"/>
+        <location filename="QScintilla/MiniEditor.py" line="2332"/>
         <source>Languages</source>
         <translation>Sprachen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2340"/>
+        <location filename="QScintilla/MiniEditor.py" line="2335"/>
         <source>No Language</source>
         <translation>Keine Sprache</translation>
     </message>
@@ -26880,22 +28803,22 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Druckt die aktuelle Datei</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2251"/>
+        <location filename="QScintilla/MiniEditor.py" line="2246"/>
         <source>Printing...</source>
         <translation>Drucke...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2267"/>
+        <location filename="QScintilla/MiniEditor.py" line="2262"/>
         <source>Printing completed</source>
         <translation>Drucken beendet</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2269"/>
+        <location filename="QScintilla/MiniEditor.py" line="2264"/>
         <source>Error while printing</source>
         <translation>Fehler beim Drucken</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2272"/>
+        <location filename="QScintilla/MiniEditor.py" line="2267"/>
         <source>Printing aborted</source>
         <translation>Drucken abgebrochen</translation>
     </message>
@@ -26920,27 +28843,27 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Druckvorschau&lt;/b&gt;&lt;p&gt;Zeift eine Druckvorschau der aktuellen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2361"/>
+        <location filename="QScintilla/MiniEditor.py" line="2356"/>
         <source>Guessed</source>
         <translation>Ermittelt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2381"/>
+        <location filename="QScintilla/MiniEditor.py" line="2376"/>
         <source>Alternatives</source>
         <translation>Alternativen</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2378"/>
+        <location filename="QScintilla/MiniEditor.py" line="2373"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativen ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2395"/>
+        <location filename="QScintilla/MiniEditor.py" line="2390"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2395"/>
+        <location filename="QScintilla/MiniEditor.py" line="2390"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
@@ -27749,7 +29672,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Gib die X-Position, an der die Benachrichtigung angezeigt werden soll, an</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="124"/>
+        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="127"/>
         <source>Enter the Y-position the notification should be shown at</source>
         <translation>Gib die Y-Position, an der die Benachrichtigung angezeigt werden soll, an</translation>
     </message>
@@ -27764,22 +29687,22 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>X:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="117"/>
+        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="120"/>
         <source>Y:</source>
         <translation>Y:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="137"/>
+        <location filename="Preferences/ConfigurationPages/NotificationsPage.ui" line="143"/>
         <source>Press to select the position visually, release to get it</source>
         <translation>Einschalten, um die Position visuell auszuwählen, ausschalten, um sie einzulesen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="68"/>
+        <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="78"/>
         <source>Visual Selection</source>
         <translation>Visuelle Auswahl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="69"/>
+        <location filename="Preferences/ConfigurationPages/NotificationsPage.py" line="79"/>
         <source>Drag the notification window to the desired place and release the button.</source>
         <translation>Ziehe das Benchrichtigungsfenster an die gewünschte Position und schalte die Funktion aus.</translation>
     </message>
@@ -29797,27 +31720,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1041"/>
+        <location filename="Preferences/__init__.py" line="1103"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1068"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1068"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1162"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1162"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>
@@ -48278,1966 +50201,1991 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>UserInterface</name>
     <message>
-        <location filename="UI/UserInterface.py" line="1449"/>
+        <location filename="UI/UserInterface.py" line="1483"/>
         <source>What&apos;s This?</source>
         <translation>Was ist das?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1454"/>
+        <location filename="UI/UserInterface.py" line="1488"/>
         <source>Context sensitive help</source>
         <translation>Kontextsensitive Hilfe</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1455"/>
+        <location filename="UI/UserInterface.py" line="1489"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige kontextsensitive Hilfe an&lt;b&gt;&lt;/p&gt;Im &quot;Was ist das?&quot; Modus (der Mauszeiger stellt einen Pfeil mit Fragezeichen dar) wird auf einen Mausklick eine kurze Hilfebeschreibung zu dem ausgewählten MMI-Element angezeigt. In Dialogen kann diese Funktionalität durch den entsprechenden Knopf im Fensterkopf erreicht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1500"/>
         <source>Helpviewer</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1500"/>
         <source>&amp;Helpviewer...</source>
         <translation>&amp;Hilfe...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1471"/>
+        <location filename="UI/UserInterface.py" line="1505"/>
         <source>Open the helpviewer window</source>
         <translation>Öffnet das Hilfe-Fenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2263"/>
+        <location filename="UI/UserInterface.py" line="2301"/>
         <source>Unittest</source>
         <translation>Modultests</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1544"/>
+        <location filename="UI/UserInterface.py" line="1578"/>
         <source>&amp;Unittest...</source>
         <translation>&amp;Modultests...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1548"/>
+        <location filename="UI/UserInterface.py" line="1582"/>
         <source>Start unittest dialog</source>
         <translation>Starte den Modultest Dialog</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2150"/>
+        <location filename="UI/UserInterface.py" line="2184"/>
         <source>&amp;Window</source>
         <translation>&amp;Fenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2123"/>
+        <location filename="UI/UserInterface.py" line="2157"/>
         <source>&amp;Tools</source>
         <translation>&amp;Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2196"/>
+        <location filename="UI/UserInterface.py" line="2234"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1133"/>
+        <location filename="UI/UserInterface.py" line="1150"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1757"/>
+        <location filename="UI/UserInterface.py" line="1791"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1757"/>
+        <location filename="UI/UserInterface.py" line="1791"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Einstellungen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1760"/>
+        <location filename="UI/UserInterface.py" line="1794"/>
         <source>Set the prefered configuration</source>
         <translation>Konfiguriert die Einstellungen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1761"/>
+        <location filename="UI/UserInterface.py" line="1795"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einstellungen&lt;/b&gt;&lt;p&gt;Konfiguriert die einstellbaren Parameter der Applikation nach ihren Wünschen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1138"/>
+        <location filename="UI/UserInterface.py" line="1155"/>
         <source>Quit the IDE</source>
         <translation>Beenden der Entwicklungsumgebung</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2262"/>
+        <location filename="UI/UserInterface.py" line="2300"/>
         <source>Tools</source>
         <translation>Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3856"/>
+        <location filename="UI/UserInterface.py" line="3908"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2209"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Werkzeugleisten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3964"/>
+        <location filename="UI/UserInterface.py" line="4016"/>
         <source>Problem</source>
         <translation>Problem</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1133"/>
+        <location filename="UI/UserInterface.py" line="1150"/>
         <source>&amp;Quit</source>
         <translation>B&amp;eenden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1139"/>
+        <location filename="UI/UserInterface.py" line="1156"/>
         <source>&lt;b&gt;Quit the IDE&lt;/b&gt;&lt;p&gt;This quits the IDE. Any unsaved changes may be saved first. Any Python program being debugged will be stopped and the preferences will be written to disc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Die Entwicklungsumgebung beenden&lt;/b&gt;&lt;p&gt;Dies beendet die Entwicklungsumgebung. Ungesicherte Änderungen können zuvor gesichert werden. Ein Python Programm, das gerade debugged wird, wird beendet und sämtliche Einstellungen werden gespeichert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1449"/>
+        <location filename="UI/UserInterface.py" line="1483"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Was ist das?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4116"/>
+        <location filename="UI/UserInterface.py" line="4168"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1105"/>
+        <location filename="UI/UserInterface.py" line="1122"/>
         <source>{0} - Passive Mode</source>
         <translation>{0} - Passiver Modus</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1110"/>
+        <location filename="UI/UserInterface.py" line="1127"/>
         <source>{0} - {1} - Passive Mode</source>
         <translation>{0} - {1} - Passiver Modus</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1286"/>
+        <location filename="UI/UserInterface.py" line="1303"/>
         <source>Log-Viewer</source>
         <translation>Ausgabefenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2264"/>
+        <location filename="UI/UserInterface.py" line="2302"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1489"/>
+        <location filename="UI/UserInterface.py" line="1523"/>
         <source>Show Versions</source>
         <translation>Zeige Versionen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1489"/>
+        <location filename="UI/UserInterface.py" line="1523"/>
         <source>Show &amp;Versions</source>
         <translation>Zeige &amp;Versionen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1491"/>
+        <location filename="UI/UserInterface.py" line="1525"/>
         <source>Display version information</source>
         <translation>Zeigt Versionsinformationen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1492"/>
+        <location filename="UI/UserInterface.py" line="1526"/>
         <source>&lt;b&gt;Show Versions&lt;/b&gt;&lt;p&gt;Display version information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige Versionen&lt;/b&gt;&lt;p&gt;Zeigt Versionsinformationen an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1841"/>
+        <location filename="UI/UserInterface.py" line="1875"/>
         <source>Keyboard Shortcuts</source>
         <translation>Tastaturkurzbefehle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1841"/>
+        <location filename="UI/UserInterface.py" line="1875"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>&amp;Tastaturkurzbefehle...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1844"/>
+        <location filename="UI/UserInterface.py" line="1878"/>
         <source>Set the keyboard shortcuts</source>
         <translation>Setze die Tastaturkurzbefehle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1845"/>
+        <location filename="UI/UserInterface.py" line="1879"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tastaturkurzbefehle&lt;/b&gt;&lt;p&gt;Setze die Tastaturkurzbefehle der Applikation mit den bevorzugten Werten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2111"/>
+        <location filename="UI/UserInterface.py" line="2145"/>
         <source>E&amp;xtras</source>
         <translation>E&amp;xtras</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2647"/>
+        <location filename="UI/UserInterface.py" line="2685"/>
         <source>Report Bug</source>
         <translation>Fehler berichten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1522"/>
+        <location filename="UI/UserInterface.py" line="1556"/>
         <source>Report &amp;Bug...</source>
         <translation>&amp;Fehler berichten...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1524"/>
+        <location filename="UI/UserInterface.py" line="1558"/>
         <source>Report a bug</source>
         <translation>Einen Fehler berichten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1525"/>
+        <location filename="UI/UserInterface.py" line="1559"/>
         <source>&lt;b&gt;Report Bug...&lt;/b&gt;&lt;p&gt;Opens a dialog to report a bug.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fehler berichten...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum Senden eines Fehlerberichtes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4708"/>
+        <location filename="UI/UserInterface.py" line="4760"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Tastaturkurzbefehle exportieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1853"/>
+        <location filename="UI/UserInterface.py" line="1887"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>Tastaturkurzbefehle &amp;exportieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1857"/>
+        <location filename="UI/UserInterface.py" line="1891"/>
         <source>Export the keyboard shortcuts</source>
         <translation>Exportiert die Tastaturkurzbefehle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1858"/>
+        <location filename="UI/UserInterface.py" line="1892"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tastaturkurzbefehle exportieren&lt;/b&gt;&lt;p&gt;Exportiert die Tastaturkurzbefehle der Applikation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4731"/>
+        <location filename="UI/UserInterface.py" line="4783"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Tastaturkurzbefehle importieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1865"/>
+        <location filename="UI/UserInterface.py" line="1899"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>Tastaturkurzbefehle &amp;importieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1869"/>
+        <location filename="UI/UserInterface.py" line="1903"/>
         <source>Import the keyboard shortcuts</source>
         <translation>Importiert die Tastaturkurzbefehle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1870"/>
+        <location filename="UI/UserInterface.py" line="1904"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tastaturkurzbefehle importieren&lt;/b&gt;&lt;p&gt;Importiert die Tastaturkurzbefehle der Applikation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="266"/>
+        <location filename="UI/UserInterface.py" line="268"/>
         <source>Generating Main User Interface...</source>
         <translation>Erzeuge das Hauptfenster...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="297"/>
+        <location filename="UI/UserInterface.py" line="299"/>
         <source>Setting up connections...</source>
         <translation>Erstelle Verbindungen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="497"/>
+        <location filename="UI/UserInterface.py" line="502"/>
         <source>Initializing Actions...</source>
         <translation>Initialisiere Aktionen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="499"/>
+        <location filename="UI/UserInterface.py" line="504"/>
         <source>Initializing Menus...</source>
         <translation>Initialisiere Menüs...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="501"/>
+        <location filename="UI/UserInterface.py" line="506"/>
         <source>Initializing Toolbars...</source>
         <translation>Initialisiere Werkzeugleisten...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="503"/>
+        <location filename="UI/UserInterface.py" line="508"/>
         <source>Initializing Statusbar...</source>
         <translation>Initialisiere Statuszeile...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="468"/>
+        <location filename="UI/UserInterface.py" line="472"/>
         <source>Initializing Tools...</source>
         <translation>Initialisiere Werkzeuge...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1549"/>
+        <location filename="UI/UserInterface.py" line="1583"/>
         <source>&lt;b&gt;Unittest&lt;/b&gt;&lt;p&gt;Perform unit tests. The dialog gives you the ability to select and run a unittest suite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Modultests&lt;/b&gt;&lt;p&gt;Führe Modultests durch. Der Dialog bietet die Möglichkeit eine Zusammenstellung von Modultests auszuwählen und auszuführen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1557"/>
+        <location filename="UI/UserInterface.py" line="1591"/>
         <source>Unittest Restart</source>
         <translation>Modultest neu starten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1561"/>
+        <location filename="UI/UserInterface.py" line="1595"/>
         <source>Restart last unittest</source>
         <translation>Modultest neu starten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1562"/>
+        <location filename="UI/UserInterface.py" line="1596"/>
         <source>&lt;b&gt;Restart Unittest&lt;/b&gt;&lt;p&gt;Restart the unittest performed last.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Modultest neu starten&lt;/b&gt;&lt;p&gt;Den letzten durchgeführten Modultest neu starten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1584"/>
+        <location filename="UI/UserInterface.py" line="1618"/>
         <source>Unittest Script</source>
         <translation>Modultest (Skript)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1588"/>
+        <location filename="UI/UserInterface.py" line="1622"/>
         <source>Run unittest with current script</source>
         <translation>Modultest für aktuelles Skript ausführen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1589"/>
+        <location filename="UI/UserInterface.py" line="1623"/>
         <source>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Run unittest with current script.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Modultest (Skript)&lt;/b&gt;&lt;p&gt;Modultest für aktuelles Skript ausführen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3633"/>
+        <location filename="UI/UserInterface.py" line="3685"/>
         <source>Unittest Project</source>
         <translation>Modultest (Projekt)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1601"/>
+        <location filename="UI/UserInterface.py" line="1635"/>
         <source>Run unittest with current project</source>
         <translation>Modultest für aktuellesProjekt ausführen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1602"/>
+        <location filename="UI/UserInterface.py" line="1636"/>
         <source>&lt;b&gt;Unittest Project&lt;/b&gt;&lt;p&gt;Run unittest with current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Modultest (Projekt)&lt;/b&gt;&lt;p&gt;Modultest für aktuelles Projekt ausführen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2094"/>
+        <location filename="UI/UserInterface.py" line="2128"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Modultests</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3633"/>
+        <location filename="UI/UserInterface.py" line="3685"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Für das aktuelle Projekt ist kein Hauptskript festgelegt. Abbruch</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1557"/>
+        <location filename="UI/UserInterface.py" line="1591"/>
         <source>&amp;Restart Unittest...</source>
         <translation>Modultest &amp;neu starten...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1584"/>
+        <location filename="UI/UserInterface.py" line="1618"/>
         <source>Unittest &amp;Script...</source>
         <translation>Modultest (&amp;Skript)...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1597"/>
+        <location filename="UI/UserInterface.py" line="1631"/>
         <source>Unittest &amp;Project...</source>
         <translation>Modultest (&amp;Projekt)...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1673"/>
+        <location filename="UI/UserInterface.py" line="1707"/>
         <source>Compare Files</source>
         <translation>Dateien vergleichen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1673"/>
+        <location filename="UI/UserInterface.py" line="1707"/>
         <source>&amp;Compare Files...</source>
         <translation>Dateien &amp;vergleichen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1688"/>
+        <location filename="UI/UserInterface.py" line="1722"/>
         <source>Compare two files</source>
         <translation>Zwei Dateien vergleichen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1677"/>
+        <location filename="UI/UserInterface.py" line="1711"/>
         <source>&lt;b&gt;Compare Files&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dateien vergleichen&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum Vergleich zweier Dateien.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1684"/>
+        <location filename="UI/UserInterface.py" line="1718"/>
         <source>Compare Files side by side</source>
         <translation>Dateien Seite an Seite vergleichen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1689"/>
+        <location filename="UI/UserInterface.py" line="1723"/>
         <source>&lt;b&gt;Compare Files side by side&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files and show the result side by side.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dateien Seite an Seite vergleichen&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum Vergleich zweier Dateien und zur Anzeige des Ergebnisse Seite an Seite.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5084"/>
+        <location filename="UI/UserInterface.py" line="5136"/>
         <source>Drop Error</source>
         <translation>Drop Fehler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="527"/>
+        <location filename="UI/UserInterface.py" line="532"/>
         <source>Initializing Single Application Server...</source>
         <translation>Initialisiere Applikationsserver...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1113"/>
+        <location filename="UI/UserInterface.py" line="1130"/>
         <source>{0} - {1} - {2} - Passive Mode</source>
         <translation>{0} - {1} - {2} - Passiver Modus</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1271"/>
+        <location filename="UI/UserInterface.py" line="1288"/>
         <source>File-Browser</source>
         <translation>Datei-Browser</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1165"/>
+        <location filename="UI/UserInterface.py" line="1182"/>
         <source>Edit Profile</source>
         <translation>Editieren Profil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1170"/>
+        <location filename="UI/UserInterface.py" line="1187"/>
         <source>Activate the edit view profile</source>
         <translation>Aktiviert das Editieren Ansichtsprofil </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1171"/>
+        <location filename="UI/UserInterface.py" line="1188"/>
         <source>&lt;b&gt;Edit Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Edit View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Editieren Profil&lt;/b&gt;&lt;p&gt;Aktiviert das &quot;Editieren Ansichtsprofil&quot;. Fenster, die in diesem Profil angezeigt werden sollen, können im &quot;Ansichtenprofile konfigurieren&quot; Dialog ausgewählt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1180"/>
+        <location filename="UI/UserInterface.py" line="1197"/>
         <source>Debug Profile</source>
         <translation>Debuggen Profil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1185"/>
+        <location filename="UI/UserInterface.py" line="1202"/>
         <source>Activate the debug view profile</source>
         <translation>Aktiviert das Debuggen Ansichtsprofil </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1187"/>
+        <location filename="UI/UserInterface.py" line="1204"/>
         <source>&lt;b&gt;Debug Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Debug View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debuggen Profil&lt;/b&gt;&lt;p&gt;Aktiviert das &quot;Debuggen Ansichtsprofil&quot;. Fenster, die in diesem Profil angezeigt werden sollen, können im &quot;Ansichtenprofile konfigurieren&quot; Dialog ausgewählt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1815"/>
+        <location filename="UI/UserInterface.py" line="1849"/>
         <source>View Profiles</source>
         <translation>Ansichtenprofile</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1815"/>
+        <location filename="UI/UserInterface.py" line="1849"/>
         <source>&amp;View Profiles...</source>
         <translation>&amp;Ansichtenprofile...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1818"/>
+        <location filename="UI/UserInterface.py" line="1852"/>
         <source>Configure view profiles</source>
         <translation>Ansichtenprofile konfigurieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1819"/>
+        <location filename="UI/UserInterface.py" line="1853"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ansichtenprofile&lt;/b&gt;&lt;p&gt;Ansichtenprofile konfigurieren. Mit diesem Dialog kann die Sichtbarkeit der verschiedenen Fenster für die vorbestimmten Ansichtenprofile eingestellt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3964"/>
+        <location filename="UI/UserInterface.py" line="4016"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert nicht oder hat die Größe Null.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3728"/>
+        <location filename="UI/UserInterface.py" line="3780"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Designer konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3785"/>
+        <location filename="UI/UserInterface.py" line="3837"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Linguist konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3829"/>
+        <location filename="UI/UserInterface.py" line="3881"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Assistant konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4116"/>
+        <location filename="UI/UserInterface.py" line="4168"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Werkzeuge Eintrag &lt;b&gt;{0}&lt;/b&gt; konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{1}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5084"/>
+        <location filename="UI/UserInterface.py" line="5136"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ist keine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1685"/>
         <source>UI Previewer</source>
         <translation>UI Betrachter</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1685"/>
         <source>&amp;UI Previewer...</source>
         <translation>&amp;UI Betrachter...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1654"/>
+        <location filename="UI/UserInterface.py" line="1688"/>
         <source>Start the UI Previewer</source>
         <translation>Started den UI Betrachter</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1655"/>
+        <location filename="UI/UserInterface.py" line="1689"/>
         <source>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Start the UI Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;UI Betrachter&lt;/b&gt;&lt;p&gt;Started den UI Betrachter.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3927"/>
+        <location filename="UI/UserInterface.py" line="3979"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der UI Betrachter konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1662"/>
+        <location filename="UI/UserInterface.py" line="1696"/>
         <source>Translations Previewer</source>
         <translation>Übersetzungsvorschau</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1662"/>
+        <location filename="UI/UserInterface.py" line="1696"/>
         <source>&amp;Translations Previewer...</source>
         <translation>&amp;Übersetzungsvorschau...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1665"/>
+        <location filename="UI/UserInterface.py" line="1699"/>
         <source>Start the Translations Previewer</source>
         <translation>Die Übersetzungsvorschau starten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1666"/>
+        <location filename="UI/UserInterface.py" line="1700"/>
         <source>&lt;b&gt;Translations Previewer&lt;/b&gt;&lt;p&gt;Start the Translations Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Übersetzungsvorschau&lt;/b&gt;&lt;p&gt;Dies startet das Programm zur Vorschau von Übersetzungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3972"/>
+        <location filename="UI/UserInterface.py" line="4024"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Übersetzungsvorschau konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1241"/>
+        <location filename="UI/UserInterface.py" line="1258"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1241"/>
+        <location filename="UI/UserInterface.py" line="1258"/>
         <source>&amp;Shell</source>
         <translation>&amp;Shell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1793"/>
+        <location filename="UI/UserInterface.py" line="1827"/>
         <source>Reload APIs</source>
         <translation>APIs neu laden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1793"/>
+        <location filename="UI/UserInterface.py" line="1827"/>
         <source>Reload &amp;APIs</source>
         <translation>APIs &amp;neu laden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1795"/>
+        <location filename="UI/UserInterface.py" line="1829"/>
         <source>Reload the API information</source>
         <translation>Die API Informationen neu laden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1796"/>
+        <location filename="UI/UserInterface.py" line="1830"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;APIs neu laden&lt;/b&gt;&lt;p&gt;Lädt die API Informationen neu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1301"/>
+        <location filename="UI/UserInterface.py" line="1318"/>
         <source>Task-Viewer</source>
         <translation>Aufgabenanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4852"/>
+        <location filename="UI/UserInterface.py" line="4904"/>
         <source>Save tasks</source>
         <translation>Aufgaben speichern</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4852"/>
+        <location filename="UI/UserInterface.py" line="4904"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Aufgabendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4874"/>
+        <location filename="UI/UserInterface.py" line="4926"/>
         <source>Read tasks</source>
         <translation>Aufgaben lesen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4874"/>
+        <location filename="UI/UserInterface.py" line="4926"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Aufgabendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3856"/>
+        <location filename="UI/UserInterface.py" line="3908"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Momentan ist kein Betrachter angegeben. Bitte benutzen sie den Einstellungen Dialog, um einen festzulegen.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3868"/>
+        <location filename="UI/UserInterface.py" line="3920"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Betrachter konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4468"/>
+        <location filename="UI/UserInterface.py" line="4520"/>
         <source>Documentation Missing</source>
         <translation>Dokumentation fehlt</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4468"/>
+        <location filename="UI/UserInterface.py" line="4520"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Dokumentationsstartpunkt &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; konnte nicht gefunden werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2647"/>
+        <location filename="UI/UserInterface.py" line="2685"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Email Adresse oder Mail Server Adresse sind leer. Bitte konfiguriere die Email Einstellungen im Einstellungen Dialog.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1316"/>
+        <location filename="UI/UserInterface.py" line="1333"/>
         <source>Template-Viewer</source>
         <translation>Vorlagen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1196"/>
+        <location filename="UI/UserInterface.py" line="1213"/>
         <source>Alt+Shift+P</source>
         <translation>Alt+Shift+P</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1226"/>
+        <location filename="UI/UserInterface.py" line="1243"/>
         <source>Alt+Shift+D</source>
         <translation>Alt+Shift+D</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1241"/>
+        <location filename="UI/UserInterface.py" line="1258"/>
         <source>Alt+Shift+S</source>
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1271"/>
+        <location filename="UI/UserInterface.py" line="1288"/>
         <source>Alt+Shift+F</source>
         <translation>Alt+Shift+F</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1301"/>
+        <location filename="UI/UserInterface.py" line="1318"/>
         <source>Alt+Shift+T</source>
         <translation>Alt+Shift+T</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1211"/>
+        <location filename="UI/UserInterface.py" line="1228"/>
         <source>Alt+Shift+M</source>
         <translation>Alt+Shift+M</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1877"/>
+        <location filename="UI/UserInterface.py" line="1911"/>
         <source>Activate current editor</source>
         <translation>Aktiviere aktuellen Editor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1877"/>
+        <location filename="UI/UserInterface.py" line="1911"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1920"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1894"/>
+        <location filename="UI/UserInterface.py" line="1928"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1286"/>
+        <location filename="UI/UserInterface.py" line="1303"/>
         <source>Alt+Shift+G</source>
         <translation>Alt+Shift+G</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1618"/>
+        <location filename="UI/UserInterface.py" line="1652"/>
         <source>Qt-Designer 4</source>
         <translation>Qt-Designer 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1621"/>
+        <location filename="UI/UserInterface.py" line="1655"/>
         <source>Start Qt-Designer 4</source>
         <translation>Starte Qt-Designer 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1622"/>
+        <location filename="UI/UserInterface.py" line="1656"/>
         <source>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Start Qt-Designer 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Starte Qt-Designer 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1638"/>
+        <location filename="UI/UserInterface.py" line="1672"/>
         <source>Qt-Linguist 4</source>
         <translation>Qt-Linguist 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1641"/>
+        <location filename="UI/UserInterface.py" line="1675"/>
         <source>Start Qt-Linguist 4</source>
         <translation>Starte Qt-Linguist 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1642"/>
+        <location filename="UI/UserInterface.py" line="1676"/>
         <source>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Start Qt-Linguist 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Starte Qt-Linguist 4 (Übersetzungsprogramm).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1973"/>
+        <location filename="UI/UserInterface.py" line="2007"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1973"/>
+        <location filename="UI/UserInterface.py" line="2007"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Qt&amp;4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1975"/>
+        <location filename="UI/UserInterface.py" line="2009"/>
         <source>Open Qt4 Documentation</source>
         <translation>Öffne die Qt4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2037"/>
+        <location filename="UI/UserInterface.py" line="2071"/>
         <source>Eric API Documentation</source>
         <translation>Eric API Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2037"/>
+        <location filename="UI/UserInterface.py" line="2071"/>
         <source>&amp;Eric API Documentation</source>
         <translation>&amp;Eric API Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2039"/>
+        <location filename="UI/UserInterface.py" line="2073"/>
         <source>Open Eric API Documentation</source>
         <translation>Öffne die Eric API Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3887"/>
+        <location filename="UI/UserInterface.py" line="3939"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Hilfeanzeige konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;hh&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="477"/>
+        <location filename="UI/UserInterface.py" line="481"/>
         <source>Registering Objects...</source>
         <translation>Registriere Objekte...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1196"/>
+        <location filename="UI/UserInterface.py" line="1213"/>
         <source>Project-Viewer</source>
         <translation>Projektanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1226"/>
+        <location filename="UI/UserInterface.py" line="1243"/>
         <source>Debug-Viewer</source>
         <translation>Debuganzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1133"/>
+        <location filename="UI/UserInterface.py" line="1150"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1196"/>
+        <location filename="UI/UserInterface.py" line="1213"/>
         <source>&amp;Project-Viewer</source>
         <translation>&amp;Projektanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1449"/>
+        <location filename="UI/UserInterface.py" line="1483"/>
         <source>Shift+F1</source>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1500"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1501"/>
+        <location filename="UI/UserInterface.py" line="1535"/>
         <source>Check for Updates</source>
         <translation>Auf Aktualisierungen prüfen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1499"/>
+        <location filename="UI/UserInterface.py" line="1533"/>
         <source>Check for &amp;Updates...</source>
         <translation>Auf &amp;Aktualisierungen prüfen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1976"/>
+        <location filename="UI/UserInterface.py" line="2010"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt4 Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die Qt4 Dokumentation an. Abhängig von den Einstellungen, wird Erics interner Hilfeanzeiger, ein Web-Browser oder Qt Assistant verwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1985"/>
+        <location filename="UI/UserInterface.py" line="2019"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1985"/>
+        <location filename="UI/UserInterface.py" line="2019"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>P&amp;yQt4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1987"/>
+        <location filename="UI/UserInterface.py" line="2021"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Öffne die PyQt4 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1988"/>
+        <location filename="UI/UserInterface.py" line="2022"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PyQt4 Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die PyQt4 Dokumentation an. Abhängig von den Einstellungen, wird Erics interner Hilfeanzeiger, ein Web-Browser oder Qt Assistant verwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2126"/>
+        <location filename="UI/UserInterface.py" line="2160"/>
         <source>Select Tool Group</source>
         <translation>Werkzeuggruppe wählen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2132"/>
+        <location filename="UI/UserInterface.py" line="2166"/>
         <source>Se&amp;ttings</source>
         <translation>&amp;Einstellungen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2266"/>
+        <location filename="UI/UserInterface.py" line="2304"/>
         <source>Profiles</source>
         <translation>Profile</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2973"/>
+        <location filename="UI/UserInterface.py" line="3011"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Eingebaute Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4100"/>
+        <location filename="UI/UserInterface.py" line="4152"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Starte Prozess &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4193"/>
+        <location filename="UI/UserInterface.py" line="4245"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Prozess &apos;{0}&apos; ist beendet.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4453"/>
+        <location filename="UI/UserInterface.py" line="4505"/>
         <source>Documentation</source>
         <translation>Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4362"/>
+        <location filename="UI/UserInterface.py" line="4414"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der PyQt4 Dokumentations Startpunkt ist nicht konfiguriert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5360"/>
+        <location filename="UI/UserInterface.py" line="5415"/>
         <source>Error during updates check</source>
         <translation>Fehler während der Aktualisierungsprüfung</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5347"/>
+        <location filename="UI/UserInterface.py" line="5402"/>
         <source>Update available</source>
         <translation>Aktualisierung verfügbar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2596"/>
+        <location filename="UI/UserInterface.py" line="2634"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versions Nummern&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5394"/>
+        <location filename="UI/UserInterface.py" line="5449"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2921"/>
+        <location filename="UI/UserInterface.py" line="2959"/>
         <source>Configure Tool Groups ...</source>
         <translation>Konfiguriere Werkzeuggruppen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2924"/>
+        <location filename="UI/UserInterface.py" line="2962"/>
         <source>Configure current Tool Group ...</source>
         <translation>Konfiguriere aktuelle Werkzeuggruppe...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1806"/>
+        <location filename="UI/UserInterface.py" line="1840"/>
         <source>Show external tools</source>
         <translation>Zeige externe Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1803"/>
+        <location filename="UI/UserInterface.py" line="1837"/>
         <source>Show external &amp;tools</source>
         <translation>Zeige externe &amp;Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5360"/>
+        <location filename="UI/UserInterface.py" line="5415"/>
         <source>Could not perform updates check.</source>
         <translation>Konnte keine Aktualisierungsprüfung durchführen.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5219"/>
+        <location filename="UI/UserInterface.py" line="5274"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Abbrechen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5224"/>
+        <location filename="UI/UserInterface.py" line="5279"/>
         <source>Trying host {0}</source>
         <translation>Prüfe Host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5437"/>
+        <location filename="UI/UserInterface.py" line="5492"/>
         <source>First time usage</source>
         <translation>Erstmalige Nutzung</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="261"/>
+        <location filename="UI/UserInterface.py" line="263"/>
         <source>Initializing Plugin Manager...</source>
         <translation>Initialisiere Plugin Manager...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2182"/>
+        <location filename="UI/UserInterface.py" line="2220"/>
         <source>P&amp;lugins</source>
         <translation>Plugi&amp;ns</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2267"/>
+        <location filename="UI/UserInterface.py" line="2305"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1944"/>
         <source>Plugin Infos</source>
         <translation>Plugin Informationen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1913"/>
+        <location filename="UI/UserInterface.py" line="1947"/>
         <source>Show Plugin Infos</source>
         <translation>Zeigt Plugin Informationen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1914"/>
+        <location filename="UI/UserInterface.py" line="1948"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Plugin Informationen...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, der einige Informationen über die geladenen Plugins anzeigt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1944"/>
         <source>&amp;Plugin Infos...</source>
         <translation>&amp;Plugin Informationen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2981"/>
+        <location filename="UI/UserInterface.py" line="3019"/>
         <source>&amp;Plugin Tools</source>
         <translation>&amp;Plugin Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1936"/>
+        <location filename="UI/UserInterface.py" line="1970"/>
         <source>Uninstall Plugin</source>
         <translation>Plugin deinstallieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1933"/>
+        <location filename="UI/UserInterface.py" line="1967"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>Plugin &amp;deinstallieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1937"/>
+        <location filename="UI/UserInterface.py" line="1971"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Plugin deinstallieren...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog zur Deinstallation eines Plugins.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3071"/>
+        <location filename="UI/UserInterface.py" line="3109"/>
         <source>&amp;Show all</source>
         <translation>Alle an&amp;zeigen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3073"/>
+        <location filename="UI/UserInterface.py" line="3111"/>
         <source>&amp;Hide all</source>
         <translation>Alle &amp;ausblenden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="535"/>
+        <location filename="UI/UserInterface.py" line="540"/>
         <source>Activating Plugins...</source>
         <translation>Aktiviere Plugins...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2116"/>
+        <location filename="UI/UserInterface.py" line="2150"/>
         <source>Wi&amp;zards</source>
         <translation>A&amp;utopiloten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1509"/>
+        <location filename="UI/UserInterface.py" line="1543"/>
         <source>Show downloadable versions</source>
         <translation>Zeige verfügbare Versionen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1509"/>
+        <location filename="UI/UserInterface.py" line="1543"/>
         <source>Show &amp;downloadable versions...</source>
         <translation>&amp;Zeige verfügbare Versionen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1512"/>
+        <location filename="UI/UserInterface.py" line="1546"/>
         <source>Show the versions available for download</source>
         <translation>Zeige die verfügbaren eric4 Versionen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5381"/>
+        <location filename="UI/UserInterface.py" line="5436"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Verfügbare Versionen&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1944"/>
+        <location filename="UI/UserInterface.py" line="1978"/>
         <source>Plugin Repository</source>
         <translation>Plugin Repository</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1944"/>
+        <location filename="UI/UserInterface.py" line="1978"/>
         <source>Plugin &amp;Repository...</source>
         <translation>Plugin &amp;Repository...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1947"/>
+        <location filename="UI/UserInterface.py" line="1981"/>
         <source>Show Plugins available for download</source>
         <translation>Zeige Plugins verfügbar zum Download an</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1949"/>
+        <location filename="UI/UserInterface.py" line="1983"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, der eine Liste der im Internet verfügbaren Plugins anzeigt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1925"/>
+        <location filename="UI/UserInterface.py" line="1959"/>
         <source>Install Plugins</source>
         <translation>Plugins installieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1922"/>
+        <location filename="UI/UserInterface.py" line="1956"/>
         <source>&amp;Install Plugins...</source>
         <translation>Plugins &amp;installieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1926"/>
+        <location filename="UI/UserInterface.py" line="1960"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Plugins installieren...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog zur Installation oder Update von Plugins.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1713"/>
+        <location filename="UI/UserInterface.py" line="1747"/>
         <source>Mini Editor</source>
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1709"/>
+        <location filename="UI/UserInterface.py" line="1743"/>
         <source>Mini &amp;Editor...</source>
         <translation>Mini &amp;Editor...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1714"/>
+        <location filename="UI/UserInterface.py" line="1748"/>
         <source>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Open a dialog with a simplified editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog mit einem vereinfachten Editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1618"/>
+        <location filename="UI/UserInterface.py" line="1652"/>
         <source>&amp;Designer 4...</source>
         <translation>&amp;Designer 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1638"/>
+        <location filename="UI/UserInterface.py" line="1672"/>
         <source>&amp;Linguist 4...</source>
         <translation>&amp;Linguist 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1828"/>
+        <location filename="UI/UserInterface.py" line="1862"/>
         <source>Toolbars</source>
         <translation>Werkzeugleisten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1828"/>
+        <location filename="UI/UserInterface.py" line="1862"/>
         <source>Tool&amp;bars...</source>
         <translation>Werkzeug&amp;leisten...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1831"/>
+        <location filename="UI/UserInterface.py" line="1865"/>
         <source>Configure toolbars</source>
         <translation>Werkzeugleisten einrichten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1832"/>
+        <location filename="UI/UserInterface.py" line="1866"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Werkzeugleisten&lt;/b&gt;&lt;p&gt;Werkzeugleisten konfigurieren. Mit diesem Dialog können die auf den Werkzeugleisten gezeigten Aktionen geändert  und neue Werkzeugleisten definiert werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="542"/>
+        <location filename="UI/UserInterface.py" line="547"/>
         <source>Restoring Toolbarmanager...</source>
         <translation>Lade Toolbarmanager...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2510"/>
+        <location filename="UI/UserInterface.py" line="2548"/>
         <source>External Tools/{0}</source>
         <translation>Externe Werkzeuge/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4064"/>
+        <location filename="UI/UserInterface.py" line="4116"/>
         <source>External Tools</source>
         <translation>Externe Werkzeuge</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4058"/>
+        <location filename="UI/UserInterface.py" line="4110"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Kein Eintrag für das externe Werkzeug &apos;{0}&apos; in der Gruppe &apos;{1}&apos; gefunden.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4064"/>
+        <location filename="UI/UserInterface.py" line="4116"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Kein Werkzeuggruppeneintrag &apos;{0}&apos; gefunden.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1211"/>
+        <location filename="UI/UserInterface.py" line="1228"/>
         <source>Multiproject-Viewer</source>
         <translation>Mehrfachprojektanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1211"/>
+        <location filename="UI/UserInterface.py" line="1228"/>
         <source>&amp;Multiproject-Viewer</source>
         <translation>&amp;Mehrfachprojektanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4889"/>
+        <location filename="UI/UserInterface.py" line="4941"/>
         <source>Save session</source>
         <translation>Session speichern</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4889"/>
+        <location filename="UI/UserInterface.py" line="4941"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Sessiondatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4912"/>
+        <location filename="UI/UserInterface.py" line="4964"/>
         <source>Read session</source>
         <translation>Session lesen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4912"/>
+        <location filename="UI/UserInterface.py" line="4964"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Sessiondatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2416"/>
+        <location filename="UI/UserInterface.py" line="2454"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Zeichenkodierung des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2430"/>
+        <location filename="UI/UserInterface.py" line="2468"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt an, ob die aktuelle Datei geschrieben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5410"/>
+        <location filename="UI/UserInterface.py" line="5465"/>
         <source>SSL Errors</source>
         <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5410"/>
+        <location filename="UI/UserInterface.py" line="5465"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1532"/>
+        <location filename="UI/UserInterface.py" line="1566"/>
         <source>Request Feature</source>
         <translation>Neue Funktion anfragen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1532"/>
+        <location filename="UI/UserInterface.py" line="1566"/>
         <source>Request &amp;Feature...</source>
         <translation>Neue &amp;Funktion anfragen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1534"/>
+        <location filename="UI/UserInterface.py" line="1568"/>
         <source>Send a feature request</source>
         <translation>Sende eine Anfrage für eine neue Funktion</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1535"/>
+        <location filename="UI/UserInterface.py" line="1569"/>
         <source>&lt;b&gt;Request Feature...&lt;/b&gt;&lt;p&gt;Opens a dialog to send a feature request.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neue Funktion anfragen...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog, um eine Anfrage für eine neue Funktion zu senden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2409"/>
+        <location filename="UI/UserInterface.py" line="2447"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Sprache des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2439"/>
+        <location filename="UI/UserInterface.py" line="2477"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt den Namen der Datei des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2446"/>
+        <location filename="UI/UserInterface.py" line="2484"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Zeilennummer des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2453"/>
+        <location filename="UI/UserInterface.py" line="2491"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Cursorposition des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1354"/>
+        <location filename="UI/UserInterface.py" line="1371"/>
         <source>Horizontal Toolbox</source>
         <translation>Horizontale Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1354"/>
+        <location filename="UI/UserInterface.py" line="1371"/>
         <source>&amp;Horizontal Toolbox</source>
         <translation>&amp;Horizontale Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1357"/>
+        <location filename="UI/UserInterface.py" line="1374"/>
         <source>Toggle the Horizontal Toolbox window</source>
         <translation>Schalte das Fenster der Horizontalen Werkzeugbox um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1358"/>
+        <location filename="UI/UserInterface.py" line="1375"/>
         <source>&lt;b&gt;Toggle the Horizontal Toolbox window&lt;/b&gt;&lt;p&gt;If the Horizontal Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der Horizontalen Werkzeugbox um&lt;/b&gt;&lt;p&gt;Falls das Fenster der Horizontalen Werkzeugbox nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2889"/>
+        <location filename="UI/UserInterface.py" line="2927"/>
         <source>Restart application</source>
         <translation>Anwendung neu starten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2889"/>
+        <location filename="UI/UserInterface.py" line="2927"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Die Anwendung muss neu gestartet werden. Jetzt durchführen?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1256"/>
+        <location filename="UI/UserInterface.py" line="1273"/>
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1256"/>
+        <location filename="UI/UserInterface.py" line="1273"/>
         <source>Te&amp;rminal</source>
         <translation>Te&amp;rminal</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1256"/>
+        <location filename="UI/UserInterface.py" line="1273"/>
         <source>Alt+Shift+R</source>
         <translation>Alt+Shift+R</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1316"/>
+        <location filename="UI/UserInterface.py" line="1333"/>
         <source>Alt+Shift+A</source>
         <translation>Alt+Shift+A</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2191"/>
+        <location filename="UI/UserInterface.py" line="2229"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2423"/>
+        <location filename="UI/UserInterface.py" line="2461"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Zeilenendekodierung des aktuellen Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
+        <location filename="UI/UserInterface.py" line="1936"/>
         <source>Switch between tabs</source>
         <translation>Zwischen Tabs umschalten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
+        <location filename="UI/UserInterface.py" line="1936"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1770"/>
+        <location filename="UI/UserInterface.py" line="1804"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1770"/>
+        <location filename="UI/UserInterface.py" line="1804"/>
         <source>E&amp;xport Preferences...</source>
         <translation>Einstellungen e&amp;xportieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1773"/>
+        <location filename="UI/UserInterface.py" line="1807"/>
         <source>Export the current configuration</source>
         <translation>Exportiert die aktuelle Konfiguration</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1774"/>
+        <location filename="UI/UserInterface.py" line="1808"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einstellungen exportieren&lt;/b&gt;&lt;p&gt;Exportiert die aktuelle Konfiguration in eine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1781"/>
+        <location filename="UI/UserInterface.py" line="1815"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1781"/>
+        <location filename="UI/UserInterface.py" line="1815"/>
         <source>I&amp;mport Preferences...</source>
         <translation>Einstellungen i&amp;mportieren...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1784"/>
+        <location filename="UI/UserInterface.py" line="1818"/>
         <source>Import a previously exported configuration</source>
         <translation>Importiert eine zuvor exportierte Konfiguration</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1786"/>
+        <location filename="UI/UserInterface.py" line="1820"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einstellungen importieren&lt;/b&gt;&lt;p&gt;Importiert eine zuvor exportierte Konfiguration.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1920"/>
         <source>Show next</source>
         <translation>Zeige nächste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1894"/>
+        <location filename="UI/UserInterface.py" line="1928"/>
         <source>Show previous</source>
         <translation>Zeige vorherige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1366"/>
+        <location filename="UI/UserInterface.py" line="1383"/>
         <source>Left Sidebar</source>
         <translation>Linke Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1366"/>
+        <location filename="UI/UserInterface.py" line="1383"/>
         <source>&amp;Left Sidebar</source>
         <translation>&amp;Linke Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1368"/>
+        <location filename="UI/UserInterface.py" line="1385"/>
         <source>Toggle the left sidebar window</source>
         <translation>Schalte das Fenster der linken Seitenleiste um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1369"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>&lt;b&gt;Toggle the left sidebar window&lt;/b&gt;&lt;p&gt;If the left sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der linken Seitenleiste um&lt;/b&gt;&lt;p&gt;Falls das Fenster der linken Seitenleiste nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1388"/>
+        <location filename="UI/UserInterface.py" line="1405"/>
         <source>Bottom Sidebar</source>
         <translation>Untere Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1388"/>
+        <location filename="UI/UserInterface.py" line="1405"/>
         <source>&amp;Bottom Sidebar</source>
         <translation>&amp;Untere Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1391"/>
+        <location filename="UI/UserInterface.py" line="1408"/>
         <source>Toggle the bottom sidebar window</source>
         <translation>Schalte das Fenster der unteren Seitenleiste um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1392"/>
+        <location filename="UI/UserInterface.py" line="1409"/>
         <source>&lt;b&gt;Toggle the bottom sidebar window&lt;/b&gt;&lt;p&gt;If the bottom sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der unteren Seitenleiste um&lt;/b&gt;&lt;p&gt;Falls das Fenster der unteren Seitenleiste nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1226"/>
+        <location filename="UI/UserInterface.py" line="1243"/>
         <source>&amp;Debug-Viewer</source>
         <translation>&amp;Debuganzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1697"/>
+        <location filename="UI/UserInterface.py" line="1731"/>
         <source>SQL Browser</source>
         <translation>SQL Browser</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1697"/>
+        <location filename="UI/UserInterface.py" line="1731"/>
         <source>SQL &amp;Browser...</source>
         <translation>SQL &amp;Browser...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1701"/>
+        <location filename="UI/UserInterface.py" line="1735"/>
         <source>Browse a SQL database</source>
         <translation>Erforsche eine SQL Datenbank</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1702"/>
+        <location filename="UI/UserInterface.py" line="1736"/>
         <source>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Browse a SQL database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Erforsche eine SQL Datenbank.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3991"/>
+        <location filename="UI/UserInterface.py" line="4043"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der SQL Browser konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1733"/>
+        <location filename="UI/UserInterface.py" line="1767"/>
         <source>Icon Editor</source>
         <translation>Icon Editor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1733"/>
+        <location filename="UI/UserInterface.py" line="1767"/>
         <source>&amp;Icon Editor...</source>
         <translation>&amp;Icon Editor...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3808"/>
+        <location filename="UI/UserInterface.py" line="3860"/>
         <source>Qt 3 support</source>
         <translation>Qt 3 Unterstützung</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2057"/>
+        <location filename="UI/UserInterface.py" line="2091"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PySide Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die PySide Dokumentation an. Abhängig von den Einstellungen, wird Erics interner Hilfeanzeiger, ein Web-Browser oder Qt Assistant verwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4453"/>
+        <location filename="UI/UserInterface.py" line="4505"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der PySide Dokumentations Startpunkt ist nicht konfiguriert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2054"/>
+        <location filename="UI/UserInterface.py" line="2088"/>
         <source>PySide Documentation</source>
         <translation>PySide Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2054"/>
+        <location filename="UI/UserInterface.py" line="2088"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Py&amp;Side Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2056"/>
+        <location filename="UI/UserInterface.py" line="2090"/>
         <source>Open PySide Documentation</source>
         <translation>Öffne die PySide Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1472"/>
+        <location filename="UI/UserInterface.py" line="1506"/>
         <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hilfe-Fenster&lt;/b&gt;&lt;p&gt;Zeige den eric5 Web-Browser an. Dieses Fenster zeigt Hilfedateien im HTML-Format und Qt Hilfesammlungen an. In ihm kann über Hyperlinks navigiert, Lesezeichen gesetzt und neben anderen Funktionen die dargestellte Seite ausgedruckt werden. Er kann auch zum Surfen im Internet benutzt werden.&lt;/p&gt;&lt;p&gt;Wenn es mit einem selektierten Wort aufgerufen wird, so wird dieses Wort in der Qt Hilfesammlung gesucht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1502"/>
+        <location filename="UI/UserInterface.py" line="1536"/>
         <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Auf Aktualisierungen prüfen...&lt;/b&gt;
 &lt;p&gt;Dies prüft im Internet auf Verfügbarkeit von Updates von eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1514"/>
+        <location filename="UI/UserInterface.py" line="1548"/>
         <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige verfügbare Versionen...&lt;/b&gt;&lt;p&gt;Zeigt die eric5 Versionen, die vom Internet heruntergeladen werden können.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1725"/>
+        <location filename="UI/UserInterface.py" line="1759"/>
         <source>Start the eric5 Web Browser</source>
         <translation>Startet den eric5 Web-Browser</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1737"/>
+        <location filename="UI/UserInterface.py" line="1771"/>
         <source>Start the eric5 Icon Editor</source>
         <translation>Starte den eric5 Icon Editor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1738"/>
+        <location filename="UI/UserInterface.py" line="1772"/>
         <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Startet den eric5 Icon Editor zumEditieren einfacher Icons.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1807"/>
+        <location filename="UI/UserInterface.py" line="1841"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige externe Werkzeuge&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog, der die Pfade und Versionen der von eric5 genutzten externen Werkzeuge anzeigt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2040"/>
+        <location filename="UI/UserInterface.py" line="2074"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eric API Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die Eric API Dokumentation an. Der Pfad für die Dokumentation ist das Unterverzeichnis Documentation/Source im eric5 Installationverzeichnis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3808"/>
+        <location filename="UI/UserInterface.py" line="3860"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 wird von eric5 nicht unterstützt.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5347"/>
+        <location filename="UI/UserInterface.py" line="5402"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>Eine Aktualisierung auf &lt;b&gt;{0}&lt;/b&gt; von Eric5 ist unter &lt;b&gt;{1}&lt;/b&gt; verfügbar. Wollen Sie sie laden?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5356"/>
+        <location filename="UI/UserInterface.py" line="5411"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 ist aktuell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5356"/>
+        <location filename="UI/UserInterface.py" line="5411"/>
         <source>You are using the latest version of eric5</source>
         <translation>Sie verwenden die aktuellste Version von eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5437"/>
+        <location filename="UI/UserInterface.py" line="5492"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 wurde noch nicht konfiguriert. Der Konfigurationsdialog wird nun gestartet.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="783"/>
+        <location filename="UI/UserInterface.py" line="794"/>
         <source>Cooperation</source>
         <translation>Zusammenarbeit</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1400"/>
+        <location filename="UI/UserInterface.py" line="1417"/>
         <source>Alt+Shift+O</source>
         <translation>Alt+Shift+O</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="833"/>
+        <location filename="UI/UserInterface.py" line="850"/>
         <source>Symbols</source>
         <translation>Symbole</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1417"/>
+        <location filename="UI/UserInterface.py" line="1451"/>
         <source>Alt+Shift+Y</source>
         <translation>Alt+Shift+Y</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="839"/>
+        <location filename="UI/UserInterface.py" line="856"/>
         <source>Numbers</source>
         <translation>Zahlen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1467"/>
         <source>Alt+Shift+B</source>
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4731"/>
+        <location filename="UI/UserInterface.py" line="4783"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Tastaturkurzbefehls Datei (*.e4k)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2035"/>
         <source>Python 3 Documentation</source>
         <translation>Python 3 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2035"/>
         <source>Python &amp;3 Documentation</source>
         <translation>Python &amp;3 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2003"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Open Python 3 Documentation</source>
         <translation>Öffne die Python 3 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2004"/>
+        <location filename="UI/UserInterface.py" line="2038"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Python 3 Dokumentation&lt;/b&gt;&lt;p&gt;Zeigt die Python 3 Dokumentation an. Ist kein Dokumentationsverzeichnis konfiguriert, so ist der Ort, an dem die Python 3 Dokumentation gesucht wird, unter Windows das Verzeichnis doc unter dem Verzeichnis, in dem der Python 3 Interpreter installiert ist, und unter Unix das Verzeichnis &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt;. Um dies zu überschreiben, können sie die Umgebungsvariable PYTHON3DOCDIR setzen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2016"/>
+        <location filename="UI/UserInterface.py" line="2050"/>
         <source>Python 2 Documentation</source>
         <translation>Python 2 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2016"/>
+        <location filename="UI/UserInterface.py" line="2050"/>
         <source>Python &amp;2 Documentation</source>
         <translation>Python &amp;2 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2018"/>
+        <location filename="UI/UserInterface.py" line="2052"/>
         <source>Open Python 2 Documentation</source>
         <translation>Öffne die Python 2 Dokumentation</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2019"/>
+        <location filename="UI/UserInterface.py" line="2053"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Python 2 Dokumentation&lt;/b&gt;&lt;p&gt;Zeigt die Python 2 Dokumentation an. Ist kein Dokumentationsverzeichnis konfiguriert, so ist der Ort, an dem die Python 2 Dokumentation gesucht wird, unter Windows das Verzeichnis doc unter dem Verzeichnis, in dem der konfigurierte Python 2 Interpreter installiert ist, und unter Unix das Verzeichnis &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt;. Um dies zu überschreiben, können sie die Umgebungsvariable PYTHON2DOCDIR setzen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5274"/>
+        <location filename="UI/UserInterface.py" line="5329"/>
         <source>Error getting versions information</source>
         <translation>Fehler beim Herunterladen der Versionsinformationen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5268"/>
+        <location filename="UI/UserInterface.py" line="5323"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>Die Versionsinformationen konnten nicht heruntergeladen werden. Bitte gehen sie online und versuchen sie es erneut.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4554"/>
+        <location filename="UI/UserInterface.py" line="4606"/>
         <source>Open Browser</source>
         <translation>Browser starten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4554"/>
+        <location filename="UI/UserInterface.py" line="4606"/>
         <source>Could not start a web browser</source>
         <translation>Der Systemwebbrowser konnte nicht gestartet werden</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5274"/>
+        <location filename="UI/UserInterface.py" line="5329"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>Die Versionsinformationen konnten seit 7 Tagen nicht heruntergeladen werden. Bitte gehen sie online und versuchen sie es erneut.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1721"/>
+        <location filename="UI/UserInterface.py" line="1755"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 Web-Browser</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1721"/>
+        <location filename="UI/UserInterface.py" line="1755"/>
         <source>eric5 &amp;Web Browser...</source>
         <translation>eric5 &amp;Web-Browser...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1726"/>
+        <location filename="UI/UserInterface.py" line="1760"/>
         <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;eric5 Web-Browser&lt;/b&gt;&lt;p&gt;Durchforste das Internet mit dem eric5 Web-Browser.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="546"/>
+        <location filename="UI/UserInterface.py" line="551"/>
         <source>Setting View Profile...</source>
         <translation>Stelle Ansichtenprofil ein...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="550"/>
+        <location filename="UI/UserInterface.py" line="555"/>
         <source>Reading Tasks...</source>
         <translation>Lese Aufgaben...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="554"/>
+        <location filename="UI/UserInterface.py" line="559"/>
         <source>Reading Templates...</source>
         <translation>Lese Vorlagen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="558"/>
+        <location filename="UI/UserInterface.py" line="563"/>
         <source>Starting Debugger...</source>
         <translation>Starte Debugger...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1166"/>
         <source>New Window</source>
         <translation>Neues Fenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1166"/>
         <source>New &amp;Window</source>
         <translation>Neues &amp;Fenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1166"/>
         <source>Ctrl+Shift+N</source>
         <comment>File|New Window</comment>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1154"/>
+        <location filename="UI/UserInterface.py" line="1171"/>
         <source>Open a new eric5 instance</source>
         <translation>Öffnet eine neue eric5 Instanz</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1155"/>
+        <location filename="UI/UserInterface.py" line="1172"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neues Fenster&lt;/b&gt;&lt;p&gt;Dies öffnet eine neue Instanz der eric5 IDE.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1570"/>
+        <location filename="UI/UserInterface.py" line="1604"/>
         <source>Unittest Rerun Failed</source>
         <translation>Fehlerhafte Modultests wiederholen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1570"/>
+        <location filename="UI/UserInterface.py" line="1604"/>
         <source>Rerun Failed Tests...</source>
         <translation>Fehlerhafte Tests wiederholen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1574"/>
+        <location filename="UI/UserInterface.py" line="1608"/>
         <source>Rerun failed tests of the last run</source>
         <translation>Fehlerhafte Tests des letzten Laufes wiederholen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1576"/>
+        <location filename="UI/UserInterface.py" line="1610"/>
         <source>&lt;b&gt;Rerun Failed Tests&lt;/b&gt;&lt;p&gt;Rerun all tests that failed during the last unittest run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fehlerhafte Tests wiederholen&lt;/b&gt;&lt;p&gt;Alle Tests wiederholen, die während des letzten Modultestlaufes fehlgeschlagen sind.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1684"/>
+        <location filename="UI/UserInterface.py" line="1718"/>
         <source>Compare &amp;Files side by side...</source>
         <translation>Dateien &amp;Seite an Seite vergleichen...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1745"/>
+        <location filename="UI/UserInterface.py" line="1779"/>
         <source>Snapshot</source>
         <translation>Bildschirmfoto</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1745"/>
+        <location filename="UI/UserInterface.py" line="1779"/>
         <source>&amp;Snapshot...</source>
         <translation>&amp;Bildschirmfoto...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1749"/>
+        <location filename="UI/UserInterface.py" line="1783"/>
         <source>Take snapshots of a screen region</source>
         <translation>Bildschirmfoto aufnehmen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1750"/>
+        <location filename="UI/UserInterface.py" line="1784"/>
         <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Bildschirmfoto&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, um ein Bildschirmfoto aufzunehmen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4038"/>
+        <location filename="UI/UserInterface.py" line="4090"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Bildschirmfotoanwendung konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5455"/>
+        <location filename="UI/UserInterface.py" line="5510"/>
         <source>Select Workspace Directory</source>
         <translation>Wähle Arbeitsverzeichnis</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1332"/>
+        <location filename="UI/UserInterface.py" line="1349"/>
         <source>Left Toolbox</source>
         <translation>Linke Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1343"/>
+        <location filename="UI/UserInterface.py" line="1360"/>
         <source>Right Toolbox</source>
         <translation>Rechte Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1201"/>
+        <location filename="UI/UserInterface.py" line="1218"/>
         <source>Switch the input focus to the Project-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Projektanzeigerfenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1203"/>
+        <location filename="UI/UserInterface.py" line="1220"/>
         <source>&lt;b&gt;Activate Project-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Project-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Projektanzeiger aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Projektanzeigerfenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1216"/>
+        <location filename="UI/UserInterface.py" line="1233"/>
         <source>Switch the input focus to the Multiproject-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Mehrfachprojektanzeigerfenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1218"/>
+        <location filename="UI/UserInterface.py" line="1235"/>
         <source>&lt;b&gt;Activate Multiproject-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Multiproject-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mehrfachprojektanzeiger aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Mehrfachprojektanzeigerfenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1231"/>
+        <location filename="UI/UserInterface.py" line="1248"/>
         <source>Switch the input focus to the Debug-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Debuganzeigefenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1233"/>
+        <location filename="UI/UserInterface.py" line="1250"/>
         <source>&lt;b&gt;Activate Debug-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Debug-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debuganzeige aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Debuganzeigefenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1246"/>
+        <location filename="UI/UserInterface.py" line="1263"/>
         <source>Switch the input focus to the Shell window.</source>
         <translation>Schalte den Eingabefokus auf das Shell-Fenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1248"/>
+        <location filename="UI/UserInterface.py" line="1265"/>
         <source>&lt;b&gt;Activate Shell&lt;/b&gt;&lt;p&gt;This switches the input focus to the Shell window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Shell aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Shell-Fenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1261"/>
+        <location filename="UI/UserInterface.py" line="1278"/>
         <source>Switch the input focus to the Terminal window.</source>
         <translation>Schalte den Eingabefokus auf das Terminal-Fenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1263"/>
+        <location filename="UI/UserInterface.py" line="1280"/>
         <source>&lt;b&gt;Activate Terminal&lt;/b&gt;&lt;p&gt;This switches the input focus to the Terminal window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Terminal aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Terminal-Fenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1271"/>
+        <location filename="UI/UserInterface.py" line="1288"/>
         <source>&amp;File-Browser</source>
         <translation>Datei-&amp;Browser</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1276"/>
+        <location filename="UI/UserInterface.py" line="1293"/>
         <source>Switch the input focus to the File-Browser window.</source>
         <translation>Schalte den Eingabefokus auf das Datei-Browser Fenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1278"/>
+        <location filename="UI/UserInterface.py" line="1295"/>
         <source>&lt;b&gt;Activate File-Browser&lt;/b&gt;&lt;p&gt;This switches the input focus to the File-Browser window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei-Browser aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Datei-Browser Fenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1286"/>
+        <location filename="UI/UserInterface.py" line="1303"/>
         <source>Lo&amp;g-Viewer</source>
         <translation>&amp;Ausgabefenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1291"/>
+        <location filename="UI/UserInterface.py" line="1308"/>
         <source>Switch the input focus to the Log-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Ausgabefenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1293"/>
+        <location filename="UI/UserInterface.py" line="1310"/>
         <source>&lt;b&gt;Activate Log-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Log-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ausgabefenster aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Ausgabefenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1301"/>
+        <location filename="UI/UserInterface.py" line="1318"/>
         <source>&amp;Task-Viewer</source>
         <translation>&amp;Aufgabenanzeige</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1306"/>
+        <location filename="UI/UserInterface.py" line="1323"/>
         <source>Switch the input focus to the Task-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Aufgabenanzeigefenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1316"/>
+        <location filename="UI/UserInterface.py" line="1333"/>
         <source>Templ&amp;ate-Viewer</source>
         <translation>&amp;Vorlagen</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1321"/>
+        <location filename="UI/UserInterface.py" line="1338"/>
         <source>Switch the input focus to the Template-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Vorlagenfenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1323"/>
+        <location filename="UI/UserInterface.py" line="1340"/>
         <source>&lt;b&gt;Activate Template-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Template-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorlagen aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Vorlagenfenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1332"/>
+        <location filename="UI/UserInterface.py" line="1349"/>
         <source>&amp;Left Toolbox</source>
         <translation>&amp;Linke Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1334"/>
+        <location filename="UI/UserInterface.py" line="1351"/>
         <source>Toggle the Left Toolbox window</source>
         <translation>Schalte das Fenster der linken Werkzeugbox um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1335"/>
+        <location filename="UI/UserInterface.py" line="1352"/>
         <source>&lt;b&gt;Toggle the Left Toolbox window&lt;/b&gt;&lt;p&gt;If the Left Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der linken Werkzeugbox um&lt;/b&gt;&lt;p&gt;Falls das Fenster der linken Werkzeugbox nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1343"/>
+        <location filename="UI/UserInterface.py" line="1360"/>
         <source>&amp;Right Toolbox</source>
         <translation>&amp;Rechte Werkzeugbox</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1345"/>
+        <location filename="UI/UserInterface.py" line="1362"/>
         <source>Toggle the Right Toolbox window</source>
         <translation>Schalte das Fenster der rechten Werkzeugbox um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1346"/>
+        <location filename="UI/UserInterface.py" line="1363"/>
         <source>&lt;b&gt;Toggle the Right Toolbox window&lt;/b&gt;&lt;p&gt;If the Right Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der rechten Werkzeugbox um&lt;/b&gt;&lt;p&gt;Falls das Fenster der rechten Werkzeugbox nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1377"/>
+        <location filename="UI/UserInterface.py" line="1394"/>
         <source>Right Sidebar</source>
         <translation>Rechte Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1377"/>
+        <location filename="UI/UserInterface.py" line="1394"/>
         <source>&amp;Right Sidebar</source>
         <translation>&amp;Rechte Seitenleiste</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1379"/>
+        <location filename="UI/UserInterface.py" line="1396"/>
         <source>Toggle the right sidebar window</source>
         <translation>Schalte das Fenster der rechten Seitenleiste um</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1380"/>
+        <location filename="UI/UserInterface.py" line="1397"/>
         <source>&lt;b&gt;Toggle the right sidebar window&lt;/b&gt;&lt;p&gt;If the right sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schalte das Fenster der rechten Seitenleiste um&lt;/b&gt;&lt;p&gt;Falls das Fenster der rechten Seitenleiste nicht sichtbar ist, wird es dargestellt. Ist es sichtbar, so wird es versteckt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1400"/>
+        <location filename="UI/UserInterface.py" line="1417"/>
         <source>Cooperation-Viewer</source>
         <translation>Zusammenarbeit</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1400"/>
+        <location filename="UI/UserInterface.py" line="1417"/>
         <source>Co&amp;operation-Viewer</source>
         <translation>&amp;Zusammenarbeit</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1406"/>
+        <location filename="UI/UserInterface.py" line="1423"/>
         <source>Switch the input focus to the Cooperation-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Fenster zur Zusammenarbeit um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1408"/>
+        <location filename="UI/UserInterface.py" line="1425"/>
         <source>&lt;b&gt;Activate Cooperation-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Cooperation-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zusammenarbeitsfenster aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Fenster zur Zusammenarbeit um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1417"/>
+        <location filename="UI/UserInterface.py" line="1451"/>
         <source>Symbols-Viewer</source>
         <translation>Symbolanzeiger</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1417"/>
+        <location filename="UI/UserInterface.py" line="1451"/>
         <source>S&amp;ymbols-Viewer</source>
         <translation>S&amp;ymbolanzeiger</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1423"/>
+        <location filename="UI/UserInterface.py" line="1457"/>
         <source>Switch the input focus to the Symbols-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Symbolanzeigerfenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1425"/>
+        <location filename="UI/UserInterface.py" line="1459"/>
         <source>&lt;b&gt;Activate Symbols-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Symbols-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Symbolanzeiger aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Symbolanzeigerfenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1467"/>
         <source>Numbers-Viewer</source>
         <translation>Zahlenanzeiger</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1467"/>
         <source>Num&amp;bers-Viewer</source>
         <translation>Za&amp;hlenanzeiger</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1439"/>
+        <location filename="UI/UserInterface.py" line="1473"/>
         <source>Switch the input focus to the Numbers-Viewer window.</source>
         <translation>Schalte den Eingabefokus auf das Zahlenanzeigerfenster um.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1441"/>
+        <location filename="UI/UserInterface.py" line="1475"/>
         <source>&lt;b&gt;Activate Numbers-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Numbers-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zahlenanzeiger aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Zahlenanzeigerfenster um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2155"/>
+        <location filename="UI/UserInterface.py" line="2189"/>
         <source>&amp;Windows</source>
         <translation>&amp;Fenster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1308"/>
+        <location filename="UI/UserInterface.py" line="1325"/>
         <source>&lt;b&gt;Activate Task-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Task-Viewer window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aufgabenanzeige aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das Aufgabenanzeigefenster um.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1434"/>
+        <source>IRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1434"/>
+        <source>&amp;IRC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1434"/>
+        <source>Meta+Shift+I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1440"/>
+        <source>Switch the input focus to the IRC window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1442"/>
+        <source>&lt;b&gt;Activate IRC&lt;/b&gt;&lt;p&gt;This switches the input focus to the IRC window.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -50298,12 +52246,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;p&gt;Sie können %-Codes als Platzhalter in der Eingabe verwenden. Unterstützte Codes sind:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;Spalte des Cursor des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;Verzeichnis des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;Dateiname des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;Home-Verzeichnis des aktullen Nutzers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;Zeile des Cursor des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;Pfad des aktuellen Projektes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selektierter Text des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;Nutzername des aktuellen Nutzers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;das Prozentzeichen&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1294"/>
+        <location filename="Utilities/__init__.py" line="1310"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Kein Python2 Interpreter konfiguriert.</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1344"/>
+        <location filename="Utilities/__init__.py" line="1360"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation>Python2 Interpreter wurde nicht innerhalb von 30s beendet.</translation>
     </message>
@@ -54648,12 +56596,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="247"/>
+        <location filename="eric5.py" line="248"/>
         <source>Importing packages...</source>
         <translation>Importiere Packages...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="252"/>
+        <location filename="eric5.py" line="253"/>
         <source>Generating Main Window...</source>
         <translation>Erzeuge das Hauptfenster...</translation>
     </message>
