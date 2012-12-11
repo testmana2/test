@@ -13,7 +13,6 @@ from PyQt4.Qsci import QsciScintilla
 
 from QScintilla.QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
 
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage
 
@@ -49,13 +48,20 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         ]
         
         self.wrapModeComboBox.addItem(self.trUtf8("Disabled"),
+            QsciScintilla.WrapNone)
+        self.wrapModeComboBox.addItem(self.trUtf8("Word Boundary"),
+            QsciScintilla.WrapWord)
+        self.wrapModeComboBox.addItem(self.trUtf8("Character Boundary"),
+            QsciScintilla.WrapCharacter)
+        self.wrapVisualComboBox.addItem(self.trUtf8("No Indicator"),
             QsciScintilla.WrapFlagNone)
-        self.wrapModeComboBox.addItem(self.trUtf8("Show Flag by Text"),
+        self.wrapVisualComboBox.addItem(self.trUtf8("Indicator by Text"),
             QsciScintilla.WrapFlagByText)
-        self.wrapModeComboBox.addItem(self.trUtf8("Show Flag by Margin"),
+        self.wrapVisualComboBox.addItem(self.trUtf8("Indicator by Margin"),
             QsciScintilla.WrapFlagByBorder)
         if QSCINTILLA_VERSION() >= 0x020700:
-            self.wrapModeComboBox.addItem(self.trUtf8("Show Flag in Linenumber Margin"),
+            self.wrapVisualComboBox.addItem(
+                self.trUtf8("Indicator in Line Number Margin"),
                 QsciScintilla.WrapFlagInMargin)
         
         # set initial values
@@ -128,6 +134,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
         self.wrapModeComboBox.setCurrentIndex(self.wrapModeComboBox.findData(
             Preferences.getEditor("WrapLongLinesMode")))
+        self.wrapVisualComboBox.setCurrentIndex(self.wrapVisualComboBox.findData(
+            Preferences.getEditor("WrapVisualFlag")))
         
         self.edgeModeCombo.setCurrentIndex(
             self.edgeModes.index(Preferences.getEditor("EdgeMode")))
@@ -224,6 +232,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.eolCheckBox.isChecked())
         Preferences.setEditor("WrapLongLinesMode",
             self.wrapModeComboBox.itemData(self.wrapModeComboBox.currentIndex()))
+        Preferences.setEditor("WrapVisualFlag",
+            self.wrapVisualComboBox.itemData(self.wrapVisualComboBox.currentIndex()))
         Preferences.setEditor("EdgeMode",
             self.edgeModes[self.edgeModeCombo.currentIndex()])
         Preferences.setEditor("EdgeColumn",

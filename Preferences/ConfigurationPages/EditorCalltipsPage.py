@@ -7,6 +7,10 @@
 Module implementing the Editor Calltips configuration page.
 """
 
+from PyQt4.Qsci import QsciScintilla
+
+from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorCalltipsPage import Ui_EditorCalltipsPage
 
@@ -25,6 +29,14 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         self.setupUi(self)
         self.setObjectName("EditorCalltipsPage")
         
+        if QSCINTILLA_VERSION() >= 0x020700:
+            self.positionComboBox.addItem(self.trUtf8("Below Text"),
+                QsciScintilla.CallTipsBelowText)
+            self.positionComboBox.addItem(self.trUtf8("Above Text"),
+                QsciScintilla.CallTipsAboveText)
+        else:
+            self.calltipsPositionBox.hide()
+        
         # set initial values
         self.ctEnabledCheckBox.setChecked(
             Preferences.getEditor("CallTipsEnabled"))
@@ -36,6 +48,10 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         
         self.ctScintillaCheckBox.setChecked(
             Preferences.getEditor("CallTipsScintillaOnFail"))
+        
+        if QSCINTILLA_VERSION() >= 0x020700:
+            self.positionComboBox.setCurrentIndex(self.positionComboBox.findData(
+                Preferences.getEditor("CallTipsPosition")))
         
     def save(self):
         """
@@ -50,6 +66,10 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         
         Preferences.setEditor("CallTipsScintillaOnFail",
             self.ctScintillaCheckBox.isChecked())
+        
+        if QSCINTILLA_VERSION() >= 0x020700:
+            Preferences.setEditor("CallTipsPosition",
+                self.positionComboBox.itemData(self.positionComboBox.currentIndex()))
 
 
 def create(dlg):

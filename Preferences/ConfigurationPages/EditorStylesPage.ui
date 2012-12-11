@@ -922,22 +922,22 @@
         <property name="checkable">
          <bool>false</bool>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
           <widget class="QLabel" name="textLabel1_15">
            <property name="text">
             <string>Mode:</string>
            </property>
           </widget>
          </item>
-         <item>
+         <item row="0" column="1">
           <widget class="QComboBox" name="wrapModeComboBox">
            <property name="toolTip">
             <string>Select the wrap mode for long lines</string>
            </property>
           </widget>
          </item>
-         <item>
+         <item row="0" column="2">
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -949,6 +949,20 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Indication:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="wrapVisualComboBox">
+           <property name="toolTip">
+            <string>Select, how wrapped lines are indicated</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -1575,6 +1589,7 @@
   <tabstop>nonmatchingBracesBackButton</tabstop>
   <tabstop>eolCheckBox</tabstop>
   <tabstop>wrapModeComboBox</tabstop>
+  <tabstop>wrapVisualComboBox</tabstop>
   <tabstop>edgeModeCombo</tabstop>
   <tabstop>edgeLineColumnSlider</tabstop>
   <tabstop>edgeBackgroundColorButton</tabstop>

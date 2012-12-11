@@ -254,7 +254,8 @@ class Prefs(object):
         "WhitespaceSize": 1,
         "ShowEOL": False,
         "UseMonospacedFont": False,
-        "WrapLongLinesMode": QsciScintilla.WrapFlagNone,
+        "WrapLongLinesMode": QsciScintilla.WrapNone,
+        "WrapVisualFlag": QsciScintilla.WrapFlagNone,
         "WarnFilesize": 512,
         "ClearBreaksOnClose": True,
         "StripTrailingWhitespace": False,
@@ -440,6 +441,12 @@ class Prefs(object):
         editorDefaults["EOLMode"] = QsciScintilla.EolWindows
     else:
         editorDefaults["EOLMode"] = QsciScintilla.EolUnix
+    
+    try:
+        # since QScintilla 2.7.0
+        editorDefaults["CallTipsPosition"] = QsciScintilla.CallTipsBelowText
+    except AttributeError:
+        editorDefaults["CallTipsPosition"] = 0
     
     editorColourDefaults = {
         "CurrentMarker": QColor(Qt.yellow),
@@ -1539,7 +1546,7 @@ def getEditor(key, prefClass=Prefs):
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
                  "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
-                 "WrapLongLinesMode"]:
+                 "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
