@@ -25119,122 +25119,122 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="314"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="318"/>
         <source>Send Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="314"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="318"/>
         <source>Messages starting with a &apos;/&apos; are not allowed in private chats.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="337"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="341"/>
         <source>Leave IRC channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="337"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="341"/>
         <source>Do you really want to leave the IRC channel &lt;b&gt;{0}&lt;/b&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="470"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="477"/>
         <source>Channel Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="474"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="481"/>
         <source>Nick mentioned</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="498"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="505"/>
         <source>{0} has joined the channel {1} ({2}).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="502"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="509"/>
         <source>You have joined the channel {0} ({1}).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="507"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="514"/>
         <source>Join Channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="525"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="532"/>
         <source>{0} has left {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="532"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="539"/>
         <source>{0} has left {1}: {2}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="537"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="544"/>
         <source>Leave Channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="555"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="562"/>
         <source>{0} has quit {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="559"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="566"/>
         <source>{0} has quit {1}: {2}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="564"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="571"/>
         <source>Quit</source>
         <translation type="unfinished">Beenden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="581"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="588"/>
         <source>You are now known as {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="586"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="593"/>
         <source>User {0} is now known as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="621"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="628"/>
         <source>Away</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="621"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="628"/>
         <source>{0} is away: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="636"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="643"/>
         <source>The channel topic is: &quot;{0}&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="651"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="658"/>
         <source>The topic was set by {0} on {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="667"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="674"/>
         <source>Channel URL: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="690"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="697"/>
         <source>password protected ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="694"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="701"/>
         <source>limited to %n user(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25242,77 +25242,77 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="701"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="708"/>
         <source>Channel modes: {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="716"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="723"/>
         <source>This channel was created on {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="749"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="756"/>
         <source>{0} sets the channel mode to &apos;anonymous&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="752"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="759"/>
         <source>{0} removes the &apos;anonymous&apos; mode from the channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="757"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="764"/>
         <source>{0} sets a ban on {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="761"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="768"/>
         <source>{0} removes the ban on {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="766"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="773"/>
         <source>{0} sets the channel mode to &apos;no colors allowed&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="770"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="777"/>
         <source>{0} sets the channel mode to &apos;allow color codes&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="775"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="782"/>
         <source>{0} sets a ban exception on {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="779"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="786"/>
         <source>{0} removes the ban exception on {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="784"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="791"/>
         <source>{0} sets the channel mode to &apos;invite only&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="787"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="794"/>
         <source>{0} removes the &apos;invite only&apos; mode from the channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="792"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="799"/>
         <source>{0} sets the channel key to &apos;{1}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="796"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="803"/>
         <source>{0} removes the channel key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="800"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="807"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25320,247 +25320,247 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="804"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
         <source>{0} removes the channel limit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="808"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="815"/>
         <source>{0} sets the channel mode to &apos;moderated&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="818"/>
         <source>{0} sets the channel mode to &apos;unmoderated&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="815"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="822"/>
         <source>{0} sets the channel mode to &apos;no messages from outside&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="819"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="826"/>
         <source>{0} sets the channel mode to &apos;allow messages from outside&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="824"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="831"/>
         <source>{0} sets the channel mode to &apos;private&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="827"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="834"/>
         <source>{0} sets the channel mode to &apos;public&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="831"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="838"/>
         <source>{0} sets the channel mode to &apos;quiet&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="834"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="841"/>
         <source>{0} removes the &apos;quiet&apos; mode from the channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="841"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="848"/>
         <source>{0} sets the channel mode to &apos;secret&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="844"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="851"/>
         <source>{0} sets the channel mode to &apos;visible&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="848"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
         <source>{0} switches on &apos;topic protection&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="851"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="858"/>
         <source>{0} switches off &apos;topic protection&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="862"/>
         <source>{0} sets invitation mask {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="859"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="866"/>
         <source>{0} removes the invitation mask {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="863"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="870"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="880"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="887"/>
         <source>{0} sets mode for {1}: {2}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="906"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="913"/>
         <source>Help</source>
         <translation type="unfinished">Hilfe</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="986"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1037"/>
         <source>--- New From Here ---</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1071"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1122"/>
         <source>Save Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1054"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1105"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1071"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1122"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1089"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1140"/>
         <source>Error saving Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1089"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1140"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1101"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1152"/>
         <source>Cut</source>
         <translation type="unfinished">Ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1105"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1156"/>
         <source>Copy</source>
         <translation type="unfinished">Kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1110"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1161"/>
         <source>Cut all</source>
         <translation type="unfinished">Alles ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1114"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
         <source>Copy all</source>
         <translation type="unfinished">Alles kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1119"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
         <source>Clear</source>
         <translation type="unfinished">Löschen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1124"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1175"/>
         <source>Save</source>
         <translation type="unfinished">Speichern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1129"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1180"/>
         <source>Mark Current Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1132"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1183"/>
         <source>Remove Position Marker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1181"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1232"/>
         <source>Who Is</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1184"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1235"/>
         <source>Private Chat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1284"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
         <source>Who</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1262"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1313"/>
         <source>End of WHO list for {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1283"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1334"/>
         <source> (Away)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1284"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
         <source>{0} is {1}@{2} ({3}){4}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1636"/>
         <source>Whois</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1304"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1355"/>
         <source>{0} is {1}@{2} ({3}).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1349"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1400"/>
         <source>{0} is a user on channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1404"/>
         <source>{0} has voice on channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1408"/>
         <source>{0} is a halfop on channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1361"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1412"/>
         <source>{0} is an operator on channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1365"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1416"/>
         <source>{0} is owner of channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1369"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1420"/>
         <source>{0} is admin on channels: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1387"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1438"/>
         <source>{0} is online via {1} ({2}).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1405"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1456"/>
         <source>{0} is an IRC Operator.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1435"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1486"/>
         <source>%n day(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25568,7 +25568,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1446"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1497"/>
         <source>%n hour(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25576,7 +25576,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1455"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1506"/>
         <source>%n minute(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25584,7 +25584,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1456"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1507"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25592,25 +25592,25 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1439"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1490"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1449"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1500"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1457"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1508"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1463"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1514"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -25618,43 +25618,68 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1468"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
         <source>{0} has been online since {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1486"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1537"/>
         <source>End of WHOIS list for {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1502"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1553"/>
         <source>{0} is an identified user.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1518"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1569"/>
         <source>{0} is available for help.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1534"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
         <source>{0} is logged in as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1552"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1603"/>
         <source>{0} is actually using the host {1} (IP: {2}).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1568"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1619"/>
         <source>{0} is using a secure connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1636"/>
         <source>{0} is connecting from {1} (IP: {2}).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="954"/>
+        <source>CTCP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="938"/>
+        <source>Received Version request from {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="943"/>
+        <source>Received CTCP-PING request from {0}, sending answer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="948"/>
+        <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="954"/>
+        <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26620,254 +26645,279 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>IrcWidget</name>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="59"/>
+        <location filename="Network/IRC/IrcWidget.py" line="61"/>
         <source>Press to leave the current channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="198"/>
+        <location filename="Network/IRC/IrcWidget.py" line="200"/>
         <source>Disconnect from Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="198"/>
+        <location filename="Network/IRC/IrcWidget.py" line="200"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="162"/>
+        <location filename="Network/IRC/IrcWidget.py" line="164"/>
         <source>SSL Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="162"/>
+        <location filename="Network/IRC/IrcWidget.py" line="164"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcWidget.py" line="421"/>
         <source>Info</source>
         <translation type="unfinished">Info</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="185"/>
+        <location filename="Network/IRC/IrcWidget.py" line="187"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="192"/>
+        <location filename="Network/IRC/IrcWidget.py" line="194"/>
         <source>Looking for server {0} (port {1})...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="204"/>
+        <location filename="Network/IRC/IrcWidget.py" line="206"/>
         <source>Disconnecting from server {0}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="368"/>
+        <location filename="Network/IRC/IrcWidget.py" line="384"/>
         <source>Server found,connecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="375"/>
+        <location filename="Network/IRC/IrcWidget.py" line="391"/>
         <source>Connected,logging in...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcWidget.py" line="421"/>
         <source>Server disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="447"/>
+        <location filename="Network/IRC/IrcWidget.py" line="463"/>
         <source>Message Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="447"/>
+        <location filename="Network/IRC/IrcWidget.py" line="463"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="471"/>
+        <location filename="Network/IRC/IrcWidget.py" line="487"/>
         <source>Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="482"/>
+        <location filename="Network/IRC/IrcWidget.py" line="498"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="486"/>
+        <location filename="Network/IRC/IrcWidget.py" line="502"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="489"/>
+        <location filename="Network/IRC/IrcWidget.py" line="505"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="496"/>
+        <location filename="Network/IRC/IrcWidget.py" line="512"/>
         <source>You have left channel {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="507"/>
+        <location filename="Network/IRC/IrcWidget.py" line="523"/>
         <source>You are now known as {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <location filename="Network/IRC/IrcWidget.py" line="528"/>
         <source>User {0} is now known as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="517"/>
+        <location filename="Network/IRC/IrcWidget.py" line="533"/>
         <source>Server Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="551"/>
+        <location filename="Network/IRC/IrcWidget.py" line="567"/>
         <source>Error</source>
         <translation type="unfinished">Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="566"/>
+        <location filename="Network/IRC/IrcWidget.py" line="582"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="568"/>
+        <location filename="Network/IRC/IrcWidget.py" line="584"/>
         <source>Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="570"/>
+        <location filename="Network/IRC/IrcWidget.py" line="586"/>
         <source>User</source>
         <translation type="unfinished">Nutzer</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="572"/>
+        <location filename="Network/IRC/IrcWidget.py" line="588"/>
         <source>MOTD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="574"/>
+        <location filename="Network/IRC/IrcWidget.py" line="590"/>
         <source>Away</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="576"/>
+        <location filename="Network/IRC/IrcWidget.py" line="592"/>
         <source>Info ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="580"/>
+        <location filename="Network/IRC/IrcWidget.py" line="596"/>
         <source>Message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="582"/>
+        <location filename="Network/IRC/IrcWidget.py" line="598"/>
         <source>End of message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="585"/>
+        <location filename="Network/IRC/IrcWidget.py" line="601"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="589"/>
+        <location filename="Network/IRC/IrcWidget.py" line="605"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="593"/>
+        <location filename="Network/IRC/IrcWidget.py" line="609"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="596"/>
+        <location filename="Network/IRC/IrcWidget.py" line="612"/>
         <source>You are no longer marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <location filename="Network/IRC/IrcWidget.py" line="614"/>
         <source>You have been marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <location filename="Network/IRC/IrcWidget.py" line="723"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="658"/>
+        <location filename="Network/IRC/IrcWidget.py" line="674"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="672"/>
+        <location filename="Network/IRC/IrcWidget.py" line="688"/>
         <source>Socket Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="664"/>
+        <location filename="Network/IRC/IrcWidget.py" line="680"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="668"/>
+        <location filename="Network/IRC/IrcWidget.py" line="684"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="672"/>
+        <location filename="Network/IRC/IrcWidget.py" line="688"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="689"/>
+        <location filename="Network/IRC/IrcWidget.py" line="705"/>
         <source>SSL Errors</source>
         <translation type="unfinished">SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="689"/>
+        <location filename="Network/IRC/IrcWidget.py" line="705"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="700"/>
+        <location filename="Network/IRC/IrcWidget.py" line="716"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <location filename="Network/IRC/IrcWidget.py" line="723"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="745"/>
+        <location filename="Network/IRC/IrcWidget.py" line="804"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished">{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="774"/>
+        <location filename="Network/IRC/IrcWidget.py" line="833"/>
         <source>Critical</source>
         <translation type="unfinished">Kritischer Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="759"/>
+        <location filename="Network/IRC/IrcWidget.py" line="818"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="774"/>
+        <location filename="Network/IRC/IrcWidget.py" line="833"/>
         <source>The given nickname is already in use.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="791"/>
+        <source>CTCP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="775"/>
+        <source>Received Version request from {0}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="780"/>
+        <source>Received CTCP-PING request from {0}, sending answer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="785"/>
+        <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="791"/>
+        <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -30,6 +30,8 @@ from .IrcNetworkListDialog import IrcNetworkListDialog
 import Preferences
 import UI.PixmapCache
 
+from UI.Info import Version, Copyright
+
 
 class IrcWidget(QWidget, Ui_IrcWidget):
     """
@@ -255,6 +257,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         channel.initAutoWho()
         
         channel.sendData.connect(self.__send)
+        channel.sendCtcpReply.connect(self.__sendCtcpReply)
         channel.channelClosed.connect(self.__closeChannel)
         channel.openPrivateChat.connect(self.__openPrivate)
         
@@ -285,6 +288,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         # group(2)   sender user@host
         # group(3)   target nick
         # group(4)   message
+        if match.group(4).startswith("\x01"):
+            return self.__handleCtcp(match)
+        
         self.__openPrivate(match.group(1))
         # the above call sets the new channel as the current widget
         channel = self.channelsWidget.currentWidget()
@@ -310,6 +316,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         channel.addUsers([name, self.__nickName])
         
         channel.sendData.connect(self.__send)
+        channel.sendCtcpReply.connect(self.__sendCtcpReply)
         channel.channelClosed.connect(self.__closeChannel)
         
         self.channelsWidget.addTab(channel, name)
@@ -360,6 +367,15 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         if self.__socket:
             self.__socket.write(QByteArray("{0}\r\n".format(data).encode("utf-8")))
+    
+    def __sendCtcpReply(self, receiver, text):
+        """
+        Private slot to send a CTCP reply.
+        
+        @param receiver nick name of the receiver (string)
+        @param text text to be sent (string)
+        """
+        self.__send("NOTICE {0} :\x01{1}\x01".format(receiver, text))
     
     def __hostFound(self):
         """
@@ -735,6 +751,49 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         self.__send("PONG " + match.group(1))
         return True
+    
+    def __handleCtcp(self, match):
+        """
+        Private method to handle a CTCP command.
+        
+        @param reference to the match object
+        @return flag indicating, if the message was handled (boolean)
+        """
+        # group(1)   sender user name
+        # group(2)   sender user@host
+        # group(3)   target nick
+        # group(4)   message
+        if match.group(4).startswith("\x01"):
+            ctcpCommand = match.group(4)[1:].split("\x01", 1)[0]
+            if " " in ctcpCommand:
+                ctcpRequest, ctcpArg = ctcpCommand.split(" ", 1)
+            else:
+                ctcpRequest, ctcpArg = ctcpCommand, ""
+            ctcpRequest = ctcpRequest.lower()
+            if ctcpRequest == "version":
+                msg = "Eric IRC client {0}, {1}".format(Version, Copyright)
+                self.networkWidget.addServerMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received Version request from {0}.").format(
+                    match.group(1)))
+                self.__sendCtcpReply(match.group(1), "VERSION " + msg)
+            elif ctcpRequest == "ping":
+                self.networkWidget.addServerMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received CTCP-PING request from {0},"
+                    " sending answer.").format(match.group(1)))
+                self.__sendCtcpReply(match.group(1), "PING {0}".format(ctcpArg))
+            elif ctcpRequest == "clientinfo":
+                self.networkWidget.addServerMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received CTCP-CLIENTINFO request from {0},"
+                        " sending answer.").format(match.group(1)))
+                self.__sendCtcpReply(match.group(1),
+                    "CLIENTINFO CLIENTINFO PING VERSION")
+            else:
+                self.networkWidget.addServerMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received unknown CTCP-{0} request from {1}.").format(
+                    ctcpRequest, match.group(1)))
+            return True
+        
+        return False
     
     def __updateUsersCount(self):
         """

@@ -23,6 +23,8 @@ import Utilities
 import UI.PixmapCache
 import Preferences
 
+from UI.Info import Version, Copyright
+
 
 class IrcUserItem(QListWidgetItem):
     """
@@ -165,10 +167,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     Class implementing the IRC channel widget.
     
     @signal sendData(str) emitted to send a message to the channel
+    @signal sendCtcpReply(str, str) emitted to send a CTCP reply
     @signal channelClosed(str) emitted after the user has left the channel
     @signal openPrivateChat(str) emitted to open a "channel" for private messages
     """
     sendData = pyqtSignal(str)
+    sendCtcpReply = pyqtSignal(str, str)
     channelClosed = pyqtSignal(str)
     openPrivateChat = pyqtSignal(str)
     
@@ -445,6 +449,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(3)   target nick
         # group(4)   message
         if match.group(3).lower() == self.__name:
+            if match.group(4).startswith("\x01"):
+                return self.__handleCtcp(match)
+            
             self.addMessage(match.group(1), match.group(4))
             if self.__private and not self.topicLabel.text():
                 self.setPrivateInfo("{0} - {1}".format(match.group(1), match.group(2)))
@@ -906,6 +913,50 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__addManagementMessage(self.trUtf8("Help"),
             "{0} {1}".format(match.group(1), ircFilter(match.group(2))))
         return True
+    
+    
+    def __handleCtcp(self, match):
+        """
+        Private method to handle a CTCP channel command.
+        
+        @param reference to the match object
+        @return flag indicating, if the message was handled (boolean)
+        """
+        # group(1)   sender user name
+        # group(2)   sender user@host
+        # group(3)   target nick
+        # group(4)   message
+        if match.group(4).startswith("\x01"):
+            ctcpCommand = match.group(4)[1:].split("\x01", 1)[0]
+            if " " in ctcpCommand:
+                ctcpRequest, ctcpArg = ctcpCommand.split(" ", 1)
+            else:
+                ctcpRequest, ctcpArg = ctcpCommand, ""
+            ctcpRequest = ctcpRequest.lower()
+            if ctcpRequest == "version":
+                msg = "Eric IRC client {0}, {1}".format(Version, Copyright)
+                self.__addManagementMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received Version request from {0}.").format(
+                    match.group(1)))
+                self.sendCtcpReply.emit(match.group(1), "VERSION " + msg)
+            elif ctcpRequest == "ping":
+                self.__addManagementMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received CTCP-PING request from {0},"
+                    " sending answer.").format(match.group(1)))
+                self.sendCtcpReply.emit(match.group(1), "PING {0}".format(ctcpArg))
+            elif ctcpRequest == "clientinfo":
+                self.__addManagementMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received CTCP-CLIENTINFO request from {0},"
+                        " sending answer.").format(match.group(1)))
+                self.sendCtcpReply.emit(match.group(1),
+                    "CLIENTINFO CLIENTINFO PING VERSION")
+            else:
+                self.__addManagementMessage(self.trUtf8("CTCP"),
+                    self.trUtf8("Received unknown CTCP-{0} request from {1}.").format(
+                    ctcpRequest, match.group(1)))
+            return True
+        
+        return False
     
     def setUserPrivilegePrefix(self, prefixes):
         """
