@@ -156,7 +156,7 @@ def __initChannelModesDict():
         "m": QCoreApplication.translate("IrcUtilities", "moderated"),
         "n": QCoreApplication.translate("IrcUtilities", "no messages from outside"),
         "p": QCoreApplication.translate("IrcUtilities", "private"),
-        "q": QCoreApplication.translate("IrcUtilities", "quit"),
+        "q": QCoreApplication.translate("IrcUtilities", "quiet"),
         "r": QCoreApplication.translate("IrcUtilities", "reop channel"),
         "s": QCoreApplication.translate("IrcUtilities", "secret"),
         "t": QCoreApplication.translate("IrcUtilities", "topic protection"),

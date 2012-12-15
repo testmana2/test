@@ -3687,7 +3687,7 @@ um die Konfigurationsseite anzuzeigen.</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="138"/>
         <source>IRC</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC</translation>
     </message>
 </context>
 <context>
@@ -8529,11 +8529,6 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Wähle die Hintergrundfarbe für Calltips.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="56"/>
-        <source>Visible calltips:</source>
-        <translation type="obsolete">Sichtbare Calltips:</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="68"/>
         <source>Move to set the maximum number of calltips shown (0 = all available)</source>
         <translation>Verschieben, um die Anzahl der angezeigten Calltips zu wählen (0 = alle verfügbaren)</translation>
@@ -8566,27 +8561,27 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="62"/>
         <source>Visible Calltips</source>
-        <translation type="unfinished"></translation>
+        <translation>Sichtbare Calltips</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="103"/>
         <source>Calltips Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Calltips Position</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="109"/>
         <source>Select the position for the calltips</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Position für die Anzeige der Calltips</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.py" line="33"/>
         <source>Below Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Unter dem Text</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.py" line="35"/>
         <source>Above Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Über dem Text</translation>
     </message>
 </context>
 <context>
@@ -10017,42 +10012,42 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="171"/>
         <source>Select to highlight hash quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um Zeichenketten in Lattenzäunen (#) hervorzuheben</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="174"/>
         <source>Highlight hash quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeichenketten in # hervorheben</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="219"/>
         <source>Select to activate HSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um HSS Unterstützung zu aktivieren</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="222"/>
         <source>HSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>HSS Unterstützung</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="229"/>
         <source>Select to activate Less CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um Less CSS Unterstützung zu aktivieren</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="232"/>
         <source>Less CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Less CSS Unterstützung</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="239"/>
         <source>Select to activate Sassy CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um Sassy CSS Unterstützung zu aktivieren</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="242"/>
         <source>Sassy CSS support</source>
-        <translation type="unfinished"></translation>
+        <translation>Sassy CSS Unterstützung</translation>
     </message>
 </context>
 <context>
@@ -10649,11 +10644,6 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeige Zeilenendemarkierung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
-        <source>Select, whether long lines should be wrapped</source>
-        <translation type="obsolete">Auswählen, wenn lange Zeilen umbrochen werden sollen</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
         <source>Wrap long lines</source>
         <translation>Lange Zeilen umbrechen</translation>
@@ -11011,47 +11001,47 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="936"/>
         <source>Select the wrap mode for long lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle dem Umbruchmodus für lange Zeilen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="956"/>
         <source>Indication:</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeige:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="963"/>
         <source>Select, how wrapped lines are indicated</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle aus, wie umbrochene Zeilen angezeigt werden sollen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="52"/>
         <source>Word Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Wortgrenze</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="54"/>
         <source>Character Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Buchstabengrenze</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="56"/>
         <source>No Indicator</source>
-        <translation type="unfinished"></translation>
+        <translation>keine Anzeige</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="58"/>
         <source>Indicator by Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeige neben dem Text</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="60"/>
         <source>Indicator by Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeige am Rand</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.py" line="63"/>
         <source>Indicator in Line Number Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeige in der Zeilennummernspalte</translation>
     </message>
 </context>
 <context>
@@ -25068,37 +25058,37 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="14"/>
         <source>IRC Channel</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Kanal</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Name:</translation>
+        <translation>Name:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="30"/>
         <source>Enter the channel name</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den Kanalnamen ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="37"/>
         <source>Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlüssel:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="44"/>
         <source>Enter the channel key/password</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den Kanalschlüssel/das Kanalkennwort ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="54"/>
         <source>Select to join this channel automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um diesem Kanal automatisch zu betreten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelEditDialog.ui" line="57"/>
         <source>Join channel automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Dem Kanal automatisch betreten</translation>
     </message>
 </context>
 <context>
@@ -25106,581 +25096,581 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.ui" line="40"/>
         <source>Shows the list of users</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeigt die Liste der Teilnehmer</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.ui" line="60"/>
         <source>Shows the channel messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeigt die Kanalnachrichten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.ui" line="77"/>
         <source>Enter a message, send by pressing Return or Enter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib eine Nachricht ein, Senden durch Drücken von Return oder Enter</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="318"/>
         <source>Send Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachrich senden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="318"/>
         <source>Messages starting with a &apos;/&apos; are not allowed in private chats.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachrichten, die mit &apos;/&apos; beginnen, sind in privaten Unterhaltungen nicht zugelassen.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="341"/>
         <source>Leave IRC channel</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Kanal verlassen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="341"/>
         <source>Do you really want to leave the IRC channel &lt;b&gt;{0}&lt;/b&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Soll der IRC Kanal &lt;b&gt;{0}&lt;/b&gt; wirklich verlassen werden?</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="477"/>
         <source>Channel Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanalnachricht</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="481"/>
         <source>Nick mentioned</source>
-        <translation type="unfinished"></translation>
+        <translation>Nick erwähnt</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="505"/>
         <source>{0} has joined the channel {1} ({2}).</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat den Kanal {1} betreten ({2}).</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="509"/>
         <source>You have joined the channel {0} ({1}).</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie sind den Kanal {0} betreten.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="514"/>
         <source>Join Channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal betreten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="532"/>
         <source>{0} has left {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat den Kanal {1} verlassen.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="539"/>
         <source>{0} has left {1}: {2}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat den Kanal {1} verlassen: {2}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="544"/>
         <source>Leave Channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal verlassen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="562"/>
         <source>{0} has quit {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat den Server verlassen.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="566"/>
         <source>{0} has quit {1}: {2}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat den Server verlassen: {2}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="571"/>
         <source>Quit</source>
-        <translation type="unfinished">Beenden</translation>
+        <translation>Server verlassen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="588"/>
         <source>You are now known as {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie sind jetzt als {0} bekannt.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="593"/>
         <source>User {0} is now known as {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutzer {0} ist nun als {1} bekannt.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="628"/>
         <source>Away</source>
-        <translation type="unfinished"></translation>
+        <translation>Abwesend</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="628"/>
         <source>{0} is away: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist abwesend: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="643"/>
         <source>The channel topic is: &quot;{0}&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Kanalthema ist: &quot;{0}&quot;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="658"/>
         <source>The topic was set by {0} on {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Thema wurde am {0} durch {1} gesetzt.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="674"/>
         <source>Channel URL: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal URL: {0}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="697"/>
         <source>password protected ({0})</source>
-        <translation type="unfinished"></translation>
+        <translation>Kennwort geschützt ({0})</translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="701"/>
         <source>limited to %n user(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>auf einen Nutzer begrenzt</numerusform>
+            <numerusform>auf %n Nutzer begrenzt</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="708"/>
         <source>Channel modes: {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanalmodi: {0}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="723"/>
         <source>This channel was created on {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieser Kanal wurde am {0} erstellt.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="756"/>
         <source>{0} sets the channel mode to &apos;anonymous&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus auf &apos;anonym&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="759"/>
         <source>{0} removes the &apos;anonymous&apos; mode from the channel.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt den Kanalmodus &apos;anonym&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="764"/>
         <source>{0} sets a ban on {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} verhängt einen Bann auf {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="768"/>
         <source>{0} removes the ban on {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt den Bann von {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="773"/>
         <source>{0} sets the channel mode to &apos;no colors allowed&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;keine Farben zugelassen&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="777"/>
         <source>{0} sets the channel mode to &apos;allow color codes&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;Farben zugelassen&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="782"/>
         <source>{0} sets a ban exception on {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt eine Bannausnahme auf {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="786"/>
         <source>{0} removes the ban exception on {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt die Bannausnahme auf {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="791"/>
         <source>{0} sets the channel mode to &apos;invite only&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;Einladung erforderlich&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="794"/>
         <source>{0} removes the &apos;invite only&apos; mode from the channel.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt den Kanalmodus &apos;Einladung erforderlich&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="799"/>
         <source>{0} sets the channel key to &apos;{1}&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalschlüssel auf &apos;{1}&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="803"/>
         <source>{0} removes the channel key.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt den Kanalschlüssel.</translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="807"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>{0} setzt die Kanalbegrenzung auf einen Nutzer.</numerusform>
+            <numerusform>{0} setzt die Kanalbegrenzung auf %n Nutzer.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
         <source>{0} removes the channel limit.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt die Kanalbegrenzung.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="815"/>
         <source>{0} sets the channel mode to &apos;moderated&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;modereriert&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="818"/>
         <source>{0} sets the channel mode to &apos;unmoderated&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;unmoderiert&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="822"/>
         <source>{0} sets the channel mode to &apos;no messages from outside&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;keine Nachrichten von außerhalb&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="826"/>
         <source>{0} sets the channel mode to &apos;allow messages from outside&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus auf &apos;Nachrichten von außerhalb zugelassen&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="831"/>
         <source>{0} sets the channel mode to &apos;private&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;privat&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="834"/>
         <source>{0} sets the channel mode to &apos;public&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;öffentlich&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="838"/>
         <source>{0} sets the channel mode to &apos;quiet&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;schweigend&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="841"/>
         <source>{0} removes the &apos;quiet&apos; mode from the channel.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt den Kanalmodus &apos;schweigend&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="848"/>
         <source>{0} sets the channel mode to &apos;secret&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;unsichtbar&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="851"/>
         <source>{0} sets the channel mode to &apos;visible&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Kanalmodus &apos;sichtbar&apos;.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
         <source>{0} switches on &apos;topic protection&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} schaltet den &apos;Themenschutz&apos; an.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="858"/>
         <source>{0} switches off &apos;topic protection&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} schaltet den &apos;Themenschutz&apos; aus.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="862"/>
         <source>{0} sets invitation mask {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt die Einladungsmaske {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="866"/>
         <source>{0} removes the invitation mask {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} entfernt die Einladungsmaske {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="870"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modus</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="887"/>
         <source>{0} sets mode for {1}: {2}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} setzt den Modus für {1}: {2}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="913"/>
         <source>Help</source>
-        <translation type="unfinished">Hilfe</translation>
+        <translation>Hilfe</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1037"/>
         <source>--- New From Here ---</source>
-        <translation type="unfinished"></translation>
+        <translation>--- Neu ab hier ---</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1122"/>
         <source>Save Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachrichten speichern</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1105"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML Dateien (*.{0});;Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1122"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1140"/>
         <source>Error saving Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Speichern der Nachrichten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1140"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Der Nachrichteninhalt konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1152"/>
         <source>Cut</source>
-        <translation type="unfinished">Ausschneiden</translation>
+        <translation>Ausschneiden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1156"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopieren</translation>
+        <translation>Kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1161"/>
         <source>Cut all</source>
-        <translation type="unfinished">Alles ausschneiden</translation>
+        <translation>Alles ausschneiden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
         <source>Copy all</source>
-        <translation type="unfinished">Alles kopieren</translation>
+        <translation>Alles kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
         <source>Clear</source>
-        <translation type="unfinished">Löschen</translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1175"/>
         <source>Save</source>
-        <translation type="unfinished">Speichern</translation>
+        <translation>Speichern</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1180"/>
         <source>Mark Current Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuellen Position markieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1183"/>
         <source>Remove Position Marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Positionsmarke entfernen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1232"/>
         <source>Who Is</source>
-        <translation type="unfinished"></translation>
+        <translation>Who Is</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1235"/>
         <source>Private Chat</source>
-        <translation type="unfinished"></translation>
+        <translation>Private Unterhaltung</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
         <source>Who</source>
-        <translation type="unfinished"></translation>
+        <translation>Who</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1313"/>
         <source>End of WHO list for {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ende der WHO Liste für {0}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1334"/>
         <source> (Away)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Abwesend)</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
         <source>{0} is {1}@{2} ({3}){4}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist {1}@{2} ({3}){4}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1636"/>
         <source>Whois</source>
-        <translation type="unfinished"></translation>
+        <translation>Whois</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1355"/>
         <source>{0} is {1}@{2} ({3}).</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist {1}@{2} ({3}).</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1400"/>
         <source>{0} is a user on channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist ein Nutzer der Kanäle: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1404"/>
         <source>{0} has voice on channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat Erlaubnis zu schreiben in den Kanälen: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1408"/>
         <source>{0} is a halfop on channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat HalfOp-Status in den Kanälen: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1412"/>
         <source>{0} is an operator on channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat Operator-Status in den Kanälen: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1416"/>
         <source>{0} is owner of channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat Besitzer-Status in den Kanälen: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1420"/>
         <source>{0} is admin on channels: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} hat Administrator-Status in den Kanälen: {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1438"/>
         <source>{0} is online via {1} ({2}).</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist auf dem Server {1} ({2}).</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1456"/>
         <source>{0} is an IRC Operator.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist ein IRC Operator.</translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1486"/>
         <source>%n day(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>1 Tag</numerusform>
+            <numerusform>%n Tage</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1497"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>1 Stunde</numerusform>
+            <numerusform>%n Stunden</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1506"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>1 Minute</numerusform>
+            <numerusform>%n Minuten</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1507"/>
         <source>%n second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>1 Sekunde</numerusform>
+            <numerusform>%n Sekunden</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1490"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist seit {1}, {2}, {3} und {4} untätig.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1500"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist seit {1}, {2} und {3} untätig.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1508"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist seit {1} und {2} untätig.</translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1514"/>
         <source>{0} has been idle for %n second(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>{0} ist seit 1 Sekunde untätig.</numerusform>
+            <numerusform>{0} ist seit %n Sekunden untätig.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
         <source>{0} has been online since {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} is seit dem {1} online.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1537"/>
         <source>End of WHOIS list for {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ende der WHOIS Liste für {0}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1553"/>
         <source>{0} is an identified user.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} wurde identifiziert.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1569"/>
         <source>{0} is available for help.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} steht für Hilfe bereit.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1585"/>
         <source>{0} is logged in as {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist angemeldet als {1}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1603"/>
         <source>{0} is actually using the host {1} (IP: {2}).</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} verwendet den Host {1} (IP: {2}).</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1619"/>
         <source>{0} is using a secure connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} verwendet eine sichere Verbindung.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1636"/>
         <source>{0} is connecting from {1} (IP: {2}).</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} ist verbunden von {1} (IP: {2}).</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="954"/>
         <source>CTCP</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="938"/>
         <source>Received Version request from {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Versionsanfrage von {0} empfangen.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="943"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP-PING-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="948"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP-CLIENTINFO-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="954"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannte CTCP-{0}-Anfrage von {1} empfangen.</translation>
     </message>
 </context>
 <context>
@@ -25688,232 +25678,232 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="14"/>
         <source>IRC Identities</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Identitäten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="25"/>
         <source>Identity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="38"/>
         <source>Select the identity to work on</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die zu bearbeitende Identität</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="45"/>
         <source>Press to add a new identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um eine neue Identität hinzuzufügen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="52"/>
         <source>Press to copy the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die ausgewählte Identität zu kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="59"/>
         <source>Press to rename the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die ausgewählte Identität umzubenennen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="66"/>
         <source>Press to delete the selected identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die ausgewählte Identität zu löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="79"/>
         <source>General</source>
-        <translation type="unfinished">Allgemein</translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="85"/>
         <source>Real Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Realer Name:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="92"/>
         <source>Enter the real name</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den realen Namen ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="99"/>
         <source>Nick Names</source>
-        <translation type="unfinished"></translation>
+        <translation>Spitznamen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="105"/>
         <source>Enter a nick name to add</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib einen hinzuzufügenden Spitznamen ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="119"/>
         <source>Press to add the entered nick name</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den eingegebenen Spitznamen hinzuzufügen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="126"/>
         <source>Press to delete the selected nick name</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den ausgewählten Spitznamen zu löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="136"/>
         <source>Press to move the selected nick name up</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den ausgewählten Spitznamen nach oben zu schieben</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="143"/>
         <source>Press to move the selected nick name down</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den ausgewählten Spitznamen nach unten zu schieben</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="166"/>
         <source>Auto Identify</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch identifizieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="172"/>
         <source>Service:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienst:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="179"/>
         <source>Enter the name of the service to identify against</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den Namen des Dienstes ein, bei dem identifiziert werden soll</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="182"/>
         <source>Service name can be &lt;b&gt;&lt;i&gt;nickserv&lt;/i&gt;&lt;/b&gt; or a network-dependent name such as &lt;b&gt;&lt;i&gt;nickserv@services.dal.net&lt;/i&gt;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Dienstname kann &lt;b&gt;&lt;i&gt;nickserv&lt;/i&gt;&lt;/b&gt; oder ein Netzwerk abhängiger Name wie &lt;b&gt;&lt;i&gt;nickserv@services.dal.net&lt;/i&gt;&lt;/b&gt; sein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="189"/>
         <source>Password:</source>
-        <translation type="unfinished">Kennwort:</translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="196"/>
         <source>Enter the password</source>
-        <translation type="unfinished">Gib das Kennwort ein</translation>
+        <translation>Gib das Kennwort ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="210"/>
         <source>Away</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="216"/>
-        <source>Select to mark the current position in the chat with a horizontal line, when you send an AWAY command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Abwesend</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="222"/>
         <source>Mark the current position in chat windows when going away</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuelle Position in den Kanalfenstern markieren, wenn Status &quot;Abwesend&quot; gesetzt wird</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="229"/>
         <source>Away Message:</source>
-        <translation type="unfinished"></translation>
+        <translation>Abwesenhaitsnachricht:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="236"/>
         <source>Enter the message to be sent when going away</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib die Nachricht ein, die gesendet wird, wenn sie abwesend sind</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="257"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Erweitert</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="263"/>
         <source>Ident:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ident:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="270"/>
         <source>Enter the identity to be used to log-on to the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib die Identität ein, die zum Anmelden am Server verwendet werden soll</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="277"/>
         <source>Reason for Quit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Grund für Quit:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="284"/>
         <source>Enter a message to be sent when quitting</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib eine Nachricht ein, die beim Verlassen des Servers geschickt wird</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="291"/>
         <source>Reason for Part:</source>
-        <translation type="unfinished"></translation>
+        <translation>Grund für Verlassen:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="298"/>
         <source>Enter message to be sent when leaving a channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib eine Nachricht ein, die beim Verlassen eines Kanals geschickt wird</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="177"/>
         <source>Edit Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="163"/>
         <source>The identity must contain at least one nick name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Identität muss mindestens einen Spitznamen enthalten.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="177"/>
         <source>The identity must have a real name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Identität muss einen realen namen enthalten.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="220"/>
         <source>Add Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität hinzufügen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="265"/>
         <source>Identity Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Name der Identität:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="275"/>
         <source>An identity named &lt;b&gt;{0}&lt;/b&gt; already exists. You must provide a different name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Identität mit Namen &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Sie müssen einen anderen Namen angeben.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="288"/>
         <source>The identity has to have a name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Identität muss einen Namen haben.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="288"/>
         <source>Copy Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="275"/>
         <source>Rename Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität umbenennen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="311"/>
         <source>This identity is in use. If you remove it, the network settings using it will fall back to the default identity. Should it be deleted anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Identität wirde genutzt. Wenn sie sie löschen, werden alle Netzwerkeinstellungen, die diese Identität verwenden auf die Standardidentität wechseln. Soll sie trotzdem gelöscht werden?</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="315"/>
         <source>Do you really want to delete all information for this identity?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sollen wirklich alle Informationen dieser Identität gelöscht werden?</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcIdentitiesEditDialog.py" line="317"/>
         <source>Delete Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität löschen</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcIdentitiesEditDialog.ui" line="216"/>
+        <source>Select to mark the current position in the chat, when you send an AWAY command.</source>
+        <translation>Auswählen, um die aktuelle Position im Kanalfenster zu markieren, wenn ein AWAY Befehl geschickt wird.</translation>
     </message>
 </context>
 <context>
@@ -25921,17 +25911,17 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcNetworkManager.py" line="25"/>
         <source>Default Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardidentität</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkManager.py" line="27"/>
         <source>Gone away for now.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bin bis auf weiteres weg.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkManager.py" line="29"/>
         <source>IRC for eric5 IDE</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Client der eric5 IDE</translation>
     </message>
 </context>
 <context>
@@ -25939,97 +25929,97 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="14"/>
         <source>IRC Network</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Netzwerk</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="23"/>
         <source>Network Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Netzwerkname:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="30"/>
         <source>Enter the name of the IRC network</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den Namen des IRC Netzwerkes ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="37"/>
         <source>Identity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="44"/>
         <source>Select the identity to be used for the IRC network</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Identität uas, die für das IRC Netzwerk verwendet werden soll</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="51"/>
         <source>Press to edit the identities</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die Identitäten zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="61"/>
         <source>Server:</source>
-        <translation type="unfinished">Server:</translation>
+        <translation>Server:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="68"/>
         <source>Press to edit the server configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die Server Konfiguration zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="78"/>
         <source>Channels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanäle:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="101"/>
         <source>Channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="106"/>
         <source>Join Automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch betreten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="116"/>
         <source>Press to add a new channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um einen neuen Kanal hinzuzufügen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="126"/>
         <source>Press to edit the selected channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den ausgewählten Kanal zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="136"/>
         <source>Press to delete the selected channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den ausgewählten Kanal zu löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="171"/>
         <source>Shows the name of the server</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeigt den Namen des Server</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.py" line="244"/>
         <source>Yes</source>
-        <translation type="unfinished">Ja</translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.py" line="246"/>
         <source>No</source>
-        <translation type="unfinished">Nein</translation>
+        <translation>Nein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.py" line="179"/>
         <source>Delete Channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.py" line="179"/>
         <source>Do you really want to delete channel &lt;b&gt;{0}&lt;/b&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Soll der Kanal &lt;b&gt;{0}&lt;/b&gt; wirklich gelöscht werden?</translation>
     </message>
 </context>
 <context>
@@ -26037,97 +26027,97 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="14"/>
         <source>IRC Networks</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Netzwerke</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="51"/>
         <source>Press to define a new network</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um ein neues Netzwerk zu definieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="54"/>
         <source>&amp;New...</source>
-        <translation type="unfinished">&amp;Neu...</translation>
+        <translation>&amp;Neu...</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="61"/>
         <source>Press to edit the selected network</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um das ausgewählte Netzwerk zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="64"/>
         <source>&amp;Edit...</source>
-        <translation type="unfinished">&amp;Bearbeiten...</translation>
+        <translation>&amp;Bearbeiten...</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="71"/>
         <source>Press to delete the selected network</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um das ausgewählte Netzwerk zu löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="74"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Löschen</translation>
+        <translation>&amp;Löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="81"/>
         <source>Press to  toggle the auto-connect flag of the selected network</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die automatische Verbindung zum ausgewählten Netzwerk umzuschalten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="84"/>
         <source>&amp;Auto-Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Automatisch Verbinden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="104"/>
         <source>Press to edit the identities</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die Identitäten zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.ui" line="107"/>
         <source>Edit &amp;Identities...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Identitäten bearbeiten...</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="227"/>
         <source>Yes</source>
-        <translation type="unfinished">Ja</translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="227"/>
         <source>No</source>
-        <translation type="unfinished">Nein</translation>
+        <translation>Nein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="89"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identität</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="91"/>
         <source>Server</source>
-        <translation type="unfinished">Server</translation>
+        <translation>Server</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="94"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanäle</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="230"/>
         <source>Auto-Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch Verbinden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="158"/>
         <source>Delete Irc Network</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Netzwerk löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="158"/>
         <source>Do you really want to delete IRC network &lt;b&gt;{0}&lt;/b&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Soll das IRC Netzwerk &lt;b&gt;{0}&lt;/b&gt; wirklich gelöscht werden?</translation>
     </message>
 </context>
 <context>
@@ -26135,97 +26125,97 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="26"/>
         <source>Shows the network messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeigt Netzwerkmeldungen an</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="41"/>
         <source>Select a network to connect to</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle ein zu verbindendes Netzwerk aus</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="48"/>
         <source>Press to connect to the selected network</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um zum ausgewählten Netzwerk zu verbinden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="58"/>
         <source>Press to set the user status to AWAY</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den Nutzerstatus auf &quot;Abwesend&quot; zu setzen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="68"/>
         <source>Press to edit the networks</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um die Netzwerke zu bearbeiten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="88"/>
         <source>Select a nick name for the channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle einen Spitznamen für das Netzwerk</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="114"/>
         <source>Enter the channel to join</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen den zu betretenden Kanal</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.ui" line="127"/>
         <source>Press to join the channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den Kanal zu betreten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
         <source>Save Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachrichten speichern</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="347"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML Dateien (*.{0});;Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
         <source>Error saving Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Speichern der Nachrichten</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Der Nachrichteninhalt konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>Cut</source>
-        <translation type="unfinished">Ausschneiden</translation>
+        <translation>Ausschneiden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopieren</translation>
+        <translation>Kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="403"/>
         <source>Cut all</source>
-        <translation type="unfinished">Alles ausschneiden</translation>
+        <translation>Alles ausschneiden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="407"/>
         <source>Copy all</source>
-        <translation type="unfinished">Alles kopieren</translation>
+        <translation>Alles kopieren</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="412"/>
         <source>Clear</source>
-        <translation type="unfinished">Löschen</translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="417"/>
         <source>Save</source>
-        <translation type="unfinished">Speichern</translation>
+        <translation>Speichern</translation>
     </message>
 </context>
 <context>
@@ -26233,287 +26223,287 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="17"/>
         <source>&lt;b&gt;Configure IRC&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;IRC Einstellungen&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="37"/>
         <source>Enable to show timestamps</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um Zeitstempel anzuzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="40"/>
         <source>Show Timestamps</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeitstempel anzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="49"/>
         <source>Time Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeitformat:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="62"/>
         <source>Select the time format to use</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle das zu verwendende Zeitformat</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="69"/>
         <source>Date Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Datumsformat</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="82"/>
         <source>Select the date format to use</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle das zu verwendende Datumsformat</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="89"/>
         <source>Select to show the date in timestamps</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um das Datum im Zeitstempel anzuzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="92"/>
         <source>Show Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum anzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="102"/>
         <source>Colours</source>
-        <translation type="unfinished">Farben</translation>
+        <translation>Farben</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="108"/>
         <source>Network Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Netzwerkmeldungen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="121"/>
         <source>Select the colour for network messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Netzwerkmeldungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="131"/>
         <source>Nick Names:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spitznamen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="144"/>
         <source>Select the colour for nick names</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Spitznamen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="154"/>
         <source>Server Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Servermeldungen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="167"/>
         <source>Select the colour for server messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Servermeldungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="177"/>
         <source>Own Nick Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eigener Spitzname:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="190"/>
         <source>Select the colour for own nick name</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für den eigenen Spitznamen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="200"/>
         <source>Channel Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanalnachrichten:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="213"/>
         <source>Select the colour for channel messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Kanalmeldungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="223"/>
         <source>Join Channel:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal betreten:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="236"/>
         <source>Select the colour for join channel messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Meldungen zum Betreten eines Kanals</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="246"/>
         <source>Error Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehlermeldungen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="259"/>
         <source>Select the colour for error messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Fehlermeldungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="269"/>
         <source>Leave Channel:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal verlassen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="282"/>
         <source>Select the colour for leave channel messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Meldungen zum Verlassen eines Kanals</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="292"/>
         <source>Timestamp:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeitstempel:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="305"/>
         <source>Select the colour for timestamps</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für den Zeitstempel</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="315"/>
         <source>Channel Info:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanalinformationen:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="328"/>
         <source>Select the colour for channel info messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Kanalinformationsmeldungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="338"/>
         <source>Hyperlink:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hyperlink:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="351"/>
         <source>Select the colour for hyperlinks</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Farbe für Hyperlinks</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="364"/>
         <source>Enable to allow coloured text in IRC messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um farbigen Text in IRC Nachrichten zuzulassen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="367"/>
         <source>Allow Colored Text in IRC Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Farbigen Text in IRC Nachrichten zulassen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="651"/>
         <source>Enable to show notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um Benachrichtigungen anzuzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="654"/>
         <source>Show Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Benachrichtigungen anzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="663"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Notifications will only be shown, if the global usage of notifications is enabled on the notifications configuration page.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hinweis:&lt;/b&gt; Benachrichtigungen werden nur dann angezeigt, wenn die globale Nutzung von Benachrichtigungen auf der entsprechenden Konfigurationsseite aktiviert wurde.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="680"/>
         <source>Select to show a notification for join and leave events</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um eine Benachrichtigung für Betreten und Verlassen Nachrichten anzuzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="683"/>
         <source>Join/Leave Event</source>
-        <translation type="unfinished"></translation>
+        <translation>Betreten/Verlassen Ereignis</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="690"/>
         <source>Select to show a notification for every mentioning of your nick</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um eine Benachrichtigung anzuzeigen, wann immer der eigene Spitzname erwähnt wird</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="693"/>
         <source>Mentioning of Own Nick</source>
-        <translation type="unfinished"></translation>
+        <translation>Erwähnung des eigenen Spitznamens</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="700"/>
         <source>Select to show a notification for every message</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um eine Benachrichtigung für jede Nachricht anzuzeigen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="703"/>
         <source>Every Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Jede Nachricht</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="713"/>
         <source>Select this to enable the automatic lookup of user information for joined channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um das automatische Nachschlagen von Nutzerinformationen für alle betretenen Kanäle zu aktivieren</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="716"/>
         <source>Enable Automatic User Information Lookup (/WHO)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutzerinformationen automatische ermitteln (/WHO)</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="728"/>
         <source>Max. Number of Users in Channel:</source>
-        <translation type="unfinished"></translation>
+        <translation>Max. Anzahl Nutzer im Kanal:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="735"/>
         <source>Enter the maximum numbers of users in a channel allowed for this function</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib die maximal zulässige Anzahl an Nutzern im Kanal an</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="761"/>
         <source>Update Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisierungsintervall:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="768"/>
         <source>Enter the user information update interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib das Aktualisierungsintervall für die Nutzerinformationen ein</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="774"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="793"/>
         <source>Marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Markierung</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="799"/>
         <source>Select to mark the current position, when the chat window is hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um die aktuelle Position im Kanalfenster zu markieren, wenn das Fenster verdeckt wird</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="802"/>
         <source>Mark Current Position When Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuelle Position markieren wenn nicht sichtbar</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="811"/>
         <source>Marker Foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vordergrundfarbe der Markierung:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="824"/>
         <source>Select the foreground colour for the marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Vordergrundfarbe der Markierung aus</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="834"/>
         <source>Marker Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hintergrundfarbe der Markierung:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="847"/>
         <source>Select the background colour for the marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Hintergrundfarbe der Markierung aus</translation>
     </message>
 </context>
 <context>
@@ -26521,47 +26511,47 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="14"/>
         <source>IRC Server</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC Server</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="23"/>
         <source>Server:</source>
-        <translation type="unfinished">Server:</translation>
+        <translation>Server:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="30"/>
         <source>Enter the host name of the IRC server</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib den Hostnamen des IRC Servers ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="37"/>
         <source>Port:</source>
-        <translation type="unfinished">Port:</translation>
+        <translation>Port:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="44"/>
         <source>Enter the port number</source>
-        <translation type="unfinished">Gib die Portnummer ein</translation>
+        <translation>Gib die Portnummer ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="76"/>
         <source>Password:</source>
-        <translation type="unfinished">Kennwort:</translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="83"/>
         <source>Enter the server password</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib das Serverkennwort ein</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="93"/>
         <source>Select to use an SSL encrypted connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswählen, um eine SSL verschlüsselte Verbindung zu verwenden</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcServerEditDialog.ui" line="96"/>
         <source>Use Encrypted Connection (SSL)</source>
-        <translation type="unfinished"></translation>
+        <translation>Verschlüsselte Verbindung benutzen (SSL)</translation>
     </message>
 </context>
 <context>
@@ -26569,77 +26559,77 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="149"/>
         <source>anonymous</source>
-        <translation type="unfinished"></translation>
+        <translation>anonym</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="150"/>
         <source>ban mask</source>
-        <translation type="unfinished"></translation>
+        <translation>Bann Maske</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="151"/>
         <source>no colors allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>keine Farben erlaubt</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="152"/>
         <source>ban exception mask</source>
-        <translation type="unfinished"></translation>
+        <translation>Bannausnahme Maske</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="153"/>
         <source>invite only</source>
-        <translation type="unfinished"></translation>
+        <translation>Einladung erforderlich</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="154"/>
         <source>password protected</source>
-        <translation type="unfinished"></translation>
+        <translation>Kennwort geschützt</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="155"/>
         <source>user limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutzerbegrenzung</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="156"/>
         <source>moderated</source>
-        <translation type="unfinished"></translation>
+        <translation>moderiert</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="157"/>
         <source>no messages from outside</source>
-        <translation type="unfinished"></translation>
+        <translation>keine Meldung von außerhalb</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="158"/>
         <source>private</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="159"/>
-        <source>quit</source>
-        <translation type="unfinished"></translation>
+        <translation>privat</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="160"/>
         <source>reop channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanal übernehmen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="161"/>
         <source>secret</source>
-        <translation type="unfinished"></translation>
+        <translation>unsichtbar</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="162"/>
         <source>topic protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Themenschutz</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcUtilities.py" line="163"/>
         <source>invitation mask</source>
-        <translation type="unfinished"></translation>
+        <translation>Einladungsmaske</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcUtilities.py" line="159"/>
+        <source>quiet</source>
+        <translation>schweigend</translation>
     </message>
 </context>
 <context>
@@ -26647,278 +26637,278 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="61"/>
         <source>Press to leave the current channel</source>
-        <translation type="unfinished"></translation>
+        <translation>Drücken, um den aktuellen Kanal zu verlassen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="200"/>
+        <location filename="Network/IRC/IrcWidget.py" line="201"/>
         <source>Disconnect from Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbindung zum Server beenden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="200"/>
+        <location filename="Network/IRC/IrcWidget.py" line="201"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Soll die Verbindung zu &lt;b&gt;{0}&lt;/b&gt; wirklich unterbrochen werden?&lt;/p&gt;&lt;p&gt;Alle Kanäle werden geschlossen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="164"/>
+        <location filename="Network/IRC/IrcWidget.py" line="165"/>
         <source>SSL Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL Verbindung</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="164"/>
+        <location filename="Network/IRC/IrcWidget.py" line="165"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine verschlüsselte Verbindung zum IRC Netzwerk wurde angefragt, SSL steht jedoch nicht zur Verfügung. Bitte ändern sie die Serverkonfiguration.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="421"/>
+        <location filename="Network/IRC/IrcWidget.py" line="423"/>
         <source>Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation>Info</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="187"/>
+        <location filename="Network/IRC/IrcWidget.py" line="188"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche nach Server {0} (Port {1}) über eine SSL verschlüsselte Verbindung...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="194"/>
+        <location filename="Network/IRC/IrcWidget.py" line="195"/>
         <source>Looking for server {0} (port {1})...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche nach Server {0} (Port {1})...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="206"/>
+        <location filename="Network/IRC/IrcWidget.py" line="207"/>
         <source>Disconnecting from server {0}...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbindung zum Server {0} wird unterbrochen...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="384"/>
+        <location filename="Network/IRC/IrcWidget.py" line="386"/>
         <source>Server found,connecting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Server gefunden, Verbindung wird hergesteltl...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="391"/>
+        <location filename="Network/IRC/IrcWidget.py" line="393"/>
         <source>Connected,logging in...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbunden, Anmeldung läuft...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="421"/>
+        <location filename="Network/IRC/IrcWidget.py" line="423"/>
         <source>Server disconnected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Serververbindung unterbrochen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="463"/>
+        <location filename="Network/IRC/IrcWidget.py" line="465"/>
         <source>Message Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachrichtenfehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="463"/>
+        <location filename="Network/IRC/IrcWidget.py" line="465"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannte Nachricht vom Server empfangen:&lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="487"/>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Notiz</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="498"/>
-        <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcWidget.py" line="502"/>
-        <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcWidget.py" line="505"/>
+        <location filename="Network/IRC/IrcWidget.py" line="507"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modus</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <location filename="Network/IRC/IrcWidget.py" line="514"/>
         <source>You have left channel {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie haben den Kanal {0} verlassen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="523"/>
+        <location filename="Network/IRC/IrcWidget.py" line="525"/>
         <source>You are now known as {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie sind jetzt als {0} bekannt.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="528"/>
+        <location filename="Network/IRC/IrcWidget.py" line="530"/>
         <source>User {0} is now known as {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutzer {0} ist nun als {1} bekannt.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="533"/>
+        <location filename="Network/IRC/IrcWidget.py" line="535"/>
         <source>Server Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Server Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="567"/>
+        <location filename="Network/IRC/IrcWidget.py" line="569"/>
         <source>Error</source>
-        <translation type="unfinished">Fehler</translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcWidget.py" line="582"/>
-        <source>Welcome</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="584"/>
-        <source>Support</source>
-        <translation type="unfinished"></translation>
+        <source>Welcome</source>
+        <translation>Willkommen</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="586"/>
-        <source>User</source>
-        <translation type="unfinished">Nutzer</translation>
+        <source>Support</source>
+        <translation>Support</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="588"/>
-        <source>MOTD</source>
-        <translation type="unfinished"></translation>
+        <source>User</source>
+        <translation>Nutzer</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="590"/>
-        <source>Away</source>
-        <translation type="unfinished"></translation>
+        <source>MOTD</source>
+        <translation>MOTD</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="592"/>
-        <source>Info ({0})</source>
-        <translation type="unfinished"></translation>
+        <source>Away</source>
+        <translation>Abwesend</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="596"/>
-        <source>Message of the day</source>
-        <translation type="unfinished"></translation>
+        <location filename="Network/IRC/IrcWidget.py" line="594"/>
+        <source>Info ({0})</source>
+        <translation>Info ({0})</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <source>Message of the day</source>
+        <translation>Nachricht des Tages</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="600"/>
         <source>End of message of the day</source>
-        <translation type="unfinished"></translation>
+        <translation>Ende der Nachricht des Tages</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="601"/>
+        <location filename="Network/IRC/IrcWidget.py" line="603"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
-        <translation type="unfinished"></translation>
+        <translation>Server {0} (Version {1}), Benutzermodi: {2}, Kanalmodi: {3}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="605"/>
+        <location filename="Network/IRC/IrcWidget.py" line="607"/>
         <source>Current users on {0}: {1}, max. {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzahl der Benutzer auf {0}: {1}, max. {2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="609"/>
+        <location filename="Network/IRC/IrcWidget.py" line="611"/>
         <source>Current users on the network: {0}, max. {1}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcWidget.py" line="612"/>
-        <source>You are no longer marked as being away.</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzahl der Benutzer im Netzwerk: {0}, max. {1}</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="614"/>
+        <source>You are no longer marked as being away.</source>
+        <translation>Sie sind nicht länger als &quot;abwesend&quot; gekennzeichnet.</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="616"/>
         <source>You have been marked as being away.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sie sind als &quot;abwesend&quot; gekennzeichnet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="723"/>
+        <location filename="Network/IRC/IrcWidget.py" line="725"/>
         <source>SSL Error</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="674"/>
+        <location filename="Network/IRC/IrcWidget.py" line="676"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Verbindung zum Server {0} (Port {1}) wurde während des Wartens auf eine Benutzerantwort auf einen SSL Fehler verloren.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="688"/>
+        <location filename="Network/IRC/IrcWidget.py" line="690"/>
         <source>Socket Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Socker Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="680"/>
+        <location filename="Network/IRC/IrcWidget.py" line="682"/>
         <source>The host was not found. Please check the host name and port settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Server wurde nicht gefunden. Bitte prüfen sie den Servernamen und die Porteinstellungen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="684"/>
+        <location filename="Network/IRC/IrcWidget.py" line="686"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Verbindung wurde von der Gegenseite abgelehnt. Bitte prüfen sie den Servernamen und die Porteinstellungen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="688"/>
+        <location filename="Network/IRC/IrcWidget.py" line="690"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Der folgende Netzwerkfehler trat auf:&lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="705"/>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
         <source>SSL Errors</source>
-        <translation type="unfinished">SSL Fehler</translation>
+        <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="705"/>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="716"/>
+        <location filename="Network/IRC/IrcWidget.py" line="718"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das SSL Zertifikat für den Server {0} (Port {1}) hat die Authentizitätsprüfung nicht bestanden.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="723"/>
+        <location filename="Network/IRC/IrcWidget.py" line="725"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Es konnte keine SSL verschlüsselte Verbindung zum Server {0} (Port {1}) aufgebaut werden. Entweder unterstütz der Server kein SSL (haben sie den richtigen Port verwendet?) oder sie haben das Zertifikat abgelehnt.&lt;br/&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="804"/>
+        <location filename="Network/IRC/IrcWidget.py" line="806"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
-        <translation type="unfinished">{0} ({1})</translation>
+        <translation>{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="833"/>
+        <location filename="Network/IRC/IrcWidget.py" line="835"/>
         <source>Critical</source>
-        <translation type="unfinished">Kritischer Fehler</translation>
+        <translation>Kritischer Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="818"/>
+        <location filename="Network/IRC/IrcWidget.py" line="820"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Es ist kein für den Server &lt;b&gt;{0}&lt;/b&gt; akzeptabler Spitzname konfiguriert. Verbindungsabbruch...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="833"/>
+        <location filename="Network/IRC/IrcWidget.py" line="835"/>
         <source>The given nickname is already in use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der übergebene Spitzname wird bereits verwendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="791"/>
+        <location filename="Network/IRC/IrcWidget.py" line="793"/>
         <source>CTCP</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="775"/>
+        <location filename="Network/IRC/IrcWidget.py" line="777"/>
         <source>Received Version request from {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Versionsanfrage von {0} empfangen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="780"/>
+        <location filename="Network/IRC/IrcWidget.py" line="782"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP-PING-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="785"/>
+        <location filename="Network/IRC/IrcWidget.py" line="787"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
-        <translation type="unfinished"></translation>
+        <translation>CTCP-CLIENTINFO-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="791"/>
+        <location filename="Network/IRC/IrcWidget.py" line="793"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannte CTCP-{0}-Anfrage von {1} empfangen.</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="500"/>
+        <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
+        <translation>Sie habe ihre persönlichen Modi auf &lt;b&gt;[{0}]&lt;/b&gt; gesetzt.</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="504"/>
+        <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
+        <translation>{0} hat ihre persönlichen Modi auf &lt;b&gt;[{0}]&lt;/b&gt; geändert.</translation>
     </message>
 </context>
 <context>
@@ -52215,27 +52205,27 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1434"/>
         <source>IRC</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1434"/>
         <source>&amp;IRC</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;IRC</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1434"/>
         <source>Meta+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+I</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1440"/>
         <source>Switch the input focus to the IRC window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schalte den Eingabefokus auf das IRC-Fenster um.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1442"/>
         <source>&lt;b&gt;Activate IRC&lt;/b&gt;&lt;p&gt;This switches the input focus to the IRC window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;IRC aktivieren&lt;/b&gt;&lt;p&gt;Dies schaltet den Eingabefokus auf das IRC-Fenster um.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

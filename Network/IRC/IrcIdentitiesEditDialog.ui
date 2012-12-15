@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
+    <width>650</width>
     <height>510</height>
    </rect>
   </property>
@@ -213,7 +213,7 @@
        <item row="0" column="0" colspan="2">
         <widget class="QCheckBox" name="rememberPosOnAwayCheckBox">
          <property name="toolTip">
-          <string>Select to mark the current position in the chat with a horizontal line, when you send an AWAY command.</string>
+          <string>Select to mark the current position in the chat, when you send an AWAY command.</string>
          </property>
          <property name="whatsThis">
           <string/>

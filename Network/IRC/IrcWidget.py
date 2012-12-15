@@ -128,6 +128,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.__socket.blockSignals(True)
                 
                 self.__send("QUIT :" + self.__quitMessage)
+                self.__socket.flush()
                 self.__socket.close()
                 self.__socket.deleteLater()
         else:
@@ -212,6 +213,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     channel.deleteLater()
                     channel = None
                 self.__send("QUIT :" + self.__quitMessage)
+                self.__socket and self.__socket.flush()
                 self.__socket and self.__socket.close()
                 self.__userName = ""
                 self.__identityName = ""
@@ -496,11 +498,11 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     if name == self.__nickName:
                         if sourceNick == self.__nickName:
                             msg = self.trUtf8(
-                                "You have set your personal modes to <b>[{0}]</b>")\
+                                "You have set your personal modes to <b>[{0}]</b>.")\
                                 .format(modes)
                         else:
                             msg = self.trUtf8(
-                                "{0} has changed your personal modes to <b>[{1}]</b>")\
+                                "{0} has changed your personal modes to <b>[{1}]</b>.")\
                                 .format(sourceNick, modes)
                         self.networkWidget.addServerMessage(
                             self.trUtf8("Mode"), msg, filterMsg=False)
