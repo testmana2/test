@@ -930,7 +930,7 @@ class Prefs(object):
         "TimeFormat": "hh:mm",
         "DateFormat": "yyyy-MM-dd",
         
-        "NetworkMessageColour": "#0000FF",
+        "NetworkMessageColour": "#000055",
         "ServerMessageColour": "#91640A",
         "ErrorMessageColour": "#FF0000",
         "TimestampColour": "#709070",
