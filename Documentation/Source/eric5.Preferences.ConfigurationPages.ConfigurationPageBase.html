@@ -61,17 +61,20 @@ QWidget
 <td><a href="#ConfigurationPageBase.__init__">ConfigurationPageBase</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#ConfigurationPageBase.__selectColourSlot">__selectColourSlot</a></td>
+<td>Private slot to select a color.</td>
+</tr><tr>
 <td><a href="#ConfigurationPageBase.initColour">initColour</a></td>
 <td>Public method to initialize a colour selection button.</td>
 </tr><tr>
 <td><a href="#ConfigurationPageBase.polishPage">polishPage</a></td>
 <td>Public slot to perform some polishing actions.</td>
 </tr><tr>
+<td><a href="#ConfigurationPageBase.saveColours">saveColours</a></td>
+<td>Public method to save the colour selections.</td>
+</tr><tr>
 <td><a href="#ConfigurationPageBase.saveState">saveState</a></td>
 <td>Public method to save the current state of the widget.</td>
-</tr><tr>
-<td><a href="#ConfigurationPageBase.selectColour">selectColour</a></td>
-<td>Public method used by the colour selection buttons.</td>
 </tr><tr>
 <td><a href="#ConfigurationPageBase.selectFont">selectFont</a></td>
 <td>Public method used by the font selection buttons.</td>
@@ -89,60 +92,54 @@ QWidget
 <b>ConfigurationPageBase</b>(<i></i>)
 <p>
         Constructor
+</p><a NAME="ConfigurationPageBase.__selectColourSlot" ID="ConfigurationPageBase.__selectColourSlot"></a>
+<h4>ConfigurationPageBase.__selectColourSlot</h4>
+<b>__selectColourSlot</b>(<i></i>)
+<p>
+        Private slot to select a color.
 </p><a NAME="ConfigurationPageBase.initColour" ID="ConfigurationPageBase.initColour"></a>
 <h4>ConfigurationPageBase.initColour</h4>
-<b>initColour</b>(<i>colourstr, button, prefMethod</i>)
+<b>initColour</b>(<i>colourKey, button, prefMethod, byName=False, hasAlpha=False</i>)
 <p>
         Public method to initialize a colour selection button.
 </p><dl>
-<dt><i>colourstr</i></dt>
+<dt><i>colourKey</i></dt>
 <dd>
-colour to be set (string)
+key of the colour resource (string)
 </dd><dt><i>button</i></dt>
 <dd>
 reference to a button to show the colour on (QPushButton)
 </dd><dt><i>prefMethod</i></dt>
 <dd>
 preferences method to get the colour
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
+</dd><dt><i>byName=</i></dt>
 <dd>
-reference to the created colour (QColor)
+flag indicating to retrieve/save by colour name (boolean)
+</dd><dt><i>hasAlpha=</i></dt>
+<dd>
+flag indicating to allow alpha channel (boolean)
 </dd>
 </dl><a NAME="ConfigurationPageBase.polishPage" ID="ConfigurationPageBase.polishPage"></a>
 <h4>ConfigurationPageBase.polishPage</h4>
 <b>polishPage</b>(<i></i>)
 <p>
         Public slot to perform some polishing actions.
-</p><a NAME="ConfigurationPageBase.saveState" ID="ConfigurationPageBase.saveState"></a>
+</p><a NAME="ConfigurationPageBase.saveColours" ID="ConfigurationPageBase.saveColours"></a>
+<h4>ConfigurationPageBase.saveColours</h4>
+<b>saveColours</b>(<i>prefMethod</i>)
+<p>
+        Public method to save the colour selections.
+</p><dl>
+<dt><i>prefMethod</i></dt>
+<dd>
+preferences method to set the colour
+</dd>
+</dl><a NAME="ConfigurationPageBase.saveState" ID="ConfigurationPageBase.saveState"></a>
 <h4>ConfigurationPageBase.saveState</h4>
 <b>saveState</b>(<i></i>)
 <p>
         Public method to save the current state of the widget.
-</p><a NAME="ConfigurationPageBase.selectColour" ID="ConfigurationPageBase.selectColour"></a>
-<h4>ConfigurationPageBase.selectColour</h4>
-<b>selectColour</b>(<i>button, colourVar, showAlpha=False</i>)
-<p>
-        Public method used by the colour selection buttons.
-</p><dl>
-<dt><i>button</i></dt>
-<dd>
-reference to a button to show the colour on (QPushButton)
-</dd><dt><i>colourVar</i></dt>
-<dd>
-reference to the variable containing the colour (QColor)
-</dd><dt><i>showAlpha</i></dt>
-<dd>
-flag indicating to show a selection for the alpha
-            channel (boolean)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-selected colour (QColor)
-</dd>
-</dl><a NAME="ConfigurationPageBase.selectFont" ID="ConfigurationPageBase.selectFont"></a>
+</p><a NAME="ConfigurationPageBase.selectFont" ID="ConfigurationPageBase.selectFont"></a>
 <h4>ConfigurationPageBase.selectFont</h4>
 <b>selectFont</b>(<i>fontSample, fontVar, showFontInfo=False</i>)
 <p>

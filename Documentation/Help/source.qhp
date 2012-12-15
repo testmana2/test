@@ -419,6 +419,21 @@
             <section title="eric5.MultiProject.MultiProjectBrowser" ref="eric5.MultiProject.MultiProjectBrowser.html" />
             <section title="eric5.MultiProject.PropertiesDialog" ref="eric5.MultiProject.PropertiesDialog.html" />
           </section>
+          <section title="eric5.Network" ref="index-eric5.Network.html">
+            <section title="eric5.Network.IRC" ref="index-eric5.Network.IRC.html">
+              <section title="eric5.Network.IRC.IrcChannelEditDialog" ref="eric5.Network.IRC.IrcChannelEditDialog.html" />
+              <section title="eric5.Network.IRC.IrcChannelWidget" ref="eric5.Network.IRC.IrcChannelWidget.html" />
+              <section title="eric5.Network.IRC.IrcIdentitiesEditDialog" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html" />
+              <section title="eric5.Network.IRC.IrcMessageEdit" ref="eric5.Network.IRC.IrcMessageEdit.html" />
+              <section title="eric5.Network.IRC.IrcNetworkEditDialog" ref="eric5.Network.IRC.IrcNetworkEditDialog.html" />
+              <section title="eric5.Network.IRC.IrcNetworkListDialog" ref="eric5.Network.IRC.IrcNetworkListDialog.html" />
+              <section title="eric5.Network.IRC.IrcNetworkManager" ref="eric5.Network.IRC.IrcNetworkManager.html" />
+              <section title="eric5.Network.IRC.IrcNetworkWidget" ref="eric5.Network.IRC.IrcNetworkWidget.html" />
+              <section title="eric5.Network.IRC.IrcServerEditDialog" ref="eric5.Network.IRC.IrcServerEditDialog.html" />
+              <section title="eric5.Network.IRC.IrcUtilities" ref="eric5.Network.IRC.IrcUtilities.html" />
+              <section title="eric5.Network.IRC.IrcWidget" ref="eric5.Network.IRC.IrcWidget.html" />
+            </section>
+          </section>
           <section title="eric5.PluginManager" ref="index-eric5.PluginManager.html">
             <section title="eric5.PluginManager.PluginDetailsDialog" ref="eric5.PluginManager.PluginDetailsDialog.html" />
             <section title="eric5.PluginManager.PluginExceptions" ref="eric5.PluginManager.PluginExceptions.html" />
@@ -717,6 +732,7 @@
               <section title="eric5.Preferences.ConfigurationPages.IconsPage" ref="eric5.Preferences.ConfigurationPages.IconsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.IconsPreviewDialog" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
               <section title="eric5.Preferences.ConfigurationPages.InterfacePage" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.IrcPage" ref="eric5.Preferences.ConfigurationPages.IrcPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
               <section title="eric5.Preferences.ConfigurationPages.MultiProjectPage" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.NetworkPage" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html" />
@@ -2243,10 +2259,11 @@
       <keyword name="ConfigurationPageBase" id="ConfigurationPageBase" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase" />
       <keyword name="ConfigurationPageBase (Constructor)" id="ConfigurationPageBase (Constructor)" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.__init__" />
       <keyword name="ConfigurationPageBase (Module)" id="ConfigurationPageBase (Module)" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html" />
+      <keyword name="ConfigurationPageBase.__selectColourSlot" id="ConfigurationPageBase.__selectColourSlot" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.__selectColourSlot" />
       <keyword name="ConfigurationPageBase.initColour" id="ConfigurationPageBase.initColour" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.initColour" />
       <keyword name="ConfigurationPageBase.polishPage" id="ConfigurationPageBase.polishPage" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.polishPage" />
+      <keyword name="ConfigurationPageBase.saveColours" id="ConfigurationPageBase.saveColours" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.saveColours" />
       <keyword name="ConfigurationPageBase.saveState" id="ConfigurationPageBase.saveState" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.saveState" />
-      <keyword name="ConfigurationPageBase.selectColour" id="ConfigurationPageBase.selectColour" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.selectColour" />
       <keyword name="ConfigurationPageBase.selectFont" id="ConfigurationPageBase.selectFont" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.selectFont" />
       <keyword name="ConfigurationPageBase.setState" id="ConfigurationPageBase.setState" ref="eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html#ConfigurationPageBase.setState" />
       <keyword name="ConfigurationPageItem" id="ConfigurationPageItem" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationPageItem" />
@@ -4153,7 +4170,6 @@
       <keyword name="EditorCalltipsPage" id="EditorCalltipsPage" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsPage.html#EditorCalltipsPage" />
       <keyword name="EditorCalltipsPage (Constructor)" id="EditorCalltipsPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsPage.html#EditorCalltipsPage.__init__" />
       <keyword name="EditorCalltipsPage (Module)" id="EditorCalltipsPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsPage.html" />
-      <keyword name="EditorCalltipsPage.on_calltipsBackgroundButton_clicked" id="EditorCalltipsPage.on_calltipsBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsPage.html#EditorCalltipsPage.on_calltipsBackgroundButton_clicked" />
       <keyword name="EditorCalltipsPage.save" id="EditorCalltipsPage.save" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsPage.html#EditorCalltipsPage.save" />
       <keyword name="EditorCalltipsQScintillaPage" id="EditorCalltipsQScintillaPage" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsQScintillaPage.html#EditorCalltipsQScintillaPage" />
       <keyword name="EditorCalltipsQScintillaPage (Constructor)" id="EditorCalltipsQScintillaPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorCalltipsQScintillaPage.html#EditorCalltipsQScintillaPage.__init__" />
@@ -4231,14 +4247,12 @@
       <keyword name="EditorSearchPage" id="EditorSearchPage" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html#EditorSearchPage" />
       <keyword name="EditorSearchPage (Constructor)" id="EditorSearchPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html#EditorSearchPage.__init__" />
       <keyword name="EditorSearchPage (Module)" id="EditorSearchPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html" />
-      <keyword name="EditorSearchPage.on_searchMarkerButton_clicked" id="EditorSearchPage.on_searchMarkerButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html#EditorSearchPage.on_searchMarkerButton_clicked" />
       <keyword name="EditorSearchPage.save" id="EditorSearchPage.save" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html#EditorSearchPage.save" />
       <keyword name="EditorSpellCheckingPage" id="EditorSpellCheckingPage" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage" />
       <keyword name="EditorSpellCheckingPage (Constructor)" id="EditorSpellCheckingPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.__init__" />
       <keyword name="EditorSpellCheckingPage (Module)" id="EditorSpellCheckingPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html" />
       <keyword name="EditorSpellCheckingPage.on_pelButton_clicked" id="EditorSpellCheckingPage.on_pelButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.on_pelButton_clicked" />
       <keyword name="EditorSpellCheckingPage.on_pwlButton_clicked" id="EditorSpellCheckingPage.on_pwlButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.on_pwlButton_clicked" />
-      <keyword name="EditorSpellCheckingPage.on_spellingMarkerButton_clicked" id="EditorSpellCheckingPage.on_spellingMarkerButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.on_spellingMarkerButton_clicked" />
       <keyword name="EditorSpellCheckingPage.save" id="EditorSpellCheckingPage.save" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.save" />
       <keyword name="EditorStylesPage" id="EditorStylesPage" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage" />
       <keyword name="EditorStylesPage (Constructor)" id="EditorStylesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.__init__" />
@@ -4247,31 +4261,9 @@
       <keyword name="EditorStylesPage.on_annotationsErrorFgButton_clicked" id="EditorStylesPage.on_annotationsErrorFgButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_annotationsErrorFgButton_clicked" />
       <keyword name="EditorStylesPage.on_annotationsWarningBgButton_clicked" id="EditorStylesPage.on_annotationsWarningBgButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_annotationsWarningBgButton_clicked" />
       <keyword name="EditorStylesPage.on_annotationsWarningFgButton_clicked" id="EditorStylesPage.on_annotationsWarningFgButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_annotationsWarningFgButton_clicked" />
-      <keyword name="EditorStylesPage.on_caretForegroundButton_clicked" id="EditorStylesPage.on_caretForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_caretForegroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_caretlineBackgroundButton_clicked" id="EditorStylesPage.on_caretlineBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_caretlineBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_changeMarkerSavedColorButton_clicked" id="EditorStylesPage.on_changeMarkerSavedColorButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_changeMarkerSavedColorButton_clicked" />
-      <keyword name="EditorStylesPage.on_changeMarkerUnsavedColorButton_clicked" id="EditorStylesPage.on_changeMarkerUnsavedColorButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_changeMarkerUnsavedColorButton_clicked" />
-      <keyword name="EditorStylesPage.on_currentLineMarkerButton_clicked" id="EditorStylesPage.on_currentLineMarkerButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_currentLineMarkerButton_clicked" />
       <keyword name="EditorStylesPage.on_defaultFontButton_clicked" id="EditorStylesPage.on_defaultFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_defaultFontButton_clicked" />
-      <keyword name="EditorStylesPage.on_edgeBackgroundColorButton_clicked" id="EditorStylesPage.on_edgeBackgroundColorButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_edgeBackgroundColorButton_clicked" />
-      <keyword name="EditorStylesPage.on_editAreaBackgroundButton_clicked" id="EditorStylesPage.on_editAreaBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_editAreaBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_editAreaForegroundButton_clicked" id="EditorStylesPage.on_editAreaForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_editAreaForegroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_errorMarkerButton_clicked" id="EditorStylesPage.on_errorMarkerButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_errorMarkerButton_clicked" />
-      <keyword name="EditorStylesPage.on_foldmarginBackgroundButton_clicked" id="EditorStylesPage.on_foldmarginBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_foldmarginBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_foldmarkersBackgroundButton_clicked" id="EditorStylesPage.on_foldmarkersBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_foldmarkersBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_foldmarkersForegroundButton_clicked" id="EditorStylesPage.on_foldmarkersForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_foldmarkersForegroundButton_clicked" />
       <keyword name="EditorStylesPage.on_linenumbersFontButton_clicked" id="EditorStylesPage.on_linenumbersFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_linenumbersFontButton_clicked" />
-      <keyword name="EditorStylesPage.on_marginsBackgroundButton_clicked" id="EditorStylesPage.on_marginsBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_marginsBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_marginsForegroundButton_clicked" id="EditorStylesPage.on_marginsForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_marginsForegroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_matchingBracesBackButton_clicked" id="EditorStylesPage.on_matchingBracesBackButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_matchingBracesBackButton_clicked" />
-      <keyword name="EditorStylesPage.on_matchingBracesButton_clicked" id="EditorStylesPage.on_matchingBracesButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_matchingBracesButton_clicked" />
       <keyword name="EditorStylesPage.on_monospacedFontButton_clicked" id="EditorStylesPage.on_monospacedFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_monospacedFontButton_clicked" />
-      <keyword name="EditorStylesPage.on_nonmatchingBracesBackButton_clicked" id="EditorStylesPage.on_nonmatchingBracesBackButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_nonmatchingBracesBackButton_clicked" />
-      <keyword name="EditorStylesPage.on_nonmatchingBracesButton_clicked" id="EditorStylesPage.on_nonmatchingBracesButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_nonmatchingBracesButton_clicked" />
-      <keyword name="EditorStylesPage.on_selectionBackgroundButton_clicked" id="EditorStylesPage.on_selectionBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_selectionBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_selectionForegroundButton_clicked" id="EditorStylesPage.on_selectionForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_selectionForegroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_whitespaceBackgroundButton_clicked" id="EditorStylesPage.on_whitespaceBackgroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_whitespaceBackgroundButton_clicked" />
-      <keyword name="EditorStylesPage.on_whitespaceForegroundButton_clicked" id="EditorStylesPage.on_whitespaceForegroundButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.on_whitespaceForegroundButton_clicked" />
       <keyword name="EditorStylesPage.polishPage" id="EditorStylesPage.polishPage" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.polishPage" />
       <keyword name="EditorStylesPage.save" id="EditorStylesPage.save" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.save" />
       <keyword name="EditorSyntaxPage" id="EditorSyntaxPage" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html#EditorSyntaxPage" />
@@ -4819,7 +4811,6 @@
       <keyword name="HelpAppearancePage (Constructor)" id="HelpAppearancePage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.__init__" />
       <keyword name="HelpAppearancePage (Module)" id="HelpAppearancePage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html" />
       <keyword name="HelpAppearancePage.on_fixedFontButton_clicked" id="HelpAppearancePage.on_fixedFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_fixedFontButton_clicked" />
-      <keyword name="HelpAppearancePage.on_secureURLsColourButton_clicked" id="HelpAppearancePage.on_secureURLsColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_secureURLsColourButton_clicked" />
       <keyword name="HelpAppearancePage.on_standardFontButton_clicked" id="HelpAppearancePage.on_standardFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_standardFontButton_clicked" />
       <keyword name="HelpAppearancePage.on_styleSheetButton_clicked" id="HelpAppearancePage.on_styleSheetButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_styleSheetButton_clicked" />
       <keyword name="HelpAppearancePage.save" id="HelpAppearancePage.save" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.save" />
@@ -6228,6 +6219,7 @@
       <keyword name="IExplorerImporter.importedBookmarks" id="IExplorerImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.importedBookmarks" />
       <keyword name="IExplorerImporter.open" id="IExplorerImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.open" />
       <keyword name="IExplorerImporter.setPath" id="IExplorerImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.setPath" />
+      <keyword name="IRC (Package)" id="IRC (Package)" ref="index-eric5.Network.IRC.html" />
       <keyword name="IconEditCommand" id="IconEditCommand" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand" />
       <keyword name="IconEditCommand (Constructor)" id="IconEditCommand (Constructor)" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.__init__" />
       <keyword name="IconEditCommand.redo" id="IconEditCommand.redo" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.redo" />
@@ -6422,10 +6414,325 @@
       <keyword name="InterfacePage.__populateLanguageCombo" id="InterfacePage.__populateLanguageCombo" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.__populateLanguageCombo" />
       <keyword name="InterfacePage.__populateStyleCombo" id="InterfacePage.__populateStyleCombo" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.__populateStyleCombo" />
       <keyword name="InterfacePage.on_resetLayoutButton_clicked" id="InterfacePage.on_resetLayoutButton_clicked" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_resetLayoutButton_clicked" />
-      <keyword name="InterfacePage.on_stderrTextColourButton_clicked" id="InterfacePage.on_stderrTextColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_stderrTextColourButton_clicked" />
       <keyword name="InterfacePage.on_styleSheetButton_clicked" id="InterfacePage.on_styleSheetButton_clicked" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_styleSheetButton_clicked" />
       <keyword name="InterfacePage.save" id="InterfacePage.save" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.save" />
       <keyword name="InvalidPlistException" id="InvalidPlistException" ref="eric5.Utilities.binplistlib.html#InvalidPlistException" />
+      <keyword name="IrcChannel" id="IrcChannel" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel" />
+      <keyword name="IrcChannel (Constructor)" id="IrcChannel (Constructor)" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.__init__" />
+      <keyword name="IrcChannel.autoJoin" id="IrcChannel.autoJoin" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.autoJoin" />
+      <keyword name="IrcChannel.getKey" id="IrcChannel.getKey" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.getKey" />
+      <keyword name="IrcChannel.getName" id="IrcChannel.getName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.getName" />
+      <keyword name="IrcChannel.load" id="IrcChannel.load" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.load" />
+      <keyword name="IrcChannel.save" id="IrcChannel.save" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.save" />
+      <keyword name="IrcChannel.setAutoJoin" id="IrcChannel.setAutoJoin" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.setAutoJoin" />
+      <keyword name="IrcChannel.setKey" id="IrcChannel.setKey" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcChannel.setKey" />
+      <keyword name="IrcChannelEditDialog" id="IrcChannelEditDialog" ref="eric5.Network.IRC.IrcChannelEditDialog.html#IrcChannelEditDialog" />
+      <keyword name="IrcChannelEditDialog (Constructor)" id="IrcChannelEditDialog (Constructor)" ref="eric5.Network.IRC.IrcChannelEditDialog.html#IrcChannelEditDialog.__init__" />
+      <keyword name="IrcChannelEditDialog (Module)" id="IrcChannelEditDialog (Module)" ref="eric5.Network.IRC.IrcChannelEditDialog.html" />
+      <keyword name="IrcChannelEditDialog.getData" id="IrcChannelEditDialog.getData" ref="eric5.Network.IRC.IrcChannelEditDialog.html#IrcChannelEditDialog.getData" />
+      <keyword name="IrcChannelEditDialog.on_nameEdit_textChanged" id="IrcChannelEditDialog.on_nameEdit_textChanged" ref="eric5.Network.IRC.IrcChannelEditDialog.html#IrcChannelEditDialog.on_nameEdit_textChanged" />
+      <keyword name="IrcChannelWidget" id="IrcChannelWidget" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget" />
+      <keyword name="IrcChannelWidget (Constructor)" id="IrcChannelWidget (Constructor)" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__init__" />
+      <keyword name="IrcChannelWidget (Module)" id="IrcChannelWidget (Module)" ref="eric5.Network.IRC.IrcChannelWidget.html" />
+      <keyword name="IrcChannelWidget.__addManagementMessage" id="IrcChannelWidget.__addManagementMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__addManagementMessage" />
+      <keyword name="IrcChannelWidget.__appendMessage" id="IrcChannelWidget.__appendMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__appendMessage" />
+      <keyword name="IrcChannelWidget.__autoWhoEntry" id="IrcChannelWidget.__autoWhoEntry" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__autoWhoEntry" />
+      <keyword name="IrcChannelWidget.__channelCreated" id="IrcChannelWidget.__channelCreated" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__channelCreated" />
+      <keyword name="IrcChannelWidget.__channelModes" id="IrcChannelWidget.__channelModes" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__channelModes" />
+      <keyword name="IrcChannelWidget.__channelUrl" id="IrcChannelWidget.__channelUrl" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__channelUrl" />
+      <keyword name="IrcChannelWidget.__clearMessages" id="IrcChannelWidget.__clearMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__clearMessages" />
+      <keyword name="IrcChannelWidget.__copyAllMessages" id="IrcChannelWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyAllMessages" />
+      <keyword name="IrcChannelWidget.__copyMessages" id="IrcChannelWidget.__copyMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyMessages" />
+      <keyword name="IrcChannelWidget.__cutAllMessages" id="IrcChannelWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutAllMessages" />
+      <keyword name="IrcChannelWidget.__cutMessages" id="IrcChannelWidget.__cutMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutMessages" />
+      <keyword name="IrcChannelWidget.__extractPrivilege" id="IrcChannelWidget.__extractPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__extractPrivilege" />
+      <keyword name="IrcChannelWidget.__findUser" id="IrcChannelWidget.__findUser" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__findUser" />
+      <keyword name="IrcChannelWidget.__handleCtcp" id="IrcChannelWidget.__handleCtcp" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__handleCtcp" />
+      <keyword name="IrcChannelWidget.__help" id="IrcChannelWidget.__help" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__help" />
+      <keyword name="IrcChannelWidget.__ignore" id="IrcChannelWidget.__ignore" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__ignore" />
+      <keyword name="IrcChannelWidget.__initMessagesMenu" id="IrcChannelWidget.__initMessagesMenu" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__initMessagesMenu" />
+      <keyword name="IrcChannelWidget.__initUsersMenu" id="IrcChannelWidget.__initUsersMenu" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__initUsersMenu" />
+      <keyword name="IrcChannelWidget.__message" id="IrcChannelWidget.__message" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__message" />
+      <keyword name="IrcChannelWidget.__openPrivateChat" id="IrcChannelWidget.__openPrivateChat" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__openPrivateChat" />
+      <keyword name="IrcChannelWidget.__saveMessages" id="IrcChannelWidget.__saveMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__saveMessages" />
+      <keyword name="IrcChannelWidget.__sendAutoWhoCommand" id="IrcChannelWidget.__sendAutoWhoCommand" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__sendAutoWhoCommand" />
+      <keyword name="IrcChannelWidget.__setTopic" id="IrcChannelWidget.__setTopic" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setTopic" />
+      <keyword name="IrcChannelWidget.__setUserPrivilege" id="IrcChannelWidget.__setUserPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setUserPrivilege" />
+      <keyword name="IrcChannelWidget.__topicCreated" id="IrcChannelWidget.__topicCreated" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__topicCreated" />
+      <keyword name="IrcChannelWidget.__updateChannelModes" id="IrcChannelWidget.__updateChannelModes" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__updateChannelModes" />
+      <keyword name="IrcChannelWidget.__userAway" id="IrcChannelWidget.__userAway" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userAway" />
+      <keyword name="IrcChannelWidget.__userJoin" id="IrcChannelWidget.__userJoin" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userJoin" />
+      <keyword name="IrcChannelWidget.__userList" id="IrcChannelWidget.__userList" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userList" />
+      <keyword name="IrcChannelWidget.__userNickChange" id="IrcChannelWidget.__userNickChange" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userNickChange" />
+      <keyword name="IrcChannelWidget.__userPart" id="IrcChannelWidget.__userPart" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userPart" />
+      <keyword name="IrcChannelWidget.__userQuit" id="IrcChannelWidget.__userQuit" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__userQuit" />
+      <keyword name="IrcChannelWidget.__whoEnd" id="IrcChannelWidget.__whoEnd" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoEnd" />
+      <keyword name="IrcChannelWidget.__whoEntry" id="IrcChannelWidget.__whoEntry" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoEntry" />
+      <keyword name="IrcChannelWidget.__whoIs" id="IrcChannelWidget.__whoIs" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIs" />
+      <keyword name="IrcChannelWidget.__whoIsAccount" id="IrcChannelWidget.__whoIsAccount" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsAccount" />
+      <keyword name="IrcChannelWidget.__whoIsActually" id="IrcChannelWidget.__whoIsActually" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsActually" />
+      <keyword name="IrcChannelWidget.__whoIsChannels" id="IrcChannelWidget.__whoIsChannels" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsChannels" />
+      <keyword name="IrcChannelWidget.__whoIsConnection" id="IrcChannelWidget.__whoIsConnection" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsConnection" />
+      <keyword name="IrcChannelWidget.__whoIsEnd" id="IrcChannelWidget.__whoIsEnd" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsEnd" />
+      <keyword name="IrcChannelWidget.__whoIsHelper" id="IrcChannelWidget.__whoIsHelper" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsHelper" />
+      <keyword name="IrcChannelWidget.__whoIsIdentify" id="IrcChannelWidget.__whoIsIdentify" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsIdentify" />
+      <keyword name="IrcChannelWidget.__whoIsIdle" id="IrcChannelWidget.__whoIsIdle" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsIdle" />
+      <keyword name="IrcChannelWidget.__whoIsOperator" id="IrcChannelWidget.__whoIsOperator" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsOperator" />
+      <keyword name="IrcChannelWidget.__whoIsSecure" id="IrcChannelWidget.__whoIsSecure" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsSecure" />
+      <keyword name="IrcChannelWidget.__whoIsServer" id="IrcChannelWidget.__whoIsServer" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsServer" />
+      <keyword name="IrcChannelWidget.__whoIsUser" id="IrcChannelWidget.__whoIsUser" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__whoIsUser" />
+      <keyword name="IrcChannelWidget.addMessage" id="IrcChannelWidget.addMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.addMessage" />
+      <keyword name="IrcChannelWidget.addUsers" id="IrcChannelWidget.addUsers" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.addUsers" />
+      <keyword name="IrcChannelWidget.getUsersCount" id="IrcChannelWidget.getUsersCount" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.getUsersCount" />
+      <keyword name="IrcChannelWidget.handleMessage" id="IrcChannelWidget.handleMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.handleMessage" />
+      <keyword name="IrcChannelWidget.hideEvent" id="IrcChannelWidget.hideEvent" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.hideEvent" />
+      <keyword name="IrcChannelWidget.initAutoWho" id="IrcChannelWidget.initAutoWho" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.initAutoWho" />
+      <keyword name="IrcChannelWidget.name" id="IrcChannelWidget.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.name" />
+      <keyword name="IrcChannelWidget.on_messageEdit_returnPressed" id="IrcChannelWidget.on_messageEdit_returnPressed" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messageEdit_returnPressed" />
+      <keyword name="IrcChannelWidget.on_messages_copyAvailable" id="IrcChannelWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_copyAvailable" />
+      <keyword name="IrcChannelWidget.on_messages_customContextMenuRequested" id="IrcChannelWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_customContextMenuRequested" />
+      <keyword name="IrcChannelWidget.on_usersList_customContextMenuRequested" id="IrcChannelWidget.on_usersList_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_usersList_customContextMenuRequested" />
+      <keyword name="IrcChannelWidget.partMessage" id="IrcChannelWidget.partMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.partMessage" />
+      <keyword name="IrcChannelWidget.requestLeave" id="IrcChannelWidget.requestLeave" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.requestLeave" />
+      <keyword name="IrcChannelWidget.setMarkerLine" id="IrcChannelWidget.setMarkerLine" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setMarkerLine" />
+      <keyword name="IrcChannelWidget.setName" id="IrcChannelWidget.setName" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setName" />
+      <keyword name="IrcChannelWidget.setPartMessage" id="IrcChannelWidget.setPartMessage" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setPartMessage" />
+      <keyword name="IrcChannelWidget.setPrivate" id="IrcChannelWidget.setPrivate" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setPrivate" />
+      <keyword name="IrcChannelWidget.setPrivateInfo" id="IrcChannelWidget.setPrivateInfo" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setPrivateInfo" />
+      <keyword name="IrcChannelWidget.setUserName" id="IrcChannelWidget.setUserName" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setUserName" />
+      <keyword name="IrcChannelWidget.setUserPrivilegePrefix" id="IrcChannelWidget.setUserPrivilegePrefix" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.setUserPrivilegePrefix" />
+      <keyword name="IrcChannelWidget.showEvent" id="IrcChannelWidget.showEvent" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.showEvent" />
+      <keyword name="IrcChannelWidget.unsetMarkerLine" id="IrcChannelWidget.unsetMarkerLine" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.unsetMarkerLine" />
+      <keyword name="IrcChannelWidget.userName" id="IrcChannelWidget.userName" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.userName" />
+      <keyword name="IrcIdentitiesEditDialog" id="IrcIdentitiesEditDialog" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog" />
+      <keyword name="IrcIdentitiesEditDialog (Constructor)" id="IrcIdentitiesEditDialog (Constructor)" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__init__" />
+      <keyword name="IrcIdentitiesEditDialog (Module)" id="IrcIdentitiesEditDialog (Module)" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html" />
+      <keyword name="IrcIdentitiesEditDialog.__checkCurrentIdentity" id="IrcIdentitiesEditDialog.__checkCurrentIdentity" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__checkCurrentIdentity" />
+      <keyword name="IrcIdentitiesEditDialog.__refreshCurrentIdentity" id="IrcIdentitiesEditDialog.__refreshCurrentIdentity" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__refreshCurrentIdentity" />
+      <keyword name="IrcIdentitiesEditDialog.__updateIdentitiesButtons" id="IrcIdentitiesEditDialog.__updateIdentitiesButtons" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__updateIdentitiesButtons" />
+      <keyword name="IrcIdentitiesEditDialog.__updateNicknameButtons" id="IrcIdentitiesEditDialog.__updateNicknameButtons" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__updateNicknameButtons" />
+      <keyword name="IrcIdentitiesEditDialog.__updateNicknameUpDownButtons" id="IrcIdentitiesEditDialog.__updateNicknameUpDownButtons" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.__updateNicknameUpDownButtons" />
+      <keyword name="IrcIdentitiesEditDialog.accept" id="IrcIdentitiesEditDialog.accept" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.accept" />
+      <keyword name="IrcIdentitiesEditDialog.eventFilter" id="IrcIdentitiesEditDialog.eventFilter" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.eventFilter" />
+      <keyword name="IrcIdentitiesEditDialog.on_addButton_clicked" id="IrcIdentitiesEditDialog.on_addButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_addButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_copyButton_clicked" id="IrcIdentitiesEditDialog.on_copyButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_copyButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_deleteButton_clicked" id="IrcIdentitiesEditDialog.on_deleteButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_deleteButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_identitiesCombo_currentIndexChanged" id="IrcIdentitiesEditDialog.on_identitiesCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_identitiesCombo_currentIndexChanged" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknameAddButton_clicked" id="IrcIdentitiesEditDialog.on_nicknameAddButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknameAddButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknameDeleteButton_clicked" id="IrcIdentitiesEditDialog.on_nicknameDeleteButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknameDeleteButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknameDownButton_clicked" id="IrcIdentitiesEditDialog.on_nicknameDownButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknameDownButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknameEdit_textEdited" id="IrcIdentitiesEditDialog.on_nicknameEdit_textEdited" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknameEdit_textEdited" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknameUpButton_clicked" id="IrcIdentitiesEditDialog.on_nicknameUpButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknameUpButton_clicked" />
+      <keyword name="IrcIdentitiesEditDialog.on_nicknamesList_itemSelectionChanged" id="IrcIdentitiesEditDialog.on_nicknamesList_itemSelectionChanged" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_nicknamesList_itemSelectionChanged" />
+      <keyword name="IrcIdentitiesEditDialog.on_renameButton_clicked" id="IrcIdentitiesEditDialog.on_renameButton_clicked" ref="eric5.Network.IRC.IrcIdentitiesEditDialog.html#IrcIdentitiesEditDialog.on_renameButton_clicked" />
+      <keyword name="IrcIdentity" id="IrcIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity" />
+      <keyword name="IrcIdentity (Constructor)" id="IrcIdentity (Constructor)" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.__init__" />
+      <keyword name="IrcIdentity.createDefaultIdentity" id="IrcIdentity.createDefaultIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.createDefaultIdentity" />
+      <keyword name="IrcIdentity.getAwayMessage" id="IrcIdentity.getAwayMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getAwayMessage" />
+      <keyword name="IrcIdentity.getIdent" id="IrcIdentity.getIdent" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getIdent" />
+      <keyword name="IrcIdentity.getName" id="IrcIdentity.getName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getName" />
+      <keyword name="IrcIdentity.getNickNames" id="IrcIdentity.getNickNames" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getNickNames" />
+      <keyword name="IrcIdentity.getPartMessage" id="IrcIdentity.getPartMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getPartMessage" />
+      <keyword name="IrcIdentity.getPassword" id="IrcIdentity.getPassword" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getPassword" />
+      <keyword name="IrcIdentity.getQuitMessage" id="IrcIdentity.getQuitMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getQuitMessage" />
+      <keyword name="IrcIdentity.getRealName" id="IrcIdentity.getRealName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getRealName" />
+      <keyword name="IrcIdentity.getServiceName" id="IrcIdentity.getServiceName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.getServiceName" />
+      <keyword name="IrcIdentity.load" id="IrcIdentity.load" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.load" />
+      <keyword name="IrcIdentity.rememberAwayPosition" id="IrcIdentity.rememberAwayPosition" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.rememberAwayPosition" />
+      <keyword name="IrcIdentity.save" id="IrcIdentity.save" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.save" />
+      <keyword name="IrcIdentity.setAwayMessage" id="IrcIdentity.setAwayMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setAwayMessage" />
+      <keyword name="IrcIdentity.setIdent" id="IrcIdentity.setIdent" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setIdent" />
+      <keyword name="IrcIdentity.setName" id="IrcIdentity.setName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setName" />
+      <keyword name="IrcIdentity.setNickNames" id="IrcIdentity.setNickNames" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setNickNames" />
+      <keyword name="IrcIdentity.setPartMessage" id="IrcIdentity.setPartMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setPartMessage" />
+      <keyword name="IrcIdentity.setPassword" id="IrcIdentity.setPassword" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setPassword" />
+      <keyword name="IrcIdentity.setQuitMessage" id="IrcIdentity.setQuitMessage" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setQuitMessage" />
+      <keyword name="IrcIdentity.setRealName" id="IrcIdentity.setRealName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setRealName" />
+      <keyword name="IrcIdentity.setRememberAwayPosition" id="IrcIdentity.setRememberAwayPosition" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setRememberAwayPosition" />
+      <keyword name="IrcIdentity.setServiceName" id="IrcIdentity.setServiceName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcIdentity.setServiceName" />
+      <keyword name="IrcMessageEdit" id="IrcMessageEdit" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit" />
+      <keyword name="IrcMessageEdit (Constructor)" id="IrcMessageEdit (Constructor)" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.__init__" />
+      <keyword name="IrcMessageEdit (Module)" id="IrcMessageEdit (Module)" ref="eric5.Network.IRC.IrcMessageEdit.html" />
+      <keyword name="IrcMessageEdit.__addHistory" id="IrcMessageEdit.__addHistory" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.__addHistory" />
+      <keyword name="IrcMessageEdit.__getHistory" id="IrcMessageEdit.__getHistory" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.__getHistory" />
+      <keyword name="IrcMessageEdit.keyPressEvent" id="IrcMessageEdit.keyPressEvent" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.keyPressEvent" />
+      <keyword name="IrcMessageEdit.setText" id="IrcMessageEdit.setText" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.setText" />
+      <keyword name="IrcMessageEdit.wheelEvent" id="IrcMessageEdit.wheelEvent" ref="eric5.Network.IRC.IrcMessageEdit.html#IrcMessageEdit.wheelEvent" />
+      <keyword name="IrcNetwork" id="IrcNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork" />
+      <keyword name="IrcNetwork (Constructor)" id="IrcNetwork (Constructor)" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.__init__" />
+      <keyword name="IrcNetwork.addChannel" id="IrcNetwork.addChannel" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.addChannel" />
+      <keyword name="IrcNetwork.autoConnect" id="IrcNetwork.autoConnect" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.autoConnect" />
+      <keyword name="IrcNetwork.createDefaultNetwork" id="IrcNetwork.createDefaultNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.createDefaultNetwork" />
+      <keyword name="IrcNetwork.deleteChannel" id="IrcNetwork.deleteChannel" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.deleteChannel" />
+      <keyword name="IrcNetwork.getChannel" id="IrcNetwork.getChannel" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getChannel" />
+      <keyword name="IrcNetwork.getChannelNames" id="IrcNetwork.getChannelNames" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getChannelNames" />
+      <keyword name="IrcNetwork.getChannels" id="IrcNetwork.getChannels" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getChannels" />
+      <keyword name="IrcNetwork.getIdentityName" id="IrcNetwork.getIdentityName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getIdentityName" />
+      <keyword name="IrcNetwork.getName" id="IrcNetwork.getName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getName" />
+      <keyword name="IrcNetwork.getServer" id="IrcNetwork.getServer" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getServer" />
+      <keyword name="IrcNetwork.getServerName" id="IrcNetwork.getServerName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.getServerName" />
+      <keyword name="IrcNetwork.load" id="IrcNetwork.load" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.load" />
+      <keyword name="IrcNetwork.save" id="IrcNetwork.save" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.save" />
+      <keyword name="IrcNetwork.setAutoConnect" id="IrcNetwork.setAutoConnect" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setAutoConnect" />
+      <keyword name="IrcNetwork.setChannel" id="IrcNetwork.setChannel" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setChannel" />
+      <keyword name="IrcNetwork.setChannels" id="IrcNetwork.setChannels" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setChannels" />
+      <keyword name="IrcNetwork.setIdentityName" id="IrcNetwork.setIdentityName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setIdentityName" />
+      <keyword name="IrcNetwork.setName" id="IrcNetwork.setName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setName" />
+      <keyword name="IrcNetwork.setServer" id="IrcNetwork.setServer" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetwork.setServer" />
+      <keyword name="IrcNetworkEditDialog" id="IrcNetworkEditDialog" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog" />
+      <keyword name="IrcNetworkEditDialog (Constructor)" id="IrcNetworkEditDialog (Constructor)" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.__init__" />
+      <keyword name="IrcNetworkEditDialog (Module)" id="IrcNetworkEditDialog (Module)" ref="eric5.Network.IRC.IrcNetworkEditDialog.html" />
+      <keyword name="IrcNetworkEditDialog.__editChannel" id="IrcNetworkEditDialog.__editChannel" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.__editChannel" />
+      <keyword name="IrcNetworkEditDialog.__refreshIdentityCombo" id="IrcNetworkEditDialog.__refreshIdentityCombo" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.__refreshIdentityCombo" />
+      <keyword name="IrcNetworkEditDialog.__updateOkButton" id="IrcNetworkEditDialog.__updateOkButton" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.__updateOkButton" />
+      <keyword name="IrcNetworkEditDialog.getNetwork" id="IrcNetworkEditDialog.getNetwork" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.getNetwork" />
+      <keyword name="IrcNetworkEditDialog.on_addChannelButton_clicked" id="IrcNetworkEditDialog.on_addChannelButton_clicked" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_addChannelButton_clicked" />
+      <keyword name="IrcNetworkEditDialog.on_channelList_itemActivated" id="IrcNetworkEditDialog.on_channelList_itemActivated" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_channelList_itemActivated" />
+      <keyword name="IrcNetworkEditDialog.on_channelList_itemSelectionChanged" id="IrcNetworkEditDialog.on_channelList_itemSelectionChanged" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_channelList_itemSelectionChanged" />
+      <keyword name="IrcNetworkEditDialog.on_deleteChannelButton_clicked" id="IrcNetworkEditDialog.on_deleteChannelButton_clicked" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_deleteChannelButton_clicked" />
+      <keyword name="IrcNetworkEditDialog.on_editChannelButton_clicked" id="IrcNetworkEditDialog.on_editChannelButton_clicked" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_editChannelButton_clicked" />
+      <keyword name="IrcNetworkEditDialog.on_editIdentitiesButton_clicked" id="IrcNetworkEditDialog.on_editIdentitiesButton_clicked" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_editIdentitiesButton_clicked" />
+      <keyword name="IrcNetworkEditDialog.on_editServerButton_clicked" id="IrcNetworkEditDialog.on_editServerButton_clicked" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_editServerButton_clicked" />
+      <keyword name="IrcNetworkEditDialog.on_identityCombo_currentIndexChanged" id="IrcNetworkEditDialog.on_identityCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_identityCombo_currentIndexChanged" />
+      <keyword name="IrcNetworkEditDialog.on_networkEdit_textChanged" id="IrcNetworkEditDialog.on_networkEdit_textChanged" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_networkEdit_textChanged" />
+      <keyword name="IrcNetworkEditDialog.on_serverEdit_textChanged" id="IrcNetworkEditDialog.on_serverEdit_textChanged" ref="eric5.Network.IRC.IrcNetworkEditDialog.html#IrcNetworkEditDialog.on_serverEdit_textChanged" />
+      <keyword name="IrcNetworkListDialog" id="IrcNetworkListDialog" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog" />
+      <keyword name="IrcNetworkListDialog (Constructor)" id="IrcNetworkListDialog (Constructor)" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__init__" />
+      <keyword name="IrcNetworkListDialog (Module)" id="IrcNetworkListDialog (Module)" ref="eric5.Network.IRC.IrcNetworkListDialog.html" />
+      <keyword name="IrcNetworkListDialog.__checkButtons" id="IrcNetworkListDialog.__checkButtons" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__checkButtons" />
+      <keyword name="IrcNetworkListDialog.__refreshNetworkEntry" id="IrcNetworkListDialog.__refreshNetworkEntry" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__refreshNetworkEntry" />
+      <keyword name="IrcNetworkListDialog.__refreshNetworksList" id="IrcNetworkListDialog.__refreshNetworksList" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__refreshNetworksList" />
+      <keyword name="IrcNetworkListDialog.__resizeColumns" id="IrcNetworkListDialog.__resizeColumns" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__resizeColumns" />
+      <keyword name="IrcNetworkListDialog.__setAutoConnectEntry" id="IrcNetworkListDialog.__setAutoConnectEntry" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.__setAutoConnectEntry" />
+      <keyword name="IrcNetworkListDialog.on_autoConnectButton_clicked" id="IrcNetworkListDialog.on_autoConnectButton_clicked" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_autoConnectButton_clicked" />
+      <keyword name="IrcNetworkListDialog.on_deleteButton_clicked" id="IrcNetworkListDialog.on_deleteButton_clicked" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_deleteButton_clicked" />
+      <keyword name="IrcNetworkListDialog.on_editButton_clicked" id="IrcNetworkListDialog.on_editButton_clicked" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_editButton_clicked" />
+      <keyword name="IrcNetworkListDialog.on_editIdentitiesButton_clicked" id="IrcNetworkListDialog.on_editIdentitiesButton_clicked" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_editIdentitiesButton_clicked" />
+      <keyword name="IrcNetworkListDialog.on_networksList_itemCollapsed" id="IrcNetworkListDialog.on_networksList_itemCollapsed" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_networksList_itemCollapsed" />
+      <keyword name="IrcNetworkListDialog.on_networksList_itemExpanded" id="IrcNetworkListDialog.on_networksList_itemExpanded" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_networksList_itemExpanded" />
+      <keyword name="IrcNetworkListDialog.on_networksList_itemSelectionChanged" id="IrcNetworkListDialog.on_networksList_itemSelectionChanged" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_networksList_itemSelectionChanged" />
+      <keyword name="IrcNetworkListDialog.on_newButton_clicked" id="IrcNetworkListDialog.on_newButton_clicked" ref="eric5.Network.IRC.IrcNetworkListDialog.html#IrcNetworkListDialog.on_newButton_clicked" />
+      <keyword name="IrcNetworkManager" id="IrcNetworkManager" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager" />
+      <keyword name="IrcNetworkManager (Constructor)" id="IrcNetworkManager (Constructor)" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.__init__" />
+      <keyword name="IrcNetworkManager (Module)" id="IrcNetworkManager (Module)" ref="eric5.Network.IRC.IrcNetworkManager.html" />
+      <keyword name="IrcNetworkManager.__load" id="IrcNetworkManager.__load" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.__load" />
+      <keyword name="IrcNetworkManager.__loadDefaults" id="IrcNetworkManager.__loadDefaults" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.__loadDefaults" />
+      <keyword name="IrcNetworkManager.addIdentity" id="IrcNetworkManager.addIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.addIdentity" />
+      <keyword name="IrcNetworkManager.addNetwork" id="IrcNetworkManager.addNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.addNetwork" />
+      <keyword name="IrcNetworkManager.close" id="IrcNetworkManager.close" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.close" />
+      <keyword name="IrcNetworkManager.deleteIdentity" id="IrcNetworkManager.deleteIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.deleteIdentity" />
+      <keyword name="IrcNetworkManager.deleteNetwork" id="IrcNetworkManager.deleteNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.deleteNetwork" />
+      <keyword name="IrcNetworkManager.getIdentities" id="IrcNetworkManager.getIdentities" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.getIdentities" />
+      <keyword name="IrcNetworkManager.getIdentity" id="IrcNetworkManager.getIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.getIdentity" />
+      <keyword name="IrcNetworkManager.getIdentityNames" id="IrcNetworkManager.getIdentityNames" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.getIdentityNames" />
+      <keyword name="IrcNetworkManager.getNetwork" id="IrcNetworkManager.getNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.getNetwork" />
+      <keyword name="IrcNetworkManager.getNetworkNames" id="IrcNetworkManager.getNetworkNames" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.getNetworkNames" />
+      <keyword name="IrcNetworkManager.identityChanged" id="IrcNetworkManager.identityChanged" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.identityChanged" />
+      <keyword name="IrcNetworkManager.networkChanged" id="IrcNetworkManager.networkChanged" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.networkChanged" />
+      <keyword name="IrcNetworkManager.renameIdentity" id="IrcNetworkManager.renameIdentity" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.renameIdentity" />
+      <keyword name="IrcNetworkManager.save" id="IrcNetworkManager.save" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.save" />
+      <keyword name="IrcNetworkManager.setIdentities" id="IrcNetworkManager.setIdentities" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.setIdentities" />
+      <keyword name="IrcNetworkManager.setNetwork" id="IrcNetworkManager.setNetwork" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcNetworkManager.setNetwork" />
+      <keyword name="IrcNetworkWidget" id="IrcNetworkWidget" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget" />
+      <keyword name="IrcNetworkWidget (Constructor)" id="IrcNetworkWidget (Constructor)" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__init__" />
+      <keyword name="IrcNetworkWidget (Module)" id="IrcNetworkWidget (Module)" ref="eric5.Network.IRC.IrcNetworkWidget.html" />
+      <keyword name="IrcNetworkWidget.__clearMessages" id="IrcNetworkWidget.__clearMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__clearMessages" />
+      <keyword name="IrcNetworkWidget.__copyAllMessages" id="IrcNetworkWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyAllMessages" />
+      <keyword name="IrcNetworkWidget.__copyMessages" id="IrcNetworkWidget.__copyMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyMessages" />
+      <keyword name="IrcNetworkWidget.__cutAllMessages" id="IrcNetworkWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutAllMessages" />
+      <keyword name="IrcNetworkWidget.__cutMessages" id="IrcNetworkWidget.__cutMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutMessages" />
+      <keyword name="IrcNetworkWidget.__initMessagesMenu" id="IrcNetworkWidget.__initMessagesMenu" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__initMessagesMenu" />
+      <keyword name="IrcNetworkWidget.__refreshNetworks" id="IrcNetworkWidget.__refreshNetworks" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__refreshNetworks" />
+      <keyword name="IrcNetworkWidget.__saveMessages" id="IrcNetworkWidget.__saveMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__saveMessages" />
+      <keyword name="IrcNetworkWidget.addErrorMessage" id="IrcNetworkWidget.addErrorMessage" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.addErrorMessage" />
+      <keyword name="IrcNetworkWidget.addMessage" id="IrcNetworkWidget.addMessage" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.addMessage" />
+      <keyword name="IrcNetworkWidget.addServerMessage" id="IrcNetworkWidget.addServerMessage" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.addServerMessage" />
+      <keyword name="IrcNetworkWidget.autoConnect" id="IrcNetworkWidget.autoConnect" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.autoConnect" />
+      <keyword name="IrcNetworkWidget.getNetworkChannels" id="IrcNetworkWidget.getNetworkChannels" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.getNetworkChannels" />
+      <keyword name="IrcNetworkWidget.getNickname" id="IrcNetworkWidget.getNickname" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.getNickname" />
+      <keyword name="IrcNetworkWidget.initialize" id="IrcNetworkWidget.initialize" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.initialize" />
+      <keyword name="IrcNetworkWidget.on_awayButton_clicked" id="IrcNetworkWidget.on_awayButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_awayButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_channelCombo_editTextChanged" id="IrcNetworkWidget.on_channelCombo_editTextChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_channelCombo_editTextChanged" />
+      <keyword name="IrcNetworkWidget.on_connectButton_clicked" id="IrcNetworkWidget.on_connectButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_connectButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_editButton_clicked" id="IrcNetworkWidget.on_editButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_editButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_joinButton_clicked" id="IrcNetworkWidget.on_joinButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_joinButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_messages_copyAvailable" id="IrcNetworkWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_copyAvailable" />
+      <keyword name="IrcNetworkWidget.on_messages_customContextMenuRequested" id="IrcNetworkWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_customContextMenuRequested" />
+      <keyword name="IrcNetworkWidget.on_networkCombo_currentIndexChanged" id="IrcNetworkWidget.on_networkCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_networkCombo_currentIndexChanged" />
+      <keyword name="IrcNetworkWidget.on_nickCombo_currentIndexChanged" id="IrcNetworkWidget.on_nickCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_nickCombo_currentIndexChanged" />
+      <keyword name="IrcNetworkWidget.setConnected" id="IrcNetworkWidget.setConnected" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.setConnected" />
+      <keyword name="IrcNetworkWidget.setNickName" id="IrcNetworkWidget.setNickName" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.setNickName" />
+      <keyword name="IrcNetworkWidget.setRegistered" id="IrcNetworkWidget.setRegistered" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.setRegistered" />
+      <keyword name="IrcPage" id="IrcPage" ref="eric5.Preferences.ConfigurationPages.IrcPage.html#IrcPage" />
+      <keyword name="IrcPage (Constructor)" id="IrcPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.IrcPage.html#IrcPage.__init__" />
+      <keyword name="IrcPage (Module)" id="IrcPage (Module)" ref="eric5.Preferences.ConfigurationPages.IrcPage.html" />
+      <keyword name="IrcPage.save" id="IrcPage.save" ref="eric5.Preferences.ConfigurationPages.IrcPage.html#IrcPage.save" />
+      <keyword name="IrcServer" id="IrcServer" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer" />
+      <keyword name="IrcServer (Constructor)" id="IrcServer (Constructor)" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.__init__" />
+      <keyword name="IrcServer.getName" id="IrcServer.getName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.getName" />
+      <keyword name="IrcServer.getPassword" id="IrcServer.getPassword" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.getPassword" />
+      <keyword name="IrcServer.getPort" id="IrcServer.getPort" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.getPort" />
+      <keyword name="IrcServer.load" id="IrcServer.load" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.load" />
+      <keyword name="IrcServer.save" id="IrcServer.save" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.save" />
+      <keyword name="IrcServer.setName" id="IrcServer.setName" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.setName" />
+      <keyword name="IrcServer.setPassword" id="IrcServer.setPassword" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.setPassword" />
+      <keyword name="IrcServer.setPort" id="IrcServer.setPort" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.setPort" />
+      <keyword name="IrcServer.setUseSSL" id="IrcServer.setUseSSL" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.setUseSSL" />
+      <keyword name="IrcServer.useSSL" id="IrcServer.useSSL" ref="eric5.Network.IRC.IrcNetworkManager.html#IrcServer.useSSL" />
+      <keyword name="IrcServerEditDialog" id="IrcServerEditDialog" ref="eric5.Network.IRC.IrcServerEditDialog.html#IrcServerEditDialog" />
+      <keyword name="IrcServerEditDialog (Constructor)" id="IrcServerEditDialog (Constructor)" ref="eric5.Network.IRC.IrcServerEditDialog.html#IrcServerEditDialog.__init__" />
+      <keyword name="IrcServerEditDialog (Module)" id="IrcServerEditDialog (Module)" ref="eric5.Network.IRC.IrcServerEditDialog.html" />
+      <keyword name="IrcServerEditDialog.__updateOkButton" id="IrcServerEditDialog.__updateOkButton" ref="eric5.Network.IRC.IrcServerEditDialog.html#IrcServerEditDialog.__updateOkButton" />
+      <keyword name="IrcServerEditDialog.getServer" id="IrcServerEditDialog.getServer" ref="eric5.Network.IRC.IrcServerEditDialog.html#IrcServerEditDialog.getServer" />
+      <keyword name="IrcServerEditDialog.on_serverEdit_textChanged" id="IrcServerEditDialog.on_serverEdit_textChanged" ref="eric5.Network.IRC.IrcServerEditDialog.html#IrcServerEditDialog.on_serverEdit_textChanged" />
+      <keyword name="IrcUserItem" id="IrcUserItem" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem" />
+      <keyword name="IrcUserItem (Constructor)" id="IrcUserItem (Constructor)" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__init__" />
+      <keyword name="IrcUserItem.__awayIcon" id="IrcUserItem.__awayIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__awayIcon" />
+      <keyword name="IrcUserItem.__setIcon" id="IrcUserItem.__setIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__setIcon" />
+      <keyword name="IrcUserItem.changePrivilege" id="IrcUserItem.changePrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.changePrivilege" />
+      <keyword name="IrcUserItem.clearPrivileges" id="IrcUserItem.clearPrivileges" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.clearPrivileges" />
+      <keyword name="IrcUserItem.name" id="IrcUserItem.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.name" />
+      <keyword name="IrcUserItem.parseWhoFlags" id="IrcUserItem.parseWhoFlags" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.parseWhoFlags" />
+      <keyword name="IrcUserItem.setName" id="IrcUserItem.setName" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.setName" />
+      <keyword name="IrcUtilities (Module)" id="IrcUtilities (Module)" ref="eric5.Network.IRC.IrcUtilities.html" />
+      <keyword name="IrcWidget" id="IrcWidget" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget" />
+      <keyword name="IrcWidget (Constructor)" id="IrcWidget (Constructor)" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__init__" />
+      <keyword name="IrcWidget (Module)" id="IrcWidget (Module)" ref="eric5.Network.IRC.IrcWidget.html" />
+      <keyword name="IrcWidget.__autoJoinChannels" id="IrcWidget.__autoJoinChannels" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__autoJoinChannels" />
+      <keyword name="IrcWidget.__away" id="IrcWidget.__away" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__away" />
+      <keyword name="IrcWidget.__changeNick" id="IrcWidget.__changeNick" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__changeNick" />
+      <keyword name="IrcWidget.__closeChannel" id="IrcWidget.__closeChannel" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__closeChannel" />
+      <keyword name="IrcWidget.__connectNetwork" id="IrcWidget.__connectNetwork" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__connectNetwork" />
+      <keyword name="IrcWidget.__editNetwork" id="IrcWidget.__editNetwork" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__editNetwork" />
+      <keyword name="IrcWidget.__handleCtcp" id="IrcWidget.__handleCtcp" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleCtcp" />
+      <keyword name="IrcWidget.__handleNamedMessage" id="IrcWidget.__handleNamedMessage" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleNamedMessage" />
+      <keyword name="IrcWidget.__handleNickInUse" id="IrcWidget.__handleNickInUse" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleNickInUse" />
+      <keyword name="IrcWidget.__handleNickInUseLogin" id="IrcWidget.__handleNickInUseLogin" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleNickInUseLogin" />
+      <keyword name="IrcWidget.__handleNumericMessage" id="IrcWidget.__handleNumericMessage" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleNumericMessage" />
+      <keyword name="IrcWidget.__handleServerError" id="IrcWidget.__handleServerError" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleServerError" />
+      <keyword name="IrcWidget.__handleServerReply" id="IrcWidget.__handleServerReply" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__handleServerReply" />
+      <keyword name="IrcWidget.__hostConnected" id="IrcWidget.__hostConnected" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__hostConnected" />
+      <keyword name="IrcWidget.__hostDisconnected" id="IrcWidget.__hostDisconnected" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__hostDisconnected" />
+      <keyword name="IrcWidget.__hostFound" id="IrcWidget.__hostFound" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__hostFound" />
+      <keyword name="IrcWidget.__joinChannel" id="IrcWidget.__joinChannel" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__joinChannel" />
+      <keyword name="IrcWidget.__leaveChannel" id="IrcWidget.__leaveChannel" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__leaveChannel" />
+      <keyword name="IrcWidget.__networkDataChanged" id="IrcWidget.__networkDataChanged" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__networkDataChanged" />
+      <keyword name="IrcWidget.__openPrivate" id="IrcWidget.__openPrivate" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__openPrivate" />
+      <keyword name="IrcWidget.__ping" id="IrcWidget.__ping" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__ping" />
+      <keyword name="IrcWidget.__query" id="IrcWidget.__query" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__query" />
+      <keyword name="IrcWidget.__readyRead" id="IrcWidget.__readyRead" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__readyRead" />
+      <keyword name="IrcWidget.__registerWithServices" id="IrcWidget.__registerWithServices" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__registerWithServices" />
+      <keyword name="IrcWidget.__send" id="IrcWidget.__send" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__send" />
+      <keyword name="IrcWidget.__sendCtcpReply" id="IrcWidget.__sendCtcpReply" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__sendCtcpReply" />
+      <keyword name="IrcWidget.__setChannelTypePrefixes" id="IrcWidget.__setChannelTypePrefixes" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__setChannelTypePrefixes" />
+      <keyword name="IrcWidget.__setUserPrivilegePrefix" id="IrcWidget.__setUserPrivilegePrefix" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__setUserPrivilegePrefix" />
+      <keyword name="IrcWidget.__sslErrors" id="IrcWidget.__sslErrors" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__sslErrors" />
+      <keyword name="IrcWidget.__tcpError" id="IrcWidget.__tcpError" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__tcpError" />
+      <keyword name="IrcWidget.__updateUsersCount" id="IrcWidget.__updateUsersCount" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__updateUsersCount" />
+      <keyword name="IrcWidget.autoConnect" id="IrcWidget.autoConnect" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.autoConnect" />
+      <keyword name="IrcWidget.isChannelName" id="IrcWidget.isChannelName" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.isChannelName" />
+      <keyword name="IrcWidget.on_channelsWidget_tabCloseRequested" id="IrcWidget.on_channelsWidget_tabCloseRequested" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.on_channelsWidget_tabCloseRequested" />
+      <keyword name="IrcWidget.shutdown" id="IrcWidget.shutdown" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.shutdown" />
       <keyword name="JavaScriptEricObject" id="JavaScriptEricObject" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject" />
       <keyword name="JavaScriptEricObject (Constructor)" id="JavaScriptEricObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.__init__" />
       <keyword name="JavaScriptEricObject.providerString" id="JavaScriptEricObject.providerString" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.providerString" />
@@ -7061,6 +7368,7 @@
       <keyword name="NannyNag.get_msg" id="NannyNag.get_msg" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#NannyNag.get_msg" />
       <keyword name="NannyNag.get_msg" id="NannyNag.get_msg" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag.get_msg" />
       <keyword name="Network (Package)" id="Network (Package)" ref="index-eric5.Helpviewer.Network.html" />
+      <keyword name="Network (Package)" id="Network (Package)" ref="index-eric5.Network.html" />
       <keyword name="NetworkAccessManager" id="NetworkAccessManager" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager" />
       <keyword name="NetworkAccessManager (Constructor)" id="NetworkAccessManager (Constructor)" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__init__" />
       <keyword name="NetworkAccessManager (Module)" id="NetworkAccessManager (Module)" ref="eric5.Helpviewer.Network.NetworkAccessManager.html" />
@@ -8057,7 +8365,6 @@
       <keyword name="ProjectBrowserPage (Module)" id="ProjectBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html" />
       <keyword name="ProjectBrowserPage.__setProjectBrowsersCheckBoxes" id="ProjectBrowserPage.__setProjectBrowsersCheckBoxes" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.__setProjectBrowsersCheckBoxes" />
       <keyword name="ProjectBrowserPage.__storeProjectBrowserFlags" id="ProjectBrowserPage.__storeProjectBrowserFlags" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.__storeProjectBrowserFlags" />
-      <keyword name="ProjectBrowserPage.on_pbHighlightedButton_clicked" id="ProjectBrowserPage.on_pbHighlightedButton_clicked" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.on_pbHighlightedButton_clicked" />
       <keyword name="ProjectBrowserPage.on_projectTypeCombo_activated" id="ProjectBrowserPage.on_projectTypeCombo_activated" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.on_projectTypeCombo_activated" />
       <keyword name="ProjectBrowserPage.save" id="ProjectBrowserPage.save" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.save" />
       <keyword name="ProjectBrowserSimpleDirectoryItem" id="ProjectBrowserSimpleDirectoryItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem" />
@@ -10454,10 +10761,6 @@
       <keyword name="TasksPage" id="TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage" />
       <keyword name="TasksPage (Constructor)" id="TasksPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.__init__" />
       <keyword name="TasksPage (Module)" id="TasksPage (Module)" ref="eric5.Preferences.ConfigurationPages.TasksPage.html" />
-      <keyword name="TasksPage.on_tasksFixmeColourButton_clicked" id="TasksPage.on_tasksFixmeColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksFixmeColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksNoteColourButton_clicked" id="TasksPage.on_tasksNoteColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksNoteColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksTodoColourButton_clicked" id="TasksPage.on_tasksTodoColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksTodoColourButton_clicked" />
-      <keyword name="TasksPage.on_tasksWarningColourButton_clicked" id="TasksPage.on_tasksWarningColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.on_tasksWarningColourButton_clicked" />
       <keyword name="TasksPage.save" id="TasksPage.save" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage.save" />
       <keyword name="TasksReader" id="TasksReader" ref="eric5.E5XML.TasksReader.html#TasksReader" />
       <keyword name="TasksReader (Constructor)" id="TasksReader (Constructor)" ref="eric5.E5XML.TasksReader.html#TasksReader.__init__" />
@@ -11020,6 +11323,7 @@
       <keyword name="UserInterface.__UIPreviewer" id="UserInterface.__UIPreviewer" ref="eric5.UI.UserInterface.html#UserInterface.__UIPreviewer" />
       <keyword name="UserInterface.__activateBrowser" id="UserInterface.__activateBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateBrowser" />
       <keyword name="UserInterface.__activateDebugViewer" id="UserInterface.__activateDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateDebugViewer" />
+      <keyword name="UserInterface.__activateIRC" id="UserInterface.__activateIRC" ref="eric5.UI.UserInterface.html#UserInterface.__activateIRC" />
       <keyword name="UserInterface.__activateLogViewer" id="UserInterface.__activateLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateLogViewer" />
       <keyword name="UserInterface.__activateMultiProjectBrowser" id="UserInterface.__activateMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateMultiProjectBrowser" />
       <keyword name="UserInterface.__activateNumbersViewer" id="UserInterface.__activateNumbersViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateNumbersViewer" />
@@ -11072,6 +11376,7 @@
       <keyword name="UserInterface.__initStatusbar" id="UserInterface.__initStatusbar" ref="eric5.UI.UserInterface.html#UserInterface.__initStatusbar" />
       <keyword name="UserInterface.__initToolbars" id="UserInterface.__initToolbars" ref="eric5.UI.UserInterface.html#UserInterface.__initToolbars" />
       <keyword name="UserInterface.__installPlugins" id="UserInterface.__installPlugins" ref="eric5.UI.UserInterface.html#UserInterface.__installPlugins" />
+      <keyword name="UserInterface.__ircAutoConnected" id="UserInterface.__ircAutoConnected" ref="eric5.UI.UserInterface.html#UserInterface.__ircAutoConnected" />
       <keyword name="UserInterface.__lastEditorClosed" id="UserInterface.__lastEditorClosed" ref="eric5.UI.UserInterface.html#UserInterface.__lastEditorClosed" />
       <keyword name="UserInterface.__linguist" id="UserInterface.__linguist" ref="eric5.UI.UserInterface.html#UserInterface.__linguist" />
       <keyword name="UserInterface.__linguist4" id="UserInterface.__linguist4" ref="eric5.UI.UserInterface.html#UserInterface.__linguist4" />
@@ -11163,6 +11468,7 @@
       <keyword name="UserInterface.addSideWidget" id="UserInterface.addSideWidget" ref="eric5.UI.UserInterface.html#UserInterface.addSideWidget" />
       <keyword name="UserInterface.appendToStderr" id="UserInterface.appendToStderr" ref="eric5.UI.UserInterface.html#UserInterface.appendToStderr" />
       <keyword name="UserInterface.appendToStdout" id="UserInterface.appendToStdout" ref="eric5.UI.UserInterface.html#UserInterface.appendToStdout" />
+      <keyword name="UserInterface.autoConnectIrc" id="UserInterface.autoConnectIrc" ref="eric5.UI.UserInterface.html#UserInterface.autoConnectIrc" />
       <keyword name="UserInterface.checkConfigurationStatus" id="UserInterface.checkConfigurationStatus" ref="eric5.UI.UserInterface.html#UserInterface.checkConfigurationStatus" />
       <keyword name="UserInterface.checkForErrorLog" id="UserInterface.checkForErrorLog" ref="eric5.UI.UserInterface.html#UserInterface.checkForErrorLog" />
       <keyword name="UserInterface.checkProjectsWorkspace" id="UserInterface.checkProjectsWorkspace" ref="eric5.UI.UserInterface.html#UserInterface.checkProjectsWorkspace" />
@@ -11267,12 +11573,6 @@
       <keyword name="VcsPage" id="VcsPage" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage" />
       <keyword name="VcsPage (Constructor)" id="VcsPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.__init__" />
       <keyword name="VcsPage (Module)" id="VcsPage (Module)" ref="eric5.Preferences.ConfigurationPages.VcsPage.html" />
-      <keyword name="VcsPage.on_pbVcsAddedButton_clicked" id="VcsPage.on_pbVcsAddedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsAddedButton_clicked" />
-      <keyword name="VcsPage.on_pbVcsConflictButton_clicked" id="VcsPage.on_pbVcsConflictButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsConflictButton_clicked" />
-      <keyword name="VcsPage.on_pbVcsModifiedButton_clicked" id="VcsPage.on_pbVcsModifiedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsModifiedButton_clicked" />
-      <keyword name="VcsPage.on_pbVcsRemovedButton_clicked" id="VcsPage.on_pbVcsRemovedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsRemovedButton_clicked" />
-      <keyword name="VcsPage.on_pbVcsReplacedButton_clicked" id="VcsPage.on_pbVcsReplacedButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsReplacedButton_clicked" />
-      <keyword name="VcsPage.on_pbVcsUpdateButton_clicked" id="VcsPage.on_pbVcsUpdateButton_clicked" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.on_pbVcsUpdateButton_clicked" />
       <keyword name="VcsPage.save" id="VcsPage.save" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#VcsPage.save" />
       <keyword name="VcsPlugins (Package)" id="VcsPlugins (Package)" ref="index-eric5.Plugins.VcsPlugins.html" />
       <keyword name="VcsProjectBrowserHelper" id="VcsProjectBrowserHelper" ref="eric5.VCS.ProjectBrowserHelper.html#VcsProjectBrowserHelper" />
@@ -11877,6 +12177,7 @@
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric5.Utilities.crypto.__init__.html#__getMasterPassword" />
       <keyword name="__getPygmentsLexer" id="__getPygmentsLexer" ref="eric5.QScintilla.Lexers.__init__.html#__getPygmentsLexer" />
+      <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric5.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
       <keyword name="__messageBox" id="__messageBox" ref="eric5.E5Gui.E5MessageBox.html#__messageBox" />
       <keyword name="__readShortcut" id="__readShortcut" ref="eric5.Preferences.Shortcuts.html#__readShortcut" />
       <keyword name="__render" id="__render" ref="eric5.Helpviewer.HelpSnap.html#__render" />
@@ -11968,6 +12269,7 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.IconsPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#create" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.IrcPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.NotificationsPage.html#create" />
@@ -12108,6 +12410,7 @@
       <keyword name="generatePySideToolPath" id="generatePySideToolPath" ref="eric5.Utilities.__init__.html#generatePySideToolPath" />
       <keyword name="generateQtToolName" id="generateQtToolName" ref="eric5.Utilities.__init__.html#generateQtToolName" />
       <keyword name="generateVersionInfo" id="generateVersionInfo" ref="eric5.Utilities.__init__.html#generateVersionInfo" />
+      <keyword name="getChannelModesDict" id="getChannelModesDict" ref="eric5.Network.IRC.IrcUtilities.html#getChannelModesDict" />
       <keyword name="getCompleter" id="getCompleter" ref="eric5.QScintilla.TypingCompleters.__init__.html#getCompleter" />
       <keyword name="getConfig" id="getConfig" ref="eric5.eric5config.html#getConfig" />
       <keyword name="getConfigData" id="getConfigData" ref="eric5.Plugins.PluginVcsMercurial.html#getConfigData" />
@@ -12155,6 +12458,7 @@
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
       <keyword name="getImporters" id="getImporters" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporters" />
+      <keyword name="getIrc" id="getIrc" ref="eric5.Preferences.__init__.html#getIrc" />
       <keyword name="getLanguageIcon" id="getLanguageIcon" ref="eric5.QScintilla.Lexers.__init__.html#getLanguageIcon" />
       <keyword name="getLexer" id="getLexer" ref="eric5.QScintilla.Lexers.__init__.html#getLexer" />
       <keyword name="getMessage" id="getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#getMessage" />
@@ -12180,6 +12484,7 @@
       <keyword name="getQt4DocDir" id="getQt4DocDir" ref="eric5.Preferences.__init__.html#getQt4DocDir" />
       <keyword name="getQt4TranslationsDir" id="getQt4TranslationsDir" ref="eric5.Preferences.__init__.html#getQt4TranslationsDir" />
       <keyword name="getQtMacBundle" id="getQtMacBundle" ref="eric5.Utilities.__init__.html#getQtMacBundle" />
+      <keyword name="getRealName" id="getRealName" ref="eric5.Utilities.__init__.html#getRealName" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfaceNone.html#getRegistryData" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfacePython.html#getRegistryData" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfacePython3.html#getRegistryData" />
@@ -12270,6 +12575,8 @@
       <keyword name="installEric" id="installEric" ref="eric5.install.html#installEric" />
       <keyword name="installTranslations" id="installTranslations" ref="eric5.install-i18n.html#installTranslations" />
       <keyword name="interrupt" id="interrupt" ref="eric5.DebugClients.Ruby.Debuggee.html#interrupt" />
+      <keyword name="ircFilter" id="ircFilter" ref="eric5.Network.IRC.IrcUtilities.html#ircFilter" />
+      <keyword name="ircTimestamp" id="ircTimestamp" ref="eric5.Network.IRC.IrcUtilities.html#ircTimestamp" />
       <keyword name="isConfigured" id="isConfigured" ref="eric5.Preferences.__init__.html#isConfigured" />
       <keyword name="isExecutable" id="isExecutable" ref="eric5.Utilities.__init__.html#isExecutable" />
       <keyword name="isLinuxPlatform" id="isLinuxPlatform" ref="eric5.Globals.__init__.html#isLinuxPlatform" />
@@ -12450,6 +12757,7 @@
       <keyword name="setHelp" id="setHelp" ref="eric5.Preferences.__init__.html#setHelp" />
       <keyword name="setIconEditor" id="setIconEditor" ref="eric5.Preferences.__init__.html#setIconEditor" />
       <keyword name="setIcons" id="setIcons" ref="eric5.Preferences.__init__.html#setIcons" />
+      <keyword name="setIrc" id="setIrc" ref="eric5.Preferences.__init__.html#setIrc" />
       <keyword name="setLibraryPaths" id="setLibraryPaths" ref="eric5.Toolbox.Startup.html#setLibraryPaths" />
       <keyword name="setMultiProject" id="setMultiProject" ref="eric5.Preferences.__init__.html#setMultiProject" />
       <keyword name="setPluginManager" id="setPluginManager" ref="eric5.Preferences.__init__.html#setPluginManager" />
@@ -12548,6 +12856,7 @@
       <keyword name="wildcardMatch" id="wildcardMatch" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#wildcardMatch" />
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric5.Utilities.__init__.html#win32_GetUserName" />
       <keyword name="win32_Kill" id="win32_Kill" ref="eric5.Utilities.__init__.html#win32_Kill" />
+      <keyword name="win32_getRealName" id="win32_getRealName" ref="eric5.Utilities.__init__.html#win32_getRealName" />
       <keyword name="wrapperName" id="wrapperName" ref="eric5.install.html#wrapperName" />
       <keyword name="wrapperName" id="wrapperName" ref="eric5.uninstall.html#wrapperName" />
       <keyword name="write" id="write" ref="eric5.DebugClients.Ruby.AsyncFile.html#write" />
@@ -12885,6 +13194,17 @@
       <file>eric5.MultiProject.MultiProject.html</file>
       <file>eric5.MultiProject.MultiProjectBrowser.html</file>
       <file>eric5.MultiProject.PropertiesDialog.html</file>
+      <file>eric5.Network.IRC.IrcChannelEditDialog.html</file>
+      <file>eric5.Network.IRC.IrcChannelWidget.html</file>
+      <file>eric5.Network.IRC.IrcIdentitiesEditDialog.html</file>
+      <file>eric5.Network.IRC.IrcMessageEdit.html</file>
+      <file>eric5.Network.IRC.IrcNetworkEditDialog.html</file>
+      <file>eric5.Network.IRC.IrcNetworkListDialog.html</file>
+      <file>eric5.Network.IRC.IrcNetworkManager.html</file>
+      <file>eric5.Network.IRC.IrcNetworkWidget.html</file>
+      <file>eric5.Network.IRC.IrcServerEditDialog.html</file>
+      <file>eric5.Network.IRC.IrcUtilities.html</file>
+      <file>eric5.Network.IRC.IrcWidget.html</file>
       <file>eric5.PluginManager.PluginDetailsDialog.html</file>
       <file>eric5.PluginManager.PluginExceptions.html</file>
       <file>eric5.PluginManager.PluginInfoDialog.html</file>
@@ -13110,6 +13430,7 @@
       <file>eric5.Preferences.ConfigurationPages.IconsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.InterfacePage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.IrcPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.MultiProjectPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.NetworkPage.html</file>
@@ -13374,6 +13695,8 @@
       <file>index-eric5.IconEditor.cursors.html</file>
       <file>index-eric5.IconEditor.html</file>
       <file>index-eric5.MultiProject.html</file>
+      <file>index-eric5.Network.IRC.html</file>
+      <file>index-eric5.Network.html</file>
       <file>index-eric5.PluginManager.html</file>
       <file>index-eric5.Plugins.AboutPlugin.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.Pep8.html</file>

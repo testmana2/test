@@ -134,6 +134,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#getQtMacBundle">getQtMacBundle</a></td>
 <td>Module function to determine the correct Mac OS X bundle name for Qt tools.</td>
 </tr><tr>
+<td><a href="#getRealName">getRealName</a></td>
+<td>Function to get the real name of the user.</td>
+</tr><tr>
 <td><a href="#getTestFileName">getTestFileName</a></td>
 <td>Function to build the filename of a unittest file.</td>
 </tr><tr>
@@ -232,6 +235,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 </tr><tr>
 <td><a href="#win32_Kill">win32_Kill</a></td>
 <td>Function to provide an os.kill equivalent for Win32.</td>
+</tr><tr>
+<td><a href="#win32_getRealName">win32_getRealName</a></td>
+<td>Function to get the user's real name (aka.</td>
 </tr><tr>
 <td><a href="#writeEncodedFile">writeEncodedFile</a></td>
 <td>Function to write a file with properly encoded text.</td>
@@ -918,6 +924,19 @@ bundle name of the Qt tool (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="getRealName" ID="getRealName"></a>
+<h2>getRealName</h2>
+<b>getRealName</b>(<i></i>)
+<p>
+    Function to get the real name of the user.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+real name of the user (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="getTestFileName" ID="getTestFileName"></a>
 <h2>getTestFileName</h2>
 <b>getTestFileName</b>(<i>fn</i>)
@@ -1535,6 +1554,19 @@ user name (string)
 <dt><i>pid</i></dt>
 <dd>
 process id
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="win32_getRealName" ID="win32_getRealName"></a>
+<h2>win32_getRealName</h2>
+<b>win32_getRealName</b>(<i></i>)
+<p>
+    Function to get the user's real name (aka. display name) under Win32.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+real name of the current user (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

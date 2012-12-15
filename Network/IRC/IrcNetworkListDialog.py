@@ -69,7 +69,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         """
         Private method to (re-)set the data of a network entry.
         
-        @oaram itm reference to the network entry (QTreeWidgetItem)
+        @param itm reference to the network entry (QTreeWidgetItem)
         """
         # step 1: delete all child entries
         children = itm.takeChildren()

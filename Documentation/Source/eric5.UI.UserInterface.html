@@ -197,6 +197,9 @@ E5MainWindow
 <td><a href="#UserInterface.__activateDebugViewer">__activateDebugViewer</a></td>
 <td>Private slot to handle the activation of the debug viewer.</td>
 </tr><tr>
+<td><a href="#UserInterface.__activateIRC">__activateIRC</a></td>
+<td>Public slot to handle the activation of the IRC window.</td>
+</tr><tr>
 <td><a href="#UserInterface.__activateLogViewer">__activateLogViewer</a></td>
 <td>Private slot to handle the activation of the Log Viewer.</td>
 </tr><tr>
@@ -352,6 +355,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.__installPlugins">__installPlugins</a></td>
 <td>Private slot to show a dialog to install a new plugin.</td>
+</tr><tr>
+<td><a href="#UserInterface.__ircAutoConnected">__ircAutoConnected</a></td>
+<td>Private slot handling the automatic connection of the IRC client.</td>
 </tr><tr>
 <td><a href="#UserInterface.__lastEditorClosed">__lastEditorClosed</a></td>
 <td>Private slot to handle the lastEditorClosed signal.</td>
@@ -626,6 +632,9 @@ E5MainWindow
 <td><a href="#UserInterface.appendToStdout">appendToStdout</a></td>
 <td>Public slot to append text to the stdout log viewer tab.</td>
 </tr><tr>
+<td><a href="#UserInterface.autoConnectIrc">autoConnectIrc</a></td>
+<td>Public method to initiate the IRC auto connection.</td>
+</tr><tr>
 <td><a href="#UserInterface.checkConfigurationStatus">checkConfigurationStatus</a></td>
 <td>Public method to check, if eric5 has been configured.</td>
 </tr><tr>
@@ -813,6 +822,11 @@ filename of the form to be previewed (string)
 <b>__activateDebugViewer</b>(<i></i>)
 <p>
         Private slot to handle the activation of the debug viewer.
+</p><a NAME="UserInterface.__activateIRC" ID="UserInterface.__activateIRC"></a>
+<h4>UserInterface.__activateIRC</h4>
+<b>__activateIRC</b>(<i></i>)
+<p>
+        Public slot to handle the activation of the IRC window.
 </p><a NAME="UserInterface.__activateLogViewer" ID="UserInterface.__activateLogViewer"></a>
 <h4>UserInterface.__activateLogViewer</h4>
 <b>__activateLogViewer</b>(<i></i>)
@@ -1164,7 +1178,12 @@ list giving the widget's geometry and it's visibility
 list of plugin files suggested for
             installation list of strings
 </dd>
-</dl><a NAME="UserInterface.__lastEditorClosed" ID="UserInterface.__lastEditorClosed"></a>
+</dl><a NAME="UserInterface.__ircAutoConnected" ID="UserInterface.__ircAutoConnected"></a>
+<h4>UserInterface.__ircAutoConnected</h4>
+<b>__ircAutoConnected</b>(<i></i>)
+<p>
+        Private slot handling the automatic connection of the IRC client.
+</p><a NAME="UserInterface.__lastEditorClosed" ID="UserInterface.__lastEditorClosed"></a>
 <h4>UserInterface.__lastEditorClosed</h4>
 <b>__lastEditorClosed</b>(<i></i>)
 <p>
@@ -1817,7 +1836,12 @@ output to be appended (string)
 <dd>
 output to be appended (string)
 </dd>
-</dl><a NAME="UserInterface.checkConfigurationStatus" ID="UserInterface.checkConfigurationStatus"></a>
+</dl><a NAME="UserInterface.autoConnectIrc" ID="UserInterface.autoConnectIrc"></a>
+<h4>UserInterface.autoConnectIrc</h4>
+<b>autoConnectIrc</b>(<i></i>)
+<p>
+        Public method to initiate the IRC auto connection.
+</p><a NAME="UserInterface.checkConfigurationStatus" ID="UserInterface.checkConfigurationStatus"></a>
 <h4>UserInterface.checkConfigurationStatus</h4>
 <b>checkConfigurationStatus</b>(<i></i>)
 <p>
