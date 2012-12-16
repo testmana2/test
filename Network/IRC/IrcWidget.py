@@ -11,7 +11,7 @@ import re
 import logging
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QTimer
-from PyQt4.QtGui import QWidget, QToolButton, QLabel
+from PyQt4.QtGui import QWidget, QToolButton, QLabel, QTabWidget
 from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
 try:
     from PyQt4.QtNetwork import QSslSocket, QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
@@ -29,6 +29,8 @@ from .IrcNetworkListDialog import IrcNetworkListDialog
 
 import Preferences
 import UI.PixmapCache
+
+from Globals import isMacPlatform
 
 from UI.Info import Version, Copyright
 
@@ -63,6 +65,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__leaveButton.setEnabled(False)
         self.channelsWidget.setCornerWidget(self.__leaveButton, Qt.BottomRightCorner)
         self.channelsWidget.setTabsClosable(False)
+        if not isMacPlatform():
+            self.channelsWidget.setTabPosition(QTabWidget.South)
         
         self.__channelList = []
         self.__channelTypePrefixes = ""

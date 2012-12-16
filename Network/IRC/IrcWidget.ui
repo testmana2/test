@@ -22,9 +22,6 @@
        <verstretch>3</verstretch>
       </sizepolicy>
      </property>
-     <property name="tabPosition">
-      <enum>QTabWidget::South</enum>
-     </property>
      <property name="documentMode">
       <bool>true</bool>
      </property>
