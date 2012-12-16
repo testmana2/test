@@ -781,7 +781,11 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 ctcpRequest, ctcpArg = ctcpCommand, ""
             ctcpRequest = ctcpRequest.lower()
             if ctcpRequest == "version":
-                msg = "Eric IRC client {0}, {1}".format(Version, Copyright)
+                if Version.startswith("@@"):
+                    vers = ""
+                else:
+                    vers = " " + Version
+                msg = "Eric IRC client{0}, {1}".format(vers, Copyright)
                 self.networkWidget.addServerMessage(self.trUtf8("CTCP"),
                     self.trUtf8("Received Version request from {0}.").format(
                     match.group(1)))
