@@ -68,6 +68,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if not isMacPlatform():
             self.channelsWidget.setTabPosition(QTabWidget.South)
         
+        height = self.height()
+        self.splitter.setSizes([height * 0.6, height * 0.4])
+        
         self.__channelList = []
         self.__channelTypePrefixes = ""
         self.__userName = ""
@@ -351,6 +354,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         if self.channelsWidget.count() == 0:
             self.channelsWidget.addTab(self.__emptyLabel, "")
+            self.__emptyLabel.show()
             self.__leaveButton.setEnabled(False)
             self.channelsWidget.setTabsClosable(False)
     
@@ -845,7 +849,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param nick nick name to use (str)
         """
-        self.__send("NICK " + nick)
+        if nick:
+            self.__send("NICK " + nick)
     
     def __setChannelTypePrefixes(self, prefixes):
         """

@@ -6488,6 +6488,7 @@
       <keyword name="IrcChannelWidget.hideEvent" id="IrcChannelWidget.hideEvent" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.hideEvent" />
       <keyword name="IrcChannelWidget.initAutoWho" id="IrcChannelWidget.initAutoWho" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.initAutoWho" />
       <keyword name="IrcChannelWidget.name" id="IrcChannelWidget.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.name" />
+      <keyword name="IrcChannelWidget.on_editTopicButton_clicked" id="IrcChannelWidget.on_editTopicButton_clicked" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_editTopicButton_clicked" />
       <keyword name="IrcChannelWidget.on_messageEdit_returnPressed" id="IrcChannelWidget.on_messageEdit_returnPressed" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messageEdit_returnPressed" />
       <keyword name="IrcChannelWidget.on_messages_copyAvailable" id="IrcChannelWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_copyAvailable" />
       <keyword name="IrcChannelWidget.on_messages_customContextMenuRequested" id="IrcChannelWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_customContextMenuRequested" />

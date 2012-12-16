@@ -18,17 +18,31 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QLabel" name="topicLabel">
-     <property name="text">
-      <string/>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-     <property name="openExternalLinks">
-      <bool>true</bool>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="topicLabel">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="editTopicButton">
+       <property name="toolTip">
+        <string>Press to change the topic</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QSplitter" name="splitter">
@@ -91,9 +105,10 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>usersList</tabstop>
-  <tabstop>messages</tabstop>
   <tabstop>messageEdit</tabstop>
+  <tabstop>messages</tabstop>
+  <tabstop>usersList</tabstop>
+  <tabstop>editTopicButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

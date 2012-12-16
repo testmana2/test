@@ -10,7 +10,8 @@ Module implementing the IRC channel widget.
 import re
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer
-from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication
+from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication, \
+    QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
@@ -195,6 +196,11 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__ui = e5App().getObject("UserInterface")
         self.__ircWidget = parent
         
+        self.editTopicButton.setIcon(UI.PixmapCache.getIcon("ircEditTopic.png"))
+        
+        height = self.usersList.height() + self.messages.height()
+        self.splitter.setSizes([height * 0.3, height * 0.7])
+        
         self.__initMessagesMenu()
         self.__initUsersMenu()
         
@@ -287,14 +293,9 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             # :sturgeon.freenode.net 313 foo_ bar :is an IRC Operator
             (re.compile(r":.*\s313\s[^ ]+\s([^ ]+)\s:(.*)"), self.__whoIsOperator),
             # :sturgeon.freenode.net 378 foo_ bar :is connecting from *@mnch-4d044d5a.pool.mediaWays.net 77.4.77.90
-            (re.compile(r":.*\s311\s[^ ]+\s([^ ]+)\s:.*\s([^ ]+)\s([^ ]+)"),
+            (re.compile(r":.*\s378\s[^ ]+\s([^ ]+)\s:.*\s([^ ]+)\s([^ ]+)"),
                 self.__whoIsConnection),
         ]
-        # group(1)   nick
-        # group(2)   host name
-        # group(3)   IP
-        # group(4)   real name
-        # group(5)   
         
         self.__autoWhoTemplate = "WHO {0} %tnf,42"
         self.__autoWhoTimer = QTimer()
@@ -414,6 +415,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         self.__private = private
         self.__privatePartner = partner
+        self.editTopicButton.setEnabled(private)
     
     def setPrivateInfo(self, infoText):
         """
@@ -1231,11 +1233,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         Private slot to initialize the users list context menu.
         """
         self.__usersMenu = QMenu(self)
-        self.__usersMenu.addAction(self.trUtf8("Who Is"), self.__whoIs)
+        self.__whoIsAct = \
+            self.__usersMenu.addAction(self.trUtf8("Who Is"),
+            self.__whoIs)
         self.__usersMenu.addSeparator()
         self.__privateChatAct = \
             self.__usersMenu.addAction(self.trUtf8("Private Chat"),
             self.__openPrivateChat)
+        self.__usersMenu.addSeparator()
+        self.__usersListRefreshAct = \
+            self.__usersMenu.addAction(self.trUtf8("Refresh"),
+            self.__sendAutoWhoCommand)
     
     @pyqtSlot(QPoint)
     def on_usersList_customContextMenuRequested(self, pos):
@@ -1244,9 +1252,17 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         @param pos the position of the mouse pointer (QPoint)
         """
-        self.__privateChatAct.setEnabled(not self.__private)
-        if len(self.usersList.selectedItems()) > 0:
-            self.__usersMenu.popup(self.usersList.mapToGlobal(pos))
+        enable = len(self.usersList.selectedItems()) > 0
+        enablePrivate = enable and not self.__private
+        itm = self.usersList.itemAt(pos)
+        if itm and enablePrivate:
+            enablePrivate = itm.text().lower() not in [
+                "chanserv", self.__userName.lower()]
+        self.__whoIsAct.setEnabled(enable)
+        self.__privateChatAct.setEnabled(enablePrivate)
+        self.__usersListRefreshAct.setEnabled(
+            self.usersList.count() <= Preferences.getIrc("AutoUserInfoMax"))
+        self.__usersMenu.popup(self.usersList.mapToGlobal(pos))
     
     def hideEvent(self, evt):
         """
@@ -1332,7 +1348,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(4)  nick
         # group(5)  user flags
         # group(6)  real name
-        if match.group(2).lower() == self.__name:
+        if match.group(1).lower() == self.__name:
             away = self.trUtf8(" (Away)") if match.group(5).startswith("G") else ""
             self.__addManagementMessage(self.trUtf8("Who"),
                 self.trUtf8("{0} is {1}@{2} ({3}){4}").format(
@@ -1641,3 +1657,18 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             return True
         
         return False
+    
+    @pyqtSlot()
+    def on_editTopicButton_clicked(self):
+        """
+        Private slot to change the topic of the channel.
+        """
+        topic, ok = QInputDialog.getText(
+            self,
+            self.trUtf8("Edit Channel Topic"),
+            self.trUtf8("Enter the topic for this channel:"),
+            QLineEdit.Normal,
+            self.topicLabel.text())
+        if ok and topic != "":
+            self.sendData.emit("TOPIC {0} :{1}".format(
+                self.__name, topic))
