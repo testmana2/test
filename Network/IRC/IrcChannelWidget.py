@@ -228,8 +228,10 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             # :foo_!n=foo@foohost.bar.net MODE #eric-ide +o foo_
             (re.compile(r":([^!]+).*\sMODE\s([^ ]+)\s([+-][ovO]+)\s([^ ]+).*"),
                 self.__setUserPrivilege),
-            # :cameron.freenode.net MODE #testeric +ns
+            # :cameron.freenode.net MODE #eric-ide +ns
             (re.compile(r":([^ ]+)\sMODE\s([^ ]+)\s(.+)"), self.__updateChannelModes),
+            # :foo_!n=foo@foohost.bar.net TOPIC #eric-ide :eric - The Python IDE
+            (re.compile(r":.*\sTOPIC\s([^ ]+)\s:(.*)"), self.__setTopic),
             # :sturgeon.freenode.net 301 foo_ bar :Gone away for now
             (re.compile(r":.*\s301\s([^ ]+)\s([^ ]+)\s:(.+)"), self.__userAway),
             # :sturgeon.freenode.net 315 foo_ #eric-ide :End of /WHO list.
