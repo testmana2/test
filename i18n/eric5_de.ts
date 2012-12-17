@@ -1943,8 +1943,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2180,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14291,8 +14291,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
@@ -56920,12 +56920,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
         <source>multiple statements on one line (colon)</source>
-        <translation>mehrere Anweisungen in einer Teile (Doppelpunkt)</translation>
+        <translation>mehrere Anweisungen in einer Zeile (Doppelpunkt)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
         <source>multiple statements on one line (semicolon)</source>
-        <translation>mehrere Anweisungen in einer Teile (Semikolon)</translation>
+        <translation>mehrere Anweisungen in einer Zeile (Semikolon)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
