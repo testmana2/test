@@ -835,8 +835,8 @@ def doDependancyChecks():
         maj = int(maj)
         min = int(min)
         pat = int(pat)
-        if maj < 4 or (maj == 4 and min < 7):
-            print('Sorry, you must have PyQt 4.7.0 or higher or' \
+        if maj < 4 or (maj == 4 and min < 8):
+            print('Sorry, you must have PyQt 4.8.0 or higher or' \
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
@@ -859,8 +859,8 @@ def doDependancyChecks():
         maj = int(maj)
         min = int(min)
         pat = int(pat)
-        if maj < 2 or (maj == 2 and min < 4):
-            print('Sorry, you must have QScintilla 2.4.0 or higher or' \
+        if maj < 2 or (maj == 2 and min < 6):
+            print('Sorry, you must have QScintilla 2.6.0 or higher or' \
                   ' a recent snapshot release.')
             exit(5)
         # check for blacklisted versions
