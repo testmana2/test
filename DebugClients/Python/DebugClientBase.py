@@ -886,8 +886,6 @@ class DebugClientBase(object):
             sys.last_type, sys.last_value, sys.last_traceback = sys.exc_info()
             map(self.write, traceback.format_exception_only(sys.last_type, sys.last_value))
             self.buffer = ''
-
-            self.__exceptionRaised()
         else:
             if code is None:
                 self.pendingResponse = DebugProtocol.ResponseContinue
@@ -950,8 +948,6 @@ class DebugClientBase(object):
                         tblist = tb = None
 
                     map(self.write, list)
-
-                    self.__exceptionRaised()
 
     def __clientCapabilities(self):
         """
