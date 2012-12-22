@@ -7,6 +7,8 @@
 Module implementing the Mercurial configuration page.
 """
 
+import os
+
 from PyQt4.QtCore import pyqtSlot
 
 from QScintilla.MiniEditor import MiniEditor
@@ -60,5 +62,12 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         Private slot to edit the (per user) Mercurial configuration file.
         """
         cfgFile = self.__plugin.getConfigPath()
+        if not os.path.exists(cfgFile):
+            try:
+                f = open(cfgFile, "w")
+                f.close()
+            except (IOError, OSError):
+                # ignore these
+                pass
         editor = MiniEditor(cfgFile, "Properties", self)
         editor.show()

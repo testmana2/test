@@ -1887,6 +1887,13 @@ class Hg(VersionControl):
         Public method used to edit the user configuration file.
         """
         cfgFile = getConfigPath()
+        if not os.path.exists(cfgFile):
+            try:
+                f = open(cfgFile, "w")
+                f.close()
+            except (IOError, OSError):
+                # ignore these
+                pass
         self.userEditor = MiniEditor(cfgFile, "Properties")
         self.userEditor.show()
     
