@@ -3487,6 +3487,7 @@ eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.getIdentity?4(name, create
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.getIdentityNames?4()
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.getNetwork?4(name)
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.getNetworkNames?4()
+eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.identitiesChanged?7
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.identityChanged?4()
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.networkChanged?4()
 eric5.Network.IRC.IrcNetworkManager.IrcNetworkManager.networksChanged?7
