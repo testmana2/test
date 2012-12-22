@@ -34,7 +34,7 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
         self.setObjectName("NotificationsPage")
         
         minX, maxX = self.xSpinBox.maximum(), self.xSpinBox.minimum()
-        minY, maxY = self.ySpinBox.maximum(), self.ySpinBox.minimum() 
+        minY, maxY = self.ySpinBox.maximum(), self.ySpinBox.minimum()
         desk = QApplication.desktop()
         for screen in range(desk.screenCount()):
             geom = desk.availableGeometry(screen)

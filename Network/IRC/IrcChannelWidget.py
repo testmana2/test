@@ -251,7 +251,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             # :zelazny.freenode.net 332 foo_ #eric-ide :eric support channel
             (re.compile(r":.*\s332\s.*\s([^ ]+)\s:(.*)"), self.__setTopic),
             # :zelazny.freenode.net foo_ 333 #eric-ide foo 1353089020
-            (re.compile(r":.*\s333\s.*\s([^ ]+)\s([^ ]+)\s(\d+)"), self.__topicCreated), 
+            (re.compile(r":.*\s333\s.*\s([^ ]+)\s([^ ]+)\s(\d+)"), self.__topicCreated),
             # :cameron.freenode.net 352 detlev_ #eric-ide ~foo foohost.bar.net cameron.freenode.net foo_ H :0 Foo Bar
             (re.compile(r":.*\s352\s[^ ]+\s([^ ]+)\s([^ ]+)\s([^ ]+)\s[^ ]+\s([^ ]+)"
                         r"\s([^ ]+)\s:\d+\s(.*)"), self.__whoEntry),

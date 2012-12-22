@@ -440,7 +440,7 @@ class IrcChannel(object):
         """
         Public method to check the auto join status.
         
-        @return flag indicating if the channel should be 
+        @return flag indicating if the channel should be
             joined automatically (boolean)
         """
         return self.__autoJoin
@@ -449,7 +449,7 @@ class IrcChannel(object):
         """
         Public method to set the auto join status of the channel.
         
-        @param enable flag indicating if the channel should be 
+        @param enable flag indicating if the channel should be
             joined automatically (boolean)
         """
         self.__autoJoin = enable
@@ -914,7 +914,7 @@ class IrcNetworkManager(QObject):
         @param newName new name of the identity (string)
         """
         if oldName in self.__identities:
-            self.__identities[newName] = self.__identities[oldName] 
+            self.__identities[newName] = self.__identities[oldName]
             del self.__identities[oldName]
             
             for network in self.__networks:

@@ -23,6 +23,7 @@ __ColorRe = re.compile(
     r"""((?:\x03(?:0[0-9]|1[0-5]|[0-9])?(?:,(?:0[0-9]|1[0-5]|[0-9]))?)"""
     r"""|\x02|\x03|\x13|\x15|\x16|\x17|\x1d|\x1f)""")
 
+
 def ircTimestamp():
     """
     Module method to generate a time stamp string.
@@ -45,6 +46,7 @@ def ircTimestamp():
     else:
         return ""
 
+
 def ircFilter(msg):
     """
     Module method to make the message HTML compliant and detect URLs.
@@ -62,30 +64,30 @@ def ircFilter(msg):
     for part in parts:
         if part == "\x02":                                  # bold
             if openTags and openTags[-1] == "b":
-                msgParts.append("</" + openTags.pop(-1) +">")
+                msgParts.append("</" + openTags.pop(-1) + ">")
             else:
                 msgParts.append("<b>")
                 openTags.append("b")
         elif part in ["\x03", "\x17"]:
             if Preferences.getIrc("EnableIrcColours"):
                 if openTags and openTags[-1] == "span":
-                    msgParts.append("</" + openTags.pop(-1) +">")
+                    msgParts.append("</" + openTags.pop(-1) + ">")
                 else:
                     continue
             else:
                 continue
         elif part == "\x0f":                                # reset
             while openTags:
-                msgParts.append("</" + openTags.pop(-1) +">")
+                msgParts.append("</" + openTags.pop(-1) + ">")
         elif part == "\x13":                                # strikethru
             if openTags and openTags[-1] == "s":
-                msgParts.append("</" + openTags.pop(-1) +">")
+                msgParts.append("</" + openTags.pop(-1) + ">")
             else:
                 msgParts.append("<s>")
                 openTags.append("s")
         elif part in ["\x15", "\x1f"]:                      # underline
             if openTags and openTags[-1] == "u":
-                msgParts.append("</" + openTags.pop(-1) +">")
+                msgParts.append("</" + openTags.pop(-1) + ">")
             else:
                 msgParts.append("<u>")
                 openTags.append("u")
@@ -94,7 +96,7 @@ def ircFilter(msg):
             continue
         elif part == "\x1d":                                # italic
             if openTags and openTags[-1] == "i":
-                msgParts.append("</" + openTags.pop(-1) +">")
+                msgParts.append("</" + openTags.pop(-1) + ">")
             else:
                 msgParts.append("<i>")
                 openTags.append("i")

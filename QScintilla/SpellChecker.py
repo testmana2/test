@@ -88,7 +88,7 @@ class SpellChecker(QObject):
         """
         Class method to get the default path names of the user dictionaries.
         
-        @param isException flag indicating to return the name of the default 
+        @param isException flag indicating to return the name of the default
             exception dictionary (boolean)
         @return file name of the default user dictionary or the default user
             exception dictionary (string)

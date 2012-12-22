@@ -344,7 +344,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private slot handling the closing of a channel.
         
-        @param name name of the closed channel (string) 
+        @param name name of the closed channel (string)
         """
         for channel in self.__channelList:
             if channel.name() == name:

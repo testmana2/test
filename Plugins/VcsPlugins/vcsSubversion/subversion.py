@@ -483,7 +483,7 @@ class Subversion(VersionControl):
                 elif os.path.isfile(nam):
                     editor = e5App().getObject("ViewManager").getOpenEditor(nam)
                     if editor:
-                       ok &= editor.checkDirty()
+                        ok &= editor.checkDirty()
                 if not ok:
                     break
             
@@ -492,7 +492,7 @@ class Subversion(VersionControl):
                     self.trUtf8("Commit Changes"),
                     self.trUtf8("""The commit affects files, that have unsaved"""
                                 """ changes. Shall the commit be continued?"""),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return
         

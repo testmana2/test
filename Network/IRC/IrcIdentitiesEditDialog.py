@@ -302,7 +302,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         inUse = False
         for networkName in self.__manager.getNetworkNames():
             inUse = (
-                self.__manager.getNetwork(networkName).getIdentityName() == 
+                self.__manager.getNetwork(networkName).getIdentityName() ==
                     currentIdentity)
             if inUse:
                 break
@@ -317,7 +317,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Delete Identity"),
             msg,
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         if res:
             del self.__identities[currentIdentity]
             self.identitiesCombo.removeItem(

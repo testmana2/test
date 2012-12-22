@@ -5428,7 +5428,7 @@ class ViewManager(QObject):
             fileInfo = dictionaryFile if len(dictionaryFile) < 40 \
                        else "...{0}".format(dictionaryFile[-40:])
             dlg = SpellingDictionaryEditDialog(data,
-                QApplication.translate('ViewManager', "Editing {0}").format(fileInfo), 
+                QApplication.translate('ViewManager', "Editing {0}").format(fileInfo),
                 self.ui)
             if dlg.exec_() == QDialog.Accepted:
                 data = dlg.getData()
