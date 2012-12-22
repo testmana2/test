@@ -11,7 +11,7 @@ import re
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer
 from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication, \
-    QInputDialog, QLineEdit
+    QInputDialog, QLineEdit, QTextCursor
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
@@ -1058,6 +1058,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                 txt = txt.replace(self.__markerLine, "")
             self.messages.setHtml(txt)
             self.__markerLine = ""
+            self.messages.moveCursor(QTextCursor.End)
     
     def __clearMessages(self):
         """
