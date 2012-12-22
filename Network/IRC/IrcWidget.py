@@ -853,7 +853,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param nick nick name to use (str)
         """
-        if nick:
+        if nick and nick != self.__nickName:
             self.__send("NICK " + nick)
     
     def __setChannelTypePrefixes(self, prefixes):

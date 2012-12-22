@@ -701,9 +701,11 @@ class IrcNetworkManager(QObject):
     
     @signal dataChanged() emitted after some data has changed
     @signal networksChanged() emitted after a network object has changed
+    @signal identitiesChanged() emitted after an identity object has changed
     """
     dataChanged = pyqtSignal()
     networksChanged = pyqtSignal()
+    identitiesChanged = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -926,6 +928,7 @@ class IrcNetworkManager(QObject):
         Public method to indicate a change of an identity object.
         """
         self.dataChanged.emit()
+        self.identitiesChanged.emit()
     
     ##################################################################
     ## Network related methods below

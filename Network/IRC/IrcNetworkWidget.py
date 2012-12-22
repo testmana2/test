@@ -81,6 +81,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.networkCombo.addItems(self.__manager.getNetworkNames())
         
         self.__manager.networksChanged.connect(self.__refreshNetworks)
+        self.__manager.identitiesChanged.connect(self.__refreshNetworks)
     
     def autoConnect(self):
         """
@@ -102,13 +103,17 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         currentNetwork = self.networkCombo.currentText()
         currentNick = self.nickCombo.currentText()
         currentChannel = self.channelCombo.currentText()
+        blocked = self.networkCombo.blockSignals(True)
         self.networkCombo.clear()
         self.networkCombo.addItems(self.__manager.getNetworkNames())
+        self.networkCombo.blockSignals(blocked)
         row = self.networkCombo.findText(currentNetwork)
         if row == -1:
             row = 0
+        blocked = self.nickCombo.blockSignals(True)
         self.networkCombo.setCurrentIndex(row)
         self.nickCombo.setEditText(currentNick)
+        self.nickCombo.blockSignals(blocked)
         self.channelCombo.setEditText(currentChannel)
     
     @pyqtSlot()
@@ -171,7 +176,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         @param networkName selected network name (string)
         """
         network = self.__manager.getNetwork(networkName)
-        self.channelCombo.clear()
         self.nickCombo.clear()
         self.channelCombo.clear()
         if network:
