@@ -640,7 +640,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.append(
             QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
         self.chatEdit.append(self.trUtf8("* {0} has been kicked.\n").format(
-            itm.text().split(":")[0]))
+            itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
     
     def __banUser(self):
@@ -655,7 +655,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.append(
             QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
         self.chatEdit.append(self.trUtf8("* {0} has been banned.\n").format(
-            itm.text().split(":")[0]))
+            itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)
     
     def __banKickUser(self):
@@ -670,5 +670,5 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.chatEdit.append(
             QDateTime.currentDateTime().toString(Qt.SystemLocaleLongDate) + ":")
         self.chatEdit.append(self.trUtf8("* {0} has been banned and kicked.\n").format(
-            itm.text().split(":")[0]))
+            itm.text().split("@")[0]))
         self.chatEdit.setTextColor(color)

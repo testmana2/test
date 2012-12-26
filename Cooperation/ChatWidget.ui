@@ -217,7 +217,7 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Enter the host and port to connect to in the form &quot;host:port&quot;</string>
+           <string>Enter the host and port to connect to in the form &quot;host@port&quot;</string>
           </property>
           <property name="editable">
            <bool>true</bool>

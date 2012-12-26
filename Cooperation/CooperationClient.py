@@ -339,7 +339,7 @@ class CooperationClient(QObject):
         @param nick nick name in the format of self.nickName() (string)
         """
         Preferences.syncPreferences()
-        user = nick.split("@")[0]
+        user = nick.rsplit("@")[0]
         bannedUsers = Preferences.getCooperation("BannedUsers")[:]
         if user not in bannedUsers:
             bannedUsers.append(user)
