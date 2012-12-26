@@ -8,7 +8,7 @@ Module implementing a class representing a peer connection.
 """
 
 from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
-from PyQt4.QtNetwork import QTcpSocket
+from PyQt4.QtNetwork import QTcpSocket, QHostInfo
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
@@ -174,9 +174,10 @@ class Connection(QTcpSocket):
                 return
             self.__serverPort = int(serverPort)
             
+            hostInfo = QHostInfo.fromName(self.peerAddress().toString())
             self.__username = "{0}@{1}@{2}".format(
                 user,
-                self.peerAddress().toString(),
+                hostInfo.hostName(),
                 self.peerPort()
             )
             self.__currentDataType = Connection.Undefined
@@ -189,7 +190,7 @@ class Connection(QTcpSocket):
             
             bannedName = "{0}@{1}".format(
                 user,
-                self.peerAddress().toString()
+                hostInfo.hostName(),
             )
             Preferences.syncPreferences()
             if bannedName in Preferences.getCooperation("BannedUsers"):
@@ -207,7 +208,7 @@ class Connection(QTcpSocket):
                     self.trUtf8("New Connection"),
                     self.trUtf8("""<p>Accept connection from """
                                 """<strong>{0}@{1}</strong>?</p>""").format(
-                        user, self.peerAddress().toString()),
+                        user, hostInfo.hostName()),
                     yesDefault=True)
                 if not res:
                     self.abort()
