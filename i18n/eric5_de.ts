@@ -1943,8 +1943,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2180,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2645,11 +2645,6 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Gib den Serverport ein</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="210"/>
-        <source>Enter the host and port to connect to in the form &quot;host:port&quot;</source>
-        <translation>Gib den Host und den Port in der Form &quot;Host:Port&quot; für die Verbindung ein</translation>
-    </message>
-    <message>
         <location filename="Cooperation/ChatWidget.ui" line="230"/>
         <source>Press to clear the hosts list</source>
         <translation>Drücken, um die Hostsliste zu löschen</translation>
@@ -2731,6 +2726,11 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <location filename="Cooperation/ChatWidget.py" line="234"/>
         <source>Message from &lt;{0}&gt;</source>
         <translation>Nachricht von &lt;{0}&gt;</translation>
+    </message>
+    <message>
+        <location filename="Cooperation/ChatWidget.ui" line="210"/>
+        <source>Enter the host and port to connect to in the form &quot;host@port&quot;</source>
+        <translation type="unfinished">Gib den Host und den Port in der Form &quot;Host@Port&quot; für die Verbindung ein</translation>
     </message>
 </context>
 <context>
@@ -3703,22 +3703,22 @@ um die Konfigurationsseite anzuzeigen.</translation>
         <translation>unbekannt</translation>
     </message>
     <message>
-        <location filename="Cooperation/Connection.py" line="206"/>
+        <location filename="Cooperation/Connection.py" line="207"/>
         <source>New Connection</source>
         <translation>Neue Verbindung</translation>
     </message>
     <message>
-        <location filename="Cooperation/Connection.py" line="206"/>
+        <location filename="Cooperation/Connection.py" line="207"/>
         <source>&lt;p&gt;Accept connection from &lt;strong&gt;{0}@{1}&lt;/strong&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Verbindungswunsch von &lt;strong&gt;{0}@{1}&lt;/strong&gt; annehmen?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Cooperation/Connection.py" line="431"/>
+        <location filename="Cooperation/Connection.py" line="432"/>
         <source>* Connection to {0}:{1} refused.</source>
         <translation>* Verbindung zu {0}:{1} abgelehnt.</translation>
     </message>
     <message>
-        <location filename="Cooperation/Connection.py" line="196"/>
+        <location filename="Cooperation/Connection.py" line="197"/>
         <source>* Connection attempted by banned user &apos;{0}&apos;.</source>
         <translation>* Verbindungsversuch durch gebannten Nutzer &apos;{0}&apos;.</translation>
     </message>
@@ -14291,8 +14291,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
@@ -17401,27 +17401,27 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Erzeuge Zweig im Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1937"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1944"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Verifiziere die Integrität des Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1962"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1969"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zeige die kombinierten Einstellungen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1985"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1992"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zeige Namen für entfernte Repositories</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2008"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2015"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Setze abgebrochene Transaktion zurück</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2251"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2258"/>
         <source>Shall the working directory be updated?</source>
         <translation>Soll das Arbeitsverzeichnis aktualisiert werden?</translation>
     </message>
@@ -17431,87 +17431,87 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Zeige aktuellen Zweig</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2160"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2167"/>
         <source>Create changegroup</source>
         <translation>Änderungsgruppe erzeugen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2263"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2270"/>
         <source>Apply changegroups</source>
         <translation>Änderungsgruppen anwenden</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2280"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2287"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Ungültiger Bisect Unterbefehl ({0}).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2314"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2321"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2212"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2219"/>
         <source>Preview changegroup</source>
         <translation>Änderungsgruppe ansehen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2031"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2038"/>
         <source>Identifying project directory</source>
         <translation>Projektverzeichnis identifizieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2067"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
         <source>Create .hgignore file</source>
         <translation>.hgignore Datei erstellen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2067"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2346"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2353"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Lösche Dateien nur aus dem Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2118"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2125"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial Änderungsgruppendateien (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2245"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2252"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial Änderungsgruppendateien (*.hg);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2222"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2229"/>
         <source>Identifying changegroup file</source>
         <translation>Identifiziere Änderungsgruppendatei</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2402"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2409"/>
         <source>Backing out changeset</source>
         <translation>Änderungssatz umkehren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2382"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2389"/>
         <source>No revision given. Aborting...</source>
         <translation>Keine Revision angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2142"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Mercurial Änderungsgruppendatei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2434"/>
         <source>Rollback last transaction</source>
         <translation>Letzte Transaktion zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2422"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2429"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation>Wollen sie die letzte Transaktion wirklich zurücksetzen?</translation>
     </message>
@@ -17521,72 +17521,72 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Pflege Änderungen in das Mercurial Repository ein</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2947"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
         <source>Mercurial Command Server</source>
         <translation>Mercurial Befehlsserver</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2820"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2827"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht wiedergestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2947"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht gestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2494"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2501"/>
         <source>Import Patch</source>
         <translation>Patch importieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2541"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2548"/>
         <source>Export Patches</source>
         <translation>Patches exportieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2587"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2594"/>
         <source>Change Phase</source>
         <translation>Phase ändern</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2638"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2645"/>
         <source>Copy Changesets</source>
         <translation>Änderungssätze kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2665"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2672"/>
         <source>Copy Changesets (Continue)</source>
         <translation>Änderungssätze kopieren (Fortsetzung)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2745"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2752"/>
         <source>Add Sub-repository</source>
         <translation>Unterrepository hinzufügen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2775"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2782"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gelesen werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2728"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2735"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub enthält bereits einen Eintrag &lt;b&gt;{0}&lt;/b&gt;. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2791"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2791"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
         <source>Remove Sub-repositories</source>
         <translation>Unterrepositories löschen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2764"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2771"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub existiert nicht. Abbruch...&lt;/p&gt;</translation>
     </message>
@@ -25094,17 +25094,17 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>IrcChannelWidget</name>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.ui" line="57"/>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="60"/>
         <source>Shows the list of users</source>
         <translation>Zeigt die Liste der Teilnehmer</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.ui" line="77"/>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="80"/>
         <source>Shows the channel messages</source>
         <translation>Zeigt die Kanalnachrichten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.ui" line="94"/>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="97"/>
         <source>Enter a message, send by pressing Return or Enter</source>
         <translation>Gib eine Nachricht ein, Senden durch Drücken von Return oder Enter</translation>
     </message>
@@ -25405,152 +25405,152 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>--- Neu ab hier ---</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1126"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1127"/>
         <source>Save Messages</source>
         <translation>Nachrichten speichern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1109"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1110"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>HTML Dateien (*.{0});;Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1126"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1127"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1144"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1145"/>
         <source>Error saving Messages</source>
         <translation>Fehler beim Speichern der Nachrichten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1144"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1145"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Nachrichteninhalt konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1156"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1157"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1160"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1161"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1166"/>
         <source>Cut all</source>
         <translation>Alles ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1169"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
         <source>Copy all</source>
         <translation>Alles kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1174"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1175"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1179"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1180"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1184"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1185"/>
         <source>Mark Current Position</source>
         <translation>Aktuellen Position markieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1187"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1188"/>
         <source>Remove Position Marker</source>
         <translation>Positionsmarke entfernen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1237"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1238"/>
         <source>Who Is</source>
         <translation>Who Is</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1241"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1242"/>
         <source>Private Chat</source>
         <translation>Private Unterhaltung</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1354"/>
         <source>Who</source>
         <translation>Who</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1331"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1332"/>
         <source>End of WHO list for {0}.</source>
         <translation>Ende der WHO Liste für {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1352"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
         <source> (Away)</source>
         <translation>(Abwesend)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1354"/>
         <source>{0} is {1}@{2} ({3}){4}</source>
         <translation>{0} ist {1}@{2} ({3}){4}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1654"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1655"/>
         <source>Whois</source>
         <translation>Whois</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1373"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1374"/>
         <source>{0} is {1}@{2} ({3}).</source>
         <translation>{0} ist {1}@{2} ({3}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1418"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1419"/>
         <source>{0} is a user on channels: {1}</source>
         <translation>{0} ist ein Nutzer der Kanäle: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1422"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1423"/>
         <source>{0} has voice on channels: {1}</source>
         <translation>{0} hat Erlaubnis zu schreiben in den Kanälen: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1426"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1427"/>
         <source>{0} is a halfop on channels: {1}</source>
         <translation>{0} hat HalfOp-Status in den Kanälen: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1430"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1431"/>
         <source>{0} is an operator on channels: {1}</source>
         <translation>{0} hat Operator-Status in den Kanälen: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1434"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1435"/>
         <source>{0} is owner of channels: {1}</source>
         <translation>{0} hat Besitzer-Status in den Kanälen: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1438"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1439"/>
         <source>{0} is admin on channels: {1}</source>
         <translation>{0} hat Administrator-Status in den Kanälen: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1456"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1457"/>
         <source>{0} is online via {1} ({2}).</source>
         <translation>{0} ist auf dem Server {1} ({2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1474"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1475"/>
         <source>{0} is an IRC Operator.</source>
         <translation>{0} ist ein IRC Operator.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1504"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1505"/>
         <source>%n day(s)</source>
         <translation>
             <numerusform>1 Tag</numerusform>
@@ -25558,7 +25558,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1515"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1516"/>
         <source>%n hour(s)</source>
         <translation>
             <numerusform>1 Stunde</numerusform>
@@ -25566,7 +25566,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1524"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1525"/>
         <source>%n minute(s)</source>
         <translation>
             <numerusform>1 Minute</numerusform>
@@ -25574,7 +25574,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1525"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1526"/>
         <source>%n second(s)</source>
         <translation>
             <numerusform>1 Sekunde</numerusform>
@@ -25582,25 +25582,25 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1508"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1509"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
         <translation>{0} ist seit {1}, {2}, {3} und {4} untätig.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1518"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} ist seit {1}, {2} und {3} untätig.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1526"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1527"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} ist seit {1} und {2} untätig.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1532"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1533"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation>
             <numerusform>{0} ist seit 1 Sekunde untätig.</numerusform>
@@ -25608,42 +25608,42 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1537"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1538"/>
         <source>{0} has been online since {1}.</source>
         <translation>{0} is seit dem {1} online.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1555"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1556"/>
         <source>End of WHOIS list for {0}.</source>
         <translation>Ende der WHOIS Liste für {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1571"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1572"/>
         <source>{0} is an identified user.</source>
         <translation>{0} wurde identifiziert.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1587"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1588"/>
         <source>{0} is available for help.</source>
         <translation>{0} steht für Hilfe bereit.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1603"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1604"/>
         <source>{0} is logged in as {1}.</source>
         <translation>{0} ist angemeldet als {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1621"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1622"/>
         <source>{0} is actually using the host {1} (IP: {2}).</source>
         <translation>{0} verwendet den Host {1} (IP: {2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1637"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1638"/>
         <source>{0} is using a secure connection.</source>
         <translation>{0} verwendet eine sichere Verbindung.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1654"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1655"/>
         <source>{0} is connecting from {1} (IP: {2}).</source>
         <translation>{0} ist verbunden von {1} (IP: {2}).</translation>
     </message>
@@ -25673,22 +25673,22 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Unbekannte CTCP-{0}-Anfrage von {1} empfangen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.ui" line="38"/>
+        <location filename="Network/IRC/IrcChannelWidget.ui" line="41"/>
         <source>Press to change the topic</source>
         <translation>Drücken, um das Thema zu ändern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1245"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1246"/>
         <source>Refresh</source>
         <translation>Aktualisieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1666"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1667"/>
         <source>Edit Channel Topic</source>
         <translation>Kanalthema bearbeiten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1666"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1667"/>
         <source>Enter the topic for this channel:</source>
         <translation>Gib das Thema für diesen Kanal ein:</translation>
     </message>
@@ -26143,97 +26143,97 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>IrcNetworkWidget</name>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="26"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="29"/>
         <source>Shows the network messages</source>
         <translation>Zeigt Netzwerkmeldungen an</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="41"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="44"/>
         <source>Select a network to connect to</source>
         <translation>Wähle ein zu verbindendes Netzwerk aus</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="48"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="51"/>
         <source>Press to connect to the selected network</source>
         <translation>Drücken, um zum ausgewählten Netzwerk zu verbinden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="58"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="61"/>
         <source>Press to set the user status to AWAY</source>
         <translation>Drücken, um den Nutzerstatus auf &quot;Abwesend&quot; zu setzen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="68"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="71"/>
         <source>Press to edit the networks</source>
         <translation>Drücken, um die Netzwerke zu bearbeiten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="88"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="91"/>
         <source>Select a nick name for the channel</source>
         <translation>Wähle einen Spitznamen für das Netzwerk</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="114"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="117"/>
         <source>Enter the channel to join</source>
         <translation>Wählen den zu betretenden Kanal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="127"/>
+        <location filename="Network/IRC/IrcNetworkWidget.ui" line="130"/>
         <source>Press to join the channel</source>
         <translation>Drücken, um den Kanal zu betreten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="368"/>
         <source>Save Messages</source>
         <translation>Nachrichten speichern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="347"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="351"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>HTML Dateien (*.{0});;Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="364"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="368"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="386"/>
         <source>Error saving Messages</source>
         <translation>Fehler beim Speichern der Nachrichten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="382"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="386"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Nachrichteninhalt konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="402"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="403"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="407"/>
         <source>Cut all</source>
         <translation>Alles ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="407"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
         <source>Copy all</source>
         <translation>Alles kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="412"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="416"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="417"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="421"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
@@ -26577,77 +26577,77 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>IrcUtilities</name>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="149"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="151"/>
         <source>anonymous</source>
         <translation>anonym</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="150"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="152"/>
         <source>ban mask</source>
         <translation>Bann Maske</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="151"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="153"/>
         <source>no colors allowed</source>
         <translation>keine Farben erlaubt</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="152"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="154"/>
         <source>ban exception mask</source>
         <translation>Bannausnahme Maske</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="153"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="155"/>
         <source>invite only</source>
         <translation>Einladung erforderlich</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="154"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="156"/>
         <source>password protected</source>
         <translation>Kennwort geschützt</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="155"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="157"/>
         <source>user limit</source>
         <translation>Nutzerbegrenzung</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="156"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="158"/>
         <source>moderated</source>
         <translation>moderiert</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="157"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="159"/>
         <source>no messages from outside</source>
         <translation>keine Meldung von außerhalb</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="158"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="160"/>
         <source>private</source>
         <translation>privat</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="160"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="162"/>
         <source>reop channel</source>
         <translation>Kanal übernehmen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="161"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="163"/>
         <source>secret</source>
         <translation>unsichtbar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="162"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="164"/>
         <source>topic protection</source>
         <translation>Themenschutz</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="163"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="165"/>
         <source>invitation mask</source>
         <translation>Einladungsmaske</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcUtilities.py" line="159"/>
+        <location filename="Network/IRC/IrcUtilities.py" line="161"/>
         <source>quiet</source>
         <translation>schweigend</translation>
     </message>
@@ -26875,48 +26875,48 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Es konnte keine SSL verschlüsselte Verbindung zum Server {0} (Port {1}) aufgebaut werden. Entweder unterstütz der Server kein SSL (haben sie den richtigen Port verwendet?) oder sie haben das Zertifikat abgelehnt.&lt;br/&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="814"/>
+        <location filename="Network/IRC/IrcWidget.py" line="818"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation>{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="843"/>
+        <location filename="Network/IRC/IrcWidget.py" line="847"/>
         <source>Critical</source>
         <translation>Kritischer Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="828"/>
+        <location filename="Network/IRC/IrcWidget.py" line="832"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation>Es ist kein für den Server &lt;b&gt;{0}&lt;/b&gt; akzeptabler Spitzname konfiguriert. Verbindungsabbruch...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="843"/>
+        <location filename="Network/IRC/IrcWidget.py" line="847"/>
         <source>The given nickname is already in use.</source>
         <translation>Der übergebene Spitzname wird bereits verwendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="801"/>
+        <location filename="Network/IRC/IrcWidget.py" line="805"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="785"/>
+        <location filename="Network/IRC/IrcWidget.py" line="789"/>
         <source>Received Version request from {0}.</source>
         <translation>Versionsanfrage von {0} empfangen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="790"/>
+        <location filename="Network/IRC/IrcWidget.py" line="794"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>CTCP-PING-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="795"/>
+        <location filename="Network/IRC/IrcWidget.py" line="799"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>CTCP-CLIENTINFO-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="801"/>
+        <location filename="Network/IRC/IrcWidget.py" line="805"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Unbekannte CTCP-{0}-Anfrage von {1} empfangen.</translation>
     </message>
