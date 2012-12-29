@@ -694,10 +694,17 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
                 self.trUtf8("The connection was refused by the peer. Please check the"
                             " host name and port settings."))
-        else:
+        elif error == QAbstractSocket.SslHandshakeFailedError:
             self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
-                self.trUtf8("The following network error occurred:<br/>{0}").format(
-                self.__socket.errorString()))
+                self.trUtf8("The SSL handshake failed."))
+        else:
+            if self.__socket:
+                self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
+                    self.trUtf8("The following network error occurred:<br/>{0}").format(
+                    self.__socket.errorString()))
+            else:
+                self.networkWidget.addErrorMessage(self.trUtf8("Socket Error"),
+                    self.trUtf8("A network error occurred."))
     
     def __sslErrors(self, errors):
         """

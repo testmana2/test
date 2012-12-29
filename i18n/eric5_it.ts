@@ -27401,7 +27401,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="733"/>
+        <location filename="Network/IRC/IrcWidget.py" line="740"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27411,7 +27411,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <location filename="Network/IRC/IrcWidget.py" line="706"/>
         <source>Socket Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27426,73 +27426,73 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <location filename="Network/IRC/IrcWidget.py" line="702"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="715"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>SSL Errors</source>
         <translation type="unfinished">Errori SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="715"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Errori SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Vuoi ignorare questi errori ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="726"/>
+        <location filename="Network/IRC/IrcWidget.py" line="733"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="733"/>
+        <location filename="Network/IRC/IrcWidget.py" line="740"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="818"/>
+        <location filename="Network/IRC/IrcWidget.py" line="825"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished">{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="847"/>
+        <location filename="Network/IRC/IrcWidget.py" line="854"/>
         <source>Critical</source>
         <translation type="unfinished">Critico</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="832"/>
+        <location filename="Network/IRC/IrcWidget.py" line="839"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="847"/>
+        <location filename="Network/IRC/IrcWidget.py" line="854"/>
         <source>The given nickname is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="805"/>
+        <location filename="Network/IRC/IrcWidget.py" line="812"/>
         <source>CTCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="789"/>
+        <location filename="Network/IRC/IrcWidget.py" line="796"/>
         <source>Received Version request from {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="794"/>
+        <location filename="Network/IRC/IrcWidget.py" line="801"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="799"/>
+        <location filename="Network/IRC/IrcWidget.py" line="806"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="805"/>
+        <location filename="Network/IRC/IrcWidget.py" line="812"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27515,6 +27515,16 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="Network/IRC/IrcWidget.ui" line="53"/>
         <source>Network</source>
         <translation type="unfinished">Rete</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <source>The SSL handshake failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="706"/>
+        <source>A network error occurred.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
