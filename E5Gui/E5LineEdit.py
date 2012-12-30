@@ -65,10 +65,15 @@ class E5LineEdit(QLineEdit):
         else:
             self.setPlaceholderText(inactiveText)
         
+        self.__mainLayout = QHBoxLayout(self)
+        self.__mainLayout.setContentsMargins(0, 0, 0, 0)
+        self.__mainLayout.setSpacing(0)
+        
+        self.__leftMargin = 0
         self.__leftWidget = E5LineEditSideWidget(self)
         self.__leftWidget.resize(0, 0)
         self.__leftLayout = QHBoxLayout(self.__leftWidget)
-        self.__leftLayout.setContentsMargins(0, 0, 0, 0)
+        self.__leftLayout.setContentsMargins(0, 0, 2, 0)
         if QApplication.isRightToLeft():
             self.__leftLayout.setDirection(QBoxLayout.RightToLeft)
         else:
@@ -78,17 +83,42 @@ class E5LineEdit(QLineEdit):
         self.__rightWidget = E5LineEditSideWidget(self)
         self.__rightWidget.resize(0, 0)
         self.__rightLayout = QHBoxLayout(self.__rightWidget)
-        self.__rightLayout.setContentsMargins(0, 0, 0, 0)
+        self.__rightLayout.setContentsMargins(0, 0, 2, 0)
         if self.isRightToLeft():
             self.__rightLayout.setDirection(QBoxLayout.RightToLeft)
         else:
             self.__rightLayout.setDirection(QBoxLayout.LeftToRight)
+        
         horizontalSpacer = QSpacerItem(0, 0, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        self.__rightLayout.addItem(horizontalSpacer)
+        self.__mainLayout.addWidget(
+            self.__leftWidget, 0, Qt.AlignVCenter | Qt.AlignLeft)
+        self.__mainLayout.addItem(horizontalSpacer)
+        self.__mainLayout.addWidget(
+            self.__rightWidget, 0, Qt.AlignVCenter | Qt.AlignRight)
+        if self.isRightToLeft():
+            self.__mainLayout.setDirection(QBoxLayout.RightToLeft)
+        else:
+            self.__mainLayout.setDirection(QBoxLayout.LeftToRight)
         
         self.setWidgetSpacing(3)
         self.__leftWidget.sizeHintChanged.connect(self._updateTextMargins)
         self.__rightWidget.sizeHintChanged.connect(self._updateTextMargins)
+    
+    def setLeftMargin(self, margin):
+        """
+        Public method to set the left margin.
+        
+        @param margin left margin in pixel (integer)
+        """
+        self.__leftMargin = margin
+    
+    def leftMargin(self):
+        """
+        Public method to get the size of the left margin.
+        
+        @return left margin in pixel (integer)
+        """
+        return self.__leftMargin
     
     def event(self, evt):
         """
@@ -99,21 +129,14 @@ class E5LineEdit(QLineEdit):
         """
         if evt.type() == QEvent.LayoutDirectionChange:
             if self.isRightToLeft():
+                self.__mainLayout.setDirection(QBoxLayout.RightToLeft)
                 self.__leftLayout.setDirection(QBoxLayout.RightToLeft)
                 self.__rightLayout.setDirection(QBoxLayout.RightToLeft)
             else:
+                self.__mainLayout.setDirection(QBoxLayout.LeftToRight)
                 self.__leftLayout.setDirection(QBoxLayout.LeftToRight)
                 self.__rightLayout.setDirection(QBoxLayout.LeftToRight)
         return QLineEdit.event(self, evt)
-    
-    def resizeEvent(self, evt):
-        """
-        Protected method to handle resize events.
-        
-        @param evt reference to the resize event (QResizeEvent)
-        """
-        self.__updateSideWidgetLocations()
-        super().resizeEvent(evt)
     
     def paintEvent(self, evt):
         """
@@ -141,40 +164,18 @@ class E5LineEdit(QLineEdit):
                 painter.drawText(
                     textRect, Qt.AlignLeft | Qt.AlignVCenter, self.__inactiveText)
     
-    def __updateSideWidgetLocations(self):
-        """
-        Private method to update the side widget locations.
-        """
-        opt = QStyleOptionFrameV2()
-        self.initStyleOption(opt)
-        textRect = \
-            self.style().subElementRect(QStyle.SE_LineEditContents, opt, self)
-        textRect.adjust(2, 0, 0, 0)
-        
-        left = self.textMargin(self.LeftSide)
-        
-        midHeight = textRect.center().y() + 1
-        
-        if self.__leftLayout.count() > 0:
-            leftHeight = midHeight - self.__leftWidget.height() // 2
-            leftWidth = self.__leftWidget.width()
-            if leftWidth == 0:
-                leftHeight = midHeight - self.__leftWidget.sizeHint().height() // 2
-            self.__leftWidget.move(textRect.x(), leftHeight)
-        
-        textRect.setX(left)
-        textRect.setY(midHeight - self.__rightWidget.sizeHint().height() // 2)
-        textRect.setHeight(self.__rightWidget.sizeHint().height())
-        self.__rightWidget.setGeometry(textRect)
-    
     def _updateTextMargins(self):
         """
         Protected slot to update the text margins.
         """
-        left = self.textMargin(self.LeftSide)
-        right = self.textMargin(self.RightSide)
-        self.setTextMargins(left, 0, right, 0)
-        self.__updateSideWidgetLocations()
+        if self.__leftMargin == 0:
+            left = self.__leftWidget.sizeHint().width()
+        else:
+            left = self.__leftMargin
+        right = self.__rightWidget.sizeHint().width()
+        top = 0
+        bottom = 0
+        self.setTextMargins(left, top, right, bottom)
     
     def addWidget(self, widget, position):
         """

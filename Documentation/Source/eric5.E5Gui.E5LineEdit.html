@@ -127,9 +127,6 @@ QLineEdit
 <td><a href="#E5LineEdit.__init__">E5LineEdit</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#E5LineEdit.__updateSideWidgetLocations">__updateSideWidgetLocations</a></td>
-<td>Private method to update the side widget locations.</td>
-</tr><tr>
 <td><a href="#E5LineEdit._updateTextMargins">_updateTextMargins</a></td>
 <td>Protected slot to update the text margins.</td>
 </tr><tr>
@@ -142,17 +139,20 @@ QLineEdit
 <td><a href="#E5LineEdit.inactiveText">inactiveText</a></td>
 <td>Public method to get the inactive text.</td>
 </tr><tr>
+<td><a href="#E5LineEdit.leftMargin">leftMargin</a></td>
+<td>Public method to get the size of the left margin.</td>
+</tr><tr>
 <td><a href="#E5LineEdit.paintEvent">paintEvent</a></td>
 <td>Protected method handling a paint event.</td>
 </tr><tr>
 <td><a href="#E5LineEdit.removeWidget">removeWidget</a></td>
 <td>Public method to remove a widget from a side.</td>
 </tr><tr>
-<td><a href="#E5LineEdit.resizeEvent">resizeEvent</a></td>
-<td>Protected method to handle resize events.</td>
-</tr><tr>
 <td><a href="#E5LineEdit.setInactiveText">setInactiveText</a></td>
 <td>Public method to set the inactive text.</td>
+</tr><tr>
+<td><a href="#E5LineEdit.setLeftMargin">setLeftMargin</a></td>
+<td>Public method to set the left margin.</td>
 </tr><tr>
 <td><a href="#E5LineEdit.setWidgetSpacing">setWidgetSpacing</a></td>
 <td>Public method to set the side widget spacing.</td>
@@ -181,12 +181,7 @@ reference to the parent widget (QWidget)
 <dd>
 text to be shown on inactivity (string)
 </dd>
-</dl><a NAME="E5LineEdit.__updateSideWidgetLocations" ID="E5LineEdit.__updateSideWidgetLocations"></a>
-<h4>E5LineEdit.__updateSideWidgetLocations</h4>
-<b>__updateSideWidgetLocations</b>(<i></i>)
-<p>
-        Private method to update the side widget locations.
-</p><a NAME="E5LineEdit._updateTextMargins" ID="E5LineEdit._updateTextMargins"></a>
+</dl><a NAME="E5LineEdit._updateTextMargins" ID="E5LineEdit._updateTextMargins"></a>
 <h4>E5LineEdit._updateTextMargins</h4>
 <b>_updateTextMargins</b>(<i></i>)
 <p>
@@ -226,7 +221,17 @@ flag indicating, whether the event was recognized (boolean)
         Public method to get the inactive text.
 </p><p>
         return inactive text (string)
-</p><a NAME="E5LineEdit.paintEvent" ID="E5LineEdit.paintEvent"></a>
+</p><a NAME="E5LineEdit.leftMargin" ID="E5LineEdit.leftMargin"></a>
+<h4>E5LineEdit.leftMargin</h4>
+<b>leftMargin</b>(<i></i>)
+<p>
+        Public method to get the size of the left margin.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+left margin in pixel (integer)
+</dd>
+</dl><a NAME="E5LineEdit.paintEvent" ID="E5LineEdit.paintEvent"></a>
 <h4>E5LineEdit.paintEvent</h4>
 <b>paintEvent</b>(<i>evt</i>)
 <p>
@@ -246,16 +251,6 @@ reference to the paint event (QPaintEvent)
 <dd>
 reference to the widget to remove (QWidget)
 </dd>
-</dl><a NAME="E5LineEdit.resizeEvent" ID="E5LineEdit.resizeEvent"></a>
-<h4>E5LineEdit.resizeEvent</h4>
-<b>resizeEvent</b>(<i>evt</i>)
-<p>
-        Protected method to handle resize events.
-</p><dl>
-<dt><i>evt</i></dt>
-<dd>
-reference to the resize event (QResizeEvent)
-</dd>
 </dl><a NAME="E5LineEdit.setInactiveText" ID="E5LineEdit.setInactiveText"></a>
 <h4>E5LineEdit.setInactiveText</h4>
 <b>setInactiveText</b>(<i>inactiveText</i>)
@@ -265,6 +260,16 @@ reference to the resize event (QResizeEvent)
 <dt><i>inactiveText</i></dt>
 <dd>
 text to be shown on inactivity (string)
+</dd>
+</dl><a NAME="E5LineEdit.setLeftMargin" ID="E5LineEdit.setLeftMargin"></a>
+<h4>E5LineEdit.setLeftMargin</h4>
+<b>setLeftMargin</b>(<i>margin</i>)
+<p>
+        Public method to set the left margin.
+</p><dl>
+<dt><i>margin</i></dt>
+<dd>
+left margin in pixel (integer)
 </dd>
 </dl><a NAME="E5LineEdit.setWidgetSpacing" ID="E5LineEdit.setWidgetSpacing"></a>
 <h4>E5LineEdit.setWidgetSpacing</h4>

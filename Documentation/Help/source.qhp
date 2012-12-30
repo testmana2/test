@@ -3433,15 +3433,15 @@
       <keyword name="E5LineEdit" id="E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit" />
       <keyword name="E5LineEdit (Constructor)" id="E5LineEdit (Constructor)" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.__init__" />
       <keyword name="E5LineEdit (Module)" id="E5LineEdit (Module)" ref="eric5.E5Gui.E5LineEdit.html" />
-      <keyword name="E5LineEdit.__updateSideWidgetLocations" id="E5LineEdit.__updateSideWidgetLocations" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.__updateSideWidgetLocations" />
       <keyword name="E5LineEdit._updateTextMargins" id="E5LineEdit._updateTextMargins" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit._updateTextMargins" />
       <keyword name="E5LineEdit.addWidget" id="E5LineEdit.addWidget" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.addWidget" />
       <keyword name="E5LineEdit.event" id="E5LineEdit.event" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.event" />
       <keyword name="E5LineEdit.inactiveText" id="E5LineEdit.inactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.inactiveText" />
+      <keyword name="E5LineEdit.leftMargin" id="E5LineEdit.leftMargin" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.leftMargin" />
       <keyword name="E5LineEdit.paintEvent" id="E5LineEdit.paintEvent" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.paintEvent" />
       <keyword name="E5LineEdit.removeWidget" id="E5LineEdit.removeWidget" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.removeWidget" />
-      <keyword name="E5LineEdit.resizeEvent" id="E5LineEdit.resizeEvent" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.resizeEvent" />
       <keyword name="E5LineEdit.setInactiveText" id="E5LineEdit.setInactiveText" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setInactiveText" />
+      <keyword name="E5LineEdit.setLeftMargin" id="E5LineEdit.setLeftMargin" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setLeftMargin" />
       <keyword name="E5LineEdit.setWidgetSpacing" id="E5LineEdit.setWidgetSpacing" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.setWidgetSpacing" />
       <keyword name="E5LineEdit.textMargin" id="E5LineEdit.textMargin" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.textMargin" />
       <keyword name="E5LineEdit.widgetSpacing" id="E5LineEdit.widgetSpacing" ref="eric5.E5Gui.E5LineEdit.html#E5LineEdit.widgetSpacing" />
