@@ -138,6 +138,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.__socket.flush()
                 self.__socket.close()
                 self.__socket.deleteLater()
+                self.__socket = None
         else:
             ok = True
         
