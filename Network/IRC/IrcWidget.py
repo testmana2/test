@@ -126,11 +126,14 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         @return flag indicating successful shutdown (boolean)
         """
         if self.__server:
-            ok = E5MessageBox.yesNo(self,
-                self.trUtf8("Disconnect from Server"),
-                self.trUtf8("""<p>Do you really want to disconnect from"""
-                            """ <b>{0}</b>?</p><p>All channels will be closed.</p>""")\
-                    .format(self.__server.getName()))
+            if Preferences.getIrc("AskOnShutdown"):
+                ok = E5MessageBox.yesNo(self,
+                    self.trUtf8("Disconnect from Server"),
+                    self.trUtf8("""<p>Do you really want to disconnect from"""
+                                """ <b>{0}</b>?</p><p>All channels will be closed."""
+                                """</p>""").format(self.__server.getName()))
+            else:
+                ok = True
             if ok:
                 self.__socket.blockSignals(True)
                 

@@ -117,6 +117,10 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
                          Preferences.getIrc, byName=True)
         self.initColour("MarkerLineBackgroundColour", self.markerBackgroundButton,
                          Preferences.getIrc, byName=True)
+        
+        # Shutdown
+        self.confirmShutdownCheckBox.setChecked(
+            Preferences.getIrc("AskOnShutdown"))
     
     def save(self):
         """
@@ -142,6 +146,9 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         # Markers
         Preferences.setIrc("MarkPositionWhenHidden",
             self.markWhenHiddenCheckBox.isChecked())
+        
+        # Shutdown
+        Preferences.setIrc("AskOnShutdown", self.confirmShutdownCheckBox.isChecked())
         
         # colours
         self.saveColours(Preferences.setIrc)

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1943,8 +1944,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2181,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14291,8 +14292,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
@@ -26550,6 +26551,21 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <source>Select the background colour for the marker</source>
         <translation>Wähle die Hintergrundfarbe der Markierung aus</translation>
     </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="862"/>
+        <source>Shutdown</source>
+        <translation>Beenden</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="868"/>
+        <source>Select to confirm a shutdown operation while still connected to an IRC server</source>
+        <translation>Auswählen, um das Beenden zu bestätigen, wenn noch eine Verbindung mit einem IRC Server besteht</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/IrcPage.ui" line="871"/>
+        <source>Confirm Shutdown When Connected</source>
+        <translation>Beenden bei bestehender Verbindung bestätigen</translation>
+    </message>
 </context>
 <context>
     <name>IrcServerEditDialog</name>
@@ -26685,273 +26701,273 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Drücken, um den aktuellen Kanal zu verlassen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="209"/>
+        <location filename="Network/IRC/IrcWidget.py" line="212"/>
         <source>Disconnect from Server</source>
         <translation>Verbindung zum Server beenden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="209"/>
+        <location filename="Network/IRC/IrcWidget.py" line="212"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soll die Verbindung zu &lt;b&gt;{0}&lt;/b&gt; wirklich unterbrochen werden?&lt;/p&gt;&lt;p&gt;Alle Kanäle werden geschlossen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="173"/>
+        <location filename="Network/IRC/IrcWidget.py" line="176"/>
         <source>SSL Connection</source>
         <translation>SSL Verbindung</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="173"/>
+        <location filename="Network/IRC/IrcWidget.py" line="176"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
         <translation>Eine verschlüsselte Verbindung zum IRC Netzwerk wurde angefragt, SSL steht jedoch nicht zur Verfügung. Bitte ändern sie die Serverkonfiguration.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="432"/>
+        <location filename="Network/IRC/IrcWidget.py" line="435"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="196"/>
+        <location filename="Network/IRC/IrcWidget.py" line="199"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
         <translation>Suche nach Server {0} (Port {1}) über eine SSL verschlüsselte Verbindung...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="203"/>
+        <location filename="Network/IRC/IrcWidget.py" line="206"/>
         <source>Looking for server {0} (port {1})...</source>
         <translation>Suche nach Server {0} (Port {1})...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="215"/>
+        <location filename="Network/IRC/IrcWidget.py" line="218"/>
         <source>Disconnecting from server {0}...</source>
         <translation>Verbindung zum Server {0} wird unterbrochen...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="395"/>
+        <location filename="Network/IRC/IrcWidget.py" line="398"/>
         <source>Server found,connecting...</source>
         <translation>Server gefunden, Verbindung wird hergesteltl...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="402"/>
+        <location filename="Network/IRC/IrcWidget.py" line="405"/>
         <source>Connected,logging in...</source>
         <translation>Verbunden, Anmeldung läuft...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="432"/>
+        <location filename="Network/IRC/IrcWidget.py" line="435"/>
         <source>Server disconnected.</source>
         <translation>Serververbindung unterbrochen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="474"/>
+        <location filename="Network/IRC/IrcWidget.py" line="477"/>
         <source>Message Error</source>
         <translation>Nachrichtenfehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="474"/>
+        <location filename="Network/IRC/IrcWidget.py" line="477"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation>Unbekannte Nachricht vom Server empfangen:&lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="498"/>
+        <location filename="Network/IRC/IrcWidget.py" line="501"/>
         <source>Notice</source>
         <translation>Notiz</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="516"/>
+        <location filename="Network/IRC/IrcWidget.py" line="519"/>
         <source>Mode</source>
         <translation>Modus</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="523"/>
+        <location filename="Network/IRC/IrcWidget.py" line="526"/>
         <source>You have left channel {0}.</source>
         <translation>Sie haben den Kanal {0} verlassen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="534"/>
+        <location filename="Network/IRC/IrcWidget.py" line="537"/>
         <source>You are now known as {0}.</source>
         <translation>Sie sind jetzt als {0} bekannt.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="539"/>
+        <location filename="Network/IRC/IrcWidget.py" line="542"/>
         <source>User {0} is now known as {1}.</source>
         <translation>Nutzer {0} ist nun als {1} bekannt.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="544"/>
+        <location filename="Network/IRC/IrcWidget.py" line="547"/>
         <source>Server Error</source>
         <translation>Server Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="578"/>
+        <location filename="Network/IRC/IrcWidget.py" line="581"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="593"/>
+        <location filename="Network/IRC/IrcWidget.py" line="596"/>
         <source>Welcome</source>
         <translation>Willkommen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="595"/>
+        <location filename="Network/IRC/IrcWidget.py" line="598"/>
         <source>Support</source>
         <translation>Support</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="597"/>
+        <location filename="Network/IRC/IrcWidget.py" line="600"/>
         <source>User</source>
         <translation>Nutzer</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="599"/>
+        <location filename="Network/IRC/IrcWidget.py" line="602"/>
         <source>MOTD</source>
         <translation>MOTD</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="601"/>
+        <location filename="Network/IRC/IrcWidget.py" line="604"/>
         <source>Away</source>
         <translation>Abwesend</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="603"/>
+        <location filename="Network/IRC/IrcWidget.py" line="606"/>
         <source>Info ({0})</source>
         <translation>Info ({0})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="607"/>
+        <location filename="Network/IRC/IrcWidget.py" line="610"/>
         <source>Message of the day</source>
         <translation>Nachricht des Tages</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="609"/>
+        <location filename="Network/IRC/IrcWidget.py" line="612"/>
         <source>End of message of the day</source>
         <translation>Ende der Nachricht des Tages</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="612"/>
+        <location filename="Network/IRC/IrcWidget.py" line="615"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation>Server {0} (Version {1}), Benutzermodi: {2}, Kanalmodi: {3}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="616"/>
+        <location filename="Network/IRC/IrcWidget.py" line="619"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation>Anzahl der Benutzer auf {0}: {1}, max. {2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="620"/>
+        <location filename="Network/IRC/IrcWidget.py" line="623"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation>Anzahl der Benutzer im Netzwerk: {0}, max. {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="623"/>
+        <location filename="Network/IRC/IrcWidget.py" line="626"/>
         <source>You are no longer marked as being away.</source>
         <translation>Sie sind nicht länger als &quot;abwesend&quot; gekennzeichnet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="625"/>
+        <location filename="Network/IRC/IrcWidget.py" line="628"/>
         <source>You have been marked as being away.</source>
         <translation>Sie sind als &quot;abwesend&quot; gekennzeichnet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="741"/>
+        <location filename="Network/IRC/IrcWidget.py" line="744"/>
         <source>SSL Error</source>
         <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="685"/>
+        <location filename="Network/IRC/IrcWidget.py" line="688"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation>Die Verbindung zum Server {0} (Port {1}) wurde während des Wartens auf eine Benutzerantwort auf einen SSL Fehler verloren.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <location filename="Network/IRC/IrcWidget.py" line="710"/>
         <source>Socket Error</source>
         <translation>Socker Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="691"/>
+        <location filename="Network/IRC/IrcWidget.py" line="694"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation>Der Server wurde nicht gefunden. Bitte prüfen sie den Servernamen und die Porteinstellungen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="695"/>
+        <location filename="Network/IRC/IrcWidget.py" line="698"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation>Die Verbindung wurde von der Gegenseite abgelehnt. Bitte prüfen sie den Servernamen und die Porteinstellungen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="703"/>
+        <location filename="Network/IRC/IrcWidget.py" line="706"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation>Der folgende Netzwerkfehler trat auf:&lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="723"/>
+        <location filename="Network/IRC/IrcWidget.py" line="726"/>
         <source>SSL Errors</source>
         <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="723"/>
+        <location filename="Network/IRC/IrcWidget.py" line="726"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL Fehler&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Wollen Sie diese Fehler ignorieren?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="734"/>
+        <location filename="Network/IRC/IrcWidget.py" line="737"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation>Das SSL Zertifikat für den Server {0} (Port {1}) hat die Authentizitätsprüfung nicht bestanden.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="741"/>
+        <location filename="Network/IRC/IrcWidget.py" line="744"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation>Es konnte keine SSL verschlüsselte Verbindung zum Server {0} (Port {1}) aufgebaut werden. Entweder unterstütz der Server kein SSL (haben sie den richtigen Port verwendet?) oder sie haben das Zertifikat abgelehnt.&lt;br/&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="826"/>
+        <location filename="Network/IRC/IrcWidget.py" line="829"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation>{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcWidget.py" line="858"/>
         <source>Critical</source>
         <translation>Kritischer Fehler</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="840"/>
+        <location filename="Network/IRC/IrcWidget.py" line="843"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation>Es ist kein für den Server &lt;b&gt;{0}&lt;/b&gt; akzeptabler Spitzname konfiguriert. Verbindungsabbruch...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcWidget.py" line="858"/>
         <source>The given nickname is already in use.</source>
         <translation>Der übergebene Spitzname wird bereits verwendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="813"/>
+        <location filename="Network/IRC/IrcWidget.py" line="816"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="797"/>
+        <location filename="Network/IRC/IrcWidget.py" line="800"/>
         <source>Received Version request from {0}.</source>
         <translation>Versionsanfrage von {0} empfangen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="802"/>
+        <location filename="Network/IRC/IrcWidget.py" line="805"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>CTCP-PING-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="807"/>
+        <location filename="Network/IRC/IrcWidget.py" line="810"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>CTCP-CLIENTINFO-Anfrage von {0} empfangen, Antwort wird gesendet.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="813"/>
+        <location filename="Network/IRC/IrcWidget.py" line="816"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Unbekannte CTCP-{0}-Anfrage von {1} empfangen.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="509"/>
+        <location filename="Network/IRC/IrcWidget.py" line="512"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation>Sie habe ihre persönlichen Modi auf &lt;b&gt;[{0}]&lt;/b&gt; gesetzt.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="513"/>
+        <location filename="Network/IRC/IrcWidget.py" line="516"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation>{0} hat ihre persönlichen Modi auf &lt;b&gt;[{0}]&lt;/b&gt; geändert.</translation>
     </message>
@@ -26966,12 +26982,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Netzwerk</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="699"/>
+        <location filename="Network/IRC/IrcWidget.py" line="702"/>
         <source>The SSL handshake failed.</source>
         <translation>Der SSL Handshake schlug fehl.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="707"/>
+        <location filename="Network/IRC/IrcWidget.py" line="710"/>
         <source>A network error occurred.</source>
         <translation>Ein Netzwerkfehler trat auf.</translation>
     </message>
@@ -31825,27 +31841,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1108"/>
+        <location filename="Preferences/__init__.py" line="1110"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1135"/>
+        <location filename="Preferences/__init__.py" line="1137"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1135"/>
+        <location filename="Preferences/__init__.py" line="1137"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1229"/>
+        <location filename="Preferences/__init__.py" line="1231"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1229"/>
+        <location filename="Preferences/__init__.py" line="1231"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>

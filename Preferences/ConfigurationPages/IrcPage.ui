@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>501</width>
-    <height>853</height>
+    <width>522</width>
+    <height>1022</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -857,6 +857,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="shutdownGroup">
+     <property name="title">
+      <string>Shutdown</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="confirmShutdownCheckBox">
+        <property name="toolTip">
+         <string>Select to confirm a shutdown operation while still connected to an IRC server</string>
+        </property>
+        <property name="text">
+         <string>Confirm Shutdown When Connected</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -908,6 +927,13 @@
   <tabstop>joinLeaveCheckBox</tabstop>
   <tabstop>messageCheckBox</tabstop>
   <tabstop>ownNickCheckBox</tabstop>
+  <tabstop>whoGroup</tabstop>
+  <tabstop>whoUsersSpinBox</tabstop>
+  <tabstop>whoIntervalSpinBox</tabstop>
+  <tabstop>markWhenHiddenCheckBox</tabstop>
+  <tabstop>markerForegroundButton</tabstop>
+  <tabstop>markerBackgroundButton</tabstop>
+  <tabstop>confirmShutdownCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>
