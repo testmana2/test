@@ -5762,13 +5762,12 @@ eric5.Preferences.Prefs.editorDefaults?7
 eric5.Preferences.Prefs.editorExporterDefaults?7
 eric5.Preferences.Prefs.editorOtherFontsDefaults?7
 eric5.Preferences.Prefs.editorTypingDefaults?7
-eric5.Preferences.Prefs.fontFamily?7
-eric5.Preferences.Prefs.fontSize?7
 eric5.Preferences.Prefs.geometryDefaults?7
 eric5.Preferences.Prefs.graphicsDefaults?7
 eric5.Preferences.Prefs.helpDefaults?7
 eric5.Preferences.Prefs.iconEditorDefaults?7
 eric5.Preferences.Prefs.iconsDefaults?7
+eric5.Preferences.Prefs.initWebSettingsDefaults?4()
 eric5.Preferences.Prefs.ircDefaults?7
 eric5.Preferences.Prefs.multiProjectDefaults?7
 eric5.Preferences.Prefs.pluginManagerDefaults?7
@@ -5790,7 +5789,7 @@ eric5.Preferences.Prefs.userDefaults?7
 eric5.Preferences.Prefs.varDefaults?7
 eric5.Preferences.Prefs.vcsDefaults?7
 eric5.Preferences.Prefs.viewProfilesLength?7
-eric5.Preferences.Prefs.websettings?7
+eric5.Preferences.Prefs.webSettingsIntitialized?7
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_buttonBox_clicked?4(button)
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_programsSearchButton_clicked?4()
 eric5.Preferences.ProgramsDialog.ProgramsDialog.show?4()

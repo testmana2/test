@@ -474,10 +474,6 @@ class Prefs(object):
         "AnnotationsErrorBackground": QColor("#ffd0d0"),
         "WhitespaceForeground": QColor(Qt.darkGray),
         "WhitespaceBackground": QColor(Qt.white),
-        "EditAreaForeground":
-            QApplication.palette().color(QPalette.Active, QPalette.Base),
-        "EditAreaBackground":
-            QApplication.palette().color(QPalette.Active, QPalette.Text),
         "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),
         "OnlineChangeTraceMarkerSaved": QColor("#88ff88"),
     }
@@ -726,64 +722,72 @@ class Prefs(object):
         "GreaseMonkeyDisabledScripts": [],
     }
     
-    websettings = QWebSettings.globalSettings()
-    fontFamily = websettings.fontFamily(QWebSettings.StandardFont)
-    fontSize = websettings.fontSize(QWebSettings.DefaultFontSize)
-    helpDefaults["StandardFont"] = QFont(fontFamily, fontSize).toString()
-    fontFamily = websettings.fontFamily(QWebSettings.FixedFont)
-    fontSize = websettings.fontSize(QWebSettings.DefaultFixedFontSize)
-    helpDefaults["FixedFont"] = QFont(fontFamily, fontSize).toString()
-    helpDefaults.update({
-        "AutoLoadImages":
-            websettings.testAttribute(QWebSettings.AutoLoadImages),
-        "UserStyleSheet": "",
-        "SaveUrlColor": QColor(248, 248, 210),
-        "JavaEnabled":
-            websettings.testAttribute(QWebSettings.JavaEnabled),
-        "JavaScriptEnabled":
-            websettings.testAttribute(QWebSettings.JavascriptEnabled),
-        "JavaScriptCanOpenWindows":
-            websettings.testAttribute(QWebSettings.JavascriptCanOpenWindows),
-        "JavaScriptCanAccessClipboard":
-            websettings.testAttribute(QWebSettings.JavascriptCanAccessClipboard),
-        "PluginsEnabled":
-            websettings.testAttribute(QWebSettings.PluginsEnabled),
-        "OfflineStorageDatabaseEnabled":
-            websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled),
-    })
-    if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
-        helpDefaults.update({
-            "OfflineWebApplicationCacheEnabled":
-                websettings.testAttribute(QWebSettings.OfflineWebApplicationCacheEnabled),
-            "OfflineWebApplicationCacheQuota": 50,     # 50 MB
+    @classmethod
+    def initWebSettingsDefaults(cls):
+        """
+        Class method to initialize the web settings related defaults.
+        """
+        websettings = QWebSettings.globalSettings()
+        fontFamily = websettings.fontFamily(QWebSettings.StandardFont)
+        fontSize = websettings.fontSize(QWebSettings.DefaultFontSize)
+        cls.helpDefaults["StandardFont"] = QFont(fontFamily, fontSize).toString()
+        fontFamily = websettings.fontFamily(QWebSettings.FixedFont)
+        fontSize = websettings.fontSize(QWebSettings.DefaultFixedFontSize)
+        cls.helpDefaults["FixedFont"] = QFont(fontFamily, fontSize).toString()
+        cls.helpDefaults.update({
+            "AutoLoadImages":
+                websettings.testAttribute(QWebSettings.AutoLoadImages),
+            "UserStyleSheet": "",
+            "SaveUrlColor": QColor(248, 248, 210),
+            "JavaEnabled":
+                websettings.testAttribute(QWebSettings.JavaEnabled),
+            "JavaScriptEnabled":
+                websettings.testAttribute(QWebSettings.JavascriptEnabled),
+            "JavaScriptCanOpenWindows":
+                websettings.testAttribute(QWebSettings.JavascriptCanOpenWindows),
+            "JavaScriptCanAccessClipboard":
+                websettings.testAttribute(QWebSettings.JavascriptCanAccessClipboard),
+            "PluginsEnabled":
+                websettings.testAttribute(QWebSettings.PluginsEnabled),
+            "OfflineStorageDatabaseEnabled":
+                websettings.testAttribute(QWebSettings.OfflineStorageDatabaseEnabled),
         })
-    if hasattr(QWebSettings, "LocalStorageEnabled"):
-        helpDefaults["LocalStorageEnabled"] = \
-            websettings.testAttribute(QWebSettings.LocalStorageEnabled)
-    if hasattr(QWebSettings, "DnsPrefetchEnabled"):
-        helpDefaults["DnsPrefetchEnabled"] = \
-            websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
-    if hasattr(QWebSettings, "defaultTextEncoding"):
-        helpDefaults["DefaultTextEncoding"] = \
-            websettings.defaultTextEncoding()
-    if hasattr(QWebSettings, "SpatialNavigationEnabled"):
-        helpDefaults["SpatialNavigationEnabled"] = \
-            websettings.testAttribute(QWebSettings.SpatialNavigationEnabled)
-    if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
-        helpDefaults["LinksIncludedInFocusChain"] = \
-            websettings.testAttribute(QWebSettings.LinksIncludedInFocusChain)
-    if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
-        helpDefaults["LocalContentCanAccessRemoteUrls"] = \
-            websettings.testAttribute(QWebSettings.LocalContentCanAccessRemoteUrls)
-    if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
-        helpDefaults["LocalContentCanAccessFileUrls"] = \
-            websettings.testAttribute(QWebSettings.LocalContentCanAccessFileUrls)
-    if hasattr(QWebSettings, "XSSAuditingEnabled"):
-        helpDefaults["XSSAuditingEnabled"] = \
-            websettings.testAttribute(QWebSettings.XSSAuditingEnabled)
-    if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
-        helpDefaults["SiteSpecificQuirksEnabled"] = \
-            websettings.testAttribute(QWebSettings.SiteSpecificQuirksEnabled)
+        if hasattr(QWebSettings, "OfflineWebApplicationCacheEnabled"):
+            cls.helpDefaults.update({
+                "OfflineWebApplicationCacheEnabled":
+                    websettings.testAttribute(
+                    QWebSettings.OfflineWebApplicationCacheEnabled),
+                "OfflineWebApplicationCacheQuota": 50,     # 50 MB
+            })
+        if hasattr(QWebSettings, "LocalStorageEnabled"):
+            cls.helpDefaults["LocalStorageEnabled"] = \
+                websettings.testAttribute(QWebSettings.LocalStorageEnabled)
+        if hasattr(QWebSettings, "DnsPrefetchEnabled"):
+            cls.helpDefaults["DnsPrefetchEnabled"] = \
+                websettings.testAttribute(QWebSettings.DnsPrefetchEnabled)
+        if hasattr(QWebSettings, "defaultTextEncoding"):
+            cls.helpDefaults["DefaultTextEncoding"] = \
+                websettings.defaultTextEncoding()
+        if hasattr(QWebSettings, "SpatialNavigationEnabled"):
+            cls.helpDefaults["SpatialNavigationEnabled"] = \
+                websettings.testAttribute(QWebSettings.SpatialNavigationEnabled)
+        if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
+            cls.helpDefaults["LinksIncludedInFocusChain"] = \
+                websettings.testAttribute(QWebSettings.LinksIncludedInFocusChain)
+        if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
+            cls.helpDefaults["LocalContentCanAccessRemoteUrls"] = \
+                websettings.testAttribute(QWebSettings.LocalContentCanAccessRemoteUrls)
+        if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
+            cls.helpDefaults["LocalContentCanAccessFileUrls"] = \
+                websettings.testAttribute(QWebSettings.LocalContentCanAccessFileUrls)
+        if hasattr(QWebSettings, "XSSAuditingEnabled"):
+            cls.helpDefaults["XSSAuditingEnabled"] = \
+                websettings.testAttribute(QWebSettings.XSSAuditingEnabled)
+        if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
+            cls.helpDefaults["SiteSpecificQuirksEnabled"] = \
+                websettings.testAttribute(QWebSettings.SiteSpecificQuirksEnabled)
+    
+    webSettingsIntitialized = False
 
     # defaults for system settings
     sysDefaults = {
@@ -1585,7 +1589,13 @@ def getEditorColour(key, prefClass=Prefs):
         else:
             return QColor(col)
     else:
-        return prefClass.editorColourDefaults[key]
+        # palette based defaults here because of Qt5
+        if key == "EditAreaForeground":
+            return QApplication.palette().color(QPalette.Active, QPalette.Base)
+        elif key == "EditAreaBackground":
+            return QApplication.palette().color(QPalette.Active, QPalette.Text)
+        else:
+            return prefClass.editorColourDefaults[key]
     
 
 def setEditorColour(key, value, prefClass=Prefs):
@@ -2084,6 +2094,9 @@ def getHelp(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested help setting
     """
+    if not prefClass.webSettingsIntitialized:
+        prefClass.initWebSettingsDefaults()
+    
     if key in ["StandardFont", "FixedFont"]:
         f = QFont()
         f.fromString(prefClass.settings.value("Help/" + key,

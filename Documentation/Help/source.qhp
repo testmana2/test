@@ -8078,6 +8078,7 @@
       <keyword name="PreferencesLexerLanguageError" id="PreferencesLexerLanguageError" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexerLanguageError" />
       <keyword name="PreferencesLexerLanguageError (Constructor)" id="PreferencesLexerLanguageError (Constructor)" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexerLanguageError.__init__" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
+      <keyword name="Prefs.initWebSettingsDefaults" id="Prefs.initWebSettingsDefaults" ref="eric5.Preferences.__init__.html#Prefs.initWebSettingsDefaults" />
       <keyword name="Printer" id="Printer" ref="eric5.QScintilla.Printer.html#Printer" />
       <keyword name="Printer (Constructor)" id="Printer (Constructor)" ref="eric5.QScintilla.Printer.html#Printer.__init__" />
       <keyword name="Printer (Module)" id="Printer (Module)" ref="eric5.QScintilla.Printer.html" />
