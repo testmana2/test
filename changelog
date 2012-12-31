@@ -2,6 +2,8 @@ Change Log
 ----------
 Version 5.3-snapshot-2012mmdd:
 - bug fixes
+- General
+  -- added support for Qt5 (experimental)
 - Debugger
   -- added the capability to trace function calls and returns to the
      Python 2 and Python 3 debuggers

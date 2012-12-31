@@ -2016,6 +2016,18 @@ class UserInterface(E5MainWindow):
         self.qt4DocAct.triggered[()].connect(self.__showQt4Doc)
         self.actions.append(self.qt4DocAct)
       
+        self.qt5DocAct = E5Action(self.trUtf8('Qt5 Documentation'),
+                self.trUtf8('Qt&5 Documentation'), 0, 0, self, 'qt5_documentation')
+        self.qt5DocAct.setStatusTip(self.trUtf8('Open Qt5 Documentation'))
+        self.qt5DocAct.setWhatsThis(self.trUtf8(
+            """<b>Qt5 Documentation</b>"""
+            """<p>Display the Qt5 Documentation. Dependant upon your settings, this"""
+            """ will either show the help in Eric's internal help viewer, or execute"""
+            """ a web browser or Qt Assistant. </p>"""
+        ))
+        self.qt5DocAct.triggered[()].connect(self.__showQt5Doc)
+        self.actions.append(self.qt5DocAct)
+      
         self.pyqt4DocAct = E5Action(self.trUtf8('PyQt4 Documentation'),
                 self.trUtf8('P&yQt4 Documentation'), 0, 0, self, 'pyqt4_documentation')
         self.pyqt4DocAct.setStatusTip(self.trUtf8('Open PyQt4 Documentation'))
@@ -2240,6 +2252,7 @@ class UserInterface(E5MainWindow):
         self.__menus["help"].addAction(self.pythonDocAct)
         self.__menus["help"].addAction(self.python2DocAct)
         self.__menus["help"].addAction(self.qt4DocAct)
+        self.__menus["help"].addAction(self.qt5DocAct)
         self.__menus["help"].addAction(self.pyqt4DocAct)
         if self.pysideDocAct is not None:
             self.__menus["help"].addAction(self.pysideDocAct)
@@ -4358,26 +4371,45 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the Qt4 documentation.
         """
-        qt4DocDir = Preferences.getHelp("Qt4DocDir")
-        if not qt4DocDir:
-            qt4DocDir = Utilities.getEnvironmentEntry("QT4DOCDIR", "")
-            if not qt4DocDir:
-                qt4DocDir = os.path.join(Preferences.getQt4DocDir(), "html")
+        self.__showQtDoc(4)
+    
+    def __showQt5Doc(self):
+        """
+        Private slot to show the Qt5 documentation.
+        """
+        self.__showQtDoc(5)
+    
+    def __showQtDoc(self, version):
+        """
+        Private method to show the Qt documentation.
         
-        if qt4DocDir.startswith("qthelp://"):
-            if not os.path.splitext(qt4DocDir)[1]:
-                home = qt4DocDir + "/index.html"
+        @param version Qt version to show documentation for (integer)
+        """
+        assert version in [4, 5]
+##        qt4DocDir = Preferences.getHelp("Qt4DocDir")
+##        if not qt4DocDir:
+##            qt4DocDir = Utilities.getEnvironmentEntry("QT4DOCDIR", "")
+##            if not qt4DocDir:
+##                qt4DocDir = os.path.join(Preferences.getQt4DocDir(), "html")
+        if version == 4:
+            qtDocDir = Preferences.getQt4DocDir()
+        elif version == 5:
+            qtDocDir = Preferences.getQt5DocDir()
+        
+        if qtDocDir.startswith("qthelp://"):
+            if not os.path.splitext(qtDocDir)[1]:
+                home = qtDocDir + "/index.html"
             else:
-                home = qt4DocDir
-        elif qt4DocDir.startswith("http://") or qt4DocDir.startswith("https://"):
-            home = qt4DocDir
+                home = qtDocDir
+        elif qtDocDir.startswith("http://") or qtDocDir.startswith("https://"):
+            home = qtDocDir
         else:
-            if qt4DocDir.startswith("file://"):
-                qt4DocDir = qt4DocDir[7:]
-            if not os.path.splitext(qt4DocDir)[1]:
-                home = Utilities.normjoinpath(qt4DocDir, 'index.html')
+            if qtDocDir.startswith("file://"):
+                qtDocDir = qtDocDir[7:]
+            if not os.path.splitext(qtDocDir)[1]:
+                home = Utilities.normjoinpath(qtDocDir, 'index.html')
             else:
-                home = qt4DocDir
+                home = qtDocDir
             
             if not os.path.exists(home):
                 E5MessageBox.warning(self,

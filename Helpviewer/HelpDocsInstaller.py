@@ -8,7 +8,7 @@ Module implementing a thread class populating and updating the QtHelp
 documentation database.
 """
 
-from PyQt4.QtCore import pyqtSignal, QThread, qVersion, Qt, QMutex, QDateTime, QDir, \
+from PyQt4.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
     QLibraryInfo, QFileInfo
 from PyQt4.QtHelp import QHelpEngineCore
 
@@ -65,30 +65,37 @@ class HelpDocsInstaller(QThread):
         engine.setupData()
         changes = False
         
-        qtDocs = ["designer", "linguist", "qt"]
-        for doc in qtDocs:
-            changes |= self.__installQtDoc(doc, engine)
-            self.__mutex.lock()
-            if self.__abort:
-                engine = None
+        qt4Docs = ["designer", "linguist", "qt"]
+        qt5Docs = ["activeqt", "qtconcurrent", "qtcore", "qtdbus", "qtdesigner", "qtdoc",
+            "qtgraphicaleffects", "qtgui", "qthelp", "qtimageformats", "qtlinguist",
+            "qtmultimedia", "qtnetwork", "qtopengl", "qtprintsupport", "qtqml", "qtquick",
+            "qtscript", "qtsql", "qtsvg", "qttestlib", "qtuitools", "qtwebkit",
+            "qtwebkitexamples", "qtwidgets", "qtxml", "qtxmlpatterns"]
+        for qtDocs, version in [(qt4Docs, 4), (qt5Docs, 5)]:
+            for doc in qtDocs:
+                changes |= self.__installQtDoc(doc, version, engine)
+                self.__mutex.lock()
+                if self.__abort:
+                    engine = None
+                    self.__mutex.unlock()
+                    return
                 self.__mutex.unlock()
-                return
-            self.__mutex.unlock()
         
         changes |= self.__installEric5Doc(engine)
         engine = None
         del engine
         self.docsInstalled.emit(changes)
     
-    def __installQtDoc(self, name, engine):
+    def __installQtDoc(self, name, version, engine):
         """
         Private method to install/update a Qt help document.
         
         @param name name of the Qt help document (string)
+        @param version Qt version of the help documens (integer)
         @param engine reference to the help engine (QHelpEngineCore)
         @return flag indicating success (boolean)
         """
-        versionKey = "qt_version_{0}@@{1}".format(qVersion(), name)
+        versionKey = "qt_version_{0}@@{1}".format(version, name)
         info = engine.customValue(versionKey, "")
         lst = info.split('|')
         
@@ -100,8 +107,14 @@ class HelpDocsInstaller(QThread):
         if len(lst) == 2:
             qchFile = lst[1]
         
-        docsPath = QDir(QLibraryInfo.location(QLibraryInfo.DocumentationPath) + \
-                   QDir.separator() + "qch")
+        if version == 4:
+            docsPath = QDir(QLibraryInfo.location(QLibraryInfo.DocumentationPath) + \
+                       QDir.separator() + "qch")
+        elif version == 5:
+            docsPath = QDir(QLibraryInfo.location(QLibraryInfo.DocumentationPath))
+        else:
+            # unsupported Qt version
+            return False
         
         files = docsPath.entryList(["*.qch"])
         if not files:

@@ -643,6 +643,7 @@ class Prefs(object):
         "Python2DocDir": "",
         "QtDocDir": "",
         "Qt4DocDir": "",
+        "Qt5DocDir": "",
         "PyQt4DocDir": "",
         "PySideDocDir": "",
         "SingleHelpWindow": True,
@@ -2082,7 +2083,23 @@ def getQt4DocDir(prefClass=Prefs):
     if s == "":
         s = os.getenv("QT4DOCDIR", "")
     if s == "":
-        s = QLibraryInfo.location(QLibraryInfo.DocumentationPath)
+        s = os.path.join(QLibraryInfo.location(QLibraryInfo.DocumentationPath), "html")
+    return s
+    
+
+def getQt5DocDir(prefClass=Prefs):
+    """
+    Module function to retrieve the Qt5DocDir setting.
+    
+    @param prefClass preferences class used as the storage area
+    @return the requested Qt4DocDir setting (string)
+    """
+    s = prefClass.settings.value("Help/Qt5DocDir",
+        prefClass.helpDefaults["Qt5DocDir"])
+    if s == "":
+        s = os.getenv("QT5DOCDIR", "")
+    if s == "":
+        s = os.path.join(QLibraryInfo.location(QLibraryInfo.DocumentationPath), "qtdoc")
     return s
 
 

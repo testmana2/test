@@ -49,6 +49,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             Preferences.getHelp("PythonDocDir"))
         self.qt4DocDirEdit.setText(
             Preferences.getHelp("Qt4DocDir"))
+        self.qt5DocDirEdit.setText(
+            Preferences.getHelp("Qt5DocDir"))
         self.pyqt4DocDirEdit.setText(
             Preferences.getHelp("PyQt4DocDir"))
         self.pysideDocDirEdit.setText(
@@ -64,6 +66,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self.pythonDocDirEdit.text())
         Preferences.setHelp("Qt4DocDir",
             self.qt4DocDirEdit.text())
+        Preferences.setHelp("Qt5DocDir",
+            self.qt5DocDirEdit.text())
         Preferences.setHelp("PyQt4DocDir",
             self.pyqt4DocDirEdit.text())
         Preferences.setHelp("PySideDocDir",
@@ -114,6 +118,20 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         
         if entry:
             self.qt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
+        
+    @pyqtSlot()
+    def on_qt5DocDirButton_clicked(self):
+        """
+        Private slot to select the Qt5 documentation directory.
+        """
+        entry = E5FileDialog.getOpenFileName(
+            self,
+            self.trUtf8("Select Qt5 documentation entry"),
+            QUrl(self.qt5DocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+        
+        if entry:
+            self.qt5DocDirEdit.setText(Utilities.toNativeSeparators(entry))
         
     @pyqtSlot()
     def on_pyqt4DocDirButton_clicked(self):

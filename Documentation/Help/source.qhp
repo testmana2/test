@@ -4922,6 +4922,7 @@
       <keyword name="HelpDocumentationPage.on_python2DocDirButton_clicked" id="HelpDocumentationPage.on_python2DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_python2DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_pythonDocDirButton_clicked" id="HelpDocumentationPage.on_pythonDocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pythonDocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_qt4DocDirButton_clicked" id="HelpDocumentationPage.on_qt4DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt4DocDirButton_clicked" />
+      <keyword name="HelpDocumentationPage.on_qt5DocDirButton_clicked" id="HelpDocumentationPage.on_qt5DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt5DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.save" id="HelpDocumentationPage.save" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.save" />
       <keyword name="HelpIndexWidget" id="HelpIndexWidget" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget" />
       <keyword name="HelpIndexWidget (Constructor)" id="HelpIndexWidget (Constructor)" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__init__" />
@@ -11421,6 +11422,8 @@
       <keyword name="UserInterface.__showPython2Doc" id="UserInterface.__showPython2Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPython2Doc" />
       <keyword name="UserInterface.__showPythonDoc" id="UserInterface.__showPythonDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showPythonDoc" />
       <keyword name="UserInterface.__showQt4Doc" id="UserInterface.__showQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showQt4Doc" />
+      <keyword name="UserInterface.__showQt5Doc" id="UserInterface.__showQt5Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showQt5Doc" />
+      <keyword name="UserInterface.__showQtDoc" id="UserInterface.__showQtDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showQtDoc" />
       <keyword name="UserInterface.__showSubWindowMenu" id="UserInterface.__showSubWindowMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showSubWindowMenu" />
       <keyword name="UserInterface.__showSvg" id="UserInterface.__showSvg" ref="eric5.UI.UserInterface.html#UserInterface.__showSvg" />
       <keyword name="UserInterface.__showSystemEmailClient" id="UserInterface.__showSystemEmailClient" ref="eric5.UI.UserInterface.html#UserInterface.__showSystemEmailClient" />
@@ -12485,6 +12488,7 @@
       <keyword name="getQt" id="getQt" ref="eric5.Preferences.__init__.html#getQt" />
       <keyword name="getQt4DocDir" id="getQt4DocDir" ref="eric5.Preferences.__init__.html#getQt4DocDir" />
       <keyword name="getQt4TranslationsDir" id="getQt4TranslationsDir" ref="eric5.Preferences.__init__.html#getQt4TranslationsDir" />
+      <keyword name="getQt5DocDir" id="getQt5DocDir" ref="eric5.Preferences.__init__.html#getQt5DocDir" />
       <keyword name="getQtMacBundle" id="getQtMacBundle" ref="eric5.Utilities.__init__.html#getQtMacBundle" />
       <keyword name="getRealName" id="getRealName" ref="eric5.Utilities.__init__.html#getRealName" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfaceNone.html#getRegistryData" />
