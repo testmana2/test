@@ -112,7 +112,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         
     def __getCode4(self, indLevel, indString):
         """
-        Private method to get the source code for Qt4.
+        Private method to get the source code for Qt4/Qt5.
         
         @param indLevel indentation level (int)
         @param indString string used for indentation (space or tab) (string)

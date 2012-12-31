@@ -1497,7 +1497,7 @@ class DebugClientBase(object):
         
     def __formatQt4Variable(self, value, vtype):
         """
-        Private method to produce a formatted output of a simple Qt4 type.
+        Private method to produce a formatted output of a simple Qt4/Qt5 type.
         
         @param value variable to be formatted
         @param vtype type of the variable to be formatted (string)

@@ -12619,11 +12619,6 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;b&gt;Generovat dokumentaci&lt;/b&gt;&lt;p&gt;Generovat API dokumentaci za použití eric5-doc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="89"/>
-        <source>Qt4 Help Tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate documentation (eric5_doc)</source>
         <translation type="unfinished"></translation>
@@ -12641,6 +12636,11 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="138"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="89"/>
+        <source>Qt Help Tools</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -27465,273 +27465,273 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="208"/>
+        <location filename="Network/IRC/IrcWidget.py" line="209"/>
         <source>Disconnect from Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="208"/>
+        <location filename="Network/IRC/IrcWidget.py" line="209"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="172"/>
+        <location filename="Network/IRC/IrcWidget.py" line="173"/>
         <source>SSL Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="172"/>
+        <location filename="Network/IRC/IrcWidget.py" line="173"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="431"/>
+        <location filename="Network/IRC/IrcWidget.py" line="432"/>
         <source>Info</source>
         <translation type="unfinished">Info</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="195"/>
+        <location filename="Network/IRC/IrcWidget.py" line="196"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="202"/>
+        <location filename="Network/IRC/IrcWidget.py" line="203"/>
         <source>Looking for server {0} (port {1})...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="214"/>
+        <location filename="Network/IRC/IrcWidget.py" line="215"/>
         <source>Disconnecting from server {0}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="394"/>
+        <location filename="Network/IRC/IrcWidget.py" line="395"/>
         <source>Server found,connecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="401"/>
+        <location filename="Network/IRC/IrcWidget.py" line="402"/>
         <source>Connected,logging in...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="431"/>
+        <location filename="Network/IRC/IrcWidget.py" line="432"/>
         <source>Server disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="473"/>
+        <location filename="Network/IRC/IrcWidget.py" line="474"/>
         <source>Message Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="473"/>
+        <location filename="Network/IRC/IrcWidget.py" line="474"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="497"/>
+        <location filename="Network/IRC/IrcWidget.py" line="498"/>
         <source>Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="515"/>
+        <location filename="Network/IRC/IrcWidget.py" line="516"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="522"/>
+        <location filename="Network/IRC/IrcWidget.py" line="523"/>
         <source>You have left channel {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="533"/>
+        <location filename="Network/IRC/IrcWidget.py" line="534"/>
         <source>You are now known as {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="538"/>
+        <location filename="Network/IRC/IrcWidget.py" line="539"/>
         <source>User {0} is now known as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="543"/>
+        <location filename="Network/IRC/IrcWidget.py" line="544"/>
         <source>Server Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="577"/>
+        <location filename="Network/IRC/IrcWidget.py" line="578"/>
         <source>Error</source>
         <translation type="unfinished">Chyba</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="592"/>
+        <location filename="Network/IRC/IrcWidget.py" line="593"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="594"/>
+        <location filename="Network/IRC/IrcWidget.py" line="595"/>
         <source>Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="596"/>
+        <location filename="Network/IRC/IrcWidget.py" line="597"/>
         <source>User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <location filename="Network/IRC/IrcWidget.py" line="599"/>
         <source>MOTD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="600"/>
+        <location filename="Network/IRC/IrcWidget.py" line="601"/>
         <source>Away</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="602"/>
+        <location filename="Network/IRC/IrcWidget.py" line="603"/>
         <source>Info ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="606"/>
+        <location filename="Network/IRC/IrcWidget.py" line="607"/>
         <source>Message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="608"/>
+        <location filename="Network/IRC/IrcWidget.py" line="609"/>
         <source>End of message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="611"/>
+        <location filename="Network/IRC/IrcWidget.py" line="612"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="615"/>
+        <location filename="Network/IRC/IrcWidget.py" line="616"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="619"/>
+        <location filename="Network/IRC/IrcWidget.py" line="620"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="622"/>
+        <location filename="Network/IRC/IrcWidget.py" line="623"/>
         <source>You are no longer marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="624"/>
+        <location filename="Network/IRC/IrcWidget.py" line="625"/>
         <source>You have been marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="740"/>
+        <location filename="Network/IRC/IrcWidget.py" line="741"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="684"/>
+        <location filename="Network/IRC/IrcWidget.py" line="685"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="706"/>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
         <source>Socket Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="690"/>
+        <location filename="Network/IRC/IrcWidget.py" line="691"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="694"/>
+        <location filename="Network/IRC/IrcWidget.py" line="695"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="702"/>
+        <location filename="Network/IRC/IrcWidget.py" line="703"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="722"/>
+        <location filename="Network/IRC/IrcWidget.py" line="723"/>
         <source>SSL Errors</source>
         <translation type="unfinished">SSL chyby</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="722"/>
+        <location filename="Network/IRC/IrcWidget.py" line="723"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;SSL chyby:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="733"/>
+        <location filename="Network/IRC/IrcWidget.py" line="734"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="740"/>
+        <location filename="Network/IRC/IrcWidget.py" line="741"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="825"/>
+        <location filename="Network/IRC/IrcWidget.py" line="826"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="854"/>
+        <location filename="Network/IRC/IrcWidget.py" line="855"/>
         <source>Critical</source>
         <translation type="unfinished">Kritický</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="839"/>
+        <location filename="Network/IRC/IrcWidget.py" line="840"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="854"/>
+        <location filename="Network/IRC/IrcWidget.py" line="855"/>
         <source>The given nickname is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="812"/>
+        <location filename="Network/IRC/IrcWidget.py" line="813"/>
         <source>CTCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="796"/>
+        <location filename="Network/IRC/IrcWidget.py" line="797"/>
         <source>Received Version request from {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="801"/>
+        <location filename="Network/IRC/IrcWidget.py" line="802"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="806"/>
+        <location filename="Network/IRC/IrcWidget.py" line="807"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="812"/>
+        <location filename="Network/IRC/IrcWidget.py" line="813"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="508"/>
+        <location filename="Network/IRC/IrcWidget.py" line="509"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <location filename="Network/IRC/IrcWidget.py" line="513"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27746,12 +27746,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished">Síť</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <location filename="Network/IRC/IrcWidget.py" line="699"/>
         <source>The SSL handshake failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="706"/>
+        <location filename="Network/IRC/IrcWidget.py" line="707"/>
         <source>A network error occurred.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32977,27 +32977,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1103"/>
+        <location filename="Preferences/__init__.py" line="1107"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1130"/>
+        <location filename="Preferences/__init__.py" line="1134"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1130"/>
+        <location filename="Preferences/__init__.py" line="1134"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1224"/>
+        <location filename="Preferences/__init__.py" line="1228"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1224"/>
+        <location filename="Preferences/__init__.py" line="1228"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33141,37 +33141,22 @@ Vyberte Obnovit.</translation>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="82"/>
         <source>Translation Converter (Qt4)</source>
-        <translation>Konvertor překladů (Qt4)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="91"/>
-        <source>Qt4 Designer</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="99"/>
-        <source>Qt4 Linguist</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="107"/>
-        <source>Qt4 Assistant</source>
-        <translation></translation>
+        <translation type="obsolete">Konvertor překladů (Qt4)</translation>
     </message>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="111"/>
         <source>Translation Extractor (Python, Qt4)</source>
-        <translation>Extraktor překladů (Python, Qt4)</translation>
+        <translation type="obsolete">Extraktor překladů (Python, Qt4)</translation>
     </message>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="115"/>
         <source>Forms Compiler (Python, Qt4)</source>
-        <translation>Kompilátor formulářů (Python, Qt4)</translation>
+        <translation type="obsolete">Kompilátor formulářů (Python, Qt4)</translation>
     </message>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="119"/>
         <source>Resource Compiler (Python, Qt4)</source>
-        <translation>Kompilátor resource (Python, Qt4)</translation>
+        <translation type="obsolete">Kompilátor resource (Python, Qt4)</translation>
     </message>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="139"/>
@@ -33243,6 +33228,41 @@ Vyberte Obnovit.</translation>
         <source>Source Highlighter - Pygments</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="82"/>
+        <source>Translation Converter (Qt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="91"/>
+        <source>Qt Designer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="99"/>
+        <source>Qt Linguist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="107"/>
+        <source>Qt Assistant</source>
+        <translation type="unfinished">Qt asistent</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="111"/>
+        <source>Translation Extractor (Python, Qt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="115"/>
+        <source>Forms Compiler (Python, Qt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ProgramsDialog.py" line="119"/>
+        <source>Resource Compiler (Python, Qt)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Project</name>
@@ -33250,16 +33270,6 @@ Vyberte Obnovit.</translation>
         <location filename="Project/Project.py" line="219"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Ruby soubory (*.rb);;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="261"/>
-        <source>Qt4 GUI</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="262"/>
-        <source>Qt4 Console</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="264"/>
@@ -34438,6 +34448,16 @@ Vyberte Obnovit.</translation>
     <message>
         <location filename="Project/Project.py" line="341"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/Project.py" line="261"/>
+        <source>Qt GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/Project.py" line="262"/>
+        <source>Qt Console</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -41405,17 +41425,17 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="366"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="367"/>
         <source>Unable to load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="202"/>
         <source>Saving Speed Dial data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="202"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52412,34 +52432,24 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Unittest projekt&lt;/b&gt;&lt;p&gt;Spustit unittest s aktuálním projektem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1652"/>
-        <source>Qt-Designer 4</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1655"/>
         <source>Start Qt-Designer 4</source>
-        <translation>Spustit Qt-Designer 4</translation>
+        <translation type="obsolete">Spustit Qt-Designer 4</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1656"/>
         <source>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Start Qt-Designer 4.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Designer 4.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1672"/>
-        <source>Qt-Linguist 4</source>
-        <translation></translation>
+        <translation type="obsolete">&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Designer 4.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1675"/>
         <source>Start Qt-Linguist 4</source>
-        <translation>Spustit Qt-Linguist 4</translation>
+        <translation type="obsolete">Spustit Qt-Linguist 4</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1676"/>
         <source>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Start Qt-Linguist 4.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Linguist 4.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Spustit Qt-Linguist 4.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1685"/>
@@ -53069,12 +53079,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/UserInterface.py" line="1652"/>
         <source>&amp;Designer 4...</source>
-        <translation>&amp;Designer 4...</translation>
+        <translation type="obsolete">&amp;Designer 4...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1672"/>
         <source>&amp;Linguist 4...</source>
-        <translation>&amp;Linguist 4...</translation>
+        <translation type="obsolete">&amp;Linguist 4...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1862"/>
@@ -54234,6 +54244,46 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/UserInterface.py" line="1442"/>
         <source>&lt;b&gt;Activate IRC&lt;/b&gt;&lt;p&gt;This switches the input focus to the IRC window.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1652"/>
+        <source>Qt-Designer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1652"/>
+        <source>Qt-&amp;Designer...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1655"/>
+        <source>Start Qt-Designer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1656"/>
+        <source>&lt;b&gt;Qt-Designer&lt;/b&gt;&lt;p&gt;Start Qt-Designer.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1672"/>
+        <source>Qt-Linguist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1672"/>
+        <source>Qt-&amp;Linguist...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1675"/>
+        <source>Start Qt-Linguist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1676"/>
+        <source>&lt;b&gt;Qt-Linguist&lt;/b&gt;&lt;p&gt;Start Qt-Linguist.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

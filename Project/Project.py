@@ -258,8 +258,8 @@ class Project(QObject):
         self.__lexerAssociationCallbacks = {}
         self.__binaryTranslationsCallbacks = {}
         
-        self.__projectTypes["Qt4"] = self.trUtf8("Qt4 GUI")
-        self.__projectTypes["Qt4C"] = self.trUtf8("Qt4 Console")
+        self.__projectTypes["Qt4"] = self.trUtf8("Qt GUI")
+        self.__projectTypes["Qt4C"] = self.trUtf8("Qt Console")
         self.__projectTypes["E4Plugin"] = self.trUtf8("Eric Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")

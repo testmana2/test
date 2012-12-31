@@ -73,7 +73,7 @@ def exeDisplayDataList():
     dataList.append({
         "programEntry": True,
         "header": QApplication.translate("EricdocPlugin",
-                                "Qt4 Help Tools"),
+                                "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',
         "versionStartsWith": 'Qt',
@@ -89,7 +89,7 @@ def exeDisplayDataList():
     dataList.append({
         "programEntry": True,
         "header": QApplication.translate("EricdocPlugin",
-                                "Qt4 Help Tools"),
+                                "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',
         "versionStartsWith": 'Qt',

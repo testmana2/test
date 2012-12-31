@@ -1641,7 +1641,7 @@ class UserInterface(E5MainWindow):
         self.utProjectAct.setEnabled(False)
         self.actions.append(self.utProjectAct)
         
-        # check for Qt4 designer and linguist
+        # check for Qt4/Qt5 designer and linguist
         if Utilities.isWindowsPlatform():
             designerExe = "{0}.exe".format(Utilities.generateQtToolName("designer"))
         elif Utilities.isMacPlatform():
@@ -1649,13 +1649,13 @@ class UserInterface(E5MainWindow):
         else:
             designerExe = Utilities.generateQtToolName("designer")
         if Utilities.isinpath(designerExe):
-            self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'),
+            self.designer4Act = E5Action(self.trUtf8('Qt-Designer'),
                     UI.PixmapCache.getIcon("designer4.png"),
-                    self.trUtf8('&Designer 4...'), 0, 0, self, 'qt_designer4')
-            self.designer4Act.setStatusTip(self.trUtf8('Start Qt-Designer 4'))
+                    self.trUtf8('Qt-&Designer...'), 0, 0, self, 'qt_designer4')
+            self.designer4Act.setStatusTip(self.trUtf8('Start Qt-Designer'))
             self.designer4Act.setWhatsThis(self.trUtf8(
-                """<b>Qt-Designer 4</b>"""
-                """<p>Start Qt-Designer 4.</p>"""
+                """<b>Qt-Designer</b>"""
+                """<p>Start Qt-Designer.</p>"""
             ))
             self.designer4Act.triggered[()].connect(self.__designer4)
             self.actions.append(self.designer4Act)
@@ -1669,13 +1669,13 @@ class UserInterface(E5MainWindow):
         else:
             linguistExe = Utilities.generateQtToolName("linguist")
         if Utilities.isinpath(linguistExe):
-            self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'),
+            self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist'),
                     UI.PixmapCache.getIcon("linguist4.png"),
-                    self.trUtf8('&Linguist 4...'), 0, 0, self, 'qt_linguist4')
-            self.linguist4Act.setStatusTip(self.trUtf8('Start Qt-Linguist 4'))
+                    self.trUtf8('Qt-&Linguist...'), 0, 0, self, 'qt_linguist4')
+            self.linguist4Act.setStatusTip(self.trUtf8('Start Qt-Linguist'))
             self.linguist4Act.setWhatsThis(self.trUtf8(
-                """<b>Qt-Linguist 4</b>"""
-                """<p>Start Qt-Linguist 4.</p>"""
+                """<b>Qt-Linguist</b>"""
+                """<p>Start Qt-Linguist.</p>"""
             ))
             self.linguist4Act.triggered[()].connect(self.__linguist4)
             self.actions.append(self.linguist4Act)

@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to generate code for a Qt4 dialog.
+Module implementing a dialog to generate code for a Qt4/Qt5 dialog.
 """
 
 import os
@@ -32,7 +32,7 @@ rubySignatureRole = Qt.UserRole + 3
 
 class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     """
-    Class implementing a dialog to generate code for a Qt4 dialog.
+    Class implementing a dialog to generate code for a Qt4/Qt5 dialog.
     """
     DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizardPage"}
     Separator = 25 * "="
