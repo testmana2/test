@@ -185,7 +185,8 @@ class SpeedDial(QObject):
             allPages = \
                 'url:"http://eric-ide.python-projects.org/"|title:"Eric Web Site";'\
                 'url:"http://www.riverbankcomputing.com/"|title:"PyQt4 Web Site";'\
-                'url:"http://qt.nokia.com/"|title:"Qt Web Site";'\
+                'url:"http://http://qt.digia.com/"|title:"Qt Web Site";'\
+                'url:"http://blog.qt.digia.com/"|title:"Qt Blog";'\
                 'url:"http://www.python.org"|title:"Python Language Website";'\
                 'url:"http://www.google.com"|title:"Google";'
             self.changed(allPages)
