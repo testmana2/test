@@ -41221,22 +41221,22 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt4 Translations Directory</source>
-        <translation>Qt4 翻译文件夹</translation>
+        <translation type="obsolete">Qt4 翻译文件夹</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
         <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation>点击通过文件夹选择对话框选择 Qt4 翻译文件夹</translation>
+        <translation type="obsolete">点击通过文件夹选择对话框选择 Qt4 翻译文件夹</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>Enter the path of the Qt4 translations directory.</source>
-        <translation>输入 Qt4 翻译文件夹的路径。</translation>
+        <translation type="obsolete">输入 Qt4 翻译文件夹的路径。</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation>&lt;b&gt;注意：&lt;/b&gt; 为空则使用 QT4TRANSLATIONSDIR 环境变量或者编译到 Qt4 库中的路径。</translation>
+        <translation type="obsolete">&lt;b&gt;注意：&lt;/b&gt; 为空则使用 QT4TRANSLATIONSDIR 环境变量或者编译到 Qt4 库中的路径。</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
@@ -41251,7 +41251,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>Qt4-Prefix:</source>
-        <translation>Qt4 前缀：</translation>
+        <translation type="obsolete">Qt4 前缀：</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="176"/>
@@ -41266,7 +41266,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
         <source>Enter the prefix for the Qt4 tools name</source>
-        <translation>输入 Qt4 工具名称的前缀</translation>
+        <translation type="obsolete">输入 Qt4 工具名称的前缀</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="179"/>
@@ -41276,7 +41276,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
         <source>Qt4-Postfix:</source>
-        <translation>Qt4 后缀：</translation>
+        <translation type="obsolete">Qt4 后缀：</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="181"/>
@@ -41286,7 +41286,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
         <source>Enter the postfix for the Qt4 tools name</source>
-        <translation>输入 Qt4 工具名称的后缀</translation>
+        <translation type="obsolete">输入 Qt4 工具名称的后缀</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
@@ -41316,7 +41316,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt4 Directory</source>
-        <translation type="unfinished">Qt3 文件夹 {4 ?}</translation>
+        <translation type="obsolete">Qt3 文件夹 {4 ?}</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
@@ -41326,12 +41326,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>Enter the path of the Qt4 directory.</source>
-        <translation type="unfinished">输入 Qt3 文件夹的路径 {4 ?}</translation>
+        <translation type="obsolete">输入 Qt3 文件夹的路径 {4 ?}</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation type="unfinished">点击通过文件夹选择对话框选择 Qt3 文件夹 {4 ?}</translation>
+        <translation type="obsolete">点击通过文件夹选择对话框选择 Qt3 文件夹 {4 ?}</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
@@ -41341,6 +41341,61 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
+        <source>Qt Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <source>Enter the path of the Qt directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <source>Press to select the Qt directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <source>Qt Translations Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <source>Press to select the Qt translations directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <source>Enter the path of the Qt translations directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <source>Qt-Prefix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <source>Enter the prefix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <source>Qt-Postfix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

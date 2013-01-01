@@ -38794,7 +38794,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt4 Directory</source>
-        <translation>Qt4 Dizini</translation>
+        <translation type="obsolete">Qt4 Dizini</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
@@ -38804,12 +38804,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>Enter the path of the Qt4 directory.</source>
-        <translation>Qt4 belgelirinin dizin yolunu gir.</translation>
+        <translation type="obsolete">Qt4 belgelirinin dizin yolunu gir.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation>Dizin seçme diyaloğu ile Qt4 dizinini seçmek için basınız</translation>
+        <translation type="obsolete">Dizin seçme diyaloğu ile Qt4 dizinini seçmek için basınız</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="79"/>
@@ -38819,22 +38819,22 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt4 Translations Directory</source>
-        <translation>Qt4 Çeviri Dizini</translation>
+        <translation type="obsolete">Qt4 Çeviri Dizini</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
         <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation>Dizin seçme diyaloğu ile Qt4 çeviri dizinini seçmek için basınız</translation>
+        <translation type="obsolete">Dizin seçme diyaloğu ile Qt4 çeviri dizinini seçmek için basınız</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>Enter the path of the Qt4 translations directory.</source>
-        <translation>Qt4 çeviri dizinin yolunu giriniz.</translation>
+        <translation type="obsolete">Qt4 çeviri dizinin yolunu giriniz.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation>&lt;b&gt;Not:&lt;/b&gt; Ayarlandığında Boş bıraktıysanız QT4TRANSLATIONSDIR ortam değişkeni veya Qt3 kütüphanesi için belirlenen yol kullanılır.</translation>
+        <translation type="obsolete">&lt;b&gt;Not:&lt;/b&gt; Ayarlandığında Boş bıraktıysanız QT4TRANSLATIONSDIR ortam değişkeni veya Qt3 kütüphanesi için belirlenen yol kullanılır.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
@@ -38849,22 +38849,22 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>Qt4-Prefix:</source>
-        <translation>Qt4-Prefix:</translation>
+        <translation type="obsolete">Qt4-Prefix:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
         <source>Enter the prefix for the Qt4 tools name</source>
-        <translation>Qt4 araç adlarının ön ekini giriniz</translation>
+        <translation type="obsolete">Qt4 araç adlarının ön ekini giriniz</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
         <source>Qt4-Postfix:</source>
-        <translation>Qt4-Postfix:</translation>
+        <translation type="obsolete">Qt4-Postfix:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
         <source>Enter the postfix for the Qt4 tools name</source>
-        <translation>Qt4 araç adlarının son ekini giriniz</translation>
+        <translation type="obsolete">Qt4 araç adlarının son ekini giriniz</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
@@ -38885,6 +38885,61 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="75"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Qt4 Çeviri Dizinini Seç</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
+        <source>Qt Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <source>Enter the path of the Qt directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <source>Press to select the Qt directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <source>Qt Translations Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <source>Press to select the Qt translations directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <source>Enter the path of the Qt translations directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <source>Qt-Prefix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <source>Enter the prefix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <source>Qt-Postfix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <source>Enter the postfix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

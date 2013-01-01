@@ -41254,17 +41254,17 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt4 Translations Directory</source>
-        <translation>Répertoire de traductions Qt4</translation>
+        <translation type="obsolete">Répertoire de traductions Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
         <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation>Cliquer pour sélectionner un répertoire de traductions Qt4 via une boite de dialogue</translation>
+        <translation type="obsolete">Cliquer pour sélectionner un répertoire de traductions Qt4 via une boite de dialogue</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>Enter the path of the Qt4 translations directory.</source>
-        <translation>Entrer le répertoire des traductions pour Qt4.</translation>
+        <translation type="obsolete">Entrer le répertoire des traductions pour Qt4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="79"/>
@@ -41309,7 +41309,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>Qt4-Prefix:</source>
-        <translation>Préfixe Qt4:</translation>
+        <translation type="obsolete">Préfixe Qt4:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="176"/>
@@ -41324,7 +41324,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
         <source>Enter the prefix for the Qt4 tools name</source>
-        <translation>Entrer le préfixe de l&apos;outil Qt4</translation>
+        <translation type="obsolete">Entrer le préfixe de l&apos;outil Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="179"/>
@@ -41334,7 +41334,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
         <source>Qt4-Postfix:</source>
-        <translation>Suffixe Qt4:</translation>
+        <translation type="obsolete">Suffixe Qt4:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Ui_QtPage.py" line="181"/>
@@ -41344,7 +41344,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
         <source>Enter the postfix for the Qt4 tools name</source>
-        <translation>Entrer le suffixe de l&apos;outil Qt4</translation>
+        <translation type="obsolete">Entrer le suffixe de l&apos;outil Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
@@ -41364,12 +41364,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation>&lt;b&gt;Note:&lt;/b&gt; Laisser cette entrée vide pour utiliser la variable d&apos;environnement QT4TRANSLATIONSDIR ou le chmin compilé dans la librairie QT4.</translation>
+        <translation type="obsolete">&lt;b&gt;Note:&lt;/b&gt; Laisser cette entrée vide pour utiliser la variable d&apos;environnement QT4TRANSLATIONSDIR ou le chmin compilé dans la librairie QT4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt4 Directory</source>
-        <translation>Répertoire Qt4</translation>
+        <translation type="obsolete">Répertoire Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
@@ -41379,12 +41379,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>Enter the path of the Qt4 directory.</source>
-        <translation>Entrer le chemin du répertoire Qt4.</translation>
+        <translation type="obsolete">Entrer le chemin du répertoire Qt4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation>Cliquer pour choisir manuellement le répertoire Qt4</translation>
+        <translation type="obsolete">Cliquer pour choisir manuellement le répertoire Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
@@ -41394,6 +41394,61 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
+        <source>Qt Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <source>Enter the path of the Qt directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <source>Press to select the Qt directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <source>Qt Translations Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <source>Press to select the Qt translations directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <source>Enter the path of the Qt translations directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <source>Qt-Prefix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <source>Enter the prefix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <source>Qt-Postfix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

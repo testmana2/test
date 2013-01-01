@@ -38042,22 +38042,22 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt4 Translations Directory</source>
-        <translation>Directorio de Traducciones Qt4</translation>
+        <translation type="obsolete">Directorio de Traducciones Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
         <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation>Pulse para seleccionar el directorio de traducciones de Qt4 a través de un diálogo de selección de directorio</translation>
+        <translation type="obsolete">Pulse para seleccionar el directorio de traducciones de Qt4 a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>Enter the path of the Qt4 translations directory.</source>
-        <translation>Introeucir la ruta del directorio de traducciones Qt4.</translation>
+        <translation type="obsolete">Introeucir la ruta del directorio de traducciones Qt4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4TRANSLATIONSDIR o la ruta compilada en la biblioteca Qt4.</translation>
+        <translation type="obsolete">&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4TRANSLATIONSDIR o la ruta compilada en la biblioteca Qt4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
@@ -38067,22 +38067,22 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>Qt4-Prefix:</source>
-        <translation>Prefijo de Qt4:</translation>
+        <translation type="obsolete">Prefijo de Qt4:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
         <source>Enter the prefix for the Qt4 tools name</source>
-        <translation>Introducir el prefijo para nombre de las herramientas Qt4</translation>
+        <translation type="obsolete">Introducir el prefijo para nombre de las herramientas Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
         <source>Qt4-Postfix:</source>
-        <translation>Postfijo de Qt4:</translation>
+        <translation type="obsolete">Postfijo de Qt4:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
         <source>Enter the postfix for the Qt4 tools name</source>
-        <translation>Introducir el postfijo para nombre de las herramientas Qt4</translation>
+        <translation type="obsolete">Introducir el postfijo para nombre de las herramientas Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
@@ -38102,7 +38102,7 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt4 Directory</source>
-        <translation>Directorio de Qt4</translation>
+        <translation type="obsolete">Directorio de Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
@@ -38112,12 +38112,12 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>Enter the path of the Qt4 directory.</source>
-        <translation>Introducir la ruta del directorio Qt4.</translation>
+        <translation type="obsolete">Introducir la ruta del directorio Qt4.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation>Pulse para seleccionar el directorio de Qt4 a través de un diálogo de selección de directorio</translation>
+        <translation type="obsolete">Pulse para seleccionar el directorio de Qt4 a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
@@ -38128,6 +38128,61 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>El ejecutable de la herramienta se compone del prefijo, el nombre de la herramienta y el postfijo. Para win, la extensión se añade automáticamente.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
+        <source>Qt Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <source>Enter the path of the Qt directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <source>Press to select the Qt directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <source>Qt Translations Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <source>Press to select the Qt translations directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <source>Enter the path of the Qt translations directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <source>Qt-Prefix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <source>Enter the prefix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <source>Qt-Postfix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <source>Enter the postfix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1944,8 +1943,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2181,8 +2180,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14292,8 +14291,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
@@ -37650,21 +37649,6 @@ Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|M
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
-        <source>Qt4 Translations Directory</source>
-        <translation>Qt4 Übersetzungenverzeichnis</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
-        <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation>Das Qt4 Übersetzungenverzeichnis mittels eines Verzeichnisauswahldialoges wählen</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
-        <source>Enter the path of the Qt4 translations directory.</source>
-        <translation>Gib den Pfad des Qt4 Übersetzungenverzeichnisses ein.</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="75"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Wähle Qt4 Übersetzungenverzeichnis</translation>
@@ -37680,26 +37664,6 @@ Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|M
         <translation>Qt Werkzeuge</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
-        <source>Enter the postfix for the Qt4 tools name</source>
-        <translation>Gib das Anhängsel für den Qt4 Werkzeugnamen ein</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
-        <source>Enter the prefix for the Qt4 tools name</source>
-        <translation>Gib das Präfix für den Qt4 Werkzeugnamen ein</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
-        <source>Qt4-Postfix:</source>
-        <translation>Qt4-Anhängsel:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
-        <source>Qt4-Prefix:</source>
-        <translation>Qt4-Präfix:</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Dies gibt ein Beispiel für den vollständigen Werkzeugnamen</translation>
@@ -37710,29 +37674,9 @@ Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|M
         <translation>designer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
-        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation>&lt;b&gt;Hinweis:&lt;/b&gt; Lassen Sie diesen Eintrag leer, um die Umgebungsvariable QT4TRANSLATIONSDIR oder den in die Qt4 Bibliothek eincompilierten Pfad zu verwenden.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
-        <source>Qt4 Directory</source>
-        <translation>Qt4 Verzeichnis</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Hinweis:&lt;/b&gt; Diese Einstellung wird erst beim nächsten Programmstart aktiv.&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
-        <source>Enter the path of the Qt4 directory.</source>
-        <translation>Gib den Pfad des Qt4 Verzeichnisses ein.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
-        <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation>Das Qt4 Verzeichnis mittels eines Verzeichnisauswahldialoges wählen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
@@ -37743,6 +37687,61 @@ Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|M
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>Der Werkzeugname wird aus dem Präfix, dem Werkzeugnamen und dem Anhängsel gebildet. Für win wird die Erweiterung automatisch angehängt.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
+        <source>Qt Directory</source>
+        <translation>Qt Verzeichnis</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <source>Enter the path of the Qt directory.</source>
+        <translation>Gib den Pfad des Qt Verzeichnisses ein.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <source>Press to select the Qt directory via a directory selection dialog</source>
+        <translation>Das Qt Verzeichnis mittels eines Verzeichnisauswahldialoges wählen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <source>Qt Translations Directory</source>
+        <translation>Qt Übersetzungenverzeichnis</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <source>Press to select the Qt translations directory via a directory selection dialog</source>
+        <translation>Das Qt Übersetzungenverzeichnis mittels eines Verzeichnisauswahldialoges wählen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <source>Enter the path of the Qt translations directory.</source>
+        <translation>Gib den Pfad des Qt Übersetzungenverzeichnisses ein.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
+        <translation>&lt;b&gt;Hinweis:&lt;/b&gt; Lassen Sie diesen Eintrag leer, um die Umgebungsvariable QT4TRANSLATIONSDIR oder den in die Qt Bibliothek eincompilierten Pfad zu verwenden.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <source>Qt-Prefix:</source>
+        <translation>Qt-Präfix:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <source>Enter the prefix for the Qt tools name</source>
+        <translation>Gib das Präfix für den Qt Werkzeugnamen ein</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <source>Qt-Postfix:</source>
+        <translation>Qt-Anhängsel:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <source>Enter the postfix for the Qt tools name</source>
+        <translation>Gib das Anhängsel für den Qt Werkzeugnamen ein</translation>
     </message>
 </context>
 <context>

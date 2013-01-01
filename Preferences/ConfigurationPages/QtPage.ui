@@ -34,7 +34,7 @@
    <item>
     <widget class="QGroupBox" name="qt4Group">
      <property name="title">
-      <string>Qt4 Directory</string>
+      <string>Qt Directory</string>
      </property>
      <layout class="QGridLayout" name="_2">
       <item row="0" column="0" colspan="2">
@@ -47,14 +47,14 @@
       <item row="1" column="0">
        <widget class="QLineEdit" name="qt4Edit">
         <property name="toolTip">
-         <string>Enter the path of the Qt4 directory.</string>
+         <string>Enter the path of the Qt directory.</string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="qt4Button">
         <property name="toolTip">
-         <string>Press to select the Qt4 directory via a directory selection dialog</string>
+         <string>Press to select the Qt directory via a directory selection dialog</string>
         </property>
         <property name="text">
          <string>...</string>
@@ -67,13 +67,13 @@
    <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Qt4 Translations Directory</string>
+      <string>Qt Translations Directory</string>
      </property>
      <layout class="QGridLayout">
       <item row="1" column="1">
        <widget class="QPushButton" name="qt4TransButton">
         <property name="toolTip">
-         <string>Press to select the Qt4 translations directory via a directory selection dialog</string>
+         <string>Press to select the Qt translations directory via a directory selection dialog</string>
         </property>
         <property name="text">
          <string>...</string>
@@ -83,7 +83,7 @@
       <item row="1" column="0">
        <widget class="QLineEdit" name="qt4TransEdit">
         <property name="toolTip">
-         <string>Enter the path of the Qt4 translations directory.</string>
+         <string>Enter the path of the Qt translations directory.</string>
         </property>
        </widget>
       </item>
@@ -97,7 +97,7 @@
       <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="textLabel1_2_4">
         <property name="text">
-         <string>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</string>
+         <string>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -126,28 +126,28 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Qt4-Prefix:</string>
+         <string>Qt-Prefix:</string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="qt4PrefixEdit">
         <property name="toolTip">
-         <string>Enter the prefix for the Qt4 tools name</string>
+         <string>Enter the prefix for the Qt tools name</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Qt4-Postfix:</string>
+         <string>Qt-Postfix:</string>
         </property>
        </widget>
       </item>
       <item row="1" column="3">
        <widget class="QLineEdit" name="qt4PostfixEdit">
         <property name="toolTip">
-         <string>Enter the postfix for the Qt4 tools name</string>
+         <string>Enter the postfix for the Qt tools name</string>
         </property>
        </widget>
       </item>
