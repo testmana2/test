@@ -33,6 +33,8 @@ cfg = {}
 progLanguages = ["Python", "Ruby"]
 sourceDir = "eric"
 configName = 'eric5config.py'
+macAppBundleName = "eric5.app"
+macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(sys.exec_prefix)
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
@@ -81,11 +83,19 @@ def usage(rcode=2):
 
     @param rcode the return code passed back to the calling process.
     """
-    global progName, platBinDir, modDir, distDir, apisDir
+    global progName, platBinDir, modDir, distDir, apisDir, macAppBundleName
+    global macPythonExe
 
     print()
     print("Usage:")
-    print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"\
+    if sys.platform == "darwin":
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir] [-m name] [-p python]"\
+        .format(progName))
+    elif sys.platform.startswith("win"):
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"\
+        .format(progName))
+    else:
+        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"\
         .format(progName))
     print("where:")
     print("    -h        display this help message")
@@ -102,6 +112,11 @@ def usage(rcode=2):
     if not sys.platform.startswith("win"):
         print("    -i dir    temporary install prefix")
         print("              (default: {0})".format(distDir))
+    if sys.platform == "darwin":
+        print("    -m name   name of the Mac app bundle")
+        print("              (default: {0})".format(macAppBundleName))
+        print("    -p python name of the python executable")
+        print("              (default: {0})".format(macPythonExe))
     print("    -x        don't perform dependency checks (use on your own risk)")
     print("    -c        don't cleanup old installation first")
     print("    -z        don't compile the installed python files")
@@ -293,6 +308,8 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
+    global macAppBundleName
+    
     try:
         from eric5config import getConfig
     except ImportError:
@@ -380,8 +397,8 @@ def cleanUp():
             # delete the Mac app bundle
             if os.path.exists("/Developer/Applications/Eric5"):
                 shutil.rmtree("/Developer/Applications/Eric5")
-            if os.path.exists("/Applications/eric5.app"):
-                shutil.rmtree("/Applications/eric5.app")
+            if os.path.exists("/Applications/" + macAppBundleName):
+                shutil.rmtree("/Applications/" + macAppBundleName)
         
     except IOError as msg:
         sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
@@ -585,19 +602,18 @@ def createMacAppBundle(pydir):
     @param pydir the name of the directory where the Python script will eventually
         be installed (string)
     """
-    global cfg, sourceDir
+    global cfg, sourceDir, macAppBundleName, macPythonExe
     
-    dirs = {"contents": "/Applications/eric5.app/Contents/",
-            "exe": "/Applications/eric5.app/Contents/MacOS",
-            "icns": "/Applications/eric5.app/Contents/Resources"}
+    dirs = {"contents": "/Applications/{0}/Contents/".format(macAppBundleName),
+            "exe": "/Applications/{0}/Contents/MacOS".format(macAppBundleName),
+            "icns": "/Applications/{0}/Contents/Resources".format(macAppBundleName)}
     os.makedirs(dirs["contents"])
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
     
-    starter = os.path.join(dirs["exe"], "eric")
-    os.symlink(
-        "{0}/Resources/Python.app/Contents/MacOS/Python".format(sys.exec_prefix),
-        starter)
+##    starter = os.path.join(dirs["exe"], "eric")
+##    os.symlink(macPythonExe, starter)
+    starter = "python3"
     
     wname = os.path.join(dirs["exe"], "eric5")
     path = os.getenv("PATH", "")
@@ -638,7 +654,7 @@ exec "{0}" "{1}/{2}.py" "$@"
     <key>CFBundleInfoDictionaryVersion</key>
     <string>1.0</string>
     <key>CFBundleName</key>
-    <string>eric5</string>
+    <string>{0}</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleSignature</key>
@@ -647,7 +663,7 @@ exec "{0}" "{1}/{2}.py" "$@"
     <string>1.0</string>
 </dict>
 </plist>
-'''
+'''.format(macAppBundleName.replace(".app", ""))
     )
 
 
@@ -972,7 +988,7 @@ def main(argv):
 
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
-    global sourceDir, configName
+    global sourceDir, configName, macAppBundleName, macPythonExe
     
     progName = os.path.basename(argv[0])
     
@@ -984,6 +1000,8 @@ def main(argv):
     try:
         if sys.platform.startswith("win"):
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:")
+        elif sys.platform == "darwin":
+            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:p:")
         else:
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:")
     except getopt.GetoptError:
@@ -1019,6 +1037,10 @@ def main(argv):
                     exit(6)
             except:
                 cfg = {}
+        elif opt == "-m":
+            macAppBundleName = arg
+        elif opt == "-p":
+            macPythonExe = arg
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
