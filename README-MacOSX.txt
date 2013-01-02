@@ -43,8 +43,8 @@ In contrast to the Xcode 3 procedure described above, the installer does not
 ask for a selection of sub-packages.
 
 
-2. Install Python 3.2
----------------------
+2. Install Python 3.2 or 3.3
+----------------------------
 Although Mac OS X comes with a python installation it is recommended to
 install the python package provided by the Python community. Download it
 from 
@@ -58,12 +58,16 @@ Note: The Python documentation can be found in these locations
 /Library/Frameworks/Python.framework/Versions/3.2/Resources/English.lproj/Documentation/index.html
 /Applications/Python 3.2/Python Documentation.html
 
+or
 
-3. Install Qt4
---------------
+/Library/Frameworks/Python.framework/Versions/3.3/Resources/English.lproj/Documentation/index.html
+/Applications/Python 3.3/Python Documentation.html
+
+3a. Install Qt4
+---------------
 Download the Qt4 package from
 
-http://qt.nokia.com/downloads/qt-for-open-source-cpp-development-on-mac-os-x
+http://qt-project.org/downloads
 
 After the download finished open the downloaded package and install it. The
 tools (e.g. Designer, Linguist) can be found in the location
@@ -80,6 +84,28 @@ The translation files can be found in this location
 /Developer/Applications/Qt/translations
 
 
+3b. Install Qt5
+---------------
+Download the Qt5 package from
+
+http://qt-project.org/downloads
+
+After the download finished open the downloaded package and install it. The
+tools (e.g. Designer, Linguist) can be found in the location
+
+˜/Qt<version>/<version>/<compiler>/bin
+e.g. ˜/Qt5.0.0/5.0.0/clang_64/bin
+
+The documentation can be found in these locations
+
+˜/Qt<version>/<version>/<compiler>/qtdoc (HTML format)
+˜/Qt<version>/<version>/<compiler>/ (QtHelp format)
+
+The translation files can be found in this location
+
+˜/Qt<version>/<version>/<compiler>//translations
+
+
 4. Install QScintilla2
 ----------------------
 Download the QScintilla2 source code package from
@@ -91,7 +117,13 @@ archive in the Downloads folder (or any other folder of your choice). Change to
 the Qt4 directory within the extracted folder and enter these commands in a
 terminal window
 
+Qt4:
 qmake qscintilla.pro -spec macx-g++
+make -j x (number of cores including hyper threaded ones)
+sudo make install
+
+Qt5:
+qmake qscintilla.pro
 make -j x (number of cores including hyper threaded ones)
 sudo make install
 
