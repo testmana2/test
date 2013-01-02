@@ -1719,7 +1719,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/ThirdParty/*, */coverage/*</string>
+              <string>*/ThirdParty/*, */coverage/*, Ui_*.py</string>
             </value>
           </dict>
         </value>
