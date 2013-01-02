@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.QScintilla.Terminal</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.QScintilla.Terminal</h1>
+<p>
+Module implementing a simple terminal based on QScintilla.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Terminal">Terminal</a></td>
+<td>Class implementing a simple terminal based on QScintilla.</td>
+</tr><tr>
+<td><a href="#TerminalAssembly">TerminalAssembly</a></td>
+<td>Class implementing the containing widget for the terminal.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="Terminal" ID="Terminal"></a>
+<h2>Terminal</h2>
+<p>
+    Class implementing a simple terminal based on QScintilla.
+</p><p>
+    A user can enter commands that are executed by a shell process.
+</p><h3>Signals</h3>
+<dl>
+<dt>searchStringFound(found)</dt>
+<dd>
+emitted to indicate the search result (boolean)
+</dd>
+</dl>
+<h3>Derived from</h3>
+QsciScintillaCompat
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Terminal.__init__">Terminal</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaCharLeft">__QScintillaCharLeft</a></td>
+<td>Private method to handle the Cursor Left command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaCharLeftExtend">__QScintillaCharLeftExtend</a></td>
+<td>Private method to handle the Extend Selection Left command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaCharRight">__QScintillaCharRight</a></td>
+<td>Private method to handle the Cursor Right command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDelete">__QScintillaDelete</a></td>
+<td>Private method to handle the delete command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDeleteBack">__QScintillaDeleteBack</a></td>
+<td>Private method to handle the Backspace key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDeleteLineLeft">__QScintillaDeleteLineLeft</a></td>
+<td>Private method to handle the Delete Line Left command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDeleteLineRight">__QScintillaDeleteLineRight</a></td>
+<td>Private method to handle the Delete Line Right command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDeleteWordLeft">__QScintillaDeleteWordLeft</a></td>
+<td>Private method to handle the Delete Word Left command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaDeleteWordRight">__QScintillaDeleteWordRight</a></td>
+<td>Private method to handle the Delete Word Right command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaLeftCommand">__QScintillaLeftCommand</a></td>
+<td>Private method to handle a QScintilla command working to the left.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaLeftDeleteCommand">__QScintillaLeftDeleteCommand</a></td>
+<td>Private method to handle a QScintilla delete command working to the left.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaLineDown">__QScintillaLineDown</a></td>
+<td>Private method to handle the Down key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaLineEnd">__QScintillaLineEnd</a></td>
+<td>Private method to handle the End key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaLineUp">__QScintillaLineUp</a></td>
+<td>Private method to handle the Up key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaNewline">__QScintillaNewline</a></td>
+<td>Private method to handle the Return key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaRightCommand">__QScintillaRightCommand</a></td>
+<td>Private method to handle a QScintilla command working to the right.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaVCHome">__QScintillaVCHome</a></td>
+<td>Private method to handle the Home key.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaVCHomeExtend">__QScintillaVCHomeExtend</a></td>
+<td>Private method to handle the Extend Selection to start of line command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaWordLeft">__QScintillaWordLeft</a></td>
+<td>Private method to handle the Cursor Word Left command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaWordLeftExtend">__QScintillaWordLeftExtend</a></td>
+<td>Private method to handle the Extend Selection Left one word command.</td>
+</tr><tr>
+<td><a href="#Terminal.__QScintillaWordRight">__QScintillaWordRight</a></td>
+<td>Private method to handle the Cursor Word Right command.</td>
+</tr><tr>
+<td><a href="#Terminal.__bindLexer">__bindLexer</a></td>
+<td>Private slot to set the lexer.</td>
+</tr><tr>
+<td><a href="#Terminal.__clearCurrentLine">__clearCurrentLine</a></td>
+<td>Private method to clear the line containing the cursor.</td>
+</tr><tr>
+<td><a href="#Terminal.__clearHistory">__clearHistory</a></td>
+<td>Private slot to clear the current history.</td>
+</tr><tr>
+<td><a href="#Terminal.__configure">__configure</a></td>
+<td>Private method to open the configuration dialog.</td>
+</tr><tr>
+<td><a href="#Terminal.__executeCommand">__executeCommand</a></td>
+<td>Private slot to execute a command.</td>
+</tr><tr>
+<td><a href="#Terminal.__find">__find</a></td>
+<td>Private slot to show the find widget.</td>
+</tr><tr>
+<td><a href="#Terminal.__finished">__finished</a></td>
+<td>Private method called, when the shell process has finished.</td>
+</tr><tr>
+<td><a href="#Terminal.__getEndPos">__getEndPos</a></td>
+<td>Private method to return the line and column of the last character.</td>
+</tr><tr>
+<td><a href="#Terminal.__insertHistory">__insertHistory</a></td>
+<td>Private method to insert a command selected from the history.</td>
+</tr><tr>
+<td><a href="#Terminal.__insertText">__insertText</a></td>
+<td>Private method to insert some text at the current cursor position.</td>
+</tr><tr>
+<td><a href="#Terminal.__insertTextAtEnd">__insertTextAtEnd</a></td>
+<td>Private method to insert some text at the end of the command line.</td>
+</tr><tr>
+<td><a href="#Terminal.__isCursorOnLastLine">__isCursorOnLastLine</a></td>
+<td>Private method to check, if the cursor is on the last line.</td>
+</tr><tr>
+<td><a href="#Terminal.__readOutput">__readOutput</a></td>
+<td>Private method to process the output of the shell.</td>
+</tr><tr>
+<td><a href="#Terminal.__reset">__reset</a></td>
+<td>Private slot to handle the 'reset' context menu entry.</td>
+</tr><tr>
+<td><a href="#Terminal.__rsearchHistory">__rsearchHistory</a></td>
+<td>Private method used to reverse search the history.</td>
+</tr><tr>
+<td><a href="#Terminal.__searchHistory">__searchHistory</a></td>
+<td>Private method used to search the history.</td>
+</tr><tr>
+<td><a href="#Terminal.__searchNext">__searchNext</a></td>
+<td>Private method to search for the next occurrence.</td>
+</tr><tr>
+<td><a href="#Terminal.__searchPrev">__searchPrev</a></td>
+<td>Private method to search for the next occurrence.</td>
+</tr><tr>
+<td><a href="#Terminal.__selectHistory">__selectHistory</a></td>
+<td>Private slot to select a history entry to execute.</td>
+</tr><tr>
+<td><a href="#Terminal.__send">__send</a></td>
+<td>Private method to send data to the shell process.</td>
+</tr><tr>
+<td><a href="#Terminal.__sendCtrl">__sendCtrl</a></td>
+<td>Private slot to send a control command to the shell process.</td>
+</tr><tr>
+<td><a href="#Terminal.__setMargin0">__setMargin0</a></td>
+<td>Private method to configure margin 0.</td>
+</tr><tr>
+<td><a href="#Terminal.__setMonospaced">__setMonospaced</a></td>
+<td>Private method to set/reset a monospaced font.</td>
+</tr><tr>
+<td><a href="#Terminal.__setTextDisplay">__setTextDisplay</a></td>
+<td>Private method to configure the text display.</td>
+</tr><tr>
+<td><a href="#Terminal.__showHistory">__showHistory</a></td>
+<td>Private slot to show the shell history dialog.</td>
+</tr><tr>
+<td><a href="#Terminal.__startShell">__startShell</a></td>
+<td>Private slot to start the shell process.</td>
+</tr><tr>
+<td><a href="#Terminal.__started">__started</a></td>
+<td>Private method called, when the shell process has started.</td>
+</tr><tr>
+<td><a href="#Terminal.__stopShell">__stopShell</a></td>
+<td>Private slot to stop the shell process.</td>
+</tr><tr>
+<td><a href="#Terminal.__useHistory">__useHistory</a></td>
+<td>Private method to display a command from the history.</td>
+</tr><tr>
+<td><a href="#Terminal.__write">__write</a></td>
+<td>Private method to display some text.</td>
+</tr><tr>
+<td><a href="#Terminal.clear">clear</a></td>
+<td>Public slot to clear the display.</td>
+</tr><tr>
+<td><a href="#Terminal.closeTerminal">closeTerminal</a></td>
+<td>Public method to shutdown the terminal.</td>
+</tr><tr>
+<td><a href="#Terminal.contextMenuEvent">contextMenuEvent</a></td>
+<td>Reimplemented to show our own context menu.</td>
+</tr><tr>
+<td><a href="#Terminal.editorCommand">editorCommand</a></td>
+<td>Public method to perform an editor command.</td>
+</tr><tr>
+<td><a href="#Terminal.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
+<td><a href="#Terminal.focusInEvent">focusInEvent</a></td>
+<td>Public method called when the shell receives focus.</td>
+</tr><tr>
+<td><a href="#Terminal.focusOutEvent">focusOutEvent</a></td>
+<td>Public method called when the shell loses focus.</td>
+</tr><tr>
+<td><a href="#Terminal.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
+</tr><tr>
+<td><a href="#Terminal.getHistory">getHistory</a></td>
+<td>Public method to get the history.</td>
+</tr><tr>
+<td><a href="#Terminal.handlePreferencesChanged">handlePreferencesChanged</a></td>
+<td>Public slot to handle the preferencesChanged signal.</td>
+</tr><tr>
+<td><a href="#Terminal.insert">insert</a></td>
+<td>Public slot to insert text at the current cursor position.</td>
+</tr><tr>
+<td><a href="#Terminal.keyPressEvent">keyPressEvent</a></td>
+<td>Re-implemented to handle the user input a key at a time.</td>
+</tr><tr>
+<td><a href="#Terminal.loadHistory">loadHistory</a></td>
+<td>Public method to load the history.</td>
+</tr><tr>
+<td><a href="#Terminal.mousePressEvent">mousePressEvent</a></td>
+<td>Protected method to handle the mouse press event.</td>
+</tr><tr>
+<td><a href="#Terminal.reloadHistory">reloadHistory</a></td>
+<td>Public method to reload the history.</td>
+</tr><tr>
+<td><a href="#Terminal.saveHistory">saveHistory</a></td>
+<td>Public method to save the history.</td>
+</tr><tr>
+<td><a href="#Terminal.searchNext">searchNext</a></td>
+<td>Public method to search the next occurrence of the given text.</td>
+</tr><tr>
+<td><a href="#Terminal.searchPrev">searchPrev</a></td>
+<td>Public method to search the previous occurrence of the given text.</td>
+</tr><tr>
+<td><a href="#Terminal.wheelEvent">wheelEvent</a></td>
+<td>Protected method to handle wheel events.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Terminal.__init__" ID="Terminal.__init__"></a>
+<h4>Terminal (Constructor)</h4>
+<b>Terminal</b>(<i>vm, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vm</i></dt>
+<dd>
+reference to the viewmanager object
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="Terminal.__QScintillaCharLeft" ID="Terminal.__QScintillaCharLeft"></a>
+<h4>Terminal.__QScintillaCharLeft</h4>
+<b>__QScintillaCharLeft</b>(<i></i>)
+<p>
+        Private method to handle the Cursor Left command.
+</p><a NAME="Terminal.__QScintillaCharLeftExtend" ID="Terminal.__QScintillaCharLeftExtend"></a>
+<h4>Terminal.__QScintillaCharLeftExtend</h4>
+<b>__QScintillaCharLeftExtend</b>(<i></i>)
+<p>
+        Private method to handle the Extend Selection Left command.
+</p><a NAME="Terminal.__QScintillaCharRight" ID="Terminal.__QScintillaCharRight"></a>
+<h4>Terminal.__QScintillaCharRight</h4>
+<b>__QScintillaCharRight</b>(<i></i>)
+<p>
+        Private method to handle the Cursor Right command.
+</p><a NAME="Terminal.__QScintillaDelete" ID="Terminal.__QScintillaDelete"></a>
+<h4>Terminal.__QScintillaDelete</h4>
+<b>__QScintillaDelete</b>(<i></i>)
+<p>
+        Private method to handle the delete command.
+</p><a NAME="Terminal.__QScintillaDeleteBack" ID="Terminal.__QScintillaDeleteBack"></a>
+<h4>Terminal.__QScintillaDeleteBack</h4>
+<b>__QScintillaDeleteBack</b>(<i></i>)
+<p>
+        Private method to handle the Backspace key.
+</p><a NAME="Terminal.__QScintillaDeleteLineLeft" ID="Terminal.__QScintillaDeleteLineLeft"></a>
+<h4>Terminal.__QScintillaDeleteLineLeft</h4>
+<b>__QScintillaDeleteLineLeft</b>(<i></i>)
+<p>
+        Private method to handle the Delete Line Left command.
+</p><a NAME="Terminal.__QScintillaDeleteLineRight" ID="Terminal.__QScintillaDeleteLineRight"></a>
+<h4>Terminal.__QScintillaDeleteLineRight</h4>
+<b>__QScintillaDeleteLineRight</b>(<i></i>)
+<p>
+        Private method to handle the Delete Line Right command.
+</p><a NAME="Terminal.__QScintillaDeleteWordLeft" ID="Terminal.__QScintillaDeleteWordLeft"></a>
+<h4>Terminal.__QScintillaDeleteWordLeft</h4>
+<b>__QScintillaDeleteWordLeft</b>(<i></i>)
+<p>
+        Private method to handle the Delete Word Left command.
+</p><a NAME="Terminal.__QScintillaDeleteWordRight" ID="Terminal.__QScintillaDeleteWordRight"></a>
+<h4>Terminal.__QScintillaDeleteWordRight</h4>
+<b>__QScintillaDeleteWordRight</b>(<i></i>)
+<p>
+        Private method to handle the Delete Word Right command.
+</p><a NAME="Terminal.__QScintillaLeftCommand" ID="Terminal.__QScintillaLeftCommand"></a>
+<h4>Terminal.__QScintillaLeftCommand</h4>
+<b>__QScintillaLeftCommand</b>(<i>method, allLinesAllowed=False</i>)
+<p>
+        Private method to handle a QScintilla command working to the left.
+</p><dl>
+<dt><i>method</i></dt>
+<dd>
+shell method to execute
+</dd>
+</dl><a NAME="Terminal.__QScintillaLeftDeleteCommand" ID="Terminal.__QScintillaLeftDeleteCommand"></a>
+<h4>Terminal.__QScintillaLeftDeleteCommand</h4>
+<b>__QScintillaLeftDeleteCommand</b>(<i>method</i>)
+<p>
+        Private method to handle a QScintilla delete command working to the left.
+</p><dl>
+<dt><i>method</i></dt>
+<dd>
+shell method to execute
+</dd>
+</dl><a NAME="Terminal.__QScintillaLineDown" ID="Terminal.__QScintillaLineDown"></a>
+<h4>Terminal.__QScintillaLineDown</h4>
+<b>__QScintillaLineDown</b>(<i>cmd</i>)
+<p>
+        Private method to handle the Down key.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+QScintilla command
+</dd>
+</dl><a NAME="Terminal.__QScintillaLineEnd" ID="Terminal.__QScintillaLineEnd"></a>
+<h4>Terminal.__QScintillaLineEnd</h4>
+<b>__QScintillaLineEnd</b>(<i>cmd</i>)
+<p>
+        Private method to handle the End key.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+QScintilla command
+</dd>
+</dl><a NAME="Terminal.__QScintillaLineUp" ID="Terminal.__QScintillaLineUp"></a>
+<h4>Terminal.__QScintillaLineUp</h4>
+<b>__QScintillaLineUp</b>(<i>cmd</i>)
+<p>
+        Private method to handle the Up key.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+QScintilla command
+</dd>
+</dl><a NAME="Terminal.__QScintillaNewline" ID="Terminal.__QScintillaNewline"></a>
+<h4>Terminal.__QScintillaNewline</h4>
+<b>__QScintillaNewline</b>(<i>cmd</i>)
+<p>
+        Private method to handle the Return key.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+QScintilla command
+</dd>
+</dl><a NAME="Terminal.__QScintillaRightCommand" ID="Terminal.__QScintillaRightCommand"></a>
+<h4>Terminal.__QScintillaRightCommand</h4>
+<b>__QScintillaRightCommand</b>(<i>method</i>)
+<p>
+        Private method to handle a QScintilla command working to the right.
+</p><dl>
+<dt><i>method</i></dt>
+<dd>
+shell method to execute
+</dd>
+</dl><a NAME="Terminal.__QScintillaVCHome" ID="Terminal.__QScintillaVCHome"></a>
+<h4>Terminal.__QScintillaVCHome</h4>
+<b>__QScintillaVCHome</b>(<i>cmd</i>)
+<p>
+        Private method to handle the Home key.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+QScintilla command
+</dd>
+</dl><a NAME="Terminal.__QScintillaVCHomeExtend" ID="Terminal.__QScintillaVCHomeExtend"></a>
+<h4>Terminal.__QScintillaVCHomeExtend</h4>
+<b>__QScintillaVCHomeExtend</b>(<i></i>)
+<p>
+        Private method to handle the Extend Selection to start of line command.
+</p><a NAME="Terminal.__QScintillaWordLeft" ID="Terminal.__QScintillaWordLeft"></a>
+<h4>Terminal.__QScintillaWordLeft</h4>
+<b>__QScintillaWordLeft</b>(<i></i>)
+<p>
+        Private method to handle the Cursor Word Left command.
+</p><a NAME="Terminal.__QScintillaWordLeftExtend" ID="Terminal.__QScintillaWordLeftExtend"></a>
+<h4>Terminal.__QScintillaWordLeftExtend</h4>
+<b>__QScintillaWordLeftExtend</b>(<i></i>)
+<p>
+        Private method to handle the Extend Selection Left one word command.
+</p><a NAME="Terminal.__QScintillaWordRight" ID="Terminal.__QScintillaWordRight"></a>
+<h4>Terminal.__QScintillaWordRight</h4>
+<b>__QScintillaWordRight</b>(<i></i>)
+<p>
+        Private method to handle the Cursor Word Right command.
+</p><a NAME="Terminal.__bindLexer" ID="Terminal.__bindLexer"></a>
+<h4>Terminal.__bindLexer</h4>
+<b>__bindLexer</b>(<i></i>)
+<p>
+        Private slot to set the lexer.
+</p><a NAME="Terminal.__clearCurrentLine" ID="Terminal.__clearCurrentLine"></a>
+<h4>Terminal.__clearCurrentLine</h4>
+<b>__clearCurrentLine</b>(<i></i>)
+<p>
+        Private method to clear the line containing the cursor.
+</p><a NAME="Terminal.__clearHistory" ID="Terminal.__clearHistory"></a>
+<h4>Terminal.__clearHistory</h4>
+<b>__clearHistory</b>(<i></i>)
+<p>
+        Private slot to clear the current history.
+</p><a NAME="Terminal.__configure" ID="Terminal.__configure"></a>
+<h4>Terminal.__configure</h4>
+<b>__configure</b>(<i></i>)
+<p>
+        Private method to open the configuration dialog.
+</p><a NAME="Terminal.__executeCommand" ID="Terminal.__executeCommand"></a>
+<h4>Terminal.__executeCommand</h4>
+<b>__executeCommand</b>(<i>cmd</i>)
+<p>
+        Private slot to execute a command.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+command to be executed by debug client (string)
+</dd>
+</dl><a NAME="Terminal.__find" ID="Terminal.__find"></a>
+<h4>Terminal.__find</h4>
+<b>__find</b>(<i></i>)
+<p>
+        Private slot to show the find widget.
+</p><a NAME="Terminal.__finished" ID="Terminal.__finished"></a>
+<h4>Terminal.__finished</h4>
+<b>__finished</b>(<i></i>)
+<p>
+        Private method called, when the shell process has finished.
+</p><a NAME="Terminal.__getEndPos" ID="Terminal.__getEndPos"></a>
+<h4>Terminal.__getEndPos</h4>
+<b>__getEndPos</b>(<i></i>)
+<p>
+        Private method to return the line and column of the last character.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of two values (int, int) giving the line and column
+</dd>
+</dl><a NAME="Terminal.__insertHistory" ID="Terminal.__insertHistory"></a>
+<h4>Terminal.__insertHistory</h4>
+<b>__insertHistory</b>(<i>cmd</i>)
+<p>
+        Private method to insert a command selected from the history.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+history entry to be inserted (string)
+</dd>
+</dl><a NAME="Terminal.__insertText" ID="Terminal.__insertText"></a>
+<h4>Terminal.__insertText</h4>
+<b>__insertText</b>(<i>s</i>)
+<p>
+        Private method to insert some text at the current cursor position.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+text to be inserted (string)
+</dd>
+</dl><a NAME="Terminal.__insertTextAtEnd" ID="Terminal.__insertTextAtEnd"></a>
+<h4>Terminal.__insertTextAtEnd</h4>
+<b>__insertTextAtEnd</b>(<i>s</i>)
+<p>
+        Private method to insert some text at the end of the command line.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+text to be inserted (string)
+</dd>
+</dl><a NAME="Terminal.__isCursorOnLastLine" ID="Terminal.__isCursorOnLastLine"></a>
+<h4>Terminal.__isCursorOnLastLine</h4>
+<b>__isCursorOnLastLine</b>(<i></i>)
+<p>
+        Private method to check, if the cursor is on the last line.
+</p><a NAME="Terminal.__readOutput" ID="Terminal.__readOutput"></a>
+<h4>Terminal.__readOutput</h4>
+<b>__readOutput</b>(<i></i>)
+<p>
+        Private method to process the output of the shell.
+</p><a NAME="Terminal.__reset" ID="Terminal.__reset"></a>
+<h4>Terminal.__reset</h4>
+<b>__reset</b>(<i></i>)
+<p>
+        Private slot to handle the 'reset' context menu entry.
+</p><a NAME="Terminal.__rsearchHistory" ID="Terminal.__rsearchHistory"></a>
+<h4>Terminal.__rsearchHistory</h4>
+<b>__rsearchHistory</b>(<i>txt, startIdx=-1</i>)
+<p>
+        Private method used to reverse search the history.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to match at the beginning (string)
+</dd><dt><i>startIdx</i></dt>
+<dd>
+index to start search from (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+index of found entry (integer)
+</dd>
+</dl><a NAME="Terminal.__searchHistory" ID="Terminal.__searchHistory"></a>
+<h4>Terminal.__searchHistory</h4>
+<b>__searchHistory</b>(<i>txt, startIdx=-1</i>)
+<p>
+        Private method used to search the history.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to match at the beginning (string)
+</dd><dt><i>startIdx</i></dt>
+<dd>
+index to start search from (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+index of found entry (integer)
+</dd>
+</dl><a NAME="Terminal.__searchNext" ID="Terminal.__searchNext"></a>
+<h4>Terminal.__searchNext</h4>
+<b>__searchNext</b>(<i></i>)
+<p>
+        Private method to search for the next occurrence.
+</p><a NAME="Terminal.__searchPrev" ID="Terminal.__searchPrev"></a>
+<h4>Terminal.__searchPrev</h4>
+<b>__searchPrev</b>(<i></i>)
+<p>
+        Private method to search for the next occurrence.
+</p><a NAME="Terminal.__selectHistory" ID="Terminal.__selectHistory"></a>
+<h4>Terminal.__selectHistory</h4>
+<b>__selectHistory</b>(<i></i>)
+<p>
+        Private slot to select a history entry to execute.
+</p><a NAME="Terminal.__send" ID="Terminal.__send"></a>
+<h4>Terminal.__send</h4>
+<b>__send</b>(<i>data</i>)
+<p>
+        Private method to send data to the shell process.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+data to be sent to the shell process (string)
+</dd>
+</dl><a NAME="Terminal.__sendCtrl" ID="Terminal.__sendCtrl"></a>
+<h4>Terminal.__sendCtrl</h4>
+<b>__sendCtrl</b>(<i>cmd</i>)
+<p>
+        Private slot to send a control command to the shell process.
+</p><dl>
+<dt><i>the</i></dt>
+<dd>
+control command to be sent (integer)
+</dd>
+</dl><a NAME="Terminal.__setMargin0" ID="Terminal.__setMargin0"></a>
+<h4>Terminal.__setMargin0</h4>
+<b>__setMargin0</b>(<i></i>)
+<p>
+        Private method to configure margin 0.
+</p><a NAME="Terminal.__setMonospaced" ID="Terminal.__setMonospaced"></a>
+<h4>Terminal.__setMonospaced</h4>
+<b>__setMonospaced</b>(<i>on</i>)
+<p>
+        Private method to set/reset a monospaced font.
+</p><dl>
+<dt><i>on</i></dt>
+<dd>
+flag to indicate usage of a monospace font (boolean)
+</dd>
+</dl><a NAME="Terminal.__setTextDisplay" ID="Terminal.__setTextDisplay"></a>
+<h4>Terminal.__setTextDisplay</h4>
+<b>__setTextDisplay</b>(<i></i>)
+<p>
+        Private method to configure the text display.
+</p><a NAME="Terminal.__showHistory" ID="Terminal.__showHistory"></a>
+<h4>Terminal.__showHistory</h4>
+<b>__showHistory</b>(<i></i>)
+<p>
+        Private slot to show the shell history dialog.
+</p><a NAME="Terminal.__startShell" ID="Terminal.__startShell"></a>
+<h4>Terminal.__startShell</h4>
+<b>__startShell</b>(<i></i>)
+<p>
+        Private slot to start the shell process.
+</p><a NAME="Terminal.__started" ID="Terminal.__started"></a>
+<h4>Terminal.__started</h4>
+<b>__started</b>(<i></i>)
+<p>
+        Private method called, when the shell process has started.
+</p><a NAME="Terminal.__stopShell" ID="Terminal.__stopShell"></a>
+<h4>Terminal.__stopShell</h4>
+<b>__stopShell</b>(<i></i>)
+<p>
+        Private slot to stop the shell process.
+</p><a NAME="Terminal.__useHistory" ID="Terminal.__useHistory"></a>
+<h4>Terminal.__useHistory</h4>
+<b>__useHistory</b>(<i></i>)
+<p>
+        Private method to display a command from the history.
+</p><a NAME="Terminal.__write" ID="Terminal.__write"></a>
+<h4>Terminal.__write</h4>
+<b>__write</b>(<i>s</i>)
+<p>
+        Private method to display some text.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+text to be displayed (string)
+</dd>
+</dl><a NAME="Terminal.clear" ID="Terminal.clear"></a>
+<h4>Terminal.clear</h4>
+<b>clear</b>(<i></i>)
+<p>
+        Public slot to clear the display.
+</p><a NAME="Terminal.closeTerminal" ID="Terminal.closeTerminal"></a>
+<h4>Terminal.closeTerminal</h4>
+<b>closeTerminal</b>(<i></i>)
+<p>
+        Public method to shutdown the terminal.
+</p><a NAME="Terminal.contextMenuEvent" ID="Terminal.contextMenuEvent"></a>
+<h4>Terminal.contextMenuEvent</h4>
+<b>contextMenuEvent</b>(<i>ev</i>)
+<p>
+        Reimplemented to show our own context menu.
+</p><dl>
+<dt><i>ev</i></dt>
+<dd>
+context menu event (QContextMenuEvent)
+</dd>
+</dl><a NAME="Terminal.editorCommand" ID="Terminal.editorCommand"></a>
+<h4>Terminal.editorCommand</h4>
+<b>editorCommand</b>(<i>cmd</i>)
+<p>
+        Public method to perform an editor command.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+the scintilla command to be performed
+</dd>
+</dl><a NAME="Terminal.event" ID="Terminal.event"></a>
+<h4>Terminal.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="Terminal.focusInEvent" ID="Terminal.focusInEvent"></a>
+<h4>Terminal.focusInEvent</h4>
+<b>focusInEvent</b>(<i>event</i>)
+<p>
+        Public method called when the shell receives focus.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the event object (QFocusEvent)
+</dd>
+</dl><a NAME="Terminal.focusOutEvent" ID="Terminal.focusOutEvent"></a>
+<h4>Terminal.focusOutEvent</h4>
+<b>focusOutEvent</b>(<i>event</i>)
+<p>
+        Public method called when the shell loses focus.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the event object (QFocusEvent)
+</dd>
+</dl><a NAME="Terminal.gestureEvent" ID="Terminal.gestureEvent"></a>
+<h4>Terminal.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="Terminal.getHistory" ID="Terminal.getHistory"></a>
+<h4>Terminal.getHistory</h4>
+<b>getHistory</b>(<i></i>)
+<p>
+        Public method to get the history.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the history list (list of strings)
+</dd>
+</dl><a NAME="Terminal.handlePreferencesChanged" ID="Terminal.handlePreferencesChanged"></a>
+<h4>Terminal.handlePreferencesChanged</h4>
+<b>handlePreferencesChanged</b>(<i></i>)
+<p>
+        Public slot to handle the preferencesChanged signal.
+</p><a NAME="Terminal.insert" ID="Terminal.insert"></a>
+<h4>Terminal.insert</h4>
+<b>insert</b>(<i>txt</i>)
+<p>
+        Public slot to insert text at the current cursor position.
+</p><p>
+        The cursor is advanced to the end of the inserted text.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be inserted (string)
+</dd>
+</dl><a NAME="Terminal.keyPressEvent" ID="Terminal.keyPressEvent"></a>
+<h4>Terminal.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>ev</i>)
+<p>
+        Re-implemented to handle the user input a key at a time.
+</p><dl>
+<dt><i>ev</i></dt>
+<dd>
+key event (QKeyEvent)
+</dd>
+</dl><a NAME="Terminal.loadHistory" ID="Terminal.loadHistory"></a>
+<h4>Terminal.loadHistory</h4>
+<b>loadHistory</b>(<i></i>)
+<p>
+        Public method to load the history.
+</p><a NAME="Terminal.mousePressEvent" ID="Terminal.mousePressEvent"></a>
+<h4>Terminal.mousePressEvent</h4>
+<b>mousePressEvent</b>(<i>event</i>)
+<p>
+        Protected method to handle the mouse press event.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the mouse press event (QMouseEvent)
+</dd>
+</dl><a NAME="Terminal.reloadHistory" ID="Terminal.reloadHistory"></a>
+<h4>Terminal.reloadHistory</h4>
+<b>reloadHistory</b>(<i></i>)
+<p>
+        Public method to reload the history.
+</p><a NAME="Terminal.saveHistory" ID="Terminal.saveHistory"></a>
+<h4>Terminal.saveHistory</h4>
+<b>saveHistory</b>(<i></i>)
+<p>
+        Public method to save the history.
+</p><a NAME="Terminal.searchNext" ID="Terminal.searchNext"></a>
+<h4>Terminal.searchNext</h4>
+<b>searchNext</b>(<i>txt, caseSensitive, wholeWord</i>)
+<p>
+        Public method to search the next occurrence of the given text.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to search for (string)
+</dd><dt><i>caseSensitive</i></dt>
+<dd>
+flag indicating to perform a case sensitive
+            search (boolean)
+</dd><dt><i>wholeWord</i></dt>
+<dd>
+flag indicating to search for whole words
+            only (boolean)
+</dd>
+</dl><a NAME="Terminal.searchPrev" ID="Terminal.searchPrev"></a>
+<h4>Terminal.searchPrev</h4>
+<b>searchPrev</b>(<i>txt, caseSensitive, wholeWord</i>)
+<p>
+        Public method to search the previous occurrence of the given text.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to search for (string)
+</dd><dt><i>caseSensitive</i></dt>
+<dd>
+flag indicating to perform a case sensitive
+            search (boolean)
+</dd><dt><i>wholeWord</i></dt>
+<dd>
+flag indicating to search for whole words
+            only (boolean)
+</dd>
+</dl><a NAME="Terminal.wheelEvent" ID="Terminal.wheelEvent"></a>
+<h4>Terminal.wheelEvent</h4>
+<b>wheelEvent</b>(<i>evt</i>)
+<p>
+        Protected method to handle wheel events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the wheel event (QWheelEvent)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="TerminalAssembly" ID="TerminalAssembly"></a>
+<h2>TerminalAssembly</h2>
+<p>
+    Class implementing the containing widget for the terminal.
+</p>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#TerminalAssembly.__init__">TerminalAssembly</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#TerminalAssembly.showFind">showFind</a></td>
+<td>Public method to display the search widget.</td>
+</tr><tr>
+<td><a href="#TerminalAssembly.terminal">terminal</a></td>
+<td>Public method to get a reference to the terminal widget.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="TerminalAssembly.__init__" ID="TerminalAssembly.__init__"></a>
+<h4>TerminalAssembly (Constructor)</h4>
+<b>TerminalAssembly</b>(<i>vm, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vm</i></dt>
+<dd>
+reference to the viewmanager object
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="TerminalAssembly.showFind" ID="TerminalAssembly.showFind"></a>
+<h4>TerminalAssembly.showFind</h4>
+<b>showFind</b>(<i>txt=""</i>)
+<p>
+        Public method to display the search widget.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be shown in the combo (string)
+</dd>
+</dl><a NAME="TerminalAssembly.terminal" ID="TerminalAssembly.terminal"></a>
+<h4>TerminalAssembly.terminal</h4>
+<b>terminal</b>(<i></i>)
+<p>
+        Public method to get a reference to the terminal widget.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the terminal widget (Terminal)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
