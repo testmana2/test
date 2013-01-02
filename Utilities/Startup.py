@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2002 - 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2002 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
@@ -83,7 +83,7 @@ def version(appinfo):
 
 {description}
 
-Copyright (c) 2002 - 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+Copyright (c) 2002 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.""".format(**appinfo))
