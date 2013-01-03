@@ -33,6 +33,7 @@ cfg = {}
 progLanguages = ["Python", "Ruby"]
 sourceDir = "eric"
 configName = 'eric5config.py'
+defaultMacAppBundleName = "eric5.app"
 macAppBundleName = "eric5.app"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(sys.exec_prefix)
 
@@ -611,9 +612,11 @@ def createMacAppBundle(pydir):
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
     
-##    starter = os.path.join(dirs["exe"], "eric")
-##    os.symlink(macPythonExe, starter)
-    starter = "python3"
+    if macAppBundleName == defaultMacAppBundleName:
+        starter = os.path.join(dirs["exe"], "eric")
+        os.symlink(macPythonExe, starter)
+    else:
+        starter = "python3"
     
     wname = os.path.join(dirs["exe"], "eric5")
     path = os.getenv("PATH", "")
@@ -654,6 +657,8 @@ exec "{0}" "{1}/{2}.py" "$@"
     <key>CFBundleInfoDictionaryVersion</key>
     <string>1.0</string>
     <key>CFBundleName</key>
+    <string>{0}</string>
+    <key>CFBundleDisplayName</key>
     <string>{0}</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
