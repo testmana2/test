@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -103,19 +102,9 @@
         <translation>Habilitar AdBlock</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="77"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="81"/>
         <source>Actions</source>
         <translation>Acciones</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="86"/>
-        <source>Add Custom Rule</source>
-        <translation type="obsolete">Añadir Regla Personalizada</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="140"/>
@@ -141,11 +130,6 @@
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="63"/>
         <source>Enter search term for subscriptions and rules</source>
         <translation>Introduzca el término de búsqueda para suscripciones y reglas</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="101"/>
-        <source>Update Period (days):</source>
-        <translation type="obsolete">Periodo de Actualización (días):</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="108"/>
@@ -254,11 +238,6 @@
         <translation>Habilitar AdBlock</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="77"/>
-        <source>AdBlock Configuration</source>
-        <translation type="obsolete">Configuración de AdBlock </translation>
-    </message>
-    <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="96"/>
         <source>Blocked URL (AdBlock Rule) - click to edit rule</source>
         <translation>URL Bloqueada (AdBlock Rule) - click para editar regla</translation>
@@ -308,14 +287,6 @@
     </message>
 </context>
 <context>
-    <name>AdBlockModel</name>
-    <message>
-        <location filename="Helpviewer/AdBlock/AdBlockModel.py" line="87"/>
-        <source>Rule</source>
-        <translation type="obsolete">Regla</translation>
-    </message>
-</context>
-<context>
     <name>AdBlockSubscription</name>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="277"/>
@@ -341,11 +312,6 @@
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="269"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>No ha sido posible abrir el archivo de AdBlock &apos;{0}&apos; en modo lectura.</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="252"/>
-        <source>Adblock file &apos;{0}&apos; does not start with [Adblock.</source>
-        <translation type="obsolete">El archivo de AdBlock &apos;{0}&apos; no comienza con [Adblock.</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="366"/>
@@ -1180,24 +1146,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
-    <name>ApplicationDiagram</name>
-    <message>
-        <location filename="Graphics/ApplicationDiagram.py" line="69"/>
-        <source>Parsing modules...</source>
-        <translation type="obsolete">Analizando modulos...</translation>
-    </message>
-    <message>
-        <location filename="Graphics/ApplicationDiagram.py" line="189"/>
-        <source>&lt;&lt;Application&gt;&gt;</source>
-        <translation type="obsolete">&lt;&lt;Aplicación&gt;&gt;</translation>
-    </message>
-    <message>
-        <location filename="Graphics/ApplicationDiagram.py" line="191"/>
-        <source>&lt;&lt;Others&gt;&gt;</source>
-        <translation type="obsolete">&lt;&lt;Otros&gt;&gt;</translation>
-    </message>
-</context>
-<context>
     <name>ApplicationDiagramBuilder</name>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="46"/>
@@ -1757,11 +1705,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Introduzca término de búsqueda para marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Bookmarks/BookmarksDialog.ui" line="88"/>
         <source>Press to add a new bookmarks folder</source>
         <translation>Presione para añadir una nueva carpeta de marcadores</translation>
@@ -1987,8 +1930,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2229,8 +2172,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -2699,21 +2642,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Introducir el puerto del servidor</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.ui" line="80"/>
-        <source>Press to clear the message text</source>
-        <translation type="obsolete">Pulse para limpiar el texto de mensaje</translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.ui" line="210"/>
-        <source>Enter the host and port to connect to in the form &quot;host:port&quot;</source>
-        <translation type="obsolete">Introduzca el host y puerto de conexión de la forma &quot;host:puerto&quot;</translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.ui" line="239"/>
-        <source>Press to clear the host</source>
-        <translation type="obsolete">Pulse para limpiar el host</translation>
-    </message>
-    <message>
         <location filename="Cooperation/ChatWidget.ui" line="230"/>
         <source>Press to clear the hosts list</source>
         <translation>Pulse para limpiar la lista de hosts</translation>
@@ -2921,11 +2849,6 @@ Razón: {1}</translation>
         <translation>Lista Blanca de ClickToFlash</translation>
     </message>
     <message>
-        <location filename="Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="86"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="103"/>
         <source>Press to add site to the whitelist</source>
         <translation>Pulsar para añadir el site a la lista blanca</translation>
@@ -3098,11 +3021,6 @@ Razón: {1}</translation>
         <location filename="DataViews/CodeMetricsDialog.ui" line="46"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
-    </message>
-    <message>
-        <location filename="DataViews/CodeMetricsDialog.ui" line="53"/>
-        <source>Press to clear the filter edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
         <location filename="DataViews/CodeMetricsDialog.ui" line="63"/>
@@ -3342,31 +3260,6 @@ Razón: {1}</translation>
         <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.py" line="67"/>
         <source>QColorDialog Wizard Error</source>
         <translation>Error del asistente de QColorDialog</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="23"/>
-        <source>Qt Version</source>
-        <translation type="obsolete">Versión de Qt</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="32"/>
-        <source>Select to generate code for Qt 4.0.0 but less than Qt 4.5.0</source>
-        <translation type="obsolete">Seleccionar para generar codigo para Qt 4.0.0 pero para versión menor que Qt 4.5.0</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="35"/>
-        <source>Qt 4.0</source>
-        <translation type="obsolete">Qt 4.0</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="45"/>
-        <source>Select to generate code for Qt 4.5.0 or newer</source>
-        <translation type="obsolete">Seleccionar para generar codigo para Qt 4.5.0 o más reciente</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="48"/>
-        <source>Qt 4.5</source>
-        <translation type="obsolete">Qt 4.5</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="55"/>
@@ -4030,11 +3923,6 @@ para visualizar la página de configuración.</translation>
         <translation>Cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/CookieJar/CookiesDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/CookieJar/CookiesDialog.ui" line="79"/>
         <source>Press to remove the selected entries</source>
         <translation>Pulse para eliminar las entradas seleccionadas</translation>
@@ -4131,11 +4019,6 @@ para visualizar la página de configuración.</translation>
         <location filename="Helpviewer/CookieJar/CookiesExceptionsDialog.ui" line="150"/>
         <source>Enter search term for exceptions</source>
         <translation>Introduzca término de búsqueda para excepciones</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/CookieJar/CookiesExceptionsDialog.ui" line="151"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
     </message>
     <message>
         <location filename="Helpviewer/CookieJar/CookiesExceptionsDialog.ui" line="183"/>
@@ -6435,11 +6318,6 @@ Not connected
         <translation>Nombre de archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="63"/>
-        <source>Info</source>
-        <translation type="obsolete">Información</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="78"/>
         <source>Press to repeat the download</source>
         <translation>Pulse para repetir la descarga</translation>
@@ -6683,11 +6561,6 @@ elementos mostrados.&lt;/p&gt;
 selección completa.&lt;/li&gt;
 &lt;/ul&gt;
 </translation>
-    </message>
-    <message>
-        <location filename="E5Graphics/E5GraphicsView.py" line="314"/>
-        <source>Diagram: {0}, Page {1}</source>
-        <translation type="obsolete">Diagrama: {0}, Página {1}</translation>
     </message>
     <message>
         <location filename="E5Graphics/E5GraphicsView.py" line="326"/>
@@ -7113,11 +6986,6 @@ selección completa.&lt;/li&gt;
         <location filename="E5Network/E5NetworkMonitor.ui" line="56"/>
         <source>Enter search term for requests</source>
         <translation>Introduzca término de búsqueda para solicitudes</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5NetworkMonitor.ui" line="57"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="E5Network/E5NetworkMonitor.ui" line="85"/>
@@ -8656,11 +8524,6 @@ selección completa.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="141"/>
         <source>Select the background colour for calltips.</source>
         <translation>Seleccione el color de fondo para consejos de llamada.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="56"/>
-        <source>Visible calltips:</source>
-        <translation type="obsolete">Consejos de llamada visibles:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="68"/>
@@ -10788,11 +10651,6 @@ selección completa.&lt;/li&gt;
         <translation>Mostrar final de línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
-        <source>Select, whether long lines should be wrapped</source>
-        <translation type="obsolete">Seleccionar si las líneas largas se deben partir</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
         <source>Wrap long lines</source>
         <translation>Partir líneas largas</translation>
@@ -12362,11 +12220,6 @@ selección completa.&lt;/li&gt;
         <translation>Generador de Documentación de Eric5</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="89"/>
-        <source>Qt4 Help Tools</source>
-        <translation type="obsolete">Herramientas de Ayuda de Qt4</translation>
-    </message>
-    <message>
         <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate documentation (eric5_doc)</source>
         <translation>Generar documentación (eric5_doc)</translation>
@@ -13677,11 +13530,6 @@ Razón: {0}</translation>
 <context>
     <name>FtpReply</name>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="141"/>
-        <source>No suitable proxy found.</source>
-        <translation type="obsolete">No se ha encontrado ningún proxy adecuado.</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/FtpReply.py" line="398"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
         <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Cambiar al directorio superior&lt;/a&gt;&lt;/p&gt;</translation>
@@ -13705,11 +13553,6 @@ Razón: {0}</translation>
         <translation>Listado de {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/FtpReply.py" line="237"/>
-        <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/FtpReply.py" line="264"/>
         <source>The proxy type seems to be wrong. If it is not in the list of supported proxy types please report it with the instructions given by the proxy.
 {0}</source>
@@ -13724,16 +13567,6 @@ Razón: {0}</translation>
 </context>
 <context>
     <name>FtpSyncHandler</name>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="96"/>
-        <source>No suitable proxy found.</source>
-        <translation type="obsolete">¡El archivo remoto de marcadores ya existe! Sincronizando copia local...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
-        <source>Synchronization finished</source>
-        <translation type="obsolete">Subiendo archivo local de marcadores...</translation>
-    </message>
     <message>
         <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="307"/>
         <source>Cannot log in to FTP host.</source>
@@ -14168,7 +14001,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -14578,11 +14411,6 @@ Razón: {0}</translation>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="104"/>
         <source>Select to clear the download history</source>
         <translation>Seleccionar para limpiar el historial de descarga</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="107"/>
-        <source>Download History</source>
-        <translation type="obsolete">Historial de Descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpClearPrivateDataDialog.ui" line="57"/>
@@ -17479,16 +17307,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <source>&lt;b&gt;GreaseMonkey Scripts...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available GreaseMonkey Scripts.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Scripts de GreaseMonkey...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar los Scripts de GreaseMonkey disponibles.&lt;/p&gt;</translation>
     </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3305"/>
-        <source>Loading Style Sheet</source>
-        <translation type="obsolete">Cargando hoja de estilos</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3305"/>
-        <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de hoja de estilo Qt &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
-    </message>
 </context>
 <context>
     <name>Hg</name>
@@ -18755,13 +18573,6 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Introduzca el nombre de destino</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
-        <source>&lt;b&gt;Target name&lt;/b&gt;
-&lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Nombre de destino&lt;/b&gt;
-&lt;p&gt;Introduzca el nuevo nombre en este campo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
@@ -20423,16 +20234,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Eliminar del repositorio (y del disco)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="398"/>
-        <source>Copy in repository</source>
-        <translation type="obsolete">Copiar en el repositorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
-        <source>Move in repository</source>
-        <translation type="obsolete">Mover en el repositorio</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="403"/>
         <source>Show log</source>
         <translation>Mostrar log</translation>
@@ -20451,11 +20252,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="485"/>
         <source>Show difference (extended)</source>
         <translation>Mostrar diferencia (extendida)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="493"/>
-        <source>Resolve conflict</source>
-        <translation type="obsolete">Resolver conflicto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="496"/>
@@ -20666,46 +20462,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Exportar desde repositorio&lt;/b&gt;&lt;p&gt;Exporta un proyecto desde el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
-        <source>Add to repository</source>
-        <translation type="obsolete">Añadir al repositorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
-        <source>&amp;Add to repository...</source>
-        <translation type="obsolete">&amp;Añadir al repositorio...</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="225"/>
-        <source>Add the local project to the repository</source>
-        <translation type="obsolete">Añadir el proyecto local al repositorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="228"/>
-        <source>&lt;b&gt;Add to repository&lt;/b&gt;&lt;p&gt;This adds (imports) the local project to the repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Añadir al repositorio&lt;/b&gt;&lt;p&gt;Añade (import) el proyecto local al repositorio.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
-        <source>Remove from repository (and disk)</source>
-        <translation type="obsolete">Eliminar del repositorio (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
-        <source>&amp;Remove from repository (and disk)</source>
-        <translation type="obsolete">Eliminar del &amp;repositorio (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="226"/>
-        <source>Remove the local project from the repository (and  disk)</source>
-        <translation type="obsolete">Eliminar el proyecto local del repositorio (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="229"/>
-        <source>&lt;b&gt;Remove from repository&lt;/b&gt;&lt;p&gt;This removes the local project from the repository (and disk).&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Eliminar del repositorio&lt;/b&gt;&lt;p&gt;Elimina el proyecto local del repositorio (y del disco).&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="230"/>
         <source>Show log</source>
         <translation>Mostrar log</translation>
@@ -20839,26 +20595,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="362"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;Hace un merge de los cambios de una revision en el proyecto local.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
-        <source>Resolve conflicts</source>
-        <translation type="obsolete">Resolver conflictos</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
-        <source>Resolve con&amp;flicts</source>
-        <translation type="obsolete">Resolver con&amp;flictos</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="392"/>
-        <source>Resolve all conflicts of the local project</source>
-        <translation type="obsolete">Resolver todos los conflictos del proyecto local</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="395"/>
-        <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Resolver conflictos&lt;/b&gt;&lt;p&gt;Resuelve todos los conflictos del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
@@ -23252,11 +22988,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Introduzca término de búsqueda entradas de historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/History/HistoryDialog.ui" line="72"/>
         <source>Press to remove the selected entries</source>
         <translation>Pulse para eliminar las entradas seleccionadas</translation>
@@ -24827,19 +24558,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
     </message>
 </context>
 <context>
-    <name>ImportsDiagram</name>
-    <message>
-        <location filename="Graphics/ImportsDiagram.py" line="89"/>
-        <source>Parsing modules...</source>
-        <translation type="obsolete">Analizando módulos...</translation>
-    </message>
-    <message>
-        <location filename="Graphics/ImportsDiagram.py" line="118"/>
-        <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a Python package.</source>
-        <translation type="obsolete">El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete Python.</translation>
-    </message>
-</context>
-<context>
     <name>ImportsDiagramBuilder</name>
     <message>
         <location filename="Graphics/ImportsDiagramBuilder.py" line="63"/>
@@ -25210,16 +24928,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="450"/>
         <source>Select the layout type.</source>
         <translation>Seleccione el tipo de disposición.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="454"/>
-        <source>Dock Windows</source>
-        <translation type="obsolete">Ventanas Ancladas</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="459"/>
-        <source>Floating Windows </source>
-        <translation type="obsolete">Ventanas Flotantes</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="471"/>
@@ -25904,21 +25612,18 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Network/IRC/IrcChannelWidget.py" line="1509"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
-        <translatorcomment>{0} = nombre de persona, {1} = (x días), {2} = (x horas), {3} = (x minutos), {4} = (x segundos)</translatorcomment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, {3}, y {4}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
-        <translatorcomment>{0} = nobre de persona, {1} = (x horas), {2} = (x minutos), {3} = (x segundos)</translatorcomment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, y {3}.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1527"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
-        <translatorcomment>{0} = nombre de persona, {1} = (x minutos), {3} = (x segundos)</translatorcomment>
         <translation>{0} no ha mostrado actividad durante {1}, y {2}.</translation>
     </message>
     <message numerus="yes">
@@ -27215,7 +26920,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Network/IRC/IrcWidget.py" line="829"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
-        <translatorcomment>nombre de canal, cuenta de usuarios</translatorcomment>
         <translation>{0} ({1})</translation>
     </message>
     <message>
@@ -29773,11 +29477,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Ajustes manuales de proxy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
-        <source>Http-Proxy:</source>
-        <translation type="obsolete">Http-Proxy:</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
         <source>Enter the name of the HTTP proxy host</source>
         <translation>Introduzca el nombre del host HTTP proxy</translation>
@@ -29803,11 +29502,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Utilizar este proxy para todos los protocolos</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="226"/>
-        <source>Https-Proxy:</source>
-        <translation type="obsolete">Https-Proxy:</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="233"/>
         <source>Enter the name of the HTTPS proxy host</source>
         <translation>Introduzca el nombre del host HTTPS proxy</translation>
@@ -29816,11 +29510,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="247"/>
         <source>Enter the HTTPS proxy port</source>
         <translation>Introduzca el puerto del HTTPS proxy</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="266"/>
-        <source>Ftp-Proxy:</source>
-        <translation type="obsolete">Ftp-Proxy:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="279"/>
@@ -29871,16 +29560,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
         <source>When download finished successfully</source>
         <translation>Al terminar una descarga con éxito</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="309"/>
-        <source>Press to clear the saved proxy passwords</source>
-        <translation type="obsolete">Pulsar para limpiar las contraseñas de proxy almacenadas</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="312"/>
-        <source>Clear Proxy Passwords</source>
-        <translation type="obsolete">Limpiar Contraseñas de Proxy</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
@@ -30617,29 +30296,6 @@ Razón: {1}</translation>
     </message>
 </context>
 <context>
-    <name>PackageDiagram</name>
-    <message>
-        <location filename="Graphics/PackageDiagram.py" line="90"/>
-        <source>Parsing modules...</source>
-        <translation type="obsolete">Analizando modulos...</translation>
-    </message>
-    <message>
-        <location filename="Graphics/PackageDiagram.py" line="120"/>
-        <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a package.</source>
-        <translation type="obsolete">El directorio &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no es un paquete.</translation>
-    </message>
-    <message>
-        <location filename="Graphics/PackageDiagram.py" line="128"/>
-        <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any modules.</source>
-        <translation type="obsolete">El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ningún módulo.</translation>
-    </message>
-    <message>
-        <location filename="Graphics/PackageDiagram.py" line="143"/>
-        <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
-        <translation type="obsolete">El paquete &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
-    </message>
-</context>
-<context>
     <name>PackageDiagramBuilder</name>
     <message>
         <location filename="Graphics/PackageDiagramBuilder.py" line="53"/>
@@ -30806,11 +30462,6 @@ Razón: {1}</translation>
         <translation>Introduzca el término de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordsDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Passwords/PasswordsDialog.ui" line="87"/>
         <source>Press to remove the selected entries</source>
         <translation>Pulse para eliminar las entradas seleccionadas</translation>
@@ -30929,11 +30580,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea y po
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="48"/>
-        <source>Press to clear the filter edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de filtro</translation>
-    </message>
-    <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="107"/>
         <source>Press to start the PEP 8 check run</source>
         <translation>Pulse para comenzar la ejecución de la revisión de PEP 8</translation>
@@ -30954,11 +30600,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea y po
         <translation>Introduzca códigos de mensaje o categorías a excluir separados por comas</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
-        <source>Press to clear the exclude messages edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de mensajes a excluir</translation>
-    </message>
-    <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
         <source>...</source>
         <translation>...</translation>
@@ -30972,11 +30613,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea y po
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="152"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation>Introduzca códigos de mensaje o categorías a incluir separados por comas</translation>
-    </message>
-    <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
-        <source>Press to clear the include messages edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de mensajes a incluir</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="46"/>
@@ -31082,11 +30718,6 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="98"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation>Introduzca los códigos de mensaje de los problemas que se desea arreglar automáticamente (dejar en blanco para arreglar todos)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
-        <source>Press to clear the fix issues edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de problemas a arreglar</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="59"/>
@@ -32370,41 +32001,6 @@ Seleccione Actualizar.</translation>
         <translation>Presione para buscar programas</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="82"/>
-        <source>Translation Converter (Qt4)</source>
-        <translation type="obsolete">Conversor de Traducciones (Qt4)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="91"/>
-        <source>Qt4 Designer</source>
-        <translation type="obsolete">Qt4 Designer</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="99"/>
-        <source>Qt4 Linguist</source>
-        <translation type="obsolete">Qt4 Linguist</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="107"/>
-        <source>Qt4 Assistant</source>
-        <translation type="obsolete">Qt4 Assistant</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="111"/>
-        <source>Translation Extractor (Python, Qt4)</source>
-        <translation type="obsolete">Extractor de traducciones (Python, Qt4)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="115"/>
-        <source>Forms Compiler (Python, Qt4)</source>
-        <translation type="obsolete">Compilador de Formularios (Python, Qt4)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="119"/>
-        <source>Resource Compiler (Python, Qt4)</source>
-        <translation type="obsolete">Compilador de Recursos (Python, Qt4)</translation>
-    </message>
-    <message>
         <location filename="Preferences/ProgramsDialog.py" line="139"/>
         <source>Forms Compiler (Ruby, Qt4)</source>
         <translation>Compilador de Formularios (Ruby, Qt4)</translation>
@@ -32506,16 +32102,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="219"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Archivos Ruby (*.rb);;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="261"/>
-        <source>Qt4 GUI</source>
-        <translation type="obsolete">Qt4 GUI</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="262"/>
-        <source>Qt4 Console</source>
-        <translation type="obsolete">Consola QT4</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="264"/>
@@ -33391,11 +32977,6 @@ Seleccione Actualizar.</translation>
         <translation>Plugin para Eric</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="290"/>
-        <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El Tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="683"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
@@ -33609,11 +33190,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="332"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El Lenguaje de Programación &lt;b&gt;{0}&lt;/b&gt; no está soportado.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="341"/>
-        <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programmin Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado con el Lenguaje de Programación &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="351"/>
@@ -38045,49 +37621,9 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
-        <source>Qt4 Translations Directory</source>
-        <translation type="obsolete">Directorio de Traducciones Qt4</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
-        <source>Press to select the Qt4 translations directory via a directory selection dialog</source>
-        <translation type="obsolete">Pulse para seleccionar el directorio de traducciones de Qt4 a través de un diálogo de selección de directorio</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
-        <source>Enter the path of the Qt4 translations directory.</source>
-        <translation type="obsolete">Introeucir la ruta del directorio de traducciones Qt4.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
-        <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</source>
-        <translation type="obsolete">&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4TRANSLATIONSDIR o la ruta compilada en la biblioteca Qt4.</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
         <source>Qt Tools</source>
         <translation>Herramientas Qt</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
-        <source>Qt4-Prefix:</source>
-        <translation type="obsolete">Prefijo de Qt4:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
-        <source>Enter the prefix for the Qt4 tools name</source>
-        <translation type="obsolete">Introducir el prefijo para nombre de las herramientas Qt4</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
-        <source>Qt4-Postfix:</source>
-        <translation type="obsolete">Postfijo de Qt4:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
-        <source>Enter the postfix for the Qt4 tools name</source>
-        <translation type="obsolete">Introducir el postfijo para nombre de las herramientas Qt4</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
@@ -38105,24 +37641,9 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <translation>Seleccionar el directorio de Traducciones Qt4</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
-        <source>Qt4 Directory</source>
-        <translation type="obsolete">Directorio de Qt4</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración serán activadas la siguiente vez que se inicie la aplicación.&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
-        <source>Enter the path of the Qt4 directory.</source>
-        <translation type="obsolete">Introducir la ruta del directorio Qt4.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
-        <source>Press to select the Qt4 directory via a directory selection dialog</source>
-        <translation type="obsolete">Pulse para seleccionar el directorio de Qt4 a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
@@ -39450,11 +38971,6 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>Introducir término de búsqueda para hosts</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="47"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="77"/>
         <source>Press to add site to the whitelist</source>
         <translation>Pulsar para añadir el site a la lista blanca</translation>
@@ -39981,11 +39497,6 @@ Not connected</source>
         <location filename="Preferences/ShortcutsDialog.ui" line="32"/>
         <source>Enter the regular expression that should be contained in the shortcut action</source>
         <translation>Introduzca la expresión regular que debería contener la acción del atajo</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ShortcutsDialog.ui" line="39"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Presione para limpiar la caja de búsqueda</translation>
     </message>
     <message>
         <location filename="Preferences/ShortcutsDialog.ui" line="22"/>
@@ -42835,11 +42346,6 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <translation>Conservar listas de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="65"/>
-        <source>Enter the list of changelists separated by &apos;;&apos;</source>
-        <translation type="obsolete">Introduzca la lista de listas de cambios separadas por &apos;;&apos;</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="66"/>
         <source>Select the change lists to limit the commit</source>
         <translation>Seleccionar las listas de cambios para limitar el commit</translation>
@@ -42888,12 +42394,6 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Introduzca el nombre de destino</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
-        <source>&lt;b&gt;Target name&lt;/b&gt;
-&lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Nombre de destino&lt;/b&gt;&lt;p&gt;Introduzca el nuevo nombre en este campo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="71"/>
@@ -44005,16 +43505,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Eliminar del repositorio (y del disco)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="494"/>
-        <source>Copy in repository</source>
-        <translation type="obsolete">Copiar en el repositorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="496"/>
-        <source>Move in repository</source>
-        <translation type="obsolete">Mover en el repositorio</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="507"/>
         <source>Show log</source>
         <translation>Mostrar log</translation>
@@ -44053,11 +43543,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="630"/>
         <source>Merge changes</source>
         <translation>Hacer merge de los cambios</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="633"/>
-        <source>Resolve conflict</source>
-        <translation type="obsolete">Resolver conflicto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="388"/>
@@ -44216,46 +43701,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="82"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the VCS repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;Envia los cambios del proyecto local al repositorio VCS utilizando el comando commit.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="89"/>
-        <source>Add to repository</source>
-        <translation type="obsolete">Añadir al repositorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="89"/>
-        <source>&amp;Add to repository...</source>
-        <translation type="obsolete">&amp;Añadir al repositorio...</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="92"/>
-        <source>Add the local project to the VCS repository</source>
-        <translation type="obsolete">Añadir el proyecto local al repositorio VCS</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="95"/>
-        <source>&lt;b&gt;Add to repository&lt;/b&gt;&lt;p&gt;This adds (imports) the local project to the VCS repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Añadir al repositorio&lt;/b&gt;&lt;p&gt;Añade (import) el proyecto local al repositorio VCS.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="89"/>
-        <source>Remove from repository (and disk)</source>
-        <translation type="obsolete">Eliminar del repositorio (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="89"/>
-        <source>&amp;Remove from repository (and disk)</source>
-        <translation type="obsolete">Eliminar del &amp;repositorio (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="93"/>
-        <source>Remove the local project from the VCS repository (and  disk)</source>
-        <translation type="obsolete">Eliminar el proyecto local del repositorio VCS (y del disco)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="96"/>
-        <source>&lt;b&gt;Remove from repository&lt;/b&gt;&lt;p&gt;This removes the local project from the VCS repository (and disk).&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Eliminar del repositorio&lt;/b&gt;&lt;p&gt;Elimina el proyecto local del repositorio VCS (y del disco).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="89"/>
@@ -44466,26 +43911,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="280"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the local copy to another tag/branch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer switch&lt;/b&gt;&lt;p&gt;Hace un switch de la copia local a otra tag/branch.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
-        <source>Resolve conflicts</source>
-        <translation type="obsolete">Resolver conflictos</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
-        <source>Resolve con&amp;flicts</source>
-        <translation type="obsolete">Resolver con&amp;flictos</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="303"/>
-        <source>Resolve all conflicts of the local project</source>
-        <translation type="obsolete">Resolver todos los conflictos del proyecto local</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="306"/>
-        <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Resolver conflictos&lt;/b&gt;&lt;p&gt;Resuelve todos los conflictos del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
@@ -47281,11 +46706,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="54"/>
-        <source>Press to clear the filter edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de filtro</translation>
-    </message>
-    <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="64"/>
         <source>Press to start the syntax check run</source>
         <translation>Pulse para comenzar la ejecución de la revisión de sintaxis</translation>
@@ -47724,11 +47144,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="54"/>
-        <source>Press to clear the filter edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de filtro</translation>
-    </message>
-    <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="64"/>
         <source>Press to start the tabnanny run</source>
         <translation>Pulse para comenzar la ejecución de tabnanny</translation>
@@ -47796,21 +47211,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="23"/>
         <source>Select the categories, the tasks list should be filtered on. Within each category, enter the selection criteria. The enabled categories are combined using an &quot;&lt;b&gt;and&lt;/b&gt;&quot; operation.</source>
         <translation>Seleccione las categorías por las que se debería filtrar la lista de tareas. En cada categoría, introduzca el criterio de selección. Las categorías habilitadas se combinan utilizando una operación &quot;&lt;b&gt;and&lt;/b&gt;&quot;.</translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="39"/>
-        <source>Select to filter on the task description</source>
-        <translation type="obsolete">Seleccionar para filtrar por descripción de la tarea</translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="42"/>
-        <source>Description</source>
-        <translation type="obsolete">Descripción</translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskFilterConfigDialog.ui" line="51"/>
-        <source>Enter the description filter as a regular expression.</source>
-        <translation type="obsolete">Introducir el filtro de descripción como una expresión regular.</translation>
     </message>
     <message>
         <location filename="Tasks/TaskFilterConfigDialog.ui" line="64"/>
@@ -48509,11 +47909,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <location filename="Templates/TemplateViewer.py" line="509"/>
         <source>&lt;p&gt;Do you really want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;¿Desea realmente eliminar &lt;b&gt;{0}&lt;/b&gt; ?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Templates/TemplateViewer.py" line="564"/>
-        <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog. There is an example template available in the Examples subdirectory of the eric5 distribution.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Los rupos de plantillas&lt;/b&gt; son un medio para agrupar plantillas individuales. Los grupos tienen un atributo que especifica a qué lenguaje de programación se aplican. Para añadir entradas de plantillas tiene que haber definido al menos un grupo.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Las entradas de plantillas&lt;/b&gt; son las plantillas en si. Se agrupan en grupos de plantillas. En el diálogo de edición de plantilla hay disponible un texto de ayuda acerca de cómo definirlas. Hay un ejemplo de plantilla disponible en el subdirectorio Examples de la distribución de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Templates/TemplateViewer.py" line="797"/>
@@ -50168,19 +49563,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     </message>
 </context>
 <context>
-    <name>UMLClassDiagram</name>
-    <message>
-        <location filename="Graphics/UMLClassDiagram.py" line="81"/>
-        <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; could not be found.</source>
-        <translation type="obsolete">No se encuentra el módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt;.</translation>
-    </message>
-    <message>
-        <location filename="Graphics/UMLClassDiagram.py" line="142"/>
-        <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
-        <translation type="obsolete">El módulo &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; no contiene ninguna clase.</translation>
-    </message>
-</context>
-<context>
     <name>UMLClassDiagramBuilder</name>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="50"/>
@@ -50304,16 +49686,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Borrar figuras</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="73"/>
-        <source>Save as PNG</source>
-        <translation type="obsolete">Guardar como PNG</translation>
-    </message>
-    <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="78"/>
-        <source>Print</source>
-        <translation type="obsolete">Imprimir</translation>
-    </message>
-    <message>
         <location filename="Graphics/UMLGraphicsView.py" line="76"/>
         <source>Zoom in</source>
         <translation>Aumentar zoom</translation>
@@ -50387,11 +49759,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <location filename="Graphics/UMLGraphicsView.py" line="342"/>
         <source>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</source>
         <translation>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</translation>
-    </message>
-    <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="83"/>
-        <source>Print Preview</source>
-        <translation type="obsolete">Presentación preliminar</translation>
     </message>
     <message>
         <location filename="Graphics/UMLGraphicsView.py" line="96"/>
@@ -50882,11 +50249,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Introduzca el término de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="75"/>
         <source>Press to remove the selected entries</source>
         <translation>Pulse para eliminar las entradas seleccionadas</translation>
@@ -50968,11 +50330,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="540"/>
         <source>Activating Plugins...</source>
         <translation>Activando Plugins...</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="598"/>
-        <source>Loading Style Sheet</source>
-        <translation type="obsolete">Cargando hoja de estilos</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1213"/>
@@ -51071,21 +50428,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Visor de &amp;Proyecto</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1184"/>
-        <source>Toggle the Project-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Proyecto</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1185"/>
-        <source>&lt;b&gt;Toggle the Project-Viewer window&lt;/b&gt;&lt;p&gt;If the Project-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Proyecto&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Proyecto está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1193"/>
-        <source>Activate Project-Viewer</source>
-        <translation type="obsolete">Activar Visor de Proyecto</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1213"/>
         <source>Alt+Shift+P</source>
         <translation>Alt+Shift+P</translation>
@@ -51101,44 +50443,9 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&amp;Shell</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1245"/>
-        <source>Toggle the Shell window</source>
-        <translation type="obsolete">Conmutar la ventana de Shell</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1246"/>
-        <source>&lt;b&gt;Toggle the Shell window&lt;/b&gt;&lt;p&gt;If the Shell window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Sehll&lt;/b&gt;&lt;p&gt;Si la ventana de Shell está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1255"/>
-        <source>Activate Shell</source>
-        <translation type="obsolete">Activar Shell</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1258"/>
         <source>Alt+Shift+S</source>
         <translation>Alt+Shift+S</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1284"/>
-        <source>File-&amp;Browser</source>
-        <translation type="obsolete">Na&amp;vegador de archivos</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1286"/>
-        <source>Toggle the File-Browser window</source>
-        <translation type="obsolete">Conmutar la ventana de Navegador de Archivos</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1287"/>
-        <source>&lt;b&gt;Toggle the File-Browser window&lt;/b&gt;&lt;p&gt;If the File-Browser window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Navegador de Archivos&lt;/b&gt;&lt;p&gt;Si la ventana de Navegador de Archivos está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1296"/>
-        <source>Activate File-Browser</source>
-        <translation type="obsolete">Activar Navegador de Archivos</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1288"/>
@@ -51146,69 +50453,14 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Alt+Shift+F</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1305"/>
-        <source>&amp;Log-Viewer</source>
-        <translation type="obsolete">Visor de &amp;Log</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1307"/>
-        <source>Toggle the Log-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Log</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1308"/>
-        <source>&lt;b&gt;Toggle the Log-Viewer window&lt;/b&gt;&lt;p&gt;If the Log-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Log&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Log está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1316"/>
-        <source>Activate Log-Viewer</source>
-        <translation type="obsolete">Activar Visor de Log</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1303"/>
         <source>Alt+Shift+G</source>
         <translation>Alt+Shift+G</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1325"/>
-        <source>T&amp;ask-Viewer</source>
-        <translation type="obsolete">Visor de T&amp;areas</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1327"/>
-        <source>Toggle the Task-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Tareas</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1328"/>
-        <source>&lt;b&gt;Toggle the Task-Viewer window&lt;/b&gt;&lt;p&gt;If the Task-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Tareas&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Tareas está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1336"/>
-        <source>Activate Task-Viewer</source>
-        <translation type="obsolete">Activar Visor de Tareas</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1318"/>
         <source>Alt+Shift+T</source>
         <translation>Alt+Shift+T</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1347"/>
-        <source>Toggle the Template-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Plantillas</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1349"/>
-        <source>&lt;b&gt;Toggle the Template-Viewer window&lt;/b&gt;&lt;p&gt;If the Template-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Plantillas&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Plantillas está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1357"/>
-        <source>Activate Template-Viewer</source>
-        <translation type="obsolete">Activar visor de Plantillas</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1228"/>
@@ -51404,36 +50656,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="1636"/>
         <source>&lt;b&gt;Unittest Project&lt;/b&gt;&lt;p&gt;Run unittest with current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Test Unitario del Proyecto&lt;/b&gt;Ejecuta un test unitario con el proyecto actual.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1652"/>
-        <source>Qt-Designer 4</source>
-        <translation type="obsolete">Qt-Designer 4</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1655"/>
-        <source>Start Qt-Designer 4</source>
-        <translation type="obsolete">Ejecutar Qt-Designer 4</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1656"/>
-        <source>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Start Qt-Designer 4.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Ejecutar Qt-Designer 4.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1672"/>
-        <source>Qt-Linguist 4</source>
-        <translation type="obsolete">Qt-Linguist 4</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1675"/>
-        <source>Start Qt-Linguist 4</source>
-        <translation type="obsolete">Ejecutar Qt-Linguist 4</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1676"/>
-        <source>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Start Qt-Linguist 4.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Ejecutar Qt-Linguist 4.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1685"/>
@@ -51971,16 +51193,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Usado por primera vez</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1652"/>
-        <source>&amp;Designer 4...</source>
-        <translation type="obsolete">&amp;Designer 4...</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1672"/>
-        <source>&amp;Linguist 4...</source>
-        <translation type="obsolete">&amp;Linguist 4...</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1747"/>
         <source>Mini Editor</source>
         <translation>Mini Editor</translation>
@@ -52049,26 +51261,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="1228"/>
         <source>&amp;Multiproject-Viewer</source>
         <translation>Visor de &amp;Multiproyecto</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1205"/>
-        <source>Toggle the Multiproject-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Multiproyecto</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1206"/>
-        <source>&lt;b&gt;Toggle the Multiproject-Viewer window&lt;/b&gt;&lt;p&gt;If the Multiproject-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Multiproyecto&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Multiproyecto está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1214"/>
-        <source>Activate Multiproject-Viewer</source>
-        <translation type="obsolete">Activar Visor de Multiproyecto</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1345"/>
-        <source>Temp&amp;late-Viewer</source>
-        <translation type="obsolete">Visor de P&amp;lantillas</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4973"/>
@@ -52141,11 +51333,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1366"/>
-        <source>Vertical Toolbox</source>
-        <translation type="obsolete">Caja de Herramientas Vertical</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1371"/>
         <source>Horizontal Toolbox</source>
         <translation>Caja de Herramientas Horizontal</translation>
@@ -52156,21 +51343,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Te&amp;rminal</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1266"/>
-        <source>Toggle the Terminal window</source>
-        <translation type="obsolete">Conmutar la ventana de Terminal</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1267"/>
-        <source>&lt;b&gt;Toggle the Terminal window&lt;/b&gt;&lt;p&gt;If the Terminal window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Terminal&lt;/b&gt;&lt;p&gt;Si la ventana de Terminal está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1275"/>
-        <source>Activate Terminal</source>
-        <translation type="obsolete">Activar Terminal</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1273"/>
         <source>Alt+Shift+R</source>
         <translation>Alt+Shift+S</translation>
@@ -52179,21 +51351,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="1333"/>
         <source>Alt+Shift+A</source>
         <translation>Alt+Shift+A</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1366"/>
-        <source>&amp;Vertical Toolbox</source>
-        <translation type="obsolete">Caja de Herramientas &amp;Vertical</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1368"/>
-        <source>Toggle the Vertical Toolbox window</source>
-        <translation type="obsolete">Conmutar la ventana de Caja de Herramientas Vertical</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1369"/>
-        <source>&lt;b&gt;Toggle the Vertical Toolbox window&lt;/b&gt;&lt;p&gt;If the Vertical Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Caja de Herramientas Vertical&lt;/b&gt;&lt;p&gt;Si la ventana de Caja de Herramientas Vertical está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1371"/>
@@ -52336,21 +51493,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Visor &amp;Depurador</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1225"/>
-        <source>Toggle the Debug-Viewer window</source>
-        <translation type="obsolete">Conmutar la ventana de Visor de Depuración</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1226"/>
-        <source>&lt;b&gt;Toggle the Debug-Viewer window&lt;/b&gt;&lt;p&gt;If the Debug-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Visor de Depuración&lt;/b&gt;&lt;p&gt;Si la ventana de Visor de Depuración está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1234"/>
-        <source>Activate Debug-Viewer</source>
-        <translation type="obsolete">Activar Visor de Depuración</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1731"/>
         <source>SQL Browser</source>
         <translation>Navegador SQL</translation>
@@ -52409,11 +51551,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="2102"/>
         <source>Open PySide Documentation</source>
         <translation>Abrir Documentación de PySide</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="598"/>
-        <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de hoja de estilo Qt &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1122"/>
@@ -52614,26 +51751,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Cooperación</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1412"/>
-        <source>&amp;Cooperation</source>
-        <translation type="obsolete">&amp;Cooperación</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1414"/>
-        <source>Toggle the Cooperation window</source>
-        <translation type="obsolete">Conmutar la ventana de Cooperación</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1416"/>
-        <source>&lt;b&gt;Toggle the Cooperation window&lt;/b&gt;&lt;p&gt;If the Cooperation window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Cooperación&lt;/b&gt;&lt;p&gt;Si la ventana de Cooperación está oculta, mostrarla. Si está visible, cerrarla.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1424"/>
-        <source>Activate Cooperation-Viewer</source>
-        <translation type="obsolete">Activar Visor de Cooperación</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1417"/>
         <source>Alt+Shift+O</source>
         <translation>Alt+Shift+O</translation>
@@ -52644,26 +51761,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Símbolos</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1434"/>
-        <source>&amp;Symbols</source>
-        <translation type="obsolete">&amp;Símbolos</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1436"/>
-        <source>Toggle the Symbols window</source>
-        <translation type="obsolete">Conmutar la ventana de Símbolos</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1438"/>
-        <source>&lt;b&gt;Toggle the Symbols window&lt;/b&gt;&lt;p&gt;If the Symbols window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Símbolos&lt;/b&gt;&lt;p&gt;Si la ventana de Símbolos está oculta, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1446"/>
-        <source>Activate Symbols-Viewer</source>
-        <translation type="obsolete">Activar visor de Símbolos</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1451"/>
         <source>Alt+Shift+Y</source>
         <translation>Alt+Shift+Y</translation>
@@ -52672,26 +51769,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="UI/UserInterface.py" line="856"/>
         <source>Numbers</source>
         <translation>Números</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1456"/>
-        <source>&amp;Numbers</source>
-        <translation type="obsolete">&amp;Números</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1458"/>
-        <source>Toggle the Numbers window</source>
-        <translation type="obsolete">Conmutar la ventana de Números</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1460"/>
-        <source>&lt;b&gt;Toggle the Numbers window&lt;/b&gt;&lt;p&gt;If the Numbers window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Conmutar la ventana de Números&lt;/b&gt;&lt;p&gt;Si la ventana de Números está oculta, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1468"/>
-        <source>Activate Numbers-Viewer</source>
-        <translation type="obsolete">Activar visor de Números</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1467"/>
@@ -54132,11 +53209,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="571"/>
         <source>Save all</source>
         <translation>Guardar todo</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="570"/>
-        <source>Save a&amp;ll...</source>
-        <translation type="obsolete">Guardar &amp;Todo...</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="575"/>
@@ -56276,16 +55348,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Reemplazar en Archivos&lt;/b&gt;&lt;p&gt;Buscar un texto en los archivos de un árbol de directorios o en el proyecto y reemplazarlo. Se muestra un diálogo para introducir el texto de búsqueda, el texto de reemplazo y opciones para búsqueda y visualización del resultado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3450"/>
-        <source>Spell check</source>
-        <translation type="obsolete">Corrección ortográfica</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="3450"/>
-        <source>&amp;Spell Check...</source>
-        <translation type="obsolete">Co&amp;rrección ortográfica...</translation>
-    </message>
-    <message>
         <location filename="ViewManager/ViewManager.py" line="3533"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
@@ -56295,11 +55357,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="3542"/>
         <source>Perform spell check of current editor</source>
         <translation>Lleva a cabo la corrección ortográfica del editor actual</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="3461"/>
-        <source>&lt;b&gt;Spell check&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Corrección ortográfica&lt;/b&gt;&lt;p&gt;Lleva a cabo la corrección ortográfica del editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3551"/>
@@ -57105,89 +56162,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     </message>
 </context>
 <context>
-    <name>ViewProfileDialog</name>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="14"/>
-        <source>Configure View Profiles</source>
-        <translation type="obsolete">Configurar Perfiles de Vista</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="156"/>
-        <source>&amp;Debug Profile</source>
-        <translation type="obsolete">Perfil de &amp;Depuración</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="179"/>
-        <source>File-Browser</source>
-        <translation type="obsolete">Explorador de archivos</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="220"/>
-        <source>Shell</source>
-        <translation type="obsolete">Shell</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="186"/>
-        <source>Log-Viewer</source>
-        <translation type="obsolete">Visor Log</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="237"/>
-        <source>Task-Viewer</source>
-        <translation type="obsolete">Visor de Tareas</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="247"/>
-        <source>Templates-Viewer</source>
-        <translation type="obsolete">Visor de Plantillas</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="33"/>
-        <source>&amp;Edit Profile</source>
-        <translation type="obsolete">Perfil de &amp;Edición</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="23"/>
-        <source>Select the windows, that should be visible, when the different profiles are active.</source>
-        <translation type="obsolete">Seleccionar las ventanas que deberian ser visibles cuando los distintos perfiles están activos.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="196"/>
-        <source>Multiproject-Viewer</source>
-        <translation type="obsolete">Visor de Multiproyecto</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="210"/>
-        <source>Project-Viewer</source>
-        <translation type="obsolete">Visor de Proyecto</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="169"/>
-        <source>Debug-Viewer</source>
-        <translation type="obsolete">Visor de Depurador</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="254"/>
-        <source>Terminal</source>
-        <translation type="obsolete">Terminal</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="162"/>
-        <source>Cooperation</source>
-        <translation type="obsolete">Cooperación</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="230"/>
-        <source>Symbols</source>
-        <translation type="obsolete">Símbolos</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileDialog.ui" line="203"/>
-        <source>Numbers</source>
-        <translation type="obsolete">Números</translation>
-    </message>
-</context>
-<context>
     <name>ViewProfileSidebarsDialog</name>
     <message>
         <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="14"/>
@@ -57215,19 +56189,9 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Barra Lateral Abajo</translation>
     </message>
     <message>
-        <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="109"/>
-        <source>Debug-Viewer</source>
-        <translation type="obsolete">Visor Depurador</translation>
-    </message>
-    <message>
         <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="72"/>
         <source>&amp;Debug Profile</source>
         <translation>Perfil de &amp;Depuración</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="102"/>
-        <source>Cooperation</source>
-        <translation type="obsolete">Cooperación</translation>
     </message>
     <message>
         <location filename="Preferences/ViewProfileSidebarsDialog.ui" line="85"/>
@@ -57253,29 +56217,14 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Perfil de &amp;Edición</translation>
     </message>
     <message>
-        <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="85"/>
-        <source>Vertical Toolbox</source>
-        <translation type="obsolete">Caja de Herramientas Vertical</translation>
-    </message>
-    <message>
         <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="95"/>
         <source>Horizontal Toolbox</source>
         <translation>Caja de Herramientas Horizontal</translation>
     </message>
     <message>
-        <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="109"/>
-        <source>Debug-Viewer</source>
-        <translation type="obsolete">Visor de Depurador</translation>
-    </message>
-    <message>
         <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="72"/>
         <source>&amp;Debug Profile</source>
         <translation>Perfil de &amp;Depuración</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="102"/>
-        <source>Cooperation</source>
-        <translation type="obsolete">Cooperación</translation>
     </message>
     <message>
         <location filename="Preferences/ViewProfileToolboxesDialog.ui" line="78"/>
@@ -57517,11 +56466,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="14"/>
         <source>Web SQL Databases</source>
         <translation>Bases de Datos SQL Web</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="50"/>
-        <source>Press to clear the search edit</source>
-        <translation type="obsolete">Pulse para limpiar la caja de búsqueda</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="70"/>
