@@ -4513,22 +4513,22 @@ to display the configuration page.</source>
         <translation>změněno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="609"/>
+        <location filename="Debugger/DebugServer.py" line="610"/>
         <source>Connection from illegal host</source>
         <translation>Spojení z ilegálního hosta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1358"/>
+        <location filename="Debugger/DebugServer.py" line="1359"/>
         <source>Passive debug connection received</source>
         <translation>Spojení pasivního debugeru přijato</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1372"/>
+        <location filename="Debugger/DebugServer.py" line="1373"/>
         <source>Passive debug connection closed</source>
         <translation>Spojení pasivního debugeru uzavřeno</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1179"/>
+        <location filename="Debugger/DebugServer.py" line="1180"/>
         <source>
 Not connected
 </source>
@@ -4537,7 +4537,7 @@ Nepřipojen
 </translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="609"/>
+        <location filename="Debugger/DebugServer.py" line="610"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pokus o spojení z ilegálního hosta &lt;b&gt;{0}&lt;/b&gt;. Přijmout toto spojení?&lt;/p&gt;</translation>
     </message>
@@ -14188,12 +14188,12 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="143"/>
+        <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="136"/>
         <source>Remove Script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="143"/>
+        <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="136"/>
         <source>&lt;p&gt;Are you sure you want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14984,27 +14984,27 @@ Reason: {0}</source>
         <translation type="obsolete">Vyberte pro vstup do Python dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="155"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="156"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation>HTML soubory (*.html *.htm);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="113"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="114"/>
         <source>Select Qt4 documentation entry</source>
         <translation>Vyberte pro vstup do Qt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="141"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="142"/>
         <source>Select PyQt4 documentation entry</source>
         <translation>Vyberte pro vstup do PyQt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="155"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="156"/>
         <source>Select PySide documentation entry</source>
         <translation>Vyberte pro vstup do PySide dokumentace</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="97"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="98"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15049,12 +15049,12 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="81"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="82"/>
         <source>Select Python 2 documentation entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="97"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="98"/>
         <source>Select Python 3 documentation entry</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15079,7 +15079,7 @@ Reason: {0}</source>
         <translation type="unfinished">&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí QT4DOCDIR, je-li nastavena. {5D?}</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="127"/>
+        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
         <source>Select Qt5 documentation entry</source>
         <translation type="unfinished">Vyberte pro vstup do Qt4 dokumentace {5 ?}</translation>
     </message>
@@ -17941,47 +17941,47 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Zapsání změn (commit) do Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="573"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation>Synchronizovat s Mercurial úložištěm</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="625"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation>Přidat soubory/složky do Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="688"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="689"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation>Odebrat soubory/složky z Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="752"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="753"/>
         <source>Renaming {0}</source>
         <translation>Přejmenování {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="881"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="882"/>
         <source>Taging in the Mercurial repository</source>
         <translation>Otagovat Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="914"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="915"/>
         <source>Reverting changes</source>
         <translation>Navrácení změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="964"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="965"/>
         <source>Merging</source>
         <translation>Merging</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1217"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1218"/>
         <source>Mercurial command</source>
         <translation>Mercurial příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1407"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1408"/>
         <source>Copying {0}</source>
         <translation>Kopírování {0}</translation>
     </message>
@@ -17996,112 +17996,112 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Vyberte počet položek, které se mají zobrazit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1652"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1653"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Stažení (pull) z Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1705"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1706"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Odeslání (push) do Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1824"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1825"/>
         <source>Resolving files/directories</source>
         <translation>Vyřešení souborů/složek</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1846"/>
         <source>Create Branch</source>
         <translation>Vytvořit větev</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1846"/>
         <source>Enter branch name</source>
         <translation>Zadejte název větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1856"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1857"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Vytvoření větve v Mercurial repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1944"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1945"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Ověřit integritu Mercurial repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1969"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1970"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zobrazení nastavení kombinovaných konfigurací</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1992"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1993"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zobrazení aliasů pro vzdálené úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2015"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2016"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Obnovení z přerušené transakce</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2258"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2259"/>
         <source>Shall the working directory be updated?</source>
         <translation>Má být pracovní adresář aktualizován?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1880"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1881"/>
         <source>Showing current branch</source>
         <translation>Zobrazení aktuální větve</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2167"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2168"/>
         <source>Create changegroup</source>
         <translation>Vytvořit skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2270"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2271"/>
         <source>Apply changegroups</source>
         <translation>Použít skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2287"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2288"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Neplatný bisect podpříkaz ({0}).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2321"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2322"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2219"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2220"/>
         <source>Preview changegroup</source>
         <translation>Náhled skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2038"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2039"/>
         <source>Identifying project directory</source>
         <translation>Rozpoznat složku projektu</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
         <source>Create .hgignore file</source>
         <translation>Vytvořit soubor .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2353"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2354"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Odebrat soubory jen z Mercurial úložiště</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2125"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg)</translation>
     </message>
@@ -18111,112 +18111,112 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;p&gt;Soubor Mercurial skupiny změn&lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2252"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2253"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Soubory Mercurial skupiny změn (*.hg);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2229"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2230"/>
         <source>Identifying changegroup file</source>
         <translation>Rozpoznat soubor skupiny změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2409"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2410"/>
         <source>Backing out changeset</source>
         <translation>Zálohovat skupinu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2389"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2390"/>
         <source>No revision given. Aborting...</source>
         <translation>Nebyla dána žádná revize. Ruším...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2142"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2143"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2434"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2435"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2429"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2430"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="520"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="521"/>
         <source>Committing changes to Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2827"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2828"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2501"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2502"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2548"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2549"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2594"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2595"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2645"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2646"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2672"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2673"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2752"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2782"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2783"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2735"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2736"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
         <source>Remove Sub-repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2771"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2772"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18996,37 +18996,37 @@ You have %n tab(s) open.</source>
         <translation type="unfinished">Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="134"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="135"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="137"/>
         <source>Received data on unexpected channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="141"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="142"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="145"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="146"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="154"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="157"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="158"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="331"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="332"/>
         <source>For message see output dialog.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33327,7 +33327,7 @@ Vyberte Obnovit.</translation>
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="683"/>
+        <location filename="Project/Project.py" line="684"/>
         <source>Read project file</source>
         <translation>Načíst soubor projektu</translation>
     </message>
@@ -33337,27 +33337,27 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Komprimované soubory nejsou podporovány. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="769"/>
+        <location filename="Project/Project.py" line="770"/>
         <source>Save project file</source>
         <translation>Uložit soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="803"/>
+        <location filename="Project/Project.py" line="804"/>
         <source>Read user project properties</source>
         <translation>Načíst uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="823"/>
+        <location filename="Project/Project.py" line="824"/>
         <source>Save user project properties</source>
         <translation>Uložit uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="854"/>
+        <location filename="Project/Project.py" line="855"/>
         <source>Read project session</source>
         <translation>Načíst relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1022"/>
+        <location filename="Project/Project.py" line="1023"/>
         <source>Please save the project first.</source>
         <translation>Prosím, nejdříve uložte projekt.</translation>
     </message>
@@ -33367,17 +33367,17 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Soubor s komprimovanou relací projektu není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="884"/>
+        <location filename="Project/Project.py" line="885"/>
         <source>Save project session</source>
         <translation>Uložit relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="906"/>
+        <location filename="Project/Project.py" line="907"/>
         <source>Delete project session</source>
         <translation>Smazat relaci projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="931"/>
+        <location filename="Project/Project.py" line="932"/>
         <source>Read tasks</source>
         <translation>Načíst úlohy</translation>
     </message>
@@ -33387,17 +33387,17 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Soubor s komprimovanými úlohami není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="949"/>
+        <location filename="Project/Project.py" line="950"/>
         <source>Save tasks</source>
         <translation>Uložit úlohy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="982"/>
+        <location filename="Project/Project.py" line="983"/>
         <source>Read debugger properties</source>
         <translation>Načíst nastavení debuggeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1011"/>
+        <location filename="Project/Project.py" line="1012"/>
         <source>Save debugger properties</source>
         <translation>Uložit nastavení debuggeru</translation>
     </message>
@@ -33407,97 +33407,97 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Soubor s komprimovanými nastaveními debuggeru není podporován. Kompresní knihovna chybí.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1034"/>
+        <location filename="Project/Project.py" line="1035"/>
         <source>Delete debugger properties</source>
         <translation>Smazat nastavení debuggeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1127"/>
+        <location filename="Project/Project.py" line="1128"/>
         <source>Add Language</source>
         <translation>Přidat jazyk</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1236"/>
+        <location filename="Project/Project.py" line="1237"/>
         <source>Delete translation</source>
         <translation>Smazat překlad</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1375"/>
+        <location filename="Project/Project.py" line="1376"/>
         <source>Add file</source>
         <translation>Přidat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1479"/>
+        <location filename="Project/Project.py" line="1480"/>
         <source>The target directory must not be empty.</source>
         <translation>Cílový adresář nesmí být prázdný.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1489"/>
+        <location filename="Project/Project.py" line="1490"/>
         <source>Add directory</source>
         <translation>Přidat adresář</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1489"/>
+        <location filename="Project/Project.py" line="1490"/>
         <source>The source directory must not be empty.</source>
         <translation>Cílový adresář nesmí být prázdný.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1609"/>
+        <location filename="Project/Project.py" line="1610"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1632"/>
+        <location filename="Project/Project.py" line="1633"/>
         <source>Rename File</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1817"/>
+        <location filename="Project/Project.py" line="1818"/>
         <source>Delete file</source>
         <translation>Smazat soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1840"/>
+        <location filename="Project/Project.py" line="1841"/>
         <source>Delete directory</source>
         <translation>Smazat adresář</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1919"/>
+        <location filename="Project/Project.py" line="1920"/>
         <source>Create project directory</source>
         <translation>Vytvořit adresář projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2375"/>
+        <location filename="Project/Project.py" line="2377"/>
         <source>New Project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1981"/>
+        <location filename="Project/Project.py" line="1982"/>
         <source>Add existing files to the project?</source>
         <translation>Přidat existující soubory do projektu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2086"/>
+        <location filename="Project/Project.py" line="2087"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Chcete editovat parametry VCS příkazu?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3059"/>
+        <location filename="Project/Project.py" line="3062"/>
         <source>New project</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2039"/>
+        <location filename="Project/Project.py" line="2040"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Má být projekt přidán do repozitáře?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2060"/>
+        <location filename="Project/Project.py" line="2061"/>
         <source>Select version control system for the project</source>
         <translation>Výběr verzovacího systému projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3072"/>
+        <location filename="Project/Project.py" line="3075"/>
         <source>Open project</source>
         <translation>Otevřít projekt</translation>
     </message>
@@ -33507,12 +33507,12 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2499"/>
+        <location filename="Project/Project.py" line="2501"/>
         <source>Project Files (*.e4p)</source>
         <translation>Soubory projektu (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3106"/>
+        <location filename="Project/Project.py" line="3109"/>
         <source>Save project as</source>
         <translation>Uložit projekt jako</translation>
     </message>
@@ -33522,27 +33522,27 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">Soubory projektu (*.e4p);;Komprimované soubory projektu (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2514"/>
+        <location filename="Project/Project.py" line="2516"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2551"/>
+        <location filename="Project/Project.py" line="2553"/>
         <source>Close Project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2551"/>
+        <location filename="Project/Project.py" line="2553"/>
         <source>The current project has unsaved changes.</source>
         <translation>Aktuální projekt obsahuje neuložené změny.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2719"/>
+        <location filename="Project/Project.py" line="2722"/>
         <source>Syntax errors detected</source>
         <translation>Zjištěny syntaktické chyby</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="2719"/>
+        <location filename="Project/Project.py" line="2722"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Projekt obsahuje %n soubor se syntaktickými chybami.</numerusform>
@@ -33551,662 +33551,662 @@ Vyberte Obnovit.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3059"/>
+        <location filename="Project/Project.py" line="3062"/>
         <source>&amp;New...</source>
         <translation>&amp;Nový...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3063"/>
+        <location filename="Project/Project.py" line="3066"/>
         <source>Generate a new project</source>
         <translation>Vygenerovat nový projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3064"/>
+        <location filename="Project/Project.py" line="3067"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový...&lt;/b&gt;&lt;p&gt;Otevře se dialogové okno pro zadání informací o novém projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3072"/>
+        <location filename="Project/Project.py" line="3075"/>
         <source>&amp;Open...</source>
         <translation>&amp;Otevřít...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3076"/>
+        <location filename="Project/Project.py" line="3079"/>
         <source>Open an existing project</source>
         <translation>Otevřít existující projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3077"/>
+        <location filename="Project/Project.py" line="3080"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Otevřít....&lt;/b&gt;&lt;p&gt;Otevře existující projekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3084"/>
+        <location filename="Project/Project.py" line="3087"/>
         <source>Close project</source>
         <translation>Zavřít projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3084"/>
+        <location filename="Project/Project.py" line="3087"/>
         <source>&amp;Close</source>
         <translation>&amp;Zavřít</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3087"/>
+        <location filename="Project/Project.py" line="3090"/>
         <source>Close the current project</source>
         <translation>Uzavře aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3088"/>
+        <location filename="Project/Project.py" line="3091"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zavřít&lt;/b&gt;&lt;p&gt;Aktuální projekt se uzavře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3095"/>
+        <location filename="Project/Project.py" line="3098"/>
         <source>Save project</source>
         <translation>Uložit projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3249"/>
+        <location filename="Project/Project.py" line="3252"/>
         <source>&amp;Save</source>
         <translation>&amp;Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3098"/>
+        <location filename="Project/Project.py" line="3101"/>
         <source>Save the current project</source>
         <translation>Uložit aktuální projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3099"/>
+        <location filename="Project/Project.py" line="3102"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit&lt;/b&gt;&lt;p&gt;Aktuální projekt se uloží.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3106"/>
+        <location filename="Project/Project.py" line="3109"/>
         <source>Save &amp;as...</source>
         <translation>Uložit j&amp;ako...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3109"/>
+        <location filename="Project/Project.py" line="3112"/>
         <source>Save the current project to a new file</source>
         <translation>Uloží aktuální projekt do nového souboru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3110"/>
+        <location filename="Project/Project.py" line="3113"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit jako&lt;/b&gt;&lt;p&gt;Uloží aktuální projekt do nového souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3119"/>
+        <location filename="Project/Project.py" line="3122"/>
         <source>Add files to project</source>
         <translation>Přidat soubory do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3119"/>
+        <location filename="Project/Project.py" line="3122"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3123"/>
+        <location filename="Project/Project.py" line="3126"/>
         <source>Add files to the current project</source>
         <translation>Přidat soubory do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3124"/>
+        <location filename="Project/Project.py" line="3127"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat soubory...&lt;/b&gt;&lt;p&gt;Otevře dialog pri přidání souborů do aktuálního projektu. Místo pro přidání je definováno extenzí souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3133"/>
+        <location filename="Project/Project.py" line="3136"/>
         <source>Add directory to project</source>
         <translation>Přidat adresář do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3133"/>
+        <location filename="Project/Project.py" line="3136"/>
         <source>Add directory...</source>
         <translation>Přidat adresář...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3137"/>
+        <location filename="Project/Project.py" line="3140"/>
         <source>Add a directory to the current project</source>
         <translation>Přidat adresář do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3139"/>
+        <location filename="Project/Project.py" line="3142"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat adresář...&lt;/b&gt;&lt;p&gt;Otevře dialog pro přičtení adresáře do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3147"/>
+        <location filename="Project/Project.py" line="3150"/>
         <source>Add translation to project</source>
         <translation>Přidat překlad do projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3147"/>
+        <location filename="Project/Project.py" line="3150"/>
         <source>Add &amp;translation...</source>
         <translation>Přida&amp;t překlad...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3151"/>
+        <location filename="Project/Project.py" line="3154"/>
         <source>Add a translation to the current project</source>
         <translation>Přidat překlad do aktuálního projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3153"/>
+        <location filename="Project/Project.py" line="3156"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat překlad&lt;/b&gt;&lt;p&gt;Otevře dialog pro přidání překladu do aktuálního projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3161"/>
+        <location filename="Project/Project.py" line="3164"/>
         <source>Search new files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3161"/>
+        <location filename="Project/Project.py" line="3164"/>
         <source>Searc&amp;h new files...</source>
         <translation>&amp;Hledat nové soubory...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3164"/>
+        <location filename="Project/Project.py" line="3167"/>
         <source>Search new files in the project directory.</source>
         <translation>Hledat nové soubory v adresáři projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3165"/>
+        <location filename="Project/Project.py" line="3168"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hledat nové soubory...&lt;/b&gt;&lt;p&gt;Hledají se nové soubory (zdrojové, *.ui, *.idl) v adresáři projektu a v registrovaných podadresářích.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3173"/>
+        <location filename="Project/Project.py" line="3176"/>
         <source>Project properties</source>
         <translation>Nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3173"/>
+        <location filename="Project/Project.py" line="3176"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3176"/>
+        <location filename="Project/Project.py" line="3179"/>
         <source>Show the project properties</source>
         <translation>Zobrazit nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3177"/>
+        <location filename="Project/Project.py" line="3180"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3184"/>
+        <location filename="Project/Project.py" line="3187"/>
         <source>User project properties</source>
         <translation>Uživatelská nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3184"/>
+        <location filename="Project/Project.py" line="3187"/>
         <source>&amp;User Properties...</source>
         <translation>Uživat&amp;elská nastavení...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3187"/>
+        <location filename="Project/Project.py" line="3190"/>
         <source>Show the user specific project properties</source>
         <translation>Zobrazit uživatelem definovaná nastavení projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3189"/>
+        <location filename="Project/Project.py" line="3192"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uživatelská nastavení...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací uživatelských nastavení projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3196"/>
+        <location filename="Project/Project.py" line="3199"/>
         <source>Filetype Associations</source>
         <translation>Asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3196"/>
+        <location filename="Project/Project.py" line="3199"/>
         <source>Filetype Associations...</source>
         <translation>Asociace typů souborů...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3199"/>
+        <location filename="Project/Project.py" line="3202"/>
         <source>Show the project filetype associations</source>
         <translation>Zobrazit asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3201"/>
+        <location filename="Project/Project.py" line="3204"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociace typů souborů...&lt;/b&gt;&lt;p&gt;Zobrazí se dialog s editací asociace typů souborů v projektu. Na základě vzorku souborového jména tyto asociace určují typ souboru (zdrojový kód, formulář, interface nebo jiné). Tyto asociace jsou použity při přidávání souborů do projektu a při vyhledávání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3227"/>
+        <location filename="Project/Project.py" line="3230"/>
         <source>Debugger Properties</source>
         <translation>Nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3227"/>
+        <location filename="Project/Project.py" line="3230"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Nastavení &amp;debuggeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3230"/>
+        <location filename="Project/Project.py" line="3233"/>
         <source>Show the debugger properties</source>
         <translation>Zobrazit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3231"/>
+        <location filename="Project/Project.py" line="3234"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nastavení debugeru...&lt;/b&gt;&lt;p&gt;Zobrazí dialog s editací nastavení debugeru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3238"/>
+        <location filename="Project/Project.py" line="3241"/>
         <source>Load</source>
         <translation>Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3238"/>
+        <location filename="Project/Project.py" line="3241"/>
         <source>&amp;Load</source>
         <translation>&amp;Načíst</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3241"/>
+        <location filename="Project/Project.py" line="3244"/>
         <source>Load the debugger properties</source>
         <translation>Načíst nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3242"/>
+        <location filename="Project/Project.py" line="3245"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst nastavení debugeru&lt;/b&gt;&lt;p&gt;Načtou se nastavení debugeru do projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3249"/>
+        <location filename="Project/Project.py" line="3252"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3252"/>
+        <location filename="Project/Project.py" line="3255"/>
         <source>Save the debugger properties</source>
         <translation>Uložit nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3253"/>
+        <location filename="Project/Project.py" line="3256"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit nastavení debugeru&lt;/b&gt;&lt;p&gt;Uloží nastavení debugeru definovaná v projektu..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3260"/>
+        <location filename="Project/Project.py" line="3263"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3260"/>
+        <location filename="Project/Project.py" line="3263"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3263"/>
+        <location filename="Project/Project.py" line="3266"/>
         <source>Delete the debugger properties</source>
         <translation>Smazat nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3264"/>
+        <location filename="Project/Project.py" line="3267"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat nastavení debugeru&lt;/b&gt;&lt;p&gt;Smaže se soubor obsahující nastavení debugeru v daném projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3272"/>
+        <location filename="Project/Project.py" line="3275"/>
         <source>Reset</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3272"/>
+        <location filename="Project/Project.py" line="3275"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reset</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3275"/>
+        <location filename="Project/Project.py" line="3278"/>
         <source>Reset the debugger properties</source>
         <translation>Reset nastavení debugeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3276"/>
+        <location filename="Project/Project.py" line="3279"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reset nastavení debugeru&lt;/b&gt;&lt;p&gt;Zresetuje nastavení debugeru v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3285"/>
+        <location filename="Project/Project.py" line="3288"/>
         <source>Load session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3288"/>
+        <location filename="Project/Project.py" line="3291"/>
         <source>Load the projects session file.</source>
         <translation>Načíst soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3289"/>
+        <location filename="Project/Project.py" line="3292"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst relaci&lt;/b&gt;&lt;p&gt;Načte soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3302"/>
+        <location filename="Project/Project.py" line="3305"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3305"/>
+        <location filename="Project/Project.py" line="3308"/>
         <source>Save the projects session file.</source>
         <translation>Uložit soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3306"/>
+        <location filename="Project/Project.py" line="3309"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit relaci&lt;/b&gt;&lt;p&gt;Uloží soubor s relací projektu. Relace obsahuje následující údaje:&lt;br&gt;- všechny otevřené zdrojové soubory&lt;br&gt;- všechny breakpointy&lt;br&gt;- argumenty příkazové řádky &lt;br&gt;- pracovní adresář&lt;br&gt;- příznak výjimky&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3319"/>
+        <location filename="Project/Project.py" line="3322"/>
         <source>Delete session</source>
         <translation>Smazat relaci</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3322"/>
+        <location filename="Project/Project.py" line="3325"/>
         <source>Delete the projects session file.</source>
         <translation>Smaže soubor s relací projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3323"/>
+        <location filename="Project/Project.py" line="3326"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat relaci&lt;/b&gt;&lt;p&gt;Smaže soubor s relací projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3332"/>
+        <location filename="Project/Project.py" line="3335"/>
         <source>Code Metrics</source>
         <translation>Metriky kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3332"/>
+        <location filename="Project/Project.py" line="3335"/>
         <source>&amp;Code Metrics...</source>
         <translation>Metriky &amp;kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3335"/>
+        <location filename="Project/Project.py" line="3338"/>
         <source>Show some code metrics for the project.</source>
         <translation>Zobrazit metriky kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3337"/>
+        <location filename="Project/Project.py" line="3340"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Metriky kódu...&lt;/b&gt;&lt;p&gt;Zobrazí se metriky kódu všech python souborů v projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3344"/>
+        <location filename="Project/Project.py" line="3347"/>
         <source>Python Code Coverage</source>
         <translation>Pokrytí python kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3344"/>
+        <location filename="Project/Project.py" line="3347"/>
         <source>Code Co&amp;verage...</source>
         <translation>Pokr&amp;ytí kódu...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3347"/>
+        <location filename="Project/Project.py" line="3350"/>
         <source>Show code coverage information for the project.</source>
         <translation>Zobrazit informace pokrytí kódu projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3349"/>
+        <location filename="Project/Project.py" line="3352"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pokrytí kódu...&lt;/b&gt;&lt;p&gt;Zobrazí informace o pokrytí kódu ve všech python souborech projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4060"/>
+        <location filename="Project/Project.py" line="4063"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3357"/>
+        <location filename="Project/Project.py" line="3360"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profilovat data...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3360"/>
+        <location filename="Project/Project.py" line="3363"/>
         <source>Show profiling data for the project.</source>
         <translation>Zobrazit profilování dat projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3362"/>
+        <location filename="Project/Project.py" line="3365"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilovat data&lt;/b&gt;&lt;p&gt;Zobrazí se profilování dat projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4113"/>
+        <location filename="Project/Project.py" line="4116"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3371"/>
+        <location filename="Project/Project.py" line="3374"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagram &amp;aplikace...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3374"/>
+        <location filename="Project/Project.py" line="3377"/>
         <source>Show a diagram of the project.</source>
         <translation>Zobrazit diagram projektu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3376"/>
+        <location filename="Project/Project.py" line="3379"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagram aplikace...&lt;/b&gt;&lt;p&gt;Zobrazí diagram projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3460"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>&amp;Project</source>
         <translation>&amp;Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3461"/>
+        <location filename="Project/Project.py" line="3464"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Otevřít poslední p&amp;rojekty</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3462"/>
+        <location filename="Project/Project.py" line="3465"/>
         <source>&amp;Version Control</source>
         <translation>Kontrola &amp;verzí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3466"/>
+        <location filename="Project/Project.py" line="3469"/>
         <source>Chec&amp;k</source>
         <translation>Zkontro&amp;lovat</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3468"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>Sho&amp;w</source>
         <translation>Zo&amp;brazit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3469"/>
+        <location filename="Project/Project.py" line="3472"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramy</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3470"/>
+        <location filename="Project/Project.py" line="3473"/>
         <source>Session</source>
         <translation>Relace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3471"/>
+        <location filename="Project/Project.py" line="3474"/>
         <source>Source &amp;Documentation</source>
         <translation>Zd&amp;rojová dokumentace</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3473"/>
+        <location filename="Project/Project.py" line="3476"/>
         <source>Debugger</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3474"/>
+        <location filename="Project/Project.py" line="3477"/>
         <source>Pac&amp;kagers</source>
         <translation>Balíč&amp;ky</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3578"/>
+        <location filename="Project/Project.py" line="3581"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3639"/>
+        <location filename="Project/Project.py" line="3642"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3749"/>
+        <location filename="Project/Project.py" line="3752"/>
         <source>Search New Files</source>
         <translation>Hledat nové soubory</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3749"/>
+        <location filename="Project/Project.py" line="3752"/>
         <source>There were no new files found to be added.</source>
         <translation>Nebyly nalezeny žádné soubory, které je možné přidat.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3887"/>
+        <location filename="Project/Project.py" line="3890"/>
         <source>Version Control System</source>
         <translation>Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3993"/>
+        <location filename="Project/Project.py" line="3996"/>
         <source>Coverage Data</source>
         <translation>Datové pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4039"/>
+        <location filename="Project/Project.py" line="4042"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu nebyl určen hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4014"/>
+        <location filename="Project/Project.py" line="4017"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4014"/>
+        <location filename="Project/Project.py" line="4017"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor pokrytí</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4060"/>
+        <location filename="Project/Project.py" line="4063"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4113"/>
+        <location filename="Project/Project.py" line="4116"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4254"/>
+        <location filename="Project/Project.py" line="4257"/>
         <source>Create Package List</source>
         <translation>Vytvořit seznam balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3397"/>
+        <location filename="Project/Project.py" line="3400"/>
         <source>Create &amp;Package List</source>
         <translation>Vytvořit seznam &amp;balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4421"/>
+        <location filename="Project/Project.py" line="4424"/>
         <source>Create Plugin Archive</source>
         <translation>Vytvořit Plugin archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3411"/>
+        <location filename="Project/Project.py" line="3414"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Vytvořit Plugin &amp;archiv</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4227"/>
+        <location filename="Project/Project.py" line="4230"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Přepsat jej?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4271"/>
+        <location filename="Project/Project.py" line="4274"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; neexistuje. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4279"/>
+        <location filename="Project/Project.py" line="4282"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Projekt nemá definován hlavní skript. Zrušeno...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1404"/>
+        <location filename="Project/Project.py" line="1405"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zdrojový adresář neobsahuje žádné soubory související s danou kategorií.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2375"/>
+        <location filename="Project/Project.py" line="2377"/>
         <source>Select Version Control System</source>
         <translation>Vybrat Version Control System</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2066"/>
+        <location filename="Project/Project.py" line="2067"/>
         <source>None</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="351"/>
+        <location filename="Project/Project.py" line="352"/>
         <source>Registering Project Type</source>
         <translation>Zaregistrovat typ projektu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3426"/>
+        <location filename="Project/Project.py" line="3429"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Vytvořit archiv pluginů (snímek)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3426"/>
+        <location filename="Project/Project.py" line="3429"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Vytvořit archiv pluginů (&amp;snímek)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1127"/>
+        <location filename="Project/Project.py" line="1128"/>
         <source>You have to specify a translation pattern first.</source>
         <translation>Nejdříve musíte specifikovat vzor překladu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2154"/>
+        <location filename="Project/Project.py" line="2155"/>
         <source>Translation Pattern</source>
         <translation>Vzor překladu</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2154"/>
+        <location filename="Project/Project.py" line="2155"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Zadejte vzor cesty pro soubory s překlady (použijte  &apos;%language%&apos; na místě s kódem jazyka):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3211"/>
+        <location filename="Project/Project.py" line="3214"/>
         <source>Lexer Associations</source>
         <translation>Spojení lexeru</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3211"/>
+        <location filename="Project/Project.py" line="3214"/>
         <source>Lexer Associations...</source>
         <translation>Spojení lexeru...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3214"/>
+        <location filename="Project/Project.py" line="3217"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Zobrazit spojení lexeru projektu (přepíše výchozí)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3216"/>
+        <location filename="Project/Project.py" line="3219"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spojení lexeru...&lt;/b&gt;&lt;p&gt;Zobrazuje dialog s editací spojení lexeru projektu. Tato spojení přepisují globální lexer spojení. Lexer je použit pro zvýraznění textu v editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="274"/>
+        <location filename="Project/Project.py" line="275"/>
         <source>PySide GUI</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="275"/>
+        <location filename="Project/Project.py" line="276"/>
         <source>PySide Console</source>
         <translation>PySide konzole</translation>
     </message>
@@ -34231,7 +34231,7 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Typ projektu &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="683"/>
+        <location filename="Project/Project.py" line="684"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -34246,17 +34246,17 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Soubor projektu &lt;b&gt;{0}&lt;/b&gt; má neplatný obsah.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="769"/>
+        <location filename="Project/Project.py" line="770"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="803"/>
+        <location filename="Project/Project.py" line="804"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Uživatelská nastavení projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="823"/>
+        <location filename="Project/Project.py" line="824"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s uživatelskými nastaveními  &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
@@ -34271,22 +34271,22 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Relace projektu &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="854"/>
+        <location filename="Project/Project.py" line="855"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="884"/>
+        <location filename="Project/Project.py" line="885"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="906"/>
+        <location filename="Project/Project.py" line="907"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s relací projektu &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="931"/>
+        <location filename="Project/Project.py" line="932"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -34296,12 +34296,12 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="949"/>
+        <location filename="Project/Project.py" line="950"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="982"/>
+        <location filename="Project/Project.py" line="983"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -34311,47 +34311,47 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1011"/>
+        <location filename="Project/Project.py" line="1012"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1034"/>
+        <location filename="Project/Project.py" line="1035"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s nastaveními debuggeru &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1236"/>
+        <location filename="Project/Project.py" line="1237"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor s překladem &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1430"/>
+        <location filename="Project/Project.py" line="1431"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2514"/>
+        <location filename="Project/Project.py" line="2516"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1632"/>
+        <location filename="Project/Project.py" line="1633"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1817"/>
+        <location filename="Project/Project.py" line="1818"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1840"/>
+        <location filename="Project/Project.py" line="1841"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný adresář &lt;b&gt;{0}&lt;/b&gt; nelze smazat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1919"/>
+        <location filename="Project/Project.py" line="1920"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář projektu &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;</translation>
     </message>
@@ -34366,82 +34366,82 @@ Vyberte Obnovit.</translation>
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3401"/>
+        <location filename="Project/Project.py" line="3404"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Vytvořit počáteční soubor PKGLIST pro eric5 plugin.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3403"/>
+        <location filename="Project/Project.py" line="3406"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit seznam balíčků&lt;/b&gt;&lt;p&gt;Vytvoří počáteční seznam souborů pro vložení do eric5 plugin archivu. Seznam je vytvořen ze souboru projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3415"/>
+        <location filename="Project/Project.py" line="3418"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Vytvořit soubor eric5 plugin archivu.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3417"/>
+        <location filename="Project/Project.py" line="3420"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Jméno archivu je odvozeno ze jména hlavního skriptu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3430"/>
+        <location filename="Project/Project.py" line="3433"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Vytvoří se soubor eric5 plugin archívu (snímek vydání).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3432"/>
+        <location filename="Project/Project.py" line="3435"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vytvořit Plugin archiv (Snímek)&lt;/b&gt;&lt;p&gt;Vytvoří soubor s eric5 plugin archivem za použití seznamu souborů daných v PKGLIST souboru. Údaj o verzi hlavního skriptu je změněn v souladu se snímkem vydání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3878"/>
+        <location filename="Project/Project.py" line="3881"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Navrácení do původního stavu.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3887"/>
+        <location filename="Project/Project.py" line="3890"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Kontrola verzí vypnuta.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4254"/>
+        <location filename="Project/Project.py" line="4257"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4291"/>
+        <location filename="Project/Project.py" line="4294"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze načíst.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4302"/>
+        <location filename="Project/Project.py" line="4305"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4322"/>
+        <location filename="Project/Project.py" line="4325"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit do archivu. Ingorováno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4341"/>
+        <location filename="Project/Project.py" line="4344"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; byl úspěšně vytvořen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4421"/>
+        <location filename="Project/Project.py" line="4424"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1366"/>
+        <location filename="Project/Project.py" line="1367"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vybraný soubor &lt;b&gt;{0}&lt;/b&gt; nelze přidat do &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Důvod: {2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1414"/>
+        <location filename="Project/Project.py" line="1415"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Cílový adresář &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -34451,47 +34451,47 @@ Vyberte Obnovit.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1971"/>
+        <location filename="Project/Project.py" line="1972"/>
         <source>Create main script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1971"/>
+        <location filename="Project/Project.py" line="1972"/>
         <source>&lt;p&gt;The mainscript &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3383"/>
+        <location filename="Project/Project.py" line="3386"/>
         <source>Load Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3383"/>
+        <location filename="Project/Project.py" line="3386"/>
         <source>&amp;Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3386"/>
+        <location filename="Project/Project.py" line="3389"/>
         <source>Load a diagram from file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3388"/>
+        <location filename="Project/Project.py" line="3391"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="332"/>
+        <location filename="Project/Project.py" line="333"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="351"/>
+        <location filename="Project/Project.py" line="352"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="341"/>
+        <location filename="Project/Project.py" line="342"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43092,132 +43092,132 @@ Not connected</source>
         <translation>Exportuje projekt z Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="562"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="563"/>
         <source>Commiting changes to Subversion repository</source>
         <translation>Commit změn do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="618"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="619"/>
         <source>Synchronizing with the Subversion repository</source>
         <translation>Synchronizovat se Subversion repozitářem</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="720"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Přidat soubory/adresáře do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="818"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="819"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Přidat strom adresářů do Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="853"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="854"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Odebrat soubory/adresáře ze Subversion repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1158"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1159"/>
         <source>Subversion Error</source>
         <translation>Subversion chyba</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1019"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1020"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>Z pracovní kopie nelze získat URL repozitáře projektu. Operace tagování bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1043"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1044"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>URL repozitáře projektu má neplatný formát. Operace tagování bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1107"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1108"/>
         <source>Reverting changes</source>
         <translation>Navrácení změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1134"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1135"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>Z pracovní kopie nelze získat URL repozitáře projektu. Operace přepínání bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1158"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1159"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>URL repozitáře projektu má neplatný formát. Operace přepínání bude zrušena</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1595"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1596"/>
         <source>Subversion command</source>
         <translation>Subversion příkaz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1702"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1703"/>
         <source>Resolving conficts</source>
         <translation>Řešení konfliktů</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1808"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1809"/>
         <source>Subversion Set Property</source>
         <translation>Nastavit Subversion vlastnost</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1841"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1842"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Musíte doplnit jméno vlastnosti. Zrušeno.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1859"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1860"/>
         <source>Subversion Delete Property</source>
         <translation>Smazat Subversion vlastnost</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1679"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1680"/>
         <source>Enter property name</source>
         <translation>Zadejte jméno vlastnosti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="955"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="956"/>
         <source>Subversion Log</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="955"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="956"/>
         <source>Select number of entries to show.</source>
         <translation>Vyberte počet položek, které se mají zobrazit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2025"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2026"/>
         <source>Locking in the Subversion repository</source>
         <translation>Zamknout v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2063"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2064"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Odemknout v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1824"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1825"/>
         <source>Property set.</source>
         <translation>Vlastnost nastavena.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1874"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1875"/>
         <source>Property deleted.</source>
         <translation>Vlastnost smazána.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2005"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2006"/>
         <source>Subversion Lock</source>
         <translation>Subversion zámek</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2005"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2006"/>
         <source>Enter lock comment</source>
         <translation>Zadejte komentář zámku</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2108"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2109"/>
         <source>Relocating</source>
         <translation></translation>
     </message>
@@ -43382,27 +43382,27 @@ Not connected</source>
         <translation>Nelze spustit svn proces.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2134"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2135"/>
         <source>Repository Browser</source>
         <translation>Prohlížeč repozitáře</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2134"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2135"/>
         <source>Enter the repository URL.</source>
         <translation>Zadejte URL repozitáře.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2158"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2159"/>
         <source>Remove from changelist</source>
         <translation>Odebrat ze seznamu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2195"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2196"/>
         <source>Add to changelist</source>
         <translation>Přidat do seznamu změn</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2184"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2185"/>
         <source>Enter name of the changelist:</source>
         <translation>Zadejte název seznamu změn:</translation>
     </message>
@@ -43427,32 +43427,32 @@ Not connected</source>
         <translation>Proces svn skončil exit kódem {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="915"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="916"/>
         <source>Moving {0}</source>
         <translation>Přesun {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1078"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1079"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Tagování {0} v Subversion repozitáři</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1180"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1181"/>
         <source>Switching to {0}</source>
         <translation>Přepínání do {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1282"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1283"/>
         <source>Merging {0}</source>
         <translation>Sloučení {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1559"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1560"/>
         <source>Cleaning up {0}</source>
         <translation>Vyčištění {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1741"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1742"/>
         <source>Copying {0}</source>
         <translation>Kopírování {0}</translation>
     </message>
@@ -43463,12 +43463,12 @@ Not connected</source>
         <translation>Inportovaná revize {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="587"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="588"/>
         <source>Committed revision {0}.</source>
         <translation>Zapsaná revize {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1187"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1188"/>
         <source>Revision {0}.
 </source>
         <translation>Revize {0}.</translation>
@@ -49574,7 +49574,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Přidat záznam...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="409"/>
+        <location filename="Templates/TemplateViewer.py" line="410"/>
         <source>Add group...</source>
         <translation>Přidat skupinu...</translation>
     </message>
@@ -49589,72 +49589,72 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="411"/>
+        <location filename="Templates/TemplateViewer.py" line="412"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="412"/>
+        <location filename="Templates/TemplateViewer.py" line="413"/>
         <source>Import...</source>
         <translation>Import...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="413"/>
+        <location filename="Templates/TemplateViewer.py" line="414"/>
         <source>Export...</source>
         <translation>Export...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="415"/>
+        <location filename="Templates/TemplateViewer.py" line="417"/>
         <source>Help about Templates...</source>
         <translation>Nápověda o šablonách...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="509"/>
+        <location filename="Templates/TemplateViewer.py" line="515"/>
         <source>Remove Template</source>
         <translation>Odebrat šablonu</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="531"/>
+        <location filename="Templates/TemplateViewer.py" line="541"/>
         <source>Import Templates</source>
         <translation>Importovat šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="544"/>
+        <location filename="Templates/TemplateViewer.py" line="555"/>
         <source>Export Templates</source>
         <translation>Exportovat šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="544"/>
+        <location filename="Templates/TemplateViewer.py" line="555"/>
         <source>Templates Files (*.e4c);; All Files (*)</source>
         <translation>Soubory šablon (*.e4c);; Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <location filename="Templates/TemplateViewer.py" line="593"/>
         <source>Template Help</source>
         <translation>Nápověda šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="797"/>
+        <location filename="Templates/TemplateViewer.py" line="826"/>
         <source>Edit Template Group</source>
         <translation>Editovat skupinu šablon</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="888"/>
+        <location filename="Templates/TemplateViewer.py" line="918"/>
         <source>Save templates</source>
         <translation>Uložit šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="914"/>
+        <location filename="Templates/TemplateViewer.py" line="946"/>
         <source>Read templates</source>
         <translation>Načíst šablony</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="417"/>
+        <location filename="Templates/TemplateViewer.py" line="419"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="509"/>
+        <location filename="Templates/TemplateViewer.py" line="515"/>
         <source>&lt;p&gt;Do you really want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Opravdu chcete odebrat &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
@@ -49665,17 +49665,17 @@ be changed via the preferences dialog.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Záznamy šablon&lt;/b&gt; jsou aktuální šablony. Jsou seskupeny do skupin. Nápověda jak je definovat je dostupná v dialogu editace šablony. V podadresáři distribuce Eric5 je k prostudování jeden příklad šablony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="797"/>
+        <location filename="Templates/TemplateViewer.py" line="826"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Skupina šablon se jménem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="888"/>
+        <location filename="Templates/TemplateViewer.py" line="918"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="914"/>
+        <location filename="Templates/TemplateViewer.py" line="946"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -49685,8 +49685,23 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor se šablonami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Templates/TemplateViewer.py" line="564"/>
+        <location filename="Templates/TemplateViewer.py" line="593"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="415"/>
+        <source>Reload</source>
+        <translation type="unfinished">Obnovit</translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="576"/>
+        <source>Reload Templates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Templates/TemplateViewer.py" line="576"/>
+        <source>The templates contain unsaved changes. Shall these changes be discarded?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -52432,7 +52447,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Zjistit akt&amp;ualizace...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2698"/>
+        <location filename="UI/UserInterface.py" line="2699"/>
         <source>Report Bug</source>
         <translation>Reportovat Bugy</translation>
     </message>
@@ -52452,7 +52467,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Reportovat bug...&lt;/b&gt;&lt;p&gt;Otevře se dialog pro reportování bugu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2314"/>
+        <location filename="UI/UserInterface.py" line="2315"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
@@ -52512,7 +52527,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Spustit unittest s aktuálním skriptem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3698"/>
+        <location filename="UI/UserInterface.py" line="3699"/>
         <source>Unittest Project</source>
         <translation>Unittest Projekt</translation>
     </message>
@@ -52707,7 +52722,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Klávesové zkratky&lt;/b&gt;&lt;p&gt;Nastavení klávesových zkratek aplikace podle zvyklostí uživatele.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4792"/>
+        <location filename="UI/UserInterface.py" line="4793"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportovat klávesové zkratky</translation>
     </message>
@@ -52727,7 +52742,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Export klávesových zkratek&lt;/b&gt;&lt;p&gt;Exportují se klávesové zkratky z aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4815"/>
+        <location filename="UI/UserInterface.py" line="4816"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Import klávesových zkratek</translation>
     </message>
@@ -52842,157 +52857,157 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Otevřít Eric API dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2140"/>
+        <location filename="UI/UserInterface.py" line="2141"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2157"/>
+        <location filename="UI/UserInterface.py" line="2158"/>
         <source>E&amp;xtras</source>
         <translation>E&amp;xtra funkce</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2169"/>
+        <location filename="UI/UserInterface.py" line="2170"/>
         <source>&amp;Tools</source>
         <translation>&amp;Nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2172"/>
+        <location filename="UI/UserInterface.py" line="2173"/>
         <source>Select Tool Group</source>
         <translation>Vybrat skupinu nástrojů</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2178"/>
+        <location filename="UI/UserInterface.py" line="2179"/>
         <source>Se&amp;ttings</source>
         <translation>Nas&amp;tavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2196"/>
+        <location filename="UI/UserInterface.py" line="2197"/>
         <source>&amp;Window</source>
         <translation>O&amp;kno</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2221"/>
+        <location filename="UI/UserInterface.py" line="2222"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Toolbary</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2246"/>
+        <location filename="UI/UserInterface.py" line="2247"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2313"/>
+        <location filename="UI/UserInterface.py" line="2314"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2315"/>
+        <location filename="UI/UserInterface.py" line="2316"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3921"/>
+        <location filename="UI/UserInterface.py" line="3922"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2317"/>
+        <location filename="UI/UserInterface.py" line="2318"/>
         <source>Profiles</source>
         <translation>Profily</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2647"/>
+        <location filename="UI/UserInterface.py" line="2648"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Čísla verzí&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5481"/>
+        <location filename="UI/UserInterface.py" line="5482"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2698"/>
+        <location filename="UI/UserInterface.py" line="2699"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Emailová adresa nebo mail server adresa jsou prázdné. Prosím, nastavte váš email v dialogovém okně Nastavení.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2972"/>
+        <location filename="UI/UserInterface.py" line="2973"/>
         <source>Configure Tool Groups ...</source>
         <translation>Konfigurace Skupin nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2975"/>
+        <location filename="UI/UserInterface.py" line="2976"/>
         <source>Configure current Tool Group ...</source>
         <translation>Konfigurace aktuální skupiny nástrojů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3024"/>
+        <location filename="UI/UserInterface.py" line="3025"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Vestavěné nástroje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3698"/>
+        <location filename="UI/UserInterface.py" line="3699"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu není definován hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4029"/>
+        <location filename="UI/UserInterface.py" line="4030"/>
         <source>Problem</source>
         <translation>Problém</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4181"/>
+        <location filename="UI/UserInterface.py" line="4182"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3921"/>
+        <location filename="UI/UserInterface.py" line="3922"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Aktuálně není vybrán žádný prohlížeč. Prosím otevřete Nastavení a nějaký vyberte.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3952"/>
+        <location filename="UI/UserInterface.py" line="3953"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit prohlížeč nápovědy.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4552"/>
+        <location filename="UI/UserInterface.py" line="4553"/>
         <source>Documentation Missing</source>
         <translation>Dokumentace chybí</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4537"/>
+        <location filename="UI/UserInterface.py" line="4538"/>
         <source>Documentation</source>
         <translation>Dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4446"/>
+        <location filename="UI/UserInterface.py" line="4447"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář PyQt4 dokumentace není nakonfigurován.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4937"/>
         <source>Save tasks</source>
         <translation>Uložit úlohy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4958"/>
+        <location filename="UI/UserInterface.py" line="4959"/>
         <source>Read tasks</source>
         <translation>Načíst úlohy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5168"/>
+        <location filename="UI/UserInterface.py" line="5169"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5447"/>
+        <location filename="UI/UserInterface.py" line="5448"/>
         <source>Error during updates check</source>
         <translation>Chyba během zjišťování aktualizací</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5434"/>
+        <location filename="UI/UserInterface.py" line="5435"/>
         <source>Update available</source>
         <translation>Byla nalezena aktualizace</translation>
     </message>
@@ -53007,17 +53022,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Zobrazit externí nás&amp;troje</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5447"/>
+        <location filename="UI/UserInterface.py" line="5448"/>
         <source>Could not perform updates check.</source>
         <translation>Kontrolu updatů nelze provést.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5306"/>
+        <location filename="UI/UserInterface.py" line="5307"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5524"/>
+        <location filename="UI/UserInterface.py" line="5525"/>
         <source>First time usage</source>
         <translation>Spuštěno poprvé</translation>
     </message>
@@ -53027,12 +53042,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Inicializace Plugin manažera...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2232"/>
+        <location filename="UI/UserInterface.py" line="2233"/>
         <source>P&amp;lugins</source>
         <translation>P&amp;luginy</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2319"/>
         <source>Plugins</source>
         <translation>Pluginy</translation>
     </message>
@@ -53057,7 +53072,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&amp;Plugin Infa...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3032"/>
+        <location filename="UI/UserInterface.py" line="3033"/>
         <source>&amp;Plugin Tools</source>
         <translation>&amp;Plugin nástroje</translation>
     </message>
@@ -53077,12 +53092,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Odinstalovat plugin...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odinstalaci pluginu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3122"/>
+        <location filename="UI/UserInterface.py" line="3123"/>
         <source>&amp;Show all</source>
         <translation>&amp;Zobrazit vše</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3124"/>
+        <location filename="UI/UserInterface.py" line="3125"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Skrýt vše</translation>
     </message>
@@ -53092,7 +53107,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Aktivace pluginů...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2163"/>
         <source>Wi&amp;zards</source>
         <translation>&amp;Průvodci</translation>
     </message>
@@ -53122,7 +53137,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="obsolete">Nelze stáhnout soubor s verzemi.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5468"/>
+        <location filename="UI/UserInterface.py" line="5469"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Dostupné verze&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -53212,7 +53227,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Obnovit manažer nástrojových lišt...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4130"/>
         <source>External Tools</source>
         <translation>Externí nástroje</translation>
     </message>
@@ -53247,27 +53262,27 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="obsolete">Proh&amp;lížeč šablon</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4973"/>
+        <location filename="UI/UserInterface.py" line="4974"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4996"/>
+        <location filename="UI/UserInterface.py" line="4997"/>
         <source>Read session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2467"/>
+        <location filename="UI/UserInterface.py" line="2468"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální kódování editorů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2481"/>
+        <location filename="UI/UserInterface.py" line="2482"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje indikátor práva zápisu editoru do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5497"/>
+        <location filename="UI/UserInterface.py" line="5498"/>
         <source>SSL Errors</source>
         <translation>SSL chyby</translation>
     </message>
@@ -53292,22 +53307,22 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Požadavek na vlastnost...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odeslání požadavku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2460"/>
+        <location filename="UI/UserInterface.py" line="2461"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální jazyk editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2490"/>
+        <location filename="UI/UserInterface.py" line="2491"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část statusbaru zobrazuje jméno souboru v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2497"/>
+        <location filename="UI/UserInterface.py" line="2498"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje číslo řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2504"/>
+        <location filename="UI/UserInterface.py" line="2505"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
@@ -53352,12 +53367,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Přepnout vodorovnou nástrojovou lištu&lt;/b&gt;&lt;p&gt;Pokud je vodorovná nástrojová lišta skryta, tak se zobrazí. Je-li zobrazena, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2940"/>
+        <location filename="UI/UserInterface.py" line="2941"/>
         <source>Restart application</source>
         <translation>Restartovat aplikaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2940"/>
+        <location filename="UI/UserInterface.py" line="2941"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Aplikace potřebuje restartovat. Má se provést nyní?</translation>
     </message>
@@ -53397,12 +53412,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2241"/>
+        <location filename="UI/UserInterface.py" line="2242"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2474"/>
+        <location filename="UI/UserInterface.py" line="2475"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje eol nastavení v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
@@ -53592,32 +53607,32 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Editor &amp;ikon...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3873"/>
+        <location filename="UI/UserInterface.py" line="3874"/>
         <source>Qt 3 support</source>
         <translation>Qt 3 podpora</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>PySide Documentation</source>
         <translation>PySide dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Py&amp;Side dokumentace</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2102"/>
+        <location filename="UI/UserInterface.py" line="2103"/>
         <source>Open PySide Documentation</source>
         <translation>Otevřít PySide dokumentaci</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2103"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PySide dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit PySide dokumentaci. V závislosti na vašich nastaveních zobrazí interní Eric prohlížeč nápovědy nebo spustí webový prohlížeč nebo Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4537"/>
+        <location filename="UI/UserInterface.py" line="4538"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Počátek dokumentace PySide nebyl nastaven.&lt;/p&gt;</translation>
     </message>
@@ -53687,86 +53702,86 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Eric API dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit Eric API dokumentaci. Umístění dokumentace je v podadresáři Documentation/Source v instalačním adresáři eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2561"/>
+        <location filename="UI/UserInterface.py" line="2562"/>
         <source>External Tools/{0}</source>
         <translation>Externí nástroje/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3873"/>
+        <location filename="UI/UserInterface.py" line="3874"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 není podporováno v eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4029"/>
+        <location filename="UI/UserInterface.py" line="4030"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; neexistuje nebo má nulovou délku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3793"/>
+        <location filename="UI/UserInterface.py" line="3794"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Designer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3850"/>
+        <location filename="UI/UserInterface.py" line="3851"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Linguist.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3894"/>
+        <location filename="UI/UserInterface.py" line="3895"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Assistant.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3933"/>
+        <location filename="UI/UserInterface.py" line="3934"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit aktuální prohlížeč.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3992"/>
+        <location filename="UI/UserInterface.py" line="3993"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit UI Previewer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4037"/>
+        <location filename="UI/UserInterface.py" line="4038"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Previewer překladů.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4056"/>
+        <location filename="UI/UserInterface.py" line="4057"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit SQL Browser.&lt;br&gt;Ujistěte se, že je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4123"/>
+        <location filename="UI/UserInterface.py" line="4124"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>V externím nástroji  &apos;{0}&apos; ve skupině &apos;{1}&apos; nebyl záznam nástroje nalezen.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4130"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Skupina nástrojů &apos;{0}&apos; nenalezena. </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4165"/>
+        <location filename="UI/UserInterface.py" line="4166"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Spouštím proces &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4181"/>
+        <location filename="UI/UserInterface.py" line="4182"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit příkaz &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{1}&lt;/b&gt;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4258"/>
+        <location filename="UI/UserInterface.py" line="4259"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Proces &apos;{0}&apos; byl ukončen.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4552"/>
+        <location filename="UI/UserInterface.py" line="4553"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář dokumentace &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; nebyl nalezen.&lt;/p&gt;</translation>
     </message>
@@ -53786,12 +53801,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="obsolete">Soubor klávesových zkratek (*.e4k *.e4kz)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4937"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4958"/>
+        <location filename="UI/UserInterface.py" line="4959"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
@@ -53801,12 +53816,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="obsolete">&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4973"/>
+        <location filename="UI/UserInterface.py" line="4974"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zápis do souboru relace session &lt;b&gt;{0}&lt;/b&gt; se nezdařil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4996"/>
+        <location filename="UI/UserInterface.py" line="4997"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor relace session &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
@@ -53816,37 +53831,37 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="obsolete">&lt;p&gt;Soubor relace (session) &lt;b&gt;{0}&lt;/b&gt; je v nepodporovaném formátu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5168"/>
+        <location filename="UI/UserInterface.py" line="5169"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5311"/>
+        <location filename="UI/UserInterface.py" line="5312"/>
         <source>Trying host {0}</source>
         <translation>Zkouším host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5434"/>
+        <location filename="UI/UserInterface.py" line="5435"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>Aktualizace &lt;b&gt;{0}&lt;/b&gt; eric5 je připravena na &lt;b&gt;{1}&lt;/b&gt;. Chcete ji stáhnout a nainstalovat?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5443"/>
+        <location filename="UI/UserInterface.py" line="5444"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 je aktuální</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5443"/>
+        <location filename="UI/UserInterface.py" line="5444"/>
         <source>You are using the latest version of eric5</source>
         <translation>Používáte poslední verzi eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5497"/>
+        <location filename="UI/UserInterface.py" line="5498"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL chyby:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5524"/>
+        <location filename="UI/UserInterface.py" line="5525"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 nebyl ještě nakonfigurován. Bude spuštěn konfigurační dialog.</translation>
     </message>
@@ -53901,7 +53916,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4815"/>
+        <location filename="UI/UserInterface.py" line="4816"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53946,27 +53961,27 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5361"/>
+        <location filename="UI/UserInterface.py" line="5362"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5355"/>
+        <location filename="UI/UserInterface.py" line="5356"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4638"/>
+        <location filename="UI/UserInterface.py" line="4639"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4638"/>
+        <location filename="UI/UserInterface.py" line="4639"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5361"/>
+        <location filename="UI/UserInterface.py" line="5362"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54077,12 +54092,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4103"/>
+        <location filename="UI/UserInterface.py" line="4104"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5542"/>
+        <location filename="UI/UserInterface.py" line="5543"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54312,7 +54327,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2202"/>
         <source>&amp;Windows</source>
         <translation type="unfinished">&amp;Windows</translation>
     </message>
@@ -59131,30 +59146,30 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1277"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1278"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodič #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1774"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1775"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tagy&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1782"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1783"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Větve&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1293"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1294"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zapsání změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zapsání změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1324"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -59165,23 +59180,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Informace o repozitáře&lt;/h3&gt;&lt;p&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1768"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1769"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1770"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1771"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Množina změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1786"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1787"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Rodiče&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1789"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1790"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -59189,7 +59204,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zapsání změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zapsání změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1778"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1779"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59433,17 +59448,17 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1636"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1637"/>
         <source>unknown</source>
         <translation>neznámý</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1505"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1506"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Informace z repozitáře&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Aktuální revize&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revize zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1637"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1638"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Informace z repozitáře&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Aktuální revize&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revize zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Čas zápisu změn&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Poslední autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>

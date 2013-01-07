@@ -397,9 +397,10 @@ class TemplateViewer(QTreeWidget):
         self.__menu.addAction(self.trUtf8("Edit..."), self.__edit)
         self.__menu.addAction(self.trUtf8("Remove"), self.__remove)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Save"), self.__save)
+        self.__menu.addAction(self.trUtf8("Save"), self.save)
         self.__menu.addAction(self.trUtf8("Import..."), self.__import)
         self.__menu.addAction(self.trUtf8("Export..."), self.__export)
+        self.__menu.addAction(self.trUtf8("Reload"), self.__reload)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Help about Templates..."), self.__showHelp)
         self.__menu.addSeparator()
@@ -408,15 +409,17 @@ class TemplateViewer(QTreeWidget):
         self.__backMenu = QMenu(self)
         self.__backMenu.addAction(self.trUtf8("Add group..."), self.__addGroup)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.trUtf8("Save"), self.__save)
+        self.__backMenu.addAction(self.trUtf8("Save"), self.save)
         self.__backMenu.addAction(self.trUtf8("Import..."), self.__import)
         self.__backMenu.addAction(self.trUtf8("Export..."), self.__export)
+        self.__backMenu.addAction(self.trUtf8("Reload"), self.__reload)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Help about Templates..."), self.__showHelp)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.__activating = False
+        self.__dirty = False
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
@@ -473,6 +476,7 @@ class TemplateViewer(QTreeWidget):
         if dlg.exec_() == QDialog.Accepted:
             name, description, groupName, template = dlg.getData()
             self.addEntry(groupName, name, description, template)
+            self.__dirty = True
         
     def __addGroup(self):
         """
@@ -482,6 +486,7 @@ class TemplateViewer(QTreeWidget):
         if dlg.exec_() == QDialog.Accepted:
             name, language = dlg.getData()
             self.addGroup(name, language)
+            self.__dirty = True
         
     def __edit(self):
         """
@@ -500,6 +505,7 @@ class TemplateViewer(QTreeWidget):
             else:
                 name, description, groupName, template = dlg.getData()
                 self.changeEntry(itm, name, groupName, description, template)
+            self.__dirty = True
         
     def __remove(self):
         """
@@ -517,12 +523,16 @@ class TemplateViewer(QTreeWidget):
             self.removeGroup(itm)
         else:
             self.removeEntry(itm)
+        self.__dirty = True
 
-    def __save(self):
+    def save(self):
         """
-        Private slot to handle the Save context menu action.
+        Public slot to save the templates.
         """
-        self.writeTemplates()
+        if self.__dirty:
+            ok = self.writeTemplates()
+            if ok:
+                self.__dirty = False
 
     def __import(self):
         """
@@ -536,6 +546,7 @@ class TemplateViewer(QTreeWidget):
         
         if fn:
             self.readTemplates(fn)
+            self.__dirty = True
 
     def __export(self):
         """
@@ -556,7 +567,25 @@ class TemplateViewer(QTreeWidget):
                 if ex:
                     fn += ex
             self.writeTemplates(fn)
-
+    
+    def __reload(self):
+        """
+        Private slot to reload the templates.
+        """
+        if self.__dirty:
+            res = E5MessageBox.yesNo(self,
+                self.trUtf8("Reload Templates"),
+                self.trUtf8("""The templates contain unsaved changes. Shall these"""
+                            """ changes be discarded?"""),
+                icon = E5MessageBox.Warning)
+            if not res:
+                return
+        
+        self.clear()
+        self.groups = {}
+        
+        self.readTemplates()
+    
     def __showHelp(self):
         """
         Private method to show some help.
@@ -879,6 +908,7 @@ class TemplateViewer(QTreeWidget):
         Public method to write the templates data to an XML file (.e4c).
         
         @param filename name of a templates file to read (string)
+        @return flag indicating success (boolean)
         """
         if filename is None:
             filename = os.path.join(Utilities.getConfigDir(), "eric5templates.e4c")
@@ -889,10 +919,12 @@ class TemplateViewer(QTreeWidget):
                 self.trUtf8("Save templates"),
                 self.trUtf8("<p>The templates file <b>{0}</b> could not be written.</p>")
                     .format(filename))
-            return
+            return False
         
         TemplatesWriter(f, self).writeXML()
         f.close()
+        
+        return True
     
     def readTemplates(self, filename=None):
         """

@@ -5224,7 +5224,7 @@ class UserInterface(E5MainWindow):
         self.terminal.closeTerminal()
         
         self.__writeTasks()
-        self.templateViewer.writeTemplates()
+        self.templateViewer.save()
         
         if not self.debuggerUI.shutdownServer():
             return False
