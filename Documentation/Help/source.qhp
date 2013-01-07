@@ -7323,6 +7323,7 @@
       <keyword name="MultiProjectBrowser" id="MultiProjectBrowser" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser" />
       <keyword name="MultiProjectBrowser (Constructor)" id="MultiProjectBrowser (Constructor)" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__init__" />
       <keyword name="MultiProjectBrowser (Module)" id="MultiProjectBrowser (Module)" ref="eric5.MultiProject.MultiProjectBrowser.html" />
+      <keyword name="MultiProjectBrowser.__addNewProject" id="MultiProjectBrowser.__addNewProject" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__addNewProject" />
       <keyword name="MultiProjectBrowser.__addProject" id="MultiProjectBrowser.__addProject" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__addProject" />
       <keyword name="MultiProjectBrowser.__configure" id="MultiProjectBrowser.__configure" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__configure" />
       <keyword name="MultiProjectBrowser.__contextMenuRequested" id="MultiProjectBrowser.__contextMenuRequested" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__contextMenuRequested" />

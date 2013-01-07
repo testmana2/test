@@ -1,5 +1,11 @@
 Change Log
 ----------
+Version 5.4-snapshot-2013mmdd:
+- bug fixes
+- Multi Project
+  -- extended the context menus of the multi project browser to be able
+     to add projects this way
+
 Version 5.3-snapshot-20130106:
 - bug fixes
 - General

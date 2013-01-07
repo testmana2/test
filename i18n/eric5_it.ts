@@ -30010,24 +30010,29 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="234"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="240"/>
         <source>Open</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="235"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
         <source>Remove</source>
         <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="236"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="242"/>
         <source>Properties</source>
         <translation>Proprietà</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="251"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="249"/>
+        <source>Add Project...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

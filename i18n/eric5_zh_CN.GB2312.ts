@@ -31555,24 +31555,29 @@ Do you want to save your changes?</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="234"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="240"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="235"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="236"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="242"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="251"/>
         <source>Configure...</source>
         <translation>配置……</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="249"/>
+        <source>Add Project...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

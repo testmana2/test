@@ -29244,24 +29244,29 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="234"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="240"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="235"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
         <source>Remove</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="236"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="242"/>
         <source>Properties</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProjectBrowser.py" line="241"/>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="251"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/MultiProjectBrowser.py" line="249"/>
+        <source>Add Project...</source>
+        <translation>Projekt hinzufügen...</translation>
     </message>
 </context>
 <context>
