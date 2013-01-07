@@ -81,11 +81,8 @@ class VcsStatusMonitorThread(QThread):
                     "timeout", self.trUtf8("Timed out waiting for lock"))
             
             if self.autoUpdate and self.shouldUpdate:
-                try:
-                    self.vcs.vcsUpdate(self.projectDir, True)
-                    continue    # check again
-                except TypeError:
-                    pass    # compatibility for older VCS plugins
+                self.vcs.vcsUpdate(self.projectDir, True)
+                continue    # check again
                 self.shouldUpdate = False
             
             # wait until interval has expired checking for a stop condition

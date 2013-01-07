@@ -502,7 +502,8 @@ class Subversion(VersionControl):
                 changelists, keepChangelists = self.__commitDialog.changelistsData()
             else:
                 changelists, keepChangelists = [], False
-            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
+##            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
+            self.__commitDialog.deleteLater()
             self.__commitDialog = None
         else:
             changelists, keepChangelists = [], False

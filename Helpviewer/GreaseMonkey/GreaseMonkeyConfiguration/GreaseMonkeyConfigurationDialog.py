@@ -46,6 +46,7 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         self.__loadScripts()
         
         self.scriptsList.removeItemRequested.connect(self.__removeItem)
+        self.scriptsList.itemChanged.connect(self.__itemChanged)
     
     @pyqtSlot()
     def on_openDirectoryButton_clicked(self):
@@ -77,12 +78,6 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         """
         Private method to load all the available scripts.
         """
-        try:
-            self.scriptsList.itemChanged.disconnect(self.__itemChanged)
-        except TypeError:
-            # it isn't connected yet
-            pass
-        
         for script in self.__manager.allScripts():
             itm = QListWidgetItem(UI.PixmapCache.getIcon("greaseMonkeyScript.png"),
                 script.name(), self.scriptsList)
@@ -114,8 +109,6 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
                     itm = self.scriptsList.takeItem(row + 1)
                     self.scriptsList.insertItem(row, itm)
                     itemMoved = True
-        
-        self.scriptsList.itemChanged.connect(self.__itemChanged)
     
     def __getScript(self, itm):
         """

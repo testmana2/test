@@ -109,7 +109,8 @@ class HgClient(QObject):
                     self.__server.waitForFinished(3000)
             
             self.__started = False
-            self.__server.finished.disconnect(self.__serverFinished)
+##            self.__server.finished.disconnect(self.__serverFinished)
+            self.__server.deleteLater()
             self.__server = None
     
     def restartServer(self):

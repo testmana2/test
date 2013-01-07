@@ -2251,9 +2251,10 @@ class Project(QObject):
                 # stop the VCS monitor thread and shutdown VCS
                 if self.vcs is not None:
                     self.vcs.stopStatusMonitor()
-                    self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
-                    self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
+##                    self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
+##                    self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
                     self.vcs.vcsShutdown()
+                    self.vcs.deleteLater()
                     self.vcs = None
                     e5App().getObject("PluginManager").deactivateVcsPlugins()
                 # reinit VCS
@@ -2614,16 +2615,16 @@ class Project(QObject):
         # stop the VCS monitor thread
         if self.vcs is not None:
             self.vcs.stopStatusMonitor()
-            try:
-                self.vcs.vcsStatusMonitorData.disconnect(
-                    self.__model.changeVCSStates)
-            except TypeError:
-                pass
-            try:
-                self.vcs.vcsStatusMonitorStatus.disconnect(
-                    self.__statusMonitorStatus)
-            except TypeError:
-                pass
+##            try:
+##                self.vcs.vcsStatusMonitorData.disconnect(
+##                    self.__model.changeVCSStates)
+##            except TypeError:
+##                pass
+##            try:
+##                self.vcs.vcsStatusMonitorStatus.disconnect(
+##                    self.__statusMonitorStatus)
+##            except TypeError:
+##                pass
         
         # now save the tasks
         if not noSave:
@@ -2634,6 +2635,7 @@ class Project(QObject):
         # now shutdown the vcs interface
         if self.vcs:
             self.vcs.vcsShutdown()
+            self.vcs.deleteLater()
             self.vcs = None
             e5App().getObject("PluginManager").deactivateVcsPlugins()
         

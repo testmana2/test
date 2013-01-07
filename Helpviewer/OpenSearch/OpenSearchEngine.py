@@ -414,8 +414,9 @@ class OpenSearchEngine(QObject):
             return
         
         if self.__suggestionsReply is not None:
-            self.__suggestionsReply.finished[()].disconnect(self.__suggestionsObtained)
+##            self.__suggestionsReply.finished[()].disconnect(self.__suggestionsObtained)
             self.__suggestionsReply.abort()
+            self.__suggestionsReply.deleteLater()
             self.__suggestionsReply = None
         
         if self.__suggestionsMethod not in self.__requestMethods:
