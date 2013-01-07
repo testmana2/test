@@ -2096,7 +2096,8 @@ class UserInterface(E5MainWindow):
         """
         Private slot to initialize the action to show the PySide documentation.
         """
-        if Utilities.checkPyside():
+        pyside2, pyside3 = Utilities.checkPyside()
+        if pyside2 or pyside3:
             self.pysideDocAct = E5Action(self.trUtf8('PySide Documentation'),
                 self.trUtf8('Py&Side Documentation'), 0, 0, self, 'pyside_documentation')
             self.pysideDocAct.setStatusTip(self.trUtf8('Open PySide Documentation'))

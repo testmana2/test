@@ -270,13 +270,14 @@ class Project(QObject):
             "Ruby": ["Qt4", "Qt4C", "Console", "Other"],
         }
         
-        if Utilities.checkPyside():
+        pyside2, pyside3 = Utilities.checkPyside()
+        if pyside2 or pyside3:
             self.__projectTypes["PySide"] = self.trUtf8("PySide GUI")
             self.__projectTypes["PySideC"] = self.trUtf8("PySide Console")
-            self.__projectProgLanguages["Python2"].extend(["PySide", "PySideC"])
-            self.__projectProgLanguages["Python3"].extend(["PySide", "PySideC"])
-        else:
-            pass
+            if pyside2:
+                self.__projectProgLanguages["Python2"].extend(["PySide", "PySideC"])
+            if pyside3:
+                self.__projectProgLanguages["Python3"].extend(["PySide", "PySideC"])
         
     def getProjectTypes(self, progLanguage=""):
         """
