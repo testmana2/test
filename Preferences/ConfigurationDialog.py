@@ -20,6 +20,8 @@ from E5Gui.E5LineEdit import E5ClearableLineEdit
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
 
+from Globals import isMacPlatform
+
 import QScintilla.Lexers
 
 import Preferences
@@ -383,9 +385,10 @@ class ConfigurationWidget(QWidget):
         """
         Public slot to accept the buttonBox accept signal.
         """
-        wdg = self.focusWidget()
-        if wdg == self.configList:
-            return
+        if not isMacPlatform():
+            wdg = self.focusWidget()
+            if wdg == self.configList:
+                return
         
         self.accepted.emit()
         
