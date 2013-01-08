@@ -74,11 +74,8 @@ def getVcsSystemIndicator():
     """
     global pluginTypename
     data = {}
-    try:
-        data[".svn"] = (pluginTypename, displayString())
-        data["_svn"] = (pluginTypename, displayString())
-    except ImportError:
-        pass
+    data[".svn"] = (pluginTypename, displayString())
+    data["_svn"] = (pluginTypename, displayString())
     return data
 
 
