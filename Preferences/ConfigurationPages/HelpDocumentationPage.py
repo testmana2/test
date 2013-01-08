@@ -37,7 +37,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
         self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)
         
-        if Utilities.checkPyside():
+        pyside2, pyside3 = Utilities.checkPyside()
+        if pyside2 or pyside3:
             self.pysideGroup.setEnabled(True)
         else:
             self.pysideGroup.setEnabled(False)

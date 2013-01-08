@@ -513,14 +513,14 @@ QTreeWidget
 <td><a href="#TemplateViewer.__import">__import</a></td>
 <td>Private slot to handle the Import context menu action.</td>
 </tr><tr>
+<td><a href="#TemplateViewer.__reload">__reload</a></td>
+<td>Private slot to reload the templates.</td>
+</tr><tr>
 <td><a href="#TemplateViewer.__remove">__remove</a></td>
 <td>Private slot to handle the Remove context menu action.</td>
 </tr><tr>
 <td><a href="#TemplateViewer.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
-</tr><tr>
-<td><a href="#TemplateViewer.__save">__save</a></td>
-<td>Private slot to handle the Save context menu action.</td>
 </tr><tr>
 <td><a href="#TemplateViewer.__showContextMenu">__showContextMenu</a></td>
 <td>Private slot to show the context menu of the list.</td>
@@ -572,6 +572,9 @@ QTreeWidget
 </tr><tr>
 <td><a href="#TemplateViewer.removeGroup">removeGroup</a></td>
 <td>Public method to remove a group.</td>
+</tr><tr>
+<td><a href="#TemplateViewer.save">save</a></td>
+<td>Public slot to save the templates.</td>
 </tr><tr>
 <td><a href="#TemplateViewer.writeTemplates">writeTemplates</a></td>
 <td>Public method to write the templates data to an XML file (.e4c).</td>
@@ -634,6 +637,11 @@ dictionary of predefined variables and their values
 <b>__import</b>(<i></i>)
 <p>
         Private slot to handle the Import context menu action.
+</p><a NAME="TemplateViewer.__reload" ID="TemplateViewer.__reload"></a>
+<h4>TemplateViewer.__reload</h4>
+<b>__reload</b>(<i></i>)
+<p>
+        Private slot to reload the templates.
 </p><a NAME="TemplateViewer.__remove" ID="TemplateViewer.__remove"></a>
 <h4>TemplateViewer.__remove</h4>
 <b>__remove</b>(<i></i>)
@@ -644,11 +652,6 @@ dictionary of predefined variables and their values
 <b>__resort</b>(<i></i>)
 <p>
         Private method to resort the tree.
-</p><a NAME="TemplateViewer.__save" ID="TemplateViewer.__save"></a>
-<h4>TemplateViewer.__save</h4>
-<b>__save</b>(<i></i>)
-<p>
-        Private slot to handle the Save context menu action.
 </p><a NAME="TemplateViewer.__showContextMenu" ID="TemplateViewer.__showContextMenu"></a>
 <h4>TemplateViewer.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
@@ -879,7 +882,12 @@ template entry to be removed (TemplateEntry)
 <dd>
 template group to be removed (TemplateGroup)
 </dd>
-</dl><a NAME="TemplateViewer.writeTemplates" ID="TemplateViewer.writeTemplates"></a>
+</dl><a NAME="TemplateViewer.save" ID="TemplateViewer.save"></a>
+<h4>TemplateViewer.save</h4>
+<b>save</b>(<i></i>)
+<p>
+        Public slot to save the templates.
+</p><a NAME="TemplateViewer.writeTemplates" ID="TemplateViewer.writeTemplates"></a>
 <h4>TemplateViewer.writeTemplates</h4>
 <b>writeTemplates</b>(<i>filename=None</i>)
 <p>
@@ -888,6 +896,11 @@ template group to be removed (TemplateGroup)
 <dt><i>filename</i></dt>
 <dd>
 name of a templates file to read (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -226,6 +226,12 @@ class MultiProjectBrowser(QListWidget):
                         }
                         self.multiProject.changeProjectProperties(project)
     
+    def __addNewProject(self):
+        """
+        Private method to add a new project entry.
+        """
+        self.multiProject.addProject()
+    
     def __createPopupMenu(self):
         """
         Private method to create the popup menu.
@@ -235,9 +241,13 @@ class MultiProjectBrowser(QListWidget):
         self.__menu.addAction(self.trUtf8("Remove"), self.__removeProject)
         self.__menu.addAction(self.trUtf8("Properties"), self.__showProjectProperties)
         self.__menu.addSeparator()
+        self.__menu.addAction(self.trUtf8("Add Project..."), self.__addNewProject)
+        self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
         
         self.__backMenu = QMenu(self)
+        self.__backMenu.addAction(self.trUtf8("Add Project..."), self.__addNewProject)
+        self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
     
     def __configure(self):

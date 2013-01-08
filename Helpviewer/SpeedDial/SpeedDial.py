@@ -384,7 +384,8 @@ class SpeedDial(QObject):
                 frame.evaluateJavaScript("setTitleToUrl('{0}', '{1}');".format(
                                          url, title))
         
-        thumbnailer.thumbnailCreated.disconnect(self.__thumbnailCreated)
+##        thumbnailer.thumbnailCreated.disconnect(self.__thumbnailCreated)
+        thumbnailer.deleteLater()
         self.__thumbnailers.remove(thumbnailer)
     
     def __cleanFrames(self):

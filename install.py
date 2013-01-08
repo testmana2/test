@@ -801,7 +801,7 @@ def doDependancyChecks():
     except ImportError as msg:
         print('Sorry, please install QtHelp.')
         print('Error: {0}'.format(msg))
-        sys.exit(1)
+        exit(1)
     print("Found QtHelp")
     
     try:
@@ -812,6 +812,22 @@ def doDependancyChecks():
         print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")
+    
+    for impModule in [
+        "PyQt4.QtGui", "PyQt4.QtNetwork", "PyQt4.QtSql",
+        "PyQt4.QtSvg", "PyQt4.QtWebKit",
+    ]:
+        name = impModule.split(".")[1]
+        modulesOK = True
+        try:
+            __import__(impModule)
+            print("Found", name)
+        except ImportError as msg:
+            print('Sorry, please install {0}.'.format(name))
+            print('Error: {0}'.format(msg))
+            modulesOK = False
+    if not modulesOK:
+        exit(1)
     
     # determine the platform dependent black list
     if sys.platform.startswith("win"):

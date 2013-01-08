@@ -7323,6 +7323,7 @@
       <keyword name="MultiProjectBrowser" id="MultiProjectBrowser" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser" />
       <keyword name="MultiProjectBrowser (Constructor)" id="MultiProjectBrowser (Constructor)" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__init__" />
       <keyword name="MultiProjectBrowser (Module)" id="MultiProjectBrowser (Module)" ref="eric5.MultiProject.MultiProjectBrowser.html" />
+      <keyword name="MultiProjectBrowser.__addNewProject" id="MultiProjectBrowser.__addNewProject" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__addNewProject" />
       <keyword name="MultiProjectBrowser.__addProject" id="MultiProjectBrowser.__addProject" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__addProject" />
       <keyword name="MultiProjectBrowser.__configure" id="MultiProjectBrowser.__configure" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__configure" />
       <keyword name="MultiProjectBrowser.__contextMenuRequested" id="MultiProjectBrowser.__contextMenuRequested" ref="eric5.MultiProject.MultiProjectBrowser.html#MultiProjectBrowser.__contextMenuRequested" />
@@ -10826,9 +10827,9 @@
       <keyword name="TemplateViewer.__export" id="TemplateViewer.__export" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__export" />
       <keyword name="TemplateViewer.__getPredefinedVars" id="TemplateViewer.__getPredefinedVars" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__getPredefinedVars" />
       <keyword name="TemplateViewer.__import" id="TemplateViewer.__import" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__import" />
+      <keyword name="TemplateViewer.__reload" id="TemplateViewer.__reload" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__reload" />
       <keyword name="TemplateViewer.__remove" id="TemplateViewer.__remove" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__remove" />
       <keyword name="TemplateViewer.__resort" id="TemplateViewer.__resort" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__resort" />
-      <keyword name="TemplateViewer.__save" id="TemplateViewer.__save" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__save" />
       <keyword name="TemplateViewer.__showContextMenu" id="TemplateViewer.__showContextMenu" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__showContextMenu" />
       <keyword name="TemplateViewer.__showHelp" id="TemplateViewer.__showHelp" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__showHelp" />
       <keyword name="TemplateViewer.__templateItemActivated" id="TemplateViewer.__templateItemActivated" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.__templateItemActivated" />
@@ -10846,6 +10847,7 @@
       <keyword name="TemplateViewer.readTemplates" id="TemplateViewer.readTemplates" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.readTemplates" />
       <keyword name="TemplateViewer.removeEntry" id="TemplateViewer.removeEntry" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.removeEntry" />
       <keyword name="TemplateViewer.removeGroup" id="TemplateViewer.removeGroup" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.removeGroup" />
+      <keyword name="TemplateViewer.save" id="TemplateViewer.save" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.save" />
       <keyword name="TemplateViewer.writeTemplates" id="TemplateViewer.writeTemplates" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.writeTemplates" />
       <keyword name="Templates (Package)" id="Templates (Package)" ref="index-eric5.Templates.html" />
       <keyword name="TemplatesListsStyle (Module)" id="TemplatesListsStyle (Module)" ref="eric5.DocumentationTools.TemplatesListsStyle.html" />

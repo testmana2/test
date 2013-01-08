@@ -102,7 +102,9 @@ class FollowRedirectReply(QObject):
         
         redirectUrl = self.__reply.attribute(QNetworkRequest.RedirectionTargetAttribute)
         self.__reply.close()
-        self.__reply.finished[()].disconnect(self.__replyFinished)
+##        self.__reply.finished[()].disconnect(self.__replyFinished)
+        self.__reply.deleteLater()
+        self.__reply = None
         
         self.__reply = self.__manager.get(QNetworkRequest(redirectUrl))
         self.__reply.finished[()].connect(self.__replyFinished)

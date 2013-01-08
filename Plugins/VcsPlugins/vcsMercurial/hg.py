@@ -466,7 +466,8 @@ class Hg(VersionControl):
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()
             commitSubrepositories = self.__commitDialog.commitSubrepositories()
-            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
+##            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
+            self.__commitDialog.deleteLater()
             self.__commitDialog = None
         else:
             amend = False

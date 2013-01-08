@@ -7255,6 +7255,7 @@ eric5.Templates.TemplateViewer.TemplateViewer.hasTemplate?4(entryName, groupName
 eric5.Templates.TemplateViewer.TemplateViewer.readTemplates?4(filename=None)
 eric5.Templates.TemplateViewer.TemplateViewer.removeEntry?4(itm)
 eric5.Templates.TemplateViewer.TemplateViewer.removeGroup?4(itm)
+eric5.Templates.TemplateViewer.TemplateViewer.save?4()
 eric5.Templates.TemplateViewer.TemplateViewer.writeTemplates?4(filename=None)
 eric5.Templates.TemplateViewer.TemplateViewer?1(parent, viewmanager)
 eric5.Toolbox.SingleApplication.SingleApplicationClient.connect?4()
@@ -8606,6 +8607,7 @@ eric5.install.createInstallConfig?4()
 eric5.install.createMacAppBundle?4(pydir)
 eric5.install.createPyWrapper?4(pydir, wfile, isGuiScript=True)
 eric5.install.currDir?7
+eric5.install.defaultMacAppBundleName?7
 eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7
@@ -8613,6 +8615,8 @@ eric5.install.doDependancyChecks?4()
 eric5.install.exit?4(rcode=0)
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
+eric5.install.macAppBundleName?7
+eric5.install.macPythonExe?7
 eric5.install.main?4(argv)
 eric5.install.modDir?7
 eric5.install.platBinDir?7

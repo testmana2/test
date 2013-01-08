@@ -1502,19 +1502,24 @@ def checkPyside():
     """
     Module function to check the presence of PySide.
     
-    @return flag indicating the presence of PySide (boolean)
+    @return tuple of two flags indicating the presence of PySide for Python2
+        and PySide for Python3 (boolean, boolean)
     """
+
     try:
         # step 1: try Python3 variant of PySide
         import PySide       # __IGNORE_EXCEPTION__
         del PySide
-        return True
+        py3 = True
     except ImportError:
-        # step 2: check for a Python2 variant
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-        if interpreter == "" or not isinpath(interpreter):
-            return False
-        
+        py3 = False
+    
+    # step 2: check for a Python2 variant
+    interpreter = Preferences.getDebugger("PythonInterpreter")
+    if interpreter == "" or not isinpath(interpreter):
+        py2 = False
+    else:
+        py2 = False
         checker = os.path.join(getConfig('ericDir'),
                                "UtilitiesPython2", "PySideImporter.py")
         args = [checker]
@@ -1524,9 +1529,9 @@ def checkPyside():
         finished = proc.waitForFinished(30000)
         if finished:
             if proc.exitCode() == 0:
-                return True
+                py2 = True
     
-    return False
+    return py2, py3
 
 ################################################################################
 # Other utility functions below
