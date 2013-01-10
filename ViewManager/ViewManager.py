@@ -3953,14 +3953,14 @@ class ViewManager(QObject):
         @param language language to display (string)
         @param eol eol indicator to display (string)
         """
-        if fn is None:
+        if not fn:
             fn = ''
-            writ = '   '
+            writ = '  '
         else:
             if QFileInfo(fn).isWritable():
-                writ = ' rw'
+                writ = 'rw'
             else:
-                writ = ' ro'
+                writ = 'ro'
         self.sbWritable.setText(writ)
         self.sbFile.setTextPath(QApplication.translate('ViewManager', 'File: {0}'), fn)
         
