@@ -7675,7 +7675,6 @@ eric5.UI.UserInterface.UserInterface.launchHelpViewer?4(home, searchWord=None, u
 eric5.UI.UserInterface.UserInterface.masterPasswordChanged?7
 eric5.UI.UserInterface.UserInterface.maxFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxMenuFilePathLen?7
-eric5.UI.UserInterface.UserInterface.maxSbFilePathLen?7
 eric5.UI.UserInterface.UserInterface.notificationsEnabled?4()
 eric5.UI.UserInterface.UserInterface.performVersionCheck?4(manual=True, alternative=0, showVersions=False)
 eric5.UI.UserInterface.UserInterface.preferencesChanged?7
@@ -8512,7 +8511,7 @@ eric5.ViewManager.ViewManager.ViewManager.setCooperationClient?4(client)
 eric5.ViewManager.ViewManager.ViewManager.setEditorName?4(editor, newName)
 eric5.ViewManager.ViewManager.ViewManager.setFileLine?4(fn, line, error=False, syntaxError=False)
 eric5.ViewManager.ViewManager.ViewManager.setReferences?4(ui, dbs)
-eric5.ViewManager.ViewManager.ViewManager.setSbInfo?4(sbFile, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol)
+eric5.ViewManager.ViewManager.ViewManager.setSbInfo?4(sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol)
 eric5.ViewManager.ViewManager.ViewManager.setSplitOrientation?4(orientation)
 eric5.ViewManager.ViewManager.ViewManager.shareConnected?4(connected)
 eric5.ViewManager.ViewManager.ViewManager.shareEditor?4(share)

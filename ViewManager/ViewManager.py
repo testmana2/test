@@ -211,11 +211,10 @@ class ViewManager(QObject):
         else:
             return None
         
-    def setSbInfo(self, sbFile, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol):
+    def setSbInfo(self, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol):
         """
         Public method to transfer statusbar info from the user interface to viewmanager.
         
-        @param sbFile reference to the file part of the statusbar (E5SqueezeLabelPath)
         @param sbLine reference to the line number part of the statusbar (QLabel)
         @param sbPos reference to the character position part of the statusbar (QLabel)
         @param sbWritable reference to the writability indicator part of
@@ -226,7 +225,6 @@ class ViewManager(QObject):
             statusbar (QLabel)
         @param sbEol reference to the eol indicator part of the statusbar (QLabel)
         """
-        self.sbFile = sbFile
         self.sbLine = sbLine
         self.sbPos = sbPos
         self.sbWritable = sbWritable
@@ -3962,7 +3960,6 @@ class ViewManager(QObject):
             else:
                 writ = 'ro'
         self.sbWritable.setText(writ)
-        self.sbFile.setTextPath(QApplication.translate('ViewManager', 'File: {0}'), fn)
         
         if line is None:
             line = ''

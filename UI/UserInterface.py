@@ -85,7 +85,6 @@ from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui.E5ToolBarManager import E5ToolBarManager
 from E5Gui.E5ToolBarDialog import E5ToolBarDialog
-from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
 from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
 from E5Gui import E5MessageBox, E5FileDialog
@@ -195,7 +194,6 @@ class UserInterface(E5MainWindow):
     masterPasswordChanged = pyqtSignal(str, str)
     
     maxFilePathLen = 100
-    maxSbFilePathLen = 150
     maxMenuFilePathLen = 75
     
     LeftSide = 1
@@ -2484,15 +2482,6 @@ class UserInterface(E5MainWindow):
             """ current editors files writability.</p>"""
         ))
 
-        self.sbFile = E5SqueezeLabelPath(self.__statusBar)
-        self.sbFile.setMaximumWidth(500)
-        self.sbFile.setMinimumWidth(100)
-        self.__statusBar.addPermanentWidget(self.sbFile, True)
-        self.sbFile.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the name of the file of"""
-            """ the current editor.</p>"""
-        ))
-
         self.sbLine = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbLine)
         self.sbLine.setWhatsThis(self.trUtf8(
@@ -2507,9 +2496,8 @@ class UserInterface(E5MainWindow):
             """ the current editor.</p>"""
         ))
         
-        self.viewmanager.setSbInfo(self.sbFile, self.sbLine, self.sbPos,
-                                   self.sbWritable, self.sbEncoding, self.sbLanguage,
-                                   self.sbEol)
+        self.viewmanager.setSbInfo(self.sbLine, self.sbPos, self.sbWritable,
+                                   self.sbEncoding, self.sbLanguage, self.sbEol)
 
         self.sbVcsMonitorLed = StatusMonitorLed(self.project, self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbVcsMonitorLed)
@@ -4387,11 +4375,6 @@ class UserInterface(E5MainWindow):
         @param version Qt version to show documentation for (integer)
         """
         assert version in [4, 5]
-##        qt4DocDir = Preferences.getHelp("Qt4DocDir")
-##        if not qt4DocDir:
-##            qt4DocDir = Utilities.getEnvironmentEntry("QT4DOCDIR", "")
-##            if not qt4DocDir:
-##                qt4DocDir = os.path.join(Preferences.getQt4DocDir(), "html")
         if version == 4:
             qtDocDir = Preferences.getQt4DocDir()
         elif version == 5:
