@@ -1262,22 +1262,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished">正在分析模块……</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="186"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="187"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
         <translation type="unfinished">&lt;&lt;Application&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="188"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="189"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
         <translation type="unfinished">&lt;&lt;Others&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>Load Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3681,228 +3681,228 @@ Reason: {1}</source>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="122"/>
         <source>Application</source>
         <translation>应用程序</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="128"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="131"/>
         <source>Email</source>
         <translation>电子邮件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="134"/>
         <source>Graphics</source>
         <translation>图形</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="137"/>
         <source>Icons</source>
         <translation>图标</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="319"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="321"/>
         <source>Network</source>
         <translation>网络</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="149"/>
         <source>Plugin Manager</source>
         <translation>插件管理器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="322"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="324"/>
         <source>Printer</source>
         <translation>打印机</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="192"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="161"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="167"/>
         <source>Shell</source>
         <translation>命令行</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="170"/>
         <source>Tasks</source>
         <translation>任务</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="173"/>
         <source>Templates</source>
         <translation>模板</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="176"/>
         <source>Terminal</source>
         <translation>终端</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="180"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="182"/>
         <source>Version Control Systems</source>
         <translation>版本控制系统</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="186"/>
         <source>Debugger</source>
         <translation>调试器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="221"/>
         <source>General</source>
         <translation>通用配置</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="196"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="202"/>
         <source>Editor</source>
         <translation>编辑器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="205"/>
         <source>APIs</source>
         <translation>API</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="208"/>
         <source>Autocompletion</source>
         <translation>自动完成</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="218"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="215"/>
         <source>Calltips</source>
         <translation>调用提示</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="224"/>
         <source>Filehandling</source>
         <translation>文件处理</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="227"/>
         <source>Searching</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="230"/>
         <source>Spell checking</source>
         <translation>拼写检查</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="233"/>
         <source>Style</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="237"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="239"/>
         <source>Typing</source>
         <translation>键盘输入</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="240"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="242"/>
         <source>Exporters</source>
         <translation>输出器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="246"/>
         <source>Highlighters</source>
         <translation>高亮功能</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="249"/>
         <source>Filetype Associations</source>
         <translation>文件类型关联</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="251"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="253"/>
         <source>Styles</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="258"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="260"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="329"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="331"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="335"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="337"/>
         <source>Help Documentation</source>
         <translation>帮助文档</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="272"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="274"/>
         <source>Help Viewers</source>
         <translation>帮助浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="290"/>
         <source>Project</source>
         <translation>项目</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="287"/>
         <source>Project Viewer</source>
         <translation>项目浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="291"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="293"/>
         <source>Multiproject</source>
         <translation>多重项目</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="318"/>
         <source>Interface</source>
         <translation>界面</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="301"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="303"/>
         <source>Viewmanager</source>
         <translation>视图管理器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="332"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="334"/>
         <source>Appearance</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="471"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="474"/>
         <source>Preferences</source>
         <translation>参数选择</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="476"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="479"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>请在左边选择一个列表项以显示配置页面。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="546"/>
         <source>Configuration Page Error</source>
         <translation>配置页面错误</translation>
     </message>
@@ -3912,67 +3912,67 @@ to display the configuration page.</source>
         <translation type="obsolete">&lt;p&gt;无法载入配置页面 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
         <source>Python3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="546"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="255"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="257"/>
         <source>Keywords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="125"/>
         <source>Cooperation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="354"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="356"/>
         <source>Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="155"/>
         <source>PyFlakes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="339"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="341"/>
         <source>VirusTotal Interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="325"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
         <source>Security</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="342"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="344"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="236"/>
         <source>Syntax Checker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="412"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="415"/>
         <source>Enter filter text...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="146"/>
         <source>Notifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="138"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="140"/>
         <source>IRC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7340,7 +7340,7 @@ whole selection.&lt;/li&gt;
 可以使用多种动作对显示的内容进行操纵。&lt;/p&gt;&lt;ul&gt;&lt;li&gt;在对象上单击可以选择对象。&lt;/li&gt;&lt;li&gt;Ctrl-单击将对象添加到选择范围中。&lt;/li&gt;&lt;li&gt;Ctrl-单击一个已选对象可取消对其选择。&lt;/li&gt;&lt;li&gt;在画布的空白区域单击可取消所有选择。&lt;/li&gt;&lt;li&gt;在画布上拖动鼠标可以用选框方式选择多个对象。&lt;/li&gt;&lt;li&gt;在已选对象上拖动鼠标可以对其进行整体移动。&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="E5Graphics/E5GraphicsView.py" line="326"/>
+        <location filename="E5Graphics/E5GraphicsView.py" line="327"/>
         <source>{0}, Page {1}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26299,7 +26299,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished">正在分析模块……</translation>
     </message>
     <message>
-        <location filename="Graphics/ImportsDiagramBuilder.py" line="116"/>
+        <location filename="Graphics/ImportsDiagramBuilder.py" line="117"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a Python package.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32713,22 +32713,22 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="138"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="140"/>
         <source>Parsing modules...</source>
         <translation type="unfinished">正在分析模块……</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="182"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="185"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a package.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="190"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="193"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any modules.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="205"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="208"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54502,93 +54502,98 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UMLDialog</name>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="73"/>
+        <location filename="Graphics/UMLDialog.py" line="75"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="111"/>
+        <location filename="Graphics/UMLDialog.py" line="113"/>
         <source>Window</source>
         <translation>窗口</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="78"/>
+        <location filename="Graphics/UMLDialog.py" line="80"/>
         <source>Load</source>
         <translation type="unfinished">载入</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="83"/>
+        <location filename="Graphics/UMLDialog.py" line="85"/>
         <source>Save</source>
         <translation type="unfinished">保存</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="88"/>
+        <location filename="Graphics/UMLDialog.py" line="90"/>
         <source>Save As...</source>
         <translation type="unfinished">另存为……</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="93"/>
         <source>Save as PNG</source>
-        <translation type="unfinished">另存为 PNG</translation>
+        <translation type="obsolete">另存为 PNG</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="98"/>
+        <location filename="Graphics/UMLDialog.py" line="100"/>
         <source>Print</source>
         <translation type="unfinished">打印</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="103"/>
+        <location filename="Graphics/UMLDialog.py" line="105"/>
         <source>Print Preview</source>
         <translation type="unfinished">打印预览</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="115"/>
+        <location filename="Graphics/UMLDialog.py" line="117"/>
         <source>File</source>
         <translation type="unfinished">文件</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="178"/>
+        <location filename="Graphics/UMLDialog.py" line="180"/>
         <source>Illegal diagram type &apos;{0}&apos; given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="251"/>
+        <location filename="Graphics/UMLDialog.py" line="253"/>
         <source>Save Diagram</source>
         <translation type="unfinished">保存图表</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="265"/>
+        <location filename="Graphics/UMLDialog.py" line="267"/>
         <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="226"/>
+        <location filename="Graphics/UMLDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="251"/>
+        <location filename="Graphics/UMLDialog.py" line="253"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="365"/>
+        <location filename="Graphics/UMLDialog.py" line="367"/>
         <source>Load Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="279"/>
+        <location filename="Graphics/UMLDialog.py" line="281"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="359"/>
+        <location filename="Graphics/UMLDialog.py" line="361"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="362"/>
+        <location filename="Graphics/UMLDialog.py" line="364"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;&lt;p&gt;Invalid line: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Graphics/UMLDialog.py" line="95"/>
+        <source>Save as Image</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -58586,7 +58591,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VcsPySvnPlugin</name>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="94"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="90"/>
         <source>Subversion (pysvn)</source>
         <translation>版本控制（pysvn）</translation>
     </message>
@@ -58596,7 +58601,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>版本控制 - 版本控制（pysvn）</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="123"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="119"/>
         <source>Subversion</source>
         <translation>版本控制</translation>
     </message>

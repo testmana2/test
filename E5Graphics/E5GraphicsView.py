@@ -223,6 +223,7 @@ class E5GraphicsView(QGraphicsView):
             paintDevice = QSvgGenerator()
             paintDevice.setResolution(100)  # 100 dpi
             paintDevice.setSize(QSize(int(rect.width()), int(rect.height())))
+            paintDevice.setViewBox(rect)
             paintDevice.setFileName(filename)
         painter = QPainter(paintDevice)
         painter.setRenderHint(QPainter.Antialiasing, True)

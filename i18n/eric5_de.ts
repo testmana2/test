@@ -1161,22 +1161,22 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Module werden gelesen...</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="186"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="187"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
         <translation>&lt;&lt;Applikation&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="188"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="189"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
         <translation>&lt;&lt;Sonstige&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>Load Diagram</source>
         <translation>Diagramm laden</translation>
     </message>
     <message>
-        <location filename="Graphics/ApplicationDiagramBuilder.py" line="269"/>
+        <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Diagramm gehört zum Projekt &lt;b&gt;{0}&lt;/b&gt;. Soll dieses Projekt geöffnet werden?&lt;/p&gt;</translation>
     </message>
@@ -3398,294 +3398,294 @@ Ursache: {1}</translation>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="122"/>
         <source>Application</source>
         <translation>Applikation</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="128"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="131"/>
         <source>Email</source>
         <translation>Email</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="134"/>
         <source>Graphics</source>
         <translation>Grafiken</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="137"/>
         <source>Icons</source>
         <translation>Symbole</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="149"/>
         <source>Plugin Manager</source>
         <translation>Plugin Manager</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="322"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="324"/>
         <source>Printer</source>
         <translation>Drucker</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="190"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="192"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="161"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="167"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="170"/>
         <source>Tasks</source>
         <translation>Aufgaben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="173"/>
         <source>Templates</source>
         <translation>Vorlagen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="180"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="182"/>
         <source>Version Control Systems</source>
         <translation>Versionskontrollsysteme</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="186"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="196"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="200"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="202"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="203"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="205"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="206"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="208"/>
         <source>Autocompletion</source>
         <translation>Autom. Vervollständigung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="215"/>
         <source>Calltips</source>
         <translation>Calltips</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="221"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="237"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="239"/>
         <source>Typing</source>
         <translation>Eingabe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="240"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="242"/>
         <source>Exporters</source>
         <translation>Exporter</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="246"/>
         <source>Highlighters</source>
         <translation>Syntax-Hervorhebung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="249"/>
         <source>Filetype Associations</source>
         <translation>Dateitypzuordnungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="251"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="253"/>
         <source>Styles</source>
         <translation>Stile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="329"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="331"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="335"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="337"/>
         <source>Help Documentation</source>
         <translation>Hilfe Dokumentation</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="272"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="274"/>
         <source>Help Viewers</source>
         <translation>Hilfeanzeiger</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="288"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="290"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="285"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="287"/>
         <source>Project Viewer</source>
         <translation>Projektanzeige</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="291"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="293"/>
         <source>Multiproject</source>
         <translation>Mehrfachprojekt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="316"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="318"/>
         <source>Interface</source>
         <translation>Oberfläche</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="301"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="303"/>
         <source>Viewmanager</source>
         <translation>Ansichtenmanager</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="546"/>
         <source>Configuration Page Error</source>
         <translation>Konfigurationsseitenfehler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="546"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Konfigurationsseite &lt;b&gt;{0}&lt;/b&gt; konnte nicht geladen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="224"/>
         <source>Filehandling</source>
         <translation>Dateibehandlung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="227"/>
         <source>Searching</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="332"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="334"/>
         <source>Appearance</source>
         <translation>Erscheinung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="218"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="231"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="233"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="258"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="260"/>
         <source>Properties</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="471"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="474"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="476"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="479"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Wähle einen Listeneintrag aus,
 um die Konfigurationsseite anzuzeigen.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="174"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="176"/>
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="319"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="321"/>
         <source>Network</source>
         <translation>Netzwerk</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="228"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="230"/>
         <source>Spell checking</source>
         <translation>Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="193"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="255"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="257"/>
         <source>Keywords</source>
         <translation>Schlüsselwörter</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="125"/>
         <source>Cooperation</source>
         <translation>Zusammenarbeit</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="354"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="356"/>
         <source>Tray Starter</source>
         <translation>Systemstarter</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="155"/>
         <source>PyFlakes</source>
         <translation>PyFlakes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="339"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="341"/>
         <source>VirusTotal Interface</source>
         <translation>VirusTotal Schnittstelle</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="325"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="342"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="344"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 Web-Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="236"/>
         <source>Syntax Checker</source>
         <translation>Syntaxprüfer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="412"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="415"/>
         <source>Enter filter text...</source>
         <translation>Filtertext...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="146"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="138"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="140"/>
         <source>IRC</source>
         <translation>IRC</translation>
     </message>
@@ -6566,7 +6566,7 @@ gesamte Auswahl.&lt;/li&gt;
 </translation>
     </message>
     <message>
-        <location filename="E5Graphics/E5GraphicsView.py" line="326"/>
+        <location filename="E5Graphics/E5GraphicsView.py" line="327"/>
         <source>{0}, Page {1}</source>
         <translation>{0}, Seite {1}</translation>
     </message>
@@ -24573,7 +24573,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Module werden gelesen...</translation>
     </message>
     <message>
-        <location filename="Graphics/ImportsDiagramBuilder.py" line="116"/>
+        <location filename="Graphics/ImportsDiagramBuilder.py" line="117"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a Python package.</source>
         <translation>Das Verzeichnis &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; ist kein Python Package.</translation>
     </message>
@@ -30306,22 +30306,22 @@ Ursache: {1}</translation>
         <translation>Package-Diagramm: {0}</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="138"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="140"/>
         <source>Parsing modules...</source>
         <translation>Module werden gelesen...</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="182"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="185"/>
         <source>The directory &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; is not a package.</source>
         <translation>Das Verzeichnis &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; ist kein Package.</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="190"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="193"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any modules.</source>
         <translation>Das Package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; enthält keine Module.</translation>
     </message>
     <message>
-        <location filename="Graphics/PackageDiagramBuilder.py" line="205"/>
+        <location filename="Graphics/PackageDiagramBuilder.py" line="208"/>
         <source>The package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
         <translation>Das Package &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; enthält keine Klassen.</translation>
     </message>
@@ -49631,94 +49631,94 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UMLDialog</name>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="73"/>
+        <location filename="Graphics/UMLDialog.py" line="75"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="111"/>
+        <location filename="Graphics/UMLDialog.py" line="113"/>
         <source>Window</source>
         <translation>Fenster</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="78"/>
+        <location filename="Graphics/UMLDialog.py" line="80"/>
         <source>Load</source>
         <translation>Laden</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="83"/>
+        <location filename="Graphics/UMLDialog.py" line="85"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="88"/>
+        <location filename="Graphics/UMLDialog.py" line="90"/>
         <source>Save As...</source>
         <translation>Speichern unter...</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="93"/>
-        <source>Save as PNG</source>
-        <translation>Speichern als PNG</translation>
-    </message>
-    <message>
-        <location filename="Graphics/UMLDialog.py" line="98"/>
+        <location filename="Graphics/UMLDialog.py" line="100"/>
         <source>Print</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="103"/>
+        <location filename="Graphics/UMLDialog.py" line="105"/>
         <source>Print Preview</source>
         <translation>Druckvorschau</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="115"/>
+        <location filename="Graphics/UMLDialog.py" line="117"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="178"/>
+        <location filename="Graphics/UMLDialog.py" line="180"/>
         <source>Illegal diagram type &apos;{0}&apos; given.</source>
         <translation>Ungültiger Diagrammtyp &apos;{0}&apos; angegeben.</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="251"/>
+        <location filename="Graphics/UMLDialog.py" line="253"/>
         <source>Save Diagram</source>
         <translation>Diagramm speichern</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="265"/>
+        <location filename="Graphics/UMLDialog.py" line="267"/>
         <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
         <translation>Eric5 Grafikdateien (*.e5g);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="226"/>
+        <location filename="Graphics/UMLDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="251"/>
+        <location filename="Graphics/UMLDialog.py" line="253"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gespeichert werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="365"/>
+        <location filename="Graphics/UMLDialog.py" line="367"/>
         <source>Load Diagram</source>
         <translation>Diagramm laden</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="279"/>
+        <location filename="Graphics/UMLDialog.py" line="281"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geladen werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="359"/>
+        <location filename="Graphics/UMLDialog.py" line="361"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält keine gültigen Daten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLDialog.py" line="362"/>
+        <location filename="Graphics/UMLDialog.py" line="364"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not contain valid data.&lt;/p&gt;&lt;p&gt;Invalid line: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält keine gültigen Daten.&lt;/p&gt;&lt;p&gt;Ungültige Zeile: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Graphics/UMLDialog.py" line="95"/>
+        <source>Save as Image</source>
+        <translation>Als Bild speichern</translation>
     </message>
 </context>
 <context>
@@ -53017,7 +53017,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>VcsPySvnPlugin</name>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="94"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="90"/>
         <source>Subversion (pysvn)</source>
         <translation>Subversion (pysvn)</translation>
     </message>
@@ -53027,7 +53027,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Versionskontrolle - Subversion (pysvn)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginVcsPySvn.py" line="123"/>
+        <location filename="Plugins/PluginVcsPySvn.py" line="119"/>
         <source>Subversion</source>
         <translation>Subversion</translation>
     </message>
