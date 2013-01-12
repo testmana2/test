@@ -64,6 +64,8 @@ class UMLDialog(E5MainWindow):
         self.setCentralWidget(self.umlView)
         
         self.umlView.relayout.connect(self.__relayout)
+        
+        self.setWindowTitle(self.__diagramTypeString())
     
     def __initActions(self):
         """

@@ -105,6 +105,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                     moduleDict[name] = mod
         finally:
             progress.setValue(tot)
+            progress.deleteLater()
         return moduleDict
     
     def __buildSubpackagesDict(self):
@@ -126,6 +127,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         for subpackage in os.listdir(self.package):
             subpackagePath = os.path.join(self.package, subpackage)
             if os.path.isdir(subpackagePath) and \
+               subpackage != "__pycache__" and \
                len(glob.glob(os.path.join(subpackagePath, "__init__.*"))) != 0:
                 subpackagesList.append(subpackagePath)
         
@@ -166,6 +168,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                     subpackagesDict[packageName].insert(0, "__init__")
         finally:
             progress.setValue(tot)
+            progress.deleteLater()
         return subpackagesDict
     
     def buildDiagram(self):
