@@ -90,6 +90,7 @@ from E5Gui.E5SideBar import E5SideBar
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from VCS.StatusMonitorLed import StatusMonitorLed
 
@@ -2496,8 +2497,19 @@ class UserInterface(E5MainWindow):
             """ the current editor.</p>"""
         ))
         
+        self.sbZoom = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+            UI.PixmapCache.getPixmap("zoomIn.png"),
+            UI.PixmapCache.getPixmap("zoomReset.png"),
+            self.__statusBar)
+        self.__statusBar.addPermanentWidget(self.sbZoom)
+        self.sbZoom.setWhatsThis(self.trUtf8(
+            """<p>This part of the status bar allows zooming the current editor,"""
+            """ shell or terminal.</p>"""
+        ))
+        
         self.viewmanager.setSbInfo(self.sbLine, self.sbPos, self.sbWritable,
-                                   self.sbEncoding, self.sbLanguage, self.sbEol)
+                                   self.sbEncoding, self.sbLanguage, self.sbEol,
+                                   self.sbZoom)
 
         self.sbVcsMonitorLed = StatusMonitorLed(self.project, self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbVcsMonitorLed)

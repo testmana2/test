@@ -9,7 +9,7 @@ Module implementing a canvas view class.
 
 import sys
 
-from PyQt4.QtCore import QRectF, QSize, QSizeF, Qt
+from PyQt4.QtCore import pyqtSignal, QRectF, QSize, QSizeF, Qt
 from PyQt4.QtGui import QGraphicsView, QBrush, QPainter, QPixmap, QFont, QColor
 
 import Preferences
@@ -18,7 +18,20 @@ import Preferences
 class E5GraphicsView(QGraphicsView):
     """
     Class implementing a graphics view.
+    
+    @signal zoomValueChanged(int) emitted to signal a change of the zoom value
     """
+    zoomValueChanged = pyqtSignal(int)
+    
+    ZoomLevels = [
+        1, 3, 5, 7, 9,
+        10, 20, 30, 50, 67, 80, 90,
+        100,
+        110, 120, 133, 150, 170, 200, 240, 300, 400,
+        500, 600, 700, 800, 900, 1000,
+    ]
+    ZoomLevelDefault = 100
+    
     def __init__(self, scene, parent=None):
         """
         Constructor
@@ -54,40 +67,62 @@ class E5GraphicsView(QGraphicsView):
             "</ul>\n"
         ))
         
+    def __levelForZoom(self, zoom):
+        """
+        Private method determining the zoom level index given a zoom factor.
+        
+        @param zoom zoom factor (integer)
+        @return index of zoom factor (integer)
+        """
+        try:
+            index = E5GraphicsView.ZoomLevels.index(zoom)
+        except ValueError:
+            for index in range(len(E5GraphicsView.ZoomLevels)):
+                if zoom <= E5GraphicsView.ZoomLevels[index]:
+                    break
+        return index
+    
     def zoomIn(self):
         """
         Public method to zoom in.
         """
-        self.scale(1.25, 1.25)
+        index = self.__levelForZoom(self.zoom())
+        if index < len(E5GraphicsView.ZoomLevels) - 1:
+            self.setZoom(E5GraphicsView.ZoomLevels[index + 1])
         
     def zoomOut(self):
         """
         Public method to zoom out.
         """
-        self.scale(0.8, 0.8)
+        index = self.__levelForZoom(self.zoom())
+        if index > 0:
+            self.setZoom(E5GraphicsView.ZoomLevels[index - 1])
     
     def zoomReset(self):
         """
-        Public method to handle the reset zoom context menu entry.
+        Public method to handle the reset the zoom value.
         """
-        self.resetMatrix()
+        self.setZoom(E5GraphicsView.ZoomLevels[E5GraphicsView.ZoomLevelDefault])
         
-    def setZoom(self, zoomFactor):
+    def setZoom(self, value):
         """
-        Public method to set the zoom factor.
+        Public method to set the zoom value in percent.
         
-        @param zoomFactor new zoom factor (float)
+        @param value zoom value in percent (integer)
         """
-        self.zoomReset()
-        self.scale(zoomFactor, zoomFactor)
+        if value != self.zoom():
+            self.resetMatrix()
+            factor = value / 100.0
+            self.scale(factor, factor)
+            self.zoomValueChanged.emit(value)
         
     def zoom(self):
         """
-        Public method to get the current zoom factor.
+        Public method to get the current zoom factor in percent.
         
-        @return current zoom factor (float)
+        @return current zoom factor in percent (integer)
         """
-        return self.matrix().m11()
+        return int(self.matrix().m11() * 100.0)
        
     def resizeScene(self, amount, isWidth=True):
         """
@@ -223,6 +258,7 @@ class E5GraphicsView(QGraphicsView):
             paintDevice = QSvgGenerator()
             paintDevice.setResolution(100)  # 100 dpi
             paintDevice.setSize(QSize(int(rect.width()), int(rect.height())))
+            paintDevice.setViewBox(rect)
             paintDevice.setFileName(filename)
         painter = QPainter(paintDevice)
         painter.setRenderHint(QPainter.Antialiasing, True)

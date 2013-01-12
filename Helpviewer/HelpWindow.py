@@ -48,6 +48,7 @@ from .AdBlock.AdBlockIcon import AdBlockIcon
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
 from .UserAgent.UserAgentManager import UserAgentManager
+from .HelpBrowserWV import HelpBrowser
 from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
 from .VirusTotalApi import VirusTotalAPI
@@ -67,6 +68,7 @@ from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5Application import e5App
+from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -157,11 +159,20 @@ class HelpWindow(E5MainWindow):
             self.__helpEngine.warning.connect(self.__warning)
             self.__helpInstaller = None
             
+            self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+                UI.PixmapCache.getPixmap("zoomIn.png"),
+                UI.PixmapCache.getPixmap("zoomReset.png"), self)
+            self.statusBar().addPermanentWidget(self.__zoomWidget)
+            self.__zoomWidget.setMapping(
+                HelpBrowser.ZoomLevels, HelpBrowser.ZoomLevelDefault)
+            self.__zoomWidget.valueChanged.connect(self.__zoomValueChanged)
+            
             self.tabWidget = HelpTabWidget(self)
             self.tabWidget.currentChanged[int].connect(self.__currentChanged)
             self.tabWidget.titleChanged.connect(self.__titleChanged)
             self.tabWidget.showMessage.connect(self.statusBar().showMessage)
             self.tabWidget.browserClosed.connect(self.__browserClosed)
+            self.tabWidget.browserZoomValueChanged.connect(self.__zoomWidget.setValue)
             
             self.findDlg = SearchWidget(self, self)
             centralWidget = QWidget()
@@ -2052,23 +2063,34 @@ class HelpWindow(E5MainWindow):
         """
         self.currentBrowser().stop()
     
+    def __zoomValueChanged(self, value):
+        """
+        Private slot to handle value changes of the zoom widget.
+        
+        @param value zoom value (integer)
+        """
+        self.currentBrowser().setZoomValue(value)
+    
     def __zoomIn(self):
         """
         Private slot called to handle the zoom in action.
         """
         self.currentBrowser().zoomIn()
+        self.__zoomWidget.setValue(self.currentBrowser().zoomValue())
     
     def __zoomOut(self):
         """
         Private slot called to handle the zoom out action.
         """
         self.currentBrowser().zoomOut()
+        self.__zoomWidget.setValue(self.currentBrowser().zoomValue())
     
     def __zoomReset(self):
         """
         Private slot called to handle the zoom reset action.
         """
         self.currentBrowser().zoomReset()
+        self.__zoomWidget.setValue(self.currentBrowser().zoomValue())
     
     def __zoomTextOnly(self, textOnly):
         """
@@ -2184,6 +2206,9 @@ class HelpWindow(E5MainWindow):
                 self.setForwardAvailable(cb.isForwardAvailable())
                 self.setBackwardAvailable(cb.isBackwardAvailable())
                 self.setLoadingActions(cb.isLoading())
+                
+                # set value of zoom widget
+                self.__zoomWidget.setValue(cb.zoomValue())
     
     def __showPreferences(self):
         """

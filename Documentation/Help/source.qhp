@@ -141,6 +141,7 @@
             <section title="eric5.E5Gui.E5TreeSortFilterProxyModel" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html" />
             <section title="eric5.E5Gui.E5TreeView" ref="eric5.E5Gui.E5TreeView.html" />
             <section title="eric5.E5Gui.E5TreeWidget" ref="eric5.E5Gui.E5TreeWidget.html" />
+            <section title="eric5.E5Gui.E5ZoomWidget" ref="eric5.E5Gui.E5ZoomWidget.html" />
           </section>
           <section title="eric5.E5Network" ref="index-eric5.E5Network.html">
             <section title="eric5.E5Network.E5Ftp" ref="eric5.E5Network.E5Ftp.html" />
@@ -194,7 +195,6 @@
             <section title="eric5.Graphics.UMLGraphicsView" ref="eric5.Graphics.UMLGraphicsView.html" />
             <section title="eric5.Graphics.UMLItem" ref="eric5.Graphics.UMLItem.html" />
             <section title="eric5.Graphics.UMLSceneSizeDialog" ref="eric5.Graphics.UMLSceneSizeDialog.html" />
-            <section title="eric5.Graphics.ZoomDialog" ref="eric5.Graphics.ZoomDialog.html" />
           </section>
           <section title="eric5.Helpviewer" ref="index-eric5.Helpviewer.html">
             <section title="eric5.Helpviewer.AdBlock" ref="index-eric5.Helpviewer.AdBlock.html">
@@ -411,7 +411,6 @@
             <section title="eric5.IconEditor.IconEditorPalette" ref="eric5.IconEditor.IconEditorPalette.html" />
             <section title="eric5.IconEditor.IconEditorWindow" ref="eric5.IconEditor.IconEditorWindow.html" />
             <section title="eric5.IconEditor.IconSizeDialog" ref="eric5.IconEditor.IconSizeDialog.html" />
-            <section title="eric5.IconEditor.IconZoomDialog" ref="eric5.IconEditor.IconZoomDialog.html" />
           </section>
           <section title="eric5.MultiProject" ref="index-eric5.MultiProject.html">
             <section title="eric5.MultiProject.AddProjectDialog" ref="eric5.MultiProject.AddProjectDialog.html" />
@@ -3385,6 +3384,7 @@
       <keyword name="E5GraphicsView (Constructor)" id="E5GraphicsView (Constructor)" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__init__" />
       <keyword name="E5GraphicsView (Module)" id="E5GraphicsView (Module)" ref="eric5.E5Graphics.E5GraphicsView.html" />
       <keyword name="E5GraphicsView.__getDiagram" id="E5GraphicsView.__getDiagram" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__getDiagram" />
+      <keyword name="E5GraphicsView.__levelForZoom" id="E5GraphicsView.__levelForZoom" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.__levelForZoom" />
       <keyword name="E5GraphicsView._getDiagramRect" id="E5GraphicsView._getDiagramRect" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramRect" />
       <keyword name="E5GraphicsView._getDiagramSize" id="E5GraphicsView._getDiagramSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView._getDiagramSize" />
       <keyword name="E5GraphicsView.autoAdjustSceneSize" id="E5GraphicsView.autoAdjustSceneSize" ref="eric5.E5Graphics.E5GraphicsView.html#E5GraphicsView.autoAdjustSceneSize" />
@@ -3812,6 +3812,33 @@
       <keyword name="E5WheelTabBar (Constructor)" id="E5WheelTabBar (Constructor)" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar.__init__" />
       <keyword name="E5WheelTabBar.wheelEvent" id="E5WheelTabBar.wheelEvent" ref="eric5.E5Gui.E5TabWidget.html#E5WheelTabBar.wheelEvent" />
       <keyword name="E5XML (Package)" id="E5XML (Package)" ref="index-eric5.E5XML.html" />
+      <keyword name="E5ZoomWidget" id="E5ZoomWidget" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget" />
+      <keyword name="E5ZoomWidget (Constructor)" id="E5ZoomWidget (Constructor)" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__init__" />
+      <keyword name="E5ZoomWidget (Module)" id="E5ZoomWidget (Module)" ref="eric5.E5Gui.E5ZoomWidget.html" />
+      <keyword name="E5ZoomWidget.__indexForValue" id="E5ZoomWidget.__indexForValue" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__indexForValue" />
+      <keyword name="E5ZoomWidget.__setValueLabelWidth" id="E5ZoomWidget.__setValueLabelWidth" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__setValueLabelWidth" />
+      <keyword name="E5ZoomWidget.__zoomIn" id="E5ZoomWidget.__zoomIn" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__zoomIn" />
+      <keyword name="E5ZoomWidget.__zoomOut" id="E5ZoomWidget.__zoomOut" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__zoomOut" />
+      <keyword name="E5ZoomWidget.__zoomReset" id="E5ZoomWidget.__zoomReset" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__zoomReset" />
+      <keyword name="E5ZoomWidget._sliderValueChanged" id="E5ZoomWidget._sliderValueChanged" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget._sliderValueChanged" />
+      <keyword name="E5ZoomWidget.default" id="E5ZoomWidget.default" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.default" />
+      <keyword name="E5ZoomWidget.isMapped" id="E5ZoomWidget.isMapped" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.isMapped" />
+      <keyword name="E5ZoomWidget.isPercent" id="E5ZoomWidget.isPercent" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.isPercent" />
+      <keyword name="E5ZoomWidget.mapping" id="E5ZoomWidget.mapping" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.mapping" />
+      <keyword name="E5ZoomWidget.maximum" id="E5ZoomWidget.maximum" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.maximum" />
+      <keyword name="E5ZoomWidget.minimum" id="E5ZoomWidget.minimum" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.minimum" />
+      <keyword name="E5ZoomWidget.on_slider_sliderMoved" id="E5ZoomWidget.on_slider_sliderMoved" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.on_slider_sliderMoved" />
+      <keyword name="E5ZoomWidget.pageStep" id="E5ZoomWidget.pageStep" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.pageStep" />
+      <keyword name="E5ZoomWidget.setDefault" id="E5ZoomWidget.setDefault" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setDefault" />
+      <keyword name="E5ZoomWidget.setMapping" id="E5ZoomWidget.setMapping" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setMapping" />
+      <keyword name="E5ZoomWidget.setMaximum" id="E5ZoomWidget.setMaximum" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setMaximum" />
+      <keyword name="E5ZoomWidget.setMinimum" id="E5ZoomWidget.setMinimum" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setMinimum" />
+      <keyword name="E5ZoomWidget.setPageStep" id="E5ZoomWidget.setPageStep" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setPageStep" />
+      <keyword name="E5ZoomWidget.setPercent" id="E5ZoomWidget.setPercent" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setPercent" />
+      <keyword name="E5ZoomWidget.setSingleStep" id="E5ZoomWidget.setSingleStep" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setSingleStep" />
+      <keyword name="E5ZoomWidget.setValue" id="E5ZoomWidget.setValue" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.setValue" />
+      <keyword name="E5ZoomWidget.singleStep" id="E5ZoomWidget.singleStep" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.singleStep" />
+      <keyword name="E5ZoomWidget.value" id="E5ZoomWidget.value" ref="eric5.E5Gui.E5ZoomWidget.html#E5ZoomWidget.value" />
       <keyword name="EditBreakpointDialog" id="EditBreakpointDialog" ref="eric5.Debugger.EditBreakpointDialog.html#EditBreakpointDialog" />
       <keyword name="EditBreakpointDialog (Constructor)" id="EditBreakpointDialog (Constructor)" ref="eric5.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.__init__" />
       <keyword name="EditBreakpointDialog (Module)" id="EditBreakpointDialog (Module)" ref="eric5.Debugger.EditBreakpointDialog.html" />
@@ -4896,11 +4923,13 @@
       <keyword name="HelpBrowser.reload" id="HelpBrowser.reload" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.reload" />
       <keyword name="HelpBrowser.saveAs" id="HelpBrowser.saveAs" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.saveAs" />
       <keyword name="HelpBrowser.setSource" id="HelpBrowser.setSource" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.setSource" />
+      <keyword name="HelpBrowser.setZoomValue" id="HelpBrowser.setZoomValue" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.setZoomValue" />
       <keyword name="HelpBrowser.source" id="HelpBrowser.source" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.source" />
       <keyword name="HelpBrowser.wheelEvent" id="HelpBrowser.wheelEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.wheelEvent" />
       <keyword name="HelpBrowser.zoomIn" id="HelpBrowser.zoomIn" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomIn" />
       <keyword name="HelpBrowser.zoomOut" id="HelpBrowser.zoomOut" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomOut" />
       <keyword name="HelpBrowser.zoomReset" id="HelpBrowser.zoomReset" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomReset" />
+      <keyword name="HelpBrowser.zoomValue" id="HelpBrowser.zoomValue" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.zoomValue" />
       <keyword name="HelpBrowserWV (Module)" id="HelpBrowserWV (Module)" ref="eric5.Helpviewer.HelpBrowserWV.html" />
       <keyword name="HelpClearPrivateDataDialog" id="HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog" />
       <keyword name="HelpClearPrivateDataDialog (Constructor)" id="HelpClearPrivateDataDialog (Constructor)" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog.__init__" />
@@ -5200,6 +5229,7 @@
       <keyword name="HelpWindow.__zoomOut" id="HelpWindow.__zoomOut" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomOut" />
       <keyword name="HelpWindow.__zoomReset" id="HelpWindow.__zoomReset" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomReset" />
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
+      <keyword name="HelpWindow.__zoomValueChanged" id="HelpWindow.__zoomValueChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomValueChanged" />
       <keyword name="HelpWindow.adBlockIcon" id="HelpWindow.adBlockIcon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adBlockIcon" />
       <keyword name="HelpWindow.adBlockManager" id="HelpWindow.adBlockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adBlockManager" />
       <keyword name="HelpWindow.bookmarkAll" id="HelpWindow.bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarkAll" />
@@ -6326,7 +6356,6 @@
       <keyword name="IconEditorWindow.__updateSize" id="IconEditorWindow.__updateSize" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__updateSize" />
       <keyword name="IconEditorWindow.__updateZoom" id="IconEditorWindow.__updateZoom" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__updateZoom" />
       <keyword name="IconEditorWindow.__whatsThis" id="IconEditorWindow.__whatsThis" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__whatsThis" />
-      <keyword name="IconEditorWindow.__zoom" id="IconEditorWindow.__zoom" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoom" />
       <keyword name="IconEditorWindow.__zoomIn" id="IconEditorWindow.__zoomIn" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomIn" />
       <keyword name="IconEditorWindow.__zoomOut" id="IconEditorWindow.__zoomOut" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomOut" />
       <keyword name="IconEditorWindow.__zoomReset" id="IconEditorWindow.__zoomReset" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomReset" />
@@ -6338,10 +6367,6 @@
       <keyword name="IconSizeDialog (Constructor)" id="IconSizeDialog (Constructor)" ref="eric5.IconEditor.IconSizeDialog.html#IconSizeDialog.__init__" />
       <keyword name="IconSizeDialog (Module)" id="IconSizeDialog (Module)" ref="eric5.IconEditor.IconSizeDialog.html" />
       <keyword name="IconSizeDialog.getData" id="IconSizeDialog.getData" ref="eric5.IconEditor.IconSizeDialog.html#IconSizeDialog.getData" />
-      <keyword name="IconZoomDialog" id="IconZoomDialog" ref="eric5.IconEditor.IconZoomDialog.html#IconZoomDialog" />
-      <keyword name="IconZoomDialog (Constructor)" id="IconZoomDialog (Constructor)" ref="eric5.IconEditor.IconZoomDialog.html#IconZoomDialog.__init__" />
-      <keyword name="IconZoomDialog (Module)" id="IconZoomDialog (Module)" ref="eric5.IconEditor.IconZoomDialog.html" />
-      <keyword name="IconZoomDialog.getZoomFactor" id="IconZoomDialog.getZoomFactor" ref="eric5.IconEditor.IconZoomDialog.html#IconZoomDialog.getZoomFactor" />
       <keyword name="IconsPage" id="IconsPage" ref="eric5.Preferences.ConfigurationPages.IconsPage.html#IconsPage" />
       <keyword name="IconsPage (Constructor)" id="IconsPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.IconsPage.html#IconsPage.__init__" />
       <keyword name="IconsPage (Module)" id="IconsPage (Module)" ref="eric5.Preferences.ConfigurationPages.IconsPage.html" />
@@ -7842,6 +7867,7 @@
       <keyword name="PixmapDiagram.__initActions" id="PixmapDiagram.__initActions" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__initActions" />
       <keyword name="PixmapDiagram.__initContextMenu" id="PixmapDiagram.__initContextMenu" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__initContextMenu" />
       <keyword name="PixmapDiagram.__initToolBars" id="PixmapDiagram.__initToolBars" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__initToolBars" />
+      <keyword name="PixmapDiagram.__levelForZoom" id="PixmapDiagram.__levelForZoom" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__levelForZoom" />
       <keyword name="PixmapDiagram.__print" id="PixmapDiagram.__print" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__print" />
       <keyword name="PixmapDiagram.__printDiagram" id="PixmapDiagram.__printDiagram" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__printDiagram" />
       <keyword name="PixmapDiagram.__printPreviewDiagram" id="PixmapDiagram.__printPreviewDiagram" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__printPreviewDiagram" />
@@ -9787,6 +9813,7 @@
       <keyword name="SvgDiagram.__initActions" id="SvgDiagram.__initActions" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__initActions" />
       <keyword name="SvgDiagram.__initContextMenu" id="SvgDiagram.__initContextMenu" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__initContextMenu" />
       <keyword name="SvgDiagram.__initToolBars" id="SvgDiagram.__initToolBars" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__initToolBars" />
+      <keyword name="SvgDiagram.__levelForZoom" id="SvgDiagram.__levelForZoom" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__levelForZoom" />
       <keyword name="SvgDiagram.__print" id="SvgDiagram.__print" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__print" />
       <keyword name="SvgDiagram.__printDiagram" id="SvgDiagram.__printDiagram" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__printDiagram" />
       <keyword name="SvgDiagram.__printPreviewDiagram" id="SvgDiagram.__printPreviewDiagram" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__printPreviewDiagram" />
@@ -11150,7 +11177,6 @@
       <keyword name="UMLGraphicsView.__rescan" id="UMLGraphicsView.__rescan" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__rescan" />
       <keyword name="UMLGraphicsView.__sceneChanged" id="UMLGraphicsView.__sceneChanged" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__sceneChanged" />
       <keyword name="UMLGraphicsView.__setSize" id="UMLGraphicsView.__setSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__setSize" />
-      <keyword name="UMLGraphicsView.__zoom" id="UMLGraphicsView.__zoom" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.__zoom" />
       <keyword name="UMLGraphicsView.autoAdjustSceneSize" id="UMLGraphicsView.autoAdjustSceneSize" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.autoAdjustSceneSize" />
       <keyword name="UMLGraphicsView.event" id="UMLGraphicsView.event" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.event" />
       <keyword name="UMLGraphicsView.filteredItems" id="UMLGraphicsView.filteredItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.filteredItems" />
@@ -12172,13 +12198,9 @@
       <keyword name="XbelWriter.write" id="XbelWriter.write" ref="eric5.Helpviewer.Bookmarks.XbelWriter.html#XbelWriter.write" />
       <keyword name="XmlEntityResolver" id="XmlEntityResolver" ref="eric5.Helpviewer.Bookmarks.XbelReader.html#XmlEntityResolver" />
       <keyword name="XmlEntityResolver.resolveUndeclaredEntity" id="XmlEntityResolver.resolveUndeclaredEntity" ref="eric5.Helpviewer.Bookmarks.XbelReader.html#XmlEntityResolver.resolveUndeclaredEntity" />
-      <keyword name="ZoomDialog" id="ZoomDialog" ref="eric5.Graphics.ZoomDialog.html#ZoomDialog" />
       <keyword name="ZoomDialog" id="ZoomDialog" ref="eric5.QScintilla.ZoomDialog.html#ZoomDialog" />
-      <keyword name="ZoomDialog (Constructor)" id="ZoomDialog (Constructor)" ref="eric5.Graphics.ZoomDialog.html#ZoomDialog.__init__" />
       <keyword name="ZoomDialog (Constructor)" id="ZoomDialog (Constructor)" ref="eric5.QScintilla.ZoomDialog.html#ZoomDialog.__init__" />
-      <keyword name="ZoomDialog (Module)" id="ZoomDialog (Module)" ref="eric5.Graphics.ZoomDialog.html" />
       <keyword name="ZoomDialog (Module)" id="ZoomDialog (Module)" ref="eric5.QScintilla.ZoomDialog.html" />
-      <keyword name="ZoomDialog.getZoomSize" id="ZoomDialog.getZoomSize" ref="eric5.Graphics.ZoomDialog.html#ZoomDialog.getZoomSize" />
       <keyword name="ZoomDialog.getZoomSize" id="ZoomDialog.getZoomSize" ref="eric5.QScintilla.ZoomDialog.html#ZoomDialog.getZoomSize" />
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
@@ -12984,6 +13006,7 @@
       <file>eric5.E5Gui.E5TreeSortFilterProxyModel.html</file>
       <file>eric5.E5Gui.E5TreeView.html</file>
       <file>eric5.E5Gui.E5TreeWidget.html</file>
+      <file>eric5.E5Gui.E5ZoomWidget.html</file>
       <file>eric5.E5Network.E5Ftp.html</file>
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
@@ -13029,7 +13052,6 @@
       <file>eric5.Graphics.UMLGraphicsView.html</file>
       <file>eric5.Graphics.UMLItem.html</file>
       <file>eric5.Graphics.UMLSceneSizeDialog.html</file>
-      <file>eric5.Graphics.ZoomDialog.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockAccessHandler.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.html</file>
       <file>eric5.Helpviewer.AdBlock.AdBlockDialog.html</file>
@@ -13196,7 +13218,6 @@
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>
       <file>eric5.IconEditor.IconSizeDialog.html</file>
-      <file>eric5.IconEditor.IconZoomDialog.html</file>
       <file>eric5.IconEditor.cursors.cursors_rc.html</file>
       <file>eric5.MultiProject.AddProjectDialog.html</file>
       <file>eric5.MultiProject.MultiProject.html</file>

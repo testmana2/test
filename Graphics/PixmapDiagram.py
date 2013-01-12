@@ -9,12 +9,11 @@ Module implementing a dialog showing a pixmap.
 
 from PyQt4.QtCore import Qt, QSize, QEvent
 from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
-    QToolBar, QImage, QPixmap, QDialog, QPrinter, QPrintDialog, QPainter, QFont, QColor
+    QToolBar, QImage, QPixmap, QPrinter, QPrintDialog, QPainter, QFont, QColor
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
-
-from .ZoomDialog import ZoomDialog
+from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 import UI.Config
 
@@ -25,6 +24,15 @@ class PixmapDiagram(E5MainWindow):
     """
     Class implementing a dialog showing a pixmap.
     """
+    ZoomLevels = [
+        1, 3, 5, 7, 9,
+        10, 20, 30, 50, 67, 80, 90,
+        100,
+        110, 120, 133, 150, 170, 200, 240, 300, 400,
+        500, 600, 700, 800, 900, 1000,
+    ]
+    ZoomLevelDefault = 100
+    
     def __init__(self, pixmap, parent=None, name=None):
         """
         Constructor
@@ -53,10 +61,17 @@ class PixmapDiagram(E5MainWindow):
         
         self.setCentralWidget(self.pixmapView)
         
+        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+            UI.PixmapCache.getPixmap("zoomIn.png"),
+            UI.PixmapCache.getPixmap("zoomReset.png"), self)
+        self.statusBar().addPermanentWidget(self.__zoomWidget)
+        self.__zoomWidget.setMapping(
+            PixmapDiagram.ZoomLevels, PixmapDiagram.ZoomLevelDefault)
+        self.__zoomWidget.valueChanged.connect(self.__doZoom)
+        
         # polish up the dialog
         self.resize(QSize(800, 600).expandedTo(self.minimumSizeHint()))
         
-        self.zoom = 1.0
         self.pixmapfile = pixmap
         self.status = self.__showPixmap(self.pixmapfile)
         
@@ -85,26 +100,6 @@ class PixmapDiagram(E5MainWindow):
                     self.trUtf8("Print Preview"), self)
         self.printPreviewAct.triggered[()].connect(self.__printPreviewDiagram)
         
-        self.zoomInAct = \
-            QAction(UI.PixmapCache.getIcon("zoomIn.png"),
-                    self.trUtf8("Zoom in"), self)
-        self.zoomInAct.triggered[()].connect(self.__zoomIn)
-        
-        self.zoomOutAct = \
-            QAction(UI.PixmapCache.getIcon("zoomOut.png"),
-                    self.trUtf8("Zoom out"), self)
-        self.zoomOutAct.triggered[()].connect(self.__zoomOut)
-        
-        self.zoomAct = \
-            QAction(UI.PixmapCache.getIcon("zoomTo.png"),
-                    self.trUtf8("Zoom..."), self)
-        self.zoomAct.triggered[()].connect(self.__zoom)
-        
-        self.zoomResetAct = \
-            QAction(UI.PixmapCache.getIcon("zoomReset.png"),
-                    self.trUtf8("Zoom reset"), self)
-        self.zoomResetAct.triggered[()].connect(self.__zoomReset)
-        
     def __initContextMenu(self):
         """
         Private method to initialize the context menu.
@@ -114,11 +109,6 @@ class PixmapDiagram(E5MainWindow):
         self.__menu.addSeparator()
         self.__menu.addAction(self.printPreviewAct)
         self.__menu.addAction(self.printAct)
-        self.__menu.addSeparator()
-        self.__menu.addAction(self.zoomInAct)
-        self.__menu.addAction(self.zoomOutAct)
-        self.__menu.addAction(self.zoomAct)
-        self.__menu.addAction(self.zoomResetAct)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__showContextMenu)
@@ -143,11 +133,6 @@ class PixmapDiagram(E5MainWindow):
         self.graphicsToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.graphicsToolBar.addAction(self.printPreviewAct)
         self.graphicsToolBar.addAction(self.printAct)
-        self.graphicsToolBar.addSeparator()
-        self.graphicsToolBar.addAction(self.zoomInAct)
-        self.graphicsToolBar.addAction(self.zoomOutAct)
-        self.graphicsToolBar.addAction(self.zoomAct)
-        self.graphicsToolBar.addAction(self.zoomResetAct)
         
         self.addToolBar(Qt.TopToolBarArea, self.windowToolBar)
         self.addToolBar(Qt.TopToolBarArea, self.graphicsToolBar)
@@ -225,9 +210,9 @@ class PixmapDiagram(E5MainWindow):
         pinch = evt.gesture(Qt.PinchGesture)
         if pinch:
             if pinch.state() == Qt.GestureStarted:
-                pinch.setScaleFactor(self.zoom)
+                pinch.setScaleFactor(self.__zoom() / 100)
             else:
-                self.__doZoom(pinch.scaleFactor() / self.zoom)
+                self.__doZoom(int(pinch.scaleFactor() * 100))
             evt.accept()
     
     ############################################################################
@@ -244,46 +229,66 @@ class PixmapDiagram(E5MainWindow):
         scrollBar.setValue(int(factor * scrollBar.value()
                                 + ((factor - 1) * scrollBar.pageStep() / 2)))
         
-    def __doZoom(self, factor):
+    def __levelForZoom(self, zoom):
         """
-        Private method to perform the zooming.
+        Private method determining the zoom level index given a zoom factor.
         
-        @param factor zoom factor (float)
+        @param zoom zoom factor (integer)
+        @return index of zoom factor (integer)
         """
-        self.zoom *= factor
-        self.pixmapLabel.resize(self.zoom * self.pixmapLabel.pixmap().size())
+        try:
+            index = PixmapDiagram.ZoomLevels.index(zoom)
+        except ValueError:
+            for index in range(len(PixmapDiagram.ZoomLevels)):
+                if zoom <= PixmapDiagram.ZoomLevels[index]:
+                    break
+        return index
+    
+    def __doZoom(self, value):
+        """
+        Public method to set the zoom value in percent.
         
-        self.__adjustScrollBar(self.pixmapView.horizontalScrollBar(), factor)
-        self.__adjustScrollBar(self.pixmapView.verticalScrollBar(), factor)
+        @param value zoom value in percent (integer)
+        """
+        oldValue = self.__zoom()
+        if value != oldValue:
+            self.pixmapLabel.resize(value / 100 * self.pixmapLabel.pixmap().size())
+            
+            factor = value / oldValue
+            self.__adjustScrollBar(self.pixmapView.horizontalScrollBar(), factor)
+            self.__adjustScrollBar(self.pixmapView.verticalScrollBar(), factor)
+            
+            self.__zoomWidget.setValue(value)
         
     def __zoomIn(self):
         """
-        Private method to handle the zoom in context menu entry.
+        Private method to zoom into the pixmap.
         """
-        self.__doZoom(1.25)
+        index = self.__levelForZoom(self.__zoom())
+        if index < len(PixmapDiagram.ZoomLevels) - 1:
+            self.__doZoom(PixmapDiagram.ZoomLevels[index + 1])
         
     def __zoomOut(self):
         """
-        Private method to handle the zoom out context menu entry.
+        Private method to zoom out of the pixmap.
         """
-        self.__doZoom(0.8)
+        index = self.__levelForZoom(self.__zoom())
+        if index > 0:
+            self.__doZoom(PixmapDiagram.ZoomLevels[index - 1])
         
     def __zoomReset(self):
         """
-        Private method to handle the reset zoom context menu entry.
+        Private method to reset the zoom value.
         """
-        self.zoom = 1.0
-        self.pixmapLabel.adjustSize()
+        self.__doZoom(PixmapDiagram.ZoomLevels[PixmapDiagram.ZoomLevelDefault])
         
     def __zoom(self):
         """
-        Private method to handle the zoom context menu action.
+        Public method to get the current zoom factor in percent.
+        
+        @return current zoom factor in percent (integer)
         """
-        dlg = ZoomDialog(self.zoom, self)
-        if dlg.exec_() == QDialog.Accepted:
-            zoom = dlg.getZoomSize()
-            factor = zoom / self.zoom
-            self.__doZoom(factor)
+        return int(self.pixmapLabel.width() / self.pixmapLabel.pixmap().width() * 100.0)
         
     def __printDiagram(self):
         """

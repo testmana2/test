@@ -73,6 +73,7 @@ class IconEditorGrid(QWidget):
     @signal previewChanged(QPixmap) emitted to signal a new preview pixmap
     @signal selectionAvailable(bool) emitted to signal a change of the selection
     @signal sizeChanged(int, int) emitted after the size has been changed
+    @signal zoomChanged(int) emitted to signal a change of the zoom value
     """
     canRedoChanged = pyqtSignal(bool)
     canUndoChanged = pyqtSignal(bool)
@@ -83,6 +84,7 @@ class IconEditorGrid(QWidget):
     previewChanged = pyqtSignal(QPixmap)
     selectionAvailable = pyqtSignal(bool)
     sizeChanged = pyqtSignal(int, int)
+    zoomChanged = pyqtSignal(int)
     
     Pencil = 1
     Rubber = 2
@@ -101,6 +103,12 @@ class IconEditorGrid(QWidget):
     
     MarkColor = QColor(255, 255, 255, 255)
     NoMarkColor = QColor(0, 0, 0, 0)
+    
+    ZoomMinimum = 100
+    ZoomMaximum = 10000
+    ZoomStep = 100
+    ZoomDefault = 1200
+    ZoomPercent = True
     
     def __init__(self, parent=None):
         """
@@ -352,24 +360,25 @@ class IconEditorGrid(QWidget):
     
     def setZoomFactor(self, newZoom):
         """
-        Public method to set the zoom factor.
+        Public method to set the zoom factor in percent.
         
-        @param newZoom zoom factor (integer >= 1)
+        @param newZoom zoom factor (integer >= 100)
         """
-        newZoom = max(1, newZoom)   # must not be less than 1
+        newZoom = max(100, newZoom)   # must not be less than 100
         if newZoom != self.__zoom:
-            self.__zoom = newZoom
+            self.__zoom = newZoom // 100
             self.update()
             self.updateGeometry()
             self.resize(self.sizeHint())
+            self.zoomChanged.emit(int(self.__zoom * 100))
     
     def zoomFactor(self):
         """
-        Public method to get the current zoom factor.
+        Public method to get the current zoom factor in percent.
         
         @return zoom factor (integer)
         """
-        return self.__zoom
+        return self.__zoom * 100
     
     def setGridEnabled(self, enable):
         """

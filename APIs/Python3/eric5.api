@@ -1154,6 +1154,8 @@ eric5.E5Graphics.E5ArrowItem.E5ArrowItem.setStartPoint?4(x, y)
 eric5.E5Graphics.E5ArrowItem.E5ArrowItem?1(origin=QPointF(), end=QPointF(), filled=False, type=NormalArrow, parent=None)
 eric5.E5Graphics.E5ArrowItem.NormalArrow?7
 eric5.E5Graphics.E5ArrowItem.WideArrow?7
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.ZoomLevelDefault?7
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.ZoomLevels?7
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView._getDiagramRect?5(border=0)
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView._getDiagramSize?5(border=0)
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.autoAdjustSceneSize?4(limit=False)
@@ -1162,11 +1164,12 @@ eric5.E5Graphics.E5GraphicsView.E5GraphicsView.printDiagram?4(printer, diagramNa
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.resizeScene?4(amount, isWidth=True)
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.saveImage?4(filename, format="PNG")
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.setSceneSize?4(width, height)
-eric5.E5Graphics.E5GraphicsView.E5GraphicsView.setZoom?4(zoomFactor)
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.setZoom?4(value)
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoom?4()
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomIn?4()
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomOut?4()
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomReset?4()
+eric5.E5Graphics.E5GraphicsView.E5GraphicsView.zoomValueChanged?7
 eric5.E5Graphics.E5GraphicsView.E5GraphicsView?1(scene, parent=None)
 eric5.E5Gui.E5Action.ArgumentsError?1(error)
 eric5.E5Gui.E5Action.E5Action.alternateShortcut?4()
@@ -1537,6 +1540,27 @@ eric5.E5Gui.E5TreeWidget.E5TreeWidget.mousePressEvent?4(evt)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget.prependToParentItem?4(parent, item)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget.setDefaultItemShowMode?4(mode)
 eric5.E5Gui.E5TreeWidget.E5TreeWidget?1(parent=None)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget._sliderValueChanged?5(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.default?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.isMapped?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.isPercent?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.mapping?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.maximum?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.minimum?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.on_slider_sliderMoved?4(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.pageStep?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setDefault?4(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setMapping?4(mapping, default, percent=True)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setMaximum?4(maximum)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setMinimum?4(minimum)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setPageStep?4(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setPercent?4(on)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setSingleStep?4(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.setValue?4(value)
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.singleStep?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.value?4()
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget.valueChanged?7
+eric5.E5Gui.E5ZoomWidget.E5ZoomWidget?1(outPix, inPix, resetPix, parent=None)
 eric5.E5Network.E5Ftp.E5Ftp.connect?4(host="", port=0, timeout=-999)
 eric5.E5Network.E5Ftp.E5Ftp.login?4(user="", password="", acct="")
 eric5.E5Network.E5Ftp.E5Ftp.setProxy?4(proxyType=E5FtpProxyType.NoProxy, proxyHost="", proxyPort=ftplib.FTP_PORT, proxyUser="", proxyPassword="", proxyAccount="")
@@ -1773,12 +1797,16 @@ eric5.Graphics.PackageItem.PackageItem?1(model=None, x=0, y=0, rounded=False, no
 eric5.Graphics.PackageItem.PackageModel.addModule?4(modulename)
 eric5.Graphics.PackageItem.PackageModel.getModules?4()
 eric5.Graphics.PackageItem.PackageModel?1(name, moduleslist=[])
+eric5.Graphics.PixmapDiagram.PixmapDiagram.ZoomLevelDefault?7
+eric5.Graphics.PixmapDiagram.PixmapDiagram.ZoomLevels?7
 eric5.Graphics.PixmapDiagram.PixmapDiagram.event?4(evt)
 eric5.Graphics.PixmapDiagram.PixmapDiagram.gestureEvent?4(evt)
 eric5.Graphics.PixmapDiagram.PixmapDiagram.getDiagramName?4()
 eric5.Graphics.PixmapDiagram.PixmapDiagram.getStatus?4()
 eric5.Graphics.PixmapDiagram.PixmapDiagram.wheelEvent?4(evt)
 eric5.Graphics.PixmapDiagram.PixmapDiagram?1(pixmap, parent=None, name=None)
+eric5.Graphics.SvgDiagram.SvgDiagram.ZoomLevelDefault?7
+eric5.Graphics.SvgDiagram.SvgDiagram.ZoomLevels?7
 eric5.Graphics.SvgDiagram.SvgDiagram.event?4(evt)
 eric5.Graphics.SvgDiagram.SvgDiagram.gestureEvent?4(evt)
 eric5.Graphics.SvgDiagram.SvgDiagram.getDiagramName?4()
@@ -1844,8 +1872,6 @@ eric5.Graphics.UMLItem.UMLModel.getName?4()
 eric5.Graphics.UMLItem.UMLModel?1(name)
 eric5.Graphics.UMLSceneSizeDialog.UMLSceneSizeDialog.getData?4()
 eric5.Graphics.UMLSceneSizeDialog.UMLSceneSizeDialog?1(w, h, minW, minH, parent=None, name=None)
-eric5.Graphics.ZoomDialog.ZoomDialog.getZoomSize?4()
-eric5.Graphics.ZoomDialog.ZoomDialog?1(zoom, parent=None, name=None)
 eric5.Helpviewer.AdBlock.AdBlockAccessHandler.AdBlockAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.AdBlockBlockedNetworkReply.abort?4()
 eric5.Helpviewer.AdBlock.AdBlockBlockedNetworkReply.AdBlockBlockedNetworkReply.readData?4(maxlen)
@@ -2363,6 +2389,8 @@ eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher.matc
 eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher.pattern?4()
 eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.GreaseMonkeyUrlMatcher?1(pattern)
 eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.wildcardMatch?4(string, pattern)
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.ZoomLevelDefault?7
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.ZoomLevels?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
@@ -2400,12 +2428,15 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.search?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.setSource?4(name, requestData=None)
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.setZoomValue?4(value)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.source?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.sourceChanged?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.wheelEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomIn?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomOut?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomReset?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomValue?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.zoomValueChanged?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser?1(mainWindow, parent=None, name="")
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage._webPluginFactory?8
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.acceptNavigationRequest?4(frame, request, type_)
@@ -2472,6 +2503,7 @@ eric5.Helpviewer.HelpTabBar.HelpTabBar.tabRemoved?4(index)
 eric5.Helpviewer.HelpTabBar.HelpTabBar?1(parent=None)
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.browserAt?4(index)
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.browserClosed?7
+eric5.Helpviewer.HelpTabWidget.HelpTabWidget.browserZoomValueChanged?7
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.browsers?4()
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.canRestoreClosedTab?4()
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.clearClosedTabsList?4()
@@ -3216,6 +3248,11 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.Pencil?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.Rectangle?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.RectangleSelection?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.Rubber?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.ZoomDefault?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.ZoomMaximum?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.ZoomMinimum?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.ZoomPercent?7
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.ZoomStep?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canPaste?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canRedo?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.canRedoChanged?7
@@ -3261,6 +3298,7 @@ eric5.IconEditor.IconEditorGrid.IconEditorGrid.shutdown?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.sizeChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.sizeHint?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.tool?4()
+eric5.IconEditor.IconEditorGrid.IconEditorGrid.zoomChanged?7
 eric5.IconEditor.IconEditorGrid.IconEditorGrid.zoomFactor?4()
 eric5.IconEditor.IconEditorGrid.IconEditorGrid?1(parent=None)
 eric5.IconEditor.IconEditorPalette.IconEditorPalette.colorChanged?4(color)
@@ -3278,8 +3316,6 @@ eric5.IconEditor.IconEditorWindow.IconEditorWindow.windows?7
 eric5.IconEditor.IconEditorWindow.IconEditorWindow?1(fileName="", parent=None, fromEric=False, initShortcutsOnly=False)
 eric5.IconEditor.IconSizeDialog.IconSizeDialog.getData?4()
 eric5.IconEditor.IconSizeDialog.IconSizeDialog?1(width, height, parent=None)
-eric5.IconEditor.IconZoomDialog.IconZoomDialog.getZoomFactor?4()
-eric5.IconEditor.IconZoomDialog.IconZoomDialog?1(zoom, parent=None)
 eric5.IconEditor.cursors.cursors_rc.qCleanupResources?4()
 eric5.IconEditor.cursors.cursors_rc.qInitResources?4()
 eric5.IconEditor.cursors.cursors_rc.qt_resource_data?7
@@ -8511,7 +8547,7 @@ eric5.ViewManager.ViewManager.ViewManager.setCooperationClient?4(client)
 eric5.ViewManager.ViewManager.ViewManager.setEditorName?4(editor, newName)
 eric5.ViewManager.ViewManager.ViewManager.setFileLine?4(fn, line, error=False, syntaxError=False)
 eric5.ViewManager.ViewManager.ViewManager.setReferences?4(ui, dbs)
-eric5.ViewManager.ViewManager.ViewManager.setSbInfo?4(sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol)
+eric5.ViewManager.ViewManager.ViewManager.setSbInfo?4(sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol, sbZoom)
 eric5.ViewManager.ViewManager.ViewManager.setSplitOrientation?4(orientation)
 eric5.ViewManager.ViewManager.ViewManager.shareConnected?4(connected)
 eric5.ViewManager.ViewManager.ViewManager.shareEditor?4(share)

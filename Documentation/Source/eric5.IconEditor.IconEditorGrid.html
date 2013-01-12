@@ -154,13 +154,16 @@ emitted to signal a change of the selection
 </dd><dt>sizeChanged(int, int)</dt>
 <dd>
 emitted after the size has been changed
+</dd><dt>zoomChanged(int)</dt>
+<dd>
+emitted to signal a change of the zoom value
 </dd>
 </dl>
 <h3>Derived from</h3>
 QWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>Circle</td></tr><tr><td>CircleSelection</td></tr><tr><td>ColorPicker</td></tr><tr><td>Ellipse</td></tr><tr><td>Fill</td></tr><tr><td>FilledCircle</td></tr><tr><td>FilledEllipse</td></tr><tr><td>FilledRectangle</td></tr><tr><td>Line</td></tr><tr><td>MarkColor</td></tr><tr><td>NoMarkColor</td></tr><tr><td>Pencil</td></tr><tr><td>Rectangle</td></tr><tr><td>RectangleSelection</td></tr><tr><td>Rubber</td></tr>
+<tr><td>Circle</td></tr><tr><td>CircleSelection</td></tr><tr><td>ColorPicker</td></tr><tr><td>Ellipse</td></tr><tr><td>Fill</td></tr><tr><td>FilledCircle</td></tr><tr><td>FilledEllipse</td></tr><tr><td>FilledRectangle</td></tr><tr><td>Line</td></tr><tr><td>MarkColor</td></tr><tr><td>NoMarkColor</td></tr><tr><td>Pencil</td></tr><tr><td>Rectangle</td></tr><tr><td>RectangleSelection</td></tr><tr><td>Rubber</td></tr><tr><td>ZoomDefault</td></tr><tr><td>ZoomMaximum</td></tr><tr><td>ZoomMinimum</td></tr><tr><td>ZoomPercent</td></tr><tr><td>ZoomStep</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -320,7 +323,7 @@ QWidget
 <td>Public method to set the current drawing tool.</td>
 </tr><tr>
 <td><a href="#IconEditorGrid.setZoomFactor">setZoomFactor</a></td>
-<td>Public method to set the zoom factor.</td>
+<td>Public method to set the zoom factor in percent.</td>
 </tr><tr>
 <td><a href="#IconEditorGrid.shutdown">shutdown</a></td>
 <td>Public slot to perform some shutdown actions.</td>
@@ -332,7 +335,7 @@ QWidget
 <td>Public method to get the current drawing tool.</td>
 </tr><tr>
 <td><a href="#IconEditorGrid.zoomFactor">zoomFactor</a></td>
-<td>Public method to get the current zoom factor.</td>
+<td>Public method to get the current zoom factor in percent.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -828,11 +831,11 @@ drawing tool to be used
 <h4>IconEditorGrid.setZoomFactor</h4>
 <b>setZoomFactor</b>(<i>newZoom</i>)
 <p>
-        Public method to set the zoom factor.
+        Public method to set the zoom factor in percent.
 </p><dl>
 <dt><i>newZoom</i></dt>
 <dd>
-zoom factor (integer >= 1)
+zoom factor (integer >= 100)
 </dd>
 </dl><a NAME="IconEditorGrid.shutdown" ID="IconEditorGrid.shutdown"></a>
 <h4>IconEditorGrid.shutdown</h4>
@@ -864,7 +867,7 @@ current drawing tool
 <h4>IconEditorGrid.zoomFactor</h4>
 <b>zoomFactor</b>(<i></i>)
 <p>
-        Public method to get the current zoom factor.
+        Public method to get the current zoom factor in percent.
 </p><dl>
 <dt>Returns:</dt>
 <dd>

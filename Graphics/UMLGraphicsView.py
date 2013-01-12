@@ -13,6 +13,7 @@ from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, QPr
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from .UMLItem import UMLItem
 from .AssociationItem import AssociationItem
@@ -20,7 +21,6 @@ from .ClassItem import ClassItem
 from .ModuleItem import ModuleItem
 from .PackageItem import PackageItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
-from .ZoomDialog import ZoomDialog
 
 import UI.Config
 import UI.PixmapCache
@@ -54,6 +54,15 @@ class UMLGraphicsView(E5GraphicsView):
         self.border = 10
         self.deltaSize = 100.0
         
+        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+            UI.PixmapCache.getPixmap("zoomIn.png"),
+            UI.PixmapCache.getPixmap("zoomReset.png"), self)
+        parent.statusBar().addPermanentWidget(self.__zoomWidget)
+        self.__zoomWidget.setMapping(
+            E5GraphicsView.ZoomLevels, E5GraphicsView.ZoomLevelDefault)
+        self.__zoomWidget.valueChanged.connect(self.setZoom)
+        self.zoomValueChanged.connect(self.__zoomWidget.setValue)
+        
         self.__initActions()
         
         scene.changed.connect(self.__sceneChanged)
@@ -71,26 +80,6 @@ class UMLGraphicsView(E5GraphicsView):
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
                     self.trUtf8("Delete shapes"), self)
         self.deleteShapeAct.triggered[()].connect(self.__deleteShape)
-        
-        self.zoomInAct = \
-            QAction(UI.PixmapCache.getIcon("zoomIn.png"),
-                    self.trUtf8("Zoom in"), self)
-        self.zoomInAct.triggered[()].connect(self.zoomIn)
-        
-        self.zoomOutAct = \
-            QAction(UI.PixmapCache.getIcon("zoomOut.png"),
-                    self.trUtf8("Zoom out"), self)
-        self.zoomOutAct.triggered[()].connect(self.zoomOut)
-        
-        self.zoomAct = \
-            QAction(UI.PixmapCache.getIcon("zoomTo.png"),
-                    self.trUtf8("Zoom..."), self)
-        self.zoomAct.triggered[()].connect(self.__zoom)
-        
-        self.zoomResetAct = \
-            QAction(UI.PixmapCache.getIcon("zoomReset.png"),
-                    self.trUtf8("Zoom reset"), self)
-        self.zoomResetAct.triggered[()].connect(self.zoomReset)
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
@@ -216,11 +205,6 @@ class UMLGraphicsView(E5GraphicsView):
         toolBar = QToolBar(self.trUtf8("Graphics"), self)
         toolBar.setIconSize(UI.Config.ToolBarIconSize)
         toolBar.addAction(self.deleteShapeAct)
-        toolBar.addSeparator()
-        toolBar.addAction(self.zoomInAct)
-        toolBar.addAction(self.zoomOutAct)
-        toolBar.addAction(self.zoomAct)
-        toolBar.addAction(self.zoomResetAct)
         toolBar.addSeparator()
         toolBar.addAction(self.alignLeftAct)
         toolBar.addAction(self.alignHCenterAct)
@@ -466,15 +450,6 @@ class UMLGraphicsView(E5GraphicsView):
         """
         super().printDiagram(printer, self.diagramName)
         
-    def __zoom(self):
-        """
-        Private method to handle the zoom context menu action.
-        """
-        dlg = ZoomDialog(self.zoom(), self)
-        if dlg.exec_() == QDialog.Accepted:
-            zoom = dlg.getZoomSize()
-            self.setZoom(zoom)
-        
     def setDiagramName(self, name):
         """
         Public slot to set the diagram name.
@@ -641,9 +616,9 @@ class UMLGraphicsView(E5GraphicsView):
         pinch = evt.gesture(Qt.PinchGesture)
         if pinch:
             if pinch.state() == Qt.GestureStarted:
-                pinch.setScaleFactor(self.zoom())
+                pinch.setScaleFactor(self.zoom() / 100.0)
             else:
-                self.setZoom(pinch.scaleFactor())
+                self.setZoom(int(pinch.scaleFactor() * 100))
             evt.accept()
     
     def getItemId(self):

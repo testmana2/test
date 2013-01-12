@@ -396,10 +396,10 @@ class Browser(QTreeView):
                         self.sourceFile[str].emit(itm.fileName())
                     elif itm.isResourcesFile():
                         self.sourceFile[str].emit(itm.fileName())
-                    elif itm.isPixmapFile():
-                        self.pixmapFile.emit(itm.fileName())
                     elif itm.isSvgFile():
                         self.svgFile.emit(itm.fileName())
+                    elif itm.isPixmapFile():
+                        self.pixmapFile.emit(itm.fileName())
                     else:
                         type_ = mimetypes.guess_type(itm.fileName())[0]
                         if type_ is None or type_.split("/")[0] == "text":

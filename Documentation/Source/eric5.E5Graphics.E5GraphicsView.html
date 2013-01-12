@@ -44,12 +44,18 @@ Module implementing a canvas view class.
 <h2>E5GraphicsView</h2>
 <p>
     Class implementing a graphics view.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>zoomValueChanged(int)</dt>
+<dd>
+emitted to signal a change of the zoom value
+</dd>
+</dl>
 <h3>Derived from</h3>
 QGraphicsView
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ZoomLevelDefault</td></tr><tr><td>ZoomLevels</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -63,6 +69,9 @@ QGraphicsView
 </tr><tr>
 <td><a href="#E5GraphicsView.__getDiagram">__getDiagram</a></td>
 <td>Private method to retrieve the diagram from the scene fitting it in the minimum rectangle.</td>
+</tr><tr>
+<td><a href="#E5GraphicsView.__levelForZoom">__levelForZoom</a></td>
+<td>Private method determining the zoom level index given a zoom factor.</td>
 </tr><tr>
 <td><a href="#E5GraphicsView._getDiagramRect">_getDiagramRect</a></td>
 <td>Protected method to calculate the minimum rectangle fitting the diagram.</td>
@@ -89,10 +98,10 @@ QGraphicsView
 <td>Public method to set the scene size.</td>
 </tr><tr>
 <td><a href="#E5GraphicsView.setZoom">setZoom</a></td>
-<td>Public method to set the zoom factor.</td>
+<td>Public method to set the zoom value in percent.</td>
 </tr><tr>
 <td><a href="#E5GraphicsView.zoom">zoom</a></td>
-<td>Public method to get the current zoom factor.</td>
+<td>Public method to get the current zoom factor in percent.</td>
 </tr><tr>
 <td><a href="#E5GraphicsView.zoomIn">zoomIn</a></td>
 <td>Public method to zoom in.</td>
@@ -101,7 +110,7 @@ QGraphicsView
 <td>Public method to zoom out.</td>
 </tr><tr>
 <td><a href="#E5GraphicsView.zoomReset">zoomReset</a></td>
-<td>Public method to handle the reset zoom context menu entry.</td>
+<td>Public method to handle the reset the zoom value.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -142,6 +151,21 @@ name of the file for non pixmaps (string)
 <dt>Returns:</dt>
 <dd>
 diagram pixmap to receive the diagram (QPixmap)
+</dd>
+</dl><a NAME="E5GraphicsView.__levelForZoom" ID="E5GraphicsView.__levelForZoom"></a>
+<h4>E5GraphicsView.__levelForZoom</h4>
+<b>__levelForZoom</b>(<i>zoom</i>)
+<p>
+        Private method determining the zoom level index given a zoom factor.
+</p><dl>
+<dt><i>zoom</i></dt>
+<dd>
+zoom factor (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+index of zoom factor (integer)
 </dd>
 </dl><a NAME="E5GraphicsView._getDiagramRect" ID="E5GraphicsView._getDiagramRect"></a>
 <h4>E5GraphicsView._getDiagramRect</h4>
@@ -259,23 +283,23 @@ height for the scene (real)
 </dd>
 </dl><a NAME="E5GraphicsView.setZoom" ID="E5GraphicsView.setZoom"></a>
 <h4>E5GraphicsView.setZoom</h4>
-<b>setZoom</b>(<i>zoomFactor</i>)
+<b>setZoom</b>(<i>value</i>)
 <p>
-        Public method to set the zoom factor.
+        Public method to set the zoom value in percent.
 </p><dl>
-<dt><i>zoomFactor</i></dt>
+<dt><i>value</i></dt>
 <dd>
-new zoom factor (float)
+zoom value in percent (integer)
 </dd>
 </dl><a NAME="E5GraphicsView.zoom" ID="E5GraphicsView.zoom"></a>
 <h4>E5GraphicsView.zoom</h4>
 <b>zoom</b>(<i></i>)
 <p>
-        Public method to get the current zoom factor.
+        Public method to get the current zoom factor in percent.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-current zoom factor (float)
+current zoom factor in percent (integer)
 </dd>
 </dl><a NAME="E5GraphicsView.zoomIn" ID="E5GraphicsView.zoomIn"></a>
 <h4>E5GraphicsView.zoomIn</h4>
@@ -291,7 +315,7 @@ current zoom factor (float)
 <h4>E5GraphicsView.zoomReset</h4>
 <b>zoomReset</b>(<i></i>)
 <p>
-        Public method to handle the reset zoom context menu entry.
+        Public method to handle the reset the zoom value.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

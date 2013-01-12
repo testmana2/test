@@ -49,7 +49,7 @@ Module implementing a dialog showing a pixmap.
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ZoomLevelDefault</td></tr><tr><td>ZoomLevels</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -65,7 +65,7 @@ E5MainWindow
 <td>Private method to adjust a scrollbar by a certain factor.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__doZoom">__doZoom</a></td>
-<td>Private method to perform the zooming.</td>
+<td>Public method to set the zoom value in percent.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__initActions">__initActions</a></td>
 <td>Private method to initialize the view actions.</td>
@@ -75,6 +75,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#PixmapDiagram.__initToolBars">__initToolBars</a></td>
 <td>Private method to populate the toolbars with our actions.</td>
+</tr><tr>
+<td><a href="#PixmapDiagram.__levelForZoom">__levelForZoom</a></td>
+<td>Private method determining the zoom level index given a zoom factor.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__print">__print</a></td>
 <td>Private slot to the actual printing.</td>
@@ -92,16 +95,16 @@ E5MainWindow
 <td>Private method to show a file.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoom">__zoom</a></td>
-<td>Private method to handle the zoom context menu action.</td>
+<td>Public method to get the current zoom factor in percent.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoomIn">__zoomIn</a></td>
-<td>Private method to handle the zoom in context menu entry.</td>
+<td>Private method to zoom into the pixmap.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoomOut">__zoomOut</a></td>
-<td>Private method to handle the zoom out context menu entry.</td>
+<td>Private method to zoom out of the pixmap.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoomReset">__zoomReset</a></td>
-<td>Private method to handle the reset zoom context menu entry.</td>
+<td>Private method to reset the zoom value.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.event">event</a></td>
 <td>Protected method handling events.</td>
@@ -154,13 +157,13 @@ factor to adjust by (float)
 </dd>
 </dl><a NAME="PixmapDiagram.__doZoom" ID="PixmapDiagram.__doZoom"></a>
 <h4>PixmapDiagram.__doZoom</h4>
-<b>__doZoom</b>(<i>factor</i>)
+<b>__doZoom</b>(<i>value</i>)
 <p>
-        Private method to perform the zooming.
+        Public method to set the zoom value in percent.
 </p><dl>
-<dt><i>factor</i></dt>
+<dt><i>value</i></dt>
 <dd>
-zoom factor (float)
+zoom value in percent (integer)
 </dd>
 </dl><a NAME="PixmapDiagram.__initActions" ID="PixmapDiagram.__initActions"></a>
 <h4>PixmapDiagram.__initActions</h4>
@@ -177,7 +180,22 @@ zoom factor (float)
 <b>__initToolBars</b>(<i></i>)
 <p>
         Private method to populate the toolbars with our actions.
-</p><a NAME="PixmapDiagram.__print" ID="PixmapDiagram.__print"></a>
+</p><a NAME="PixmapDiagram.__levelForZoom" ID="PixmapDiagram.__levelForZoom"></a>
+<h4>PixmapDiagram.__levelForZoom</h4>
+<b>__levelForZoom</b>(<i>zoom</i>)
+<p>
+        Private method determining the zoom level index given a zoom factor.
+</p><dl>
+<dt><i>zoom</i></dt>
+<dd>
+zoom factor (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+index of zoom factor (integer)
+</dd>
+</dl><a NAME="PixmapDiagram.__print" ID="PixmapDiagram.__print"></a>
 <h4>PixmapDiagram.__print</h4>
 <b>__print</b>(<i>printer</i>)
 <p>
@@ -226,22 +244,27 @@ flag indicating success (boolean)
 <h4>PixmapDiagram.__zoom</h4>
 <b>__zoom</b>(<i></i>)
 <p>
-        Private method to handle the zoom context menu action.
-</p><a NAME="PixmapDiagram.__zoomIn" ID="PixmapDiagram.__zoomIn"></a>
+        Public method to get the current zoom factor in percent.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current zoom factor in percent (integer)
+</dd>
+</dl><a NAME="PixmapDiagram.__zoomIn" ID="PixmapDiagram.__zoomIn"></a>
 <h4>PixmapDiagram.__zoomIn</h4>
 <b>__zoomIn</b>(<i></i>)
 <p>
-        Private method to handle the zoom in context menu entry.
+        Private method to zoom into the pixmap.
 </p><a NAME="PixmapDiagram.__zoomOut" ID="PixmapDiagram.__zoomOut"></a>
 <h4>PixmapDiagram.__zoomOut</h4>
 <b>__zoomOut</b>(<i></i>)
 <p>
-        Private method to handle the zoom out context menu entry.
+        Private method to zoom out of the pixmap.
 </p><a NAME="PixmapDiagram.__zoomReset" ID="PixmapDiagram.__zoomReset"></a>
 <h4>PixmapDiagram.__zoomReset</h4>
 <b>__zoomReset</b>(<i></i>)
 <p>
-        Private method to handle the reset zoom context menu entry.
+        Private method to reset the zoom value.
 </p><a NAME="PixmapDiagram.event" ID="PixmapDiagram.event"></a>
 <h4>PixmapDiagram.event</h4>
 <b>event</b>(<i>evt</i>)

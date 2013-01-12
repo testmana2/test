@@ -2,6 +2,8 @@ Change Log
 ----------
 Version 5.4-snapshot-2013mmdd:
 - bug fixes
+- General
+  -- introduced a zoom widget in the status bar of several windows
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way

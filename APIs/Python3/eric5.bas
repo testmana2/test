@@ -175,6 +175,7 @@ E5TreeView QTreeView
 E5TreeWidget QTreeWidget
 E5VerticalToolBox QToolBox
 E5WheelTabBar QTabBar
+E5ZoomWidget QWidget Ui_E5ZoomWidget
 EditBreakpointDialog QDialog Ui_EditBreakpointDialog
 EditWatchpointDialog QDialog Ui_EditWatchpointDialog
 Editor QsciScintillaCompat
@@ -345,7 +346,6 @@ IconEditorGrid QWidget
 IconEditorPalette QWidget
 IconEditorWindow E5MainWindow
 IconSizeDialog QDialog Ui_IconSizeDialog
-IconZoomDialog QDialog Ui_IconZoomDialog
 IconsPage ConfigurationPageBase Ui_IconsPage
 IconsPreviewDialog QDialog Ui_IconsPreviewDialog
 ImportShadowedByLoopVar Message

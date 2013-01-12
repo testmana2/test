@@ -574,12 +574,21 @@ class HelpBrowser(QWebView):
     @signal backwardAvailable(bool) emitted after the current URL has changed
     @signal highlighted(str) emitted, when the mouse hovers over a link
     @signal search(QUrl) emitted, when a search is requested
+    @signal zoomValueChanged(int) emitted to signal a change of the zoom value
     """
     sourceChanged = pyqtSignal(QUrl)
     forwardAvailable = pyqtSignal(bool)
     backwardAvailable = pyqtSignal(bool)
     highlighted = pyqtSignal(str)
     search = pyqtSignal(QUrl)
+    zoomValueChanged = pyqtSignal(int)
+    
+    ZoomLevels = [
+        30, 50, 67, 80, 90,
+        100,
+        110, 120, 133, 150, 170, 200, 240, 300,
+    ]
+    ZoomLevelDefault = 100
     
     def __init__(self, mainWindow, parent=None, name=""):
         """
@@ -607,11 +616,7 @@ class HelpBrowser(QWebView):
         self.__progress = 0
         
         self.__currentZoom = 100
-        self.__zoomLevels = [
-            30, 50, 67, 80, 90,
-            100,
-            110, 120, 133, 150, 170, 200, 240, 300,
-        ]
+        self.__zoomLevels = HelpBrowser.ZoomLevels[:]
         
         self.__javaScriptBinding = None
         self.__javaScriptEricObject = None
@@ -892,10 +897,32 @@ class HelpBrowser(QWebView):
         """
         Private slot to apply the current zoom factor.
         """
+        self.setZoomValue(self.__currentZoom)
+    
+    def setZoomValue(self, value):
+        """
+        Public method to set the zoom value.
+        
+        @param value zoom value (integer)
+        """
+        if value != self.zoomValue():
+            try:
+                self.setZoomFactor(value / 100.0)
+            except AttributeError:
+                self.setTextSizeMultiplier(value / 100.0)
+            self.zoomValueChanged.emit(value)
+    
+    def zoomValue(self):
+        """
+        Public method to get the current zoom value.
+        
+        @return zoom value (integer)
+        """
         try:
-            self.setZoomFactor(self.__currentZoom / 100.0)
+            val = self.zoomFactor() * 100
         except AttributeError:
-            self.setTextSizeMultiplier(self.__currentZoom / 100.0)
+            val = self.textSizeMultiplier() * 100
+        return int(val)
     
     def zoomIn(self):
         """
@@ -919,7 +946,7 @@ class HelpBrowser(QWebView):
         """
         Public method to reset the zoom factor.
         """
-        self.__currentZoom = 100
+        self.__currentZoom = self.__zoomLevels[HelpBrowser.ZoomLevelDefault]
         self.__applyZoom()
     
     def hasSelection(self):
@@ -1545,10 +1572,10 @@ class HelpBrowser(QWebView):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            degrees = evt.delta() // 8
-            steps = degrees // 15
-            self.__currentZoom += steps * 10
-            self.__applyZoom()
+            if evt.delta() < 0:
+                self.zoomOut()
+            else:
+                self.zoomIn()
             evt.accept()
             return
         

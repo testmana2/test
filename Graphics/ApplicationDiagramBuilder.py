@@ -82,6 +82,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                     moduleDict[name] = mod
         finally:
             progress.setValue(tot)
+            progress.deleteLater()
         return moduleDict
         
     def buildDiagram(self):

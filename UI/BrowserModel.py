@@ -1002,10 +1002,10 @@ class BrowserFileItem(BrowserItem):
             self._populated = False
             self._lazyPopulation = True
             self._moduleName = os.path.basename(finfo)
-        elif self.isPixmapFile():
-            pixName = "filePixmap.png"
         elif self.isSvgFile():
             pixName = "fileSvg.png"
+        elif self.isPixmapFile():
+            pixName = "filePixmap.png"
         elif self.isDFile():
             pixName = "fileD.png"
         else:

@@ -160,7 +160,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>uninstall.py</Source>
     <Source>Graphics/PixmapDiagram.py</Source>
     <Source>Graphics/__init__.py</Source>
-    <Source>Graphics/ZoomDialog.py</Source>
     <Source>Graphics/GraphicsUtilities.py</Source>
     <Source>Project/ProjectResourcesBrowser.py</Source>
     <Source>Preferences/ToolGroupConfigurationDialog.py</Source>
@@ -619,7 +618,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>IconEditor/cursors/__init__.py</Source>
     <Source>IconEditor/IconEditorGrid.py</Source>
     <Source>IconEditor/IconEditorWindow.py</Source>
-    <Source>IconEditor/IconZoomDialog.py</Source>
     <Source>IconEditor/IconEditorPalette.py</Source>
     <Source>DebugClients/Python/coverage/backward.py</Source>
     <Source>DebugClients/Python3/coverage/__init__.py</Source>
@@ -1068,6 +1066,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Network/IRC/IrcServerEditDialog.py</Source>
     <Source>Network/IRC/IrcIdentitiesEditDialog.py</Source>
     <Source>Network/IRC/IrcMessageEdit.py</Source>
+    <Source>E5Gui/E5ZoomWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1131,7 +1130,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>ViewManager/BookmarkedFilesDialog.ui</Form>
     <Form>QScintilla/GotoDialog.ui</Form>
     <Form>QScintilla/ZoomDialog.ui</Form>
-    <Form>Graphics/ZoomDialog.ui</Form>
     <Form>Preferences/ToolGroupConfigurationDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/ProjectBrowserPage.ui</Form>
     <Form>Preferences/ConfigurationPages/IconsPreviewDialog.ui</Form>
@@ -1260,7 +1258,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/SearchWidget.ui</Form>
     <Form>Helpviewer/History/HistoryDialog.ui</Form>
     <Form>IconEditor/IconSizeDialog.ui</Form>
-    <Form>IconEditor/IconZoomDialog.ui</Form>
     <Form>Helpviewer/Passwords/PasswordsDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/OpenSearch/OpenSearchEditDialog.ui</Form>
@@ -1381,6 +1378,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Network/IRC/IrcChannelEditDialog.ui</Form>
     <Form>Network/IRC/IrcServerEditDialog.ui</Form>
     <Form>Network/IRC/IrcIdentitiesEditDialog.ui</Form>
+    <Form>E5Gui/E5ZoomWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

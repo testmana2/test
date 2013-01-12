@@ -10,14 +10,14 @@ Module implementing the icon editor main window.
 from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile, \
     QEvent
 from PyQt4.QtGui import QScrollArea, QPalette, QImage, QImageReader, QImageWriter, \
-    QKeySequence, qApp, QLabel, QDockWidget, QDialog, QWhatsThis
+    QKeySequence, qApp, QLabel, QDockWidget, QWhatsThis
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from .IconEditorGrid import IconEditorGrid
-from .IconZoomDialog import IconZoomDialog
 from .IconEditorPalette import IconEditorPalette
 
 import UI.PixmapCache
@@ -116,6 +116,7 @@ class IconEditorWindow(E5MainWindow):
             'gif': self.trUtf8("Graphic Interchange Format File (*.gif)"),
             'ico': self.trUtf8("Windows Icon File (*.ico)"),
             'jpg': self.trUtf8("JPEG File (*.jpg)"),
+            'jpeg': self.trUtf8("JPEG File (*.jpeg)"),
             'mng': self.trUtf8("Multiple-Image Network Graphics File (*.mng)"),
             'pbm': self.trUtf8("Portable Bitmap File (*.pbm)"),
             'pcx': self.trUtf8("Paintbrush Bitmap File (*.pcx)"),
@@ -124,8 +125,11 @@ class IconEditorWindow(E5MainWindow):
             'ppm': self.trUtf8("Portable Pixmap File (*.ppm)"),
             'sgi': self.trUtf8("Silicon Graphics Image File (*.sgi)"),
             'svg': self.trUtf8("Scalable Vector Graphics File (*.svg)"),
+            'svgz': self.trUtf8("Compressed Scalable Vector Graphics File (*.svgz)"),
             'tga': self.trUtf8("Targa Graphic File (*.tga)"),
             'tif': self.trUtf8("TIFF File (*.tif)"),
+            'tiff': self.trUtf8("TIFF File (*.tiff)"),
+            'wbmp': self.trUtf8("WAP Bitmap File (*.wbmp)"),
             'xbm': self.trUtf8("X11 Bitmap File (*.xbm)"),
             'xpm': self.trUtf8("X11 Pixmap File (*.xpm)"),
         }
@@ -476,21 +480,6 @@ class IconEditorWindow(E5MainWindow):
         self.zoomResetAct.triggered[()].connect(self.__zoomReset)
         self.__actions.append(self.zoomResetAct)
         
-        self.zoomToAct = E5Action(self.trUtf8('Zoom'),
-            UI.PixmapCache.getIcon("zoomTo.png"),
-            self.trUtf8('&Zoom...'),
-            QKeySequence(self.trUtf8("Ctrl+#", "View|Zoom")),
-            0,
-            self, 'iconEditor_view_zoom')
-        self.zoomToAct.setStatusTip(self.trUtf8('Zoom the icon'))
-        self.zoomToAct.setWhatsThis(self.trUtf8(
-                """<b>Zoom</b>"""
-                """<p>Zoom the icon. This opens a dialog where the"""
-                """ desired zoom factor can be entered.</p>"""
-                ))
-        self.zoomToAct.triggered[()].connect(self.__zoom)
-        self.__actions.append(self.zoomToAct)
-        
         self.showGridAct = E5Action(self.trUtf8('Show Grid'),
             UI.PixmapCache.getIcon("grid.png"),
             self.trUtf8('Show &Grid'),
@@ -788,7 +777,6 @@ class IconEditorWindow(E5MainWindow):
         menu.addAction(self.zoomInAct)
         menu.addAction(self.zoomResetAct)
         menu.addAction(self.zoomOutAct)
-        menu.addAction(self.zoomToAct)
         menu.addSeparator()
         menu.addAction(self.showGridAct)
         
@@ -850,11 +838,6 @@ class IconEditorWindow(E5MainWindow):
         viewtb = self.addToolBar(self.trUtf8("View"))
         viewtb.setObjectName("ViewToolBar")
         viewtb.setIconSize(UI.Config.ToolBarIconSize)
-        viewtb.addAction(self.zoomInAct)
-        viewtb.addAction(self.zoomResetAct)
-        viewtb.addAction(self.zoomOutAct)
-        viewtb.addAction(self.zoomToAct)
-        viewtb.addSeparator()
         viewtb.addAction(self.showGridAct)
         
         toolstb = self.addToolBar(self.trUtf8("Tools"))
@@ -887,13 +870,6 @@ class IconEditorWindow(E5MainWindow):
         self.__statusBar = self.statusBar()
         self.__statusBar.setSizeGripEnabled(True)
 
-        self.__sbZoom = QLabel(self.__statusBar)
-        self.__statusBar.addPermanentWidget(self.__sbZoom)
-        self.__sbZoom.setWhatsThis(self.trUtf8(
-            """<p>This part of the status bar displays the current zoom factor.</p>"""
-        ))
-        self.__updateZoom()
-
         self.__sbSize = QLabel(self.__statusBar)
         self.__statusBar.addPermanentWidget(self.__sbSize)
         self.__sbSize.setWhatsThis(self.trUtf8(
@@ -907,6 +883,21 @@ class IconEditorWindow(E5MainWindow):
             """<p>This part of the status bar displays the cursor position.</p>"""
         ))
         self.__updatePosition(0, 0)
+        
+        self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
+            UI.PixmapCache.getPixmap("zoomIn.png"),
+            UI.PixmapCache.getPixmap("zoomReset.png"), self)
+        self.__zoomWidget.setMinimum(IconEditorGrid.ZoomMinimum)
+        self.__zoomWidget.setMaximum(IconEditorGrid.ZoomMaximum)
+        self.__zoomWidget.setDefault(IconEditorGrid.ZoomDefault)
+        self.__zoomWidget.setSingleStep(IconEditorGrid.ZoomStep)
+        self.__zoomWidget.setPercent(IconEditorGrid.ZoomPercent)
+        self.__statusBar.addPermanentWidget(self.__zoomWidget)
+        self.__zoomWidget.setValue(self.__editor.zoomFactor())
+        self.__zoomWidget.valueChanged.connect(self.__editor.setZoomFactor)
+        self.__editor.zoomChanged.connect(self.__zoomWidget.setValue)
+        
+        self.__updateZoom()
     
     def __createPaletteDock(self):
         """
@@ -1156,7 +1147,7 @@ class IconEditorWindow(E5MainWindow):
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         """
-        self.__sbPos.setText("{0:d}, {1:d}".format(x + 1, y + 1))
+        self.__sbPos.setText("X: {0:d} Y: {1:d}".format(x + 1, y + 1))
     
     def __updateSize(self, w, h):
         """
@@ -1165,45 +1156,37 @@ class IconEditorWindow(E5MainWindow):
         @param w width of the icon (integer)
         @param h height of the icon (integer)
         """
-        self.__sbSize.setText("{0:d} x {1:d}".format(w, h))
+        self.__sbSize.setText("Size: {0:d} x {1:d}".format(w, h))
     
     def __updateZoom(self):
         """
         Private slot to show the current zoom factor.
         """
-        zoom = self.__editor.zoomFactor()
-        self.__sbZoom.setText("{0:d} %".format(zoom * 100))
-        self.zoomOutAct.setEnabled(self.__editor.zoomFactor() > 1)
+        self.zoomOutAct.setEnabled(
+            self.__editor.zoomFactor() > IconEditorGrid.ZoomMinimum)
+        self.zoomInAct.setEnabled(
+            self.__editor.zoomFactor() < IconEditorGrid.ZoomMaximum)
     
     def __zoomIn(self):
         """
         Private slot called to handle the zoom in action.
         """
-        self.__editor.setZoomFactor(self.__editor.zoomFactor() + 1)
+        self.__editor.setZoomFactor(self.__editor.zoomFactor() + IconEditorGrid.ZoomStep)
         self.__updateZoom()
     
     def __zoomOut(self):
         """
         Private slot called to handle the zoom out action.
         """
-        self.__editor.setZoomFactor(self.__editor.zoomFactor() - 1)
+        self.__editor.setZoomFactor(self.__editor.zoomFactor() - IconEditorGrid.ZoomStep)
         self.__updateZoom()
     
     def __zoomReset(self):
         """
         Private slot called to handle the zoom reset action.
         """
-        self.__editor.setZoomFactor(1)
+        self.__editor.setZoomFactor(IconEditorGrid.ZoomDefault)
         self.__updateZoom()
-    
-    def __zoom(self):
-        """
-        Private method to handle the zoom action.
-        """
-        dlg = IconZoomDialog(self.__editor.zoomFactor(), self)
-        if dlg.exec_() == QDialog.Accepted:
-            self.__editor.setZoomFactor(dlg.getZoomFactor())
-            self.__updateZoom()
     
     def __about(self):
         """

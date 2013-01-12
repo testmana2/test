@@ -1540,7 +1540,7 @@ flag indicating an error (boolean)
         Private slot to set the automatic spell checking of all editors.
 </p><a NAME="ViewManager.__setSbFile" ID="ViewManager.__setSbFile"></a>
 <h4>ViewManager.__setSbFile</h4>
-<b>__setSbFile</b>(<i>fn=None, line=None, pos=None, encoding=None, language=None, eol=None</i>)
+<b>__setSbFile</b>(<i>fn=None, line=None, pos=None, encoding=None, language=None, eol=None, zoom=None</i>)
 <p>
         Private method to set the file info in the status bar.
 </p><dl>
@@ -1562,6 +1562,9 @@ language to display (string)
 </dd><dt><i>eol</i></dt>
 <dd>
 eol indicator to display (string)
+</dd><dt><i>zoom</i></dt>
+<dd>
+zoom value (integer)
 </dd>
 </dl><a NAME="ViewManager.__shortenEmptyLines" ID="ViewManager.__shortenEmptyLines"></a>
 <h4>ViewManager.__shortenEmptyLines</h4>
@@ -1640,10 +1643,15 @@ editor that sent the signal
         Private method to handle the toggle current fold action.
 </p><a NAME="ViewManager.__zoom" ID="ViewManager.__zoom"></a>
 <h4>ViewManager.__zoom</h4>
-<b>__zoom</b>(<i></i>)
+<b>__zoom</b>(<i>value=None</i>)
 <p>
         Private method to handle the zoom action.
-</p><a NAME="ViewManager.__zoomIn" ID="ViewManager.__zoomIn"></a>
+</p><dl>
+<dt><i>value=</i></dt>
+<dd>
+zoom value to be set (integer)
+</dd>
+</dl><a NAME="ViewManager.__zoomIn" ID="ViewManager.__zoomIn"></a>
 <h4>ViewManager.__zoomIn</h4>
 <b>__zoomIn</b>(<i></i>)
 <p>
@@ -2704,7 +2712,7 @@ reference to the debug server object
 </dd>
 </dl><a NAME="ViewManager.setSbInfo" ID="ViewManager.setSbInfo"></a>
 <h4>ViewManager.setSbInfo</h4>
-<b>setSbInfo</b>(<i>sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol</i>)
+<b>setSbInfo</b>(<i>sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol, sbZoom</i>)
 <p>
         Public method to transfer statusbar info from the user interface to viewmanager.
 </p><dl>
@@ -2729,6 +2737,9 @@ reference to the language indicator part of the
 </dd><dt><i>sbEol</i></dt>
 <dd>
 reference to the eol indicator part of the statusbar (QLabel)
+</dd><dt><i>sbZoom</i></dt>
+<dd>
+reference to the zoom widget (E5ZoomWidget)
 </dd>
 </dl><a NAME="ViewManager.setSplitOrientation" ID="ViewManager.setSplitOrientation"></a>
 <h4>ViewManager.setSplitOrientation</h4>

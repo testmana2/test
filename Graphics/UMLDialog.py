@@ -64,6 +64,8 @@ class UMLDialog(E5MainWindow):
         self.setCentralWidget(self.umlView)
         
         self.umlView.relayout.connect(self.__relayout)
+        
+        self.setWindowTitle(self.__diagramTypeString())
     
     def __initActions(self):
         """
@@ -91,7 +93,7 @@ class UMLDialog(E5MainWindow):
         
         self.saveImageAct = \
             QAction(UI.PixmapCache.getIcon("fileSavePixmap.png"),
-                    self.trUtf8("Save as PNG"), self)
+                    self.trUtf8("Save as Image"), self)
         self.saveImageAct.triggered[()].connect(self.umlView.saveImage)
         
         self.printAct = \

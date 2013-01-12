@@ -79,13 +79,16 @@ emitted, when a search is requested
 </dd><dt>sourceChanged(QUrl)</dt>
 <dd>
 emitted after the current URL has changed
+</dd><dt>zoomValueChanged(int)</dt>
+<dd>
+emitted to signal a change of the zoom value
 </dd>
 </dl>
 <h3>Derived from</h3>
 QWebView
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ZoomLevelDefault</td></tr><tr><td>ZoomLevels</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -334,6 +337,9 @@ QWebView
 <td><a href="#HelpBrowser.setSource">setSource</a></td>
 <td>Public method used to set the source to be displayed.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.setZoomValue">setZoomValue</a></td>
+<td>Public method to set the zoom value.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.source">source</a></td>
 <td>Public method to return the URL of the loaded page.</td>
 </tr><tr>
@@ -348,6 +354,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.zoomReset">zoomReset</a></td>
 <td>Public method to reset the zoom factor.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.zoomValue">zoomValue</a></td>
+<td>Public method to get the current zoom value.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -1045,6 +1054,16 @@ filename to be shown (QUrl)
 tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
 </dd>
+</dl><a NAME="HelpBrowser.setZoomValue" ID="HelpBrowser.setZoomValue"></a>
+<h4>HelpBrowser.setZoomValue</h4>
+<b>setZoomValue</b>(<i>value</i>)
+<p>
+        Public method to set the zoom value.
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+zoom value (integer)
+</dd>
 </dl><a NAME="HelpBrowser.source" ID="HelpBrowser.source"></a>
 <h4>HelpBrowser.source</h4>
 <b>source</b>(<i></i>)
@@ -1080,7 +1099,17 @@ reference to the wheel event (QWheelEvent)
 <b>zoomReset</b>(<i></i>)
 <p>
         Public method to reset the zoom factor.
-</p>
+</p><a NAME="HelpBrowser.zoomValue" ID="HelpBrowser.zoomValue"></a>
+<h4>HelpBrowser.zoomValue</h4>
+<b>zoomValue</b>(<i></i>)
+<p>
+        Public method to get the current zoom value.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+zoom value (integer)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="HelpWebPage" ID="HelpWebPage"></a>

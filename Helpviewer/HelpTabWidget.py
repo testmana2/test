@@ -46,11 +46,14 @@ class HelpTabWidget(E5TabWidget):
             has changed
     @signal showMessage(str) emitted to show a message in the main window status bar
     @signal browserClosed(QWidget) emitted after a browser was closed
+    @signal browserZoomValueChanged(int) emitted to signal a change of the current
+            browser's zoom level
     """
     sourceChanged = pyqtSignal(HelpBrowser, QUrl)
     titleChanged = pyqtSignal(HelpBrowser, str)
     showMessage = pyqtSignal(str)
     browserClosed = pyqtSignal(QWidget)
+    browserZoomValueChanged = pyqtSignal(int)
     
     def __init__(self, parent):
         """
@@ -317,6 +320,7 @@ class HelpTabWidget(E5TabWidget):
         browser.search.connect(self.newBrowser)
         browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
         browser.page().printRequested.connect(self.__printRequested)
+        browser.zoomValueChanged.connect(self.browserZoomValueChanged)
         
         if position == -1:
             index = self.addTab(browser, self.trUtf8("..."))

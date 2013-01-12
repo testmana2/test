@@ -211,7 +211,7 @@ class ViewManager(QObject):
         else:
             return None
         
-    def setSbInfo(self, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol):
+    def setSbInfo(self, sbLine, sbPos, sbWritable, sbEncoding, sbLanguage, sbEol, sbZoom):
         """
         Public method to transfer statusbar info from the user interface to viewmanager.
         
@@ -224,6 +224,7 @@ class ViewManager(QObject):
         @param sbLanguage reference to the language indicator part of the
             statusbar (QLabel)
         @param sbEol reference to the eol indicator part of the statusbar (QLabel)
+        @param sbZoom reference to the zoom widget (E5ZoomWidget)
         """
         self.sbLine = sbLine
         self.sbPos = sbPos
@@ -231,7 +232,9 @@ class ViewManager(QObject):
         self.sbEnc = sbEncoding
         self.sbLang = sbLanguage
         self.sbEol = sbEol
-        self.__setSbFile()
+        self.sbZoom = sbZoom
+        self.sbZoom.valueChanged.connect(self.__zoom)
+        self.__setSbFile(zoom=0)
     
     ############################################################################
     ## methods below need to be implemented by a subclass
@@ -3931,7 +3934,8 @@ class ViewManager(QObject):
         enc = self.currentEditor.getEncoding()
         lang = self.currentEditor.getLanguage()
         eol = self.currentEditor.getEolIndicator()
-        self.__setSbFile(fn, line, encoding=enc, language=lang, eol=eol)
+        zoom = self.currentEditor.getZoom()
+        self.__setSbFile(fn, line, encoding=enc, language=lang, eol=eol, zoom=zoom)
         
         # Change the highlighted line.
         self.currentEditor.highlight(line, error, syntaxError)
@@ -3940,7 +3944,8 @@ class ViewManager(QObject):
         self._checkActions(self.currentEditor, False)
         
     def __setSbFile(self, fn=None, line=None, pos=None,
-                    encoding=None, language=None, eol=None):
+                    encoding=None, language=None, eol=None,
+                    zoom=None):
         """
         Private method to set the file info in the status bar.
         
@@ -3950,6 +3955,7 @@ class ViewManager(QObject):
         @param encoding encoding name to display (string)
         @param language language to display (string)
         @param eol eol indicator to display (string)
+        @param zoom zoom value (integer)
         """
         if not fn:
             fn = ''
@@ -3992,6 +3998,18 @@ class ViewManager(QObject):
         self.sbEol.setPixmap(self.__eolPixmap(eol))
         self.sbEol.setToolTip(QApplication.translate('ViewManager',
             'EOL Mode: {0}'.format(eol)))
+        
+        if zoom is None:
+            if QApplication.focusWidget() == e5App().getObject("Shell"):
+                aw = e5App().getObject("Shell")
+            elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+                aw = e5App().getObject("Terminal")
+            else:
+                aw = self.activeWindow()
+            if aw:
+                self.sbZoom.setValue(aw.getZoom())
+        else:
+            self.sbZoom.setValue(zoom)
         
     def __eolPixmap(self, eolIndicator):
         """
@@ -4431,6 +4449,10 @@ class ViewManager(QObject):
             self.editActGrp.setEnabled(False)
             self.copyActGrp.setEnabled(False)
             self.viewActGrp.setEnabled(False)
+            self.sbZoom.setEnabled(False)
+        else:
+            self.sbZoom.setEnabled(True)
+            self.sbZoom.setValue(now.getZoom())
         
         if not isinstance(now, (Editor, Shell, Terminal)) and \
            now is not self.quickFindtextCombo:
@@ -4969,6 +4991,7 @@ class ViewManager(QObject):
             aw = self.activeWindow()
             if aw:
                 aw.zoomIn()
+                self.sbZoom.setValue(aw.getZoom())
         
     def __zoomOut(self):
         """
@@ -4982,6 +5005,7 @@ class ViewManager(QObject):
             aw = self.activeWindow()
             if aw:
                 aw.zoomOut()
+                self.sbZoom.setValue(aw.getZoom())
         
     def __zoomReset(self):
         """
@@ -4995,10 +5019,13 @@ class ViewManager(QObject):
             aw = self.activeWindow()
             if aw:
                 aw.zoomTo(0)
+                self.sbZoom.setValue(aw.getZoom())
         
-    def __zoom(self):
+    def __zoom(self, value=None):
         """
         Private method to handle the zoom action.
+        
+        @keyparam value zoom value to be set (integer)
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             aw = e5App().getObject("Shell")
@@ -5007,9 +5034,13 @@ class ViewManager(QObject):
         else:
             aw = self.activeWindow()
         if aw:
-            dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
-            if dlg.exec_() == QDialog.Accepted:
-                aw.zoomTo(dlg.getZoomSize())
+            if value is None:
+                dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
+                if dlg.exec_() == QDialog.Accepted:
+                    value = dlg.getZoomSize()
+            if value is not None:
+                aw.zoomTo(value)
+                self.sbZoom.setValue(aw.getZoom())
         
     def __toggleAll(self):
         """
@@ -5465,7 +5496,8 @@ class ViewManager(QObject):
             enc = editor.getEncoding()
             lang = editor.getLanguage()
             eol = editor.getEolIndicator()
-            self.__setSbFile(editor.getFileName(), line + 1, pos, enc, lang, eol)
+            zoom = editor.getZoom()
+            self.__setSbFile(editor.getFileName(), line + 1, pos, enc, lang, eol, zoom)
         
     def closeViewManager(self):
         """
@@ -5517,7 +5549,7 @@ class ViewManager(QObject):
         self.macroActGrp.setEnabled(False)
         self.bookmarkActGrp.setEnabled(False)
         self.__enableSpellingActions()
-        self.__setSbFile()
+        self.__setSbFile(zoom=0)
         
         # remove all split views, if this is supported
         if self.canSplit():
@@ -5665,7 +5697,9 @@ class ViewManager(QObject):
                 enc = editor.getEncoding()
                 lang = editor.getLanguage()
                 eol = editor.getEolIndicator()
-                self.__setSbFile(editor.getFileName(), line + 1, pos, enc, lang, eol)
+                zoom = editor.getZoom()
+                self.__setSbFile(
+                    editor.getFileName(), line + 1, pos, enc, lang, eol, zoom)
             
             self.checkActions.emit(editor)
         
@@ -5804,7 +5838,9 @@ class ViewManager(QObject):
         enc = editor.getEncoding()
         lang = editor.getLanguage()
         eol = editor.getEolIndicator()
-        self.__setSbFile(fn, line + 1, pos, encoding=enc, language=lang, eol=eol)
+        zoom = editor.getZoom()
+        self.__setSbFile(
+            fn, line + 1, pos, encoding=enc, language=lang, eol=eol, zoom=zoom)
         self._checkActions(editor, False)
     
     ##################################################################
