@@ -577,7 +577,7 @@ class TemplateViewer(QTreeWidget):
                 self.trUtf8("Reload Templates"),
                 self.trUtf8("""The templates contain unsaved changes. Shall these"""
                             """ changes be discarded?"""),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return
         
