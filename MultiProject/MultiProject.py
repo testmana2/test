@@ -268,8 +268,10 @@ class MultiProject(QObject):
         
         @param startdir start directory for the selection dialog (string)
         """
-        if startdir is None:
+        if not startdir:
             startdir = self.ppath
+        if not startdir:
+            startdir = Preferences.getMultiProject("Workspace")
         dlg = AddProjectDialog(self.ui, startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             name, filename, isMaster, description = dlg.getData()
