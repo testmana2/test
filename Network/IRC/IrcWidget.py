@@ -218,11 +218,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.networkWidget.addServerMessage(self.trUtf8("Info"),
                     self.trUtf8("Disconnecting from server {0}...").format(
                         self.__server.getName()))
-                while self.__channelList:
-                    channel = self.__channelList.pop()
-                    self.channelsWidget.removeTab(self.channelsWidget.indexOf(channel))
-                    channel.deleteLater()
-                    channel = None
+                self.__closeAllChannels()
                 self.__send("QUIT :" + self.__quitMessage)
                 self.__socket and self.__socket.flush()
                 self.__socket and self.__socket.close()
@@ -344,6 +340,16 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         channel = self.channelsWidget.currentWidget()
         channel.requestLeave()
     
+    def __closeAllChannels(self):
+        """
+        Private method to close all channels.
+        """
+        while self.__channelList:
+            channel = self.__channelList.pop()
+            self.channelsWidget.removeTab(self.channelsWidget.indexOf(channel))
+            channel.deleteLater()
+            channel = None
+    
     def __closeChannel(self, name):
         """
         Private slot handling the closing of a channel.
@@ -432,6 +438,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private slot to indicate the host was disconnected.
         """
+        self.__closeAllChannels()
         self.networkWidget.addServerMessage(self.trUtf8("Info"),
             self.trUtf8("Server disconnected."))
         self.networkWidget.setRegistered(False)

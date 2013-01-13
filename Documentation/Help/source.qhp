@@ -6703,6 +6703,7 @@
       <keyword name="IrcWidget.__autoJoinChannels" id="IrcWidget.__autoJoinChannels" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__autoJoinChannels" />
       <keyword name="IrcWidget.__away" id="IrcWidget.__away" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__away" />
       <keyword name="IrcWidget.__changeNick" id="IrcWidget.__changeNick" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__changeNick" />
+      <keyword name="IrcWidget.__closeAllChannels" id="IrcWidget.__closeAllChannels" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__closeAllChannels" />
       <keyword name="IrcWidget.__closeChannel" id="IrcWidget.__closeChannel" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__closeChannel" />
       <keyword name="IrcWidget.__connectNetwork" id="IrcWidget.__connectNetwork" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__connectNetwork" />
       <keyword name="IrcWidget.__editNetwork" id="IrcWidget.__editNetwork" ref="eric5.Network.IRC.IrcWidget.html#IrcWidget.__editNetwork" />
