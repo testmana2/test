@@ -155,12 +155,13 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         self.networkWidget.autoConnect()
 
-    def __connectNetwork(self, name, connect):
+    def __connectNetwork(self, name, connect, silent=False):
         """
         Private slot to connect to or disconnect from the given network.
         
         @param name name of the network to connect to (string)
         @param connect flag indicating to connect (boolean)
+        @keyparam silent flag indicating a silent connect/disconnect (boolean)
         """
         if connect:
             network = self.__ircNetworkManager.getNetwork(name)
@@ -209,11 +210,15 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                         self.__socket.connectToHost(self.__server.getName(),
                                                     self.__server.getPort())
         else:
-            ok = E5MessageBox.yesNo(self,
-                self.trUtf8("Disconnect from Server"),
-                self.trUtf8("""<p>Do you really want to disconnect from"""
-                            """ <b>{0}</b>?</p><p>All channels will be closed.</p>""")\
-                    .format(self.__server.getName()))
+            if silent:
+                ok = True
+            else:
+                ok = E5MessageBox.yesNo(self,
+                    self.trUtf8("Disconnect from Server"),
+                    self.trUtf8("""<p>Do you really want to disconnect from"""
+                                """ <b>{0}</b>?</p><p>All channels will be"""
+                                """ closed.</p>""")\
+                        .format(self.__server.getName()))
             if ok:
                 self.networkWidget.addServerMessage(self.trUtf8("Info"),
                     self.trUtf8("Disconnecting from server {0}...").format(
@@ -849,8 +854,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         except IndexError:
             self.networkWidget.addServerMessage(self.trUtf8("Critical"),
                 self.trUtf8("No nickname acceptable to the server configured"
-                            " for <b>{0}</b>. Disconnecting...").format(self.__userName))
-            self.__connectNetwork("", False)
+                            " for <b>{0}</b>. Disconnecting...").format(self.__userName),
+                            filterMsg=False)
+            self.__connectNetwork("", False, silent=True)
             self.__nickName = ""
             self.__nickIndex = -1
             return
