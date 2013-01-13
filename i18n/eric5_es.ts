@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -7235,22 +7236,22 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Gui/E5ZoomWidget.ui" line="75"/>
         <source>Zoom out</source>
-        <translation type="unfinished"></translation>
+        <translation>Disminuir zoom</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ZoomWidget.ui" line="103"/>
         <source>Drag to zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastrar para hacer zoom</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ZoomWidget.ui" line="140"/>
         <source>Zoom in</source>
-        <translation type="unfinished">Aumentar zoom</translation>
+        <translation>Aumentar zoom</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ZoomWidget.ui" line="165"/>
         <source>Zoom reset</source>
-        <translation type="unfinished">Restablecer zoom</translation>
+        <translation>Restablecer zoom</translation>
     </message>
 </context>
 <context>
@@ -14024,7 +14025,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1009"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -24439,22 +24440,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>JPEG File (*.jpeg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo JPEG (*.jpeg)</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="128"/>
         <source>Compressed Scalable Vector Graphics File (*.svgz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de Scalable Vector Graphics (*.svgz)</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="131"/>
         <source>TIFF File (*.tiff)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo TIFF (*.tiff)</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="132"/>
         <source>WAP Bitmap File (*.wbmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de Bitmap WAP(*.wbmp)</translation>
     </message>
 </context>
 <context>
@@ -29311,7 +29312,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="MultiProject/MultiProjectBrowser.py" line="249"/>
         <source>Add Project...</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Proyecto...</translation>
     </message>
 </context>
 <context>
@@ -47981,17 +47982,17 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Templates/TemplateViewer.py" line="415"/>
         <source>Reload</source>
-        <translation type="unfinished">Recargar</translation>
+        <translation>Recargar</translation>
     </message>
     <message>
         <location filename="Templates/TemplateViewer.py" line="576"/>
         <source>Reload Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Recargar Plantillas</translation>
     </message>
     <message>
         <location filename="Templates/TemplateViewer.py" line="576"/>
         <source>The templates contain unsaved changes. Shall these changes be discarded?</source>
-        <translation type="unfinished"></translation>
+        <translation>Las plantillas contienen cambios sin guardar. ¿Deben descartarse dichos cambios?</translation>
     </message>
 </context>
 <context>
@@ -49743,7 +49744,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Graphics/UMLDialog.py" line="95"/>
         <source>Save as Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar como Imagen</translation>
     </message>
 </context>
 <context>
@@ -52352,7 +52353,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="2505"/>
         <source>&lt;p&gt;This part of the status bar allows zooming the current editor, shell or terminal.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Esta zona de la barra de estado permite hacer zoom sobre el editor, shell o terminal actual.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
