@@ -3732,6 +3732,8 @@ class ViewManager(QObject):
             self.__lastEditorClosed()
             self.lastEditorClosed.emit()
         
+        editor.deleteLater()
+        
         return True
         
     def closeCurrentWindow(self):
@@ -3855,6 +3857,7 @@ class ViewManager(QObject):
         editor.selectionChanged.connect(self.searchDlg.selectionChanged)
         editor.selectionChanged.connect(self.replaceDlg.selectionChanged)
         editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
+        editor.zoomValueChanged.connect(self.zoomValueChanged)
         
     def newEditorView(self, fn, caller, filetype=""):
         """
@@ -5041,6 +5044,14 @@ class ViewManager(QObject):
             if value is not None:
                 aw.zoomTo(value)
                 self.sbZoom.setValue(aw.getZoom())
+        
+    def zoomValueChanged(self, value):
+        """
+        Public slot to handle changes of the zoom value.
+        
+        @param value new zoom value (integer)
+        """
+        self.sbZoom.setValue(value)
         
     def __toggleAll(self):
         """

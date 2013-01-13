@@ -449,6 +449,10 @@ class UserInterface(E5MainWindow):
         self.viewmanager.editorChanged.connect(self.projectBrowser.handleEditorChanged)
         self.viewmanager.checkActions.connect(self.cooperation.checkEditorActions)
         
+        self.shell.zoomValueChanged.connect(self.viewmanager.zoomValueChanged)
+        
+        self.terminal.zoomValueChanged.connect(self.viewmanager.zoomValueChanged)
+        
         self.cooperation.shareEditor.connect(self.viewmanager.shareEditor)
         self.cooperation.startEdit.connect(self.viewmanager.startSharedEdit)
         self.cooperation.sendEdit.connect(self.viewmanager.sendSharedEdit)

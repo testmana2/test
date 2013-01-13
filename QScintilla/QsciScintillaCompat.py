@@ -7,7 +7,7 @@
 Module implementing a compatability interface class to QsciScintilla.
 """
 
-from PyQt4.QtCore import Qt
+from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QPalette, QColor, QApplication
 from PyQt4.Qsci import QsciScintilla, \
     QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR, \
@@ -40,7 +40,11 @@ class QsciScintillaCompat(QsciScintilla):
     This class implements all the functions, that were added to
     QsciScintilla incrementally. This class ensures compatibility
     to older versions of QsciScintilla.
+    
+    @signal zoomValueChanged(int) emitted to signal a change of the zoom value
     """
+    zoomValueChanged = pyqtSignal(int)
+    
     ArrowFoldStyle = QsciScintilla.BoxedTreeFoldStyle + 1
     ArrowTreeFoldStyle = ArrowFoldStyle + 1
     
@@ -304,34 +308,33 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method used to increase the zoom factor.
         
-        @param zoom zoom factor increment
+        @param zoom zoom factor increment (integer)
         """
-        self.zoom += zoom
         super().zoomIn(zoom)
     
     def zoomOut(self, zoom=1):
         """
         Public method used to decrease the zoom factor.
         
-        @param zoom zoom factor decrement
+        @param zoom zoom factor decrement (integer)
         """
-        self.zoom -= zoom
         super().zoomOut(zoom)
     
     def zoomTo(self, zoom):
         """
         Public method used to zoom to a specific zoom factor.
         
-        @param zoom zoom factor
+        @param zoom zoom factor (integer)
         """
         self.zoom = zoom
         super().zoomTo(zoom)
+        self.zoomValueChanged.emit(self.zoom)
     
     def getZoom(self):
         """
         Public method used to retrieve the current zoom factor.
         
-        @return zoom factor (int)
+        @return zoom factor (integer)
         """
         return self.zoom
     

@@ -51,7 +51,13 @@ Module implementing a compatability interface class to QsciScintilla.
     This class implements all the functions, that were added to
     QsciScintilla incrementally. This class ensures compatibility
     to older versions of QsciScintilla.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>zoomValueChanged(int)</dt>
+<dd>
+emitted to signal a change of the zoom value
+</dd>
+</dl>
 <h3>Derived from</h3>
 QsciScintilla
 <h3>Class Attributes</h3>
@@ -792,7 +798,7 @@ eol string (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-zoom factor (int)
+zoom factor (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.hasIndicator" ID="QsciScintillaCompat.hasIndicator"></a>
 <h4>QsciScintillaCompat.hasIndicator</h4>
@@ -1260,7 +1266,7 @@ style at the requested position or 0, if the position
 </p><dl>
 <dt><i>zoom</i></dt>
 <dd>
-zoom factor increment
+zoom factor increment (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.zoomOut" ID="QsciScintillaCompat.zoomOut"></a>
 <h4>QsciScintillaCompat.zoomOut</h4>
@@ -1270,7 +1276,7 @@ zoom factor increment
 </p><dl>
 <dt><i>zoom</i></dt>
 <dd>
-zoom factor decrement
+zoom factor decrement (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.zoomTo" ID="QsciScintillaCompat.zoomTo"></a>
 <h4>QsciScintillaCompat.zoomTo</h4>
@@ -1280,7 +1286,7 @@ zoom factor decrement
 </p><dl>
 <dt><i>zoom</i></dt>
 <dd>
-zoom factor
+zoom factor (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

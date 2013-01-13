@@ -11979,6 +11979,7 @@
       <keyword name="ViewManager.textForFind" id="ViewManager.textForFind" ref="eric5.ViewManager.ViewManager.html#ViewManager.textForFind" />
       <keyword name="ViewManager.tile" id="ViewManager.tile" ref="eric5.ViewManager.ViewManager.html#ViewManager.tile" />
       <keyword name="ViewManager.unhighlight" id="ViewManager.unhighlight" ref="eric5.ViewManager.ViewManager.html#ViewManager.unhighlight" />
+      <keyword name="ViewManager.zoomValueChanged" id="ViewManager.zoomValueChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.zoomValueChanged" />
       <keyword name="ViewManagerPlugins (Package)" id="ViewManagerPlugins (Package)" ref="index-eric5.Plugins.ViewManagerPlugins.html" />
       <keyword name="ViewProfileDialog" id="ViewProfileDialog" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog" />
       <keyword name="ViewProfileDialog (Constructor)" id="ViewProfileDialog (Constructor)" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog.__init__" />
