@@ -493,12 +493,12 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 msgdlg += self.__getDefaultButtonCode(istring)
             elif self.rYesNo.isChecked():
                 if not self.iconQuestion.isChecked():
-                    msgdlg += ',{0}{1}icon = {2}'.format(os.linesep, istring, icon)
+                    msgdlg += ',{0}{1}icon={2}'.format(os.linesep, istring, icon)
                 if self.yesDefaultCheck.isChecked():
-                    msgdlg += ',{0}{1}yesDefault = True'.format(os.linesep, istring)
+                    msgdlg += ',{0}{1}yesDefault=True'.format(os.linesep, istring)
             elif self.rRetryAbort.isChecked():
                 if not self.iconQuestion.isChecked():
-                    msgdlg += ',{0}{1}icon = {2}'.format(os.linesep, istring, icon)
+                    msgdlg += ',{0}{1}icon={2}'.format(os.linesep, istring, icon)
             elif self.rOkToClearData.isChecked():
                 saveFunc = self.saveFuncEdit.text()
                 if saveFunc == "":
@@ -510,12 +510,12 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
             if self.modalCheck.isChecked():
-                msgdlg += ',{0}{1}modal = True'.format(os.linesep, istring)
+                msgdlg += ',{0}{1}modal=True'.format(os.linesep, istring)
             btnCode = self.__getStandardButtonCode(istring, indString, withIntro=False)
             if btnCode:
-                msgdlg += ',{0}{1}buttons = {2}'.format(os.linesep, istring, btnCode)
+                msgdlg += ',{0}{1}buttons={2}'.format(os.linesep, istring, btnCode)
             if not self.parentNone.isChecked():
-                msgdlg += ',{0}{1}parent = {2}'.format(os.linesep, istring, parent)
+                msgdlg += ',{0}{1}parent={2}'.format(os.linesep, istring, parent)
         
         msgdlg += '){0}'.format(estring)
         return msgdlg
