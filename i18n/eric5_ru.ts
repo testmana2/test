@@ -17818,42 +17818,42 @@ You have %n tab(s) open.</source>
 <context>
     <name>Hg</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="253"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="255"/>
         <source>The hg process finished with the exit code {0}</source>
         <translation>Процесс hg завершился с кодом возврата {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="256"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="258"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Процесс hg не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="258"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="260"/>
         <source>Could not start the hg executable.</source>
         <translation>Невозможно запустить исполняемый файл hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="284"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="286"/>
         <source>Create project repository</source>
         <translation>Создать репозиторий проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="284"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="286"/>
         <source>The project repository could not be created.</source>
         <translation>Не могу создать репозиторий проекта.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="312"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="314"/>
         <source>Creating Mercurial repository</source>
         <translation>Создание репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="329"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="331"/>
         <source>Initial commit to Mercurial repository</source>
         <translation>Первичная подача в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="377"/>
         <source>Cloning project from a Mercurial repository</source>
         <translation>Создание копии репозитория</translation>
     </message>
@@ -17863,32 +17863,32 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Подача изменений в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="573"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="575"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation>Синхронизация с репозиторием</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="627"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation>Добавление файлов/каталогов в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="689"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="691"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation>Удаление файлов/каталогов из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="755"/>
         <source>Renaming {0}</source>
         <translation>Переименование {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="965"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="987"/>
         <source>Merging</source>
         <translation>Слияние</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1408"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1430"/>
         <source>Copying {0}</source>
         <translation>Копирование {0}</translation>
     </message>
@@ -17903,248 +17903,263 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Задайте количество элементов для отображения.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1653"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1675"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Загрузка изменений из удалённого репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1706"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1728"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Загрузка изменений в удалённый репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1825"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1847"/>
         <source>Resolving files/directories</source>
         <translation>Разрешение конфликтов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="882"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="884"/>
         <source>Taging in the Mercurial repository</source>
         <translation>Создание меток в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="915"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="934"/>
         <source>Reverting changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1218"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1240"/>
         <source>Mercurial command</source>
         <translation>Mercurial команда</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1846"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1868"/>
         <source>Create Branch</source>
         <translation>Создать ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1846"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1868"/>
         <source>Enter branch name</source>
         <translation>Введите имя ветви</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1857"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1879"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Создание ветвив репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1945"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1967"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Проверка целостности репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1970"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1992"/>
         <source>Showing the combined configuration settings</source>
         <translation>Показ комбинированных настроек</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1993"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2015"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Алиасы для удалённых репозиториев</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2016"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2038"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Восстановление после прерванной транзакции</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2259"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2281"/>
         <source>Shall the working directory be updated?</source>
         <translation>Обновить рабочий каталог?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1881"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1903"/>
         <source>Showing current branch</source>
         <translation>Текущая ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2168"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2190"/>
         <source>Create changegroup</source>
         <translation>Создать группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2271"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2293"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2288"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2310"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Неправильная подкоманда ({0}) для Bisect.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2322"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2344"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2220"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2242"/>
         <source>Preview changegroup</source>
         <translation>Предпросмотр группы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2039"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2061"/>
         <source>Identifying project directory</source>
         <translation>Каталог проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2097"/>
         <source>Create .hgignore file</source>
         <translation>Создать файл .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2097"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже существует. Перезаписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2354"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2376"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Удаление файлов только из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2148"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial файлы изменений (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2253"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2275"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial файлы изменений (*.hg);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2230"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2252"/>
         <source>Identifying changegroup file</source>
         <translation>Файлы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2410"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2432"/>
         <source>Backing out changeset</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2390"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2412"/>
         <source>No revision given. Aborting...</source>
         <translation>Не задана ревизия. Отмена...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2143"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2165"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл группы изменений&lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2435"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2457"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2430"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2452"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="521"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="523"/>
         <source>Committing changes to Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2977"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2828"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2850"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2977"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2502"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2524"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2571"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2595"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2617"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2646"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2668"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2673"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2695"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2775"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2783"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2805"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2736"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2758"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2821"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2821"/>
         <source>Remove Sub-repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2772"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2794"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="459"/>
         <source>Commit Changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="459"/>
         <source>The commit affects files, that have unsaved changes. Shall the commit be continued?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="929"/>
+        <source>Revert changes</source>
+        <translation type="unfinished">Отмена изменений</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="922"/>
+        <source>Do you really want to revert all changes to these files or directories?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="929"/>
+        <source>Do you really want to revert all changes of the project?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -27445,273 +27460,273 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="212"/>
+        <location filename="Network/IRC/IrcWidget.py" line="216"/>
         <source>Disconnect from Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="212"/>
+        <location filename="Network/IRC/IrcWidget.py" line="216"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="176"/>
+        <location filename="Network/IRC/IrcWidget.py" line="177"/>
         <source>SSL Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="176"/>
+        <location filename="Network/IRC/IrcWidget.py" line="177"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="435"/>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
         <source>Info</source>
         <translation type="unfinished">Информация</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="199"/>
+        <location filename="Network/IRC/IrcWidget.py" line="200"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="206"/>
+        <location filename="Network/IRC/IrcWidget.py" line="207"/>
         <source>Looking for server {0} (port {1})...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="218"/>
+        <location filename="Network/IRC/IrcWidget.py" line="223"/>
         <source>Disconnecting from server {0}...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="398"/>
+        <location filename="Network/IRC/IrcWidget.py" line="409"/>
         <source>Server found,connecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcWidget.py" line="416"/>
         <source>Connected,logging in...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="435"/>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
         <source>Server disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="477"/>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
         <source>Message Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="477"/>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="501"/>
+        <location filename="Network/IRC/IrcWidget.py" line="513"/>
         <source>Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="519"/>
+        <location filename="Network/IRC/IrcWidget.py" line="531"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="526"/>
+        <location filename="Network/IRC/IrcWidget.py" line="538"/>
         <source>You have left channel {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="537"/>
+        <location filename="Network/IRC/IrcWidget.py" line="549"/>
         <source>You are now known as {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="542"/>
+        <location filename="Network/IRC/IrcWidget.py" line="554"/>
         <source>User {0} is now known as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="547"/>
+        <location filename="Network/IRC/IrcWidget.py" line="559"/>
         <source>Server Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="581"/>
+        <location filename="Network/IRC/IrcWidget.py" line="593"/>
         <source>Error</source>
         <translation type="unfinished">Ошибка</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="596"/>
+        <location filename="Network/IRC/IrcWidget.py" line="608"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <location filename="Network/IRC/IrcWidget.py" line="610"/>
         <source>Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="600"/>
+        <location filename="Network/IRC/IrcWidget.py" line="612"/>
         <source>User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="602"/>
+        <location filename="Network/IRC/IrcWidget.py" line="614"/>
         <source>MOTD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="604"/>
+        <location filename="Network/IRC/IrcWidget.py" line="616"/>
         <source>Away</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="606"/>
+        <location filename="Network/IRC/IrcWidget.py" line="618"/>
         <source>Info ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="610"/>
+        <location filename="Network/IRC/IrcWidget.py" line="622"/>
         <source>Message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="612"/>
+        <location filename="Network/IRC/IrcWidget.py" line="624"/>
         <source>End of message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="615"/>
+        <location filename="Network/IRC/IrcWidget.py" line="627"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="619"/>
+        <location filename="Network/IRC/IrcWidget.py" line="631"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="623"/>
+        <location filename="Network/IRC/IrcWidget.py" line="635"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="626"/>
+        <location filename="Network/IRC/IrcWidget.py" line="638"/>
         <source>You are no longer marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="628"/>
+        <location filename="Network/IRC/IrcWidget.py" line="640"/>
         <source>You have been marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="756"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="688"/>
+        <location filename="Network/IRC/IrcWidget.py" line="700"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>Socket Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="694"/>
+        <location filename="Network/IRC/IrcWidget.py" line="706"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <location filename="Network/IRC/IrcWidget.py" line="710"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="706"/>
+        <location filename="Network/IRC/IrcWidget.py" line="718"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="726"/>
+        <location filename="Network/IRC/IrcWidget.py" line="738"/>
         <source>SSL Errors</source>
         <translation type="unfinished">Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="726"/>
+        <location filename="Network/IRC/IrcWidget.py" line="738"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Ошибки SSL: &lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="737"/>
+        <location filename="Network/IRC/IrcWidget.py" line="749"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="756"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="829"/>
+        <location filename="Network/IRC/IrcWidget.py" line="841"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="858"/>
+        <location filename="Network/IRC/IrcWidget.py" line="871"/>
         <source>Critical</source>
         <translation type="unfinished">Ошибка</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="843"/>
+        <location filename="Network/IRC/IrcWidget.py" line="855"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="858"/>
+        <location filename="Network/IRC/IrcWidget.py" line="871"/>
         <source>The given nickname is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="816"/>
+        <location filename="Network/IRC/IrcWidget.py" line="828"/>
         <source>CTCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="800"/>
+        <location filename="Network/IRC/IrcWidget.py" line="812"/>
         <source>Received Version request from {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="805"/>
+        <location filename="Network/IRC/IrcWidget.py" line="817"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="810"/>
+        <location filename="Network/IRC/IrcWidget.py" line="822"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="816"/>
+        <location filename="Network/IRC/IrcWidget.py" line="828"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <location filename="Network/IRC/IrcWidget.py" line="524"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="516"/>
+        <location filename="Network/IRC/IrcWidget.py" line="528"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27726,12 +27741,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished">Сеть</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="702"/>
+        <location filename="Network/IRC/IrcWidget.py" line="714"/>
         <source>The SSL handshake failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>A network error occurred.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29979,62 +29994,62 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>MultiProject</name>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="480"/>
+        <location filename="MultiProject/MultiProject.py" line="482"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="557"/>
+        <location filename="MultiProject/MultiProject.py" line="559"/>
         <source>&amp;New...</source>
         <translation>&amp;Новый...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="570"/>
+        <location filename="MultiProject/MultiProject.py" line="572"/>
         <source>&amp;Open...</source>
         <translation>&amp;Открыть...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="582"/>
+        <location filename="MultiProject/MultiProject.py" line="584"/>
         <source>&amp;Close</source>
         <translation>&amp;Закрыть</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="593"/>
+        <location filename="MultiProject/MultiProject.py" line="595"/>
         <source>&amp;Save</source>
         <translation>&amp;Сохранить</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="604"/>
+        <location filename="MultiProject/MultiProject.py" line="606"/>
         <source>Save &amp;as...</source>
         <translation>Сохранить &amp;как...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="616"/>
+        <location filename="MultiProject/MultiProject.py" line="618"/>
         <source>Add &amp;project...</source>
         <translation>Добавить &amp;проект...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="630"/>
+        <location filename="MultiProject/MultiProject.py" line="632"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Свойства...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="653"/>
+        <location filename="MultiProject/MultiProject.py" line="655"/>
         <source>&amp;Multiproject</source>
         <translation>&amp;Мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="654"/>
+        <location filename="MultiProject/MultiProject.py" line="656"/>
         <source>Open &amp;Recent Multiprojects</source>
         <translation>Открыть &amp;недавние мултипроекты</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="693"/>
+        <location filename="MultiProject/MultiProject.py" line="695"/>
         <source>Multiproject</source>
         <translation>Мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="751"/>
+        <location filename="MultiProject/MultiProject.py" line="753"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
@@ -30059,127 +30074,127 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл мултипроекта: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="570"/>
+        <location filename="MultiProject/MultiProject.py" line="572"/>
         <source>Open multiproject</source>
         <translation>Открыть мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="465"/>
+        <location filename="MultiProject/MultiProject.py" line="467"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>Файлы мултипроектов (*.e4m)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="604"/>
+        <location filename="MultiProject/MultiProject.py" line="606"/>
         <source>Save multiproject as</source>
         <translation>Сохранить файл мултипроекта как</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="504"/>
+        <location filename="MultiProject/MultiProject.py" line="506"/>
         <source>Close Multiproject</source>
         <translation>Закрыть мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="504"/>
+        <location filename="MultiProject/MultiProject.py" line="506"/>
         <source>The current multiproject has unsaved changes.</source>
         <translation>Изменения в текущем мултипроекте не сохранены.</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="557"/>
+        <location filename="MultiProject/MultiProject.py" line="559"/>
         <source>New multiproject</source>
         <translation>Новый мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="561"/>
+        <location filename="MultiProject/MultiProject.py" line="563"/>
         <source>Generate a new multiproject</source>
         <translation>Создать новый мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="562"/>
+        <location filename="MultiProject/MultiProject.py" line="564"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Новый...&lt;/b&gt;&lt;p&gt;Открыть диалог для ввода информации о новом мултипроекте.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="574"/>
+        <location filename="MultiProject/MultiProject.py" line="576"/>
         <source>Open an existing multiproject</source>
         <translation>Открыть существующий мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="575"/>
+        <location filename="MultiProject/MultiProject.py" line="577"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Открыть...&lt;/b&gt;&lt;p&gt;Открыть существующий мултипроект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="582"/>
+        <location filename="MultiProject/MultiProject.py" line="584"/>
         <source>Close multiproject</source>
         <translation>Закрыть мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="585"/>
+        <location filename="MultiProject/MultiProject.py" line="587"/>
         <source>Close the current multiproject</source>
         <translation>Закрыть текущий мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="586"/>
+        <location filename="MultiProject/MultiProject.py" line="588"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть&lt;/b&gt;&lt;p&gt;Закрыть текущий мултипроект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="593"/>
+        <location filename="MultiProject/MultiProject.py" line="595"/>
         <source>Save multiproject</source>
         <translation>Сохранить файл мултипроекта</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="596"/>
+        <location filename="MultiProject/MultiProject.py" line="598"/>
         <source>Save the current multiproject</source>
         <translation>Закрыть текущий мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="597"/>
+        <location filename="MultiProject/MultiProject.py" line="599"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть&lt;/b&gt;&lt;p&gt;Закрыть текущий мултипроект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="607"/>
+        <location filename="MultiProject/MultiProject.py" line="609"/>
         <source>Save the current multiproject to a new file</source>
         <translation>Сохранить текущий мултипроект в новый файл</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="609"/>
+        <location filename="MultiProject/MultiProject.py" line="611"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current multiproject to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сохранить как&lt;/b&gt;&lt;p&gt; Сохранить текущий мултипроект в новый файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="616"/>
+        <location filename="MultiProject/MultiProject.py" line="618"/>
         <source>Add project to multiproject</source>
         <translation>Добавить проект в мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="620"/>
+        <location filename="MultiProject/MultiProject.py" line="622"/>
         <source>Add a project to the current multiproject</source>
         <translation>Добавить проект в текущий мултипроект</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="622"/>
+        <location filename="MultiProject/MultiProject.py" line="624"/>
         <source>&lt;b&gt;Add project...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a project to the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Добавить проект...&lt;/b&gt;&lt;p&gt;Открыть диалог для добавления проект в текущий мултипроект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="630"/>
+        <location filename="MultiProject/MultiProject.py" line="632"/>
         <source>Multiproject properties</source>
         <translation>Свойства мултипроекта</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="633"/>
+        <location filename="MultiProject/MultiProject.py" line="635"/>
         <source>Show the multiproject properties</source>
         <translation>Свойства мултипроекта</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="634"/>
+        <location filename="MultiProject/MultiProject.py" line="636"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the multiproject properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Свойства...&lt;/b&gt;&lt;p&gt;Показать диалог для редактирования свойств мултипроекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="480"/>
+        <location filename="MultiProject/MultiProject.py" line="482"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
@@ -42914,223 +42929,223 @@ Not connected</source>
 <context>
     <name>Subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="315"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="317"/>
         <source>Importing project into Subversion repository</source>
         <translation>Импорт проекта в репозиторий Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="365"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="367"/>
         <source>Subversion Checkout</source>
         <translation>Закрузка из Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="429"/>
         <source>The tag must be a normal tag (tags) or a branch tag (branches). Please select from the list.</source>
         <translation>Тег должен быть обычным тегом (tag) или ветвью (branch). Пожалуйста, выберите из списка.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="386"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="388"/>
         <source>Checking project out of Subversion repository</source>
         <translation>Загрузка проекта из репозитория Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="429"/>
         <source>Subversion Export</source>
         <translation>Экспорт из Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="447"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="449"/>
         <source>Exporting project from Subversion repository</source>
         <translation>Экспорт файлов из репозитория Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1159"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1177"/>
         <source>Subversion Error</source>
         <translation>Ошибка Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1020"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1022"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>URL репозитория проекта недоступен из рабочей копии. Операция кстановки тега будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1044"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1046"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>Неверный формат URL репозитория. Операция установки тега будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1079"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1081"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Изменение тегов &apos;{0}&apos; в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1135"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1153"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>URL репозитория проекта недоступен из рабочей копии. Операция переключения будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1159"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1177"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>Неверный формат URL репозитория. Операция переключения будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1181"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1199"/>
         <source>Switching to {0}</source>
         <translation>Преключение на &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1283"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1301"/>
         <source>Merging {0}</source>
         <translation>Слияние с &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1560"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1578"/>
         <source>Cleaning up {0}</source>
         <translation>Очистка {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1596"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1614"/>
         <source>Subversion command</source>
         <translation>Команда Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1742"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1760"/>
         <source>Copying {0}</source>
         <translation>Копирование &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="916"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="918"/>
         <source>Moving {0}</source>
         <translation>Перемещение {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1809"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1827"/>
         <source>Subversion Set Property</source>
         <translation>Установить свойство Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1842"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1860"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Необходимо задать имя свойства. Прервано.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1860"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1878"/>
         <source>Subversion Delete Property</source>
         <translation>Удалить свойство Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1680"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1699"/>
         <source>Enter property name</source>
         <translation>Задайте имя свойства</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="563"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="565"/>
         <source>Commiting changes to Subversion repository</source>
         <translation>Фиксация изменений в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="619"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="621"/>
         <source>Synchronizing with the Subversion repository</source>
         <translation>Синхронизация с репозиторием Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="720"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="722"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Добавляю файлы/каталоги в репозиторий Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="819"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="821"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Добавляю деревья каталогов в репозиторий Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="854"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="856"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Удаляю файлы/каталоги из репозитория Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1108"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1126"/>
         <source>Reverting changes</source>
         <translation>Отменяю изменения</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1721"/>
         <source>Resolving conficts</source>
         <translation>Разрешаю конфликт</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="223"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="225"/>
         <source>Create project in repository</source>
         <translation>Создать проект в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="223"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="225"/>
         <source>The project could not be created in the repository. Maybe the given repository doesn&apos;t exist or the repository server is down.</source>
         <translation>Невозможно создать проект в репозитории. Возможно данный репозиторий не существует или сервер не функционирует.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="245"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="247"/>
         <source>New project</source>
         <translation>Новый проект</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="245"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="247"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
         <translation>Невозможно загрузить проект из репозитория. &lt;br /&gt;Восстанавливаю предыдущее содержимое.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="956"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="958"/>
         <source>Subversion Log</source>
         <translation>Журнал Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="956"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="958"/>
         <source>Select number of entries to show.</source>
         <translation>Задайте количество элементов для отображения.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2026"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2044"/>
         <source>Locking in the Subversion repository</source>
         <translation>Захватываю файл/каталог в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2064"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2082"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Освобождаю файл/каталог в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="588"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="590"/>
         <source>Committed revision {0}.</source>
         <translation>Сохранена ревизия {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1188"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1206"/>
         <source>Revision {0}.
 </source>
         <translation>Ревизия {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1825"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1843"/>
         <source>Property set.</source>
         <translation>Свойство установлено.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1875"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1893"/>
         <source>Property deleted.</source>
         <translation>Свойство удалено.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2006"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2024"/>
         <source>Subversion Lock</source>
         <translation>Запереть</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2006"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2024"/>
         <source>Enter lock comment</source>
         <translation>Задайте комментарий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2109"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2127"/>
         <source>Relocating</source>
         <translation>Перемещаю</translation>
     </message>
@@ -43285,48 +43300,48 @@ Not connected</source>
         <translation>нет версий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="331"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="333"/>
         <source>Imported revision {0}.
 </source>
         <translation>Импортирована ревизия {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="193"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="195"/>
         <source>The svn process finished with the exit code {0}</source>
         <translation>Процесс svn завершился с кодом {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="196"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="198"/>
         <source>The svn process did not finish within 30s.</source>
         <translation>Процесс svn не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="198"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="200"/>
         <source>Could not start the svn executable.</source>
         <translation>Невозможно запустить исполняемый файл svn.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2135"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2153"/>
         <source>Repository Browser</source>
         <translation>Проводник репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2135"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2153"/>
         <source>Enter the repository URL.</source>
         <translation>Задайте URL репозитория.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2159"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2177"/>
         <source>Remove from changelist</source>
         <translation>Удалить из списка изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2196"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2214"/>
         <source>Add to changelist</source>
         <translation>Добавить к списку изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2185"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2203"/>
         <source>Enter name of the changelist:</source>
         <translation>Введите имя списка изменений:</translation>
     </message>
@@ -43346,13 +43361,28 @@ Not connected</source>
         <translation>Список изменений перемещён</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="521"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="523"/>
         <source>Commit Changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="521"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="523"/>
         <source>The commit affects files, that have unsaved changes. Shall the commit be continued?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1119"/>
+        <source>Revert changes</source>
+        <translation type="unfinished">Отмена изменений</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1112"/>
+        <source>Do you really want to revert all changes to these files or directories?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1119"/>
+        <source>Do you really want to revert all changes of the project?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -52030,37 +52060,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>UserInterface</name>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>Log-Viewer</source>
         <translation>Просмотрщик журнала</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1121"/>
+        <location filename="UI/UserInterface.py" line="1125"/>
         <source>{0} - Passive Mode</source>
         <translation>{0} - пассивный режим</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1126"/>
+        <location filename="UI/UserInterface.py" line="1130"/>
         <source>{0} - {1} - Passive Mode</source>
         <translation>{0} - {1} - пассивный режим</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1153"/>
         <source>Quit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1153"/>
         <source>&amp;Quit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1154"/>
+        <location filename="UI/UserInterface.py" line="1158"/>
         <source>Quit the IDE</source>
         <translation>Выход из IDE</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1155"/>
+        <location filename="UI/UserInterface.py" line="1159"/>
         <source>&lt;b&gt;Quit the IDE&lt;/b&gt;&lt;p&gt;This quits the IDE. Any unsaved changes may be saved first. Any Python program being debugged will be stopped and the preferences will be written to disc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выход из IDE&lt;/b&gt;
 &lt;p&gt;Перед выходом все изменения могут быть сохранены. Отлаживаемая программа (если есть) будет остановлена, и настройки будут сохранены на диск.&lt;/p&gt;</translation>
@@ -52082,230 +52112,230 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Журнала скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1482"/>
+        <location filename="UI/UserInterface.py" line="1486"/>
         <source>What&apos;s This?</source>
         <translation>Что это?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1482"/>
+        <location filename="UI/UserInterface.py" line="1486"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Что это?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1487"/>
+        <location filename="UI/UserInterface.py" line="1491"/>
         <source>Context sensitive help</source>
         <translation>Контекстная помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1488"/>
+        <location filename="UI/UserInterface.py" line="1492"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать контекстную помощь&lt;/b&gt;
 &lt;p&gt;В режиме контекстной помощи курсор мыши выглядит как стрелка со знаком вопроса, и, щёлкнув по элементу интерфейса, Вы можете просмотреть краткую помощь о его роли и его использовании. В диалогах можно воспользоваться кнопкой контекстной помощи в заголовке окна.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1499"/>
+        <location filename="UI/UserInterface.py" line="1503"/>
         <source>Helpviewer</source>
         <translation>Просмотрщик помощи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1499"/>
+        <location filename="UI/UserInterface.py" line="1503"/>
         <source>&amp;Helpviewer...</source>
         <translation>Просмотрщик помо&amp;щи...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1504"/>
+        <location filename="UI/UserInterface.py" line="1508"/>
         <source>Open the helpviewer window</source>
         <translation>Открыть просмотрщик помощи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1522"/>
+        <location filename="UI/UserInterface.py" line="1526"/>
         <source>Show Versions</source>
         <translation>Показать версию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1522"/>
+        <location filename="UI/UserInterface.py" line="1526"/>
         <source>Show &amp;Versions</source>
         <translation>Показать &amp;версию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1524"/>
+        <location filename="UI/UserInterface.py" line="1528"/>
         <source>Display version information</source>
         <translation>Информация о версии</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1525"/>
+        <location filename="UI/UserInterface.py" line="1529"/>
         <source>&lt;b&gt;Show Versions&lt;/b&gt;&lt;p&gt;Display version information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать версию&lt;/b&gt;&lt;p&gt;Информация о версии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2314"/>
+        <location filename="UI/UserInterface.py" line="2318"/>
         <source>Unittest</source>
         <translation>Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1577"/>
+        <location filename="UI/UserInterface.py" line="1581"/>
         <source>&amp;Unittest...</source>
         <translation>&amp;Unittest...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1581"/>
+        <location filename="UI/UserInterface.py" line="1585"/>
         <source>Start unittest dialog</source>
         <translation>Запустить unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1790"/>
+        <location filename="UI/UserInterface.py" line="1794"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1790"/>
+        <location filename="UI/UserInterface.py" line="1794"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Предпочтения...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1793"/>
+        <location filename="UI/UserInterface.py" line="1797"/>
         <source>Set the prefered configuration</source>
         <translation>Установите предпочтительную конфигурацию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1794"/>
+        <location filename="UI/UserInterface.py" line="1798"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предпочтения&lt;/b&gt;
 &lt;p&gt;Настройте Eric по своему вкусу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2196"/>
+        <location filename="UI/UserInterface.py" line="2200"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2169"/>
+        <location filename="UI/UserInterface.py" line="2173"/>
         <source>&amp;Tools</source>
         <translation>&amp;Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2166"/>
         <source>Wi&amp;zards</source>
         <translation>&amp;Мастера</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2246"/>
+        <location filename="UI/UserInterface.py" line="2250"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2313"/>
+        <location filename="UI/UserInterface.py" line="2317"/>
         <source>Tools</source>
         <translation>Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3922"/>
+        <location filename="UI/UserInterface.py" line="3926"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2315"/>
+        <location filename="UI/UserInterface.py" line="2319"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2221"/>
+        <location filename="UI/UserInterface.py" line="2225"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4030"/>
+        <location filename="UI/UserInterface.py" line="4034"/>
         <source>Problem</source>
         <translation>Проблема</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4182"/>
+        <location filename="UI/UserInterface.py" line="4186"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1874"/>
+        <location filename="UI/UserInterface.py" line="1878"/>
         <source>Keyboard Shortcuts</source>
         <translation>Горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1874"/>
+        <location filename="UI/UserInterface.py" line="1878"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>Горячие &amp;клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1877"/>
+        <location filename="UI/UserInterface.py" line="1881"/>
         <source>Set the keyboard shortcuts</source>
         <translation>Задать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1878"/>
+        <location filename="UI/UserInterface.py" line="1882"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Горячие клавиши&lt;/b&gt;&lt;p&gt;Задайте горячие клавиши на свой вкус.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2157"/>
+        <location filename="UI/UserInterface.py" line="2161"/>
         <source>E&amp;xtras</source>
         <translation>До&amp;полнительно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2699"/>
+        <location filename="UI/UserInterface.py" line="2703"/>
         <source>Report Bug</source>
         <translation>Сообщение об ошибке</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1555"/>
+        <location filename="UI/UserInterface.py" line="1559"/>
         <source>Report &amp;Bug...</source>
         <translation>Сообщить об &amp;ошибке...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1557"/>
+        <location filename="UI/UserInterface.py" line="1561"/>
         <source>Report a bug</source>
         <translation>Сообщить об ошибке</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1558"/>
+        <location filename="UI/UserInterface.py" line="1562"/>
         <source>&lt;b&gt;Report Bug...&lt;/b&gt;&lt;p&gt;Opens a dialog to report a bug.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сообщить об ошибке...&lt;/b&gt;&lt;p&gt;Открывает диалог для сообщения об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4788"/>
+        <location filename="UI/UserInterface.py" line="4792"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Экспортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1890"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>&amp;Экспортировать горячие клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1890"/>
+        <location filename="UI/UserInterface.py" line="1894"/>
         <source>Export the keyboard shortcuts</source>
         <translation>Экспортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1891"/>
+        <location filename="UI/UserInterface.py" line="1895"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспортировать горячие клавиши&lt;/b&gt;
 &lt;p&gt;Экспортировать горячие клавиши приложения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4811"/>
+        <location filename="UI/UserInterface.py" line="4815"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Импортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1898"/>
+        <location filename="UI/UserInterface.py" line="1902"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>&amp;Импортировать горячие клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
+        <location filename="UI/UserInterface.py" line="1906"/>
         <source>Import the keyboard shortcuts</source>
         <translation>Импортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1903"/>
+        <location filename="UI/UserInterface.py" line="1907"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Импортировать горячие клавиши&lt;/b&gt;
 &lt;p&gt;Импортировать горячие клавиши приложения.&lt;/p&gt;</translation>
@@ -52321,130 +52351,130 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Установка соединений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="501"/>
+        <location filename="UI/UserInterface.py" line="505"/>
         <source>Initializing Actions...</source>
         <translation>Инициализация действий...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="503"/>
+        <location filename="UI/UserInterface.py" line="507"/>
         <source>Initializing Menus...</source>
         <translation>Инициализация меню...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="505"/>
+        <location filename="UI/UserInterface.py" line="509"/>
         <source>Initializing Toolbars...</source>
         <translation>Инициализация панелей инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="507"/>
+        <location filename="UI/UserInterface.py" line="511"/>
         <source>Initializing Statusbar...</source>
         <translation>Инициализация строки статуса...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="471"/>
+        <location filename="UI/UserInterface.py" line="475"/>
         <source>Initializing Tools...</source>
         <translation>Инициализация инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1582"/>
+        <location filename="UI/UserInterface.py" line="1586"/>
         <source>&lt;b&gt;Unittest&lt;/b&gt;&lt;p&gt;Perform unit tests. The dialog gives you the ability to select and run a unittest suite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Unittest&lt;/b&gt;
 &lt;p&gt;Провести тесты. Диалог даёт возможность выбрать и провести набор тестов с помощью Unittest.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1590"/>
+        <location filename="UI/UserInterface.py" line="1594"/>
         <source>Unittest Restart</source>
         <translation>Перезапустить Uniitest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1594"/>
+        <location filename="UI/UserInterface.py" line="1598"/>
         <source>Restart last unittest</source>
         <translation>Перезапустить последний Uniitest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1595"/>
+        <location filename="UI/UserInterface.py" line="1599"/>
         <source>&lt;b&gt;Restart Unittest&lt;/b&gt;&lt;p&gt;Restart the unittest performed last.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Перезапустить Uniitest&lt;/b&gt;
 &lt;p&gt;Перезапустить последний проведённый тест.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1617"/>
+        <location filename="UI/UserInterface.py" line="1621"/>
         <source>Unittest Script</source>
         <translation>Unittest на сценарии</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1621"/>
+        <location filename="UI/UserInterface.py" line="1625"/>
         <source>Run unittest with current script</source>
         <translation>Выполнить Uniitest с текущим сценарием</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1622"/>
+        <location filename="UI/UserInterface.py" line="1626"/>
         <source>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Run unittest with current script.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим сценарием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3699"/>
+        <location filename="UI/UserInterface.py" line="3703"/>
         <source>Unittest Project</source>
         <translation>Uniitest на проекте</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1634"/>
+        <location filename="UI/UserInterface.py" line="1638"/>
         <source>Run unittest with current project</source>
         <translation>Выполнить Uniitest с текущим проектом</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1635"/>
+        <location filename="UI/UserInterface.py" line="1639"/>
         <source>&lt;b&gt;Unittest Project&lt;/b&gt;&lt;p&gt;Run unittest with current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим проектом.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2140"/>
+        <location filename="UI/UserInterface.py" line="2144"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3699"/>
+        <location filename="UI/UserInterface.py" line="3703"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1590"/>
+        <location filename="UI/UserInterface.py" line="1594"/>
         <source>&amp;Restart Unittest...</source>
         <translation>&amp;Перезапустить Uniitest...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1617"/>
+        <location filename="UI/UserInterface.py" line="1621"/>
         <source>Unittest &amp;Script...</source>
         <translation>Unittest на &amp;сценарии...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1630"/>
+        <location filename="UI/UserInterface.py" line="1634"/>
         <source>Unittest &amp;Project...</source>
         <translation>Uniitest на &amp;проекте...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1706"/>
+        <location filename="UI/UserInterface.py" line="1710"/>
         <source>Compare Files</source>
         <translation>Сравнить файлы</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1706"/>
+        <location filename="UI/UserInterface.py" line="1710"/>
         <source>&amp;Compare Files...</source>
         <translation>&amp;Сравнить файлы...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1721"/>
+        <location filename="UI/UserInterface.py" line="1725"/>
         <source>Compare two files</source>
         <translation>Сравнить два файла</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1710"/>
+        <location filename="UI/UserInterface.py" line="1714"/>
         <source>&lt;b&gt;Compare Files&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сравнение файлов&lt;/b&gt;
 &lt;p&gt;Открыть диалог для сравнения двух файлов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1717"/>
+        <location filename="UI/UserInterface.py" line="1721"/>
         <source>Compare Files side by side</source>
         <translation>Сравнить файлы с параллальным отображением (side by side)</translation>
     </message>
@@ -52454,58 +52484,58 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Сравнить файлы с &amp;параллальным отображением (side by side)...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1722"/>
+        <location filename="UI/UserInterface.py" line="1726"/>
         <source>&lt;b&gt;Compare Files side by side&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files and show the result side by side.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сравнить файлы с параллальным отображением (side by side)&lt;/b&gt;
 &lt;p&gt;Открыть диалог, в котором показаны различия между файлами в две колонки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5164"/>
+        <location filename="UI/UserInterface.py" line="5168"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="531"/>
+        <location filename="UI/UserInterface.py" line="535"/>
         <source>Initializing Single Application Server...</source>
         <translation>Инициализируется сервер уникального приложения...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1129"/>
+        <location filename="UI/UserInterface.py" line="1133"/>
         <source>{0} - {1} - {2} - Passive Mode</source>
         <translation>{0} - {1} - {2} - пассивный режим</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1287"/>
+        <location filename="UI/UserInterface.py" line="1291"/>
         <source>File-Browser</source>
         <translation>Просмотрщик файлов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1181"/>
+        <location filename="UI/UserInterface.py" line="1185"/>
         <source>Edit Profile</source>
         <translation>Профиль редактирования</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1186"/>
+        <location filename="UI/UserInterface.py" line="1190"/>
         <source>Activate the edit view profile</source>
         <translation>Активизировать профиль редактирования</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1187"/>
+        <location filename="UI/UserInterface.py" line="1191"/>
         <source>&lt;b&gt;Edit Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Edit View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профиль редактирования&lt;/b&gt;&lt;p&gt;Активизировать &quot;профиль редактирования&quot;. Окна, отображаемые в этом профиле, можно настроить в диалоге &quot;Конфигурация профилей&quot;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1196"/>
+        <location filename="UI/UserInterface.py" line="1200"/>
         <source>Debug Profile</source>
         <translation>Профиль отладки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1201"/>
+        <location filename="UI/UserInterface.py" line="1205"/>
         <source>Activate the debug view profile</source>
         <translation>Активизировать профиль отладки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1203"/>
+        <location filename="UI/UserInterface.py" line="1207"/>
         <source>&lt;b&gt;Debug Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Debug View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профиль отладки&lt;/b&gt;&lt;p&gt;Активизировать &quot;профиль отладки&quot;. Окна, отображаемые в этом профиле, можно настроить в диалоге &quot;Конфигурация профилей&quot;.&lt;/p&gt;</translation>
     </message>
@@ -52526,112 +52556,112 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно просмотрщика скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1848"/>
+        <location filename="UI/UserInterface.py" line="1852"/>
         <source>View Profiles</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1848"/>
+        <location filename="UI/UserInterface.py" line="1852"/>
         <source>&amp;View Profiles...</source>
         <translation>&amp;Профили...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1851"/>
+        <location filename="UI/UserInterface.py" line="1855"/>
         <source>Configure view profiles</source>
         <translation>Конфигурация профилей</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1852"/>
+        <location filename="UI/UserInterface.py" line="1856"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профили&lt;/b&gt;&lt;p&gt;Конфигурация профилей. С помощью этого диалога вы можете устанавливать видимость разных окон для заданных профилей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4030"/>
+        <location filename="UI/UserInterface.py" line="4034"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; либо не существует, либо нулевой длины.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3794"/>
+        <location filename="UI/UserInterface.py" line="3798"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Designer.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3851"/>
+        <location filename="UI/UserInterface.py" line="3855"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Linguist.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3895"/>
+        <location filename="UI/UserInterface.py" line="3899"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Assistant.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4182"/>
+        <location filename="UI/UserInterface.py" line="4186"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить инструмент &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5164"/>
+        <location filename="UI/UserInterface.py" line="5168"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1684"/>
+        <location filename="UI/UserInterface.py" line="1688"/>
         <source>UI Previewer</source>
         <translation>Педпросмотр UI</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1684"/>
+        <location filename="UI/UserInterface.py" line="1688"/>
         <source>&amp;UI Previewer...</source>
         <translation>Педпросмотр &amp;UI...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1687"/>
+        <location filename="UI/UserInterface.py" line="1691"/>
         <source>Start the UI Previewer</source>
         <translation>Запустить UI Previewer</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1688"/>
+        <location filename="UI/UserInterface.py" line="1692"/>
         <source>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Start the UI Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Запустить the UI Previewer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3993"/>
+        <location filename="UI/UserInterface.py" line="3997"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить UI Previewer.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1695"/>
+        <location filename="UI/UserInterface.py" line="1699"/>
         <source>Translations Previewer</source>
         <translation>Предпросмотр переводов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1695"/>
+        <location filename="UI/UserInterface.py" line="1699"/>
         <source>&amp;Translations Previewer...</source>
         <translation>&amp;Предпросмотр переводов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1698"/>
+        <location filename="UI/UserInterface.py" line="1702"/>
         <source>Start the Translations Previewer</source>
         <translation>Запустить предпросмотр переводов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1699"/>
+        <location filename="UI/UserInterface.py" line="1703"/>
         <source>&lt;b&gt;Translations Previewer&lt;/b&gt;&lt;p&gt;Start the Translations Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предпросмотр переводов&lt;/b&gt;&lt;p&gt;Запустить предпросмотр переводов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4038"/>
+        <location filename="UI/UserInterface.py" line="4042"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить предпросмотр переводов.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1257"/>
+        <location filename="UI/UserInterface.py" line="1261"/>
         <source>Shell</source>
         <translation>Оболочка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1257"/>
+        <location filename="UI/UserInterface.py" line="1261"/>
         <source>&amp;Shell</source>
         <translation>&amp;Оболочка</translation>
     </message>
@@ -52647,27 +52677,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Оболочки скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1826"/>
+        <location filename="UI/UserInterface.py" line="1830"/>
         <source>Reload APIs</source>
         <translation>Перезагрузить API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1826"/>
+        <location filename="UI/UserInterface.py" line="1830"/>
         <source>Reload &amp;APIs</source>
         <translation>Перезагрузить &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1828"/>
+        <location filename="UI/UserInterface.py" line="1832"/>
         <source>Reload the API information</source>
         <translation>Перезагрузить информацию об API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1829"/>
+        <location filename="UI/UserInterface.py" line="1833"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Перезагрузить API&lt;/b&gt;&lt;p&gt;Перезагрузить информацию об API.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1317"/>
+        <location filename="UI/UserInterface.py" line="1321"/>
         <source>Task-Viewer</source>
         <translation>Просмотрщик задач</translation>
     </message>
@@ -52688,53 +52718,53 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Задач скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4932"/>
+        <location filename="UI/UserInterface.py" line="4936"/>
         <source>Save tasks</source>
         <translation>Сохранить задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4932"/>
+        <location filename="UI/UserInterface.py" line="4936"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4954"/>
+        <location filename="UI/UserInterface.py" line="4958"/>
         <source>Read tasks</source>
         <translation>Прочитать задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4954"/>
+        <location filename="UI/UserInterface.py" line="4958"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3922"/>
+        <location filename="UI/UserInterface.py" line="3926"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Специальный просмотрщик не выбран.
 Используйте диалог с настройками для его выбора.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3934"/>
+        <location filename="UI/UserInterface.py" line="3938"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить специальный просмотрщик.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4548"/>
+        <location filename="UI/UserInterface.py" line="4552"/>
         <source>Documentation Missing</source>
         <translation>Документация отсутствует</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4548"/>
+        <location filename="UI/UserInterface.py" line="4552"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2699"/>
+        <location filename="UI/UserInterface.py" line="2703"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Почтовый адрес или адрес почтового сервера пуст. Настройте электронную почту в диалоге конфигурации.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1332"/>
+        <location filename="UI/UserInterface.py" line="1336"/>
         <source>Template-Viewer</source>
         <translation>Просмотрщик шаблонов</translation>
     </message>
@@ -52750,12 +52780,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно просмотрщика скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1212"/>
+        <location filename="UI/UserInterface.py" line="1216"/>
         <source>Alt+Shift+P</source>
         <translation>Alt+Shift+P</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1242"/>
+        <location filename="UI/UserInterface.py" line="1246"/>
         <source>Alt+Shift+D</source>
         <translation>Alt+Shift+D</translation>
     </message>
@@ -52765,7 +52795,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Оболочку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1257"/>
+        <location filename="UI/UserInterface.py" line="1261"/>
         <source>Alt+Shift+S</source>
         <translation>Alt+Shift+S</translation>
     </message>
@@ -52775,7 +52805,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик файлов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1287"/>
+        <location filename="UI/UserInterface.py" line="1291"/>
         <source>Alt+Shift+F</source>
         <translation>Alt+Shift+F</translation>
     </message>
@@ -52790,7 +52820,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик задач</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1317"/>
+        <location filename="UI/UserInterface.py" line="1321"/>
         <source>Alt+Shift+T</source>
         <translation>Alt+Shift+T</translation>
     </message>
@@ -52800,32 +52830,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик шаблонов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1227"/>
+        <location filename="UI/UserInterface.py" line="1231"/>
         <source>Alt+Shift+M</source>
         <translation>Alt+Shift+M</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1914"/>
         <source>Activate current editor</source>
         <translation>Активизировать текущий редактор</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1914"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1919"/>
+        <location filename="UI/UserInterface.py" line="1923"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1927"/>
+        <location filename="UI/UserInterface.py" line="1931"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>Alt+Shift+G</source>
         <translation>Alt+Shift+G</translation>
     </message>
@@ -52860,63 +52890,63 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Qt-Лингвист 4&lt;/b&gt;&lt;p&gt;Запустить Qt-Лингвист 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2006"/>
+        <location filename="UI/UserInterface.py" line="2010"/>
         <source>Qt4 Documentation</source>
         <translation>Документация Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2006"/>
+        <location filename="UI/UserInterface.py" line="2010"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Документация Qt&amp;4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2008"/>
+        <location filename="UI/UserInterface.py" line="2012"/>
         <source>Open Qt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2082"/>
+        <location filename="UI/UserInterface.py" line="2086"/>
         <source>Eric API Documentation</source>
         <translation>Документация API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2082"/>
+        <location filename="UI/UserInterface.py" line="2086"/>
         <source>&amp;Eric API Documentation</source>
         <translation>Документация API &amp;Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2084"/>
+        <location filename="UI/UserInterface.py" line="2088"/>
         <source>Open Eric API Documentation</source>
         <translation>Открыть документацию API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3953"/>
+        <location filename="UI/UserInterface.py" line="3957"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик помощи.&lt;br&gt;Убедитесь, что он доступен под именем &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="480"/>
+        <location filename="UI/UserInterface.py" line="484"/>
         <source>Registering Objects...</source>
         <translation>Регистрация объектов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1212"/>
+        <location filename="UI/UserInterface.py" line="1216"/>
         <source>Project-Viewer</source>
         <translation>Просмотрщик проекта</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1242"/>
+        <location filename="UI/UserInterface.py" line="1246"/>
         <source>Debug-Viewer</source>
         <translation>Просмотрщик отладки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1149"/>
+        <location filename="UI/UserInterface.py" line="1153"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1212"/>
+        <location filename="UI/UserInterface.py" line="1216"/>
         <source>&amp;Project-Viewer</source>
         <translation>&amp;Просмотрщик проекта</translation>
     </message>
@@ -52937,112 +52967,112 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик проекта</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1482"/>
+        <location filename="UI/UserInterface.py" line="1486"/>
         <source>Shift+F1</source>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1499"/>
+        <location filename="UI/UserInterface.py" line="1503"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1534"/>
+        <location filename="UI/UserInterface.py" line="1538"/>
         <source>Check for Updates</source>
         <translation>Проверить наличие обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1532"/>
+        <location filename="UI/UserInterface.py" line="1536"/>
         <source>Check for &amp;Updates...</source>
         <translation>Проверить наличие &amp;обновлений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2009"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Qt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию Qt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2030"/>
+        <location filename="UI/UserInterface.py" line="2034"/>
         <source>PyQt4 Documentation</source>
         <translation>Документация PyQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2030"/>
+        <location filename="UI/UserInterface.py" line="2034"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>Документация P&amp;yQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2032"/>
+        <location filename="UI/UserInterface.py" line="2036"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2033"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PyQt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию PyQt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2172"/>
+        <location filename="UI/UserInterface.py" line="2176"/>
         <source>Select Tool Group</source>
         <translation>Выберите группу инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2178"/>
+        <location filename="UI/UserInterface.py" line="2182"/>
         <source>Se&amp;ttings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2317"/>
+        <location filename="UI/UserInterface.py" line="2321"/>
         <source>Profiles</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3025"/>
+        <location filename="UI/UserInterface.py" line="3029"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Встроенные инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4166"/>
+        <location filename="UI/UserInterface.py" line="4170"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Запускается процесс &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4259"/>
+        <location filename="UI/UserInterface.py" line="4263"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Процесс &apos;{0}&apos; завершился.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4533"/>
+        <location filename="UI/UserInterface.py" line="4537"/>
         <source>Documentation</source>
         <translation>Документация</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4442"/>
+        <location filename="UI/UserInterface.py" line="4446"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PyQt4 не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5443"/>
+        <location filename="UI/UserInterface.py" line="5447"/>
         <source>Error during updates check</source>
         <translation>Ошибка при проверке обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5430"/>
+        <location filename="UI/UserInterface.py" line="5434"/>
         <source>Update available</source>
         <translation>Обновления доступны</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2648"/>
+        <location filename="UI/UserInterface.py" line="2652"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Номера версий&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5477"/>
+        <location filename="UI/UserInterface.py" line="5481"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -53057,42 +53087,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2973"/>
+        <location filename="UI/UserInterface.py" line="2977"/>
         <source>Configure Tool Groups ...</source>
         <translation>Настроить группы Инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2976"/>
+        <location filename="UI/UserInterface.py" line="2980"/>
         <source>Configure current Tool Group ...</source>
         <translation>Настроить текущую группу Инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1839"/>
+        <location filename="UI/UserInterface.py" line="1843"/>
         <source>Show external tools</source>
         <translation>Показать внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1836"/>
+        <location filename="UI/UserInterface.py" line="1840"/>
         <source>Show external &amp;tools</source>
         <translation>Показать &amp;внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5443"/>
+        <location filename="UI/UserInterface.py" line="5447"/>
         <source>Could not perform updates check.</source>
         <translation>Невозможно запустить проверку обновлений.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5302"/>
+        <location filename="UI/UserInterface.py" line="5306"/>
         <source>&amp;Cancel</source>
         <translation>От&amp;мена</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5307"/>
+        <location filename="UI/UserInterface.py" line="5311"/>
         <source>Trying host {0}</source>
         <translation>Пробую узел {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5520"/>
+        <location filename="UI/UserInterface.py" line="5524"/>
         <source>First time usage</source>
         <translation>Первое использование</translation>
     </message>
@@ -53102,83 +53132,83 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Инициализируется менеджер расширений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2232"/>
+        <location filename="UI/UserInterface.py" line="2236"/>
         <source>P&amp;lugins</source>
         <translation>&amp;Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2322"/>
         <source>Plugins</source>
         <translation>Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1947"/>
         <source>Plugin Infos</source>
         <translation>Информация о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1946"/>
+        <location filename="UI/UserInterface.py" line="1950"/>
         <source>Show Plugin Infos</source>
         <translation>Показать информацию о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1947"/>
+        <location filename="UI/UserInterface.py" line="1951"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Информация о расширениях...&lt;/b&gt;
 &lt;p&gt;Открывает диалог, отображающий информацию о загруженных расширениях.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1947"/>
         <source>&amp;Plugin Infos...</source>
         <translation>Ин&amp;формация о подключаемых модулях...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1969"/>
+        <location filename="UI/UserInterface.py" line="1973"/>
         <source>Uninstall Plugin</source>
         <translation>Убрать подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1966"/>
+        <location filename="UI/UserInterface.py" line="1970"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>У&amp;брать подключаемый модуль...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1970"/>
+        <location filename="UI/UserInterface.py" line="1974"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Убрать подключаемый модуль...&lt;/b&gt;&lt;p&gt;Открывает диалог деинсталляции нового подключаемого модуля.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3033"/>
+        <location filename="UI/UserInterface.py" line="3037"/>
         <source>&amp;Plugin Tools</source>
         <translation>Инструменты для &amp;плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3123"/>
+        <location filename="UI/UserInterface.py" line="3127"/>
         <source>&amp;Show all</source>
         <translation>Показать &amp;всё</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3125"/>
+        <location filename="UI/UserInterface.py" line="3129"/>
         <source>&amp;Hide all</source>
         <translation>Ск&amp;рыть всё</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="539"/>
+        <location filename="UI/UserInterface.py" line="543"/>
         <source>Activating Plugins...</source>
         <translation>Активация подключаемых модулей...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1542"/>
+        <location filename="UI/UserInterface.py" line="1546"/>
         <source>Show downloadable versions</source>
         <translation>Показать версии, доступные для загрузки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1542"/>
+        <location filename="UI/UserInterface.py" line="1546"/>
         <source>Show &amp;downloadable versions...</source>
         <translation>Показать версии, доступные для &amp;загрузки...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1545"/>
+        <location filename="UI/UserInterface.py" line="1549"/>
         <source>Show the versions available for download</source>
         <translation>Показать версии, доступные для загрузки</translation>
     </message>
@@ -53193,57 +53223,57 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Невозможно скачать файл версий.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5464"/>
+        <location filename="UI/UserInterface.py" line="5468"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Доступные версии&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1977"/>
+        <location filename="UI/UserInterface.py" line="1981"/>
         <source>Plugin Repository</source>
         <translation>Репозиторий плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1977"/>
+        <location filename="UI/UserInterface.py" line="1981"/>
         <source>Plugin &amp;Repository...</source>
         <translation>&amp;Репозиторий плагинов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1980"/>
+        <location filename="UI/UserInterface.py" line="1984"/>
         <source>Show Plugins available for download</source>
         <translation>Показать плагины, доступные для загрузки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1986"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Репозиторий плагинов...&lt;/b&gt;&lt;p&gt;Открывает диалог, который показывает список плагинов, доступных для скачивания с интернета.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1958"/>
+        <location filename="UI/UserInterface.py" line="1962"/>
         <source>Install Plugins</source>
         <translation>Установить плагины</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1955"/>
+        <location filename="UI/UserInterface.py" line="1959"/>
         <source>&amp;Install Plugins...</source>
         <translation>&amp;Установить плагины...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1959"/>
+        <location filename="UI/UserInterface.py" line="1963"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Установить плагины...&lt;/b&gt;&lt;p&gt;Открывает диалог для установки или обновления плагинов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1746"/>
+        <location filename="UI/UserInterface.py" line="1750"/>
         <source>Mini Editor</source>
         <translation>Мини-редактор</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1742"/>
+        <location filename="UI/UserInterface.py" line="1746"/>
         <source>Mini &amp;Editor...</source>
         <translation>Мини-&amp;редактор...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1747"/>
+        <location filename="UI/UserInterface.py" line="1751"/>
         <source>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Open a dialog with a simplified editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Мини-редактор&lt;/b&gt;&lt;p&gt;Открывает диалог с упрощённым редактором.&lt;/p&gt;</translation>
     </message>
@@ -53258,57 +53288,57 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&amp;Лингвист 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1861"/>
+        <location filename="UI/UserInterface.py" line="1865"/>
         <source>Toolbars</source>
         <translation>Панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1861"/>
+        <location filename="UI/UserInterface.py" line="1865"/>
         <source>Tool&amp;bars...</source>
         <translation>Панели &amp;инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1864"/>
+        <location filename="UI/UserInterface.py" line="1868"/>
         <source>Configure toolbars</source>
         <translation>Настроить панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1865"/>
+        <location filename="UI/UserInterface.py" line="1869"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Панели инструментов&lt;/b&gt;&lt;p&gt;Настроить панели инструментов. В этом диалоге Вы можете изменить имеющиеся панели инструментов, а так же создать новые.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="546"/>
+        <location filename="UI/UserInterface.py" line="550"/>
         <source>Restoring Toolbarmanager...</source>
         <translation>Восстановление менеджера панелей инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2562"/>
+        <location filename="UI/UserInterface.py" line="2566"/>
         <source>External Tools/{0}</source>
         <translation>Внешние инструменты/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4130"/>
+        <location filename="UI/UserInterface.py" line="4134"/>
         <source>External Tools</source>
         <translation>Внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4124"/>
+        <location filename="UI/UserInterface.py" line="4128"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Запись для внешней программы &apos;{0}&apos; не найдена в группе &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4130"/>
+        <location filename="UI/UserInterface.py" line="4134"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Запись для группы &apos;{0}&apos; не найдена.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1227"/>
+        <location filename="UI/UserInterface.py" line="1231"/>
         <source>Multiproject-Viewer</source>
         <translation>Просмотрщик мултипроекта</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1227"/>
+        <location filename="UI/UserInterface.py" line="1231"/>
         <source>&amp;Multiproject-Viewer</source>
         <translation>Просмотрщик &amp;мултипроекта</translation>
     </message>
@@ -53333,67 +53363,67 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Просмотрщик &amp;шаблонов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4969"/>
+        <location filename="UI/UserInterface.py" line="4973"/>
         <source>Save session</source>
         <translation>Сохранить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4969"/>
+        <location filename="UI/UserInterface.py" line="4973"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу записать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4992"/>
+        <location filename="UI/UserInterface.py" line="4996"/>
         <source>Read session</source>
         <translation>Загрузить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4992"/>
+        <location filename="UI/UserInterface.py" line="4996"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу прочитать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2467"/>
+        <location filename="UI/UserInterface.py" line="2471"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую кодировку редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2481"/>
+        <location filename="UI/UserInterface.py" line="2485"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса указывает на возможность записи открытого в редакторе файла.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5493"/>
+        <location filename="UI/UserInterface.py" line="5497"/>
         <source>SSL Errors</source>
         <translation>Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5493"/>
+        <location filename="UI/UserInterface.py" line="5497"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ошибки SSL: &lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1565"/>
+        <location filename="UI/UserInterface.py" line="1569"/>
         <source>Request Feature</source>
         <translation>Послать запрос</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1565"/>
+        <location filename="UI/UserInterface.py" line="1569"/>
         <source>Request &amp;Feature...</source>
         <translation>Послать &amp;запрос...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1567"/>
+        <location filename="UI/UserInterface.py" line="1571"/>
         <source>Send a feature request</source>
         <translation>Послать запрос</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1568"/>
+        <location filename="UI/UserInterface.py" line="1572"/>
         <source>&lt;b&gt;Request Feature...&lt;/b&gt;&lt;p&gt;Opens a dialog to send a feature request.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Послать запрос...&lt;/b&gt;&lt;p&gt;Показать диалог создания запроса.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2460"/>
+        <location filename="UI/UserInterface.py" line="2464"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает язык текущего окна редактора.&lt;/p&gt;</translation>
     </message>
@@ -53403,12 +53433,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Эта часть строки статуса показывает имя файла открытого в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2488"/>
+        <location filename="UI/UserInterface.py" line="2492"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает номер текущей строки в редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2495"/>
+        <location filename="UI/UserInterface.py" line="2499"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую позицию курсора в редакторе.&lt;/p&gt;</translation>
     </message>
@@ -53418,7 +53448,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Вертикальная панель инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1370"/>
+        <location filename="UI/UserInterface.py" line="1374"/>
         <source>Horizontal Toolbox</source>
         <translation>Горизонтальная панель инструментов</translation>
     </message>
@@ -53438,37 +53468,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Переключить вертикальную панель инструментов&lt;/b&gt;&lt;p&gt;Показать/скрыть вертикальную панель инструментов&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1370"/>
+        <location filename="UI/UserInterface.py" line="1374"/>
         <source>&amp;Horizontal Toolbox</source>
         <translation>&amp;Горизонтальная панель инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1373"/>
+        <location filename="UI/UserInterface.py" line="1377"/>
         <source>Toggle the Horizontal Toolbox window</source>
         <translation>Переключить горизонтальную панель инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1374"/>
+        <location filename="UI/UserInterface.py" line="1378"/>
         <source>&lt;b&gt;Toggle the Horizontal Toolbox window&lt;/b&gt;&lt;p&gt;If the Horizontal Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переключить горизонтальную панель инструментов&lt;/b&gt;&lt;p&gt;Показать/скрыть горизонтальную панель инструментов&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2941"/>
+        <location filename="UI/UserInterface.py" line="2945"/>
         <source>Restart application</source>
         <translation>Перезапустить приложение</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2941"/>
+        <location filename="UI/UserInterface.py" line="2945"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Необходимо перезапустить приложение. Сделать это сейчас?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1272"/>
+        <location filename="UI/UserInterface.py" line="1276"/>
         <source>Terminal</source>
         <translation>Терминал</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1272"/>
+        <location filename="UI/UserInterface.py" line="1276"/>
         <source>Te&amp;rminal</source>
         <translation>Те&amp;рминал</translation>
     </message>
@@ -53489,129 +53519,129 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Оболочку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1272"/>
+        <location filename="UI/UserInterface.py" line="1276"/>
         <source>Alt+Shift+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1332"/>
+        <location filename="UI/UserInterface.py" line="1336"/>
         <source>Alt+Shift+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2241"/>
+        <location filename="UI/UserInterface.py" line="2245"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2474"/>
+        <location filename="UI/UserInterface.py" line="2478"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает режим конца строки в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1935"/>
+        <location filename="UI/UserInterface.py" line="1939"/>
         <source>Switch between tabs</source>
         <translation>Переключиться между закладками</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1935"/>
+        <location filename="UI/UserInterface.py" line="1939"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1803"/>
+        <location filename="UI/UserInterface.py" line="1807"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1803"/>
+        <location filename="UI/UserInterface.py" line="1807"/>
         <source>E&amp;xport Preferences...</source>
         <translation>&amp;Экспорт предпочтений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1806"/>
+        <location filename="UI/UserInterface.py" line="1810"/>
         <source>Export the current configuration</source>
         <translation>Экспорт текущих настроек</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1807"/>
+        <location filename="UI/UserInterface.py" line="1811"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспорт предпочтений&lt;/b&gt;&lt;p&gt;Экспорт текущих предпочтений в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1814"/>
+        <location filename="UI/UserInterface.py" line="1818"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1814"/>
+        <location filename="UI/UserInterface.py" line="1818"/>
         <source>I&amp;mport Preferences...</source>
         <translation>&amp;Импорт предпочтений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1817"/>
+        <location filename="UI/UserInterface.py" line="1821"/>
         <source>Import a previously exported configuration</source>
         <translation>Импорт сохранённых ранее настроек</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1819"/>
+        <location filename="UI/UserInterface.py" line="1823"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Импорт настроек&lt;/b&gt;&lt;p&gt;Импорт сохранённых ранее настроек.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1919"/>
+        <location filename="UI/UserInterface.py" line="1923"/>
         <source>Show next</source>
         <translation>Показать следующую закладку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1927"/>
+        <location filename="UI/UserInterface.py" line="1931"/>
         <source>Show previous</source>
         <translation>Показать предыдущую закладку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1382"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>Left Sidebar</source>
         <translation>Левая док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1382"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>&amp;Left Sidebar</source>
         <translation>&amp;Левая док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1384"/>
+        <location filename="UI/UserInterface.py" line="1388"/>
         <source>Toggle the left sidebar window</source>
         <translation>Показать/скрыть левую док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1385"/>
+        <location filename="UI/UserInterface.py" line="1389"/>
         <source>&lt;b&gt;Toggle the left sidebar window&lt;/b&gt;&lt;p&gt;If the left sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать/скрыть левую док-панель&lt;/b&gt;
 &lt;p&gt;Если левая док-панель скрыта, показать её. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1404"/>
+        <location filename="UI/UserInterface.py" line="1408"/>
         <source>Bottom Sidebar</source>
         <translation>Нижняя док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1404"/>
+        <location filename="UI/UserInterface.py" line="1408"/>
         <source>&amp;Bottom Sidebar</source>
         <translation>&amp;Нижняя док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1407"/>
+        <location filename="UI/UserInterface.py" line="1411"/>
         <source>Toggle the bottom sidebar window</source>
         <translation>Показать/скрыть нижнюю док-панель</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1408"/>
+        <location filename="UI/UserInterface.py" line="1412"/>
         <source>&lt;b&gt;Toggle the bottom sidebar window&lt;/b&gt;&lt;p&gt;If the bottom sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать/скрыть нижнюю док-панель&lt;/b&gt;
 &lt;p&gt;Если нижняя док-панель скрыта, показать её. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1242"/>
+        <location filename="UI/UserInterface.py" line="1246"/>
         <source>&amp;Debug-Viewer</source>
         <translation>&amp;Просмотрщик отладки</translation>
     </message>
@@ -53632,27 +53662,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик отладки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1730"/>
+        <location filename="UI/UserInterface.py" line="1734"/>
         <source>SQL Browser</source>
         <translation>Просмотрщик SQL</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1730"/>
+        <location filename="UI/UserInterface.py" line="1734"/>
         <source>SQL &amp;Browser...</source>
         <translation>&amp;Просмотрщик SQL...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1734"/>
+        <location filename="UI/UserInterface.py" line="1738"/>
         <source>Browse a SQL database</source>
         <translation>Просмотреть SQL базу данных</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1735"/>
+        <location filename="UI/UserInterface.py" line="1739"/>
         <source>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Browse a SQL database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Просмотрщик SQL&lt;/b&gt;&lt;p&gt;Просмотреть SQL базу данных.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4057"/>
+        <location filename="UI/UserInterface.py" line="4061"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик SQL.&lt;br&gt;Убедитесь, что он доступен как &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -53692,62 +53722,62 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Просмотрщик &amp;Web...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1766"/>
+        <location filename="UI/UserInterface.py" line="1770"/>
         <source>Icon Editor</source>
         <translation>Редактор иконок</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1766"/>
+        <location filename="UI/UserInterface.py" line="1770"/>
         <source>&amp;Icon Editor...</source>
         <translation>Редактор &amp;иконок...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3874"/>
+        <location filename="UI/UserInterface.py" line="3878"/>
         <source>Qt 3 support</source>
         <translation>Поддержка Qt3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2103"/>
+        <location filename="UI/UserInterface.py" line="2107"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PySide&lt;/b&gt;&lt;p&gt;Показать документацию PySide. В зависимости от настроек документация будет показана или во внутреннем просмотрщике помощи, в WEB просмотрщике или в Qt Assistant. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4533"/>
+        <location filename="UI/UserInterface.py" line="4537"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PySide не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>PySide Documentation</source>
         <translation>Документация PySide</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Документация Py&amp;Side</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2102"/>
+        <location filename="UI/UserInterface.py" line="2106"/>
         <source>Open PySide Documentation</source>
         <translation>Открыть документацию PySide</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1505"/>
+        <location filename="UI/UserInterface.py" line="1509"/>
         <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric5 просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1535"/>
+        <location filename="UI/UserInterface.py" line="1539"/>
         <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric5 в интернет.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1547"/>
+        <location filename="UI/UserInterface.py" line="1551"/>
         <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric5, которые можно скачать с интернета.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1758"/>
+        <location filename="UI/UserInterface.py" line="1762"/>
         <source>Start the eric5 Web Browser</source>
         <translation>Запустить WEB просмотрщик встроенный в Eric5</translation>
     </message>
@@ -53757,52 +53787,52 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Просмотрщик Web&lt;/b&gt;&lt;p&gt;Запустить WEB просмотрщик встроенный в Eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1770"/>
+        <location filename="UI/UserInterface.py" line="1774"/>
         <source>Start the eric5 Icon Editor</source>
         <translation>Запустить редактор иконок</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1771"/>
+        <location filename="UI/UserInterface.py" line="1775"/>
         <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1840"/>
+        <location filename="UI/UserInterface.py" line="1844"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2085"/>
+        <location filename="UI/UserInterface.py" line="2089"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3874"/>
+        <location filename="UI/UserInterface.py" line="3878"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt3 не поддерживается в eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5430"/>
+        <location filename="UI/UserInterface.py" line="5434"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5439"/>
+        <location filename="UI/UserInterface.py" line="5443"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 не требует обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5439"/>
+        <location filename="UI/UserInterface.py" line="5443"/>
         <source>You are using the latest version of eric5</source>
         <translation>Вы используете самую последнюю версию eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5520"/>
+        <location filename="UI/UserInterface.py" line="5524"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="793"/>
+        <location filename="UI/UserInterface.py" line="797"/>
         <source>Cooperation</source>
         <translation>Кооперация</translation>
     </message>
@@ -53827,12 +53857,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать Просмотрщик Коопераци</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1416"/>
+        <location filename="UI/UserInterface.py" line="1420"/>
         <source>Alt+Shift+O</source>
         <translation>Alt+Shift+O</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="849"/>
+        <location filename="UI/UserInterface.py" line="853"/>
         <source>Symbols</source>
         <translation>Символы</translation>
     </message>
@@ -53858,12 +53888,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать просмотрщик символов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1450"/>
+        <location filename="UI/UserInterface.py" line="1454"/>
         <source>Alt+Shift+Y</source>
         <translation>Alt+Shift+Y</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="855"/>
+        <location filename="UI/UserInterface.py" line="859"/>
         <source>Numbers</source>
         <translation>Числа</translation>
     </message>
@@ -53889,519 +53919,519 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Активизировать просмотрщик чисел</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1470"/>
         <source>Alt+Shift+B</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4811"/>
+        <location filename="UI/UserInterface.py" line="4815"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Файл горячих клавиш (*.e4k)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2046"/>
+        <location filename="UI/UserInterface.py" line="2050"/>
         <source>Python 3 Documentation</source>
         <translation>Документация Pyton 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2046"/>
+        <location filename="UI/UserInterface.py" line="2050"/>
         <source>Python &amp;3 Documentation</source>
         <translation>Документация Pyton &amp;3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2048"/>
+        <location filename="UI/UserInterface.py" line="2052"/>
         <source>Open Python 3 Documentation</source>
         <translation>Открыть документацию Python 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2049"/>
+        <location filename="UI/UserInterface.py" line="2053"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 3&lt;/b&gt;&lt;p&gt;Показать Pyton 3 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 3 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON3DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2061"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python 2 Documentation</source>
         <translation>Документация Pyton 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2061"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python &amp;2 Documentation</source>
         <translation>Документация Pyton &amp;2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Open Python 2 Documentation</source>
         <translation>Открыть документацию Python 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2064"/>
+        <location filename="UI/UserInterface.py" line="2068"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 2&lt;/b&gt;&lt;p&gt;Показать Pyton 2 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 2 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON2DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5357"/>
+        <location filename="UI/UserInterface.py" line="5361"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5351"/>
+        <location filename="UI/UserInterface.py" line="5355"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4634"/>
+        <location filename="UI/UserInterface.py" line="4638"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4634"/>
+        <location filename="UI/UserInterface.py" line="4638"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5357"/>
+        <location filename="UI/UserInterface.py" line="5361"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1754"/>
+        <location filename="UI/UserInterface.py" line="1758"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1754"/>
+        <location filename="UI/UserInterface.py" line="1758"/>
         <source>eric5 &amp;Web Browser...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1759"/>
+        <location filename="UI/UserInterface.py" line="1763"/>
         <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="550"/>
+        <location filename="UI/UserInterface.py" line="554"/>
         <source>Setting View Profile...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="554"/>
+        <location filename="UI/UserInterface.py" line="558"/>
         <source>Reading Tasks...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="558"/>
+        <location filename="UI/UserInterface.py" line="562"/>
         <source>Reading Templates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="562"/>
+        <location filename="UI/UserInterface.py" line="566"/>
         <source>Starting Debugger...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1165"/>
+        <location filename="UI/UserInterface.py" line="1169"/>
         <source>New Window</source>
         <translation type="unfinished">Новое окно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1165"/>
+        <location filename="UI/UserInterface.py" line="1169"/>
         <source>New &amp;Window</source>
         <translation type="unfinished">&amp;Новое окно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1165"/>
+        <location filename="UI/UserInterface.py" line="1169"/>
         <source>Ctrl+Shift+N</source>
         <comment>File|New Window</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1170"/>
+        <location filename="UI/UserInterface.py" line="1174"/>
         <source>Open a new eric5 instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1171"/>
+        <location filename="UI/UserInterface.py" line="1175"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1603"/>
+        <location filename="UI/UserInterface.py" line="1607"/>
         <source>Unittest Rerun Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1603"/>
+        <location filename="UI/UserInterface.py" line="1607"/>
         <source>Rerun Failed Tests...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1607"/>
+        <location filename="UI/UserInterface.py" line="1611"/>
         <source>Rerun failed tests of the last run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1609"/>
+        <location filename="UI/UserInterface.py" line="1613"/>
         <source>&lt;b&gt;Rerun Failed Tests&lt;/b&gt;&lt;p&gt;Rerun all tests that failed during the last unittest run.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1717"/>
+        <location filename="UI/UserInterface.py" line="1721"/>
         <source>Compare &amp;Files side by side...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1778"/>
+        <location filename="UI/UserInterface.py" line="1782"/>
         <source>Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1778"/>
+        <location filename="UI/UserInterface.py" line="1782"/>
         <source>&amp;Snapshot...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1782"/>
+        <location filename="UI/UserInterface.py" line="1786"/>
         <source>Take snapshots of a screen region</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1783"/>
+        <location filename="UI/UserInterface.py" line="1787"/>
         <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4104"/>
+        <location filename="UI/UserInterface.py" line="4108"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5538"/>
+        <location filename="UI/UserInterface.py" line="5542"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1348"/>
+        <location filename="UI/UserInterface.py" line="1352"/>
         <source>Left Toolbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1359"/>
+        <location filename="UI/UserInterface.py" line="1363"/>
         <source>Right Toolbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1217"/>
+        <location filename="UI/UserInterface.py" line="1221"/>
         <source>Switch the input focus to the Project-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1219"/>
+        <location filename="UI/UserInterface.py" line="1223"/>
         <source>&lt;b&gt;Activate Project-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Project-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1232"/>
+        <location filename="UI/UserInterface.py" line="1236"/>
         <source>Switch the input focus to the Multiproject-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1234"/>
+        <location filename="UI/UserInterface.py" line="1238"/>
         <source>&lt;b&gt;Activate Multiproject-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Multiproject-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1247"/>
+        <location filename="UI/UserInterface.py" line="1251"/>
         <source>Switch the input focus to the Debug-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1249"/>
+        <location filename="UI/UserInterface.py" line="1253"/>
         <source>&lt;b&gt;Activate Debug-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Debug-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1262"/>
+        <location filename="UI/UserInterface.py" line="1266"/>
         <source>Switch the input focus to the Shell window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1264"/>
+        <location filename="UI/UserInterface.py" line="1268"/>
         <source>&lt;b&gt;Activate Shell&lt;/b&gt;&lt;p&gt;This switches the input focus to the Shell window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1277"/>
+        <location filename="UI/UserInterface.py" line="1281"/>
         <source>Switch the input focus to the Terminal window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1279"/>
+        <location filename="UI/UserInterface.py" line="1283"/>
         <source>&lt;b&gt;Activate Terminal&lt;/b&gt;&lt;p&gt;This switches the input focus to the Terminal window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1287"/>
+        <location filename="UI/UserInterface.py" line="1291"/>
         <source>&amp;File-Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1292"/>
+        <location filename="UI/UserInterface.py" line="1296"/>
         <source>Switch the input focus to the File-Browser window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1294"/>
+        <location filename="UI/UserInterface.py" line="1298"/>
         <source>&lt;b&gt;Activate File-Browser&lt;/b&gt;&lt;p&gt;This switches the input focus to the File-Browser window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>Lo&amp;g-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1307"/>
+        <location filename="UI/UserInterface.py" line="1311"/>
         <source>Switch the input focus to the Log-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1309"/>
+        <location filename="UI/UserInterface.py" line="1313"/>
         <source>&lt;b&gt;Activate Log-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Log-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1317"/>
+        <location filename="UI/UserInterface.py" line="1321"/>
         <source>&amp;Task-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1322"/>
+        <location filename="UI/UserInterface.py" line="1326"/>
         <source>Switch the input focus to the Task-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1332"/>
+        <location filename="UI/UserInterface.py" line="1336"/>
         <source>Templ&amp;ate-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1337"/>
+        <location filename="UI/UserInterface.py" line="1341"/>
         <source>Switch the input focus to the Template-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1339"/>
+        <location filename="UI/UserInterface.py" line="1343"/>
         <source>&lt;b&gt;Activate Template-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Template-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1348"/>
+        <location filename="UI/UserInterface.py" line="1352"/>
         <source>&amp;Left Toolbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1350"/>
+        <location filename="UI/UserInterface.py" line="1354"/>
         <source>Toggle the Left Toolbox window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1351"/>
+        <location filename="UI/UserInterface.py" line="1355"/>
         <source>&lt;b&gt;Toggle the Left Toolbox window&lt;/b&gt;&lt;p&gt;If the Left Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1359"/>
+        <location filename="UI/UserInterface.py" line="1363"/>
         <source>&amp;Right Toolbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1361"/>
+        <location filename="UI/UserInterface.py" line="1365"/>
         <source>Toggle the Right Toolbox window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1362"/>
+        <location filename="UI/UserInterface.py" line="1366"/>
         <source>&lt;b&gt;Toggle the Right Toolbox window&lt;/b&gt;&lt;p&gt;If the Right Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1393"/>
+        <location filename="UI/UserInterface.py" line="1397"/>
         <source>Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1393"/>
+        <location filename="UI/UserInterface.py" line="1397"/>
         <source>&amp;Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1395"/>
+        <location filename="UI/UserInterface.py" line="1399"/>
         <source>Toggle the right sidebar window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1396"/>
+        <location filename="UI/UserInterface.py" line="1400"/>
         <source>&lt;b&gt;Toggle the right sidebar window&lt;/b&gt;&lt;p&gt;If the right sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1416"/>
+        <location filename="UI/UserInterface.py" line="1420"/>
         <source>Cooperation-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1416"/>
+        <location filename="UI/UserInterface.py" line="1420"/>
         <source>Co&amp;operation-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1422"/>
+        <location filename="UI/UserInterface.py" line="1426"/>
         <source>Switch the input focus to the Cooperation-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1424"/>
+        <location filename="UI/UserInterface.py" line="1428"/>
         <source>&lt;b&gt;Activate Cooperation-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Cooperation-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1450"/>
+        <location filename="UI/UserInterface.py" line="1454"/>
         <source>Symbols-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1450"/>
+        <location filename="UI/UserInterface.py" line="1454"/>
         <source>S&amp;ymbols-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1456"/>
+        <location filename="UI/UserInterface.py" line="1460"/>
         <source>Switch the input focus to the Symbols-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1458"/>
+        <location filename="UI/UserInterface.py" line="1462"/>
         <source>&lt;b&gt;Activate Symbols-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Symbols-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1470"/>
         <source>Numbers-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1466"/>
+        <location filename="UI/UserInterface.py" line="1470"/>
         <source>Num&amp;bers-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1472"/>
+        <location filename="UI/UserInterface.py" line="1476"/>
         <source>Switch the input focus to the Numbers-Viewer window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1474"/>
+        <location filename="UI/UserInterface.py" line="1478"/>
         <source>&lt;b&gt;Activate Numbers-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Numbers-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2205"/>
         <source>&amp;Windows</source>
         <translation type="unfinished">&amp;Окна</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1324"/>
+        <location filename="UI/UserInterface.py" line="1328"/>
         <source>&lt;b&gt;Activate Task-Viewer&lt;/b&gt;&lt;p&gt;This switches the input focus to the Task-Viewer window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1437"/>
         <source>IRC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1437"/>
         <source>&amp;IRC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1433"/>
+        <location filename="UI/UserInterface.py" line="1437"/>
         <source>Meta+Shift+I</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1439"/>
+        <location filename="UI/UserInterface.py" line="1443"/>
         <source>Switch the input focus to the IRC window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1441"/>
+        <location filename="UI/UserInterface.py" line="1445"/>
         <source>&lt;b&gt;Activate IRC&lt;/b&gt;&lt;p&gt;This switches the input focus to the IRC window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1655"/>
         <source>Qt-Designer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1655"/>
         <source>Qt-&amp;Designer...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1654"/>
+        <location filename="UI/UserInterface.py" line="1658"/>
         <source>Start Qt-Designer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1655"/>
+        <location filename="UI/UserInterface.py" line="1659"/>
         <source>&lt;b&gt;Qt-Designer&lt;/b&gt;&lt;p&gt;Start Qt-Designer.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1671"/>
+        <location filename="UI/UserInterface.py" line="1675"/>
         <source>Qt-Linguist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1671"/>
+        <location filename="UI/UserInterface.py" line="1675"/>
         <source>Qt-&amp;Linguist...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1674"/>
+        <location filename="UI/UserInterface.py" line="1678"/>
         <source>Start Qt-Linguist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1675"/>
+        <location filename="UI/UserInterface.py" line="1679"/>
         <source>&lt;b&gt;Qt-Linguist&lt;/b&gt;&lt;p&gt;Start Qt-Linguist.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2018"/>
+        <location filename="UI/UserInterface.py" line="2022"/>
         <source>Qt5 Documentation</source>
         <translation type="unfinished">Документация Qt4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2018"/>
+        <location filename="UI/UserInterface.py" line="2022"/>
         <source>Qt&amp;5 Documentation</source>
         <translation type="unfinished">Документация Qt&amp;4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2020"/>
+        <location filename="UI/UserInterface.py" line="2024"/>
         <source>Open Qt5 Documentation</source>
         <translation type="unfinished">Открыть документацию Qt4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2021"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>&lt;b&gt;Qt5 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt5 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Документация Qt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию Qt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt; {5 ?} {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2505"/>
+        <location filename="UI/UserInterface.py" line="2509"/>
         <source>&lt;p&gt;This part of the status bar allows zooming the current editor, shell or terminal.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56655,17 +56685,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Открыть &amp;закладки на файлы</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4355"/>
+        <location filename="ViewManager/ViewManager.py" line="4358"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4351"/>
+        <location filename="ViewManager/ViewManager.py" line="4354"/>
         <source>&amp;Add</source>
         <translation>&amp;Добавить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4353"/>
+        <location filename="ViewManager/ViewManager.py" line="4356"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Правка...</translation>
     </message>
@@ -57693,12 +57723,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3972"/>
+        <location filename="ViewManager/ViewManager.py" line="3975"/>
         <source>Line: {0:5}</source>
         <translation>Строка: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3977"/>
+        <location filename="ViewManager/ViewManager.py" line="3980"/>
         <source>Pos: {0:5}</source>
         <translation>Позиция: {0:5}</translation>
     </message>
@@ -58321,47 +58351,47 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5406"/>
+        <location filename="ViewManager/ViewManager.py" line="5424"/>
         <source>Edit Project Word List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5406"/>
+        <location filename="ViewManager/ViewManager.py" line="5424"/>
         <source>No word list defined for the current project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5419"/>
+        <location filename="ViewManager/ViewManager.py" line="5437"/>
         <source>Edit Project Exception List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5419"/>
+        <location filename="ViewManager/ViewManager.py" line="5437"/>
         <source>No exception list defined for the current project.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5477"/>
+        <location filename="ViewManager/ViewManager.py" line="5495"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5458"/>
+        <location filename="ViewManager/ViewManager.py" line="5476"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5448"/>
+        <location filename="ViewManager/ViewManager.py" line="5466"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5468"/>
+        <location filename="ViewManager/ViewManager.py" line="5486"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5477"/>
+        <location filename="ViewManager/ViewManager.py" line="5495"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59128,17 +59158,17 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1775"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1797"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Метки&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1783"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1805"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Ветви&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1790"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1812"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -59149,30 +59179,30 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 &lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1769"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1791"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1771"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1793"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Изменения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1787"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1809"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Предки&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1278"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1300"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Предок #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Изменения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1316"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
@@ -59182,7 +59212,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 &lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1324"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1346"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -59199,7 +59229,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 {2}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1779"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1801"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59443,17 +59473,17 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1637"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1655"/>
         <source>unknown</source>
         <translation>неизвестный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1506"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1525"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Информация о репозитории&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Версия Subversion:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Текущая ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Зафиксированная ревизия (committed)&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Дата сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Время сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Последний автор&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1638"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1656"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Информация о репозитории&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Текущая ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Зафиксированная ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Дата сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Время сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Автор последней ревизии&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>

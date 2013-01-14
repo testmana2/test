@@ -49,6 +49,8 @@ from .SvnUtilities import getConfigPath, amendConfig, createDefaultConfig
 
 from .ProjectBrowserHelper import SvnProjectBrowserHelper
 
+from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+
 import Preferences
 import Utilities
 
@@ -990,16 +992,33 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         if isinstance(name, list):
             self.addArguments(args, name)
+            names = name[:]
         else:
             if os.path.isdir(name):
                 args.append('--recursive')
             args.append(name)
+            names = [name]
         
-        dia = SvnDialog(self.trUtf8('Reverting changes'))
-        res = dia.startProcess(args)
-        if res:
-            dia.exec_()
-        self.checkVCSStatus()
+        project = e5App().getObject("Project")
+        names = [project.getRelativePath(nam) for nam in names]
+        if names[0]:
+            dlg = DeleteFilesConfirmationDialog(self.parent(),
+                self.trUtf8("Revert changes"),
+                self.trUtf8("Do you really want to revert all changes to these files"
+                            " or directories?"),
+                names)
+            yes = dlg.exec_() == QDialog.Accepted
+        else:
+            yes = E5MessageBox.yesNo(None,
+                self.trUtf8("Revert changes"),
+                self.trUtf8("""Do you really want to revert all changes of"""
+                            """ the project?"""))
+        if yes:
+            dia = SvnDialog(self.trUtf8('Reverting changes'))
+            res = dia.startProcess(args)
+            if res:
+                dia.exec_()
+            self.checkVCSStatus()
     
     def vcsSwitch(self, name):
         """

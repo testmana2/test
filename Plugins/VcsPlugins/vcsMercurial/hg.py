@@ -65,6 +65,8 @@ from .RebaseExtension.rebase import Rebase
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
+from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+
 import Preferences
 import Utilities
 
@@ -901,9 +903,11 @@ class Hg(VersionControl):
         if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
             self.addArguments(args, name)
+            names = name[:]
         else:
             dname, fname = self.splitPath(name)
             args.append(name)
+            names = [name]
         
         # find the root of the repo
         repodir = dname
@@ -912,12 +916,30 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        dia = HgDialog(self.trUtf8('Reverting changes'), self)
-        res = dia.startProcess(args, repodir)
-        if res:
-            dia.exec_()
-            res = dia.hasAddOrDelete()
-        self.checkVCSStatus()
+        project = e5App().getObject("Project")
+        names = [project.getRelativePath(nam) for nam in names]
+        if names[0]:
+            dlg = DeleteFilesConfirmationDialog(self.parent(),
+                self.trUtf8("Revert changes"),
+                self.trUtf8("Do you really want to revert all changes to these files"
+                            " or directories?"),
+                names)
+            yes = dlg.exec_() == QDialog.Accepted
+        else:
+            yes = E5MessageBox.yesNo(None,
+                self.trUtf8("Revert changes"),
+                self.trUtf8("""Do you really want to revert all changes of"""
+                            """ the project?"""))
+        if yes:
+            dia = HgDialog(self.trUtf8('Reverting changes'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+                res = dia.hasAddOrDelete()
+            self.checkVCSStatus()
+        else:
+            res = False
+        
         return res
     
     def vcsMerge(self, name):

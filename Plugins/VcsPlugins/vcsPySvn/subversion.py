@@ -55,6 +55,8 @@ from .ProjectBrowserHelper import SvnProjectBrowserHelper
 
 from Plugins.VcsPlugins.vcsSubversion.SvnDialog import SvnDialog as SvnProcessDialog
 
+from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+
 import Utilities
 
 
@@ -1103,22 +1105,38 @@ class Subversion(VersionControl):
             name = [name]
             if os.path.isdir(name[0]):
                 recurse = True
-        client = self.getClient()
-        dlg = \
-            SvnDialog(self.trUtf8('Reverting changes'),
-                      "revert {0} {1}".format((not recurse) and " --non-recursive" or "",
-                        " ".join(name)),
-                client)
-        QApplication.processEvents()
-        locker = QMutexLocker(self.vcsExecutionMutex)
-        try:
-            client.revert(name, recurse)
-        except pysvn.ClientError as e:
-            dlg.showError(e.args[0])
-        locker.unlock()
-        dlg.finish()
-        dlg.exec_()
-        self.checkVCSStatus()
+        
+        project = e5App().getObject("Project")
+        names = [project.getRelativePath(nam) for nam in name]
+        if names[0]:
+            dia = DeleteFilesConfirmationDialog(self.parent(),
+                self.trUtf8("Revert changes"),
+                self.trUtf8("Do you really want to revert all changes to these files"
+                            " or directories?"),
+                name)
+            yes = dia.exec_() == QDialog.Accepted
+        else:
+            yes = E5MessageBox.yesNo(None,
+                self.trUtf8("Revert changes"),
+                self.trUtf8("""Do you really want to revert all changes of"""
+                            """ the project?"""))
+        if yes:
+            client = self.getClient()
+            dlg = \
+                SvnDialog(self.trUtf8('Reverting changes'),
+                          "revert {0} {1}".format((not recurse) and " --non-recursive" or "",
+                            " ".join(name)),
+                    client)
+            QApplication.processEvents()
+            locker = QMutexLocker(self.vcsExecutionMutex)
+            try:
+                client.revert(name, recurse)
+            except pysvn.ClientError as e:
+                dlg.showError(e.args[0])
+            locker.unlock()
+            dlg.finish()
+            dlg.exec_()
+            self.checkVCSStatus()
     
     def vcsSwitch(self, name):
         """
