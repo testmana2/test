@@ -5051,7 +5051,14 @@ class ViewManager(QObject):
         
         @param value new zoom value (integer)
         """
-        self.sbZoom.setValue(value)
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            aw = e5App().getObject("Shell")
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            aw = e5App().getObject("Terminal")
+        else:
+            aw = self.activeWindow()
+        if aw and aw == self.sender():
+            self.sbZoom.setValue(value)
         
     def __toggleAll(self):
         """
@@ -5732,7 +5739,9 @@ class ViewManager(QObject):
         
         # reload editor settings
         for editor in self.editors:
+            zoom = editor.getZoom()
             editor.readSettings()
+            editor.zoomTo(zoom)
         
         # reload the autosave timer setting
         self.autosaveInterval = Preferences.getEditor("AutosaveInterval")
