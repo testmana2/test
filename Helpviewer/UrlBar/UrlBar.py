@@ -180,19 +180,18 @@ class UrlBar(E5LineEdit):
                 sslInfo = self.__browser.page().getSslInfo()
                 if sslInfo is not None:
                     if qVersion() >= "5.0.0":
-                        org = Utilities.html_encode(Utilities.decodeString(
-                            ", ".join(sslInfo.subjectInfo(QSslCertificate.Organization))))
+                        org = Utilities.decodeString(
+                            ", ".join(sslInfo.subjectInfo(QSslCertificate.Organization)))
                     else:
-                        org = Utilities.html_encode(Utilities.decodeString(
-                            sslInfo.subjectInfo(QSslCertificate.Organization)))
+                        org = Utilities.decodeString(
+                            sslInfo.subjectInfo(QSslCertificate.Organization))
                     if org == "":
                         if qVersion() >= "5.0.0":
-                            cn = Utilities.html_encode(Utilities.decodeString(
-                                ", ".join(
-                                    sslInfo.subjectInfo(QSslCertificate.CommonName))))
-                        else:
-                            cn = Utilities.html_encode(Utilities.decodeString(
+                            cn = Utilities.decodeString(", ".join(
                                 sslInfo.subjectInfo(QSslCertificate.CommonName)))
+                        else:
+                            cn = Utilities.decodeString(
+                                sslInfo.subjectInfo(QSslCertificate.CommonName))
                         if cn != "":
                             org = cn.split(".", 1)[1]
                         if org == "":
