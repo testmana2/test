@@ -70,10 +70,10 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
             self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
                 certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
         self.serialNumberLabel.setText(self.__serialNumber(certificate))
-        self.effectiveLabel.setText(Utilities.html_encode(
-            certificate.effectiveDate().toString("yyyy-MM-dd")))
-        self.expiresLabel.setText(Utilities.html_encode(
-            certificate.expiryDate().toString("yyyy-MM-dd")))
+        self.effectiveLabel.setText(
+            certificate.effectiveDate().toString("yyyy-MM-dd"))
+        self.expiresLabel.setText(
+            certificate.expiryDate().toString("yyyy-MM-dd"))
         self.sha1Label.setText(self.__formatHexString(
             str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
         self.md5Label.setText(self.__formatHexString(
@@ -97,7 +97,7 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
         if txt is None or txt == "":
             return self.trUtf8("<not part of the certificate>")
         
-        return Utilities.html_encode(Utilities.decodeString(txt))
+        return Utilities.decodeString(txt)
     
     def __serialNumber(self, cert):
         """
@@ -133,7 +133,7 @@ class SslInfoWidget(QWidget, Ui_SslInfoWidget):
             hexList.append(hexString[:2])
             hexString = hexString[2:]
         
-        return Utilities.html_encode(':'.join(hexList))
+        return ':'.join(hexList)
     
     def __hasExpired(self, effectiveDate, expiryDate):
         """

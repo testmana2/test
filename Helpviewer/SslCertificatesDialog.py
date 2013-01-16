@@ -69,20 +69,20 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         # step 1: extract the info to be shown
         if qVersion() >= "5.0.0":
-            organisation = Utilities.html_encode(Utilities.decodeString(
-                ", ".join(cert.subjectInfo(QSslCertificate.Organization))))
-            commonName = Utilities.html_encode(Utilities.decodeString(
-                ", ".join(cert.subjectInfo(QSslCertificate.CommonName))))
+            organisation = Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.Organization)))
+            commonName = Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.CommonName)))
         else:
-            organisation = Utilities.html_encode(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.Organization)))
-            commonName = Utilities.html_encode(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.CommonName)))
+            organisation = Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization))
+            commonName = Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
-        expiryDate = Utilities.html_encode(cert.expiryDate().toString("yyyy-MM-dd"))
+        expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
         items = self.serversCertificatesTree.findItems(organisation,
@@ -261,20 +261,20 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         # step 1: extract the info to be shown
         if qVersion() >= "5.0.0":
-            organisation = Utilities.html_encode(Utilities.decodeString(
-                ", ".join(cert.subjectInfo(QSslCertificate.Organization))))
-            commonName = Utilities.html_encode(Utilities.decodeString(
-                ", ".join(cert.subjectInfo(QSslCertificate.CommonName))))
+            organisation = Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.Organization)))
+            commonName = Utilities.decodeString(
+                ", ".join(cert.subjectInfo(QSslCertificate.CommonName)))
         else:
-            organisation = Utilities.html_encode(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.Organization)))
-            commonName = Utilities.html_encode(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.CommonName)))
+            organisation = Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization))
+            commonName = Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
-        expiryDate = Utilities.html_encode(cert.expiryDate().toString("yyyy-MM-dd"))
+        expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
         items = self.caCertificatesTree.findItems(organisation,
