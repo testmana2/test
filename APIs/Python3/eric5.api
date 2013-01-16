@@ -1594,6 +1594,10 @@ eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory.queryProxy?4(query)
 eric5.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory?1()
 eric5.E5Network.E5NetworkProxyFactory.proxyAuthenticationRequired?4(proxy, auth)
 eric5.E5Network.E5NetworkProxyFactory.schemeFromProxyType?4(proxyType)
+eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrors?4(errors, server, port=-1)
+eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrorsReply?4(reply, errors)
+eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrorsReplySlot?4(reply, errors)
+eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler?1(parent=None)
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeGroup?7
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOther?7
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOwner?7

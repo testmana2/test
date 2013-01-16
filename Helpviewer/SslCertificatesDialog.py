@@ -51,7 +51,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         Private slot to populate the server certificates tree.
         """
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
                 self.__createServerCertificateEntry(server, cert)
@@ -145,7 +145,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             
             # delete the certificate from the user certificate store
             certificateDict = Preferences.toDict(
-                    Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                    Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
             if server in certificateDict:
                 certs = QSslCertificate.fromData(certificateDict[server])
                 if cert in certs:
@@ -157,7 +157,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                     certificateDict[server] = pems
                 else:
                     del certificateDict[server]
-            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
+            Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
                 certificateDict)
             
             # delete the certificate from the default certificates
@@ -172,7 +172,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         if certs:
             server = "*"
             certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
             if server in certificateDict:
                 sCerts = QSslCertificate.fromData(certificateDict[server])
             else:
@@ -196,7 +196,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             if server not in certificateDict:
                 certificateDict[server] = QByteArray()
             certificateDict[server].append(pems)
-            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
+            Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
                 certificateDict)
             
             self.serversCertificatesTree.clear()
@@ -220,7 +220,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         caList = self.__getSystemCaCertificates()
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
                 if cert not in caList:

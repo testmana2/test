@@ -512,7 +512,7 @@ class HelpWebPage(QWebPage):
             return False
         
         certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+                Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             localCAList = QSslCertificate.fromData(certificateDict[server])
             for cert in certList:

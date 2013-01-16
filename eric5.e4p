@@ -1067,6 +1067,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Network/IRC/IrcIdentitiesEditDialog.py</Source>
     <Source>Network/IRC/IrcMessageEdit.py</Source>
     <Source>E5Gui/E5ZoomWidget.py</Source>
+    <Source>E5Network/E5SslErrorHandler.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

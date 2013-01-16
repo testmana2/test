@@ -16,11 +16,6 @@ from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, QProc
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QTreeWidgetItem, \
     QDialog, QVBoxLayout
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
-try:
-    from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
-    SSL_AVAILABLE = True
-except ImportError:
-    SSL_AVAILABLE = False
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
@@ -31,6 +26,11 @@ from E5Gui.E5Application import e5App
 from E5XML.PluginRepositoryReader import PluginRepositoryReader
 
 from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
+try:
+    from E5Network.E5SslErrorHandler import E5SslErrorHandler
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 import Utilities
 import Preferences
@@ -94,6 +94,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
         if SSL_AVAILABLE:
+            self.__sslErrorHandler = E5SslErrorHandler(self)
             self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
@@ -504,25 +505,9 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         """
-        errorStrings = []
-        if errors:
-            for err in errors:
-                errorStrings.append(err.errorString())
-            errorString = '.<br />'.join(errorStrings)
-            ret = E5MessageBox.yesNo(self,
-                self.trUtf8("SSL Errors"),
-                self.trUtf8("""<p>SSL Errors:</p>"""
-                            """<p>{0}</p>"""
-                            """<p>Do you want to ignore these errors?</p>""")\
-                    .format(errorString),
-            icon=E5MessageBox.Warning)
-        else:
-            ret = True
-        if ret:
-            reply.ignoreSslErrors()
-        else:
+        ignore = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
+        if not ignore:
             self.__downloadCancelled = True
-            reply.abort()
     
     def getDownloadedPlugins(self):
         """

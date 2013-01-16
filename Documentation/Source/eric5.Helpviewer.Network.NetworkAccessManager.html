@@ -70,17 +70,8 @@ QNetworkAccessManager
 <td><a href="#NetworkAccessManager.__authenticationRequired">__authenticationRequired</a></td>
 <td>Private slot to handle an authentication request.</td>
 </tr><tr>
-<td><a href="#NetworkAccessManager.__certToString">__certToString</a></td>
-<td>Private method to convert a certificate to a formatted string.</td>
-</tr><tr>
-<td><a href="#NetworkAccessManager.__getSystemCaCertificates">__getSystemCaCertificates</a></td>
-<td>Private method to get the list of system certificates.</td>
-</tr><tr>
 <td><a href="#NetworkAccessManager.__setDiskCache">__setDiskCache</a></td>
 <td>Private method to set the disk cache.</td>
-</tr><tr>
-<td><a href="#NetworkAccessManager.__sslErrors">__sslErrors</a></td>
-<td>Private slot to handle SSL errors.</td>
 </tr><tr>
 <td><a href="#NetworkAccessManager.createRequest">createRequest</a></td>
 <td>Protected method to create a request.</td>
@@ -125,50 +116,12 @@ reference to the reply object (QNetworkReply)
 <dd>
 reference to the authenticator object (QAuthenticator)
 </dd>
-</dl><a NAME="NetworkAccessManager.__certToString" ID="NetworkAccessManager.__certToString"></a>
-<h4>NetworkAccessManager.__certToString</h4>
-<b>__certToString</b>(<i>cert</i>)
-<p>
-        Private method to convert a certificate to a formatted string.
-</p><dl>
-<dt><i>cert</i></dt>
-<dd>
-certificate to convert (QSslCertificate)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-formatted string (string)
-</dd>
-</dl><a NAME="NetworkAccessManager.__getSystemCaCertificates" ID="NetworkAccessManager.__getSystemCaCertificates"></a>
-<h4>NetworkAccessManager.__getSystemCaCertificates</h4>
-<b>__getSystemCaCertificates</b>(<i></i>)
-<p>
-        Private method to get the list of system certificates.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-list of system certificates (list of QSslCertificate)
-</dd>
 </dl><a NAME="NetworkAccessManager.__setDiskCache" ID="NetworkAccessManager.__setDiskCache"></a>
 <h4>NetworkAccessManager.__setDiskCache</h4>
 <b>__setDiskCache</b>(<i></i>)
 <p>
         Private method to set the disk cache.
-</p><a NAME="NetworkAccessManager.__sslErrors" ID="NetworkAccessManager.__sslErrors"></a>
-<h4>NetworkAccessManager.__sslErrors</h4>
-<b>__sslErrors</b>(<i>reply, errors</i>)
-<p>
-        Private slot to handle SSL errors.
-</p><dl>
-<dt><i>reply</i></dt>
-<dd>
-reference to the reply object (QNetworkReply)
-</dd><dt><i>errors</i></dt>
-<dd>
-list of SSL errors (list of QSslError)
-</dd>
-</dl><a NAME="NetworkAccessManager.createRequest" ID="NetworkAccessManager.createRequest"></a>
+</p><a NAME="NetworkAccessManager.createRequest" ID="NetworkAccessManager.createRequest"></a>
 <h4>NetworkAccessManager.createRequest</h4>
 <b>createRequest</b>(<i>op, request, outgoingData=None</i>)
 <p>

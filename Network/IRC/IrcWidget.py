@@ -14,7 +14,8 @@ from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QTimer
 from PyQt4.QtGui import QWidget, QToolButton, QLabel, QTabWidget
 from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
 try:
-    from PyQt4.QtNetwork import QSslSocket, QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
+    from PyQt4.QtNetwork import QSslSocket, QSslConfiguration
+    from E5Network.E5SslErrorHandler import E5SslErrorHandler
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -88,6 +89,10 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__userPrefix = {}
         
         self.__socket = None
+        if SSL_AVAILABLE:
+            self.__sslErrorHandler = E5SslErrorHandler(self)
+        else:
+            self.__sslErrorHandler = None
         
         self.__patterns = [
             # :foo_!n=foo@foohost.bar.net PRIVMSG bar_ :some long message
@@ -728,24 +733,12 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param errors list of SSL errors (list of QSslError)
         """
-        errorString = ""
-        if errors:
-            self.__sslErrorLock = True
-            errorStrings = []
-            for err in errors:
-                errorStrings.append(err.errorString())
-            errorString = '.<br/>'.join(errorStrings)
-            ret = E5MessageBox.yesNo(self,
-                self.trUtf8("SSL Errors"),
-                self.trUtf8("""<p>SSL Errors:</p>"""
-                            """<p>{0}</p>"""
-                            """<p>Do you want to ignore these errors?</p>""")\
-                    .format(errorString),
-                icon=E5MessageBox.Warning)
-            self.__sslErrorLock = False
-        else:
-            ret = True
-        if ret:
+        ignore, defaultChanged = self.__sslErrorHandler.sslErrors(
+            errors, self.__server.getName(), self.__server.getPort())
+        if ignore:
+            if defaultChanged:
+                self.__socket.setSslConfiguration(
+                    QSslConfiguration.defaultConfiguration())
             self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
                 self.trUtf8("""The SSL certificate for the server {0} (port {1})"""
                             """ failed the authenticity check.""").format(
@@ -757,8 +750,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 self.trUtf8("""Could not connect to {0} (port {1}) using an SSL"""
                             """ encrypted connection. Either the server does not"""
                             """ support SSL (did you use the correct port?) or"""
-                            """ you rejected the certificate.<br/>{2}""").format(
-                self.__server.getName(), self.__server.getPort(), errorString))
+                            """ you rejected the certificate.""").format(
+                self.__server.getName(), self.__server.getPort()))
             self.__socket.close()
     
     def __setUserPrivilegePrefix(self, prefix1, prefix2):

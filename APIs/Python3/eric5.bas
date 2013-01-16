@@ -164,6 +164,7 @@ E5SingleApplicationClient SingleApplicationClient
 E5SingleApplicationServer SingleApplicationServer
 E5SqueezeLabel QLabel
 E5SqueezeLabelPath QLabel
+E5SslErrorHandler QObject
 E5StringListCompleter QCompleter
 E5TabWidget QTabWidget
 E5TableView QTableView

@@ -148,6 +148,7 @@
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
             <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
+            <section title="eric5.E5Network.E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html" />
             <section title="eric5.E5Network.E5UrlInfo" ref="eric5.E5Network.E5UrlInfo.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
@@ -3663,6 +3664,14 @@
       <keyword name="E5SqueezeLabelPath.setSurrounding" id="E5SqueezeLabelPath.setSurrounding" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setSurrounding" />
       <keyword name="E5SqueezeLabelPath.setTextPath" id="E5SqueezeLabelPath.setTextPath" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setTextPath" />
       <keyword name="E5SqueezeLabels (Module)" id="E5SqueezeLabels (Module)" ref="eric5.E5Gui.E5SqueezeLabels.html" />
+      <keyword name="E5SslErrorHandler" id="E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler" />
+      <keyword name="E5SslErrorHandler (Constructor)" id="E5SslErrorHandler (Constructor)" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.__init__" />
+      <keyword name="E5SslErrorHandler (Module)" id="E5SslErrorHandler (Module)" ref="eric5.E5Network.E5SslErrorHandler.html" />
+      <keyword name="E5SslErrorHandler.__certToString" id="E5SslErrorHandler.__certToString" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.__certToString" />
+      <keyword name="E5SslErrorHandler.__getSystemCaCertificates" id="E5SslErrorHandler.__getSystemCaCertificates" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.__getSystemCaCertificates" />
+      <keyword name="E5SslErrorHandler.sslErrors" id="E5SslErrorHandler.sslErrors" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrors" />
+      <keyword name="E5SslErrorHandler.sslErrorsReply" id="E5SslErrorHandler.sslErrorsReply" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReply" />
+      <keyword name="E5SslErrorHandler.sslErrorsReplySlot" id="E5SslErrorHandler.sslErrorsReplySlot" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReplySlot" />
       <keyword name="E5StringListCompleter" id="E5StringListCompleter" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter" />
       <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
       <keyword name="E5TabWidget" id="E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget" />
@@ -7402,10 +7411,7 @@
       <keyword name="NetworkAccessManager (Constructor)" id="NetworkAccessManager (Constructor)" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__init__" />
       <keyword name="NetworkAccessManager (Module)" id="NetworkAccessManager (Module)" ref="eric5.Helpviewer.Network.NetworkAccessManager.html" />
       <keyword name="NetworkAccessManager.__authenticationRequired" id="NetworkAccessManager.__authenticationRequired" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__authenticationRequired" />
-      <keyword name="NetworkAccessManager.__certToString" id="NetworkAccessManager.__certToString" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__certToString" />
-      <keyword name="NetworkAccessManager.__getSystemCaCertificates" id="NetworkAccessManager.__getSystemCaCertificates" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__getSystemCaCertificates" />
       <keyword name="NetworkAccessManager.__setDiskCache" id="NetworkAccessManager.__setDiskCache" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__setDiskCache" />
-      <keyword name="NetworkAccessManager.__sslErrors" id="NetworkAccessManager.__sslErrors" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.__sslErrors" />
       <keyword name="NetworkAccessManager.createRequest" id="NetworkAccessManager.createRequest" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.createRequest" />
       <keyword name="NetworkAccessManager.languagesChanged" id="NetworkAccessManager.languagesChanged" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.languagesChanged" />
       <keyword name="NetworkAccessManager.preferencesChanged" id="NetworkAccessManager.preferencesChanged" ref="eric5.Helpviewer.Network.NetworkAccessManager.html#NetworkAccessManager.preferencesChanged" />
@@ -13013,6 +13019,7 @@
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>
+      <file>eric5.E5Network.E5SslErrorHandler.html</file>
       <file>eric5.E5Network.E5UrlInfo.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesReader.html</file>

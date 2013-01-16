@@ -19,11 +19,6 @@ from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
-try:
-    from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
-    SSL_AVAILABLE = True
-except ImportError:
-    SSL_AVAILABLE = False
 
 from Debugger.DebugUI import DebugUI
 from Debugger.DebugServer import DebugServer
@@ -110,6 +105,11 @@ from E5XML.SessionWriter import SessionWriter
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
+try:
+    from E5Network.E5SslErrorHandler import E5SslErrorHandler
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from IconEditor.IconEditorWindow import IconEditorWindow
 
@@ -571,6 +571,7 @@ class UserInterface(E5MainWindow):
         self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
         if SSL_AVAILABLE:
+            self.__sslErrorHandler = E5SslErrorHandler(self)
             self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
@@ -5489,25 +5490,9 @@ class UserInterface(E5MainWindow):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         """
-        errorStrings = []
-        if errors:
-            for err in errors:
-                errorStrings.append(err.errorString())
-            errorString = '.<br />'.join(errorStrings)
-            ret = E5MessageBox.yesNo(self,
-                self.trUtf8("SSL Errors"),
-                self.trUtf8("""<p>SSL Errors:</p>"""
-                            """<p>{0}</p>"""
-                            """<p>Do you want to ignore these errors?</p>""")\
-                    .format(errorString),
-                icon=E5MessageBox.Warning)
-        else:
-            ret = True
-        if ret:
-            reply.ignoreSslErrors()
-        else:
+        ignore = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
+        if not ignore:
             self.__downloadCancelled = True
-            reply.abort()
     
     #######################################
     ## Below are methods for various checks

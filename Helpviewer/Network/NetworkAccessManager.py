@@ -9,20 +9,18 @@ Module implementing a QNetworkAccessManager subclass.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
+from PyQt4.QtCore import pyqtSignal, QByteArray
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
-try:
-    from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \
-        QSslError, QSsl
-    SSL_AVAILABLE = True
-except ImportError:
-    SSL_AVAILABLE = False
-
-from E5Gui import E5MessageBox
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
+try:
+    from PyQt4.QtNetwork import QSslSocket
+    from E5Network.E5SslErrorHandler import E5SslErrorHandler
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from UI.AuthenticationDialog import AuthenticationDialog
 
@@ -74,23 +72,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.languagesChanged()
         
         if SSL_AVAILABLE:
-            caList = self.__getSystemCaCertificates()
-            certificateDict = Preferences.toDict(
-                    Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
-            for server in certificateDict:
-                for cert in QSslCertificate.fromData(certificateDict[server]):
-                    if cert not in caList:
-                        caList.append(cert)
-            sslCfg = QSslConfiguration.defaultConfiguration()
-            sslCfg.setCaCertificates(caList)
-            sslCfg.setProtocol(QSsl.AnyProtocol)
-            try:
-                sslCfg.setSslOption(QSsl.SslOptionDisableCompression, True)
-            except AttributeError:
-                pass
-            QSslConfiguration.setDefaultConfiguration(sslCfg)
-            
-            self.sslErrors.connect(self.__sslErrors)
+            self.__sslErrorHandler = E5SslErrorHandler(self)
+            self.sslErrors.connect(self.__sslErrorHandler.sslErrorsReplySlot)
         
         self.proxyAuthenticationRequired.connect(proxyAuthenticationRequired)
         self.authenticationRequired.connect(self.__authenticationRequired)
@@ -222,145 +205,6 @@ class NetworkAccessManager(QNetworkAccessManager):
             if Preferences.getUser("SavePasswords"):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
                     reply.url(), realm, username, password)
-    
-    def __sslErrors(self, reply, errors):
-        """
-        Private slot to handle SSL errors.
-        
-        @param reply reference to the reply object (QNetworkReply)
-        @param errors list of SSL errors (list of QSslError)
-        """
-        caMerge = {}
-        certificateDict = Preferences.toDict(
-                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
-        for server in certificateDict:
-            caMerge[server] = QSslCertificate.fromData(certificateDict[server])
-        caNew = []
-        
-        errorStrings = []
-        url = reply.url()
-        server = url.host()
-        if url.port() != -1:
-            server += ":{0:d}".format(url.port())
-        if errors:
-            for err in errors:
-                if err.error() == QSslError.NoError:
-                    continue
-                if server in caMerge and err.certificate() in caMerge[server]:
-                    continue
-                errorStrings.append(err.errorString())
-                if not err.certificate().isNull():
-                    cert = err.certificate()
-                    if cert not in caNew:
-                        caNew.append(cert)
-        if not errorStrings:
-            reply.ignoreSslErrors()
-            return
-        
-        errorString = '.</li><li>'.join(errorStrings)
-        ret = E5MessageBox.yesNo(None,
-            self.trUtf8("SSL Errors"),
-            self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
-                        """<ul><li>{1}</li></ul></p>"""
-                        """<p>Do you want to ignore these errors?</p>""")\
-                .format(reply.url().toString(), errorString),
-            icon=E5MessageBox.Warning)
-        
-        if ret:
-            if len(caNew) > 0:
-                certinfos = []
-                for cert in caNew:
-                    certinfos.append(self.__certToString(cert))
-                ret = E5MessageBox.yesNo(None,
-                    self.trUtf8("Certificates"),
-                    self.trUtf8("""<p>Certificates:<br/>{0}<br/>"""
-                                """Do you want to accept all these certificates?</p>""")\
-                        .format("".join(certinfos)))
-                if ret:
-                    if server not in caMerge:
-                        caMerge[server] = []
-                    for cert in caNew:
-                        caMerge[server].append(cert)
-                    
-                    sslCfg = QSslConfiguration.defaultConfiguration()
-                    caList = sslCfg.caCertificates()
-                    for cert in caNew:
-                        caList.append(cert)
-                    sslCfg.setCaCertificates(caList)
-                    sslCfg.setProtocol(QSsl.AnyProtocol)
-                    QSslConfiguration.setDefaultConfiguration(sslCfg)
-                    reply.setSslConfiguration(sslCfg)
-                    
-                    certificateDict = {}
-                    for server in caMerge:
-                        pems = QByteArray()
-                        for cert in caMerge[server]:
-                            pems.append(cert.toPem() + '\n')
-                        certificateDict[server] = pems
-                    Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
-                        certificateDict)
-                else:
-                    reply.abort()
-                    return
-            
-            reply.ignoreSslErrors()
-        
-        else:
-            reply.abort()
-    
-    def __certToString(self, cert):
-        """
-        Private method to convert a certificate to a formatted string.
-        
-        @param cert certificate to convert (QSslCertificate)
-        @return formatted string (string)
-        """
-        result = "<p>"
-        
-        if qVersion() >= "5.0.0":
-            result += self.trUtf8("Name: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    ", ".join(cert.subjectInfo(QSslCertificate.CommonName)))))
-            
-            result += self.trUtf8("<br/>Organization: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    ", ".join(cert.subjectInfo(QSslCertificate.Organization)))))
-            
-            result += self.trUtf8("<br/>Issuer: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    ", ".join(cert.issuerInfo(QSslCertificate.CommonName)))))
-        else:
-            result += self.trUtf8("Name: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    cert.subjectInfo(QSslCertificate.CommonName))))
-            
-            result += self.trUtf8("<br/>Organization: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    cert.subjectInfo(QSslCertificate.Organization))))
-            
-            result += self.trUtf8("<br/>Issuer: {0}")\
-                .format(Utilities.html_encode(Utilities.decodeString(
-                    cert.issuerInfo(QSslCertificate.CommonName))))
-        
-        result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(Utilities.html_encode(cert.effectiveDate().toString("yyyy-MM-dd")),
-                    Utilities.html_encode(cert.expiryDate().toString("yyyy-MM-dd")))
-        
-        result += "</p>"
-        
-        return result
-    
-    def __getSystemCaCertificates(self):
-        """
-        Private method to get the list of system certificates.
-        
-        @return list of system certificates (list of QSslCertificate)
-        """
-        caList = QSslCertificate.fromData(Preferences.toByteArray(
-            Preferences.Prefs.settings.value("Help/SystemCertificates")))
-        if not caList:
-            caList = QSslSocket.systemCaCertificates()
-        return caList
     
     def preferencesChanged(self):
         """
