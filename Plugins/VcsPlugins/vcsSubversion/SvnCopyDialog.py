@@ -17,6 +17,8 @@ from E5Gui import E5FileDialog
 
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
+import Utilities
+
 
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
     """
@@ -61,7 +63,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         if not os.path.isabs(target):
             sourceDir = os.path.dirname(self.sourceEdit.text())
             target = os.path.join(sourceDir, target)
-        return target, self.forceCheckBox.isChecked()
+        return Utilities.toNativeSeparators(target), self.forceCheckBox.isChecked()
         
     @pyqtSlot()
     def on_dirButton_clicked(self):
@@ -84,7 +86,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if target:
-            self.targetEdit.setText(target)
+            self.targetEdit.setText(Utilities.toNativeSeparators(target))
     
     @pyqtSlot(str)
     def on_targetEdit_textChanged(self, txt):
