@@ -7098,46 +7098,285 @@ selección completa.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>E5SslCertificatesDialog</name>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="14"/>
+        <source>SSL Certificate Manager</source>
+        <translation type="unfinished">Gestor de Certificados SSL</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="27"/>
+        <source>&amp;Servers</source>
+        <translation type="unfinished">&amp;Servidores</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="33"/>
+        <source>You have saved certificates identifying these servers:</source>
+        <translation type="unfinished">Ha almacenado certificados que identifican estos servidores:</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="140"/>
+        <source>Certificate name</source>
+        <translation type="unfinished">Nombre de certificado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="46"/>
+        <source>Server</source>
+        <translation type="unfinished">Servidor</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="145"/>
+        <source>Expiry Date</source>
+        <translation type="unfinished">Fecha de expiración</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="158"/>
+        <source>Press to view the selected certificate</source>
+        <translation type="unfinished">Pulse para ver el certificado seleccionado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="161"/>
+        <source>&amp;View...</source>
+        <translation type="unfinished">&amp;Ver...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="168"/>
+        <source>Press to import a certificate</source>
+        <translation type="unfinished">Pulse para importar un certificado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="171"/>
+        <source>&amp;Import...</source>
+        <translation type="unfinished">&amp;Importar...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="181"/>
+        <source>Press to export the selected certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="184"/>
+        <source>&amp;Export...</source>
+        <translation type="unfinished">&amp;Exportar...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="194"/>
+        <source>Press to delete the selected certificate</source>
+        <translation type="unfinished">Pulse para borrar el certificado seleccionado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="197"/>
+        <source>&amp;Delete...</source>
+        <translation type="unfinished">&amp;Borrar...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="126"/>
+        <source>Certificate &amp;Authorities</source>
+        <translation type="unfinished">&amp;Autoridades Certificadoras</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="132"/>
+        <source>You have saved certificates identifying these certification authorities:</source>
+        <translation type="unfinished">Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="274"/>
+        <source>(Unknown)</source>
+        <translation type="unfinished">(Desconocido)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="276"/>
+        <source>(Unknown common name)</source>
+        <translation type="unfinished">(Nombre común desconocido)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
+        <source>Delete Server Certificate</source>
+        <translation type="unfinished">Borrar Certificado del Servidor</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
+        <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
+        <source>Import Certificate</source>
+        <translation type="unfinished">Importar Certificado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="363"/>
+        <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
+        <source>Delete CA Certificate</source>
+        <translation type="unfinished">Borrar Certificado de la CA</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
+        <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
+        <source>Export Certificate</source>
+        <translation type="unfinished">Exportar Certificado</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="399"/>
+        <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
+        <translation type="unfinished">Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="415"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="425"/>
+        <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
+        <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
+        <translation type="unfinished">Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
+        <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>E5SslErrorHandler</name>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="115"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
         <source>SSL Errors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="115"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Errores de SSL para &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
         <source>Certificates</source>
         <translation type="unfinished">Certificados</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Certificados:&lt;br/&gt;{0}&lt;br/&gt;¿Desea aceptar todos estos certificados?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="184"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="192"/>
         <source>Name: {0}</source>
         <translation type="unfinished">Nombre: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="188"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="196"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Organización: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="192"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="200"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Emisor: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="196"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="204"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation type="unfinished">&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
+    </message>
+</context>
+<context>
+    <name>E5SslInfoDialog</name>
+    <message>
+        <location filename="E5Network/E5SslInfoDialog.ui" line="14"/>
+        <source>SSL Certificate Info</source>
+        <translation type="unfinished">Información del Certificado SSL</translation>
+    </message>
+</context>
+<context>
+    <name>E5SslInfoWidget</name>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="17"/>
+        <source>This certificated has been blacklisted.</source>
+        <translation type="unfinished">Este certificado está en una lista negra.</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="24"/>
+        <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Emitido para&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="118"/>
+        <source>Common Name (CN)</source>
+        <translation type="unfinished">Nombre Común (CN)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="138"/>
+        <source>Organization (O)</source>
+        <translation type="unfinished">Organización (O)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="158"/>
+        <source>Organizational Unit (OU)</source>
+        <translation type="unfinished">Unidad Organizacional (OU)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="91"/>
+        <source>Serialnumber</source>
+        <translation type="unfinished">Número de serie</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="111"/>
+        <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Emitido por&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="178"/>
+        <source>&lt;b&gt;Validity&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Validez&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="185"/>
+        <source>Issued on</source>
+        <translation type="unfinished">Emitido a</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="205"/>
+        <source>Expires on</source>
+        <translation type="unfinished">Expira en</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="225"/>
+        <source>This certificate is not valid yet or has expired.</source>
+        <translation type="unfinished">Este certificado no es válido aún o ha expirado.</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="232"/>
+        <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="239"/>
+        <source>SHA1-Fingerprint</source>
+        <translation type="unfinished">SHA1-Fingerprint</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="259"/>
+        <source>MD5-Fingerprint</source>
+        <translation type="unfinished">MD5-Fingerprint</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.py" line="111"/>
+        <source>&lt;not part of the certificate&gt;</source>
+        <translation type="unfinished">&lt;no es parte del certificado&gt;</translation>
     </message>
 </context>
 <context>
@@ -17090,22 +17329,22 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage Certificates</source>
-        <translation>Gestionar Certificados</translation>
+        <translation type="obsolete">Gestionar Certificados</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage Certificates...</source>
-        <translation>Gestionar Certificados...</translation>
+        <translation type="obsolete">Gestionar Certificados...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1234"/>
         <source>Manage the saved certificates</source>
-        <translation>Gestionar los certificados almacenados</translation>
+        <translation type="obsolete">Gestionar los certificados almacenados</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Gestionar Certificados Almacenados&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar los certificados almacenados.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Gestionar Certificados Almacenados&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar los certificados almacenados.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1615"/>
@@ -17372,6 +17611,26 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="1040"/>
         <source>&lt;b&gt;GreaseMonkey Scripts...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available GreaseMonkey Scripts.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Scripts de GreaseMonkey...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar los Scripts de GreaseMonkey disponibles.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
+        <source>Manage SSL Certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
+        <source>Manage SSL Certificates...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1234"/>
+        <source>Manage the saved SSL certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
+        <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -18671,12 +18930,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Imponer operación</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="46"/>
         <source>Mercurial Move</source>
         <translation>Mercurial Move</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
@@ -40533,152 +40792,147 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation>Gestor de Certificados SSL</translation>
+        <translation type="obsolete">Gestor de Certificados SSL</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation>&amp;Servidores</translation>
+        <translation type="obsolete">&amp;Servidores</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation>Ha almacenado certificados que identifican estos servidores:</translation>
+        <translation type="obsolete">Ha almacenado certificados que identifican estos servidores:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation>Nombre de certificado</translation>
+        <translation type="obsolete">Nombre de certificado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation>Servidor</translation>
+        <translation type="obsolete">Servidor</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation>Fecha de expiración</translation>
+        <translation type="obsolete">Fecha de expiración</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation>Pulse para ver el certificado seleccionado</translation>
+        <translation type="obsolete">Pulse para ver el certificado seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation>&amp;Ver...</translation>
+        <translation type="obsolete">&amp;Ver...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation>Pulse para borrar el certificado seleccionado</translation>
+        <translation type="obsolete">Pulse para borrar el certificado seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation>&amp;Borrar...</translation>
+        <translation type="obsolete">&amp;Borrar...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation>&amp;Autoridades Certificadoras</translation>
+        <translation type="obsolete">&amp;Autoridades Certificadoras</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation>Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
+        <translation type="obsolete">Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="274"/>
         <source>(Unknown)</source>
-        <translation>(Desconocido)</translation>
+        <translation type="obsolete">(Desconocido)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="276"/>
         <source>(Unknown common name)</source>
-        <translation>(Nombre común desconocido)</translation>
+        <translation type="obsolete">(Nombre común desconocido)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
         <source>Delete Server Certificate</source>
-        <translation>Borrar Certificado del Servidor</translation>
+        <translation type="obsolete">Borrar Certificado del Servidor</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation>Pulse para importar un certificado</translation>
+        <translation type="obsolete">Pulse para importar un certificado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation>&amp;Importar...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="181"/>
-        <source>Press to export the selected certificate</source>
-        <translation></translation>
+        <translation type="obsolete">&amp;Importar...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Exportar...</translation>
+        <translation type="obsolete">&amp;Exportar...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
         <source>Import Certificate</source>
-        <translation>Importar Certificado</translation>
+        <translation type="obsolete">Importar Certificado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="363"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
         <source>Delete CA Certificate</source>
-        <translation>Borrar Certificado de la CA</translation>
+        <translation type="obsolete">Borrar Certificado de la CA</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
         <source>Export Certificate</source>
-        <translation>Exportar Certificado</translation>
+        <translation type="obsolete">Exportar Certificado</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="399"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation>Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
+        <translation type="obsolete">Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="415"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="425"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation>Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
+        <translation type="obsolete">Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -40686,7 +40940,7 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="14"/>
         <source>SSL Certificate Info</source>
-        <translation>Información del Certificado SSL</translation>
+        <translation type="obsolete">Información del Certificado SSL</translation>
     </message>
 </context>
 <context>
@@ -40694,77 +40948,77 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="17"/>
         <source>This certificated has been blacklisted.</source>
-        <translation>Este certificado está en una lista negra.</translation>
+        <translation type="obsolete">Este certificado está en una lista negra.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="24"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Emitido para&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Emitido para&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="118"/>
         <source>Common Name (CN)</source>
-        <translation>Nombre Común (CN)</translation>
+        <translation type="obsolete">Nombre Común (CN)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="138"/>
         <source>Organization (O)</source>
-        <translation>Organización (O)</translation>
+        <translation type="obsolete">Organización (O)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="158"/>
         <source>Organizational Unit (OU)</source>
-        <translation>Unidad Organizacional (OU)</translation>
+        <translation type="obsolete">Unidad Organizacional (OU)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="91"/>
         <source>Serialnumber</source>
-        <translation>Número de serie</translation>
+        <translation type="obsolete">Número de serie</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="111"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Emitido por&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Emitido por&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="178"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Validez&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Validez&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="185"/>
         <source>Issued on</source>
-        <translation>Emitido a</translation>
+        <translation type="obsolete">Emitido a</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="205"/>
         <source>Expires on</source>
-        <translation>Expira en</translation>
+        <translation type="obsolete">Expira en</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="225"/>
         <source>This certificate is not valid yet or has expired.</source>
-        <translation>Este certificado no es válido aún o ha expirado.</translation>
+        <translation type="obsolete">Este certificado no es válido aún o ha expirado.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="232"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="239"/>
         <source>SHA1-Fingerprint</source>
-        <translation>SHA1-Fingerprint</translation>
+        <translation type="obsolete">SHA1-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="259"/>
         <source>MD5-Fingerprint</source>
-        <translation>MD5-Fingerprint</translation>
+        <translation type="obsolete">MD5-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.py" line="111"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation>&lt;no es parte del certificado&gt;</translation>
+        <translation type="obsolete">&lt;no es parte del certificado&gt;</translation>
     </message>
 </context>
 <context>
@@ -42439,12 +42693,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
 &lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="46"/>
         <source>Subversion Move</source>
         <translation>Move de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
@@ -50158,7 +50412,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>UrlBar</name>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="199"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="198"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
@@ -50574,7 +50828,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Mostrar las versiones disponibles para descarga</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2704"/>
+        <location filename="UI/UserInterface.py" line="2721"/>
         <source>Report Bug</source>
         <translation>Enviar informe de bugs</translation>
     </message>
@@ -50594,7 +50848,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Enviar informe de Bugs...&lt;/b&gt;&lt;p&gt;Abre un diálogo para enviar un informe de un error (bug).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2319"/>
+        <location filename="UI/UserInterface.py" line="2336"/>
         <source>Unittest</source>
         <translation>Test Unitario</translation>
     </message>
@@ -50654,7 +50908,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Test Unitario de Script&lt;/b&gt;&lt;p&gt;Ejecuta un test unitario con el script actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3704"/>
+        <location filename="UI/UserInterface.py" line="3721"/>
         <source>Unittest Project</source>
         <translation>Test Unitario de Proyecto</translation>
     </message>
@@ -50834,7 +51088,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Atajos de Teclado&lt;/b&gt;&lt;p&gt;Establezca los atajos de teclado para la aplicación con sus valores preferidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4793"/>
+        <location filename="UI/UserInterface.py" line="4810"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar Atajos de Teclado</translation>
     </message>
@@ -50854,7 +51108,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Exportar Atajos de Teclado&lt;/b&gt;&lt;p&gt;Exporte  los atajos de teclado de la aplicación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4833"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Importar Atajos de Teclado</translation>
     </message>
@@ -50874,337 +51128,337 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Importar Atajos de Teclado&lt;/b&gt;&lt;p&gt;Importe  los atajos de teclado de la aplicación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1915"/>
+        <location filename="UI/UserInterface.py" line="1929"/>
         <source>Activate current editor</source>
         <translation>Activar editor actual</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1915"/>
+        <location filename="UI/UserInterface.py" line="1929"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1924"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1946"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1948"/>
+        <location filename="UI/UserInterface.py" line="1962"/>
         <source>Plugin Infos</source>
         <translation>Información sobre Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1948"/>
+        <location filename="UI/UserInterface.py" line="1962"/>
         <source>&amp;Plugin Infos...</source>
         <translation>Información sobre &amp;Plugins...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1951"/>
+        <location filename="UI/UserInterface.py" line="1965"/>
         <source>Show Plugin Infos</source>
         <translation>Mostrar Información sobre Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1952"/>
+        <location filename="UI/UserInterface.py" line="1966"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Información sobre Plugins...&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra información sobre las extensiones (plugins) cargadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1974"/>
+        <location filename="UI/UserInterface.py" line="1988"/>
         <source>Uninstall Plugin</source>
         <translation>Desinstalar Plugin</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1971"/>
+        <location filename="UI/UserInterface.py" line="1985"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>Desinstalar Pl&amp;ugin...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1975"/>
+        <location filename="UI/UserInterface.py" line="1989"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Desinstalar Plugin...&lt;/b&gt;&lt;p&gt;Abre un diálogo para desinstalar una extensión o plugin.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Plugin Repository</source>
         <translation>Repositorio de Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Plugin &amp;Repository...</source>
         <translation>&amp;Repositorio de Plugins...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1985"/>
+        <location filename="UI/UserInterface.py" line="1999"/>
         <source>Show Plugins available for download</source>
         <translation>Mostrar Plugins disponibles para descarga</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1987"/>
+        <location filename="UI/UserInterface.py" line="2001"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Repositorios de Plugins...&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra una lista de extensiones (plugins) disponibles en Internet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2011"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>Qt4 Documentation</source>
         <translation>Documentación de Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2011"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Documentación de Qt&amp;4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2013"/>
+        <location filename="UI/UserInterface.py" line="2027"/>
         <source>Open Qt4 Documentation</source>
         <translation>Abrir Documentación de Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2028"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de Qt4&lt;/b&gt;&lt;p&gt;Muestra la Documentación de Qt4. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2035"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>PyQt4 Documentation</source>
         <translation>Documentación de PyQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2035"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>Documentación de P&amp;yQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2037"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Abrir Documentación de PyQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2038"/>
+        <location filename="UI/UserInterface.py" line="2052"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de PyQt4&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PyQt4. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2087"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>Eric API Documentation</source>
         <translation>Documentación de API de Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2087"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>&amp;Eric API Documentation</source>
         <translation>Documentación de API de &amp;Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2089"/>
+        <location filename="UI/UserInterface.py" line="2103"/>
         <source>Open Eric API Documentation</source>
         <translation>Abrir Documentación de API de Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2145"/>
+        <location filename="UI/UserInterface.py" line="2159"/>
         <source>&amp;Unittest</source>
         <translation>Te&amp;st Unitario</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2176"/>
         <source>E&amp;xtras</source>
         <translation>E&amp;xtras</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2167"/>
+        <location filename="UI/UserInterface.py" line="2181"/>
         <source>Wi&amp;zards</source>
         <translation>Asis&amp;tentes</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2174"/>
+        <location filename="UI/UserInterface.py" line="2188"/>
         <source>&amp;Tools</source>
         <translation>&amp;Herramientas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2177"/>
+        <location filename="UI/UserInterface.py" line="2191"/>
         <source>Select Tool Group</source>
         <translation>Seleccionar Grupo de Herramientas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2183"/>
+        <location filename="UI/UserInterface.py" line="2197"/>
         <source>Se&amp;ttings</source>
         <translation>Con&amp;figuración</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2218"/>
         <source>&amp;Window</source>
         <translation>Ven&amp;tana</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2226"/>
+        <location filename="UI/UserInterface.py" line="2243"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Barra de Herramientas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2237"/>
+        <location filename="UI/UserInterface.py" line="2254"/>
         <source>P&amp;lugins</source>
         <translation>P&amp;lugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2251"/>
+        <location filename="UI/UserInterface.py" line="2268"/>
         <source>&amp;Help</source>
         <translation>Ay&amp;uda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2335"/>
         <source>Tools</source>
         <translation>Herramientas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2320"/>
+        <location filename="UI/UserInterface.py" line="2337"/>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3927"/>
+        <location filename="UI/UserInterface.py" line="3944"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2322"/>
+        <location filename="UI/UserInterface.py" line="2339"/>
         <source>Profiles</source>
         <translation>Perfiles</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2323"/>
+        <location filename="UI/UserInterface.py" line="2340"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2653"/>
+        <location filename="UI/UserInterface.py" line="2670"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Números de Versiones&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5482"/>
+        <location filename="UI/UserInterface.py" line="5508"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2704"/>
+        <location filename="UI/UserInterface.py" line="2721"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>La dirección de correo electrónico o la dirección del servidor de correo están en blanco. Por favor configure las opciones de Correo Electrónico en el diálogo de Preferencias.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2978"/>
+        <location filename="UI/UserInterface.py" line="2995"/>
         <source>Configure Tool Groups ...</source>
         <translation>Configurar Grupos de Herramientas ...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2981"/>
+        <location filename="UI/UserInterface.py" line="2998"/>
         <source>Configure current Tool Group ...</source>
         <translation>Configurar Grupo de Herramientas actual ...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3030"/>
+        <location filename="UI/UserInterface.py" line="3047"/>
         <source>&amp;Builtin Tools</source>
         <translation>Herramientas de serie (&amp;builtin)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3038"/>
+        <location filename="UI/UserInterface.py" line="3055"/>
         <source>&amp;Plugin Tools</source>
         <translation>Herramientas de Extensión (&amp;Plugin)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3128"/>
+        <location filename="UI/UserInterface.py" line="3145"/>
         <source>&amp;Show all</source>
         <translation>&amp;Ver todo</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3130"/>
+        <location filename="UI/UserInterface.py" line="3147"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Ocultar todo</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3704"/>
+        <location filename="UI/UserInterface.py" line="3721"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4035"/>
+        <location filename="UI/UserInterface.py" line="4052"/>
         <source>Problem</source>
         <translation>Problema</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4187"/>
+        <location filename="UI/UserInterface.py" line="4204"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3927"/>
+        <location filename="UI/UserInterface.py" line="3944"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>No hay visor personalizado seleccionado actualmente. Por favor, especifique uno en el diálogo de preferencias.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3958"/>
+        <location filename="UI/UserInterface.py" line="3975"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el visor de ayuda.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4553"/>
+        <location filename="UI/UserInterface.py" line="4570"/>
         <source>Documentation Missing</source>
         <translation>Falta documentación</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4538"/>
+        <location filename="UI/UserInterface.py" line="4555"/>
         <source>Documentation</source>
         <translation>Documentación</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4447"/>
+        <location filename="UI/UserInterface.py" line="4464"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;P&gt;El punto de entrada de documentación de PyQt4 no ha sido configurado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4937"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>Save tasks</source>
         <translation>Guardar tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4959"/>
+        <location filename="UI/UserInterface.py" line="4985"/>
         <source>Read tasks</source>
         <translation>Leer tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5169"/>
+        <location filename="UI/UserInterface.py" line="5195"/>
         <source>Drop Error</source>
         <translation>Error de volcado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5448"/>
+        <location filename="UI/UserInterface.py" line="5474"/>
         <source>Error during updates check</source>
         <translation>Error durante la verificación de actualización</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5307"/>
+        <location filename="UI/UserInterface.py" line="5333"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5435"/>
+        <location filename="UI/UserInterface.py" line="5461"/>
         <source>Update available</source>
         <translation>Actualizaciones disponibles</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5448"/>
+        <location filename="UI/UserInterface.py" line="5474"/>
         <source>Could not perform updates check.</source>
         <translation>No se puede llevar a cabo la verificación de actualizaciones.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5469"/>
+        <location filename="UI/UserInterface.py" line="5495"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versiones disponibles&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5509"/>
+        <location filename="UI/UserInterface.py" line="5535"/>
         <source>First time usage</source>
         <translation>Usado por primera vez</translation>
     </message>
@@ -51224,17 +51478,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Abre un diálogo con un editor simple.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1963"/>
+        <location filename="UI/UserInterface.py" line="1977"/>
         <source>Install Plugins</source>
         <translation>Instalar Plugins</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1960"/>
+        <location filename="UI/UserInterface.py" line="1974"/>
         <source>&amp;Install Plugins...</source>
         <translation>&amp;Instalar Plugins...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1964"/>
+        <location filename="UI/UserInterface.py" line="1978"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Instalar Plugins...&lt;/b&gt;&lt;p&gt;Abre un diálogo para instalar o actualizar extensiones (plugins).&lt;/p&gt;</translation>
     </message>
@@ -51264,7 +51518,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Restaurando Gestor de Barras de Herramientas...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4135"/>
+        <location filename="UI/UserInterface.py" line="4152"/>
         <source>External Tools</source>
         <translation>Herramientas Externas</translation>
     </message>
@@ -51279,22 +51533,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Visor de &amp;Multiproyecto</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4974"/>
+        <location filename="UI/UserInterface.py" line="5000"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4997"/>
+        <location filename="UI/UserInterface.py" line="5023"/>
         <source>Read session</source>
         <translation>Cargar sesión</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2472"/>
+        <location filename="UI/UserInterface.py" line="2489"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra la codificación del editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2486"/>
+        <location filename="UI/UserInterface.py" line="2503"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra una indicación de las propiedades de escritura de los archivos del editor.&lt;/p&gt;</translation>
     </message>
@@ -51324,17 +51578,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Solicitar nueva Característica...&lt;/b&gt;&lt;p&gt;Abre un diálogo para enviar una solicitud de nueva característica.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2465"/>
+        <location filename="UI/UserInterface.py" line="2482"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra el lenguaje del editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2493"/>
+        <location filename="UI/UserInterface.py" line="2510"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra el número de línea en el editor actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2500"/>
+        <location filename="UI/UserInterface.py" line="2517"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra la posición del cursor en el editor actual.&lt;/p&gt;</translation>
     </message>
@@ -51379,32 +51633,32 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Conmutar la ventana de Caja de Herramientas Horizontal&lt;/b&gt;&lt;p&gt;Si la ventana de Caja de Herramientas Horizontal está escondida, se muestra. Si está siendo mostrada, se cierra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2946"/>
+        <location filename="UI/UserInterface.py" line="2963"/>
         <source>Restart application</source>
         <translation>Reiniciar aplicación</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2946"/>
+        <location filename="UI/UserInterface.py" line="2963"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>La aplicación necesita ser reiniciada. ¿Desea hacerlo ahora?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2246"/>
+        <location filename="UI/UserInterface.py" line="2263"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2479"/>
+        <location filename="UI/UserInterface.py" line="2496"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra la configuración actual de fin de línea (eol) para los editores.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1940"/>
+        <location filename="UI/UserInterface.py" line="1954"/>
         <source>Switch between tabs</source>
         <translation>Alternar entre pestañas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1940"/>
+        <location filename="UI/UserInterface.py" line="1954"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
@@ -51449,12 +51703,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Importar Preferencias&lt;/b&gt;&lt;p&gt;Importar una configuración previamente exportada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1924"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Show next</source>
         <translation>Mostrar siguente</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1946"/>
         <source>Show previous</source>
         <translation>Mostrar anterior</translation>
     </message>
@@ -51534,32 +51788,32 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Editor de &amp;Iconos...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3879"/>
+        <location filename="UI/UserInterface.py" line="3896"/>
         <source>Qt 3 support</source>
         <translation>Soporte para Qt 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2122"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de PySide&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PySide. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4538"/>
+        <location filename="UI/UserInterface.py" line="4555"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;P&gt;El punto de entrada de documentación de PySide no ha sido configurado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2105"/>
+        <location filename="UI/UserInterface.py" line="2119"/>
         <source>PySide Documentation</source>
         <translation>Documentación de PySide</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2105"/>
+        <location filename="UI/UserInterface.py" line="2119"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Documentación de Py&amp;Side</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2107"/>
+        <location filename="UI/UserInterface.py" line="2121"/>
         <source>Open PySide Documentation</source>
         <translation>Abrir Documentación de PySide</translation>
     </message>
@@ -51614,135 +51868,135 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Mostrar herramientas externas&lt;/b&gt;&lt;p&gt;Abre un diálogo para mostrar la ruta y versiones de todas las herramientas externas que utiliza eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2090"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de API de Eric&lt;/b&gt;&lt;p&gt;Muestra la documentación de API de Eric. La ubicación de la documentación es el subdirectorio Documentation/Source del directorio de instalación de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2567"/>
+        <location filename="UI/UserInterface.py" line="2584"/>
         <source>External Tools/{0}</source>
         <translation>Herramientas Externas/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3879"/>
+        <location filename="UI/UserInterface.py" line="3896"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 no está soportado por eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4035"/>
+        <location filename="UI/UserInterface.py" line="4052"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no existe o tiene longitud nula. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3799"/>
+        <location filename="UI/UserInterface.py" line="3816"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar Qt-Designer.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3856"/>
+        <location filename="UI/UserInterface.py" line="3873"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar Qt-Linguist.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3900"/>
+        <location filename="UI/UserInterface.py" line="3917"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar Qt-Assistant.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3939"/>
+        <location filename="UI/UserInterface.py" line="3956"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el visor personalizado.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3998"/>
+        <location filename="UI/UserInterface.py" line="4015"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el Previsualizador de UI.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4043"/>
+        <location filename="UI/UserInterface.py" line="4060"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el Previsualizador de Traducciones.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4062"/>
+        <location filename="UI/UserInterface.py" line="4079"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido iniciar el navegador SQL.&lt;br&gt;Asegúrese de que está disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4146"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>No se ha encontrado la entrada para la herramienta externa &apos;{0}&apos; en el grupo de herramientas &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4135"/>
+        <location filename="UI/UserInterface.py" line="4152"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>No se ha encontrado la entrada para el grupo de herramientas &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4171"/>
+        <location filename="UI/UserInterface.py" line="4188"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Comenzando proceso &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4187"/>
+        <location filename="UI/UserInterface.py" line="4204"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar la entrada de herramienta &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4264"/>
+        <location filename="UI/UserInterface.py" line="4281"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>El proceso &apos;{0}&apos; ha finalizado.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4553"/>
+        <location filename="UI/UserInterface.py" line="4570"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;P&gt;El punto de entrada de documentación &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; no ha podido encontrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4937"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4959"/>
+        <location filename="UI/UserInterface.py" line="4985"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4974"/>
+        <location filename="UI/UserInterface.py" line="5000"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4997"/>
+        <location filename="UI/UserInterface.py" line="5023"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5169"/>
+        <location filename="UI/UserInterface.py" line="5195"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5312"/>
+        <location filename="UI/UserInterface.py" line="5338"/>
         <source>Trying host {0}</source>
         <translation>Probando host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5435"/>
+        <location filename="UI/UserInterface.py" line="5461"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>La actualización para &lt;b&gt;{0}&lt;/b&gt; de eric5 está disponible en &lt;b&gt;{1}&lt;/b&gt;. ¿Le gustaría obtenerla?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5470"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 está actualizado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5470"/>
         <source>You are using the latest version of eric5</source>
         <translation>Está utilizando la última versión de eric5</translation>
     </message>
@@ -51752,7 +52006,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation type="obsolete">&lt;p&gt;Errores SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5509"/>
+        <location filename="UI/UserInterface.py" line="5535"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 todavía no está configurado. El diálogo de configuración va a ser iniciado.</translation>
     </message>
@@ -51787,72 +52041,72 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4833"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Archivo de atajos de teclado (*.e4k)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python 3 Documentation</source>
         <translation>Documentación de Python 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python &amp;3 Documentation</source>
         <translation>Documentación de Python &amp;3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2053"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Open Python 3 Documentation</source>
         <translation>Abrir Documentación de Python 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2054"/>
+        <location filename="UI/UserInterface.py" line="2068"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de Python 3&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 3. Si no se ha configurado un directorio con lesta documentación, la ubicación de la documentación de Python 3 se asumirá en el directorio de documentación bajo la ubicación del ejecutable de Python 3 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON3DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2080"/>
         <source>Python 2 Documentation</source>
         <translation>Documentación de Python 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2080"/>
         <source>Python &amp;2 Documentation</source>
         <translation>Documentación de Python &amp;2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2068"/>
+        <location filename="UI/UserInterface.py" line="2082"/>
         <source>Open Python 2 Documentation</source>
         <translation>Abrir Documentación de Python 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2069"/>
+        <location filename="UI/UserInterface.py" line="2083"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de Python 2&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 2. Si no se ha configurado un directorio con esta documentación, la ubicación de la documentación de Python 2 se asumirá en el directorio de documentación bajo la ubicación del ejecutable configurado de Python 2 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON2DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5362"/>
+        <location filename="UI/UserInterface.py" line="5388"/>
         <source>Error getting versions information</source>
         <translation>Error al obtener información de versiones</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5356"/>
+        <location filename="UI/UserInterface.py" line="5382"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar. Póngase online por favor e inténtelo de nuevo.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4639"/>
+        <location filename="UI/UserInterface.py" line="4656"/>
         <source>Open Browser</source>
         <translation>Abrir Navegador</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4639"/>
+        <location filename="UI/UserInterface.py" line="4656"/>
         <source>Could not start a web browser</source>
         <translation>No se ha podido iniciar el navegador web</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5362"/>
+        <location filename="UI/UserInterface.py" line="5388"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
@@ -51963,12 +52217,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Pantallazo&lt;/b&gt;&lt;p&gt;Abre un diálogo para tomar pantallazos de una región de la pantalla.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4109"/>
+        <location filename="UI/UserInterface.py" line="4126"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Pantallazos.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5527"/>
+        <location filename="UI/UserInterface.py" line="5553"/>
         <source>Select Workspace Directory</source>
         <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
@@ -52198,7 +52452,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Activar Visor de Números&lt;/b&gt;&lt;p&gt;Cambia el foco de input a la ventana de Visor de Números.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2206"/>
+        <location filename="UI/UserInterface.py" line="2223"/>
         <source>&amp;Windows</source>
         <translation>&amp;Ventanas</translation>
     </message>
@@ -52273,29 +52527,49 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Qt-Linguist&lt;/b&gt;&lt;p&gt;Iniciar Qt-Linguist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2023"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Qt5 Documentation</source>
         <translation>Documentación de Qt5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2023"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Qt&amp;5 Documentation</source>
         <translation>Documentación de Qt&amp;5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2025"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Open Qt5 Documentation</source>
         <translation>Abrir Documentación de Qt5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2026"/>
+        <location filename="UI/UserInterface.py" line="2040"/>
         <source>&lt;b&gt;Qt5 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt5 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Documentación de Qt5&lt;/b&gt;&lt;p&gt;Muestra la Documentación de Qt5. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2510"/>
+        <location filename="UI/UserInterface.py" line="2527"/>
         <source>&lt;p&gt;This part of the status bar allows zooming the current editor, shell or terminal.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado permite hacer zoom sobre el editor, shell o terminal actual.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1916"/>
+        <source>Manage SSL Certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1916"/>
+        <source>Manage SSL Certificates...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1920"/>
+        <source>Manage the saved SSL certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1922"/>
+        <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

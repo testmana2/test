@@ -11,12 +11,12 @@ from PyQt4.QtCore import QCryptographicHash, QDateTime, qVersion
 from PyQt4.QtGui import QWidget
 from PyQt4.QtNetwork import QSslCertificate
 
-from .Ui_SslInfoWidget import Ui_SslInfoWidget
+from .Ui_E5SslInfoWidget import Ui_E5SslInfoWidget
 
 import Utilities
 
 
-class SslInfoWidget(QWidget, Ui_SslInfoWidget):
+class E5SslInfoWidget(QWidget, Ui_E5SslInfoWidget):
     """
     Class implementing a widget to show SSL certificate infos.
     """

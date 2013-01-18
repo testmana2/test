@@ -7358,46 +7358,286 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>E5SslCertificatesDialog</name>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="14"/>
+        <source>SSL Certificate Manager</source>
+        <translation type="unfinished">Менеджер SLL сертификатов</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="27"/>
+        <source>&amp;Servers</source>
+        <translation type="unfinished">&amp;Серверы</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="33"/>
+        <source>You have saved certificates identifying these servers:</source>
+        <translation type="unfinished">Сертификаты следующих серверов уже сохранены:</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="140"/>
+        <source>Certificate name</source>
+        <translation type="unfinished">Имя сертификата</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="46"/>
+        <source>Server</source>
+        <translation type="unfinished">Сервер</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="145"/>
+        <source>Expiry Date</source>
+        <translation type="unfinished">Дата окончания</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="158"/>
+        <source>Press to view the selected certificate</source>
+        <translation type="unfinished">Показать выбранный сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="161"/>
+        <source>&amp;View...</source>
+        <translation type="unfinished">&amp;Показать...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="168"/>
+        <source>Press to import a certificate</source>
+        <translation type="unfinished">Импортировать сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="171"/>
+        <source>&amp;Import...</source>
+        <translation type="unfinished">&amp;Импорт...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="181"/>
+        <source>Press to export the selected certificate</source>
+        <translation type="unfinished">Экспортировать сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="184"/>
+        <source>&amp;Export...</source>
+        <translation type="unfinished">&amp;Экспорт...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="194"/>
+        <source>Press to delete the selected certificate</source>
+        <translation type="unfinished">Удалить выбранный сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="197"/>
+        <source>&amp;Delete...</source>
+        <translation type="unfinished">&amp;Удалить...</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="126"/>
+        <source>Certificate &amp;Authorities</source>
+        <translation type="unfinished">&amp;Авторитеты</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.ui" line="132"/>
+        <source>You have saved certificates identifying these certification authorities:</source>
+        <translation type="unfinished">Сертификаты для следующих авторитетов уже сохранены:</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="274"/>
+        <source>(Unknown)</source>
+        <translation type="unfinished">(неизвестный)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="276"/>
+        <source>(Unknown common name)</source>
+        <translation type="unfinished">(Неизвестное имя)
+</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
+        <source>Delete Server Certificate</source>
+        <translation type="unfinished">Удалить сертификат сервера</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
+        <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
+        <source>Import Certificate</source>
+        <translation type="unfinished">Импортировать сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="363"/>
+        <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
+        <source>Delete CA Certificate</source>
+        <translation type="unfinished">Удалить CA сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
+        <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
+        <source>Export Certificate</source>
+        <translation type="unfinished">Экспортировать сертификат</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="399"/>
+        <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
+        <translation type="unfinished">Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="415"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="425"/>
+        <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
+        <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
+        <translation type="unfinished">Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
+        <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>E5SslErrorHandler</name>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="115"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
         <source>SSL Errors</source>
         <translation type="unfinished">Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="115"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Ошибки SSL для &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
         <source>Certificates</source>
         <translation type="unfinished">Сертификаты</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Сертификаты:&lt;br/&gt;{0}&lt;br/&gt;Принять?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="184"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="192"/>
         <source>Name: {0}</source>
         <translation type="unfinished">Имя: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="188"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="196"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Организация: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="192"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="200"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Эмитент: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="196"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="204"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation type="unfinished">&lt;br/&gt;Не действительны ранее: {0}&lt;br/&gt;Действительны до: {1}</translation>
+    </message>
+</context>
+<context>
+    <name>E5SslInfoDialog</name>
+    <message>
+        <location filename="E5Network/E5SslInfoDialog.ui" line="14"/>
+        <source>SSL Certificate Info</source>
+        <translation type="unfinished">SLL сертификат</translation>
+    </message>
+</context>
+<context>
+    <name>E5SslInfoWidget</name>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="17"/>
+        <source>This certificated has been blacklisted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="24"/>
+        <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Выдан для&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="118"/>
+        <source>Common Name (CN)</source>
+        <translation type="unfinished">Общее имя (CN)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="138"/>
+        <source>Organization (O)</source>
+        <translation type="unfinished">Организация (O)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="158"/>
+        <source>Organizational Unit (OU)</source>
+        <translation type="unfinished">Организационное подразделение (OU)</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="91"/>
+        <source>Serialnumber</source>
+        <translation type="unfinished">Серийный номер</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="111"/>
+        <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Выдан&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="178"/>
+        <source>&lt;b&gt;Validity&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Верен&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="185"/>
+        <source>Issued on</source>
+        <translation type="unfinished">Дата выдачи</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="205"/>
+        <source>Expires on</source>
+        <translation type="unfinished">Дата окончания</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="225"/>
+        <source>This certificate is not valid yet or has expired.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="232"/>
+        <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Отпечатки&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="239"/>
+        <source>SHA1-Fingerprint</source>
+        <translation type="unfinished">SHA1</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.ui" line="259"/>
+        <source>MD5-Fingerprint</source>
+        <translation type="unfinished">MD5</translation>
+    </message>
+    <message>
+        <location filename="E5Network/E5SslInfoWidget.py" line="111"/>
+        <source>&lt;not part of the certificate&gt;</source>
+        <translation type="unfinished">&lt;Не является частью сертификата&gt;</translation>
     </message>
 </context>
 <context>
@@ -17565,22 +17805,22 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage Certificates</source>
-        <translation>Управлять сертификатами</translation>
+        <translation type="obsolete">Управлять сертификатами</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage Certificates...</source>
-        <translation>Управлять сертификатами...</translation>
+        <translation type="obsolete">Управлять сертификатами...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1234"/>
         <source>Manage the saved certificates</source>
-        <translation>Управлять сохранёнными сертификатами</translation>
+        <translation type="obsolete">Управлять сохранёнными сертификатами</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Управлять сохранёнными сертификатами&lt;/b&gt;&lt;p&gt;Показывает диалог управления сохранёнными сертификатами.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Управлять сохранёнными сертификатами&lt;/b&gt;&lt;p&gt;Показывает диалог управления сохранёнными сертификатами.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1615"/>
@@ -17856,6 +18096,26 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="3305"/>
         <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
+        <source>Manage SSL Certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1230"/>
+        <source>Manage SSL Certificates...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1234"/>
+        <source>Manage the saved SSL certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
+        <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -19198,12 +19458,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Выполнить принудительно</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="46"/>
         <source>Mercurial Move</source>
         <translation>Mercurial Move</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Выберите цель</translation>
     </message>
@@ -41934,153 +42194,153 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation>Менеджер SLL сертификатов</translation>
+        <translation type="obsolete">Менеджер SLL сертификатов</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation>&amp;Серверы</translation>
+        <translation type="obsolete">&amp;Серверы</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation>Сертификаты следующих серверов уже сохранены:</translation>
+        <translation type="obsolete">Сертификаты следующих серверов уже сохранены:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation>Имя сертификата</translation>
+        <translation type="obsolete">Имя сертификата</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation>Сервер</translation>
+        <translation type="obsolete">Сервер</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation>Дата окончания</translation>
+        <translation type="obsolete">Дата окончания</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation>Показать выбранный сертификат</translation>
+        <translation type="obsolete">Показать выбранный сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation>&amp;Показать...</translation>
+        <translation type="obsolete">&amp;Показать...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation>Удалить выбранный сертификат</translation>
+        <translation type="obsolete">Удалить выбранный сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation>&amp;Удалить...</translation>
+        <translation type="obsolete">&amp;Удалить...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation>&amp;Авторитеты</translation>
+        <translation type="obsolete">&amp;Авторитеты</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation>Сертификаты для следующих авторитетов уже сохранены:</translation>
+        <translation type="obsolete">Сертификаты для следующих авторитетов уже сохранены:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="274"/>
         <source>(Unknown)</source>
-        <translation>(неизвестный)</translation>
+        <translation type="obsolete">(неизвестный)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="276"/>
         <source>(Unknown common name)</source>
-        <translation>(Неизвестное имя)
+        <translation type="obsolete">(Неизвестное имя)
 </translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
         <source>Delete Server Certificate</source>
-        <translation>Удалить сертификат сервера</translation>
+        <translation type="obsolete">Удалить сертификат сервера</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation>Импортировать сертификат</translation>
+        <translation type="obsolete">Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation>&amp;Импорт...</translation>
+        <translation type="obsolete">&amp;Импорт...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="181"/>
         <source>Press to export the selected certificate</source>
-        <translation>Экспортировать сертификат</translation>
+        <translation type="obsolete">Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Экспорт...</translation>
+        <translation type="obsolete">&amp;Экспорт...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
         <source>Import Certificate</source>
-        <translation>Импортировать сертификат</translation>
+        <translation type="obsolete">Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="363"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
         <source>Delete CA Certificate</source>
-        <translation>Удалить CA сертификат</translation>
+        <translation type="obsolete">Удалить CA сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
         <source>Export Certificate</source>
-        <translation>Экспортировать сертификат</translation>
+        <translation type="obsolete">Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="399"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation>Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
+        <translation type="obsolete">Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="415"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="425"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation>Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
+        <translation type="obsolete">Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -42088,7 +42348,7 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="14"/>
         <source>SSL Certificate Info</source>
-        <translation>SLL сертификат</translation>
+        <translation type="obsolete">SLL сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="32"/>
@@ -42159,79 +42419,69 @@ Not connected</source>
 <context>
     <name>SslInfoWidget</name>
     <message>
-        <location filename="Helpviewer/SslInfoWidget.ui" line="17"/>
-        <source>This certificated has been blacklisted.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="24"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Выдан для&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Выдан для&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="118"/>
         <source>Common Name (CN)</source>
-        <translation type="unfinished">Общее имя (CN)</translation>
+        <translation type="obsolete">Общее имя (CN)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="138"/>
         <source>Organization (O)</source>
-        <translation type="unfinished">Организация (O)</translation>
+        <translation type="obsolete">Организация (O)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="158"/>
         <source>Organizational Unit (OU)</source>
-        <translation type="unfinished">Организационное подразделение (OU)</translation>
+        <translation type="obsolete">Организационное подразделение (OU)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="91"/>
         <source>Serialnumber</source>
-        <translation type="unfinished">Серийный номер</translation>
+        <translation type="obsolete">Серийный номер</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="111"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Выдан&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Выдан&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="178"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Верен&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Верен&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="185"/>
         <source>Issued on</source>
-        <translation type="unfinished">Дата выдачи</translation>
+        <translation type="obsolete">Дата выдачи</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="205"/>
         <source>Expires on</source>
-        <translation type="unfinished">Дата окончания</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/SslInfoWidget.ui" line="225"/>
-        <source>This certificate is not valid yet or has expired.</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Дата окончания</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="232"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Отпечатки&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Отпечатки&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="239"/>
         <source>SHA1-Fingerprint</source>
-        <translation type="unfinished">SHA1</translation>
+        <translation type="obsolete">SHA1</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="259"/>
         <source>MD5-Fingerprint</source>
-        <translation type="unfinished">MD5</translation>
+        <translation type="obsolete">MD5</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.py" line="111"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished">&lt;Не является частью сертификата&gt;</translation>
+        <translation type="obsolete">&lt;Не является частью сертификата&gt;</translation>
     </message>
 </context>
 <context>
@@ -43864,12 +44114,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
 <context>
     <name>SvnCopyDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="46"/>
         <source>Subversion Move</source>
         <translation>Перемещение Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Выберите цель</translation>
     </message>
@@ -51964,7 +52214,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Задайте адрес.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="199"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="198"/>
         <source>Unknown</source>
         <translation>Неизвестный</translation>
     </message>
@@ -52211,7 +52461,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Показать версию&lt;/b&gt;&lt;p&gt;Информация о версии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2319"/>
+        <location filename="UI/UserInterface.py" line="2336"/>
         <source>Unittest</source>
         <translation>Unittest</translation>
     </message>
@@ -52247,52 +52497,52 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Настройте Eric по своему вкусу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2218"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2174"/>
+        <location filename="UI/UserInterface.py" line="2188"/>
         <source>&amp;Tools</source>
         <translation>&amp;Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2167"/>
+        <location filename="UI/UserInterface.py" line="2181"/>
         <source>Wi&amp;zards</source>
         <translation>&amp;Мастера</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2251"/>
+        <location filename="UI/UserInterface.py" line="2268"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2335"/>
         <source>Tools</source>
         <translation>Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3927"/>
+        <location filename="UI/UserInterface.py" line="3944"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2320"/>
+        <location filename="UI/UserInterface.py" line="2337"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2226"/>
+        <location filename="UI/UserInterface.py" line="2243"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4035"/>
+        <location filename="UI/UserInterface.py" line="4052"/>
         <source>Problem</source>
         <translation>Проблема</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4187"/>
+        <location filename="UI/UserInterface.py" line="4204"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
@@ -52317,12 +52567,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Горячие клавиши&lt;/b&gt;&lt;p&gt;Задайте горячие клавиши на свой вкус.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2176"/>
         <source>E&amp;xtras</source>
         <translation>До&amp;полнительно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2704"/>
+        <location filename="UI/UserInterface.py" line="2721"/>
         <source>Report Bug</source>
         <translation>Сообщение об ошибке</translation>
     </message>
@@ -52342,7 +52592,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сообщить об ошибке...&lt;/b&gt;&lt;p&gt;Открывает диалог для сообщения об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4793"/>
+        <location filename="UI/UserInterface.py" line="4810"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Экспортировать горячие клавиши</translation>
     </message>
@@ -52363,7 +52613,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Экспортировать горячие клавиши приложения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4833"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Импортировать горячие клавиши</translation>
     </message>
@@ -52456,7 +52706,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим сценарием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3704"/>
+        <location filename="UI/UserInterface.py" line="3721"/>
         <source>Unittest Project</source>
         <translation>Uniitest на проекте</translation>
     </message>
@@ -52471,12 +52721,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим проектом.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2145"/>
+        <location filename="UI/UserInterface.py" line="2159"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3704"/>
+        <location filename="UI/UserInterface.py" line="3721"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
@@ -52533,7 +52783,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Открыть диалог, в котором показаны различия между файлами в две колонки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5169"/>
+        <location filename="UI/UserInterface.py" line="5195"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -52619,32 +52869,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Профили&lt;/b&gt;&lt;p&gt;Конфигурация профилей. С помощью этого диалога вы можете устанавливать видимость разных окон для заданных профилей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4035"/>
+        <location filename="UI/UserInterface.py" line="4052"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; либо не существует, либо нулевой длины.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3799"/>
+        <location filename="UI/UserInterface.py" line="3816"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Designer.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3856"/>
+        <location filename="UI/UserInterface.py" line="3873"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Linguist.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3900"/>
+        <location filename="UI/UserInterface.py" line="3917"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Assistant.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4187"/>
+        <location filename="UI/UserInterface.py" line="4204"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить инструмент &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5169"/>
+        <location filename="UI/UserInterface.py" line="5195"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -52669,7 +52919,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Запустить the UI Previewer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3998"/>
+        <location filename="UI/UserInterface.py" line="4015"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить UI Previewer.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -52694,7 +52944,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Предпросмотр переводов&lt;/b&gt;&lt;p&gt;Запустить предпросмотр переводов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4043"/>
+        <location filename="UI/UserInterface.py" line="4060"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить предпросмотр переводов.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -52761,48 +53011,48 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Задач скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4937"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>Save tasks</source>
         <translation>Сохранить задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4937"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4959"/>
+        <location filename="UI/UserInterface.py" line="4985"/>
         <source>Read tasks</source>
         <translation>Прочитать задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4959"/>
+        <location filename="UI/UserInterface.py" line="4985"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3927"/>
+        <location filename="UI/UserInterface.py" line="3944"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Специальный просмотрщик не выбран.
 Используйте диалог с настройками для его выбора.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3939"/>
+        <location filename="UI/UserInterface.py" line="3956"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить специальный просмотрщик.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4553"/>
+        <location filename="UI/UserInterface.py" line="4570"/>
         <source>Documentation Missing</source>
         <translation>Документация отсутствует</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4553"/>
+        <location filename="UI/UserInterface.py" line="4570"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2704"/>
+        <location filename="UI/UserInterface.py" line="2721"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Почтовый адрес или адрес почтового сервера пуст. Настройте электронную почту в диалоге конфигурации.</translation>
     </message>
@@ -52878,22 +53128,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Alt+Shift+M</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1915"/>
+        <location filename="UI/UserInterface.py" line="1929"/>
         <source>Activate current editor</source>
         <translation>Активизировать текущий редактор</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1915"/>
+        <location filename="UI/UserInterface.py" line="1929"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1924"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1946"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
@@ -52933,37 +53183,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Qt-Лингвист 4&lt;/b&gt;&lt;p&gt;Запустить Qt-Лингвист 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2011"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>Qt4 Documentation</source>
         <translation>Документация Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2011"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Документация Qt&amp;4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2013"/>
+        <location filename="UI/UserInterface.py" line="2027"/>
         <source>Open Qt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2087"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>Eric API Documentation</source>
         <translation>Документация API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2087"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>&amp;Eric API Documentation</source>
         <translation>Документация API &amp;Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2089"/>
+        <location filename="UI/UserInterface.py" line="2103"/>
         <source>Open Eric API Documentation</source>
         <translation>Открыть документацию API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3958"/>
+        <location filename="UI/UserInterface.py" line="3975"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик помощи.&lt;br&gt;Убедитесь, что он доступен под именем &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -53030,92 +53280,92 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Проверить наличие &amp;обновлений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2028"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Qt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию Qt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2035"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>PyQt4 Documentation</source>
         <translation>Документация PyQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2035"/>
+        <location filename="UI/UserInterface.py" line="2049"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>Документация P&amp;yQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2037"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2038"/>
+        <location filename="UI/UserInterface.py" line="2052"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PyQt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию PyQt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2177"/>
+        <location filename="UI/UserInterface.py" line="2191"/>
         <source>Select Tool Group</source>
         <translation>Выберите группу инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2183"/>
+        <location filename="UI/UserInterface.py" line="2197"/>
         <source>Se&amp;ttings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2322"/>
+        <location filename="UI/UserInterface.py" line="2339"/>
         <source>Profiles</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3030"/>
+        <location filename="UI/UserInterface.py" line="3047"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Встроенные инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4171"/>
+        <location filename="UI/UserInterface.py" line="4188"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Запускается процесс &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4264"/>
+        <location filename="UI/UserInterface.py" line="4281"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Процесс &apos;{0}&apos; завершился.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4538"/>
+        <location filename="UI/UserInterface.py" line="4555"/>
         <source>Documentation</source>
         <translation>Документация</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4447"/>
+        <location filename="UI/UserInterface.py" line="4464"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PyQt4 не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5448"/>
+        <location filename="UI/UserInterface.py" line="5474"/>
         <source>Error during updates check</source>
         <translation>Ошибка при проверке обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5435"/>
+        <location filename="UI/UserInterface.py" line="5461"/>
         <source>Update available</source>
         <translation>Обновления доступны</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2653"/>
+        <location filename="UI/UserInterface.py" line="2670"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Номера версий&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5482"/>
+        <location filename="UI/UserInterface.py" line="5508"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -53130,12 +53380,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2978"/>
+        <location filename="UI/UserInterface.py" line="2995"/>
         <source>Configure Tool Groups ...</source>
         <translation>Настроить группы Инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2981"/>
+        <location filename="UI/UserInterface.py" line="2998"/>
         <source>Configure current Tool Group ...</source>
         <translation>Настроить текущую группу Инструментов...</translation>
     </message>
@@ -53150,22 +53400,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Показать &amp;внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5448"/>
+        <location filename="UI/UserInterface.py" line="5474"/>
         <source>Could not perform updates check.</source>
         <translation>Невозможно запустить проверку обновлений.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5307"/>
+        <location filename="UI/UserInterface.py" line="5333"/>
         <source>&amp;Cancel</source>
         <translation>От&amp;мена</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5312"/>
+        <location filename="UI/UserInterface.py" line="5338"/>
         <source>Trying host {0}</source>
         <translation>Пробую узел {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5509"/>
+        <location filename="UI/UserInterface.py" line="5535"/>
         <source>First time usage</source>
         <translation>Первое использование</translation>
     </message>
@@ -53175,63 +53425,63 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Инициализируется менеджер расширений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2237"/>
+        <location filename="UI/UserInterface.py" line="2254"/>
         <source>P&amp;lugins</source>
         <translation>&amp;Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2323"/>
+        <location filename="UI/UserInterface.py" line="2340"/>
         <source>Plugins</source>
         <translation>Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1948"/>
+        <location filename="UI/UserInterface.py" line="1962"/>
         <source>Plugin Infos</source>
         <translation>Информация о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1951"/>
+        <location filename="UI/UserInterface.py" line="1965"/>
         <source>Show Plugin Infos</source>
         <translation>Показать информацию о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1952"/>
+        <location filename="UI/UserInterface.py" line="1966"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Информация о расширениях...&lt;/b&gt;
 &lt;p&gt;Открывает диалог, отображающий информацию о загруженных расширениях.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1948"/>
+        <location filename="UI/UserInterface.py" line="1962"/>
         <source>&amp;Plugin Infos...</source>
         <translation>Ин&amp;формация о подключаемых модулях...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1974"/>
+        <location filename="UI/UserInterface.py" line="1988"/>
         <source>Uninstall Plugin</source>
         <translation>Убрать подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1971"/>
+        <location filename="UI/UserInterface.py" line="1985"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>У&amp;брать подключаемый модуль...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1975"/>
+        <location filename="UI/UserInterface.py" line="1989"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Убрать подключаемый модуль...&lt;/b&gt;&lt;p&gt;Открывает диалог деинсталляции нового подключаемого модуля.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3038"/>
+        <location filename="UI/UserInterface.py" line="3055"/>
         <source>&amp;Plugin Tools</source>
         <translation>Инструменты для &amp;плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3128"/>
+        <location filename="UI/UserInterface.py" line="3145"/>
         <source>&amp;Show all</source>
         <translation>Показать &amp;всё</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3130"/>
+        <location filename="UI/UserInterface.py" line="3147"/>
         <source>&amp;Hide all</source>
         <translation>Ск&amp;рыть всё</translation>
     </message>
@@ -53266,42 +53516,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Невозможно скачать файл версий.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5469"/>
+        <location filename="UI/UserInterface.py" line="5495"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Доступные версии&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Plugin Repository</source>
         <translation>Репозиторий плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Plugin &amp;Repository...</source>
         <translation>&amp;Репозиторий плагинов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1985"/>
+        <location filename="UI/UserInterface.py" line="1999"/>
         <source>Show Plugins available for download</source>
         <translation>Показать плагины, доступные для загрузки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1987"/>
+        <location filename="UI/UserInterface.py" line="2001"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Репозиторий плагинов...&lt;/b&gt;&lt;p&gt;Открывает диалог, который показывает список плагинов, доступных для скачивания с интернета.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1963"/>
+        <location filename="UI/UserInterface.py" line="1977"/>
         <source>Install Plugins</source>
         <translation>Установить плагины</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1960"/>
+        <location filename="UI/UserInterface.py" line="1974"/>
         <source>&amp;Install Plugins...</source>
         <translation>&amp;Установить плагины...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1964"/>
+        <location filename="UI/UserInterface.py" line="1978"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Установить плагины...&lt;/b&gt;&lt;p&gt;Открывает диалог для установки или обновления плагинов.&lt;/p&gt;</translation>
     </message>
@@ -53356,22 +53606,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Восстановление менеджера панелей инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2567"/>
+        <location filename="UI/UserInterface.py" line="2584"/>
         <source>External Tools/{0}</source>
         <translation>Внешние инструменты/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4135"/>
+        <location filename="UI/UserInterface.py" line="4152"/>
         <source>External Tools</source>
         <translation>Внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4146"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Запись для внешней программы &apos;{0}&apos; не найдена в группе &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4135"/>
+        <location filename="UI/UserInterface.py" line="4152"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Запись для группы &apos;{0}&apos; не найдена.</translation>
     </message>
@@ -53406,32 +53656,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Просмотрщик &amp;шаблонов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4974"/>
+        <location filename="UI/UserInterface.py" line="5000"/>
         <source>Save session</source>
         <translation>Сохранить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4974"/>
+        <location filename="UI/UserInterface.py" line="5000"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу записать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4997"/>
+        <location filename="UI/UserInterface.py" line="5023"/>
         <source>Read session</source>
         <translation>Загрузить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4997"/>
+        <location filename="UI/UserInterface.py" line="5023"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу прочитать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2472"/>
+        <location filename="UI/UserInterface.py" line="2489"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую кодировку редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2486"/>
+        <location filename="UI/UserInterface.py" line="2503"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса указывает на возможность записи открытого в редакторе файла.&lt;/p&gt;</translation>
     </message>
@@ -53466,7 +53716,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Послать запрос...&lt;/b&gt;&lt;p&gt;Показать диалог создания запроса.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2465"/>
+        <location filename="UI/UserInterface.py" line="2482"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает язык текущего окна редактора.&lt;/p&gt;</translation>
     </message>
@@ -53476,12 +53726,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;Эта часть строки статуса показывает имя файла открытого в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2493"/>
+        <location filename="UI/UserInterface.py" line="2510"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает номер текущей строки в редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2500"/>
+        <location filename="UI/UserInterface.py" line="2517"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую позицию курсора в редакторе.&lt;/p&gt;</translation>
     </message>
@@ -53526,12 +53776,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Переключить горизонтальную панель инструментов&lt;/b&gt;&lt;p&gt;Показать/скрыть горизонтальную панель инструментов&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2946"/>
+        <location filename="UI/UserInterface.py" line="2963"/>
         <source>Restart application</source>
         <translation>Перезапустить приложение</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2946"/>
+        <location filename="UI/UserInterface.py" line="2963"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Необходимо перезапустить приложение. Сделать это сейчас?</translation>
     </message>
@@ -53572,22 +53822,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2246"/>
+        <location filename="UI/UserInterface.py" line="2263"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2479"/>
+        <location filename="UI/UserInterface.py" line="2496"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает режим конца строки в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1940"/>
+        <location filename="UI/UserInterface.py" line="1954"/>
         <source>Switch between tabs</source>
         <translation>Переключиться между закладками</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1940"/>
+        <location filename="UI/UserInterface.py" line="1954"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
@@ -53632,12 +53882,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Импорт настроек&lt;/b&gt;&lt;p&gt;Импорт сохранённых ранее настроек.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1924"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Show next</source>
         <translation>Показать следующую закладку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1932"/>
+        <location filename="UI/UserInterface.py" line="1946"/>
         <source>Show previous</source>
         <translation>Показать предыдущую закладку</translation>
     </message>
@@ -53725,7 +53975,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Просмотрщик SQL&lt;/b&gt;&lt;p&gt;Просмотреть SQL базу данных.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4062"/>
+        <location filename="UI/UserInterface.py" line="4079"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик SQL.&lt;br&gt;Убедитесь, что он доступен как &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -53775,32 +54025,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Редактор &amp;иконок...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3879"/>
+        <location filename="UI/UserInterface.py" line="3896"/>
         <source>Qt 3 support</source>
         <translation>Поддержка Qt3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2122"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PySide&lt;/b&gt;&lt;p&gt;Показать документацию PySide. В зависимости от настроек документация будет показана или во внутреннем просмотрщике помощи, в WEB просмотрщике или в Qt Assistant. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4538"/>
+        <location filename="UI/UserInterface.py" line="4555"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PySide не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2105"/>
+        <location filename="UI/UserInterface.py" line="2119"/>
         <source>PySide Documentation</source>
         <translation>Документация PySide</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2105"/>
+        <location filename="UI/UserInterface.py" line="2119"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Документация Py&amp;Side</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2107"/>
+        <location filename="UI/UserInterface.py" line="2121"/>
         <source>Open PySide Documentation</source>
         <translation>Открыть документацию PySide</translation>
     </message>
@@ -53845,32 +54095,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2090"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3879"/>
+        <location filename="UI/UserInterface.py" line="3896"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt3 не поддерживается в eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5435"/>
+        <location filename="UI/UserInterface.py" line="5461"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5470"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 не требует обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5470"/>
         <source>You are using the latest version of eric5</source>
         <translation>Вы используете самую последнюю версию eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5509"/>
+        <location filename="UI/UserInterface.py" line="5535"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации.</translation>
     </message>
@@ -53967,72 +54217,72 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4816"/>
+        <location filename="UI/UserInterface.py" line="4833"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Файл горячих клавиш (*.e4k)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python 3 Documentation</source>
         <translation>Документация Pyton 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2065"/>
         <source>Python &amp;3 Documentation</source>
         <translation>Документация Pyton &amp;3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2053"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Open Python 3 Documentation</source>
         <translation>Открыть документацию Python 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2054"/>
+        <location filename="UI/UserInterface.py" line="2068"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 3&lt;/b&gt;&lt;p&gt;Показать Pyton 3 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 3 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON3DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2080"/>
         <source>Python 2 Documentation</source>
         <translation>Документация Pyton 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2080"/>
         <source>Python &amp;2 Documentation</source>
         <translation>Документация Pyton &amp;2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2068"/>
+        <location filename="UI/UserInterface.py" line="2082"/>
         <source>Open Python 2 Documentation</source>
         <translation>Открыть документацию Python 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2069"/>
+        <location filename="UI/UserInterface.py" line="2083"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 2&lt;/b&gt;&lt;p&gt;Показать Pyton 2 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 2 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON2DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5362"/>
+        <location filename="UI/UserInterface.py" line="5388"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5356"/>
+        <location filename="UI/UserInterface.py" line="5382"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4639"/>
+        <location filename="UI/UserInterface.py" line="4656"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4639"/>
+        <location filename="UI/UserInterface.py" line="4656"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5362"/>
+        <location filename="UI/UserInterface.py" line="5388"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54143,12 +54393,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4109"/>
+        <location filename="UI/UserInterface.py" line="4126"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5527"/>
+        <location filename="UI/UserInterface.py" line="5553"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54378,7 +54628,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2206"/>
+        <location filename="UI/UserInterface.py" line="2223"/>
         <source>&amp;Windows</source>
         <translation type="unfinished">&amp;Окна</translation>
     </message>
@@ -54453,29 +54703,49 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2023"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Qt5 Documentation</source>
         <translation type="unfinished">Документация Qt4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2023"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Qt&amp;5 Documentation</source>
         <translation type="unfinished">Документация Qt&amp;4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2025"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Open Qt5 Documentation</source>
         <translation type="unfinished">Открыть документацию Qt4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2026"/>
+        <location filename="UI/UserInterface.py" line="2040"/>
         <source>&lt;b&gt;Qt5 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt5 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Документация Qt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию Qt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt; {5 ?} {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2510"/>
+        <location filename="UI/UserInterface.py" line="2527"/>
         <source>&lt;p&gt;This part of the status bar allows zooming the current editor, shell or terminal.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1916"/>
+        <source>Manage SSL Certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1916"/>
+        <source>Manage SSL Certificates...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1920"/>
+        <source>Manage the saved SSL certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1922"/>
+        <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

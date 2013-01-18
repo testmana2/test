@@ -164,7 +164,10 @@ E5SingleApplicationClient SingleApplicationClient
 E5SingleApplicationServer SingleApplicationServer
 E5SqueezeLabel QLabel
 E5SqueezeLabelPath QLabel
+E5SslCertificatesDialog QDialog Ui_E5SslCertificatesDialog
 E5SslErrorHandler QObject
+E5SslInfoDialog QDialog Ui_E5SslInfoDialog
+E5SslInfoWidget QWidget Ui_E5SslInfoWidget
 E5StringListCompleter QCompleter
 E5TabWidget QTabWidget
 E5TableView QTableView
@@ -592,9 +595,6 @@ SqlBrowser E5MainWindow
 SqlBrowserWidget QWidget Ui_SqlBrowserWidget
 SqlConnectionDialog QDialog Ui_SqlConnectionDialog
 SqlConnectionWidget QWidget
-SslCertificatesDialog QDialog Ui_SslCertificatesDialog
-SslInfoDialog QDialog Ui_SslInfoDialog
-SslInfoWidget QWidget Ui_SslInfoWidget
 SslLabel QLabel
 StackedUrlBar QStackedWidget
 StackedWidget QStackedWidget

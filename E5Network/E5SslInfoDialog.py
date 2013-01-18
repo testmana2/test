@@ -9,10 +9,10 @@ Module implementing a dialog to show SSL certificate infos.
 
 from PyQt4.QtGui import QDialog
 
-from .Ui_SslInfoDialog import Ui_SslInfoDialog
+from .Ui_E5SslInfoDialog import Ui_E5SslInfoDialog
 
 
-class SslInfoDialog(QDialog, Ui_SslInfoDialog):
+class E5SslInfoDialog(QDialog, Ui_E5SslInfoDialog):
     """
     Class implementing a dialog to show SSL certificate infos.
     """

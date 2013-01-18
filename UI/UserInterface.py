@@ -1912,6 +1912,20 @@ class UserInterface(E5MainWindow):
         self.importShortcutsAct.triggered[()].connect(self.__importShortcuts)
         self.actions.append(self.importShortcutsAct)
 
+        if SSL_AVAILABLE:
+            self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
+                          self.trUtf8('Manage SSL Certificates...'),
+                          0, 0,
+                          self, 'manage_ssl_certificates')
+            self.certificatesAct.setStatusTip(self.trUtf8(
+                    'Manage the saved SSL certificates'))
+            self.certificatesAct.setWhatsThis(self.trUtf8(
+                    """<b>Manage SSL Certificates...</b>"""
+                    """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
+            ))
+            self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
+            self.actions.append(self.certificatesAct)
+        
         self.viewmanagerActivateAct = E5Action(self.trUtf8('Activate current editor'),
                 self.trUtf8('Activate current editor'),
                 QKeySequence(self.trUtf8("Alt+Shift+E")),
@@ -2197,6 +2211,9 @@ class UserInterface(E5MainWindow):
         self.__menus["settings"].addAction(self.importShortcutsAct)
         self.__menus["settings"].addSeparator()
         self.__menus["settings"].addAction(self.showExternalToolsAct)
+        if SSL_AVAILABLE:
+            self.__menus["settings"].addSeparator()
+            self.__menus["settings"].addAction(self.certificatesAct)
         
         self.__menus["window"] = QMenu(self.trUtf8('&Window'), self)
         mb.addMenu(self.__menus["window"])
@@ -4822,6 +4839,15 @@ class UserInterface(E5MainWindow):
         if fn:
             Shortcuts.importShortcuts(fn)
 
+    def __showCertificatesDialog(self):
+        """
+        Private slot to show the certificates management dialog.
+        """
+        from E5Network.E5SslCertificatesDialog import E5SslCertificatesDialog
+        
+        dlg = E5SslCertificatesDialog(self)
+        dlg.exec_()
+        
     def __newProject(self):
         """
         Private slot to handle the NewProject signal.

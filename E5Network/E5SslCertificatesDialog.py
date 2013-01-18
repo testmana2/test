@@ -17,10 +17,10 @@ except ImportError:
 
 from E5Gui import E5MessageBox, E5FileDialog
 
-from .Ui_SslCertificatesDialog import Ui_SslCertificatesDialog
+from .Ui_E5SslCertificatesDialog import Ui_E5SslCertificatesDialog
 
 try:
-    from .SslInfoDialog import SslInfoDialog
+    from E5Network.E5SslInfoDialog import E5SslInfoDialog
 except ImportError:
     pass
 
@@ -28,7 +28,7 @@ import Preferences
 import Utilities
 
 
-class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
+class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
     """
     Class implementing a dialog to show and edit all certificates.
     """
@@ -115,7 +115,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         Private slot to show data of the selected server certificate.
         """
         cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
-        dlg = SslInfoDialog(cert, self)
+        dlg = E5SslInfoDialog(cert, self)
         dlg.exec_()
     
     @pyqtSlot()
@@ -307,7 +307,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         Private slot to show data of the selected CA certificate.
         """
         cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
-        dlg = SslInfoDialog(cert, self)
+        dlg = E5SslInfoDialog(cert, self)
         dlg.exec_()
     
     @pyqtSlot()

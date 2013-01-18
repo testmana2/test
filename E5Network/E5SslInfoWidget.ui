@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SslInfoWidget</class>
- <widget class="QWidget" name="SslInfoWidget">
+ <class>E5SslInfoWidget</class>
+ <widget class="QWidget" name="E5SslInfoWidget">
   <property name="geometry">
    <rect>
     <x>0</x>

@@ -793,7 +793,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/UrlBar/FavIconLabel.py</Source>
     <Source>Helpviewer/UrlBar/StackedUrlBar.py</Source>
     <Source>Helpviewer/UrlBar/SslLabel.py</Source>
-    <Source>Helpviewer/SslInfoDialog.py</Source>
     <Source>Helpviewer/UrlBar/BookmarkInfoDialog.py</Source>
     <Source>Helpviewer/Download/__init__.py</Source>
     <Source>Helpviewer/Download/DownloadItem.py</Source>
@@ -803,7 +802,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
-    <Source>Helpviewer/SslCertificatesDialog.py</Source>
     <Source>UtilitiesPython2/__init__.py</Source>
     <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
     <Source>UtilitiesPython2/py2flakes/__init__.py</Source>
@@ -926,7 +924,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Feeds/FeedEditDialog.py</Source>
     <Source>Helpviewer/SiteInfo/__init__.py</Source>
     <Source>Helpviewer/SiteInfo/SiteInfoDialog.py</Source>
-    <Source>Helpviewer/SslInfoWidget.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentsDialog.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentModel.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentManager.py</Source>
@@ -1068,6 +1065,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Network/IRC/IrcMessageEdit.py</Source>
     <Source>E5Gui/E5ZoomWidget.py</Source>
     <Source>E5Network/E5SslErrorHandler.py</Source>
+    <Source>E5Network/E5SslInfoWidget.py</Source>
+    <Source>E5Network/E5SslInfoDialog.py</Source>
+    <Source>E5Network/E5SslCertificatesDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1293,12 +1293,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>UI/SymbolsWidget.ui</Form>
     <Form>UI/NumbersWidget.ui</Form>
     <Form>Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui</Form>
-    <Form>Helpviewer/SslInfoDialog.ui</Form>
     <Form>Helpviewer/UrlBar/BookmarkInfoDialog.ui</Form>
     <Form>Helpviewer/Download/DownloadItem.ui</Form>
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
-    <Form>Helpviewer/SslCertificatesDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui</Form>
@@ -1335,7 +1333,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Feeds/FeedsManager.ui</Form>
     <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
     <Form>Helpviewer/SiteInfo/SiteInfoDialog.ui</Form>
-    <Form>Helpviewer/SslInfoWidget.ui</Form>
     <Form>Helpviewer/UserAgent/UserAgentsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui</Form>
     <Form>Helpviewer/PageScreenDialog.ui</Form>
@@ -1380,6 +1377,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Network/IRC/IrcServerEditDialog.ui</Form>
     <Form>Network/IRC/IrcIdentitiesEditDialog.ui</Form>
     <Form>E5Gui/E5ZoomWidget.ui</Form>
+    <Form>E5Network/E5SslInfoWidget.ui</Form>
+    <Form>E5Network/E5SslInfoDialog.ui</Form>
+    <Form>E5Network/E5SslCertificatesDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

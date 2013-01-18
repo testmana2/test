@@ -30,8 +30,8 @@ import UI.PixmapCache
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .Bookmarks.BookmarkNode import BookmarkNode
 try:
-    from .SslInfoDialog import SslInfoDialog
     from PyQt4.QtNetwork import QSslCertificate
+    from E5Network.E5SslInfoDialog import E5SslInfoDialog
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -491,7 +491,7 @@ class HelpWebPage(QWebPage):
         Public slot to show some SSL information for the loaded page.
         """
         if SSL_AVAILABLE and self.__sslConfiguration is not None:
-            dlg = SslInfoDialog(self.getSslInfo(), self.view())
+            dlg = E5SslInfoDialog(self.getSslInfo(), self.view())
             dlg.exec_()
         else:
             E5MessageBox.warning(self.view(),

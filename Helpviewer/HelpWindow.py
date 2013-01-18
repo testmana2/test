@@ -1227,15 +1227,15 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.flashblockAct)
         
         if SSL_AVAILABLE:
-            self.certificatesAct = E5Action(self.trUtf8('Manage Certificates'),
-                          self.trUtf8('Manage Certificates...'),
+            self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
+                          self.trUtf8('Manage SSL Certificates...'),
                           0, 0,
                           self, 'help_manage_certificates')
             self.certificatesAct.setStatusTip(self.trUtf8(
-                    'Manage the saved certificates'))
+                    'Manage the saved SSL certificates'))
             self.certificatesAct.setWhatsThis(self.trUtf8(
-                    """<b>Manage Saved Certificates...</b>"""
-                    """<p>Opens a dialog to manage the saved certificates.</p>"""
+                    """<b>Manage SSL Certificates...</b>"""
+                    """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
             ))
             if not self.initShortcutsOnly:
                 self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
@@ -2723,9 +2723,9 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the certificates management dialog.
         """
-        from .SslCertificatesDialog import SslCertificatesDialog
+        from E5Network.E5SslCertificatesDialog import E5SslCertificatesDialog
         
-        dlg = SslCertificatesDialog(self)
+        dlg = E5SslCertificatesDialog(self)
         dlg.exec_()
         
     def __showAdBlockDialog(self):

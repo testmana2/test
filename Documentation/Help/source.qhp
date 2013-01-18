@@ -148,7 +148,10 @@
             <section title="eric5.E5Network.E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
             <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
+            <section title="eric5.E5Network.E5SslCertificatesDialog" ref="eric5.E5Network.E5SslCertificatesDialog.html" />
             <section title="eric5.E5Network.E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html" />
+            <section title="eric5.E5Network.E5SslInfoDialog" ref="eric5.E5Network.E5SslInfoDialog.html" />
+            <section title="eric5.E5Network.E5SslInfoWidget" ref="eric5.E5Network.E5SslInfoWidget.html" />
             <section title="eric5.E5Network.E5UrlInfo" ref="eric5.E5Network.E5UrlInfo.html" />
           </section>
           <section title="eric5.E5XML" ref="index-eric5.E5XML.html">
@@ -400,9 +403,6 @@
             <section title="eric5.Helpviewer.QtHelpDocumentationDialog" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html" />
             <section title="eric5.Helpviewer.QtHelpFiltersDialog" ref="eric5.Helpviewer.QtHelpFiltersDialog.html" />
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
-            <section title="eric5.Helpviewer.SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
-            <section title="eric5.Helpviewer.SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html" />
-            <section title="eric5.Helpviewer.SslInfoWidget" ref="eric5.Helpviewer.SslInfoWidget.html" />
             <section title="eric5.Helpviewer.VirusTotalApi" ref="eric5.Helpviewer.VirusTotalApi.html" />
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
@@ -3664,6 +3664,27 @@
       <keyword name="E5SqueezeLabelPath.setSurrounding" id="E5SqueezeLabelPath.setSurrounding" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setSurrounding" />
       <keyword name="E5SqueezeLabelPath.setTextPath" id="E5SqueezeLabelPath.setTextPath" ref="eric5.E5Gui.E5SqueezeLabels.html#E5SqueezeLabelPath.setTextPath" />
       <keyword name="E5SqueezeLabels (Module)" id="E5SqueezeLabels (Module)" ref="eric5.E5Gui.E5SqueezeLabels.html" />
+      <keyword name="E5SslCertificatesDialog" id="E5SslCertificatesDialog" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog" />
+      <keyword name="E5SslCertificatesDialog (Constructor)" id="E5SslCertificatesDialog (Constructor)" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__init__" />
+      <keyword name="E5SslCertificatesDialog (Module)" id="E5SslCertificatesDialog (Module)" ref="eric5.E5Network.E5SslCertificatesDialog.html" />
+      <keyword name="E5SslCertificatesDialog.__createCaCertificateEntry" id="E5SslCertificatesDialog.__createCaCertificateEntry" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__createCaCertificateEntry" />
+      <keyword name="E5SslCertificatesDialog.__createServerCertificateEntry" id="E5SslCertificatesDialog.__createServerCertificateEntry" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__createServerCertificateEntry" />
+      <keyword name="E5SslCertificatesDialog.__exportCertificate" id="E5SslCertificatesDialog.__exportCertificate" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__exportCertificate" />
+      <keyword name="E5SslCertificatesDialog.__getSystemCaCertificates" id="E5SslCertificatesDialog.__getSystemCaCertificates" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__getSystemCaCertificates" />
+      <keyword name="E5SslCertificatesDialog.__importCertificate" id="E5SslCertificatesDialog.__importCertificate" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__importCertificate" />
+      <keyword name="E5SslCertificatesDialog.__populateCaCertificatesTree" id="E5SslCertificatesDialog.__populateCaCertificatesTree" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__populateCaCertificatesTree" />
+      <keyword name="E5SslCertificatesDialog.__populateServerCertificatesTree" id="E5SslCertificatesDialog.__populateServerCertificatesTree" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__populateServerCertificatesTree" />
+      <keyword name="E5SslCertificatesDialog.__updateDefaultConfiguration" id="E5SslCertificatesDialog.__updateDefaultConfiguration" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.__updateDefaultConfiguration" />
+      <keyword name="E5SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" id="E5SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" />
+      <keyword name="E5SslCertificatesDialog.on_caDeleteButton_clicked" id="E5SslCertificatesDialog.on_caDeleteButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_caDeleteButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_caExportButton_clicked" id="E5SslCertificatesDialog.on_caExportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_caExportButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_caImportButton_clicked" id="E5SslCertificatesDialog.on_caImportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_caImportButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_caViewButton_clicked" id="E5SslCertificatesDialog.on_caViewButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_caViewButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" id="E5SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" />
+      <keyword name="E5SslCertificatesDialog.on_serversDeleteButton_clicked" id="E5SslCertificatesDialog.on_serversDeleteButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversDeleteButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_serversExportButton_clicked" id="E5SslCertificatesDialog.on_serversExportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversExportButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_serversImportButton_clicked" id="E5SslCertificatesDialog.on_serversImportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversImportButton_clicked" />
+      <keyword name="E5SslCertificatesDialog.on_serversViewButton_clicked" id="E5SslCertificatesDialog.on_serversViewButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversViewButton_clicked" />
       <keyword name="E5SslErrorHandler" id="E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler" />
       <keyword name="E5SslErrorHandler (Constructor)" id="E5SslErrorHandler (Constructor)" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.__init__" />
       <keyword name="E5SslErrorHandler (Module)" id="E5SslErrorHandler (Module)" ref="eric5.E5Network.E5SslErrorHandler.html" />
@@ -3672,6 +3693,17 @@
       <keyword name="E5SslErrorHandler.sslErrors" id="E5SslErrorHandler.sslErrors" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrors" />
       <keyword name="E5SslErrorHandler.sslErrorsReply" id="E5SslErrorHandler.sslErrorsReply" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReply" />
       <keyword name="E5SslErrorHandler.sslErrorsReplySlot" id="E5SslErrorHandler.sslErrorsReplySlot" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReplySlot" />
+      <keyword name="E5SslInfoDialog" id="E5SslInfoDialog" ref="eric5.E5Network.E5SslInfoDialog.html#E5SslInfoDialog" />
+      <keyword name="E5SslInfoDialog (Constructor)" id="E5SslInfoDialog (Constructor)" ref="eric5.E5Network.E5SslInfoDialog.html#E5SslInfoDialog.__init__" />
+      <keyword name="E5SslInfoDialog (Module)" id="E5SslInfoDialog (Module)" ref="eric5.E5Network.E5SslInfoDialog.html" />
+      <keyword name="E5SslInfoWidget" id="E5SslInfoWidget" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget" />
+      <keyword name="E5SslInfoWidget (Constructor)" id="E5SslInfoWidget (Constructor)" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__init__" />
+      <keyword name="E5SslInfoWidget (Module)" id="E5SslInfoWidget (Module)" ref="eric5.E5Network.E5SslInfoWidget.html" />
+      <keyword name="E5SslInfoWidget.__certificateString" id="E5SslInfoWidget.__certificateString" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__certificateString" />
+      <keyword name="E5SslInfoWidget.__formatHexString" id="E5SslInfoWidget.__formatHexString" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__formatHexString" />
+      <keyword name="E5SslInfoWidget.__hasExpired" id="E5SslInfoWidget.__hasExpired" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__hasExpired" />
+      <keyword name="E5SslInfoWidget.__serialNumber" id="E5SslInfoWidget.__serialNumber" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__serialNumber" />
+      <keyword name="E5SslInfoWidget.showCertificate" id="E5SslInfoWidget.showCertificate" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.showCertificate" />
       <keyword name="E5StringListCompleter" id="E5StringListCompleter" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter" />
       <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
       <keyword name="E5TabWidget" id="E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget" />
@@ -9592,38 +9624,6 @@
       <keyword name="SqlConnectionWidget.currentDatabase" id="SqlConnectionWidget.currentDatabase" ref="eric5.SqlBrowser.SqlConnectionWidget.html#SqlConnectionWidget.currentDatabase" />
       <keyword name="SqlConnectionWidget.refresh" id="SqlConnectionWidget.refresh" ref="eric5.SqlBrowser.SqlConnectionWidget.html#SqlConnectionWidget.refresh" />
       <keyword name="SqlConnectionWidget.showSchema" id="SqlConnectionWidget.showSchema" ref="eric5.SqlBrowser.SqlConnectionWidget.html#SqlConnectionWidget.showSchema" />
-      <keyword name="SslCertificatesDialog" id="SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog" />
-      <keyword name="SslCertificatesDialog (Constructor)" id="SslCertificatesDialog (Constructor)" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__init__" />
-      <keyword name="SslCertificatesDialog (Module)" id="SslCertificatesDialog (Module)" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
-      <keyword name="SslCertificatesDialog.__createCaCertificateEntry" id="SslCertificatesDialog.__createCaCertificateEntry" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__createCaCertificateEntry" />
-      <keyword name="SslCertificatesDialog.__createServerCertificateEntry" id="SslCertificatesDialog.__createServerCertificateEntry" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__createServerCertificateEntry" />
-      <keyword name="SslCertificatesDialog.__exportCertificate" id="SslCertificatesDialog.__exportCertificate" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__exportCertificate" />
-      <keyword name="SslCertificatesDialog.__getSystemCaCertificates" id="SslCertificatesDialog.__getSystemCaCertificates" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__getSystemCaCertificates" />
-      <keyword name="SslCertificatesDialog.__importCertificate" id="SslCertificatesDialog.__importCertificate" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__importCertificate" />
-      <keyword name="SslCertificatesDialog.__populateCaCertificatesTree" id="SslCertificatesDialog.__populateCaCertificatesTree" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__populateCaCertificatesTree" />
-      <keyword name="SslCertificatesDialog.__populateServerCertificatesTree" id="SslCertificatesDialog.__populateServerCertificatesTree" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__populateServerCertificatesTree" />
-      <keyword name="SslCertificatesDialog.__updateDefaultConfiguration" id="SslCertificatesDialog.__updateDefaultConfiguration" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__updateDefaultConfiguration" />
-      <keyword name="SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" id="SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" />
-      <keyword name="SslCertificatesDialog.on_caDeleteButton_clicked" id="SslCertificatesDialog.on_caDeleteButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caDeleteButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_caExportButton_clicked" id="SslCertificatesDialog.on_caExportButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caExportButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_caImportButton_clicked" id="SslCertificatesDialog.on_caImportButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caImportButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_caViewButton_clicked" id="SslCertificatesDialog.on_caViewButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caViewButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" id="SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" />
-      <keyword name="SslCertificatesDialog.on_serversDeleteButton_clicked" id="SslCertificatesDialog.on_serversDeleteButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversDeleteButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_serversExportButton_clicked" id="SslCertificatesDialog.on_serversExportButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversExportButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_serversImportButton_clicked" id="SslCertificatesDialog.on_serversImportButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversImportButton_clicked" />
-      <keyword name="SslCertificatesDialog.on_serversViewButton_clicked" id="SslCertificatesDialog.on_serversViewButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversViewButton_clicked" />
-      <keyword name="SslInfoDialog" id="SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog" />
-      <keyword name="SslInfoDialog (Constructor)" id="SslInfoDialog (Constructor)" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__init__" />
-      <keyword name="SslInfoDialog (Module)" id="SslInfoDialog (Module)" ref="eric5.Helpviewer.SslInfoDialog.html" />
-      <keyword name="SslInfoWidget" id="SslInfoWidget" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget" />
-      <keyword name="SslInfoWidget (Constructor)" id="SslInfoWidget (Constructor)" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__init__" />
-      <keyword name="SslInfoWidget (Module)" id="SslInfoWidget (Module)" ref="eric5.Helpviewer.SslInfoWidget.html" />
-      <keyword name="SslInfoWidget.__certificateString" id="SslInfoWidget.__certificateString" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__certificateString" />
-      <keyword name="SslInfoWidget.__formatHexString" id="SslInfoWidget.__formatHexString" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__formatHexString" />
-      <keyword name="SslInfoWidget.__hasExpired" id="SslInfoWidget.__hasExpired" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__hasExpired" />
-      <keyword name="SslInfoWidget.__serialNumber" id="SslInfoWidget.__serialNumber" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__serialNumber" />
-      <keyword name="SslInfoWidget.showCertificate" id="SslInfoWidget.showCertificate" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.showCertificate" />
       <keyword name="SslLabel" id="SslLabel" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel" />
       <keyword name="SslLabel (Constructor)" id="SslLabel (Constructor)" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.__init__" />
       <keyword name="SslLabel (Module)" id="SslLabel (Module)" ref="eric5.Helpviewer.UrlBar.SslLabel.html" />
@@ -11442,6 +11442,7 @@
       <keyword name="UserInterface.__setWindowCaption" id="UserInterface.__setWindowCaption" ref="eric5.UI.UserInterface.html#UserInterface.__setWindowCaption" />
       <keyword name="UserInterface.__setupDockWindow" id="UserInterface.__setupDockWindow" ref="eric5.UI.UserInterface.html#UserInterface.__setupDockWindow" />
       <keyword name="UserInterface.__showAvailableVersionInfos" id="UserInterface.__showAvailableVersionInfos" ref="eric5.UI.UserInterface.html#UserInterface.__showAvailableVersionInfos" />
+      <keyword name="UserInterface.__showCertificatesDialog" id="UserInterface.__showCertificatesDialog" ref="eric5.UI.UserInterface.html#UserInterface.__showCertificatesDialog" />
       <keyword name="UserInterface.__showEricDoc" id="UserInterface.__showEricDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showEricDoc" />
       <keyword name="UserInterface.__showExternalTools" id="UserInterface.__showExternalTools" ref="eric5.UI.UserInterface.html#UserInterface.__showExternalTools" />
       <keyword name="UserInterface.__showExtrasMenu" id="UserInterface.__showExtrasMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showExtrasMenu" />
@@ -13019,7 +13020,10 @@
       <file>eric5.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>
+      <file>eric5.E5Network.E5SslCertificatesDialog.html</file>
       <file>eric5.E5Network.E5SslErrorHandler.html</file>
+      <file>eric5.E5Network.E5SslInfoDialog.html</file>
+      <file>eric5.E5Network.E5SslInfoWidget.html</file>
       <file>eric5.E5Network.E5UrlInfo.html</file>
       <file>eric5.E5XML.Config.html</file>
       <file>eric5.E5XML.DebuggerPropertiesReader.html</file>
@@ -13189,9 +13193,6 @@
       <file>eric5.Helpviewer.SpeedDial.SpeedDial.html</file>
       <file>eric5.Helpviewer.SpeedDial.SpeedDialReader.html</file>
       <file>eric5.Helpviewer.SpeedDial.SpeedDialWriter.html</file>
-      <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
-      <file>eric5.Helpviewer.SslInfoDialog.html</file>
-      <file>eric5.Helpviewer.SslInfoWidget.html</file>
       <file>eric5.Helpviewer.Sync.DirectorySyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.FtpSyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.SyncAssistantDialog.html</file>
