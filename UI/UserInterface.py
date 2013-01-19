@@ -1914,14 +1914,15 @@ class UserInterface(E5MainWindow):
 
         if SSL_AVAILABLE:
             self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
-                          self.trUtf8('Manage SSL Certificates...'),
-                          0, 0,
-                          self, 'manage_ssl_certificates')
+                    UI.PixmapCache.getIcon("certificates.png"),
+                    self.trUtf8('Manage SSL Certificates...'),
+                    0, 0,
+                    self, 'manage_ssl_certificates')
             self.certificatesAct.setStatusTip(self.trUtf8(
-                    'Manage the saved SSL certificates'))
+                'Manage the saved SSL certificates'))
             self.certificatesAct.setWhatsThis(self.trUtf8(
-                    """<b>Manage SSL Certificates...</b>"""
-                    """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
+                """<b>Manage SSL Certificates...</b>"""
+                """<p>Opens a dialog to manage the saved SSL certificates.</p>"""
             ))
             self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
             self.actions.append(self.certificatesAct)

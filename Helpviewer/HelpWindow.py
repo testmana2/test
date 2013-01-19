@@ -1183,6 +1183,7 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.searchEnginesAct)
         
         self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'),
+                      UI.PixmapCache.getIcon("passwords.png"),
                       self.trUtf8('Manage Saved Passwords...'),
                       0, 0,
                       self, 'help_manage_passwords')
@@ -1228,6 +1229,7 @@ class HelpWindow(E5MainWindow):
         
         if SSL_AVAILABLE:
             self.certificatesAct = E5Action(self.trUtf8('Manage SSL Certificates'),
+                          UI.PixmapCache.getIcon("certificates.png"),
                           self.trUtf8('Manage SSL Certificates...'),
                           0, 0,
                           self, 'help_manage_certificates')

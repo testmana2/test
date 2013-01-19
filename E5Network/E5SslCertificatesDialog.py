@@ -26,6 +26,7 @@ except ImportError:
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
@@ -42,6 +43,16 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         super().__init__(parent)
         self.setupUi(self)
+        
+        self.serversViewButton.setIcon(UI.PixmapCache.getIcon("certificates.png"))
+        self.serversDeleteButton.setIcon(UI.PixmapCache.getIcon("certificateDelete.png"))
+        self.serversExportButton.setIcon(UI.PixmapCache.getIcon("certificateExport.png"))
+        self.serversImportButton.setIcon(UI.PixmapCache.getIcon("certificateImport.png"))
+        
+        self.caViewButton.setIcon(UI.PixmapCache.getIcon("certificates.png"))
+        self.caDeleteButton.setIcon(UI.PixmapCache.getIcon("certificateDelete.png"))
+        self.caExportButton.setIcon(UI.PixmapCache.getIcon("certificateExport.png"))
+        self.caImportButton.setIcon(UI.PixmapCache.getIcon("certificateImport.png"))
         
         self.__populateServerCertificatesTree()
         self.__populateCaCertificatesTree()
