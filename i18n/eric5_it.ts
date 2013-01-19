@@ -7463,42 +7463,42 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>E5SslErrorHandler</name>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
         <source>SSL Errors</source>
         <translation type="unfinished">Errori SSL</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="123"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Errori SSL per &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Vuoi ignorarli ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="143"/>
         <source>Certificates</source>
         <translation type="unfinished">Certificati</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="137"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="143"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Certificati:&lt;br/&gt;{0}&lt;br/&gt;Vuoi accettare tutti questi certificati?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="192"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="198"/>
         <source>Name: {0}</source>
         <translation type="unfinished">Nome: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="196"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="202"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Organizzazione: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="200"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="206"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation type="unfinished">&lt;br/&gt;Emettitore: {0}</translation>
     </message>
     <message>
-        <location filename="E5Network/E5SslErrorHandler.py" line="204"/>
+        <location filename="E5Network/E5SslErrorHandler.py" line="210"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation type="unfinished">&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
     </message>
@@ -27806,7 +27806,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="749"/>
+        <location filename="Network/IRC/IrcWidget.py" line="751"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27846,53 +27846,48 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="obsolete">&lt;p&gt;Errori SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Vuoi ignorare questi errori ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="742"/>
-        <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcWidget.py" line="834"/>
+        <location filename="Network/IRC/IrcWidget.py" line="836"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished">{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="864"/>
+        <location filename="Network/IRC/IrcWidget.py" line="866"/>
         <source>Critical</source>
         <translation type="unfinished">Critico</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="848"/>
+        <location filename="Network/IRC/IrcWidget.py" line="850"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="864"/>
+        <location filename="Network/IRC/IrcWidget.py" line="866"/>
         <source>The given nickname is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="821"/>
+        <location filename="Network/IRC/IrcWidget.py" line="823"/>
         <source>CTCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="805"/>
+        <location filename="Network/IRC/IrcWidget.py" line="807"/>
         <source>Received Version request from {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="810"/>
+        <location filename="Network/IRC/IrcWidget.py" line="812"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="815"/>
+        <location filename="Network/IRC/IrcWidget.py" line="817"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="821"/>
+        <location filename="Network/IRC/IrcWidget.py" line="823"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27927,8 +27922,13 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="749"/>
+        <location filename="Network/IRC/IrcWidget.py" line="739"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcWidget.py" line="751"/>
+        <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check. SSL errors were accepted by you.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

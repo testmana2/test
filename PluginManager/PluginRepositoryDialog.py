@@ -505,8 +505,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         """
-        ignore = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
-        if not ignore:
+        ignored = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
+        if ignored == E5SslErrorHandler.NotIgnored:
             self.__downloadCancelled = True
     
     def getDownloadedPlugins(self):

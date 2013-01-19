@@ -24,6 +24,10 @@ class E5SslErrorHandler(QObject):
     It also initializes the default SSL configuration with certificates
     permanently accepted by the user already.
     """
+    NotIgnored = 0
+    SystemIgnored = 1
+    UserIgnored = 2
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -71,8 +75,9 @@ class E5SslErrorHandler(QObject):
         
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
-        @return tuple of two flags indicating to ignore the SSL errors (boolean)
-            and indicating a change of the default SSL configuration (boolean)
+        @return tuple indicating to ignore the SSL errors (one of NotIgnored,
+            SystemIgnored or UserIgnored) and indicating a change of the default
+            SSL configuration (boolean)
         """
         url = reply.url()
         ignore, defaultChanged = self.sslErrors(errors, url.host(), url.port())
@@ -92,8 +97,9 @@ class E5SslErrorHandler(QObject):
         @param errors list of SSL errors (list of QSslError)
         @param server name of the server (string)
         @keyparam port value of the port (integer)
-        @return tuple of two flags indicating to ignore the SSL errors (boolean)
-            and indicating a change of the default SSL configuration (boolean)
+        @return tuple indicating to ignore the SSL errors (one of NotIgnored,
+            SystemIgnored or UserIgnored) and indicating a change of the default
+            SSL configuration (boolean)
         """
         caMerge = {}
         certificateDict = Preferences.toDict(
@@ -117,7 +123,7 @@ class E5SslErrorHandler(QObject):
                     if cert not in caNew:
                         caNew.append(cert)
         if not errorStrings:
-            return True, False
+            return E5SslErrorHandler.SystemIgnored, False
         
         errorString = '.</li><li>'.join(errorStrings)
         ret = E5MessageBox.yesNo(None,
@@ -162,10 +168,10 @@ class E5SslErrorHandler(QObject):
                     Preferences.Prefs.settings.setValue("Ssl/CaCertificatesDict",
                         certificateDict)
             
-            return True, caRet
+            return E5SslErrorHandler.UserIgnored, caRet
         
         else:
-            return False, False
+            return E5SslErrorHandler.NotIgnored, False
     
     def __certToString(self, cert):
         """

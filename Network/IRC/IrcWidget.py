@@ -733,19 +733,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param errors list of SSL errors (list of QSslError)
         """
-        ignore, defaultChanged = self.__sslErrorHandler.sslErrors(
+        ignored, defaultChanged = self.__sslErrorHandler.sslErrors(
             errors, self.__server.getName(), self.__server.getPort())
-        if ignore:
-            if defaultChanged:
-                self.__socket.setSslConfiguration(
-                    QSslConfiguration.defaultConfiguration())
-            self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
-                self.trUtf8("""The SSL certificate for the server {0} (port {1})"""
-                            """ failed the authenticity check.""").format(
-                self.__server.getName(), self.__server.getPort()))
-            if self.__connectionState == IrcWidget.ServerConnecting:
-                self.__socket.ignoreSslErrors()
-        else:
+        if ignored == E5SslErrorHandler.NotIgnored:
             self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
                 self.trUtf8("""Could not connect to {0} (port {1}) using an SSL"""
                             """ encrypted connection. Either the server does not"""
@@ -753,6 +743,18 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                             """ you rejected the certificate.""").format(
                 self.__server.getName(), self.__server.getPort()))
             self.__socket.close()
+        else:
+            if defaultChanged:
+                self.__socket.setSslConfiguration(
+                    QSslConfiguration.defaultConfiguration())
+            if ignored == E5SslErrorHandler.UserIgnored:
+                self.networkWidget.addErrorMessage(self.trUtf8("SSL Error"),
+                    self.trUtf8("""The SSL certificate for the server {0} (port {1})"""
+                                """ failed the authenticity check. SSL errors"""
+                                """ were accepted by you.""").format(
+                    self.__server.getName(), self.__server.getPort()))
+            if self.__connectionState == IrcWidget.ServerConnecting:
+                self.__socket.ignoreSslErrors()
     
     def __setUserPrivilegePrefix(self, prefix1, prefix2):
         """

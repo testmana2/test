@@ -52,7 +52,7 @@ Module implementing a SSL error handler.
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>NotIgnored</td></tr><tr><td>SystemIgnored</td></tr><tr><td>UserIgnored</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -138,8 +138,9 @@ value of the port (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of two flags indicating to ignore the SSL errors (boolean)
-            and indicating a change of the default SSL configuration (boolean)
+tuple indicating to ignore the SSL errors (one of NotIgnored,
+            SystemIgnored or UserIgnored) and indicating a change of the default
+            SSL configuration (boolean)
 </dd>
 </dl><a NAME="E5SslErrorHandler.sslErrorsReply" ID="E5SslErrorHandler.sslErrorsReply"></a>
 <h4>E5SslErrorHandler.sslErrorsReply</h4>
@@ -157,8 +158,9 @@ list of SSL errors (list of QSslError)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-tuple of two flags indicating to ignore the SSL errors (boolean)
-            and indicating a change of the default SSL configuration (boolean)
+tuple indicating to ignore the SSL errors (one of NotIgnored,
+            SystemIgnored or UserIgnored) and indicating a change of the default
+            SSL configuration (boolean)
 </dd>
 </dl><a NAME="E5SslErrorHandler.sslErrorsReplySlot" ID="E5SslErrorHandler.sslErrorsReplySlot"></a>
 <h4>E5SslErrorHandler.sslErrorsReplySlot</h4>
