@@ -800,6 +800,9 @@ QObject
 <td><a href="#ViewManager.removeSplit">removeSplit</a></td>
 <td>Public method used to remove the current split view.</td>
 </tr><tr>
+<td><a href="#ViewManager.replaceWidget">replaceWidget</a></td>
+<td>Public method to get a reference to the replace widget.</td>
+</tr><tr>
 <td><a href="#ViewManager.saveAllEditors">saveAllEditors</a></td>
 <td>Public slot to save the contents of all editors.</td>
 </tr><tr>
@@ -820,6 +823,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.saveEditorsList">saveEditorsList</a></td>
 <td>Public slot to save a list of editors.</td>
+</tr><tr>
+<td><a href="#ViewManager.searchWidget">searchWidget</a></td>
+<td>Public method to get a reference to the search widget.</td>
 </tr><tr>
 <td><a href="#ViewManager.send">send</a></td>
 <td>Public method to send an editor command to remote editors.</td>
@@ -2568,6 +2574,16 @@ command string (string)
 <dd>
 Flag indicating successful deletion
 </dd>
+</dl><a NAME="ViewManager.replaceWidget" ID="ViewManager.replaceWidget"></a>
+<h4>ViewManager.replaceWidget</h4>
+<b>replaceWidget</b>(<i></i>)
+<p>
+        Public method to get a reference to the replace widget.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the replace widget (SearchReplaceSlidingWidget)
+</dd>
 </dl><a NAME="ViewManager.saveAllEditors" ID="ViewManager.saveAllEditors"></a>
 <h4>ViewManager.saveAllEditors</h4>
 <b>saveAllEditors</b>(<i></i>)
@@ -2632,6 +2648,16 @@ flag indicating success (boolean)
 <dt><i>editors</i></dt>
 <dd>
 list of editors to be saved
+</dd>
+</dl><a NAME="ViewManager.searchWidget" ID="ViewManager.searchWidget"></a>
+<h4>ViewManager.searchWidget</h4>
+<b>searchWidget</b>(<i></i>)
+<p>
+        Public method to get a reference to the search widget.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the search widget (SearchReplaceSlidingWidget)
 </dd>
 </dl><a NAME="ViewManager.send" ID="ViewManager.send"></a>
 <h4>ViewManager.send</h4>

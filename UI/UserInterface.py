@@ -603,14 +603,15 @@ class UserInterface(E5MainWindow):
         centralWidget = QWidget()
         layout = QVBoxLayout()
         layout.setContentsMargins(1, 1, 1, 1)
+        layout.setSpacing(1)
         layout.addWidget(self.viewmanager)
-        layout.addWidget(self.viewmanager.searchDlg)
-        layout.addWidget(self.viewmanager.replaceDlg)
+        layout.addWidget(self.viewmanager.searchWidget())
+        layout.addWidget(self.viewmanager.replaceWidget())
         self.viewmanager.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
         centralWidget.setLayout(layout)
         self.setCentralWidget(centralWidget)
-        self.viewmanager.searchDlg.hide()
-        self.viewmanager.replaceDlg.hide()
+        self.viewmanager.searchWidget().hide()
+        self.viewmanager.replaceWidget().hide()
         
         # Create layout with toolbox windows embedded in dock windows
         if self.layout == "Toolboxes":
@@ -3322,8 +3323,8 @@ class UserInterface(E5MainWindow):
         @param save flag indicating that the current profile should
             be saved (boolean)
         """
-        self.viewmanager.searchDlg.hide()
-        self.viewmanager.replaceDlg.hide()
+        self.viewmanager.searchWidget().hide()
+        self.viewmanager.replaceWidget.hide()
         self.__activateViewProfile("debug", save)
         self.setDebugProfileAct.setChecked(True)
         

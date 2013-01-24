@@ -31,6 +31,9 @@ Module implementing the search and replace widget.
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#SearchReplaceSlidingWidget">SearchReplaceSlidingWidget</a></td>
+<td>Class implementing the search and replace widget with sliding behavior.</td>
+</tr><tr>
 <td><a href="#SearchReplaceWidget">SearchReplaceWidget</a></td>
 <td>Class implementing the search and replace widget.</td>
 </tr>
@@ -39,6 +42,136 @@ Module implementing the search and replace widget.
 <table>
 <tr><td>None</td></tr>
 </table>
+<hr /><hr />
+<a NAME="SearchReplaceSlidingWidget" ID="SearchReplaceSlidingWidget"></a>
+<h2>SearchReplaceSlidingWidget</h2>
+<p>
+    Class implementing the search and replace widget with sliding behavior.
+</p><h3>Signals</h3>
+<dl>
+<dt>searchListChanged()</dt>
+<dd>
+emitted to indicate a change of the search list
+</dd>
+</dl>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SearchReplaceSlidingWidget.__init__">SearchReplaceSlidingWidget</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.__slide">__slide</a></td>
+<td>Private method to move the sliding widget.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.__slideLeft">__slideLeft</a></td>
+<td>Private slot to move the widget to the left, i.e.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.__slideRight">__slideRight</a></td>
+<td>Private slot to move the widget to the right, i.e.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.findNext">findNext</a></td>
+<td>Public slot to find the next occurrence of text.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.findPrev">findPrev</a></td>
+<td>Public slot to find the next previous of text.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.selectionChanged">selectionChanged</a></td>
+<td>Public slot tracking changes of selected text.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.show">show</a></td>
+<td>Overridden slot from QWidget.</td>
+</tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.updateSelectionCheckBox">updateSelectionCheckBox</a></td>
+<td>Public slot to update the selection check box.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="SearchReplaceSlidingWidget.__init__" ID="SearchReplaceSlidingWidget.__init__"></a>
+<h4>SearchReplaceSlidingWidget (Constructor)</h4>
+<b>SearchReplaceSlidingWidget</b>(<i>replace, vm, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>replace</i></dt>
+<dd>
+flag indicating a replace widget is called
+</dd><dt><i>vm</i></dt>
+<dd>
+reference to the viewmanager object
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget of this widget (QWidget)
+</dd>
+</dl><a NAME="SearchReplaceSlidingWidget.__slide" ID="SearchReplaceSlidingWidget.__slide"></a>
+<h4>SearchReplaceSlidingWidget.__slide</h4>
+<b>__slide</b>(<i>toLeft</i>)
+<p>
+        Private method to move the sliding widget.
+</p><dl>
+<dt><i>toLeft</i></dt>
+<dd>
+flag indicating to move to the left (boolean)
+</dd>
+</dl><a NAME="SearchReplaceSlidingWidget.__slideLeft" ID="SearchReplaceSlidingWidget.__slideLeft"></a>
+<h4>SearchReplaceSlidingWidget.__slideLeft</h4>
+<b>__slideLeft</b>(<i></i>)
+<p>
+        Private slot to move the widget to the left, i.e. show contents to the right.
+</p><a NAME="SearchReplaceSlidingWidget.__slideRight" ID="SearchReplaceSlidingWidget.__slideRight"></a>
+<h4>SearchReplaceSlidingWidget.__slideRight</h4>
+<b>__slideRight</b>(<i></i>)
+<p>
+        Private slot to move the widget to the right, i.e. show contents to the left.
+</p><a NAME="SearchReplaceSlidingWidget.findNext" ID="SearchReplaceSlidingWidget.findNext"></a>
+<h4>SearchReplaceSlidingWidget.findNext</h4>
+<b>findNext</b>(<i></i>)
+<p>
+        Public slot to find the next occurrence of text.
+</p><a NAME="SearchReplaceSlidingWidget.findPrev" ID="SearchReplaceSlidingWidget.findPrev"></a>
+<h4>SearchReplaceSlidingWidget.findPrev</h4>
+<b>findPrev</b>(<i></i>)
+<p>
+        Public slot to find the next previous of text.
+</p><a NAME="SearchReplaceSlidingWidget.selectionChanged" ID="SearchReplaceSlidingWidget.selectionChanged"></a>
+<h4>SearchReplaceSlidingWidget.selectionChanged</h4>
+<b>selectionChanged</b>(<i></i>)
+<p>
+        Public slot tracking changes of selected text.
+</p><a NAME="SearchReplaceSlidingWidget.show" ID="SearchReplaceSlidingWidget.show"></a>
+<h4>SearchReplaceSlidingWidget.show</h4>
+<b>show</b>(<i>text=''</i>)
+<p>
+        Overridden slot from QWidget.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to be shown in the findtext edit (string)
+</dd>
+</dl><a NAME="SearchReplaceSlidingWidget.updateSelectionCheckBox" ID="SearchReplaceSlidingWidget.updateSelectionCheckBox"></a>
+<h4>SearchReplaceSlidingWidget.updateSelectionCheckBox</h4>
+<b>updateSelectionCheckBox</b>(<i>editor</i>)
+<p>
+        Public slot to update the selection check box.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+reference to the editor (Editor)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="SearchReplaceWidget" ID="SearchReplaceWidget"></a>
 <h2>SearchReplaceWidget</h2>
@@ -131,7 +264,7 @@ QWidget
 </table>
 <a NAME="SearchReplaceWidget.__init__" ID="SearchReplaceWidget.__init__"></a>
 <h4>SearchReplaceWidget (Constructor)</h4>
-<b>SearchReplaceWidget</b>(<i>replace, vm, parent=None</i>)
+<b>SearchReplaceWidget</b>(<i>replace, vm, parent=None, sliding=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -144,6 +277,10 @@ reference to the viewmanager object
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this widget (QWidget)
+</dd><dt><i>sliding</i></dt>
+<dd>
+flag indicating the widget is embedded in the
+            sliding widget (boolean)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__doReplace" ID="SearchReplaceWidget.__doReplace"></a>
 <h4>SearchReplaceWidget.__doReplace</h4>

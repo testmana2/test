@@ -8,7 +8,8 @@ Module implementing the search and replace widget.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget
+from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, QSizePolicy, \
+    QFrame
 
 from .Ui_SearchWidget import Ui_SearchWidget
 from .Ui_ReplaceWidget import Ui_ReplaceWidget
@@ -31,18 +32,23 @@ class SearchReplaceWidget(QWidget):
     """
     searchListChanged = pyqtSignal()
     
-    def __init__(self, replace, vm, parent=None):
+    def __init__(self, replace, vm, parent=None, sliding=False):
         """
         Constructor
         
         @param replace flag indicating a replace widget is called
         @param vm reference to the viewmanager object
         @param parent parent widget of this widget (QWidget)
+        @param sliding flag indicating the widget is embedded in the
+            sliding widget (boolean)
         """
         super().__init__(parent)
         
         self.viewmanager = vm
         self.replace = replace
+        self.__sliding = sliding
+        if sliding:
+            self.__topWidget = parent
         
         self.findHistory = vm.getSRHistory('search')
         if replace:
@@ -657,7 +663,10 @@ character except an alphabetic character.</td></tr>
         """
         Private slot to close the widget.
         """
-        self.close()
+        if self.__sliding:
+            self.__topWidget.close()
+        else:
+            self.close()
     
     def keyPressEvent(self, event):
         """
@@ -670,4 +679,132 @@ character except an alphabetic character.</td></tr>
             if aw:
                 aw.setFocus(Qt.ActiveWindowFocusReason)
             event.accept()
-            self.close()
+            if self.__sliding:
+                self.__topWidget.close()
+            else:
+                self.close()
+
+
+class SearchReplaceSlidingWidget(QWidget):
+    """
+    Class implementing the search and replace widget with sliding behavior.
+    
+    @signal searchListChanged() emitted to indicate a change of the search list
+    """
+    searchListChanged = pyqtSignal()
+    
+    def __init__(self, replace, vm, parent=None):
+        """
+        Constructor
+        
+        @param replace flag indicating a replace widget is called
+        @param vm reference to the viewmanager object
+        @param parent parent widget of this widget (QWidget)
+        """
+        super().__init__(parent)
+        
+        self.__searchReplaceWidget = SearchReplaceWidget(replace, vm, self, True)
+        srHeight = self.__searchReplaceWidget.height()
+        
+        self.__layout = QHBoxLayout(self)
+        self.setLayout(self.__layout)
+        self.__layout.setContentsMargins(0, 0, 0, 0)
+        self.__layout.setAlignment(Qt.AlignTop)
+        
+        self.__leftButton = QToolButton(self)
+        self.__leftButton.setArrowType(Qt.LeftArrow)
+        self.__leftButton.setSizePolicy(
+            QSizePolicy.Minimum, QSizePolicy.MinimumExpanding)
+        self.__leftButton.setAutoRepeat(True)
+        
+        self.__scroller = QScrollArea(self)
+        self.__scroller.setWidget(self.__searchReplaceWidget)
+        self.__scroller.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.__scroller.setMaximumHeight(srHeight)
+        self.__scroller.setFrameShape(QFrame.NoFrame)
+        self.__scroller.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.__scroller.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.__scroller.setWidgetResizable(False)
+        
+        self.__rightButton = QToolButton(self)
+        self.__rightButton.setArrowType(Qt.RightArrow)
+        self.__rightButton.setSizePolicy(
+            QSizePolicy.Minimum, QSizePolicy.MinimumExpanding)
+        self.__rightButton.setAutoRepeat(True)
+        
+        self.__layout.addWidget(self.__leftButton)
+        self.__layout.addWidget(self.__scroller)
+        self.__layout.addWidget(self.__rightButton)
+        
+        self.setMaximumHeight(srHeight)
+        
+        self.__searchReplaceWidget.searchListChanged.connect(self.searchListChanged)
+        self.__leftButton.clicked[()].connect(self.__slideLeft)
+        self.__rightButton.clicked[()].connect(self.__slideRight)
+    
+    def findNext(self):
+        """
+        Public slot to find the next occurrence of text.
+        """
+        self.__searchReplaceWidget.findNext()
+    
+    def findPrev(self):
+        """
+        Public slot to find the next previous of text.
+        """
+        self.__searchReplaceWidget.findPrev()
+    
+    def selectionChanged(self):
+        """
+        Public slot tracking changes of selected text.
+        """
+        editor = self.sender()
+        self.__searchReplaceWidget.updateSelectionCheckBox(editor)
+    
+    @pyqtSlot(Editor)
+    def updateSelectionCheckBox(self, editor):
+        """
+        Public slot to update the selection check box.
+        
+        @param editor reference to the editor (Editor)
+        """
+        self.__searchReplaceWidget.updateSelectionCheckBox(editor)
+
+    def show(self, text=''):
+        """
+        Overridden slot from QWidget.
+        
+        @param text text to be shown in the findtext edit (string)
+        """
+        self.__searchReplaceWidget.show(text)
+        super().show()
+    
+    def __slideLeft(self):
+        """
+        Private slot to move the widget to the left, i.e. show contents to the right.
+        """
+        self.__slide(True)
+    
+    def __slideRight(self):
+        """
+        Private slot to move the widget to the right, i.e. show contents to the left.
+        """
+        self.__slide(False)
+    
+    def __slide(self, toLeft):
+        """
+        Private method to move the sliding widget.
+        
+        @param toLeft flag indicating to move to the left (boolean)
+        """
+        scrollBar = self.__scroller.horizontalScrollBar()
+        stepSize = scrollBar.singleStep()
+        if toLeft:
+            stepSize = -stepSize
+        newValue = scrollBar.value() + stepSize
+        if newValue < 0:
+            newValue = 0
+        elif newValue > scrollBar.maximum():
+            newValue = scrollBar.maximum()
+        scrollBar.setValue(newValue)

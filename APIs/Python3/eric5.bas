@@ -560,6 +560,7 @@ RevisionsValidator QValidator
 SafariImporter BookmarksImporter
 SchemeAccessHandler QObject
 Scope dict
+SearchReplaceSlidingWidget QWidget
 SearchReplaceWidget QWidget
 SearchWidget QWidget Ui_SearchWidget
 SecurityPage ConfigurationPageBase Ui_SecurityPage

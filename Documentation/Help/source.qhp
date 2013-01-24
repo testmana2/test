@@ -9133,6 +9133,16 @@
       <keyword name="Scope (Constructor)" id="Scope (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Scope.__init__" />
       <keyword name="Scope.__repr__" id="Scope.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Scope.__repr__" />
       <keyword name="Scope.__repr__" id="Scope.__repr__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Scope.__repr__" />
+      <keyword name="SearchReplaceSlidingWidget" id="SearchReplaceSlidingWidget" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget" />
+      <keyword name="SearchReplaceSlidingWidget (Constructor)" id="SearchReplaceSlidingWidget (Constructor)" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__init__" />
+      <keyword name="SearchReplaceSlidingWidget.__slide" id="SearchReplaceSlidingWidget.__slide" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slide" />
+      <keyword name="SearchReplaceSlidingWidget.__slideLeft" id="SearchReplaceSlidingWidget.__slideLeft" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideLeft" />
+      <keyword name="SearchReplaceSlidingWidget.__slideRight" id="SearchReplaceSlidingWidget.__slideRight" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideRight" />
+      <keyword name="SearchReplaceSlidingWidget.findNext" id="SearchReplaceSlidingWidget.findNext" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findNext" />
+      <keyword name="SearchReplaceSlidingWidget.findPrev" id="SearchReplaceSlidingWidget.findPrev" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findPrev" />
+      <keyword name="SearchReplaceSlidingWidget.selectionChanged" id="SearchReplaceSlidingWidget.selectionChanged" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.selectionChanged" />
+      <keyword name="SearchReplaceSlidingWidget.show" id="SearchReplaceSlidingWidget.show" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.show" />
+      <keyword name="SearchReplaceSlidingWidget.updateSelectionCheckBox" id="SearchReplaceSlidingWidget.updateSelectionCheckBox" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.updateSelectionCheckBox" />
       <keyword name="SearchReplaceWidget" id="SearchReplaceWidget" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget" />
       <keyword name="SearchReplaceWidget (Constructor)" id="SearchReplaceWidget (Constructor)" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__init__" />
       <keyword name="SearchReplaceWidget (Module)" id="SearchReplaceWidget (Module)" ref="eric5.QScintilla.SearchReplaceWidget.html" />
@@ -11963,6 +11973,7 @@
       <keyword name="ViewManager.projectOpened" id="ViewManager.projectOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectOpened" />
       <keyword name="ViewManager.receive" id="ViewManager.receive" ref="eric5.ViewManager.ViewManager.html#ViewManager.receive" />
       <keyword name="ViewManager.removeSplit" id="ViewManager.removeSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.removeSplit" />
+      <keyword name="ViewManager.replaceWidget" id="ViewManager.replaceWidget" ref="eric5.ViewManager.ViewManager.html#ViewManager.replaceWidget" />
       <keyword name="ViewManager.saveAllEditors" id="ViewManager.saveAllEditors" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAllEditors" />
       <keyword name="ViewManager.saveAsCurrentEditor" id="ViewManager.saveAsCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAsCurrentEditor" />
       <keyword name="ViewManager.saveAsEditorEd" id="ViewManager.saveAsEditorEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAsEditorEd" />
@@ -11970,6 +11981,7 @@
       <keyword name="ViewManager.saveEditor" id="ViewManager.saveEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditor" />
       <keyword name="ViewManager.saveEditorEd" id="ViewManager.saveEditorEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorEd" />
       <keyword name="ViewManager.saveEditorsList" id="ViewManager.saveEditorsList" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorsList" />
+      <keyword name="ViewManager.searchWidget" id="ViewManager.searchWidget" ref="eric5.ViewManager.ViewManager.html#ViewManager.searchWidget" />
       <keyword name="ViewManager.send" id="ViewManager.send" ref="eric5.ViewManager.ViewManager.html#ViewManager.send" />
       <keyword name="ViewManager.sendSharedEdit" id="ViewManager.sendSharedEdit" ref="eric5.ViewManager.ViewManager.html#ViewManager.sendSharedEdit" />
       <keyword name="ViewManager.setCooperationClient" id="ViewManager.setCooperationClient" ref="eric5.ViewManager.ViewManager.html#ViewManager.setCooperationClient" />

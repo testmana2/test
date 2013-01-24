@@ -27,7 +27,7 @@ from .BookmarkedFilesDialog import BookmarkedFilesDialog
 from QScintilla.Editor import Editor
 from QScintilla.EditorAssembly import EditorAssembly
 from QScintilla.GotoDialog import GotoDialog
-from QScintilla.SearchReplaceWidget import SearchReplaceWidget
+from QScintilla.SearchReplaceWidget import SearchReplaceSlidingWidget
 from QScintilla.ZoomDialog import ZoomDialog
 from QScintilla.APIsManager import APIsManager
 from QScintilla.SpellChecker import SpellChecker
@@ -175,11 +175,27 @@ class ViewManager(QObject):
         self.ui = ui
         self.dbs = dbs
         
-        self.searchDlg = SearchReplaceWidget(False, self, ui)
-        self.replaceDlg = SearchReplaceWidget(True, self, ui)
+        self.__searchWidget = SearchReplaceSlidingWidget(False, self, ui)
+        self.__replaceWidget = SearchReplaceSlidingWidget(True, self, ui)
         
-        self.checkActions.connect(self.searchDlg.updateSelectionCheckBox)
-        self.checkActions.connect(self.replaceDlg.updateSelectionCheckBox)
+        self.checkActions.connect(self.__searchWidget.updateSelectionCheckBox)
+        self.checkActions.connect(self.__replaceWidget.updateSelectionCheckBox)
+        
+    def searchWidget(self):
+        """
+        Public method to get a reference to the search widget.
+        
+        @return reference to the search widget (SearchReplaceSlidingWidget)
+        """
+        return self.__searchWidget
+        
+    def replaceWidget(self):
+        """
+        Public method to get a reference to the replace widget.
+        
+        @return reference to the replace widget (SearchReplaceSlidingWidget)
+        """
+        return self.__replaceWidget
         
     def __loadRecent(self):
         """
@@ -2419,7 +2435,7 @@ class ViewManager(QObject):
             """<p>Search the next occurrence of some text in the current editor."""
             """ The previously entered searchtext and options are reused.</p>"""
         ))
-        self.searchNextAct.triggered[()].connect(self.searchDlg.findNext)
+        self.searchNextAct.triggered[()].connect(self.__searchWidget.findNext)
         self.searchActions.append(self.searchNextAct)
         
         self.searchPrevAct = E5Action(QApplication.translate('ViewManager',
@@ -2437,7 +2453,7 @@ class ViewManager(QObject):
             """<p>Search the previous occurrence of some text in the current editor."""
             """ The previously entered searchtext and options are reused.</p>"""
         ))
-        self.searchPrevAct.triggered[()].connect(self.searchDlg.findPrev)
+        self.searchPrevAct.triggered[()].connect(self.__searchWidget.findPrev)
         self.searchActions.append(self.searchPrevAct)
         
         self.searchClearMarkersAct = E5Action(QApplication.translate('ViewManager',
@@ -3854,8 +3870,8 @@ class ViewManager(QObject):
         editor.languageChanged.connect(self.__editorConfigChanged)
         editor.eolChanged.connect(self.__editorConfigChanged)
         editor.encodingChanged.connect(self.__editorConfigChanged)
-        editor.selectionChanged.connect(self.searchDlg.selectionChanged)
-        editor.selectionChanged.connect(self.replaceDlg.selectionChanged)
+        editor.selectionChanged.connect(self.__searchWidget.selectionChanged)
+        editor.selectionChanged.connect(self.__replaceWidget.selectionChanged)
         editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
         editor.zoomValueChanged.connect(self.zoomValueChanged)
         
@@ -4883,15 +4899,16 @@ class ViewManager(QObject):
         """
         Private method to handle the search action.
         """
-        self.replaceDlg.close()
-        self.searchDlg.show(self.textForFind())
+        self.__replaceWidget.hide()
+        self.__searchWidget.show()
+        self.__searchWidget.show(self.textForFind())
         
     def __replace(self):
         """
         Private method to handle the replace action.
         """
-        self.searchDlg.close()
-        self.replaceDlg.show(self.textForFind())
+        self.__searchWidget.hide()
+        self.__replaceWidget.show(self.textForFind())
         
     def __findNextWord(self):
         """
