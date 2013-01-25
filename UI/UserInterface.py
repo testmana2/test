@@ -3324,7 +3324,7 @@ class UserInterface(E5MainWindow):
             be saved (boolean)
         """
         self.viewmanager.searchWidget().hide()
-        self.viewmanager.replaceWidget.hide()
+        self.viewmanager.replaceWidget().hide()
         self.__activateViewProfile("debug", save)
         self.setDebugProfileAct.setChecked(True)
         
