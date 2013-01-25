@@ -779,6 +779,7 @@ class SearchReplaceSlidingWidget(QWidget):
         """
         self.__searchReplaceWidget.show(text)
         super().show()
+        self.__enableScrollerButtons()
     
     def __slideLeft(self):
         """
@@ -808,3 +809,12 @@ class SearchReplaceSlidingWidget(QWidget):
         elif newValue > scrollBar.maximum():
             newValue = scrollBar.maximum()
         scrollBar.setValue(newValue)
+        self.__enableScrollerButtons()
+    
+    def __enableScrollerButtons(self):
+        """
+        Private method to set the enabled state of the scroll buttons.
+        """
+        scrollBar = self.__scroller.horizontalScrollBar()
+        self.__leftButton.setEnabled(scrollBar.value() > 0)
+        self.__rightButton.setEnabled(scrollBar.value() < scrollBar.maximum())
