@@ -4517,11 +4517,13 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the Eric documentation.
         """
-        home = Utilities.normjoinpath(getConfig('ericDocDir'),
-            "Source", "index.html")
+##        home = Utilities.normjoinpath(getConfig('ericDocDir'),
+##            "Source", "index.html")
+        home = "qthelp://org.eric5.ide/eric5/index.html"
         
         if not home.startswith("http://") and \
-           not home.startswith("https://"):
+           not home.startswith("https://") and \
+           not home.startswith("qthelp://"):
             if not os.path.exists(home):
                 E5MessageBox.warning(self,
                     self.trUtf8("Documentation Missing"),
@@ -4529,11 +4531,11 @@ class UserInterface(E5MainWindow):
                                 """ "<b>{0}</b>" could not be found.</p>""")\
                         .format(home))
                 return
-        
-        if Utilities.isWindowsPlatform():
-            home = "file:///" + Utilities.fromNativeSeparators(home)
-        else:
-            home = "file://" + home
+            
+            if Utilities.isWindowsPlatform():
+                home = "file:///" + Utilities.fromNativeSeparators(home)
+            else:
+                home = "file://" + home
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
