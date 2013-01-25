@@ -93,7 +93,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             parent = items[0]
         
         itm = QTreeWidgetItem(parent, [commonName, server, expiryDate])
-        itm.setData(0, self.CertRole, cert)
+        itm.setData(0, self.CertRole, cert.toPem())
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_serversCertificatesTree_currentItemChanged(self, current, previous):
@@ -114,7 +114,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         Private slot to show data of the selected server certificate.
         """
-        cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
+        cert = QSslCertificate.fromData(
+            self.serversCertificatesTree.currentItem().data(0, self.CertRole))[0]
         dlg = SslInfoDialog(cert, self)
         dlg.exec_()
     
@@ -285,7 +286,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             parent = items[0]
         
         itm = QTreeWidgetItem(parent, [commonName, expiryDate])
-        itm.setData(0, self.CertRole, cert)
+        itm.setData(0, self.CertRole, cert.toPem())
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_caCertificatesTree_currentItemChanged(self, current, previous):
@@ -306,7 +307,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         Private slot to show data of the selected CA certificate.
         """
-        cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
+        cert = QSslCertificate.fromData(
+            self.caCertificatesTree.currentItem().data(0, self.CertRole))[0]
         dlg = SslInfoDialog(cert, self)
         dlg.exec_()
     
