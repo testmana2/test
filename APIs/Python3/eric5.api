@@ -7002,6 +7002,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomValueChanged?7
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat?1(parent=None)
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.findNext?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.findPrev?4()
+eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.resizeEvent?4(evt)
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.searchListChanged?7
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.selectionChanged?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.show?4(text='')

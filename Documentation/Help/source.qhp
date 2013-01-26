@@ -9141,6 +9141,7 @@
       <keyword name="SearchReplaceSlidingWidget.__slideRight" id="SearchReplaceSlidingWidget.__slideRight" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideRight" />
       <keyword name="SearchReplaceSlidingWidget.findNext" id="SearchReplaceSlidingWidget.findNext" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findNext" />
       <keyword name="SearchReplaceSlidingWidget.findPrev" id="SearchReplaceSlidingWidget.findPrev" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findPrev" />
+      <keyword name="SearchReplaceSlidingWidget.resizeEvent" id="SearchReplaceSlidingWidget.resizeEvent" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.resizeEvent" />
       <keyword name="SearchReplaceSlidingWidget.selectionChanged" id="SearchReplaceSlidingWidget.selectionChanged" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.selectionChanged" />
       <keyword name="SearchReplaceSlidingWidget.show" id="SearchReplaceSlidingWidget.show" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.show" />
       <keyword name="SearchReplaceSlidingWidget.updateSelectionCheckBox" id="SearchReplaceSlidingWidget.updateSelectionCheckBox" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.updateSelectionCheckBox" />

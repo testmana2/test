@@ -818,3 +818,13 @@ class SearchReplaceSlidingWidget(QWidget):
         scrollBar = self.__scroller.horizontalScrollBar()
         self.__leftButton.setEnabled(scrollBar.value() > 0)
         self.__rightButton.setEnabled(scrollBar.value() < scrollBar.maximum())
+    
+    def resizeEvent(self, evt):
+        """
+        Protected method to handle resize events.
+        
+        @param evt reference to the resize event (QResizeEvent)
+        """
+        self.__enableScrollerButtons()
+        
+        super().resizeEvent(evt)
