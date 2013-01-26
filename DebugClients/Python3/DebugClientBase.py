@@ -16,6 +16,7 @@ import os
 import time
 import imp
 import re
+import atexit
 
 
 import DebugProtocol
@@ -608,12 +609,23 @@ class DebugClientBase(object):
                     self.cover.erase()
                 sys.modules['__main__'] = self.debugMod
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
-                self.cover.start()
-                exec(open(sys.argv[0], encoding=self.__coding).read(),
-                     self.debugMod.__dict__)
-                self.cover.stop()
-                self.cover.save()
-                self.writestream.flush()
+                fp = open(sys.argv[0], encoding=self.__coding)
+                try:
+                    script = fp.read()
+                finally:
+                    fp.close()
+                if script:
+                    if not script.endswith('\n'):
+                        script += '\n'
+                    code = compile(script, sys.argv[0], 'exec')
+                    self.cover.start()
+                    try:
+                        exec(code, self.debugMod.__dict__)
+                    except SystemExit:
+                        atexit._run_exitfuncs()
+                    self.cover.stop()
+                    self.cover.save()
+                    self.writestream.flush()
                 return
 
             if cmd == DebugProtocol.RequestShutdown:
