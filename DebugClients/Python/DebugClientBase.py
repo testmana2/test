@@ -16,6 +16,7 @@ import os
 import time
 import imp
 import re
+import atexit
 
 
 import DebugProtocol
@@ -585,7 +586,10 @@ class DebugClientBase(object):
                 sys.modules['__main__'] = self.debugMod
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 self.cover.start()
-                execfile(sys.argv[0], self.debugMod.__dict__)
+                try:
+                    execfile(sys.argv[0], self.debugMod.__dict__)
+                except SystemExit:
+                    atexit._run_exitfuncs()
                 self.cover.stop()
                 self.cover.save()
                 self.writestream.flush()
