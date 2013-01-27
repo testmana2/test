@@ -555,8 +555,14 @@ class DebugClientBase(object):
                 
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
-                execfile(sys.argv[0], self.debugMod.__dict__)
+                res = 0
+                try:
+                    execfile(sys.argv[0], self.debugMod.__dict__)
+                except SystemExit as exc:
+                    res = exc.code
+                    atexit._run_exitfuncs()
                 self.writestream.flush()
+                self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestCoverage:
@@ -585,16 +591,20 @@ class DebugClientBase(object):
                     self.cover.erase()
                 sys.modules['__main__'] = self.debugMod
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
+                self.running = sys.argv[0]
+                res = 0
                 self.cover.start()
                 try:
                     execfile(sys.argv[0], self.debugMod.__dict__)
-                except SystemExit:
+                except SystemExit as exc:
+                    res = exc.code
                     atexit._run_exitfuncs()
                 self.cover.stop()
                 self.cover.save()
                 self.writestream.flush()
+                self.progTerminated(res)
                 return
-
+            
             if cmd == DebugProtocol.RequestProfile:
                 sys.setprofile(None)
                 import PyProfile
@@ -620,9 +630,16 @@ class DebugClientBase(object):
                     self.prof.erase()
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
-                self.prof.run('execfile(%r)' % sys.argv[0])
+                self.running = sys.argv[0]
+                res = 0
+                try:
+                    self.prof.run('execfile(%r)' % sys.argv[0])
+                except SystemExit as exc:
+                    res = exc.code
+                    atexit._run_exitfuncs()
                 self.prof.save()
                 self.writestream.flush()
+                self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestShutdown:

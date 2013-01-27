@@ -542,9 +542,15 @@ class DebugClientBase(object):
                 
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
-                exec(open(sys.argv[0], encoding=self.__coding).read(),
-                     self.debugMod.__dict__)
+                res = 0
+                try:
+                    exec(open(sys.argv[0], encoding=self.__coding).read(),
+                         self.debugMod.__dict__)
+                except SystemExit as exc:
+                    res = exc.code
+                    atexit._run_exitfuncs()
                 self.writestream.flush()
+                self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestProfile:
@@ -578,9 +584,18 @@ class DebugClientBase(object):
                 finally:
                     fp.close()
                 if script:
-                    self.prof.run("exec({0!r}\n)".format(script))
+                    if not script.endswith('\n'):
+                        script += '\n'
+                    self.running = sys.argv[0]
+                    res = 0
+                    try:
+                        self.prof.run(script)
+                    except SystemExit as exc:
+                        res = exc.code
+                        atexit._run_exitfuncs()
                     self.prof.save()
                     self.writestream.flush()
+                    self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestCoverage:
@@ -618,14 +633,18 @@ class DebugClientBase(object):
                     if not script.endswith('\n'):
                         script += '\n'
                     code = compile(script, sys.argv[0], 'exec')
+                    self.running = sys.argv[0]
+                    res = 0
                     self.cover.start()
                     try:
                         exec(code, self.debugMod.__dict__)
-                    except SystemExit:
+                    except SystemExit as exc:
+                        res = exc.code
                         atexit._run_exitfuncs()
                     self.cover.stop()
                     self.cover.save()
                     self.writestream.flush()
+                    self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestShutdown:
