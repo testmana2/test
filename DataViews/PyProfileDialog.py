@@ -19,8 +19,6 @@ from E5Gui import E5MessageBox
 from .Ui_PyProfileDialog import Ui_PyProfileDialog
 import Utilities
 
-from eric5config import getConfig
-
 
 class ProfileTreeWidgetItem(QTreeWidgetItem):
     """
@@ -68,7 +66,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         self.cancelled = False
         self.exclude = True
-        self.ericpath = getConfig('ericDir')
+        self.ericpath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.pyLibPath = Utilities.getPythonLibPath()
         
         self.summaryList.headerItem().setText(self.summaryList.columnCount(), "")
@@ -162,7 +160,10 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                     return
                 
                 if not (self.ericpath and func[0].startswith(self.ericpath)) and \
-                   not (exclude and func[0].startswith(self.pyLibPath)):
+                   not func[0].startswith("DebugClients") and \
+                   func[0] != "profile" and \
+                   not (exclude and (
+                        func[0].startswith(self.pyLibPath) or func[0] == "")):
                     if self.file is None or func[0].startswith(self.file) or \
                        func[0].startswith(self.pyLibPath):
                         # calculate the totals
