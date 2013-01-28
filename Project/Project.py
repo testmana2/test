@@ -734,7 +734,7 @@ class Project(QObject):
                     self.otherssubdirs.append(dn)
             
             # create hash value, if it doesn't have one
-            if not self.pdata["HASH"][0]:
+            if reader.version.startswith("5.") and not self.pdata["HASH"][0]:
                 hash = str(QCryptographicHash.hash(
                     QByteArray(self.ppath.encode("utf-8")),
                     QCryptographicHash.Sha1).toHex(),
@@ -758,6 +758,13 @@ class Project(QObject):
         if self.vcs is not None:
             self.pdata["VCSOPTIONS"] = [copy.deepcopy(self.vcs.vcsGetOptions())]
             self.pdata["VCSOTHERDATA"] = [copy.deepcopy(self.vcs.vcsGetOtherData())]
+        
+        if not self.pdata["HASH"][0]:
+            hash = str(QCryptographicHash.hash(
+                QByteArray(self.ppath.encode("utf-8")),
+                QCryptographicHash.Sha1).toHex(),
+                encoding="utf-8")
+            self.pdata["HASH"] = [hash]
         
         if fn is None:
             fn = self.pfile
