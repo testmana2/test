@@ -322,7 +322,9 @@ def cleanUp():
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux"):
         for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/applications/eric5.desktop"]:
+                     "/usr/share/applications/eric5.desktop",
+                     "/usr/share/pixmaps/ericWeb.png",
+                     "/usr/share/applications/eric5_webbrowser.desktop"]:
             if os.path.exists(name):
                 os.remove(name)
     
@@ -427,6 +429,8 @@ def shutilCopy(src, dst, perm=0o644):
 def installEric():
     """
     Actually perform the installation steps.
+    
+    @return result code (integer)
     """
     global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
     
@@ -520,11 +524,11 @@ def installEric():
         
     except IOError as msg:
         sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
-        exit(7)
+        return(7)
         
     except OSError as msg:
         sys.stderr.write('OSError: {0}\nTry install with admin rights.\n'.format(msg))
-        exit(7)
+        return(7)
     
     # copy some text files to the doc area
     for name in ["LICENSE.GPL3", "THANKS", "changelog"]:
@@ -579,21 +583,27 @@ def installEric():
             dst = os.path.normpath(os.path.join(distDir, "usr/share/pixmaps"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
+            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric.png"),
                        os.path.join(dst, "eric.png"))
             dst = os.path.normpath(os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
         else:
-            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric_2.png"),
+            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric.png"),
                 "/usr/share/pixmaps/eric.png")
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"),
+                "/usr/share/applications")
+            shutilCopy(os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
+                "/usr/share/pixmaps/ericWeb.png")
+            shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
                 "/usr/share/applications")
     
     # Create a Mac application bundle
     if sys.platform == "darwin":
         createMacAppBundle(cfg['ericDir'])
+    
+    return 0
 
 
 def createMacAppBundle(pydir):
@@ -1119,7 +1129,7 @@ def main(argv):
             py_compile.compile(configName,
                                dfile=os.path.join(modDir, "eric5config.py"))
     print("\nInstalling eric5 ...")
-    installEric()
+    res = installEric()
     
     # do some cleanup
     try:
@@ -1135,7 +1145,7 @@ def main(argv):
     print("\nInstallation complete.")
     print()
     
-    exit()
+    exit(res)
     
     
 if __name__ == "__main__":

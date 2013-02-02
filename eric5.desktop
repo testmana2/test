@@ -1,4 +1,5 @@
 [Desktop Entry]
+Version=1.0
 Type=Application
 Exec=eric5
 MimeType=text/x-python;
