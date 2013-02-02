@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
+<!-- Saved: 2013-02-02, 14:35:00 -->
+<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -1498,6 +1500,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Helpviewer/data/icons/setting.png</Other>
     <Other>Helpviewer/data/javascript/jquery-ui.js</Other>
     <Other>Helpviewer/data/javascript/jquery.js</Other>
+    <Other>README-Raspberry.txt</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

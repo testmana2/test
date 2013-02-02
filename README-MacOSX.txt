@@ -378,8 +378,9 @@ In the extracted cx_freeze directory execute the command
 
 sudo python3 setup.py install
 
-This completes this installation instruction. Please enjoy using eric4 and let
+This completes this installation instruction. Please enjoy using eric5 and let
 the world know about it.
+
 
 Appendix A Update of MacPorts
 -----------------------------
