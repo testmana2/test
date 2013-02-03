@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -7102,152 +7103,152 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation type="unfinished">Gestor de Certificados SSL</translation>
+        <translation>Gestor de Certificados SSL</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation type="unfinished">&amp;Servidores</translation>
+        <translation>&amp;Servidores</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation type="unfinished">Ha almacenado certificados que identifican estos servidores:</translation>
+        <translation>Ha almacenado certificados que identifican estos servidores:</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation type="unfinished">Nombre de certificado</translation>
+        <translation>Nombre de certificado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation type="unfinished">Servidor</translation>
+        <translation>Servidor</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation type="unfinished">Fecha de expiración</translation>
+        <translation>Fecha de expiración</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation type="unfinished">Pulse para ver el certificado seleccionado</translation>
+        <translation>Pulse para ver el certificado seleccionado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation type="unfinished">&amp;Ver...</translation>
+        <translation>&amp;Ver...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation type="unfinished">Pulse para importar un certificado</translation>
+        <translation>Pulse para importar un certificado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished">&amp;Importar...</translation>
+        <translation>&amp;Importar...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="181"/>
         <source>Press to export the selected certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para exportar el certificado seleccionado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished">&amp;Exportar...</translation>
+        <translation>&amp;Exportar...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation type="unfinished">Pulse para borrar el certificado seleccionado</translation>
+        <translation>Pulse para borrar el certificado seleccionado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation type="unfinished">&amp;Borrar...</translation>
+        <translation>&amp;Borrar...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation type="unfinished">&amp;Autoridades Certificadoras</translation>
+        <translation>&amp;Autoridades Certificadoras</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation type="unfinished">Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
+        <translation>Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="274"/>
         <source>(Unknown)</source>
-        <translation type="unfinished">(Desconocido)</translation>
+        <translation>(Desconocido)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="276"/>
         <source>(Unknown common name)</source>
-        <translation type="unfinished">(Nombre común desconocido)</translation>
+        <translation>(Nombre común desconocido)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
         <source>Delete Server Certificate</source>
-        <translation type="unfinished">Borrar Certificado del Servidor</translation>
+        <translation>Borrar Certificado del Servidor</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="127"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
         <source>Import Certificate</source>
-        <translation type="unfinished">Importar Certificado</translation>
+        <translation>Importar Certificado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="363"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
         <source>Delete CA Certificate</source>
-        <translation type="unfinished">Borrar Certificado de la CA</translation>
+        <translation>Borrar Certificado de la CA</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="319"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
         <source>Export Certificate</source>
-        <translation type="unfinished">Exportar Certificado</translation>
+        <translation>Exportar Certificado</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="399"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation type="unfinished">Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
+        <translation>Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="415"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="425"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="445"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation type="unfinished">Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
+        <translation>Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="455"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -7255,42 +7256,42 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
         <source>SSL Errors</source>
-        <translation type="unfinished"></translation>
+        <translation>Errores SSL</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="129"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Errores de SSL para &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Errores de SSL para &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="143"/>
         <source>Certificates</source>
-        <translation type="unfinished">Certificados</translation>
+        <translation>Certificados</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="143"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Certificados:&lt;br/&gt;{0}&lt;br/&gt;¿Desea aceptar todos estos certificados?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Certificados:&lt;br/&gt;{0}&lt;br/&gt;¿Desea aceptar todos estos certificados?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="198"/>
         <source>Name: {0}</source>
-        <translation type="unfinished">Nombre: {0}</translation>
+        <translation>Nombre: {0}</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="202"/>
         <source>&lt;br/&gt;Organization: {0}</source>
-        <translation type="unfinished">&lt;br/&gt;Organización: {0}</translation>
+        <translation>&lt;br/&gt;Organización: {0}</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="206"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
-        <translation type="unfinished">&lt;br/&gt;Emisor: {0}</translation>
+        <translation>&lt;br/&gt;Emisor: {0}</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslErrorHandler.py" line="210"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
-        <translation type="unfinished">&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
+        <translation>&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
     </message>
 </context>
 <context>
@@ -7298,7 +7299,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Network/E5SslInfoDialog.ui" line="14"/>
         <source>SSL Certificate Info</source>
-        <translation type="unfinished">Información del Certificado SSL</translation>
+        <translation>Información del Certificado SSL</translation>
     </message>
 </context>
 <context>
@@ -7306,77 +7307,77 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="17"/>
         <source>This certificated has been blacklisted.</source>
-        <translation type="unfinished">Este certificado está en una lista negra.</translation>
+        <translation>Este certificado está en una lista negra.</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="24"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Emitido para&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Emitido para&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="118"/>
         <source>Common Name (CN)</source>
-        <translation type="unfinished">Nombre Común (CN)</translation>
+        <translation>Nombre Común (CN)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="138"/>
         <source>Organization (O)</source>
-        <translation type="unfinished">Organización (O)</translation>
+        <translation>Organización (O)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="158"/>
         <source>Organizational Unit (OU)</source>
-        <translation type="unfinished">Unidad Organizacional (OU)</translation>
+        <translation>Unidad Organizacional (OU)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="91"/>
         <source>Serialnumber</source>
-        <translation type="unfinished">Número de serie</translation>
+        <translation>Número de serie</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="111"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Emitido por&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Emitido por&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="178"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Validez&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Validez&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="185"/>
         <source>Issued on</source>
-        <translation type="unfinished">Emitido a</translation>
+        <translation>Emitido a</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="205"/>
         <source>Expires on</source>
-        <translation type="unfinished">Expira en</translation>
+        <translation>Expira en</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="225"/>
         <source>This certificate is not valid yet or has expired.</source>
-        <translation type="unfinished">Este certificado no es válido aún o ha expirado.</translation>
+        <translation>Este certificado no es válido aún o ha expirado.</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="232"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="239"/>
         <source>SHA1-Fingerprint</source>
-        <translation type="unfinished">SHA1-Fingerprint</translation>
+        <translation>SHA1-Fingerprint</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.ui" line="259"/>
         <source>MD5-Fingerprint</source>
-        <translation type="unfinished">MD5-Fingerprint</translation>
+        <translation>MD5-Fingerprint</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.py" line="111"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished">&lt;no es parte del certificado&gt;</translation>
+        <translation>&lt;no es parte del certificado&gt;</translation>
     </message>
 </context>
 <context>
@@ -14306,7 +14307,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1009"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -17615,22 +17616,22 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage SSL Certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Certificados SSL</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1230"/>
         <source>Manage SSL Certificates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Certificados SSL...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1234"/>
         <source>Manage the saved SSL certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar los certificados SSL almacenados</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Gestionar Certificados SSL&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar los certificados SSL almacenados.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17953,17 +17954,17 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="929"/>
         <source>Revert changes</source>
-        <translation type="unfinished">Revertir cambios</translation>
+        <translation>Revertir cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="922"/>
         <source>Do you really want to revert all changes to these files or directories?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea revertir todos los cambios a estos archivos o directorios?</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="929"/>
         <source>Do you really want to revert all changes of the project?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea revertir todos los cambios del proyecto?</translation>
     </message>
 </context>
 <context>
@@ -27290,12 +27291,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="739"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha podido conectar a {0} (puerto {1}) utilizando una conexión encriptada sobre SSL. O bien el servidor no soporta SSL (¿se ha utilizado el puerto correcto?) o bien usted ha rechazado el certificado.</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="751"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check. SSL errors were accepted by you.</source>
-        <translation type="unfinished"></translation>
+        <translation>El certificado SSL para el servidor {0} (puerto {1}) ha fallado la comprobación de autenticidad. Los errores SSL han sido aceptados por usted.</translation>
     </message>
 </context>
 <context>
@@ -42209,17 +42210,17 @@ Not connected</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1119"/>
         <source>Revert changes</source>
-        <translation type="unfinished">Revertir cambios</translation>
+        <translation>Revertir cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1112"/>
         <source>Do you really want to revert all changes to these files or directories?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea revertir todos los cambios a estos archivos o directorios?</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1119"/>
         <source>Do you really want to revert all changes of the project?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea revertir todos los cambios del proyecto?</translation>
     </message>
 </context>
 <context>
@@ -52559,22 +52560,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1916"/>
         <source>Manage SSL Certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Certificados SSL</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1916"/>
         <source>Manage SSL Certificates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Certificados SSL...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1920"/>
         <source>Manage the saved SSL certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar los certificados SSL guardados</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1922"/>
         <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Gestionar Certificados SSL...&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar los certificados SSL guardados.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
