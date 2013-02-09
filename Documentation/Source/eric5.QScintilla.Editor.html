@@ -938,6 +938,9 @@ QsciScintillaCompat
 <td><a href="#Editor.refresh">refresh</a></td>
 <td>Public slot to refresh the editor contents.</td>
 </tr><tr>
+<td><a href="#Editor.refreshCoverageAnnotations">refreshCoverageAnnotations</a></td>
+<td>Public method to refresh the code coverage annotations.</td>
+</tr><tr>
 <td><a href="#Editor.removeClone">removeClone</a></td>
 <td>Public method to remove a clone from our list.</td>
 </tr><tr>
@@ -2399,10 +2402,15 @@ ignored
         Public method called by the viewmanager to finally get rid of us.
 </p><a NAME="Editor.codeCoverageShowAnnotations" ID="Editor.codeCoverageShowAnnotations"></a>
 <h4>Editor.codeCoverageShowAnnotations</h4>
-<b>codeCoverageShowAnnotations</b>(<i></i>)
+<b>codeCoverageShowAnnotations</b>(<i>silent=False</i>)
 <p>
         Public method to handle the show code coverage annotations context menu action.
-</p><a NAME="Editor.commentLine" ID="Editor.commentLine"></a>
+</p><dl>
+<dt><i>silent</i></dt>
+<dd>
+flag indicating to not show any dialog (boolean)
+</dd>
+</dl><a NAME="Editor.commentLine" ID="Editor.commentLine"></a>
 <h4>Editor.commentLine</h4>
 <b>commentLine</b>(<i></i>)
 <p>
@@ -3304,6 +3312,11 @@ command string (string)
 <b>refresh</b>(<i></i>)
 <p>
         Public slot to refresh the editor contents.
+</p><a NAME="Editor.refreshCoverageAnnotations" ID="Editor.refreshCoverageAnnotations"></a>
+<h4>Editor.refreshCoverageAnnotations</h4>
+<b>refreshCoverageAnnotations</b>(<i></i>)
+<p>
+        Public method to refresh the code coverage annotations.
 </p><a NAME="Editor.removeClone" ID="Editor.removeClone"></a>
 <h4>Editor.removeClone</h4>
 <b>removeClone</b>(<i>editor</i>)
