@@ -4161,6 +4161,7 @@
       <keyword name="Editor.receive" id="Editor.receive" ref="eric5.QScintilla.Editor.html#Editor.receive" />
       <keyword name="Editor.redo" id="Editor.redo" ref="eric5.QScintilla.Editor.html#Editor.redo" />
       <keyword name="Editor.refresh" id="Editor.refresh" ref="eric5.QScintilla.Editor.html#Editor.refresh" />
+      <keyword name="Editor.refreshCoverageAnnotations" id="Editor.refreshCoverageAnnotations" ref="eric5.QScintilla.Editor.html#Editor.refreshCoverageAnnotations" />
       <keyword name="Editor.removeClone" id="Editor.removeClone" ref="eric5.QScintilla.Editor.html#Editor.removeClone" />
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric5.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric5.QScintilla.Editor.html#Editor.saveFile" />
