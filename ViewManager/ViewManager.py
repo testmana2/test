@@ -3815,7 +3815,10 @@ class ViewManager(QObject):
         if self.currentEditor is not None:
             self.currentEditor.highlight()
             self.currentEditor = None
-            
+        
+        for editor in self.editors:
+            editor.refreshCoverageAnnotations()
+        
         self.__setSbFile()
         
     def openSourceFile(self, fn, lineno=-1, filetype="",
