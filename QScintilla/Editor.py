@@ -179,6 +179,7 @@ class Editor(QsciScintillaCompat):
         self.warnings = {}          # key:   marker handle
                                     # value: list of warning messages
         self.notcoveredMarkers = []  # just a list of marker handles
+        self.showingNotcoveredMarkers = False
         
         self.condHistory = []
         self.lexer_ = None
@@ -328,6 +329,7 @@ class Editor(QsciScintillaCompat):
             self.bookmarks = editor.bookmarks
             self.syntaxerrors = editor.syntaxerrors
             self.notcoveredMarkers = editor.notcoveredMarkers
+            self.showingNotcoveredMarkers = editor.showingNotcoveredMarkers
             self.isResourcesFile = editor.isResourcesFile
             self.lastModified = editor.lastModified
             
@@ -393,9 +395,6 @@ class Editor(QsciScintillaCompat):
             # it's a clone
             self.__languageChanged(editor.apiLanguage, propagate=False)
             self.__encodingChanged(editor.encoding, propagate=False)
-        
-        self.__coverageMarkersShown = False   # flag remembering the current status of the
-                                              # code coverage markers
         
         self.setAcceptDrops(True)
         
@@ -4513,9 +4512,9 @@ class Editor(QsciScintillaCompat):
         self.profileMenuAct.setEnabled(prEnable)
         self.coverageMenuAct.setEnabled(coEnable)
         self.coverageShowAnnotationMenuAct.setEnabled(
-            coEnable and not self.__coverageMarkersShown)
+            coEnable and len(self.notcoveredMarkers) == 0)
         self.coverageHideAnnotationMenuAct.setEnabled(
-            self.__coverageMarkersShown)
+            len(self.notcoveredMarkers) > 0)
         
         self.showMenu.emit("Show", self.menuShow,  self)
         
@@ -4897,10 +4896,21 @@ class Editor(QsciScintillaCompat):
             self.codecoverage.show()
             self.codecoverage.start(fn, self.fileName)
         
-    def codeCoverageShowAnnotations(self):
+    def refreshCoverageAnnotations(self):
+        """
+        Public method to refresh the code coverage annotations.
+        """
+        if self.showingNotcoveredMarkers:
+            self.codeCoverageShowAnnotations(silent=True)
+        
+    def codeCoverageShowAnnotations(self, silent=False):
         """
         Public method to handle the show code coverage annotations context menu action.
+        
+        @param silent flag indicating to not show any dialog (boolean)
         """
+        self.__codeCoverageHideAnnotations()
+        
         fn = self.__getCodeCoverageFile()
         if fn:
             cover = coverage(data_file=fn)
@@ -4912,15 +4922,17 @@ class Editor(QsciScintillaCompat):
                     handle = self.markerAdd(line - 1, self.notcovered)
                     self.notcoveredMarkers.append(handle)
                     self.coverageMarkersShown.emit(True)
-                    self.__coverageMarkersShown = True
             else:
-                E5MessageBox.information(self,
-                    self.trUtf8("Show Code Coverage Annotations"),
-                    self.trUtf8("""All lines have been covered."""))
+                if not silent:
+                    E5MessageBox.information(self,
+                        self.trUtf8("Show Code Coverage Annotations"),
+                        self.trUtf8("""All lines have been covered."""))
+            self.showingNotcoveredMarkers = True
         else:
-            E5MessageBox.warning(self,
-                self.trUtf8("Show Code Coverage Annotations"),
-                self.trUtf8("""There is no coverage file available."""))
+            if not silent:
+                E5MessageBox.warning(self,
+                    self.trUtf8("Show Code Coverage Annotations"),
+                    self.trUtf8("""There is no coverage file available."""))
         
     def __codeCoverageHideAnnotations(self):
         """
@@ -4930,7 +4942,7 @@ class Editor(QsciScintillaCompat):
             self.markerDeleteHandle(handle)
         self.notcoveredMarkers = []
         self.coverageMarkersShown.emit(False)
-        self.__coverageMarkersShown = False
+        self.showingNotcoveredMarkers = False
         
     def hasCoverageMarkers(self):
         """
