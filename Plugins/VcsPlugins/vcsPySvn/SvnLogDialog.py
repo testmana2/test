@@ -18,7 +18,6 @@ from .SvnUtilities import formatTime
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnLogDialog import Ui_SvnLogDialog
-from .SvnDiffDialog import SvnDiffDialog
 
 import Utilities
 
@@ -228,6 +227,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.contents.scrollToAnchor(ver)
         
         if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(filename, [v1, v2], pegRev=self.__pegRev)

@@ -25,37 +25,7 @@ from VCS.VersionControl import VersionControl
 import pysvn
 
 from .SvnDialog import SvnDialog
-from .SvnCommitDialog import SvnCommitDialog
-from .SvnLogDialog import SvnLogDialog
-from .SvnLogBrowserDialog import SvnLogBrowserDialog
-from .SvnDiffDialog import SvnDiffDialog
-from .SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
-from .SvnStatusDialog import SvnStatusDialog
-from .SvnTagDialog import SvnTagDialog
-from .SvnTagBranchListDialog import SvnTagBranchListDialog
-from .SvnCopyDialog import SvnCopyDialog
-from .SvnCommandDialog import SvnCommandDialog
-from .SvnSwitchDialog import SvnSwitchDialog
-from .SvnMergeDialog import SvnMergeDialog
-from .SvnPropListDialog import SvnPropListDialog
-from .SvnPropSetDialog import SvnPropSetDialog
-from .SvnPropDelDialog import SvnPropDelDialog
-from .SvnOptionsDialog import SvnOptionsDialog
-from .SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
-from .SvnBlameDialog import SvnBlameDialog
-from .SvnInfoDialog import SvnInfoDialog
-from .SvnRelocateDialog import SvnRelocateDialog
-from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
-from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
-from .SvnChangeListsDialog import SvnChangeListsDialog
-from .SvnStatusMonitorThread import SvnStatusMonitorThread
 from .SvnUtilities import getConfigPath, amendConfig, createDefaultConfig
-
-from .ProjectBrowserHelper import SvnProjectBrowserHelper
-
-from Plugins.VcsPlugins.vcsSubversion.SvnDialog import SvnDialog as SvnProcessDialog
-
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 
 import Utilities
 
@@ -476,6 +446,7 @@ class Subversion(VersionControl):
         if not noDialog and not message:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
+                from .SvnCommitDialog import SvnCommitDialog
                 self.__commitDialog = SvnCommitDialog(self.svnGetChangelists(), self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
@@ -895,6 +866,7 @@ class Subversion(VersionControl):
             force = True
             accepted = True
         else:
+            from .SvnCopyDialog import SvnCopyDialog
             dlg = SvnCopyDialog(name, None, True, "--force" in opts)
             accepted = (dlg.exec_() == QDialog.Accepted)
             if accepted:
@@ -961,6 +933,7 @@ class Subversion(VersionControl):
             self.trUtf8("Select number of entries to show."),
             self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
         if ok:
+            from .SvnLogDialog import SvnLogDialog
             self.log = SvnLogDialog(self)
             self.log.show()
             QApplication.processEvents()
@@ -990,6 +963,7 @@ class Subversion(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
+        from .SvnDiffDialog import SvnDiffDialog
         self.diff = SvnDiffDialog(self)
         self.diff.show()
         QApplication.processEvents()
@@ -1003,6 +977,7 @@ class Subversion(VersionControl):
         @param name file/directory name(s) to show the status of
             (string or list of strings)
         """
+        from .SvnStatusDialog import SvnStatusDialog
         self.status = SvnStatusDialog(self)
         self.status.show()
         QApplication.processEvents()
@@ -1030,6 +1005,7 @@ class Subversion(VersionControl):
             url = None
         else:
             url = self.svnNormalizeURL(reposURL)
+        from .SvnTagDialog import SvnTagDialog
         dlg = SvnTagDialog(self.allTagsBranchesList, url,
                            self.otherData["standardLayout"])
         if dlg.exec_() == QDialog.Accepted:
@@ -1109,6 +1085,7 @@ class Subversion(VersionControl):
         project = e5App().getObject("Project")
         names = [project.getRelativePath(nam) for nam in name]
         if names[0]:
+            from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
             dia = DeleteFilesConfirmationDialog(self.parent(),
                 self.trUtf8("Revert changes"),
                 self.trUtf8("Do you really want to revert all changes to these files"
@@ -1161,6 +1138,7 @@ class Subversion(VersionControl):
             url = None
         else:
             url = self.svnNormalizeURL(reposURL)
+        from .SvnSwitchDialog import SvnSwitchDialog
         dlg = SvnSwitchDialog(self.allTagsBranchesList, url,
                               self.otherData["standardLayout"])
         if dlg.exec_() == QDialog.Accepted:
@@ -1222,6 +1200,7 @@ class Subversion(VersionControl):
         dname, fname = self.splitPath(name)
         
         opts = self.options['global']
+        from .SvnMergeDialog import SvnMergeDialog
         dlg = SvnMergeDialog(self.mergeList[0], self.mergeList[1], self.mergeList[2],
                              "--force" in opts)
         if dlg.exec_() == QDialog.Accepted:
@@ -1594,6 +1573,7 @@ class Subversion(VersionControl):
         
         @param name directory name of the working directory (string)
         """
+        from .SvnCommandDialog import SvnCommandDialog
         dlg = SvnCommandDialog(self.commandHistory, self.wdHistory, name)
         if dlg.exec_() == QDialog.Accepted:
             command, wd = dlg.getData()
@@ -1611,6 +1591,8 @@ class Subversion(VersionControl):
             args = []
             self.addArguments(args, commandList)
             
+            from Plugins.VcsPlugins.vcsSubversion.SvnDialog import \
+                SvnDialog as SvnProcessDialog
             dia = SvnProcessDialog(self.trUtf8('Subversion command'))
             res = dia.startProcess(args, wd)
             if res:
@@ -1625,6 +1607,7 @@ class Subversion(VersionControl):
         @param editable flag indicating that the project name is editable (boolean)
         @param parent parent widget (QWidget)
         """
+        from .SvnOptionsDialog import SvnOptionsDialog
         return SvnOptionsDialog(self, project, parent)
         
     def vcsNewProjectOptionsDialog(self, parent=None):
@@ -1633,6 +1616,7 @@ class Subversion(VersionControl):
         
         @param parent parent widget (QWidget)
         """
+        from .SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
         return SvnNewProjectOptionsDialog(self, parent)
         
     def vcsRepositoryInfos(self, ppath):
@@ -1743,6 +1727,7 @@ class Subversion(VersionControl):
         @param project reference to the project object
         @return flag indicating successfull operation (boolean)
         """
+        from .SvnCopyDialog import SvnCopyDialog
         rx_prot = QRegExp('(file:|svn:|svn+ssh:|http:|https:).+')
         dlg = SvnCopyDialog(name)
         res = False
@@ -1790,6 +1775,7 @@ class Subversion(VersionControl):
         @param name file/directory name (string or list of strings)
         @param recursive flag indicating a recursive list is requested
         """
+        from .SvnPropListDialog import SvnPropListDialog
         self.propList = SvnPropListDialog(self)
         self.propList.show()
         QApplication.processEvents()
@@ -1802,6 +1788,7 @@ class Subversion(VersionControl):
         @param name file/directory name (string or list of strings)
         @param recursive flag indicating a recursive set is requested
         """
+        from .SvnPropSetDialog import SvnPropSetDialog
         dlg = SvnPropSetDialog(recursive)
         if dlg.exec_() == QDialog.Accepted:
             propName, propValue, recurse = dlg.getData()
@@ -1852,6 +1839,7 @@ class Subversion(VersionControl):
         @param name file/directory name (string or list of strings)
         @param recursive flag indicating a recursive list is requested
         """
+        from .SvnPropDelDialog import SvnPropDelDialog
         dlg = SvnPropDelDialog(recursive)
         if dlg.exec_() == QDialog.Accepted:
             propName, recurse = dlg.getData()
@@ -1903,6 +1891,7 @@ class Subversion(VersionControl):
         @param tags flag indicating listing of branches or tags
                 (False = branches, True = tags)
         """
+        from .SvnTagBranchListDialog import SvnTagBranchListDialog
         self.tagbranchList = SvnTagBranchListDialog(self)
         self.tagbranchList.show()
         QApplication.processEvents()
@@ -1925,6 +1914,7 @@ class Subversion(VersionControl):
         
         @param name file name to show the blame for (string)
         """
+        from .SvnBlameDialog import SvnBlameDialog
         self.blame = SvnBlameDialog(self)
         self.blame.show()
         QApplication.processEvents()
@@ -1956,9 +1946,11 @@ class Subversion(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
+        from .SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
         dlg = SvnRevisionSelectionDialog()
         if dlg.exec_() == QDialog.Accepted:
             revisions = dlg.getRevisions()
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self)
             self.diff.show()
             QApplication.processEvents()
@@ -1993,9 +1985,11 @@ class Subversion(VersionControl):
         
         dname = self.splitPath(names[0])[0]
         
+        from .SvnUrlSelectionDialog import SvnUrlSelectionDialog
         dlg = SvnUrlSelectionDialog(self, self.tagsList, self.branchesList, dname)
         if dlg.exec_() == QDialog.Accepted:
             urls, summary = dlg.getURLs()
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self)
             self.diff.show()
             QApplication.processEvents()
@@ -2008,6 +2002,7 @@ class Subversion(VersionControl):
         
         @param path file/directory name to show the log of (string)
         """
+        from .SvnLogBrowserDialog import SvnLogBrowserDialog
         self.logBrowser = SvnLogBrowserDialog(self)
         self.logBrowser.show()
         QApplication.processEvents()
@@ -2104,6 +2099,7 @@ class Subversion(VersionControl):
         @param projectPath path name of the project (string)
         @param name file/directory name relative to the project (string)
         """
+        from .SvnInfoDialog import SvnInfoDialog
         dlg = SvnInfoDialog(self)
         dlg.start(projectPath, name)
         dlg.exec_()
@@ -2114,6 +2110,7 @@ class Subversion(VersionControl):
         
         @param projectPath path name of the project (string)
         """
+        from .SvnRelocateDialog import SvnRelocateDialog
         currUrl = self.svnGetReposName(projectPath)
         dlg = SvnRelocateDialog(currUrl)
         if dlg.exec_() == QDialog.Accepted:
@@ -2158,6 +2155,7 @@ class Subversion(VersionControl):
             if not ok or not url:
                 return
         
+        from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
         self.repoBrowser = SvnRepoBrowserDialog(self)
         self.repoBrowser.start(url)
         
@@ -2231,6 +2229,7 @@ class Subversion(VersionControl):
         
         @param path directory name to show change lists for (string)
         """
+        from .SvnChangeListsDialog import SvnChangeListsDialog
         self.changeLists = SvnChangeListsDialog(self)
         self.changeLists.show()
         QApplication.processEvents()
@@ -2324,6 +2323,7 @@ class Subversion(VersionControl):
             translations browser (this needs some special treatment)
         @return the project browser helper object
         """
+        from .ProjectBrowserHelper import SvnProjectBrowserHelper
         return SvnProjectBrowserHelper(self, browser, project, isTranslationsBrowser)
         
     def vcsGetProjectHelper(self, project):
@@ -2352,4 +2352,5 @@ class Subversion(VersionControl):
         @param interval check interval for the monitor thread in seconds (integer)
         @return reference to the monitor thread (QThread)
         """
+        from .SvnStatusMonitorThread import SvnStatusMonitorThread
         return SvnStatusMonitorThread(interval, project, self)

@@ -15,7 +15,6 @@ from PyQt4.QtGui import QDialog
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
 
-from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .Ui_SvnNewProjectOptionsDialog import Ui_SvnNewProjectOptionsDialog
 from .Config import ConfigSvnProtocols
 
@@ -70,6 +69,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
         else:
+            from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
             dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
             dlg.start(self.protocolCombo.currentText() + self.vcsUrlEdit.text())
             if dlg.exec_() == QDialog.Accepted:

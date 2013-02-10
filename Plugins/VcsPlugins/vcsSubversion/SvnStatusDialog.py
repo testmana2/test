@@ -17,8 +17,6 @@ from PyQt4.QtGui import QWidget, QHeaderView, QLineEdit, QApplication, QMenu, \
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from .SvnDiffDialog import SvnDiffDialog
-
 from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
@@ -800,6 +798,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             return
         
         if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         QApplication.processEvents()

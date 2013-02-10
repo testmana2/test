@@ -15,8 +15,6 @@ from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, \
 
 from E5Gui import E5MessageBox
 
-from .SvnDiffDialog import SvnDiffDialog
-
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 import Preferences
@@ -414,6 +412,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param rev2 second revision number (integer)
         """
         if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(self.filename, [rev1, rev2])

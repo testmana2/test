@@ -21,7 +21,6 @@ from E5Gui import E5MessageBox
 
 from .SvnConst import svnStatusMap
 from .SvnDialogMixin import SvnDialogMixin
-from .SvnDiffDialog import SvnDiffDialog
 
 from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
@@ -688,6 +687,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             return
         
         if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         QApplication.processEvents()

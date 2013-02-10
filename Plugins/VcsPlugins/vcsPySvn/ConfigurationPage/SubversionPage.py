@@ -9,8 +9,6 @@ Module implementing the Subversion configuration page.
 
 from PyQt4.QtCore import pyqtSlot
 
-from QScintilla.MiniEditor import MiniEditor
-
 from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
 from .Ui_SubversionPage import Ui_SubversionPage
 
@@ -47,6 +45,7 @@ class SubversionPage(ConfigurationPageBase, Ui_SubversionPage):
         """
         Private slot to edit the Subversion config file.
         """
+        from QScintilla.MiniEditor import MiniEditor
         cfgFile = self.__plugin.getConfigPath()
         editor = MiniEditor(cfgFile, "Properties", self)
         editor.show()
@@ -56,6 +55,7 @@ class SubversionPage(ConfigurationPageBase, Ui_SubversionPage):
         """
         Private slot to edit the Subversion servers file.
         """
+        from QScintilla.MiniEditor import MiniEditor
         serversFile = self.__plugin.getServersPath()
         editor = MiniEditor(serversFile, "Properties", self)
         editor.show()

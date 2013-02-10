@@ -19,7 +19,6 @@ from E5Gui import E5MessageBox
 
 from .SvnUtilities import formatTime, dateFromTime_t
 from .SvnDialogMixin import SvnDialogMixin
-from .SvnDiffDialog import SvnDiffDialog
 
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
@@ -318,6 +317,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param peg_rev revision number to use as a reference (integer)
         """
         if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         QApplication.processEvents()
