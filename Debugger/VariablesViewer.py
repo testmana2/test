@@ -16,7 +16,6 @@ from E5Gui.E5Application import e5App
 from DebugClients.Python3.DebugConfig import ConfigVarTypeStrings
     
 from .Config import ConfigVarTypeDispStrings
-from .VariableDetailDialog import VariableDetailDialog
 
 import Preferences
 
@@ -632,6 +631,7 @@ class VariablesViewer(QTreeWidget):
             
         name = ''.join(nlist)
         # now show the dialog
+        from .VariableDetailDialog import VariableDetailDialog
         dlg = VariableDetailDialog(name, vtype, val)
         dlg.exec_()
     

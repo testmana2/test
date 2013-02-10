@@ -14,11 +14,6 @@ from PyQt4.QtGui import QKeySequence, QMenu, QToolBar, QApplication, QDialog, \
     QInputDialog
 
 from UI.Info import Program
-from .VariablesFilterDialog import VariablesFilterDialog
-from .ExceptionsFilterDialog import ExceptionsFilterDialog
-from .StartDialog import StartDialog
-from .EditBreakpointDialog import EditBreakpointDialog
-from .EditWatchpointDialog import EditWatchpointDialog
 
 from .DebugClientCapabilities import HasDebugger, HasInterpreter, HasProfiler, \
     HasCoverage
@@ -77,9 +72,6 @@ class DebugUI(QObject):
         self.projectOpen = False
         self.editorOpen = False
         
-        # Generate the variables filter dialog
-        self.dbgFilterDialog = VariablesFilterDialog(self.ui, 'Filter Dialog', True)
-
         # read the saved debug info values
         self.argvHistory = Preferences.toList(
             Preferences.Prefs.settings.value('DebugInfo/ArgumentsHistory'))
@@ -1186,6 +1178,7 @@ class DebugUI(QObject):
         
         fn, line, cond, temp, enabled, count = bp[:6]
         
+        from .EditBreakpointDialog import EditBreakpointDialog
         dlg = EditBreakpointDialog((fn, line), (cond, temp, enabled, count),
             [], self.ui, modal=True)
         if dlg.exec_() == QDialog.Accepted:
@@ -1217,6 +1210,7 @@ class DebugUI(QObject):
         
         cond, special, temp, enabled, count = wp[:5]
         
+        from .EditWatchpointDialog import EditWatchpointDialog
         dlg = EditWatchpointDialog(
             (cond, temp, enabled, count, special), self)
         if dlg.exec_() == QDialog.Accepted:
@@ -1247,19 +1241,19 @@ class DebugUI(QObject):
         """
         Private slot for displaying the variables filter configuration dialog.
         """
-        result = self.dbgFilterDialog.exec_()
-        if result == QDialog.Accepted:
-            self.localsVarFilter, self.globalsVarFilter = \
-                self.dbgFilterDialog.getSelection()
-        else:
-            self.dbgFilterDialog.setSelection(
-                self.localsVarFilter, self.globalsVarFilter)
-        self.debugViewer.setVariablesFilter(self.globalsVarFilter, self.localsVarFilter)
+        from .VariablesFilterDialog import VariablesFilterDialog
+        dlg = VariablesFilterDialog(self.ui, 'Filter Dialog', True)
+        dlg.setSelection(self.localsVarFilter, self.globalsVarFilter)
+        if dlg.exec_() == QDialog.Accepted:
+            self.localsVarFilter, self.globalsVarFilter = dlg.getSelection()
+            self.debugViewer.setVariablesFilter(
+                self.globalsVarFilter, self.localsVarFilter)
 
     def __configureExceptionsFilter(self):
         """
         Private slot for displaying the exception filter dialog.
         """
+        from .ExceptionsFilterDialog import ExceptionsFilterDialog
         dlg = ExceptionsFilterDialog(self.excList, ignore=False)
         if dlg.exec_() == QDialog.Accepted:
             self.excList = dlg.getExceptionsList()[:]   # keep a copy
@@ -1268,6 +1262,7 @@ class DebugUI(QObject):
         """
         Private slot for displaying the ignored exceptions dialog.
         """
+        from .ExceptionsFilterDialog import ExceptionsFilterDialog
         dlg = ExceptionsFilterDialog(self.excIgnoreList, ignore=True)
         if dlg.exec_() == QDialog.Accepted:
             self.excIgnoreList = dlg.getExceptionsList()[:]   # keep a copy
@@ -1374,6 +1369,8 @@ class DebugUI(QObject):
         @param runProject flag indicating coverage of the current project (True)
                 or script (false)
         """
+        from .StartDialog import StartDialog
+        
         self.__resetUI()
         doNotStart = False
         
@@ -1480,6 +1477,8 @@ class DebugUI(QObject):
         @param runProject flag indicating profiling of the current project (True)
                 or script (False)
         """
+        from .StartDialog import StartDialog
+        
         self.__resetUI()
         doNotStart = False
         
@@ -1587,6 +1586,8 @@ class DebugUI(QObject):
         @param runProject flag indicating running the current project (True)
                 or script (False)
         """
+        from .StartDialog import StartDialog
+        
         self.__resetUI()
         doNotStart = False
         
@@ -1697,6 +1698,8 @@ class DebugUI(QObject):
         @param debugProject flag indicating debugging the current project (True)
                 or script (False)
         """
+        from .StartDialog import StartDialog
+        
         self.__resetUI()
         doNotStart = False
         

@@ -26,13 +26,6 @@ from PyQt4.QtCore import pyqtSignal
 from PyQt4.QtGui import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QSizePolicy, \
     QPushButton, QComboBox, QLabel, QTreeWidget, QTreeWidgetItem, QHeaderView
 
-from QScintilla.Shell import ShellAssembly
-from .VariablesViewer import VariablesViewer
-from .ExceptionLogger import ExceptionLogger
-from .BreakPointViewer import BreakPointViewer
-from .WatchPointViewer import WatchPointViewer
-from .CallTraceViewer import CallTraceViewer
-
 import UI.PixmapCache
 import Preferences
 
@@ -85,6 +78,7 @@ class DebugViewer(QWidget):
         
         self.embeddedShell = embeddedShell
         if embeddedShell:
+            from QScintilla.Shell import ShellAssembly
             # add the interpreter shell
             self.shellAssembly = ShellAssembly(debugServer, vm, False)
             self.shell = self.shellAssembly.shell()
@@ -101,6 +95,7 @@ class DebugViewer(QWidget):
                 UI.PixmapCache.getIcon("browser.png"), '')
             self.__tabWidget.setTabToolTip(index, self.browser.windowTitle())
         
+        from .VariablesViewer import VariablesViewer
         # add the global variables viewer
         self.glvWidget = QWidget()
         self.glvWidgetVLayout = QVBoxLayout(self.glvWidget)
@@ -185,6 +180,7 @@ class DebugViewer(QWidget):
         self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
         self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
         
+        from .CallTraceViewer import CallTraceViewer
         # add the call trace viewer
         self.callTraceViewer = CallTraceViewer(self.debugServer)
         index = self.__tabWidget.addTab(self.callTraceViewer,
@@ -192,6 +188,7 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.callTraceViewer.windowTitle())
         self.callTraceViewer.sourceFile.connect(self.sourceFile)
         
+        from .BreakPointViewer import BreakPointViewer
         # add the breakpoint viewer
         self.breakpointViewer = BreakPointViewer()
         self.breakpointViewer.setModel(self.debugServer.getBreakPointModel())
@@ -200,6 +197,7 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.breakpointViewer.windowTitle())
         self.breakpointViewer.sourceFile.connect(self.sourceFile)
         
+        from .WatchPointViewer import WatchPointViewer
         # add the watch expression viewer
         self.watchpointViewer = WatchPointViewer()
         self.watchpointViewer.setModel(self.debugServer.getWatchPointModel())
@@ -207,6 +205,7 @@ class DebugViewer(QWidget):
             UI.PixmapCache.getIcon("watchpoints.png"), '')
         self.__tabWidget.setTabToolTip(index, self.watchpointViewer.windowTitle())
         
+        from .ExceptionLogger import ExceptionLogger
         # add the exception logger
         self.exceptionLogger = ExceptionLogger()
         index = self.__tabWidget.addTab(self.exceptionLogger,

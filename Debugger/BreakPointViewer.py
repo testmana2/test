@@ -13,8 +13,6 @@ from PyQt4.QtGui import QTreeView, QAbstractItemView, QSortFilterProxyModel, \
 
 from E5Gui.E5Application import e5App
 
-from .EditBreakpointDialog import EditBreakpointDialog
-
 
 class BreakPointViewer(QTreeView):
     """
@@ -218,6 +216,8 @@ class BreakPointViewer(QTreeView):
         """
         Private slot to handle the add breakpoint context menu entry.
         """
+        from .EditBreakpointDialog import EditBreakpointDialog
+        
         dlg = EditBreakpointDialog((self.fnHistory[0], None), None,
             self.condHistory, self, modal=1, addMode=1,
             filenameHistory=self.fnHistory)
@@ -268,6 +268,7 @@ class BreakPointViewer(QTreeView):
             
             fn, line, cond, temp, enabled, count = bp[:6]
             
+            from .EditBreakpointDialog import EditBreakpointDialog
             dlg = EditBreakpointDialog((fn, line), (cond, temp, enabled, count),
                 self.condHistory, self, modal=True)
             if dlg.exec_() == QDialog.Accepted:

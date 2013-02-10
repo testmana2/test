@@ -14,8 +14,6 @@ from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, QSortFilterProxyMod
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from .EditWatchpointDialog import EditWatchpointDialog
-
 import Utilities
 
 
@@ -242,6 +240,7 @@ class WatchPointViewer(QTreeView):
         """
         Private slot to handle the add watch expression context menu entry.
         """
+        from .EditWatchpointDialog import EditWatchpointDialog
         dlg = EditWatchpointDialog(("", False, True, 0, ""), self)
         if dlg.exec_() == QDialog.Accepted:
             cond, temp, enabled, ignorecount, special = dlg.getData()
@@ -281,6 +280,7 @@ class WatchPointViewer(QTreeView):
             
             cond, special, temp, enabled, count = wp[:5]
             
+            from .EditWatchpointDialog import EditWatchpointDialog
             dlg = EditWatchpointDialog(
                 (cond, temp, enabled, count, special), self)
             if dlg.exec_() == QDialog.Accepted:

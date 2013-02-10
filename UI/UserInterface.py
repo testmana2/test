@@ -27,27 +27,13 @@ from Debugger.DebugClientCapabilities import HasUnittest
 
 from QScintilla.Shell import ShellAssembly
 from QScintilla.Terminal import TerminalAssembly
-from QScintilla.MiniEditor import MiniEditor
 from QScintilla.SpellChecker import SpellChecker
 
-from PyUnit.UnittestDialog import UnittestDialog
-
 from Helpviewer.HelpWindow import HelpWindow
-from Helpviewer.Passwords.PasswordManager import PasswordManager
 
-from Preferences.ConfigurationDialog import ConfigurationDialog
-from Preferences.ViewProfileDialog import ViewProfileDialog
-from Preferences.ShortcutsDialog import ShortcutsDialog
-from Preferences.ToolConfigurationDialog import ToolConfigurationDialog
-from Preferences.ToolGroupConfigurationDialog import ToolGroupConfigurationDialog
-from Preferences.ProgramsDialog import ProgramsDialog
 from Preferences import Shortcuts
 
 from PluginManager.PluginManager import PluginManager
-from PluginManager.PluginInfoDialog import PluginInfoDialog
-from PluginManager.PluginInstallDialog import PluginInstallDialog
-from PluginManager.PluginUninstallDialog import PluginUninstallDialog
-from PluginManager.PluginRepositoryDialog import PluginRepositoryDialog
 
 from Project.Project import Project
 from Project.ProjectBrowser import ProjectBrowser
@@ -66,22 +52,13 @@ from Network.IRC.IrcWidget import IrcWidget
 from .Browser import Browser
 from .Info import Version, BugAddress, Program, FeatureAddress
 from . import Config
-from .EmailDialog import EmailDialog
-from .DiffDialog import DiffDialog
-from .CompareDialog import CompareDialog
 from .LogView import LogViewer
-from .FindFileDialog import FindFileDialog
-from .FindFileNameDialog import FindFileNameDialog
 from .SymbolsWidget import SymbolsWidget
 from .NumbersWidget import NumbersWidget
-from .NotificationWidget import NotificationWidget
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui.E5ToolBarManager import E5ToolBarManager
-from E5Gui.E5ToolBarDialog import E5ToolBarDialog
-from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
-from E5Gui.E5SideBar import E5SideBar
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
@@ -93,15 +70,7 @@ import Preferences
 import ViewManager
 import Utilities
 
-from Graphics.PixmapDiagram import PixmapDiagram
-from Graphics.SvgDiagram import SvgDiagram
-
 import UI.PixmapCache
-
-from E5XML.TasksReader import TasksReader
-from E5XML.TasksWriter import TasksWriter
-from E5XML.SessionReader import SessionReader
-from E5XML.SessionWriter import SessionWriter
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
@@ -110,8 +79,6 @@ try:
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
-
-from IconEditor.IconEditorWindow import IconEditorWindow
 
 from eric5config import getConfig
 
@@ -633,6 +600,8 @@ class UserInterface(E5MainWindow):
         
         @param debugServer reference to the debug server object
         """
+        from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
+        
         # Create the left toolbox
         self.lToolboxDock = self.__createDockWindow("lToolboxDock")
         self.lToolbox = E5VerticalToolBox(self.lToolboxDock)
@@ -752,6 +721,8 @@ class UserInterface(E5MainWindow):
         
         @param debugServer reference to the debug server object
         """
+        from E5Gui.E5SideBar import E5SideBar
+        
         # Create the left sidebar
         self.leftSidebar = E5SideBar(E5SideBar.West)
         
@@ -2728,6 +2699,7 @@ class UserInterface(E5MainWindow):
                 self.showPreferences("emailPage")
                 return
                 
+            from .EmailDialog import EmailDialog
             self.dlg = EmailDialog(mode=mode)
             if attachFile is not None:
                 self.dlg.attachFile(attachFile, deleteAttachFile)
@@ -2784,6 +2756,7 @@ class UserInterface(E5MainWindow):
         aw = self.viewmanager.activeWindow()
         fn = aw and aw.getFileName() or None
         if self.diffDlg is None:
+            from .DiffDialog import DiffDialog
             self.diffDlg = DiffDialog()
         self.diffDlg.show(fn)
         
@@ -2794,6 +2767,7 @@ class UserInterface(E5MainWindow):
         aw = self.viewmanager.activeWindow()
         fn = aw and aw.getFileName() or None
         if self.compareDlg is None:
+            from .CompareDialog import CompareDialog
             self.compareDlg = CompareDialog()
         self.compareDlg.show(fn)
         
@@ -2801,6 +2775,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show a mini editor window.
         """
+        from QScintilla.MiniEditor import MiniEditor
         editor = MiniEditor(parent=self)
         editor.show()
         
@@ -3648,6 +3623,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the tools configuration menu entry.
         """
+        from Preferences.ToolConfigurationDialog import ToolConfigurationDialog
         dlg = ToolConfigurationDialog(self.toolGroups[self.currentToolGroup][1], self)
         if dlg.exec_() == QDialog.Accepted:
             self.toolGroups[self.currentToolGroup][1] = dlg.getToollist()
@@ -3657,6 +3633,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the tool groups configuration menu entry.
         """
+        from Preferences.ToolGroupConfigurationDialog import ToolGroupConfigurationDialog
         dlg = ToolGroupConfigurationDialog(self.toolGroups, self.currentToolGroup, self)
         if dlg.exec_() == QDialog.Accepted:
             self.toolGroups, self.currentToolGroup = dlg.getToolGroups()
@@ -3666,6 +3643,7 @@ class UserInterface(E5MainWindow):
         Private slot to generate the unit test dialog on demand.
         """
         if self.unittestDialog is None:
+            from PyUnit.UnittestDialog import UnittestDialog
             self.unittestDialog = UnittestDialog(
                 None, self.debuggerUI.debugServer, self, fromEric=True)
             self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
@@ -4091,6 +4069,7 @@ class UserInterface(E5MainWindow):
         
         @param fn filename of the file to show (string)
         """
+        from IconEditor.IconEditorWindow import IconEditorWindow
         dlg = IconEditorWindow(fn, self, fromEric=True)
         dlg.show()
         
@@ -4100,6 +4079,7 @@ class UserInterface(E5MainWindow):
         
         @param fn filename of the file to show (string)
         """
+        from Graphics.PixmapDiagram import PixmapDiagram
         dlg = PixmapDiagram(fn, self)
         if dlg.getStatus():
             dlg.show()
@@ -4110,6 +4090,7 @@ class UserInterface(E5MainWindow):
         
         @param fn filename of the file to show (string)
         """
+        from Graphics.SvgDiagram import SvgDiagram
         dlg = SvgDiagram(fn, self)
         dlg.show()
         
@@ -4679,6 +4660,7 @@ class UserInterface(E5MainWindow):
         
         @param pageName name of the configuration page to show (string)
         """
+        from Preferences.ConfigurationDialog import ConfigurationDialog
         dlg = ConfigurationDialog(self, 'Configuration')
         dlg.preferencesChanged.connect(self.__preferencesChanged)
         dlg.masterPasswordChanged.connect(self.__masterPasswordChanged)
@@ -4758,6 +4740,7 @@ class UserInterface(E5MainWindow):
         self.masterPasswordChanged.emit(oldPassword, newPassword)
         Preferences.convertPasswords(oldPassword, newPassword)
         if self.helpWindow is None:
+            from Helpviewer.Passwords.PasswordManager import PasswordManager
             pwManager = PasswordManager()
             pwManager.masterPasswordChanged(oldPassword, newPassword)
         Utilities.crypto.changeRememberedMaster(newPassword)
@@ -4773,6 +4756,7 @@ class UserInterface(E5MainWindow):
         Private slot to display a dialog show a list of external tools used by eric5.
         """
         if self.programsDialog is None:
+            from Preferences.ProgramsDialog import ProgramsDialog
             self.programsDialog = ProgramsDialog(self)
         self.programsDialog.show()
         
@@ -4780,6 +4764,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to configure the various view profiles.
         """
+        from Preferences.ViewProfileDialog import ViewProfileDialog
         dlg = ViewProfileDialog(self.layout, self.profiles,
             not self.embeddedShell, not self.embeddedFileBrowser)
         if dlg.exec_() == QDialog.Accepted:
@@ -4794,6 +4779,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to configure the various toolbars.
         """
+        from E5Gui.E5ToolBarDialog import E5ToolBarDialog
         dlg = E5ToolBarDialog(self.toolbarManager)
         if dlg.exec_() == QDialog.Accepted:
             Preferences.setUI("ToolbarManagerState", self.toolbarManager.saveState())
@@ -4803,6 +4789,7 @@ class UserInterface(E5MainWindow):
         Private slot to configure the keyboard shortcuts.
         """
         if self.shortcutsDialog is None:
+            from Preferences.ShortcutsDialog import ShortcutsDialog
             self.shortcutsDialog = ShortcutsDialog(self, 'Shortcuts')
         self.shortcutsDialog.populate()
         self.shortcutsDialog.show()
@@ -4970,6 +4957,7 @@ class UserInterface(E5MainWindow):
                     .format(fn))
             return
         
+        from E5XML.TasksWriter import TasksWriter
         TasksWriter(f, False).writeXML()
         f.close()
         
@@ -4982,6 +4970,7 @@ class UserInterface(E5MainWindow):
             return
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.TasksReader import TasksReader
             reader = TasksReader(f, viewer=self.taskViewer)
             reader.readXML()
             f.close()
@@ -4998,6 +4987,7 @@ class UserInterface(E5MainWindow):
         fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.SessionWriter import SessionWriter
             SessionWriter(f, None).writeXML()
             f.close()
         else:
@@ -5020,6 +5010,7 @@ class UserInterface(E5MainWindow):
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.SessionReader import SessionReader
             reader = SessionReader(f, True)
             reader.readXML()
             f.close()
@@ -5034,6 +5025,7 @@ class UserInterface(E5MainWindow):
         Public slot to show the Find File by Name dialog.
         """
         if self.findFileNameDialog is None:
+            from .FindFileNameDialog import FindFileNameDialog
             self.findFileNameDialog = FindFileNameDialog(self.project)
             self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
             self.findFileNameDialog.designerFile.connect(self.__designer)
@@ -5050,6 +5042,7 @@ class UserInterface(E5MainWindow):
         @keyparam openFiles flag indicating to operate on open files (boolean)
         """
         if self.findFilesDialog is None:
+            from .FindFileDialog import FindFileDialog
             self.findFilesDialog = FindFileDialog(self.project)
             self.findFilesDialog.sourceFile.connect(
                 self.viewmanager.openSourceFile)
@@ -5071,6 +5064,7 @@ class UserInterface(E5MainWindow):
         @keyparam openFiles flag indicating to operate on open files (boolean)
         """
         if self.replaceFilesDialog is None:
+            from .FindFileDialog import FindFileDialog
             self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
             self.replaceFilesDialog.sourceFile.connect(
                 self.viewmanager.openSourceFile)
@@ -5113,6 +5107,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the plugin info dialog.
         """
+        from PluginManager.PluginInfoDialog import PluginInfoDialog
         self.__pluginInfoDialog = PluginInfoDialog(self.pluginManager, self)
         self.__pluginInfoDialog.show()
         
@@ -5123,6 +5118,7 @@ class UserInterface(E5MainWindow):
         @param pluginFileNames list of plugin files suggested for
             installation list of strings
         """
+        from PluginManager.PluginInstallDialog import PluginInstallDialog
         dlg = PluginInstallDialog(self.pluginManager, pluginFileNames, self)
         dlg.exec_()
         if dlg.restartNeeded():
@@ -5132,6 +5128,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show a dialog to uninstall a plugin.
         """
+        from PluginManager.PluginUninstallDialog import PluginUninstallDialog
         dlg = PluginUninstallDialog(self.pluginManager, self)
         dlg.exec_()
         
@@ -5139,6 +5136,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the plugins available for download.
         """
+        from PluginManager.PluginRepositoryDialog import PluginRepositoryDialog
         dlg = PluginRepositoryDialog(self)
         res = dlg.exec_()
         if res == (QDialog.Accepted + 1):
@@ -5629,6 +5627,7 @@ class UserInterface(E5MainWindow):
         """
         if Preferences.getUI("NotificationsEnabled"):
             if self.__notification is None:
+                from .NotificationWidget import NotificationWidget
                 self.__notification = NotificationWidget(parent=self)
             self.__notification.setPixmap(icon)
             self.__notification.setHeading(heading)

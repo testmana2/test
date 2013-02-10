@@ -22,20 +22,14 @@ from Globals import recentNameFiles, isMacPlatform
 
 import Preferences
 
-from .BookmarkedFilesDialog import BookmarkedFilesDialog
-
 from QScintilla.Editor import Editor
 from QScintilla.EditorAssembly import EditorAssembly
-from QScintilla.GotoDialog import GotoDialog
-from QScintilla.SearchReplaceWidget import SearchReplaceSlidingWidget
-from QScintilla.ZoomDialog import ZoomDialog
 from QScintilla.APIsManager import APIsManager
 from QScintilla.SpellChecker import SpellChecker
 import QScintilla.Lexers
 import QScintilla.Exporters
 from QScintilla.Shell import Shell
 from QScintilla.Terminal import Terminal
-from QScintilla.SpellingDictionaryEditDialog import SpellingDictionaryEditDialog
 
 import Utilities
 
@@ -172,6 +166,8 @@ class ViewManager(QObject):
         @param ui reference to the main user interface
         @param dbs reference to the debug server object
         """
+        from QScintilla.SearchReplaceWidget import SearchReplaceSlidingWidget
+        
         self.ui = ui
         self.dbs = dbs
         
@@ -4389,6 +4385,7 @@ class ViewManager(QObject):
         """
         Private method to edit the list of bookmarked files.
         """
+        from .BookmarkedFilesDialog import BookmarkedFilesDialog
         dlg = BookmarkedFilesDialog(self.bookmarked, self.ui)
         if dlg.exec_() == QDialog.Accepted:
             self.bookmarked = dlg.getBookmarkedFiles()
@@ -4937,6 +4934,8 @@ class ViewManager(QObject):
         """
         Private method to handle the goto action.
         """
+        from QScintilla.GotoDialog import GotoDialog
+        
         aw = self.activeWindow()
         lines = aw.lines()
         curLine = aw.getCursorPosition()[0] + 1
@@ -5058,6 +5057,7 @@ class ViewManager(QObject):
             aw = self.activeWindow()
         if aw:
             if value is None:
+                from QScintilla.ZoomDialog import ZoomDialog
                 dlg = ZoomDialog(aw.getZoom(), self.ui, None, True)
                 if dlg.exec_() == QDialog.Accepted:
                     value = dlg.getZoomSize()
@@ -5493,6 +5493,8 @@ class ViewManager(QObject):
             
             fileInfo = dictionaryFile if len(dictionaryFile) < 40 \
                        else "...{0}".format(dictionaryFile[-40:])
+            from QScintilla.SpellingDictionaryEditDialog import \
+                SpellingDictionaryEditDialog
             dlg = SpellingDictionaryEditDialog(data,
                 QApplication.translate('ViewManager', "Editing {0}").format(fileInfo),
                 self.ui)

@@ -19,46 +19,7 @@ from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
-from .SearchWidget import SearchWidget
-from .HelpTocWidget import HelpTocWidget
-from .HelpIndexWidget import HelpIndexWidget
-from .HelpSearchWidget import HelpSearchWidget
-from .HelpTopicDialog import HelpTopicDialog
-from .QtHelpDocumentationDialog import QtHelpDocumentationDialog
-from .QtHelpFiltersDialog import QtHelpFiltersDialog
-from .HelpDocsInstaller import HelpDocsInstaller
-from .HelpWebSearchWidget import HelpWebSearchWidget
-from .HelpClearPrivateDataDialog import HelpClearPrivateDataDialog
-from .HelpLanguagesDialog import HelpLanguagesDialog
-from .PageScreenDialog import PageScreenDialog
-from .CookieJar.CookieJar import CookieJar
-from .CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
-from .Bookmarks.BookmarksManager import BookmarksManager
-from .Bookmarks.BookmarksMenu import BookmarksMenuBarMenu
-from .Bookmarks.BookmarksToolBar import BookmarksToolBar
-from .Bookmarks.BookmarkNode import BookmarkNode
-from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
-from .Bookmarks.BookmarksDialog import BookmarksDialog
-from .History.HistoryManager import HistoryManager
-from .History.HistoryMenu import HistoryMenu
-from .Passwords.PasswordManager import PasswordManager
-from .Network.NetworkAccessManager import NetworkAccessManager, SSL_AVAILABLE
-from .AdBlock.AdBlockManager import AdBlockManager
-from .AdBlock.AdBlockIcon import AdBlockIcon
-from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
-from .UserAgent.UserAgentMenu import UserAgentMenu
-from .UserAgent.UserAgentManager import UserAgentManager
-from .HelpBrowserWV import HelpBrowser
-from .HelpTabWidget import HelpTabWidget
-from .Download.DownloadManager import DownloadManager
-from .VirusTotalApi import VirusTotalAPI
-from .Feeds.FeedsManager import FeedsManager
-from .SiteInfo.SiteInfoDialog import SiteInfoDialog
-from .Sync.SyncManager import SyncManager
-from .SpeedDial.SpeedDial import SpeedDial
-from .PersonalInformationManager.PersonalInformationManager import \
-    PersonalInformationManager
-from .GreaseMonkey.GreaseMonkeyManager import GreaseMonkeyManager
+from .Network.NetworkAccessManager import SSL_AVAILABLE
 
 from .data import icons_rc          # __IGNORE_WARNING__
 from .data import html_rc           # __IGNORE_WARNING__
@@ -70,18 +31,14 @@ from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5Application import e5App
 from E5Gui.E5ZoomWidget import E5ZoomWidget
 
-from E5Network.E5NetworkMonitor import E5NetworkMonitor
-
 import Preferences
 from Preferences import Shortcuts
-from Preferences.ConfigurationDialog import ConfigurationDialog
 
 import Utilities
 
 import UI.PixmapCache
 import UI.Config
 from UI.Info import Version
-from UI.NotificationWidget import NotificationWidget
 
 
 class HelpWindow(E5MainWindow):
@@ -150,6 +107,15 @@ class HelpWindow(E5MainWindow):
         if self.initShortcutsOnly:
             self.__initActions()
         else:
+            from .SearchWidget import SearchWidget
+            from .HelpTocWidget import HelpTocWidget
+            from .HelpIndexWidget import HelpIndexWidget
+            from .HelpSearchWidget import HelpSearchWidget
+            from .HelpBrowserWV import HelpBrowser
+            from .HelpTabWidget import HelpTabWidget
+            from .AdBlock.AdBlockIcon import AdBlockIcon
+            from .VirusTotalApi import VirusTotalAPI
+            
             if not self.fromEric:
                 self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
             
@@ -1406,6 +1372,7 @@ class HelpWindow(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.syncTocAct)
         
+        from .History.HistoryMenu import HistoryMenu
         self.historyMenu = HistoryMenu(self, self.tabWidget)
         self.historyMenu.setTearOffEnabled(True)
         self.historyMenu.setTitle(self.trUtf8('H&istory'))
@@ -1413,6 +1380,7 @@ class HelpWindow(E5MainWindow):
         self.historyMenu.newUrl.connect(self.openUrlNewTab)
         mb.addMenu(self.historyMenu)
         
+        from .Bookmarks.BookmarksMenu import BookmarksMenuBarMenu
         self.bookmarksMenu = BookmarksMenuBarMenu(self)
         self.bookmarksMenu.setTearOffEnabled(True)
         self.bookmarksMenu.setTitle(self.trUtf8('&Bookmarks'))
@@ -1448,10 +1416,13 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.adblockAct)
         menu.addAction(self.flashblockAct)
         menu.addSeparator()
+        
+        from .UserAgent.UserAgentMenu import UserAgentMenu
         self.__userAgentMenu = UserAgentMenu(self.trUtf8("Global User Agent"))
         menu.addMenu(self.__userAgentMenu)
         menu.addAction(self.userAgentManagerAct)
         menu.addSeparator()
+        
         menu.addAction(self.manageQtHelpDocsAct)
         menu.addAction(self.manageQtHelpFiltersAct)
         menu.addAction(self.reindexDocumentationAct)
@@ -1577,6 +1548,7 @@ class HelpWindow(E5MainWindow):
         self.__navigationSplitter = QSplitter(gotb)
         self.__navigationSplitter.addWidget(self.tabWidget.stackedUrlBar())
         
+        from .HelpWebSearchWidget import HelpWebSearchWidget
         self.searchEdit = HelpWebSearchWidget(self)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(2)
@@ -1604,6 +1576,7 @@ class HelpWindow(E5MainWindow):
         forwardButton.setMenu(self.forwardMenu)
         forwardButton.setPopupMode(QToolButton.MenuButtonPopup)
         
+        from .Bookmarks.BookmarksToolBar import BookmarksToolBar
         bookmarksModel = self.bookmarksManager().bookmarksModel()
         self.bookmarksToolBar = BookmarksToolBar(self, bookmarksModel, self)
         self.bookmarksToolBar.setObjectName("BookmarksToolBar")
@@ -1826,6 +1799,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to save the current page as a screen shot.
         """
+        from .PageScreenDialog import PageScreenDialog
         self.__pageScreen = PageScreenDialog(self.currentBrowser())
         self.__pageScreen.show()
         
@@ -1882,6 +1856,7 @@ class HelpWindow(E5MainWindow):
         if "description" in meta:
             description = meta["description"][0]
         
+        from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setUrl(url)
         dlg.setTitle(title)
@@ -1895,6 +1870,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to add a new bookmarks folder.
         """
+        from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         menu = self.bookmarksManager().menu()
         idx = self.bookmarksManager().bookmarksModel().nodeIndex(menu)
@@ -1906,6 +1882,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the bookmarks dialog.
         """
+        from .Bookmarks.BookmarksDialog import BookmarksDialog
         self.__bookmarksDialog = BookmarksDialog(self)
         self.__bookmarksDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.__bookmarksDialog.openUrl.connect(self.openUrl)
@@ -1916,6 +1893,7 @@ class HelpWindow(E5MainWindow):
         """
         Public slot to bookmark all open tabs.
         """
+        from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setFolder(True)
         dlg.setTitle(self.trUtf8("Saved Tabs"))
@@ -1925,6 +1903,7 @@ class HelpWindow(E5MainWindow):
         if folder is None:
             return
         
+        from .Bookmarks.BookmarkNode import BookmarkNode
         for browser in self.tabWidget.browsers():
             bookmark = BookmarkNode(BookmarkNode.Bookmark)
             bookmark.url = bytes(browser.url().toEncoded()).decode()
@@ -2216,6 +2195,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to set the preferences.
         """
+        from Preferences.ConfigurationDialog import ConfigurationDialog
         dlg = ConfigurationDialog(self, 'Configuration', True,
                                   fromEric=self.fromEric,
                                   displayMode=ConfigurationDialog.HelpBrowserMode)
@@ -2268,6 +2248,7 @@ class HelpWindow(E5MainWindow):
         @param oldPassword current master password (string)
         @param newPassword new master password (string)
         """
+        from Preferences.ConfigurationDialog import ConfigurationDialog
         self.passwordManager().masterPasswordChanged(oldPassword, newPassword)
         if self.fromEric and isinstance(self.sender(), ConfigurationDialog):
             # we were called from our local configuration dialog
@@ -2278,6 +2259,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to configure the accepted languages for web pages.
         """
+        from .HelpLanguagesDialog import HelpLanguagesDialog
         dlg = HelpLanguagesDialog(self)
         dlg.exec_()
         self.networkAccessManager().languagesChanged()
@@ -2286,6 +2268,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to configure the cookies handling.
         """
+        from .CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
         dlg = CookiesConfigurationDialog(self)
         dlg.exec_()
     
@@ -2293,6 +2276,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to configure the offline storage.
         """
+        from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
         dlg = OfflineStorageConfigDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
@@ -2319,6 +2303,8 @@ class HelpWindow(E5MainWindow):
         @return reference to the network access manager (NetworkAccessManager)
         """
         if cls._networkAccessManager is None:
+            from .Network.NetworkAccessManager import NetworkAccessManager
+            from .CookieJar.CookieJar import CookieJar
             cls._networkAccessManager = \
                 NetworkAccessManager(cls.helpEngine())
             cls._cookieJar = CookieJar()
@@ -2365,6 +2351,7 @@ class HelpWindow(E5MainWindow):
         @param keyword keyword for the link set (string)
         """
         if not self.__activating:
+            from .HelpTopicDialog import HelpTopicDialog
             self.__activating = True
             dlg = HelpTopicDialog(self, keyword, links)
             if dlg.exec_() == QDialog.Accepted:
@@ -2461,6 +2448,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to manage the QtHelp documentation database.
         """
+        from .QtHelpDocumentationDialog import QtHelpDocumentationDialog
         dlg = QtHelpDocumentationDialog(self.__helpEngine, self)
         dlg.exec_()
         if dlg.hasChanges():
@@ -2480,6 +2468,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to manage the QtHelp filters.
         """
+        from .QtHelpFiltersDialog import QtHelpFiltersDialog
         dlg = QtHelpFiltersDialog(self.__helpEngine, self)
         dlg.exec_()
         
@@ -2542,6 +2531,7 @@ class HelpWindow(E5MainWindow):
         Private slot to look for new documentation to be loaded into the
         help database.
         """
+        from .HelpDocsInstaller import HelpDocsInstaller
         self.__helpInstaller = HelpDocsInstaller(self.__helpEngine.collectionFile())
         self.__helpInstaller.errorMessage.connect(self.__showInstallationError)
         self.__helpInstaller.docsInstalled.connect(self.__docsInstalled)
@@ -2652,6 +2642,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to clear the private data.
         """
+        from .HelpClearPrivateDataDialog import HelpClearPrivateDataDialog
         dlg = HelpClearPrivateDataDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             # browsing history, search history, favicons, disk cache, cookies,
@@ -2685,6 +2676,7 @@ class HelpWindow(E5MainWindow):
                         for database in securityOrigin.databases():
                             QWebDatabase.removeDatabase(database)
             if flashCookies:
+                from .HelpLanguagesDialog import HelpLanguagesDialog
                 languages = Preferences.toList(
                     Preferences.Prefs.settings.value("Help/AcceptLanguages",
                         HelpLanguagesDialog.defaultAcceptLanguages()))
@@ -2759,6 +2751,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the network monitor dialog.
         """
+        from E5Network.E5NetworkMonitor import E5NetworkMonitor
         monitor = E5NetworkMonitor.instance(self.networkAccessManager())
         monitor.show()
         
@@ -2772,6 +2765,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to close the network monitor dialog.
         """
+        from E5Network.E5NetworkMonitor import E5NetworkMonitor
         E5NetworkMonitor.closeMonitor()
         
     def __showPageSource(self):
@@ -2844,6 +2838,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the bookmarks manager (BookmarksManager)
         """
         if cls._bookmarksManager is None:
+            from .Bookmarks.BookmarksManager import BookmarksManager
             cls._bookmarksManager = BookmarksManager()
         
         return cls._bookmarksManager
@@ -2878,6 +2873,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the history manager (HistoryManager)
         """
         if cls._historyManager is None:
+            from .History.HistoryManager import HistoryManager
             cls._historyManager = HistoryManager()
         
         return cls._historyManager
@@ -2890,6 +2886,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the password manager (PasswordManager)
         """
         if cls._passwordManager is None:
+            from .Passwords.PasswordManager import PasswordManager
             cls._passwordManager = PasswordManager()
         
         return cls._passwordManager
@@ -2902,6 +2899,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the AdBlock manager (AdBlockManager)
         """
         if cls._adblockManager is None:
+            from .AdBlock.AdBlockManager import AdBlockManager
             cls._adblockManager = AdBlockManager()
         
         return cls._adblockManager
@@ -2922,6 +2920,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the password manager (DownloadManager)
         """
         if cls._downloadManager is None:
+            from .Download.DownloadManager import DownloadManager
             cls._downloadManager = DownloadManager()
         
         return cls._downloadManager
@@ -2934,6 +2933,8 @@ class HelpWindow(E5MainWindow):
         @return reference to the personal information manager (PersonalInformationManager)
         """
         if cls._personalInformationManager is None:
+            from .PersonalInformationManager.PersonalInformationManager import \
+                PersonalInformationManager
             cls._personalInformationManager = PersonalInformationManager()
         
         return cls._personalInformationManager
@@ -2946,6 +2947,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the GreaseMonkey manager (GreaseMonkeyManager)
         """
         if cls._greaseMonkeyManager is None:
+            from .GreaseMonkey.GreaseMonkeyManager import GreaseMonkeyManager
             cls._greaseMonkeyManager = GreaseMonkeyManager()
         
         return cls._greaseMonkeyManager
@@ -3101,6 +3103,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the RSS feeds manager (FeedsManager)
         """
         if cls._feedsManager is None:
+            from .Feeds.FeedsManager import FeedsManager
             cls._feedsManager = FeedsManager()
         
         return cls._feedsManager
@@ -3128,6 +3131,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show the site info dialog.
         """
+        from .SiteInfo.SiteInfoDialog import SiteInfoDialog
         self.__siteinfoDialog = SiteInfoDialog(self.currentBrowser(), self)
         self.__siteinfoDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.__siteinfoDialog.show()
@@ -3140,6 +3144,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the user agents manager (UserAgentManager)
         """
         if cls._userAgentsManager is None:
+            from .UserAgent.UserAgentManager import UserAgentManager
             cls._userAgentsManager = UserAgentManager()
         
         return cls._userAgentsManager
@@ -3161,6 +3166,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the data synchronization manager (SyncManager)
         """
         if cls._syncManager is None:
+            from .Sync.SyncManager import SyncManager
             cls._syncManager = SyncManager()
         
         return cls._syncManager
@@ -3179,6 +3185,7 @@ class HelpWindow(E5MainWindow):
         @return reference to the speed dial (SpeedDial)
         """
         if cls._speedDial is None:
+            from .SpeedDial.SpeedDial import SpeedDial
             cls._speedDial = SpeedDial()
         
         return cls._speedDial
@@ -3248,6 +3255,7 @@ class HelpWindow(E5MainWindow):
         """
         search = self.virustotalSearchEdit.text()
         if search:
+            from .VirusTotalApi import VirusTotalAPI
             requestData = VirusTotalAPI.getSearchRequestData(search)
             self.newTab(requestData=requestData)
     
@@ -3347,6 +3355,7 @@ class HelpWindow(E5MainWindow):
         else:
             if Preferences.getUI("NotificationsEnabled"):
                 if cls._notification is None:
+                    from UI.NotificationWidget import NotificationWidget
                     cls._notification = NotificationWidget()
                 cls._notification.setPixmap(icon)
                 cls._notification.setHeading(heading)

@@ -15,8 +15,6 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from Globals import recentNameHosts
 
-from QScintilla.Editor import Editor
-
 from .CooperationClient import CooperationClient
 
 from .Ui_ChatWidget import Ui_ChatWidget
@@ -385,6 +383,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         self.editorCommand.emit(hash, fileName, message)
         
+        from QScintilla.Editor import Editor
         if message.startswith(Editor.StartEditToken + Editor.Separator) or \
            message.startswith(Editor.EndEditToken + Editor.Separator):
             vm = e5App().getObject("ViewManager")
