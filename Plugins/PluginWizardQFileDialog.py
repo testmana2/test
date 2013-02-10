@@ -14,9 +14,6 @@ from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 
-from WizardPlugins.FileDialogWizard.FileDialogWizardDialog import \
-    FileDialogWizardDialog
-
 # Start-Of-Header
 name = "QFileDialog Wizard Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -99,6 +96,8 @@ class FileDialogWizard(QObject):
         @param editor reference to the current editor
         @return the generated code (string)
         """
+        from WizardPlugins.FileDialogWizard.FileDialogWizardDialog import \
+            FileDialogWizardDialog
         dlg = FileDialogWizardDialog(None)
         if dlg.exec_() == QDialog.Accepted:
             line, index = editor.getCursorPosition()

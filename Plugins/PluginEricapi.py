@@ -16,9 +16,6 @@ from E5Gui.E5Application import e5App
 
 from E5Gui.E5Action import E5Action
 
-from DocumentationPlugins.Ericapi.EricapiConfigDialog import EricapiConfigDialog
-from DocumentationPlugins.Ericapi.EricapiExecDialog import EricapiExecDialog
-
 import Utilities
 
 from eric5config import getConfig
@@ -141,6 +138,7 @@ class EricapiPlugin(QObject):
         """
         Private slot to perform the eric5_api api generation.
         """
+        from DocumentationPlugins.Ericapi.EricapiConfigDialog import EricapiConfigDialog
         eolTranslation = {
             '\r': 'cr',
             '\n': 'lf',
@@ -158,6 +156,7 @@ class EricapiPlugin(QObject):
                 args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
+            from DocumentationPlugins.Ericapi.EricapiExecDialog import EricapiExecDialog
             dia = EricapiExecDialog("Ericapi")
             res = dia.start(args, project.ppath)
             if res:

@@ -16,8 +16,6 @@ import UI.PixmapCache
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 
-from AboutPlugin.AboutDialog import AboutDialog
-
 # Start-Of-Header
 name = "About Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -121,6 +119,7 @@ class AboutPlugin(QObject):
         """
         Private slot to handle the About dialog.
         """
+        from AboutPlugin.AboutDialog import AboutDialog
         dlg = AboutDialog(self.__ui)
         dlg.exec_()
         

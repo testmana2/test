@@ -15,8 +15,6 @@ from E5Gui.E5Application import e5App
 
 from E5Gui.E5Action import E5Action
 
-from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
-
 import Preferences
 
 # Start-Of-Header
@@ -182,6 +180,7 @@ class SyntaxCheckerPlugin(QObject):
                 if file.endswith(tuple(Preferences.getPython("Python3Extensions")) +
                                  tuple(Preferences.getPython("PythonExtensions")))]
         
+        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
         self.__projectSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectSyntaxCheckerDialog.show()
         self.__projectSyntaxCheckerDialog.prepare(files, project)
@@ -198,6 +197,7 @@ class SyntaxCheckerPlugin(QObject):
         except AttributeError:
             fn = itm.dirName()
         
+        from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import SyntaxCheckerDialog
         self.__projectBrowserSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectBrowserSyntaxCheckerDialog.show()
         self.__projectBrowserSyntaxCheckerDialog.start(fn)
@@ -245,6 +245,8 @@ class SyntaxCheckerPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
+                from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
+                    SyntaxCheckerDialog
                 self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
                 self.__editorSyntaxCheckerDialog.show()
                 self.__editorSyntaxCheckerDialog.start(

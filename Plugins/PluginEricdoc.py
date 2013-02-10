@@ -16,9 +16,6 @@ from E5Gui.E5Application import e5App
 
 from E5Gui.E5Action import E5Action
 
-from DocumentationPlugins.Ericdoc.EricdocConfigDialog import EricdocConfigDialog
-from DocumentationPlugins.Ericdoc.EricdocExecDialog import EricdocExecDialog
-
 import Utilities
 
 from eric5config import getConfig
@@ -177,6 +174,7 @@ class EricdocPlugin(QObject):
         """
         Private slot to perform the eric5_doc api documentation generation.
         """
+        from DocumentationPlugins.Ericdoc.EricdocConfigDialog import EricdocConfigDialog
         eolTranslation = {
             '\r': 'cr',
             '\n': 'lf',
@@ -194,6 +192,7 @@ class EricdocPlugin(QObject):
                 args.append("--eol={0}".format(eolTranslation[project.getEolString()]))
             
             # now do the call
+            from DocumentationPlugins.Ericdoc.EricdocExecDialog import EricdocExecDialog
             dia = EricdocExecDialog("Ericdoc")
             res = dia.start(args, project.ppath)
             if res:

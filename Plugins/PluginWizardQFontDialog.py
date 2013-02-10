@@ -14,9 +14,6 @@ from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 
-from WizardPlugins.FontDialogWizard.FontDialogWizardDialog import \
-    FontDialogWizardDialog
-
 # Start-Of-Header
 name = "QFontDialog Wizard Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
@@ -99,6 +96,8 @@ class FontDialogWizard(QObject):
         @param editor reference to the current editor
         @return the generated code (string)
         """
+        from WizardPlugins.FontDialogWizard.FontDialogWizardDialog import \
+            FontDialogWizardDialog
         dlg = FontDialogWizardDialog(None)
         if dlg.exec_() == QDialog.Accepted:
             line, index = editor.getCursorPosition()

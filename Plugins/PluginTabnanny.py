@@ -15,8 +15,6 @@ from E5Gui.E5Application import e5App
 
 from E5Gui.E5Action import E5Action
 
-from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
-
 import Preferences
 
 # Start-Of-Header
@@ -185,6 +183,7 @@ class TabnannyPlugin(QObject):
                 if file.endswith(tuple(Preferences.getPython("Python3Extensions")) +
                                  tuple(Preferences.getPython("PythonExtensions")))]
         
+        from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
         self.__projectTabnannyDialog = TabnannyDialog()
         self.__projectTabnannyDialog.show()
         self.__projectTabnannyDialog.prepare(files, project)
@@ -201,6 +200,7 @@ class TabnannyPlugin(QObject):
         except AttributeError:
             fn = itm.dirName()
         
+        from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
         self.__projectBrowserTabnannyDialog = TabnannyDialog()
         self.__projectBrowserTabnannyDialog.show()
         self.__projectBrowserTabnannyDialog.start(fn)
@@ -249,6 +249,7 @@ class TabnannyPlugin(QObject):
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
             if editor.checkDirty() and editor.getFileName() is not None:
+                from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
                 self.__editorTabnannyDialog = TabnannyDialog()
                 self.__editorTabnannyDialog.show()
                 self.__editorTabnannyDialog.start(editor.getFileName())

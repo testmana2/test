@@ -15,8 +15,6 @@ from E5Gui.E5Application import e5App
 
 from E5Gui.E5Action import E5Action
 
-from CheckerPlugins.Pep8.Pep8Dialog import Pep8Dialog
-
 import Preferences
 
 # Start-Of-Header
@@ -194,6 +192,7 @@ class Pep8CheckerPlugin(QObject):
                     tuple(Preferences.getPython("Python3Extensions")) +
                     tuple(Preferences.getPython("PythonExtensions")))]
         
+        from CheckerPlugins.Pep8.Pep8Dialog import Pep8Dialog
         self.__projectPep8CheckerDialog = Pep8Dialog()
         self.__projectPep8CheckerDialog.show()
         self.__projectPep8CheckerDialog.prepare(files, project)
@@ -213,6 +212,7 @@ class Pep8CheckerPlugin(QObject):
             fn = itm.dirName()
             isDir = True
         
+        from CheckerPlugins.Pep8.Pep8Dialog import Pep8Dialog
         self.__projectBrowserPep8CheckerDialog = Pep8Dialog()
         self.__projectBrowserPep8CheckerDialog.show()
         if isDir:
@@ -267,6 +267,7 @@ class Pep8CheckerPlugin(QObject):
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
             if editor.checkDirty() and editor.getFileName() is not None:
+                from CheckerPlugins.Pep8.Pep8Dialog import Pep8Dialog
                 self.__editorPep8CheckerDialog = Pep8Dialog()
                 self.__editorPep8CheckerDialog.show()
                 self.__editorPep8CheckerDialog.start(

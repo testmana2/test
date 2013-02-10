@@ -18,9 +18,6 @@ from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_QRegExpWizardDialog import Ui_QRegExpWizardWidget
 
-from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
-from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
-
 import UI.PixmapCache
 
 import Utilities
@@ -218,6 +215,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the repeat toolbutton.
         """
+        from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
         dlg = QRegExpWizardRepeatDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getRepeat())
@@ -227,6 +225,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the characters toolbutton.
         """
+        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.RegExpMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -237,6 +236,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the wildcard characters toolbutton.
         """
+        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.WildcardMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -261,6 +261,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the wildcard characters toolbutton.
         """
+        from .QRegExpWizardCharactersDialog import QRegExpWizardCharactersDialog
         dlg = QRegExpWizardCharactersDialog(
             mode=QRegExpWizardCharactersDialog.W3CMode, parent=self)
         if dlg.exec_() == QDialog.Accepted:
@@ -278,6 +279,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         """
         Private slot to handle the W3C repeat toolbutton.
         """
+        from .QRegExpWizardRepeatDialog import QRegExpWizardRepeatDialog
         dlg = QRegExpWizardRepeatDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getRepeat())

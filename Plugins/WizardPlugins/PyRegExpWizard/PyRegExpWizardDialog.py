@@ -19,9 +19,6 @@ from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_PyRegExpWizardDialog import Ui_PyRegExpWizardDialog
 
-from .PyRegExpWizardRepeatDialog import PyRegExpWizardRepeatDialog
-from .PyRegExpWizardCharactersDialog import PyRegExpWizardCharactersDialog
-
 import UI.PixmapCache
 
 import Utilities
@@ -250,6 +247,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to handle the repeat toolbutton.
         """
+        from .PyRegExpWizardRepeatDialog import PyRegExpWizardRepeatDialog
         dlg = PyRegExpWizardRepeatDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getRepeat())
@@ -259,6 +257,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to handle the characters toolbutton.
         """
+        from .PyRegExpWizardCharactersDialog import PyRegExpWizardCharactersDialog
         dlg = PyRegExpWizardCharactersDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             self.__insertString(dlg.getCharacters())
