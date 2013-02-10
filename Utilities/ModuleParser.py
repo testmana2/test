@@ -164,12 +164,12 @@ _py_getnext = re.compile(r"""
     )
 
 |   (?P<Import>
-        ^ (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
+        ^ [ \t]* (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
         (?P<ImportList> (?: [^#;\\\n]+ (?: \\\n )* )* )
     )
 
 |   (?P<ImportFrom>
-        ^ from [ \t]+
+        ^ [ \t]* from [ \t]+
         (?P<ImportFromPath>
             \.* \w+
             (?:
