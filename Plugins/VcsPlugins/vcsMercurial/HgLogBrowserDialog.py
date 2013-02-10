@@ -19,7 +19,6 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
-from .HgDiffDialog import HgDiffDialog
 
 import Preferences
 
@@ -939,6 +938,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param rev2 second revision number (integer)
         """
         if self.diff is None:
+            from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(self.filename, [rev1, rev2], self.bundle)

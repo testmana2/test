@@ -14,8 +14,6 @@ from PyQt4.QtGui import QDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-from .HgFetchDialog import HgFetchDialog
-
 
 class Fetch(HgExtension):
     """
@@ -43,6 +41,7 @@ class Fetch(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
+        from .HgFetchDialog import HgFetchDialog
         res = False
         dlg = HgFetchDialog()
         if dlg.exec_() == QDialog.Accepted:

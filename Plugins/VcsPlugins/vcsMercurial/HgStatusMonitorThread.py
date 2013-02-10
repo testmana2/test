@@ -10,7 +10,6 @@ Module implementing the VCS status monitor thread class for Mercurial.
 from PyQt4.QtCore import QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread
-from .HgClient import HgClient
 
 import Preferences
 
@@ -62,6 +61,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             if self.vcs.version >= (2, 9, 9):
                 # versions below that have a bug causing a second
                 # instance to not recognize changes to the status
+                from .HgClient import HgClient
                 client = HgClient(self.projectDir, "utf-8")
                 ok, err = client.startServer()
                 if ok:

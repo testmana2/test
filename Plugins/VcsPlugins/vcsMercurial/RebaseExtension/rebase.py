@@ -14,8 +14,6 @@ from PyQt4.QtGui import QDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-from .HgRebaseDialog import HgRebaseDialog
-
 
 class Rebase(HgExtension):
     """
@@ -49,6 +47,7 @@ class Rebase(HgExtension):
                 self.vcs.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgRebaseDialog import HgRebaseDialog
         dlg = HgRebaseDialog(self.vcs.hgGetTagsList(repodir),
                              self.vcs.hgGetBranchesList(repodir),
                              bookmarksList)

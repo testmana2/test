@@ -16,18 +16,6 @@ from E5Gui import E5MessageBox
 
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
-from ..HgDiffDialog import HgDiffDialog
-
-from .HgQueuesNewPatchDialog import HgQueuesNewPatchDialog
-from .HgQueuesListDialog import HgQueuesListDialog
-from .HgQueuesRenamePatchDialog import HgQueuesRenamePatchDialog
-from .HgQueuesFoldDialog import HgQueuesFoldDialog
-from .HgQueuesHeaderDialog import HgQueuesHeaderDialog
-from .HgQueuesListGuardsDialog import HgQueuesListGuardsDialog
-from .HgQueuesListAllGuardsDialog import HgQueuesListAllGuardsDialog
-from .HgQueuesDefineGuardsDialog import HgQueuesDefineGuardsDialog
-from .HgQueuesGuardsSelectionDialog import HgQueuesGuardsSelectionDialog
-from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
 
 import Preferences
 
@@ -249,6 +237,7 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgQueuesNewPatchDialog import HgQueuesNewPatchDialog
         dlg = HgQueuesNewPatchDialog(HgQueuesNewPatchDialog.NEW_MODE)
         if dlg.exec_() == QDialog.Accepted:
             name, message, (userData, currentUser, userName), \
@@ -299,6 +288,7 @@ class Queues(HgExtension):
         
         if editMessage:
             currentMessage = self.__getCommitMessage(repodir)
+            from .HgQueuesNewPatchDialog import HgQueuesNewPatchDialog
             dlg = HgQueuesNewPatchDialog(HgQueuesNewPatchDialog.REFRESH_MODE,
                                          currentMessage)
             if dlg.exec_() == QDialog.Accepted:
@@ -334,6 +324,7 @@ class Queues(HgExtension):
         
         @param name file/directory name (string)
         """
+        from ..HgDiffDialog import HgDiffDialog
         self.qdiffDialog = HgDiffDialog(self.vcs)
         self.qdiffDialog.show()
         QApplication.processEvents()
@@ -345,6 +336,7 @@ class Queues(HgExtension):
         
         @param name file/directory name (string)
         """
+        from .HgQueuesHeaderDialog import HgQueuesHeaderDialog
         self.qheaderDialog = HgQueuesHeaderDialog(self.vcs)
         self.qheaderDialog.show()
         QApplication.processEvents()
@@ -423,6 +415,7 @@ class Queues(HgExtension):
         
         @param name file/directory name (string)
         """
+        from .HgQueuesListDialog import HgQueuesListDialog
         self.queuesListDialog = HgQueuesListDialog(self.vcs)
         self.queuesListDialog.show()
         self.queuesListDialog.start(name)
@@ -469,6 +462,7 @@ class Queues(HgExtension):
         if patchnames:
             currentPatch = self.__getCurrentPatch(repodir)
             if currentPatch:
+                from .HgQueuesRenamePatchDialog import HgQueuesRenamePatchDialog
                 dlg = HgQueuesRenamePatchDialog(currentPatch, patchnames)
                 if dlg.exec_() == QDialog.Accepted:
                     newName, selectedPatch = dlg.getData()
@@ -534,6 +528,7 @@ class Queues(HgExtension):
         patchnames = sorted(
             self.__getPatchesList(repodir, Queues.UNAPPLIED_LIST, withSummary=True))
         if patchnames:
+            from .HgQueuesFoldDialog import HgQueuesFoldDialog
             dlg = HgQueuesFoldDialog(patchnames)
             if dlg.exec_() == QDialog.Accepted:
                 message, patchesList = dlg.getData()
@@ -572,6 +567,7 @@ class Queues(HgExtension):
         patchnames = sorted(
             self.__getPatchesList(repodir, Queues.SERIES_LIST))
         if patchnames:
+            from .HgQueuesListGuardsDialog import HgQueuesListGuardsDialog
             self.queuesListGuardsDialog = HgQueuesListGuardsDialog(self.vcs, patchnames)
             self.queuesListGuardsDialog.show()
             self.queuesListGuardsDialog.start(name)
@@ -586,6 +582,7 @@ class Queues(HgExtension):
         
         @param name file/directory name (string)
         """
+        from .HgQueuesListAllGuardsDialog import HgQueuesListAllGuardsDialog
         self.queuesListAllGuardsDialog = HgQueuesListAllGuardsDialog(self.vcs)
         self.queuesListAllGuardsDialog.show()
         self.queuesListAllGuardsDialog.start(name)
@@ -606,6 +603,7 @@ class Queues(HgExtension):
         patchnames = sorted(
             self.__getPatchesList(repodir, Queues.SERIES_LIST))
         if patchnames:
+            from .HgQueuesDefineGuardsDialog import HgQueuesDefineGuardsDialog
             self.queuesDefineGuardsDialog = HgQueuesDefineGuardsDialog(
                 self.vcs, self, patchnames)
             self.queuesDefineGuardsDialog.show()
@@ -676,6 +674,7 @@ class Queues(HgExtension):
         guardsList = self.getGuardsList(repodir)
         if guardsList:
             activeGuardsList = self.getGuardsList(repodir, all=False)
+            from .HgQueuesGuardsSelectionDialog import HgQueuesGuardsSelectionDialog
             dlg = HgQueuesGuardsSelectionDialog(
                 guardsList, activeGuards=activeGuardsList, listOnly=False)
             if dlg.exec_() == QDialog.Accepted:
@@ -732,6 +731,7 @@ class Queues(HgExtension):
         
         guardsList = self.getGuardsList(repodir, all=False)
         if guardsList:
+            from .HgQueuesGuardsSelectionDialog import HgQueuesGuardsSelectionDialog
             dlg = HgQueuesGuardsSelectionDialog(guardsList, listOnly=True)
             dlg.exec_()
     
@@ -753,6 +753,7 @@ class Queues(HgExtension):
             title = self.trUtf8("Create New Queue")
         else:
             title = self.trUtf8("Rename Active Queue")
+        from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
         dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.NAME_INPUT,
             title, False, repodir, self.vcs)
         if dlg.exec_() == QDialog.Accepted:
@@ -824,6 +825,7 @@ class Queues(HgExtension):
         else:
             raise ValueError("illegal value for operation")
         
+        from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
         dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.QUEUE_INPUT,
             title, True, repodir, self.vcs)
         if dlg.exec_() == QDialog.Accepted:
@@ -884,6 +886,7 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
         self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(
             HgQueuesQueueManagementDialog.NO_INPUT,
             self.trUtf8("Available Queues"),

@@ -14,8 +14,6 @@ from PyQt4.QtGui import QDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-from .TransplantDialog import TransplantDialog
-
 
 class Transplant(HgExtension):
     """
@@ -43,6 +41,7 @@ class Transplant(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
+        from .TransplantDialog import TransplantDialog
         res = False
         dlg = TransplantDialog(self.vcs.hgGetBranchesList(repodir))
         if dlg.exec_() == QDialog.Accepted:

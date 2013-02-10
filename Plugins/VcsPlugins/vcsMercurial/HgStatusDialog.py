@@ -16,8 +16,6 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidg
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from .HgDiffDialog import HgDiffDialog
-
 from .Ui_HgStatusDialog import Ui_HgStatusDialog
 
 import Preferences
@@ -667,6 +665,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             return
         
         if self.diff is None:
+            from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(names)

@@ -15,10 +15,6 @@ from PyQt4.QtGui import QDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-from .HgPurgeListDialog import HgPurgeListDialog
-
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-
 import Preferences
 
 
@@ -102,6 +98,7 @@ class Purge(HgExtension):
             message = self.trUtf8("""Do really want to delete files not tracked by"""
                                   """ Mercurial?""")
         entries = self.__getEntries(repodir, all)
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(None, title, message, entries)
         if dlg.exec_() == QDialog.Accepted:
             args = []
@@ -130,5 +127,6 @@ class Purge(HgExtension):
                 return False
         
         entries = self.__getEntries(repodir, all)
+        from .HgPurgeListDialog import HgPurgeListDialog
         self.purgeListDialog = HgPurgeListDialog(entries)
         self.purgeListDialog.show()

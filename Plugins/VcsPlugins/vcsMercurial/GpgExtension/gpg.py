@@ -15,9 +15,6 @@ from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 from ..HgRevisionSelectionDialog import HgRevisionSelectionDialog
 
-from .HgGpgSignaturesDialog import HgGpgSignaturesDialog
-from .HgGpgSignDialog import HgGpgSignDialog
-
 
 class Gpg(HgExtension):
     """
@@ -46,6 +43,7 @@ class Gpg(HgExtension):
         
         @param path directory name of the project (string)
         """
+        from .HgGpgSignaturesDialog import HgGpgSignaturesDialog
         self.gpgSignaturesDialog = HgGpgSignaturesDialog(self.vcs)
         self.gpgSignaturesDialog.show()
         self.gpgSignaturesDialog.show()
@@ -107,6 +105,7 @@ class Gpg(HgExtension):
                 self.vcs.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgGpgSignDialog import HgGpgSignDialog
         dlg = HgGpgSignDialog(self.vcs.hgGetTagsList(repodir),
                               self.vcs.hgGetBranchesList(repodir),
                               bookmarksList)

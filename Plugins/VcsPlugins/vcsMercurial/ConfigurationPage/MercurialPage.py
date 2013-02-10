@@ -11,8 +11,6 @@ import os
 
 from PyQt4.QtCore import pyqtSlot
 
-from QScintilla.MiniEditor import MiniEditor
-
 from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
 from .Ui_MercurialPage import Ui_MercurialPage
 
@@ -61,6 +59,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         """
         Private slot to edit the (per user) Mercurial configuration file.
         """
+        from QScintilla.MiniEditor import MiniEditor
         cfgFile = self.__plugin.getConfigPath()
         if not os.path.exists(cfgFile):
             try:

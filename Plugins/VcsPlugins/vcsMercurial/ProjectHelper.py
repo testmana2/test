@@ -16,14 +16,6 @@ from E5Gui.E5Application import e5App
 
 from VCS.ProjectHelper import VcsProjectHelper
 
-from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
-from .QueuesExtension.ProjectHelper import QueuesProjectHelper
-from .FetchExtension.ProjectHelper import FetchProjectHelper
-from .PurgeExtension.ProjectHelper import PurgeProjectHelper
-from .GpgExtension.ProjectHelper import GpgProjectHelper
-from .TransplantExtension.ProjectHelper import TransplantProjectHelper
-from .RebaseExtension.ProjectHelper import RebaseProjectHelper
-
 from E5Gui.E5Action import E5Action
 
 import UI.PixmapCache
@@ -46,6 +38,13 @@ class HgProjectHelper(VcsProjectHelper):
         VcsProjectHelper.__init__(self, vcsObject, projectObject, parent, name)
         
         # instantiate the extensions
+        from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
+        from .QueuesExtension.ProjectHelper import QueuesProjectHelper
+        from .FetchExtension.ProjectHelper import FetchProjectHelper
+        from .PurgeExtension.ProjectHelper import PurgeProjectHelper
+        from .GpgExtension.ProjectHelper import GpgProjectHelper
+        from .TransplantExtension.ProjectHelper import TransplantProjectHelper
+        from .RebaseExtension.ProjectHelper import RebaseProjectHelper
         self.__extensions = {
             "bookmarks": BookmarksProjectHelper(),
             "mq": QueuesProjectHelper(),

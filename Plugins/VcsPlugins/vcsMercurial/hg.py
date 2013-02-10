@@ -26,46 +26,6 @@ from VCS.VersionControl import VersionControl
 from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from .HgDialog import HgDialog
-from .HgCommitDialog import HgCommitDialog
-from .HgOptionsDialog import HgOptionsDialog
-from .HgNewProjectOptionsDialog import HgNewProjectOptionsDialog
-from .HgCopyDialog import HgCopyDialog
-from .HgLogDialog import HgLogDialog
-from .HgLogBrowserDialog import HgLogBrowserDialog
-from .HgDiffDialog import HgDiffDialog
-from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
-from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
-from .HgMultiRevisionSelectionDialog import HgMultiRevisionSelectionDialog
-from .HgMergeDialog import HgMergeDialog
-from .HgStatusMonitorThread import HgStatusMonitorThread
-from .HgStatusDialog import HgStatusDialog
-from .HgAnnotateDialog import HgAnnotateDialog
-from .HgTagDialog import HgTagDialog
-from .HgTagBranchListDialog import HgTagBranchListDialog
-from .HgCommandDialog import HgCommandDialog
-from .HgBundleDialog import HgBundleDialog
-from .HgBackoutDialog import HgBackoutDialog
-from .HgServeDialog import HgServeDialog
-from .HgUtilities import getConfigPath
-from .HgClient import HgClient
-from .HgImportDialog import HgImportDialog
-from .HgExportDialog import HgExportDialog
-from .HgPhaseDialog import HgPhaseDialog
-from .HgGraftDialog import HgGraftDialog
-from .HgAddSubrepositoryDialog import HgAddSubrepositoryDialog
-from .HgRemoveSubrepositoriesDialog import HgRemoveSubrepositoriesDialog
-
-from .BookmarksExtension.bookmarks import Bookmarks
-from .QueuesExtension.queues import Queues
-from .FetchExtension.fetch import Fetch
-from .PurgeExtension.purge import Purge
-from .GpgExtension.gpg import Gpg
-from .TransplantExtension.transplant import Transplant
-from .RebaseExtension.rebase import Rebase
-
-from .ProjectBrowserHelper import HgProjectBrowserHelper
-
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 
 import Preferences
 import Utilities
@@ -151,6 +111,7 @@ class Hg(VersionControl):
         
         self.__activeExtensions = []
         
+        from .HgUtilities import getConfigPath
         self.__iniWatcher = QFileSystemWatcher(self)
         self.__iniWatcher.fileChanged.connect(self.__iniFileChanged)
         cfgFile = getConfigPath()
@@ -160,6 +121,13 @@ class Hg(VersionControl):
         self.__client = None
         
         # instantiate the extensions
+        from .BookmarksExtension.bookmarks import Bookmarks
+        from .QueuesExtension.queues import Queues
+        from .FetchExtension.fetch import Fetch
+        from .PurgeExtension.purge import Purge
+        from .GpgExtension.gpg import Gpg
+        from .TransplantExtension.transplant import Transplant
+        from .RebaseExtension.rebase import Rebase
         self.__extensions = {
             "bookmarks": Bookmarks(self),
             "mq": Queues(self),
@@ -410,6 +378,7 @@ class Hg(VersionControl):
         if not noDialog and not msg:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
+                from .HgCommitDialog import HgCommitDialog
                 self.__commitDialog = HgCommitDialog(self, self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
@@ -721,6 +690,7 @@ class Hg(VersionControl):
             force = True
             accepted = True
         else:
+            from .HgCopyDialog import HgCopyDialog
             dlg = HgCopyDialog(name, None, True, force)
             accepted = dlg.exec_() == QDialog.Accepted
             if accepted:
@@ -792,6 +762,7 @@ class Hg(VersionControl):
         else:
             bookmarksList = None
         
+        from .HgMultiRevisionSelectionDialog import HgMultiRevisionSelectionDialog
         dlg = HgMultiRevisionSelectionDialog(
                 self.hgGetTagsList(repodir),
                 self.hgGetBranchesList(repodir),
@@ -801,6 +772,7 @@ class Hg(VersionControl):
                 limitDefault=self.getPlugin().getPreferences("LogLimit"))
         if dlg.exec_() == QDialog.Accepted:
             revs, noEntries = dlg.getRevisions()
+            from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self)
             self.log.show()
             self.log.start(name, noEntries=noEntries, revisions=revs)
@@ -829,6 +801,7 @@ class Hg(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
+        from .HgDiffDialog import HgDiffDialog
         self.diff = HgDiffDialog(self)
         self.diff.show()
         QApplication.processEvents()
@@ -842,6 +815,7 @@ class Hg(VersionControl):
         @param name file/directory name(s) to show the status of
             (string or list of strings)
         """
+        from .HgStatusDialog import HgStatusDialog
         self.status = HgStatusDialog(self)
         self.status.show()
         self.status.start(name)
@@ -861,6 +835,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgTagDialog import HgTagDialog
         dlg = HgTagDialog(self.hgGetTagsList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             tag, tagOp = dlg.getParameters()
@@ -919,6 +894,7 @@ class Hg(VersionControl):
         project = e5App().getObject("Project")
         names = [project.getRelativePath(nam) for nam in names]
         if names[0]:
+            from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
             dlg = DeleteFilesConfirmationDialog(self.parent(),
                 self.trUtf8("Revert changes"),
                 self.trUtf8("Do you really want to revert all changes to these files"
@@ -967,6 +943,7 @@ class Hg(VersionControl):
                 self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgMergeDialog import HgMergeDialog
         dlg = HgMergeDialog(force, self.hgGetTagsList(repodir),
                             self.hgGetBranchesList(repodir),
                             bookmarksList)
@@ -1012,6 +989,7 @@ class Hg(VersionControl):
                 self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
         dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                         self.hgGetBranchesList(repodir),
                                         bookmarksList)
@@ -1216,6 +1194,7 @@ class Hg(VersionControl):
         
         @param name directory name of the working directory (string)
         """
+        from .HgCommandDialog import HgCommandDialog
         dlg = HgCommandDialog(self.commandHistory, name)
         if dlg.exec_() == QDialog.Accepted:
             command = dlg.getData()
@@ -1251,6 +1230,7 @@ class Hg(VersionControl):
         @param editable flag indicating that the project name is editable (boolean)
         @param parent parent widget (QWidget)
         """
+        from .HgOptionsDialog import HgOptionsDialog
         return HgOptionsDialog(self, project, parent)
     
     def vcsNewProjectOptionsDialog(self, parent=None):
@@ -1259,6 +1239,7 @@ class Hg(VersionControl):
         
         @param parent parent widget (QWidget)
         """
+        from .HgNewProjectOptionsDialog import HgNewProjectOptionsDialog
         return HgNewProjectOptionsDialog(self, parent)
     
     def vcsRepositoryInfos(self, ppath):
@@ -1407,6 +1388,7 @@ class Hg(VersionControl):
         @param project reference to the project object
         @return flag indicating successful operation (boolean)
         """
+        from .HgCopyDialog import HgCopyDialog
         dlg = HgCopyDialog(name)
         res = False
         if dlg.exec_() == QDialog.Accepted:
@@ -1533,6 +1515,7 @@ class Hg(VersionControl):
         @param tags flag indicating listing of branches or tags
                 (False = branches, True = tags)
         """
+        from .HgTagBranchListDialog import HgTagBranchListDialog
         self.tagbranchList = HgTagBranchListDialog(self)
         self.tagbranchList.show()
         if tags:
@@ -1560,6 +1543,7 @@ class Hg(VersionControl):
         
         @param name file name to show the annotations for (string)
         """
+        from .HgAnnotateDialog import HgAnnotateDialog
         self.annotate = HgAnnotateDialog(self)
         self.annotate.show()
         self.annotate.start(name)
@@ -1605,11 +1589,13 @@ class Hg(VersionControl):
                 self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
         dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
                                          self.hgGetBranchesList(repodir),
                                          bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             revisions = dlg.getRevisions()
+            from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self)
             self.diff.show()
             self.diff.start(name, revisions)
@@ -1621,6 +1607,7 @@ class Hg(VersionControl):
         
         @param path file/directory name to show the log of (string)
         """
+        from .HgLogBrowserDialog import HgLogBrowserDialog
         self.logBrowser = HgLogBrowserDialog(self)
         self.logBrowser.show()
         self.logBrowser.start(path)
@@ -1633,10 +1620,12 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
+            from .HgLogBrowserDialog import HgLogBrowserDialog
             self.logBrowser = HgLogBrowserDialog(self, mode="incoming")
             self.logBrowser.show()
             self.logBrowser.start(name)
         else:
+            from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="incoming")
             self.log.show()
             self.log.start(name)
@@ -1649,10 +1638,12 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
+            from .HgLogBrowserDialog import HgLogBrowserDialog
             self.logBrowser = HgLogBrowserDialog(self, mode="outgoing")
             self.logBrowser.show()
             self.logBrowser.start(name)
         else:
+            from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="outgoing")
             self.log.show()
             self.log.start(name)
@@ -1909,6 +1900,7 @@ class Hg(VersionControl):
         """
         Public method used to edit the user configuration file.
         """
+        from .HgUtilities import getConfigPath
         cfgFile = getConfigPath()
         if not os.path.exists(cfgFile):
             try:
@@ -2139,6 +2131,7 @@ class Hg(VersionControl):
                 self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgBundleDialog import HgBundleDialog
         dlg = HgBundleDialog(self.hgGetTagsList(repodir),
                              self.hgGetBranchesList(repodir),
                              bookmarksList)
@@ -2215,11 +2208,13 @@ class Hg(VersionControl):
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             if self.getPlugin().getPreferences("UseLogBrowser"):
+                from .HgLogBrowserDialog import HgLogBrowserDialog
                 self.logBrowser = \
                     HgLogBrowserDialog(self, mode="incoming", bundle=file)
                 self.logBrowser.show()
                 self.logBrowser.start(name)
             else:
+                from .HgLogDialog import HgLogDialog
                 self.log = HgLogDialog(self, mode="incoming", bundle=file)
                 self.log.show()
                 self.log.start(name)
@@ -2326,6 +2321,7 @@ class Hg(VersionControl):
                     self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
             else:
                 bookmarksList = None
+            from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
             dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                             self.hgGetBranchesList(repodir),
                                             bookmarksList,
@@ -2403,6 +2399,7 @@ class Hg(VersionControl):
                 self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
         else:
             bookmarksList = None
+        from .HgBackoutDialog import HgBackoutDialog
         dlg = HgBackoutDialog(self.hgGetTagsList(repodir),
                               self.hgGetBranchesList(repodir),
                               bookmarksList)
@@ -2474,6 +2471,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgServeDialog import HgServeDialog
         self.serveDlg = HgServeDialog(self, repodir)
         self.serveDlg.show()
     
@@ -2494,6 +2492,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgImportDialog import HgImportDialog
         dlg = HgImportDialog()
         if dlg.exec_() == QDialog.Accepted:
             patchFile, noCommit, message, date, user, stripCount, force = \
@@ -2547,6 +2546,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgExportDialog import HgExportDialog
         dlg = HgExportDialog()
         if dlg.exec_() == QDialog.Accepted:
             filePattern, revisions, switchParent, allText, noDates, git = \
@@ -2592,6 +2592,7 @@ class Hg(VersionControl):
                 return False
         
         if data is None:
+            from .HgPhaseDialog import HgPhaseDialog
             dlg = HgPhaseDialog()
             if dlg.exec_() == QDialog.Accepted:
                 data = dlg.getData()
@@ -2638,6 +2639,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
+        from .HgGraftDialog import HgGraftDialog
         res = False
         dlg = HgGraftDialog(self)
         if dlg.exec_() == QDialog.Accepted:
@@ -2727,6 +2729,7 @@ class Hg(VersionControl):
         """
         Public method to add a sub-repository.
         """
+        from .HgAddSubrepositoryDialog import HgAddSubrepositoryDialog
         ppath = self.__projectHelper.getProject().getProjectPath()
         hgsub = self.getHgSubPath()
         dlg = HgAddSubrepositoryDialog(ppath)
@@ -2809,6 +2812,7 @@ class Hg(VersionControl):
                             .format(str(err)))
             return
         
+        from .HgRemoveSubrepositoriesDialog import HgRemoveSubrepositoriesDialog
         dlg = HgRemoveSubrepositoriesDialog(subrepositories)
         if dlg.exec_() == QDialog.Accepted:
             subrepositories, removedSubrepos, deleteSubrepos = dlg.getData()
@@ -2947,6 +2951,7 @@ class Hg(VersionControl):
             translations browser (this needs some special treatment)
         @return the project browser helper object
         """
+        from .ProjectBrowserHelper import HgProjectBrowserHelper
         return HgProjectBrowserHelper(self, browser, project, isTranslationsBrowser)
         
     def vcsGetProjectHelper(self, project):
@@ -2969,6 +2974,7 @@ class Hg(VersionControl):
                     repodir = ""
                     break
             if repodir:
+                from .HgClient import HgClient
                 client = HgClient(repodir, "utf-8", self)
                 ok, err = client.startServer()
                 if ok:
@@ -2993,4 +2999,5 @@ class Hg(VersionControl):
         @param interval check interval for the monitor thread in seconds (integer)
         @return reference to the monitor thread (QThread)
         """
+        from .HgStatusMonitorThread import HgStatusMonitorThread
         return HgStatusMonitorThread(interval, project, self)

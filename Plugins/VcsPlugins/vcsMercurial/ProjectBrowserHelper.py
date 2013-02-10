@@ -15,7 +15,6 @@ from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
 from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
 
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
 
@@ -604,6 +603,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         Private slot called by the context menu to remove the selected file from the
         Mercurial repository leaving a copy in the project directory.
         """
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         if self.isTranslationsBrowser:
             items = self.browser.getSelectedItems([ProjectBrowserFileItem])
             names = [itm.fileName() for itm in items]

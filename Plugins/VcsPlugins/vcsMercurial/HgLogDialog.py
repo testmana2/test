@@ -17,7 +17,6 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_HgLogDialog import Ui_HgLogDialog
-from .HgDiffDialog import HgDiffDialog
 
 import Utilities
 import Preferences
@@ -443,6 +442,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.scrollToAnchor(ver)
         
         if self.diff is None:
+            from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(filename, [v1, v2], self.bundle)

@@ -15,11 +15,6 @@ from PyQt4.QtGui import QDialog, QInputDialog
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
-from .HgBookmarksListDialog import HgBookmarksListDialog
-from .HgBookmarkDialog import HgBookmarkDialog
-from .HgBookmarkRenameDialog import HgBookmarkRenameDialog
-from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
-
 import Preferences
 
 
@@ -56,6 +51,7 @@ class Bookmarks(HgExtension):
         """
         self.bookmarksList = []
         
+        from .HgBookmarksListDialog import HgBookmarksListDialog
         self.bookmarksListDlg = HgBookmarksListDialog(self.vcs)
         self.bookmarksListDlg.show()
         self.bookmarksListDlg.start(path, self.bookmarksList)
@@ -112,6 +108,7 @@ class Bookmarks(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgBookmarkDialog import HgBookmarkDialog
         dlg = HgBookmarkDialog(HgBookmarkDialog.DEFINE_MODE,
                                self.vcs.hgGetTagsList(repodir),
                                self.vcs.hgGetBranchesList(repodir),
@@ -174,6 +171,7 @@ class Bookmarks(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgBookmarkRenameDialog import HgBookmarkRenameDialog
         dlg = HgBookmarkRenameDialog(self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             newName, oldName = dlg.getData()
@@ -202,6 +200,7 @@ class Bookmarks(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
+        from .HgBookmarkDialog import HgBookmarkDialog
         dlg = HgBookmarkDialog(HgBookmarkDialog.MOVE_MODE,
                                self.vcs.hgGetTagsList(repodir),
                                self.vcs.hgGetBranchesList(repodir),
@@ -228,6 +227,7 @@ class Bookmarks(HgExtension):
         
         @param name file/directory name (string)
         """
+        from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
         self.bookmarksInOutDlg = HgBookmarksInOutDialog(
             self.vcs, HgBookmarksInOutDialog.INCOMING)
         self.bookmarksInOutDlg.show()
@@ -239,6 +239,7 @@ class Bookmarks(HgExtension):
         
         @param name file/directory name (string)
         """
+        from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
         self.bookmarksInOutDlg = HgBookmarksInOutDialog(
             self.vcs, HgBookmarksInOutDialog.OUTGOING)
         self.bookmarksInOutDlg.show()
@@ -313,8 +314,9 @@ class Bookmarks(HgExtension):
             args.append('--bookmark')
             args.append(bookmark)
             
-            dia = HgDialog(self.trUtf8('Pulling bookmark from a remote Mercurial repository'),
-                           self.vcs)
+            dia = HgDialog(self.trUtf8(
+                    'Pulling bookmark from a remote Mercurial repository'),
+                self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -346,8 +348,9 @@ class Bookmarks(HgExtension):
             args.append('--bookmark')
             args.append(bookmark)
             
-            dia = HgDialog(self.trUtf8('Pushing bookmark to a remote Mercurial repository'),
-                           self.vcs)
+            dia = HgDialog(self.trUtf8(
+                    'Pushing bookmark to a remote Mercurial repository'),
+                self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()

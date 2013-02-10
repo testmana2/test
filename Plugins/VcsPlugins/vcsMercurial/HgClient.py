@@ -14,8 +14,6 @@ from PyQt4.QtCore import QProcess, QProcessEnvironment, QObject, QByteArray, \
     QCoreApplication, QThread
 from PyQt4.QtGui import QDialog
 
-from .HgClientPromptDialog import HgClientPromptDialog
-
 import Preferences
 
 
@@ -281,6 +279,7 @@ class HgClient(QObject):
         @param size maximum length of the requested input (integer)
         @param message message sent by the server (string)
         """
+        from .HgClientPromptDialog import HgClientPromptDialog
         input = ""
         dlg = HgClientPromptDialog(size, message)
         if dlg.exec_() == QDialog.Accepted:
