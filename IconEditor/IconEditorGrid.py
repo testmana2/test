@@ -15,8 +15,6 @@ from E5Gui import E5MessageBox
 
 from .cursors import cursors_rc     # __IGNORE_WARNING__
 
-from .IconSizeDialog import IconSizeDialog
-
 
 class IconEditCommand(QUndoCommand):
     """
@@ -944,6 +942,7 @@ class IconEditorGrid(QWidget):
         """
         Public slot to resize the image.
         """
+        from .IconSizeDialog import IconSizeDialog
         dlg = IconSizeDialog(self.__image.width(), self.__image.height())
         res = dlg.exec_()
         if res == QDialog.Accepted:
@@ -961,6 +960,7 @@ class IconEditorGrid(QWidget):
         """
         Public slot to generate a new, empty image.
         """
+        from .IconSizeDialog import IconSizeDialog
         dlg = IconSizeDialog(self.__image.width(), self.__image.height())
         res = dlg.exec_()
         if res == QDialog.Accepted:

@@ -18,11 +18,6 @@ from . import pep8
 
 from E5Gui.E5Application import e5App
 
-from .Pep8Checker import Pep8Checker, Pep8Py2Checker
-from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
-from .Pep8StatisticsDialog import Pep8StatisticsDialog
-from .Pep8Fixer import Pep8Fixer, Pep8FixableIssues
-
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
 
 import UI.PixmapCache
@@ -96,6 +91,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param message message text (string)
         @param fixed flag indicating a fixed issue (boolean)
         """
+        from .Pep8Fixer import Pep8FixableIssues
+        
         if self.__lastFileItem is None:
             # It's a new file
             self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
@@ -291,6 +288,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     flags = Utilities.extractFlags(source)
                     ext = os.path.splitext(file)[1]
                     if fixIssues:
+                        from .Pep8Fixer import Pep8Fixer
                         fixer = Pep8Fixer(self.__project, file, source,
                                           fixCodes, True)  # always fix in place
                     else:
@@ -304,11 +302,13 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.__project.isProjectFile(file) and \
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
+                        from .Pep8Checker import Pep8Py2Checker
                         checker = Pep8Py2Checker(file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
                             ignore=excludeMessages)
                     else:
+                        from .Pep8Checker import Pep8Checker
                         checker = Pep8Checker(file, source,
                             repeat=repeatMessages,
                             select=includeMessages,
@@ -397,6 +397,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the message codes to be excluded via a
         selection dialog.
         """
+        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
         dlg = Pep8CodeSelectionDialog(
             self.excludeMessagesEdit.text(), False, self)
         if dlg.exec_() == QDialog.Accepted:
@@ -408,6 +409,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the message codes to be included via a
         selection dialog.
         """
+        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
         dlg = Pep8CodeSelectionDialog(
             self.includeMessagesEdit.text(), False, self)
         if dlg.exec_() == QDialog.Accepted:
@@ -419,6 +421,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the issue codes to be fixed via a
         selection dialog.
         """
+        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
         dlg = Pep8CodeSelectionDialog(
             self.fixIssuesEdit.text(), True, self)
         if dlg.exec_() == QDialog.Accepted:
@@ -490,6 +493,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         Private slot to show the statistics dialog.
         """
+        from .Pep8StatisticsDialog import Pep8StatisticsDialog
         dlg = Pep8StatisticsDialog(self.__statistics, self)
         dlg.exec_()
     

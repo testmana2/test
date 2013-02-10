@@ -18,7 +18,6 @@ from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from .IconEditorGrid import IconEditorGrid
-from .IconEditorPalette import IconEditorPalette
 
 import UI.PixmapCache
 import UI.Config
@@ -903,6 +902,8 @@ class IconEditorWindow(E5MainWindow):
         """
         Private method to initialize the palette dock widget.
         """
+        from .IconEditorPalette import IconEditorPalette
+        
         self.__paletteDock = QDockWidget(self)
         self.__paletteDock.setObjectName("paletteDock")
         self.__paletteDock.setFeatures(

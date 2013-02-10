@@ -19,7 +19,6 @@ from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5Application import e5App
 
-from .PluginManager import PluginManager
 from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
 
 import Preferences
@@ -44,6 +43,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         
         if pluginManager is None:
             # started as external plugin deinstaller
+            from .PluginManager import PluginManager
             self.__pluginManager = PluginManager(doLoadPlugins=False)
             self.__external = True
         else:

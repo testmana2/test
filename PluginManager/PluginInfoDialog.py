@@ -11,8 +11,6 @@ Module implementing the Plugin Info Dialog.
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
 
-from .PluginDetailsDialog import PluginDetailsDialog
-
 from .Ui_PluginInfoDialog import Ui_PluginInfoDialog
 
 
@@ -115,6 +113,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         if details is None:
             pass
         else:
+            from .PluginDetailsDialog import PluginDetailsDialog
             dlg = PluginDetailsDialog(details, self)
             dlg.show()
     

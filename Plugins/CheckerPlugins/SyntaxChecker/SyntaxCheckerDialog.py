@@ -19,8 +19,6 @@ from E5Gui.E5Application import e5App
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
-from Utilities.py3flakes.checker import Checker
-from Utilities.py3flakes.messages import ImportStarUsed
 import Preferences
 import UI.PixmapCache
 
@@ -223,6 +221,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         if isPy3:
                             try:
+                                from Utilities.py3flakes.checker import Checker
+                                from Utilities.py3flakes.messages import ImportStarUsed
                                 sourceLines = source.splitlines()
                                 warnings = Checker(source, file)
                                 warnings.messages.sort(key=lambda a: a.lineno)

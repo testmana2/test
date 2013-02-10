@@ -16,11 +16,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_IrcNetworkEditDialog import Ui_IrcNetworkEditDialog
 
-from .IrcNetworkManager import IrcIdentity, IrcNetwork, IrcChannel
-from .IrcChannelEditDialog import IrcChannelEditDialog
-from .IrcServerEditDialog import IrcServerEditDialog
-from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
-
 import UI.PixmapCache
 
 
@@ -52,6 +47,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         if networkName:
             self.__network = copy.deepcopy(self.__manager.getNetwork(networkName))
         else:
+            from .IrcNetworkManager import IrcNetwork
             self.__network = IrcNetwork("")
         
         # network name
@@ -102,6 +98,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         self.identityCombo.clear()
         
+        from .IrcNetworkManager import IrcIdentity
         identities = list(sorted(self.__manager.getIdentityNames()))
         identities[identities.index(IrcIdentity.DefaultIdentityName)] = \
             IrcIdentity.DefaultIdentityDisplay
@@ -120,6 +117,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         
         @param identity selected entity (string)
         """
+        from .IrcNetworkManager import IrcIdentity
         if identity == IrcIdentity.DefaultIdentityDisplay:
             identity = IrcIdentity.DefaultIdentityName
         self.__network.setIdentityName(identity)
@@ -129,6 +127,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         Private slot to edit the identities.
         """
+        from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
         currentIdentity = self.identityCombo.currentText()
         dlg = IrcIdentitiesEditDialog(self.__manager, currentIdentity, self)
         dlg.exec_()
@@ -148,6 +147,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         """
         Private slot to edit the server configuration.
         """
+        from .IrcServerEditDialog import IrcServerEditDialog
         dlg = IrcServerEditDialog(self.__network.getServer())
         if dlg.exec_() == QDialog.Accepted:
             self.__network.setServer(dlg.getServer())
@@ -227,8 +227,10 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
             key = ""
             autoJoin = False
         
+        from .IrcChannelEditDialog import IrcChannelEditDialog
         dlg = IrcChannelEditDialog(name, key, autoJoin, itm is not None, self)
         if dlg.exec_() == QDialog.Accepted:
+            from .IrcNetworkManager import IrcChannel
             name, key, autoJoin = dlg.getData()
             channel = IrcChannel(name)
             channel.setKey(key)

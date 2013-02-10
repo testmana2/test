@@ -21,7 +21,6 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication
 from E5Gui import E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
-from .PluginManager import PluginManager
 from .Ui_PluginInstallDialog import Ui_PluginInstallDialog
 
 import Utilities
@@ -48,6 +47,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if pluginManager is None:
             # started as external plugin installer
+            from .PluginManager import PluginManager
             self.__pluginManager = PluginManager(doLoadPlugins=False)
             self.__external = True
         else:

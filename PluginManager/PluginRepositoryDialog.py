@@ -23,8 +23,6 @@ from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5Application import e5App
 
-from E5XML.PluginRepositoryReader import PluginRepositoryReader
-
 from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
 try:
     from E5Network.E5SslErrorHandler import E5SslErrorHandler
@@ -301,6 +299,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
             self.__repositoryMissing = False
             f = QFile(self.pluginRepositoryFile)
             if f.open(QIODevice.ReadOnly):
+                from E5XML.PluginRepositoryReader import PluginRepositoryReader
                 reader = PluginRepositoryReader(f, self)
                 reader.readXML()
                 self.repositoryList.resizeColumnToContents(0)

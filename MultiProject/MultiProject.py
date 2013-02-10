@@ -14,14 +14,8 @@ from PyQt4.QtGui import QMenu, QApplication, QDialog, QCursor, QToolBar
 
 from Globals import recentNameMultiProject
 
-from .PropertiesDialog import PropertiesDialog
-from .AddProjectDialog import AddProjectDialog
-
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox
-
-from E5XML.MultiProjectReader import MultiProjectReader
-from E5XML.MultiProjectWriter import MultiProjectWriter
 
 import UI.PixmapCache
 
@@ -199,6 +193,7 @@ class MultiProject(QObject):
         """
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.MultiProjectReader import MultiProjectReader
             reader = MultiProjectReader(f, self)
             reader.readXML()
             f.close()
@@ -241,6 +236,7 @@ class MultiProject(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.MultiProjectWriter import MultiProjectWriter
             MultiProjectWriter(f, self, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
             res = True
@@ -268,6 +264,7 @@ class MultiProject(QObject):
         
         @param startdir start directory for the selection dialog (string)
         """
+        from .AddProjectDialog import AddProjectDialog
         if not startdir:
             startdir = self.ppath
         if not startdir:
@@ -371,6 +368,7 @@ class MultiProject(QObject):
         if not self.checkDirty():
             return
             
+        from .PropertiesDialog import PropertiesDialog
         dlg = PropertiesDialog(self, True)
         if dlg.exec_() == QDialog.Accepted:
             self.closeMultiProject()
@@ -387,6 +385,7 @@ class MultiProject(QObject):
         """
         Private slot to display the properties dialog.
         """
+        from .PropertiesDialog import PropertiesDialog
         dlg = PropertiesDialog(self, False)
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()

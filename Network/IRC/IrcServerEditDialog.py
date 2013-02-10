@@ -12,8 +12,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_IrcServerEditDialog import Ui_IrcServerEditDialog
 
-from .IrcNetworkManager import IrcServer
-
 
 class IrcServerEditDialog(QDialog, Ui_IrcServerEditDialog):
     """
@@ -61,6 +59,7 @@ class IrcServerEditDialog(QDialog, Ui_IrcServerEditDialog):
         
         @return server object (IrcServer)
         """
+        from .IrcNetworkManager import IrcServer
         server = IrcServer(self.serverEdit.text())
         server.setPort(self.portSpinBox.value())
         server.setPassword(self.passwordEdit.text())

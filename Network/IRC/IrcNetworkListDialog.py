@@ -14,10 +14,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_IrcNetworkListDialog import Ui_IrcNetworkListDialog
 
-from .IrcNetworkManager import IrcIdentity
-from .IrcNetworkEditDialog import IrcNetworkEditDialog
-from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
-
 
 class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     """
@@ -77,6 +73,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             del child
         
         # step 2: (re-)add the child entries
+        from .IrcNetworkManager import IrcIdentity
         networkName = itm.text(0)
         network = self.__manager.getNetwork(networkName)
         server = network.getServer()
@@ -125,6 +122,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         """
         Private slot to add a new network entry.
         """
+        from .IrcNetworkEditDialog import IrcNetworkEditDialog
         dlg = IrcNetworkEditDialog(self.__manager, "", self)
         if dlg.exec_() == QDialog.Accepted:
             network = dlg.getNetwork()
@@ -138,6 +136,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         """
         itm = self.networksList.selectedItems()[0]
         if itm:
+            from .IrcNetworkEditDialog import IrcNetworkEditDialog
             networkName = itm.text(0)
             dlg = IrcNetworkEditDialog(self.__manager, networkName, self)
             if dlg.exec_() == QDialog.Accepted:
@@ -235,6 +234,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         """
         Private slot to edit the identities.
         """
+        from .IrcIdentitiesEditDialog import IrcIdentitiesEditDialog
         dlg = IrcIdentitiesEditDialog(self.__manager, "", self)
         dlg.exec_()
         

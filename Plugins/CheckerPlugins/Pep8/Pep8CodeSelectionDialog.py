@@ -11,7 +11,6 @@ from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
-from .Pep8Fixer import Pep8FixableIssues
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
 
@@ -35,6 +34,7 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
         codeList = [code.strip() for code in codes.split(",") if code.strip()]
         
         if showFixCodes:
+            from .Pep8Fixer import Pep8FixableIssues
             selectableCodes = Pep8FixableIssues
         else:
             selectableCodes = pep8.pep8_messages.keys()

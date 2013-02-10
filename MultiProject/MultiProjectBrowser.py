@@ -12,8 +12,6 @@ from PyQt4.QtGui import QListWidget, QListWidgetItem, QDialog, QMenu
 
 from E5Gui.E5Application import e5App
 
-from .AddProjectDialog import AddProjectDialog
-
 import UI.PixmapCache
 
 
@@ -215,6 +213,7 @@ class MultiProjectBrowser(QListWidget):
             if filename:
                 project = self.multiProject.getProject(filename)
                 if project is not None:
+                    from .AddProjectDialog import AddProjectDialog
                     dlg = AddProjectDialog(self, project=project)
                     if dlg.exec_() == QDialog.Accepted:
                         name, filename, isMaster, description = dlg.getData()

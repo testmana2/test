@@ -18,7 +18,6 @@ from E5Gui.E5Application import e5App
 
 from .Ui_TabnannyDialog import Ui_TabnannyDialog
 
-from . import Tabnanny
 import Utilities
 import Preferences
 
@@ -161,6 +160,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     self.__project.getProjectLanguage() in ["Python", "Python2"]):
                     nok, fname, line, error = self.__py2check(file)
                 else:
+                    from . import Tabnanny
                     nok, fname, line, error = Tabnanny.check(file, source)
                 if nok:
                     self.noResults = False

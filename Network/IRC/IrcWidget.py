@@ -24,10 +24,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_IrcWidget import Ui_IrcWidget
 
-from .IrcNetworkManager import IrcNetworkManager
-from .IrcChannelWidget import IrcChannelWidget
-from .IrcNetworkListDialog import IrcNetworkListDialog
-
 import Preferences
 import UI.PixmapCache
 
@@ -57,6 +53,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         super().__init__(parent)
         self.setupUi(self)
         
+        from .IrcNetworkManager import IrcNetworkManager
         self.__ircNetworkManager = IrcNetworkManager(self)
         
         self.__leaveButton = QToolButton(self)
@@ -242,6 +239,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param name name of the network to edit (string)
         """
+        from .IrcNetworkListDialog import IrcNetworkListDialog
         dlg = IrcNetworkListDialog(self.__ircNetworkManager, self)
         dlg.exec_()
     
@@ -267,6 +265,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             if channel.name() == name:
                 return
         
+        from .IrcChannelWidget import IrcChannelWidget
         channel = IrcChannelWidget(self)
         channel.setName(name)
         channel.setUserName(self.__nickName)
@@ -325,6 +324,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         
         @param name name of the user (string)
         """
+        from .IrcChannelWidget import IrcChannelWidget
         channel = IrcChannelWidget(self)
         channel.setName(self.__nickName)
         channel.setUserName(self.__nickName)
