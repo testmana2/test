@@ -13,8 +13,6 @@ from PyQt4.QtGui import QFrame, QLabel
 from E5Gui.E5TabWidget import E5WheelTabBar
 from E5Gui.E5PassivePopup import E5PassivePopup
 
-from .HelpSnap import renderTabPreview
-
 import Preferences
 
 
@@ -59,6 +57,7 @@ class HelpTabBar(E5WheelTabBar):
         self.__previewPopup.setFrameShadow(QFrame.Plain)
         self.__previewPopup.setFixedSize(w, h)
         
+        from .HelpSnap import renderTabPreview
         l = QLabel()
         l.setPixmap(renderTabPreview(indexedBrowser.page(), w, h))
         

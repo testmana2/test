@@ -10,8 +10,6 @@ Module implementing the cookies configuration dialog.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
-from .CookiesDialog import CookiesDialog
-from .CookiesExceptionsDialog import CookiesExceptionsDialog
 from .CookieJar import CookieJar
 
 from .Ui_CookiesConfigurationDialog import Ui_CookiesConfigurationDialog
@@ -81,6 +79,7 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         """
         Private slot to show the cookies exceptions dialog.
         """
+        from .CookiesExceptionsDialog import CookiesExceptionsDialog
         dlg = CookiesExceptionsDialog(self.__mw.cookieJar())
         dlg.exec_()
     
@@ -89,5 +88,6 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         """
         Private slot to show the cookies dialog.
         """
+        from .CookiesDialog import CookiesDialog
         dlg = CookiesDialog(self.__mw.cookieJar())
         dlg.exec_()

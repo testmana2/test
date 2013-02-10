@@ -14,11 +14,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_GreaseMonkeyConfigurationDialog import Ui_GreaseMonkeyConfigurationDialog
 
-from .GreaseMonkeyConfigurationScriptInfoDialog import \
-    GreaseMonkeyConfigurationScriptInfoDialog
-
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -60,6 +55,7 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         """
         Private slot to open the userscript.org web site.
         """
+        import Helpviewer.HelpWindow
         Helpviewer.HelpWindow.HelpWindow.mainWindow().newTab(
             QUrl("http://www.userscript.org"))
         self.close()
@@ -71,6 +67,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         """
         script = self.__getScript(item)
         if script is not None:
+            from .GreaseMonkeyConfigurationScriptInfoDialog import \
+                GreaseMonkeyConfigurationScriptInfoDialog
             infoDlg = GreaseMonkeyConfigurationScriptInfoDialog(script, self)
             infoDlg.exec_()
     

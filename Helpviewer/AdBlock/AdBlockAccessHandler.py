@@ -12,9 +12,6 @@ from PyQt4.QtNetwork import QNetworkAccessManager
 
 from E5Gui import E5MessageBox
 
-from .AdBlockSubscription import AdBlockSubscription
-
-import Helpviewer.HelpWindow
 from Helpviewer.Network.SchemeAccessHandler import SchemeAccessHandler
 from Helpviewer.Network.EmptyNetworkReply import EmptyNetworkReply
 
@@ -48,6 +45,9 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             self.trUtf8("""<p>Subscribe to this AdBlock subscription?</p><p>{0}</p>""")\
                 .format(title))
         if res:
+            from .AdBlockSubscription import AdBlockSubscription
+            import Helpviewer.HelpWindow
+            
             dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager().showDialog()
             subscription = AdBlockSubscription(url, False,
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager())

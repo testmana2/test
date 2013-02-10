@@ -9,11 +9,6 @@ Module implementing the synchronization manager class.
 
 from PyQt4.QtCore import QObject, pyqtSignal
 
-from .FtpSyncHandler import FtpSyncHandler
-from .DirectorySyncHandler import DirectorySyncHandler
-from .SyncAssistantDialog import SyncAssistantDialog
-from . import SyncGlobals
-
 import Preferences
 
 import Helpviewer.HelpWindow
@@ -61,6 +56,7 @@ class SyncManager(QObject):
         """
         Public method to show the synchronization dialog.
         """
+        from .SyncAssistantDialog import SyncAssistantDialog
         dlg = SyncAssistantDialog()
         dlg.exec_()
     
@@ -78,9 +74,12 @@ class SyncManager(QObject):
             self.__handler.shutdown()
         
         if self.syncEnabled():
+            from . import SyncGlobals
             if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
+                from .FtpSyncHandler import FtpSyncHandler
                 self.__handler = FtpSyncHandler(self)
             elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
+                from .DirectorySyncHandler import DirectorySyncHandler
                 self.__handler = DirectorySyncHandler(self)
             self.__handler.syncError.connect(self.__syncError)
             self.__handler.syncFinished.connect(self.__syncFinished)
@@ -178,6 +177,7 @@ class SyncManager(QObject):
         
         @return flag indicating enabled synchronization
         """
+        from . import SyncGlobals
         return Preferences.getHelp("SyncEnabled") and \
                Preferences.getHelp("SyncType") != SyncGlobals.SyncTypeNone
     

@@ -12,8 +12,6 @@ import json
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
-from ..BookmarkNode import BookmarkNode
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -121,6 +119,7 @@ class ChromeImporter(BookmarksImporter):
                 .format(self.__fileName, str(err))
             return None
         
+        from ..BookmarkNode import BookmarkNode
         importRootNode = BookmarkNode(BookmarkNode.Folder)
         if contents["version"] == 1:
             self.__processRoots(contents["roots"], importRootNode)
@@ -154,6 +153,7 @@ class ChromeImporter(BookmarksImporter):
         @param data dictionary with the bookmarks data (dict)
         @param rootNode node to add the bookmarks to (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
         folder = BookmarkNode(BookmarkNode.Folder, rootNode)
         folder.title = data["name"].replace("&", "&&")
         for node in data["children"]:
@@ -169,6 +169,7 @@ class ChromeImporter(BookmarksImporter):
         @param data dictionary with the bookmarks data (dict)
         @param rootNode node to add the bookmarks to (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
         bookmark = BookmarkNode(BookmarkNode.Bookmark, rootNode)
         bookmark.url = data["url"]
         bookmark.title = data["name"].replace("&", "&&")

@@ -12,8 +12,6 @@ from PyQt4.QtGui import QAction, QMenu
 
 from E5Gui.E5ClickableLabel import E5ClickableLabel
 
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -65,6 +63,7 @@ class AdBlockIcon(E5ClickableLabel):
         
         menu.clear()
         
+        import Helpviewer.HelpWindow
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         
         if manager.isEnabled():
@@ -139,6 +138,7 @@ class AdBlockIcon(E5ClickableLabel):
         """
         act = self.sender()
         if act is not None:
+            import Helpviewer.HelpWindow
             Helpviewer.HelpWindow.HelpWindow.adBlockManager().setEnabled(act.data())
     
     def __isCurrentHostExcepted(self):
@@ -150,6 +150,7 @@ class AdBlockIcon(E5ClickableLabel):
         browser = self.__mw.currentBrowser()
         urlHost = browser.page().url().host()
         
+        import Helpviewer.HelpWindow
         return urlHost and \
                Helpviewer.HelpWindow.HelpWindow.adBlockManager().isHostExcepted(urlHost)
     
@@ -169,6 +170,7 @@ class AdBlockIcon(E5ClickableLabel):
         """
         act = self.sender()
         if act is not None:
+            import Helpviewer.HelpWindow
             urlHost = self.__mw.currentBrowser().page().url().host()
             if act.data():
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager().addException(urlHost)

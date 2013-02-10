@@ -10,8 +10,6 @@ Module implementing the label to show the web site icon.
 from PyQt4.QtCore import Qt, QPoint, QUrl, QMimeData
 from PyQt4.QtGui import QLabel, QApplication, QDrag, QPixmap
 
-import Helpviewer.HelpWindow
-
 
 class FavIconLabel(QLabel):
     """
@@ -39,6 +37,7 @@ class FavIconLabel(QLabel):
         """
         Private slot to set the icon.
         """
+        import Helpviewer.HelpWindow
         try:
             url = QUrl()
             if self.__browser:

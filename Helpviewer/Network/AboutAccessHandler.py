@@ -9,8 +9,6 @@ Module implementing a scheme access handler for about schemes.
 
 from .SchemeAccessHandler import SchemeAccessHandler
 
-from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
-
 
 class AboutAccessHandler(SchemeAccessHandler):
     """
@@ -26,4 +24,5 @@ class AboutAccessHandler(SchemeAccessHandler):
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
+        from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
         return NetworkProtocolUnknownErrorReply("about", self.parent())

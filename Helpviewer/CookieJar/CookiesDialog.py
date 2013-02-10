@@ -11,8 +11,6 @@ from PyQt4.QtCore import pyqtSlot, Qt, QDateTime, QByteArray
 from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
 from .CookieModel import CookieModel
-from .CookieDetailsDialog import CookieDetailsDialog
-from .CookiesExceptionsDialog import CookiesExceptionsDialog
 
 from .Ui_CookiesDialog import Ui_CookiesDialog
 
@@ -96,6 +94,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
             QByteArray.fromPercentEncoding(model.data(model.index(row, 5)))).decode()
         
         if self.__detailsDialog is None:
+            from .CookieDetailsDialog import CookieDetailsDialog
             self.__detailsDialog = CookieDetailsDialog(self)
         self.__detailsDialog.setData(domain, name, path, secure, expires, value)
         self.__detailsDialog.show()
@@ -108,6 +107,8 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         selection = self.cookiesTable.selectionModel().selectedRows()
         if len(selection) == 0:
             return
+        
+        from .CookiesExceptionsDialog import CookiesExceptionsDialog
         
         firstSelected = selection[0]
         domainSelection = firstSelected.sibling(firstSelected.row(), 0)

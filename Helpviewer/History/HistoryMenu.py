@@ -15,11 +15,7 @@ from PyQt4.QtGui import QAbstractProxyModel, QSortFilterProxyModel, QMenu
 from E5Gui.E5ModelMenu import E5ModelMenu
 from E5Gui import E5MessageBox
 
-import Helpviewer.HelpWindow
-
 from .HistoryModel import HistoryModel
-from .HistoryDialog import HistoryDialog
-from .HistoryFilterModel import HistoryFilterModel
 
 import UI.PixmapCache
 
@@ -226,6 +222,7 @@ class HistoryMostVisitedMenuModel(QSortFilterProxyModel):
         @param right index of right item (QModelIndex)
         @return true, if left is less than right (boolean)
         """
+        from .HistoryFilterModel import HistoryFilterModel
         frequency_L = \
             self.sourceModel().data(left, HistoryFilterModel.FrequencyRole)
         dateTime_L = \
@@ -302,6 +299,7 @@ class HistoryMenu(E5ModelMenu):
         @return flag indicating if any actions were added (boolean)
         """
         if self.__historyManager is None:
+            import Helpviewer.HelpWindow
             self.__historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
             self.__historyMenuModel = \
                 HistoryMenuModel(self.__historyManager.historyTreeModel(), self)
@@ -355,6 +353,7 @@ class HistoryMenu(E5ModelMenu):
         """
         Private slot to show the history dialog.
         """
+        from .HistoryDialog import HistoryDialog
         dlg = HistoryDialog(self)
         dlg.setAttribute(Qt.WA_DeleteOnClose)
         dlg.newUrl.connect(self.newUrl)
@@ -378,6 +377,7 @@ class HistoryMenu(E5ModelMenu):
         fm = self.__closedTabsMenu.fontMetrics()
         maxWidth = fm.width('m') * 40
         
+        import Helpviewer.HelpWindow
         self.__closedTabsMenu.clear()
         index = 0
         for tab in self.__tabWidget.closedTabsManager().allClosedTabs():
@@ -449,6 +449,7 @@ class HistoryMostVisitedMenu(E5ModelMenu):
         @return flag indicating if any actions were added (boolean)
         """
         if self.__historyMenuModel is None:
+            import Helpviewer.HelpWindow
             historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
             self.__historyMenuModel = \
                 HistoryMostVisitedMenuModel(historyManager.historyFilterModel(), self)

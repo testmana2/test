@@ -11,13 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile
 
-from .AdBlockNetwork import AdBlockNetwork
-from .AdBlockPage import AdBlockPage
 from .AdBlockSubscription import AdBlockSubscription
-from .AdBlockDialog import AdBlockDialog
-from .AdBlockExceptionsDialog import AdBlockExceptionsDialog
-
-import Helpviewer.HelpWindow
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -89,6 +83,7 @@ class AdBlockManager(QObject):
         if self.isEnabled() == enabled:
             return
         
+        import Helpviewer.HelpWindow
         self.__enabled = enabled
         for mainWindow in Helpviewer.HelpWindow.HelpWindow.mainWindows():
             mainWindow.adBlockIcon().setEnabled(enabled)
@@ -103,6 +98,7 @@ class AdBlockManager(QObject):
         @return reference to the network block object (AdBlockNetwork)
         """
         if self.__adBlockNetwork is None:
+            from .AdBlockNetwork import AdBlockNetwork
             self.__adBlockNetwork = AdBlockNetwork(self)
         return self.__adBlockNetwork
     
@@ -113,6 +109,7 @@ class AdBlockManager(QObject):
         @return reference to the page block object (AdBlockPage)
         """
         if self.__adBlockPage is None:
+            from .AdBlockPage import AdBlockPage
             self.__adBlockPage = AdBlockPage(self)
         return self.__adBlockPage
     
@@ -346,6 +343,7 @@ class AdBlockManager(QObject):
         @return reference to the dialog (AdBlockDialog)
         """
         if self.__adBlockDialog is None:
+            from .AdBlockDialog import AdBlockDialog
             self.__adBlockDialog = AdBlockDialog()
         
         self.__adBlockDialog.show()
@@ -458,6 +456,7 @@ class AdBlockManager(QObject):
         @return reference to the exceptions dialog (AdBlockExceptionsDialog)
         """
         if self.__adBlockExceptionsDialog is None:
+            from .AdBlockExceptionsDialog import AdBlockExceptionsDialog
             self.__adBlockExceptionsDialog = AdBlockExceptionsDialog()
         
         self.__adBlockExceptionsDialog.load(self.__exceptedHosts)

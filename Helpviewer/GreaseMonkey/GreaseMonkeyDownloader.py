@@ -16,11 +16,7 @@ from PyQt4.QtNetwork import QNetworkReply
 from E5Gui import E5MessageBox
 
 import Helpviewer.HelpWindow
-from Helpviewer import HelpUtilities
 from Helpviewer.Network.FollowRedirectReply import FollowRedirectReply
-
-from .GreaseMonkeyScript import GreaseMonkeyScript
-from .GreaseMonkeyAddScriptDialog import GreaseMonkeyAddScriptDialog
 
 
 class GreaseMonkeyDownloader(QObject):
@@ -59,6 +55,7 @@ class GreaseMonkeyDownloader(QObject):
         
         if self.__reply.error() == QNetworkReply.NoError and \
            "// ==UserScript==" in response:
+            from Helpviewer import HelpUtilities
             filePath = os.path.join(self.__manager.scriptsDirectory(),
                 HelpUtilities.getFileNameFromUrl(self.__reply.url()))
             self.__fileName = HelpUtilities.ensureUniqueFilename(filePath)
@@ -106,6 +103,7 @@ class GreaseMonkeyDownloader(QObject):
         response = bytes(self.__reply.readAll()).decode()
         
         if self.__reply.error() == QNetworkReply.NoError and response:
+            from Helpviewer import HelpUtilities
             filePath = os.path.join(self.__manager.requireScriptsDirectory(),
                                     "require.js")
             fileName = HelpUtilities.ensureUniqueFilename(filePath, "{0}")
@@ -143,11 +141,13 @@ class GreaseMonkeyDownloader(QObject):
                 Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
             self.__reply.finished.connect(self.__requireDownloaded)
         else:
+            from .GreaseMonkeyScript import GreaseMonkeyScript
             deleteScript = True
             script = GreaseMonkeyScript(self.__manager, self.__fileName)
             
             if script.isValid():
                 if not self.__manager.containsScript(script.fullName()):
+                    from .GreaseMonkeyAddScriptDialog import GreaseMonkeyAddScriptDialog
                     dlg = GreaseMonkeyAddScriptDialog(self.__manager, script)
                     deleteScript = dlg.exec_() != QDialog.Accepted
                 else:

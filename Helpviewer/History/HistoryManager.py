@@ -15,10 +15,6 @@ from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
 
 from E5Gui import E5MessageBox
 
-from .HistoryModel import HistoryModel
-from .HistoryFilterModel import HistoryFilterModel
-from .HistoryTreeModel import HistoryTreeModel
-
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
@@ -121,6 +117,10 @@ class HistoryManager(QWebHistoryInterface):
         self.entryRemoved.connect(self.__saveTimer.changeOccurred)
         
         self.__load()
+        
+        from .HistoryModel import HistoryModel
+        from .HistoryFilterModel import HistoryFilterModel
+        from .HistoryTreeModel import HistoryTreeModel
         
         self.__historyModel = HistoryModel(self, self)
         self.__historyFilterModel = HistoryFilterModel(self.__historyModel, self)

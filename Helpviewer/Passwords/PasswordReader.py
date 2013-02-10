@@ -9,8 +9,6 @@ Module implementing a class to read login data files.
 
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, QCoreApplication, QUrl
 
-from .LoginForm import LoginForm
-
 
 class PasswordReader(QXmlStreamReader):
     """
@@ -115,6 +113,7 @@ class PasswordReader(QXmlStreamReader):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Form":
+                    from .LoginForm import LoginForm
                     attributes = self.attributes()
                     key = attributes.value("key")
                     form = LoginForm()

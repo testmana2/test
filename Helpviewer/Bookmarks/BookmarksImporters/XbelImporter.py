@@ -11,10 +11,6 @@ import os
 
 from PyQt4.QtCore import QCoreApplication, QXmlStreamReader, QDate, Qt
 
-from ..BookmarksManager import BookmarksManager
-from ..BookmarkNode import BookmarkNode
-from ..XbelReader import XbelReader
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -29,6 +25,7 @@ def getImporterInfo(id):
         a prompt (string) and the default directory of the bookmarks file (string)
     """
     if id == "e5browser":
+        from ..BookmarksManager import BookmarksManager
         bookmarksFile = BookmarksManager.getFileName()
         return (
             UI.PixmapCache.getPixmap("ericWeb48.png"),
@@ -119,6 +116,8 @@ class XbelImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
+        from ..XbelReader import XbelReader
+        
         reader = XbelReader()
         importRootNode = reader.read(self.__fileName)
         
@@ -131,6 +130,7 @@ class XbelImporter(BookmarksImporter):
                         reader.errorString())
             return None
         
+        from ..BookmarkNode import BookmarkNode
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "e5browser":
             importRootNode.title = self.trUtf8("eric5 Web Browser Import")

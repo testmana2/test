@@ -16,8 +16,6 @@ from .Ui_FeedsDialog import Ui_FeedsDialog
 
 import UI.PixmapCache
 
-import Helpviewer.HelpWindow
-
 
 class FeedsDialog(QDialog, Ui_FeedsDialog):
     """
@@ -75,6 +73,7 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
         else:
             title = self.__browser.url().host()
         
+        import Helpviewer.HelpWindow
         feedsManager = Helpviewer.HelpWindow.HelpWindow.feedsManager()
         if feedsManager.addFeed(urlString, title, self.__browser.icon()):
             if Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():

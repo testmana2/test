@@ -9,8 +9,6 @@ Module implementing a class to apply AdBlock rules to a web page.
 
 from PyQt4.QtCore import QObject, QUrl
 
-import Helpviewer.HelpWindow
-
 
 class AdBlockPage(QObject):
     """
@@ -25,6 +23,7 @@ class AdBlockPage(QObject):
         if page is None or page.mainFrame() is None:
             return
         
+        import Helpviewer.HelpWindow
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         if not manager.isEnabled():
             return

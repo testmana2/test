@@ -12,8 +12,6 @@ from PyQt4.QtGui import QDialog, QFont
 
 from .Ui_BookmarkInfoDialog import Ui_BookmarkInfoDialog
 
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -50,6 +48,7 @@ class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
         """
         Private slot to remove the current bookmark.
         """
+        import Helpviewer.HelpWindow
         Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
             .removeBookmark(self.__bookmark)
         self.close()
@@ -60,6 +59,7 @@ class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
         """
         if self.__bookmark is not None and \
            self.titleEdit.text() != self.__bookmark.title:
+            import Helpviewer.HelpWindow
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
                 .setTitle(self.__bookmark, self.titleEdit.text())
         self.close()

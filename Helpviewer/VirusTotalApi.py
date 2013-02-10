@@ -12,8 +12,6 @@ import json
 from PyQt4.QtCore import QObject, QUrl, QByteArray, pyqtSignal
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, QNetworkAccessManager
 
-import Helpviewer.HelpWindow
-
 import Preferences
 
 
@@ -106,6 +104,7 @@ class VirusTotalAPI(QObject):
         params = QByteArray("key={0}&resource={1}".format(
             key, self.TestServiceKeyScanID))
         
+        import Helpviewer.HelpWindow
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
         reply.finished.connect(self.__checkServiceKeyValidityFinished)
@@ -143,6 +142,7 @@ class VirusTotalAPI(QObject):
             "key={0}&url=".format(Preferences.getHelp("VirusTotalServiceKey")))\
             .append(QUrl.toPercentEncoding(url.toString()))
         
+        import Helpviewer.HelpWindow
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
         reply.finished.connect(self.__submitUrlFinished)
@@ -178,6 +178,7 @@ class VirusTotalAPI(QObject):
         params = QByteArray("key={0}&resource={1}".format(
             Preferences.getHelp("VirusTotalServiceKey"), scanId))
         
+        import Helpviewer.HelpWindow
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
         reply.finished.connect(self.__getFileScanReportUrlFinished)

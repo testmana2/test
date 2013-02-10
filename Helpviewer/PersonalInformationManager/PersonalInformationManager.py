@@ -10,8 +10,6 @@ Module implementing a personal information manager used to complete form fields.
 from PyQt4.QtCore import Qt, QObject
 from PyQt4.QtGui import QDialog, QMenu
 
-from .PersonalDataDialog import PersonalDataDialog
-
 import Preferences
 import UI.PixmapCache
 
@@ -112,6 +110,7 @@ class PersonalInformationManager(QObject):
         """
         Public method to show the configuration dialog.
         """
+        from .PersonalDataDialog import PersonalDataDialog
         dlg = PersonalDataDialog()
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()

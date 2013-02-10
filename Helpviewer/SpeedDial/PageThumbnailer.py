@@ -13,8 +13,6 @@ from PyQt4.QtWebKit import QWebPage
 
 from ..Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
 
-import Helpviewer.HelpWindow
-
 
 class PageThumbnailer(QObject):
     """
@@ -39,6 +37,7 @@ class PageThumbnailer(QObject):
         self.__url = QUrl()
         
         self.__proxy = NetworkAccessManagerProxy(self)
+        import Helpviewer.HelpWindow
         self.__proxy.setPrimaryNetworkAccessManager(
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.__page.setNetworkAccessManager(self.__proxy)

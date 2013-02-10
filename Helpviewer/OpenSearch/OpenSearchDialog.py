@@ -13,7 +13,6 @@ from PyQt4.QtCore import pyqtSlot
 from E5Gui import E5MessageBox, E5FileDialog
 
 from .OpenSearchEngineModel import OpenSearchEngineModel
-from .OpenSearchEditDialog import OpenSearchEditDialog
 
 from .Ui_OpenSearchDialog import Ui_OpenSearchDialog
 
@@ -89,6 +88,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         """
         Private slot to edit the data of the current search engine.
         """
+        from .OpenSearchEditDialog import OpenSearchEditDialog
+        
         rows = self.enginesTable.selectionModel().selectedRows()
         if len(rows) == 0:
             row = self.enginesTable.selectionModel().currentIndex().row()

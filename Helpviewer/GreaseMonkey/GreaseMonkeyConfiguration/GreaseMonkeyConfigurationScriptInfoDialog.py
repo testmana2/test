@@ -15,8 +15,6 @@ from .Ui_GreaseMonkeyConfigurationScriptInfoDialog import \
 
 from ..GreaseMonkeyScript import GreaseMonkeyScript
 
-from QScintilla.MiniEditor import MiniEditor
-
 import UI.PixmapCache
 
 
@@ -57,5 +55,6 @@ class GreaseMonkeyConfigurationScriptInfoDialog(QDialog,
         """
         Private slot to show an editor window with the script source code.
         """
+        from QScintilla.MiniEditor import MiniEditor
         editor = MiniEditor(self.__scriptFileName, "JavaScript", self)
         editor.show()

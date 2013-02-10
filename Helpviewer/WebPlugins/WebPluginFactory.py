@@ -9,8 +9,6 @@ Module implementing the web plug-in factory.
 
 from PyQt4.QtWebKit import QWebPluginFactory
 
-from .ClickToFlash.ClickToFlashPlugin import ClickToFlashPlugin
-
 
 class WebPluginFactory(QWebPluginFactory):
     """
@@ -77,6 +75,7 @@ class WebPluginFactory(QWebPluginFactory):
         self.__plugins = {}
         self.__pluginsCache = {}
         
+        from .ClickToFlash.ClickToFlashPlugin import ClickToFlashPlugin
         self.__plugins["ClickToFlash"] = ClickToFlashPlugin()
         
         for plugin in self.__plugins.values():

@@ -12,8 +12,6 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_BookmarkActionSelectionDialog import Ui_BookmarkActionSelectionDialog
 
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -40,6 +38,8 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
         self.__action = self.Undefined
         
         self.icon.setPixmap(UI.PixmapCache.getPixmap("bookmark32.png"))
+        
+        import Helpviewer.HelpWindow
         
         if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
            .bookmarkForUrl(url) is None:

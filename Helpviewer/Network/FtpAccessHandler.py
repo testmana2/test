@@ -10,7 +10,6 @@ Module implementing a scheme access handler for FTP.
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 from .SchemeAccessHandler import SchemeAccessHandler
-from .FtpReply import FtpReply
 
 
 class FtpAccessHandler(SchemeAccessHandler):
@@ -39,6 +38,7 @@ class FtpAccessHandler(SchemeAccessHandler):
         @return reference to the created reply object (QNetworkReply)
         """
         if op == QNetworkAccessManager.GetOperation:
+            from .FtpReply import FtpReply
             return FtpReply(request.url(), self, self.parent())
         else:
             return None

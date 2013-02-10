@@ -13,8 +13,6 @@ from PyQt4.QtGui import QAbstractItemView, QFont, QTreeWidgetItem, QInputDialog,
 
 from E5Gui.E5TreeWidget import E5TreeWidget
 
-from .AdBlockRule import AdBlockRule
-
 
 class AdBlockTreeWidget(E5TreeWidget):
     """
@@ -123,6 +121,7 @@ class AdBlockTreeWidget(E5TreeWidget):
             if filter == "":
                 return
         
+        from .AdBlockRule import AdBlockRule
         rule = AdBlockRule(filter, self.__subscription)
         offset = self.__subscription.addRule(rule)
         
@@ -196,6 +195,7 @@ class AdBlockTreeWidget(E5TreeWidget):
             rule = self.__subscription.setRuleEnabled(offset, True)
             self.__adjustItemFeatures(itm, rule)
         elif self.__subscription.canEditRules():
+            from .AdBlockRule import AdBlockRule
             # Custom rule has been changed
             rule = self.__subscription.replaceRule(
                 AdBlockRule(itm.text(0), self.__subscription), offset)

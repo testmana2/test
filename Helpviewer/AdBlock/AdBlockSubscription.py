@@ -18,11 +18,6 @@ from PyQt4.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
 
-from .AdBlockRule import AdBlockRule
-
-import Helpviewer.HelpWindow
-from Helpviewer.Network.FollowRedirectReply import FollowRedirectReply
-
 import Utilities
 import Preferences
 
@@ -127,6 +122,7 @@ class AdBlockSubscription(QObject):
         self.__requiresTitle = \
             QUrl.fromPercentEncoding(url.encodedQueryItemValue("requiresTitle"))
         if self.__requiresLocation and self.__requiresTitle:
+            import Helpviewer.HelpWindow
             Helpviewer.HelpWindow.HelpWindow.adBlockManager().loadRequiredSubscription(
                 self.__requiresLocation, self.__requiresTitle)
         
@@ -283,6 +279,8 @@ class AdBlockSubscription(QObject):
                     f.remove()
                     self.__lastUpdate = QDateTime()
                 else:
+                    from .AdBlockRule import AdBlockRule
+                    
                     self.__updatePeriod = 0
                     self.__remoteModified = QDateTime()
                     self.__rules = []
@@ -346,6 +344,8 @@ class AdBlockSubscription(QObject):
             self.__loadRules()
             return
         
+        import Helpviewer.HelpWindow
+        from Helpviewer.Network.FollowRedirectReply import FollowRedirectReply
         self.__downloading = FollowRedirectReply(self.location(),
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.__downloading.finished[()].connect(self.__rulesDownloaded)
@@ -656,6 +656,7 @@ class AdBlockSubscription(QObject):
         rule = self.__rules[offset]
         rule.setEnabled(enabled)
         if rule.isCSSRule():
+            import Helpviewer.HelpWindow
             self.__populateCache()
             Helpviewer.HelpWindow.HelpWindow.mainWindow().reloadUserStyleSheet()
         

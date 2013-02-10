@@ -12,11 +12,8 @@ from PyQt4.QtGui import QMenu, QCursor
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 
-import Helpviewer.HelpWindow
-
 from .BookmarksModel import BookmarksModel
 from .BookmarkNode import BookmarkNode
-from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 
 class BookmarksMenu(E5ModelMenu):
@@ -190,6 +187,8 @@ class BookmarksMenu(E5ModelMenu):
         """
         Private slot to edit a bookmarks properties.
         """
+        from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
+        
         idx = self.index(self.sender())
         node = self.model().node(idx)
         dlg = BookmarkPropertiesDialog(node)
@@ -224,6 +223,8 @@ class BookmarksMenuBarMenu(BookmarksMenu):
        
         @return flag indicating if any actions were added (boolean)
         """
+        import Helpviewer.HelpWindow
+        
         self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         self.setModel(self.__bookmarksManager.bookmarksModel())
         self.setRootIndex(self.__bookmarksManager.bookmarksModel()\

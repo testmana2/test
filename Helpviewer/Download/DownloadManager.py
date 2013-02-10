@@ -13,7 +13,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_DownloadManager import Ui_DownloadManager
 
-from .DownloadItem import DownloadItem
 from .DownloadModel import DownloadModel
 
 import Helpviewer.HelpWindow
@@ -185,6 +184,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         if size == 0:
             return
         
+        from .DownloadItem import DownloadItem
         itm = DownloadItem(reply=reply, requestFilename=requestFileName,
             webPage=webPage, download=download, parent=self, mainWindow=mainWindow)
         self.__addItem(itm)
@@ -324,6 +324,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         for download in downloads:
             if not download[0].isEmpty() and \
                download[1] != "":
+                from .DownloadItem import DownloadItem
                 itm = DownloadItem(parent=self)
                 itm.setData(download)
                 self.__addItem(itm)

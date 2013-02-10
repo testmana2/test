@@ -12,10 +12,6 @@ from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
 from E5Gui import E5MessageBox
 
-import Helpviewer.HelpWindow
-
-from .PasswordModel import PasswordModel
-
 from .Ui_PasswordsDialog import Ui_PasswordsDialog
 
 
@@ -38,6 +34,9 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         
         self.removeButton.clicked[()].connect(self.passwordsTable.removeSelected)
         self.removeAllButton.clicked[()].connect(self.passwordsTable.removeAll)
+        
+        import Helpviewer.HelpWindow
+        from .PasswordModel import PasswordModel
         
         self.passwordsTable.verticalHeader().hide()
         self.__passwordModel = \

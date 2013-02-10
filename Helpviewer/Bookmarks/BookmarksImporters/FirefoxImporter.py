@@ -12,8 +12,6 @@ import sqlite3
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt, QUrl
 
-from ..BookmarkNode import BookmarkNode
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -104,6 +102,7 @@ class FirefoxImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
         importRootNode = BookmarkNode(BookmarkNode.Root)
         
         # step 1: build the hierarchy of bookmark folders

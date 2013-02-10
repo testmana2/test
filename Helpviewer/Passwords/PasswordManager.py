@@ -17,12 +17,6 @@ from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 from E5Gui import E5MessageBox
 
-from Helpviewer.JavaScriptResources import parseForms_js
-
-from .LoginForm import LoginForm
-from .PasswordWriter import PasswordWriter
-from .PasswordReader import PasswordReader
-
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Utilities.crypto
@@ -137,6 +131,7 @@ class PasswordManager(QObject):
         if not self.__loaded:
             return
         
+        from .PasswordWriter import PasswordWriter
         loginFile = self.getFileName()
         writer = PasswordWriter()
         if not writer.write(loginFile, self.__logins, self.__loginForms, self.__never):
@@ -155,6 +150,7 @@ class PasswordManager(QObject):
         if not os.path.exists(loginFile):
             self.__loadNonXml(os.path.splitext(loginFile)[0])
         else:
+            from .PasswordReader import PasswordReader
             reader = PasswordReader()
             self.__logins, self.__loginForms, self.__never = reader.read(loginFile)
             if reader.error() != QXmlStreamReader.NoError:
@@ -220,6 +216,7 @@ class PasswordManager(QObject):
                     if line != self.SEPARATOR:
                         data.append(line)
                     else:
+                        from .LoginForm import LoginForm
                         key = data[0]
                         form = LoginForm()
                         form.url = QUrl(data[1])
@@ -430,6 +427,7 @@ class PasswordManager(QObject):
             None for urlencoded data
         @return parsed form (LoginForm)
         """
+        from .LoginForm import LoginForm
         form = LoginForm()
         if boundary is not None:
             args = self.__extractMultipartQueryItems(data, boundary)
@@ -444,6 +442,7 @@ class PasswordManager(QObject):
                 args.add((key, value))
         
         # extract the forms
+        from Helpviewer.JavaScriptResources import parseForms_js
         lst = webPage.mainFrame().evaluateJavaScript(parseForms_js)
         for map in lst:
             formHasPasswords = False

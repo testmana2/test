@@ -11,8 +11,6 @@ import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
-from ..BookmarkNode import BookmarkNode
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -104,6 +102,7 @@ class OperaImporter(BookmarksImporter):
         
         folderStack = []
         
+        from ..BookmarkNode import BookmarkNode
         importRootNode = BookmarkNode(BookmarkNode.Folder)
         folderStack.append(importRootNode)
         

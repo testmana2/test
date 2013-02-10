@@ -18,15 +18,7 @@ from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
 
-from .HelpTabBar import HelpTabBar
 from .HelpBrowserWV import HelpBrowser
-import Helpviewer
-from .ClosedTabsManager import ClosedTabsManager
-
-from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
-
-from .UrlBar.StackedUrlBar import StackedUrlBar
-from .UrlBar.UrlBar import UrlBar
 
 import UI.PixmapCache
 
@@ -62,6 +54,8 @@ class HelpTabWidget(E5TabWidget):
         @param parent reference to the parent widget (QWidget)
         """
         E5TabWidget.__init__(self, parent, dnd=True)
+        
+        from .HelpTabBar import HelpTabBar
         self.__tabBar = HelpTabBar(self)
         self.setCustomTabBar(True, self.__tabBar)
         
@@ -71,9 +65,11 @@ class HelpTabWidget(E5TabWidget):
         self.setDocumentMode(True)
         self.setElideMode(Qt.ElideNone)
         
+        from .ClosedTabsManager import ClosedTabsManager
         self.__closedTabsManager = ClosedTabsManager(self)
         self.__closedTabsManager.closedTabAvailable.connect(self.__closedTabAvailable)
         
+        from .UrlBar.StackedUrlBar import StackedUrlBar
         self.__stackedUrlBar = StackedUrlBar(self)
         self.__tabBar.tabMoved.connect(self.__stackedUrlBar.moveBar)
         
@@ -291,8 +287,11 @@ class HelpTabWidget(E5TabWidget):
         else:
             linkName = link
         
+        from .UrlBar.UrlBar import UrlBar
         urlbar = UrlBar(self.__mainWindow, self)
         if self.__historyCompleter is None:
+            import Helpviewer.HelpWindow
+            from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
             self.__historyCompletionModel = HistoryCompletionModel(self)
             self.__historyCompletionModel.setSourceModel(
                 Helpviewer.HelpWindow.HelpWindow.historyManager().historyFilterModel())
@@ -703,6 +702,7 @@ class HelpTabWidget(E5TabWidget):
             return
         
         if browser is not None:
+            import Helpviewer.HelpWindow
             index = self.indexOf(browser)
             self.resetAnimation(index)
             self.setTabIcon(index, Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
@@ -720,6 +720,7 @@ class HelpTabWidget(E5TabWidget):
         browser = self.sender()
         
         if browser is not None:
+            import Helpviewer.HelpWindow
             self.setTabIcon(self.indexOf(browser),
                 Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().iconChanged(browser.url())

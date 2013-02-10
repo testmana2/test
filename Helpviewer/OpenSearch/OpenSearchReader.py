@@ -9,8 +9,6 @@ Module implementing a reader for open search engine descriptions.
 
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QCoreApplication
 
-from .OpenSearchEngine import OpenSearchEngine
-
 
 class OpenSearchReader(QXmlStreamReader):
     """
@@ -37,6 +35,7 @@ class OpenSearchReader(QXmlStreamReader):
         
         @return search engine object (OpenSearchEngine)
         """
+        from .OpenSearchEngine import OpenSearchEngine
         engine = OpenSearchEngine()
         
         while not self.isStartElement() and not self.atEnd():

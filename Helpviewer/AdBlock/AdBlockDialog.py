@@ -12,11 +12,7 @@ from PyQt4.QtGui import QDialog, QMenu, QToolButton
 
 from E5Gui import E5MessageBox
 
-import Helpviewer.HelpWindow
-
 from .Ui_AdBlockDialog import Ui_AdBlockDialog
-
-from .AdBlockTreeWidget import AdBlockTreeWidget
 
 import UI.PixmapCache
 import Preferences
@@ -39,6 +35,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         
         self.searchEdit.setInactiveText(self.trUtf8("Search..."))
         
+        import Helpviewer.HelpWindow
         self.__manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         self.adBlockGroup.setChecked(self.__manager.isEnabled())
         self.__manager.requiredSubscriptionLoaded.connect(self.addSubscription)
@@ -72,6 +69,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         if self.__loaded or not self.adBlockGroup.isChecked():
             return
         
+        from .AdBlockTreeWidget import AdBlockTreeWidget
         for subscription in self.__manager.subscriptions():
             tree = AdBlockTreeWidget(subscription, self.subscriptionsTabWidget)
             if subscription.isEnabled():
@@ -93,6 +91,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
             added (AdBlockSubscription)
         @param refresh flag indicating to refresh the tree (boolean)
         """
+        from .AdBlockTreeWidget import AdBlockTreeWidget
         tree = AdBlockTreeWidget(subscription, self.subscriptionsTabWidget)
         index = self.subscriptionsTabWidget.insertTab(
             self.subscriptionsTabWidget.count() - 1, tree, subscription.title())
@@ -178,6 +177,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         Private slot to browse the list of available AdBlock subscriptions.
         """
+        import Helpviewer.HelpWindow
         mw = Helpviewer.HelpWindow.HelpWindow.mainWindow()
         mw.newTab("http://adblockplus.org/en/subscriptions")
         mw.raise_()
@@ -186,6 +186,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         Private slot to show the web page about how to write filters.
         """
+        import Helpviewer.HelpWindow
         mw = Helpviewer.HelpWindow.HelpWindow.mainWindow()
         mw.newTab("http://adblockplus.org/en/filters")
         mw.raise_()
@@ -268,6 +269,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         if value != Preferences.getHelp("AdBlockUpdatePeriod"):
             Preferences.setHelp("AdBlockUpdatePeriod", value)
             
+            import Helpviewer.HelpWindow
             manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
             for subscription in manager.subscriptions():
                 subscription.checkForUpdate()

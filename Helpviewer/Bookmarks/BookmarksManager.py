@@ -16,12 +16,6 @@ from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
 from E5Gui import E5MessageBox, E5FileDialog
 
 from .BookmarkNode import BookmarkNode
-from .BookmarksModel import BookmarksModel
-from .DefaultBookmarks import DefaultBookmarks
-from .XbelReader import XbelReader
-from .XbelWriter import XbelWriter
-from .NsHtmlWriter import NsHtmlWriter
-from .BookmarksImportDialog import BookmarksImportDialog
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -126,10 +120,12 @@ class BookmarksManager(QObject):
         
         bookmarkFile = self.getFileName()
         if not QFile.exists(bookmarkFile):
+            from .DefaultBookmarks import DefaultBookmarks
             ba = QByteArray(DefaultBookmarks)
             bookmarkFile = QBuffer(ba)
             bookmarkFile.open(QIODevice.ReadOnly)
         
+        from .XbelReader import XbelReader
         reader = XbelReader()
         self.__bookmarkRootNode = reader.read(bookmarkFile)
         if reader.error() != QXmlStreamReader.NoError:
@@ -187,6 +183,7 @@ class BookmarksManager(QObject):
         if not self.__loaded:
             return
         
+        from .XbelWriter import XbelWriter
         writer = XbelWriter()
         bookmarkFile = self.getFileName()
         
@@ -331,6 +328,7 @@ class BookmarksManager(QObject):
         @return reference to the bookmarks model (BookmarksModel)
         """
         if self.__bookmarksModel is None:
+            from .BookmarksModel import BookmarksModel
             self.__bookmarksModel = BookmarksModel(self, self)
         return self.__bookmarksModel
     
@@ -338,6 +336,7 @@ class BookmarksManager(QObject):
         """
         Public method to import bookmarks.
         """
+        from .BookmarksImportDialog import BookmarksImportDialog
         dlg = BookmarksImportDialog()
         if dlg.exec_() == QDialog.Accepted:
             importRootNode = dlg.getImportedBookmarks()
@@ -366,8 +365,10 @@ class BookmarksManager(QObject):
         
         ext = QFileInfo(fileName).suffix()
         if ext == "html":
+            from .NsHtmlWriter import NsHtmlWriter
             writer = NsHtmlWriter()
         else:
+            from .XbelWriter import XbelWriter
             writer = XbelWriter()
         if not writer.write(fileName, self.__bookmarkRootNode):
             E5MessageBox.critical(None,

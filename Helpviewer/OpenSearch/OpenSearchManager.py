@@ -13,11 +13,6 @@ from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice, QByt
     QBuffer
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
-from .OpenSearchDefaultEngines import OpenSearchDefaultEngines
-from .OpenSearchEngine import OpenSearchEngine
-from .OpenSearchReader import OpenSearchReader
-from .OpenSearchWriter import OpenSearchWriter
-
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
@@ -155,6 +150,7 @@ class OpenSearchManager(QObject):
             or reference to an engine object (OpenSearchEngine)
         @return flag indicating success (boolean)
         """
+        from .OpenSearchEngine import OpenSearchEngine
         if isinstance(engine, QUrl):
             return self.__addEngineByUrl(engine)
         elif isinstance(engine, OpenSearchEngine):
@@ -192,6 +188,7 @@ class OpenSearchManager(QObject):
         if not file_.open(QIODevice.ReadOnly):
             return False
         
+        from .OpenSearchReader import OpenSearchReader
         reader = OpenSearchReader()
         engine = reader.read(file_)
         
@@ -281,6 +278,7 @@ class OpenSearchManager(QObject):
             return
         dir.setPath(dirName)
         
+        from .OpenSearchWriter import OpenSearchWriter
         writer = OpenSearchWriter()
         
         for engine in list(self.__engines.values()):
@@ -354,6 +352,9 @@ class OpenSearchManager(QObject):
         """
         Public method to restore the default search engines.
         """
+        from .OpenSearchDefaultEngines import OpenSearchDefaultEngines
+        from .OpenSearchReader import OpenSearchReader
+        
         reader = OpenSearchReader()
         for engine in OpenSearchDefaultEngines:
             engineDescription = QByteArray(OpenSearchDefaultEngines[engine])
@@ -408,6 +409,7 @@ class OpenSearchManager(QObject):
                 self.__replies.remove(reply)
             return
         
+        from .OpenSearchReader import OpenSearchReader
         reader = OpenSearchReader()
         engine = reader.read(reply)
         

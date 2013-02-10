@@ -22,22 +22,6 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
-from UI.AuthenticationDialog import AuthenticationDialog
-
-from Helpviewer.HelpLanguagesDialog import HelpLanguagesDialog
-import Helpviewer.HelpWindow
-
-from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
-from .NetworkDiskCache import NetworkDiskCache
-
-from .QtHelpAccessHandler import QtHelpAccessHandler
-from .EricAccessHandler import EricAccessHandler
-from .AboutAccessHandler import AboutAccessHandler
-from .FtpAccessHandler import FtpAccessHandler
-from .FileAccessHandler import FileAccessHandler
-
-from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
-
 import Preferences
 import Utilities
 
@@ -82,11 +66,22 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.__sendReferer = Preferences.getHelp("SendReferer")
         
         # register scheme handlers
+        from .QtHelpAccessHandler import QtHelpAccessHandler
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
+        
+        from .EricAccessHandler import EricAccessHandler
         self.setSchemeHandler("eric", EricAccessHandler(self))
+        
+        from .AboutAccessHandler import AboutAccessHandler
         self.setSchemeHandler("about", AboutAccessHandler(self))
+        
+        from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
+        
+        from .FtpAccessHandler import FtpAccessHandler
         self.setSchemeHandler("ftp", FtpAccessHandler(self))
+        
+        from .FileAccessHandler import FileAccessHandler
         self.setSchemeHandler("file", FileAccessHandler(self))
     
     def setSchemeHandler(self, scheme, handler):
@@ -110,7 +105,10 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         scheme = request.url().scheme()
         if scheme == "https" and (not SSL_AVAILABLE or not QSslSocket.supportsSsl()):
+            from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
             return NetworkProtocolUnknownErrorReply(scheme, self)
+        
+        import Helpviewer.HelpWindow
         
         if op == QNetworkAccessManager.PostOperation and outgoingData is not None:
             outgoingDataByteArray = outgoingData.peek(1024 * 1024)
@@ -189,6 +187,9 @@ class NetworkAccessManager(QNetworkAccessManager):
             info = self.trUtf8("<b>Enter username and password for '{0}'</b>")\
                 .format(urlRoot)
         
+        from UI.AuthenticationDialog import AuthenticationDialog
+        import Helpviewer.HelpWindow
+        
         dlg = AuthenticationDialog(info, auth.user(),
                                    Preferences.getUser("SavePasswords"),
                                    Preferences.getUser("SavePasswords"))
@@ -219,6 +220,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Public slot to (re-)load the list of accepted languages.
         """
+        from Helpviewer.HelpLanguagesDialog import HelpLanguagesDialog
         languages = Preferences.toList(
             Preferences.Prefs.settings.value("Help/AcceptLanguages",
                 HelpLanguagesDialog.defaultAcceptLanguages()))
@@ -228,13 +230,13 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         Private method to set the disk cache.
         """
-        if NetworkDiskCache is not None:
-            if Preferences.getHelp("DiskCacheEnabled"):
-                diskCache = NetworkDiskCache(self)
-                location = os.path.join(Utilities.getConfigDir(), "browser", 'cache')
-                size = Preferences.getHelp("DiskCacheSize") * 1024 * 1024
-                diskCache.setCacheDirectory(location)
-                diskCache.setMaximumCacheSize(size)
-            else:
-                diskCache = None
-            self.setCache(diskCache)
+        if Preferences.getHelp("DiskCacheEnabled"):
+            from .NetworkDiskCache import NetworkDiskCache
+            diskCache = NetworkDiskCache(self)
+            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache')
+            size = Preferences.getHelp("DiskCacheSize") * 1024 * 1024
+            diskCache.setCacheDirectory(location)
+            diskCache.setMaximumCacheSize(size)
+        else:
+            diskCache = None
+        self.setCache(diskCache)

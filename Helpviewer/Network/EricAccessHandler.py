@@ -11,11 +11,6 @@ from PyQt4.QtCore import QFile, QByteArray
 
 from .SchemeAccessHandler import SchemeAccessHandler
 
-from .NetworkReply import NetworkReply
-from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
-
-import Helpviewer.HelpWindow
-
 
 class EricAccessHandler(SchemeAccessHandler):
     """
@@ -34,6 +29,9 @@ class EricAccessHandler(SchemeAccessHandler):
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
+        from .NetworkReply import NetworkReply
+        from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
+
         if request.url().toString() == "eric:home":
             return NetworkReply(request, self.__createHomePage(),
                                 "text/html", self.parent())
@@ -100,6 +98,7 @@ class EricAccessHandler(SchemeAccessHandler):
             
             self._speedDialPage = html
         
+        import Helpviewer.HelpWindow
         html = QByteArray(self._speedDialPage)
         dial = Helpviewer.HelpWindow.HelpWindow.speedDial()
         

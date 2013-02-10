@@ -11,9 +11,6 @@ import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
-from ..BookmarkNode import BookmarkNode
-from ..NsHtmlReader import NsHtmlReader
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -87,6 +84,9 @@ class HtmlImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
+        from ..NsHtmlReader import NsHtmlReader
+        
         reader = NsHtmlReader()
         importRootNode = reader.read(self.__fileName)
         

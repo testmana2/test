@@ -10,12 +10,6 @@ Module implementing the bookmark model class.
 from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, QByteArray, \
     QDataStream, QIODevice, QBuffer, QMimeData
 
-from .BookmarkNode import BookmarkNode
-from .XbelWriter import XbelWriter
-from .XbelReader import XbelReader
-
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -164,6 +158,8 @@ class BookmarksModel(QAbstractItemModel):
         if not index.isValid() or index.model() != self:
             return None
         
+        from .BookmarkNode import BookmarkNode
+        
         bookmarkNode = self.node(index)
         if role in [Qt.EditRole, Qt.DisplayRole]:
             if bookmarkNode.type() == BookmarkNode.Separator:
@@ -193,6 +189,7 @@ class BookmarksModel(QAbstractItemModel):
             if index.column() == 0:
                 if bookmarkNode.type() == BookmarkNode.Folder:
                     return UI.PixmapCache.getIcon("dirOpen.png")
+                import Helpviewer.HelpWindow
                 return Helpviewer.HelpWindow.HelpWindow.icon(
                         QUrl(bookmarkNode.url))
         
@@ -276,6 +273,7 @@ class BookmarksModel(QAbstractItemModel):
         if not parent.isValid():
             return True
         
+        from .BookmarkNode import BookmarkNode
         parentNode = self.node(parent)
         return parentNode.type() == BookmarkNode.Folder
     
@@ -302,6 +300,7 @@ class BookmarksModel(QAbstractItemModel):
         
         flags |= Qt.ItemIsDragEnabled
         
+        from .BookmarkNode import BookmarkNode
         if (index.column() == 0 and type_ != BookmarkNode.Separator) or \
            (index.column() == 1 and type_ == BookmarkNode.Bookmark):
             flags |= Qt.ItemIsEditable
@@ -331,6 +330,8 @@ class BookmarksModel(QAbstractItemModel):
         @param indexes list of indexes (QModelIndexList)
         @return mime data (QMimeData)
         """
+        from .XbelWriter import XbelWriter
+        
         data = QByteArray()
         stream = QDataStream(data, QIODevice.WriteOnly)
         urls = []
@@ -376,6 +377,7 @@ class BookmarksModel(QAbstractItemModel):
             if not data.hasUrls():
                 return False
             
+            from .BookmarkNode import BookmarkNode
             node = BookmarkNode(BookmarkNode.Bookmark, parentNode)
             node.url = bytes(data.urls()[0].toEncoded()).decode()
             
@@ -395,6 +397,7 @@ class BookmarksModel(QAbstractItemModel):
         undoStack = self.__bookmarksManager.undoRedoStack()
         undoStack.beginMacro("Move Bookmarks")
         
+        from .XbelReader import XbelReader
         while not stream.atEnd():
             encodedData = QByteArray()
             stream >> encodedData

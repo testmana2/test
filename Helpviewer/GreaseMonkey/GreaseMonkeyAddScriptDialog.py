@@ -17,11 +17,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_GreaseMonkeyAddScriptDialog import Ui_GreaseMonkeyAddScriptDialog
 
-from QScintilla.MiniEditor import MiniEditor
-
-from Helpviewer import HelpUtilities
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -70,9 +65,12 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         """
         Private slot to show an editor window with the source code.
         """
+        from Helpviewer import HelpUtilities
+        
         tmpFileName = HelpUtilities.ensureUniqueFilename(
             os.path.join(QDir.tempPath(), "tmp-userscript.js"))
         if QFile.copy(self.__script.fileName(), tmpFileName):
+            from QScintilla.MiniEditor import MiniEditor
             editor = MiniEditor(tmpFileName, "JavaScript", self)
             editor.show()
     
@@ -88,6 +86,7 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
             msg = self.trUtf8("<p>Cannot install script.</p>")
             success = False
         
+        import Helpviewer.HelpWindow
         if success and Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():
             Helpviewer.HelpWindow.HelpWindow.showNotification(
                 UI.PixmapCache.getPixmap("greaseMonkey48.png"),

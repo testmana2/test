@@ -16,11 +16,7 @@ import UI.PixmapCache
 
 import Preferences
 
-from E5Gui.E5LineEdit import E5LineEdit, E5ClearableLineEdit
-from E5Gui.E5LineEditButton import E5LineEditButton
-
-from .OpenSearch.OpenSearchManager import OpenSearchManager
-from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+from E5Gui.E5LineEdit import E5ClearableLineEdit
 
 
 class HelpWebSearchWidget(E5ClearableLineEdit):
@@ -39,6 +35,10 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         super().__init__(parent)
         
+        from E5Gui.E5LineEdit import E5LineEdit
+        from E5Gui.E5LineEditButton import E5LineEditButton
+        from .OpenSearch.OpenSearchManager import OpenSearchManager
+
         self.__mw = parent
         
         self.__openSearchManager = OpenSearchManager(self)
@@ -219,6 +219,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         self.__enginesMenu.clear()
         
+        from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
         engineNames = self.__openSearchManager.allEnginesNames()
         for engineName in engineNames:
             engine = self.__openSearchManager.engine(engineName)

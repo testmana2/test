@@ -11,8 +11,6 @@ import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
-from ..BookmarkNode import BookmarkNode
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -102,6 +100,7 @@ class SafariImporter(BookmarksImporter):
                 "Bookmarks file cannot be read.\nReason: {0}".format(str(err)))
             return None
         
+        from ..BookmarkNode import BookmarkNode
         importRootNode = BookmarkNode(BookmarkNode.Folder)
         if bookmarksDict["WebBookmarkFileVersion"] == 1 and \
            bookmarksDict["WebBookmarkType"] == "WebBookmarkTypeList":
@@ -121,6 +120,7 @@ class SafariImporter(BookmarksImporter):
         @param children list of child nodes to be processed (list of dict)
         @param rootNode node to add the bookmarks to (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
         for child in children:
             if child["WebBookmarkType"] == "WebBookmarkTypeList":
                 folder = BookmarkNode(BookmarkNode.Folder, rootNode)

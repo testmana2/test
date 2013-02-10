@@ -27,25 +27,12 @@ from E5Gui import E5MessageBox, E5FileDialog
 import Preferences
 import UI.PixmapCache
 
-from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
-from .Bookmarks.BookmarkNode import BookmarkNode
 try:
     from PyQt4.QtNetwork import QSslCertificate
     from E5Network.E5SslInfoDialog import E5SslInfoDialog
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
-import Helpviewer.HelpWindow
-from .HelpLanguagesDialog import HelpLanguagesDialog
-
-from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
-
-from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
-from .OpenSearch.OpenSearchEngine import OpenSearchEngine
-
-from .WebPlugins.WebPluginFactory import WebPluginFactory
-
-from .AdBlock.AdBlockPage import AdBlockedPageEntry
 
 ##########################################################################################
 
@@ -175,6 +162,8 @@ class HelpWebPage(QWebPage):
         self.__lastRequest = None
         self.__lastRequestType = QWebPage.NavigationTypeOther
         
+        import Helpviewer.HelpWindow
+        from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
         self.__proxy = NetworkAccessManagerProxy(self)
         self.__proxy.setWebPage(self)
         self.__proxy.setPrimaryNetworkAccessManager(
@@ -379,6 +368,7 @@ class HelpWebPage(QWebPage):
         @param rule AdBlock rule to add (AdBlockRule)
         @param url URL that matched the rule (QUrl)
         """
+        from .AdBlock.AdBlockPage import AdBlockedPageEntry
         entry = AdBlockedPageEntry(rule, url)
         if entry not in self.__adBlockedEntries:
             self.__adBlockedEntries.append(entry)
@@ -427,6 +417,7 @@ class HelpWebPage(QWebPage):
         @param url URL to determine user agent for (QUrl)
         @return user agent string (string)
         """
+        import Helpviewer.HelpWindow
         agent = Helpviewer.HelpWindow.HelpWindow.userAgentsManager().userAgentForUrl(url)
         if agent == "":
             # no agent string specified for the given host -> use global one
@@ -469,7 +460,9 @@ class HelpWebPage(QWebPage):
            reply.url() == self.mainFrame().url():
             modified = reply.header(QNetworkRequest.LastModifiedHeader)
             if modified and modified.isValid():
+                import Helpviewer.HelpWindow
                 manager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+                from .Bookmarks.BookmarkNode import BookmarkNode
                 for bookmark in manager.bookmarksForUrl(reply.url()):
                     manager.setTimestamp(bookmark, BookmarkNode.TsModified, modified)
     
@@ -538,6 +531,7 @@ class HelpWebPage(QWebPage):
         @return reference to the web plug-in factory instance (WebPluginFactory
         """
         if cls._webPluginFactory is None:
+            from .WebPlugins.WebPluginFactory import WebPluginFactory
             cls._webPluginFactory = WebPluginFactory()
         
         return cls._webPluginFactory
@@ -605,6 +599,7 @@ class HelpBrowser(QWebView):
                 """<p>This window displays the selected help information.</p>"""
         ))
         
+        import Helpviewer.HelpWindow
         self.__speedDial = Helpviewer.HelpWindow.HelpWindow.speedDial()
         
         self.__page = HelpWebPage(self)
@@ -1176,6 +1171,7 @@ class HelpBrowser(QWebView):
         if self.selectedText():
             self.__searchMenu = menu.addMenu(self.trUtf8("Search with..."))
             
+            from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
             engineNames = self.mw.openSearchManager().allEnginesNames()
             for engineName in engineNames:
                 engine = self.mw.openSearchManager().engine(engineName)
@@ -1186,6 +1182,7 @@ class HelpBrowser(QWebView):
             
             menu.addSeparator()
             
+            from .HelpLanguagesDialog import HelpLanguagesDialog
             languages = Preferences.toList(
                 Preferences.Prefs.settings.value("Help/AcceptLanguages",
                     HelpLanguagesDialog.defaultAcceptLanguages()))
@@ -1259,6 +1256,7 @@ class HelpBrowser(QWebView):
         if url.isEmpty():
             return
         
+        from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setUrl(bytes(url.toEncoded()).decode())
         dlg.exec_()
@@ -1312,6 +1310,7 @@ class HelpBrowser(QWebView):
         """
         Private slot to add a block rule for an image URL.
         """
+        import Helpviewer.HelpWindow
         act = self.sender()
         url = act.data()
         dlg = Helpviewer.HelpWindow.HelpWindow.adBlockManager().showDialog()
@@ -1459,6 +1458,7 @@ class HelpBrowser(QWebView):
         if not ok:
             return
         
+        from .OpenSearch.OpenSearchEngine import OpenSearchEngine
         engine = OpenSearchEngine()
         engine.setName(engineName)
         engine.setDescription(engineName)
@@ -1477,6 +1477,7 @@ class HelpBrowser(QWebView):
         """
         Public slot to bookmark the current page.
         """
+        from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setUrl(bytes(self.url().toEncoded()).decode())
         dlg.setTitle(self.title())

@@ -16,10 +16,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_FeedsManager import Ui_FeedsManager
 
-from .FeedEditDialog import FeedEditDialog
-
-import Helpviewer.HelpWindow
-
 import Preferences
 import UI.PixmapCache
 
@@ -168,6 +164,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         if feedToChange:
             feedIndex = self.__feeds.index(feedToChange)
             
+            from .FeedEditDialog import FeedEditDialog
             dlg = FeedEditDialog(origUrlString, origTitle)
             if dlg.exec_() == QDialog.Accepted:
                 urlString, title = dlg.getData()
@@ -250,6 +247,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         for child in itm.takeChildren():
             del child
         
+        import Helpviewer.HelpWindow
         request = QNetworkRequest(QUrl(urlString))
         reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(request)
         reply.finished[()].connect(self.__feedLoaded)

@@ -12,11 +12,6 @@ from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox
 
-from .UserAgentDefaults import UserAgentDefaults
-
-from Helpviewer.HelpBrowserWV import HelpWebPage
-import Helpviewer.HelpWindow
-
 
 class UserAgentMenu(QMenu):
     """
@@ -36,6 +31,7 @@ class UserAgentMenu(QMenu):
         self.__url = url
         if self.__url:
             if self.__url.isValid():
+                import Helpviewer.HelpWindow
                 self.__manager = Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
             else:
                 self.__url = None
@@ -59,6 +55,7 @@ class UserAgentMenu(QMenu):
             self.__defaultUserAgent.setChecked(
                 self.__manager.userAgentForUrl(self.__url) == "")
         else:
+            from Helpviewer.HelpBrowserWV import HelpWebPage
             self.__defaultUserAgent.setChecked(HelpWebPage().userAgent() == "")
         self.addAction(self.__defaultUserAgent)
         self.__actionGroup.addAction(self.__defaultUserAgent)
@@ -84,12 +81,14 @@ class UserAgentMenu(QMenu):
         if self.__url:
             self.__manager.removeUserAgent(self.__url.host())
         else:
+            from Helpviewer.HelpBrowserWV import HelpWebPage
             HelpWebPage().setUserAgent("")
     
     def __switchToOtherUserAgent(self):
         """
         Private slot to set a custom user agent string.
         """
+        from Helpviewer.HelpBrowserWV import HelpWebPage
         userAgent, ok = QInputDialog.getText(
             self,
             self.trUtf8("Custom user agent"),
@@ -110,6 +109,7 @@ class UserAgentMenu(QMenu):
         if self.__url:
             self.__manager.setUserAgentForUrl(self.__url, act.data())
         else:
+            from Helpviewer.HelpBrowserWV import HelpWebPage
             HelpWebPage().setUserAgent(act.data())
     
     def __addDefaultActions(self):
@@ -118,6 +118,7 @@ class UserAgentMenu(QMenu):
         
         @return flag indicating that a user agent entry is checked (boolean)
         """
+        from .UserAgentDefaults import UserAgentDefaults
         menuStack = []
         isChecked = False
         defaultUserAgents = QByteArray(UserAgentDefaults)
@@ -125,6 +126,7 @@ class UserAgentMenu(QMenu):
         if self.__url:
             currentUserAgentString = self.__manager.userAgentForUrl(self.__url)
         else:
+            from Helpviewer.HelpBrowserWV import HelpWebPage
             currentUserAgentString = HelpWebPage().userAgent()
         xml = QXmlStreamReader(defaultUserAgents)
         while not xml.atEnd():

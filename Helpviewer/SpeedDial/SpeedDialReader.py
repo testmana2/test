@@ -10,8 +10,6 @@ Module implementing a class to read speed dial data files.
 
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, QCoreApplication
 
-from .Page import Page
-
 
 class SpeedDialReader(QXmlStreamReader):
     """
@@ -90,6 +88,7 @@ class SpeedDialReader(QXmlStreamReader):
                     if url:
                         if not title:
                             title = url
+                        from .Page import Page
                         page = Page(url, title)
                         self.__pages.append(page)
                 else:

@@ -13,15 +13,6 @@ from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, QU
     QByteArray
 from PyQt4.QtNetwork import QNetworkAccessManager
 
-from .GreaseMonkeyJavaScript import bootstrap_js
-from .GreaseMonkeyDownloader import GreaseMonkeyDownloader
-from .GreaseMonkeyScript import GreaseMonkeyScript
-
-from .GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog import \
-    GreaseMonkeyConfigurationDialog
-
-from Helpviewer.Network.EmptyNetworkReply import EmptyNetworkReply
-
 import Utilities
 import Preferences
 
@@ -53,6 +44,8 @@ class GreaseMonkeyManager(QObject):
         
         @param parent reference to the parent widget (QWidget)
         """
+        from .GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog import \
+            GreaseMonkeyConfigurationDialog
         self.__configDiaolg = GreaseMonkeyConfigurationDialog(self, parent)
         self.__configDiaolg.show()
     
@@ -62,6 +55,7 @@ class GreaseMonkeyManager(QObject):
         
         @param request reference to the request (QNetworkRequest)
         """
+        from .GreaseMonkeyDownloader import GreaseMonkeyDownloader
         downloader = GreaseMonkeyDownloader(request, self)
         downloader.finished.connect(self.__downloaderFinished)
         self.__downloaders.append(downloader)
@@ -182,6 +176,7 @@ class GreaseMonkeyManager(QObject):
         if not script:
             return False
         
+        from .GreaseMonkeyScript import GreaseMonkeyScript
         if script.startAt() == GreaseMonkeyScript.DocumentStart:
             self.__startScripts.append(script)
         else:
@@ -200,6 +195,7 @@ class GreaseMonkeyManager(QObject):
         if not script:
             return False
         
+        from .GreaseMonkeyScript import GreaseMonkeyScript
         if script.startAt() == GreaseMonkeyScript.DocumentStart:
             try:
                 self.__startScripts.remove(script)
@@ -242,6 +238,7 @@ class GreaseMonkeyManager(QObject):
         if not self.canRunOnScheme(urlScheme):
             return
         
+        from .GreaseMonkeyJavaScript import bootstrap_js
         for script in self.__startScripts:
             if script.match(urlString):
                 frame.evaluateJavaScript(bootstrap_js + script.script())
@@ -266,6 +263,7 @@ class GreaseMonkeyManager(QObject):
         
         self.__disabledScripts = Preferences.getHelp("GreaseMonkeyDisabledScripts")
         
+        from .GreaseMonkeyScript import GreaseMonkeyScript
         for fileName in scriptsDir.entryList(["*.js"], QDir.Files):
             absolutePath = scriptsDir.absoluteFilePath(fileName)
             script = GreaseMonkeyScript(self, absolutePath)
@@ -301,6 +299,7 @@ class GreaseMonkeyManager(QObject):
             urlString = request.url().toString(QUrl.RemoveFragment | QUrl.RemoveQuery)
             if urlString.endswith(".user.js"):
                 self.downloadScript(request)
+                from Helpviewer.Network.EmptyNetworkReply import EmptyNetworkReply
                 return EmptyNetworkReply(self)
         
         return None

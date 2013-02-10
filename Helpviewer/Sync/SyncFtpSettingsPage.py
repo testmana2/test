@@ -9,8 +9,6 @@ Module implementing the synchronization FTP host settings wizard page.
 
 from PyQt4.QtGui import QWizardPage
 
-from . import SyncGlobals
-
 from .Ui_SyncFtpSettingsPage import Ui_SyncFtpSettingsPage
 
 import Preferences
@@ -55,6 +53,7 @@ class SyncFtpSettingsPage(QWizardPage, Ui_SyncFtpSettingsPage):
         Preferences.setHelp("SyncFtpPort", self.portSpinBox.value())
         Preferences.setHelp("SyncFtpIdleTimeout", self.idleSpinBox.value())
         
+        from . import SyncGlobals
         return SyncGlobals.PageCheck
     
     def isComplete(self):

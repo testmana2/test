@@ -10,8 +10,6 @@ Module implementing encryption settings wizard page.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QWizardPage
 
-from . import SyncGlobals
-
 from .Ui_SyncEncryptionPage import Ui_SyncEncryptionPage
 
 import Preferences
@@ -57,6 +55,7 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         Preferences.setHelp("SyncEncryptPasswordsOnly",
             self.loginsOnlyCheckBox.isChecked())
         
+        from . import SyncGlobals
         return SyncGlobals.PageType
     
     def isComplete(self):

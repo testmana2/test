@@ -15,11 +15,6 @@ from PyQt4.QtWebKit import QWebPage
 
 from E5Gui import E5MessageBox
 
-from .Page import Page
-from .PageThumbnailer import PageThumbnailer
-from .SpeedDialReader import SpeedDialReader
-from .SpeedDialWriter import SpeedDialWriter
-
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 
@@ -78,6 +73,7 @@ class SpeedDial(QObject):
         if url.isEmpty():
             return
         
+        from .Page import Page
         page = Page(url.toString(), title)
         self.__webPages.append(page)
         
@@ -172,6 +168,7 @@ class SpeedDial(QObject):
         
         speedDialFile = self.getFileName()
         if os.path.exists(speedDialFile):
+            from .SpeedDialReader import SpeedDialReader
             reader = SpeedDialReader()
             allPages, pagesPerRow, speedDialSize = reader.read(speedDialFile)
         
@@ -195,6 +192,7 @@ class SpeedDial(QObject):
         """
         Public method to save the speed dial configuration.
         """
+        from .SpeedDialWriter import SpeedDialWriter
         speedDialFile = self.getFileName()
         writer = SpeedDialWriter()
         if not writer.write(speedDialFile,
@@ -224,6 +222,7 @@ class SpeedDial(QObject):
             if page.url == urlString:
                 return page
         
+        from .Page import Page
         return Page()
     
     def urlForShortcut(self, key):
@@ -251,6 +250,7 @@ class SpeedDial(QObject):
         entries = allPages.split('";')
         self.__webPages = []
         
+        from .Page import Page
         for entry in entries:
             if not entry:
                 continue
@@ -281,6 +281,7 @@ class SpeedDial(QObject):
         if not url:
             return
         
+        from .PageThumbnailer import PageThumbnailer
         thumbnailer = PageThumbnailer(self)
         thumbnailer.setUrl(QUrl.fromEncoded(url.encode("utf-8")))
         thumbnailer.setLoadTitle(loadTitle)
@@ -352,6 +353,7 @@ class SpeedDial(QObject):
         
         @param image thumbnail image (QPixmap)
         """
+        from .PageThumbnailer import PageThumbnailer
         thumbnailer = self.sender()
         if not isinstance(thumbnailer, PageThumbnailer) or \
            thumbnailer not in self.__thumbnailers:

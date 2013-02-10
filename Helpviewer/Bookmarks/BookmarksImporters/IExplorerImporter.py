@@ -11,8 +11,6 @@ import os
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
-from ..BookmarkNode import BookmarkNode
-
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
@@ -94,6 +92,8 @@ class IExplorerImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
+        from ..BookmarkNode import BookmarkNode
+        
         folders = {}
         
         importRootNode = BookmarkNode(BookmarkNode.Folder)

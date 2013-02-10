@@ -11,7 +11,6 @@ from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 from PyQt4.QtWebKit import QWebSettings
 
-from .WebDatabasesDialog import WebDatabasesDialog
 from .Ui_OfflineStorageConfigDialog import Ui_OfflineStorageConfigDialog
 
 import Preferences
@@ -91,5 +90,6 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         """
         Private slot to show a dialog with all databases.
         """
+        from .WebDatabasesDialog import WebDatabasesDialog
         dlg = WebDatabasesDialog(self)
         dlg.exec_()

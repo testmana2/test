@@ -10,8 +10,6 @@ Module implementing the cookie exceptions model.
 from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
 from PyQt4.QtGui import QFont, QFontMetrics
 
-from .CookieJar import CookieJar
-
 
 class CookieExceptionsModel(QAbstractTableModel):
     """
@@ -177,6 +175,8 @@ class CookieExceptionsModel(QAbstractTableModel):
         """
         if not host:
             return
+        
+        from .CookieJar import CookieJar
         
         if rule == CookieJar.Allow:
             self.__addHost(host,

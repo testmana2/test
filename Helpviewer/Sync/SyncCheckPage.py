@@ -19,8 +19,6 @@ from .Ui_SyncCheckPage import Ui_SyncCheckPage
 import Preferences
 import UI.PixmapCache
 
-import Helpviewer.HelpWindow
-
 from eric5config import getConfig
 
 
@@ -45,6 +43,7 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         
         forceUpload = self.field("ReencryptData")
         
+        import Helpviewer.HelpWindow
         syncMgr = Helpviewer.HelpWindow.HelpWindow.syncManager()
         syncMgr.syncError.connect(self.__syncError)
         syncMgr.syncStatus.connect(self.__updateMessages)

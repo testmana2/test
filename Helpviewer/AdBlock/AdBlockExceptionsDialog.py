@@ -12,8 +12,6 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_AdBlockExceptionsDialog import Ui_AdBlockExceptionsDialog
 
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -87,6 +85,7 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         for row in range(self.hostList.count()):
             hosts.append(self.hostList.item(row).text())
         
+        import Helpviewer.HelpWindow
         Helpviewer.HelpWindow.HelpWindow.adBlockManager().setExceptions(hosts)
         
         super().accept()

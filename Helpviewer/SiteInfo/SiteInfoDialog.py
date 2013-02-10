@@ -25,8 +25,6 @@ except ImportError:
 
 from ..Download.DownloadUtilities import dataString
 
-import Helpviewer.HelpWindow
-
 import UI.PixmapCache
 
 
@@ -168,6 +166,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             imageUrl.setHost(QUrl(self.siteAddressLabel.text()).host())
             imageUrl.setScheme(QUrl(self.siteAddressLabel.text()).scheme())
         
+        import Helpviewer.HelpWindow
         cache = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().cache()
         if cache:
             cacheData = cache.data(imageUrl)
@@ -232,6 +231,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             imageUrl.setHost(QUrl(self.siteAddressLabel.text()).host())
             imageUrl.setScheme(QUrl(self.siteAddressLabel.text()).scheme())
         
+        import Helpviewer.HelpWindow
         cache = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().cache()
         if cache:
             cacheData = cache.data(imageUrl)

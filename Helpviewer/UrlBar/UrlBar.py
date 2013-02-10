@@ -22,11 +22,6 @@ import Helpviewer.HelpWindow
 
 from .FavIconLabel import FavIconLabel
 from .SslLabel import SslLabel
-from .BookmarkInfoDialog import BookmarkInfoDialog
-from .BookmarkActionSelectionDialog import BookmarkActionSelectionDialog
-
-from Helpviewer.Feeds.FeedsDialog import FeedsDialog
-from Helpviewer.Bookmarks.BookmarkNode import BookmarkNode
 
 import UI.PixmapCache
 import Preferences
@@ -149,6 +144,7 @@ class UrlBar(E5LineEdit):
         if manager.bookmarkForUrl(self.__browser.url()) is not None:
             self.__bookmarkButton.setIcon(self.__bmActiveIcon)
             bookmarks = manager.bookmarksForUrl(self.__browser.url())
+            from Helpviewer.Bookmarks.BookmarkNode import BookmarkNode
             for bookmark in bookmarks:
                 manager.setTimestamp(bookmark, BookmarkNode.TsVisited,
                                      QDateTime.currentDateTime())
@@ -242,6 +238,7 @@ class UrlBar(E5LineEdit):
         """
         Private slot to show a dialog with some bookmark info.
         """
+        from .BookmarkActionSelectionDialog import BookmarkActionSelectionDialog
         url = self.__browser.url()
         dlg = BookmarkActionSelectionDialog(url)
         if dlg.exec_() == QDialog.Accepted:
@@ -251,6 +248,7 @@ class UrlBar(E5LineEdit):
             elif action == BookmarkActionSelectionDialog.EditBookmark:
                 bookmark = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
                    .bookmarkForUrl(url)
+                from .BookmarkInfoDialog import BookmarkInfoDialog
                 dlg = BookmarkInfoDialog(bookmark, self.__browser)
                 dlg.exec_()
             elif action == BookmarkActionSelectionDialog.AddSpeeddial:
@@ -427,6 +425,7 @@ class UrlBar(E5LineEdit):
         """
         Private slot to handle clicking the RSS icon.
         """
+        from Helpviewer.Feeds.FeedsDialog import FeedsDialog
         feeds = self.__browser.getRSS()
         dlg = FeedsDialog(feeds, self.__browser)
         dlg.exec_()

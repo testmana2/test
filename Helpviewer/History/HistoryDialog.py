@@ -12,7 +12,6 @@ from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 
-import Helpviewer.HelpWindow
 from .HistoryModel import HistoryModel
 
 from .Ui_HistoryDialog import Ui_HistoryDialog
@@ -40,6 +39,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         
         self.__historyManager = manager
         if self.__historyManager is None:
+            import Helpviewer.HelpWindow
             self.__historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
         
         self.__model = self.__historyManager.historyTreeModel()

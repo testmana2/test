@@ -16,10 +16,7 @@ from E5Gui import E5FileDialog
 
 from .Ui_DownloadItem import Ui_DownloadItem
 
-import Helpviewer.HelpWindow
-
 from .DownloadUtilities import timeString, dataString
-from .DownloadAskActionDialog import DownloadAskActionDialog
 
 import UI.PixmapCache
 import Preferences
@@ -158,6 +155,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.__gettingFileName:
             return
         
+        import Helpviewer.HelpWindow
         downloadDirectory = Helpviewer.HelpWindow.HelpWindow\
             .downloadManager().downloadDirectory()
         
@@ -173,6 +171,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             ask = True
         self.__autoOpen = False
         if not self.__toDownload:
+            from .DownloadAskActionDialog import DownloadAskActionDialog
             url = self.__reply.url()
             dlg = DownloadAskActionDialog(
                 QFileInfo(originalFileName).fileName(),
@@ -324,6 +323,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.__page:
             nam = self.__page.networkAccessManager()
         else:
+            import Helpviewer.HelpWindow
             nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.get(QNetworkRequest(self.__url))
         if self.__output.exists():
@@ -446,6 +446,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         locationHeader = self.__reply.header(QNetworkRequest.LocationHeader)
         if locationHeader and locationHeader.isValid():
             self.__url = QUrl(locationHeader)
+            import Helpviewer.HelpWindow
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))
             self.initialize()

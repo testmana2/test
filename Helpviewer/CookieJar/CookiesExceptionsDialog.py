@@ -10,7 +10,6 @@ Module implementing a dialog for the configuration of cookie exceptions.
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, QFontMetrics
 
-from .CookieJar import CookieJar
 from .CookieExceptionsModel import CookieExceptionsModel
 from .CookieModel import CookieModel
 
@@ -87,6 +86,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         """
         Private slot to block cookies of a domain.
         """
+        from .CookieJar import CookieJar
         self.__exceptionsModel.addRule(self.domainEdit.text(), CookieJar.Block)
     
     @pyqtSlot()
@@ -94,6 +94,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         """
         Private slot to allow cookies of a domain for the current session only.
         """
+        from .CookieJar import CookieJar
         self.__exceptionsModel.addRule(self.domainEdit.text(), CookieJar.AllowForSession)
     
     @pyqtSlot()
@@ -101,4 +102,5 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         """
         Private slot to allow cookies of a domain.
         """
+        from .CookieJar import CookieJar
         self.__exceptionsModel.addRule(self.domainEdit.text(), CookieJar.Allow)

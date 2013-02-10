@@ -20,7 +20,6 @@ from PyQt4.QtWebKit import QWebSettings
 
 from E5Network.E5Ftp import E5Ftp, E5FtpProxyError, E5FtpProxyType
 
-from UI.AuthenticationDialog import AuthenticationDialog
 import UI.PixmapCache
 
 from Utilities.FtpUtilities import FtpDirLineParser, FtpDirLineParserError
@@ -270,6 +269,7 @@ class FtpReply(QNetworkReply):
                         self.error.emit(QNetworkReply.ProxyConnectionRefusedError)
                         return False, False
                     else:
+                        from UI.AuthenticationDialog import AuthenticationDialog
                         info = self.trUtf8("<b>Connect to proxy '{0}' using:</b>")\
                             .format(Utilities.html_encode(
                                 Preferences.getUI("ProxyHost/Ftp")))

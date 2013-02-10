@@ -10,8 +10,6 @@ Module implementing a QAction subclass for open search.
 from PyQt4.QtCore import QUrl
 from PyQt4.QtGui import QPixmap, QIcon, QAction
 
-import Helpviewer.HelpWindow
-
 
 class OpenSearchEngineAction(QAction):
     """
@@ -28,6 +26,7 @@ class OpenSearchEngineAction(QAction):
         
         self.__engine = engine
         if self.__engine.networkAccessManager() is None:
+            import Helpviewer.HelpWindow
             self.__engine.setNetworkAccessManager(
                 Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         
@@ -42,6 +41,7 @@ class OpenSearchEngineAction(QAction):
         """
         image = self.__engine.image()
         if image.isNull():
+            import Helpviewer.HelpWindow
             self.setIcon(
                 Helpviewer.HelpWindow.HelpWindow.icon(QUrl(self.__engine.imageUrl())))
         else:

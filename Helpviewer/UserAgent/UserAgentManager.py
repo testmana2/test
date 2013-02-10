@@ -13,9 +13,6 @@ from PyQt4.QtCore import pyqtSignal, QObject, QXmlStreamReader
 
 from E5Gui import E5MessageBox
 
-from .UserAgentWriter import UserAgentWriter
-from .UserAgentReader import UserAgentReader
-
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 
@@ -59,6 +56,7 @@ class UserAgentManager(QObject):
         if not self.__loaded:
             return
         
+        from .UserAgentWriter import UserAgentWriter
         agentFile = self.getFileName()
         writer = UserAgentWriter()
         if not writer.write(agentFile, self.__agents):
@@ -77,6 +75,7 @@ class UserAgentManager(QObject):
         if not os.path.exists(agentFile):
             self.__loadNonXml(os.path.splitext(agentFile)[0])
         else:
+            from .UserAgentReader import UserAgentReader
             reader = UserAgentReader()
             self.__agents = reader.read(agentFile)
             if reader.error() != QXmlStreamReader.NoError:

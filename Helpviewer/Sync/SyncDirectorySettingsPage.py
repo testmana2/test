@@ -12,8 +12,6 @@ from PyQt4.QtGui import QWizardPage
 
 from E5Gui import E5FileDialog
 
-from . import SyncGlobals
-
 from .Ui_SyncDirectorySettingsPage import Ui_SyncDirectorySettingsPage
 
 import Preferences
@@ -47,6 +45,7 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         Preferences.setHelp("SyncDirectoryPath",
             Utilities.toNativeSeparators(self.directoryEdit.text()))
         
+        from . import SyncGlobals
         return SyncGlobals.PageCheck
     
     def isComplete(self):

@@ -12,9 +12,6 @@ from PyQt4.QtWebKit import QWebPluginFactory
 
 from ..WebPluginInterface import WebPluginInterface
 
-from .ClickToFlash import ClickToFlash
-from .ClickToFlashWhitelistDialog import ClickToFlashWhitelistDialog
-
 import Preferences
 
 
@@ -116,6 +113,8 @@ class ClickToFlashPlugin(WebPluginInterface):
         if self.onWhitelist(url.host()):
             return None
         
+        from .ClickToFlash import ClickToFlash
+        
         if ClickToFlash.isAlreadyAccepted(url, argumentNames, argumentValues):
             return None
         
@@ -126,6 +125,7 @@ class ClickToFlashPlugin(WebPluginInterface):
         """
         Public method to configure the plug-in.
         """
+        from .ClickToFlashWhitelistDialog import ClickToFlashWhitelistDialog
         self.__load()
         dlg = ClickToFlashWhitelistDialog(self.__whitelist)
         if dlg.exec_() == QDialog.Accepted:

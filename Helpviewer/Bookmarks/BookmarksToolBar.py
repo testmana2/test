@@ -16,9 +16,6 @@ from E5Gui.E5ModelToolBar import E5ModelToolBar
 import Helpviewer.HelpWindow
 
 from .BookmarksModel import BookmarksModel
-from .BookmarksMenu import BookmarksMenu
-from .AddBookmarkDialog import AddBookmarkDialog
-from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 
 class BookmarksToolBar(E5ModelToolBar):
@@ -175,6 +172,7 @@ class BookmarksToolBar(E5ModelToolBar):
         """
         Private slot to add a new bookmark.
         """
+        from .AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setCurrentIndex(self.rootIndex())
         dlg.exec_()
@@ -183,6 +181,7 @@ class BookmarksToolBar(E5ModelToolBar):
         """
         Private slot to add a new bookmarks folder.
         """
+        from .AddBookmarkDialog import AddBookmarkDialog
         dlg = AddBookmarkDialog()
         dlg.setCurrentIndex(self.rootIndex())
         dlg.setFolder(True)
@@ -194,6 +193,7 @@ class BookmarksToolBar(E5ModelToolBar):
         
         @return menu for a tool bar action (E5ModelMenu)
         """
+        from .BookmarksMenu import BookmarksMenu
         menu = BookmarksMenu(self)
         menu.openUrl.connect(self.openUrl)
         menu.newUrl.connect(self.newUrl)
@@ -203,6 +203,7 @@ class BookmarksToolBar(E5ModelToolBar):
         """
         Private slot to edit a bookmarks properties.
         """
+        from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
         idx = self.index(self.sender())
         node = self.__bookmarksModel.node(idx)
         dlg = BookmarkPropertiesDialog(node)

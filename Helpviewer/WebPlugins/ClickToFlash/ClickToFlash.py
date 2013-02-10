@@ -17,8 +17,6 @@ from .Ui_ClickToFlash import Ui_ClickToFlash
 
 import UI.PixmapCache
 
-import Helpviewer.HelpWindow
-
 
 class ClickToFlash(QWidget, Ui_ClickToFlash):
     """
@@ -42,6 +40,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         super().__init__(parent)
         
         # Check AdBlock first
+        import Helpviewer.HelpWindow
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
         if manager.isEnabled():
             urlString = bytes(url.toEncoded()).decode()

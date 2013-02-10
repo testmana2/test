@@ -11,10 +11,6 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_BookmarkPropertiesDialog import Ui_BookmarkPropertiesDialog
 
-from .BookmarkNode import BookmarkNode
-
-import Helpviewer.HelpWindow
-
 
 class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
     """
@@ -29,6 +25,7 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        from .BookmarkNode import BookmarkNode
         self.__node = node
         if self.__node.type() == BookmarkNode.Folder:
             self.addressLabel.hide()
@@ -42,12 +39,15 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         """
         Public slot handling the acceptance of the dialog.
         """
+        from .BookmarkNode import BookmarkNode
+        
         if (self.__node.type() == BookmarkNode.Bookmark and \
             not self.addressEdit.text()) or \
            not self.nameEdit.text():
             super().accept()
             return
         
+        import Helpviewer.HelpWindow
         bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         title = self.nameEdit.text()
         if title != self.__node.title:

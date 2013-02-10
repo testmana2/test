@@ -12,11 +12,6 @@ from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 
-import Helpviewer.HelpWindow
-from .BookmarkNode import BookmarkNode
-from .BookmarksModel import BookmarksModel
-from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
-
 from .Ui_BookmarksDialog import Ui_BookmarksDialog
 
 
@@ -42,6 +37,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         
         self.__bookmarksManager = manager
         if self.__bookmarksManager is None:
+            import Helpviewer.HelpWindow
             self.__bookmarksManager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         
         self.__bookmarksModel = self.__bookmarksManager.bookmarksModel()
@@ -131,6 +127,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         
         @param pos position the context menu was requested (QPoint)
         """
+        from .BookmarkNode import BookmarkNode
+        
         menu = QMenu()
         idx = self.bookmarksTree.indexAt(pos)
         idx = idx.sibling(idx.row(), 0)
@@ -178,6 +176,9 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         
         @param newTab flag indicating to open the bookmark in a new tab (boolean)
         """
+        from .BookmarkNode import BookmarkNode
+        from .BookmarksModel import BookmarksModel
+        
         idx = self.bookmarksTree.currentIndex()
         sourceIndex = self.__proxyModel.mapToSource(idx)
         node = self.__bookmarksModel.node(sourceIndex)
@@ -214,6 +215,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         """
         Private slot to edit a bookmarks properties.
         """
+        from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
+        
         idx = self.bookmarksTree.currentIndex()
         sourceIndex = self.__proxyModel.mapToSource(idx)
         node = self.__bookmarksModel.node(sourceIndex)
@@ -224,6 +227,8 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         """
         Private slot to add a new bookmarks folder.
         """
+        from .BookmarkNode import BookmarkNode
+        
         currentIndex = self.bookmarksTree.currentIndex()
         idx = QModelIndex(currentIndex)
         sourceIndex = self.__proxyModel.mapToSource(idx)

@@ -11,7 +11,6 @@ from PyQt4.QtCore import QFileInfo
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 from .SchemeAccessHandler import SchemeAccessHandler
-from .FileReply import FileReply
 
 
 class FileAccessHandler(SchemeAccessHandler):
@@ -42,6 +41,7 @@ class FileAccessHandler(SchemeAccessHandler):
                not fileInfo.isReadable() or \
                not fileInfo.exists():
                 return None
+            from .FileReply import FileReply
             return FileReply(request.url(), self.parent())
         else:
             return None

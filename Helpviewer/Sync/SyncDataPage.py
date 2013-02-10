@@ -9,8 +9,6 @@ Module implementing the synchronization data wizard page.
 
 from PyQt4.QtGui import QWizardPage
 
-from . import SyncGlobals
-
 from .Ui_SyncDataPage import Ui_SyncDataPage
 
 import Preferences
@@ -52,6 +50,7 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         Preferences.setHelp("SyncUserAgents", self.userAgentsCheckBox.isChecked())
         Preferences.setHelp("SyncSpeedDial", self.speedDialCheckBox.isChecked())
         
+        from . import SyncGlobals
         if self.activeCheckBox.isChecked():
             return SyncGlobals.PageEncryption
         else:
