@@ -13,8 +13,6 @@ from PyQt4.QtGui import QAction, QToolBar, QGraphicsScene
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
-from .UMLGraphicsView import UMLGraphicsView
-
 import UI.Config
 import UI.PixmapCache
 
@@ -50,6 +48,7 @@ class UMLDialog(E5MainWindow):
         self.__diagramType = diagramType
         self.__project = project
         
+        from .UMLGraphicsView import UMLGraphicsView
         self.scene = QGraphicsScene(0.0, 0.0, 800.0, 600.0)
         self.umlView = UMLGraphicsView(self.scene, parent=self)
         self.builder = self.__diagramBuilder(self.__diagramType, path, **kwargs)

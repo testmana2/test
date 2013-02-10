@@ -15,12 +15,8 @@ from PyQt4.QtGui import QApplication, QProgressDialog
 from E5Gui import E5MessageBox
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
-from .PackageItem import PackageItem, PackageModel
-from .AssociationItem import AssociationItem, Imports
 
-import Utilities.ModuleParser
 import Utilities
-
 import Preferences
 
 
@@ -66,6 +62,8 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                 None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
+            
+            import Utilities.ModuleParser
             for module in modules:
                 progress.setValue(prog)
                 QApplication.processEvents()
@@ -223,6 +221,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         @param x x-coordinate (float)
         @param y y-coordinate (float)
         """
+        from .PackageItem import PackageItem, PackageModel
         modules.sort()
         pm = PackageModel(name, modules)
         pw = PackageItem(pm, x, y, noModules=self.noModules, scene=self.scene)
@@ -235,6 +234,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         @param shapes list of shapes
         """
+        from .AssociationItem import AssociationItem, Imports
         for package in shapes:
             for rel in shapes[package][1]:
                 assoc = AssociationItem(

@@ -16,9 +16,6 @@ import Utilities.ModuleParser
 import Preferences
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
-from .ClassItem import ClassItem, ClassModel
-from .AssociationItem import AssociationItem, Generalisation
-from . import GraphicsUtilities
 
 
 class UMLClassDiagramBuilder(UMLDiagramBuilder):
@@ -152,6 +149,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         
         The algorithm is borrowed from Boa Constructor.
         """
+        from . import GraphicsUtilities
         generations = GraphicsUtilities.sort(nodes, routes)
         
         # calculate width and height of all elements
@@ -226,6 +224,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         @param y y-coordinate (float)
         @param isRbModule flag indicating a Ruby module (boolean)
         """
+        from .ClassItem import ClassItem, ClassModel
         meths = sorted(_class.methods.keys())
         attrs = sorted(_class.attributes.keys())
         name = _class.name
@@ -249,6 +248,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         @param x x-coordinate (float)
         @param y y-coordinate (float)
         """
+        from .ClassItem import ClassItem, ClassModel
         cl = ClassModel(_class)
         cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         cw.setId(self.umlView.getItemId())
@@ -262,6 +262,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         
         @param routes list of relationsships
         """
+        from .AssociationItem import AssociationItem, Generalisation
         for route in routes:
             if len(route) > 1:
                 assoc = AssociationItem(

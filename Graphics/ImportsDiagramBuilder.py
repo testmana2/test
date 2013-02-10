@@ -13,10 +13,7 @@ import os
 from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
-from .ModuleItem import ModuleItem, ModuleModel
-from .AssociationItem import AssociationItem, Imports
 
-import Utilities.ModuleParser
 import Utilities
 import Preferences
 
@@ -88,6 +85,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                 None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
+            import Utilities.ModuleParser
             for module in modules:
                 progress.setValue(prog)
                 QApplication.processEvents()
@@ -223,6 +221,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         @param x x-coordinate (float)
         @param y y-coordinate (float)
         """
+        from .ModuleItem import ModuleItem, ModuleModel
         classes.sort()
         impM = ModuleModel(name, classes)
         impW = ModuleItem(impM, x, y, scene=self.scene)
@@ -235,6 +234,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         
         @param shapes list of shapes
         """
+        from .AssociationItem import AssociationItem, Imports
         for module in list(shapes.keys()):
             for rel in shapes[module][1]:
                 assoc = AssociationItem(

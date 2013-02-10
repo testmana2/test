@@ -14,9 +14,6 @@ this module.
 import sys
 import re
 
-from . import TemplatesListsStyle
-from . import TemplatesListsStyleCSS
-
 from Utilities import html_uencode
 from Utilities.ModuleParser import RB_SOURCE, Function
 
@@ -74,6 +71,7 @@ class ModuleDocument(object):
         self.stylesheet = stylesheet
         
         if self.stylesheet:
+            from . import TemplatesListsStyleCSS
             self.headerTemplate = TemplatesListsStyleCSS.headerTemplate
             self.footerTemplate = TemplatesListsStyleCSS.footerTemplate
             self.moduleTemplate = TemplatesListsStyleCSS.moduleTemplate
@@ -110,6 +108,7 @@ class ModuleDocument(object):
             self.seeLinkTemplate = TemplatesListsStyleCSS.seeLinkTemplate
             self.sinceInfoTemplate = TemplatesListsStyleCSS.sinceInfoTemplate
         else:
+            from . import TemplatesListsStyle
             self.headerTemplate = TemplatesListsStyle.headerTemplate.format(**colors)
             self.footerTemplate = TemplatesListsStyle.footerTemplate.format(**colors)
             self.moduleTemplate = TemplatesListsStyle.moduleTemplate.format(**colors)

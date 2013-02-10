@@ -10,8 +10,6 @@ Module implementing a tool bar populated from a QAbstractItemModel.
 from PyQt4.QtCore import pyqtSignal, Qt, QModelIndex, QPoint, QEvent
 from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, QToolButton
 
-from .E5ModelMenu import E5ModelMenu
-
 
 class E5ModelToolBar(QToolBar):
     """
@@ -148,6 +146,7 @@ class E5ModelToolBar(QToolBar):
         
         @return menu for a tool bar action (E5ModelMenu)
         """
+        from .E5ModelMenu import E5ModelMenu
         return E5ModelMenu(self)
     
     def eventFilter(self, obj, evt):

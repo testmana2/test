@@ -15,8 +15,6 @@ from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkProxy, QNetworkProxyQu
 
 from E5Gui import E5MessageBox
 
-from UI.AuthenticationDialog import AuthenticationDialog
-
 import Preferences
 import Globals
 import Utilities
@@ -52,6 +50,7 @@ def proxyAuthenticationRequired(proxy, auth):
         "<b>Connect to proxy '{0}' using:</b>")\
         .format(Utilities.html_encode(proxy.hostName()))
     
+    from UI.AuthenticationDialog import AuthenticationDialog
     dlg = AuthenticationDialog(info, proxy.user(), True)
     dlg.setData(proxy.user(), proxy.password())
     if dlg.exec_() == QDialog.Accepted:

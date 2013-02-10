@@ -16,11 +16,6 @@ from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5ZoomWidget import E5ZoomWidget
 
 from .UMLItem import UMLItem
-from .AssociationItem import AssociationItem
-from .ClassItem import ClassItem
-from .ModuleItem import ModuleItem
-from .PackageItem import PackageItem
-from .UMLSceneSizeDialog import UMLSceneSizeDialog
 
 import UI.Config
 import UI.PixmapCache
@@ -300,6 +295,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to handle the set size context menu entry.
         """
+        from .UMLSceneSizeDialog import UMLSceneSizeDialog
         rect = self._getDiagramRect(10)
         sceneRect = self.scene().sceneRect()
         dlg = UMLSceneSizeDialog(sceneRect.width(), sceneRect.height(),
@@ -677,6 +673,7 @@ class UMLGraphicsView(E5GraphicsView):
                 item.getId(), item.x(), item.y(), item.getItemType(),
                 item.buildItemDataString()))
         
+        from .AssociationItem import AssociationItem
         for item in self.filteredItems(self.scene().items(), AssociationItem):
             lines.append("association: {0}".format(item.buildAssociationItemDataString()))
         
@@ -696,6 +693,11 @@ class UMLGraphicsView(E5GraphicsView):
         if not data[0].startswith("diagram_name:"):
             return False, 0
         self.diagramName = data[0].split(": ", 1)[1].strip()
+        
+        from .ClassItem import ClassItem
+        from .ModuleItem import ModuleItem
+        from .PackageItem import PackageItem
+        from .AssociationItem import AssociationItem
         
         linenum = 0
         for line in data[1:]:

@@ -9,8 +9,6 @@ Module implementing combobox classes using the eric5 line edits.
 
 from PyQt4.QtGui import QComboBox
 
-from .E5LineEdit import E5LineEdit, E5ClearableLineEdit
-
 
 class E5ComboBox(QComboBox):
     """
@@ -27,6 +25,7 @@ class E5ComboBox(QComboBox):
         
         self.setMinimumHeight(24)
         
+        from .E5LineEdit import E5LineEdit
         self.__lineedit = E5LineEdit(self, inactiveText)
         self.setLineEdit(self.__lineedit)
         
@@ -62,5 +61,6 @@ class E5ClearableComboBox(E5ComboBox):
         """
         super().__init__(parent, inactiveText)
         
+        from .E5LineEdit import E5ClearableLineEdit
         self.__lineedit = E5ClearableLineEdit(self, inactiveText)
         self.setLineEdit(self.__lineedit)

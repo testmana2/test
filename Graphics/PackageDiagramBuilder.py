@@ -14,12 +14,7 @@ import itertools
 from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
-from .ClassItem import ClassItem, ClassModel
-from .PackageItem import PackageItem, PackageModel
-from .AssociationItem import AssociationItem, Generalisation
-from . import GraphicsUtilities
 
-import Utilities.ModuleParser
 import Utilities
 import Preferences
 
@@ -89,6 +84,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
+            
+            import Utilities.ModuleParser
             for module in modules:
                 progress.setValue(prog)
                 QApplication.processEvents()
@@ -141,6 +138,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 None, 0, tot, self.parent())
             progress.show()
             QApplication.processEvents()
+            
+            import Utilities.ModuleParser
             for subpackage in subpackagesList:
                 packageName = os.path.basename(subpackage)
                 subpackagesDict[packageName] = []
@@ -271,6 +270,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         The algorithm is borrowed from Boa Constructor.
         """
+        from . import GraphicsUtilities
         generations = GraphicsUtilities.sort(nodes, routes)
         
         # calculate width and height of all elements
@@ -345,6 +345,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @param y y-coordinate (float)
         @param isRbModule flag indicating a Ruby module (boolean)
         """
+        from .ClassItem import ClassItem, ClassModel
         meths = sorted(_class.methods.keys())
         attrs = sorted(_class.attributes.keys())
         name = _class.name
@@ -366,6 +367,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @param x x-coordinate (float)
         @param y y-coordinate (float)
         """
+        from .ClassItem import ClassItem, ClassModel
         cl = ClassModel(_class)
         cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         cw.setId(self.umlView.getItemId())
@@ -381,6 +383,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @param x x-coordinate (float)
         @param y y-coordinate (float)
         """
+        from .PackageItem import PackageItem, PackageModel
         pm = PackageModel(name, modules)
         pw = PackageItem(pm, x, y, scene=self.scene)
         pw.setId(self.umlView.getItemId())
@@ -392,6 +395,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         @param routes list of relationsships
         """
+        from .AssociationItem import AssociationItem, Generalisation
         for route in routes:
             if len(route) > 1:
                 assoc = AssociationItem(

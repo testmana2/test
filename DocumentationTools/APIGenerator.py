@@ -8,8 +8,6 @@ Module implementing the builtin API generator.
 
 """
 
-from QScintilla.Editor import Editor
-
 
 class APIGenerator(object):
     """
@@ -79,6 +77,8 @@ class APIGenerator(object):
         """
         Private method to generate the api section for global variables.
         """
+        from QScintilla.Editor import Editor
+        
         moduleNameStr = "{0}".format(self.moduleName)
         
         for globalName in sorted(self.module.globals.keys()):
@@ -107,6 +107,8 @@ class APIGenerator(object):
         
         @param classname Name of the class containing the method. (string)
         """
+        from QScintilla.Editor import Editor
+        
         _class = self.module.classes[className]
         methods = sorted(list(_class.methods.keys()))
         if '__init__' in methods:
@@ -140,6 +142,8 @@ class APIGenerator(object):
         
         @param classname Name of the class containing the class variables. (string)
         """
+        from QScintilla.Editor import Editor
+        
         _class = self.module.classes[className]
         classNameStr = "{0}{1}.".format(self.moduleName, className)
         for variable in sorted(_class.globals.keys()):
@@ -156,6 +160,8 @@ class APIGenerator(object):
         """
         Private method to generate the api section for functions.
         """
+        from QScintilla.Editor import Editor
+        
         funcNames = sorted(list(self.module.functions.keys()))
         for funcName in funcNames:
             if not self.__isPrivate(self.module.functions[funcName]):

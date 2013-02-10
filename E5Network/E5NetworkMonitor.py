@@ -11,8 +11,6 @@ from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 from PyQt4.QtGui import QDialog, QStandardItemModel, QSortFilterProxyModel
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
-from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
-
 from .Ui_E5NetworkMonitor import Ui_E5NetworkMonitor
 
 
@@ -190,6 +188,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         name = headerList.model().data(headerList.model().index(row, 0))
         value = headerList.model().data(headerList.model().index(row, 1))
         if self.__headersDlg is None:
+            from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
             self.__headersDlg = E5NetworkHeaderDetailsDialog(self)
         self.__headersDlg.setData(name, value)
         self.__headersDlg.show()

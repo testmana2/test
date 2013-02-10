@@ -19,11 +19,6 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_E5SslCertificatesDialog import Ui_E5SslCertificatesDialog
 
-try:
-    from E5Network.E5SslInfoDialog import E5SslInfoDialog
-except ImportError:
-    pass
-
 import Preferences
 import Utilities
 import UI.PixmapCache
@@ -125,10 +120,14 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         Private slot to show data of the selected server certificate.
         """
-        cert = QSslCertificate.fromData(
-            self.serversCertificatesTree.currentItem().data(0, self.CertRole))[0]
-        dlg = E5SslInfoDialog(cert, self)
-        dlg.exec_()
+        try:
+            from E5Network.E5SslInfoDialog import E5SslInfoDialog
+            cert = QSslCertificate.fromData(
+                self.serversCertificatesTree.currentItem().data(0, self.CertRole))[0]
+            dlg = E5SslInfoDialog(cert, self)
+            dlg.exec_()
+        except ImportError:
+            pass
     
     @pyqtSlot()
     def on_serversDeleteButton_clicked(self):
@@ -318,10 +317,14 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         Private slot to show data of the selected CA certificate.
         """
-        cert = QSslCertificate.fromData(
-            self.caCertificatesTree.currentItem().data(0, self.CertRole))[0]
-        dlg = E5SslInfoDialog(cert, self)
-        dlg.exec_()
+        try:
+            from E5Network.E5SslInfoDialog import E5SslInfoDialog
+            cert = QSslCertificate.fromData(
+                self.caCertificatesTree.currentItem().data(0, self.CertRole))[0]
+            dlg = E5SslInfoDialog(cert, self)
+            dlg.exec_()
+        except ImportError:
+            pass
     
     @pyqtSlot()
     def on_caDeleteButton_clicked(self):

@@ -11,8 +11,6 @@ from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, QStyleOptionFrameV2, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
 
-from E5Gui.E5LineEditButton import E5LineEditButton
-
 import UI.PixmapCache
 
 
@@ -286,6 +284,7 @@ class E5ClearableLineEdit(E5LineEdit):
         
         super().__init__(parent, inactiveText)
         
+        from E5Gui.E5LineEditButton import E5LineEditButton
         self.__clearButton = E5LineEditButton(self)
         self.__clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
         self.addWidget(self.__clearButton, side)
