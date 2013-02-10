@@ -12,7 +12,6 @@ import itertools
 from PyQt4.QtGui import QGraphicsTextItem
 
 import Utilities
-import Utilities.ModuleParser
 import Preferences
 
 from .UMLDiagramBuilder import UMLDiagramBuilder
@@ -65,6 +64,8 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         
         The algorithm is borrowed from Boa Constructor.
         """
+        import Utilities.ModuleParser
+        
         self.allClasses = {}
         self.allModules = {}
         

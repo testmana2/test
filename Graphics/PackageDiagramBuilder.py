@@ -66,6 +66,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         @return dictionary of modules contained in the package.
         """
+        import Utilities.ModuleParser
         supportedExt = \
             ['*{0}'.format(ext) for ext in Preferences.getPython("PythonExtensions")] + \
             ['*{0}'.format(ext) for ext in Preferences.getPython("Python3Extensions")] + \
@@ -85,7 +86,6 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
             progress.show()
             QApplication.processEvents()
             
-            import Utilities.ModuleParser
             for module in modules:
                 progress.setValue(prog)
                 QApplication.processEvents()

@@ -48,6 +48,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         
         @return dictionary of modules contained in the application.
         """
+        import Utilities.ModuleParser
         extensions = Preferences.getPython("PythonExtensions") + \
             Preferences.getPython("Python3Extensions") + ['.rb']
         moduleDict = {}
@@ -63,7 +64,6 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
             progress.show()
             QApplication.processEvents()
             
-            import Utilities.ModuleParser
             for module in modules:
                 progress.setValue(prog)
                 QApplication.processEvents()
