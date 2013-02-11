@@ -18,17 +18,13 @@ from PyQt4.Qsci import QsciScintilla
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
 
 import Preferences
 
 import UI.PixmapCache
-from UI.SearchWidget import SearchWidget
 
 from Debugger.DebugClientCapabilities import HasCompleter
-
-from .ShellHistoryDialog import ShellHistoryDialog
 
 
 class ShellAssembly(QWidget):
@@ -47,6 +43,8 @@ class ShellAssembly(QWidget):
         super().__init__(parent)
         
         self.__shell = Shell(dbs, vm, self)
+        
+        from UI.SearchWidget import SearchWidget
         self.__searchWidget = SearchWidget(self.__shell, self, horizontal)
         self.__searchWidget.hide()
         
@@ -290,6 +288,7 @@ class Shell(QsciScintillaCompat):
         """
         self.language = language
         if Preferences.getShell("SyntaxHighlightingEnabled"):
+            from . import Lexers
             self.lexer_ = Lexers.getLexer(self.language, self)
         else:
             self.lexer_ = None
@@ -568,6 +567,7 @@ class Shell(QsciScintillaCompat):
         """
         Private slot to show the shell history dialog.
         """
+        from .ShellHistoryDialog import ShellHistoryDialog
         dlg = ShellHistoryDialog(self.history, self.vm, self)
         if dlg.exec_() == QDialog.Accepted:
             self.historyLists[self.clientType] = dlg.getHistory()

@@ -13,7 +13,6 @@ from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel,
 
 from E5Gui import E5MessageBox
 
-from .SqlConnectionDialog import SqlConnectionDialog
 from .Ui_SqlBrowserWidget import Ui_SqlBrowserWidget
 
 
@@ -143,6 +142,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         """
         Public slot to add a database connection via an input dialog.
         """
+        from .SqlConnectionDialog import SqlConnectionDialog
         dlg = SqlConnectionDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             driver, dbName, user, password, host, port = dlg.getData()

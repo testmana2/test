@@ -17,14 +17,7 @@ from PyQt4.QtGui import QTreeWidget, QDialog, QApplication, QMenu, QTreeWidgetIt
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
 
-from .TemplatePropertiesDialog import TemplatePropertiesDialog
-from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
-from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
-
 import Preferences
-
-from E5XML.TemplatesReader import TemplatesReader
-from E5XML.TemplatesWriter import TemplatesWriter
 
 import UI.PixmapCache
 import Utilities
@@ -471,6 +464,7 @@ class TemplateViewer(QTreeWidget):
         else:
             groupName = itm.getGroupName()
         
+        from .TemplatePropertiesDialog import TemplatePropertiesDialog
         dlg = TemplatePropertiesDialog(self)
         dlg.setSelectedGroup(groupName)
         if dlg.exec_() == QDialog.Accepted:
@@ -482,6 +476,7 @@ class TemplateViewer(QTreeWidget):
         """
         Private slot to handle the Add Group context menu action.
         """
+        from .TemplatePropertiesDialog import TemplatePropertiesDialog
         dlg = TemplatePropertiesDialog(self, True)
         if dlg.exec_() == QDialog.Accepted:
             name, language = dlg.getData()
@@ -497,6 +492,8 @@ class TemplateViewer(QTreeWidget):
             editGroup = False
         else:
             editGroup = True
+        
+        from .TemplatePropertiesDialog import TemplatePropertiesDialog
         dlg = TemplatePropertiesDialog(self, editGroup, itm)
         if dlg.exec_() == QDialog.Accepted:
             if editGroup:
@@ -675,11 +672,14 @@ class TemplateViewer(QTreeWidget):
         
         if vars:
             if Preferences.getTemplates("SingleDialog"):
+                from .TemplateMultipleVariablesDialog import \
+                    TemplateMultipleVariablesDialog
                 dlg = TemplateMultipleVariablesDialog(vars, self)
                 if dlg.exec_() == QDialog.Accepted:
                     varValues.update(dlg.getVariables())
                     ok = True
             else:
+                from .TemplateSingleVariableDialog import TemplateSingleVariableDialog
                 for var in vars:
                     dlg = TemplateSingleVariableDialog(var, self)
                     if dlg.exec_() == QDialog.Accepted:
@@ -921,6 +921,7 @@ class TemplateViewer(QTreeWidget):
                     .format(filename))
             return False
         
+        from E5XML.TemplatesWriter import TemplatesWriter
         TemplatesWriter(f, self).writeXML()
         f.close()
         
@@ -939,6 +940,7 @@ class TemplateViewer(QTreeWidget):
         
         f = QFile(filename)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.TemplatesReader import TemplatesReader
             reader = TemplatesReader(f, viewer=self)
             reader.readXML()
             f.close()

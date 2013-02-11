@@ -245,7 +245,7 @@ def main():
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
     
-    splash.showMessage(QApplication.translate("eric5", "Importing packages..."))
+    splash.showMessage(QApplication.translate("eric5", "Starting..."))
     # We can only import these after creating the E5Application because they
     # make Qt calls that need the E5Application to exist.
     from UI.UserInterface import UserInterface

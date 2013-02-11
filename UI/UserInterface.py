@@ -20,41 +20,8 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
 
-from Debugger.DebugUI import DebugUI
-from Debugger.DebugServer import DebugServer
-from Debugger.DebugViewer import DebugViewer
-from Debugger.DebugClientCapabilities import HasUnittest
-
-from QScintilla.Shell import ShellAssembly
-from QScintilla.Terminal import TerminalAssembly
-from QScintilla.SpellChecker import SpellChecker
-
-from Helpviewer.HelpWindow import HelpWindow
-
-from Preferences import Shortcuts
-
-from PluginManager.PluginManager import PluginManager
-
-from Project.Project import Project
-from Project.ProjectBrowser import ProjectBrowser
-
-from MultiProject.MultiProject import MultiProject
-from MultiProject.MultiProjectBrowser import MultiProjectBrowser
-
-from Tasks.TaskViewer import TaskViewer
-
-from Templates.TemplateViewer import TemplateViewer
-
-from Cooperation.ChatWidget import ChatWidget
-
-from Network.IRC.IrcWidget import IrcWidget
-
-from .Browser import Browser
 from .Info import Version, BugAddress, Program, FeatureAddress
 from . import Config
-from .LogView import LogViewer
-from .SymbolsWidget import SymbolsWidget
-from .NumbersWidget import NumbersWidget
 
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -64,10 +31,7 @@ from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5ZoomWidget import E5ZoomWidget
 
-from VCS.StatusMonitorLed import StatusMonitorLed
-
 import Preferences
-import ViewManager
 import Utilities
 
 import UI.PixmapCache
@@ -220,15 +184,20 @@ class UserInterface(E5MainWindow):
         self.profiles = Preferences.getUI("ViewProfiles")
         
         # Generate the debug server object
+        from Debugger.DebugServer import DebugServer
         debugServer = DebugServer()
         
         # Generate an empty project object and multi project object
+        from Project.Project import Project
         self.project = Project(self)
+        
+        from MultiProject.MultiProject import MultiProject
         self.multiProject = MultiProject(self.project, self)
         
         splash.showMessage(self.trUtf8("Initializing Plugin Manager..."))
         
         # Initialize the Plugin Manager (Plugins are initialized later
+        from PluginManager.PluginManager import PluginManager
         self.pluginManager = PluginManager(self, develPlugin=plugin)
         
         splash.showMessage(self.trUtf8("Generating Main User Interface..."))
@@ -241,6 +210,7 @@ class UserInterface(E5MainWindow):
         
         # Generate the debugger part of the ui
         logging.debug("Creating Debugger UI...")
+        from Debugger.DebugUI import DebugUI
         self.debuggerUI = DebugUI(self, self.viewmanager, debugServer,
                                   self.debugViewer, self.project)
         self.debugViewer.setDebugger(self.debuggerUI)
@@ -445,6 +415,7 @@ class UserInterface(E5MainWindow):
         self.__initExternalToolsActions()
         
         # create a dummy help window for shortcuts handling
+        from Helpviewer.HelpWindow import HelpWindow
         self.dummyHelpViewer = HelpWindow(None, '.', None, 'help viewer', True, True)
         
         # register all relevant objects
@@ -511,6 +482,7 @@ class UserInterface(E5MainWindow):
         self.pluginManager.activatePlugins()
         
         # now read the keyboard shortcuts for all the actions
+        from Preferences import Shortcuts
         Shortcuts.readShortcuts()
         
         # restore toolbar manager state
@@ -551,6 +523,7 @@ class UserInterface(E5MainWindow):
         self.__versionCheckProgress = None
         
         # set spellchecker defaults
+        from QScintilla.SpellChecker import SpellChecker
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
@@ -565,6 +538,7 @@ class UserInterface(E5MainWindow):
         """
         # Create the view manager depending on the configuration setting
         logging.debug("Creating Viewmanager...")
+        import ViewManager
         self.viewmanager = \
             ViewManager.factory(self, self, debugServer, self.pluginManager)
         centralWidget = QWidget()
@@ -621,6 +595,7 @@ class UserInterface(E5MainWindow):
                                self.rToolbox, self.trUtf8("Right Toolbox"))
         
         # Create the project browser
+        from Project.ProjectBrowser import ProjectBrowser
         self.projectBrowser = ProjectBrowser(self.project, None,
             embeddedBrowser=(self.embeddedFileBrowser == 2))
         self.lToolbox.addItem(self.projectBrowser,
@@ -628,12 +603,14 @@ class UserInterface(E5MainWindow):
                               self.trUtf8("Project-Viewer"))
 
         # Create the multi project browser
+        from MultiProject.MultiProjectBrowser import MultiProjectBrowser
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
         self.lToolbox.addItem(self.multiProjectBrowser,
                               UI.PixmapCache.getIcon("multiProjectViewer.png"),
                               self.trUtf8("Multiproject-Viewer"))
 
         # Create the template viewer part of the user interface
+        from Templates.TemplateViewer import TemplateViewer
         self.templateViewer = TemplateViewer(None,
                                              self.viewmanager)
         self.lToolbox.addItem(self.templateViewer,
@@ -641,6 +618,7 @@ class UserInterface(E5MainWindow):
                               self.trUtf8("Template-Viewer"))
 
         # Create the debug viewer maybe without the embedded shell
+        from Debugger.DebugViewer import DebugViewer
         self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
             None,
             embeddedShell=self.embeddedShell,
@@ -650,18 +628,21 @@ class UserInterface(E5MainWindow):
                               self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
+        from Cooperation.ChatWidget import ChatWidget
         self.cooperation = ChatWidget(self)
         self.rToolbox.addItem(self.cooperation,
                               UI.PixmapCache.getIcon("cooperation.png"),
                               self.trUtf8("Cooperation"))
         
         # Create the IRC part of the user interface
+        from Network.IRC.IrcWidget import IrcWidget
         self.irc = IrcWidget(self)
         self.rToolbox.addItem(self.irc,
                               UI.PixmapCache.getIcon("irc.png"),
                               self.trUtf8("IRC"))
         
         # Create the terminal part of the user interface
+        from QScintilla.Terminal import TerminalAssembly
         self.terminalAssembly = TerminalAssembly(self.viewmanager)
         self.terminal = self.terminalAssembly.terminal()
         self.hToolbox.addItem(self.terminalAssembly,
@@ -669,12 +650,14 @@ class UserInterface(E5MainWindow):
                               self.trUtf8("Terminal"))
 
         # Create the task viewer part of the user interface
+        from Tasks.TaskViewer import TaskViewer
         self.taskViewer = TaskViewer(None, self.project)
         self.hToolbox.addItem(self.taskViewer,
                               UI.PixmapCache.getIcon("task.png"),
                               self.trUtf8("Task-Viewer"))
 
         # Create the log viewer part of the user interface
+        from .LogView import LogViewer
         self.logViewer = LogViewer()
         self.hToolbox.addItem(self.logViewer,
                               UI.PixmapCache.getIcon("logViewer.png"),
@@ -684,6 +667,7 @@ class UserInterface(E5MainWindow):
             self.shell = self.debugViewer.shell
         else:
             # Create the shell
+            from QScintilla.Shell import ShellAssembly
             self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True)
             self.shell = self.shellAssembly.shell()
             self.hToolbox.insertItem(0, self.shellAssembly,
@@ -692,6 +676,7 @@ class UserInterface(E5MainWindow):
 
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
+            from .Browser import Browser
             self.browser = Browser()
             self.lToolbox.addItem(self.browser,
                                   UI.PixmapCache.getIcon("browser.png"),
@@ -702,12 +687,14 @@ class UserInterface(E5MainWindow):
             self.browser = self.projectBrowser.fileBrowser
         
         # Create the symbols viewer
+        from .SymbolsWidget import SymbolsWidget
         self.symbolsViewer = SymbolsWidget()
         self.lToolbox.addItem(self.symbolsViewer,
                               UI.PixmapCache.getIcon("symbols.png"),
                               self.trUtf8("Symbols"))
         
         # Create the numbers viewer
+        from .NumbersWidget import NumbersWidget
         self.numbersViewer = NumbersWidget()
         self.hToolbox.addItem(self.numbersViewer,
                               UI.PixmapCache.getIcon("numbers.png"),
@@ -734,6 +721,7 @@ class UserInterface(E5MainWindow):
         
         # Create the project browser
         logging.debug("Creating Project Browser...")
+        from Project.ProjectBrowser import ProjectBrowser
         self.projectBrowser = ProjectBrowser(self.project, None,
             embeddedBrowser=(self.embeddedFileBrowser == 2))
         self.leftSidebar.addTab(self.projectBrowser,
@@ -742,6 +730,7 @@ class UserInterface(E5MainWindow):
 
         # Create the multi project browser
         logging.debug("Creating Multiproject Browser...")
+        from MultiProject.MultiProjectBrowser import MultiProjectBrowser
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
         self.leftSidebar.addTab(self.multiProjectBrowser,
                               UI.PixmapCache.getIcon("multiProjectViewer.png"),
@@ -749,6 +738,7 @@ class UserInterface(E5MainWindow):
 
         # Create the template viewer part of the user interface
         logging.debug("Creating Template Viewer...")
+        from Templates.TemplateViewer import TemplateViewer
         self.templateViewer = TemplateViewer(None,
                                              self.viewmanager)
         self.leftSidebar.addTab(self.templateViewer,
@@ -757,6 +747,7 @@ class UserInterface(E5MainWindow):
 
         # Create the debug viewer maybe without the embedded shell
         logging.debug("Creating Debug Viewer...")
+        from Debugger.DebugViewer import DebugViewer
         self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
             None,
             embeddedShell=self.embeddedShell,
@@ -766,18 +757,21 @@ class UserInterface(E5MainWindow):
 
         # Create the chat part of the user interface
         logging.debug("Creating Chat Widget...")
+        from Cooperation.ChatWidget import ChatWidget
         self.cooperation = ChatWidget(self)
         self.rightSidebar.addTab(self.cooperation,
             UI.PixmapCache.getIcon("cooperation.png"), self.trUtf8("Cooperation"))
         
         # Create the IRC part of the user interface
         logging.debug("Creating IRC Widget...")
+        from Network.IRC.IrcWidget import IrcWidget
         self.irc = IrcWidget(self)
         self.rightSidebar.addTab(self.irc,
             UI.PixmapCache.getIcon("irc.png"), self.trUtf8("IRC"))
         
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
+        from QScintilla.Terminal import TerminalAssembly
         self.terminalAssembly = TerminalAssembly(self.viewmanager)
         self.terminal = self.terminalAssembly.terminal()
         self.bottomSidebar.addTab(self.terminalAssembly,
@@ -786,6 +780,7 @@ class UserInterface(E5MainWindow):
 
         # Create the task viewer part of the user interface
         logging.debug("Creating Task Viewer...")
+        from Tasks.TaskViewer import TaskViewer
         self.taskViewer = TaskViewer(None, self.project)
         self.bottomSidebar.addTab(self.taskViewer,
                               UI.PixmapCache.getIcon("task.png"),
@@ -793,6 +788,7 @@ class UserInterface(E5MainWindow):
 
         # Create the log viewer part of the user interface
         logging.debug("Creating Log Viewer...")
+        from .LogView import LogViewer
         self.logViewer = LogViewer()
         self.bottomSidebar.addTab(self.logViewer,
                               UI.PixmapCache.getIcon("logViewer.png"),
@@ -803,6 +799,7 @@ class UserInterface(E5MainWindow):
         else:
             # Create the shell
             logging.debug("Creating Shell...")
+            from QScintilla.Shell import ShellAssembly
             self.shellAssembly = ShellAssembly(debugServer, self.viewmanager, True)
             self.shell = self.shellAssembly.shell()
             self.bottomSidebar.insertTab(0, self.shellAssembly,
@@ -812,6 +809,7 @@ class UserInterface(E5MainWindow):
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
             logging.debug("Creating File Browser...")
+            from .Browser import Browser
             self.browser = Browser()
             self.leftSidebar.addTab(self.browser,
                                     UI.PixmapCache.getIcon("browser.png"),
@@ -822,12 +820,16 @@ class UserInterface(E5MainWindow):
             self.browser = self.projectBrowser.fileBrowser
         
         # Create the symbols viewer
+        logging.debug("Creating Symbols Viewer...")
+        from .SymbolsWidget import SymbolsWidget
         self.symbolsViewer = SymbolsWidget()
         self.leftSidebar.addTab(self.symbolsViewer,
                                 UI.PixmapCache.getIcon("symbols.png"),
                                 self.trUtf8("Symbols"))
         
         # Create the numbers viewer
+        logging.debug("Creating Numbers Viewer...")
+        from .NumbersWidget import NumbersWidget
         self.numbersViewer = NumbersWidget()
         self.bottomSidebar.addTab(self.numbersViewer,
                                   UI.PixmapCache.getIcon("numbers.png"),
@@ -2506,6 +2508,7 @@ class UserInterface(E5MainWindow):
                                    self.sbEncoding, self.sbLanguage, self.sbEol,
                                    self.sbZoom)
 
+        from VCS.StatusMonitorLed import StatusMonitorLed
         self.sbVcsMonitorLed = StatusMonitorLed(self.project, self.__statusBar)
         self.__statusBar.addPermanentWidget(self.sbVcsMonitorLed)
     
@@ -4590,6 +4593,7 @@ class UserInterface(E5MainWindow):
                 home = QUrl.fromLocalFile(home).toString()
         if not (useSingle or Preferences.getHelp("SingleHelpWindow")) or \
            self.helpWindow is None:
+            from Helpviewer.HelpWindow import HelpWindow
             help = HelpWindow(home, '.', None, 'help viewer', True,
                               searchWord=searchWord)
 
@@ -4724,6 +4728,7 @@ class UserInterface(E5MainWindow):
         
         self.__configureDockareaCornerUsage()
         
+        from QScintilla.SpellChecker import SpellChecker
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
@@ -4815,6 +4820,7 @@ class UserInterface(E5MainWindow):
             if ex:
                 fn += ex
         
+        from Preferences import Shortcuts
         Shortcuts.exportShortcuts(fn)
 
     def __importShortcuts(self):
@@ -4828,6 +4834,7 @@ class UserInterface(E5MainWindow):
             self.trUtf8("Keyboard shortcut file (*.e4k)"))
         
         if fn:
+            from Preferences import Shortcuts
             Shortcuts.importShortcuts(fn)
 
     def __showCertificatesDialog(self):
@@ -4849,6 +4856,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the projectOpened signal.
         """
+        from Debugger.DebugClientCapabilities import HasUnittest
         self.__setWindowCaption(project=self.project.name)
         cap = e5App().getObject("DebugServer")\
             .getClientCapabilities(self.project.pdata["PROGLANGUAGE"][0])
@@ -4905,6 +4913,7 @@ class UserInterface(E5MainWindow):
             for language in dbs.getSupportedLanguages():
                 exts = dbs.getExtensions(language)
                 if fn.endswith(exts):
+                    from Debugger.DebugClientCapabilities import HasUnittest
                     cap = dbs.getClientCapabilities(language)
                     self.utScriptAct.setEnabled(cap & HasUnittest)
                     self.utEditorOpen = cap & HasUnittest
@@ -4931,6 +4940,7 @@ class UserInterface(E5MainWindow):
             for language in dbs.getSupportedLanguages():
                 exts = dbs.getExtensions(language)
                 if fn.endswith(exts):
+                    from Debugger.DebugClientCapabilities import HasUnittest
                     cap = dbs.getClientCapabilities(language)
                     self.utScriptAct.setEnabled(cap & HasUnittest)
                     self.utEditorOpen = cap & HasUnittest

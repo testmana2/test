@@ -11,10 +11,6 @@ the editor widget.
 from PyQt4.QtCore import QTimer
 from PyQt4.QtGui import QWidget, QGridLayout, QComboBox
 
-from .Editor import Editor
-
-from Utilities.ModuleParser import Module, Function, getTypeFromTypeName
-
 import UI.PixmapCache
 
 
@@ -43,6 +39,7 @@ class EditorAssembly(QWidget):
         
         self.__globalsCombo = QComboBox()
         self.__membersCombo = QComboBox()
+        from .Editor import Editor
         self.__editor = Editor(dbs, fn, vm, filetype, editor, tv)
         
         self.__layout.addWidget(self.__globalsCombo, 0, 0)
@@ -125,6 +122,7 @@ class EditorAssembly(QWidget):
                     return
                 
                 # step 2.1: add class methods
+                from Utilities.ModuleParser import Function
                 items = {}
                 for meth in entry.methods.values():
                     if meth.modifier == Function.Static:
@@ -190,6 +188,8 @@ class EditorAssembly(QWidget):
         """
         Private method to parse the editor source and repopulate the globals combo.
         """
+        from Utilities.ModuleParser import Module, getTypeFromTypeName
+        
         self.__module = None
         sourceType = getTypeFromTypeName(self.__editor.determineFileType())
         if sourceType != -1:

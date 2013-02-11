@@ -21,14 +21,10 @@ from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
-from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
-from .SearchReplaceWidget import SearchReplaceWidget
 
 import UI.PixmapCache
 import UI.Config
-
-from .Printer import Printer
 
 from Globals import isMacPlatform
 
@@ -127,6 +123,7 @@ class MiniEditor(E5MainWindow):
             "search": [],
             "replace": []
         }
+        from .SearchReplaceWidget import SearchReplaceWidget
         self.searchDlg = SearchReplaceWidget(False, self, self)
         self.replaceDlg = SearchReplaceWidget(True, self, self)
         
@@ -2237,6 +2234,7 @@ class MiniEditor(E5MainWindow):
         """
         Private slot to print the text.
         """
+        from .Printer import Printer
         printer = Printer(mode=QPrinter.HighResolution)
         sb = self.statusBar()
         printDialog = QPrintDialog(printer, self)
@@ -2272,6 +2270,7 @@ class MiniEditor(E5MainWindow):
         Private slot to show a print preview of the text.
         """
         from PyQt4.QtGui import QPrintPreviewDialog
+        from .Printer import Printer
         
         printer = Printer(mode=QPrinter.HighResolution)
         if self.__curFile:
@@ -2338,6 +2337,7 @@ class MiniEditor(E5MainWindow):
         self.languagesActGrp.addAction(self.noLanguageAct)
         menu.addSeparator()
         
+        from . import Lexers
         self.supportedLanguages = {}
         supportedLanguages = Lexers.getSupportedLanguages()
         languages = sorted(list(supportedLanguages.keys()))
@@ -2501,6 +2501,7 @@ class MiniEditor(E5MainWindow):
             pyname = language.split("|", 1)[1]
             language = ""
         
+        from . import Lexers
         self.lexer_ = Lexers.getLexer(language, self.__textEdit, pyname=pyname)
         if self.lexer_ is None:
             self.__textEdit.setLexer()

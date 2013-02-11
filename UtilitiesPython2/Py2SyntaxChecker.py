@@ -14,9 +14,6 @@ import traceback
 
 from Tools import readEncodedFile, normalizeCode, extractLineFlags
 
-from py2flakes.checker import Checker
-from py2flakes.messages import ImportStarUsed
-
 
 def compile(file, codestring):
     """
@@ -104,6 +101,9 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     @return list of strings containing the warnings
         (marker, file name, line number, message)
     """
+    from py2flakes.checker import Checker
+    from py2flakes.messages import ImportStarUsed
+    
     strings = []
     lines = codestring.splitlines()
     try:

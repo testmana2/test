@@ -14,9 +14,6 @@ import fnmatch
 from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, QFileSystemWatcher, Qt
 from PyQt4.QtGui import QImageReader, QApplication, QFont
 
-import Utilities.ClassBrowsers
-import Utilities.ClassBrowsers.ClbrBaseClasses
-
 import UI.PixmapCache
 import Preferences
 import Utilities
@@ -529,6 +526,7 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the file item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
+        import Utilities.ClassBrowsers
         moduleName = parentItem.moduleName()
         fileName = parentItem.fileName()
         try:
@@ -1227,6 +1225,7 @@ class BrowserClassItem(BrowserItem):
         self._classObject = cl
         self._filename = filename
         
+        import Utilities.ClassBrowsers.ClbrBaseClasses
         self.isfunction = isinstance(self._classObject,
                                      Utilities.ClassBrowsers.ClbrBaseClasses.Function)
         self.ismodule = isinstance(self._classObject,
@@ -1328,6 +1327,7 @@ class BrowserMethodItem(BrowserItem):
         name = fn.name
         BrowserItem.__init__(self, parent, name)
         
+        import Utilities.ClassBrowsers.ClbrBaseClasses
         self.type_ = BrowserItemMethod
         self.name = name
         self._functionObject = fn

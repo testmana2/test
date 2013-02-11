@@ -10,8 +10,6 @@ Module implementing the templates properties dialog.
 from PyQt4.QtCore import QRegExp, Qt, pyqtSlot
 from PyQt4.QtGui import QDialog, QRegExpValidator
 
-import QScintilla.Lexers
-
 from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 
 from E5Gui import E5MessageBox
@@ -45,6 +43,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
                                                     self.nameEdit)
             self.nameEdit.setValidator(self.__nameValidator)
         
+        import QScintilla.Lexers
         self.languages = [("All", self.trUtf8("All"))]
         supportedLanguages = QScintilla.Lexers.getSupportedLanguages()
         languages = sorted(supportedLanguages.keys())

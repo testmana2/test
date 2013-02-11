@@ -13,8 +13,6 @@ from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, QWi
 
 from E5Gui.E5Application import e5App
 
-from .SearchWidget import SearchWidget
-
 import UI.PixmapCache
 import Preferences
 
@@ -34,6 +32,7 @@ class LogViewer(QWidget):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
         self.__logViewer = LogViewerEdit(self)
+        from .SearchWidget import SearchWidget
         self.__searchWidget = SearchWidget(self.__logViewer, self)
         self.__searchWidget.hide()
         

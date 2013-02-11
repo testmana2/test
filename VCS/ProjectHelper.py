@@ -14,9 +14,6 @@ import copy
 from PyQt4.QtCore import QDir, QFileInfo, QObject
 from PyQt4.QtGui import QDialog, QInputDialog
 
-from .CommandOptionsDialog import vcsCommandOptionsDialog
-from .RepositoryInfoDialog import VcsRepositoryInfoDialog
-
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
@@ -169,6 +166,7 @@ class VcsProjectHelper(QObject):
                     self.trUtf8("New Project"),
                     self.trUtf8("""Would you like to edit the VCS command options?"""))
                 if vcores:
+                    from .CommandOptionsDialog import vcsCommandOptionsDialog
                     codlg = vcsCommandOptionsDialog(self.project.vcs)
                     if codlg.exec_() == QDialog.Accepted:
                         self.project.vcs.vcsSetOptions(codlg.getOptions())
@@ -330,6 +328,7 @@ class VcsProjectHelper(QObject):
                     self.trUtf8("Import Project"),
                     self.trUtf8("""Would you like to edit the VCS command options?"""))
                 if vcores:
+                    from .CommandOptionsDialog import vcsCommandOptionsDialog
                     codlg = vcsCommandOptionsDialog(self.project.vcs)
                     if codlg.exec_() == QDialog.Accepted:
                         self.project.vcs.vcsSetOptions(codlg.getOptions())
@@ -396,6 +395,7 @@ class VcsProjectHelper(QObject):
         """
         Protected slot to edit the VCS command options.
         """
+        from .CommandOptionsDialog import vcsCommandOptionsDialog
         codlg = vcsCommandOptionsDialog(self.vcs)
         if codlg.exec_() == QDialog.Accepted:
             self.vcs.vcsSetOptions(codlg.getOptions())
@@ -466,6 +466,7 @@ class VcsProjectHelper(QObject):
         """
         Protected slot called to show some vcs information.
         """
+        from .RepositoryInfoDialog import VcsRepositoryInfoDialog
         info = self.vcs.vcsRepositoryInfos(self.project.ppath)
         dlg = VcsRepositoryInfoDialog(None, info)
         dlg.exec_()

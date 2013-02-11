@@ -20,29 +20,10 @@ from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
 
-from . import Exporters
-from . import Lexers
-from . import TypingCompleters
 from .QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
-from .SpellChecker import SpellChecker
-from .SpellCheckingDialog import SpellCheckingDialog
-
-from Debugger.EditBreakpointDialog import EditBreakpointDialog
-
-from DebugClients.Python3.coverage import coverage
-
-from DataViews.CodeMetricsDialog import CodeMetricsDialog
-from DataViews.PyCoverageDialog import PyCoverageDialog
-from DataViews.PyProfileDialog import PyProfileDialog
-
-from Tasks.Task import Task
-
-from .Printer import Printer
 
 import Preferences
 import Utilities
-from Utilities.py3flakes.checker import Checker
-from Utilities.py3flakes.messages import ImportStarUsed
 
 import UI.PixmapCache
 
@@ -829,6 +810,7 @@ class Editor(QsciScintillaCompat):
         self.languagesActGrp.addAction(self.noLanguageAct)
         menu.addSeparator()
         
+        from . import Lexers
         self.supportedLanguages = {}
         supportedLanguages = Lexers.getSupportedLanguages()
         languages = sorted(list(supportedLanguages.keys()))
@@ -920,6 +902,7 @@ class Editor(QsciScintillaCompat):
         """
         menu = QMenu(self.trUtf8("Export as"))
         
+        from . import Exporters
         supportedExporters = Exporters.getSupportedFormats()
         exporters = sorted(list(supportedExporters.keys()))
         for exporter in exporters:
@@ -1151,6 +1134,7 @@ class Editor(QsciScintillaCompat):
         @param exporterFormat format the file should be exported into (string)
         """
         if exporterFormat:
+            from . import Exporters
             exporter = Exporters.getExporter(exporterFormat, self)
             if exporter:
                 exporter.exportSource()
@@ -1440,6 +1424,7 @@ class Editor(QsciScintillaCompat):
             pyname = language.split("|", 1)[1]
             language = ""
         
+        from . import Lexers
         self.lexer_ = Lexers.getLexer(language, self, pyname=pyname)
         if self.lexer_ is None:
             self.setLexer()
@@ -1548,6 +1533,7 @@ class Editor(QsciScintillaCompat):
             elif self.isRubyFile():
                 apiLanguage = "Ruby"
         
+        from . import TypingCompleters
         self.completer = TypingCompleters.getCompleter(apiLanguage, self)
         
     def getCompleter(self):
@@ -2094,6 +2080,7 @@ class Editor(QsciScintillaCompat):
             if not index.isValid():
                 return
             
+            from Debugger.EditBreakpointDialog import EditBreakpointDialog
             dlg = EditBreakpointDialog((self.fileName, ln),
                 (cond, temp, enabled, ignorecount),
                 self.condHistory, self, modal=True)
@@ -2263,6 +2250,7 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to print the text.
         """
+        from .Printer import Printer
         printer = Printer(mode=QPrinter.HighResolution)
         sb = e5App().getObject("UserInterface").statusBar()
         printDialog = QPrintDialog(printer, self)
@@ -2299,6 +2287,7 @@ class Editor(QsciScintillaCompat):
         Public slot to show a print preview of the text.
         """
         from PyQt4.QtGui import QPrintPreviewDialog
+        from .Printer import Printer
         
         printer = Printer(mode=QPrinter.HighResolution)
         fn = self.getFileName()
@@ -2368,6 +2357,7 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to extract all tasks.
         """
+        from Tasks.Task import Task
         markers = {
             Task.TypeWarning: Preferences.getTasks("TasksWarningMarkers").split(),
             Task.TypeNote: Preferences.getTasks("TasksNoteMarkers").split(),
@@ -2774,6 +2764,8 @@ class Editor(QsciScintillaCompat):
                 path = os.path.dirname(self.fileName)
             if not path:
                 path = Preferences.getMultiProject("Workspace") or Utilities.getHomeDir()
+            
+            from . import Lexers
             if self.fileName:
                 filterPattern = "(*{0})".format(os.path.splitext(self.fileName)[1])
                 for filter in Lexers.getSaveFileFiltersList(True):
@@ -4441,6 +4433,7 @@ class Editor(QsciScintillaCompat):
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         
+        from .SpellChecker import SpellChecker
         spellingAvailable = SpellChecker.isAvailable()
         self.menuActs["SpellCheck"].setEnabled(spellingAvailable)
         self.menuActs["SpellCheckSelection"].setEnabled(
@@ -4764,6 +4757,9 @@ class Editor(QsciScintillaCompat):
                         int(errorline), int(errorindex), True, _error)
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                        from Utilities.py3flakes.checker import Checker
+                        from Utilities.py3flakes.messages import ImportStarUsed
+                        
                         ignoreStarImportWarnings = \
                             Preferences.getFlakes("IgnoreStarImportWarnings")
                         try:
@@ -4827,6 +4823,7 @@ class Editor(QsciScintillaCompat):
         if not self.checkDirty():
             return
         
+        from DataViews.CodeMetricsDialog import CodeMetricsDialog
         self.codemetrics = CodeMetricsDialog()
         self.codemetrics.show()
         self.codemetrics.start(self.fileName)
@@ -4892,6 +4889,7 @@ class Editor(QsciScintillaCompat):
         """
         fn = self.__getCodeCoverageFile()
         if fn:
+            from DataViews.PyCoverageDialog import PyCoverageDialog
             self.codecoverage = PyCoverageDialog()
             self.codecoverage.show()
             self.codecoverage.start(fn, self.fileName)
@@ -4913,6 +4911,7 @@ class Editor(QsciScintillaCompat):
         
         fn = self.__getCodeCoverageFile()
         if fn:
+            from DebugClients.Python3.coverage import coverage
             cover = coverage(data_file=fn)
             cover.use_cache(True)
             cover.load()
@@ -5035,6 +5034,7 @@ class Editor(QsciScintillaCompat):
         else:
             return
         
+        from DataViews.PyProfileDialog import PyProfileDialog
         self.profiledata = PyProfileDialog()
         self.profiledata.show()
         self.profiledata.start(fn, self.fileName)
@@ -6242,6 +6242,7 @@ class Editor(QsciScintillaCompat):
         if Preferences.getEditor("SpellCheckingEnabled"):
             self.__spellCheckStringsOnly = Preferences.getEditor("SpellCheckStringsOnly")
             if self.spell is None:
+                from .SpellChecker import SpellChecker
                 self.spell = SpellChecker(self, self.spellingIndicator,
                                           checkRegion=self.isSpellCheckRegion)
             self.setSpellingForProject()
@@ -6316,6 +6317,7 @@ class Editor(QsciScintillaCompat):
         """
         if self.spell:
             cline, cindex = self.getCursorPosition()
+            from .SpellCheckingDialog import SpellCheckingDialog
             dlg = SpellCheckingDialog(self.spell, 0, self.length(), self)
             dlg.exec_()
             self.setCursorPosition(cline, cindex)
@@ -6326,6 +6328,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to spell check the current selection.
         """
+        from .SpellCheckingDialog import SpellCheckingDialog
         sline, sindex, eline, eindex = self.getSelection()
         startPos = self.positionFromLineIndex(sline, sindex)
         endPos = self.positionFromLineIndex(eline, eindex)
@@ -6336,6 +6339,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to check the word below the spelling context menu.
         """
+        from .SpellCheckingDialog import SpellCheckingDialog
         line, index = self.lineIndexFromPosition(self.spellingMenuPos)
         wordStart, wordEnd = self.getWordBoundaries(line, index)
         wordStartPos = self.positionFromLineIndex(line, wordStart)

@@ -11,9 +11,6 @@ from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, QSizePolicy, \
     QFrame
 
-from .Ui_SearchWidget import Ui_SearchWidget
-from .Ui_ReplaceWidget import Ui_ReplaceWidget
-
 from .Editor import Editor
 
 from E5Gui.E5Action import E5Action
@@ -52,6 +49,7 @@ class SearchReplaceWidget(QWidget):
         
         self.findHistory = vm.getSRHistory('search')
         if replace:
+            from .Ui_ReplaceWidget import Ui_ReplaceWidget
             self.replaceHistory = vm.getSRHistory('replace')
             self.ui = Ui_ReplaceWidget()
             whatsThis = self.trUtf8(r"""
@@ -63,6 +61,7 @@ interpreted are:</p>
 """
             )
         else:
+            from .Ui_SearchWidget import Ui_SearchWidget
             self.ui = Ui_SearchWidget()
             whatsThis = self.trUtf8(r"""
 <b>Find</b>

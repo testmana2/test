@@ -23,13 +23,6 @@ from Globals import recentNameFiles, isMacPlatform
 import Preferences
 
 from QScintilla.Editor import Editor
-from QScintilla.EditorAssembly import EditorAssembly
-from QScintilla.APIsManager import APIsManager
-from QScintilla.SpellChecker import SpellChecker
-import QScintilla.Lexers
-import QScintilla.Exporters
-from QScintilla.Shell import Shell
-from QScintilla.Terminal import Terminal
 
 import Utilities
 
@@ -153,6 +146,7 @@ class ViewManager(QObject):
         self.autosaveTimer.timeout.connect(self.__autosave)
         
         # initialize the APIs manager
+        from QScintilla.APIsManager import APIsManager
         self.apisManager = APIsManager(parent=self)
         
         self.__cooperationClient = None
@@ -716,6 +710,7 @@ class ViewManager(QObject):
         """
         menu = QMenu(QApplication.translate('ViewManager', "Export as"))
         
+        import QScintilla.Exporters
         supportedExporters = QScintilla.Exporters.getSupportedFormats()
         exporters = sorted(list(supportedExporters.keys()))
         for exporter in exporters:
@@ -3587,6 +3582,7 @@ class ViewManager(QObject):
         """
         Private method to set the enabled state of the spelling actions.
         """
+        from QScintilla.SpellChecker import SpellChecker
         spellingAvailable = SpellChecker.isAvailable()
         
         self.spellCheckAct.setEnabled(len(self.editors) != 0 and spellingAvailable)
@@ -3654,6 +3650,7 @@ class ViewManager(QObject):
             #     1: Directory of currently active editor
             #     2: Directory of currently active project
             #     3: CWD
+            import QScintilla.Lexers
             filter = self._getOpenFileFilter()
             progs = E5FileDialog.getOpenFileNamesAndFilter(
                 self.ui,
@@ -3898,6 +3895,7 @@ class ViewManager(QObject):
         @return reference to the new editor object (Editor.Editor) and the new
             edito assembly object (EditorAssembly.EditorAssembly)
         """
+        from QScintilla.EditorAssembly import EditorAssembly
         assembly = EditorAssembly(self.dbs, fn, self, filetype=filetype, editor=caller,
                                   tv=e5App().getObject("TaskViewer"))
         editor = assembly.getEditor()
@@ -4001,6 +3999,7 @@ class ViewManager(QObject):
         
         if language is None:
             language = ''
+        import QScintilla.Lexers
         pixmap = QScintilla.Lexers.getLanguageIcon(language, True)
         self.sbLang.setPixmap(pixmap)
         if pixmap.isNull():
@@ -4093,6 +4092,7 @@ class ViewManager(QObject):
                 if Utilities.samepath(fn, editor.getFileName()):
                     break
             else:
+                from QScintilla.EditorAssembly import EditorAssembly
                 assembly = EditorAssembly(self.dbs, fn, self, filetype=filetype,
                                           tv=e5App().getObject("TaskViewer"))
                 editor = assembly.getEditor()
@@ -4268,6 +4268,7 @@ class ViewManager(QObject):
         """
         Public slot to generate a new empty editor.
         """
+        from QScintilla.EditorAssembly import EditorAssembly
         assembly = EditorAssembly(self.dbs, None, self,
                                   tv=e5App().getObject("TaskViewer"))
         editor = assembly.getEditor()
@@ -4464,6 +4465,9 @@ class ViewManager(QObject):
         @param old reference to the widget loosing focus (QWidget)
         @param now reference to the widget gaining focus (QWidget)
         """
+        from QScintilla.Shell import Shell
+        from QScintilla.Terminal import Terminal
+        
         if not isinstance(now, (Editor, Shell, Terminal)):
             self.editActGrp.setEnabled(False)
             self.copyActGrp.setEnabled(False)
@@ -5463,6 +5467,7 @@ class ViewManager(QObject):
         """
         Private slot to edit the user word list.
         """
+        from QScintilla.SpellChecker import SpellChecker
         pwl = SpellChecker.getUserDictionaryPath()
         self.__editSpellingDictionary(pwl)
     
@@ -5470,6 +5475,7 @@ class ViewManager(QObject):
         """
         Private slot to edit the user exception list.
         """
+        from QScintilla.SpellChecker import SpellChecker
         pel = SpellChecker.getUserDictionaryPath(True)
         self.__editSpellingDictionary(pel)
     
@@ -5926,6 +5932,7 @@ class ViewManager(QObject):
            self.activeWindow().getFileName():
             ext = os.path.splitext(self.activeWindow().getFileName())[1]
             rx = QRegExp(".*\*\.{0}[ )].*".format(ext[1:]))
+            import QScintilla.Lexers
             filters = QScintilla.Lexers.getOpenFileFiltersList()
             index = -1
             for i in range(len(filters)):

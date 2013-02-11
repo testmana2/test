@@ -22,9 +22,6 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Task import Task
-from .TaskPropertiesDialog import TaskPropertiesDialog
-from .TaskFilter import TaskFilter
-from .TaskFilterConfigDialog import TaskFilterConfigDialog
 
 import UI.PixmapCache
 
@@ -70,6 +67,7 @@ class TaskViewer(QTreeWidget):
         self.project = project
         self.projectTasksScanFilter = ""
         
+        from .TaskFilter import TaskFilter
         self.taskFilter = TaskFilter()
         self.taskFilter.setActive(False)
         
@@ -351,6 +349,7 @@ class TaskViewer(QTreeWidget):
         """
         Private slot to handle the "Properties" context menu entry
         """
+        from .TaskPropertiesDialog import TaskPropertiesDialog
         task = self.currentItem()
         dlg = TaskPropertiesDialog(task, self, self.projectOpen)
         ro = task.getFilename() != ""
@@ -369,6 +368,7 @@ class TaskViewer(QTreeWidget):
         """
         Private slot to handle the "New Task" context menu entry.
         """
+        from .TaskPropertiesDialog import TaskPropertiesDialog
         dlg = TaskPropertiesDialog(None, self, self.projectOpen)
         if dlg.exec_() == QDialog.Accepted:
             data = dlg.getData()
@@ -478,6 +478,7 @@ class TaskViewer(QTreeWidget):
         """
         Private slot to handle the "Configure filter" context menu entry.
         """
+        from .TaskFilterConfigDialog import TaskFilterConfigDialog
         dlg = TaskFilterConfigDialog(self.taskFilter)
         if dlg.exec_() == QDialog.Accepted:
             dlg.configureTaskFilter(self.taskFilter)

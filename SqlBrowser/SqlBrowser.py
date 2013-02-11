@@ -15,8 +15,6 @@ from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
 
-from .SqlBrowserWidget import SqlBrowserWidget
-
 import UI.PixmapCache
 import UI.Config
 
@@ -42,6 +40,7 @@ class SqlBrowser(E5MainWindow):
         
         self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         
+        from .SqlBrowserWidget import SqlBrowserWidget
         self.__browser = SqlBrowserWidget(self)
         self.setCentralWidget(self.__browser)
         

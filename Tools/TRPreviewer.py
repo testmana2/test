@@ -18,8 +18,6 @@ from PyQt4 import uic
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
-from .TRSingleApplication import TRSingleApplicationServer
-
 import UI.PixmapCache
 import UI.Config
 
@@ -106,6 +104,7 @@ class TRPreviewer(E5MainWindow):
         self.__updateActions()
         
         # fire up the single application server
+        from .TRSingleApplication import TRSingleApplicationServer
         self.SAServer = TRSingleApplicationServer(self)
         self.SAServer.loadForm.connect(self.preview.loadWidget)
         self.SAServer.loadTranslation.connect(self.translations.add)

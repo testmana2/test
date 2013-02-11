@@ -22,10 +22,6 @@ from E5Gui import E5FileDialog, E5MessageBox
 
 from .Ui_SnapWidget import Ui_SnapWidget
 
-from .SnapshotRegionGrabber import SnapshotRegionGrabber
-from .SnapshotFreehandGrabber import SnapshotFreehandGrabber
-from .SnapshotTimer import SnapshotTimer
-
 import UI.PixmapCache
 import Preferences
 import Globals
@@ -95,6 +91,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         self.preview.startDrag.connect(self.__dragSnapshot)
         
+        from .SnapshotTimer import SnapshotTimer
         self.__grabTimer = SnapshotTimer()
         self.__grabTimer.timeout.connect(self.__grabTimerTimeout)
         self.__updateTimer = QTimer()
@@ -323,6 +320,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private method to grab a rectangular screen region.
         """
+        from .SnapshotRegionGrabber import SnapshotRegionGrabber
         self.__grabber = SnapshotRegionGrabber(mode=SnapshotRegionGrabber.Rectangle)
         self.__grabber.grabbed.connect(self.__captured)
     
@@ -330,6 +328,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private method to grab an elliptical screen region.
         """
+        from .SnapshotRegionGrabber import SnapshotRegionGrabber
         self.__grabber = SnapshotRegionGrabber(mode=SnapshotRegionGrabber.Ellipse)
         self.__grabber.grabbed.connect(self.__captured)
     
@@ -337,6 +336,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private method to grab a non-rectangular screen region.
         """
+        from .SnapshotFreehandGrabber import SnapshotFreehandGrabber
         self.__grabber = SnapshotFreehandGrabber()
         self.__grabber.grabbed.connect(self.__captured)
     

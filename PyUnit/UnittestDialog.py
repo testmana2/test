@@ -23,9 +23,6 @@ from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
-from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
-
-from DebugClients.Python3.coverage import coverage
 
 import UI.PixmapCache
 
@@ -339,6 +336,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                         mainScript = os.path.abspath(prog)
                 else:
                     mainScript = os.path.abspath(prog)
+                
+                from DebugClients.Python3.coverage import coverage
                 cover = coverage(
                     data_file="{0}.coverage".format(os.path.splitext(mainScript)[0]))
                 cover.use_cache(True)
@@ -593,6 +592,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         test, tracebackText = lbitem.data(Qt.UserRole)
 
         # now build the dialog
+        from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
         self.dlg = QDialog()
         ui = Ui_UnittestStacktraceDialog()
         ui.setupUi(self.dlg)

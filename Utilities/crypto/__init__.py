@@ -15,9 +15,6 @@ from PyQt4.QtGui import QLineEdit, QInputDialog
 
 from E5Gui import E5MessageBox
 
-from .py3AES import encryptData, decryptData
-from .py3PBKDF2 import verifyPassword, hashPasswordTuple, rehashPassword
-
 import Preferences
 
 ################################################################################
@@ -70,6 +67,7 @@ def __getMasterPassword():
         QCoreApplication.translate("Crypto", "Enter the master password:"),
         QLineEdit.Password)
     if ok:
+        from .py3PBKDF2 import verifyPassword
         masterPassword = Preferences.getUser("MasterPassword")
         try:
             if masterPassword:
@@ -110,8 +108,10 @@ def pwEncrypt(pw, masterPW=None):
         
         masterPW = pwDecode(MasterPassword)
     
+    from .py3PBKDF2 import hashPasswordTuple
     digestname, iterations, salt, hash = hashPasswordTuple(masterPW)
     key = hash[:32]
+    from .py3AES import encryptData
     try:
         cipher = encryptData(key, pw.encode("utf-8"))
     except ValueError:
@@ -143,6 +143,9 @@ def pwDecrypt(epw, masterPW=None):
                 return "", False
         
         masterPW = pwDecode(MasterPassword)
+    
+    from .py3AES import decryptData
+    from .py3PBKDF2 import rehashPassword
     
     hashParameters, epw = epw[3:].rsplit(Delimiter, 1)
     try:
@@ -255,6 +258,9 @@ def dataEncrypt(data, password, keyLength=32, hashIterations=10000):
     @return encrypted data (bytes) and flag indicating
         success (boolean)
     """
+    from .py3AES import encryptData
+    from .py3PBKDF2 import hashPasswordTuple
+    
     digestname, iterations, salt, hash = \
         hashPasswordTuple(password, iterations=hashIterations)
     key = hash[:keyLength]
@@ -282,6 +288,9 @@ def dataDecrypt(edata, password, keyLength=32):
     """
     if not edata.startswith(CryptoMarker.encode()):
         return edata, False  # it was not encoded using dataEncrypt
+    
+    from .py3AES import decryptData
+    from .py3PBKDF2 import rehashPassword
     
     hashParametersBytes, edata = edata[3:].rsplit(Delimiter.encode(), 1)
     hashParameters = hashParametersBytes.decode()

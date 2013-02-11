@@ -19,8 +19,6 @@ from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 from Project.ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem, \
     ProjectBrowserFileItem, ProjectBrowserDirectoryItem
 
-from .RepositoryInfoDialog import VcsRepositoryInfoDialog
-
 import Preferences
 
 
@@ -359,6 +357,7 @@ class VcsProjectBrowserHelper(QObject):
         """
         Protected slot called to show some vcs information.
         """
+        from .RepositoryInfoDialog import VcsRepositoryInfoDialog
         info = self.vcs.vcsRepositoryInfos(self.project.ppath)
         dlg = VcsRepositoryInfoDialog(None, info)
         dlg.exec_()

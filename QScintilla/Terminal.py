@@ -19,16 +19,12 @@ from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
 
-from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
 
 import Preferences
 import Utilities
 
 import UI.PixmapCache
-from UI.SearchWidget import SearchWidget
-
-from .ShellHistoryDialog import ShellHistoryDialog
 
 
 class TerminalAssembly(QWidget):
@@ -47,6 +43,8 @@ class TerminalAssembly(QWidget):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
         self.__terminal = Terminal(vm, self)
+        
+        from UI.SearchWidget import SearchWidget
         self.__searchWidget = SearchWidget(self.__terminal, self)
         self.__searchWidget.hide()
         
@@ -299,6 +297,7 @@ class Terminal(QsciScintillaCompat):
         else:
             self.language = "Bash"
         if Preferences.getTerminal("SyntaxHighlightingEnabled"):
+            from . import Lexers
             self.lexer_ = Lexers.getLexer(self.language, self)
         else:
             self.lexer_ = None
@@ -478,6 +477,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private slot to show the shell history dialog.
         """
+        from .ShellHistoryDialog import ShellHistoryDialog
         dlg = ShellHistoryDialog(self.history, self.vm, self)
         if dlg.exec_() == QDialog.Accepted:
             self.history = dlg.getHistory()
