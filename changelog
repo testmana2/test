@@ -6,6 +6,7 @@ Version 5.4-snapshot-2013mmdd:
   -- introduced a zoom widget in the status bar of several windows
   -- centralized the SSL error handling in E5SslErrorHandler
   -- moved the SSL widgets to the E5Network package
+  -- changed the 'import' statements to improve startup behavior
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
