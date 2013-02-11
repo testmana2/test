@@ -13,8 +13,6 @@ from PyQt4.QtGui import QApplication
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NotificationsPage import Ui_NotificationsPage
 
-from UI.NotificationWidget import NotificationWidget
-
 import Preferences
 import UI.PixmapCache
 
@@ -73,6 +71,7 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
         @param checked state of the button (boolean)
         """
         if checked:
+            from UI.NotificationWidget import NotificationWidget
             self.__notification = NotificationWidget(parent=self, setPosition=True)
             self.__notification.setPixmap(UI.PixmapCache.getPixmap("notification48.png"))
             self.__notification.setHeading(self.trUtf8("Visual Selection"))

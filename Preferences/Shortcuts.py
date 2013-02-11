@@ -15,9 +15,6 @@ from E5Gui import E5MessageBox
 
 from Preferences import Prefs, syncPreferences
 
-from E5XML.ShortcutsReader import ShortcutsReader
-from E5XML.ShortcutsWriter import ShortcutsWriter
-
 
 def __readShortcut(act, category, prefClass):
     """
@@ -196,6 +193,7 @@ def exportShortcuts(fn):
     
     f = QFile(fn)
     if f.open(QIODevice.WriteOnly):
+        from E5XML.ShortcutsWriter import ShortcutsWriter
         ShortcutsWriter(f).writeXML()
         f.close()
     else:
@@ -218,6 +216,7 @@ def importShortcuts(fn):
     
     f = QFile(fn)
     if f.open(QIODevice.ReadOnly):
+        from E5XML.ShortcutsReader import ShortcutsReader
         reader = ShortcutsReader(f)
         reader.readXML()
         f.close()

@@ -15,8 +15,6 @@ from PyQt4.QtGui import QDialog
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog
 
-from QScintilla.SpellChecker import SpellChecker
-
 from .Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
 
 import Utilities
@@ -44,6 +42,7 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         self.pwlCompleter = E5FileCompleter(self.pwlEdit)
         self.pelCompleter = E5FileCompleter(self.pelEdit)
         
+        from QScintilla.SpellChecker import SpellChecker
         self.spellingComboBox.addItem(self.trUtf8("<default>"))
         self.spellingComboBox.addItems(sorted(SpellChecker.getAvailableLanguages()))
         

@@ -10,8 +10,6 @@ Module implementing a special QextScintilla lexer to handle the preferences.
 from PyQt4.QtGui import QColor, QFont, QApplication
 from PyQt4.Qsci import QsciLexer
 
-import QScintilla.Lexers
-
 import Preferences
 
 
@@ -72,6 +70,7 @@ class PreferencesLexer(QsciLexer):
         super().__init__(parent)
         
         # instantiate a lexer object for the given language
+        import QScintilla.Lexers
         lex = QScintilla.Lexers.getLexer(language)
         if lex is None:
             raise PreferencesLexerLanguageError(language)

@@ -18,10 +18,7 @@ from PyQt4 import uic
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from .NewDialogClassDialog import NewDialogClassDialog
 from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
-
-from Utilities import ModuleParser
 
 from eric5config import getConfig
 
@@ -81,6 +78,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     exts = [splitExt[1]]
                 else:
                     exts = None
+                from Utilities import ModuleParser
                 self.__module = ModuleParser.readModule(self.srcFile, extensions=exts,
                                                         caching=False)
             except ImportError:
@@ -506,6 +504,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         path, file = os.path.split(self.srcFile)
         objName = self.__objectName()
         if objName:
+            from .NewDialogClassDialog import NewDialogClassDialog
             dlg = NewDialogClassDialog(objName, file, path, self)
             if dlg.exec_() == QDialog.Accepted:
                 className, fileName = dlg.getData()

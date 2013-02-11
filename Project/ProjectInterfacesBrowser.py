@@ -23,7 +23,6 @@ from .ProjectBaseBrowser import ProjectBaseBrowser
 
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
 import Preferences
@@ -386,6 +385,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete interfaces"),
             self.trUtf8("Do you really want to delete these interfaces from"

@@ -12,8 +12,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_MasterPasswordEntryDialog import Ui_MasterPasswordEntryDialog
 
-from Utilities.crypto.py3PBKDF2 import verifyPassword
-
 
 class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
     """
@@ -45,6 +43,7 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
         enable = True
         error = ""
         if self.currentPasswordEdit.isEnabled():
+            from Utilities.crypto.py3PBKDF2 import verifyPassword
             enable = \
                 verifyPassword(self.currentPasswordEdit.text(), self.__oldPasswordHash)
             if not enable:

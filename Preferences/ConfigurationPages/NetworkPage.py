@@ -18,8 +18,6 @@ from E5Network.E5Ftp import E5FtpProxyType
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NetworkPage import Ui_NetworkPage
 
-from Helpviewer.Download.DownloadManager import DownloadManager
-
 import Preferences
 import Utilities
 
@@ -62,6 +60,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.requestFilenameCheckBox.setChecked(
             Preferences.getUI("RequestDownloadFilename"))
         policy = Preferences.getHelp("DownloadManagerRemovePolicy")
+        from Helpviewer.Download.DownloadManager import DownloadManager
         if policy == DownloadManager.RemoveNever:
             self.cleanupNeverButton.setChecked(True)
         elif policy == DownloadManager.RemoveExit:
@@ -113,6 +112,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.downloadDirEdit.text())
         Preferences.setUI("RequestDownloadFilename",
             self.requestFilenameCheckBox.isChecked())
+        from Helpviewer.Download.DownloadManager import DownloadManager
         if self.cleanupNeverButton.isChecked():
             policy = DownloadManager.RemoveNever
         elif self.cleanupExitButton.isChecked():

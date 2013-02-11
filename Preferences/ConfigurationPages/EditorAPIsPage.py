@@ -17,9 +17,6 @@ from E5Gui import E5FileDialog, E5MessageBox
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
 
-from QScintilla.APIsManager import APIsManager
-import QScintilla.Lexers
-
 import Preferences
 import Utilities
 
@@ -37,7 +34,6 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.setObjectName("EditorAPIsPage")
         
         self.prepareApiButton.setText(self.trUtf8("Compile APIs"))
-        self.__apisManager = APIsManager()
         self.__currentAPI = None
         self.__inPreparation = False
         
@@ -48,6 +44,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.apiAutoPrepareCheckBox.setChecked(
             Preferences.getEditor("AutoPrepareAPIs"))
         
+        import QScintilla.Lexers
         self.apis = {}
         apiLanguages = sorted([''] + \
                        list(QScintilla.Lexers.getSupportedLanguages().keys()))
@@ -95,7 +92,9 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         for api in self.apis[self.currentApiLanguage]:
             if api:
                 self.apiList.addItem(api)
-        self.__currentAPI = self.__apisManager.getAPIs(self.currentApiLanguage)
+        
+        from QScintilla.APIsManager import APIsManager
+        self.__currentAPI = APIsManager().getAPIs(self.currentApiLanguage)
         if self.__currentAPI is not None:
             self.__currentAPI.apiPreparationFinished.connect(
                 self.__apiPreparationFinished)

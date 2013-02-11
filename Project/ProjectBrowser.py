@@ -15,13 +15,6 @@ from UI.Browser import Browser
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui.E5Led import E5Led
 
-from .ProjectSourcesBrowser import ProjectSourcesBrowser
-from .ProjectFormsBrowser import ProjectFormsBrowser
-from .ProjectTranslationsBrowser import ProjectTranslationsBrowser
-from .ProjectResourcesBrowser import ProjectResourcesBrowser
-from .ProjectInterfacesBrowser import ProjectInterfacesBrowser
-from .ProjectOthersBrowser import ProjectOthersBrowser
-
 import UI.PixmapCache
 import Preferences
 
@@ -82,6 +75,12 @@ class ProjectBrowser(E5TabWidget):
         self.__vcsStateChanged(" ")
         
         # step 1: create all the individual browsers
+        from .ProjectSourcesBrowser import ProjectSourcesBrowser
+        from .ProjectFormsBrowser import ProjectFormsBrowser
+        from .ProjectTranslationsBrowser import ProjectTranslationsBrowser
+        from .ProjectResourcesBrowser import ProjectResourcesBrowser
+        from .ProjectInterfacesBrowser import ProjectInterfacesBrowser
+        from .ProjectOthersBrowser import ProjectOthersBrowser
         # sources browser
         self.psBrowser = ProjectSourcesBrowser(self.project)
         # forms browser

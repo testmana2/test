@@ -22,7 +22,6 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserTranslationType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
 import Preferences
@@ -604,6 +603,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         translationFiles = [itm.fileName() for itm in itmList]
         
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete translation files"),
             self.trUtf8("Do you really want to delete these translation files"

@@ -12,9 +12,6 @@ from PyQt4.QtCore import pyqtSlot
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorKeywordsPage import Ui_EditorKeywordsPage
 
-import QScintilla.Lexers
-from QScintilla.Lexers.LexerContainer import LexerContainer
-
 import Preferences
 
 
@@ -31,6 +28,9 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.setObjectName("EditorKeywordsPage")
         
         # set initial values
+        import QScintilla.Lexers
+        from QScintilla.Lexers.LexerContainer import LexerContainer
+        
         self.__keywords = {
             "": ["", "", "", "", "", "", "", "", "", ""]
         }

@@ -18,8 +18,6 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserOthersType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
     """
@@ -283,6 +281,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         del dirFullNames
         del dirNames
         
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete files/directories"),
             self.trUtf8("Do you really want to delete these entries from the project?"),

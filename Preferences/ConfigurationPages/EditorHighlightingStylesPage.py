@@ -16,9 +16,6 @@ from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
 
 from E5Gui import E5MessageBox, E5FileDialog
 
-from E5XML.HighlightingStylesWriter import HighlightingStylesWriter
-from E5XML.HighlightingStylesReader import HighlightingStylesReader
-
 import Preferences
 
 
@@ -383,6 +380,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.HighlightingStylesWriter import HighlightingStylesWriter
             HighlightingStylesWriter(f, lexers).writeXML()
             f.close()
         else:
@@ -410,6 +408,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.HighlightingStylesReader import HighlightingStylesReader
             reader = HighlightingStylesReader(f, lexers)
             reader.readXML()
             f.close()

@@ -12,8 +12,6 @@ from PyQt4.QtCore import pyqtSlot
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpVirusTotalPage import Ui_HelpVirusTotalPage
 
-from Helpviewer.VirusTotalApi import VirusTotalAPI
-
 import Preferences
 
 
@@ -33,6 +31,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         
         self.testResultLabel.setHidden(True)
         
+        from Helpviewer.VirusTotalApi import VirusTotalAPI
         self.__vt = VirusTotalAPI(self)
         self.__vt.checkServiceKeyFinished.connect(self.__checkServiceKeyFinished)
         

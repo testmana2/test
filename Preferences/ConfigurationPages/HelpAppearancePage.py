@@ -15,8 +15,6 @@ from E5Gui import E5FileDialog
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 
-from ..ConfigurationDialog import ConfigurationWidget
-
 import Preferences
 import Utilities
 
@@ -69,6 +67,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
             (ConfigurationWidget.DefaultMode, ConfigurationWidget.HelpBrowserMode,
              ConfigurationWidget.TrayStarterMode)
         """
+        from ..ConfigurationDialog import ConfigurationWidget
         assert displayMode in (
             ConfigurationWidget.DefaultMode,
             ConfigurationWidget.HelpBrowserMode,
@@ -95,6 +94,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         self.saveColours(Preferences.setHelp)
         
+        from ..ConfigurationDialog import ConfigurationWidget
         if self.__displayMode == ConfigurationWidget.HelpBrowserMode:
             Preferences.setUI("SingleCloseButton",
                 self.tabsCloseButtonCheckBox.isChecked())

@@ -20,7 +20,6 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserResourceType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
 import Preferences
@@ -453,6 +452,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete resources"),
             self.trUtf8("Do you really want to delete these resources from the project?"),

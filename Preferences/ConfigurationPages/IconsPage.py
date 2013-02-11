@@ -14,7 +14,6 @@ from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
-from .IconsPreviewDialog import IconsPreviewDialog
 from .Ui_IconsPage import Ui_IconsPage
 
 import Preferences
@@ -166,6 +165,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             if itm is not None:
                 dir = itm.text()
         if dir:
+            from .IconsPreviewDialog import IconsPreviewDialog
             dlg = IconsPreviewDialog(self, dir)
             dlg.exec_()
     

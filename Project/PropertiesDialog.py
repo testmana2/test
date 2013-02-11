@@ -17,10 +17,6 @@ from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 from E5Gui import E5FileDialog
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
-from .TranslationPropertiesDialog import TranslationPropertiesDialog
-from .SpellingPropertiesDialog import SpellingPropertiesDialog
-
-from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 import Utilities
 import Preferences
@@ -162,6 +158,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         Private slot to display the spelling properties dialog.
         """
         if self.spellPropertiesDlg is None:
+            from .SpellingPropertiesDialog import SpellingPropertiesDialog
             self.spellPropertiesDlg = \
                 SpellingPropertiesDialog(self.project, self.newProject, self)
         res = self.spellPropertiesDlg.exec_()
@@ -174,6 +171,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         Private slot to display the translations properties dialog.
         """
         if self.transPropertiesDlg is None:
+            from .TranslationPropertiesDialog import TranslationPropertiesDialog
             self.transPropertiesDlg = \
                 TranslationPropertiesDialog(self.project, self.newProject, self)
         else:
@@ -217,6 +215,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if self.project.vcs is None:
             return
             
+        from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
         info = self.project.vcs.vcsRepositoryInfos(self.project.ppath)
         dlg = VcsRepositoryInfoDialog(self, info)
         dlg.exec_()

@@ -11,8 +11,6 @@ from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QColor, QPalette, QColorDialog
 from PyQt4.Qsci import QsciScintilla
 
-from QScintilla.QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage
 
@@ -31,6 +29,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.setupUi(self)
         self.setObjectName("EditorStylesPage")
         
+        from QScintilla.QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
         self.foldStyles = [
             QsciScintilla.PlainFoldStyle,
             QsciScintilla.CircledFoldStyle,

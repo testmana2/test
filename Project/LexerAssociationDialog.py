@@ -9,12 +9,8 @@ Module implementing a dialog to enter lexer associations for the project.
 
 import os
 
-from pygments.lexers import get_all_lexers
-
 from PyQt4.QtCore import Qt, pyqtSlot, qVersion
 from PyQt4.QtGui import QHeaderView, QTreeWidgetItem, QDialog
-
-import QScintilla.Lexers
 
 from .Ui_LexerAssociationDialog import Ui_LexerAssociationDialog
 
@@ -47,10 +43,13 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
             self.extsep = "."
         
         self.extras = ["-----------", self.trUtf8("Alternative")]
+        
+        import QScintilla.Lexers
         languages = \
             [''] + sorted(QScintilla.Lexers.getSupportedLanguages().keys()) + self.extras
         self.editorLexerCombo.addItems(languages)
         
+        from pygments.lexers import get_all_lexers
         pygmentsLexers = [''] + sorted([l[0] for l in get_all_lexers()])
         self.pygmentsLexerCombo.addItems(pygmentsLexers)
         

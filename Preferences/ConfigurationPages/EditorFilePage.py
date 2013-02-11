@@ -13,8 +13,6 @@ from PyQt4.Qsci import QsciScintilla
 
 from E5Gui import E5MessageBox
 
-import QScintilla.Lexers
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorFilePage import Ui_EditorFilePage
 
@@ -135,6 +133,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             selectedOpenFilter = self.openFilesFilterComboBox.currentText()
             selectedSaveFilter = self.saveFilesFilterComboBox.currentText()
         
+        import QScintilla.Lexers
         openFileFiltersList = \
             QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional=False) + \
             self.openFileFilters

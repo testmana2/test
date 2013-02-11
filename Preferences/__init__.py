@@ -31,8 +31,6 @@ from E5Gui import E5FileDialog
 
 from E5Network.E5Ftp import E5FtpProxyType
 
-import QScintilla.Lexers
-
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
     isWindowsPlatform, isLinuxPlatform, findPython2Interpreters
 
@@ -1708,6 +1706,8 @@ def getEditorLexerAssocs(prefClass=Prefs):
     prefClass.settings.beginGroup("Editor/LexerAssociations")
     keyList = prefClass.settings.childKeys()
     prefClass.settings.endGroup()
+    
+    import QScintilla.Lexers
     editorLexerAssocDefaults = QScintilla.Lexers.getDefaultLexerAssociations()
     
     if len(keyList) == 0:

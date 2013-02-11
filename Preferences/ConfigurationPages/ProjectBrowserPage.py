@@ -14,10 +14,6 @@ from E5Gui.E5Application import e5App
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ProjectBrowserPage import Ui_ProjectBrowserPage
 
-from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
-    ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
-    OthersBrowserFlag
-
 import Preferences
 
 
@@ -80,6 +76,10 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         @param projectType type of the selected project (string)
         """
+        from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
+            ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
+            OthersBrowserFlag
+        
         flags = 0
         if self.sourcesBrowserCheckBox.isChecked():
             flags |= SourcesBrowserFlag
@@ -102,6 +102,10 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         @param projectType type of the selected project (string)
         """
+        from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
+            ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
+            OthersBrowserFlag
+        
         flags = self.__projectBrowserFlags[projectType]
         
         self.sourcesBrowserCheckBox.setChecked(flags & SourcesBrowserFlag)

@@ -16,19 +16,11 @@ from E5Gui import E5MessageBox
 
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem
-from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
-
-from DataViews.CodeMetricsDialog import CodeMetricsDialog
-from DataViews.PyCoverageDialog import PyCoverageDialog
-from DataViews.PyProfileDialog import PyProfileDialog
-
-from Graphics.UMLDialog import UMLDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserSourceType
 from .ProjectBaseBrowser import ProjectBaseBrowser
-from .NewPythonPackageDialog import NewPythonPackageDialog
 
 import Utilities
 import UI.PixmapCache
@@ -621,6 +613,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         dn = self.project.getRelativePath(dn)
         if dn.startswith(os.sep):
             dn = dn[1:]
+        from .NewPythonPackageDialog import NewPythonPackageDialog
         dlg = NewPythonPackageDialog(dn, self)
         if dlg.exec_() == QDialog.Accepted:
             packageName = dlg.getData()
@@ -703,6 +696,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             fn = self.project.getRelativePath(fn2)
             files.append(fn)
         
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(self.parent(),
             self.trUtf8("Delete files"),
             self.trUtf8("Do you really want to delete these files from the project?"),
@@ -734,6 +728,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         itm = self.model().item(self.currentIndex())
         fn = itm.fileName()
         
+        from DataViews.CodeMetricsDialog import CodeMetricsDialog
         self.codemetrics = CodeMetricsDialog()
         self.codemetrics.show()
         self.codemetrics.start(fn)
@@ -787,6 +782,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         else:
             return
         
+        from DataViews.PyCoverageDialog import PyCoverageDialog
         self.codecoverage = PyCoverageDialog()
         self.codecoverage.show()
         self.codecoverage.start(pfn, fn)
@@ -840,6 +836,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         else:
             return
             
+        from DataViews.PyProfileDialog import PyProfileDialog
         self.profiledata = PyProfileDialog()
         self.profiledata.show()
         self.profiledata.start(pfn, fn)
@@ -867,6 +864,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Class Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
+        from Graphics.UMLDialog import UMLDialog
         self.classDiagram = UMLDialog(UMLDialog.ClassDiagram, self.project, fn,
                                       self, noAttrs=not res)
         self.classDiagram.show()
@@ -884,6 +882,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Imports Diagram"),
             self.trUtf8("""Include imports from external modules?"""))
+        from Graphics.UMLDialog import UMLDialog
         self.importsDiagram = UMLDialog(UMLDialog.ImportsDiagram, self.project, package,
                                         self, showExternalImports=res)
         self.importsDiagram.show()
@@ -902,6 +901,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Package Diagram"),
             self.trUtf8("""Include class attributes?"""),
             yesDefault=True)
+        from Graphics.UMLDialog import UMLDialog
         self.packageDiagram = UMLDialog(UMLDialog.PackageDiagram, self.project, package,
                                         self, noAttrs=not res)
         self.packageDiagram.show()
@@ -914,6 +914,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
+        from Graphics.UMLDialog import UMLDialog
         self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self.project,
                                             self, noModules=not res)
         self.applicationDiagram.show()
@@ -922,6 +923,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Private slot to load a diagram from file.
         """
+        from Graphics.UMLDialog import UMLDialog
         self.loadedDiagram = None
         loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self.project, parent=self)
         if loadedDiagram.load():

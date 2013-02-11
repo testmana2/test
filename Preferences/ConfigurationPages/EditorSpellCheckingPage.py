@@ -18,8 +18,6 @@ from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
 import Preferences
 import Utilities
 
-from QScintilla.SpellChecker import SpellChecker
-
 
 class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage):
     """
@@ -33,6 +31,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         self.setupUi(self)
         self.setObjectName("EditorSpellCheckingPage")
         
+        from QScintilla.SpellChecker import SpellChecker
         languages = sorted(SpellChecker.getAvailableLanguages())
         self.defaultLanguageCombo.addItems(languages)
         if languages:

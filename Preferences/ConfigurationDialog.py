@@ -22,11 +22,8 @@ from E5Gui.E5MainWindow import E5MainWindow
 
 from Globals import isMacPlatform
 
-import QScintilla.Lexers
-
 import Preferences
 
-from .PreferencesLexer import PreferencesLexer, PreferencesLexerLanguageError
 import UI.PixmapCache
 
 from eric5config import getConfig
@@ -520,6 +517,9 @@ class ConfigurationWidget(QWidget):
         """
         Private method to initialize the dictionary of preferences lexers.
         """
+        import QScintilla.Lexers
+        from .PreferencesLexer import PreferencesLexer, PreferencesLexerLanguageError
+        
         self.lexers = {}
         for language in QScintilla.Lexers.getSupportedLanguages():
             if language not in self.lexers:

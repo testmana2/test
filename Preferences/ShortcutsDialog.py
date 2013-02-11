@@ -14,7 +14,6 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_ShortcutsDialog import Ui_ShortcutsDialog
-from .ShortcutDialog import ShortcutDialog
 
 import Preferences
 from Preferences import Shortcuts
@@ -49,6 +48,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         self.shortcutsList.headerItem().setText(self.shortcutsList.columnCount(), "")
         self.shortcutsList.header().setSortIndicator(0, Qt.AscendingOrder)
         
+        from .ShortcutDialog import ShortcutDialog
         self.shortcutDialog = ShortcutDialog()
         self.shortcutDialog.shortcutChanged.connect(self.__shortcutChanged)
         

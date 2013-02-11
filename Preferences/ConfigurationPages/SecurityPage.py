@@ -14,8 +14,6 @@ from PyQt4.QtWebKit import QWebSettings
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_SecurityPage import Ui_SecurityPage
 
-from .MasterPasswordEntryDialog import MasterPasswordEntryDialog
-
 import Preferences
 
 
@@ -74,6 +72,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         @param checked flag indicating the state of the check box (boolean)
         """
         if checked:
+            from .MasterPasswordEntryDialog import MasterPasswordEntryDialog
             dlg = MasterPasswordEntryDialog("", self)
             if dlg.exec_() == QDialog.Accepted:
                 Preferences.setUser("MasterPassword",
@@ -91,6 +90,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         """
         Private slot to change the master password.
         """
+        from .MasterPasswordEntryDialog import MasterPasswordEntryDialog
         dlg = MasterPasswordEntryDialog(Preferences.getUser("MasterPassword"), self)
         if dlg.exec_() == QDialog.Accepted:
             Preferences.setUser("MasterPassword",

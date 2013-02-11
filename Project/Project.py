@@ -26,39 +26,6 @@ from E5Gui import E5FileDialog, E5MessageBox
 
 from Globals import recentNameProject
 
-from .ProjectBrowserModel import ProjectBrowserModel
-
-from .AddLanguageDialog import AddLanguageDialog
-from .AddFileDialog import AddFileDialog
-from .AddDirectoryDialog import AddDirectoryDialog
-from .PropertiesDialog import PropertiesDialog
-from .AddFoundFilesDialog import AddFoundFilesDialog
-from .DebuggerPropertiesDialog import DebuggerPropertiesDialog
-from .FiletypeAssociationDialog import FiletypeAssociationDialog
-from .LexerAssociationDialog import LexerAssociationDialog
-from .UserPropertiesDialog import UserPropertiesDialog
-
-from E5XML.ProjectReader import ProjectReader
-from E5XML.ProjectWriter import ProjectWriter
-from E5XML.UserProjectReader import UserProjectReader
-from E5XML.UserProjectWriter import UserProjectWriter
-from E5XML.SessionReader import SessionReader
-from E5XML.SessionWriter import SessionWriter
-from E5XML.TasksReader import TasksReader
-from E5XML.TasksWriter import TasksWriter
-from E5XML.DebuggerPropertiesReader import DebuggerPropertiesReader
-from E5XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
-
-import VCS
-from VCS.CommandOptionsDialog import vcsCommandOptionsDialog
-from VCS.ProjectHelper import VcsProjectHelper
-
-from Graphics.UMLDialog import UMLDialog
-
-from DataViews.CodeMetricsDialog import CodeMetricsDialog
-from DataViews.PyCoverageDialog import PyCoverageDialog
-from DataViews.PyProfileDialog import PyProfileDialog
-
 import UI.PixmapCache
 
 from E5Gui.E5Action import E5Action, createActionGroup
@@ -233,6 +200,7 @@ class Project(QObject):
         else:
             self.vcs = self.initVCS()
         
+        from .ProjectBrowserModel import ProjectBrowserModel
         self.__model = ProjectBrowserModel(self)
         
         self.codemetrics = None
@@ -675,6 +643,7 @@ class Project(QObject):
         """
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.ProjectReader import ProjectReader
             reader = ProjectReader(f, self)
             reader.readXML()
             res = not reader.hasError()
@@ -771,6 +740,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.ProjectWriter import ProjectWriter
             ProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             res = True
         else:
@@ -804,6 +774,7 @@ class Project(QObject):
         if os.path.exists(fn):
             f = QFile(fn)
             if f.open(QIODevice.ReadOnly):
+                from E5XML.UserProjectReader import UserProjectReader
                 reader = UserProjectReader(f, self)
                 reader.readXML()
                 f.close()
@@ -825,6 +796,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.UserProjectWriter import UserProjectWriter
             UserProjectWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             f.close()
         else:
@@ -854,6 +826,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.SessionReader import SessionReader
             reader = SessionReader(f, False)
             reader.readXML(quiet=quiet)
             f.close()
@@ -885,6 +858,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.SessionWriter import SessionWriter
             SessionWriter(f, os.path.splitext(os.path.basename(fn))[0]).writeXML()
             f.close()
         else:
@@ -932,6 +906,7 @@ class Project(QObject):
             return
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.TasksReader import TasksReader
             reader = TasksReader(f, True)
             reader.readXML()
             f.close()
@@ -960,6 +935,7 @@ class Project(QObject):
                     .format(fn))
             return
         
+        from E5XML.TasksWriter import TasksWriter
         TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
         f.close()
         
@@ -982,6 +958,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
+            from E5XML.DebuggerPropertiesReader import DebuggerPropertiesReader
             reader = DebuggerPropertiesReader(f, self)
             reader.readXML(quiet=quiet)
             f.close()
@@ -1011,6 +988,7 @@ class Project(QObject):
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
+            from E5XML.DebuggerPropertiesWriter import DebuggerPropertiesWriter
             DebuggerPropertiesWriter(f, os.path.splitext(os.path.basename(fn))[0])\
                 .writeXML()
             f.close()
@@ -1072,6 +1050,7 @@ class Project(QObject):
         """
         Private slot to display the debugger properties dialog.
         """
+        from .DebuggerPropertiesDialog import DebuggerPropertiesDialog
         dlg = DebuggerPropertiesDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
@@ -1137,6 +1116,7 @@ class Project(QObject):
                 self.trUtf8("You have to specify a translation pattern first."))
             return
         
+        from .AddLanguageDialog import AddLanguageDialog
         dlg = AddLanguageDialog(self.parent())
         if dlg.exec_() == QDialog.Accepted:
             lang = dlg.getSelectedLanguage()
@@ -1348,6 +1328,7 @@ class Project(QObject):
         """
         if startdir is None:
             startdir = self.ppath
+        from .AddFileDialog import AddFileDialog
         dlg = AddFileDialog(self, self.parent(), filter, startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             fnames, target, isSource = dlg.getData()
@@ -1480,6 +1461,7 @@ class Project(QObject):
         """
         if startdir is None:
             startdir = self.ppath
+        from .AddDirectoryDialog import AddDirectoryDialog
         dlg = AddDirectoryDialog(self, filter, self.parent(), startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             filetype, source, target, recursive = dlg.getData()
@@ -1881,6 +1863,7 @@ class Project(QObject):
         if not self.checkDirty():
             return
             
+        from .PropertiesDialog import PropertiesDialog
         dlg = PropertiesDialog(self, True)
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
@@ -2039,6 +2022,8 @@ class Project(QObject):
                                 self.trUtf8("""Would you like to edit the VCS"""
                                     """ command options?"""))
                             if vcores:
+                                from VCS.CommandOptionsDialog import \
+                                    vcsCommandOptionsDialog
                                 codlg = vcsCommandOptionsDialog(self.vcs)
                                 if codlg.exec_() == QDialog.Accepted:
                                     self.vcs.vcsSetOptions(codlg.getOptions())
@@ -2199,6 +2184,7 @@ class Project(QObject):
         """
         Private slot to display the properties dialog.
         """
+        from .PropertiesDialog import PropertiesDialog
         dlg = PropertiesDialog(self, False)
         if dlg.exec_() == QDialog.Accepted:
             projectType = self.pdata["PROJECTTYPE"][0]
@@ -2246,6 +2232,7 @@ class Project(QObject):
         vcsSystemOverride = \
             self.pudata["VCSOVERRIDE"] and self.pudata["VCSOVERRIDE"][0] or None
         
+        from .UserPropertiesDialog import UserPropertiesDialog
         dlg = UserPropertiesDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.storeData()
@@ -2259,8 +2246,6 @@ class Project(QObject):
                 # stop the VCS monitor thread and shutdown VCS
                 if self.vcs is not None:
                     self.vcs.stopStatusMonitor()
-##                    self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
-##                    self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
                     self.vcs.vcsShutdown()
                     self.vcs.deleteLater()
                     self.vcs = None
@@ -2285,6 +2270,7 @@ class Project(QObject):
         """
         Public slot to display the filetype association dialog.
         """
+        from .FiletypeAssociationDialog import FiletypeAssociationDialog
         dlg = FiletypeAssociationDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.transferData()
@@ -2294,6 +2280,7 @@ class Project(QObject):
         """
         Public slot to display the lexer association dialog.
         """
+        from .LexerAssociationDialog import LexerAssociationDialog
         dlg = LexerAssociationDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             dlg.transferData()
@@ -2623,16 +2610,6 @@ class Project(QObject):
         # stop the VCS monitor thread
         if self.vcs is not None:
             self.vcs.stopStatusMonitor()
-##            try:
-##                self.vcs.vcsStatusMonitorData.disconnect(
-##                    self.__model.changeVCSStates)
-##            except TypeError:
-##                pass
-##            try:
-##                self.vcs.vcsStatusMonitorStatus.disconnect(
-##                    self.__statusMonitorStatus)
-##            except TypeError:
-##                pass
         
         # now save the tasks
         if not noSave:
@@ -3762,6 +3739,7 @@ class Project(QObject):
             return
             
         # autoInclude is not set, show a dialog
+        from .AddFoundFilesDialog import AddFoundFilesDialog
         dlg = AddFoundFilesDialog(newFiles, self.parent(), None)
         res = dlg.exec_()
         
@@ -3871,6 +3849,7 @@ class Project(QObject):
                 override = True
         
         if vcsSystem is not None:
+            import VCS
             try:
                 vcs = VCS.factory(vcsSystem)
             except ImportError:
@@ -3921,6 +3900,7 @@ class Project(QObject):
                 pass
         
         if vcs is None:
+            from VCS.ProjectHelper import VcsProjectHelper
             self.vcsProjectHelper = VcsProjectHelper(None, self)
             self.vcsBasicHelper = True
         else:
@@ -3990,6 +3970,7 @@ class Project(QObject):
         """
         files = [os.path.join(self.ppath, file) \
             for file in self.pdata["SOURCES"] if file.endswith(".py")]
+        from DataViews.CodeMetricsDialog import CodeMetricsDialog
         self.codemetrics = CodeMetricsDialog()
         self.codemetrics.show()
         self.codemetrics.prepare(files, self)
@@ -4036,6 +4017,7 @@ class Project(QObject):
         
         files = [os.path.join(self.ppath, file) \
             for file in self.pdata["SOURCES"] if file.endswith(".py")]
+        from DataViews.PyCoverageDialog import PyCoverageDialog
         self.codecoverage = PyCoverageDialog()
         self.codecoverage.show()
         self.codecoverage.start(fn, files)
@@ -4080,6 +4062,7 @@ class Project(QObject):
         else:
             return
         
+        from DataViews.PyProfileDialog import PyProfileDialog
         self.profiledata = PyProfileDialog()
         self.profiledata.show()
         self.profiledata.start(fn)
@@ -4125,6 +4108,7 @@ class Project(QObject):
             self.trUtf8("""Include module names?"""),
             yesDefault=True)
         
+        from Graphics.UMLDialog import UMLDialog
         self.applicationDiagram = UMLDialog(UMLDialog.ApplicationDiagram, self,
                                             self.parent(), noModules=not res)
         self.applicationDiagram.show()
@@ -4133,6 +4117,7 @@ class Project(QObject):
         """
         Private slot to load a diagram from file.
         """
+        from Graphics.UMLDialog import UMLDialog
         self.loadedDiagram = None
         loadedDiagram = UMLDialog(UMLDialog.NoDiagram, self, parent=self.parent())
         if loadedDiagram.load():
