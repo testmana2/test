@@ -807,14 +807,6 @@ def doDependancyChecks():
     print("Found PyQt4")
     
     try:
-        import PyQt4.QtHelp         # __IGNORE_WARNING__
-    except ImportError as msg:
-        print('Sorry, please install QtHelp.')
-        print('Error: {0}'.format(msg))
-        exit(1)
-    print("Found QtHelp")
-    
-    try:
         from PyQt4 import Qsci      # __IGNORE_WARNING__
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")

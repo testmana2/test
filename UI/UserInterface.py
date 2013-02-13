@@ -4501,9 +4501,9 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the Eric documentation.
         """
-##        home = Utilities.normjoinpath(getConfig('ericDocDir'),
-##            "Source", "index.html")
-        home = "qthelp://org.eric5.ide/eric5/index.html"
+        home = Utilities.normjoinpath(getConfig('ericDocDir'),
+            "Source", "index.html")
+##        home = "qthelp://org.eric5.ide/eric5/index.html"
         
         if not home.startswith("http://") and \
            not home.startswith("https://") and \

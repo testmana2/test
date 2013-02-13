@@ -2636,10 +2636,12 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.setUseQtHelp?4(use)
 eric5.Helpviewer.HelpWindow.HelpWindow.showNotification?4(icon, heading, text)
 eric5.Helpviewer.HelpWindow.HelpWindow.shutdown?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.speedDial?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.syncManager?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.useQtHelp?7
 eric5.Helpviewer.HelpWindow.HelpWindow.userAgentsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric5.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric=False, initShortcutsOnly=False, searchWord=None)

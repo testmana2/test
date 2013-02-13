@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>org.eric5.ide.53</namespace>
+  <namespace>org.eric5.ide.54</namespace>
   <virtualFolder>eric5</virtualFolder>
   <customFilter name="eric5">
-    <filterAttribute>5.3</filterAttribute>
+    <filterAttribute>5.4</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
   </customFilter>
   <filterSection>
-    <filterAttribute>5.3</filterAttribute>
+    <filterAttribute>5.4</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
     <toc>
@@ -5317,6 +5317,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.setUseQtHelp" id="HelpWindow.setUseQtHelp" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setUseQtHelp" />
       <keyword name="HelpWindow.showNotification" id="HelpWindow.showNotification" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.showNotification" />
       <keyword name="HelpWindow.shutdown" id="HelpWindow.shutdown" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.shutdown" />
       <keyword name="HelpWindow.speedDial" id="HelpWindow.speedDial" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.speedDial" />

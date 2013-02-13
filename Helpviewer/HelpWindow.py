@@ -17,7 +17,11 @@ from PyQt4.QtGui import QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
     QHBoxLayout, QProgressBar, QAction, QIcon
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
-from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
+try:
+    from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
+    QTHELP_AVAILABLE = True
+except ImportError:
+    QTHELP_AVAILABLE = False
 
 from .Network.NetworkAccessManager import SSL_AVAILABLE
 
@@ -58,6 +62,7 @@ class HelpWindow(E5MainWindow):
     maxMenuFilePathLen = 75
     
     _fromEric = False
+    useQtHelp = QTHELP_AVAILABLE
     
     _networkAccessManager = None
     _cookieJar = None
@@ -116,13 +121,18 @@ class HelpWindow(E5MainWindow):
             from .AdBlock.AdBlockIcon import AdBlockIcon
             from .VirusTotalApi import VirusTotalAPI
             
+            HelpWindow.setUseQtHelp(self.fromEric)
+            
             if not self.fromEric:
                 self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
             
-            self.__helpEngine = \
-                QHelpEngine(os.path.join(Utilities.getConfigDir(),
-                                         "browser", "eric5help.qhc"), self)
-            self.__helpEngine.warning.connect(self.__warning)
+            if self.useQtHelp:
+                self.__helpEngine = \
+                    QHelpEngine(os.path.join(Utilities.getConfigDir(),
+                                             "browser", "eric5help.qhc"), self)
+                self.__helpEngine.warning.connect(self.__warning)
+            else:
+                self.__helpEngine = None
             self.__helpInstaller = None
             
             self.__zoomWidget = E5ZoomWidget(UI.PixmapCache.getPixmap("zoomOut.png"),
@@ -152,32 +162,33 @@ class HelpWindow(E5MainWindow):
             self.setCentralWidget(centralWidget)
             self.findDlg.hide()
             
-            # setup the TOC widget
-            self.__tocWindow = HelpTocWidget(self.__helpEngine, self)
-            self.__tocDock = QDockWidget(self.trUtf8("Contents"), self)
-            self.__tocDock.setObjectName("TocWindow")
-            self.__tocDock.setWidget(self.__tocWindow)
-            self.addDockWidget(Qt.LeftDockWidgetArea, self.__tocDock)
-            
-            # setup the index widget
-            self.__indexWindow = HelpIndexWidget(self.__helpEngine, self)
-            self.__indexDock = QDockWidget(self.trUtf8("Index"), self)
-            self.__indexDock.setObjectName("IndexWindow")
-            self.__indexDock.setWidget(self.__indexWindow)
-            self.addDockWidget(Qt.LeftDockWidgetArea, self.__indexDock)
-            
-            # setup the search widget
-            self.__searchWord = searchWord
-            self.__indexing = False
-            self.__indexingProgress = None
-            self.__searchEngine = self.__helpEngine.searchEngine()
-            self.__searchEngine.indexingStarted.connect(self.__indexingStarted)
-            self.__searchEngine.indexingFinished.connect(self.__indexingFinished)
-            self.__searchWindow = HelpSearchWidget(self.__searchEngine, self)
-            self.__searchDock = QDockWidget(self.trUtf8("Search"), self)
-            self.__searchDock.setObjectName("SearchWindow")
-            self.__searchDock.setWidget(self.__searchWindow)
-            self.addDockWidget(Qt.LeftDockWidgetArea, self.__searchDock)
+            if self.useQtHelp:
+                # setup the TOC widget
+                self.__tocWindow = HelpTocWidget(self.__helpEngine, self)
+                self.__tocDock = QDockWidget(self.trUtf8("Contents"), self)
+                self.__tocDock.setObjectName("TocWindow")
+                self.__tocDock.setWidget(self.__tocWindow)
+                self.addDockWidget(Qt.LeftDockWidgetArea, self.__tocDock)
+                
+                # setup the index widget
+                self.__indexWindow = HelpIndexWidget(self.__helpEngine, self)
+                self.__indexDock = QDockWidget(self.trUtf8("Index"), self)
+                self.__indexDock.setObjectName("IndexWindow")
+                self.__indexDock.setWidget(self.__indexWindow)
+                self.addDockWidget(Qt.LeftDockWidgetArea, self.__indexDock)
+                
+                # setup the search widget
+                self.__searchWord = searchWord
+                self.__indexing = False
+                self.__indexingProgress = None
+                self.__searchEngine = self.__helpEngine.searchEngine()
+                self.__searchEngine.indexingStarted.connect(self.__indexingStarted)
+                self.__searchEngine.indexingFinished.connect(self.__indexingFinished)
+                self.__searchWindow = HelpSearchWidget(self.__searchEngine, self)
+                self.__searchDock = QDockWidget(self.trUtf8("Search"), self)
+                self.__searchDock.setObjectName("SearchWindow")
+                self.__searchDock.setWidget(self.__searchWindow)
+                self.addDockWidget(Qt.LeftDockWidgetArea, self.__searchDock)
             
             if Preferences.getHelp("SaveGeometry"):
                 g = Preferences.getGeometry("HelpViewerGeometry")
@@ -218,16 +229,17 @@ class HelpWindow(E5MainWindow):
             
             # setup connections
             self.__activating = False
-            # TOC window
-            self.__tocWindow.linkActivated.connect(self.__linkActivated)
-            self.__tocWindow.escapePressed.connect(self.__activateCurrentBrowser)
-            # index window
-            self.__indexWindow.linkActivated.connect(self.__linkActivated)
-            self.__indexWindow.linksActivated.connect(self.__linksActivated)
-            self.__indexWindow.escapePressed.connect(self.__activateCurrentBrowser)
-            # search window
-            self.__searchWindow.linkActivated.connect(self.__linkActivated)
-            self.__searchWindow.escapePressed.connect(self.__activateCurrentBrowser)
+            if self.useQtHelp:
+                # TOC window
+                self.__tocWindow.linkActivated.connect(self.__linkActivated)
+                self.__tocWindow.escapePressed.connect(self.__activateCurrentBrowser)
+                # index window
+                self.__indexWindow.linkActivated.connect(self.__linkActivated)
+                self.__indexWindow.linksActivated.connect(self.__linksActivated)
+                self.__indexWindow.escapePressed.connect(self.__activateCurrentBrowser)
+                # search window
+                self.__searchWindow.linkActivated.connect(self.__linkActivated)
+                self.__searchWindow.escapePressed.connect(self.__activateCurrentBrowser)
             
             state = Preferences.getHelp("HelpViewerState")
             self.restoreState(state)
@@ -242,9 +254,10 @@ class HelpWindow(E5MainWindow):
             self.__previewer = None
             self.__shutdownCalled = False
             
-            QTimer.singleShot(0, self.__lookForNewDocumentation)
-            if self.__searchWord is not None:
-                QTimer.singleShot(0, self.__searchForWord)
+            if self.useQtHelp:
+                QTimer.singleShot(0, self.__lookForNewDocumentation)
+                if self.__searchWord is not None:
+                    QTimer.singleShot(0, self.__searchForWord)
             
             QTimer.singleShot(0, syncMgr.loadSettings)
 
@@ -1012,99 +1025,101 @@ class HelpWindow(E5MainWindow):
                 self.__showGreaseMonkeyConfigDialog)
         self.__actions.append(self.greaseMonkeyAct)
         
-        self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
-            UI.PixmapCache.getIcon("syncToc.png"),
-            self.trUtf8('Sync with Table of Contents'),
-            0, 0, self, 'help_sync_toc')
-        self.syncTocAct.setStatusTip(self.trUtf8(
-                'Synchronizes the table of contents with current page'))
-        self.syncTocAct.setWhatsThis(self.trUtf8(
-                """<b>Sync with Table of Contents</b>"""
-                """<p>Synchronizes the table of contents with current page.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.syncTocAct.triggered[()].connect(self.__syncTOC)
-        self.__actions.append(self.syncTocAct)
-        
-        self.showTocAct = E5Action(self.trUtf8('Table of Contents'),
-            self.trUtf8('Table of Contents'),
-            0, 0, self, 'help_show_toc')
-        self.showTocAct.setStatusTip(self.trUtf8(
-                'Shows the table of contents window'))
-        self.showTocAct.setWhatsThis(self.trUtf8(
-                """<b>Table of Contents</b>"""
-                """<p>Shows the table of contents window.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.showTocAct.triggered[()].connect(self.__showTocWindow)
-        self.__actions.append(self.showTocAct)
-        
-        self.showIndexAct = E5Action(self.trUtf8('Index'),
-            self.trUtf8('Index'),
-            0, 0, self, 'help_show_index')
-        self.showIndexAct.setStatusTip(self.trUtf8(
-                'Shows the index window'))
-        self.showIndexAct.setWhatsThis(self.trUtf8(
-                """<b>Index</b>"""
-                """<p>Shows the index window.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
-        self.__actions.append(self.showIndexAct)
-        
-        self.showSearchAct = E5Action(self.trUtf8('Search'),
-            self.trUtf8('Search'),
-            0, 0, self, 'help_show_search')
-        self.showSearchAct.setStatusTip(self.trUtf8(
-                'Shows the search window'))
-        self.showSearchAct.setWhatsThis(self.trUtf8(
-                """<b>Search</b>"""
-                """<p>Shows the search window.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.showSearchAct.triggered[()].connect(self.__showSearchWindow)
-        self.__actions.append(self.showSearchAct)
-        
-        self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'),
-            self.trUtf8('Manage QtHelp &Documents'),
-            0, 0, self, 'help_qthelp_documents')
-        self.manageQtHelpDocsAct.setStatusTip(self.trUtf8(
-                'Shows a dialog to manage the QtHelp documentation set'))
-        self.manageQtHelpDocsAct.setWhatsThis(self.trUtf8(
-                """<b>Manage QtHelp Documents</b>"""
-                """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.manageQtHelpDocsAct.triggered[()].connect(
-                self.__manageQtHelpDocumentation)
-        self.__actions.append(self.manageQtHelpDocsAct)
-        
-        self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'),
-            self.trUtf8('Manage QtHelp &Filters'),
-            0, 0, self, 'help_qthelp_filters')
-        self.manageQtHelpFiltersAct.setStatusTip(self.trUtf8(
-                'Shows a dialog to manage the QtHelp filters'))
-        self.manageQtHelpFiltersAct.setWhatsThis(self.trUtf8(
-                """<b>Manage QtHelp Filters</b>"""
-                """<p>Shows a dialog to manage the QtHelp filters.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.manageQtHelpFiltersAct.triggered[()].connect(self.__manageQtHelpFilters)
-        self.__actions.append(self.manageQtHelpFiltersAct)
-        
-        self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'),
-            self.trUtf8('&Reindex Documentation'),
-            0, 0, self, 'help_qthelp_reindex')
-        self.reindexDocumentationAct.setStatusTip(self.trUtf8(
-                'Reindexes the documentation set'))
-        self.reindexDocumentationAct.setWhatsThis(self.trUtf8(
-                """<b>Reindex Documentation</b>"""
-                """<p>Reindexes the documentation set.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.reindexDocumentationAct.triggered[()].connect(
-                self.__searchEngine.reindexDocumentation)
-        self.__actions.append(self.reindexDocumentationAct)
+        if self.useQtHelp or self.initShortcutsOnly:
+            self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
+                UI.PixmapCache.getIcon("syncToc.png"),
+                self.trUtf8('Sync with Table of Contents'),
+                0, 0, self, 'help_sync_toc')
+            self.syncTocAct.setStatusTip(self.trUtf8(
+                    'Synchronizes the table of contents with current page'))
+            self.syncTocAct.setWhatsThis(self.trUtf8(
+                    """<b>Sync with Table of Contents</b>"""
+                    """<p>Synchronizes the table of contents with current page.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.syncTocAct.triggered[()].connect(self.__syncTOC)
+            self.__actions.append(self.syncTocAct)
+            
+            self.showTocAct = E5Action(self.trUtf8('Table of Contents'),
+                self.trUtf8('Table of Contents'),
+                0, 0, self, 'help_show_toc')
+            self.showTocAct.setStatusTip(self.trUtf8(
+                    'Shows the table of contents window'))
+            self.showTocAct.setWhatsThis(self.trUtf8(
+                    """<b>Table of Contents</b>"""
+                    """<p>Shows the table of contents window.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.showTocAct.triggered[()].connect(self.__showTocWindow)
+            self.__actions.append(self.showTocAct)
+            
+            self.showIndexAct = E5Action(self.trUtf8('Index'),
+                self.trUtf8('Index'),
+                0, 0, self, 'help_show_index')
+            self.showIndexAct.setStatusTip(self.trUtf8(
+                    'Shows the index window'))
+            self.showIndexAct.setWhatsThis(self.trUtf8(
+                    """<b>Index</b>"""
+                    """<p>Shows the index window.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.showIndexAct.triggered[()].connect(self.__showIndexWindow)
+            self.__actions.append(self.showIndexAct)
+            
+            self.showSearchAct = E5Action(self.trUtf8('Search'),
+                self.trUtf8('Search'),
+                0, 0, self, 'help_show_search')
+            self.showSearchAct.setStatusTip(self.trUtf8(
+                    'Shows the search window'))
+            self.showSearchAct.setWhatsThis(self.trUtf8(
+                    """<b>Search</b>"""
+                    """<p>Shows the search window.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.showSearchAct.triggered[()].connect(self.__showSearchWindow)
+            self.__actions.append(self.showSearchAct)
+            
+            self.manageQtHelpDocsAct = E5Action(self.trUtf8('Manage QtHelp Documents'),
+                self.trUtf8('Manage QtHelp &Documents'),
+                0, 0, self, 'help_qthelp_documents')
+            self.manageQtHelpDocsAct.setStatusTip(self.trUtf8(
+                    'Shows a dialog to manage the QtHelp documentation set'))
+            self.manageQtHelpDocsAct.setWhatsThis(self.trUtf8(
+                    """<b>Manage QtHelp Documents</b>"""
+                    """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.manageQtHelpDocsAct.triggered[()].connect(
+                    self.__manageQtHelpDocumentation)
+            self.__actions.append(self.manageQtHelpDocsAct)
+            
+            self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'),
+                self.trUtf8('Manage QtHelp &Filters'),
+                0, 0, self, 'help_qthelp_filters')
+            self.manageQtHelpFiltersAct.setStatusTip(self.trUtf8(
+                    'Shows a dialog to manage the QtHelp filters'))
+            self.manageQtHelpFiltersAct.setWhatsThis(self.trUtf8(
+                    """<b>Manage QtHelp Filters</b>"""
+                    """<p>Shows a dialog to manage the QtHelp filters.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.manageQtHelpFiltersAct.triggered[()].connect(
+                    self.__manageQtHelpFilters)
+            self.__actions.append(self.manageQtHelpFiltersAct)
+            
+            self.reindexDocumentationAct = E5Action(self.trUtf8('Reindex Documentation'),
+                self.trUtf8('&Reindex Documentation'),
+                0, 0, self, 'help_qthelp_reindex')
+            self.reindexDocumentationAct.setStatusTip(self.trUtf8(
+                    'Reindexes the documentation set'))
+            self.reindexDocumentationAct.setWhatsThis(self.trUtf8(
+                    """<b>Reindex Documentation</b>"""
+                    """<p>Reindexes the documentation set.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.reindexDocumentationAct.triggered[()].connect(
+                    self.__searchEngine.reindexDocumentation)
+            self.__actions.append(self.reindexDocumentationAct)
         
         self.clearPrivateDataAct = E5Action(self.trUtf8('Clear private data'),
                       self.trUtf8('&Clear private data'),
@@ -1369,8 +1384,9 @@ class HelpWindow(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.stopAct)
         menu.addAction(self.reloadAct)
-        menu.addSeparator()
-        menu.addAction(self.syncTocAct)
+        if self.useQtHelp:
+            menu.addSeparator()
+            menu.addAction(self.syncTocAct)
         
         from .History.HistoryMenu import HistoryMenu
         self.historyMenu = HistoryMenu(self, self.tabWidget)
@@ -1423,10 +1439,11 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.userAgentManagerAct)
         menu.addSeparator()
         
-        menu.addAction(self.manageQtHelpDocsAct)
-        menu.addAction(self.manageQtHelpFiltersAct)
-        menu.addAction(self.reindexDocumentationAct)
-        menu.addSeparator()
+        if self.useQtHelp:
+            menu.addAction(self.manageQtHelpDocsAct)
+            menu.addAction(self.manageQtHelpFiltersAct)
+            menu.addAction(self.reindexDocumentationAct)
+            menu.addSeparator()
         menu.addAction(self.clearPrivateDataAct)
         menu.addAction(self.clearIconsAct)
         
@@ -1442,10 +1459,11 @@ class HelpWindow(E5MainWindow):
         menu = mb.addMenu(self.trUtf8("&Window"))
         menu.setTearOffEnabled(True)
         menu.addAction(self.showDownloadManagerAct)
-        menu.addSeparator()
-        menu.addAction(self.showTocAct)
-        menu.addAction(self.showIndexAct)
-        menu.addAction(self.showSearchAct)
+        if self.useQtHelp:
+            menu.addSeparator()
+            menu.addAction(self.showTocAct)
+            menu.addAction(self.showIndexAct)
+            menu.addAction(self.showSearchAct)
         
         mb.addSeparator()
         
@@ -1499,16 +1517,17 @@ class HelpWindow(E5MainWindow):
         findtb.addAction(self.findNextAct)
         findtb.addAction(self.findPrevAct)
         
-        filtertb = self.addToolBar(self.trUtf8("Filter"))
-        filtertb.setObjectName("FilterToolBar")
-        self.filterCombo = QComboBox()
-        self.filterCombo.setMinimumWidth(
-            QFontMetrics(QFont()).width("ComboBoxWithEnoughWidth"))
-        filtertb.addWidget(QLabel(self.trUtf8("Filtered by: ")))
-        filtertb.addWidget(self.filterCombo)
-        self.__helpEngine.setupFinished.connect(self.__setupFilterCombo)
-        self.filterCombo.activated[str].connect(self.__filterQtHelpDocumentation)
-        self.__setupFilterCombo()
+        if self.useQtHelp:
+            filtertb = self.addToolBar(self.trUtf8("Filter"))
+            filtertb.setObjectName("FilterToolBar")
+            self.filterCombo = QComboBox()
+            self.filterCombo.setMinimumWidth(
+                QFontMetrics(QFont()).width("ComboBoxWithEnoughWidth"))
+            filtertb.addWidget(QLabel(self.trUtf8("Filtered by: ")))
+            filtertb.addWidget(self.filterCombo)
+            self.__helpEngine.setupFinished.connect(self.__setupFilterCombo)
+            self.filterCombo.activated[str].connect(self.__filterQtHelpDocumentation)
+            self.__setupFilterCombo()
         
         settingstb = self.addToolBar(self.trUtf8("Settings"))
         settingstb.setObjectName("SettingsToolBar")
@@ -1986,11 +2005,12 @@ class HelpWindow(E5MainWindow):
         
         self.searchEdit.openSearchManager().close()
         
-        self.__searchEngine.cancelIndexing()
-        self.__searchEngine.cancelSearching()
-        
-        if self.__helpInstaller:
-            self.__helpInstaller.stop()
+        if self.useQtHelp:
+            self.__searchEngine.cancelIndexing()
+            self.__searchEngine.cancelSearching()
+            
+            if self.__helpInstaller:
+                self.__helpInstaller.stop()
         
         self.searchEdit.saveSearches()
         
@@ -2283,17 +2303,32 @@ class HelpWindow(E5MainWindow):
             self.__initWebSettings()
     
     @classmethod
+    def setUseQtHelp(cls, use):
+        """
+        Class method to set the QtHelp usage.
+        
+        @param use flag indicating usage (boolean)
+        """
+        if use:
+            cls.useQtHelp = use and QTHELP_AVAILABLE
+        else:
+            cls.useQtHelp = False
+    
+    @classmethod
     def helpEngine(cls):
         """
         Class method to get a reference to the help engine.
         
         @return reference to the help engine (QHelpEngine)
         """
-        if cls._helpEngine is None:
-            cls._helpEngine = \
-                QHelpEngine(os.path.join(Utilities.getConfigDir(),
-                                         "browser", "eric5help.qhc"))
-        return cls._helpEngine
+        if cls.useQtHelp:
+            if cls._helpEngine is None:
+                cls._helpEngine = \
+                    QHelpEngine(os.path.join(Utilities.getConfigDir(),
+                                             "browser", "eric5help.qhc"))
+            return cls._helpEngine
+        else:
+            return None
         
     @classmethod
     def networkAccessManager(cls):
@@ -2368,49 +2403,56 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to synchronize the TOC with the currently shown page.
         """
-        QApplication.setOverrideCursor(Qt.WaitCursor)
-        url = self.currentBrowser().source()
-        self.__showTocWindow()
-        if not self.__tocWindow.syncToContent(url):
-            self.statusBar().showMessage(
-                self.trUtf8("Could not find an associated content."), 5000)
-        QApplication.restoreOverrideCursor()
+        if self.useQtHelp:
+            QApplication.setOverrideCursor(Qt.WaitCursor)
+            url = self.currentBrowser().source()
+            self.__showTocWindow()
+            if not self.__tocWindow.syncToContent(url):
+                self.statusBar().showMessage(
+                    self.trUtf8("Could not find an associated content."), 5000)
+            QApplication.restoreOverrideCursor()
         
     def __showTocWindow(self):
         """
         Private method to show the table of contents window.
         """
-        self.__activateDock(self.__tocWindow)
+        if self.useQtHelp:
+            self.__activateDock(self.__tocWindow)
         
     def __hideTocWindow(self):
         """
         Private method to hide the table of contents window.
         """
-        self.__tocDock.hide()
+        if self.useQtHelp:
+            self.__tocDock.hide()
         
     def __showIndexWindow(self):
         """
         Private method to show the index window.
         """
-        self.__activateDock(self.__indexWindow)
+        if self.useQtHelp:
+            self.__activateDock(self.__indexWindow)
         
     def __hideIndexWindow(self):
         """
         Private method to hide the index window.
         """
-        self.__indexDock.hide()
+        if self.useQtHelp:
+            self.__indexDock.hide()
         
     def __showSearchWindow(self):
         """
         Private method to show the search window.
         """
-        self.__activateDock(self.__searchWindow)
+        if self.useQtHelp:
+            self.__activateDock(self.__searchWindow)
         
     def __hideSearchWindow(self):
         """
         Private method to hide the search window.
         """
-        self.__searchDock.hide()
+        if self.useQtHelp:
+            self.__searchDock.hide()
         
     def __activateDock(self, widget):
         """
@@ -2426,15 +2468,16 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to setup the filter combo box.
         """
-        curFilter = self.filterCombo.currentText()
-        if not curFilter:
-            curFilter = self.__helpEngine.currentFilter()
-        self.filterCombo.clear()
-        self.filterCombo.addItems(self.__helpEngine.customFilters())
-        idx = self.filterCombo.findText(curFilter)
-        if idx < 0:
-            idx = 0
-        self.filterCombo.setCurrentIndex(idx)
+        if self.useQtHelp:
+            curFilter = self.filterCombo.currentText()
+            if not curFilter:
+                curFilter = self.__helpEngine.currentFilter()
+            self.filterCombo.clear()
+            self.filterCombo.addItems(self.__helpEngine.customFilters())
+            idx = self.filterCombo.findText(curFilter)
+            if idx < 0:
+                idx = 0
+            self.filterCombo.setCurrentIndex(idx)
         
     def __filterQtHelpDocumentation(self, customFilter):
         """
@@ -2442,19 +2485,21 @@ class HelpWindow(E5MainWindow):
         
         @param customFilter name of filter to be applied (string)
         """
-        self.__helpEngine.setCurrentFilter(customFilter)
+        if self.__helpEngine:
+            self.__helpEngine.setCurrentFilter(customFilter)
         
     def __manageQtHelpDocumentation(self):
         """
         Private slot to manage the QtHelp documentation database.
         """
-        from .QtHelpDocumentationDialog import QtHelpDocumentationDialog
-        dlg = QtHelpDocumentationDialog(self.__helpEngine, self)
-        dlg.exec_()
-        if dlg.hasChanges():
-            for i in sorted(dlg.getTabsToClose(), reverse=True):
-                self.tabWidget.closeBrowserAt(i)
-            self.__helpEngine.setupData()
+        if self.useQtHelp:
+            from .QtHelpDocumentationDialog import QtHelpDocumentationDialog
+            dlg = QtHelpDocumentationDialog(self.__helpEngine, self)
+            dlg.exec_()
+            if dlg.hasChanges():
+                for i in sorted(dlg.getTabsToClose(), reverse=True):
+                    self.tabWidget.closeBrowserAt(i)
+                self.__helpEngine.setupData()
         
     def getSourceFileList(self):
         """
@@ -2468,49 +2513,52 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to manage the QtHelp filters.
         """
-        from .QtHelpFiltersDialog import QtHelpFiltersDialog
-        dlg = QtHelpFiltersDialog(self.__helpEngine, self)
-        dlg.exec_()
+        if self.useQtHelp:
+            from .QtHelpFiltersDialog import QtHelpFiltersDialog
+            dlg = QtHelpFiltersDialog(self.__helpEngine, self)
+            dlg.exec_()
         
     def __indexingStarted(self):
         """
         Private slot to handle the start of the indexing process.
         """
-        self.__indexing = True
-        if self.__indexingProgress is None:
-            self.__indexingProgress = QWidget()
-            layout = QHBoxLayout(self.__indexingProgress)
-            layout.setMargin(0)
-            sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-            
-            label = QLabel(self.trUtf8("Updating search index"))
-            label.setSizePolicy(sizePolicy)
-            layout.addWidget(label)
-            
-            progressBar = QProgressBar()
-            progressBar.setRange(0, 0)
-            progressBar.setTextVisible(False)
-            progressBar.setFixedHeight(16)
-            progressBar.setSizePolicy(sizePolicy)
-            layout.addWidget(progressBar)
-            
-            self.statusBar().insertPermanentWidget(0, self.__indexingProgress)
+        if self.useQtHelp:
+            self.__indexing = True
+            if self.__indexingProgress is None:
+                self.__indexingProgress = QWidget()
+                layout = QHBoxLayout(self.__indexingProgress)
+                layout.setMargin(0)
+                sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+                
+                label = QLabel(self.trUtf8("Updating search index"))
+                label.setSizePolicy(sizePolicy)
+                layout.addWidget(label)
+                
+                progressBar = QProgressBar()
+                progressBar.setRange(0, 0)
+                progressBar.setTextVisible(False)
+                progressBar.setFixedHeight(16)
+                progressBar.setSizePolicy(sizePolicy)
+                layout.addWidget(progressBar)
+                
+                self.statusBar().insertPermanentWidget(0, self.__indexingProgress)
         
     def __indexingFinished(self):
         """
         Private slot to handle the start of the indexing process.
         """
-        self.statusBar().removeWidget(self.__indexingProgress)
-        self.__indexingProgress = None
-        self.__indexing = False
-        if self.__searchWord is not None:
-            self.__searchForWord()
+        if self.useQtHelp:
+            self.statusBar().removeWidget(self.__indexingProgress)
+            self.__indexingProgress = None
+            self.__indexing = False
+            if self.__searchWord is not None:
+                self.__searchForWord()
         
     def __searchForWord(self):
         """
         Private slot to search for a word.
         """
-        if not self.__indexing and self.__searchWord is not None:
+        if self.useQtHelp and not self.__indexing and self.__searchWord is not None:
             self.__searchDock.show()
             self.__searchDock.raise_()
             query = QHelpSearchQuery(QHelpSearchQuery.DEFAULT, [self.__searchWord])
@@ -2523,21 +2571,23 @@ class HelpWindow(E5MainWindow):
         
         @param word word to search for (string)
         """
-        self.__searchWord = word
-        self.__searchForWord()
+        if self.useQtHelp:
+                self.__searchWord = word
+                self.__searchForWord()
         
     def __lookForNewDocumentation(self):
         """
         Private slot to look for new documentation to be loaded into the
         help database.
         """
-        from .HelpDocsInstaller import HelpDocsInstaller
-        self.__helpInstaller = HelpDocsInstaller(self.__helpEngine.collectionFile())
-        self.__helpInstaller.errorMessage.connect(self.__showInstallationError)
-        self.__helpInstaller.docsInstalled.connect(self.__docsInstalled)
-        
-        self.statusBar().showMessage(self.trUtf8("Looking for Documentation..."))
-        self.__helpInstaller.installDocs()
+        if self.useQtHelp:
+            from .HelpDocsInstaller import HelpDocsInstaller
+            self.__helpInstaller = HelpDocsInstaller(self.__helpEngine.collectionFile())
+            self.__helpInstaller.errorMessage.connect(self.__showInstallationError)
+            self.__helpInstaller.docsInstalled.connect(self.__docsInstalled)
+            
+            self.statusBar().showMessage(self.trUtf8("Looking for Documentation..."))
+            self.__helpInstaller.installDocs()
         
     def __showInstallationError(self, message):
         """
@@ -2555,29 +2605,31 @@ class HelpWindow(E5MainWindow):
         
         @param installed flag indicating that documents were installed (boolean)
         """
-        if installed:
-            self.__helpEngine.setupData()
-        self.statusBar().clearMessage()
+        if self.useQtHelp:
+            if installed:
+                self.__helpEngine.setupData()
+            self.statusBar().clearMessage()
         
     def __initHelpDb(self):
         """
         Private slot to initialize the documentation database.
         """
-        if not self.__helpEngine.setupData():
-            return
-        
-        unfiltered = self.trUtf8("Unfiltered")
-        if unfiltered not in self.__helpEngine.customFilters():
-            hc = QHelpEngineCore(self.__helpEngine.collectionFile())
-            hc.setupData()
-            hc.addCustomFilter(unfiltered, [])
-            hc = None
-            del hc
+        if self.useQtHelp:
+            if not self.__helpEngine.setupData():
+                return
             
-            self.__helpEngine.blockSignals(True)
-            self.__helpEngine.setCurrentFilter(unfiltered)
-            self.__helpEngine.blockSignals(False)
-            self.__helpEngine.setupData()
+            unfiltered = self.trUtf8("Unfiltered")
+            if unfiltered not in self.__helpEngine.customFilters():
+                hc = QHelpEngineCore(self.__helpEngine.collectionFile())
+                hc.setupData()
+                hc.addCustomFilter(unfiltered, [])
+                hc = None
+                del hc
+                
+                self.__helpEngine.blockSignals(True)
+                self.__helpEngine.setCurrentFilter(unfiltered)
+                self.__helpEngine.blockSignals(False)
+                self.__helpEngine.setupData()
         
     def __warning(self, msg):
         """
@@ -2814,7 +2866,7 @@ class HelpWindow(E5MainWindow):
         scheme = url.scheme()
         if scheme in ["eric", "about"]:
             return UI.PixmapCache.getIcon("ericWeb.png")
-        elif scheme == "qthelp":
+        elif scheme == "qthelp" and QTHELP_AVAILABLE:
             return UI.PixmapCache.getIcon("qthelp.png")
         elif scheme == "file":
             return UI.PixmapCache.getIcon("fileMisc.png")

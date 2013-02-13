@@ -66,8 +66,9 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.__sendReferer = Preferences.getHelp("SendReferer")
         
         # register scheme handlers
-        from .QtHelpAccessHandler import QtHelpAccessHandler
-        self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
+        if engine:
+            from .QtHelpAccessHandler import QtHelpAccessHandler
+            self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
         
         from .EricAccessHandler import EricAccessHandler
         self.setSchemeHandler("eric", EricAccessHandler(self))

@@ -42,7 +42,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.__helpWindow = None
         self.setCurrentPageButton.setEnabled(self.__helpWindow is not None)
         
-        defaultSchemes = ["file://", "http://", "https://", "qthelp://"]
+        defaultSchemes = ["file://", "http://", "https://"]
         self.defaultSchemeCombo.addItems(defaultSchemes)
         
         self.clickToFlashCheckBox.setIcon(UI.PixmapCache.getIcon("flashBlock.png"))

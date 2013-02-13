@@ -7,6 +7,8 @@ Version 5.4-snapshot-2013mmdd:
   -- centralized the SSL error handling in E5SslErrorHandler
   -- moved the SSL widgets to the E5Network package
   -- changed the 'import' statements to improve startup behavior
+  -- removed the QtHelp dependancy; support is only available,
+     if the QtHelp module could be imported
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
