@@ -787,6 +787,8 @@ class Prefs(object):
         if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
             cls.helpDefaults["SiteSpecificQuirksEnabled"] = \
                 websettings.testAttribute(QWebSettings.SiteSpecificQuirksEnabled)
+        
+        cls.webSettingsIntitialized = True
     
     webSettingsIntitialized = False
 
