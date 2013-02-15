@@ -454,6 +454,9 @@ QObject
 <td><a href="#ViewManager.__previousWarning">__previousWarning</a></td>
 <td>Private method to handle the previous warning action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__processSSI">__processSSI</a></td>
+<td>Private method to process the given text for SSI statements.</td>
+</tr><tr>
 <td><a href="#ViewManager.__quickSearch">__quickSearch</a></td>
 <td>Private slot to handle the incremental quick search.</td>
 </tr><tr>
@@ -1431,7 +1434,30 @@ reference to the action that triggered (QAction)
 <b>__previousWarning</b>(<i></i>)
 <p>
         Private method to handle the previous warning action.
-</p><a NAME="ViewManager.__quickSearch" ID="ViewManager.__quickSearch"></a>
+</p><a NAME="ViewManager.__processSSI" ID="ViewManager.__processSSI"></a>
+<h4>ViewManager.__processSSI</h4>
+<b>__processSSI</b>(<i>txt, filename, root</i>)
+<p>
+        Private method to process the given text for SSI statements.
+</p><p>
+        Note: Only a limited subset of SSI statements are supported.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be processed (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+name of the file associated with the given text (string)
+</dd><dt><i>root</i></dt>
+<dd>
+directory of the document root (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed text (string)
+</dd>
+</dl><a NAME="ViewManager.__quickSearch" ID="ViewManager.__quickSearch"></a>
 <h4>ViewManager.__quickSearch</h4>
 <b>__quickSearch</b>(<i></i>)
 <p>

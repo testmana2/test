@@ -11862,6 +11862,7 @@
       <keyword name="ViewManager.__previousTask" id="ViewManager.__previousTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousTask" />
       <keyword name="ViewManager.__previousUncovered" id="ViewManager.__previousUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousUncovered" />
       <keyword name="ViewManager.__previousWarning" id="ViewManager.__previousWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousWarning" />
+      <keyword name="ViewManager.__processSSI" id="ViewManager.__processSSI" ref="eric5.ViewManager.ViewManager.html#ViewManager.__processSSI" />
       <keyword name="ViewManager.__quickSearch" id="ViewManager.__quickSearch" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearch" />
       <keyword name="ViewManager.__quickSearchEnter" id="ViewManager.__quickSearchEnter" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEnter" />
       <keyword name="ViewManager.__quickSearchEscape" id="ViewManager.__quickSearchEscape" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEscape" />

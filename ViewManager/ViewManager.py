@@ -8,6 +8,7 @@ Module implementing the viewmanager base class.
 """
 
 import os
+import re
 
 from PyQt4.QtCore import QSignalMapper, QTimer, QFileInfo, pyqtSignal, QRegExp, \
     QObject, Qt, QUrl
@@ -4892,8 +4893,8 @@ class ViewManager(QObject):
         line, index = aw.getCursorPosition()
         text = aw.text(line)
         
-        re = QRegExp('[^\w_]')
-        end = re.indexIn(text, index)
+        reg = QRegExp('[^\w_]')
+        end = reg.indexIn(text, index)
         if end > index:
             ext = text[index:end]
             txt += ext
@@ -5142,13 +5143,66 @@ class ViewManager(QObject):
             if fn:
                 project = e5App().getObject("Project")
                 if project.isProjectFile(fn):
-                    baseUrl = QUrl.fromLocalFile(project.getProjectPath())
+                    baseUrl = QUrl.fromLocalFile(project.getAbsoluteUniversalPath(fn))
+                    fullName = project.getAbsoluteUniversalPath(fn)
+                    rootPath = project.getProjectPath()
                 else:
                     baseUrl = QUrl.fromLocalFile(fn)
+                    fullName = fn
+                    rootPath = os.path.dirname(os.path.abspath(fn))
             else:
                 baseUrl = QUrl()
+                fullName = ""
+                rootPath = ""
+            txt = self.__processSSI(aw.text(), fullName, rootPath)
             previewer = self.ui.getHelpViewer(preview=True).previewer()
-            previewer.setHtml(aw.text(), baseUrl)
+            previewer.setHtml(txt, baseUrl)
+    
+    def __processSSI(self, txt, filename, root):
+        """
+        Private method to process the given text for SSI statements.
+        
+        Note: Only a limited subset of SSI statements are supported.
+        
+        @param txt text to be processed (string)
+        @param filename name of the file associated with the given text (string)
+        @param root directory of the document root (string)
+        @return processed text (string)
+        """
+        if not filename:
+            return txt
+        
+        # SSI include
+        incRe = re.compile(
+            r"""<!--#include[ \t]+(virtual|file)=[\"']([^\"']+)[\"']\s*-->""",
+            re.IGNORECASE)
+        baseDir = os.path.dirname(os.path.abspath(filename))
+        docRoot = root if root != "" else baseDir
+        while True:
+            incMatch = incRe.search(txt)
+            if incMatch is None:
+                break
+            
+            if incMatch.group(1) == "virtual":
+                incFile = Utilities.normjoinpath(docRoot, incMatch.group(2))
+            elif incMatch.group(1) == "file":
+                incFile = Utilities.normjoinpath(baseDir, incMatch.group(2))
+            else:
+                incFile = ""
+            if os.path.exists(incFile):
+                try:
+                    f = open(incFile, "r")
+                    incTxt = f.read()
+                    f.close()
+                except (IOError, OSError):
+                    # remove SSI include
+                    incTxt = ""
+            else:
+                # remove SSI include
+                incTxt = ""
+            txt = txt[:incMatch.start(0)] + incTxt + txt[incMatch.end(0):]
+        
+        return txt
     
     ##################################################################
     ## Below are the action methods for the macro menu
