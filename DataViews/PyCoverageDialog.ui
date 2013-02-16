@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>PyCoverageDialog</class>
- <widget class="QDialog" name="PyCoverageDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="PyCoverageDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,70 +10,70 @@
     <height>585</height>
    </rect>
   </property>
-  <property name="sizePolicy" >
-   <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>3</verstretch>
    </sizepolicy>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Python Code Coverage</string>
   </property>
-  <property name="whatsThis" >
-   <string>&lt;b>Python Code Coverage&lt;/b>
-&lt;p>This dialog shows the collected code coverage data.&lt;/p></string>
+  <property name="whatsThis">
+   <string>&lt;b&gt;Python Code Coverage&lt;/b&gt;
+&lt;p&gt;This dialog shows the collected code coverage data.&lt;/p&gt;</string>
   </property>
-  <property name="sizeGripEnabled" >
+  <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QHBoxLayout" >
+    <layout class="QHBoxLayout">
      <item>
-      <widget class="QLabel" name="textLabel1_2" >
-       <property name="text" >
+      <widget class="QLabel" name="textLabel1_2">
+       <property name="text">
         <string>E&amp;xclude pattern:</string>
        </property>
-       <property name="buddy" >
+       <property name="buddy">
         <cstring>excludeCombo</cstring>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="excludeCombo" >
-       <property name="sizePolicy" >
-        <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+      <widget class="QComboBox" name="excludeCombo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Enter a regexp pattern marking lines to exclude from coverage</string>
        </property>
-       <property name="whatsThis" >
-        <string>&lt;b>Exclude pattern&lt;/b>
-&lt;p>Enter a regular expression pattern. Lines matching this pattern are excluded from the coverage analysis. The default pattern is '#pragma[: ]+[nN][oO] [cC][oO][vV][eE][rR]'. If the pattern is found on a line containing the colon that introduces a suite of statements, the entire suite is excluded.&lt;/p></string>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Exclude pattern&lt;/b&gt;
+&lt;p&gt;Enter a regular expression pattern. Lines matching this pattern are excluded from the coverage analysis. The default pattern is '#pragma[: ]+[nN][oO] [cC][oO][vV][eE][rR]'. If the pattern is found on a line containing the colon that introduces a suite of statements, the entire suite is excluded.&lt;/p&gt;</string>
        </property>
-       <property name="editable" >
+       <property name="editable">
         <bool>true</bool>
        </property>
-       <property name="insertPolicy" >
+       <property name="insertPolicy">
         <enum>QComboBox::InsertAtTop</enum>
        </property>
-       <property name="autoCompletion" >
+       <property name="autoCompletion">
         <bool>true</bool>
        </property>
-       <property name="duplicatesEnabled" >
+       <property name="duplicatesEnabled">
         <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="reloadButton" >
-       <property name="text" >
+      <widget class="QPushButton" name="reloadButton">
+       <property name="text">
         <string>&amp;Reload</string>
        </property>
-       <property name="shortcut" >
+       <property name="shortcut">
         <string>Alt+R</string>
        </property>
       </widget>
@@ -80,129 +81,131 @@
     </layout>
    </item>
    <item>
-    <widget class="QTreeWidget" name="resultList" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+    <widget class="QTreeWidget" name="resultList">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>3</verstretch>
       </sizepolicy>
      </property>
-     <property name="whatsThis" >
-      <string>&lt;b>Python Code Coverage&lt;/b>
-&lt;p>This list shows the collected code coverage data. There are several actions available via the context menu.&lt;/p></string>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Python Code Coverage&lt;/b&gt;
+&lt;p&gt;This list shows the collected code coverage data. There are several actions available via the context menu.&lt;/p&gt;</string>
      </property>
-     <property name="alternatingRowColors" >
+     <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
-     <property name="rootIsDecorated" >
+     <property name="rootIsDecorated">
       <bool>false</bool>
      </property>
-     <property name="itemsExpandable" >
+     <property name="itemsExpandable">
       <bool>false</bool>
      </property>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Name</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Statements</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Executed</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Coverage</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Excluded</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Missing</string>
       </property>
      </column>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="textLabel1" >
-     <property name="text" >
-      <string>Summary</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QTreeWidget" name="summaryList" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+    <widget class="QGroupBox" name="summaryGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
        <verstretch>1</verstretch>
       </sizepolicy>
      </property>
-     <property name="whatsThis" >
-      <string>&lt;b>Summary&lt;/b>
-&lt;p>This shows some overall code coverage information.&lt;/p></string>
+     <property name="title">
+      <string>Summary</string>
      </property>
-     <property name="alternatingRowColors" >
-      <bool>true</bool>
-     </property>
-     <property name="rootIsDecorated" >
-      <bool>false</bool>
-     </property>
-     <property name="itemsExpandable" >
-      <bool>false</bool>
-     </property>
-     <column>
-      <property name="text" >
-       <string>Statements</string>
-      </property>
-     </column>
-     <column>
-      <property name="text" >
-       <string>Executed</string>
-      </property>
-     </column>
-     <column>
-      <property name="text" >
-       <string>Coverage</string>
-      </property>
-     </column>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTreeWidget" name="summaryList">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Summary&lt;/b&gt;
+&lt;p&gt;This shows some overall code coverage information.&lt;/p&gt;</string>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>false</bool>
+        </property>
+        <property name="itemsExpandable">
+         <bool>false</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>Statements</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Executed</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Coverage</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
-    <widget class="QProgressBar" name="checkProgress" >
-     <property name="toolTip" >
+    <widget class="QProgressBar" name="checkProgress">
+     <property name="toolTip">
       <string>Shows the progress of the code coverage action</string>
      </property>
-     <property name="value" >
+     <property name="value">
       <number>0</number>
      </property>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="6" />
+ <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
   <tabstop>excludeCombo</tabstop>
