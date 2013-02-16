@@ -219,6 +219,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             ])
             for col in range(0, 3):
                 itm.setTextAlignment(col, Qt.AlignRight)
+        else:
+            self.summaryGroup.hide()
         
         self.__finish()
         
