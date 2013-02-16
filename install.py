@@ -1088,7 +1088,7 @@ def main(argv):
                 cleanUp()
     except (IOError, OSError) as msg:
         sys.stderr.write('IOError: {0}\nTry install as root.\n'.format(msg))
-        return(7)
+        exit(7)
 
     # Create a config file and delete the default one
     createConfig()
