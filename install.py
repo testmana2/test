@@ -403,12 +403,8 @@ def cleanUp():
             if os.path.exists("/Applications/" + macAppBundleName):
                 shutil.rmtree("/Applications/" + macAppBundleName)
         
-    except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
-        exit(7)
-        
-    except OSError as msg:
-        sys.stderr.write('OSError: {0}\nTry install with admin rights.\n'.format(msg))
+    except (IOError, OSError) as msg:
+        sys.stderr.write('Error: {0}\nTry install with admin rights.\n'.format(msg))
         exit(7)
 
 
@@ -522,12 +518,8 @@ def installEric():
         # create the global plugins directory
         createGlobalPluginsDir()
         
-    except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
-        return(7)
-        
-    except OSError as msg:
-        sys.stderr.write('OSError: {0}\nTry install with admin rights.\n'.format(msg))
+    except (IOError, OSError) as msg:
+        sys.stderr.write('Error: {0}\nTry install with admin rights.\n'.format(msg))
         return(7)
     
     # copy some text files to the doc area
@@ -1102,8 +1094,9 @@ def main(argv):
                 shutil.rmtree(distDir, True)
             else:
                 cleanUp()
-    except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry install as root.\n'.format(msg))
+    except (IOError, OSError) as msg:
+        sys.stderr.write('Error: {0}\nTry install as root.\n'.format(msg))
+        exit(7)
 
     # Create a config file and delete the default one
     createConfig()
