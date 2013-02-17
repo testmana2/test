@@ -1069,6 +1069,13 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslInfoDialog.py</Source>
     <Source>E5Network/E5SslCertificatesDialog.py</Source>
     <Source>UI/Previewer.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_robotframeworklexer.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/foxpro.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_lassobuiltins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_sourcemodbuiltins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_stan_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_openedgebuiltins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/dalvik.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

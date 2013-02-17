@@ -5,7 +5,7 @@
 
     Utility functions.
 
-    :copyright: Copyright 2006-2012 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 
@@ -205,6 +205,51 @@ def looks_like_xml(text):
         rv = tag_re.search(text[:1000]) is not None
         _looks_like_xml_cache[key] = rv
         return rv
+
+# Python narrow build compatibility
+
+def _surrogatepair(c):
+    return (0xd7c0 + (c >> 10), (0xdc00 + (c & 0x3ff)))
+
+def unirange(a, b):
+    """
+    Returns a regular expression string to match the given non-BMP range.
+    """
+    if b < a:
+        raise ValueError("Bad character range")
+    if a < 0x10000 or b < 0x10000:
+        raise ValueError("unirange is only defined for non-BMP ranges")
+
+    if sys.maxunicode > 0xffff:
+        # wide build
+        return '[%s-%s]' % (chr(a), chr(b))
+    else:
+        # narrow build stores surrogates, and the 're' module handles them
+        # (incorrectly) as characters.  Since there is still ordering among
+        # these characters, expand the range to one that it understands.  Some
+        # background in http://bugs.python.org/issue3665 and
+        # http://bugs.python.org/issue12749
+        #
+        # Additionally, the lower constants are using unichr rather than
+        # literals because jython [which uses the wide path] can't load this
+        # file if they are literals.
+        ah, al = _surrogatepair(a)
+        bh, bl = _surrogatepair(b)
+        if ah == bh:
+            return '(?:%s[%s-%s])' % (chr(ah), chr(al), chr(bl))
+        else:
+            buf = []
+            buf.append('%s[%s-%s]' %
+                       (chr(ah), chr(al),
+                        ah == bh and chr(bl) or chr(0xdfff)))
+            if ah - bh > 1:
+                buf.append('[%s-%s][%s-%s]' %
+                           chr(ah+1), chr(bh-1), chr(0xdc00), chr(0xdfff))
+            if ah != bh:
+                buf.append('%s[%s-%s]' %
+                           (chr(bh), chr(0xdc00), chr(bl)))
+
+            return '(?:' + '|'.join(buf) + ')'
 
 # Python 2/3 compatibility
 

@@ -24,6 +24,8 @@ Version 5.4-snapshot-2013mmdd:
 - Version Control System Interfaces
   -- All
      --- added a confirmation dialog to the 'revert' actions
+- Third Party packages
+  -- updated to Pygments 1.6
 
 Version 5.3-snapshot-20130106:
 - bug fixes
