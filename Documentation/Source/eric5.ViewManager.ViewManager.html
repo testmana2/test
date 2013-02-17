@@ -130,10 +130,13 @@ key event (QKeyPressEvent)
 <dl>
 <dt>bookmarkToggled(Editor)</dt>
 <dd>
-emitted when a bookmark is toggled.
+emitted when a bookmark is toggled
 </dd><dt>breakpointToggled(Editor)</dt>
 <dd>
-emitted when a breakpoint is toggled.
+emitted when a breakpoint is toggled
+</dd><dt>changeCaption(str)</dt>
+<dd>
+emitted if a change of the caption is necessary
 </dd><dt>checkActions(Editor)</dt>
 <dd>
 emitted when some actions should be checked
@@ -142,12 +145,22 @@ emitted when some actions should be checked
 <dd>
 emitted after the cursor position of the active
             window has changed
+</dd><dt>editorChanged(str)</dt>
+<dd>
+emitted when the current editor has changed
+</dd><dt>editorChangedEd(Editor)</dt>
+<dd>
+emitted when the current editor has changed
 </dd><dt>editorClosed(str)</dt>
 <dd>
 emitted just before an editor window gets closed
 </dd><dt>editorClosedEd(Editor)</dt>
 <dd>
 emitted just before an editor window gets closed
+</dd><dt>editorLanguageChanged(Editor)</dt>
+<dd>
+emitted to signal a change of an
+            editor's language
 </dd><dt>editorOpened(str)</dt>
 <dd>
 emitted after an editor window was opened
@@ -157,9 +170,18 @@ emitted after an editor window was opened
 </dd><dt>editorSaved(str)</dt>
 <dd>
 emitted after an editor window was saved
+</dd><dt>editorTextChanged(Editor)</dt>
+<dd>
+emitted to signal a change of an editor's text
 </dd><dt>lastEditorClosed()</dt>
 <dd>
 emitted after the last editor window was closed
+</dd><dt>previewStateChanged(bool)</dt>
+<dd>
+emitted to signal a change in the preview state
+</dd><dt>syntaxerrorToggled(Editor)</dt>
+<dd>
+emitted when a syntax error is toggled
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -320,7 +342,7 @@ QObject
 <td>Private method to send an editor command to the active window.</td>
 </tr><tr>
 <td><a href="#ViewManager.__editorConfigChanged">__editorConfigChanged</a></td>
-<td>Private method to handle changes of an editors configuration (e.g.</td>
+<td>Private slot to handle changes of an editor's configuration (e.g.</td>
 </tr><tr>
 <td><a href="#ViewManager.__editorOpened">__editorOpened</a></td>
 <td>Private slot to handle the editorOpened signal.</td>
@@ -437,7 +459,7 @@ QObject
 <td>Private method to open a file from the list of recently opened files.</td>
 </tr><tr>
 <td><a href="#ViewManager.__previewEditor">__previewEditor</a></td>
-<td>Private method to preview the contents of the current editor in a web browser.</td>
+<td>Private slot to handle a change of the preview selection state.</td>
 </tr><tr>
 <td><a href="#ViewManager.__previousBookmark">__previousBookmark</a></td>
 <td>Private method to handle the previous bookmark action.</td>
@@ -453,9 +475,6 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__previousWarning">__previousWarning</a></td>
 <td>Private method to handle the previous warning action.</td>
-</tr><tr>
-<td><a href="#ViewManager.__processSSI">__processSSI</a></td>
-<td>Private method to process the given text for SSI statements.</td>
 </tr><tr>
 <td><a href="#ViewManager.__quickSearch">__quickSearch</a></td>
 <td>Private slot to handle the incremental quick search.</td>
@@ -1183,7 +1202,7 @@ the scintilla command to be sent
 <h4>ViewManager.__editorConfigChanged</h4>
 <b>__editorConfigChanged</b>(<i></i>)
 <p>
-        Private method to handle changes of an editors configuration (e.g. language).
+        Private slot to handle changes of an editor's configuration (e.g. language).
 </p><a NAME="ViewManager.__editorOpened" ID="ViewManager.__editorOpened"></a>
 <h4>ViewManager.__editorOpened</h4>
 <b>__editorOpened</b>(<i></i>)
@@ -1406,10 +1425,15 @@ reference to the action that triggered (QAction)
 </dd>
 </dl><a NAME="ViewManager.__previewEditor" ID="ViewManager.__previewEditor"></a>
 <h4>ViewManager.__previewEditor</h4>
-<b>__previewEditor</b>(<i></i>)
+<b>__previewEditor</b>(<i>checked</i>)
 <p>
-        Private method to preview the contents of the current editor in a web browser.
-</p><a NAME="ViewManager.__previousBookmark" ID="ViewManager.__previousBookmark"></a>
+        Private slot to handle a change of the preview selection state.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the action (boolean)
+</dd>
+</dl><a NAME="ViewManager.__previousBookmark" ID="ViewManager.__previousBookmark"></a>
 <h4>ViewManager.__previousBookmark</h4>
 <b>__previousBookmark</b>(<i></i>)
 <p>
@@ -1434,30 +1458,7 @@ reference to the action that triggered (QAction)
 <b>__previousWarning</b>(<i></i>)
 <p>
         Private method to handle the previous warning action.
-</p><a NAME="ViewManager.__processSSI" ID="ViewManager.__processSSI"></a>
-<h4>ViewManager.__processSSI</h4>
-<b>__processSSI</b>(<i>txt, filename, root</i>)
-<p>
-        Private method to process the given text for SSI statements.
-</p><p>
-        Note: Only a limited subset of SSI statements are supported.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-text to be processed (string)
-</dd><dt><i>filename</i></dt>
-<dd>
-name of the file associated with the given text (string)
-</dd><dt><i>root</i></dt>
-<dd>
-directory of the document root (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-processed text (string)
-</dd>
-</dl><a NAME="ViewManager.__quickSearch" ID="ViewManager.__quickSearch"></a>
+</p><a NAME="ViewManager.__quickSearch" ID="ViewManager.__quickSearch"></a>
 <h4>ViewManager.__quickSearch</h4>
 <b>__quickSearch</b>(<i></i>)
 <p>

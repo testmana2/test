@@ -76,8 +76,12 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         elif eolMode == QsciScintilla.EolUnix:
             self.lfRadioButton.setChecked(True)
         
-        self.previewExtensionsEdit.setText(
-            " ".join(Preferences.getEditor("PreviewableFileNameExtensions")))
+        self.previewHtmlExtensionsEdit.setText(
+            " ".join(Preferences.getEditor("PreviewHtmlFileNameExtensions")))
+        self.previewMarkdownExtensionsEdit.setText(
+            " ".join(Preferences.getEditor("PreviewMarkdownFileNameExtensions")))
+        self.previewRestExtensionsEdit.setText(
+            " ".join(Preferences.getEditor("PreviewRestFileNameExtensions")))
         
     def save(self):
         """
@@ -119,8 +123,12 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         Preferences.setEditor("AdditionalOpenFilters", self.openFileFilters)
         Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
         
-        Preferences.setEditor("PreviewableFileNameExtensions",
-            [ext.strip() for ext in self.previewExtensionsEdit.text().split()])
+        Preferences.setEditor("PreviewHtmlFileNameExtensions",
+            [ext.strip() for ext in self.previewHtmlExtensionsEdit.text().split()])
+        Preferences.setEditor("PreviewMarkdownFileNameExtensions",
+            [ext.strip() for ext in self.previewMarkdownExtensionsEdit.text().split()])
+        Preferences.setEditor("PreviewRestFileNameExtensions",
+            [ext.strip() for ext in self.previewRestExtensionsEdit.text().split()])
     
     def __setDefaultFiltersLists(self, keepSelection=False):
         """

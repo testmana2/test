@@ -662,6 +662,7 @@ class Tabview(QSplitter, ViewManager):
     
     @signal changeCaption(str) emitted if a change of the caption is necessary
     @signal editorChanged(str) emitted when the current editor has changed
+    @signal editorChangedEd(Editor) emitted when the current editor has changed
     @signal lastEditorClosed() emitted after the last editor window was closed
     @signal editorOpened(str) emitted after an editor window was opened
     @signal editorOpenedEd(Editor) emitted after an editor window was opened
@@ -675,10 +676,14 @@ class Tabview(QSplitter, ViewManager):
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
     @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled.
+    @signal previewStateChanged(bool) emitted to signal a change in the preview state
+    @signal editorLanguageChanged(Editor) emitted to signal a change of an
+            editors language
+    @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
-    
+    editorChangedEd = pyqtSignal(Editor)
     lastEditorClosed = pyqtSignal()
     editorOpened = pyqtSignal(str)
     editorOpenedEd = pyqtSignal(Editor)
@@ -690,6 +695,9 @@ class Tabview(QSplitter, ViewManager):
     breakpointToggled = pyqtSignal(Editor)
     bookmarkToggled = pyqtSignal(Editor)
     syntaxerrorToggled = pyqtSignal(Editor)
+    previewStateChanged = pyqtSignal(bool)
+    editorLanguageChanged = pyqtSignal(Editor)
+    editorTextChanged = pyqtSignal(Editor)
     
     def __init__(self, parent):
         """
@@ -792,6 +800,7 @@ class Tabview(QSplitter, ViewManager):
             self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
+        self.editorChangedEd.emit(aw)
         
     def _addView(self, win, fn=None, noName=""):
         """
@@ -828,6 +837,7 @@ class Tabview(QSplitter, ViewManager):
             self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
+        self.editorChangedEd.emit(editor)
         
     def insertView(self, win, tabWidget, index, fn=None, noName=""):
         """
@@ -865,6 +875,7 @@ class Tabview(QSplitter, ViewManager):
             self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
+        self.editorChangedEd.emit(editor)
         
         self._modificationStatusChanged(editor.isModified(), editor)
         self._checkActions(editor)
@@ -1095,6 +1106,7 @@ class Tabview(QSplitter, ViewManager):
                 self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
+        self.editorChangedEd.emit(editor)
         
     def eventFilter(self, watched, event):
         """
@@ -1135,6 +1147,7 @@ class Tabview(QSplitter, ViewManager):
                         self.editorChanged.emit(fn)
                 else:
                     self.changeCaption.emit("")
+                self.editorChangedEd.emit(aw)
         
         return False
         

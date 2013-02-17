@@ -1764,22 +1764,6 @@ class Editor(QsciScintillaCompat):
         
         return False
     
-    def isPreviewable(self):
-        """
-        Public method to check, if the contents of the file is previewable in
-        a web browser.
-        
-        @return flag indicating a previewable file (boolean)
-        """
-        if self.fileName is not None and \
-           os.path.splitext(self.fileName)[1][1:] in Preferences.getEditor(
-            "PreviewableFileNameExtensions"):
-            return True
-        elif self.getLanguage() == "HTML":
-            return True
-        else:
-            return False
-    
     def highlightVisible(self):
         """
         Public method to make sure that the highlight is visible.

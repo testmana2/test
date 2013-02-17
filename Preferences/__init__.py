@@ -120,6 +120,9 @@ class Prefs(object):
         "BottomRightByRight": False,
         "TabViewManagerFilenameLength": 40,
         "TabViewManagerFilenameOnly": True,
+        "ShowFilePreview": True,
+        "ShowFilePreviewJS": True,
+        "ShowFilePreviewSSI": True, 
         # the order in ViewProfiles is Project-Viewer, File-Browser,
         # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
         # Templates-Viewer, Multiproject-Viewer, Terminal, Chat, Symbols,
@@ -169,6 +172,7 @@ class Prefs(object):
                 ],
         },
         "ToolbarManagerState": QByteArray(),
+        "PreviewSplitterState": QByteArray(),
         "ShowSplash": True,
         "SingleCloseButton": False,
         
@@ -324,7 +328,9 @@ class Prefs(object):
         
         "ZoomFactor": 0,
         
-        "PreviewableFileNameExtensions": ["html", "htm", "svg", "asp", "kid"],
+        "PreviewHtmlFileNameExtensions": ["html", "htm", "svg", "asp", "kid"],
+        "PreviewMarkdownFileNameExtensions": ["md", "markdown"],
+        "PreviewRestFileNameExtensions": ["rst"],
         
         # All (most) lexers
         "AllFoldCompact": True,
@@ -1379,17 +1385,18 @@ def getUI(key, prefClass=Prefs):
     @return the requested UI setting
     """
     if key in ["BrowsersListFoldersFirst", "BrowsersHideNonPublic",
-                "BrowsersListContentsByOccurrence", "BrowsersListHiddenFiles",
-                "LogViewerAutoRaise",
-                "SingleApplicationMode", "TabViewManagerFilenameOnly",
-                "CaptionShowsFilename", "ShowSplash",
-                "SingleCloseButton",
-                "UseProxy", "UseSystemProxy", "UseHttpProxyForAll",
-                "TopLeftByLeft", "BottomLeftByLeft",
-                "TopRightByRight", "BottomRightByRight",
-                "RequestDownloadFilename",
-                "LayoutShellEmbedded", "LayoutFileBrowserEmbedded",
-                "CheckErrorLog", "NotificationsEnabled"]:
+               "BrowsersListContentsByOccurrence", "BrowsersListHiddenFiles",
+               "LogViewerAutoRaise",
+               "SingleApplicationMode", "TabViewManagerFilenameOnly",
+               "ShowFilePreview", "ShowFilePreviewJS", "ShowFilePreviewSSI",
+               "CaptionShowsFilename", "ShowSplash",
+               "SingleCloseButton",
+               "UseProxy", "UseSystemProxy", "UseHttpProxyForAll",
+               "TopLeftByLeft", "BottomLeftByLeft",
+               "TopRightByRight", "BottomRightByRight",
+               "RequestDownloadFilename",
+               "LayoutShellEmbedded", "LayoutFileBrowserEmbedded",
+               "CheckErrorLog", "NotificationsEnabled"]:
         return toBool(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
@@ -1439,12 +1446,12 @@ def getUI(key, prefClass=Prefs):
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
-    elif key == "ToolbarManagerState":
-        toolbarManagerState = prefClass.settings.value("UI/ToolbarManagerState")
-        if toolbarManagerState is not None:
-            return toolbarManagerState
+    elif key in ["ToolbarManagerState", "PreviewSplitterState"]:
+        state = prefClass.settings.value("UI/" + key)
+        if state is not None:
+            return state
         else:
-            return prefClass.uiDefaults["ToolbarManagerState"]
+            return prefClass.uiDefaults[key]
     elif key in ["VersionsUrls5"]:
         urls = toList(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
         if len(urls) == 0:
@@ -1557,7 +1564,8 @@ def getEditor(key, prefClass=Prefs):
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
-                 "PreviewableFileNameExtensions"]:
+                 "PreviewMarkdownFileNameExtensions", "PreviewRestFileNameExtensions",
+                 "PreviewHtmlFileNameExtensions"]:
         return toList(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     else:

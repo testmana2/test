@@ -545,7 +545,9 @@ class UserInterface(E5MainWindow):
         layout = QVBoxLayout()
         layout.setContentsMargins(1, 1, 1, 1)
         layout.setSpacing(1)
-        layout.addWidget(self.viewmanager)
+        splitter = QSplitter(Qt.Horizontal)
+        splitter.addWidget(self.viewmanager)
+        layout.addWidget(splitter)
         layout.addWidget(self.viewmanager.searchWidget())
         layout.addWidget(self.viewmanager.replaceWidget())
         self.viewmanager.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
@@ -553,6 +555,12 @@ class UserInterface(E5MainWindow):
         self.setCentralWidget(centralWidget)
         self.viewmanager.searchWidget().hide()
         self.viewmanager.replaceWidget().hide()
+        
+        # Create previewer
+        logging.debug("Creating Previewer...")
+        from .Previewer import Previewer
+        self.__previewer = Previewer(self.viewmanager, splitter)
+        splitter.addWidget(self.__previewer)
         
         # Create layout with toolbox windows embedded in dock windows
         if self.layout == "Toolboxes":
@@ -5257,6 +5265,8 @@ class UserInterface(E5MainWindow):
         
         if not self.viewmanager.closeViewManager():
             return False
+        
+        self.__previewer.shutdown()
         
         self.shell.closeShell()
         self.terminal.closeTerminal()

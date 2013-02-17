@@ -5238,15 +5238,19 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.changeCaption?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.checkActions?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.cursorChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorChanged?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosedEd?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLanguageChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.eventFilter?4(watched, event)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.prevSplit?4()
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.previewStateChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.removeSplit?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.setEditorName?4(editor, newName)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.setSplitOrientation?4(orientation)
@@ -5302,11 +5306,14 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.changeCaption?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.checkActions?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.cursorChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorChanged?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosedEd?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLanguageChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorTextChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.eventFilter?4(watched, event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getTabWidgetById?4(id_)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.insertView?4(win, tabWidget, index, fn=None, noName="")
@@ -5314,6 +5321,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.lastEditorClosed?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.nextSplit?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.preferencesChanged?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.prevSplit?4()
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.previewStateChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.removeSplit?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.setEditorName?4(editor, newName)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.setSplitOrientation?4(orientation)
@@ -6524,7 +6532,6 @@ eric5.QScintilla.Editor.Editor.highlight?4(line=None, error=False, syntaxError=F
 eric5.QScintilla.Editor.Editor.highlightVisible?4()
 eric5.QScintilla.Editor.Editor.indentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.isLastEditPositionAvailable?4()
-eric5.QScintilla.Editor.Editor.isPreviewable?4()
 eric5.QScintilla.Editor.Editor.isPy2File?4()
 eric5.QScintilla.Editor.Editor.isPy3File?4()
 eric5.QScintilla.Editor.Editor.isRubyFile?4()
@@ -7662,6 +7669,20 @@ eric5.UI.PixmapCache.getIcon?4(key, cache=pixCache)
 eric5.UI.PixmapCache.getPixmap?4(key, cache=pixCache)
 eric5.UI.PixmapCache.getSymlinkIcon?4(key, cache=pixCache)
 eric5.UI.PixmapCache.pixCache?7
+eric5.UI.Previewer.PreviewProcessingThread.htmlReady?7
+eric5.UI.Previewer.PreviewProcessingThread.process?4(filePath, language, text, ssiEnabled, rootPath)
+eric5.UI.Previewer.PreviewProcessingThread.run?4()
+eric5.UI.Previewer.PreviewProcessingThread?1(parent=None)
+eric5.UI.Previewer.Previewer.hide?4()
+eric5.UI.Previewer.Previewer.on_jsCheckBox_clicked?4(checked)
+eric5.UI.Previewer.Previewer.on_previewView_linkClicked?4(url)
+eric5.UI.Previewer.Previewer.on_previewView_titleChanged?4(title)
+eric5.UI.Previewer.Previewer.on_ssiCheckBox_clicked?4(checked)
+eric5.UI.Previewer.Previewer.show?4()
+eric5.UI.Previewer.Previewer.shutdown?4()
+eric5.UI.Previewer.Previewer?1(viewmanager, splitter, parent=None)
+eric5.UI.Previewer._StrikeThroughExtension.DEL_RE?7
+eric5.UI.Previewer._StrikeThroughExtension.extendMarkdown?4(md, md_globals)
 eric5.UI.SearchWidget.SearchWidget.keyPressEvent?4(event)
 eric5.UI.SearchWidget.SearchWidget.on_closeButton_clicked?4()
 eric5.UI.SearchWidget.SearchWidget.on_findNextButton_clicked?4()
@@ -8488,6 +8509,7 @@ eric5.ViewManager.ViewManager.ViewManager.canSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.canTile?4()
 eric5.ViewManager.ViewManager.ViewManager.cancelSharedEdit?4()
 eric5.ViewManager.ViewManager.ViewManager.cascade?4()
+eric5.ViewManager.ViewManager.ViewManager.changeCaption?7
 eric5.ViewManager.ViewManager.ViewManager.checkActions?7
 eric5.ViewManager.ViewManager.ViewManager.checkAllDirty?4()
 eric5.ViewManager.ViewManager.ViewManager.checkDirty?4(editor, autosave=False)
@@ -8499,11 +8521,15 @@ eric5.ViewManager.ViewManager.ViewManager.closeEditorWindow?4(editor)
 eric5.ViewManager.ViewManager.ViewManager.closeViewManager?4()
 eric5.ViewManager.ViewManager.ViewManager.closeWindow?4(fn)
 eric5.ViewManager.ViewManager.ViewManager.cursorChanged?7
+eric5.ViewManager.ViewManager.ViewManager.editorChanged?7
+eric5.ViewManager.ViewManager.ViewManager.editorChangedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosed?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosedEd?7
+eric5.ViewManager.ViewManager.ViewManager.editorLanguageChanged?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpened?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpenedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorSaved?7
+eric5.ViewManager.ViewManager.ViewManager.editorTextChanged?7
 eric5.ViewManager.ViewManager.ViewManager.editorsCheckFocusInEnabled?4()
 eric5.ViewManager.ViewManager.ViewManager.enableEditorsCheckFocusIn?4(enabled)
 eric5.ViewManager.ViewManager.ViewManager.eventFilter?4(object, event)
@@ -8544,6 +8570,7 @@ eric5.ViewManager.ViewManager.ViewManager.openFiles?4(prog=None)
 eric5.ViewManager.ViewManager.ViewManager.openSourceFile?4(fn, lineno=-1, filetype="", selStart=0, selEnd=0, pos=0)
 eric5.ViewManager.ViewManager.ViewManager.preferencesChanged?4()
 eric5.ViewManager.ViewManager.ViewManager.prevSplit?4()
+eric5.ViewManager.ViewManager.ViewManager.previewStateChanged?7
 eric5.ViewManager.ViewManager.ViewManager.printCurrentEditor?4()
 eric5.ViewManager.ViewManager.ViewManager.printEditor?4(editor)
 eric5.ViewManager.ViewManager.ViewManager.printPreviewCurrentEditor?4()

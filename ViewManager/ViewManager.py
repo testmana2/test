@@ -8,10 +8,9 @@ Module implementing the viewmanager base class.
 """
 
 import os
-import re
 
 from PyQt4.QtCore import QSignalMapper, QTimer, QFileInfo, pyqtSignal, QRegExp, \
-    QObject, Qt, QUrl
+    QObject, Qt
 from PyQt4.QtGui import QColor, QKeySequence, QLineEdit, QToolBar, QWidgetAction, \
     QDialog, QApplication, QMenu, QPalette, QComboBox, QPixmap
 from PyQt4.Qsci import QsciScintilla
@@ -90,6 +89,9 @@ class ViewManager(QObject):
     It defines the interface to be implemented by specific
     viewmanager classes and all common methods.
     
+    @signal changeCaption(str) emitted if a change of the caption is necessary
+    @signal editorChanged(str) emitted when the current editor has changed
+    @signal editorChangedEd(Editor) emitted when the current editor has changed
     @signal lastEditorClosed() emitted after the last editor window was closed
     @signal editorOpened(str) emitted after an editor window was opened
     @signal editorOpenedEd(Editor) emitted after an editor window was opened
@@ -100,9 +102,17 @@ class ViewManager(QObject):
             for their status
     @signal cursorChanged(Editor) emitted after the cursor position of the active
             window has changed
-    @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
-    @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
+    @signal breakpointToggled(Editor) emitted when a breakpoint is toggled
+    @signal bookmarkToggled(Editor) emitted when a bookmark is toggled
+    @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled
+    @signal previewStateChanged(bool) emitted to signal a change in the preview state
+    @signal editorLanguageChanged(Editor) emitted to signal a change of an
+            editor's language
+    @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
     """
+    changeCaption = pyqtSignal(str)
+    editorChanged = pyqtSignal(str)
+    editorChangedEd = pyqtSignal(Editor)
     lastEditorClosed = pyqtSignal()
     editorOpened = pyqtSignal(str)
     editorOpenedEd = pyqtSignal(Editor)
@@ -114,6 +124,9 @@ class ViewManager(QObject):
     breakpointToggled = pyqtSignal(Editor)
     bookmarkToggled = pyqtSignal(Editor)
     syntaxerrorToggled = pyqtSignal(Editor)
+    previewStateChanged = pyqtSignal(bool)
+    editorLanguageChanged = pyqtSignal(Editor)
+    editorTextChanged = pyqtSignal(Editor)
     
     def __init__(self):
         """
@@ -3038,7 +3051,7 @@ class ViewManager(QObject):
                                 'Preview'),
                             UI.PixmapCache.getIcon("previewer.png"),
                             QApplication.translate('ViewManager', 'Preview'),
-                            0, 0, self, 'vm_preview')
+                            0, 0, self, 'vm_preview', True)
         self.previewAct.setStatusTip(QApplication.translate('ViewManager',
             'Preview the current file in the web browser'))
         self.previewAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -3046,7 +3059,8 @@ class ViewManager(QObject):
                 """<p>This opens the web browser with a preview of"""
                 """ the current file.</p>"""
                 ))
-        self.previewAct.triggered[()].connect(self.__previewEditor)
+        self.previewAct.setChecked(Preferences.getUI("ShowFilePreview"))
+        self.previewAct.toggled[bool].connect(self.__previewEditor)
         self.viewActions.append(self.previewAct)
         
         self.viewActGrp.setEnabled(False)
@@ -3057,7 +3071,7 @@ class ViewManager(QObject):
         self.splitRemoveAct.setEnabled(False)
         self.nextSplitAct.setEnabled(False)
         self.prevSplitAct.setEnabled(False)
-        self.previewAct.setEnabled(False)
+        self.previewAct.setEnabled(True)
         
     def initViewMenu(self):
         """
@@ -3563,7 +3577,7 @@ class ViewManager(QObject):
                             QApplication.translate('ViewManager',
                                 '&Automatic spell checking'),
                             0, 0,
-                            self.spellingActGrp, 'vm_spelling_autospellcheck')
+                            self.spellingActGrp, 'vm_spelling_autospellcheck', True)
         self.autoSpellCheckAct.setStatusTip(QApplication.translate('ViewManager',
             '(De-)Activate automatic spell checking'))
         self.autoSpellCheckAct.setWhatsThis(QApplication.translate('ViewManager',
@@ -3571,7 +3585,6 @@ class ViewManager(QObject):
                 """<p>Activate or deactivate the automatic spell checking function of"""
                 """ all editors.</p>"""
                 ))
-        self.autoSpellCheckAct.setCheckable(True)
         self.autoSpellCheckAct.setChecked(
             Preferences.getEditor("AutoSpellCheckingEnabled"))
         self.autoSpellCheckAct.triggered[()].connect(self.__setAutoSpellChecking)
@@ -3872,6 +3885,9 @@ class ViewManager(QObject):
         editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
         editor.zoomValueChanged.connect(self.zoomValueChanged)
         
+        editor.languageChanged.connect(lambda: self.editorLanguageChanged.emit(editor))
+        editor.textChanged.connect(lambda: self.editorTextChanged.emit(editor))
+
     def newEditorView(self, fn, caller, filetype=""):
         """
         Public method to create a new editor displaying the given document.
@@ -5133,76 +5149,14 @@ class ViewManager(QObject):
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
     
-    def __previewEditor(self):
+    def __previewEditor(self, checked):
         """
-        Private method to preview the contents of the current editor in a web browser.
+        Private slot to handle a change of the preview selection state.
+        
+        @param checked state of the action (boolean)
         """
-        aw = self.activeWindow()
-        if aw is not None and aw.isPreviewable():
-            fn = aw.getFileName()
-            if fn:
-                project = e5App().getObject("Project")
-                if project.isProjectFile(fn):
-                    baseUrl = QUrl.fromLocalFile(project.getAbsoluteUniversalPath(fn))
-                    fullName = project.getAbsoluteUniversalPath(fn)
-                    rootPath = project.getProjectPath()
-                else:
-                    baseUrl = QUrl.fromLocalFile(fn)
-                    fullName = fn
-                    rootPath = os.path.dirname(os.path.abspath(fn))
-            else:
-                baseUrl = QUrl()
-                fullName = ""
-                rootPath = ""
-            txt = self.__processSSI(aw.text(), fullName, rootPath)
-            previewer = self.ui.getHelpViewer(preview=True).previewer()
-            previewer.setHtml(txt, baseUrl)
-    
-    def __processSSI(self, txt, filename, root):
-        """
-        Private method to process the given text for SSI statements.
-        
-        Note: Only a limited subset of SSI statements are supported.
-        
-        @param txt text to be processed (string)
-        @param filename name of the file associated with the given text (string)
-        @param root directory of the document root (string)
-        @return processed text (string)
-        """
-        if not filename:
-            return txt
-        
-        # SSI include
-        incRe = re.compile(
-            r"""<!--#include[ \t]+(virtual|file)=[\"']([^\"']+)[\"']\s*-->""",
-            re.IGNORECASE)
-        baseDir = os.path.dirname(os.path.abspath(filename))
-        docRoot = root if root != "" else baseDir
-        while True:
-            incMatch = incRe.search(txt)
-            if incMatch is None:
-                break
-            
-            if incMatch.group(1) == "virtual":
-                incFile = Utilities.normjoinpath(docRoot, incMatch.group(2))
-            elif incMatch.group(1) == "file":
-                incFile = Utilities.normjoinpath(baseDir, incMatch.group(2))
-            else:
-                incFile = ""
-            if os.path.exists(incFile):
-                try:
-                    f = open(incFile, "r")
-                    incTxt = f.read()
-                    f.close()
-                except (IOError, OSError):
-                    # remove SSI include
-                    incTxt = ""
-            else:
-                # remove SSI include
-                incTxt = ""
-            txt = txt[:incMatch.start(0)] + incTxt + txt[incMatch.end(0):]
-        
-        return txt
+        Preferences.setUI("ShowFilePreview", checked)
+        self.previewStateChanged.emit(checked)
     
     ##################################################################
     ## Below are the action methods for the macro menu
@@ -5645,7 +5599,7 @@ class ViewManager(QObject):
         self.unhighlightAct.setEnabled(False)
         self.splitViewAct.setEnabled(False)
         self.splitOrientationAct.setEnabled(False)
-        self.previewAct.setEnabled(False)
+        self.previewAct.setEnabled(True)
         self.macroActGrp.setEnabled(False)
         self.bookmarkActGrp.setEnabled(False)
         self.__enableSpellingActions()
@@ -5720,8 +5674,8 @@ class ViewManager(QObject):
             self.redoAct.setEnabled(editor.isRedoAvailable())
             self.gotoLastEditAct.setEnabled(editor.isLastEditPositionAvailable())
             
-            self.previewAct.setEnabled(editor.isPreviewable())
-            
+##            self.previewAct.setEnabled(editor.isPreviewable())
+##            
             lex = editor.getLexer()
             if lex is not None:
                 self.commentAct.setEnabled(lex.canBlockComment())
@@ -5932,7 +5886,7 @@ class ViewManager(QObject):
         
     def __editorConfigChanged(self):
         """
-        Private method to handle changes of an editors configuration (e.g. language).
+        Private slot to handle changes of an editor's configuration (e.g. language).
         """
         editor = self.sender()
         fn = editor.getFileName()

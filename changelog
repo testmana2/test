@@ -9,6 +9,8 @@ Version 5.4-snapshot-2013mmdd:
   -- changed the 'import' statements to improve startup behavior
   -- removed the QtHelp dependancy; support is only available,
      if the QtHelp module could be imported
+- Editor
+  -- added the capability to preview HTML, Mardown and ReST files
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way

@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>975</height>
+    <height>1032</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -444,18 +444,46 @@
      <property name="title">
       <string>File Preview</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
        <widget class="QLabel" name="label_6">
         <property name="text">
-         <string>Extensions of previewable files:</string>
+         <string>Extensions of HTML files:</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLineEdit" name="previewExtensionsEdit">
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="previewHtmlExtensionsEdit">
         <property name="toolTip">
-         <string>Enter the filename extensions of files that may be previewed in the web browser (separated by a space)</string>
+         <string>Enter the filename extensions of HTML files that may be previewed (separated by a space)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Extensions of Markdown files:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="previewMarkdownExtensionsEdit">
+        <property name="toolTip">
+         <string>Enter the filename extensions of Markdown files that may be previewed (separated by a space)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Extensions of ReST files:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="previewRestExtensionsEdit">
+        <property name="toolTip">
+         <string>Enter the filename extensions of ReStructuredText files that may be previewed (separated by a space)</string>
         </property>
        </widget>
       </item>

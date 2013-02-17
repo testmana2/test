@@ -497,6 +497,8 @@ PluginUninstallWindow E5MainWindow
 PreferencesLexer QsciLexer
 PreferencesLexerError Exception
 PreferencesLexerLanguageError PreferencesLexerError
+PreviewProcessingThread QThread
+Previewer QWidget Ui_Previewer
 Printer QsciPrinter
 PrinterPage ConfigurationPageBase Ui_PrinterPage
 ProfileTreeWidgetItem QTreeWidgetItem
@@ -743,4 +745,5 @@ XbelReader QXmlStreamReader
 XbelWriter QXmlStreamWriter
 XmlEntityResolver QXmlStreamEntityResolver
 ZoomDialog QDialog Ui_ZoomDialog
+_StrikeThroughExtension markdown.Extension
 vcsCommandOptionsDialog QDialog Ui_vcsCommandOptionsDialog

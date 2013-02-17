@@ -622,12 +622,19 @@ emitted after the cursor position of the active
 </dd><dt>editorChanged(str)</dt>
 <dd>
 emitted when the current editor has changed
+</dd><dt>editorChangedEd(Editor)</dt>
+<dd>
+emitted when the current editor has changed
 </dd><dt>editorClosed(str)</dt>
 <dd>
 emitted just before an editor window gets closed
 </dd><dt>editorClosedEd(Editor)</dt>
 <dd>
 emitted just before an editor window gets closed
+</dd><dt>editorLanguageChanged(Editor)</dt>
+<dd>
+emitted to signal a change of an
+            editors language
 </dd><dt>editorOpened(str)</dt>
 <dd>
 emitted after an editor window was opened
@@ -637,9 +644,15 @@ emitted after an editor window was opened
 </dd><dt>editorSaved(str)</dt>
 <dd>
 emitted after an editor window was saved
+</dd><dt>editorTextChanged(Editor)</dt>
+<dd>
+emitted to signal a change of an editor's text
 </dd><dt>lastEditorClosed()</dt>
 <dd>
 emitted after the last editor window was closed
+</dd><dt>previewStateChanged(bool)</dt>
+<dd>
+emitted to signal a change in the preview state
 </dd><dt>syntaxerrorToggled(Editor)</dt>
 <dd>
 emitted when a syntax error is toggled.

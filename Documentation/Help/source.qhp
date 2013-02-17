@@ -918,6 +918,7 @@
             <section title="eric5.UI.NotificationWidget" ref="eric5.UI.NotificationWidget.html" />
             <section title="eric5.UI.NumbersWidget" ref="eric5.UI.NumbersWidget.html" />
             <section title="eric5.UI.PixmapCache" ref="eric5.UI.PixmapCache.html" />
+            <section title="eric5.UI.Previewer" ref="eric5.UI.Previewer.html" />
             <section title="eric5.UI.SearchWidget" ref="eric5.UI.SearchWidget.html" />
             <section title="eric5.UI.SplashScreen" ref="eric5.UI.SplashScreen.html" />
             <section title="eric5.UI.SymbolsWidget" ref="eric5.UI.SymbolsWidget.html" />
@@ -4121,7 +4122,6 @@
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
       <keyword name="Editor.isLastEditPositionAvailable" id="Editor.isLastEditPositionAvailable" ref="eric5.QScintilla.Editor.html#Editor.isLastEditPositionAvailable" />
-      <keyword name="Editor.isPreviewable" id="Editor.isPreviewable" ref="eric5.QScintilla.Editor.html#Editor.isPreviewable" />
       <keyword name="Editor.isPy2File" id="Editor.isPy2File" ref="eric5.QScintilla.Editor.html#Editor.isPy2File" />
       <keyword name="Editor.isPy3File" id="Editor.isPy3File" ref="eric5.QScintilla.Editor.html#Editor.isPy3File" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />
@@ -8148,6 +8148,35 @@
       <keyword name="PreferencesLexerLanguageError (Constructor)" id="PreferencesLexerLanguageError (Constructor)" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexerLanguageError.__init__" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
       <keyword name="Prefs.initWebSettingsDefaults" id="Prefs.initWebSettingsDefaults" ref="eric5.Preferences.__init__.html#Prefs.initWebSettingsDefaults" />
+      <keyword name="PreviewProcessingThread" id="PreviewProcessingThread" ref="eric5.UI.Previewer.html#PreviewProcessingThread" />
+      <keyword name="PreviewProcessingThread (Constructor)" id="PreviewProcessingThread (Constructor)" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__init__" />
+      <keyword name="PreviewProcessingThread.__convertMarkdown" id="PreviewProcessingThread.__convertMarkdown" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__convertMarkdown" />
+      <keyword name="PreviewProcessingThread.__convertReST" id="PreviewProcessingThread.__convertReST" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__convertReST" />
+      <keyword name="PreviewProcessingThread.__getHtml" id="PreviewProcessingThread.__getHtml" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__getHtml" />
+      <keyword name="PreviewProcessingThread.__processSSI" id="PreviewProcessingThread.__processSSI" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__processSSI" />
+      <keyword name="PreviewProcessingThread.process" id="PreviewProcessingThread.process" ref="eric5.UI.Previewer.html#PreviewProcessingThread.process" />
+      <keyword name="PreviewProcessingThread.run" id="PreviewProcessingThread.run" ref="eric5.UI.Previewer.html#PreviewProcessingThread.run" />
+      <keyword name="Previewer" id="Previewer" ref="eric5.UI.Previewer.html#Previewer" />
+      <keyword name="Previewer (Constructor)" id="Previewer (Constructor)" ref="eric5.UI.Previewer.html#Previewer.__init__" />
+      <keyword name="Previewer (Module)" id="Previewer (Module)" ref="eric5.UI.Previewer.html" />
+      <keyword name="Previewer.__editorChanged" id="Previewer.__editorChanged" ref="eric5.UI.Previewer.html#Previewer.__editorChanged" />
+      <keyword name="Previewer.__editorLanguageChanged" id="Previewer.__editorLanguageChanged" ref="eric5.UI.Previewer.html#Previewer.__editorLanguageChanged" />
+      <keyword name="Previewer.__editorTextChanged" id="Previewer.__editorTextChanged" ref="eric5.UI.Previewer.html#Previewer.__editorTextChanged" />
+      <keyword name="Previewer.__isPreviewable" id="Previewer.__isPreviewable" ref="eric5.UI.Previewer.html#Previewer.__isPreviewable" />
+      <keyword name="Previewer.__previewStateChanged" id="Previewer.__previewStateChanged" ref="eric5.UI.Previewer.html#Previewer.__previewStateChanged" />
+      <keyword name="Previewer.__restoreScrollBarPositions" id="Previewer.__restoreScrollBarPositions" ref="eric5.UI.Previewer.html#Previewer.__restoreScrollBarPositions" />
+      <keyword name="Previewer.__runProcessingThread" id="Previewer.__runProcessingThread" ref="eric5.UI.Previewer.html#Previewer.__runProcessingThread" />
+      <keyword name="Previewer.__saveScrollBarPositions" id="Previewer.__saveScrollBarPositions" ref="eric5.UI.Previewer.html#Previewer.__saveScrollBarPositions" />
+      <keyword name="Previewer.__setHtml" id="Previewer.__setHtml" ref="eric5.UI.Previewer.html#Previewer.__setHtml" />
+      <keyword name="Previewer.__setJavaScriptEnabled" id="Previewer.__setJavaScriptEnabled" ref="eric5.UI.Previewer.html#Previewer.__setJavaScriptEnabled" />
+      <keyword name="Previewer.__splitterMoved" id="Previewer.__splitterMoved" ref="eric5.UI.Previewer.html#Previewer.__splitterMoved" />
+      <keyword name="Previewer.hide" id="Previewer.hide" ref="eric5.UI.Previewer.html#Previewer.hide" />
+      <keyword name="Previewer.on_jsCheckBox_clicked" id="Previewer.on_jsCheckBox_clicked" ref="eric5.UI.Previewer.html#Previewer.on_jsCheckBox_clicked" />
+      <keyword name="Previewer.on_previewView_linkClicked" id="Previewer.on_previewView_linkClicked" ref="eric5.UI.Previewer.html#Previewer.on_previewView_linkClicked" />
+      <keyword name="Previewer.on_previewView_titleChanged" id="Previewer.on_previewView_titleChanged" ref="eric5.UI.Previewer.html#Previewer.on_previewView_titleChanged" />
+      <keyword name="Previewer.on_ssiCheckBox_clicked" id="Previewer.on_ssiCheckBox_clicked" ref="eric5.UI.Previewer.html#Previewer.on_ssiCheckBox_clicked" />
+      <keyword name="Previewer.show" id="Previewer.show" ref="eric5.UI.Previewer.html#Previewer.show" />
+      <keyword name="Previewer.shutdown" id="Previewer.shutdown" ref="eric5.UI.Previewer.html#Previewer.shutdown" />
       <keyword name="Printer" id="Printer" ref="eric5.QScintilla.Printer.html#Printer" />
       <keyword name="Printer (Constructor)" id="Printer (Constructor)" ref="eric5.QScintilla.Printer.html#Printer.__init__" />
       <keyword name="Printer (Module)" id="Printer (Module)" ref="eric5.QScintilla.Printer.html" />
@@ -11862,7 +11891,6 @@
       <keyword name="ViewManager.__previousTask" id="ViewManager.__previousTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousTask" />
       <keyword name="ViewManager.__previousUncovered" id="ViewManager.__previousUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousUncovered" />
       <keyword name="ViewManager.__previousWarning" id="ViewManager.__previousWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousWarning" />
-      <keyword name="ViewManager.__processSSI" id="ViewManager.__processSSI" ref="eric5.ViewManager.ViewManager.html#ViewManager.__processSSI" />
       <keyword name="ViewManager.__quickSearch" id="ViewManager.__quickSearch" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearch" />
       <keyword name="ViewManager.__quickSearchEnter" id="ViewManager.__quickSearchEnter" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEnter" />
       <keyword name="ViewManager.__quickSearchEscape" id="ViewManager.__quickSearchEscape" ref="eric5.ViewManager.ViewManager.html#ViewManager.__quickSearchEscape" />
@@ -12230,6 +12258,8 @@
       <keyword name="ZoomDialog.getZoomSize" id="ZoomDialog.getZoomSize" ref="eric5.QScintilla.ZoomDialog.html#ZoomDialog.getZoomSize" />
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
+      <keyword name="_StrikeThroughExtension" id="_StrikeThroughExtension" ref="eric5.UI.Previewer.html#_StrikeThroughExtension" />
+      <keyword name="_StrikeThroughExtension.extendMarkdown" id="_StrikeThroughExtension.extendMarkdown" ref="eric5.UI.Previewer.html#_StrikeThroughExtension.extendMarkdown" />
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric5.Utilities.crypto.__init__.html#__getMasterPassword" />
       <keyword name="__getPygmentsLexer" id="__getPygmentsLexer" ref="eric5.QScintilla.Lexers.__init__.html#__getPygmentsLexer" />
       <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric5.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
@@ -13644,6 +13674,7 @@
       <file>eric5.UI.NotificationWidget.html</file>
       <file>eric5.UI.NumbersWidget.html</file>
       <file>eric5.UI.PixmapCache.html</file>
+      <file>eric5.UI.Previewer.html</file>
       <file>eric5.UI.SearchWidget.html</file>
       <file>eric5.UI.SplashScreen.html</file>
       <file>eric5.UI.SymbolsWidget.html</file>
