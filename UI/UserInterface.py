@@ -541,20 +541,21 @@ class UserInterface(E5MainWindow):
         import ViewManager
         self.viewmanager = \
             ViewManager.factory(self, self, debugServer, self.pluginManager)
-        centralWidget = QWidget()
+        leftWidget = QWidget()
         layout = QVBoxLayout()
         layout.setContentsMargins(1, 1, 1, 1)
         layout.setSpacing(1)
-        splitter = QSplitter(Qt.Horizontal)
-        splitter.addWidget(self.viewmanager)
-        layout.addWidget(splitter)
+        layout.addWidget(self.viewmanager)
         layout.addWidget(self.viewmanager.searchWidget())
         layout.addWidget(self.viewmanager.replaceWidget())
         self.viewmanager.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        centralWidget.setLayout(layout)
-        self.setCentralWidget(centralWidget)
+        leftWidget.setLayout(layout)
         self.viewmanager.searchWidget().hide()
         self.viewmanager.replaceWidget().hide()
+        
+        splitter = QSplitter(Qt.Horizontal)
+        splitter.addWidget(leftWidget)
+        self.setCentralWidget(splitter)
         
         # Create previewer
         logging.debug("Creating Previewer...")
