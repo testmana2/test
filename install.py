@@ -71,7 +71,10 @@ def exit(rcode=0):
     global currDir
     
     if sys.platform.startswith("win"):
-        input("Press enter to continue...")
+        try:
+            input("Press enter to continue...")
+        except EOFError:
+            pass
     
     os.chdir(currDir)
     
