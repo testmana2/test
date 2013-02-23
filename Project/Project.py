@@ -19,7 +19,7 @@ import re
 from PyQt4.QtCore import QFile, QFileInfo, pyqtSignal, QCryptographicHash, QIODevice, \
     QByteArray, QObject, Qt
 from PyQt4.QtGui import QCursor, QLineEdit, QToolBar, QDialog, QInputDialog, \
-    QApplication, QMenu
+    QApplication, QMenu, QAction
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
@@ -805,6 +805,22 @@ class Project(QObject):
                 self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
                     " could not be written.</p>").format(fn))
         
+    def __showContextMenuSession(self):
+        """
+        Private slot called before the Session menu is shown.
+        """
+        enable = True
+        if self.pfile is None:
+            enable = False
+        else:
+            fn, ext = os.path.splitext(os.path.basename(self.pfile))
+            fn = os.path.join(self.getProjectManagementDir(),
+                              '{0}.e4s'.format(fn))
+            enable = os.path.exists(fn)
+        self.sessActGrp.findChild(QAction, "project_load_session").setEnabled(enable)
+        self.sessActGrp.findChild(QAction, "project_delete_session").setEnabled(enable)
+        
+        
     def __readSession(self, quiet=False, indicator=""):
         """
         Private method to read in the project session file (.e4s)
@@ -938,6 +954,23 @@ class Project(QObject):
         from E5XML.TasksWriter import TasksWriter
         TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
         f.close()
+        
+    def __showContextMenuDebugger(self):
+        """
+        Private slot called before the Debugger menu is shown.
+        """
+        enable = True
+        if self.pfile is None:
+            enable = False
+        else:
+            fn, ext = os.path.splitext(os.path.basename(self.pfile))
+            fn = os.path.join(self.getProjectManagementDir(),
+                              '{0}.e4d'.format(fn))
+            enable = os.path.exists(fn)
+        self.dbgActGrp.findChild(QAction, "project_debugger_properties_load")\
+            .setEnabled(enable)
+        self.dbgActGrp.findChild(QAction, "project_debugger_properties_delete")\
+            .setEnabled(enable)
         
     def __readDebugProperties(self, quiet=False):
         """
@@ -3483,6 +3516,8 @@ class Project(QObject):
         self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
         self.apidocMenu.aboutToShow.connect(self.__showContextMenuApiDoc)
         self.packagersMenu.aboutToShow.connect(self.__showContextMenuPackagers)
+        self.sessionMenu.aboutToShow.connect(self.__showContextMenuSession)
+        self.debuggerMenu.aboutToShow.connect(self.__showContextMenuDebugger)
         menu.aboutToShow.connect(self.__showMenu)
         
         # build the show menu

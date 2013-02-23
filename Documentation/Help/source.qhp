@@ -8236,9 +8236,11 @@
       <keyword name="Project.__showCodeMetrics" id="Project.__showCodeMetrics" ref="eric5.Project.Project.html#Project.__showCodeMetrics" />
       <keyword name="Project.__showContextMenuApiDoc" id="Project.__showContextMenuApiDoc" ref="eric5.Project.Project.html#Project.__showContextMenuApiDoc" />
       <keyword name="Project.__showContextMenuChecks" id="Project.__showContextMenuChecks" ref="eric5.Project.Project.html#Project.__showContextMenuChecks" />
+      <keyword name="Project.__showContextMenuDebugger" id="Project.__showContextMenuDebugger" ref="eric5.Project.Project.html#Project.__showContextMenuDebugger" />
       <keyword name="Project.__showContextMenuGraphics" id="Project.__showContextMenuGraphics" ref="eric5.Project.Project.html#Project.__showContextMenuGraphics" />
       <keyword name="Project.__showContextMenuPackagers" id="Project.__showContextMenuPackagers" ref="eric5.Project.Project.html#Project.__showContextMenuPackagers" />
       <keyword name="Project.__showContextMenuRecent" id="Project.__showContextMenuRecent" ref="eric5.Project.Project.html#Project.__showContextMenuRecent" />
+      <keyword name="Project.__showContextMenuSession" id="Project.__showContextMenuSession" ref="eric5.Project.Project.html#Project.__showContextMenuSession" />
       <keyword name="Project.__showContextMenuShow" id="Project.__showContextMenuShow" ref="eric5.Project.Project.html#Project.__showContextMenuShow" />
       <keyword name="Project.__showContextMenuVCS" id="Project.__showContextMenuVCS" ref="eric5.Project.Project.html#Project.__showContextMenuVCS" />
       <keyword name="Project.__showDebugProperties" id="Project.__showDebugProperties" ref="eric5.Project.Project.html#Project.__showDebugProperties" />
