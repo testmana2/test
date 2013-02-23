@@ -991,6 +991,13 @@ class DebugUI(QObject):
                             ' syntax error.'))
             return
             
+        if not os.path.isabs(filename):
+            if os.path.exists(os.path.join(self.project.getProjectPath(), filename)):
+                filename = os.path.join(self.project.getProjectPath(), filename)
+            else:
+                d = os.path.dirname(self.project.getMainScript(normalized=True))
+                if os.path.exists(os.path.join(d, filename)):
+                    filename = os.path.join(d, filename)
         self.viewmanager.setFileLine(filename, lineNo, True, True)
         E5MessageBox.critical(self.ui, Program,
             self.trUtf8('<p>The file <b>{0}</b> contains the syntax error'
