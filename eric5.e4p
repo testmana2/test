@@ -1065,8 +1065,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Network/IRC/IrcMessageEdit.py</Source>
     <Source>E5Gui/E5ZoomWidget.py</Source>
     <Source>E5Network/E5SslErrorHandler.py</Source>
-    <Source>E5Network/E5SslInfoWidget.py</Source>
-    <Source>E5Network/E5SslInfoDialog.py</Source>
     <Source>E5Network/E5SslCertificatesDialog.py</Source>
     <Source>UI/Previewer.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/_robotframeworklexer.py</Source>
@@ -1076,6 +1074,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/_stan_builtins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/_openedgebuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/dalvik.py</Source>
+    <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>
+    <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
+    <Source>E5Network/E5SslInfoWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1385,10 +1386,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Network/IRC/IrcServerEditDialog.ui</Form>
     <Form>Network/IRC/IrcIdentitiesEditDialog.ui</Form>
     <Form>E5Gui/E5ZoomWidget.ui</Form>
-    <Form>E5Network/E5SslInfoWidget.ui</Form>
-    <Form>E5Network/E5SslInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesDialog.ui</Form>
     <Form>UI/Previewer.ui</Form>
+    <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
+    <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -29,7 +29,6 @@ import UI.PixmapCache
 
 try:
     from PyQt4.QtNetwork import QSslCertificate
-    from E5Network.E5SslInfoDialog import E5SslInfoDialog
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -466,11 +465,11 @@ class HelpWebPage(QWebPage):
                 for bookmark in manager.bookmarksForUrl(reply.url()):
                     manager.setTimestamp(bookmark, BookmarkNode.TsModified, modified)
     
-    def getSslInfo(self):
+    def getSslCertificate(self):
         """
-        Public method to get a reference to the SSL info object.
+        Public method to get a reference to the SSL certificate.
         
-        @return reference to the SSL info (QSslCertificate)
+        @return amended SSL certificate (QSslCertificate)
         """
         if self.__sslConfiguration is None:
             return None
@@ -479,17 +478,31 @@ class HelpWebPage(QWebPage):
         sslInfo.url = QUrl(self.__sslConfiguration.url)
         return sslInfo
     
-    def showSslInfo(self):
+    def getSslCertificateChain(self):
+        """
+        Public method to get a reference to the SSL certificate chain.
+        
+        @return SSL certificate chain (list of QSslCertificate)
+        """
+        if self.__sslConfiguration is None:
+            return []
+        
+        chain = self.__sslConfiguration.peerCertificateChain()
+        return chain
+    
+    def showSslInfo(self, pos):
         """
         Public slot to show some SSL information for the loaded page.
         """
         if SSL_AVAILABLE and self.__sslConfiguration is not None:
-            dlg = E5SslInfoDialog(self.getSslInfo(), self.view())
-            dlg.exec_()
+            from E5Network.E5SslInfoWidget import E5SslInfoWidget
+            widget = E5SslInfoWidget(self.mainFrame().url(), self.__sslConfiguration,
+                self.view())
+            widget.showAt(pos)
         else:
             E5MessageBox.warning(self.view(),
-                self.trUtf8("SSL Certificate Info"),
-                self.trUtf8("""There is no SSL Certificate Info available."""))
+                self.trUtf8("SSL Info"),
+                self.trUtf8("""This site does not contain SSL information."""))
     
     def hasValidSslInfo(self):
         """

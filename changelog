@@ -24,6 +24,8 @@ Version 5.4-snapshot-2013mmdd:
 - Version Control System Interfaces
   -- All
      --- added a confirmation dialog to the 'revert' actions
+- Web Browser
+  -- reworked the various SSL info widgets to show more info
 - Third Party packages
   -- updated to Pygments 1.6
 

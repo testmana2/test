@@ -54,7 +54,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         
         self.__mainFrame = browser.page().mainFrame()
         title = browser.title()
-        sslInfo = browser.page().getSslInfo()
+        sslInfo = browser.page().getSslCertificateChain()
         
         # populate General tab
         self.heading.setText("<b>{0}</b>".format(title))
@@ -86,13 +86,13 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         self.encodingLabel.setText(encoding)
         
         # populate the Security info and the Security tab
-        if sslInfo is not None and \
-           ((qVersion() >= "5.0.0" and not sslInfo.isBlacklisted()) or \
-            (qVersion() < "5.0.0" and sslInfo.isValid())):
+        if sslInfo and \
+           ((qVersion() >= "5.0.0" and not sslInfo[0].isBlacklisted()) or \
+            (qVersion() < "5.0.0" and sslInfo[0].isValid())):
             self.securityLabel.setStyleSheet(SiteInfoDialog.okStyle)
             self.securityLabel.setText('<b>Connection is encrypted.</b>')
             if SSL:
-                self.sslWidget.showCertificate(sslInfo)
+                self.sslWidget.showCertificateChain(sslInfo)
                 self.securityDetailsButton.setEnabled(True)
             else:
                 self.securityDetailsButton.setEnabled(False)

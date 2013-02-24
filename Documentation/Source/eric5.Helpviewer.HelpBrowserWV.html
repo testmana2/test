@@ -1156,8 +1156,11 @@ QWebPage
 <td><a href="#HelpWebPage.getAdBlockedPageEntries">getAdBlockedPageEntries</a></td>
 <td>Public method to get the list of AdBlock page entries.</td>
 </tr><tr>
-<td><a href="#HelpWebPage.getSslInfo">getSslInfo</a></td>
-<td>Public method to get a reference to the SSL info object.</td>
+<td><a href="#HelpWebPage.getSslCertificate">getSslCertificate</a></td>
+<td>Public method to get a reference to the SSL certificate.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.getSslCertificateChain">getSslCertificateChain</a></td>
+<td>Public method to get a reference to the SSL certificate chain.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.hasValidSslInfo">hasValidSslInfo</a></td>
 <td>Public method to check, if the page has a valid SSL certificate.</td>
@@ -1308,15 +1311,25 @@ flag indicating a successful call of the extension (boolean)
 <dd>
 list of AdBlock page entries (list of AdBlockedPageEntry)
 </dd>
-</dl><a NAME="HelpWebPage.getSslInfo" ID="HelpWebPage.getSslInfo"></a>
-<h4>HelpWebPage.getSslInfo</h4>
-<b>getSslInfo</b>(<i></i>)
+</dl><a NAME="HelpWebPage.getSslCertificate" ID="HelpWebPage.getSslCertificate"></a>
+<h4>HelpWebPage.getSslCertificate</h4>
+<b>getSslCertificate</b>(<i></i>)
 <p>
-        Public method to get a reference to the SSL info object.
+        Public method to get a reference to the SSL certificate.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-reference to the SSL info (QSslCertificate)
+amended SSL certificate (QSslCertificate)
+</dd>
+</dl><a NAME="HelpWebPage.getSslCertificateChain" ID="HelpWebPage.getSslCertificateChain"></a>
+<h4>HelpWebPage.getSslCertificateChain</h4>
+<b>getSslCertificateChain</b>(<i></i>)
+<p>
+        Public method to get a reference to the SSL certificate chain.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+SSL certificate chain (list of QSslCertificate)
 </dd>
 </dl><a NAME="HelpWebPage.hasValidSslInfo" ID="HelpWebPage.hasValidSslInfo"></a>
 <h4>HelpWebPage.hasValidSslInfo</h4>
@@ -1360,7 +1373,7 @@ new current user agent string (string)
 </dd>
 </dl><a NAME="HelpWebPage.showSslInfo" ID="HelpWebPage.showSslInfo"></a>
 <h4>HelpWebPage.showSslInfo</h4>
-<b>showSslInfo</b>(<i></i>)
+<b>showSslInfo</b>(<i>pos</i>)
 <p>
         Public slot to show some SSL information for the loaded page.
 </p><a NAME="HelpWebPage.supportsExtension" ID="HelpWebPage.supportsExtension"></a>

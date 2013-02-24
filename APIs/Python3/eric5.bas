@@ -165,9 +165,10 @@ E5SingleApplicationServer SingleApplicationServer
 E5SqueezeLabel QLabel
 E5SqueezeLabelPath QLabel
 E5SslCertificatesDialog QDialog Ui_E5SslCertificatesDialog
+E5SslCertificatesInfoDialog QDialog Ui_E5SslCertificatesInfoDialog
+E5SslCertificatesInfoWidget QWidget Ui_E5SslCertificatesInfoWidget
 E5SslErrorHandler QObject
-E5SslInfoDialog QDialog Ui_E5SslInfoDialog
-E5SslInfoWidget QWidget Ui_E5SslInfoWidget
+E5SslInfoWidget QMenu
 E5StringListCompleter QCompleter
 E5TabWidget QTabWidget
 E5TableView QTableView

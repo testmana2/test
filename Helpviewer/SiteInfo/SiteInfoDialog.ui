@@ -349,7 +349,7 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="E5SslInfoWidget" name="sslWidget" native="true"/>
+        <widget class="E5SslCertificatesInfoWidget" name="sslWidget" native="true"/>
        </item>
       </layout>
      </widget>
@@ -369,9 +369,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E5SslInfoWidget</class>
+   <class>E5SslCertificatesInfoWidget</class>
    <extends>QWidget</extends>
-   <header>E5Network/E5SslInfoWidget.h</header>
+   <header>E5Network/E5SslCertificatesInfoWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

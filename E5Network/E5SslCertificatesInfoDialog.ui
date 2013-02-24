@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>E5SslInfoDialog</class>
- <widget class="QDialog" name="E5SslInfoDialog">
+ <class>E5SslCertificatesInfoDialog</class>
+ <widget class="QDialog" name="E5SslCertificatesInfoDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,7 +18,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="E5SslInfoWidget" name="sslWidget" native="true"/>
+    <widget class="E5SslCertificatesInfoWidget" name="sslWidget" native="true"/>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
@@ -34,9 +34,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>E5SslInfoWidget</class>
+   <class>E5SslCertificatesInfoWidget</class>
    <extends>QWidget</extends>
-   <header>E5Network/E5SslInfoWidget.h</header>
+   <header>E5Network/E5SslCertificatesInfoWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
@@ -45,7 +45,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>E5SslInfoDialog</receiver>
+   <receiver>E5SslCertificatesInfoDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -61,7 +61,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>E5SslInfoDialog</receiver>
+   <receiver>E5SslCertificatesInfoDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

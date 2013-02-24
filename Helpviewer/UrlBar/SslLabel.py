@@ -7,7 +7,7 @@
 Module implementing the label to show some SSL info.
 """
 
-from PyQt4.QtCore import Qt, pyqtSignal
+from PyQt4.QtCore import Qt, pyqtSignal, QPoint
 from PyQt4.QtGui import QLabel
 
 
@@ -15,7 +15,7 @@ class SslLabel(QLabel):
     """
     Class implementing the label to show some SSL info.
     """
-    clicked = pyqtSignal()
+    clicked = pyqtSignal(QPoint)
     
     okStyle = "QLabel { color : white; background-color : green; }"
     nokStyle = "QLabel { color : white; background-color : red; }"
@@ -38,7 +38,7 @@ class SslLabel(QLabel):
         @param evt reference to the mouse event (QMouseEvent)
         """
         if evt.button() == Qt.LeftButton:
-            self.clicked.emit()
+            self.clicked.emit(evt.globalPos())
         else:
             super().mouseReleaseEvent(evt)
     
@@ -49,7 +49,7 @@ class SslLabel(QLabel):
         @param evt reference to the mouse event (QMouseEvent)
         """
         if evt.button() == Qt.LeftButton:
-            self.clicked.emit()
+            self.clicked.emit(evt.globalPos())
         else:
             super().mouseDoubleClickEvent(evt)
     

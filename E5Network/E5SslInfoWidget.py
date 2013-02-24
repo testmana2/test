@@ -4,145 +4,184 @@
 #
 
 """
-Module implementing a widget to show SSL certificate infos.
+Module implementing a widget to show SSL information.
 """
 
-from PyQt4.QtCore import QCryptographicHash, QDateTime, qVersion
-from PyQt4.QtGui import QWidget
-from PyQt4.QtNetwork import QSslCertificate
+from PyQt4.QtCore import qVersion, Qt, QUrl, QPoint
+from PyQt4.QtGui import QMenu, QGridLayout, QLabel, QSizePolicy
+from PyQt4.QtNetwork import QSsl, QSslConfiguration, QSslCertificate
 
-from .Ui_E5SslInfoWidget import Ui_E5SslInfoWidget
-
+import UI.PixmapCache
 import Utilities
 
 
-class E5SslInfoWidget(QWidget, Ui_E5SslInfoWidget):
+class E5SslInfoWidget(QMenu):
     """
     Class implementing a widget to show SSL certificate infos.
     """
-    def __init__(self, parent=None):
+    def __init__(self, url, configuration, parent=None):
         """
         Constructor
         
+        @param url URL to show SSL info for (QUrl)
+        @param configuration SSL configuration (QSslConfiguration)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
-        self.setupUi(self)
         
-    def showCertificate(self, certificate):
-        """
-        Public method to show the  SSL certificate information.
+        self.__url = QUrl(url)
+        self.__configuration = QSslConfiguration(configuration)
         
-        @param certificate reference to the SSL certificate (QSslCertificate)
-        """
-        self.blacklistedLabel.setVisible(False)
-        self.blacklistedLabel.setStyleSheet(
-            "QLabel { color : white; background-color : red; }")
-        self.expiredLabel.setVisible(False)
-        self.expiredLabel.setStyleSheet(
-            "QLabel { color : white; background-color : red; }")
+        self.setAttribute(Qt.WA_DeleteOnClose)
+        self.setMinimumWidth(400)
         
-        if qVersion() >= "5.0.0":
-            self.subjectCommonNameLabel.setText(self.__certificateString(
-                ", ".join(certificate.subjectInfo(QSslCertificate.CommonName))))
-            self.subjectOrganizationLabel.setText(self.__certificateString(
-                ", ".join(certificate.subjectInfo(QSslCertificate.Organization))))
-            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
-                ", ".join(
-                    certificate.subjectInfo(QSslCertificate.OrganizationalUnitName))))
-            self.issuerCommonNameLabel.setText(self.__certificateString(
-                ", ".join(certificate.issuerInfo(QSslCertificate.CommonName))))
-            self.issuerOrganizationLabel.setText(self.__certificateString(
-                ", ".join(certificate.issuerInfo(QSslCertificate.Organization))))
-            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
-                ", ".join(certificate.issuerInfo(QSslCertificate.OrganizationalUnitName))))
+        certList = self.__configuration.peerCertificateChain()
+        if certList:
+            cert = certList[0]
         else:
-            self.subjectCommonNameLabel.setText(self.__certificateString(
-                certificate.subjectInfo(QSslCertificate.CommonName)))
-            self.subjectOrganizationLabel.setText(self.__certificateString(
-                certificate.subjectInfo(QSslCertificate.Organization)))
-            self.subjectOrganizationalUnitLabel.setText(self.__certificateString(
-                certificate.subjectInfo(QSslCertificate.OrganizationalUnitName)))
-            self.issuerCommonNameLabel.setText(self.__certificateString(
-                certificate.issuerInfo(QSslCertificate.CommonName)))
-            self.issuerOrganizationLabel.setText(self.__certificateString(
-                certificate.issuerInfo(QSslCertificate.Organization)))
-            self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
-                certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
-        self.serialNumberLabel.setText(self.__serialNumber(certificate))
-        self.effectiveLabel.setText(
-            certificate.effectiveDate().toString("yyyy-MM-dd"))
-        self.expiresLabel.setText(
-            certificate.expiryDate().toString("yyyy-MM-dd"))
-        self.sha1Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
-        self.md5Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding="ascii")))
+            cert = QSslCertificate()
         
-        if (qVersion() >= "5.0.0" and certificate.isBlacklisted()) or \
-           (qVersion() < "5.0.0" and not certificate.isValid()):
-            # something is wrong; indicate it to the user
-            if self.__hasExpired(certificate.effectiveDate(), certificate.expiryDate()):
-                self.expiredLabel.setVisible(True)
+        layout = QGridLayout(self)
+        rows = 0
+        
+        ##########################################
+        ## Identity Information
+        ##########################################
+        imageLabel = QLabel(self)
+        layout.addWidget(imageLabel, rows, 0, Qt.AlignCenter)
+        
+        label = QLabel(self)
+        label.setWordWrap(True)
+        label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        label.setText(self.trUtf8("Identity"))
+        font = label.font()
+        font.setBold(True)
+        label.setFont(font)
+        layout.addWidget(label, rows, 1)
+        rows += 1
+        
+        label = QLabel(self)
+        label.setWordWrap(True)
+        if cert.isNull():
+            label.setText(
+                self.trUtf8("Warning: this site is NOT carrying a certificate."))
+            imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+        else:
+            if qVersion() >= "5.0.0":
+                valid = not cert.isBlacklisted()
             else:
-                self.blacklistedLabel.setVisible(True)
-    
-    def __certificateString(self, txt):
-        """
-        Private method to prepare some text for display.
+                valid = cert.isValid()
+            if valid:
+                if qVersion() >= "5.0.0":
+                    txt = ", ".join(cert.issuerInfo(QSslCertificate.CommonName))
+                else:
+                    txt = cert.issuerInfo(QSslCertificate.CommonName)
+                label.setText(self.trUtf8("The certificate for this site is valid"
+                    " and has been verified by:\n{0}").format(
+                    Utilities.decodeString(txt)))
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+            else:
+                label.setText(self.trUtf8("The certificate for this site is NOT valid."))
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+            layout.addWidget(label, rows, 1)
+            rows += 1
+            
+            label = QLabel(self)
+            label.setWordWrap(True)
+            label.setText('<a href="moresslinfos">' + 
+                self.trUtf8("Certificate Information") + "</a>")
+            label.linkActivated.connect(self.__showCertificateInfos)
+            layout.addWidget(label, rows, 1)
+            rows += 1
         
-        @param txt text to be displayed (string)
-        @return prepared text (string)
-        """
-        if txt is None or txt == "":
-            return self.trUtf8("<not part of the certificate>")
+        ##########################################
+        ## Identity Information
+        ##########################################
+        imageLabel = QLabel(self)
+        layout.addWidget(imageLabel, rows, 0, Qt.AlignCenter)
         
-        return Utilities.decodeString(txt)
-    
-    def __serialNumber(self, cert):
-        """
-        Private slot to format the certificate serial number.
+        label = QLabel(self)
+        label.setWordWrap(True)
+        label.setText(self.trUtf8("Encryption"))
+        font = label.font()
+        font.setBold(True)
+        label.setFont(font)
+        layout.addWidget(label, rows, 1)
+        rows += 1
         
-        @param cert reference to the SSL certificate (QSslCertificate)
-        @return formated serial number (string)
-        """
-        serial = cert.serialNumber()
-        if serial == "":
-            return self.trUtf8("<not part of the certificate>")
-        
-        if ':' in serial:
-            return str(serial, encoding="ascii").upper()
+        cipher = self.__configuration.sessionCipher()
+        if cipher.isNull():
+            label = QLabel(self)
+            label.setWordWrap(True)
+            label.setText(self.trUtf8(
+                'Your connection to "{0}" is NOT encrypted.\n').format(
+                self.__url.host()))
+            layout.addWidget(label, rows, 1)
+            imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+            rows += 1
         else:
-            hexString = hex(int(serial))[2:]
-            return self.__formatHexString(hexString)
+            label = QLabel(self)
+            label.setWordWrap(True)
+            label.setText(self.trUtf8(
+                'Your connection to "{0}" is encrypted.').format(
+                self.__url.host()))
+            layout.addWidget(label, rows, 1)
+            
+            proto = cipher.protocol()
+            if proto == QSsl.SslV3:
+                sslVersion = "SSL 3.0"
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+            elif proto == QSsl.TlsV1:
+                sslVersion = "TLS 1.0"
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityHigh32.png"))
+            elif proto == QSsl.SslV2:
+                sslVersion = "SSL 2.0"
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+            else:
+                sslVersion = self.trUtf8("unknown")
+                imageLabel.setPixmap(UI.PixmapCache.getPixmap("securityLow32.png"))
+            rows += 1
+            
+            label = QLabel(self)
+            label.setWordWrap(True)
+            label.setText(self.trUtf8("It uses protocol: {0}").format(sslVersion))
+            layout.addWidget(label, rows, 1)
+            rows += 1
+            
+            label = QLabel(self)
+            label.setWordWrap(True)
+            label.setText(self.trUtf8(
+                "It is encrypted using {0} at {1} bits, "
+                "with {2} for message authentication and "
+                "{3} as key exchange mechanism.\n\n").format(
+                cipher.encryptionMethod(),
+                cipher.usedBits(),
+                cipher.authenticationMethod(),
+                cipher.keyExchangeMethod()))
+            layout.addWidget(label, rows, 1)
+            rows += 1
     
-    def __formatHexString(self, hexString):
+    def showAt(self, pos):
         """
-        Private method to format a hex string for display.
+        Public method to show the widget.
         
-        @param hexString hex string to be formatted (string)
-        @return formatted string (string)
+        @param pos position to show at (QPoint)
         """
-        hexString = hexString.upper()
-        
-        if len(hexString) % 2 == 1:
-            hexString = '0' + hexString
-        
-        hexList = []
-        while hexString:
-            hexList.append(hexString[:2])
-            hexString = hexString[2:]
-        
-        return ':'.join(hexList)
+        self.adjustSize()
+        p = QPoint(pos.x() - self.width(), pos.y() + 10)
+        self.move(p)
+        self.show()
     
-    def __hasExpired(self, effectiveDate, expiryDate):
+    def __showCertificateInfos(self):
         """
-        Private method to check for a certificate expiration.
-        
-        @param effectiveDate date the certificate becomes effective (QDateTime)
-        @param expiryDate date the certificate expires (QDateTime)
-        @return flag indicating the expiration status (boolean)
+        Private slot to show certificate information.
         """
-        now = QDateTime.currentDateTime()
-        
-        return now < effectiveDate or now >= expiryDate
+        from .E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
+        dlg = E5SslCertificatesInfoDialog(self.__configuration.peerCertificateChain())
+        dlg.exec_()
+    
+    def accept(self):
+        """
+        Public method to accept the widget.
+        """
+        self.close()

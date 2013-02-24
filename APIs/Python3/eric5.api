@@ -1606,6 +1606,11 @@ eric5.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.on_serversExport
 eric5.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.on_serversImportButton_clicked?4()
 eric5.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.on_serversViewButton_clicked?4()
 eric5.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog?1(parent=None)
+eric5.E5Network.E5SslCertificatesInfoDialog.E5SslCertificatesInfoDialog?1(certificateChain, parent=None)
+eric5.E5Network.E5SslCertificatesInfoWidget.E5SslCertificatesInfoWidget.on_chainComboBox_activated?4(index)
+eric5.E5Network.E5SslCertificatesInfoWidget.E5SslCertificatesInfoWidget.showCertificate?4(certificate)
+eric5.E5Network.E5SslCertificatesInfoWidget.E5SslCertificatesInfoWidget.showCertificateChain?4(certificateChain)
+eric5.E5Network.E5SslCertificatesInfoWidget.E5SslCertificatesInfoWidget?1(parent=None)
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.NotIgnored?7
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.SystemIgnored?7
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.UserIgnored?7
@@ -1613,9 +1618,9 @@ eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrors?4(errors, server, 
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrorsReply?4(reply, errors)
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler.sslErrorsReplySlot?4(reply, errors)
 eric5.E5Network.E5SslErrorHandler.E5SslErrorHandler?1(parent=None)
-eric5.E5Network.E5SslInfoDialog.E5SslInfoDialog?1(certificate, parent=None)
-eric5.E5Network.E5SslInfoWidget.E5SslInfoWidget.showCertificate?4(certificate)
-eric5.E5Network.E5SslInfoWidget.E5SslInfoWidget?1(parent=None)
+eric5.E5Network.E5SslInfoWidget.E5SslInfoWidget.accept?4()
+eric5.E5Network.E5SslInfoWidget.E5SslInfoWidget.showAt?4(pos)
+eric5.E5Network.E5SslInfoWidget.E5SslInfoWidget?1(url, configuration, parent=None)
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeGroup?7
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOther?7
 eric5.E5Network.E5UrlInfo.E5UrlInfo.ExeOwner?7
@@ -2466,12 +2471,13 @@ eric5.Helpviewer.HelpBrowserWV.HelpWebPage.addAdBlockRule?4(rule, url)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.event?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.extension?4(extension, option, output)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getAdBlockedPageEntries?4()
-eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslInfo?4()
+eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslCertificate?4()
+eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslCertificateChain?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.hasValidSslInfo?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.pageAttributeId?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.populateNetworkRequest?4(request)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.setUserAgent?4(agent)
-eric5.Helpviewer.HelpBrowserWV.HelpWebPage.showSslInfo?4()
+eric5.Helpviewer.HelpBrowserWV.HelpWebPage.showSslInfo?4(pos)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.supportsExtension?4(extension)
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.url?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.userAgent?4(resolveEmpty=False)

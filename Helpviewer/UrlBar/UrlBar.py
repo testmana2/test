@@ -107,7 +107,7 @@ class UrlBar(E5LineEdit):
         self.__browser.loadFinished.connect(self.__loadFinished)
         self.__browser.loadStarted.connect(self.__loadStarted)
         
-        self.__sslLabel.clicked[()].connect(self.__browser.page().showSslInfo)
+        self.__sslLabel.clicked.connect(self.__browser.page().showSslInfo)
     
     def browser(self):
         """
@@ -173,7 +173,7 @@ class UrlBar(E5LineEdit):
             if ok and \
                self.__browser.url().scheme() == "https" and \
                QSslCertificate is not None:
-                sslInfo = self.__browser.page().getSslInfo()
+                sslInfo = self.__browser.page().getSslCertificate()
                 if sslInfo is not None:
                     if qVersion() >= "5.0.0":
                         org = Utilities.decodeString(

@@ -121,10 +121,10 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to show data of the selected server certificate.
         """
         try:
-            from E5Network.E5SslInfoDialog import E5SslInfoDialog
+            from E5Network.E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
             cert = QSslCertificate.fromData(
-                self.serversCertificatesTree.currentItem().data(0, self.CertRole))[0]
-            dlg = E5SslInfoDialog(cert, self)
+                self.serversCertificatesTree.currentItem().data(0, self.CertRole))
+            dlg = E5SslCertificatesInfoDialog(cert, self)
             dlg.exec_()
         except ImportError:
             pass
@@ -318,10 +318,10 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private slot to show data of the selected CA certificate.
         """
         try:
-            from E5Network.E5SslInfoDialog import E5SslInfoDialog
+            from E5Network.E5SslCertificatesInfoDialog import E5SslCertificatesInfoDialog
             cert = QSslCertificate.fromData(
-                self.caCertificatesTree.currentItem().data(0, self.CertRole))[0]
-            dlg = E5SslInfoDialog(cert, self)
+                self.caCertificatesTree.currentItem().data(0, self.CertRole))
+            dlg = E5SslCertificatesInfoDialog(cert, self)
             dlg.exec_()
         except ImportError:
             pass

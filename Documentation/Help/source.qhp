@@ -149,8 +149,9 @@
             <section title="eric5.E5Network.E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html" />
             <section title="eric5.E5Network.E5NetworkProxyFactory" ref="eric5.E5Network.E5NetworkProxyFactory.html" />
             <section title="eric5.E5Network.E5SslCertificatesDialog" ref="eric5.E5Network.E5SslCertificatesDialog.html" />
+            <section title="eric5.E5Network.E5SslCertificatesInfoDialog" ref="eric5.E5Network.E5SslCertificatesInfoDialog.html" />
+            <section title="eric5.E5Network.E5SslCertificatesInfoWidget" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html" />
             <section title="eric5.E5Network.E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html" />
-            <section title="eric5.E5Network.E5SslInfoDialog" ref="eric5.E5Network.E5SslInfoDialog.html" />
             <section title="eric5.E5Network.E5SslInfoWidget" ref="eric5.E5Network.E5SslInfoWidget.html" />
             <section title="eric5.E5Network.E5UrlInfo" ref="eric5.E5Network.E5UrlInfo.html" />
           </section>
@@ -3686,6 +3687,20 @@
       <keyword name="E5SslCertificatesDialog.on_serversExportButton_clicked" id="E5SslCertificatesDialog.on_serversExportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversExportButton_clicked" />
       <keyword name="E5SslCertificatesDialog.on_serversImportButton_clicked" id="E5SslCertificatesDialog.on_serversImportButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversImportButton_clicked" />
       <keyword name="E5SslCertificatesDialog.on_serversViewButton_clicked" id="E5SslCertificatesDialog.on_serversViewButton_clicked" ref="eric5.E5Network.E5SslCertificatesDialog.html#E5SslCertificatesDialog.on_serversViewButton_clicked" />
+      <keyword name="E5SslCertificatesInfoDialog" id="E5SslCertificatesInfoDialog" ref="eric5.E5Network.E5SslCertificatesInfoDialog.html#E5SslCertificatesInfoDialog" />
+      <keyword name="E5SslCertificatesInfoDialog (Constructor)" id="E5SslCertificatesInfoDialog (Constructor)" ref="eric5.E5Network.E5SslCertificatesInfoDialog.html#E5SslCertificatesInfoDialog.__init__" />
+      <keyword name="E5SslCertificatesInfoDialog (Module)" id="E5SslCertificatesInfoDialog (Module)" ref="eric5.E5Network.E5SslCertificatesInfoDialog.html" />
+      <keyword name="E5SslCertificatesInfoWidget" id="E5SslCertificatesInfoWidget" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget" />
+      <keyword name="E5SslCertificatesInfoWidget (Constructor)" id="E5SslCertificatesInfoWidget (Constructor)" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__init__" />
+      <keyword name="E5SslCertificatesInfoWidget (Module)" id="E5SslCertificatesInfoWidget (Module)" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html" />
+      <keyword name="E5SslCertificatesInfoWidget.__certificateString" id="E5SslCertificatesInfoWidget.__certificateString" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__certificateString" />
+      <keyword name="E5SslCertificatesInfoWidget.__formatHexString" id="E5SslCertificatesInfoWidget.__formatHexString" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__formatHexString" />
+      <keyword name="E5SslCertificatesInfoWidget.__hasExpired" id="E5SslCertificatesInfoWidget.__hasExpired" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__hasExpired" />
+      <keyword name="E5SslCertificatesInfoWidget.__serialNumber" id="E5SslCertificatesInfoWidget.__serialNumber" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__serialNumber" />
+      <keyword name="E5SslCertificatesInfoWidget.__showCertificate" id="E5SslCertificatesInfoWidget.__showCertificate" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.__showCertificate" />
+      <keyword name="E5SslCertificatesInfoWidget.on_chainComboBox_activated" id="E5SslCertificatesInfoWidget.on_chainComboBox_activated" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.on_chainComboBox_activated" />
+      <keyword name="E5SslCertificatesInfoWidget.showCertificate" id="E5SslCertificatesInfoWidget.showCertificate" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.showCertificate" />
+      <keyword name="E5SslCertificatesInfoWidget.showCertificateChain" id="E5SslCertificatesInfoWidget.showCertificateChain" ref="eric5.E5Network.E5SslCertificatesInfoWidget.html#E5SslCertificatesInfoWidget.showCertificateChain" />
       <keyword name="E5SslErrorHandler" id="E5SslErrorHandler" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler" />
       <keyword name="E5SslErrorHandler (Constructor)" id="E5SslErrorHandler (Constructor)" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.__init__" />
       <keyword name="E5SslErrorHandler (Module)" id="E5SslErrorHandler (Module)" ref="eric5.E5Network.E5SslErrorHandler.html" />
@@ -3694,17 +3709,12 @@
       <keyword name="E5SslErrorHandler.sslErrors" id="E5SslErrorHandler.sslErrors" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrors" />
       <keyword name="E5SslErrorHandler.sslErrorsReply" id="E5SslErrorHandler.sslErrorsReply" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReply" />
       <keyword name="E5SslErrorHandler.sslErrorsReplySlot" id="E5SslErrorHandler.sslErrorsReplySlot" ref="eric5.E5Network.E5SslErrorHandler.html#E5SslErrorHandler.sslErrorsReplySlot" />
-      <keyword name="E5SslInfoDialog" id="E5SslInfoDialog" ref="eric5.E5Network.E5SslInfoDialog.html#E5SslInfoDialog" />
-      <keyword name="E5SslInfoDialog (Constructor)" id="E5SslInfoDialog (Constructor)" ref="eric5.E5Network.E5SslInfoDialog.html#E5SslInfoDialog.__init__" />
-      <keyword name="E5SslInfoDialog (Module)" id="E5SslInfoDialog (Module)" ref="eric5.E5Network.E5SslInfoDialog.html" />
       <keyword name="E5SslInfoWidget" id="E5SslInfoWidget" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget" />
       <keyword name="E5SslInfoWidget (Constructor)" id="E5SslInfoWidget (Constructor)" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__init__" />
       <keyword name="E5SslInfoWidget (Module)" id="E5SslInfoWidget (Module)" ref="eric5.E5Network.E5SslInfoWidget.html" />
-      <keyword name="E5SslInfoWidget.__certificateString" id="E5SslInfoWidget.__certificateString" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__certificateString" />
-      <keyword name="E5SslInfoWidget.__formatHexString" id="E5SslInfoWidget.__formatHexString" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__formatHexString" />
-      <keyword name="E5SslInfoWidget.__hasExpired" id="E5SslInfoWidget.__hasExpired" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__hasExpired" />
-      <keyword name="E5SslInfoWidget.__serialNumber" id="E5SslInfoWidget.__serialNumber" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__serialNumber" />
-      <keyword name="E5SslInfoWidget.showCertificate" id="E5SslInfoWidget.showCertificate" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.showCertificate" />
+      <keyword name="E5SslInfoWidget.__showCertificateInfos" id="E5SslInfoWidget.__showCertificateInfos" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.__showCertificateInfos" />
+      <keyword name="E5SslInfoWidget.accept" id="E5SslInfoWidget.accept" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.accept" />
+      <keyword name="E5SslInfoWidget.showAt" id="E5SslInfoWidget.showAt" ref="eric5.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.showAt" />
       <keyword name="E5StringListCompleter" id="E5StringListCompleter" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter" />
       <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
       <keyword name="E5TabWidget" id="E5TabWidget" ref="eric5.E5Gui.E5TabWidget.html#E5TabWidget" />
@@ -5141,7 +5151,8 @@
       <keyword name="HelpWebPage.event" id="HelpWebPage.event" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.event" />
       <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
       <keyword name="HelpWebPage.getAdBlockedPageEntries" id="HelpWebPage.getAdBlockedPageEntries" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getAdBlockedPageEntries" />
-      <keyword name="HelpWebPage.getSslInfo" id="HelpWebPage.getSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslInfo" />
+      <keyword name="HelpWebPage.getSslCertificate" id="HelpWebPage.getSslCertificate" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificate" />
+      <keyword name="HelpWebPage.getSslCertificateChain" id="HelpWebPage.getSslCertificateChain" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificateChain" />
       <keyword name="HelpWebPage.hasValidSslInfo" id="HelpWebPage.hasValidSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.hasValidSslInfo" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
@@ -13070,8 +13081,9 @@
       <file>eric5.E5Network.E5NetworkMonitor.html</file>
       <file>eric5.E5Network.E5NetworkProxyFactory.html</file>
       <file>eric5.E5Network.E5SslCertificatesDialog.html</file>
+      <file>eric5.E5Network.E5SslCertificatesInfoDialog.html</file>
+      <file>eric5.E5Network.E5SslCertificatesInfoWidget.html</file>
       <file>eric5.E5Network.E5SslErrorHandler.html</file>
-      <file>eric5.E5Network.E5SslInfoDialog.html</file>
       <file>eric5.E5Network.E5SslInfoWidget.html</file>
       <file>eric5.E5Network.E5UrlInfo.html</file>
       <file>eric5.E5XML.Config.html</file>
