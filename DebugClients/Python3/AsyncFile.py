@@ -48,8 +48,8 @@ class AsyncFile(object):
         self.mode = mode
         self.name = name
         self.nWriteErrors = 0
-        
         self.encoding = "utf-8"
+        
         self.line_buffering = True
         self.errors = None
 
@@ -77,7 +77,7 @@ class AsyncFile(object):
             try:
                 buf = "{0!s}{1!s}".format(self.wpending[:n], EOT)
                 try:
-                    buf = buf.encode('utf8', 'backslashreplace')
+                    buf = buf.encode('utf-8', 'backslashreplace')
                 except (UnicodeEncodeError, UnicodeDecodeError):
                     pass
                 self.sock.sendall(buf)
