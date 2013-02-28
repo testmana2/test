@@ -477,10 +477,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Private slot to initialize the chat edit context menu.
         """
         self.__chatMenu = QMenu(self)
-        self.__cutChatAct = \
-            self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"),
-                self.trUtf8("Cut"), self.__cutChat)
         self.__copyChatAct = \
             self.__chatMenu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
@@ -515,7 +511,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         @param yes flag signaling the availability of selected text (boolean)
         """
         self.__copyChatAct.setEnabled(yes)
-        self.__cutChatAct.setEnabled(yes)
     
     @pyqtSlot(QPoint)
     def on_chatEdit_customContextMenuRequested(self, pos):
@@ -581,12 +576,6 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         Private slot to copy the contents of the chat display to the clipboard.
         """
         self.chatEdit.copy()
-    
-    def __cutChat(self):
-        """
-        Private slot to cut the contents of the chat display to the clipboard.
-        """
-        self.chatEdit.cut()
     
     def __copyAllChat(self):
         """

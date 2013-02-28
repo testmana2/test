@@ -1882,7 +1882,6 @@
       <keyword name="ChatWidget.__copyAllChat" id="ChatWidget.__copyAllChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__copyAllChat" />
       <keyword name="ChatWidget.__copyChat" id="ChatWidget.__copyChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__copyChat" />
       <keyword name="ChatWidget.__cutAllChat" id="ChatWidget.__cutAllChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__cutAllChat" />
-      <keyword name="ChatWidget.__cutChat" id="ChatWidget.__cutChat" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__cutChat" />
       <keyword name="ChatWidget.__editorCommandMessage" id="ChatWidget.__editorCommandMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__editorCommandMessage" />
       <keyword name="ChatWidget.__getConnectionParameters" id="ChatWidget.__getConnectionParameters" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__getConnectionParameters" />
       <keyword name="ChatWidget.__handleMessage" id="ChatWidget.__handleMessage" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.__handleMessage" />
