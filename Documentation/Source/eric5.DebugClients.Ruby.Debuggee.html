@@ -39,9 +39,6 @@ File implementing the real debugger, which is connected to the IDE frontend.
 <td><a href="#DEBUGGER__">DEBUGGER__</a></td>
 <td>Class defining a singleton object for the debugger.</td>
 </tr><tr>
-<td><a href="#Mutex">Mutex</a></td>
-<td>Class implementing a mutex.</td>
-</tr><tr>
 <td><a href="#SilentObject">SilentObject</a></td>
 <td>Class defining an object that ignores all messages.</td>
 </tr>
@@ -966,79 +963,6 @@ Method returning the waiting list.
 <dt>Returns:</dt>
 <dd>
 the waiting list
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="Mutex" ID="Mutex"></a>
-<h2>Mutex</h2>
-<p>
-Class implementing a mutex.
-</p>
-<h3>Derived from</h3>
-None
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Class Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr>
-<td><a href="#Mutex.initialize">initialize</a></td>
-<td>Constructor</td>
-</tr><tr>
-<td><a href="#Mutex.lock">lock</a></td>
-<td>Method to lock the mutex.</td>
-</tr><tr>
-<td><a href="#Mutex.locked?">locked?</a></td>
-<td>Method returning the locked state.</td>
-</tr><tr>
-<td><a href="#Mutex.unlock">unlock</a></td>
-<td>Method to unlock the mutex.</td>
-</tr>
-</table>
-<h3>Static Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<a NAME="Mutex.initialize" ID="Mutex.initialize"></a>
-<h4>Mutex.initialize</h4>
-<b>initialize</b>(<i></i>)
-<p>
-Constructor
-</p><a NAME="Mutex.lock" ID="Mutex.lock"></a>
-<h4>Mutex.lock</h4>
-<b>lock</b>(<i></i>)
-<p>
-Method to lock the mutex.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-the mutex
-</dd>
-</dl><a NAME="Mutex.locked?" ID="Mutex.locked?"></a>
-<h4>Mutex.locked?</h4>
-<b>locked?</b>(<i></i>)
-<p>
-Method returning the locked state.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating the locked state (boolean)
-</dd>
-</dl><a NAME="Mutex.unlock" ID="Mutex.unlock"></a>
-<h4>Mutex.unlock</h4>
-<b>unlock</b>(<i></i>)
-<p>
-Method to unlock the mutex.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-the mutex
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

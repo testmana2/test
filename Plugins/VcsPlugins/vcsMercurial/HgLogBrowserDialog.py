@@ -520,6 +520,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param parents list of parent revisions (list of integers)
         @param branches list of branches (list of strings)
         @param tags list of tags (string)
+        @param phase phase of the entry (string)
         @param bookmarks list of bookmarks (string)
         @return reference to the generated item (QTreeWidgetItem)
         """

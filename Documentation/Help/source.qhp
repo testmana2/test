@@ -6569,6 +6569,7 @@
       <keyword name="IrcChannelWidget.name" id="IrcChannelWidget.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.name" />
       <keyword name="IrcChannelWidget.on_editTopicButton_clicked" id="IrcChannelWidget.on_editTopicButton_clicked" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_editTopicButton_clicked" />
       <keyword name="IrcChannelWidget.on_messageEdit_returnPressed" id="IrcChannelWidget.on_messageEdit_returnPressed" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messageEdit_returnPressed" />
+      <keyword name="IrcChannelWidget.on_messages_anchorClicked" id="IrcChannelWidget.on_messages_anchorClicked" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_anchorClicked" />
       <keyword name="IrcChannelWidget.on_messages_copyAvailable" id="IrcChannelWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_copyAvailable" />
       <keyword name="IrcChannelWidget.on_messages_customContextMenuRequested" id="IrcChannelWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_customContextMenuRequested" />
       <keyword name="IrcChannelWidget.on_usersList_customContextMenuRequested" id="IrcChannelWidget.on_usersList_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_usersList_customContextMenuRequested" />
@@ -6736,6 +6737,7 @@
       <keyword name="IrcNetworkWidget.on_connectButton_clicked" id="IrcNetworkWidget.on_connectButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_connectButton_clicked" />
       <keyword name="IrcNetworkWidget.on_editButton_clicked" id="IrcNetworkWidget.on_editButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_editButton_clicked" />
       <keyword name="IrcNetworkWidget.on_joinButton_clicked" id="IrcNetworkWidget.on_joinButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_joinButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_messages_anchorClicked" id="IrcNetworkWidget.on_messages_anchorClicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_anchorClicked" />
       <keyword name="IrcNetworkWidget.on_messages_copyAvailable" id="IrcNetworkWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_copyAvailable" />
       <keyword name="IrcNetworkWidget.on_messages_customContextMenuRequested" id="IrcNetworkWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_customContextMenuRequested" />
       <keyword name="IrcNetworkWidget.on_networkCombo_currentIndexChanged" id="IrcNetworkWidget.on_networkCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_networkCombo_currentIndexChanged" />
@@ -7434,11 +7436,6 @@
       <keyword name="MultiProjectWriter (Constructor)" id="MultiProjectWriter (Constructor)" ref="eric5.E5XML.MultiProjectWriter.html#MultiProjectWriter.__init__" />
       <keyword name="MultiProjectWriter (Module)" id="MultiProjectWriter (Module)" ref="eric5.E5XML.MultiProjectWriter.html" />
       <keyword name="MultiProjectWriter.writeXML" id="MultiProjectWriter.writeXML" ref="eric5.E5XML.MultiProjectWriter.html#MultiProjectWriter.writeXML" />
-      <keyword name="Mutex" id="Mutex" ref="eric5.DebugClients.Ruby.Debuggee.html#Mutex" />
-      <keyword name="Mutex.initialize" id="Mutex.initialize" ref="eric5.DebugClients.Ruby.Debuggee.html#Mutex.initialize" />
-      <keyword name="Mutex.lock" id="Mutex.lock" ref="eric5.DebugClients.Ruby.Debuggee.html#Mutex.lock" />
-      <keyword name="Mutex.locked?" id="Mutex.locked?" ref="eric5.DebugClients.Ruby.Debuggee.html#Mutex.locked?" />
-      <keyword name="Mutex.unlock" id="Mutex.unlock" ref="eric5.DebugClients.Ruby.Debuggee.html#Mutex.unlock" />
       <keyword name="NannyNag" id="NannyNag" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#NannyNag" />
       <keyword name="NannyNag" id="NannyNag" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag" />
       <keyword name="NannyNag (Constructor)" id="NannyNag (Constructor)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#NannyNag.__init__" />

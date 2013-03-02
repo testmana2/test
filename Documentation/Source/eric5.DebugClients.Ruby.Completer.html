@@ -102,7 +102,7 @@ binding object used to determine the possible completions
 </dd>
 </dl><a NAME="Completer.select_message" ID="Completer.select_message"></a>
 <h4>Completer.select_message</h4>
-<b>select_message</b>(<i>message, candidates</i>)
+<b>select_message</b>(<i>message, candidates, sep = "."</i>)
 <p>
 Method used to pick completion candidates.
 </p><dl>
@@ -115,6 +115,9 @@ message to be sent to object
 </dd><dt><i>candidates</i></dt>
 <dd>
 possible completion candidates
+</dd><dt><i>sep</i></dt>
+<dd>
+separater string
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
