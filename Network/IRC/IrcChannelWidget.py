@@ -161,6 +161,16 @@ class IrcUserItem(QListWidgetItem):
             privilege |= IrcUserItem.Away
         self.__privilege = privilege
         self.__setIcon()
+    
+    def canChangeTopic(self):
+        """
+        Public method to check, if the user is allowed to change the topic.
+        
+        @return flag indicating that the topic can be changed (boolean)
+        """
+        return(bool(self.__privilege & IrcUserItem.Operator) or \
+               bool(self.__privilege & IrcUserItem.Admin) or \
+               bool(self.__privilege & IrcUserItem.Owner))
 
 
 class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
@@ -197,6 +207,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         self.__ircWidget = parent
         
         self.editTopicButton.setIcon(UI.PixmapCache.getIcon("ircEditTopic.png"))
+        self.editTopicButton.hide()
         
         height = self.usersList.height() + self.messages.height()
         self.splitter.setSizes([height * 0.3, height * 0.7])
@@ -617,10 +628,12 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
                     itm = IrcUserItem(userName, self.usersList)
                 for privilege in userPrivileges:
                     itm.changePrivilege(privilege)
+            
+            self.__setEditTopicButton()
             return True
         
         return False
-    
+
     def __userAway(self, match):
         """
         Private method to handle a topic change of the channel.
@@ -888,6 +901,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             itm = self.__findUser(match.group(4))
             if itm:
                 itm.changePrivilege(match.group(3))
+                self.__setEditTopicButton()
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
                 self.trUtf8("{0} sets mode for {1}: {2}.").format(
                     match.group(1), match.group(4), match.group(3)))
@@ -1658,6 +1672,14 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             return True
         
         return False
+    
+    def __setEditTopicButton(self):
+        """
+        Private method to set the visibility of the Edit Topic button.
+        """
+        itm = self.__findUser(self.__userName)
+        if itm:
+            self.editTopicButton.setVisible(itm.canChangeTopic())
     
     @pyqtSlot()
     def on_editTopicButton_clicked(self):
