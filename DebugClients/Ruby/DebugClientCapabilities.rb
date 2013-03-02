@@ -7,11 +7,6 @@
 File defining the debug clients capabilities.
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 HasDebugger      = 0x0001
 HasInterpreter   = 0x0002
 HasProfiler      = 0x0004

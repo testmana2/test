@@ -7,11 +7,6 @@
 File implementing an asynchronous file like socket interface for the debugger.
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 require 'socket'
 
 require 'DebugProtocol'

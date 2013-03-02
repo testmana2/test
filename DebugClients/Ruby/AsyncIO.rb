@@ -7,11 +7,6 @@
 File implementing an asynchronous interface for the debugger.
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 module AsyncIO
 =begin edoc
 Module implementing asynchronous reading and writing.

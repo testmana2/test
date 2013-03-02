@@ -7,11 +7,6 @@
 File defining the debug protocol tokens
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 # The address used for debugger/client communications.
 DebugAddress = '127.0.0.1'
 

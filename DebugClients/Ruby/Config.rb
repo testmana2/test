@@ -7,11 +7,6 @@
 File defining the different Ruby types
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 ConfigVarTypeStrings = ['__', 'NilClass', '_unused_',
         'bool', 'Fixnum', 'Bignum', 'Float', 'Complex',
         'String', 'String', '_unused_', 'Array',

@@ -7,11 +7,6 @@
 File implementing a debug client base module.
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 require 'socket'
 
 require 'DebugQuit'
@@ -199,7 +194,7 @@ it trys to execute the lines accumulated so far.
         
         # Remove any newline
         if line[-1] == "\n"
-            line = line[1...-1]
+            line = line[0...-1]
         end
         
 ##        STDOUT << line << "\n"          ## debug
@@ -209,7 +204,7 @@ it trys to execute the lines accumulated so far.
         if eoc and eoc >= 0 and line[0,1] == ">"
             # Get the command part and any argument
             cmd = line[0..eoc]
-            arg = line[eoc+1...-1]
+            arg = line[eoc+1..-1]
             
             case cmd
             when RequestOK
@@ -304,6 +299,9 @@ it trys to execute the lines accumulated so far.
                 end
                 @running = fn
                 command = "$0 = '%s'; require '%s'" % [fn, fn]
+                RubyVM::InstructionSequence.compile_option = {
+                    trace_instruction: true
+                }
                 set_trace_func proc { |event, file, line, id, binding_, klass, *rest|
                     DEBUGGER__.context.trace_func(event, file, line, id, binding_, klass)
                 }

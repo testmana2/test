@@ -17,6 +17,8 @@
 File implementing the real debugger, which is connected to the IDE frontend.
 =end
 
+require 'continuation'
+
 require 'DebugQuit'
 require 'rbconfig'
 
@@ -24,64 +26,6 @@ class DEBUGGER__
 =begin edoc
 Class implementing the real debugger.
 =end
-    class Mutex
-=begin edoc
-Class implementing a mutex.
-=end
-        def initialize
-=begin edoc
-Constructor
-=end
-            @locker = nil
-            @waiting = []
-            @locked = false;
-        end
-
-        def locked?
-=begin edoc
-Method returning the locked state.
-
-@return flag indicating the locked state (boolean)
-=end
-            @locked
-        end
-
-        def lock
-=begin edoc
-Method to lock the mutex.
-
-@return the mutex
-=end
-            return if @locker == Thread.current
-            while (Thread.critical = true; @locked)
-                @waiting.push Thread.current
-                Thread.stop
-            end
-            @locked = true
-            @locker = Thread.current
-            Thread.critical = false
-            self
-        end
-
-        def unlock
-=begin edoc
-Method to unlock the mutex.
-
-@return the mutex
-=end
-            return unless @locked
-            unless @locker == Thread.current
-                raise RuntimeError, "unlocked by other"
-            end
-            Thread.critical = true
-            t = @waiting.shift
-            @locked = false
-            @locker = nil
-            Thread.critical = false
-            t.run if t
-            self
-        end
-    end
     MUTEX = Mutex.new
 
     class Context
@@ -186,12 +130,14 @@ Method to resume all threads.
 =begin edoc
 Method to check the suspend state.
 =end
-            while (Thread.critical = true; @suspend_next)
-                DEBUGGER__.waiting.push Thread.current
-                @suspend_next = false
-                Thread.stop
+            while MUTEX.synchronize {
+                if @suspend_next
+                    DEBUGGER__.waiting.push Thread.current
+                    @suspend_next = false
+                    true
+                end
+            }
             end
-            Thread.critical = false
         end
 
         def stdout
@@ -315,7 +261,7 @@ Method to check, if the given position contains an active breakpoint.
             # bp[7] special condition
             # bp[8] hash of special values
             return false if break_points.empty?
-            for b in break_points
+            break_points.each do |b|
                 if b[0]
                     if b[1] == 0 and b[2] == file and b[3] == pos   # breakpoint
                         # Evaluate condition
@@ -441,7 +387,7 @@ Method to set the enabled state of a breakpoint.
 @param pos line number of the breakpoint (int)
 @param enable flag indicating the new enabled state (boolean)
 =end
-            for bp in break_points
+            break_points.each do |bp|
                 if (bp[1] == 0 and bp[2] == file and bp[3] == pos)
                     bp[0] = enable 
                     break
@@ -457,7 +403,7 @@ Method to set the ignore count of a breakpoint.
 @param pos line number of the breakpoint (int)
 @param count ignore count to be set (int)
 =end
-            for bp in break_points
+            break_points.each do |bp|
                 if (bp[2] == file and bp[3] == pos)
                     bp[6] = count 
                     break
@@ -508,7 +454,7 @@ Method to set the enabled state of a watch expression.
 @param cond expression of the watch expression (String)
 @param enable flag indicating the new enabled state (boolean)
 =end
-            for bp in break_points
+            break_points.each do |bp|
                 if (bp[1] == 1 and bp[2] == cond)
                     bp[0] = enable
                     break
@@ -523,7 +469,7 @@ Method to set the ignore count of a watch expression.
 @param cond expression of the watch expression (String)
 @param count ignore count to be set (int)
 =end
-            for bp in break_points
+            break_points.each do |bp|
                 if (bp[1] == 1 and bp[2] == cond)
                     bp[6] = count
                     break
@@ -576,8 +522,8 @@ debugger that are called from the application being debugged.
             end
            
             if not traceRuby? and
-               (file =~ /#{Config::CONFIG['sitelibdir']}/ or
-                file =~ /#{Config::CONFIG['rubylibdir']}/)
+               (file =~ /#{RbConfig::CONFIG['sitelibdir']}/ or
+                file =~ /#{RbConfig::CONFIG['rubylibdir']}/)
                 return true
             end
             
@@ -620,9 +566,6 @@ Method executed by the tracing facility.
                 when 'return', 'end'
                     @frames.shift
         
-                when 'end'
-                    @frames.shift
-        
                 when 'raise' 
                     excn_handle(file, line, id, binding_)
                     
@@ -662,20 +605,20 @@ Method executed by the tracing facility.
     
             when 'c-call'
                 frame_set_pos(file, line)
-                if id == :require and klass == Kernel
-                    @frames.unshift [binding_, file, line, id]
-                else
-                    frame_set_pos(file, line)
-                end
-        
-            when 'c-return'
-                if id == :require and klass == Kernel
-                    if @frames.size == @finish_pos
-                        @stop_next = 1
-                        @finish_pos = 0
-                    end
-                    @frames.shift
-                end
+##                if id == :require and klass == Kernel
+##                    @frames.unshift [binding_, file, line, id]
+##                else
+##                    frame_set_pos(file, line)
+##                end
+##        
+##            when 'c-return'
+##                if id == :require and klass == Kernel
+##                    if @frames.size == @finish_pos
+##                        @stop_next = 1
+##                        @finish_pos = 0
+##                    end
+##                    @frames.shift
+##                end
     
             when 'class'
                 @frames.unshift [binding_, file, line, id]
@@ -685,9 +628,6 @@ Method executed by the tracing facility.
                     @stop_next = 1
                     @finish_pos = 0
                 end
-                @frames.shift
-    
-            when 'end'
                 @frames.shift
     
             when 'raise'
@@ -843,13 +783,13 @@ Method to remember the last thread.
 =begin edoc
 Method to suspend the program being debugged.
 =end
-            Thread.critical = true
-            make_thread_list
-            for th, in @thread_list
-                next if th == Thread.current
-                context(th).set_suspend
+            MUTEX.synchronize do
+                make_thread_list
+                for th, in @thread_list
+                    next if th == Thread.current
+                    context(th).set_suspend
+                end
             end
-            Thread.critical = false
             # Schedule other threads to suspend as soon as possible.
             Thread.pass
         end
@@ -858,17 +798,17 @@ Method to suspend the program being debugged.
 =begin edoc
 Method to resume the program being debugged.
 =end
-            Thread.critical = true
-            make_thread_list
-            for th, in @thread_list
-                next if th == Thread.current
-                context(th).clear_suspend
+            MUTEX.synchronize do
+                make_thread_list
+                for th, in @thread_list
+                    next if th == Thread.current
+                    context(th).clear_suspend
+                end
+                waiting.each do |th|
+                    th.run
+                end
+                waiting.clear
             end
-            waiting.each do |th|
-                th.run
-            end
-            waiting.clear
-            Thread.critical = false
             # Schedule other threads to restart as soon as possible.
             Thread.pass
         end
@@ -901,7 +841,7 @@ Method returning a thread by number.
 @param num thread number (int)
 @return thread with the requested number
 =end
-            th = @thread_list.index(num)
+            th = @thread_list.key(num)
             unless th
                 @stdout.print "No thread ##{num}\n"
                 throw :debug_error

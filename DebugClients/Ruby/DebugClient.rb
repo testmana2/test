@@ -7,11 +7,6 @@
 File implementing a debug client.
 =end
 
-if RUBY_VERSION < "1.9"
-    $KCODE = 'UTF8'
-    require 'jcode'
-end
-
 # insert path to ourself in front of the search path
 $:.insert(0, File.dirname($0))
 
