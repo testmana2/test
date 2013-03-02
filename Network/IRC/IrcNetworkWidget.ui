@@ -31,8 +31,8 @@
      <property name="tabChangesFocus">
       <bool>true</bool>
      </property>
-     <property name="openExternalLinks">
-      <bool>true</bool>
+     <property name="openLinks">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

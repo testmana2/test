@@ -7,8 +7,8 @@
 Module implementing the network part of the IRC widget.
 """
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QPoint, QFileInfo
-from PyQt4.QtGui import QWidget, QApplication, QMenu
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QPoint, QFileInfo, QUrl
+from PyQt4.QtGui import QWidget, QApplication, QMenu, QDesktopServices
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -444,3 +444,10 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.__copyAllMessagesAct.setEnabled(enable)
         self.__saveMessagesAct.setEnabled(enable)
         self.__messagesMenu.popup(self.messages.mapToGlobal(pos))
+    
+    @pyqtSlot(QUrl)
+    def on_messages_anchorClicked(self, url):
+        """
+        Private slot to open links in the default browser.
+        """
+        QDesktopServices.openUrl(url)
