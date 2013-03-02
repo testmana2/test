@@ -313,12 +313,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         self.messages.copy()
     
-    def __cutMessages(self):
-        """
-        Private slot to cut the selection of the messages display to the clipboard.
-        """
-        self.messages.cut()
-    
     def __copyAllMessages(self):
         """
         Private slot to copy the contents of the messages display to the clipboard.
@@ -394,10 +388,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         Private slot to initialize the context menu of the messages pane.
         """
         self.__messagesMenu = QMenu(self)
-        self.__cutMessagesAct = \
-            self.__messagesMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"),
-                self.trUtf8("Cut"), self.__cutMessages)
         self.__copyMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
@@ -432,7 +422,6 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         @param yes flag signaling the availability of selected text (boolean)
         """
         self.__copyMessagesAct.setEnabled(yes)
-        self.__cutMessagesAct.setEnabled(yes)
     
     @pyqtSlot(QPoint)
     def on_messages_customContextMenuRequested(self, pos):
