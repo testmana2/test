@@ -6445,7 +6445,6 @@
       <keyword name="IrcChannelWidget.__copyAllMessages" id="IrcChannelWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyAllMessages" />
       <keyword name="IrcChannelWidget.__copyMessages" id="IrcChannelWidget.__copyMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyMessages" />
       <keyword name="IrcChannelWidget.__cutAllMessages" id="IrcChannelWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutAllMessages" />
-      <keyword name="IrcChannelWidget.__cutMessages" id="IrcChannelWidget.__cutMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutMessages" />
       <keyword name="IrcChannelWidget.__extractPrivilege" id="IrcChannelWidget.__extractPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__extractPrivilege" />
       <keyword name="IrcChannelWidget.__findUser" id="IrcChannelWidget.__findUser" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__findUser" />
       <keyword name="IrcChannelWidget.__handleCtcp" id="IrcChannelWidget.__handleCtcp" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__handleCtcp" />
@@ -6457,6 +6456,7 @@
       <keyword name="IrcChannelWidget.__openPrivateChat" id="IrcChannelWidget.__openPrivateChat" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__openPrivateChat" />
       <keyword name="IrcChannelWidget.__saveMessages" id="IrcChannelWidget.__saveMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__saveMessages" />
       <keyword name="IrcChannelWidget.__sendAutoWhoCommand" id="IrcChannelWidget.__sendAutoWhoCommand" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__sendAutoWhoCommand" />
+      <keyword name="IrcChannelWidget.__setEditTopicButton" id="IrcChannelWidget.__setEditTopicButton" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setEditTopicButton" />
       <keyword name="IrcChannelWidget.__setTopic" id="IrcChannelWidget.__setTopic" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setTopic" />
       <keyword name="IrcChannelWidget.__setUserPrivilege" id="IrcChannelWidget.__setUserPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setUserPrivilege" />
       <keyword name="IrcChannelWidget.__topicCreated" id="IrcChannelWidget.__topicCreated" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__topicCreated" />
@@ -6491,6 +6491,7 @@
       <keyword name="IrcChannelWidget.name" id="IrcChannelWidget.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.name" />
       <keyword name="IrcChannelWidget.on_editTopicButton_clicked" id="IrcChannelWidget.on_editTopicButton_clicked" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_editTopicButton_clicked" />
       <keyword name="IrcChannelWidget.on_messageEdit_returnPressed" id="IrcChannelWidget.on_messageEdit_returnPressed" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messageEdit_returnPressed" />
+      <keyword name="IrcChannelWidget.on_messages_anchorClicked" id="IrcChannelWidget.on_messages_anchorClicked" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_anchorClicked" />
       <keyword name="IrcChannelWidget.on_messages_copyAvailable" id="IrcChannelWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_copyAvailable" />
       <keyword name="IrcChannelWidget.on_messages_customContextMenuRequested" id="IrcChannelWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_messages_customContextMenuRequested" />
       <keyword name="IrcChannelWidget.on_usersList_customContextMenuRequested" id="IrcChannelWidget.on_usersList_customContextMenuRequested" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.on_usersList_customContextMenuRequested" />
@@ -6642,7 +6643,6 @@
       <keyword name="IrcNetworkWidget.__copyAllMessages" id="IrcNetworkWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyAllMessages" />
       <keyword name="IrcNetworkWidget.__copyMessages" id="IrcNetworkWidget.__copyMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyMessages" />
       <keyword name="IrcNetworkWidget.__cutAllMessages" id="IrcNetworkWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutAllMessages" />
-      <keyword name="IrcNetworkWidget.__cutMessages" id="IrcNetworkWidget.__cutMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutMessages" />
       <keyword name="IrcNetworkWidget.__initMessagesMenu" id="IrcNetworkWidget.__initMessagesMenu" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__initMessagesMenu" />
       <keyword name="IrcNetworkWidget.__refreshNetworks" id="IrcNetworkWidget.__refreshNetworks" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__refreshNetworks" />
       <keyword name="IrcNetworkWidget.__saveMessages" id="IrcNetworkWidget.__saveMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__saveMessages" />
@@ -6658,6 +6658,7 @@
       <keyword name="IrcNetworkWidget.on_connectButton_clicked" id="IrcNetworkWidget.on_connectButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_connectButton_clicked" />
       <keyword name="IrcNetworkWidget.on_editButton_clicked" id="IrcNetworkWidget.on_editButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_editButton_clicked" />
       <keyword name="IrcNetworkWidget.on_joinButton_clicked" id="IrcNetworkWidget.on_joinButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_joinButton_clicked" />
+      <keyword name="IrcNetworkWidget.on_messages_anchorClicked" id="IrcNetworkWidget.on_messages_anchorClicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_anchorClicked" />
       <keyword name="IrcNetworkWidget.on_messages_copyAvailable" id="IrcNetworkWidget.on_messages_copyAvailable" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_copyAvailable" />
       <keyword name="IrcNetworkWidget.on_messages_customContextMenuRequested" id="IrcNetworkWidget.on_messages_customContextMenuRequested" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_messages_customContextMenuRequested" />
       <keyword name="IrcNetworkWidget.on_networkCombo_currentIndexChanged" id="IrcNetworkWidget.on_networkCombo_currentIndexChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_networkCombo_currentIndexChanged" />
@@ -6691,6 +6692,7 @@
       <keyword name="IrcUserItem (Constructor)" id="IrcUserItem (Constructor)" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__init__" />
       <keyword name="IrcUserItem.__awayIcon" id="IrcUserItem.__awayIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__awayIcon" />
       <keyword name="IrcUserItem.__setIcon" id="IrcUserItem.__setIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__setIcon" />
+      <keyword name="IrcUserItem.canChangeTopic" id="IrcUserItem.canChangeTopic" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.canChangeTopic" />
       <keyword name="IrcUserItem.changePrivilege" id="IrcUserItem.changePrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.changePrivilege" />
       <keyword name="IrcUserItem.clearPrivileges" id="IrcUserItem.clearPrivileges" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.clearPrivileges" />
       <keyword name="IrcUserItem.name" id="IrcUserItem.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.name" />

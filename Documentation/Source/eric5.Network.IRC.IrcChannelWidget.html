@@ -108,9 +108,6 @@ QWidget, Ui_IrcChannelWidget
 <td><a href="#IrcChannelWidget.__cutAllMessages">__cutAllMessages</a></td>
 <td>Private slot to cut the contents of the messages display to the clipboard.</td>
 </tr><tr>
-<td><a href="#IrcChannelWidget.__cutMessages">__cutMessages</a></td>
-<td>Private slot to cut the selection of the messages display to the clipboard.</td>
-</tr><tr>
 <td><a href="#IrcChannelWidget.__extractPrivilege">__extractPrivilege</a></td>
 <td>Private method to extract the user privileges out of the name.</td>
 </tr><tr>
@@ -143,6 +140,9 @@ QWidget, Ui_IrcChannelWidget
 </tr><tr>
 <td><a href="#IrcChannelWidget.__sendAutoWhoCommand">__sendAutoWhoCommand</a></td>
 <td>Private slot to send the WHO command to update the users list.</td>
+</tr><tr>
+<td><a href="#IrcChannelWidget.__setEditTopicButton">__setEditTopicButton</a></td>
+<td>Private method to set the visibility of the Edit Topic button.</td>
 </tr><tr>
 <td><a href="#IrcChannelWidget.__setTopic">__setTopic</a></td>
 <td>Private method to handle a topic change of the channel.</td>
@@ -245,6 +245,9 @@ QWidget, Ui_IrcChannelWidget
 </tr><tr>
 <td><a href="#IrcChannelWidget.on_messageEdit_returnPressed">on_messageEdit_returnPressed</a></td>
 <td>Private slot to send a message to the channel.</td>
+</tr><tr>
+<td><a href="#IrcChannelWidget.on_messages_anchorClicked">on_messages_anchorClicked</a></td>
+<td>Private slot to open links in the default browser.</td>
 </tr><tr>
 <td><a href="#IrcChannelWidget.on_messages_copyAvailable">on_messages_copyAvailable</a></td>
 <td>Private slot to react to text selection/deselection of the messages edit.</td>
@@ -408,11 +411,6 @@ flag indicating whether the message was handled (boolean)
 <b>__cutAllMessages</b>(<i></i>)
 <p>
         Private slot to cut the contents of the messages display to the clipboard.
-</p><a NAME="IrcChannelWidget.__cutMessages" ID="IrcChannelWidget.__cutMessages"></a>
-<h4>IrcChannelWidget.__cutMessages</h4>
-<b>__cutMessages</b>(<i></i>)
-<p>
-        Private slot to cut the selection of the messages display to the clipboard.
 </p><a NAME="IrcChannelWidget.__extractPrivilege" ID="IrcChannelWidget.__extractPrivilege"></a>
 <h4>IrcChannelWidget.__extractPrivilege</h4>
 <b>__extractPrivilege</b>(<i>name</i>)
@@ -524,6 +522,11 @@ flag indicating whether the message was handled (boolean)
 <b>__sendAutoWhoCommand</b>(<i></i>)
 <p>
         Private slot to send the WHO command to update the users list.
+</p><a NAME="IrcChannelWidget.__setEditTopicButton" ID="IrcChannelWidget.__setEditTopicButton"></a>
+<h4>IrcChannelWidget.__setEditTopicButton</h4>
+<b>__setEditTopicButton</b>(<i></i>)
+<p>
+        Private method to set the visibility of the Edit Topic button.
 </p><a NAME="IrcChannelWidget.__setTopic" ID="IrcChannelWidget.__setTopic"></a>
 <h4>IrcChannelWidget.__setTopic</h4>
 <b>__setTopic</b>(<i>match</i>)
@@ -973,6 +976,11 @@ name of the channel (string)
 <b>on_messageEdit_returnPressed</b>(<i></i>)
 <p>
         Private slot to send a message to the channel.
+</p><a NAME="IrcChannelWidget.on_messages_anchorClicked" ID="IrcChannelWidget.on_messages_anchorClicked"></a>
+<h4>IrcChannelWidget.on_messages_anchorClicked</h4>
+<b>on_messages_anchorClicked</b>(<i>url</i>)
+<p>
+        Private slot to open links in the default browser.
 </p><a NAME="IrcChannelWidget.on_messages_copyAvailable" ID="IrcChannelWidget.on_messages_copyAvailable"></a>
 <h4>IrcChannelWidget.on_messages_copyAvailable</h4>
 <b>on_messages_copyAvailable</b>(<i>yes</i>)
@@ -1141,6 +1149,9 @@ QListWidgetItem
 <td><a href="#IrcUserItem.__setIcon">__setIcon</a></td>
 <td>Private method to set the icon dependent on user privileges.</td>
 </tr><tr>
+<td><a href="#IrcUserItem.canChangeTopic">canChangeTopic</a></td>
+<td>Public method to check, if the user is allowed to change the topic.</td>
+</tr><tr>
 <td><a href="#IrcUserItem.changePrivilege">changePrivilege</a></td>
 <td>Public method to set or unset a user privilege.</td>
 </tr><tr>
@@ -1192,7 +1203,17 @@ icon (QIcon)
 <b>__setIcon</b>(<i></i>)
 <p>
         Private method to set the icon dependent on user privileges.
-</p><a NAME="IrcUserItem.changePrivilege" ID="IrcUserItem.changePrivilege"></a>
+</p><a NAME="IrcUserItem.canChangeTopic" ID="IrcUserItem.canChangeTopic"></a>
+<h4>IrcUserItem.canChangeTopic</h4>
+<b>canChangeTopic</b>(<i></i>)
+<p>
+        Public method to check, if the user is allowed to change the topic.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the topic can be changed (boolean)
+</dd>
+</dl><a NAME="IrcUserItem.changePrivilege" ID="IrcUserItem.changePrivilege"></a>
 <h4>IrcUserItem.changePrivilege</h4>
 <b>changePrivilege</b>(<i>privilege</i>)
 <p>

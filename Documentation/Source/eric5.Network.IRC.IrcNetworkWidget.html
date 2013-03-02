@@ -96,9 +96,6 @@ QWidget, Ui_IrcNetworkWidget
 <td><a href="#IrcNetworkWidget.__cutAllMessages">__cutAllMessages</a></td>
 <td>Private slot to cut the contents of the messages display to the clipboard.</td>
 </tr><tr>
-<td><a href="#IrcNetworkWidget.__cutMessages">__cutMessages</a></td>
-<td>Private slot to cut the selection of the messages display to the clipboard.</td>
-</tr><tr>
 <td><a href="#IrcNetworkWidget.__initMessagesMenu">__initMessagesMenu</a></td>
 <td>Private slot to initialize the context menu of the messages pane.</td>
 </tr><tr>
@@ -143,6 +140,9 @@ QWidget, Ui_IrcNetworkWidget
 </tr><tr>
 <td><a href="#IrcNetworkWidget.on_joinButton_clicked">on_joinButton_clicked</a></td>
 <td>Private slot to join a channel.</td>
+</tr><tr>
+<td><a href="#IrcNetworkWidget.on_messages_anchorClicked">on_messages_anchorClicked</a></td>
+<td>Private slot to open links in the default browser.</td>
 </tr><tr>
 <td><a href="#IrcNetworkWidget.on_messages_copyAvailable">on_messages_copyAvailable</a></td>
 <td>Private slot to react to text selection/deselection of the messages edit.</td>
@@ -200,11 +200,6 @@ reference to the parent widget (QWidget)
 <b>__cutAllMessages</b>(<i></i>)
 <p>
         Private slot to cut the contents of the messages display to the clipboard.
-</p><a NAME="IrcNetworkWidget.__cutMessages" ID="IrcNetworkWidget.__cutMessages"></a>
-<h4>IrcNetworkWidget.__cutMessages</h4>
-<b>__cutMessages</b>(<i></i>)
-<p>
-        Private slot to cut the selection of the messages display to the clipboard.
 </p><a NAME="IrcNetworkWidget.__initMessagesMenu" ID="IrcNetworkWidget.__initMessagesMenu"></a>
 <h4>IrcNetworkWidget.__initMessagesMenu</h4>
 <b>__initMessagesMenu</b>(<i></i>)
@@ -325,6 +320,11 @@ current text of the channel combo (string)
 <b>on_joinButton_clicked</b>(<i></i>)
 <p>
         Private slot to join a channel.
+</p><a NAME="IrcNetworkWidget.on_messages_anchorClicked" ID="IrcNetworkWidget.on_messages_anchorClicked"></a>
+<h4>IrcNetworkWidget.on_messages_anchorClicked</h4>
+<b>on_messages_anchorClicked</b>(<i>url</i>)
+<p>
+        Private slot to open links in the default browser.
 </p><a NAME="IrcNetworkWidget.on_messages_copyAvailable" ID="IrcNetworkWidget.on_messages_copyAvailable"></a>
 <h4>IrcNetworkWidget.on_messages_copyAvailable</h4>
 <b>on_messages_copyAvailable</b>(<i>yes</i>)
