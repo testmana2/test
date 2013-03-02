@@ -1632,7 +1632,7 @@ class Project(QObject):
             newfn = E5FileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Rename file"),
-                os.path.dirname(oldfn),
+                oldfn,
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if not newfn:
