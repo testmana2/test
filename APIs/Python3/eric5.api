@@ -3398,6 +3398,7 @@ eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.initAutoWho?4()
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.name?4()
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_editTopicButton_clicked?4()
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_messageEdit_returnPressed?4()
+eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_messages_anchorClicked?4(url)
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_messages_copyAvailable?4(yes)
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_messages_customContextMenuRequested?4(pos)
 eric5.Network.IRC.IrcChannelWidget.IrcChannelWidget.on_usersList_customContextMenuRequested?4(pos)
@@ -3425,6 +3426,7 @@ eric5.Network.IRC.IrcChannelWidget.IrcUserItem.Operator?7
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.Owner?7
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.PrivilegeMapping?7
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.Voice?7
+eric5.Network.IRC.IrcChannelWidget.IrcUserItem.canChangeTopic?4()
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.changePrivilege?4(privilege)
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.clearPrivileges?4()
 eric5.Network.IRC.IrcChannelWidget.IrcUserItem.name?4()
@@ -3579,6 +3581,7 @@ eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_channelCombo_editTextChan
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_connectButton_clicked?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_editButton_clicked?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_joinButton_clicked?4()
+eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_messages_anchorClicked?4(url)
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_messages_copyAvailable?4(yes)
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_messages_customContextMenuRequested?4(pos)
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_networkCombo_currentIndexChanged?4(networkName)

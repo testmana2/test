@@ -23,7 +23,7 @@ eric5.DebugClients.Ruby.Completer.Completer.Operators?7
 eric5.DebugClients.Ruby.Completer.Completer.ReservedWords?7
 eric5.DebugClients.Ruby.Completer.Completer.complete?4()
 eric5.DebugClients.Ruby.Completer.Completer.initialize?4()
-eric5.DebugClients.Ruby.Completer.Completer.select_message?4(message, candidates)
+eric5.DebugClients.Ruby.Completer.Completer.select_message?4(message, candidates, sep = ".")
 eric5.DebugClients.Ruby.Config.ConfigVarTypeStrings?7
 eric5.DebugClients.Ruby.DebugClient.DebugClient.initialize?4()
 eric5.DebugClients.Ruby.DebugClientCapabilities.HasAll?7
@@ -149,10 +149,6 @@ eric5.DebugClients.Ruby.Debuggee.DEBUGGER__.suspend?4()
 eric5.DebugClients.Ruby.Debuggee.DEBUGGER__.thnum?4()
 eric5.DebugClients.Ruby.Debuggee.DEBUGGER__.trace_func?4(file, line, id, binding_, klass)
 eric5.DebugClients.Ruby.Debuggee.DEBUGGER__.waiting?4()
-eric5.DebugClients.Ruby.Debuggee.Mutex.initialize?4()
-eric5.DebugClients.Ruby.Debuggee.Mutex.lock?4()
-eric5.DebugClients.Ruby.Debuggee.Mutex.locked??4()
-eric5.DebugClients.Ruby.Debuggee.Mutex.unlock?4()
 eric5.DebugClients.Ruby.Debuggee.SilentObject.method_missing?4(*a, &b)
 eric5.DebugClients.Ruby.Debuggee.context?4(thread=Thread.current)
 eric5.DebugClients.Ruby.Debuggee.debug_thread_info?4(input, binding_)
