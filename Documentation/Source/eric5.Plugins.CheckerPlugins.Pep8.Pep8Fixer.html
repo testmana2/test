@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer</h1>
+<p>
+Module implementing a class to fix certain PEP 8 issues.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>Pep8FixableIssues</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Pep8Fixer">Pep8Fixer</a></td>
+<td>Class implementing a fixer for certain PEP 8 issues.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="Pep8Fixer" ID="Pep8Fixer"></a>
+<h2>Pep8Fixer</h2>
+<p>
+    Class implementing a fixer for certain PEP 8 issues.
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Pep8Fixer.__init__">Pep8Fixer</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__finalize">__finalize</a></td>
+<td>Private method to apply all deferred fixes.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixBlankLinesAfterDecorator">__fixBlankLinesAfterDecorator</a></td>
+<td>Private method to fix superfluous blank lines after a function decorator.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixMissingWhitespaceAfter">__fixMissingWhitespaceAfter</a></td>
+<td>Private method to fix missing whitespace after ',;:'.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixMissingWhitespaceAroundOperator">__fixMissingWhitespaceAroundOperator</a></td>
+<td>Private method to fix missing whitespace after ',;:'.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixNewline">__fixNewline</a></td>
+<td>Private method to fix a missing newline at the end of file.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixNotEqual">__fixNotEqual</a></td>
+<td>Private method to fix the not equal notation.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixOneBlankLine">__fixOneBlankLine</a></td>
+<td>Private method to fix the need for one blank line.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixTabs">__fixTabs</a></td>
+<td>Private method to fix obsolete tab usage.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixTooManyBlankLines">__fixTooManyBlankLines</a></td>
+<td>Private method to fix superfluous blank lines.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixTrailingBlankLines">__fixTrailingBlankLines</a></td>
+<td>Private method to fix trailing blank lines.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixTwoBlankLines">__fixTwoBlankLines</a></td>
+<td>Private method to fix the need for two blank lines.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespace">__fixWhitespace</a></td>
+<td>Private method to fix trailing whitespace.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceAfter">__fixWhitespaceAfter</a></td>
+<td>Private method to fix superfluous whitespace after '([{'.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceAfterInline">__fixWhitespaceAfterInline</a></td>
+<td>Private method to fix whitespace after inline comment.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceAroundEquals">__fixWhitespaceAroundEquals</a></td>
+<td>Private method to fix extraneous whitespace around keyword and default parameter equals.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceAroundOperator">__fixWhitespaceAroundOperator</a></td>
+<td>Private method to fix extraneous whitespace around operator.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceBefore">__fixWhitespaceBefore</a></td>
+<td>Private method to fix superfluous whitespace before '}])', ',;:' and '(['.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixWhitespaceBeforeInline">__fixWhitespaceBeforeInline</a></td>
+<td>Private method to fix missing whitespace before inline comment.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__getEol">__getEol</a></td>
+<td>Private method to get the applicable eol string.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.fixIssue">fixIssue</a></td>
+<td>Public method to fix the fixable issues.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.saveFile">saveFile</a></td>
+<td>Public method to save the modified file.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Pep8Fixer.__init__" ID="Pep8Fixer.__init__"></a>
+<h4>Pep8Fixer (Constructor)</h4>
+<b>Pep8Fixer</b>(<i>project, filename, sourceLines, fixCodes, inPlace</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
+</dd><dt><i>filename</i></dt>
+<dd>
+name of the file to be fixed (string)
+</dd><dt><i>sourceLines</i></dt>
+<dd>
+list of source lines including eol marker
+            (list of string)
+</dd><dt><i>fixCodes</i></dt>
+<dd>
+list of codes to be fixed as a comma separated
+            string (string)
+</dd><dt><i>inPlace</i></dt>
+<dd>
+flag indicating to modify the file in place (boolean)
+</dd>
+</dl><a NAME="Pep8Fixer.__finalize" ID="Pep8Fixer.__finalize"></a>
+<h4>Pep8Fixer.__finalize</h4>
+<b>__finalize</b>(<i></i>)
+<p>
+        Private method to apply all deferred fixes.
+</p><a NAME="Pep8Fixer.__fixBlankLinesAfterDecorator" ID="Pep8Fixer.__fixBlankLinesAfterDecorator"></a>
+<h4>Pep8Fixer.__fixBlankLinesAfterDecorator</h4>
+<b>__fixBlankLinesAfterDecorator</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix superfluous blank lines after a function
+        decorator.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixMissingWhitespaceAfter" ID="Pep8Fixer.__fixMissingWhitespaceAfter"></a>
+<h4>Pep8Fixer.__fixMissingWhitespaceAfter</h4>
+<b>__fixMissingWhitespaceAfter</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix missing whitespace after ',;:'.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixMissingWhitespaceAroundOperator" ID="Pep8Fixer.__fixMissingWhitespaceAroundOperator"></a>
+<h4>Pep8Fixer.__fixMissingWhitespaceAroundOperator</h4>
+<b>__fixMissingWhitespaceAroundOperator</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix missing whitespace after ',;:'.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixNewline" ID="Pep8Fixer.__fixNewline"></a>
+<h4>Pep8Fixer.__fixNewline</h4>
+<b>__fixNewline</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix a missing newline at the end of file.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixNotEqual" ID="Pep8Fixer.__fixNotEqual"></a>
+<h4>Pep8Fixer.__fixNotEqual</h4>
+<b>__fixNotEqual</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix the not equal notation.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixOneBlankLine" ID="Pep8Fixer.__fixOneBlankLine"></a>
+<h4>Pep8Fixer.__fixOneBlankLine</h4>
+<b>__fixOneBlankLine</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the need for one blank line.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixTabs" ID="Pep8Fixer.__fixTabs"></a>
+<h4>Pep8Fixer.__fixTabs</h4>
+<b>__fixTabs</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix obsolete tab usage.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixTooManyBlankLines" ID="Pep8Fixer.__fixTooManyBlankLines"></a>
+<h4>Pep8Fixer.__fixTooManyBlankLines</h4>
+<b>__fixTooManyBlankLines</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix superfluous blank lines.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixTrailingBlankLines" ID="Pep8Fixer.__fixTrailingBlankLines"></a>
+<h4>Pep8Fixer.__fixTrailingBlankLines</h4>
+<b>__fixTrailingBlankLines</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix trailing blank lines.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixTwoBlankLines" ID="Pep8Fixer.__fixTwoBlankLines"></a>
+<h4>Pep8Fixer.__fixTwoBlankLines</h4>
+<b>__fixTwoBlankLines</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the need for two blank lines.
+</p><a NAME="Pep8Fixer.__fixWhitespace" ID="Pep8Fixer.__fixWhitespace"></a>
+<h4>Pep8Fixer.__fixWhitespace</h4>
+<b>__fixWhitespace</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix trailing whitespace.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceAfter" ID="Pep8Fixer.__fixWhitespaceAfter"></a>
+<h4>Pep8Fixer.__fixWhitespaceAfter</h4>
+<b>__fixWhitespaceAfter</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix superfluous whitespace after '([{'.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceAfterInline" ID="Pep8Fixer.__fixWhitespaceAfterInline"></a>
+<h4>Pep8Fixer.__fixWhitespaceAfterInline</h4>
+<b>__fixWhitespaceAfterInline</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix whitespace after inline comment.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceAroundEquals" ID="Pep8Fixer.__fixWhitespaceAroundEquals"></a>
+<h4>Pep8Fixer.__fixWhitespaceAroundEquals</h4>
+<b>__fixWhitespaceAroundEquals</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix extraneous whitespace around keyword and
+        default parameter equals.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceAroundOperator" ID="Pep8Fixer.__fixWhitespaceAroundOperator"></a>
+<h4>Pep8Fixer.__fixWhitespaceAroundOperator</h4>
+<b>__fixWhitespaceAroundOperator</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix extraneous whitespace around operator.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceBefore" ID="Pep8Fixer.__fixWhitespaceBefore"></a>
+<h4>Pep8Fixer.__fixWhitespaceBefore</h4>
+<b>__fixWhitespaceBefore</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix superfluous whitespace before '}])',
+        ',;:' and '(['.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixWhitespaceBeforeInline" ID="Pep8Fixer.__fixWhitespaceBeforeInline"></a>
+<h4>Pep8Fixer.__fixWhitespaceBeforeInline</h4>
+<b>__fixWhitespaceBeforeInline</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix missing whitespace before inline comment.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__getEol" ID="Pep8Fixer.__getEol"></a>
+<h4>Pep8Fixer.__getEol</h4>
+<b>__getEol</b>(<i></i>)
+<p>
+        Private method to get the applicable eol string.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+eol string (string)
+</dd>
+</dl><a NAME="Pep8Fixer.fixIssue" ID="Pep8Fixer.fixIssue"></a>
+<h4>Pep8Fixer.fixIssue</h4>
+<b>fixIssue</b>(<i>line, pos, message</i>)
+<p>
+        Public method to fix the fixable issues.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line number of issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+character position of issue (integer)
+</dd><dt><i>message</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.saveFile" ID="Pep8Fixer.saveFile"></a>
+<h4>Pep8Fixer.saveFile</h4>
+<b>saveFile</b>(<i>encoding</i>)
+<p>
+        Public method to save the modified file.
+</p><dl>
+<dt><i>encoding</i></dt>
+<dd>
+encoding of the source file (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

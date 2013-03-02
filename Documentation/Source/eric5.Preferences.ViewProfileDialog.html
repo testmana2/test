@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.Preferences.ViewProfileDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Preferences.ViewProfileDialog</h1>
+<p>
+Module implementing a dialog to configure the various view profiles.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#ViewProfileDialog">ViewProfileDialog</a></td>
+<td>Class implementing a dialog to configure the various view profiles.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="ViewProfileDialog" ID="ViewProfileDialog"></a>
+<h2>ViewProfileDialog</h2>
+<p>
+    Class implementing a dialog to configure the various view profiles.
+</p>
+<h3>Derived from</h3>
+QDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#ViewProfileDialog.__init__">ViewProfileDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#ViewProfileDialog.getProfiles">getProfiles</a></td>
+<td>Public method to retrieve the configured profiles.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="ViewProfileDialog.__init__" ID="ViewProfileDialog.__init__"></a>
+<h4>ViewProfileDialog (Constructor)</h4>
+<b>ViewProfileDialog</b>(<i>layout, profiles, separateShell, separateBrowser, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>layout</i></dt>
+<dd>
+type of the window layout (string)
+</dd><dt><i>profiles</i></dt>
+<dd>
+dictionary of tuples containing the visibility
+            of the windows for the various profiles
+</dd><dt><i>separateShell</i></dt>
+<dd>
+flag indicating that the Python shell
+            is a separate window (boolean)
+</dd><dt><i>separateBrowser</i></dt>
+<dd>
+flag indicating that the file browser
+            is a separate window (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget of this dialog (QWidget)
+</dd>
+</dl><a NAME="ViewProfileDialog.getProfiles" ID="ViewProfileDialog.getProfiles"></a>
+<h4>ViewProfileDialog.getProfiles</h4>
+<b>getProfiles</b>(<i></i>)
+<p>
+        Public method to retrieve the configured profiles.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary of tuples containing the visibility
+            of the windows for the various profiles
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
