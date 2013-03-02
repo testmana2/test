@@ -9,9 +9,9 @@ Module implementing the IRC channel widget.
 
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer, QUrl
 from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, QApplication, \
-    QInputDialog, QLineEdit, QTextCursor
+    QInputDialog, QLineEdit, QTextCursor, QDesktopServices
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
@@ -1673,3 +1673,10 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         if ok and topic != "":
             self.sendData.emit("TOPIC {0} :{1}".format(
                 self.__name, topic))
+    
+    @pyqtSlot(QUrl)
+    def on_messages_anchorClicked(self, url):
+        """
+        Private slot to open links in the default browser.
+        """
+        QDesktopServices.openUrl(url)
