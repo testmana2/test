@@ -22106,7 +22106,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
-        <source>Enter the url path of the repository</source>
+        <source>Enter the url path of the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -47973,7 +47973,7 @@ the working copy.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
         <source>Enter the url path of the module in the repository</source>
-        <translation>输入储存库中模块的 URL 路径</translation>
+        <translation type="obsolete">输入储存库中模块的 URL 路径</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
@@ -48046,6 +48046,11 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="119"/>
         <source>Pat&amp;h:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -48130,7 +48135,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
         <source>Enter the url path of the module in the repository</source>
-        <translation>输入储存库中模块的 URL 路径</translation>
+        <translation type="obsolete">输入储存库中模块的 URL 路径</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
@@ -48145,6 +48150,11 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="91"/>
         <source>Pat&amp;h:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
