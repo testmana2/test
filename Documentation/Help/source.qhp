@@ -5717,6 +5717,7 @@
       <keyword name="HgNewProjectOptionsDialog.on_projectDirButton_clicked" id="HgNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="HgNewProjectOptionsDialog.on_protocolCombo_activated" id="HgNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="HgOptionsDialog" id="HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog" />
       <keyword name="HgOptionsDialog (Constructor)" id="HgOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.__init__" />
       <keyword name="HgOptionsDialog (Module)" id="HgOptionsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
@@ -10081,6 +10082,8 @@
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog (Constructor)" id="SvnOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.__init__" />
@@ -10093,6 +10096,8 @@
       <keyword name="SvnOptionsDialog.on_protocolCombo_activated" id="SvnOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper (Constructor)" id="SvnProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__init__" />
