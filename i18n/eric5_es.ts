@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1931,8 +1930,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2173,8 +2172,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
@@ -2598,37 +2597,37 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Pulsar para cancelar la edición compartida</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="499"/>
+        <location filename="Cooperation/ChatWidget.py" line="495"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="504"/>
+        <location filename="Cooperation/ChatWidget.py" line="500"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="485"/>
+        <location filename="Cooperation/ChatWidget.py" line="481"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="559"/>
+        <location filename="Cooperation/ChatWidget.py" line="554"/>
         <source>Save Chat</source>
         <translation>Guardar Chat</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="545"/>
+        <location filename="Cooperation/ChatWidget.py" line="540"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="573"/>
+        <location filename="Cooperation/ChatWidget.py" line="568"/>
         <source>Error saving Chat</source>
         <translation>Error al guardar el Chat</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="573"/>
+        <location filename="Cooperation/ChatWidget.py" line="568"/>
         <source>&lt;p&gt;The chat contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos del chat no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
@@ -2650,56 +2649,56 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="481"/>
         <source>Cut</source>
-        <translation>Cortar</translation>
+        <translation type="obsolete">Cortar</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="490"/>
+        <location filename="Cooperation/ChatWidget.py" line="486"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="494"/>
+        <location filename="Cooperation/ChatWidget.py" line="490"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="616"/>
+        <location filename="Cooperation/ChatWidget.py" line="605"/>
         <source>Kick User</source>
         <translation>Kickear al usuario</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="620"/>
+        <location filename="Cooperation/ChatWidget.py" line="609"/>
         <source>Ban User</source>
         <translation>Banear usuario</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="624"/>
+        <location filename="Cooperation/ChatWidget.py" line="613"/>
         <source>Ban and Kick User</source>
         <translation>Banear y Kickear Usuario</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="652"/>
+        <location filename="Cooperation/ChatWidget.py" line="641"/>
         <source>* {0} has been kicked.
 </source>
         <translation>* {0} ha sido kickeado.
 </translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="667"/>
+        <location filename="Cooperation/ChatWidget.py" line="656"/>
         <source>* {0} has been banned.
 </source>
         <translation>* {0} ha sido baneado.
 </translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="682"/>
+        <location filename="Cooperation/ChatWidget.py" line="671"/>
         <source>* {0} has been banned and kicked.
 </source>
         <translation>* {0} ha sido baneado y kickeado.
 </translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="559"/>
+        <location filename="Cooperation/ChatWidget.py" line="554"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
@@ -4359,7 +4358,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1598"/>
+        <location filename="Debugger/DebugUI.py" line="1605"/>
         <source>Run Script</source>
         <translation>Ejecutar Script</translation>
     </message>
@@ -4379,7 +4378,7 @@ Not connected
         <translation>&lt;b&gt;Ejecutar Script&lt;/b&gt;&lt;p&gt;Establece los parámetros de la línea de comandos y ejecuta el script fuera del depurador. Si tiene cambios sin guardar, deben ser guardados primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1611"/>
+        <location filename="Debugger/DebugUI.py" line="1618"/>
         <source>Run Project</source>
         <translation>Ejecutar Proyecto</translation>
     </message>
@@ -4479,7 +4478,7 @@ Not connected
         <translation>&lt;b&gt;Hacer Profiling del Proyecto&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y hacer profiling del proyecto actual. Si hay archivos que tienen cambios sin guardar, se puede guardar primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1708"/>
+        <location filename="Debugger/DebugUI.py" line="1715"/>
         <source>Debug Script</source>
         <translation>Depurar Script</translation>
     </message>
@@ -4499,7 +4498,7 @@ Not connected
         <translation>&lt;b&gt;Depurar Script&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y establecer la línea actual en la ventana actual de edición como la primera sentencia Python ejecutable. Si el archivo tiene cambios sin guardar, se puede guardar primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1721"/>
+        <location filename="Debugger/DebugUI.py" line="1728"/>
         <source>Debug Project</source>
         <translation>Depurar proyecto</translation>
     </message>
@@ -4669,7 +4668,7 @@ Not connected
         <translation>&lt;b&gt;Detener&lt;/b&gt;&lt;p&gt;Detener la sesión de depuración en ejecución.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1982"/>
+        <location filename="Debugger/DebugUI.py" line="1989"/>
         <source>Evaluate</source>
         <translation>Evaluar</translation>
     </message>
@@ -4684,7 +4683,7 @@ Not connected
         <translation>Evaluar en el contexto actual</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2011"/>
+        <location filename="Debugger/DebugUI.py" line="2018"/>
         <source>Execute</source>
         <translation>Ejecutar</translation>
     </message>
@@ -4847,57 +4846,57 @@ Not connected
         <translation>El programa en depuración contiene un error de sintaxis no especificado.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1020"/>
+        <location filename="Debugger/DebugUI.py" line="1027"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Ha saltado una excepción que no ha sido manejada. Vea la ventana de shell para mas detalles.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1103"/>
+        <location filename="Debugger/DebugUI.py" line="1110"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>El programa en depuración ha terminado inesperadamente.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1179"/>
         <source>Breakpoint Condition Error</source>
         <translation>Error en la condición del Breakpoint</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1395"/>
+        <location filename="Debugger/DebugUI.py" line="1402"/>
         <source>Coverage of Project</source>
         <translation>Cobertura del Proyecto</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1385"/>
+        <location filename="Debugger/DebugUI.py" line="1392"/>
         <source>Coverage of Script</source>
         <translation>Cobertura del Script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1611"/>
+        <location filename="Debugger/DebugUI.py" line="1618"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1502"/>
+        <location filename="Debugger/DebugUI.py" line="1509"/>
         <source>Profile of Project</source>
         <translation>Profiling del proyecto</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1491"/>
+        <location filename="Debugger/DebugUI.py" line="1498"/>
         <source>Profile of Script</source>
         <translation>Profiling del script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1721"/>
+        <location filename="Debugger/DebugUI.py" line="1728"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>No hay script principal definido para el proyecto actual. La depuración no es posible.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1982"/>
+        <location filename="Debugger/DebugUI.py" line="1989"/>
         <source>Enter the statement to evaluate</source>
         <translation>Introduzca la sentencia a evaluar</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2011"/>
+        <location filename="Debugger/DebugUI.py" line="2018"/>
         <source>Enter the statement to execute</source>
         <translation>Introduzca la sentencia a ejecutar</translation>
     </message>
@@ -4907,12 +4906,12 @@ Not connected
         <translation>&lt;b&gt;Evaluar&lt;/b&gt;&lt;p&gt;Evaluar una expresión en el contexto actual del programa en depuración. El resultado se muestra en la ventana de shell.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1203"/>
+        <location filename="Debugger/DebugUI.py" line="1210"/>
         <source>Watch Expression Error</source>
         <translation>Error en la Expresión a Examinar</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1238"/>
+        <location filename="Debugger/DebugUI.py" line="1245"/>
         <source>Watch expression already exists</source>
         <translation>La expresión a Examinar ya existe</translation>
     </message>
@@ -4959,37 +4958,37 @@ Not connected
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ha terminado con un estado de salida {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1003"/>
+        <location filename="Debugger/DebugUI.py" line="1010"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; contiene el error de sintaxis &lt;b&gt;{1}&lt;/b&gt; en la línea&lt;b&gt;{2}&lt;/b&gt;, carácter &lt;b&gt;{4}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1058"/>
+        <location filename="Debugger/DebugUI.py" line="1065"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El programa en depuración ha lanzado la excepción &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;Archivo: &lt;b&gt;{2}&lt;/b&gt;, Línea: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;¿Interrumpir aquí?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1069"/>
+        <location filename="Debugger/DebugUI.py" line="1076"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;El programa en depuración ha lanzado la excepción &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1179"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La condición del punto de ruptura &lt;b&gt;{0},{1}&lt;/b&gt; tiene un error de sintaxis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1203"/>
+        <location filename="Debugger/DebugUI.py" line="1210"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión a examinar &lt;b&gt;{0}&lt;/b&gt; contiene un error de sintaxis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1230"/>
+        <location filename="Debugger/DebugUI.py" line="1237"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una expresión a examinar &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1234"/>
+        <location filename="Debugger/DebugUI.py" line="1241"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una expresión a examinar &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; para la variable &lt;b&gt;{1}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
@@ -7395,837 +7394,837 @@ selección completa.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2644"/>
+        <location filename="QScintilla/Editor.py" line="2643"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="612"/>
+        <location filename="QScintilla/Editor.py" line="611"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="615"/>
+        <location filename="QScintilla/Editor.py" line="614"/>
         <source>Redo</source>
         <translation>Rehacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="618"/>
+        <location filename="QScintilla/Editor.py" line="617"/>
         <source>Revert to last saved state</source>
         <translation>Volver al último estado guardado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="622"/>
+        <location filename="QScintilla/Editor.py" line="621"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="625"/>
+        <location filename="QScintilla/Editor.py" line="624"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="627"/>
+        <location filename="QScintilla/Editor.py" line="626"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="631"/>
+        <location filename="QScintilla/Editor.py" line="630"/>
         <source>Indent</source>
         <translation>Indentar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="633"/>
+        <location filename="QScintilla/Editor.py" line="632"/>
         <source>Unindent</source>
         <translation>Desindentar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="636"/>
+        <location filename="QScintilla/Editor.py" line="635"/>
         <source>Comment</source>
         <translation>Pasar a comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="639"/>
+        <location filename="QScintilla/Editor.py" line="638"/>
         <source>Uncomment</source>
         <translation>Sacar de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="642"/>
+        <location filename="QScintilla/Editor.py" line="641"/>
         <source>Stream Comment</source>
         <translation>Bloque de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="645"/>
+        <location filename="QScintilla/Editor.py" line="644"/>
         <source>Box Comment</source>
         <translation>Caja de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="648"/>
+        <location filename="QScintilla/Editor.py" line="647"/>
         <source>Select to brace</source>
         <translation>Seleccionar hasta la llave ( &apos;{&apos; o &apos;}&apos; )</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="650"/>
+        <location filename="QScintilla/Editor.py" line="649"/>
         <source>Select all</source>
         <translation>Seleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="651"/>
+        <location filename="QScintilla/Editor.py" line="650"/>
         <source>Deselect all</source>
         <translation>Deseleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="664"/>
+        <location filename="QScintilla/Editor.py" line="663"/>
         <source>Shorten empty lines</source>
         <translation>Acortar las líneas vacías</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="672"/>
+        <location filename="QScintilla/Editor.py" line="671"/>
         <source>Use Monospaced Font</source>
         <translation>Usar fuente monoespaciada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="677"/>
+        <location filename="QScintilla/Editor.py" line="676"/>
         <source>Autosave enabled</source>
         <translation>Autoguardar habilitado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="689"/>
+        <location filename="QScintilla/Editor.py" line="688"/>
         <source>Autocompletion enabled</source>
         <translation>Autocompletar habilitado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="706"/>
+        <location filename="QScintilla/Editor.py" line="705"/>
         <source>New view</source>
         <translation>Nueva vista</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="707"/>
+        <location filename="QScintilla/Editor.py" line="706"/>
         <source>New view (with new split)</source>
         <translation>Nueva vista (con nueva división)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="711"/>
+        <location filename="QScintilla/Editor.py" line="710"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="715"/>
+        <location filename="QScintilla/Editor.py" line="714"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="717"/>
+        <location filename="QScintilla/Editor.py" line="716"/>
         <source>Save As...</source>
         <translation>Guardar como...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="728"/>
+        <location filename="QScintilla/Editor.py" line="727"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="745"/>
+        <location filename="QScintilla/Editor.py" line="744"/>
         <source>Autocomplete</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="750"/>
         <source>from Document</source>
         <translation>desde Documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="754"/>
+        <location filename="QScintilla/Editor.py" line="753"/>
         <source>from APIs</source>
         <translation>desde APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="757"/>
+        <location filename="QScintilla/Editor.py" line="756"/>
         <source>from Document and APIs</source>
         <translation>desde Documento y APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="771"/>
+        <location filename="QScintilla/Editor.py" line="770"/>
         <source>Check</source>
         <translation>Verificar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="779"/>
+        <location filename="QScintilla/Editor.py" line="778"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="781"/>
+        <location filename="QScintilla/Editor.py" line="780"/>
         <source>Code metrics...</source>
         <translation>Métricas de código...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="783"/>
+        <location filename="QScintilla/Editor.py" line="782"/>
         <source>Code coverage...</source>
         <translation>Cobertura de código...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="785"/>
+        <location filename="QScintilla/Editor.py" line="784"/>
         <source>Show code coverage annotations</source>
         <translation>Mostrar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="788"/>
+        <location filename="QScintilla/Editor.py" line="787"/>
         <source>Hide code coverage annotations</source>
         <translation>Ocultar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="791"/>
+        <location filename="QScintilla/Editor.py" line="790"/>
         <source>Profile data...</source>
         <translation>Datos de profiling...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="801"/>
+        <location filename="QScintilla/Editor.py" line="800"/>
         <source>Diagrams</source>
         <translation>Diagramas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="803"/>
+        <location filename="QScintilla/Editor.py" line="802"/>
         <source>Class Diagram...</source>
         <translation>Diagrama de clases...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="805"/>
+        <location filename="QScintilla/Editor.py" line="804"/>
         <source>Package Diagram...</source>
         <translation>Diagrama de paquetes...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="807"/>
+        <location filename="QScintilla/Editor.py" line="806"/>
         <source>Imports Diagram...</source>
         <translation>Diagrama de imports...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="810"/>
+        <location filename="QScintilla/Editor.py" line="809"/>
         <source>Application Diagram...</source>
         <translation>Diagrama de aplicación...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="824"/>
+        <location filename="QScintilla/Editor.py" line="823"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="827"/>
+        <location filename="QScintilla/Editor.py" line="826"/>
         <source>No Language</source>
         <translation>Ningún Lenguaje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="922"/>
+        <location filename="QScintilla/Editor.py" line="921"/>
         <source>Export as</source>
         <translation>Exportar como</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1048"/>
+        <location filename="QScintilla/Editor.py" line="1047"/>
         <source>Toggle bookmark</source>
         <translation>Alternar marcador</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1051"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>Next bookmark</source>
         <translation>Nuevo marcador</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1054"/>
+        <location filename="QScintilla/Editor.py" line="1053"/>
         <source>Previous bookmark</source>
         <translation>Marcador anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1057"/>
+        <location filename="QScintilla/Editor.py" line="1056"/>
         <source>Clear all bookmarks</source>
         <translation>Borrar todos los marcadores</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1061"/>
+        <location filename="QScintilla/Editor.py" line="1060"/>
         <source>Goto syntax error</source>
         <translation>Ir al error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1064"/>
+        <location filename="QScintilla/Editor.py" line="1063"/>
         <source>Show syntax error message</source>
         <translation>Ver el mensaje de error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1067"/>
+        <location filename="QScintilla/Editor.py" line="1066"/>
         <source>Clear syntax error</source>
         <translation>Borrar error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1083"/>
         <source>Toggle breakpoint</source>
         <translation>Alternar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1087"/>
+        <location filename="QScintilla/Editor.py" line="1086"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Alternar punto de interrupción temporal</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1090"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>Edit breakpoint...</source>
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4548"/>
+        <location filename="QScintilla/Editor.py" line="4547"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1095"/>
         <source>Next breakpoint</source>
         <translation>Siguiente punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1099"/>
+        <location filename="QScintilla/Editor.py" line="1098"/>
         <source>Previous breakpoint</source>
         <translation>Punto de interrupción anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1102"/>
+        <location filename="QScintilla/Editor.py" line="1101"/>
         <source>Clear all breakpoints</source>
         <translation>Borrar todos los puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1106"/>
+        <location filename="QScintilla/Editor.py" line="1105"/>
         <source>Next uncovered line</source>
         <translation>Siguiente línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1109"/>
+        <location filename="QScintilla/Editor.py" line="1108"/>
         <source>Previous uncovered line</source>
         <translation>Anterior línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1113"/>
+        <location filename="QScintilla/Editor.py" line="1112"/>
         <source>Next task</source>
         <translation>Nueva tarea</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1116"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>Previous task</source>
         <translation>Tarea anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1127"/>
+        <location filename="QScintilla/Editor.py" line="1126"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB (botón izquierdo del ratón) alterna marcadores</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1132"/>
+        <location filename="QScintilla/Editor.py" line="1131"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB (botón izquierdo del ratón) alterna puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1165"/>
+        <location filename="QScintilla/Editor.py" line="1164"/>
         <source>Export source</source>
         <translation>Exportar fuente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1165"/>
+        <location filename="QScintilla/Editor.py" line="1164"/>
         <source>No export format given. Aborting...</source>
         <translation>No se ha proporcionado un formato de exportación. Abortando...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1613"/>
+        <location filename="QScintilla/Editor.py" line="1612"/>
         <source>Modification of Read Only file</source>
         <translation>Modificación de un archivo de solo lectura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1613"/>
+        <location filename="QScintilla/Editor.py" line="1612"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Usted está intentando modificar un archivo solo lectura. Por favor guarde en otro archivo primero.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2273"/>
+        <location filename="QScintilla/Editor.py" line="2272"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2290"/>
+        <location filename="QScintilla/Editor.py" line="2289"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2292"/>
+        <location filename="QScintilla/Editor.py" line="2291"/>
         <source>Error while printing</source>
         <translation>Error al imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2295"/>
+        <location filename="QScintilla/Editor.py" line="2294"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2596"/>
+        <location filename="QScintilla/Editor.py" line="2595"/>
         <source>File Modified</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2806"/>
+        <location filename="QScintilla/Editor.py" line="2805"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4058"/>
+        <location filename="QScintilla/Editor.py" line="4057"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4058"/>
+        <location filename="QScintilla/Editor.py" line="4057"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4551"/>
+        <location filename="QScintilla/Editor.py" line="4550"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4875"/>
+        <location filename="QScintilla/Editor.py" line="4874"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4875"/>
+        <location filename="QScintilla/Editor.py" line="4874"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4921"/>
+        <location filename="QScintilla/Editor.py" line="4933"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4917"/>
+        <location filename="QScintilla/Editor.py" line="4927"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4921"/>
+        <location filename="QScintilla/Editor.py" line="4933"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5013"/>
+        <location filename="QScintilla/Editor.py" line="5025"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5013"/>
+        <location filename="QScintilla/Editor.py" line="5025"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5143"/>
+        <location filename="QScintilla/Editor.py" line="5155"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5143"/>
+        <location filename="QScintilla/Editor.py" line="5155"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5368"/>
+        <location filename="QScintilla/Editor.py" line="5380"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5368"/>
+        <location filename="QScintilla/Editor.py" line="5380"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5396"/>
+        <location filename="QScintilla/Editor.py" line="5408"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5436"/>
+        <location filename="QScintilla/Editor.py" line="5448"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5429"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5436"/>
+        <location filename="QScintilla/Editor.py" line="5448"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5453"/>
+        <location filename="QScintilla/Editor.py" line="5465"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5468"/>
+        <location filename="QScintilla/Editor.py" line="5480"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5479"/>
+        <location filename="QScintilla/Editor.py" line="5491"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5479"/>
+        <location filename="QScintilla/Editor.py" line="5491"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5504"/>
+        <location filename="QScintilla/Editor.py" line="5516"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5504"/>
+        <location filename="QScintilla/Editor.py" line="5516"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5633"/>
+        <location filename="QScintilla/Editor.py" line="5645"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5893"/>
+        <location filename="QScintilla/Editor.py" line="5905"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5911"/>
+        <location filename="QScintilla/Editor.py" line="5923"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5913"/>
+        <location filename="QScintilla/Editor.py" line="5925"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5915"/>
+        <location filename="QScintilla/Editor.py" line="5927"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5917"/>
+        <location filename="QScintilla/Editor.py" line="5929"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5919"/>
+        <location filename="QScintilla/Editor.py" line="5931"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5922"/>
+        <location filename="QScintilla/Editor.py" line="5934"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5940"/>
+        <location filename="QScintilla/Editor.py" line="5952"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5956"/>
+        <location filename="QScintilla/Editor.py" line="5968"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5983"/>
+        <location filename="QScintilla/Editor.py" line="5995"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6045"/>
+        <location filename="QScintilla/Editor.py" line="6057"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6045"/>
+        <location filename="QScintilla/Editor.py" line="6057"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6063"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6063"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6075"/>
+        <location filename="QScintilla/Editor.py" line="6087"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6075"/>
+        <location filename="QScintilla/Editor.py" line="6087"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="748"/>
+        <location filename="QScintilla/Editor.py" line="747"/>
         <source>dynamic</source>
         <translation>dinámico</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="761"/>
+        <location filename="QScintilla/Editor.py" line="760"/>
         <source>Calltip</source>
         <translation>Consejo de llamada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="726"/>
+        <location filename="QScintilla/Editor.py" line="725"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="358"/>
+        <location filename="QScintilla/Editor.py" line="360"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Una Ventana de Edición de Códigos Fuente&lt;/b&gt;&lt;p&gt;Esta ventana se utiliza para mostrar y editar un archivo de código fuente.  Puede abrir tantas como desee. El nombre del archivo se muestra en la barra de título de la ventana.&lt;/p&gt;&lt;p&gt;Para insertar puntos de interrupción basta con hacer un click en el espacio entre los números de línea y los marcadores de plegado.  Pueden editarse con el menú de contexto de los márgenes.&lt;/p&gt;&lt;p&gt;Para insertar marcadores solo hay que hacer Shift-click en el espacio entre los números de línea y los marcadores de plegado.&lt;/p&gt;&lt;p&gt;Estas acciones se pueden revertir utilizando el menú de contexto.&lt;/p&gt;&lt;p&gt;Haciendo Ctrl-click en un marcador de error sintáctico se muestra información sobre el dicho error.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="682"/>
+        <location filename="QScintilla/Editor.py" line="681"/>
         <source>Typing aids enabled</source>
         <translation>Ayudas al tecleo habilitadas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="888"/>
+        <location filename="QScintilla/Editor.py" line="887"/>
         <source>End-of-Line Type</source>
         <translation>Typo de fin-de-línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="892"/>
+        <location filename="QScintilla/Editor.py" line="891"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="899"/>
+        <location filename="QScintilla/Editor.py" line="898"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="906"/>
+        <location filename="QScintilla/Editor.py" line="905"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="866"/>
+        <location filename="QScintilla/Editor.py" line="865"/>
         <source>Encodings</source>
         <translation>Codificaciones</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="848"/>
+        <location filename="QScintilla/Editor.py" line="847"/>
         <source>Guessed</source>
         <translation>Suposición</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1178"/>
+        <location filename="QScintilla/Editor.py" line="1177"/>
         <source>Alternatives</source>
         <translation>Alternativas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1194"/>
+        <location filename="QScintilla/Editor.py" line="1193"/>
         <source>Pygments Lexer</source>
         <translation>Analizador Léxico de Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1194"/>
+        <location filename="QScintilla/Editor.py" line="1193"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6347"/>
+        <location filename="QScintilla/Editor.py" line="6359"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="657"/>
+        <location filename="QScintilla/Editor.py" line="656"/>
         <source>Check spelling of selection...</source>
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6349"/>
+        <location filename="QScintilla/Editor.py" line="6361"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6351"/>
+        <location filename="QScintilla/Editor.py" line="6363"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="661"/>
+        <location filename="QScintilla/Editor.py" line="660"/>
         <source>Remove from dictionary</source>
         <translation>Eliminar del diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="306"/>
+        <location filename="QScintilla/Editor.py" line="307"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El tamaño del archivo &lt;b&gt;{0}&lt;/b&gt; es &lt;b&gt;{1} KB&lt;/b&gt;. ¿Desea cargarlo de todos modos?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1159"/>
+        <location filename="QScintilla/Editor.py" line="1158"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay un exportador disponible para el formato de exportación &lt;b&gt;{0}&lt;/b&gt;. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1174"/>
+        <location filename="QScintilla/Editor.py" line="1173"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativas ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2596"/>
+        <location filename="QScintilla/Editor.py" line="2595"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; tiene cambios sin guardar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2644"/>
+        <location filename="QScintilla/Editor.py" line="2643"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser abierto.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2745"/>
+        <location filename="QScintilla/Editor.py" line="2744"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5410"/>
+        <location filename="QScintilla/Editor.py" line="5422"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5429"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5468"/>
+        <location filename="QScintilla/Editor.py" line="5480"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5624"/>
+        <location filename="QScintilla/Editor.py" line="5636"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5771"/>
+        <location filename="QScintilla/Editor.py" line="5783"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5893"/>
+        <location filename="QScintilla/Editor.py" line="5905"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5983"/>
+        <location filename="QScintilla/Editor.py" line="5995"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1071"/>
+        <location filename="QScintilla/Editor.py" line="1070"/>
         <source>Next warning</source>
         <translation>Siguiente advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1074"/>
+        <location filename="QScintilla/Editor.py" line="1073"/>
         <source>Previous warning</source>
         <translation>Anterior advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1077"/>
+        <location filename="QScintilla/Editor.py" line="1076"/>
         <source>Show warning message</source>
         <translation>Mostrar mensaje de advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1080"/>
+        <location filename="QScintilla/Editor.py" line="1079"/>
         <source>Clear warnings</source>
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5269"/>
+        <location filename="QScintilla/Editor.py" line="5281"/>
         <source>py3flakes Warning</source>
         <translation>Advertencia de py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5269"/>
+        <location filename="QScintilla/Editor.py" line="5281"/>
         <source>No py3flakes warning message available.</source>
         <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2806"/>
+        <location filename="QScintilla/Editor.py" line="2805"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5453"/>
+        <location filename="QScintilla/Editor.py" line="5465"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5312"/>
+        <location filename="QScintilla/Editor.py" line="5324"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5318"/>
+        <location filename="QScintilla/Editor.py" line="5330"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5629"/>
+        <location filename="QScintilla/Editor.py" line="5641"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4154"/>
+        <location filename="QScintilla/Editor.py" line="4153"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Activando el Proveedor de Autocompletado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4154"/>
+        <location filename="QScintilla/Editor.py" line="4153"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de autocompletado no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4339"/>
+        <location filename="QScintilla/Editor.py" line="4338"/>
         <source>Activating Calltip Provider</source>
         <translation>Activando Proveedor de Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4339"/>
+        <location filename="QScintilla/Editor.py" line="4338"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de calltip no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="723"/>
+        <location filename="QScintilla/Editor.py" line="722"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="813"/>
+        <location filename="QScintilla/Editor.py" line="812"/>
         <source>Load Diagram...</source>
         <translation>Cargar Diagrama...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1120"/>
+        <location filename="QScintilla/Editor.py" line="1119"/>
         <source>Next change</source>
         <translation>Siguiente cambio</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1123"/>
+        <location filename="QScintilla/Editor.py" line="1122"/>
         <source>Previous change</source>
         <translation>Cambio anterior</translation>
     </message>
@@ -14002,7 +14001,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="982"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -18591,12 +18590,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Imponer operación</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="46"/>
         <source>Mercurial Move</source>
         <translation>Mercurial Move</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
@@ -20117,7 +20116,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
         <source>Enter the url path of the repository</source>
-        <translation>Introduzca la ruta-url del repositorio</translation>
+        <translation type="obsolete">Introduzca la ruta-url del repositorio</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
+        <source>Enter the url path of the repository (without protocol part)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -25137,122 +25141,122 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Introducir un mensaje, enviar pulsando Return o Enter</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="321"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="332"/>
         <source>Send Message</source>
         <translation>Enviar Mensaje</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="321"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="332"/>
         <source>Messages starting with a &apos;/&apos; are not allowed in private chats.</source>
         <translation>Los mensajes que comienzan con un carácter &apos;/&apos; no están permitidos en chats privados.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="344"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="355"/>
         <source>Leave IRC channel</source>
         <translation>Abandonar el canal IRC</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="344"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="355"/>
         <source>Do you really want to leave the IRC channel &lt;b&gt;{0}&lt;/b&gt;?</source>
         <translation>¿Desea realmente abandonar el canal IRC &lt;b&gt;{0}&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="481"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="492"/>
         <source>Channel Message</source>
         <translation>Mensaje en el Canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="485"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="496"/>
         <source>Nick mentioned</source>
         <translation>Nick mencionado</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="509"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="520"/>
         <source>{0} has joined the channel {1} ({2}).</source>
         <translation>{0} se ha unido al canal {1} ({2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="513"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="524"/>
         <source>You have joined the channel {0} ({1}).</source>
         <translation>Usted se ha unido al canal {0} ({1}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="518"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="529"/>
         <source>Join Channel</source>
         <translation>Unirse al Canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="536"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="547"/>
         <source>{0} has left {1}.</source>
         <translation>{0} ha abandonado {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="543"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="554"/>
         <source>{0} has left {1}: {2}.</source>
         <translation>{0} ha abandonado {1}: {2}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="548"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="559"/>
         <source>Leave Channel</source>
         <translation>Abandonar el Canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="566"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="577"/>
         <source>{0} has quit {1}.</source>
         <translation>{0} ha salido de {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="570"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="581"/>
         <source>{0} has quit {1}: {2}.</source>
         <translation>{0} ha salido de {1}: {2}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="575"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="586"/>
         <source>Quit</source>
         <translation>SalirSalir</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="592"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="603"/>
         <source>You are now known as {0}.</source>
         <translation>Usted es conocido como {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="597"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="608"/>
         <source>User {0} is now known as {1}.</source>
         <translation>Usuario {0} es conocido ahora como {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="632"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="645"/>
         <source>Away</source>
         <translation>Ausente</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="632"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="645"/>
         <source>{0} is away: {1}</source>
         <translation>{0} está ausente: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="647"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="660"/>
         <source>The channel topic is: &quot;{0}&quot;.</source>
         <translation>El tema del canal es: &quot;{0}&quot;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="662"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="675"/>
         <source>The topic was set by {0} on {1}.</source>
         <translation>El tema ha sido establecido por {0} en {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="678"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="691"/>
         <source>Channel URL: {0}</source>
         <translation>URL del Canal: {0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="701"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="714"/>
         <source>password protected ({0})</source>
         <translation>protegido por contraseña ({0})</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="705"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="718"/>
         <source>limited to %n user(s)</source>
         <translation>
             <numerusform>limitado a %n usuario</numerusform>
@@ -25260,77 +25264,77 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="712"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="725"/>
         <source>Channel modes: {0}.</source>
         <translation>Modos de canal: {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="727"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="740"/>
         <source>This channel was created on {0}.</source>
         <translation>Este canal se creó en {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="760"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="773"/>
         <source>{0} sets the channel mode to &apos;anonymous&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;anónimo&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="763"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="776"/>
         <source>{0} removes the &apos;anonymous&apos; mode from the channel.</source>
         <translation>{0} elimina el modo &apos;anónimo&apos; del canal.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="768"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="781"/>
         <source>{0} sets a ban on {1}.</source>
         <translation>{0} establece un ban a {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="772"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="785"/>
         <source>{0} removes the ban on {1}.</source>
         <translation>{0} elimina el ban a {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="777"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="790"/>
         <source>{0} sets the channel mode to &apos;no colors allowed&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;no se permiten colores&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="781"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="794"/>
         <source>{0} sets the channel mode to &apos;allow color codes&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;permitir códigos de color&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="786"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="799"/>
         <source>{0} sets a ban exception on {1}.</source>
         <translation>{0} establece una excepción de ban a {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="790"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="803"/>
         <source>{0} removes the ban exception on {1}.</source>
         <translation>{0} elimina la excepción de ban a {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="795"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="808"/>
         <source>{0} sets the channel mode to &apos;invite only&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;invitar solamente&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="798"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
         <source>{0} removes the &apos;invite only&apos; mode from the channel.</source>
         <translation>{0} elimina el modo &apos;invitar solamente&apos; del canal.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="803"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="816"/>
         <source>{0} sets the channel key to &apos;{1}&apos;.</source>
         <translation>{0} establece la clave de canal a &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="807"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="820"/>
         <source>{0} removes the channel key.</source>
         <translation>{0} elimina la clave del canal.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="824"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
         <translation>
             <numerusform>{0} establece el límite del canal a %n nick.</numerusform>
@@ -25338,247 +25342,247 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="815"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="828"/>
         <source>{0} removes the channel limit.</source>
         <translation>{0} elimina el límite del canal.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="819"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="832"/>
         <source>{0} sets the channel mode to &apos;moderated&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;moderado&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="822"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="835"/>
         <source>{0} sets the channel mode to &apos;unmoderated&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;no moderado&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="826"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="839"/>
         <source>{0} sets the channel mode to &apos;no messages from outside&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;sin mensajes del exterior&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="830"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="843"/>
         <source>{0} sets the channel mode to &apos;allow messages from outside&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;permitir mensajes del exterior&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="835"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="848"/>
         <source>{0} sets the channel mode to &apos;private&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;privado&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="838"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="851"/>
         <source>{0} sets the channel mode to &apos;public&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;público&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="842"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
         <source>{0} sets the channel mode to &apos;quiet&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;silencioso&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="845"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="858"/>
         <source>{0} removes the &apos;quiet&apos; mode from the channel.</source>
         <translation>{0} elimina el modo &apos;silencioso&apos; del canal.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="852"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="865"/>
         <source>{0} sets the channel mode to &apos;secret&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;secreto&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="868"/>
         <source>{0} sets the channel mode to &apos;visible&apos;.</source>
         <translation>{0} establece el modo de canal a &apos;visible&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="859"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="872"/>
         <source>{0} switches on &apos;topic protection&apos;.</source>
         <translation>{0} activa &apos;tema protegido&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="862"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="875"/>
         <source>{0} switches off &apos;topic protection&apos;.</source>
         <translation>{0} desactiva &apos;tema protegido&apos;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="866"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="879"/>
         <source>{0} sets invitation mask {1}.</source>
         <translation>{0} establece máscara de invitación {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="870"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="883"/>
         <source>{0} removes the invitation mask {1}.</source>
         <translation>{0} elimina la máscara de invitación {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="874"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="887"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="891"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="905"/>
         <source>{0} sets mode for {1}: {2}.</source>
         <translation>{0} establece el modo para {1}: {2}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="917"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="931"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1041"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1055"/>
         <source>--- New From Here ---</source>
         <translation>--- Nuevo a partir de Aquí ---</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1127"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1135"/>
         <source>Save Messages</source>
         <translation>Guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1110"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1118"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos HTML (*.{0});;Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1127"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1135"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1145"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1153"/>
         <source>Error saving Messages</source>
         <translation>Error al guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1145"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1153"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1157"/>
         <source>Cut</source>
-        <translation>Cortar</translation>
+        <translation type="obsolete">Cortar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1161"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1166"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1174"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1175"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1179"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1180"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1184"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1185"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1189"/>
         <source>Mark Current Position</source>
         <translation>Marcar Posición Actual</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1188"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1192"/>
         <source>Remove Position Marker</source>
         <translation>Eliminar Posición del Marcador</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1238"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1241"/>
         <source>Who Is</source>
         <translation>Quien Es</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1242"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1245"/>
         <source>Private Chat</source>
         <translation>Chat Privado</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1354"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
         <source>Who</source>
         <translation>Quien</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1332"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
         <source>End of WHO list for {0}.</source>
         <translation>Fin de lista WHO para {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1353"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1356"/>
         <source> (Away)</source>
         <translation>.(No está)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1354"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
         <source>{0} is {1}@{2} ({3}){4}</source>
         <translation>{0} es {1}@{2} ({3}){4}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1655"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1658"/>
         <source>Whois</source>
         <translation>Whois</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1374"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1377"/>
         <source>{0} is {1}@{2} ({3}).</source>
         <translation>{0} es {1}@{2} ({3}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1419"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1422"/>
         <source>{0} is a user on channels: {1}</source>
         <translation>{0} es un usuario en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1423"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1426"/>
         <source>{0} has voice on channels: {1}</source>
         <translation>{0} tiene voz en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1427"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1430"/>
         <source>{0} is a halfop on channels: {1}</source>
         <translation>{0} es un halfop en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1431"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1434"/>
         <source>{0} is an operator on channels: {1}</source>
         <translation>{0} is un operador en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1435"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1438"/>
         <source>{0} is owner of channels: {1}</source>
         <translation>{0} es propietario de los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1439"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1442"/>
         <source>{0} is admin on channels: {1}</source>
         <translation>{0} es un admin en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1457"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1460"/>
         <source>{0} is online via {1} ({2}).</source>
         <translation>{0} está online vía {1} ({2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1475"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1478"/>
         <source>{0} is an IRC Operator.</source>
         <translation>{0} es un Operador IRC.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1505"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1508"/>
         <source>%n day(s)</source>
         <translation>
             <numerusform>%n día</numerusform>
@@ -25586,7 +25590,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1516"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
         <source>%n hour(s)</source>
         <translation>
             <numerusform>%n hora</numerusform>
@@ -25594,7 +25598,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1525"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1528"/>
         <source>%n minute(s)</source>
         <translation>
             <numerusform>%n minuto</numerusform>
@@ -25602,7 +25606,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1526"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1529"/>
         <source>%n second(s)</source>
         <translation>
             <numerusform>%n segundo</numerusform>
@@ -25610,25 +25614,25 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1509"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1512"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, {3}, y {4}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1522"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, y {3}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1527"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1530"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, y {2}.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1533"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1536"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation>
             <numerusform>{0} no ha mostrado actividad durante %n segundo.</numerusform>
@@ -25636,67 +25640,67 @@ puede estar entre -10 y +20, y es el incremento que se añade
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1538"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1541"/>
         <source>{0} has been online since {1}.</source>
         <translation>{0} ha estado online desde {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1556"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1559"/>
         <source>End of WHOIS list for {0}.</source>
         <translation>Fin de lista WHOIS para {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1572"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1575"/>
         <source>{0} is an identified user.</source>
         <translation>{0} is an usuario identificado.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1588"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1591"/>
         <source>{0} is available for help.</source>
         <translation>{0} está disponible para ayudar.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1604"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1607"/>
         <source>{0} is logged in as {1}.</source>
         <translation>{0} está conectado como {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1622"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1625"/>
         <source>{0} is actually using the host {1} (IP: {2}).</source>
         <translation>{0} está utilizando en realidad el host {1} (IP: {2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1638"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1641"/>
         <source>{0} is using a secure connection.</source>
         <translation>{0} está utilizando una conexión segura.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1655"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1658"/>
         <source>{0} is connecting from {1} (IP: {2}).</source>
         <translation>{0} está conectando desde {1} (IP: {2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="958"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="972"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="942"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="956"/>
         <source>Received Version request from {0}.</source>
         <translation>Recibida Solicitud de Versión desde {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="947"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="961"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-PING desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="952"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="966"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-CLIENTINFO desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="958"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="972"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Recibida solicitud CTCP desconocida desde {1}.</translation>
     </message>
@@ -25706,17 +25710,17 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Pulsar para cambiar el tema</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1246"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1249"/>
         <source>Refresh</source>
         <translation>Actualizar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1667"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1678"/>
         <source>Edit Channel Topic</source>
         <translation>Editar Tema del Canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1667"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1678"/>
         <source>Enter the topic for this channel:</source>
         <translation>Introducir el tema para este canal:</translation>
     </message>
@@ -26211,57 +26215,57 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Pulsar para unirse al canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="368"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
         <source>Save Messages</source>
         <translation>Guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="351"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="345"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos HTML (*.{0});;Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="368"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="386"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
         <source>Error saving Messages</source>
         <translation>Error al guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="386"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
         <source>Cut</source>
-        <translation>Cortar</translation>
+        <translation type="obsolete">Cortar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="402"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="392"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="407"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="397"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="401"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="416"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="421"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
@@ -26703,273 +26707,273 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Pulsar para abandonar el canal actual</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="212"/>
+        <location filename="Network/IRC/IrcWidget.py" line="216"/>
         <source>Disconnect from Server</source>
         <translation>Desconectar del Servidor</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="212"/>
+        <location filename="Network/IRC/IrcWidget.py" line="216"/>
         <source>&lt;p&gt;Do you really want to disconnect from &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;All channels will be closed.&lt;/p&gt;</source>
         <translation>&lt;p&gt;¿Desea realmente desconectar de &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;&lt;p&gt;Se cerrarán todos los canales.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="176"/>
+        <location filename="Network/IRC/IrcWidget.py" line="177"/>
         <source>SSL Connection</source>
         <translation>Conexión SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="176"/>
+        <location filename="Network/IRC/IrcWidget.py" line="177"/>
         <source>An encrypted connection to the IRC network was requested but SSL is not available. Please change the server configuration.</source>
         <translation>Se ha solicitado una conexión encriptada pero SSL no está disponible. Por favor, cambie la configuración del servidor.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="435"/>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="199"/>
+        <location filename="Network/IRC/IrcWidget.py" line="200"/>
         <source>Looking for server {0} (port {1}) using an SSL encrypted connection...</source>
         <translation>Buscando el servidor {0} (puerto {1}) utilizando una conexión encriptada a través de SSL...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="206"/>
+        <location filename="Network/IRC/IrcWidget.py" line="207"/>
         <source>Looking for server {0} (port {1})...</source>
         <translation>Buscando servidor {0} (puerto {1})...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="218"/>
+        <location filename="Network/IRC/IrcWidget.py" line="223"/>
         <source>Disconnecting from server {0}...</source>
         <translation>Desconectando del servidor {0}...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="398"/>
+        <location filename="Network/IRC/IrcWidget.py" line="409"/>
         <source>Server found,connecting...</source>
         <translation>Servidor encontrado, conectando...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcWidget.py" line="416"/>
         <source>Connected,logging in...</source>
         <translation>Conectado, validándose...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="435"/>
+        <location filename="Network/IRC/IrcWidget.py" line="447"/>
         <source>Server disconnected.</source>
         <translation>Servidor desconectado.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="477"/>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
         <source>Message Error</source>
         <translation>Error de Mensaje</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="477"/>
+        <location filename="Network/IRC/IrcWidget.py" line="489"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation>Mensaje desconocido recibido del servidor: &lt;/br&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="501"/>
+        <location filename="Network/IRC/IrcWidget.py" line="513"/>
         <source>Notice</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="519"/>
+        <location filename="Network/IRC/IrcWidget.py" line="531"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="526"/>
+        <location filename="Network/IRC/IrcWidget.py" line="538"/>
         <source>You have left channel {0}.</source>
         <translation>Ha dejado el canal {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="537"/>
+        <location filename="Network/IRC/IrcWidget.py" line="549"/>
         <source>You are now known as {0}.</source>
         <translation>Usted es conocido como {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="542"/>
+        <location filename="Network/IRC/IrcWidget.py" line="554"/>
         <source>User {0} is now known as {1}.</source>
         <translation>Usuario {0} es conocido ahora como {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="547"/>
+        <location filename="Network/IRC/IrcWidget.py" line="559"/>
         <source>Server Error</source>
         <translation>Error de Servidor</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="581"/>
+        <location filename="Network/IRC/IrcWidget.py" line="593"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="596"/>
+        <location filename="Network/IRC/IrcWidget.py" line="608"/>
         <source>Welcome</source>
         <translation>Bienvenido</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="598"/>
+        <location filename="Network/IRC/IrcWidget.py" line="610"/>
         <source>Support</source>
         <translation>Soporte</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="600"/>
+        <location filename="Network/IRC/IrcWidget.py" line="612"/>
         <source>User</source>
         <translation>Usuario</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="602"/>
+        <location filename="Network/IRC/IrcWidget.py" line="614"/>
         <source>MOTD</source>
         <translation>MOTD</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="604"/>
+        <location filename="Network/IRC/IrcWidget.py" line="616"/>
         <source>Away</source>
         <translation>Ausente</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="606"/>
+        <location filename="Network/IRC/IrcWidget.py" line="618"/>
         <source>Info ({0})</source>
         <translation>Info ({0})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="610"/>
+        <location filename="Network/IRC/IrcWidget.py" line="622"/>
         <source>Message of the day</source>
         <translation>Mensaje del día</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="612"/>
+        <location filename="Network/IRC/IrcWidget.py" line="624"/>
         <source>End of message of the day</source>
         <translation>Fin de mensaje del día</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="615"/>
+        <location filename="Network/IRC/IrcWidget.py" line="627"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation>Servidor {0} (Versión {1}), Modos de Usuario: {2}, Modos de Canal: {3}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="619"/>
+        <location filename="Network/IRC/IrcWidget.py" line="631"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation>Usuarios actuales en {0}: {1}, máx. {2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="623"/>
+        <location filename="Network/IRC/IrcWidget.py" line="635"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation>Usuarios actuales en la red: {0}, máx. {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="626"/>
+        <location filename="Network/IRC/IrcWidget.py" line="638"/>
         <source>You are no longer marked as being away.</source>
         <translation>Usted ya no está marcado como ausente.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="628"/>
+        <location filename="Network/IRC/IrcWidget.py" line="640"/>
         <source>You have been marked as being away.</source>
         <translation>Usted ha sido marcado como ausente.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="756"/>
         <source>SSL Error</source>
         <translation>Error de SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="688"/>
+        <location filename="Network/IRC/IrcWidget.py" line="700"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation>Conexión al servidor {0} (puerto {1}) perdida mientras se esperaba respuesta de usuario a un error SSL.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>Socket Error</source>
         <translation>Error de Socket</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="694"/>
+        <location filename="Network/IRC/IrcWidget.py" line="706"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation>El host no ha sido encontrado. Por favor, compruebe los ajustes de nombre de host y puerto.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="698"/>
+        <location filename="Network/IRC/IrcWidget.py" line="710"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation>La conexión ha sido rechazada por el otro extremo. Por favor, compruebe los ajustes de nombre de host y puerto.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="706"/>
+        <location filename="Network/IRC/IrcWidget.py" line="718"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation>Ha ocurrido el siguiente error de red: &lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="726"/>
+        <location filename="Network/IRC/IrcWidget.py" line="738"/>
         <source>SSL Errors</source>
         <translation>Errores SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="726"/>
+        <location filename="Network/IRC/IrcWidget.py" line="738"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errores SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="737"/>
+        <location filename="Network/IRC/IrcWidget.py" line="749"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check.</source>
         <translation>El certificado SSL para el servidor {0} (puerto {1}) ha fallado la comprobación de autenticidad.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="756"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.&lt;br/&gt;{2}</source>
         <translation>No se ha podido conectar a {0} (puerto {1}) utilizando una conexión encriptada sobre SSL. O bien el servidor no soporta SSL (¿se ha utilizado el puerto correcto?) o bien el certificado ha sido rechazado. &lt;/br&gt;{2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="829"/>
+        <location filename="Network/IRC/IrcWidget.py" line="841"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation>{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="858"/>
+        <location filename="Network/IRC/IrcWidget.py" line="871"/>
         <source>Critical</source>
         <translation>Crítico</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="843"/>
+        <location filename="Network/IRC/IrcWidget.py" line="855"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation>No hay un sobrenombre que el servidor acepte configurado para &lt;b&gt;{0}&lt;/b&gt;. Desconectando...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="858"/>
+        <location filename="Network/IRC/IrcWidget.py" line="871"/>
         <source>The given nickname is already in use.</source>
         <translation>El sobrenombre proporcionado ya está en uso.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="816"/>
+        <location filename="Network/IRC/IrcWidget.py" line="828"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="800"/>
+        <location filename="Network/IRC/IrcWidget.py" line="812"/>
         <source>Received Version request from {0}.</source>
         <translation>Se ha recibido una solicitud de Versión de {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="805"/>
+        <location filename="Network/IRC/IrcWidget.py" line="817"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-PING desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="810"/>
+        <location filename="Network/IRC/IrcWidget.py" line="822"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-CLIENTINFO desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="816"/>
+        <location filename="Network/IRC/IrcWidget.py" line="828"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Recibida solicitud CTCP desconocida desde {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="512"/>
+        <location filename="Network/IRC/IrcWidget.py" line="524"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation>Usted ha establecido sus modos personales a &lt;b&gt;[{0}]&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="516"/>
+        <location filename="Network/IRC/IrcWidget.py" line="528"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation>{0} ha cambiado los modos personales de usted a &lt;b&gt;[{1}]&lt;/b&gt;.</translation>
     </message>
@@ -26984,12 +26988,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Red</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="702"/>
+        <location filename="Network/IRC/IrcWidget.py" line="714"/>
         <source>The SSL handshake failed.</source>
         <translation>Ha fallado el SSL handshake.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>A network error occurred.</source>
         <translation>Ha ocurrido un error de red.</translation>
     </message>
@@ -29039,62 +29043,62 @@ puede estar entre -10 y +20, y es el incremento que se añade
 <context>
     <name>MultiProject</name>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="480"/>
+        <location filename="MultiProject/MultiProject.py" line="482"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="557"/>
+        <location filename="MultiProject/MultiProject.py" line="559"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuevo...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="570"/>
+        <location filename="MultiProject/MultiProject.py" line="572"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="582"/>
+        <location filename="MultiProject/MultiProject.py" line="584"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="593"/>
+        <location filename="MultiProject/MultiProject.py" line="595"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="604"/>
+        <location filename="MultiProject/MultiProject.py" line="606"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="616"/>
+        <location filename="MultiProject/MultiProject.py" line="618"/>
         <source>Add &amp;project...</source>
         <translation>Añadir &amp;proyecto...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="630"/>
+        <location filename="MultiProject/MultiProject.py" line="632"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propiedades...</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="653"/>
+        <location filename="MultiProject/MultiProject.py" line="655"/>
         <source>&amp;Multiproject</source>
         <translation>&amp;Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="654"/>
+        <location filename="MultiProject/MultiProject.py" line="656"/>
         <source>Open &amp;Recent Multiprojects</source>
         <translation>Abrir Multiproyectos &amp;recientes</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="693"/>
+        <location filename="MultiProject/MultiProject.py" line="695"/>
         <source>Multiproject</source>
         <translation>Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="751"/>
+        <location filename="MultiProject/MultiProject.py" line="753"/>
         <source>&amp;Clear</source>
         <translation>&amp;Borrar</translation>
     </message>
@@ -29109,122 +29113,122 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Guardar archivo de multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="570"/>
+        <location filename="MultiProject/MultiProject.py" line="572"/>
         <source>Open multiproject</source>
         <translation>Abrir Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="465"/>
+        <location filename="MultiProject/MultiProject.py" line="467"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>Archivos de multiproyecto (*.e4m)</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="604"/>
+        <location filename="MultiProject/MultiProject.py" line="606"/>
         <source>Save multiproject as</source>
         <translation>Guardar multiproyecto como</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="504"/>
+        <location filename="MultiProject/MultiProject.py" line="506"/>
         <source>Close Multiproject</source>
         <translation>Cerrar Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="504"/>
+        <location filename="MultiProject/MultiProject.py" line="506"/>
         <source>The current multiproject has unsaved changes.</source>
         <translation>El multiproyecto actual tiene cambios sin guardar.</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="557"/>
+        <location filename="MultiProject/MultiProject.py" line="559"/>
         <source>New multiproject</source>
         <translation>Nuevo Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="561"/>
+        <location filename="MultiProject/MultiProject.py" line="563"/>
         <source>Generate a new multiproject</source>
         <translation>Generar un nuevo multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="562"/>
+        <location filename="MultiProject/MultiProject.py" line="564"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo...&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir la información para un nuevo multiproyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="574"/>
+        <location filename="MultiProject/MultiProject.py" line="576"/>
         <source>Open an existing multiproject</source>
         <translation>Abrir un multiproyecto existente</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="575"/>
+        <location filename="MultiProject/MultiProject.py" line="577"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir...&lt;/b&gt;&lt;p&gt;Abre un multiproyecto existente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="582"/>
+        <location filename="MultiProject/MultiProject.py" line="584"/>
         <source>Close multiproject</source>
         <translation>Cerrar Multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="585"/>
+        <location filename="MultiProject/MultiProject.py" line="587"/>
         <source>Close the current multiproject</source>
         <translation>Cierra el multiproyecto actual</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="586"/>
+        <location filename="MultiProject/MultiProject.py" line="588"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra el multiproyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="593"/>
+        <location filename="MultiProject/MultiProject.py" line="595"/>
         <source>Save multiproject</source>
         <translation>Guardar multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="596"/>
+        <location filename="MultiProject/MultiProject.py" line="598"/>
         <source>Save the current multiproject</source>
         <translation>Guarda el multiproyecto actual</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="597"/>
+        <location filename="MultiProject/MultiProject.py" line="599"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar&lt;/b&gt;&lt;p&gt;Guarda el multiproyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="607"/>
+        <location filename="MultiProject/MultiProject.py" line="609"/>
         <source>Save the current multiproject to a new file</source>
         <translation>Guardar el multiproyecto actual en un nuevo archivo</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="609"/>
+        <location filename="MultiProject/MultiProject.py" line="611"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current multiproject to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar como&lt;/b&gt;&lt;p&gt;Guarda el multiproyecto en nuevo archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="616"/>
+        <location filename="MultiProject/MultiProject.py" line="618"/>
         <source>Add project to multiproject</source>
         <translation>Añadir proyecto al multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="620"/>
+        <location filename="MultiProject/MultiProject.py" line="622"/>
         <source>Add a project to the current multiproject</source>
         <translation>Añadir un nuevo proyecto al multiproyecto actual</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="622"/>
+        <location filename="MultiProject/MultiProject.py" line="624"/>
         <source>&lt;b&gt;Add project...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a project to the current multiproject.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir proyecto...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir un proyecto al multiproyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="630"/>
+        <location filename="MultiProject/MultiProject.py" line="632"/>
         <source>Multiproject properties</source>
         <translation>Propiedades del multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="633"/>
+        <location filename="MultiProject/MultiProject.py" line="635"/>
         <source>Show the multiproject properties</source>
         <translation>Ver las propiedades del multiproyecto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="634"/>
+        <location filename="MultiProject/MultiProject.py" line="636"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the multiproject properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las propiedades del multiproyecto.&lt;/p&gt;</translation>
     </message>
@@ -29239,7 +29243,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>&lt;p&gt;El archivo de multiproyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="480"/>
+        <location filename="MultiProject/MultiProject.py" line="482"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
@@ -31840,27 +31844,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1110"/>
+        <location filename="Preferences/__init__.py" line="1112"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1137"/>
+        <location filename="Preferences/__init__.py" line="1139"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1137"/>
+        <location filename="Preferences/__init__.py" line="1139"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1231"/>
+        <location filename="Preferences/__init__.py" line="1233"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1231"/>
+        <location filename="Preferences/__init__.py" line="1233"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -35051,50 +35055,50 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PyCoverageDialog</name>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="19"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="20"/>
         <source>Python Code Coverage</source>
         <translation>Cobertura de Código Python</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="22"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="23"/>
         <source>&lt;b&gt;Python Code Coverage&lt;/b&gt;
 &lt;p&gt;This dialog shows the collected code coverage data.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código Python&lt;/b&gt;￼&lt;p&gt;Este diálogo muestra los datos recogidos de cobertura de código.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="34"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="35"/>
         <source>E&amp;xclude pattern:</source>
         <translation>Patrón de &amp;exclusión:</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="50"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="51"/>
         <source>Enter a regexp pattern marking lines to exclude from coverage</source>
         <translation>Introduzca un patrón de regexp marcando líneas para excluir de la cobertura</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="53"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="54"/>
         <source>&lt;b&gt;Exclude pattern&lt;/b&gt;
 &lt;p&gt;Enter a regular expression pattern. Lines matching this pattern are excluded from the coverage analysis. The default pattern is &apos;#pragma[: ]+[nN][oO] [cC][oO][vV][eE][rR]&apos;. If the pattern is found on a line containing the colon that introduces a suite of statements, the entire suite is excluded.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Patrón de exclusión&lt;/b&gt;&lt;p&gt;Introduzca un patrón de expresión regular. Las líneas que coincidan con este patrón se excluyen del análisis de cobertura. El patrón por defecto es &apos;#pragma[: ]+[nN][oO] [cC][oO][vV][eE][rR]&apos;. Si el patrón encuentra una línea que contiene &apos;dos puntos&apos; (&apos;:&apos;) para introducir un conjunto de sentencias, el conjunto completo se excluye.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="73"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="74"/>
         <source>&amp;Reload</source>
         <translation>&amp;Recargar</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="76"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="77"/>
         <source>Alt+R</source>
         <translation>Alt+R</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="91"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="92"/>
         <source>&lt;b&gt;Python Code Coverage&lt;/b&gt;
 &lt;p&gt;This list shows the collected code coverage data. There are several actions available via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código Python&lt;/b&gt;￼&lt;p&gt;Esta lista muestra los datos recogidos de cobertura de código. Hay varias acciones disponibles a traves del menú de contexto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="105"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="106"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -35114,17 +35118,17 @@ Seleccione Actualizar.</translation>
         <translation>Cobertura</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="125"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="126"/>
         <source>Excluded</source>
         <translation>Excluidas</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="130"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="131"/>
         <source>Missing</source>
         <translation>Perdidas</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="138"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="145"/>
         <source>Summary</source>
         <translation>Resumen</translation>
     </message>
@@ -35136,7 +35140,7 @@ Seleccione Actualizar.</translation>
 &lt;p&gt;Muestra información global de cobertura de codigo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.ui" line="183"/>
+        <location filename="DataViews/PyCoverageDialog.ui" line="186"/>
         <source>Shows the progress of the code coverage action</source>
         <translation>Muestra el progreso de la acción de cobertura de codigo</translation>
     </message>
@@ -35161,12 +35165,12 @@ Seleccione Actualizar.</translation>
         <translation>Borrar Información de Cobertura</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="321"/>
         <source>Annotating files...</source>
         <translation>Anotando archivos...</translation>
     </message>
     <message>
-        <location filename="DataViews/PyCoverageDialog.py" line="319"/>
+        <location filename="DataViews/PyCoverageDialog.py" line="321"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
@@ -35179,7 +35183,7 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PyProfileDialog</name>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="214"/>
+        <location filename="DataViews/PyProfileDialog.py" line="215"/>
         <source>Profile Results</source>
         <translation>Resultados de Profiling</translation>
     </message>
@@ -35257,57 +35261,57 @@ Seleccione Actualizar.</translation>
         <translation>Muestra el progreso del cálculo de datos de profiling</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="314"/>
+        <location filename="DataViews/PyProfileDialog.py" line="315"/>
         <source>Exclude Python Library</source>
         <translation>Excluir Biblioteca de Python</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="82"/>
+        <location filename="DataViews/PyProfileDialog.py" line="80"/>
         <source>Erase Profiling Info</source>
         <translation>Borrar Información de Profiling</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="84"/>
+        <location filename="DataViews/PyProfileDialog.py" line="82"/>
         <source>Erase Timing Info</source>
         <translation>Borrar Información de Timing</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="86"/>
+        <location filename="DataViews/PyProfileDialog.py" line="84"/>
         <source>Erase All Infos</source>
         <translation>Borrar todas las Infos</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="198"/>
+        <location filename="DataViews/PyProfileDialog.py" line="199"/>
         <source>function calls</source>
         <translation>llamadas a función</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="200"/>
+        <location filename="DataViews/PyProfileDialog.py" line="201"/>
         <source>primitive calls</source>
         <translation>llamadas a primitiva</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="201"/>
+        <location filename="DataViews/PyProfileDialog.py" line="202"/>
         <source>CPU seconds</source>
         <translation>segundos de CPU</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="226"/>
+        <location filename="DataViews/PyProfileDialog.py" line="227"/>
         <source>Loading Profiling Data</source>
         <translation>Cargando Datos de Profiling</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="310"/>
+        <location filename="DataViews/PyProfileDialog.py" line="311"/>
         <source>Include Python Library</source>
         <translation>Incluir Biblioteca de Python</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="214"/>
+        <location filename="DataViews/PyProfileDialog.py" line="215"/>
         <source>&lt;p&gt;There is no profiling data available for &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay datos de profiling disponibles para &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="DataViews/PyProfileDialog.py" line="226"/>
+        <location filename="DataViews/PyProfileDialog.py" line="227"/>
         <source>&lt;p&gt;The profiling data could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los datos de profiling no se han podido leer del archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -40566,22 +40570,22 @@ Not connected</source>
         <translation>Ha almacenado certificados que identifican estas autoridades certificadoras:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="274"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="275"/>
         <source>(Unknown)</source>
         <translation>(Desconocido)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="276"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="277"/>
         <source>(Unknown common name)</source>
         <translation>(Nombre común desconocido)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="128"/>
         <source>Delete Server Certificate</source>
         <translation>Borrar Certificado del Servidor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="127"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="128"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
         <translation>&lt;p&gt;¿Desea realmente borrar el certificado del servidor?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado del servidor es eliminado, los chequeos de seguridad normales se reinstanciarán y el servidor deberá presentar un certificado válido.&lt;/p&gt;</translation>
     </message>
@@ -40606,52 +40610,52 @@ Not connected</source>
         <translation>&amp;Exportar...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="447"/>
         <source>Import Certificate</source>
         <translation>Importar Certificado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="363"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="365"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El certificado &lt;b&gt;{0}&lt;/b&gt; ya existe. Omitiendo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="321"/>
         <source>Delete CA Certificate</source>
         <translation>Borrar Certificado de la CA</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="319"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="321"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
         <translation>&lt;p&gt;¿Desea realmente borrar el certificado de la CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Si el certificado de la CA es eliminado, el navegador no considerará ningún certificado emitido por esta CA como de confianza.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="457"/>
         <source>Export Certificate</source>
         <translation>Exportar Certificado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="399"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="401"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
         <translation>Archivo de Certificado (PEM) (*.pem);;Archivo de Certificado (DER) (*.der)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="415"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="417"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="425"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="427"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El certificado no se ha podido guardar en el archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="445"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="447"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
         <translation>Archivos de Certificado (*.pem *.crt *.der *.cer *.ca);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="455"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="457"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El certificado no se ha podido recuperar del archivo &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
@@ -42419,12 +42423,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
 &lt;p&gt;Seleccione el nombre de destino para la operación a través de un diálogo de selección.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="44"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="46"/>
         <source>Subversion Move</source>
         <translation>Move de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="79"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="81"/>
         <source>Select target</source>
         <translation>Seleccionar destino</translation>
     </message>
@@ -43351,7 +43355,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
         <source>Enter the url path of the module in the repository</source>
-        <translation>Introducir la ruta url del módulo en el repositorio</translation>
+        <translation type="obsolete">Introducir la ruta url del módulo en el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
@@ -43372,6 +43376,11 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="119"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Ruta:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43460,7 +43469,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
         <source>Enter the url path of the module in the repository</source>
-        <translation>Introducir la ruta url del módulo en el repositorio</translation>
+        <translation type="obsolete">Introducir la ruta url del módulo en el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
@@ -43471,6 +43480,11 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="91"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Ruta:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -50148,7 +50162,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>UrlBar</name>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="199"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="198"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
@@ -55196,17 +55210,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Archivo Modificado</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4340"/>
+        <location filename="ViewManager/ViewManager.py" line="4343"/>
         <source>&amp;Clear</source>
         <translation>&amp;Limpiar</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4336"/>
+        <location filename="ViewManager/ViewManager.py" line="4339"/>
         <source>&amp;Add</source>
         <translation>&amp;Agregar</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4338"/>
+        <location filename="ViewManager/ViewManager.py" line="4341"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Editar...</translation>
     </message>
@@ -55395,17 +55409,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; tiene cambios sin guardar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3965"/>
+        <location filename="ViewManager/ViewManager.py" line="3968"/>
         <source>File: {0}</source>
         <translation>Archivo: {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3969"/>
+        <location filename="ViewManager/ViewManager.py" line="3972"/>
         <source>Line: {0:5}</source>
         <translation>Línea: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3974"/>
+        <location filename="ViewManager/ViewManager.py" line="3977"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>
@@ -56028,47 +56042,47 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Lista de Excepciones del Usuario</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5378"/>
+        <location filename="ViewManager/ViewManager.py" line="5381"/>
         <source>Edit Project Word List</source>
         <translation>Editar Lista de Palabras del Proyecto</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5378"/>
+        <location filename="ViewManager/ViewManager.py" line="5381"/>
         <source>No word list defined for the current project.</source>
         <translation>No se ha definido una lista de palabras para el proyecto actual.</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5391"/>
+        <location filename="ViewManager/ViewManager.py" line="5394"/>
         <source>Edit Project Exception List</source>
         <translation>Editar Lista de Excepciones del Proyecto</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5391"/>
+        <location filename="ViewManager/ViewManager.py" line="5394"/>
         <source>No exception list defined for the current project.</source>
         <translation>No se ha definido una lista de excepciones para el proyecto actual.</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5449"/>
+        <location filename="ViewManager/ViewManager.py" line="5452"/>
         <source>Edit Spelling Dictionary</source>
         <translation>Editar Diccionario Ortográfico</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5430"/>
+        <location filename="ViewManager/ViewManager.py" line="5433"/>
         <source>Editing {0}</source>
         <translation>Editando {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5420"/>
+        <location filename="ViewManager/ViewManager.py" line="5423"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de diccionario ortográfico &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5440"/>
+        <location filename="ViewManager/ViewManager.py" line="5443"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de diccionario ortográfico &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5449"/>
+        <location filename="ViewManager/ViewManager.py" line="5452"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation>El diccionario ortográfico se ha guardado con éxito.</translation>
     </message>

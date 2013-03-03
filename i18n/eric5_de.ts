@@ -20108,8 +20108,8 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
-        <source>Enter the url path of the repository</source>
-        <translation>Gib die URL des Repository ein</translation>
+        <source>Enter the url path of the repository (without protocol part)</source>
+        <translation>Gib die URL des Repository ein (ohne Protokollanteil)</translation>
     </message>
 </context>
 <context>
@@ -43380,11 +43380,6 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Wähle die Repository-URL über einen Verzeichnisauswahldialog oder den Repository Browser</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
-        <source>Enter the url path of the module in the repository</source>
-        <translation>Gib die URL des Moduls im Repository ein</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Gib die URL des Moduls ein. Für ein Repository mit Standardstruktur darf diese nicht den trunk, tags oder branches Anteil enthalten.&lt;/p&gt;</translation>
@@ -43393,6 +43388,11 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="119"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Pfad:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
+        <translation>Gib die URL des Moduls im Repository ein (ohne Protokollanteil)</translation>
     </message>
 </context>
 <context>
@@ -43479,11 +43479,6 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Wähle die Repository-URL über einen Verzeichnisauswahldialog oder den Repository Browser</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
-        <source>Enter the url path of the module in the repository</source>
-        <translation>Gib die URL des Moduls im Repository ein</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Gib die URL des Moduls ein. Für ein Repository mit Standardstruktur darf diese nicht den trunk, tags oder branches Anteil enthalten.&lt;/p&gt;</translation>
@@ -43492,6 +43487,11 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="91"/>
         <source>Pat&amp;h:</source>
         <translation>&amp;Pfad:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <source>Enter the url path of the module in the repository (without protocol part)</source>
+        <translation>Gib die URL des Moduls im Repository ein (ohne Protokollanteil)</translation>
     </message>
 </context>
 <context>
