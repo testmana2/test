@@ -54,7 +54,7 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="vcsUrlEdit">
        <property name="toolTip">
-        <string>Enter the url path of the repository</string>
+        <string>Enter the url path of the repository (without protocol part)</string>
        </property>
       </widget>
      </item>
