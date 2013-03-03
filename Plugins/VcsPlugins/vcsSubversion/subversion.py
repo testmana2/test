@@ -2073,7 +2073,7 @@ class Subversion(VersionControl):
         @param url url string (string)
         @return properly normalized url for subversion (string)
         """
-        protocol, url = url.split("://")
+        protocol, url = url.split("://", 1)
         if url.startswith("\\\\"):
             url = url[2:]
         if protocol == "file":
