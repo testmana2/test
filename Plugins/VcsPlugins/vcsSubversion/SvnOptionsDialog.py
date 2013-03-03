@@ -10,7 +10,7 @@ Module implementing a dialog to enter options used to start a project in the VCS
 import os
 
 from PyQt4.QtCore import QDir, pyqtSlot
-from PyQt4.QtGui import QDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
@@ -96,6 +96,16 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
                 self.vcsUrlEdit.setText(self.networkPath)
                 self.vcsUrlLabel.setText(self.trUtf8("&URL:"))
                 self.localProtocol = False
+    
+    @pyqtSlot(str)
+    def on_vcsUrlEdit_textChanged(self, txt):
+        """
+        Private slot to handle changes of the URL.
+        
+        @param txt current text of the line edit (string)
+        """
+        enable = "://" not in txt
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)
         
     def getData(self):
         """
