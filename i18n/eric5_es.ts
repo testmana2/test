@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1931,8 +1930,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2173,8 +2172,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -2646,11 +2645,6 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <location filename="Cooperation/ChatWidget.ui" line="230"/>
         <source>Press to clear the hosts list</source>
         <translation>Pulse para limpiar la lista de hosts</translation>
-    </message>
-    <message>
-        <location filename="Cooperation/ChatWidget.py" line="480"/>
-        <source>Cut</source>
-        <translation type="obsolete">Cortar</translation>
     </message>
     <message>
         <location filename="Cooperation/ChatWidget.py" line="485"/>
@@ -7391,90 +7385,7 @@ selección completa.&lt;/li&gt;
     </message>
 </context>
 <context>
-    <name>E5SslInfoDialog</name>
-    <message>
-        <location filename="E5Network/E5SslInfoDialog.ui" line="14"/>
-        <source>SSL Certificate Info</source>
-        <translation type="obsolete">Información del Certificado SSL</translation>
-    </message>
-</context>
-<context>
     <name>E5SslInfoWidget</name>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="17"/>
-        <source>This certificated has been blacklisted.</source>
-        <translation type="obsolete">Este certificado está en una lista negra.</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="24"/>
-        <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Emitido para&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="118"/>
-        <source>Common Name (CN)</source>
-        <translation type="obsolete">Nombre Común (CN)</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="138"/>
-        <source>Organization (O)</source>
-        <translation type="obsolete">Organización (O)</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="158"/>
-        <source>Organizational Unit (OU)</source>
-        <translation type="obsolete">Unidad Organizacional (OU)</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="91"/>
-        <source>Serialnumber</source>
-        <translation type="obsolete">Número de serie</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="111"/>
-        <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Emitido por&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="178"/>
-        <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Validez&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="185"/>
-        <source>Issued on</source>
-        <translation type="obsolete">Emitido a</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="205"/>
-        <source>Expires on</source>
-        <translation type="obsolete">Expira en</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="225"/>
-        <source>This certificate is not valid yet or has expired.</source>
-        <translation type="obsolete">Este certificado no es válido aún o ha expirado.</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="232"/>
-        <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="239"/>
-        <source>SHA1-Fingerprint</source>
-        <translation type="obsolete">SHA1-Fingerprint</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.ui" line="259"/>
-        <source>MD5-Fingerprint</source>
-        <translation type="obsolete">MD5-Fingerprint</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5SslInfoWidget.py" line="111"/>
-        <source>&lt;not part of the certificate&gt;</source>
-        <translation type="obsolete">&lt;no es parte del certificado&gt;</translation>
-    </message>
     <message>
         <location filename="E5Network/E5SslInfoWidget.py" line="56"/>
         <source>Identity</source>
@@ -9515,16 +9426,6 @@ selección completa.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="445"/>
         <source>File Preview</source>
         <translation>Previsualizar Archivo</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="451"/>
-        <source>Extensions of previewable files:</source>
-        <translation type="obsolete">Extensiones de archivos previsualizables:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="458"/>
-        <source>Enter the filename extensions of files that may be previewed in the web browser (separated by a space)</source>
-        <translation type="obsolete">Introducir las extensiones de nombre de archivo de archivos que pueden ser previsualizados en el navegador web (separados por un espacio)</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="451"/>
@@ -14496,7 +14397,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -16067,16 +15968,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="Helpviewer/HelpBrowserWV.py" line="347"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="490"/>
-        <source>SSL Certificate Info</source>
-        <translation type="obsolete">Información del Certificado SSL</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="490"/>
-        <source>There is no SSL Certificate Info available.</source>
-        <translation type="obsolete">No hay información disponible para el Certificado SSL.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="198"/>
@@ -20632,11 +20523,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
         <source>Select the repository url via a directory selection dialog</source>
         <translation>Seleccione la url del repositorio a través de un diálogo de selección de directorio</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
-        <source>Enter the url path of the repository</source>
-        <translation type="obsolete">Introduzca la ruta-url del repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="57"/>
@@ -25937,11 +25823,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1157"/>
-        <source>Cut</source>
-        <translation type="obsolete">Cortar</translation>
-    </message>
-    <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
         <source>Copy</source>
         <translation>Copiar</translation>
@@ -26713,11 +26594,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
-        <source>Cut</source>
-        <translation type="obsolete">Cortar</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="392"/>
@@ -43570,11 +43446,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar Directorio del Proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="68"/>
-        <source>Enter the url path of the module in the repository</source>
-        <translation type="obsolete">Introducir la ruta url del módulo en el repositorio</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="71"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Introduzca la URL del módulo. Para un repositorio con disposición estándar, no debe contener la parte trunk, tags o branches.&lt;/p&gt;</translation>
@@ -43682,11 +43553,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="63"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleccionar la url del repositorio a traves de un diálogo de selección de directorio o del navegador de repositorios</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
-        <source>Enter the url path of the module in the repository</source>
-        <translation type="obsolete">Introducir la ruta url del módulo en el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="110"/>
@@ -56920,11 +56786,6 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 </context>
 <context>
     <name>eric5</name>
-    <message>
-        <location filename="eric5.py" line="248"/>
-        <source>Importing packages...</source>
-        <translation type="obsolete">Importando paquetes...</translation>
-    </message>
     <message>
         <location filename="eric5.py" line="253"/>
         <source>Generating Main Window...</source>
