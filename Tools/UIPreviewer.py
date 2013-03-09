@@ -7,7 +7,7 @@
 Module implementing the UI Previewer main window.
 """
 
-from PyQt4.QtCore import QDir, QFileInfo, QEvent, QSize, Qt
+from PyQt4.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QCursor, \
     QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, QImageWriter, QPainter, \
     QDialog, QScrollArea, qApp, QApplication, QStyleFactory, QFrame, QMainWindow, \
@@ -447,7 +447,10 @@ class UIPreviewer(E5MainWindow):
             ext = defaultExt
             fname.append(".{0}".format(defaultExt.lower()))
         
-        pix = QPixmap.grabWidget(self.mainWidget)
+        if qVersion() >= "5.0.0":
+            pix = self.mainWidget.grab()
+        else:
+            pix = QPixmap.grabWidget(self.mainWidget)
         self.__updateChildren(self.lastStyle)
         if not pix.save(fname, str(ext)):
             E5MessageBox.critical(self,
@@ -466,7 +469,10 @@ class UIPreviewer(E5MainWindow):
             return
         
         cb = QApplication.clipboard()
-        cb.setPixmap(QPixmap.grabWidget(self.mainWidget))
+        if qVersion() >= "5.0.0":
+            cb.setPixmap(self.mainWidget.grab())
+        else:
+            cb.setPixmap(QPixmap.grabWidget(self.mainWidget))
         self.__updateChildren(self.lastStyle)
     
     def __printImage(self):
@@ -554,7 +560,10 @@ class UIPreviewer(E5MainWindow):
             marginX *= 2
             width = printer.width() - marginX * 2
             height = printer.height() - marginY * 2
-        img = QPixmap.grabWidget(self.mainWidget).toImage()
+        if qVersion() >= "5.0.0":
+            img = self.mainWidget.grab().toImage()
+        else:
+            img = QPixmap.grabWidget(self.mainWidget).toImage()
         self.__updateChildren(self.lastStyle)
         p.drawImage(marginX, marginY,
                     img.scaled(width, height,
