@@ -7,7 +7,7 @@
 Module implementing a menu populated from a QAbstractItemModel.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QModelIndex, QPoint
+from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
 from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, QPixmap
 
 import UI.PixmapCache
@@ -378,7 +378,10 @@ class E5ModelMenu(QMenu):
         drag = QDrag(self)
         drag.setMimeData(self.__model.mimeData([idx]))
         actionRect = self.actionGeometry(act)
-        drag.setPixmap(QPixmap.grabWidget(self, actionRect))
+        if qVersion() >= "5.0.0":
+            drag.setPixmap(self.grab(actionRect))
+        else:
+            drag.setPixmap(QPixmap.grabWidget(self, actionRect))
         
         if drag.exec_() == Qt.MoveAction:
             row = idx.row()
