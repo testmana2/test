@@ -359,6 +359,11 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.channelsWidget.removeTab(self.channelsWidget.indexOf(channel))
             channel.deleteLater()
             channel = None
+        
+        self.channelsWidget.addTab(self.__emptyLabel, "")
+        self.__emptyLabel.show()
+        self.__leaveButton.setEnabled(False)
+        self.channelsWidget.setTabsClosable(False)
     
     def __closeChannel(self, name):
         """
