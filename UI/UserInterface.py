@@ -31,7 +31,6 @@ from Debugger.DebugViewer import DebugViewer
 from Debugger.DebugClientCapabilities import HasUnittest
 
 from QScintilla.Shell import ShellAssembly
-from QScintilla.Terminal import TerminalAssembly
 from QScintilla.MiniEditor import MiniEditor
 from QScintilla.SpellChecker import SpellChecker
 
@@ -420,7 +419,6 @@ class UserInterface(E5MainWindow):
         self.appendStdout.connect(self.logViewer.appendToStdout)
         self.appendStderr.connect(self.logViewer.appendToStderr)
         self.preferencesChanged.connect(self.shell.handlePreferencesChanged)
-        self.preferencesChanged.connect(self.terminal.handlePreferencesChanged)
         self.preferencesChanged.connect(self.project.handlePreferencesChanged)
         self.preferencesChanged.connect(self.projectBrowser.handlePreferencesChanged)
         self.preferencesChanged.connect(
@@ -492,7 +490,6 @@ class UserInterface(E5MainWindow):
         e5App().registerObject("DummyHelpViewer", self.dummyHelpViewer)
         e5App().registerObject("PluginManager", self.pluginManager)
         e5App().registerObject("ToolbarManager", self.toolbarManager)
-        e5App().registerObject("Terminal", self.terminal)
         e5App().registerObject("Cooperation", self.cooperation)
         e5App().registerObject("IRC", self.irc)
         e5App().registerObject("Symbols", self.symbolsViewer)
@@ -687,13 +684,6 @@ class UserInterface(E5MainWindow):
                               UI.PixmapCache.getIcon("irc.png"),
                               self.trUtf8("IRC"))
         
-        # Create the terminal part of the user interface
-        self.terminalAssembly = TerminalAssembly(self.viewmanager)
-        self.terminal = self.terminalAssembly.terminal()
-        self.hToolbox.addItem(self.terminalAssembly,
-                              UI.PixmapCache.getIcon("terminal.png"),
-                              self.trUtf8("Terminal"))
-
         # Create the task viewer part of the user interface
         self.taskViewer = TaskViewer(None, self.project)
         self.hToolbox.addItem(self.taskViewer,
@@ -800,14 +790,6 @@ class UserInterface(E5MainWindow):
         self.rightSidebar.addTab(self.irc,
             UI.PixmapCache.getIcon("irc.png"), self.trUtf8("IRC"))
         
-        # Create the terminal part of the user interface
-        logging.debug("Creating Terminal...")
-        self.terminalAssembly = TerminalAssembly(self.viewmanager)
-        self.terminal = self.terminalAssembly.terminal()
-        self.bottomSidebar.addTab(self.terminalAssembly,
-                              UI.PixmapCache.getIcon("terminal.png"),
-                              self.trUtf8("Terminal"))
-
         # Create the task viewer part of the user interface
         logging.debug("Creating Task Viewer...")
         self.taskViewer = TaskViewer(None, self.project)
@@ -1269,21 +1251,6 @@ class UserInterface(E5MainWindow):
         self.shellActivateAct.triggered[()].connect(self.__activateShell)
         self.actions.append(self.shellActivateAct)
         self.addAction(self.shellActivateAct)
-
-        self.terminalActivateAct = E5Action(self.trUtf8('Terminal'),
-                self.trUtf8('Te&rminal'),
-                QKeySequence(self.trUtf8("Alt+Shift+R")),
-                0, self,
-                'terminal_activate')
-        self.terminalActivateAct.setStatusTip(self.trUtf8(
-            "Switch the input focus to the Terminal window."))
-        self.terminalActivateAct.setWhatsThis(self.trUtf8(
-            """<b>Activate Terminal</b>"""
-            """<p>This switches the input focus to the Terminal window.</p>"""
-        ))
-        self.terminalActivateAct.triggered[()].connect(self.__activateTerminal)
-        self.actions.append(self.terminalActivateAct)
-        self.addAction(self.terminalActivateAct)
 
         self.browserActivateAct = E5Action(self.trUtf8('File-Browser'),
                 self.trUtf8('&File-Browser'),
@@ -2208,7 +2175,6 @@ class UserInterface(E5MainWindow):
         self.__menus["subwindow"].addAction(self.symbolsViewerActivateAct)
         # bottom side
         self.__menus["subwindow"].addAction(self.shellActivateAct)
-        self.__menus["subwindow"].addAction(self.terminalActivateAct)
         self.__menus["subwindow"].addAction(self.taskViewerActivateAct)
         self.__menus["subwindow"].addAction(self.logViewerActivateAct)
         self.__menus["subwindow"].addAction(self.numbersViewerActivateAct)
@@ -3377,20 +3343,6 @@ class UserInterface(E5MainWindow):
             else:
                 self.shell.show()
         self.shell.setFocus(Qt.ActiveWindowFocusReason)
-        
-    def __activateTerminal(self):
-        """
-        Private slot to handle the activation of the Terminal window.
-        """
-        if self.layout == "Toolboxes":
-            self.hToolboxDock.show()
-            self.hToolbox.setCurrentWidget(self.terminalAssembly)
-        elif self.layout == "Sidebars":
-            self.bottomSidebar.show()
-            self.bottomSidebar.setCurrentWidget(self.terminalAssembly)
-        else:
-            self.terminal.show()
-        self.terminal.setFocus(Qt.ActiveWindowFocusReason)
         
     def __activateLogViewer(self):
         """
@@ -5220,7 +5172,6 @@ class UserInterface(E5MainWindow):
             return False
         
         self.shell.closeShell()
-        self.terminal.closeTerminal()
         
         self.__writeTasks()
         self.templateViewer.writeTemplates()

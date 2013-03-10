@@ -172,9 +172,6 @@ class ConfigurationWidget(QWidget):
                 "templatesPage": \
                     [self.trUtf8("Templates"), "preferences-template.png",
                     "TemplatesPage", None, None],
-                "terminalPage": \
-                    [self.trUtf8("Terminal"), "terminal.png",
-                    "TerminalPage", None, None],
                 "trayStarterPage": \
                     [self.trUtf8("Tray Starter"), "erict.png",
                     "TrayStarterPage", None, None],

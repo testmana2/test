@@ -34,7 +34,6 @@ from QScintilla.SpellChecker import SpellChecker
 import QScintilla.Lexers
 import QScintilla.Exporters
 from QScintilla.Shell import Shell
-from QScintilla.Terminal import Terminal
 from QScintilla.SpellingDictionaryEditDialog import SpellingDictionaryEditDialog
 
 import Utilities
@@ -4433,19 +4432,19 @@ class ViewManager(QObject):
         @param old reference to the widget loosing focus (QWidget)
         @param now reference to the widget gaining focus (QWidget)
         """
-        if not isinstance(now, (Editor, Shell, Terminal)):
+        if not isinstance(now, (Editor, Shell)):
             self.editActGrp.setEnabled(False)
             self.copyActGrp.setEnabled(False)
             self.viewActGrp.setEnabled(False)
         
-        if not isinstance(now, (Editor, Shell, Terminal)) and \
+        if not isinstance(now, (Editor, Shell)) and \
            now is not self.quickFindtextCombo:
             self.searchActGrp.setEnabled(False)
         
         if now is self.quickFindtextCombo:
             self.searchActGrp.setEnabled(True)
         
-        if isinstance(old, (Editor, Shell, Terminal)):
+        if isinstance(old, (Editor, Shell)):
             self.__lastFocusWidget = old
     
     ##################################################################
@@ -4476,8 +4475,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").cut()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").cut()
         else:
             self.activeWindow().cut()
         
@@ -4487,8 +4484,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").copy()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").copy()
         else:
             self.activeWindow().copy()
         
@@ -4498,8 +4493,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").paste()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").paste()
         else:
             self.activeWindow().paste()
         
@@ -4509,8 +4502,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").clear()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").clear()
         else:
             self.activeWindow().clear()
         
@@ -4969,8 +4960,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").zoomIn()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").zoomIn()
         else:
             aw = self.activeWindow()
             if aw:
@@ -4982,8 +4971,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").zoomOut()
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").zoomOut()
         else:
             aw = self.activeWindow()
             if aw:
@@ -4995,8 +4982,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             e5App().getObject("Shell").zoomTo(0)
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").zoomTo(0)
         else:
             aw = self.activeWindow()
             if aw:
@@ -5008,8 +4993,6 @@ class ViewManager(QObject):
         """
         if QApplication.focusWidget() == e5App().getObject("Shell"):
             aw = e5App().getObject("Shell")
-        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
-            aw = e5App().getObject("Terminal")
         else:
             aw = self.activeWindow()
         if aw:
@@ -5776,8 +5759,6 @@ class ViewManager(QObject):
         focusWidget = QApplication.focusWidget()
         if focusWidget == e5App().getObject("Shell"):
             e5App().getObject("Shell").editorCommand(cmd)
-        elif focusWidget == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").editorCommand(cmd)
         elif focusWidget == self.quickFindtextCombo:
             self.quickFindtextCombo._editor.editorCommand(cmd)
         else:
@@ -5792,7 +5773,6 @@ class ViewManager(QObject):
         """
         focusWidget = QApplication.focusWidget()
         if focusWidget == e5App().getObject("Shell") or \
-           focusWidget == e5App().getObject("Terminal") or \
            focusWidget == self.quickFindtextCombo:
             return
         else:
@@ -5992,8 +5972,6 @@ class ViewManager(QObject):
         """
         if self.__lastFocusWidget == e5App().getObject("Shell"):
             e5App().getObject("Shell").insert(txt)
-        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
-            e5App().getObject("Terminal").insert(txt)
         else:
             aw = self.activeWindow()
             if aw is not None:
@@ -6016,11 +5994,6 @@ class ViewManager(QObject):
             if aw.hasSelectedText():
                 aw.removeSelectedText()
             aw.insert(txt)
-        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
-            aw = e5App().getObject("Terminal")
-            if aw.hasSelectedText():
-                aw.removeSelectedText()
-            aw.insert(txt)
         else:
             aw = self.activeWindow()
             if aw is not None:
@@ -6039,10 +6012,6 @@ class ViewManager(QObject):
         txt = ""
         if self.__lastFocusWidget == e5App().getObject("Shell"):
             aw = e5App().getObject("Shell")
-            if aw.hasSelectedText():
-                txt = aw.selectedText()
-        elif self.__lastFocusWidget == e5App().getObject("Terminal"):
-            aw = e5App().getObject("Terminal")
             if aw.hasSelectedText():
                 txt = aw.selectedText()
         else:
