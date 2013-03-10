@@ -463,7 +463,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(2)   sender user@host
         # group(3)   target nick
         # group(4)   message
-        if match.group(3).lower() == self.__name:
+        if match.group(3).lower() == self.__name.lower():
             if match.group(4).startswith("\x01"):
                 return self.__handleCtcp(match)
             
@@ -514,7 +514,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(3).lower() == self.__name:
+        if match.group(3).lower() == self.__name.lower():
             if self.__userName != match.group(1):
                 IrcUserItem(match.group(1), self.usersList)
                 msg = self.trUtf8("{0} has joined the channel {1} ({2}).").format(
@@ -539,7 +539,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(2).lower() == self.__name:
+        if match.group(2).lower() == self.__name.lower():
             itm = self.__findUser(match.group(1))
             self.usersList.takeItem(self.usersList.row(itm))
             del itm
@@ -619,7 +619,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             users = match.group(2).split()
             for user in users:
                 userPrivileges, userName = self.__extractPrivilege(user)
@@ -641,7 +641,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(self.trUtf8("Away"),
                 self.trUtf8("{0} is away: {1}").format(match.group(2), match.group(3)))
             return True
@@ -655,7 +655,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             self.topicLabel.setText(match.group(2))
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
                 ircFilter(self.trUtf8('The channel topic is: "{0}".').format(
@@ -671,7 +671,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
                 self.trUtf8("The topic was set by {0} on {1}.").format(
                     match.group(2), QDateTime.fromTime_t(int(match.group(3)))\
@@ -687,7 +687,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
                 ircFilter(self.trUtf8("Channel URL: {0}").format(match.group(2))))
             return True
@@ -701,7 +701,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             modesDict = getChannelModesDict()
             modesParameters = match.group(2).split()
             modeString = modesParameters.pop(0)
@@ -736,7 +736,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             self.__addManagementMessage(IrcChannelWidget.MessageIndicator,
                 self.trUtf8("This channel was created on {0}.").format(
                     QDateTime.fromTime_t(int(match.group(2)))\
@@ -755,7 +755,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(1)  user or server
         # group(2)  channel
         # group(3)  modes and parameter list
-        if match.group(2).lower() == self.__name:
+        if match.group(2).lower() == self.__name.lower():
             nick = match.group(1)
             modesParameters = match.group(3).split()
             modeString = modesParameters.pop(0)
@@ -897,7 +897,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(2).lower() == self.__name:
+        if match.group(2).lower() == self.__name.lower():
             itm = self.__findUser(match.group(4))
             if itm:
                 itm.changePrivilege(match.group(3))
@@ -916,7 +916,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             return True
         
         return False
@@ -1327,7 +1327,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         @param match match object that matched the pattern
         @return flag indicating whether the message was handled (boolean)
         """
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             if self.__autoWhoRequested:
                 self.__autoWhoRequested = False
                 self.initAutoWho()
@@ -1352,7 +1352,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         # group(4)  nick
         # group(5)  user flags
         # group(6)  real name
-        if match.group(1).lower() == self.__name:
+        if match.group(1).lower() == self.__name.lower():
             away = self.trUtf8(" (Away)") if match.group(5).startswith("G") else ""
             self.__addManagementMessage(self.trUtf8("Who"),
                 self.trUtf8("{0} is {1}@{2} ({3}){4}").format(
