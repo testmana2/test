@@ -72,7 +72,7 @@ class ShellAssembly(QWidget):
         """
         Public method to get a reference to the terminal widget.
         
-        @return reference to the terminal widget (Terminal)
+        @return reference to the shell widget (Shell)
         """
         return self.__shell
 

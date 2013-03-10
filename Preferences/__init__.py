@@ -32,7 +32,7 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, isLinuxPlatform, findPython2Interpreters
+    isWindowsPlatform, findPython2Interpreters
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -816,21 +816,6 @@ class Prefs(object):
         "MonospacedFont": "Courier,10,-1,5,50,0,0,0,0,0",
         "MarginsFont": "Sans Serif,10,-1,5,50,0,0,0,0,0",
     }
-
-    # defaults for the terminal settings
-    terminalDefaults = {
-        "LinenoWidth": 4,
-        "LinenoMargin": True,
-        "MaxHistoryEntries": 100,
-        "SyntaxHighlightingEnabled": True,
-        "Shell": "",
-        "ShellInteractive": True,
-        "UseMonospacedFont": False,
-        "MonospacedFont": "Courier,10,-1,5,50,0,0,0,0,0",
-        "MarginsFont": "Sans Serif,10,-1,5,50,0,0,0,0,0",
-    }
-    if isLinuxPlatform():
-        terminalDefaults["Shell"] = "bash"
 
     # defaults for Qt related stuff
     qtDefaults = {
@@ -1912,44 +1897,6 @@ def setShell(key, value, prefClass=Prefs):
         prefClass.settings.setValue("Shell/" + key, value.toString())
     else:
         prefClass.settings.setValue("Shell/" + key, value)
-
-
-def getTerminal(key, prefClass=Prefs):
-    """
-    Module function to retrieve the various terminal settings.
-    
-    @param key the key of the value to get
-    @param prefClass preferences class used as the storage area
-    @return the requested shell setting
-    """
-    if key in ["Shell"]:
-        return prefClass.settings.value("Terminal/" + key,
-            prefClass.terminalDefaults[key])
-    elif key in ["MonospacedFont", "MarginsFont"]:
-        f = QFont()
-        f.fromString(prefClass.settings.value("Terminal/" + key,
-            prefClass.terminalDefaults[key]))
-        return f
-    elif key in ["LinenoWidth", "MaxHistoryEntries"]:
-        return int(prefClass.settings.value("Terminal/" + key,
-            prefClass.terminalDefaults[key]))
-    else:
-        return toBool(prefClass.settings.value("Terminal/" + key,
-            prefClass.terminalDefaults[key]))
-
-
-def setTerminal(key, value, prefClass=Prefs):
-    """
-    Module function to store the various terminal settings.
-    
-    @param key the key of the setting to be set
-    @param value the value to be set
-    @param prefClass preferences class used as the storage area
-    """
-    if key in ["MonospacedFont", "MarginsFont"]:
-        prefClass.settings.setValue("Terminal/" + key, value.toString())
-    else:
-        prefClass.settings.setValue("Terminal/" + key, value)
 
 
 def getProject(key, prefClass=Prefs):
