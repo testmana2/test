@@ -48,7 +48,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         self.startdir = startdir
         self.filetypes = pro.pdata["FILETYPES"]  # save a reference to the filetypes dict
         
-        if self.filter is not None and self.filter != 'source':
+        if self.filter is not None:
             self.sourcecodeCheckBox.hide()
         
     @pyqtSlot()
