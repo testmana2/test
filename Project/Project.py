@@ -1390,9 +1390,9 @@ class Project(QObject):
                                 self.trUtf8("<p>The selected file <b>{0}</b> could not be"
                                     " added to <b>{1}</b>.</p><p>Reason: {2}</p>")
                                     .format(fn, target, str(why)))
-                            return
+                            continue
                             
-                    self.appendFile(targetfile, isSource or filter == 'source')
+                        self.appendFile(targetfile, isSource or filter == 'source')
             else:
                 E5MessageBox.critical(self.ui,
                     self.trUtf8("Add file"),
