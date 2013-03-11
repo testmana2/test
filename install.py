@@ -1098,6 +1098,11 @@ def main(argv):
 
     # Compile .ui files
     print("Compiling user interface files...")
+    # step 1: remove old Ui_*.py files
+    for root, _, files in os.walk(sourceDir):
+        for file in [f for f in files if fnmatch.fnmatch(f, 'Ui_*.py')]:
+            os.remove(os.path.join(root, file))
+    # step 2: compile the forms
     compileUiFiles()
     
     if doCompile:
