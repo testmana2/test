@@ -5658,6 +5658,12 @@ class ViewManager(QObject):
             
             self.checkActions.emit(editor)
         
+        saveAllEnable = False
+        for editor in self.editors:
+            if editor.isModified():
+                saveAllEnable = True
+        self.saveAllAct.setEnabled(saveAllEnable)
+        
     def preferencesChanged(self):
         """
         Public slot to handle the preferencesChanged signal.
