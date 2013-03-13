@@ -362,9 +362,8 @@ class DebugServer(QTcpServer):
                     self.__clientProcessError)
                 self.clientProcess.readyReadStandardOutput.disconnect(
                     self.__clientProcessOutput)
-                self.clientProcess.close()
                 self.clientProcess.kill()
-                self.clientProcess.waitForFinished(10000)
+                self.clientProcess.waitForFinished(1000)
                 self.clientProcess = None
             
             self.__createDebuggerInterface()
