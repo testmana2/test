@@ -358,13 +358,8 @@ class DebugServer(QTcpServer):
         # only start the client, if we are not in passive mode
         if not self.passive:
             if self.clientProcess:
-##                self.clientProcess.readyReadStandardError.disconnect(
-##                    self.__clientProcessError)
-##                self.clientProcess.readyReadStandardOutput.disconnect(
-##                    self.__clientProcessOutput)
-                self.clientProcess.close()
                 self.clientProcess.kill()
-                self.clientProcess.waitForFinished(10000)
+                self.clientProcess.waitForFinished(1000)
                 self.clientProcess.deleteLater()
                 self.clientProcess = None
             
