@@ -686,7 +686,7 @@ class DebugBase(bdb.Bdb):
         
         @param exctype type of the exception
         """
-        return repr(exctype).replace("<class '", "").replace("'>", "")
+        return str(exctype).replace("<class '", "").replace("'>", "")
     
     def __extract_stack(self, exctb):
         """

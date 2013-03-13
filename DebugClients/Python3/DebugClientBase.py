@@ -1517,12 +1517,15 @@ class DebugClientBase(object):
             varlist.extend(vlist)
         
             if obj is not None and not formatSequences:
-                if repr(obj).startswith('{'):
-                    varlist.append(('...', 'dict', "{0:d}".format(len(obj.keys()))))
-                elif repr(obj).startswith('['):
-                    varlist.append(('...', 'list', "{0:d}".format(len(obj))))
-                elif repr(obj).startswith('('):
-                    varlist.append(('...', 'tuple', "{0:d}".format(len(obj))))
+                try:
+                    if repr(obj).startswith('{'):
+                        varlist.append(('...', 'dict', "{0:d}".format(len(obj.keys()))))
+                    elif repr(obj).startswith('['):
+                        varlist.append(('...', 'list', "{0:d}".format(len(obj))))
+                    elif repr(obj).startswith('('):
+                        varlist.append(('...', 'tuple', "{0:d}".format(len(obj))))
+                except:
+                    pass
         
         self.write('{0}{1}\n'.format(DebugProtocol.ResponseVariable, str(varlist)))
         
