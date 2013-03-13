@@ -1484,12 +1484,15 @@ class DebugClientBase(object):
             varlist.extend(vlist)
         
             if obj is not None and not formatSequences:
-                if unicode(repr(obj)).startswith('{'):
-                    varlist.append(('...', 'dict', "%d" % len(obj.keys())))
-                elif unicode(repr(obj)).startswith('['):
-                    varlist.append(('...', 'list', "%d" % len(obj)))
-                elif unicode(repr(obj)).startswith('('):
-                    varlist.append(('...', 'tuple', "%d" % len(obj)))
+                try:
+                    if unicode(repr(obj)).startswith('{'):
+                        varlist.append(('...', 'dict', "%d" % len(obj.keys())))
+                    elif unicode(repr(obj)).startswith('['):
+                        varlist.append(('...', 'list', "%d" % len(obj)))
+                    elif unicode(repr(obj)).startswith('('):
+                        varlist.append(('...', 'tuple', "%d" % len(obj)))
+                except:
+                    pass
         
         self.write('%s%s\n' % (DebugProtocol.ResponseVariable, unicode(varlist)))
         
