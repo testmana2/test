@@ -3181,7 +3181,10 @@ class Editor(QsciScintillaCompat):
         
         # check if line starts with our comment string (i.e. was commented
         # by our comment...() slots
-        if not self.text(line).strip().startswith(commentStr):
+        if self.hasSelectedText() and \
+           self.text(self.getSelection()[0]).strip().startswith(commentStr):
+            self.uncommentLineOrSelection()
+        elif not self.text(line).strip().startswith(commentStr):
             # it doesn't, so comment the line or selection
             self.commentLineOrSelection()
         else:
