@@ -3968,6 +3968,7 @@
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
       <keyword name="Editor.__initOnlineChangeTrace" id="Editor.__initOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineChangeTrace" />
       <keyword name="Editor.__initOnlineSyntaxCheck" id="Editor.__initOnlineSyntaxCheck" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineSyntaxCheck" />
+      <keyword name="Editor.__isCommentedLine" id="Editor.__isCommentedLine" ref="eric5.QScintilla.Editor.html#Editor.__isCommentedLine" />
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
       <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
