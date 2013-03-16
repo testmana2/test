@@ -484,7 +484,7 @@ class PreviewProcessingThread(QThread):
             #mathjax doesn't require import statement if installed as extension
             pass
 
-        extensions = ['fenced_code', 'nl2br']
+        extensions = ['fenced_code', 'nl2br', 'extra']
         
         # version 2.0 supports only extension names, not instances
         if markdown.version_info[0] > 2 or \
