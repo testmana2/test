@@ -3140,7 +3140,21 @@ class Editor(QsciScintillaCompat):
     ############################################################################
     ## Comment handling methods below
     ############################################################################
-
+    
+    def __isCommentedLine(self, line, commentStr):
+        """
+        Private method to check, if the given line is a comment line as produced
+        by the configured comment rules.
+        
+        @param line text of the line to check (string)
+        @param commentStr comment string to check against (string)
+        @return flag indicating a commented line (boolean)
+        """
+        if Preferences.getEditor("CommentColumn0"):
+            return line.startswith(commentStr)
+        else:
+            return line.strip().startswith(commentStr)
+    
     def toggleCommentBlock(self):
         """
         Public slot to toggle the comment of a block.
@@ -3158,22 +3172,22 @@ class Editor(QsciScintillaCompat):
         # check if line starts with our comment string (i.e. was commented
         # by our comment...() slots
         if self.hasSelectedText() and \
-           self.text(self.getSelection()[0]).strip().startswith(commentStr):
+           self.__isCommentedLine(self.text(self.getSelection()[0]), commentStr):
             self.uncommentLineOrSelection()
-        elif not self.text(line).strip().startswith(commentStr):
+        elif not self.__isCommentedLine(self.text(line), commentStr):
             # it doesn't, so comment the line or selection
             self.commentLineOrSelection()
         else:
             # determine the start of the comment block
             begline = line
             while begline > 0 and \
-                  self.text(begline - 1).strip().startswith(commentStr):
+                  self.__isCommentedLine(self.text(begline - 1), commentStr):
                 begline -= 1
             # determine the end of the comment block
             endline = line
             lines = self.lines()
             while endline < lines and \
-                  self.text(endline + 1).strip().startswith(commentStr):
+                  self.__isCommentedLine(self.text(endline + 1), commentStr):
                 endline += 1
             
             self.setSelection(begline, 0, endline, self.lineLength(endline))
@@ -3209,7 +3223,7 @@ class Editor(QsciScintillaCompat):
         
         # check if line starts with our comment string (i.e. was commented
         # by our comment...() slots
-        if not self.text(line).strip().startswith(commentStr):
+        if not self.__isCommentedLine(self.text(line), commentStr):
             return
         
         # now remove the comment string
@@ -3277,7 +3291,7 @@ class Editor(QsciScintillaCompat):
         for line in range(lineFrom, endLine + 1):
             # check if line starts with our comment string (i.e. was commented
             # by our comment...() slots
-            if not self.text(line).strip().startswith(commentStr):
+            if not self.__isCommentedLine(self.text(line), commentStr):
                 continue
             
             if Preferences.getEditor("CommentColumn0"):
