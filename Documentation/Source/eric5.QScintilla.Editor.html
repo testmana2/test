@@ -335,6 +335,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__initOnlineSyntaxCheck">__initOnlineSyntaxCheck</a></td>
 <td>Private slot to initialize the online syntax check.</td>
 </tr><tr>
+<td><a href="#Editor.__isCommentedLine">__isCommentedLine</a></td>
+<td>Private method to check, if the given line is a comment line as produced by the configured comment rules.</td>
+</tr><tr>
 <td><a href="#Editor.__isStartChar">__isStartChar</a></td>
 <td>Private method to check, if a character is an autocompletion start character.</td>
 </tr><tr>
@@ -1622,7 +1625,26 @@ flag indicating an indent operation (boolean)
 <b>__initOnlineSyntaxCheck</b>(<i></i>)
 <p>
         Private slot to initialize the online syntax check.
-</p><a NAME="Editor.__isStartChar" ID="Editor.__isStartChar"></a>
+</p><a NAME="Editor.__isCommentedLine" ID="Editor.__isCommentedLine"></a>
+<h4>Editor.__isCommentedLine</h4>
+<b>__isCommentedLine</b>(<i>line, commentStr</i>)
+<p>
+        Private method to check, if the given line is a comment line as produced
+        by the configured comment rules.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+text of the line to check (string)
+</dd><dt><i>commentStr</i></dt>
+<dd>
+comment string to check against (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a commented line (boolean)
+</dd>
+</dl><a NAME="Editor.__isStartChar" ID="Editor.__isStartChar"></a>
 <h4>Editor.__isStartChar</h4>
 <b>__isStartChar</b>(<i>ch</i>)
 <p>
