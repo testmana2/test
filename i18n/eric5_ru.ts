@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="ru">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -152,52 +153,52 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="108"/>
         <source>Enter the update period (1 to 14 days)</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте период обновления (от 1 до 14 дней)</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="36"/>
         <source>Search...</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск...</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="118"/>
         <source>Add Rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить Правило</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="120"/>
         <source>Remove Rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить Правило</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="129"/>
         <source>Disable Subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Запретить подписку</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="131"/>
         <source>Enable Subscription</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить подписку</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="136"/>
         <source>Update All Subscriptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить все подписки</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="204"/>
         <source>&lt;p&gt;Do you really want to remove subscription &lt;b&gt;{0}&lt;/b&gt; and all subscriptions requiring it?&lt;/p&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Вы действительно хотите удалить подписку &lt;b&gt;{0}&lt;/b&gt; и все подписки связанные с этим?&lt;/p&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.py" line="210"/>
         <source>&lt;p&gt;Do you really want to remove subscription &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Вы действительно хотите удалить подписку &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockDialog.ui" line="101"/>
         <source>Default Update Period (days):</source>
-        <translation type="unfinished"></translation>
+        <translation>Период обновления по умолчанию(дней):</translation>
     </message>
 </context>
 <context>
@@ -205,37 +206,37 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="14"/>
         <source>AdBlock Exceptions</source>
-        <translation type="unfinished"></translation>
+        <translation>Исключения AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="51"/>
         <source>Enter a host to block AdBlock for</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте хост для блока AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="61"/>
         <source>Press to add the host</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажмите, чтобы добавить хост</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="64"/>
         <source>&amp;Add</source>
-        <translation type="unfinished">&amp;Добавить</translation>
+        <translation>&amp;Добавить</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="84"/>
         <source>Press to delete the selected hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить выбранные хосты</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.ui" line="87"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Удалить</translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockExceptionsDialog.py" line="33"/>
         <source>Enter host to be added...</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте хост, который надо добавить...</translation>
     </message>
 </context>
 <context>
@@ -243,17 +244,17 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="36"/>
         <source>AdBlock lets you block unwanted content on web pages.</source>
-        <translation type="unfinished"></translation>
+        <translation>AdBlock позволяет Вам блокировать нежелательное содержимое web страниц.</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="70"/>
         <source>Disable AdBlock</source>
-        <translation type="unfinished"></translation>
+        <translation>Запретить AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="73"/>
         <source>Enable AdBlock</source>
-        <translation type="unfinished">Разрешить AdBlock</translation>
+        <translation>Разрешить AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="77"/>
@@ -263,42 +264,42 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="95"/>
         <source>Blocked URL (AdBlock Rule) - click to edit rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Заблокированный URL (AdBlock правило) - кликните для редактирования правила</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="100"/>
         <source>{0} with ({1})</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} с ({1})</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="105"/>
         <source>No content blocked</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет заблокированного содержания</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="114"/>
         <source>AdBlock</source>
-        <translation type="unfinished"></translation>
+        <translation>AdBlock</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="79"/>
         <source>Remove AdBlock Exception</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить AdBlock исключение</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="83"/>
         <source>Add AdBlock Exception</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить AdBlock исключение</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="86"/>
         <source>AdBlock Exceptions...</source>
-        <translation type="unfinished"></translation>
+        <translation>AdBlock исключения...</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockIcon.py" line="89"/>
         <source>AdBlock Configuration...</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка AdBlock...</translation>
     </message>
 </context>
 <context>
@@ -362,12 +363,12 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="273"/>
         <source>AdBlock file &apos;{0}&apos; does not start with [Adblock.</source>
-        <translation type="unfinished"></translation>
+        <translation>Adblock файл &apos;{0}&apos; начинается не с [Adblock.</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="434"/>
         <source>&lt;p&gt;AdBlock subscription &lt;b&gt;{0}&lt;/b&gt; has a wrong checksum.&lt;br/&gt;Found: {1}&lt;br/&gt;Calculated: {2}&lt;br/&gt;Use it anyway?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Adblock подписка &lt;b&gt;{0}&lt;/b&gt; имеет неверную контрольную сумму.&lt;br/&gt;Найдено: {1}&lt;br/&gt;Вычесленно: {2}&lt;br/&gt;Использовать её?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -375,27 +376,27 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockTreeWidget.py" line="116"/>
         <source>Add Custom Rule</source>
-        <translation type="unfinished">Добавить пользовательское правило</translation>
+        <translation>Добавить пользовательское правило</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockTreeWidget.py" line="116"/>
         <source>Write your rule here:</source>
-        <translation type="unfinished"></translation>
+        <translation>Записать Ваше правило здесь:</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockTreeWidget.py" line="167"/>
         <source>Add Rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить правило</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockTreeWidget.py" line="169"/>
         <source>Remove Rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить правило</translation>
     </message>
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockTreeWidget.py" line="221"/>
         <source>{0} (recently updated)</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} (недавно обновлен)</translation>
     </message>
 </context>
 <context>
@@ -438,27 +439,27 @@
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished">Имя:</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="49"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Адрес:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="63"/>
         <source>Description:</source>
-        <translation type="unfinished">Описание:</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="73"/>
         <source>Enter a description</source>
-        <translation type="unfinished">Задайте описание</translation>
+        <translation>Задайте описание</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="80"/>
         <source>Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Папка:</translation>
     </message>
 </context>
 <context>
@@ -1209,32 +1210,32 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="42"/>
         <source>Application Diagram {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаграмма приложения {0}</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="62"/>
         <source>Parsing modules...</source>
-        <translation type="unfinished">Разбор модулей...</translation>
+        <translation>Разбор модулей...</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="185"/>
         <source>&lt;&lt;Application&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Приложение&gt;&gt;</translation>
+        <translation>&lt;&lt;Приложение&gt;&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="187"/>
         <source>&lt;&lt;Others&gt;&gt;</source>
-        <translation type="unfinished">&lt;&lt;Другие&gt;&gt;</translation>
+        <translation>&lt;&lt;Другие&gt;&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>Load Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить диаграмму</translation>
     </message>
     <message>
         <location filename="Graphics/ApplicationDiagramBuilder.py" line="270"/>
         <source>&lt;p&gt;The diagram belongs to the project &lt;b&gt;{0}&lt;/b&gt;. Shall this project be opened?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Диаграмма относится к проекту&lt;b&gt;{0}&lt;/b&gt;.Этот проект был открыт?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1453,27 +1454,27 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui" line="27"/>
         <source>&lt;b&gt;Add/Edit Bookmark&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Добавить/редактировать закладку&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="47"/>
         <source>Add Bookmark</source>
-        <translation type="unfinished">Добавить закладку</translation>
+        <translation>Добавить закладку</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="50"/>
         <source>Edit Bookmark</source>
-        <translation type="unfinished">Редактировать закладку</translation>
+        <translation>Редактировать закладку</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="54"/>
         <source>Remove from Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить из быстрого набора</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/BookmarkActionSelectionDialog.py" line="57"/>
         <source>Add to Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить в быстрый набор</translation>
     </message>
 </context>
 <context>
@@ -1509,37 +1510,37 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="26"/>
         <source>Bookmark Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Свойства закладки</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="35"/>
         <source>Name:</source>
-        <translation type="unfinished">Имя:</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="42"/>
         <source>Enter the name</source>
-        <translation type="unfinished">Введите имя</translation>
+        <translation>Введите имя</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="49"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Адрес:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="56"/>
         <source>Enter the address</source>
-        <translation type="unfinished">Введите адрес</translation>
+        <translation>Введите адрес</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="63"/>
         <source>Description:</source>
-        <translation type="unfinished">Описание:</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="73"/>
         <source>Enter a description</source>
-        <translation type="unfinished">Задайте описание</translation>
+        <translation>Задайте описание</translation>
     </message>
 </context>
 <context>
@@ -1815,7 +1816,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="149"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Свойства...</translation>
+        <translation>&amp;Свойства...</translation>
     </message>
 </context>
 <context>
@@ -1823,7 +1824,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="20"/>
         <source>Import Bookmarks</source>
-        <translation type="unfinished">Импортировать закладки</translation>
+        <translation>Импортировать закладки</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="36"/>
@@ -1843,7 +1844,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="179"/>
         <source>Cancel</source>
-        <translation type="unfinished">Отмена</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="85"/>
@@ -1878,7 +1879,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
         <source>Next &gt;</source>
-        <translation type="unfinished">Далее &gt;</translation>
+        <translation>Далее &gt;</translation>
     </message>
 </context>
 <context>
@@ -2035,8 +2036,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2046,7 +2047,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Свойства...</translation>
+        <translation>&amp;Свойства...</translation>
     </message>
 </context>
 <context>
@@ -2064,7 +2065,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="277"/>
         <source>Open all in Tabs</source>
-        <translation type="unfinished">Открыть всё в закладках</translation>
+        <translation>Открыть всё в закладках</translation>
     </message>
 </context>
 <context>
@@ -2245,7 +2246,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="195"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">Закладки</translation>
+        <translation>Закладки</translation>
     </message>
 </context>
 <context>
@@ -2277,13 +2278,13 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
         <source>&amp;Properties...</source>
-        <translation type="unfinished">&amp;Свойства...</translation>
+        <translation>&amp;Свойства...</translation>
     </message>
 </context>
 <context>
@@ -2475,7 +2476,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="UI/Browser.py" line="245"/>
         <source>Goto</source>
-        <translation type="unfinished">Перейти</translation>
+        <translation>Перейти</translation>
     </message>
     <message>
         <location filename="UI/Browser.py" line="347"/>
@@ -2551,12 +2552,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="48"/>
         <source>From</source>
-        <translation type="unfinished">От</translation>
+        <translation>От</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="48"/>
         <source>To</source>
-        <translation type="unfinished">До</translation>
+        <translation>До</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="130"/>
@@ -2566,12 +2567,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="116"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
+        <translation>Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="130"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/CallTraceViewer.py" line="153"/>
@@ -3840,12 +3841,12 @@ to display the configuration page.</source>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="324"/>
         <source>Security</source>
-        <translation type="unfinished">Безопасность</translation>
+        <translation>Безопасность</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="341"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+        <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="233"/>
@@ -3865,7 +3866,7 @@ to display the configuration page.</source>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="137"/>
         <source>IRC</source>
-        <translation type="unfinished"></translation>
+        <translation>IRC</translation>
     </message>
 </context>
 <context>
@@ -4252,7 +4253,7 @@ to display the configuration page.</source>
         <location filename="Cooperation/CooperationClient.py" line="286"/>
         <source>Illegal address: {0}@{1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Неправильный адрес: {0}@{1}</translation>
     </message>
     <message>
         <location filename="Cooperation/CooperationClient.py" line="377"/>
@@ -6669,8 +6670,6 @@ MD5: {2}</source>
         <source>%n Download(s)</source>
         <translation>
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -6678,8 +6677,6 @@ MD5: {2}</source>
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -6744,8 +6741,6 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="24"/>
         <source>%n seconds remaining</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -6828,12 +6823,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="E5Gui/E5MainWindow.py" line="54"/>
         <source>Loading Style Sheet</source>
-        <translation type="unfinished">Загружется таблица стилей</translation>
+        <translation>Загружется таблица стилей</translation>
     </message>
     <message>
         <location filename="E5Gui/E5MainWindow.py" line="54"/>
         <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -7362,153 +7357,153 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation type="unfinished">Менеджер SLL сертификатов</translation>
+        <translation>Менеджер SLL сертификатов</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation type="unfinished">&amp;Серверы</translation>
+        <translation>&amp;Серверы</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation type="unfinished">Сертификаты следующих серверов уже сохранены:</translation>
+        <translation>Сертификаты следующих серверов уже сохранены:</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation type="unfinished">Имя сертификата</translation>
+        <translation>Имя сертификата</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation type="unfinished">Сервер</translation>
+        <translation>Сервер</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation type="unfinished">Дата окончания</translation>
+        <translation>Дата окончания</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation type="unfinished">Показать выбранный сертификат</translation>
+        <translation>Показать выбранный сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation type="unfinished">&amp;Показать...</translation>
+        <translation>&amp;Показать...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation type="unfinished">Импортировать сертификат</translation>
+        <translation>Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished">&amp;Импорт...</translation>
+        <translation>&amp;Импорт...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="181"/>
         <source>Press to export the selected certificate</source>
-        <translation type="unfinished">Экспортировать сертификат</translation>
+        <translation>Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished">&amp;Экспорт...</translation>
+        <translation>&amp;Экспорт...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation type="unfinished">Удалить выбранный сертификат</translation>
+        <translation>Удалить выбранный сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation type="unfinished">&amp;Удалить...</translation>
+        <translation>&amp;Удалить...</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation type="unfinished">&amp;Авторитеты</translation>
+        <translation>&amp;Авторитеты</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation type="unfinished">Сертификаты для следующих авторитетов уже сохранены:</translation>
+        <translation>Сертификаты для следующих авторитетов уже сохранены:</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="285"/>
         <source>(Unknown)</source>
-        <translation type="unfinished">(неизвестный)</translation>
+        <translation>(Неизвестный)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="287"/>
         <source>(Unknown common name)</source>
-        <translation type="unfinished">(Неизвестное имя)
+        <translation>(Неизвестное имя)
 </translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="138"/>
         <source>Delete Server Certificate</source>
-        <translation type="unfinished">Удалить сертификат сервера</translation>
+        <translation>Удалить сертификат сервера</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="138"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="461"/>
         <source>Import Certificate</source>
-        <translation type="unfinished">Импортировать сертификат</translation>
+        <translation>Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="379"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="335"/>
         <source>Delete CA Certificate</source>
-        <translation type="unfinished">Удалить CA сертификат</translation>
+        <translation>Удалить CA сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="335"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="471"/>
         <source>Export Certificate</source>
-        <translation type="unfinished">Экспортировать сертификат</translation>
+        <translation>Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="415"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation type="unfinished">Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
+        <translation>Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="431"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="441"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="461"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation type="unfinished">Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
+        <translation>Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="E5Network/E5SslCertificatesDialog.py" line="471"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -13398,7 +13393,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="43"/>
         <source>Add</source>
-        <translation type="unfinished">Добавить</translation>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="89"/>
@@ -13496,7 +13491,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="329"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Открыть</translation>
+        <translation>&amp;Открыть</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="330"/>
@@ -13529,7 +13524,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/fetch.py" line="59"/>
         <source>Fetching from a remote Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Получение изменений из удалённого репозитория</translation>
     </message>
 </context>
 <context>
@@ -13557,7 +13552,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="82"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">Необходимо перезагрузить проект. Сделать это?</translation>
+        <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
 </context>
 <context>
@@ -13772,25 +13767,25 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Network/FileReply.py" line="203"/>
         <source>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Change to parent directory&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Перейти в родительский каталог&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation>  &lt;p&gt;&lt;a class=&quot;link_parent&quot; href=&quot;{0}&quot;&gt;Перейти в родительский каталог&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/FileReply.py" line="216"/>
         <source>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Name&lt;/th&gt;&lt;th&gt;Size&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Last modified&lt;/th&gt;&lt;/tr&gt;
 </source>
-        <translation type="unfinished">    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Имя&lt;/th&gt;&lt;th&gt;Размер&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Последнее изменение&lt;/th&gt;&lt;/tr&gt;
+        <translation>    &lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Имя&lt;/th&gt;&lt;th&gt;Размер&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Последнее изменение&lt;/th&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/FileReply.py" line="242"/>
         <source>{0} {1}</source>
         <comment>size unit</comment>
-        <translation type="unfinished">{0} {1}</translation>
+        <translation>{0} {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/FileReply.py" line="266"/>
         <source>Listing of {0}</source>
-        <translation type="unfinished">Список {0}</translation>
+        <translation>Список {0}</translation>
     </message>
 </context>
 <context>
@@ -14288,7 +14283,7 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="167"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Импортировано {0}</translation>
+        <translation>Импортировано {0}</translation>
     </message>
 </context>
 <context>
@@ -14397,7 +14392,7 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/Network/FtpReply.py" line="273"/>
         <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Подключиться к прокси &apos;{0}&apos; используя:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Подключиться к прокси &apos;{0}&apos; используя:&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -14648,17 +14643,17 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="72"/>
         <source>Name:</source>
-        <translation type="unfinished">Имя:</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="89"/>
         <source>Version:</source>
-        <translation type="unfinished">Версия:</translation>
+        <translation>Версия:</translation>
     </message>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="106"/>
         <source>URL:</source>
-        <translation type="unfinished">URL:</translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="123"/>
@@ -14668,7 +14663,7 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="140"/>
         <source>Description:</source>
-        <translation type="unfinished">Описание:</translation>
+        <translation>Описание:</translation>
     </message>
     <message>
         <location filename="Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui" line="153"/>
@@ -14851,8 +14846,8 @@ Reason: {0}</source>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Открыть ссылку в новой закладке	Shift+Левая кнопка мыши</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="775"/>
@@ -15042,7 +15037,7 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="2256"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+        <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1029"/>
@@ -15072,32 +15067,32 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>&amp;Print</source>
-        <translation type="unfinished">&amp;Печать</translation>
+        <translation>&amp;Печать</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>Print Preview</source>
-        <translation type="unfinished">Предварительный просмотр печати</translation>
+        <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1146"/>
         <source>Print as PDF</source>
-        <translation type="unfinished">Печать как PDF</translation>
+        <translation>Печать как PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1149"/>
         <source>Zoom &amp;in</source>
-        <translation type="unfinished">У&amp;величить масштаб</translation>
+        <translation>У&amp;величить масштаб</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1151"/>
         <source>Zoom &amp;reset</source>
-        <translation type="unfinished">&amp;Сбросить масштаб</translation>
+        <translation>&amp;Сбросить масштаб</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1153"/>
         <source>Zoom &amp;out</source>
-        <translation type="unfinished">У&amp;меньшить масштаб</translation>
+        <translation>У&amp;меньшить масштаб</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1156"/>
@@ -15132,7 +15127,7 @@ Reason: {0}</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="2256"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1167"/>
@@ -15471,27 +15466,27 @@ Reason: {0}</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="145"/>
         <source>Qt5 Documentation</source>
-        <translation type="unfinished">Документация Qt4 {5 ?}</translation>
+        <translation>Документация Qt5</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="151"/>
         <source>Press to select the Qt5 documentation directory via a dialog</source>
-        <translation type="unfinished">Выбрать каталог документации Qt4 с помощью диалога {5 ?}</translation>
+        <translation>Выбрать каталог документации Qt5 с помощью диалога</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="161"/>
         <source>Enter the Qt5 documentation directory</source>
-        <translation type="unfinished">Задайте каталог документации Qt4 {5 ?}</translation>
+        <translation>Задайте каталог документации Qt5</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="168"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</source>
-        <translation type="unfinished">&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения QT4DOCDIR. {5D?}</translation>
+        <translation>&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения QT4DOCDIR.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
         <source>Select Qt5 documentation entry</source>
-        <translation type="unfinished">Выберите каталог документации Qt4 {5 ?}</translation>
+        <translation>Выберите каталог документации Qt5</translation>
     </message>
 </context>
 <context>
@@ -15517,52 +15512,52 @@ Reason: {0}</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="17"/>
         <source>&lt;b&gt;Configure User Interface&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Настроить интерфейс&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Настроить интерфейс&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="39"/>
         <source>Style:</source>
-        <translation type="unfinished">Стиль:</translation>
+        <translation>Стиль:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="46"/>
         <source>Select the interface style</source>
-        <translation type="unfinished">Выбурите стиль интерфейса</translation>
+        <translation>Выбурите стиль интерфейса</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="53"/>
         <source>Style Sheet:</source>
-        <translation type="unfinished">Стиль:</translation>
+        <translation>Стиль:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="60"/>
         <source>Enter the name of the style sheet file</source>
-        <translation type="unfinished">Задайте имя файла стиля</translation>
+        <translation>Задайте имя файла стиля</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="67"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation type="unfinished">Выберите стиль с помощью диалога</translation>
+        <translation>Выберите стиль с помощью диалога</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.ui" line="70"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.py" line="55"/>
         <source>System</source>
-        <translation type="unfinished">Система</translation>
+        <translation>Система</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.py" line="68"/>
         <source>Select style sheet file</source>
-        <translation type="unfinished">Выберите файл стиля</translation>
+        <translation>Выберите файл стиля</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpInterfacePage.py" line="68"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
-        <translation type="unfinished">Стили Qt (*.qss);;Каскадные стили (*.css);;Все файлы (*)</translation>
+        <translation>Стили Qt (*.qss);;Каскадные стили (*.css);;Все файлы (*)</translation>
     </message>
 </context>
 <context>
@@ -15749,7 +15744,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="593"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+        <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="103"/>
@@ -15769,12 +15764,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="917"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить все закрытые вкладки</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="919"/>
         <source>Clear List</source>
-        <translation type="unfinished">Очистить список</translation>
+        <translation>Очистить список</translation>
     </message>
 </context>
 <context>
@@ -15903,7 +15898,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpViewersPage.ui" line="106"/>
         <source>System Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>системный WEB просмотрщик</translation>
     </message>
 </context>
 <context>
@@ -26484,8 +26479,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <source>limited to %n user(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -26562,8 +26555,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Network/IRC/IrcChannelWidget.py" line="811"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -26812,16 +26803,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <source>%n day(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1516"/>
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -26830,16 +26817,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <source>%n minute(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Network/IRC/IrcChannelWidget.py" line="1526"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -26865,8 +26848,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1533"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -41862,8 +41843,6 @@ Not connected</source>
         <source>Snapshot will be taken in %n seconds</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -51843,22 +51822,22 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="46"/>
         <source>Class Diagram {0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаграмма классов {0}: {1}</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="49"/>
         <source>Class Diagram: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаграмма классов: {0}</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="79"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; could not be found.</source>
-        <translation type="unfinished">Ме могу найти модуль &lt;b&gt;&apos;{0}&apos;&lt;/b&gt;.</translation>
+        <translation>Модуль &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; не найден.</translation>
     </message>
     <message>
         <location filename="Graphics/UMLClassDiagramBuilder.py" line="142"/>
         <source>The module &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; does not contain any classes.</source>
-        <translation type="unfinished">Модуль &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; не содержит ни одного класса.</translation>
+        <translation>Модуль &lt;b&gt;&apos;{0}&apos;&lt;/b&gt; не содержит ни одного класса.</translation>
     </message>
 </context>
 <context>
@@ -51876,12 +51855,12 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Graphics/UMLDialog.py" line="79"/>
         <source>Load</source>
-        <translation type="unfinished">Загрузить</translation>
+        <translation>Загрузить</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="84"/>
         <source>Save</source>
-        <translation type="unfinished">Сохранить</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="Graphics/UMLDialog.py" line="89"/>
@@ -55679,7 +55658,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="VCS/ProjectHelper.py" line="440"/>
         <source>Switch</source>
-        <translation type="unfinished">Переключиться</translation>
+        <translation>Переключиться</translation>
     </message>
 </context>
 <context>
@@ -58789,28 +58768,28 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="ViewManager/ViewManager.py" line="2887"/>
         <source>Zoom reset</source>
-        <translation type="unfinished">Сбросить масштаб</translation>
+        <translation>Сбросить масштаб</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2887"/>
         <source>Zoom &amp;reset</source>
-        <translation type="unfinished">&amp;Сбросить масштаб</translation>
+        <translation>&amp;Сбросить масштаб</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2887"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
-        <translation type="unfinished">Ctrl+0</translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2894"/>
         <source>Reset the zoom of the text</source>
-        <translation type="unfinished">Сбросить масштаб</translation>
+        <translation>Сбросить масштаб текста</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2896"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Сбросить масштаб&lt;/b&gt;&lt;p&gt;Сбросить масштаб текста, т.е. установить масштаб в 100%.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Сбросить масштаб&lt;/b&gt;&lt;p&gt;Сбросить масштаб текста, т.е. установить масштаб в 100%.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2853"/>
@@ -58862,7 +58841,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="ViewManager/ViewManager.py" line="3556"/>
         <source>Check spelling</source>
-        <translation type="unfinished">Проверка орфографии</translation>
+        <translation>Проверка орфографии</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="3556"/>
@@ -58953,7 +58932,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="ViewManager/ViewManager.py" line="2481"/>
         <source>Ctrl+.</source>
         <comment>Search|Search current word forward</comment>
-        <translation type="unfinished">Ctrl+.</translation>
+        <translation>Ctrl+.</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2489"/>
@@ -59626,7 +59605,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="142"/>
         <source>Imported {0}</source>
-        <translation type="unfinished">Импортировано {0}</translation>
+        <translation>Импортировано {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="61"/>
@@ -59706,7 +59685,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="eric5.py" line="248"/>
         <source>Starting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Запуск...</translation>
     </message>
 </context>
 <context>
@@ -59785,7 +59764,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1792"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Закладки:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
 </context>
 <context>
