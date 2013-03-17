@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -14392,7 +14393,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -33996,52 +33997,52 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="94"/>
         <source>QWizard</source>
-        <translation type="unfinished"></translation>
+        <translation>QWizard</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="95"/>
         <source>QWizardPage</source>
-        <translation type="unfinished"></translation>
+        <translation>QWizardPage</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="96"/>
         <source>QDockWidget</source>
-        <translation type="unfinished"></translation>
+        <translation>QDockWidget</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="97"/>
         <source>QFrame</source>
-        <translation type="unfinished"></translation>
+        <translation>QFrame</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="98"/>
         <source>QGroupBox</source>
-        <translation type="unfinished"></translation>
+        <translation>QGroupBox</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="99"/>
         <source>QScrollArea</source>
-        <translation type="unfinished"></translation>
+        <translation>QScrollArea</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="100"/>
         <source>QMdiArea</source>
-        <translation type="unfinished"></translation>
+        <translation>QMdiArea</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="101"/>
         <source>QTabWidget</source>
-        <translation type="unfinished"></translation>
+        <translation>QTabWidget</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="102"/>
         <source>QToolBox</source>
-        <translation type="unfinished"></translation>
+        <translation>QToolBox</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="103"/>
         <source>QStackedWidget</source>
-        <translation type="unfinished"></translation>
+        <translation>QStackedWidget</translation>
     </message>
 </context>
 <context>
