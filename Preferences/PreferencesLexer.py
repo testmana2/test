@@ -11,6 +11,7 @@ from PyQt4.QtGui import QColor, QFont, QApplication
 from PyQt4.Qsci import QsciLexer
 
 import Preferences
+import Globals
 
 
 class PreferencesLexerError(Exception):
@@ -69,6 +70,14 @@ class PreferencesLexer(QsciLexer):
         """
         super().__init__(parent)
         
+        # These default font families are taken from QScintilla
+        if Globals.isWindowsPlatform():
+            self.__defaultFontFamily = "Courier New"
+        elif Globals.isMacPlatform():
+            self.__defaultFontFamily = "Courier"
+        else:
+            self.__defaultFontFamily = "Bitstream Vera Sans Mono"
+        
         # instantiate a lexer object for the given language
         import QScintilla.Lexers
         lex = QScintilla.Lexers.getLexer(language)
@@ -103,11 +112,15 @@ class PreferencesLexer(QsciLexer):
                 self.papers[i] = lex.defaultPaper(i)
                 self.eolFills[i] = lex.defaultEolFill(i)
                 self.fonts[i] = lex.defaultFont(i)
+                # Override QScintilla's default font family to
+                # always use a monospaced font
+                self.fonts[i].setFamily(self.__defaultFontFamily)
                 
                 self.defaultColours[i] = lex.defaultColor(i)
                 self.defaultPapers[i] = lex.defaultPaper(i)
                 self.defaultEolFills[i] = lex.defaultEolFill(i)
                 self.defaultFonts[i] = lex.defaultFont(i)
+                self.defaultFonts[i].setFamily(self.__defaultFontFamily)
                 
                 self.ind2style[index] = i
                 index += 1
