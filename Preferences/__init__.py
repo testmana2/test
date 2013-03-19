@@ -487,7 +487,7 @@ class Prefs(object):
     editorTypingDefaults = {
         "Python/EnabledTypingAids": True,
         "Python/InsertClosingBrace": True,
-        "Python/IndentBrace": True,
+        "Python/IndentBrace": False,
         "Python/SkipBrace": True,
         "Python/InsertQuote": True,
         "Python/DedentElse": True,
