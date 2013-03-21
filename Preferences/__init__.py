@@ -319,8 +319,10 @@ class Prefs(object):
         "SpellCheckingPersonalExcludeList": "",
         
         "DefaultEncoding": "utf-8",
-        "DefaultOpenFilter": "",
-        "DefaultSaveFilter": "",
+        "DefaultOpenFilter": QApplication.translate('Lexers',
+                                                    'Python Files (*.py *.py2 *.py3)'),
+        "DefaultSaveFilter": QApplication.translate('Lexers',
+                                                    "Python3 Files (*.py)"),
         "AdditionalOpenFilters": [],
         "AdditionalSaveFilters": [],
         
