@@ -16508,7 +16508,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="351"/>
         <source>Try Again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Снова</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="298"/>
@@ -24341,12 +24341,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="28"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пожалуйста выберете файл для импортирования закладок.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="76"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Файл &apos;{0}&apos; не существует.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="95"/>
@@ -27393,7 +27393,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="86"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Идентифицировать</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkListDialog.py" line="88"/>
@@ -29174,7 +29174,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="239"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Открыть &apos;отбракованный&apos; файл</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="245"/>
@@ -29243,7 +29243,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="14"/>
         <source>Master Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Мастер-пароль</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="23"/>
@@ -31736,18 +31736,19 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="36"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пожалуйста выберете файл для импортирования закладок.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="82"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Файл &apos;{0}&apos; не существует.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="99"/>
         <source>File &apos;{0}&apos; cannot be read.
 Reason: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Файл&apos;{0}&apos;невозможно прочитать.
+Причина: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="124"/>
@@ -33366,27 +33367,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1101"/>
+        <location filename="Preferences/__init__.py" line="1103"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Файлы свойств (*.ini);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33394,12 +33395,12 @@ Select Update.</source>
 <context>
     <name>PreferencesLexerError</name>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="25"/>
+        <location filename="Preferences/PreferencesLexer.py" line="26"/>
         <source>Unspecific PreferencesLexer error.</source>
         <translation>Неустановленная ошибка PreferencesLexer.</translation>
     </message>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="55"/>
+        <location filename="Preferences/PreferencesLexer.py" line="56"/>
         <source>Unsupported Lexer Language: {0}</source>
         <translation>Неподдерживаемый язык лексического анализатора: {0}</translation>
     </message>
@@ -36124,7 +36125,7 @@ Select Update.</source>
     <message>
         <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
         <source>Load Diagram...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Загрузить диаграмму...</translation>
     </message>
 </context>
 <context>
@@ -40682,12 +40683,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="38"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пожалуйста выберете файл для импортирования закладок.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="84"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Файл &apos;{0}&apos; не существует.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="99"/>
@@ -40929,7 +40930,7 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="40"/>
         <source>Enter search term for hosts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите условия поиска хостов</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="47"/>
@@ -40939,7 +40940,7 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="77"/>
         <source>Press to add site to the whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Нажмите кнопку для добавления сайта в белый список</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="80"/>
@@ -40964,7 +40965,7 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">З&amp;аменить всё</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/SendRefererWhitelistDialog.py" line="49"/>
@@ -42079,7 +42080,7 @@ Not connected</source>
     <message>
         <location filename="QScintilla/SpellingDictionaryEditDialog.ui" line="117"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">З&amp;аменить всё</translation>
     </message>
 </context>
 <context>
@@ -48396,7 +48397,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="75"/>
         <source>User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройка агента пользователя</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="82"/>
@@ -48406,7 +48407,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="85"/>
         <source>Speed Dial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки быстрого набора</translation>
     </message>
 </context>
 <context>
@@ -49283,7 +49284,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Открыть &apos;отбракованный&apos; файл</translation>
     </message>
 </context>
 <context>
@@ -59633,7 +59634,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="61"/>
         <source>Please choose the file to begin importing bookmarks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пожалуйста выберете файл для импортирования закладок.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="61"/>
@@ -59643,7 +59644,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="108"/>
         <source>File &apos;{0}&apos; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Файл &apos;{0}&apos; не существует.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="109"/>
