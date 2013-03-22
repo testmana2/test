@@ -18241,7 +18241,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="995"/>
         <source>Personal Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Личная информация</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="995"/>
@@ -18579,7 +18579,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2523"/>
         <source>Import Patch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Импортировать патч</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2571"/>
@@ -18933,12 +18933,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="152"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="168"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
 </context>
 <context>
@@ -18956,7 +18956,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="32"/>
         <source>Enter the bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="45"/>
@@ -19036,12 +19036,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="183"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="199"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
@@ -19381,7 +19381,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="120"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="29"/>
@@ -19838,12 +19838,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="232"/>
         <source>&lt;Start&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;Начало&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="233"/>
         <source>&lt;End&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;Конец&gt;</translation>
     </message>
 </context>
 <context>
@@ -20035,12 +20035,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="152"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="168"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
@@ -20231,7 +20231,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="48"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пользователь</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="60"/>
@@ -21063,12 +21063,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="116"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="132"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="145"/>
@@ -22471,7 +22471,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1342"/>
         <source>Import Patch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Импортировать патч</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="805"/>
@@ -22581,12 +22581,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="368"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Конфликт решён</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="368"/>
         <source>Con&amp;flicts resolved</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кон&amp;фликт решён</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="371"/>
@@ -23156,7 +23156,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="25"/>
         <source>New Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Новое имя:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="32"/>
@@ -23309,12 +23309,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="350"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="366"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="233"/>
@@ -23500,12 +23500,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="152"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="168"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
 </context>
 <context>
@@ -23613,12 +23613,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="315"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладка:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="331"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Введите имя закладки</translation>
     </message>
 </context>
 <context>
@@ -26711,7 +26711,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1157"/>
         <source>Cut</source>
-        <translation>Вырезать</translation>
+        <translation type="obsolete">Вырезать</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
@@ -27263,7 +27263,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="61"/>
         <source>Server:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сервер:</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkEditDialog.ui" line="68"/>
@@ -27494,7 +27494,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="398"/>
         <source>Cut</source>
-        <translation>Вырезать</translation>
+        <translation type="obsolete">Вырезать</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcNetworkWidget.py" line="392"/>
@@ -28071,7 +28071,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="622"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пользователь</translation>
     </message>
     <message>
         <location filename="Network/IRC/IrcWidget.py" line="624"/>
@@ -35367,6 +35367,7 @@ Select Update.</source>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="103"/>
         <source>QStackedWidget</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -38529,7 +38530,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="196"/>
         <source>Geometric Shapes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Геометрические фигуры</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="196"/>
@@ -43953,7 +43954,7 @@ Not connected</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="494"/>
         <source>Commit Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Фиксировать изменения</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="494"/>
@@ -47160,12 +47161,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="153"/>
         <source>Commit the selected changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Фиксировать выбранные изменения</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="156"/>
         <source>&amp;Commit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Фиксировать</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="170"/>
@@ -47230,7 +47231,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
         <source>Differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Различия</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
@@ -48316,7 +48317,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncCheckPage.py" line="188"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Ошибка:&lt;/b&gt;&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncCheckPage.py" line="57"/>
@@ -48583,7 +48584,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="29"/>
         <source>Server:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сервер:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="36"/>
@@ -50415,7 +50416,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="QScintilla/Terminal.py" line="164"/>
         <source>Find</source>
-        <translation>Найти</translation>
+        <translation type="obsolete">Найти</translation>
     </message>
 </context>
 <context>
@@ -54663,7 +54664,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1730"/>
         <source>Snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Снимок</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1730"/>
@@ -54828,7 +54829,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1345"/>
         <source>Right Sidebar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Правая док-панель</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1345"/>
@@ -55293,7 +55294,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VariableItem</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="38"/>
+        <location filename="Debugger/VariablesViewer.py" line="40"/>
         <source>&lt;double click to show value&gt;</source>
         <translation>&lt;дважды кликните чтобы показать значение&gt;</translation>
     </message>
@@ -55355,59 +55356,59 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VariablesViewer</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="284"/>
+        <location filename="Debugger/VariablesViewer.py" line="306"/>
         <source>Global Variables</source>
         <translation>Глобальные переменные</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="285"/>
+        <location filename="Debugger/VariablesViewer.py" line="307"/>
         <source>Globals</source>
         <translation>Глобальные переменные</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="289"/>
+        <location filename="Debugger/VariablesViewer.py" line="311"/>
         <source>&lt;b&gt;The Global Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the global variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно показа глобальных переменных&lt;/b&gt;
 &lt;p&gt;Это окно отображает глобальные переменные отлаживаемой программы.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="295"/>
+        <location filename="Debugger/VariablesViewer.py" line="317"/>
         <source>Local Variables</source>
         <translation>Локальные переменные</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Locals</source>
         <translation>Локальные переменные</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="300"/>
+        <location filename="Debugger/VariablesViewer.py" line="322"/>
         <source>&lt;b&gt;The Local Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the local variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно показа локальных переменных&lt;/b&gt;
 &lt;p&gt;Это окно отображает локальные переменные отлаживаемой программы.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Value</source>
         <translation>Значение</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="541"/>
+        <location filename="Debugger/VariablesViewer.py" line="563"/>
         <source>{0} items</source>
         <translation>{0} элементов</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="330"/>
+        <location filename="Debugger/VariablesViewer.py" line="352"/>
         <source>Show Details...</source>
         <translation>Показать подробности...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="335"/>
+        <location filename="Debugger/VariablesViewer.py" line="357"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
@@ -58858,13 +58859,13 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="ViewManager/ViewManager.py" line="2853"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Увеличить масштаб</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2870"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Уменьшить масштаб</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="592"/>
