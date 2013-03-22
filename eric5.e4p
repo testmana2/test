@@ -456,8 +456,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/CharDet/chardet/langhebrewmodel.py</Source>
     <Source>ThirdParty/CharDet/chardet/mbcharsetprober.py</Source>
     <Source>ThirdParty/CharDet/chardet/eucjpprober.py</Source>
-    <Source>QScintilla/Terminal.py</Source>
-    <Source>Preferences/ConfigurationPages/TerminalPage.py</Source>
     <Source>Preferences/ConfigurationPages/NetworkPage.py</Source>
     <Source>QScintilla/Lexers/LexerContainer.py</Source>
     <Source>QScintilla/Lexers/LexerPygments.py</Source>
@@ -1244,7 +1242,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>QScintilla/ReplaceWidget.ui</Form>
     <Form>QScintilla/SearchWidget.ui</Form>
     <Form>Preferences/ViewProfileToolboxesDialog.ui</Form>
-    <Form>Preferences/ConfigurationPages/TerminalPage.ui</Form>
     <Form>Preferences/ConfigurationPages/NetworkPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSpellCheckingPage.ui</Form>
     <Form>QScintilla/SpellCheckingDialog.ui</Form>

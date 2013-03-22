@@ -77,7 +77,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.templates4 = ['dialog4.tmpl', 'widget4.tmpl', 'mainwindow4.tmpl',
             'dialogbuttonboxbottom4.tmpl', 'dialogbuttonboxright4.tmpl',
             'dialogbuttonsbottom4.tmpl', 'dialogbuttonsbottomcenter4.tmpl',
-            'dialogbuttonsright4.tmpl', 'wizard4.tmpl', 'wizardpage4.tmpl']
+            'dialogbuttonsright4.tmpl', '', 'wizard4.tmpl', 'wizardpage4.tmpl',
+            'qdockwidget4.tmpl', 'qframe4.tmpl', 'qgroupbox4.tmpl',
+            'qscrollarea4.tmpl', 'qmdiarea4.tmpl', 'qtabwidget4.tmpl',
+            'qtoolbox4.tmpl', 'qstackedwidget4.tmpl']
         self.templateTypes4 = [
             self.trUtf8("Dialog"),
             self.trUtf8("Widget"),
@@ -87,8 +90,17 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.trUtf8("Dialog with Buttons (Bottom)"),
             self.trUtf8("Dialog with Buttons (Bottom-Center)"),
             self.trUtf8("Dialog with Buttons (Right)"),
-            self.trUtf8("Wizard"),
-            self.trUtf8("Wizard Page"),
+            '',
+            self.trUtf8("QWizard"),
+            self.trUtf8("QWizardPage"),
+            self.trUtf8("QDockWidget"),
+            self.trUtf8("QFrame"),
+            self.trUtf8("QGroupBox"),
+            self.trUtf8("QScrollArea"),
+            self.trUtf8("QMdiArea"),
+            self.trUtf8("QTabWidget"),
+            self.trUtf8("QToolBox"),
+            self.trUtf8("QStackedWidget"),
         ]
         
         self.compileProc = None
@@ -487,7 +499,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.trUtf8("Select a form type:"),
             self.templateTypes4,
             0, False)
-        if not ok:
+        if not ok or not selectedForm:
             # user pressed cancel
             return
         

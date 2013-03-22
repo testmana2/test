@@ -10,6 +10,7 @@ Module implementing the variables viewer widget.
 from PyQt4.QtCore import Qt, QRegExp, qVersion
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
     QMenu
+from PyQt4.QtGui import QTextDocument   # __IGNORE_WARNING__
 
 from E5Gui.E5Application import e5App
 
@@ -18,6 +19,7 @@ from DebugClients.Python3.DebugConfig import ConfigVarTypeStrings
 from .Config import ConfigVarTypeDispStrings
 
 import Preferences
+import Utilities
 
 
 class VariableItem(QTreeWidgetItem):
@@ -33,10 +35,30 @@ class VariableItem(QTreeWidgetItem):
         @param dvalue value string (string)
         @param dtype type string (string)
         """
-        self.value = dvalue
+        self.__value = dvalue
         if len(dvalue) > 2048:     # 1024 * 2
             dvalue = QApplication.translate("VariableItem",
                                             "<double click to show value>")
+            self.__tooltip = dvalue
+        else:
+            if Qt.mightBeRichText(dvalue):
+                self.__tooltip = Utilities.html_encode(dvalue)
+            else:
+                self.__tooltip = dvalue
+            lines = dvalue.splitlines()
+            if len(lines) > 1:
+                # only show the first non-empty line;
+                # indicate skipped lines by <...> at the
+                # beginning and/or end
+                index = 0
+                while index < len(lines) and lines[index] == "":
+                    index += 1
+                dvalue = ""
+                if index > 0:
+                    dvalue += "<...>"
+                dvalue += lines[index]
+                if index < len(lines) - 1:
+                    dvalue += "<...>"
         
         super().__init__(parent, [dvar, dvalue, dtype])
         
@@ -48,7 +70,7 @@ class VariableItem(QTreeWidgetItem):
         
         @return value of the item (string)
         """
-        return self.value
+        return self.__value
         
     def data(self, column, role):
         """
@@ -62,8 +84,8 @@ class VariableItem(QTreeWidgetItem):
         @return requested data
         """
         if column == 1 and role == Qt.ToolTipRole:
-            role = Qt.DisplayRole
-        return QTreeWidgetItem.data(self, column, role)
+            return self.__tooltip
+        return super().data(column, role)
         
     def attachDummy(self):
         """

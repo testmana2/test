@@ -9,11 +9,17 @@ Version 5.4-snapshot-2013mmdd:
   -- changed the 'import' statements to improve startup behavior
   -- removed the QtHelp dependancy; support is only available,
      if the QtHelp module could be imported
+- Debugger
+  -- Variables Viewer
+     --- changed the way multi line strings are shown in the value
+         column
 - Editor
   -- added the capability to preview HTML, Mardown and ReST files
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
+- Project Forms Viewer
+  -- added support for more widgets in the code creation dialog
 - Template Viewer
   -- added a context menu entry to reload the templates
   -- changed logic such, that the templates are only written, if they contain

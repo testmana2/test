@@ -749,7 +749,6 @@
               <section title="eric5.Preferences.ConfigurationPages.ShellPage" ref="eric5.Preferences.ConfigurationPages.ShellPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TemplatesPage" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html" />
-              <section title="eric5.Preferences.ConfigurationPages.TerminalPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TrayStarterPage" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.VcsPage" ref="eric5.Preferences.ConfigurationPages.VcsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ViewmanagerPage" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html" />
@@ -862,7 +861,6 @@
             <section title="eric5.QScintilla.SpellChecker" ref="eric5.QScintilla.SpellChecker.html" />
             <section title="eric5.QScintilla.SpellCheckingDialog" ref="eric5.QScintilla.SpellCheckingDialog.html" />
             <section title="eric5.QScintilla.SpellingDictionaryEditDialog" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html" />
-            <section title="eric5.QScintilla.Terminal" ref="eric5.QScintilla.Terminal.html" />
             <section title="eric5.QScintilla.ZoomDialog" ref="eric5.QScintilla.ZoomDialog.html" />
           </section>
           <section title="eric5.Snapshot" ref="index-eric5.Snapshot.html">
@@ -3970,6 +3968,7 @@
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
       <keyword name="Editor.__initOnlineChangeTrace" id="Editor.__initOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineChangeTrace" />
       <keyword name="Editor.__initOnlineSyntaxCheck" id="Editor.__initOnlineSyntaxCheck" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineSyntaxCheck" />
+      <keyword name="Editor.__isCommentedLine" id="Editor.__isCommentedLine" ref="eric5.QScintilla.Editor.html#Editor.__isCommentedLine" />
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
       <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
@@ -5800,6 +5799,7 @@
       <keyword name="HgNewProjectOptionsDialog.on_projectDirButton_clicked" id="HgNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="HgNewProjectOptionsDialog.on_protocolCombo_activated" id="HgNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="HgOptionsDialog" id="HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog" />
       <keyword name="HgOptionsDialog (Constructor)" id="HgOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.__init__" />
       <keyword name="HgOptionsDialog (Module)" id="HgOptionsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
@@ -6523,7 +6523,6 @@
       <keyword name="IrcChannelWidget.__copyAllMessages" id="IrcChannelWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyAllMessages" />
       <keyword name="IrcChannelWidget.__copyMessages" id="IrcChannelWidget.__copyMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__copyMessages" />
       <keyword name="IrcChannelWidget.__cutAllMessages" id="IrcChannelWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutAllMessages" />
-      <keyword name="IrcChannelWidget.__cutMessages" id="IrcChannelWidget.__cutMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__cutMessages" />
       <keyword name="IrcChannelWidget.__extractPrivilege" id="IrcChannelWidget.__extractPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__extractPrivilege" />
       <keyword name="IrcChannelWidget.__findUser" id="IrcChannelWidget.__findUser" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__findUser" />
       <keyword name="IrcChannelWidget.__handleCtcp" id="IrcChannelWidget.__handleCtcp" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__handleCtcp" />
@@ -6535,6 +6534,7 @@
       <keyword name="IrcChannelWidget.__openPrivateChat" id="IrcChannelWidget.__openPrivateChat" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__openPrivateChat" />
       <keyword name="IrcChannelWidget.__saveMessages" id="IrcChannelWidget.__saveMessages" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__saveMessages" />
       <keyword name="IrcChannelWidget.__sendAutoWhoCommand" id="IrcChannelWidget.__sendAutoWhoCommand" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__sendAutoWhoCommand" />
+      <keyword name="IrcChannelWidget.__setEditTopicButton" id="IrcChannelWidget.__setEditTopicButton" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setEditTopicButton" />
       <keyword name="IrcChannelWidget.__setTopic" id="IrcChannelWidget.__setTopic" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setTopic" />
       <keyword name="IrcChannelWidget.__setUserPrivilege" id="IrcChannelWidget.__setUserPrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__setUserPrivilege" />
       <keyword name="IrcChannelWidget.__topicCreated" id="IrcChannelWidget.__topicCreated" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcChannelWidget.__topicCreated" />
@@ -6721,7 +6721,6 @@
       <keyword name="IrcNetworkWidget.__copyAllMessages" id="IrcNetworkWidget.__copyAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyAllMessages" />
       <keyword name="IrcNetworkWidget.__copyMessages" id="IrcNetworkWidget.__copyMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__copyMessages" />
       <keyword name="IrcNetworkWidget.__cutAllMessages" id="IrcNetworkWidget.__cutAllMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutAllMessages" />
-      <keyword name="IrcNetworkWidget.__cutMessages" id="IrcNetworkWidget.__cutMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__cutMessages" />
       <keyword name="IrcNetworkWidget.__initMessagesMenu" id="IrcNetworkWidget.__initMessagesMenu" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__initMessagesMenu" />
       <keyword name="IrcNetworkWidget.__refreshNetworks" id="IrcNetworkWidget.__refreshNetworks" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__refreshNetworks" />
       <keyword name="IrcNetworkWidget.__saveMessages" id="IrcNetworkWidget.__saveMessages" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.__saveMessages" />
@@ -6771,6 +6770,7 @@
       <keyword name="IrcUserItem (Constructor)" id="IrcUserItem (Constructor)" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__init__" />
       <keyword name="IrcUserItem.__awayIcon" id="IrcUserItem.__awayIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__awayIcon" />
       <keyword name="IrcUserItem.__setIcon" id="IrcUserItem.__setIcon" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.__setIcon" />
+      <keyword name="IrcUserItem.canChangeTopic" id="IrcUserItem.canChangeTopic" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.canChangeTopic" />
       <keyword name="IrcUserItem.changePrivilege" id="IrcUserItem.changePrivilege" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.changePrivilege" />
       <keyword name="IrcUserItem.clearPrivileges" id="IrcUserItem.clearPrivileges" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.clearPrivileges" />
       <keyword name="IrcUserItem.name" id="IrcUserItem.name" ref="eric5.Network.IRC.IrcChannelWidget.html#IrcUserItem.name" />
@@ -10165,6 +10165,8 @@
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog (Constructor)" id="SvnOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.__init__" />
@@ -10177,6 +10179,8 @@
       <keyword name="SvnOptionsDialog.on_protocolCombo_activated" id="SvnOptionsDialog.on_protocolCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
       <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper (Constructor)" id="SvnProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__init__" />
@@ -10952,90 +10956,6 @@
       <keyword name="TemplatesWriter (Constructor)" id="TemplatesWriter (Constructor)" ref="eric5.E5XML.TemplatesWriter.html#TemplatesWriter.__init__" />
       <keyword name="TemplatesWriter (Module)" id="TemplatesWriter (Module)" ref="eric5.E5XML.TemplatesWriter.html" />
       <keyword name="TemplatesWriter.writeXML" id="TemplatesWriter.writeXML" ref="eric5.E5XML.TemplatesWriter.html#TemplatesWriter.writeXML" />
-      <keyword name="Terminal" id="Terminal" ref="eric5.QScintilla.Terminal.html#Terminal" />
-      <keyword name="Terminal (Constructor)" id="Terminal (Constructor)" ref="eric5.QScintilla.Terminal.html#Terminal.__init__" />
-      <keyword name="Terminal (Module)" id="Terminal (Module)" ref="eric5.QScintilla.Terminal.html" />
-      <keyword name="Terminal.__QScintillaCharLeft" id="Terminal.__QScintillaCharLeft" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaCharLeft" />
-      <keyword name="Terminal.__QScintillaCharLeftExtend" id="Terminal.__QScintillaCharLeftExtend" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaCharLeftExtend" />
-      <keyword name="Terminal.__QScintillaCharRight" id="Terminal.__QScintillaCharRight" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaCharRight" />
-      <keyword name="Terminal.__QScintillaDelete" id="Terminal.__QScintillaDelete" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDelete" />
-      <keyword name="Terminal.__QScintillaDeleteBack" id="Terminal.__QScintillaDeleteBack" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDeleteBack" />
-      <keyword name="Terminal.__QScintillaDeleteLineLeft" id="Terminal.__QScintillaDeleteLineLeft" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDeleteLineLeft" />
-      <keyword name="Terminal.__QScintillaDeleteLineRight" id="Terminal.__QScintillaDeleteLineRight" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDeleteLineRight" />
-      <keyword name="Terminal.__QScintillaDeleteWordLeft" id="Terminal.__QScintillaDeleteWordLeft" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDeleteWordLeft" />
-      <keyword name="Terminal.__QScintillaDeleteWordRight" id="Terminal.__QScintillaDeleteWordRight" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaDeleteWordRight" />
-      <keyword name="Terminal.__QScintillaLeftCommand" id="Terminal.__QScintillaLeftCommand" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaLeftCommand" />
-      <keyword name="Terminal.__QScintillaLeftDeleteCommand" id="Terminal.__QScintillaLeftDeleteCommand" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaLeftDeleteCommand" />
-      <keyword name="Terminal.__QScintillaLineDown" id="Terminal.__QScintillaLineDown" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaLineDown" />
-      <keyword name="Terminal.__QScintillaLineEnd" id="Terminal.__QScintillaLineEnd" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaLineEnd" />
-      <keyword name="Terminal.__QScintillaLineUp" id="Terminal.__QScintillaLineUp" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaLineUp" />
-      <keyword name="Terminal.__QScintillaNewline" id="Terminal.__QScintillaNewline" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaNewline" />
-      <keyword name="Terminal.__QScintillaRightCommand" id="Terminal.__QScintillaRightCommand" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaRightCommand" />
-      <keyword name="Terminal.__QScintillaVCHome" id="Terminal.__QScintillaVCHome" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaVCHome" />
-      <keyword name="Terminal.__QScintillaVCHomeExtend" id="Terminal.__QScintillaVCHomeExtend" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaVCHomeExtend" />
-      <keyword name="Terminal.__QScintillaWordLeft" id="Terminal.__QScintillaWordLeft" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaWordLeft" />
-      <keyword name="Terminal.__QScintillaWordLeftExtend" id="Terminal.__QScintillaWordLeftExtend" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaWordLeftExtend" />
-      <keyword name="Terminal.__QScintillaWordRight" id="Terminal.__QScintillaWordRight" ref="eric5.QScintilla.Terminal.html#Terminal.__QScintillaWordRight" />
-      <keyword name="Terminal.__bindLexer" id="Terminal.__bindLexer" ref="eric5.QScintilla.Terminal.html#Terminal.__bindLexer" />
-      <keyword name="Terminal.__clearCurrentLine" id="Terminal.__clearCurrentLine" ref="eric5.QScintilla.Terminal.html#Terminal.__clearCurrentLine" />
-      <keyword name="Terminal.__clearHistory" id="Terminal.__clearHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__clearHistory" />
-      <keyword name="Terminal.__configure" id="Terminal.__configure" ref="eric5.QScintilla.Terminal.html#Terminal.__configure" />
-      <keyword name="Terminal.__executeCommand" id="Terminal.__executeCommand" ref="eric5.QScintilla.Terminal.html#Terminal.__executeCommand" />
-      <keyword name="Terminal.__find" id="Terminal.__find" ref="eric5.QScintilla.Terminal.html#Terminal.__find" />
-      <keyword name="Terminal.__finished" id="Terminal.__finished" ref="eric5.QScintilla.Terminal.html#Terminal.__finished" />
-      <keyword name="Terminal.__getEndPos" id="Terminal.__getEndPos" ref="eric5.QScintilla.Terminal.html#Terminal.__getEndPos" />
-      <keyword name="Terminal.__insertHistory" id="Terminal.__insertHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__insertHistory" />
-      <keyword name="Terminal.__insertText" id="Terminal.__insertText" ref="eric5.QScintilla.Terminal.html#Terminal.__insertText" />
-      <keyword name="Terminal.__insertTextAtEnd" id="Terminal.__insertTextAtEnd" ref="eric5.QScintilla.Terminal.html#Terminal.__insertTextAtEnd" />
-      <keyword name="Terminal.__isCursorOnLastLine" id="Terminal.__isCursorOnLastLine" ref="eric5.QScintilla.Terminal.html#Terminal.__isCursorOnLastLine" />
-      <keyword name="Terminal.__readOutput" id="Terminal.__readOutput" ref="eric5.QScintilla.Terminal.html#Terminal.__readOutput" />
-      <keyword name="Terminal.__reset" id="Terminal.__reset" ref="eric5.QScintilla.Terminal.html#Terminal.__reset" />
-      <keyword name="Terminal.__rsearchHistory" id="Terminal.__rsearchHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__rsearchHistory" />
-      <keyword name="Terminal.__searchHistory" id="Terminal.__searchHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__searchHistory" />
-      <keyword name="Terminal.__searchNext" id="Terminal.__searchNext" ref="eric5.QScintilla.Terminal.html#Terminal.__searchNext" />
-      <keyword name="Terminal.__searchPrev" id="Terminal.__searchPrev" ref="eric5.QScintilla.Terminal.html#Terminal.__searchPrev" />
-      <keyword name="Terminal.__selectHistory" id="Terminal.__selectHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__selectHistory" />
-      <keyword name="Terminal.__send" id="Terminal.__send" ref="eric5.QScintilla.Terminal.html#Terminal.__send" />
-      <keyword name="Terminal.__sendCtrl" id="Terminal.__sendCtrl" ref="eric5.QScintilla.Terminal.html#Terminal.__sendCtrl" />
-      <keyword name="Terminal.__setMargin0" id="Terminal.__setMargin0" ref="eric5.QScintilla.Terminal.html#Terminal.__setMargin0" />
-      <keyword name="Terminal.__setMonospaced" id="Terminal.__setMonospaced" ref="eric5.QScintilla.Terminal.html#Terminal.__setMonospaced" />
-      <keyword name="Terminal.__setTextDisplay" id="Terminal.__setTextDisplay" ref="eric5.QScintilla.Terminal.html#Terminal.__setTextDisplay" />
-      <keyword name="Terminal.__showHistory" id="Terminal.__showHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__showHistory" />
-      <keyword name="Terminal.__startShell" id="Terminal.__startShell" ref="eric5.QScintilla.Terminal.html#Terminal.__startShell" />
-      <keyword name="Terminal.__started" id="Terminal.__started" ref="eric5.QScintilla.Terminal.html#Terminal.__started" />
-      <keyword name="Terminal.__stopShell" id="Terminal.__stopShell" ref="eric5.QScintilla.Terminal.html#Terminal.__stopShell" />
-      <keyword name="Terminal.__useHistory" id="Terminal.__useHistory" ref="eric5.QScintilla.Terminal.html#Terminal.__useHistory" />
-      <keyword name="Terminal.__write" id="Terminal.__write" ref="eric5.QScintilla.Terminal.html#Terminal.__write" />
-      <keyword name="Terminal.clear" id="Terminal.clear" ref="eric5.QScintilla.Terminal.html#Terminal.clear" />
-      <keyword name="Terminal.closeTerminal" id="Terminal.closeTerminal" ref="eric5.QScintilla.Terminal.html#Terminal.closeTerminal" />
-      <keyword name="Terminal.contextMenuEvent" id="Terminal.contextMenuEvent" ref="eric5.QScintilla.Terminal.html#Terminal.contextMenuEvent" />
-      <keyword name="Terminal.editorCommand" id="Terminal.editorCommand" ref="eric5.QScintilla.Terminal.html#Terminal.editorCommand" />
-      <keyword name="Terminal.event" id="Terminal.event" ref="eric5.QScintilla.Terminal.html#Terminal.event" />
-      <keyword name="Terminal.focusInEvent" id="Terminal.focusInEvent" ref="eric5.QScintilla.Terminal.html#Terminal.focusInEvent" />
-      <keyword name="Terminal.focusOutEvent" id="Terminal.focusOutEvent" ref="eric5.QScintilla.Terminal.html#Terminal.focusOutEvent" />
-      <keyword name="Terminal.gestureEvent" id="Terminal.gestureEvent" ref="eric5.QScintilla.Terminal.html#Terminal.gestureEvent" />
-      <keyword name="Terminal.getHistory" id="Terminal.getHistory" ref="eric5.QScintilla.Terminal.html#Terminal.getHistory" />
-      <keyword name="Terminal.handlePreferencesChanged" id="Terminal.handlePreferencesChanged" ref="eric5.QScintilla.Terminal.html#Terminal.handlePreferencesChanged" />
-      <keyword name="Terminal.insert" id="Terminal.insert" ref="eric5.QScintilla.Terminal.html#Terminal.insert" />
-      <keyword name="Terminal.keyPressEvent" id="Terminal.keyPressEvent" ref="eric5.QScintilla.Terminal.html#Terminal.keyPressEvent" />
-      <keyword name="Terminal.loadHistory" id="Terminal.loadHistory" ref="eric5.QScintilla.Terminal.html#Terminal.loadHistory" />
-      <keyword name="Terminal.mousePressEvent" id="Terminal.mousePressEvent" ref="eric5.QScintilla.Terminal.html#Terminal.mousePressEvent" />
-      <keyword name="Terminal.reloadHistory" id="Terminal.reloadHistory" ref="eric5.QScintilla.Terminal.html#Terminal.reloadHistory" />
-      <keyword name="Terminal.saveHistory" id="Terminal.saveHistory" ref="eric5.QScintilla.Terminal.html#Terminal.saveHistory" />
-      <keyword name="Terminal.searchNext" id="Terminal.searchNext" ref="eric5.QScintilla.Terminal.html#Terminal.searchNext" />
-      <keyword name="Terminal.searchPrev" id="Terminal.searchPrev" ref="eric5.QScintilla.Terminal.html#Terminal.searchPrev" />
-      <keyword name="Terminal.wheelEvent" id="Terminal.wheelEvent" ref="eric5.QScintilla.Terminal.html#Terminal.wheelEvent" />
-      <keyword name="TerminalAssembly" id="TerminalAssembly" ref="eric5.QScintilla.Terminal.html#TerminalAssembly" />
-      <keyword name="TerminalAssembly (Constructor)" id="TerminalAssembly (Constructor)" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.__init__" />
-      <keyword name="TerminalAssembly.showFind" id="TerminalAssembly.showFind" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.showFind" />
-      <keyword name="TerminalAssembly.terminal" id="TerminalAssembly.terminal" ref="eric5.QScintilla.Terminal.html#TerminalAssembly.terminal" />
-      <keyword name="TerminalPage" id="TerminalPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage" />
-      <keyword name="TerminalPage (Constructor)" id="TerminalPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.__init__" />
-      <keyword name="TerminalPage (Module)" id="TerminalPage (Module)" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html" />
-      <keyword name="TerminalPage.on_linenumbersFontButton_clicked" id="TerminalPage.on_linenumbersFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.on_linenumbersFontButton_clicked" />
-      <keyword name="TerminalPage.on_monospacedFontButton_clicked" id="TerminalPage.on_monospacedFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.on_monospacedFontButton_clicked" />
-      <keyword name="TerminalPage.polishPage" id="TerminalPage.polishPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.polishPage" />
-      <keyword name="TerminalPage.save" id="TerminalPage.save" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage.save" />
       <keyword name="Token" id="Token" ref="eric5.DataViews.CodeMetrics.html#Token" />
       <keyword name="Token (Constructor)" id="Token (Constructor)" ref="eric5.DataViews.CodeMetrics.html#Token.__init__" />
       <keyword name="ToolConfigurationDialog" id="ToolConfigurationDialog" ref="eric5.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog" />
@@ -11422,7 +11342,6 @@
       <keyword name="UserInterface.__activateSymbolsViewer" id="UserInterface.__activateSymbolsViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateSymbolsViewer" />
       <keyword name="UserInterface.__activateTaskViewer" id="UserInterface.__activateTaskViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateTaskViewer" />
       <keyword name="UserInterface.__activateTemplateViewer" id="UserInterface.__activateTemplateViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateTemplateViewer" />
-      <keyword name="UserInterface.__activateTerminal" id="UserInterface.__activateTerminal" ref="eric5.UI.UserInterface.html#UserInterface.__activateTerminal" />
       <keyword name="UserInterface.__activateViewProfile" id="UserInterface.__activateViewProfile" ref="eric5.UI.UserInterface.html#UserInterface.__activateViewProfile" />
       <keyword name="UserInterface.__activateViewmanager" id="UserInterface.__activateViewmanager" ref="eric5.UI.UserInterface.html#UserInterface.__activateViewmanager" />
       <keyword name="UserInterface.__assistant" id="UserInterface.__assistant" ref="eric5.UI.UserInterface.html#UserInterface.__assistant" />
@@ -12378,7 +12297,6 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#create" />
-      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.TrayStarterPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.VcsPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#create" />
@@ -12597,7 +12515,6 @@
       <keyword name="getSystem" id="getSystem" ref="eric5.Preferences.__init__.html#getSystem" />
       <keyword name="getTasks" id="getTasks" ref="eric5.Preferences.__init__.html#getTasks" />
       <keyword name="getTemplates" id="getTemplates" ref="eric5.Preferences.__init__.html#getTemplates" />
-      <keyword name="getTerminal" id="getTerminal" ref="eric5.Preferences.__init__.html#getTerminal" />
       <keyword name="getTestFileName" id="getTestFileName" ref="eric5.Utilities.__init__.html#getTestFileName" />
       <keyword name="getTrayStarter" id="getTrayStarter" ref="eric5.Preferences.__init__.html#getTrayStarter" />
       <keyword name="getTypeFromTypeName" id="getTypeFromTypeName" ref="eric5.Utilities.ModuleParser.html#getTypeFromTypeName" />
@@ -12871,7 +12788,6 @@
       <keyword name="setSystem" id="setSystem" ref="eric5.Preferences.__init__.html#setSystem" />
       <keyword name="setTasks" id="setTasks" ref="eric5.Preferences.__init__.html#setTasks" />
       <keyword name="setTemplates" id="setTemplates" ref="eric5.Preferences.__init__.html#setTemplates" />
-      <keyword name="setTerminal" id="setTerminal" ref="eric5.Preferences.__init__.html#setTerminal" />
       <keyword name="setTrayStarter" id="setTrayStarter" ref="eric5.Preferences.__init__.html#setTrayStarter" />
       <keyword name="setUI" id="setUI" ref="eric5.Preferences.__init__.html#setUI" />
       <keyword name="setUILanguage" id="setUILanguage" ref="eric5.Preferences.__init__.html#setUILanguage" />
@@ -13542,7 +13458,6 @@
       <file>eric5.Preferences.ConfigurationPages.ShellPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TasksPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TemplatesPage.html</file>
-      <file>eric5.Preferences.ConfigurationPages.TerminalPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TrayStarterPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.VcsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ViewmanagerPage.html</file>
@@ -13637,7 +13552,6 @@
       <file>eric5.QScintilla.SpellChecker.html</file>
       <file>eric5.QScintilla.SpellCheckingDialog.html</file>
       <file>eric5.QScintilla.SpellingDictionaryEditDialog.html</file>
-      <file>eric5.QScintilla.Terminal.html</file>
       <file>eric5.QScintilla.TypingCompleters.CompleterBase.html</file>
       <file>eric5.QScintilla.TypingCompleters.CompleterPython.html</file>
       <file>eric5.QScintilla.TypingCompleters.CompleterRuby.html</file>

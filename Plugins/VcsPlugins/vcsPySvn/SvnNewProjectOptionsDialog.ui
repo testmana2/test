@@ -65,7 +65,7 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="vcsUrlEdit">
        <property name="toolTip">
-        <string>Enter the url path of the module in the repository</string>
+        <string>Enter the url path of the module in the repository (without protocol part)</string>
        </property>
        <property name="whatsThis">
         <string>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</string>

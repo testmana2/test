@@ -10,7 +10,7 @@ Module implementing the Mercurial Options Dialog for a new project from the repo
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir
-from PyQt4.QtGui import QDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
@@ -100,6 +100,16 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
                 self.localPath = self.vcsUrlEdit.text()
                 self.vcsUrlEdit.setText(self.networkPath)
                 self.localProtocol = False
+    
+    @pyqtSlot(str)
+    def on_vcsUrlEdit_textChanged(self, txt):
+        """
+        Private slot to handle changes of the URL.
+        
+        @param txt current text of the line edit (string)
+        """
+        enable = "://" not in txt
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enable)
     
     def getData(self):
         """
