@@ -9,6 +9,10 @@ Version 5.4-snapshot-2013mmdd:
   -- changed the 'import' statements to improve startup behavior
   -- removed the QtHelp dependancy; support is only available,
      if the QtHelp module could be imported
+- Debugger
+  -- Variables Viewer
+     --- changed the way multi line strings are shown in the value
+         column
 - Editor
   -- added the capability to preview HTML, Mardown and ReST files
 - Multi Project
