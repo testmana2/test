@@ -422,6 +422,7 @@ class LexerPygments(LexerContainer):
         @param end position of last character to be styled (integer)
         """
         text = self.editor.text()[:end + 1]
+        textLen = len(text.encode("utf-8"))
         self.__lexer = self.__guessLexer(text)
         
         cpos = 0
@@ -443,9 +444,11 @@ class LexerPygments(LexerContainer):
                 tlen = len(txt.encode('utf-8'))
                 if eolLen > 1:
                     tlen += txt.count('\n')
-                if tlen:
-                    self.editor.setStyling(tlen, style)
                 cpos += tlen
+                if tlen and cpos < textLen:
+                    self.editor.setStyling(tlen, style)
+                else:
+                    break
             self.editor.startStyling(cpos, 0x3f)
     
     def isCommentStyle(self, style):
