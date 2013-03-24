@@ -4279,6 +4279,7 @@ class Project(QObject):
                 newline = self.getEolString()
             pkglistFile = open(pkglist, "w", encoding="utf-8", newline=newline)
             pkglistFile.write("\n".join(lst))
+            pkglistFile.write("\n") # ensure the file ends with an empty line
             pkglistFile.close()
         except IOError as why:
             E5MessageBox.critical(self.ui,
@@ -4337,24 +4338,25 @@ class Project(QObject):
             return
         
         for name in names:
-            try:
-                self.__createZipDirEntries(os.path.split(name)[0], archiveFile)
-                if snapshot and name == self.pdata["MAINSCRIPT"][0]:
-                    snapshotSource, version = self.__createSnapshotSource(
-                        os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
-                    archiveFile.writestr(name, snapshotSource)
-                else:
-                    archiveFile.write(os.path.join(self.ppath, name), name)
-                    if name == self.pdata["MAINSCRIPT"][0]:
-                        version = self.__pluginExtractVersion(
+            if name:
+                try:
+                    self.__createZipDirEntries(os.path.split(name)[0], archiveFile)
+                    if snapshot and name == self.pdata["MAINSCRIPT"][0]:
+                        snapshotSource, version = self.__createSnapshotSource(
                             os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
-            except OSError as why:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Create Plugin Archive"),
-                    self.trUtf8("""<p>The file <b>{0}</b> could not be stored """
-                                """in the archive. Ignoring it.</p>"""
-                                """<p>Reason: {1}</p>""")\
-                                .format(os.path.join(self.ppath, name), str(why)))
+                        archiveFile.writestr(name, snapshotSource)
+                    else:
+                        archiveFile.write(os.path.join(self.ppath, name), name)
+                        if name == self.pdata["MAINSCRIPT"][0]:
+                            version = self.__pluginExtractVersion(
+                                os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0]))
+                except OSError as why:
+                    E5MessageBox.critical(self.ui,
+                        self.trUtf8("Create Plugin Archive"),
+                        self.trUtf8("""<p>The file <b>{0}</b> could not be stored """
+                                    """in the archive. Ignoring it.</p>"""
+                                    """<p>Reason: {1}</p>""")\
+                                    .format(os.path.join(self.ppath, name), str(why)))
         archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
         
