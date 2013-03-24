@@ -448,7 +448,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.__url = QUrl(locationHeader)
             self.__reply = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().get(
                            QNetworkRequest(self.__url))
-            self.initialize()
+            self.__initialize()
     
     def __downloadProgress(self, bytesReceived, bytesTotal):
         """
