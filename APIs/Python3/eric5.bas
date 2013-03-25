@@ -228,6 +228,7 @@ FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager
 Fetch HgExtension
 FetchProjectHelper HgExtensionProjectHelper
+File file
 FileAccessHandler SchemeAccessHandler
 FileDialogWizard QObject
 FileDialogWizardDialog QDialog Ui_FileDialogWizardDialog

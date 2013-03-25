@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.Utilities.compatibility_fixes</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Utilities.compatibility_fixes</h1>
+<p>
+Module implementing the open behavior of Python3 for use with Eric5.
+The from Eric5 used features are emulated only. The not emulated features
+should throw a NotImplementedError exception.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#File">File</a></td>
+<td></td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#open">open</a></td>
+<td></td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="File" ID="File"></a>
+<h2>File</h2>
+
+<h3>Derived from</h3>
+file
+<h3>Class Attributes</h3>
+<table>
+<tr><td>fp</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#File.__init__">File</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#File.next">next</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#File.read">read</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#File.readline">readline</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#File.readlines">readlines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#File.write">write</a></td>
+<td></td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="File.__init__" ID="File.__init__"></a>
+<h4>File (Constructor)</h4>
+<b>File</b>(<i>filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True</i>)
+<a NAME="File.next" ID="File.next"></a>
+<h4>File.next</h4>
+<b>next</b>(<i></i>)
+<a NAME="File.read" ID="File.read"></a>
+<h4>File.read</h4>
+<b>read</b>(<i>n=-1</i>)
+<a NAME="File.readline" ID="File.readline"></a>
+<h4>File.readline</h4>
+<b>readline</b>(<i>limit=-1</i>)
+<a NAME="File.readlines" ID="File.readlines"></a>
+<h4>File.readlines</h4>
+<b>readlines</b>(<i>hint=-1</i>)
+<a NAME="File.write" ID="File.write"></a>
+<h4>File.write</h4>
+<b>write</b>(<i>txt</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="open" ID="open"></a>
+<h2>open</h2>
+<b>open</b>(<i>file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

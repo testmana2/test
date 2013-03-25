@@ -946,6 +946,7 @@
             <section title="eric5.Utilities.PasswordChecker" ref="eric5.Utilities.PasswordChecker.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
             <section title="eric5.Utilities.binplistlib" ref="eric5.Utilities.binplistlib.html" />
+            <section title="eric5.Utilities.compatibility_fixes" ref="eric5.Utilities.compatibility_fixes.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
           <section title="eric5.UtilitiesPython2" ref="index-eric5.UtilitiesPython2.html">
@@ -4571,6 +4572,13 @@
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
       <keyword name="FetchProjectHelper.menuTitle" id="FetchProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.menuTitle" />
+      <keyword name="File" id="File" ref="eric5.Utilities.compatibility_fixes.html#File" />
+      <keyword name="File (Constructor)" id="File (Constructor)" ref="eric5.Utilities.compatibility_fixes.html#File.__init__" />
+      <keyword name="File.next" id="File.next" ref="eric5.Utilities.compatibility_fixes.html#File.next" />
+      <keyword name="File.read" id="File.read" ref="eric5.Utilities.compatibility_fixes.html#File.read" />
+      <keyword name="File.readline" id="File.readline" ref="eric5.Utilities.compatibility_fixes.html#File.readline" />
+      <keyword name="File.readlines" id="File.readlines" ref="eric5.Utilities.compatibility_fixes.html#File.readlines" />
+      <keyword name="File.write" id="File.write" ref="eric5.Utilities.compatibility_fixes.html#File.write" />
       <keyword name="FileAccessHandler" id="FileAccessHandler" ref="eric5.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler" />
       <keyword name="FileAccessHandler (Constructor)" id="FileAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler.__init__" />
       <keyword name="FileAccessHandler (Module)" id="FileAccessHandler (Module)" ref="eric5.Helpviewer.Network.FileAccessHandler.html" />
@@ -6731,6 +6739,7 @@
       <keyword name="IrcNetworkWidget.getNetworkChannels" id="IrcNetworkWidget.getNetworkChannels" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.getNetworkChannels" />
       <keyword name="IrcNetworkWidget.getNickname" id="IrcNetworkWidget.getNickname" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.getNickname" />
       <keyword name="IrcNetworkWidget.initialize" id="IrcNetworkWidget.initialize" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.initialize" />
+      <keyword name="IrcNetworkWidget.isConnected" id="IrcNetworkWidget.isConnected" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.isConnected" />
       <keyword name="IrcNetworkWidget.on_awayButton_clicked" id="IrcNetworkWidget.on_awayButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_awayButton_clicked" />
       <keyword name="IrcNetworkWidget.on_channelCombo_editTextChanged" id="IrcNetworkWidget.on_channelCombo_editTextChanged" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_channelCombo_editTextChanged" />
       <keyword name="IrcNetworkWidget.on_connectButton_clicked" id="IrcNetworkWidget.on_connectButton_clicked" ref="eric5.Network.IRC.IrcNetworkWidget.html#IrcNetworkWidget.on_connectButton_clicked" />
@@ -12227,6 +12236,7 @@
       <keyword name="cleanUp" id="cleanUp" ref="eric5.install.html#cleanUp" />
       <keyword name="close" id="close" ref="eric5.DebugClients.Ruby.AsyncFile.html#close" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
+      <keyword name="compatibility_fixes (Module)" id="compatibility_fixes (Module)" ref="eric5.Utilities.compatibility_fixes.html" />
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="compile" id="compile" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#compile" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric5.Utilities.uic.html#compileUiDir" />
@@ -12651,6 +12661,7 @@
       <keyword name="normcasepath" id="normcasepath" ref="eric5.Utilities.__init__.html#normcasepath" />
       <keyword name="normjoinpath" id="normjoinpath" ref="eric5.Utilities.__init__.html#normjoinpath" />
       <keyword name="okToClearData" id="okToClearData" ref="eric5.E5Gui.E5MessageBox.html#okToClearData" />
+      <keyword name="open" id="open" ref="eric5.Utilities.compatibility_fixes.html#open" />
       <keyword name="parseEnvironmentString" id="parseEnvironmentString" ref="eric5.Utilities.__init__.html#parseEnvironmentString" />
       <keyword name="parseOptionString" id="parseOptionString" ref="eric5.Utilities.__init__.html#parseOptionString" />
       <keyword name="parseString" id="parseString" ref="eric5.Utilities.__init__.html#parseString" />
@@ -13614,6 +13625,7 @@
       <file>eric5.Utilities.PasswordChecker.html</file>
       <file>eric5.Utilities.__init__.html</file>
       <file>eric5.Utilities.binplistlib.html</file>
+      <file>eric5.Utilities.compatibility_fixes.html</file>
       <file>eric5.Utilities.crypto.__init__.html</file>
       <file>eric5.Utilities.crypto.py3AES.html</file>
       <file>eric5.Utilities.crypto.py3PBKDF2.html</file>

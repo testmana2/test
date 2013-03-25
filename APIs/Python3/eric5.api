@@ -3574,6 +3574,7 @@ eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.editNetwork?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.getNetworkChannels?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.getNickname?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.initialize?4(manager)
+eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.isConnected?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.joinChannel?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.nickChanged?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_awayButton_clicked?4()
@@ -7963,6 +7964,14 @@ eric5.Utilities.checkPyside?4()
 eric5.Utilities.codingBytes_regexps?7
 eric5.Utilities.coding_regexps?7
 eric5.Utilities.compactPath?4(path, width, measure=len)
+eric5.Utilities.compatibility_fixes.File.fp?7
+eric5.Utilities.compatibility_fixes.File.next?4()
+eric5.Utilities.compatibility_fixes.File.read?4(n=-1)
+eric5.Utilities.compatibility_fixes.File.readline?4(limit=-1)
+eric5.Utilities.compatibility_fixes.File.readlines?4(hint=-1)
+eric5.Utilities.compatibility_fixes.File.write?4(txt)
+eric5.Utilities.compatibility_fixes.File?1(filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
+eric5.Utilities.compatibility_fixes.open?4(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
 eric5.Utilities.compile?4(file, codestring="")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
