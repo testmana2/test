@@ -14,7 +14,10 @@ import sys
 import shutil
 import zipfile
 import compileall
-import urllib.parse
+try: #Py3
+    import urllib.parse as parse
+except (ImportError):
+    import urlparse as parse
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication, \
@@ -247,7 +250,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.destinationCombo.itemData(self.destinationCombo.currentIndex())
         
         # check if archive is a local url
-        url = urllib.parse.urlparse(archive)
+        url = parse.urlparse(archive)
         if url[0].lower() == 'file':
             archive = url[2]
 
@@ -429,7 +432,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 self.trUtf8("Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except:
-            print("Unspecific exception installing plugin.", file=sys.stderr)
+            sys.stderr.write("Unspecific exception installing plugin.\n")
             self.__rollback()
             return False, \
                 self.trUtf8("Unspecific exception installing plugin."), \

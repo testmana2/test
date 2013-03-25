@@ -7,6 +7,10 @@
 Module implementing the editor component of the eric5 IDE.
 """
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    chr = unichr
+except (NameError):
+    pass
 
 import os
 import re
@@ -6620,7 +6624,8 @@ class Editor(QsciScintillaCompat):
             if not commandLine.startswith("@@"):
                 continue
             
-            command, *args = commandLine.split()
+            args = commandLine.split()
+            command = args.pop(0)
             pos, l1, l2 = [int(arg) for arg in args]
             if command == "@@i":
                 txt = sep.join(commands[0:l1]) + sep
