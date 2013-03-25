@@ -473,36 +473,37 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private slot to read data from the socket.
         """
-        self.__buffer += str(self.__socket.readAll(),
-                Preferences.getSystem("IOEncoding"),
-                'replace')
-        if self.__buffer.endswith("\r\n"):
-            for line in self.__buffer.splitlines():
-                line = line.strip()
-                if line:
-                    logging.debug("<IRC> " + line)
-                    handled = False
-                    # step 1: give channels a chance to handle the message
-                    for channel in self.__channelList:
-                        handled = channel.handleMessage(line)
-                        if handled:
-                            break
-                    else:
-                        # step 2: try to process the message ourselves
-                        for patternRe, patternFunc in self.__patterns:
-                            match = patternRe.match(line)
-                            if match is not None:
-                                if patternFunc(match):
-                                    break
+        if self.__socket:
+            self.__buffer += str(self.__socket.readAll(),
+                    Preferences.getSystem("IOEncoding"),
+                    'replace')
+            if self.__buffer.endswith("\r\n"):
+                for line in self.__buffer.splitlines():
+                    line = line.strip()
+                    if line:
+                        logging.debug("<IRC> " + line)
+                        handled = False
+                        # step 1: give channels a chance to handle the message
+                        for channel in self.__channelList:
+                            handled = channel.handleMessage(line)
+                            if handled:
+                                break
                         else:
-                            # Oops, the message wasn't handled
-                            self.networkWidget.addErrorMessage(
-                                self.trUtf8("Message Error"),
-                                self.trUtf8("Unknown message received from server:"
-                                            "<br/>{0}").format(line))
-            
-            self.__updateUsersCount()
-            self.__buffer = ""
+                            # step 2: try to process the message ourselves
+                            for patternRe, patternFunc in self.__patterns:
+                                match = patternRe.match(line)
+                                if match is not None:
+                                    if patternFunc(match):
+                                        break
+                            else:
+                                # Oops, the message wasn't handled
+                                self.networkWidget.addErrorMessage(
+                                    self.trUtf8("Message Error"),
+                                    self.trUtf8("Unknown message received from server:"
+                                                "<br/>{0}").format(line))
+                
+                self.__updateUsersCount()
+                self.__buffer = ""
     
     def __handleNamedMessage(self, match):
         """
