@@ -10,7 +10,7 @@ Module implementing a widget to select a symbol in various formats.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import unicodedata
-try: # Py3
+try:  # Py3
     import html.entities as html_entities
 except (ImportError):
     chr = unichr

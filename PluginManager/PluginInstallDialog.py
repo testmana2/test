@@ -14,7 +14,7 @@ import sys
 import shutil
 import zipfile
 import compileall
-try: #Py3
+try:  # Py3
     import urllib.parse as parse
 except (ImportError):
     import urlparse as parse

@@ -275,7 +275,7 @@ class Previewer(QWidget, Ui_Previewer):
         """
         frame = self.previewView.page().mainFrame()
         if frame.contentsSize() == QSize(0, 0):
-            return # no valid data, nothing to save
+            return  # no valid data, nothing to save
         
         pos = frame.scrollPosition()
         self.__scrollBarPositions[self.__previewedPath] = pos
@@ -319,7 +319,7 @@ class Previewer(QWidget, Ui_Previewer):
 
 class PreviewProcessingThread(QThread):
     """
-    Class implementing a thread to process some text into HTML usable by the 
+    Class implementing a thread to process some text into HTML usable by the
     previewer view.
     
     @signal htmlReady(str,str) emitted with the file name and processed HTML to signal
@@ -502,6 +502,7 @@ class PreviewProcessingThread(QThread):
                 this page for details</a>)
                 """
                 DEL_RE = r'(~~)(.*?)~~'
+
                 def extendMarkdown(self, md, md_globals):
                     # Create the del pattern
                     del_tag = markdown.inlinepatterns.SimpleTagPattern(self.DEL_RE, 'del')
@@ -512,7 +513,7 @@ class PreviewProcessingThread(QThread):
 
         try:
             return markdown.markdown(text,  extensions + ['mathjax'])
-        except (ImportError, ValueError): 
+        except (ImportError, ValueError):
             # markdown raises ValueError or ImportError, depends on version
             # It is not clear, how to distinguish missing mathjax from other errors.
             # So keep going without mathjax.

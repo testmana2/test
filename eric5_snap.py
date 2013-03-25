@@ -12,7 +12,7 @@ of the snapshot module and starts the Qt event loop.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
-try: # Only for Py2
+try:  # Only for Py2
     import sip
     sip.setapi('QString', 2)
     sip.setapi('QVariant', 2)

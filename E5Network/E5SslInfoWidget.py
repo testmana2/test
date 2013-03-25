@@ -90,7 +90,7 @@ class E5SslInfoWidget(QMenu):
             
             label = QLabel(self)
             label.setWordWrap(True)
-            label.setText('<a href="moresslinfos">' + 
+            label.setText('<a href="moresslinfos">' +
                 self.trUtf8("Certificate Information") + "</a>")
             label.linkActivated.connect(self.__showCertificateInfos)
             layout.addWidget(label, rows, 1)
