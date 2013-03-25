@@ -241,6 +241,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.dirMenu = QMenu(self)
         act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
+        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('New package...'), self.__addNewPackage)
         self.dirMenu.addAction(self.trUtf8('Add source files...'), self.__addSourceFiles)

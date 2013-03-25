@@ -257,6 +257,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.dirMenu.addSeparator()
         act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
+        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('New form...'), self.__newForm)

@@ -8356,7 +8356,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4527"/>
+        <location filename="QScintilla/Editor.py" line="4542"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
@@ -8446,122 +8446,122 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4036"/>
+        <location filename="QScintilla/Editor.py" line="4051"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4036"/>
+        <location filename="QScintilla/Editor.py" line="4051"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4545"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4873"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4873"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4919"/>
+        <location filename="QScintilla/Editor.py" line="4934"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4913"/>
+        <location filename="QScintilla/Editor.py" line="4928"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4919"/>
+        <location filename="QScintilla/Editor.py" line="4934"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5011"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5011"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5142"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5142"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5367"/>
+        <location filename="QScintilla/Editor.py" line="5382"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5367"/>
+        <location filename="QScintilla/Editor.py" line="5382"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5395"/>
+        <location filename="QScintilla/Editor.py" line="5410"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5435"/>
+        <location filename="QScintilla/Editor.py" line="5450"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5416"/>
+        <location filename="QScintilla/Editor.py" line="5431"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5435"/>
+        <location filename="QScintilla/Editor.py" line="5450"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5452"/>
+        <location filename="QScintilla/Editor.py" line="5467"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5482"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5478"/>
+        <location filename="QScintilla/Editor.py" line="5493"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5478"/>
+        <location filename="QScintilla/Editor.py" line="5493"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5503"/>
+        <location filename="QScintilla/Editor.py" line="5518"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5503"/>
+        <location filename="QScintilla/Editor.py" line="5518"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
@@ -8571,77 +8571,77 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5632"/>
+        <location filename="QScintilla/Editor.py" line="5647"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5892"/>
+        <location filename="QScintilla/Editor.py" line="5907"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5910"/>
+        <location filename="QScintilla/Editor.py" line="5925"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5912"/>
+        <location filename="QScintilla/Editor.py" line="5927"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5914"/>
+        <location filename="QScintilla/Editor.py" line="5929"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5916"/>
+        <location filename="QScintilla/Editor.py" line="5931"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5918"/>
+        <location filename="QScintilla/Editor.py" line="5933"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5921"/>
+        <location filename="QScintilla/Editor.py" line="5936"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5939"/>
+        <location filename="QScintilla/Editor.py" line="5954"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5955"/>
+        <location filename="QScintilla/Editor.py" line="5970"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5982"/>
+        <location filename="QScintilla/Editor.py" line="5997"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6044"/>
+        <location filename="QScintilla/Editor.py" line="6059"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6044"/>
+        <location filename="QScintilla/Editor.py" line="6059"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6074"/>
+        <location filename="QScintilla/Editor.py" line="6089"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6074"/>
+        <location filename="QScintilla/Editor.py" line="6089"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
@@ -8661,12 +8661,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6062"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6062"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
@@ -8741,7 +8741,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6350"/>
+        <location filename="QScintilla/Editor.py" line="6365"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -8751,12 +8751,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6352"/>
+        <location filename="QScintilla/Editor.py" line="6367"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6354"/>
+        <location filename="QScintilla/Editor.py" line="6369"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -8801,12 +8801,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5409"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5416"/>
+        <location filename="QScintilla/Editor.py" line="5431"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
@@ -8816,27 +8816,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5482"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5623"/>
+        <location filename="QScintilla/Editor.py" line="5638"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5770"/>
+        <location filename="QScintilla/Editor.py" line="5785"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5892"/>
+        <location filename="QScintilla/Editor.py" line="5907"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5982"/>
+        <location filename="QScintilla/Editor.py" line="5997"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -8861,12 +8861,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Vyčistit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5268"/>
+        <location filename="QScintilla/Editor.py" line="5283"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5268"/>
+        <location filename="QScintilla/Editor.py" line="5283"/>
         <source>No py3flakes warning message available.</source>
         <translation>Varování py3flakes není dostupné.</translation>
     </message>
@@ -8876,42 +8876,42 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5452"/>
+        <location filename="QScintilla/Editor.py" line="5467"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5311"/>
+        <location filename="QScintilla/Editor.py" line="5326"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5317"/>
+        <location filename="QScintilla/Editor.py" line="5332"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Chyby: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5628"/>
+        <location filename="QScintilla/Editor.py" line="5643"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4132"/>
+        <location filename="QScintilla/Editor.py" line="4147"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4132"/>
+        <location filename="QScintilla/Editor.py" line="4147"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4317"/>
+        <location filename="QScintilla/Editor.py" line="4332"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4317"/>
+        <location filename="QScintilla/Editor.py" line="4332"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27439,27 +27439,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
         <source>Save Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="345"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="353"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
         <source>Error saving Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27469,27 +27469,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Vyjmout</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="392"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="400"/>
         <source>Copy</source>
         <translation type="unfinished">Kopírovat</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="397"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="405"/>
         <source>Cut all</source>
         <translation type="unfinished">Vyjmout vše</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="401"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="409"/>
         <source>Copy all</source>
         <translation type="unfinished">Kopírovat vše</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="414"/>
         <source>Clear</source>
         <translation type="unfinished">Vyčistit</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="419"/>
         <source>Save</source>
         <translation type="unfinished">Uložit</translation>
     </message>
@@ -27951,7 +27951,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="457"/>
+        <location filename="Network/IRC/IrcWidget.py" line="458"/>
         <source>Info</source>
         <translation type="unfinished">Info</translation>
     </message>
@@ -27981,147 +27981,147 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="457"/>
+        <location filename="Network/IRC/IrcWidget.py" line="458"/>
         <source>Server disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="499"/>
+        <location filename="Network/IRC/IrcWidget.py" line="501"/>
         <source>Message Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="499"/>
+        <location filename="Network/IRC/IrcWidget.py" line="501"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="523"/>
+        <location filename="Network/IRC/IrcWidget.py" line="525"/>
         <source>Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="541"/>
+        <location filename="Network/IRC/IrcWidget.py" line="543"/>
         <source>Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="548"/>
+        <location filename="Network/IRC/IrcWidget.py" line="550"/>
         <source>You have left channel {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="559"/>
+        <location filename="Network/IRC/IrcWidget.py" line="561"/>
         <source>You are now known as {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="564"/>
+        <location filename="Network/IRC/IrcWidget.py" line="566"/>
         <source>User {0} is now known as {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="569"/>
+        <location filename="Network/IRC/IrcWidget.py" line="571"/>
         <source>Server Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="603"/>
+        <location filename="Network/IRC/IrcWidget.py" line="605"/>
         <source>Error</source>
         <translation type="unfinished">Chyba</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="618"/>
+        <location filename="Network/IRC/IrcWidget.py" line="620"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="620"/>
+        <location filename="Network/IRC/IrcWidget.py" line="622"/>
         <source>Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="622"/>
+        <location filename="Network/IRC/IrcWidget.py" line="624"/>
         <source>User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="624"/>
+        <location filename="Network/IRC/IrcWidget.py" line="626"/>
         <source>MOTD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="626"/>
+        <location filename="Network/IRC/IrcWidget.py" line="628"/>
         <source>Away</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="628"/>
+        <location filename="Network/IRC/IrcWidget.py" line="630"/>
         <source>Info ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="632"/>
+        <location filename="Network/IRC/IrcWidget.py" line="634"/>
         <source>Message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="634"/>
+        <location filename="Network/IRC/IrcWidget.py" line="636"/>
         <source>End of message of the day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="637"/>
+        <location filename="Network/IRC/IrcWidget.py" line="639"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="641"/>
+        <location filename="Network/IRC/IrcWidget.py" line="643"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="645"/>
+        <location filename="Network/IRC/IrcWidget.py" line="647"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="648"/>
+        <location filename="Network/IRC/IrcWidget.py" line="650"/>
         <source>You are no longer marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="650"/>
+        <location filename="Network/IRC/IrcWidget.py" line="652"/>
         <source>You have been marked as being away.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="756"/>
+        <location filename="Network/IRC/IrcWidget.py" line="758"/>
         <source>SSL Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="712"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="732"/>
+        <location filename="Network/IRC/IrcWidget.py" line="734"/>
         <source>Socket Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="716"/>
+        <location filename="Network/IRC/IrcWidget.py" line="718"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="720"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="728"/>
+        <location filename="Network/IRC/IrcWidget.py" line="730"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28136,58 +28136,58 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;SSL chyby:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Chcete tyto chyby ignorovat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="841"/>
+        <location filename="Network/IRC/IrcWidget.py" line="843"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="871"/>
+        <location filename="Network/IRC/IrcWidget.py" line="873"/>
         <source>Critical</source>
         <translation type="unfinished">Kritický</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcWidget.py" line="857"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="871"/>
+        <location filename="Network/IRC/IrcWidget.py" line="873"/>
         <source>The given nickname is already in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="828"/>
+        <location filename="Network/IRC/IrcWidget.py" line="830"/>
         <source>CTCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="812"/>
+        <location filename="Network/IRC/IrcWidget.py" line="814"/>
         <source>Received Version request from {0}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="817"/>
+        <location filename="Network/IRC/IrcWidget.py" line="819"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="822"/>
+        <location filename="Network/IRC/IrcWidget.py" line="824"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="828"/>
+        <location filename="Network/IRC/IrcWidget.py" line="830"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="534"/>
+        <location filename="Network/IRC/IrcWidget.py" line="536"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="538"/>
+        <location filename="Network/IRC/IrcWidget.py" line="540"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28202,22 +28202,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished">Síť</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="724"/>
+        <location filename="Network/IRC/IrcWidget.py" line="726"/>
         <source>The SSL handshake failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="732"/>
+        <location filename="Network/IRC/IrcWidget.py" line="734"/>
         <source>A network error occurred.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="746"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="756"/>
+        <location filename="Network/IRC/IrcWidget.py" line="758"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check. SSL errors were accepted by you.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33438,27 +33438,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1101"/>
+        <location filename="Preferences/__init__.py" line="1103"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33466,12 +33466,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>PreferencesLexerError</name>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="25"/>
+        <location filename="Preferences/PreferencesLexer.py" line="26"/>
         <source>Unspecific PreferencesLexer error.</source>
         <translation>Neznámá chyba v Nastavení Lexeru.</translation>
     </message>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="55"/>
+        <location filename="Preferences/PreferencesLexer.py" line="56"/>
         <source>Unsupported Lexer Language: {0}</source>
         <translation>Nepodporovaný Lexer jazyk: {0}</translation>
     </message>
@@ -34578,7 +34578,7 @@ Vyberte Obnovit.</translation>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4284"/>
+        <location filename="Project/Project.py" line="4285"/>
         <source>Create Package List</source>
         <translation>Vytvořit seznam balíčků</translation>
     </message>
@@ -34588,7 +34588,7 @@ Vyberte Obnovit.</translation>
         <translation>Vytvořit seznam &amp;balíčků</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4451"/>
+        <location filename="Project/Project.py" line="4453"/>
         <source>Create Plugin Archive</source>
         <translation>Vytvořit Plugin archiv</translation>
     </message>
@@ -34603,12 +34603,12 @@ Vyberte Obnovit.</translation>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Přepsat jej?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4301"/>
+        <location filename="Project/Project.py" line="4302"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; neexistuje. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4309"/>
+        <location filename="Project/Project.py" line="4310"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Projekt nemá definován hlavní skript. Zrušeno...</translation>
     </message>
@@ -34883,32 +34883,32 @@ Vyberte Obnovit.</translation>
         <translation>&lt;p&gt;Vybrané VCS &lt;b&gt;{0}&lt;/b&gt; nebylo nalezeno.&lt;br/&gt;Kontrola verzí vypnuta.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4284"/>
+        <location filename="Project/Project.py" line="4285"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze vytvořit.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4321"/>
+        <location filename="Project/Project.py" line="4322"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;PKGLIST&lt;/b&gt; nelze načíst.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4332"/>
+        <location filename="Project/Project.py" line="4333"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4352"/>
+        <location filename="Project/Project.py" line="4354"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit do archivu. Ingorováno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4371"/>
+        <location filename="Project/Project.py" line="4373"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s eric5 plugin archivem &lt;b&gt;{0}&lt;/b&gt; byl úspěšně vytvořen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4451"/>
+        <location filename="Project/Project.py" line="4453"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -34991,19 +34991,29 @@ Vyberte Obnovit.</translation>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="437"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="462"/>
         <source>local</source>
         <translation>lokální</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="477"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="502"/>
         <source>Select entries</source>
         <translation>Vybrat vstupy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="477"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="502"/>
         <source>There were no matching entries found.</source>
         <translation>Hledané vstupy nebyly nalezeny.</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectBaseBrowser.py" line="286"/>
+        <source>Delete directories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectBaseBrowser.py" line="286"/>
+        <source>Do you really want to delete these directories from the project?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -35243,7 +35253,7 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="283"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="285"/>
         <source>Compile all forms</source>
         <translation>Kompilovat všechny formuláře</translation>
     </message>
@@ -35278,32 +35288,32 @@ Vyberte Obnovit.</translation>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="230"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="254"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="259"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="261"/>
         <source>New form...</source>
         <translation>Nový formulář...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="288"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="290"/>
         <source>Add forms...</source>
         <translation>Přidat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="290"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="292"/>
         <source>Add forms directory...</source>
         <translation>Přidat adresář s formuláři...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="293"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="295"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="295"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="297"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
@@ -35313,67 +35323,67 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="540"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="542"/>
         <source>New Form</source>
         <translation>Nový formulář</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="496"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="498"/>
         <source>Select a form type:</source>
         <translation>Vybrat typ formuláře:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="531"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="566"/>
         <source>Delete forms</source>
         <translation>Smazat formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="566"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Opravdu chcete odebrat tyto formuláře z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="663"/>
         <source>Form Compilation</source>
         <translation>Kompilace formuláře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="641"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Kompilace souboru s formulářem byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="663"/>
         <source>The compilation of the form file failed.</source>
         <translation>Kompilace souboru s formulářem selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="732"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="820"/>
         <source>Compiling forms...</source>
         <translation>Kompilovat formuláře...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="820"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="853"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="855"/>
         <source>Determining changed forms...</source>
         <translation>Určení změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="880"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="882"/>
         <source>Compiling changed forms...</source>
         <translation>Kompilování změněných formulářů...</translation>
     </message>
@@ -35388,32 +35398,32 @@ Vyberte Obnovit.</translation>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="510"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="512"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt User-Interface soubory (*.ui);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="298"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="300"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="266"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="268"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="540"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="542"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s formulářem &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="651"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="653"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace formuláře se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="732"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -35486,7 +35496,7 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat interface</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="205"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="207"/>
         <source>Compile all interfaces</source>
         <translation>Kompilovat všechny interface</translation>
     </message>
@@ -35506,27 +35516,27 @@ Vyberte Obnovit.</translation>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="169"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="187"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="208"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
         <source>Add interfaces...</source>
         <translation>Přidat interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="212"/>
         <source>Add interfaces directory...</source>
         <translation>Přidat adresář s interaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="213"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="217"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
@@ -35536,62 +35546,62 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="389"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="391"/>
         <source>Delete interfaces</source>
         <translation>Smazat interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="389"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="391"/>
         <source>Do you really want to delete these interfaces from the project?</source>
         <translation>Opravdu chcete odebrat tyto interfaces z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="468"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="470"/>
         <source>Interface Compilation</source>
         <translation>Kompilace interface</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="459"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="461"/>
         <source>The compilation of the interface file was successful.</source>
         <translation>Kompilace souboru interface byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="468"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="470"/>
         <source>The compilation of the interface file failed.</source>
         <translation>Kompliace interface souboru selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="507"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="509"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="563"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="565"/>
         <source>Compiling interfaces...</source>
         <translation>Kompilovat interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="563"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="565"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="218"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="220"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="219"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="221"/>
         <source>Configure CORBA...</source>
         <translation>Konfigurovat CORBA...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="192"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="194"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="507"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="509"/>
         <source>&lt;p&gt;Could not start {0}.&lt;br&gt;Ensure that it is in the search path.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.&lt;/p&gt;</translation>
     </message>
@@ -35890,7 +35900,7 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="224"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="226"/>
         <source>Compile all resources</source>
         <translation>Kompilovat všechny Resource</translation>
     </message>
@@ -35910,32 +35920,32 @@ Vyberte Obnovit.</translation>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="177"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="201"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="202"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="204"/>
         <source>New resource...</source>
         <translation>Nový Resource...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="229"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
         <source>Add resources...</source>
         <translation>Přidat resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="233"/>
         <source>Add resources directory...</source>
         <translation>Přidat adresář se zdroji...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="234"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="238"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
@@ -35945,92 +35955,92 @@ Vyberte Obnovit.</translation>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="433"/>
         <source>New Resource</source>
         <translation>Nový Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="391"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="393"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Qt Resource soubory (*.qrc)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="410"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="412"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="456"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="458"/>
         <source>Delete resources</source>
         <translation>Smazat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="456"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="458"/>
         <source>Do you really want to delete these resources from the project?</source>
         <translation>Opravdu chcete odebrat tyto Resource z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="548"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="550"/>
         <source>Resource Compilation</source>
         <translation>Kompilovat Resource</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="531"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="533"/>
         <source>The compilation of the resource file was successful.</source>
         <translation>Kompilace souboru Resource byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="548"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="550"/>
         <source>The compilation of the resource file failed.</source>
         <translation>Kompliace Resource souboru selhala.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="623"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="625"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="685"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="687"/>
         <source>Compiling resources...</source>
         <translation>Kompilovat resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="685"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="687"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="751"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="753"/>
         <source>Determining changed resources...</source>
         <translation>Určení změněných resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="784"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="786"/>
         <source>Compiling changed resources...</source>
         <translation>Kompilování změněných resources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="239"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="241"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="207"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="209"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="433"/>
         <source>&lt;p&gt;The new resource file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s resource &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="538"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="540"/>
         <source>&lt;p&gt;The compilation of the resource file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace Resource se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="623"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="625"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -36073,17 +36083,17 @@ Vyberte Obnovit.</translation>
         <translation>Profilovat data...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="281"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="283"/>
         <source>Diagrams</source>
         <translation>Diagramy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="282"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="284"/>
         <source>Class Diagram...</source>
         <translation>Diagram třídy...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="284"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
         <source>Package Diagram...</source>
         <translation>Diagram balíčku...</translation>
     </message>
@@ -36093,7 +36103,7 @@ Vyberte Obnovit.</translation>
         <translation>Diagram importů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="288"/>
         <source>Application Diagram...</source>
         <translation>Diagram aplikace...</translation>
     </message>
@@ -36103,142 +36113,142 @@ Vyberte Obnovit.</translation>
         <translation>Spustit unittest...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="293"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="295"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="378"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="380"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="367"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="369"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="381"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="383"/>
         <source>Add source files...</source>
         <translation>Přidat zdrojové soubory...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="382"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="384"/>
         <source>Add source directory...</source>
         <translation>Přidat adresář se zdrojovými soubory...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="395"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="399"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="700"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="702"/>
         <source>Delete files</source>
         <translation>Smazat soubory</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="700"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="702"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Opravdu chcete odebrat tyto soubory z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="772"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="772"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="828"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="828"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="863"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="865"/>
         <source>Class Diagram</source>
         <translation>Diagram třídy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="900"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="902"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="900"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="902"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="913"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="915"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="913"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="915"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="335"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>New package...</source>
         <translation>Nový balíček...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="642"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="644"/>
         <source>Add new Python package</source>
         <translation>Přidat nový Python balíček</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="882"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="884"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="882"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="884"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="400"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="402"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="252"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="254"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="629"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="631"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář balíčku &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="642"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="644"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor balíčku &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="328"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
         <source>Goto</source>
         <translation type="unfinished">Jít na</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="291"/>
         <source>Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36311,17 +36321,17 @@ Vyberte Obnovit.</translation>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="331"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="379"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="379"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
         <source>Add translation...</source>
         <translation>Přidat překlad...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="381"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="384"/>
         <source>Add translation files...</source>
         <translation>Přidat soubory s překladem...</translation>
     </message>
@@ -36346,62 +36356,62 @@ Vyberte Obnovit.</translation>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="610"/>
         <source>Delete translation files</source>
         <translation>Smazat soubory s překlady</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="610"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>Opravdu chcete odebrat tyto soubory s překlady z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="742"/>
         <source>Write temporary project file</source>
         <translation>Zapsat dočasný soubor projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="715"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>Nebyly vybrány žádné soubory s překlady (*.ts).</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="853"/>
         <source>Translation file generation</source>
         <translation>Generování souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="848"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>Generování souboru s překladem (*.ts) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="853"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>Generování souboru s překladem (*.ts) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1074"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1008"/>
         <source>Translation file release</source>
         <translation>Zveřejnění souboru s překladem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="994"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) bylo úspěšné.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1008"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Zveřejnění souboru s překladem (*.qm) selhalo.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="387"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="390"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
@@ -36411,22 +36421,22 @@ Vyberte Obnovit.</translation>
         <translation>Extrahovat zprávy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="384"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="387"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="742"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do dočasného souboru projektu &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="938"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1074"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit zveřejnění.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -54969,7 +54979,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VariableItem</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="38"/>
+        <location filename="Debugger/VariablesViewer.py" line="40"/>
         <source>&lt;double click to show value&gt;</source>
         <translation>&lt;dvojitý klik pro zobrazení hodnoty&gt;</translation>
     </message>
@@ -55028,57 +55038,57 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>VariablesViewer</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="284"/>
+        <location filename="Debugger/VariablesViewer.py" line="306"/>
         <source>Global Variables</source>
         <translation>Globální proměnné</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="285"/>
+        <location filename="Debugger/VariablesViewer.py" line="307"/>
         <source>Globals</source>
         <translation>Globální</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Value</source>
         <translation>Hodnota</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="289"/>
+        <location filename="Debugger/VariablesViewer.py" line="311"/>
         <source>&lt;b&gt;The Global Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the global variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč globálních proměnných&lt;/b&gt;&lt;p&gt;Toto okno zobrazuje globální proměnné debugovénho programu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="295"/>
+        <location filename="Debugger/VariablesViewer.py" line="317"/>
         <source>Local Variables</source>
         <translation>Lokální proměnné</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Locals</source>
         <translation>Lokální</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="300"/>
+        <location filename="Debugger/VariablesViewer.py" line="322"/>
         <source>&lt;b&gt;The Local Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the local variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč lokálních proměnných&lt;/b&gt;&lt;p&gt;Toto okno zobrazuje lokální proměnné debugovénho programu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="330"/>
+        <location filename="Debugger/VariablesViewer.py" line="352"/>
         <source>Show Details...</source>
         <translation>Zobrazit detaily...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="335"/>
+        <location filename="Debugger/VariablesViewer.py" line="357"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="541"/>
+        <location filename="Debugger/VariablesViewer.py" line="563"/>
         <source>{0} items</source>
         <translation>{0} položek</translation>
     </message>
