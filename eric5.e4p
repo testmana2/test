@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2013-03-16, 16:06:43 -->
-<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -1077,6 +1075,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
     <Source>E5Network/E5SslInfoWidget.py</Source>
+    <Source>Utilities/compatibility_fixes.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
