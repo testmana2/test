@@ -4279,7 +4279,7 @@ class Project(QObject):
                 newline = self.getEolString()
             pkglistFile = open(pkglist, "w", encoding="utf-8", newline=newline)
             pkglistFile.write("\n".join(lst))
-            pkglistFile.write("\n") # ensure the file ends with an empty line
+            pkglistFile.write("\n")  # ensure the file ends with an empty line
             pkglistFile.close()
         except IOError as why:
             E5MessageBox.critical(self.ui,

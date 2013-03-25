@@ -114,9 +114,9 @@ class QsciScintillaCompat(QsciScintilla):
         for style in rangeLow + rangeHigh:
             self.SendScintilla(QsciScintilla.SCI_STYLESETFONT, style, f)
             self.SendScintilla(QsciScintilla.SCI_STYLESETSIZE, style, ps)
-            self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight);
-            self.SendScintilla(QsciScintilla.SCI_STYLESETITALIC, style, italic);
-            self.SendScintilla(QsciScintilla.SCI_STYLESETUNDERLINE, style, underline);
+            self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight)
+            self.SendScintilla(QsciScintilla.SCI_STYLESETITALIC, style, italic)
+            self.SendScintilla(QsciScintilla.SCI_STYLESETUNDERLINE, style, underline)
     
     def linesOnScreen(self):
         """

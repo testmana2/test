@@ -122,7 +122,7 @@ class Prefs(object):
         "TabViewManagerFilenameOnly": True,
         "ShowFilePreview": True,
         "ShowFilePreviewJS": True,
-        "ShowFilePreviewSSI": True, 
+        "ShowFilePreviewSSI": True,
         # the order in ViewProfiles is Project-Viewer, File-Browser,
         # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
         # Templates-Viewer, Multiproject-Viewer, Terminal, Chat, Symbols,
