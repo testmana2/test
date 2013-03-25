@@ -33,6 +33,8 @@ Version 5.4-snapshot-2013mmdd:
 - Version Control System Interfaces
   -- All
      --- added a confirmation dialog to the 'revert' actions
+  -- Mercurial
+     --- added a 'Copy Changesets' button to the log browser dialog
 - Web Browser
   -- reworked the various SSL info widgets to show more info
 - Third Party packages

@@ -17,11 +17,12 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
     """
     Class implementing a dialog to enter the data for a graft session.
     """
-    def __init__(self, vcs, parent=None):
+    def __init__(self, vcs, revs=None, parent=None):
         """
         Constructor
         
         @param vcs reference to the VCS object (Hg)
+        @param revs list of revisions to show in the revisions pane (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -33,6 +34,9 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
             self.logCheckBox.setEnabled(False)
             self.logCheckBox.setChecked(False)
             self.logCheckBox.setVisible(False)
+        
+        if revs:
+            self.revisionsEdit.setPlainText("\n".join(sorted(revs)))
        
         self.__updateOk()
     

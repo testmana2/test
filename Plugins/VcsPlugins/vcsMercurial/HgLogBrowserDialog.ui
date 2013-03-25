@@ -343,6 +343,16 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="graftButton">
+       <property name="toolTip">
+        <string>Press to copy the selected changesets to the current branch</string>
+       </property>
+       <property name="text">
+        <string>Copy Changesets</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="phaseButton">
        <property name="toolTip">
         <string>Change the phase of the selected revisions</string>
@@ -491,12 +501,13 @@
   <tabstop>diffP1Button</tabstop>
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
+  <tabstop>graftButton</tabstop>
   <tabstop>phaseButton</tabstop>
   <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
-  <tabstop>sendButton</tabstop>
   <tabstop>buttonBox</tabstop>
+  <tabstop>sendButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -2625,11 +2625,12 @@ class Hg(VersionControl):
         
         return res
     
-    def hgGraft(self, path):
+    def hgGraft(self, path, revs=None):
         """
         Public method to copy changesets from another branch.
         
         @param path directory name of the project (string)
+        @param revs list of revisions to show in the revisions pane (list of strings)
         @return flag indicating that the project should be reread (boolean)
         """
         # find the root of the repo
@@ -2641,7 +2642,7 @@ class Hg(VersionControl):
         
         from .HgGraftDialog import HgGraftDialog
         res = False
-        dlg = HgGraftDialog(self)
+        dlg = HgGraftDialog(self, revs)
         if dlg.exec_() == QDialog.Accepted:
             revs, (userData, currentUser, userName), \
             (dateData, currentDate, dateStr), log, dryrun = dlg.getData()

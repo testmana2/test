@@ -5724,6 +5724,7 @@
       <keyword name="HgLogBrowserDialog.__resortFiles" id="HgLogBrowserDialog.__resortFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resortFiles" />
       <keyword name="HgLogBrowserDialog.__showError" id="HgLogBrowserDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__showError" />
       <keyword name="HgLogBrowserDialog.__updateDiffButtons" id="HgLogBrowserDialog.__updateDiffButtons" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateDiffButtons" />
+      <keyword name="HgLogBrowserDialog.__updateGraftButton" id="HgLogBrowserDialog.__updateGraftButton" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateGraftButton" />
       <keyword name="HgLogBrowserDialog.__updateGui" id="HgLogBrowserDialog.__updateGui" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateGui" />
       <keyword name="HgLogBrowserDialog.__updatePhaseButton" id="HgLogBrowserDialog.__updatePhaseButton" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updatePhaseButton" />
       <keyword name="HgLogBrowserDialog.closeEvent" id="HgLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.closeEvent" />
@@ -5736,6 +5737,7 @@
       <keyword name="HgLogBrowserDialog.on_diffRevisionsButton_clicked" id="HgLogBrowserDialog.on_diffRevisionsButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_diffRevisionsButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_fieldCombo_activated" id="HgLogBrowserDialog.on_fieldCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_fieldCombo_activated" />
       <keyword name="HgLogBrowserDialog.on_fromDate_dateChanged" id="HgLogBrowserDialog.on_fromDate_dateChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_fromDate_dateChanged" />
+      <keyword name="HgLogBrowserDialog.on_graftButton_clicked" id="HgLogBrowserDialog.on_graftButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_graftButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_input_returnPressed" id="HgLogBrowserDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_input_returnPressed" />
       <keyword name="HgLogBrowserDialog.on_logTree_currentItemChanged" id="HgLogBrowserDialog.on_logTree_currentItemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_currentItemChanged" />
       <keyword name="HgLogBrowserDialog.on_logTree_itemSelectionChanged" id="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_itemSelectionChanged" />

@@ -131,6 +131,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
             self.phaseLine.hide()
             self.phaseButton.hide()
+        if self.vcs.version < (2, 0):
+            self.graftButton.setEnabled(False)
+            self.graftButton.hide()
+        if self.phaseButton.isHidden() and \
+           self.graftButton.isHidden():
+            self.phaseLine.hide()
     
     def __initData(self):
         """
@@ -154,6 +160,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__branchColors = {}
         
         self.__projectRevision = -1
+        self.__projectBranch = ""
     
     def closeEvent(self, e):
         """
@@ -427,7 +434,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         args = []
         args.append("identify")
-        args.append("-n")
+        args.append("-nb")
         
         output = ""
         if self.__hgClient:
@@ -457,9 +464,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 errMsg)
         
         if output:
-            self.__projectRevision = output.strip()
-            if self.__projectRevision.endswith("+"):
-                self.__projectRevision = self.__projectRevision[:-1]
+            outputList = output.strip().split()
+            if len(outputList) == 2:
+                self.__projectRevision = outputList[0].strip()
+                if self.__projectRevision.endswith("+"):
+                    self.__projectRevision = self.__projectRevision[:-1]
+                    self.__projectBranch = outputList[1].strip()
     
     def __getClosedBranches(self):
         """
@@ -1013,6 +1023,21 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         else:
             self.phaseButton.setEnabled(False)
     
+    def __updateGraftButton(self):
+        """
+        Private slot to update the status of the graft button.
+        """
+        if self.graftButton.isVisible():
+            # step 1: count selected entries not belonging to the current branch
+            otherBranches = 0
+            for itm in self.logTree.selectedItems():
+                branch = itm.text(self.BranchColumn)
+                if branch != self.__projectBranch:
+                    otherBranches += 1
+            
+            # step 2: set the status of the graft button
+            self.graftButton.setEnabled(otherBranches > 0)
+    
     def __updateGui(self, itm):
         """
         Private slot to update GUI elements except the diff and phase buttons.
@@ -1045,6 +1070,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__updateGui(current)
         self.__updateDiffButtons()
         self.__updatePhaseButton()
+        self.__updateGraftButton()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1056,6 +1082,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__updateDiffButtons()
         self.__updatePhaseButton()
+        self.__updateGraftButton()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -1306,3 +1333,27 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if res:
             for itm in self.logTree.selectedItems():
                 itm.setText(self.PhaseColumn, newPhase)
+    
+    @pyqtSlot()
+    def on_graftButton_clicked(self):
+        """
+        Private slot to handle the Copy Changesets button.
+        """
+        revs = []
+        
+        for itm in self.logTree.selectedItems():
+            branch = itm.text(self.BranchColumn)
+            if branch != self.__projectBranch:
+                revs.append(itm.text(self.RevisionColumn).strip().split(":", 1)[0])
+        
+        if revs:
+            shouldReopen = self.vcs.hgGraft(self.repodir, revs)
+            if shouldReopen:
+                res = E5MessageBox.yesNo(None,
+                    self.trUtf8("Copy Changesets"),
+                    self.trUtf8("""The project should be reread. Do this now?"""),
+                    yesDefault=True)
+                if res:
+                    e5App().getObject("Project").reopenProject()
+            else:
+                self.on_refreshButton_clicked()
