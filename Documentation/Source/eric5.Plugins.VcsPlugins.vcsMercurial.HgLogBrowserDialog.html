@@ -129,6 +129,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__updateDiffButtons">__updateDiffButtons</a></td>
 <td>Private slot to update the enabled status of the diff buttons.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__updateGraftButton">__updateGraftButton</a></td>
+<td>Private slot to update the status of the graft button.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__updateGui">__updateGui</a></td>
 <td>Private slot to update GUI elements except the diff and phase buttons.</td>
 </tr><tr>
@@ -164,6 +167,9 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_fromDate_dateChanged">on_fromDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_graftButton_clicked">on_graftButton_clicked</a></td>
+<td>Private slot to handle the Copy Changesets button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_input_returnPressed">on_input_returnPressed</a></td>
 <td>Private slot to handle the press of the return key in the input field.</td>
@@ -506,6 +512,11 @@ error to be shown (string)
 <b>__updateDiffButtons</b>(<i></i>)
 <p>
         Private slot to update the enabled status of the diff buttons.
+</p><a NAME="HgLogBrowserDialog.__updateGraftButton" ID="HgLogBrowserDialog.__updateGraftButton"></a>
+<h4>HgLogBrowserDialog.__updateGraftButton</h4>
+<b>__updateGraftButton</b>(<i></i>)
+<p>
+        Private slot to update the status of the graft button.
 </p><a NAME="HgLogBrowserDialog.__updateGui" ID="HgLogBrowserDialog.__updateGui"></a>
 <h4>HgLogBrowserDialog.__updateGui</h4>
 <b>__updateGui</b>(<i>itm</i>)
@@ -609,7 +620,12 @@ text of the selected field (string)
 <dd>
 new date (QDate)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_input_returnPressed" ID="HgLogBrowserDialog.on_input_returnPressed"></a>
+</dl><a NAME="HgLogBrowserDialog.on_graftButton_clicked" ID="HgLogBrowserDialog.on_graftButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_graftButton_clicked</h4>
+<b>on_graftButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the Copy Changesets button.
+</p><a NAME="HgLogBrowserDialog.on_input_returnPressed" ID="HgLogBrowserDialog.on_input_returnPressed"></a>
 <h4>HgLogBrowserDialog.on_input_returnPressed</h4>
 <b>on_input_returnPressed</b>(<i></i>)
 <p>

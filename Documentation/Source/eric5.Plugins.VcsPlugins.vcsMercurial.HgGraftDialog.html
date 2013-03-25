@@ -85,13 +85,16 @@ QDialog, Ui_HgGraftDialog
 </table>
 <a NAME="HgGraftDialog.__init__" ID="HgGraftDialog.__init__"></a>
 <h4>HgGraftDialog (Constructor)</h4>
-<b>HgGraftDialog</b>(<i>vcs, parent=None</i>)
+<b>HgGraftDialog</b>(<i>vcs, revs=None, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the VCS object (Hg)
+</dd><dt><i>revs</i></dt>
+<dd>
+list of revisions to show in the revisions pane (list of strings)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
