@@ -376,6 +376,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__releaseAll)
                 self.qmprocDirMenuActions.append(act)
         self.dirMenu.addSeparator()
+        act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
+        self.dirMenuActions.append(act)
+        self.dirMenu.addSeparator()
         self.__addTranslationDirAct = self.dirMenu.addAction(
             self.trUtf8('Add translation...'), self.project.addLanguage)
         self.dirMenu.addAction(self.trUtf8('Add translation files...'),

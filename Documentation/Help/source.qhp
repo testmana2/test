@@ -8384,6 +8384,7 @@
       <keyword name="ProjectBaseBrowser._contextMenuRequested" id="ProjectBaseBrowser._contextMenuRequested" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._contextMenuRequested" />
       <keyword name="ProjectBaseBrowser._copyToClipboard" id="ProjectBaseBrowser._copyToClipboard" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._copyToClipboard" />
       <keyword name="ProjectBaseBrowser._createPopupMenus" id="ProjectBaseBrowser._createPopupMenus" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._createPopupMenus" />
+      <keyword name="ProjectBaseBrowser._deleteDirectory" id="ProjectBaseBrowser._deleteDirectory" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._deleteDirectory" />
       <keyword name="ProjectBaseBrowser._disconnectExpandedCollapsed" id="ProjectBaseBrowser._disconnectExpandedCollapsed" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._disconnectExpandedCollapsed" />
       <keyword name="ProjectBaseBrowser._expandAllDirs" id="ProjectBaseBrowser._expandAllDirs" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._expandAllDirs" />
       <keyword name="ProjectBaseBrowser._initHookMethods" id="ProjectBaseBrowser._initHookMethods" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser._initHookMethods" />

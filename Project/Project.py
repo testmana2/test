@@ -1803,7 +1803,7 @@ class Project(QObject):
             dn2 = dn + os.sep
         else:
             dn2 = dn
-        for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", ]:
+        for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "TRANSLATIONS", ]:
             for entry in self.pdata[key][:]:
                 if entry.startswith(dn2):
                     self.pdata[key].remove(entry)

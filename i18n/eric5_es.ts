@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1931,8 +1930,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2173,8 +2172,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -8041,7 +8040,7 @@ selección completa.&lt;/li&gt;
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4527"/>
+        <location filename="QScintilla/Editor.py" line="4542"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
@@ -8141,207 +8140,207 @@ selección completa.&lt;/li&gt;
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4036"/>
+        <location filename="QScintilla/Editor.py" line="4051"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4036"/>
+        <location filename="QScintilla/Editor.py" line="4051"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4545"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4873"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4873"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4919"/>
+        <location filename="QScintilla/Editor.py" line="4934"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4913"/>
+        <location filename="QScintilla/Editor.py" line="4928"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4919"/>
+        <location filename="QScintilla/Editor.py" line="4934"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5011"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5011"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5142"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5142"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5367"/>
+        <location filename="QScintilla/Editor.py" line="5382"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5367"/>
+        <location filename="QScintilla/Editor.py" line="5382"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5395"/>
+        <location filename="QScintilla/Editor.py" line="5410"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5435"/>
+        <location filename="QScintilla/Editor.py" line="5450"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5416"/>
+        <location filename="QScintilla/Editor.py" line="5431"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5435"/>
+        <location filename="QScintilla/Editor.py" line="5450"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5452"/>
+        <location filename="QScintilla/Editor.py" line="5467"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5482"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5478"/>
+        <location filename="QScintilla/Editor.py" line="5493"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5478"/>
+        <location filename="QScintilla/Editor.py" line="5493"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5503"/>
+        <location filename="QScintilla/Editor.py" line="5518"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5503"/>
+        <location filename="QScintilla/Editor.py" line="5518"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5632"/>
+        <location filename="QScintilla/Editor.py" line="5647"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5892"/>
+        <location filename="QScintilla/Editor.py" line="5907"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5910"/>
+        <location filename="QScintilla/Editor.py" line="5925"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5912"/>
+        <location filename="QScintilla/Editor.py" line="5927"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5914"/>
+        <location filename="QScintilla/Editor.py" line="5929"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5916"/>
+        <location filename="QScintilla/Editor.py" line="5931"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5918"/>
+        <location filename="QScintilla/Editor.py" line="5933"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5921"/>
+        <location filename="QScintilla/Editor.py" line="5936"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5939"/>
+        <location filename="QScintilla/Editor.py" line="5954"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5955"/>
+        <location filename="QScintilla/Editor.py" line="5970"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5982"/>
+        <location filename="QScintilla/Editor.py" line="5997"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6044"/>
+        <location filename="QScintilla/Editor.py" line="6059"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6044"/>
+        <location filename="QScintilla/Editor.py" line="6059"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6062"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6062"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6074"/>
+        <location filename="QScintilla/Editor.py" line="6089"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6074"/>
+        <location filename="QScintilla/Editor.py" line="6089"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
@@ -8416,7 +8415,7 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6350"/>
+        <location filename="QScintilla/Editor.py" line="6365"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
@@ -8426,12 +8425,12 @@ selección completa.&lt;/li&gt;
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6352"/>
+        <location filename="QScintilla/Editor.py" line="6367"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6354"/>
+        <location filename="QScintilla/Editor.py" line="6369"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
@@ -8471,37 +8470,37 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5409"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5416"/>
+        <location filename="QScintilla/Editor.py" line="5431"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5482"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5623"/>
+        <location filename="QScintilla/Editor.py" line="5638"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5770"/>
+        <location filename="QScintilla/Editor.py" line="5785"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5892"/>
+        <location filename="QScintilla/Editor.py" line="5907"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5982"/>
+        <location filename="QScintilla/Editor.py" line="5997"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -8526,12 +8525,12 @@ selección completa.&lt;/li&gt;
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5268"/>
+        <location filename="QScintilla/Editor.py" line="5283"/>
         <source>py3flakes Warning</source>
         <translation>Advertencia de py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5268"/>
+        <location filename="QScintilla/Editor.py" line="5283"/>
         <source>No py3flakes warning message available.</source>
         <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
@@ -8541,42 +8540,42 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5452"/>
+        <location filename="QScintilla/Editor.py" line="5467"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5311"/>
+        <location filename="QScintilla/Editor.py" line="5326"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5317"/>
+        <location filename="QScintilla/Editor.py" line="5332"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5628"/>
+        <location filename="QScintilla/Editor.py" line="5643"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4132"/>
+        <location filename="QScintilla/Editor.py" line="4147"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Activando el Proveedor de Autocompletado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4132"/>
+        <location filename="QScintilla/Editor.py" line="4147"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de autocompletado no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4317"/>
+        <location filename="QScintilla/Editor.py" line="4332"/>
         <source>Activating Calltip Provider</source>
         <translation>Activando Proveedor de Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4317"/>
+        <location filename="QScintilla/Editor.py" line="4332"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de calltip no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
@@ -14393,7 +14392,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -26567,52 +26566,52 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Pulsar para unirse al canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
         <source>Save Messages</source>
         <translation>Guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="345"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="353"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos HTML (*.{0});;Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="362"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
         <source>Error saving Messages</source>
         <translation>Error al guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="380"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="392"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="400"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="397"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="405"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="401"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="409"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="414"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="419"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
@@ -27074,7 +27073,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Se ha solicitado una conexión encriptada pero SSL no está disponible. Por favor, cambie la configuración del servidor.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="457"/>
+        <location filename="Network/IRC/IrcWidget.py" line="458"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -27104,203 +27103,203 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Conectado, validándose...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="457"/>
+        <location filename="Network/IRC/IrcWidget.py" line="458"/>
         <source>Server disconnected.</source>
         <translation>Servidor desconectado.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="499"/>
+        <location filename="Network/IRC/IrcWidget.py" line="501"/>
         <source>Message Error</source>
         <translation>Error de Mensaje</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="499"/>
+        <location filename="Network/IRC/IrcWidget.py" line="501"/>
         <source>Unknown message received from server:&lt;br/&gt;{0}</source>
         <translation>Mensaje desconocido recibido del servidor: &lt;/br&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="523"/>
+        <location filename="Network/IRC/IrcWidget.py" line="525"/>
         <source>Notice</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="541"/>
+        <location filename="Network/IRC/IrcWidget.py" line="543"/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="548"/>
+        <location filename="Network/IRC/IrcWidget.py" line="550"/>
         <source>You have left channel {0}.</source>
         <translation>Ha dejado el canal {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="559"/>
+        <location filename="Network/IRC/IrcWidget.py" line="561"/>
         <source>You are now known as {0}.</source>
         <translation>Usted es conocido como {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="564"/>
+        <location filename="Network/IRC/IrcWidget.py" line="566"/>
         <source>User {0} is now known as {1}.</source>
         <translation>Usuario {0} es conocido ahora como {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="569"/>
+        <location filename="Network/IRC/IrcWidget.py" line="571"/>
         <source>Server Error</source>
         <translation>Error de Servidor</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="603"/>
+        <location filename="Network/IRC/IrcWidget.py" line="605"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="618"/>
+        <location filename="Network/IRC/IrcWidget.py" line="620"/>
         <source>Welcome</source>
         <translation>Bienvenido</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="620"/>
+        <location filename="Network/IRC/IrcWidget.py" line="622"/>
         <source>Support</source>
         <translation>Soporte</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="622"/>
+        <location filename="Network/IRC/IrcWidget.py" line="624"/>
         <source>User</source>
         <translation>Usuario</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="624"/>
+        <location filename="Network/IRC/IrcWidget.py" line="626"/>
         <source>MOTD</source>
         <translation>MOTD</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="626"/>
+        <location filename="Network/IRC/IrcWidget.py" line="628"/>
         <source>Away</source>
         <translation>Ausente</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="628"/>
+        <location filename="Network/IRC/IrcWidget.py" line="630"/>
         <source>Info ({0})</source>
         <translation>Info ({0})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="632"/>
+        <location filename="Network/IRC/IrcWidget.py" line="634"/>
         <source>Message of the day</source>
         <translation>Mensaje del día</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="634"/>
+        <location filename="Network/IRC/IrcWidget.py" line="636"/>
         <source>End of message of the day</source>
         <translation>Fin de mensaje del día</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="637"/>
+        <location filename="Network/IRC/IrcWidget.py" line="639"/>
         <source>Server {0} (Version {1}), User-Modes: {2}, Channel-Modes: {3}</source>
         <translation>Servidor {0} (Versión {1}), Modos de Usuario: {2}, Modos de Canal: {3}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="641"/>
+        <location filename="Network/IRC/IrcWidget.py" line="643"/>
         <source>Current users on {0}: {1}, max. {2}</source>
         <translation>Usuarios actuales en {0}: {1}, máx. {2}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="645"/>
+        <location filename="Network/IRC/IrcWidget.py" line="647"/>
         <source>Current users on the network: {0}, max. {1}</source>
         <translation>Usuarios actuales en la red: {0}, máx. {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="648"/>
+        <location filename="Network/IRC/IrcWidget.py" line="650"/>
         <source>You are no longer marked as being away.</source>
         <translation>Usted ya no está marcado como ausente.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="650"/>
+        <location filename="Network/IRC/IrcWidget.py" line="652"/>
         <source>You have been marked as being away.</source>
         <translation>Usted ha sido marcado como ausente.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="756"/>
+        <location filename="Network/IRC/IrcWidget.py" line="758"/>
         <source>SSL Error</source>
         <translation>Error de SSL</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="710"/>
+        <location filename="Network/IRC/IrcWidget.py" line="712"/>
         <source>Connection to server {0} (port {1}) lost while waiting for user response to an SSL error.</source>
         <translation>Conexión al servidor {0} (puerto {1}) perdida mientras se esperaba respuesta de usuario a un error SSL.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="732"/>
+        <location filename="Network/IRC/IrcWidget.py" line="734"/>
         <source>Socket Error</source>
         <translation>Error de Socket</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="716"/>
+        <location filename="Network/IRC/IrcWidget.py" line="718"/>
         <source>The host was not found. Please check the host name and port settings.</source>
         <translation>El host no ha sido encontrado. Por favor, compruebe los ajustes de nombre de host y puerto.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="720"/>
+        <location filename="Network/IRC/IrcWidget.py" line="722"/>
         <source>The connection was refused by the peer. Please check the host name and port settings.</source>
         <translation>La conexión ha sido rechazada por el otro extremo. Por favor, compruebe los ajustes de nombre de host y puerto.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="728"/>
+        <location filename="Network/IRC/IrcWidget.py" line="730"/>
         <source>The following network error occurred:&lt;br/&gt;{0}</source>
         <translation>Ha ocurrido el siguiente error de red: &lt;br/&gt;{0}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="841"/>
+        <location filename="Network/IRC/IrcWidget.py" line="843"/>
         <source>{0} ({1})</source>
         <comment>channel name, users count</comment>
         <translation>{0} ({1})</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="871"/>
+        <location filename="Network/IRC/IrcWidget.py" line="873"/>
         <source>Critical</source>
         <translation>Crítico</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="855"/>
+        <location filename="Network/IRC/IrcWidget.py" line="857"/>
         <source>No nickname acceptable to the server configured for &lt;b&gt;{0}&lt;/b&gt;. Disconnecting...</source>
         <translation>No hay un sobrenombre que el servidor acepte configurado para &lt;b&gt;{0}&lt;/b&gt;. Desconectando...</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="871"/>
+        <location filename="Network/IRC/IrcWidget.py" line="873"/>
         <source>The given nickname is already in use.</source>
         <translation>El sobrenombre proporcionado ya está en uso.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="828"/>
+        <location filename="Network/IRC/IrcWidget.py" line="830"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="812"/>
+        <location filename="Network/IRC/IrcWidget.py" line="814"/>
         <source>Received Version request from {0}.</source>
         <translation>Se ha recibido una solicitud de Versión de {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="817"/>
+        <location filename="Network/IRC/IrcWidget.py" line="819"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-PING desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="822"/>
+        <location filename="Network/IRC/IrcWidget.py" line="824"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-CLIENTINFO desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="828"/>
+        <location filename="Network/IRC/IrcWidget.py" line="830"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Recibida solicitud CTCP desconocida desde {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="534"/>
+        <location filename="Network/IRC/IrcWidget.py" line="536"/>
         <source>You have set your personal modes to &lt;b&gt;[{0}]&lt;/b&gt;.</source>
         <translation>Usted ha establecido sus modos personales a &lt;b&gt;[{0}]&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="538"/>
+        <location filename="Network/IRC/IrcWidget.py" line="540"/>
         <source>{0} has changed your personal modes to &lt;b&gt;[{1}]&lt;/b&gt;.</source>
         <translation>{0} ha cambiado los modos personales de usted a &lt;b&gt;[{1}]&lt;/b&gt;.</translation>
     </message>
@@ -27315,22 +27314,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Red</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="724"/>
+        <location filename="Network/IRC/IrcWidget.py" line="726"/>
         <source>The SSL handshake failed.</source>
         <translation>Ha fallado el SSL handshake.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="732"/>
+        <location filename="Network/IRC/IrcWidget.py" line="734"/>
         <source>A network error occurred.</source>
         <translation>Ha ocurrido un error de red.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="744"/>
+        <location filename="Network/IRC/IrcWidget.py" line="746"/>
         <source>Could not connect to {0} (port {1}) using an SSL encrypted connection. Either the server does not support SSL (did you use the correct port?) or you rejected the certificate.</source>
         <translation>No se ha podido conectar a {0} (puerto {1}) utilizando una conexión encriptada sobre SSL. O bien el servidor no soporta SSL (¿se ha utilizado el puerto correcto?) o bien usted ha rechazado el certificado.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcWidget.py" line="756"/>
+        <location filename="Network/IRC/IrcWidget.py" line="758"/>
         <source>The SSL certificate for the server {0} (port {1}) failed the authenticity check. SSL errors were accepted by you.</source>
         <translation>El certificado SSL para el servidor {0} (puerto {1}) ha fallado la comprobación de autenticidad. Los errores SSL han sido aceptados por usted.</translation>
     </message>
@@ -32116,27 +32115,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1101"/>
+        <location filename="Preferences/__init__.py" line="1103"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1128"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1222"/>
+        <location filename="Preferences/__init__.py" line="1224"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -32144,12 +32143,12 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PreferencesLexerError</name>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="25"/>
+        <location filename="Preferences/PreferencesLexer.py" line="26"/>
         <source>Unspecific PreferencesLexer error.</source>
         <translation>Error de Preferencias de Análizador Léxico no especificado.</translation>
     </message>
     <message>
-        <location filename="Preferences/PreferencesLexer.py" line="55"/>
+        <location filename="Preferences/PreferencesLexer.py" line="56"/>
         <source>Unsupported Lexer Language: {0}</source>
         <translation>Lenguaje de Analizador Léxico no soportado: {0}</translation>
     </message>
@@ -33105,7 +33104,7 @@ Seleccione Actualizar.</translation>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4284"/>
+        <location filename="Project/Project.py" line="4285"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
@@ -33115,7 +33114,7 @@ Seleccione Actualizar.</translation>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4451"/>
+        <location filename="Project/Project.py" line="4453"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
@@ -33235,12 +33234,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4301"/>
+        <location filename="Project/Project.py" line="4302"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4309"/>
+        <location filename="Project/Project.py" line="4310"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
@@ -33450,32 +33449,32 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4284"/>
+        <location filename="Project/Project.py" line="4285"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4321"/>
+        <location filename="Project/Project.py" line="4322"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4332"/>
+        <location filename="Project/Project.py" line="4333"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4352"/>
+        <location filename="Project/Project.py" line="4354"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4371"/>
+        <location filename="Project/Project.py" line="4373"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4451"/>
+        <location filename="Project/Project.py" line="4453"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
@@ -33558,19 +33557,29 @@ Seleccione Actualizar.</translation>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="437"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="462"/>
         <source>local</source>
         <translation>local</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="477"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="502"/>
         <source>Select entries</source>
         <translation>Seleccionar entradas</translation>
     </message>
     <message>
-        <location filename="Project/ProjectBaseBrowser.py" line="477"/>
+        <location filename="Project/ProjectBaseBrowser.py" line="502"/>
         <source>There were no matching entries found.</source>
         <translation>No se encontraron entradas coincidentes.</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectBaseBrowser.py" line="286"/>
+        <source>Delete directories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectBaseBrowser.py" line="286"/>
+        <source>Do you really want to delete these directories from the project?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -33810,7 +33819,7 @@ Seleccione Actualizar.</translation>
         <translation>Compilar formulario</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="283"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="285"/>
         <source>Compile all forms</source>
         <translation>Compilar todos los formularios</translation>
     </message>
@@ -33855,32 +33864,32 @@ Seleccione Actualizar.</translation>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="230"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="254"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="259"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="261"/>
         <source>New form...</source>
         <translation>Formulario nuevo...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="288"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="290"/>
         <source>Add forms...</source>
         <translation>Agregar formularios...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="290"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="292"/>
         <source>Add forms directory...</source>
         <translation>Agregar directorio de formularios...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="293"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="295"/>
         <source>Expand all directories</source>
         <translation>Expandir todos los directorios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="295"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="297"/>
         <source>Collapse all directories</source>
         <translation>Contraer todos los directorios</translation>
     </message>
@@ -33890,97 +33899,97 @@ Seleccione Actualizar.</translation>
         <translation>Compilar formularios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="540"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="542"/>
         <source>New Form</source>
         <translation>Formulario nuevo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="496"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="498"/>
         <source>Select a form type:</source>
         <translation>Seleccione un tipo de formulario:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="510"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="512"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Archivos de Interfaz de Usuario (*.ui);;Todos los Archivos(*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="531"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>¿El archivo ya existe! ¿Sobreescribirlo?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="566"/>
         <source>Delete forms</source>
         <translation>Borrar formularios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="566"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>¿Realmente quiere borrar estos formularios del proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="663"/>
         <source>Form Compilation</source>
         <translation>Compilación del Formulario</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="641"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Se ha compilado satisfactoriamente el archivo de formulario.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="663"/>
         <source>The compilation of the form file failed.</source>
         <translation>La compilación del archivo de formulario ha fallado.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="732"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="820"/>
         <source>Compiling forms...</source>
         <translation>Compilando formularios...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="820"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="853"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="855"/>
         <source>Determining changed forms...</source>
         <translation>Determinando que formularios han cambiado...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="880"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="882"/>
         <source>Compiling changed forms...</source>
         <translation>Compilando formularios que han cambiado...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="298"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="300"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="266"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="268"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="540"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="542"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El nuevo archivo de formulario &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado.&lt;br&gt;Problema: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="651"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="653"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La compilación del archivo de formulario ha fallado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="732"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
@@ -34063,7 +34072,7 @@ Seleccione Actualizar.</translation>
         <translation>Compilar interfaz</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="205"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="207"/>
         <source>Compile all interfaces</source>
         <translation>Compilar todas las interfaces</translation>
     </message>
@@ -34083,27 +34092,27 @@ Seleccione Actualizar.</translation>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="169"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="187"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="208"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
         <source>Add interfaces...</source>
         <translation>Añadir interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="210"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="212"/>
         <source>Add interfaces directory...</source>
         <translation>Agregar directorio de interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="213"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
         <source>Expand all directories</source>
         <translation>Expandir todos los directorios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="215"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="217"/>
         <source>Collapse all directories</source>
         <translation>Contraer todos los directorios</translation>
     </message>
@@ -34113,62 +34122,62 @@ Seleccione Actualizar.</translation>
         <translation>Compilar interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="389"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="391"/>
         <source>Delete interfaces</source>
         <translation>Borrar interfaces</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="389"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="391"/>
         <source>Do you really want to delete these interfaces from the project?</source>
         <translation>¿Realmente quiere borrar estas interfaces del proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="468"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="470"/>
         <source>Interface Compilation</source>
         <translation>Compilación de Interfaz</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="459"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="461"/>
         <source>The compilation of the interface file was successful.</source>
         <translation>Se ha compilado satisfactoriamente el archivo de interfaz.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="468"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="470"/>
         <source>The compilation of the interface file failed.</source>
         <translation>La compilación del archivo de interfaz ha fallado.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="507"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="509"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="563"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="565"/>
         <source>Compiling interfaces...</source>
         <translation>Compilando interfaces...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="563"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="565"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="218"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="220"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="219"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="221"/>
         <source>Configure CORBA...</source>
         <translation>Configurar  CORBA...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="192"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="194"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Project/ProjectInterfacesBrowser.py" line="507"/>
+        <location filename="Project/ProjectInterfacesBrowser.py" line="509"/>
         <source>&lt;p&gt;Could not start {0}.&lt;br&gt;Ensure that it is in the search path.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).&lt;/p&gt;</translation>
     </message>
@@ -34452,7 +34461,7 @@ Seleccione Actualizar.</translation>
         <translation>Compilar recurso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="224"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="226"/>
         <source>Compile all resources</source>
         <translation>Compilar todos los recursos</translation>
     </message>
@@ -34472,32 +34481,32 @@ Seleccione Actualizar.</translation>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="177"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="201"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="202"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="204"/>
         <source>New resource...</source>
         <translation>Nuevo recurso...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="229"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
         <source>Add resources...</source>
         <translation>Añadir recursos...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="231"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="233"/>
         <source>Add resources directory...</source>
         <translation>Agregar directorio de recursos...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="234"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
         <source>Expand all directories</source>
         <translation>Expandir todos los directorios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="236"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="238"/>
         <source>Collapse all directories</source>
         <translation>Contraer todos los directorios</translation>
     </message>
@@ -34507,92 +34516,92 @@ Seleccione Actualizar.</translation>
         <translation>Compilar recursos</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="433"/>
         <source>New Resource</source>
         <translation>Nuevo recurso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="391"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="393"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Archivos de Recursos Qt (*.qrc)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="410"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="412"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>¿El archivo ya existe! ¿Sobreescribirlo?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="456"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="458"/>
         <source>Delete resources</source>
         <translation>Borrar recursos</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="456"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="458"/>
         <source>Do you really want to delete these resources from the project?</source>
         <translation>¿Realmente quiere borrar estas recursos del proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="548"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="550"/>
         <source>Resource Compilation</source>
         <translation>Compilación de recursos</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="531"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="533"/>
         <source>The compilation of the resource file was successful.</source>
         <translation>Se ha compilado satisfactoriamente el archivo de recursos.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="548"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="550"/>
         <source>The compilation of the resource file failed.</source>
         <translation>La compilación del archivo de recursos ha fallado.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="623"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="625"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="685"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="687"/>
         <source>Compiling resources...</source>
         <translation>Compilando recursos...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="685"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="687"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="751"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="753"/>
         <source>Determining changed resources...</source>
         <translation>Determinando que recursos han cambiado...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="784"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="786"/>
         <source>Compiling changed resources...</source>
         <translation>Compilando recursos que han cambiado...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="239"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="241"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="207"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="209"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="431"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="433"/>
         <source>&lt;p&gt;The new resource file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El nuevo archivo de recursos &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado.&lt;br&gt;Problema: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="538"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="540"/>
         <source>&lt;p&gt;The compilation of the resource file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La compilación del archivo de recursos ha fallado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="623"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="625"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
@@ -34635,17 +34644,17 @@ Seleccione Actualizar.</translation>
         <translation>Datos de profiling...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="281"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="283"/>
         <source>Diagrams</source>
         <translation>Diagramas</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="282"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="284"/>
         <source>Class Diagram...</source>
         <translation>Diagrama de clases...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="284"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
         <source>Package Diagram...</source>
         <translation>Diagrama de paquetes...</translation>
     </message>
@@ -34655,7 +34664,7 @@ Seleccione Actualizar.</translation>
         <translation>Diagrama de imports...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="288"/>
         <source>Application Diagram...</source>
         <translation>Diagrama de aplicación...</translation>
     </message>
@@ -34665,142 +34674,142 @@ Seleccione Actualizar.</translation>
         <translation>Ejecutar test unitario...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="293"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="295"/>
         <source>Rename file</source>
         <translation>Renombrar archivo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="378"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="380"/>
         <source>Remove from project</source>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="367"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="369"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="335"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>New package...</source>
         <translation>Nuevo paquete...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="381"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="383"/>
         <source>Add source files...</source>
         <translation>Añadir archivos de códigos fuente...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="382"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="384"/>
         <source>Add source directory...</source>
         <translation>Agregar directorio de fuentes...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="395"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
         <source>Expand all directories</source>
         <translation>Expandir todos los directorios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="399"/>
         <source>Collapse all directories</source>
         <translation>Contraer todos los directorios</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="642"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="644"/>
         <source>Add new Python package</source>
         <translation>Añadir un nuevo paquete Python</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="700"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="702"/>
         <source>Delete files</source>
         <translation>Borrar archivos</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="700"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="702"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>¿Realmente quiere borrar estos archivos del proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="772"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="772"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="828"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="828"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="863"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="865"/>
         <source>Class Diagram</source>
         <translation>Diagrama de clases</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="900"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="902"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="882"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="884"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="882"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="884"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="900"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="902"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="913"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="915"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="913"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="915"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="400"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="402"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="252"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="254"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="629"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="631"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de paquetes &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="642"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="644"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de paquete &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="328"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
         <source>Goto</source>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="291"/>
         <source>Load Diagram...</source>
         <translation>Cargar Diagrama...</translation>
     </message>
@@ -34873,17 +34882,17 @@ Seleccione Actualizar.</translation>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="331"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="379"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="379"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
         <source>Add translation...</source>
         <translation>Añadir traducción...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="381"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="384"/>
         <source>Add translation files...</source>
         <translation>Añadir archivos de traducción...</translation>
     </message>
@@ -34908,62 +34917,62 @@ Seleccione Actualizar.</translation>
         <translation>Previsualizar traducciones</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="610"/>
         <source>Delete translation files</source>
         <translation>Borrar archivos de traducción</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="610"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>¿Realmente quiere borrar estas archivos de traducción del proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="742"/>
         <source>Write temporary project file</source>
         <translation>Guardar archivo de proyecto temporal</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="715"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>No se han seleccionado archivos de traducción (*.ts).</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="853"/>
         <source>Translation file generation</source>
         <translation>Generación de archivo de traducción</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="848"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>La generación de archivos de traducción (*.ts) ha sido satisfactoria.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="853"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>La generación de archivos de traducción (*.ts) ha fallado.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1074"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1008"/>
         <source>Translation file release</source>
         <translation>Crear versión release del archivo de traducción</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="994"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha sido satisfactoria.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1008"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha fallado.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="387"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="390"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
@@ -34973,22 +34982,22 @@ Seleccione Actualizar.</translation>
         <translation>Extraer mensajes</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="384"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="387"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="742"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo temporal de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="938"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1074"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar lrelease.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -52432,7 +52441,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>VariableItem</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="38"/>
+        <location filename="Debugger/VariablesViewer.py" line="40"/>
         <source>&lt;double click to show value&gt;</source>
         <translation>&lt;doble click para mostrar valor&gt;</translation>
     </message>
@@ -52494,57 +52503,57 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>VariablesViewer</name>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="284"/>
+        <location filename="Debugger/VariablesViewer.py" line="306"/>
         <source>Global Variables</source>
         <translation>Variables Globales</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="285"/>
+        <location filename="Debugger/VariablesViewer.py" line="307"/>
         <source>Globals</source>
         <translation>Globales</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Value</source>
         <translation>Valor</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="289"/>
+        <location filename="Debugger/VariablesViewer.py" line="311"/>
         <source>&lt;b&gt;The Global Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the global variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ventana de Visor de Variables Globales&lt;/b&gt;&lt;p&gt;Esta ventana muestra las variables globales del programa en depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="295"/>
+        <location filename="Debugger/VariablesViewer.py" line="317"/>
         <source>Local Variables</source>
         <translation>Variables Locales</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="296"/>
+        <location filename="Debugger/VariablesViewer.py" line="318"/>
         <source>Locals</source>
         <translation>Locales</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="300"/>
+        <location filename="Debugger/VariablesViewer.py" line="322"/>
         <source>&lt;b&gt;The Local Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the local variables of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ventana de Visor de Variables Locales&lt;/b&gt;&lt;p&gt;Esta ventana muestra las variables locales  del programa en depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="330"/>
+        <location filename="Debugger/VariablesViewer.py" line="352"/>
         <source>Show Details...</source>
         <translation>Mostrar detalles...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="335"/>
+        <location filename="Debugger/VariablesViewer.py" line="357"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Debugger/VariablesViewer.py" line="541"/>
+        <location filename="Debugger/VariablesViewer.py" line="563"/>
         <source>{0} items</source>
         <translation>{0} elementos</translation>
     </message>

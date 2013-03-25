@@ -6213,6 +6213,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._connectExpandedCollapsed?5(
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._copyToClipboard?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._createPopupMenus?5()
+eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._deleteDirectory?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._disconnectExpandedCollapsed?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._expandAllDirs?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._initHookMethods?5()

@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, Qt
 from PyQt4.QtGui import QTreeView, QCursor, QItemSelection, QItemSelectionModel, \
-    QApplication, QMenu, QAbstractItemView
+    QApplication, QMenu, QAbstractItemView, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -267,6 +267,31 @@ class ProjectBaseBrowser(Browser):
         for itm in itmList[:]:
             dn = itm.dirName()
             self.project.removeDirectory(dn)
+        
+    def _deleteDirectory(self):
+        """
+        Protected method to delete the selected directory from the project data area.
+        """
+        itmList = self.getSelectedItems()
+        
+        dirs = []
+        fullNames = []
+        for itm in itmList:
+            dn = itm.dirName()
+            fullNames.append(dn)
+            dn = self.project.getRelativePath(dn)
+            dirs.append(dn)
+        
+        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        dlg = DeleteFilesConfirmationDialog(self.parent(),
+            self.trUtf8("Delete directories"),
+            self.trUtf8("Do you really want to delete these directories from"
+                        " the project?"),
+            dirs)
+        
+        if dlg.exec_() == QDialog.Accepted:
+            for dn in fullNames:
+                self.project.deleteDirectory(dn)
         
     def _renameFile(self):
         """
