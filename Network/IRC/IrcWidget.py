@@ -448,21 +448,22 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private slot to indicate the host was disconnected.
         """
-        self.__closeAllChannels()
-        self.networkWidget.addServerMessage(self.trUtf8("Info"),
-            self.trUtf8("Server disconnected."))
-        self.networkWidget.setRegistered(False)
-        self.networkWidget.setConnected(False)
-        self.__server = None
-        self.__nickName = ""
-        self.__nickIndex = -1
-        self.__channelTypePrefixes = ""
-        
-        self.__socket.deleteLater()
-        self.__socket = None
-        
-        self.__connectionState = IrcWidget.ServerDisconnected
-        self.__sslErrorLock = False
+        if self.networkWidget.isConnected():
+            self.__closeAllChannels()
+            self.networkWidget.addServerMessage(self.trUtf8("Info"),
+                self.trUtf8("Server disconnected."))
+            self.networkWidget.setRegistered(False)
+            self.networkWidget.setConnected(False)
+            self.__server = None
+            self.__nickName = ""
+            self.__nickIndex = -1
+            self.__channelTypePrefixes = ""
+            
+            self.__socket.deleteLater()
+            self.__socket = None
+            
+            self.__connectionState = IrcWidget.ServerDisconnected
+            self.__sslErrorLock = False
     
     def __readyRead(self):
         """
