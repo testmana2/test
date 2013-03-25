@@ -285,7 +285,15 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircDisconnect.png"))
         else:
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
+    
+    def isConnected(self):
+        """
+        Public method to check, if the network is connected.
         
+        @return flag indicating a connected network (boolean)
+        """
+        return self.__connected
+    
     def setRegistered(self, registered):
         """
         Public slot to set the registered state.
