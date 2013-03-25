@@ -464,7 +464,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 errMsg)
         
         if output:
-            outputList = output.strip().split()
+            outputList = output.strip().split(None, 1)
             if len(outputList) == 2:
                 self.__projectRevision = outputList[0].strip()
                 if self.__projectRevision.endswith("+"):
