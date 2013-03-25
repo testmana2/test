@@ -3574,6 +3574,7 @@ eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.editNetwork?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.getNetworkChannels?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.getNickname?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.initialize?4(manager)
+eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.isConnected?4()
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.joinChannel?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.nickChanged?7
 eric5.Network.IRC.IrcNetworkWidget.IrcNetworkWidget.on_awayButton_clicked?4()
