@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a new property.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -28,7 +30,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnPropSetDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.propFileCompleter = E5FileCompleter(self.propFileEdit)

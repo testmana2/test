@@ -7,6 +7,8 @@
 Module implementing the fetch extension interface.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtGui import QDialog
@@ -25,7 +27,7 @@ class Fetch(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Fetch, self).__init__(vcs)
     
     def hgFetch(self, name):
         """

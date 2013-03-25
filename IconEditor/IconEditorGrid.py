@@ -7,6 +7,8 @@
 Module implementing the icon editor grid.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QPoint, QRect, QSize
 from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, QSizePolicy, \
     QUndoStack, qRgba, QPainter, QApplication, QCursor, QBrush, QDialog, qGray, qAlpha
@@ -29,7 +31,7 @@ class IconEditCommand(QUndoCommand):
         @param oldImage copy of the icon before the changes were applied (QImage)
         @param parent reference to the parent command (QUndoCommand)
         """
-        super().__init__(text, parent)
+        super(IconEditCommand, self).__init__(text, parent)
         
         self.__grid = grid
         self.__imageBefore = QImage(oldImage)
@@ -114,7 +116,7 @@ class IconEditorGrid(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IconEditorGrid, self).__init__(parent)
         
         self.setAttribute(Qt.WA_StaticContents)
         self.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)

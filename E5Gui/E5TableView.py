@@ -7,6 +7,8 @@
 Module implementing specialized table views.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QTableView, QItemSelectionModel
 
@@ -26,7 +28,7 @@ class E5TableView(QTableView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            super().keyPressEvent(evt)
+            super(E5TableView, self).keyPressEvent(evt)
     
     def removeSelected(self):
         """

@@ -7,6 +7,8 @@
 Module implementing the Mercurial Options Dialog for a new project from the repository.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir
@@ -33,7 +35,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         @param vcs reference to the version control object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgNewProjectOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)

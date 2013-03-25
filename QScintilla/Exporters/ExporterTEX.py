@@ -7,6 +7,8 @@
 Module implementing an exporter for TeX.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # This code is a port of the C++ code found in SciTE 1.74
 # Original code: Copyright 1998-2006 by Neil Hodgson <neilh@scintilla.org>
 

@@ -7,6 +7,8 @@
 Module implementing a dialog to list all files not tracked by Mercurial.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_HgPurgeListDialog import Ui_HgPurgeListDialog
@@ -23,7 +25,7 @@ class HgPurgeListDialog(QDialog, Ui_HgPurgeListDialog):
         @param entries list of entries to be shown (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgPurgeListDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.purgeList.addItems(sorted(entries))

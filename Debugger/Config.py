@@ -7,6 +7,8 @@
 Module defining the different Python types and their display strings.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 try:
     from PyQt4.QtCore import QT_TRANSLATE_NOOP
     

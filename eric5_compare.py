@@ -12,6 +12,8 @@ of the Compare module and starts the Qt event loop. This is a standalone
 version of the integrated Compare module.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 for arg in sys.argv:

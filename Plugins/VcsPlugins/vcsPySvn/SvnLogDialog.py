@@ -7,6 +7,8 @@
 Module implementing a dialog to show the output of the svn log command process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 import pysvn
@@ -36,7 +38,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         

@@ -7,6 +7,8 @@
 Module implementing the browser model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 import fnmatch
@@ -39,7 +41,7 @@ class BrowserModel(QAbstractItemModel):
         
         @param parent reference to parent object (QObject)
         """
-        super().__init__(parent)
+        super(BrowserModel, self).__init__(parent)
         
         rootData = QApplication.translate("BrowserModel", "Name")
         self.rootItem = BrowserItem(None, rootData)

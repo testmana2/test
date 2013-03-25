@@ -10,6 +10,8 @@ Eric5 Plugin Installer
 This is the main Python script to install eric5 plugins from outside of the IDE.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 for arg in sys.argv:

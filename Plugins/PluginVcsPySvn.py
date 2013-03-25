@@ -7,6 +7,8 @@
 Module implementing the PySvn version control plugin.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -141,7 +143,7 @@ class VcsPySvnPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(VcsPySvnPlugin, self).__init__(ui)
         self.__ui = ui
         
         self.__subversionDefaults = {

@@ -7,6 +7,8 @@
 Module implementing the authentication dialog for the help browser.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog, QStyle
 
 from .Ui_AuthenticationDialog import Ui_AuthenticationDialog
@@ -25,7 +27,7 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
         @param showSave flag to indicate to show the save checkbox (boolean)
         @param saveIt flag indicating the value for the save checkbox (boolean)
         """
-        super().__init__(parent)
+        super(AuthenticationDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.infoLabel.setText(info)

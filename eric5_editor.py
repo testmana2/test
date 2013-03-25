@@ -12,6 +12,8 @@ of the MiniEditor module and starts the Qt event loop. This is a standalone
 version of the integrated MiniEditor module.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 

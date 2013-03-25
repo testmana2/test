@@ -7,6 +7,8 @@
 Module implementing the TR Previewer main window.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
@@ -42,7 +44,7 @@ class TRPreviewer(E5MainWindow):
         self.mainWidget = None
         self.currentFile = QDir.currentPath()
         
-        super().__init__(parent)
+        super(TRPreviewer, self).__init__(parent)
         if not name:
             self.setObjectName("TRPreviewer")
         else:
@@ -120,7 +122,7 @@ class TRPreviewer(E5MainWindow):
         the main window has been shown. This way, previewing a dialog
         doesn't interfere with showing the main window.
         """
-        super().show()
+        super(TRPreviewer, self).show()
         if self.filesToLoad:
             filenames, self.filesToLoad = (self.filesToLoad[:], [])
             first = True
@@ -429,7 +431,7 @@ class TranslationsDict(QObject):
             available languages (QComboBox)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(TranslationsDict, self).__init__(parent)
         
         self.selector = selector
         self.currentTranslator = None
@@ -647,7 +649,7 @@ class WidgetView(QWidget):
         @param parent parent widget (QWidget)
         @param name name of this widget (string)
         """
-        super().__init__(parent)
+        super(WidgetView, self).__init__(parent)
         if name:
             self.setObjectName(name)
             self.setWindowTitle(name)
@@ -730,7 +732,7 @@ class WidgetArea(QMdiArea):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(WidgetArea, self).__init__(parent)
         
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)

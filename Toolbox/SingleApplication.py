@@ -7,6 +7,8 @@
 Module implementing the single application server and client.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtNetwork import QLocalServer, QLocalSocket
 
 
@@ -20,7 +22,7 @@ class SingleApplicationServer(QLocalServer):
         
         @param name name this server is listening to (string)
         """
-        super().__init__()
+        super(SingleApplicationServer, self).__init__()
         
         res = self.listen(name)
         if not res:

@@ -8,6 +8,8 @@
 Module implementing a dialog for adding GreaseMonkey scripts..
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir, QFile
@@ -32,7 +34,7 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         @param script GreaseMonkey script to be added (GreaseMonkeyScript)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(GreaseMonkeyAddScriptDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("greaseMonkey48.png"))

@@ -7,6 +7,8 @@
 Module implementing the debugger UI.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, Qt
@@ -60,7 +62,7 @@ class DebugUI(QObject):
         @param debugViewer reference to the debug viewer widget
         @param project reference to the project object
         """
-        super().__init__(ui)
+        super(DebugUI, self).__init__(ui)
         
         self.ui = ui
         self.viewmanager = vm

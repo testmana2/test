@@ -7,6 +7,8 @@
 Module implementing a dialog showing a UML like class diagram.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import itertools
 
 from PyQt4.QtGui import QGraphicsTextItem
@@ -31,7 +33,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         @param file file name of a python module to be shown (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(UMLClassDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("UMLClassDiagramBuilder")
         
         self.file = file

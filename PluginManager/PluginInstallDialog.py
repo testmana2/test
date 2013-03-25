@@ -7,6 +7,8 @@
 Module implementing the Plugin installation dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sys
 import shutil
@@ -42,7 +44,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             installation (list of strings)
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallWidget, self).__init__(parent)
         self.setupUi(self)
         
         if pluginManager is None:
@@ -521,7 +523,7 @@ class PluginInstallDialog(QDialog):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallDialog, self).__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -557,7 +559,7 @@ class PluginInstallWindow(E5MainWindow):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallWindow, self).__init__(parent)
         self.cw = PluginInstallWidget(None, pluginFileNames, self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

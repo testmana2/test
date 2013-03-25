@@ -7,6 +7,8 @@
 Module implementing the variable detail dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_VariableDetailDialog import Ui_VariableDetailDialog
@@ -28,7 +30,7 @@ class VariableDetailDialog(QDialog, Ui_VariableDetailDialog):
         @param vtype the variables type (string)
         @param value the variables value (string)
         """
-        super().__init__()
+        super(VariableDetailDialog, self).__init__()
         self.setupUi(self)
         
         # set the different fields

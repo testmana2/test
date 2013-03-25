@@ -7,6 +7,8 @@
 Module implementing the cookies configuration dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -23,7 +25,7 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         """
         Constructor
         """
-        super().__init__(parent)
+        super(CookiesConfigurationDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__mw = parent
@@ -72,7 +74,7 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         jar.setKeepPolicy(keepPolicy)
         jar.setFilterTrackingCookies(self.filterTrackingCookiesCheckbox.isChecked())
         
-        super().accept()
+        super(CookiesConfigurationDialog, self).accept()
     
     @pyqtSlot()
     def on_exceptionsButton_clicked(self):

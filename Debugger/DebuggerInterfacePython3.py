@@ -7,6 +7,8 @@
 Module implementing the Python3 debugger interface for the debug server.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 
@@ -59,7 +61,7 @@ class DebuggerInterfacePython3(QObject):
         @param debugServer reference to the debug server (DebugServer)
         @param passive flag indicating passive connection mode (boolean)
         """
-        super().__init__()
+        super(DebuggerInterfacePython3, self).__init__()
         
         self.__isNetworked = True
         self.__autoContinue = not passive

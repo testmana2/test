@@ -7,6 +7,8 @@
 Module implementing a clickable label.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QPoint
 from PyQt4.QtGui import QLabel
 
@@ -29,7 +31,7 @@ class E5ClickableLabel(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ClickableLabel, self).__init__(parent)
     
     def mouseReleaseEvent(self, evt):
         """
@@ -45,4 +47,4 @@ class E5ClickableLabel(QLabel):
         elif evt.button() == Qt.MiddleButton and self.rect().contains(evt.pos()):
             self.middleClicked.emit(evt.globalPos())
         else:
-            super().mouseReleaseEvent(evt)
+            super(E5ClickableLabel, self).mouseReleaseEvent(evt)

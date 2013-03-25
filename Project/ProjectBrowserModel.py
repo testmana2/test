@@ -7,6 +7,8 @@
 Module implementing the browser model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import re
 
@@ -221,7 +223,7 @@ class ProjectBrowserModel(BrowserModel):
         
         @param parent reference to parent object (Project.Project)
         """
-        super().__init__(parent)
+        super(ProjectBrowserModel, self).__init__(parent)
         
         rootData = self.trUtf8("Name")
         self.rootItem = BrowserItem(None, rootData)

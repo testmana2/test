@@ -7,6 +7,8 @@
 Module implementing a dialog showing an imports diagram of a package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import glob
 import os
 
@@ -37,7 +39,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         @keyparam showExternalImports flag indicating to show exports from outside
             the package (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(ImportsDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("ImportsDiagram")
         
         self.showExternalImports = showExternalImports

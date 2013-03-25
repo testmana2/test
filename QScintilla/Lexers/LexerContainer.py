@@ -7,6 +7,8 @@
 Module implementing a base class for custom lexers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.Qsci import QsciLexer
 
 from .Lexer import Lexer
@@ -22,7 +24,7 @@ class LexerContainer(QsciLexer, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerContainer, self).__init__(parent)
         Lexer.__init__(self)
         
         self.editor = parent

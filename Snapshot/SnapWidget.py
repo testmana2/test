@@ -7,6 +7,8 @@
 Module implementing the snapshot widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 #
 # SnapWidget and it's associated modules are PyQt4 ports of Ksnapshot.
 #
@@ -43,7 +45,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SnapWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.saveButton.setIcon(UI.PixmapCache.getIcon("fileSaveAs.png"))

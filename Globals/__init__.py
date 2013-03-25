@@ -7,6 +7,8 @@
 Module defining common data to be used by all modules.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 

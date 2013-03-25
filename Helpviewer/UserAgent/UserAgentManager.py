@@ -7,6 +7,8 @@
 Module implementing a user agent manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QXmlStreamReader
@@ -33,7 +35,7 @@ class UserAgentManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(UserAgentManager, self).__init__(parent)
         
         self.__agents = {}      # dictionary with agent strings indexed by host name
         self.__loaded = False

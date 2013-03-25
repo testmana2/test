@@ -7,6 +7,8 @@
 Module implementing a dialog to show the data of a response or reply header.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_E5NetworkHeaderDetailsDialog import Ui_E5NetworkHeaderDetailsDialog
@@ -22,7 +24,7 @@ class E5NetworkHeaderDetailsDialog(QDialog, Ui_E5NetworkHeaderDetailsDialog):
         
         @param parent reference to the parent object (QWidget)
         """
-        super().__init__(parent)
+        super(E5NetworkHeaderDetailsDialog, self).__init__(parent)
         self.setupUi(self)
     
     def setData(self, name, value):

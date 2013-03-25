@@ -4,6 +4,8 @@
 Module implementing the Interface configuration page (variant for web browser).
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QStyleFactory
 
@@ -25,7 +27,7 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         """
         Constructor
         """
-        super().__init__()
+        super(HelpInterfacePage, self).__init__()
         self.setupUi(self)
         self.setObjectName("InterfacePage")
         

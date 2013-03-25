@@ -17,6 +17,8 @@
 """
 
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 MODULES = {'.NET': ['dotnet_load'],
  'APC': ['apc_add',
          'apc_bin_dump',

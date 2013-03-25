@@ -7,6 +7,8 @@
 Module implementing a dialog to show the results of the PEP 8 check.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -42,7 +44,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Pep8Dialog, self).__init__(parent)
         self.setupUi(self)
         
         self.statisticsButton = self.buttonBox.addButton(

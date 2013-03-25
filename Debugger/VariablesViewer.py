@@ -7,6 +7,8 @@
 Module implementing the variables viewer widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QRegExp, qVersion
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
     QMenu
@@ -60,7 +62,7 @@ class VariableItem(QTreeWidgetItem):
                 if index < len(lines) - 1:
                     dvalue += "<...>"
         
-        super().__init__(parent, [dvar, dvalue, dtype])
+        super(VariableItem, self).__init__(parent, [dvar, dvalue, dtype])
         
         self.populated = True
         
@@ -85,7 +87,7 @@ class VariableItem(QTreeWidgetItem):
         """
         if column == 1 and role == Qt.ToolTipRole:
             return self.__tooltip
-        return super().data(column, role)
+        return super(VariableItem, self).data(column, role)
         
     def attachDummy(self):
         """
@@ -277,7 +279,7 @@ class VariablesViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param scope flag indicating global (1) or local (0) variables
         """
-        super().__init__(parent)
+        super(VariablesViewer, self).__init__(parent)
         
         self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',   # Python types
                            'Array': '[]', 'Hash': '{}'}                # Ruby types
@@ -700,7 +702,7 @@ class VariablesViewer(QTreeWidget):
             parentItem.expand()
             self.__resort()
         except AttributeError:
-            super().expandItem(parentItem)
+            super(VariablesViewer, self).expandItem(parentItem)
 
     def collapseItem(self, parentItem):
         """
@@ -714,7 +716,7 @@ class VariablesViewer(QTreeWidget):
         try:
             parentItem.collapse()
         except AttributeError:
-            super().collapseItem(parentItem)
+            super(VariablesViewer, self).collapseItem(parentItem)
 
     def __resort(self):
         """

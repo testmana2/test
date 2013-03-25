@@ -7,6 +7,8 @@
 Module implementing a dialog to edit watch expression properties.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_EditWatchpointDialog import Ui_EditWatchpointDialog
@@ -26,7 +28,7 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         @param name the widget name of this dialog
         @param modal flag indicating a modal dialog
         """
-        super().__init__(parent)
+        super(EditWatchpointDialog, self).__init__(parent)
         self.setupUi(self)
         if name:
             self.setObjectName(name)

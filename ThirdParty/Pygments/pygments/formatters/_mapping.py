@@ -13,6 +13,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # start
 from pygments.formatters.bbcode import BBCodeFormatter
 from pygments.formatters.html import HtmlFormatter

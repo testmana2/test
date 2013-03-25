@@ -7,6 +7,8 @@
 Module implementing the rebase extension interface.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtGui import QDialog
@@ -25,7 +27,7 @@ class Rebase(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Rebase, self).__init__(vcs)
     
     def hgRebase(self, path):
         """

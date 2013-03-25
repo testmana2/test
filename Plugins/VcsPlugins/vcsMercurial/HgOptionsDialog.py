@@ -7,6 +7,8 @@
 Module implementing a dialog to enter options used to start a project in the VCS.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_HgOptionsDialog import Ui_HgOptionsDialog
@@ -25,7 +27,7 @@ class HgOptionsDialog(QDialog, Ui_HgOptionsDialog):
         @param project reference to the project object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgOptionsDialog, self).__init__(parent)
         self.setupUi(self)
     
     def getData(self):

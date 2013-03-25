@@ -7,6 +7,8 @@
 Module implementing a special list widget for GreaseMonkey scripts.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QRect
 from PyQt4.QtGui import QListWidget, QListWidgetItem
 
@@ -25,7 +27,7 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(GreaseMonkeyConfigurationListWidget, self).__init__(parent)
         
         self.__delegate = GreaseMonkeyConfigurationListDelegate(self)
         self.setItemDelegate(self.__delegate)
@@ -60,7 +62,7 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
             self.removeItemRequested.emit(self.itemAt(evt.pos()))
             return
         
-        super().mousePressEvent(evt)
+        super(GreaseMonkeyConfigurationListWidget, self).mousePressEvent(evt)
     
     def mouseDoubleClickEvent(self, evt):
         """
@@ -72,4 +74,4 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
             self.removeItemRequested.emit(self.itemAt(evt.pos()))
             return
         
-        super().mouseDoubleClickEvent(evt)
+        super(GreaseMonkeyConfigurationListWidget, self).mouseDoubleClickEvent(evt)

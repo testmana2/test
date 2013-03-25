@@ -7,6 +7,8 @@
 Module implementing a synchronization handler using a shared directory.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QByteArray, QFileInfo, QCoreApplication
@@ -42,7 +44,7 @@ class DirectorySyncHandler(SyncHandler):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(DirectorySyncHandler, self).__init__(parent)
         self.__forceUpload = False
         
         self.__remoteFilesFound = []

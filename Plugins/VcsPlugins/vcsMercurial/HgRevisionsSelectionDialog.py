@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the revisions for the hg diff command.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -26,7 +28,7 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent parent widget of the dialog (QWidget)
         """
-        super().__init__(parent)
+        super(HgRevisionsSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

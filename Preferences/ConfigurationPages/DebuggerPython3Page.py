@@ -7,6 +7,8 @@
 Module implementing the Debugger Python3 configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -27,7 +29,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Constructor
         """
-        super().__init__()
+        super(DebuggerPython3Page, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
         

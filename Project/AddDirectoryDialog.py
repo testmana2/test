@@ -7,6 +7,8 @@
 Module implementing a dialog to add files of a directory to the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -33,7 +35,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         @param name name of this dialog (string)
         @param startdir start directory for the selection dialog
         """
-        super().__init__(parent)
+        super(AddDirectoryDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

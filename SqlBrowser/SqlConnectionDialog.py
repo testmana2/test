@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the connection parameters.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 from PyQt4.QtSql import QSqlDatabase
@@ -27,7 +29,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         Constructor
         """
-        super().__init__(parent)
+        super(SqlConnectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.databaseFileCompleter = E5FileCompleter()

@@ -7,6 +7,11 @@
 Module implementing the PEP 8 checker.
 """
 
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import optparse
 

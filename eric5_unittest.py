@@ -12,6 +12,8 @@ of the unittest module and starts the Qt event loop. This is a standalone
 version of the integrated unittest module.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 for arg in sys.argv:

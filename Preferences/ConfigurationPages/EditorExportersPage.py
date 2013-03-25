@@ -7,6 +7,8 @@
 Module implementing the Editor Exporters configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QFontDialog
 
@@ -24,7 +26,7 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorExportersPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorExportersPage")
         

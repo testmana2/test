@@ -7,6 +7,12 @@
 Module implementing a dialog to browse the log history.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
@@ -50,7 +56,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param bundle name of a bundle file (string)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
         if mode == "log":
@@ -1279,7 +1285,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgLogBrowserDialog, self).keyPressEvent(evt)
     
     @pyqtSlot()
     def on_phaseButton_clicked(self):

@@ -7,6 +7,8 @@
 Module implementing a dialog for editing IRC network definitions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import copy
 
 from PyQt4.QtCore import pyqtSlot
@@ -31,7 +33,7 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         @param networkName name of the network to work on (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcNetworkEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__manager = manager

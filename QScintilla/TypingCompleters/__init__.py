@@ -8,6 +8,8 @@ Package implementing lexers for the various supported programming languages.
 """
 
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 def getCompleter(language, editor, parent=None):
     """
     Module function to instantiate a lexer object for a given language.

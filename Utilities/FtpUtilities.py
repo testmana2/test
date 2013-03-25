@@ -7,6 +7,8 @@
 Module implementing some FTP related utilities.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QObject, QDate, QDateTime, QTime
@@ -49,7 +51,7 @@ class FtpDirLineParser(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FtpDirLineParser, self).__init__(parent)
         
         self.__parseLine = self.__parseUnixLine
         self.__modeSwitchAllowed = True

@@ -7,6 +7,12 @@
 Module implementing a class used to display the resources part of the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, PYQT_VERSION, QProcess

@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the tabnanny command process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import fnmatch
 
@@ -34,7 +40,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         @param parent The parent widget (QWidget).
         """
-        super().__init__(parent)
+        super(TabnannyDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

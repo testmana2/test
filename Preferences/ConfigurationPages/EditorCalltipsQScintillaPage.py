@@ -7,6 +7,8 @@
 Module implementing the QScintilla Calltips configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.Qsci import QsciScintilla
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -24,7 +26,7 @@ class EditorCalltipsQScintillaPage(ConfigurationPageBase,
         """
         Constructor
         """
-        super().__init__()
+        super(EditorCalltipsQScintillaPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorCalltipsQScintillaPage")
         

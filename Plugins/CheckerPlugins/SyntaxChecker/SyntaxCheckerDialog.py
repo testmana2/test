@@ -7,6 +7,8 @@
 Module implementing a simple Python syntax checker.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -39,7 +41,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         @param parent The parent widget. (QWidget)
         """
-        super().__init__(parent)
+        super(SyntaxCheckerDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.showButton = self.buttonBox.addButton(

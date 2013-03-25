@@ -7,6 +7,8 @@
 Module implementing a menu populated from a QAbstractItemModel.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
 from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, QPixmap
 
@@ -27,7 +29,7 @@ class E5ModelMenu(QMenu):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ModelMenu, self).__init__(parent)
         
         self.__maxRows = -1
         self.__firstSeparator = -1
@@ -303,7 +305,7 @@ class E5ModelMenu(QMenu):
                 if evt.mimeData().hasFormat(mimeType):
                     evt.acceptProposedAction()
         
-        super().dragEnterEvent(evt)
+        super(E5ModelMenu, self).dragEnterEvent(evt)
     
     def dropEvent(self, evt):
         """
@@ -319,7 +321,7 @@ class E5ModelMenu(QMenu):
             else:
                 idx = self.index(act)
                 if not idx.isValid():
-                    super().dropEvent(evt)
+                    super(E5ModelMenu, self).dropEvent(evt)
                     return
                 
                 row = idx.row()
@@ -334,7 +336,7 @@ class E5ModelMenu(QMenu):
                                       row, 0, parentIndex)
             self.close()
         
-        super().dropEvent(evt)
+        super(E5ModelMenu, self).dropEvent(evt)
     
     def mousePressEvent(self, evt):
         """
@@ -344,7 +346,7 @@ class E5ModelMenu(QMenu):
         """
         if evt.button() == Qt.LeftButton:
             self.__dragStartPosition = evt.pos()
-        super().mousePressEvent(evt)
+        super(E5ModelMenu, self).mousePressEvent(evt)
     
     def mouseMoveEvent(self, evt):
         """
@@ -353,26 +355,26 @@ class E5ModelMenu(QMenu):
         @param evt reference to the event (QMouseEvent)
         """
         if self.__model is None:
-            super().mouseMoveEvent(evt)
+            super(E5ModelMenu, self).mouseMoveEvent(evt)
             return
         
         if not (evt.buttons() & Qt.LeftButton):
-            super().mouseMoveEvent(evt)
+            super(E5ModelMenu, self).mouseMoveEvent(evt)
             return
         
         manhattanLength = (evt.pos() - self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
-            super().mouseMoveEvent(evt)
+            super(E5ModelMenu, self).mouseMoveEvent(evt)
             return
         
         act = self.actionAt(self.__dragStartPosition)
         if act is None:
-            super().mouseMoveEvent(evt)
+            super(E5ModelMenu, self).mouseMoveEvent(evt)
             return
         
         idx = self.index(act)
         if not idx.isValid():
-            super().mouseMoveEvent(evt)
+            super(E5ModelMenu, self).mouseMoveEvent(evt)
             return
         
         drag = QDrag(self)
@@ -402,7 +404,7 @@ class E5ModelMenu(QMenu):
         """
         self._mouseButton = evt.button()
         self._keyboardModifiers = evt.modifiers()
-        super().mouseReleaseEvent(evt)
+        super(E5ModelMenu, self).mouseReleaseEvent(evt)
     
     def resetFlags(self):
         """

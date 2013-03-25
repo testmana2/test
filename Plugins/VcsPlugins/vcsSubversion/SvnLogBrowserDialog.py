@@ -7,6 +7,12 @@
 Module implementing a dialog to browse the log history.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot
@@ -31,7 +37,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -633,4 +639,4 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnLogBrowserDialog, self).keyPressEvent(evt)

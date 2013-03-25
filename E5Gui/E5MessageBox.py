@@ -7,6 +7,8 @@
 Module implementing QMessageBox replacements and more convenience function.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QMessageBox, QApplication
 
@@ -78,7 +80,7 @@ class E5MessageBox(QMessageBox):
         @keyparam buttons set of standard buttons to generate (StandardButtons)
         @keyparam parent parent widget of the message box (QWidget)
         """
-        super().__init__(parent)
+        super(E5MessageBox, self).__init__(parent)
         self.setIcon(icon)
         if modal:
             if parent is not None:

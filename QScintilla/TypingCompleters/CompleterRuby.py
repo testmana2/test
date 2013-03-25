@@ -7,6 +7,8 @@
 Module implementing a typing completer for Ruby.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from PyQt4.QtCore import QRegExp

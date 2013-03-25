@@ -7,6 +7,8 @@
 Module implementing a base class for the bookmarks importers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QObject
 
 
@@ -21,7 +23,7 @@ class BookmarksImporter(QObject):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(BookmarksImporter, self).__init__(parent)
         
         self._path = ""
         self._file = ""

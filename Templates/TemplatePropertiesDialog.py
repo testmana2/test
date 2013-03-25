@@ -7,6 +7,8 @@
 Module implementing the templates properties dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QRegExp, Qt, pyqtSlot
 from PyQt4.QtGui import QDialog, QRegExpValidator
 
@@ -28,7 +30,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         @param itm item (TemplateEntry or TemplateGroup) to
             read the data from
         """
-        super().__init__(parent)
+        super(TemplatePropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         if not groupMode:

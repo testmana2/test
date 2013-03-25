@@ -7,6 +7,8 @@
 Module implementing the Tasks configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_TasksPage import Ui_TasksPage
 
@@ -21,7 +23,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         """
         Constructor
         """
-        super().__init__()
+        super(TasksPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("TasksPage")
         

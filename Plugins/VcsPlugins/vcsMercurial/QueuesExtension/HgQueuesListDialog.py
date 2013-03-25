@@ -7,6 +7,12 @@
 Module implementing a dialog to show a list of applied and unapplied patches.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
@@ -31,7 +37,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesListDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -431,4 +437,4 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgQueuesListDialog, self).keyPressEvent(evt)

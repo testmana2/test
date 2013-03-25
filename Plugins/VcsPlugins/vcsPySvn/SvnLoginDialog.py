@@ -7,6 +7,8 @@
 Module implementing the login dialog for pysvn.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_SvnLoginDialog import Ui_SvnLoginDialog
@@ -25,7 +27,7 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
         """
-        super().__init__(parent)
+        super(SvnLoginDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.realmLabel.setText(self.trUtf8("<b>Enter login data for realm {0}.</b>")\

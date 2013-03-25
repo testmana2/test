@@ -7,6 +7,8 @@
 Module implementing a tabbed viewmanager class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QPoint, QFileInfo, pyqtSignal, QEvent, QByteArray, QMimeData, Qt
@@ -56,7 +58,7 @@ class TabBar(E5WheelTabBar):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(TabBar, self).__init__(parent)
         self.setAcceptDrops(True)
         
         self.__dragStartPos = QPoint()
@@ -69,7 +71,7 @@ class TabBar(E5WheelTabBar):
         """
         if event.button() == Qt.LeftButton:
             self.__dragStartPos = QPoint(event.pos())
-        super().mousePressEvent(event)
+        super(TabBar, self).mousePressEvent(event)
     
     def mouseMoveEvent(self, event):
         """
@@ -94,7 +96,7 @@ class TabBar(E5WheelTabBar):
                 drag.exec_(Qt.DropActions(Qt.CopyAction))
             elif event.modifiers() == Qt.KeyboardModifiers(Qt.NoModifier):
                 drag.exec_(Qt.DropActions(Qt.MoveAction))
-        super().mouseMoveEvent(event)
+        super(TabBar, self).mouseMoveEvent(event)
     
     def dragEnterEvent(self, event):
         """
@@ -110,7 +112,7 @@ class TabBar(E5WheelTabBar):
            "source-index" in formats and \
            "tabwidget-id" in formats:
             event.acceptProposedAction()
-        super().dragEnterEvent(event)
+        super(TabBar, self).dragEnterEvent(event)
     
     def dropEvent(self, event):
         """
@@ -139,7 +141,7 @@ class TabBar(E5WheelTabBar):
                 elif event.proposedAction() == Qt.CopyAction:
                     self.tabCopyRequested[int, int].emit(fromIndex, toIndex)
                     event.acceptProposedAction()
-        super().dropEvent(event)
+        super(TabBar, self).dropEvent(event)
 
 
 class TabWidget(E5TabWidget):
@@ -152,7 +154,7 @@ class TabWidget(E5TabWidget):
         
         @param vm view manager widget (Tabview)
         """
-        super().__init__()
+        super(TabWidget, self).__init__()
         self.setAttribute(Qt.WA_DeleteOnClose, True)
         
         self.__tabBar = TabBar(self)
@@ -216,7 +218,7 @@ class TabWidget(E5TabWidget):
         self.emptyLabel = QLabel()
         self.emptyLabel.setPixmap(ericPic)
         self.emptyLabel.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-        super().addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
+        super(TabWidget, self).addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
         
     def __initMenu(self):
         """
@@ -331,7 +333,7 @@ class TabWidget(E5TabWidget):
         @param title title for the new tab (string)
         """
         editor = assembly.getEditor()
-        super().addTab(assembly, UI.PixmapCache.getIcon("empty.png"), title)
+        super(TabWidget, self).addTab(assembly, UI.PixmapCache.getIcon("empty.png"), title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
         else:
@@ -357,7 +359,7 @@ class TabWidget(E5TabWidget):
         @return index of the inserted tab (integer)
         """
         editor = assembly.getEditor()
-        newIndex = super().insertTab(index, assembly,
+        newIndex = super(TabWidget, self).insertTab(index, assembly,
                                      UI.PixmapCache.getIcon("empty.png"),
                                      title)
         if self.closeButton:
@@ -420,7 +422,7 @@ class TabWidget(E5TabWidget):
             self.removeTab(index)
         
         if not self.editors:
-            super().addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
+            super(TabWidget, self).addTab(self.emptyLabel, UI.PixmapCache.getIcon("empty.png"), "")
             self.emptyLabel.show()
             if self.closeButton:
                 self.closeButton.setEnabled(False)
@@ -495,7 +497,7 @@ class TabWidget(E5TabWidget):
         if not self.editors:
             return None
         else:
-            return super().currentWidget()
+            return super(TabWidget, self).currentWidget()
         
     def setCurrentWidget(self, assembly):
         """
@@ -504,7 +506,7 @@ class TabWidget(E5TabWidget):
         @param assembly editor assembly to determine current tab from
             (EditorAssembly.EditorAssembly)
         """
-        super().setCurrentWidget(assembly)
+        super(TabWidget, self).setCurrentWidget(assembly)
         
     def indexOf(self, object):
         """
@@ -515,7 +517,7 @@ class TabWidget(E5TabWidget):
         """
         if isinstance(object, QScintilla.Editor.Editor):
             object = object.parent()
-        return super().indexOf(object)
+        return super(TabWidget, self).indexOf(object)
         
     def hasEditor(self, editor):
         """

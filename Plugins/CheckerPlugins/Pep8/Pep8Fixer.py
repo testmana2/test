@@ -7,6 +7,8 @@
 Module implementing a class to fix certain PEP 8 issues.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import re
 
@@ -38,7 +40,7 @@ class Pep8Fixer(QObject):
             string (string)
         @param inPlace flag indicating to modify the file in place (boolean)
         """
-        super().__init__()
+        super(Pep8Fixer, self).__init__()
         
         self.__project = project
         self.__filename = filename

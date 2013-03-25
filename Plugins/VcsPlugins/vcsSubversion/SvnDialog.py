@@ -7,6 +7,12 @@
 Module implementing a dialog starting a process and showing its output.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, pyqtSlot, Qt, QProcessEnvironment
@@ -34,7 +40,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         @param text text to be shown by the label (string)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -247,7 +253,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnDialog, self).keyPressEvent(evt)
         
     def hasAddOrDelete(self):
         """

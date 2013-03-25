@@ -7,6 +7,8 @@
 Module implementing a dialog to show some information about a site.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QFile, qVersion
@@ -42,7 +44,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         @param browser reference to the browser window (HelpBrowser)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SiteInfoDialog, self).__init__(parent)
         self.setupUi(self)
         
         # put icons

@@ -7,6 +7,8 @@
 Module implementing some constants for the pysvn package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QT_TRANSLATE_NOOP
 
 import pysvn

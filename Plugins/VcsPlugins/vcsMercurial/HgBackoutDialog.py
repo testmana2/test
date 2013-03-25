@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a backout operation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QDateTime
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -26,7 +28,7 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgBackoutDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

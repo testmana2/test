@@ -7,6 +7,8 @@
 Module implementing a dialog to remove sub-repositories.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -24,7 +26,7 @@ class HgRemoveSubrepositoriesDialog(QDialog, Ui_HgRemoveSubrepositoriesDialog):
         @param subrepositories list of sub-repository entries (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgRemoveSubrepositoriesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.subrepositories.addItems(subrepositories)

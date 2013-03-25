@@ -7,6 +7,12 @@
 Module implementing the debug server.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QModelIndex
@@ -137,7 +143,7 @@ class DebugServer(QTcpServer):
         """
         Constructor
         """
-        super().__init__()
+        super(DebugServer, self).__init__()
         
         # create our models
         self.breakpointModel = BreakPointModel(self)

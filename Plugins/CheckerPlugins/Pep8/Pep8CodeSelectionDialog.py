@@ -7,6 +7,8 @@
 Module implementing a dialog to select PEP 8 message codes.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
@@ -28,7 +30,7 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             issues (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Pep8CodeSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         codeList = [code.strip() for code in codes.split(",") if code.strip()]

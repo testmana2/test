@@ -7,6 +7,8 @@
 Module implementing a widget to select a symbol in various formats.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import unicodedata
 import html.entities
 
@@ -31,7 +33,7 @@ class SymbolsModel(QAbstractTableModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SymbolsModel, self).__init__(parent)
         
         self.__headerData = [
             self.trUtf8("Code"),
@@ -345,7 +347,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SymbolsWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

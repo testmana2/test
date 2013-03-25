@@ -7,6 +7,8 @@
 Module implementing a dialog to manage bookmarks.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl, QModelIndex
 from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
 
@@ -32,7 +34,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         @param parent reference to the parent widget (QWidget
         @param manager reference to the bookmarks manager object (BookmarksManager)
         """
-        super().__init__(parent)
+        super(BookmarksDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__bookmarksManager = manager
@@ -77,7 +79,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         Protected method called when the dialog is rejected.
         """
         self.__shutdown()
-        super().reject()
+        super(BookmarksDialog, self).reject()
     
     def __shutdown(self):
         """

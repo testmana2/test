@@ -7,6 +7,8 @@
 Module implementing the base class for all configuration pages.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, QFontDialog
 
@@ -19,7 +21,7 @@ class ConfigurationPageBase(QWidget):
         """
         Constructor
         """
-        super().__init__()
+        super(ConfigurationPageBase, self).__init__()
         
         self.__coloursDict = {}
         

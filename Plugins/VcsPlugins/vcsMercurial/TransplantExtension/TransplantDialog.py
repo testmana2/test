@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a transplant session.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QValidator
 
@@ -24,7 +26,7 @@ class RevisionsValidator(QValidator):
         @param multiRevsAllowed flag indicating, if multi revs are allowed (boolean)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(RevisionsValidator, self).__init__(parent)
         
         self.__multiRevsAllowed = multiRevsAllowed
     
@@ -78,7 +80,7 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         @param branchesList list of available branch names (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(TransplantDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.branchesCombo.addItems(["", "default"] + sorted(branchesList))

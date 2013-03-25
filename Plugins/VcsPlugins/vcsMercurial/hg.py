@@ -7,6 +7,12 @@
 Module implementing the version control systems interface to Mercurial.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import shutil
 import re

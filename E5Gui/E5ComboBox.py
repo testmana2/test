@@ -7,6 +7,8 @@
 Module implementing combobox classes using the eric5 line edits.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QComboBox
 
 
@@ -21,7 +23,7 @@ class E5ComboBox(QComboBox):
         @param parent reference to the parent widget (QWidget)
         @param inactiveText text to be shown on inactivity (string)
         """
-        super().__init__(parent)
+        super(E5ComboBox, self).__init__(parent)
         
         self.setMinimumHeight(24)
         
@@ -59,7 +61,7 @@ class E5ClearableComboBox(E5ComboBox):
         @param parent reference to the parent widget (QWidget)
         @param inactiveText text to be shown on inactivity (string)
         """
-        super().__init__(parent, inactiveText)
+        super(E5ClearableComboBox, self).__init__(parent, inactiveText)
         
         from .E5LineEdit import E5ClearableLineEdit
         self.__lineedit = E5ClearableLineEdit(self, inactiveText)

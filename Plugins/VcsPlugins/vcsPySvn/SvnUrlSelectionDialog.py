@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the URLs for the svn diff command.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QRegExp, pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -34,7 +36,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         @param path pathname to determine the repository URL from (string)
         @param parent parent widget of the dialog (QWidget)
         """
-        super().__init__(parent)
+        super(SvnUrlSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         if not hasattr(pysvn.Client(), 'diff_summarize'):

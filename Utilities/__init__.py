@@ -7,6 +7,12 @@
 Package implementing various functions/classes needed everywhere within eric5.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import sys
 import re

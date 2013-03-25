@@ -7,6 +7,8 @@
 Module implementing a dialog to configure the AdBlock exceptions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -25,7 +27,7 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(AdBlockExceptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlusGreen48.png"))
@@ -88,4 +90,4 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         import Helpviewer.HelpWindow
         Helpviewer.HelpWindow.HelpWindow.adBlockManager().setExceptions(hosts)
         
-        super().accept()
+        super(AdBlockExceptionsDialog, self).accept()

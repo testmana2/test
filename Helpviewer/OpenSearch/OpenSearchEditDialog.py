@@ -7,6 +7,8 @@
 Module implementing a dialog to edit the data of a search engine.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_OpenSearchEditDialog import Ui_OpenSearchEditDialog
@@ -20,7 +22,7 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
         """
         Constructor
         """
-        super().__init__(parent)
+        super(OpenSearchEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__engine = engine
@@ -41,4 +43,4 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
         self.__engine.setSearchUrlTemplate(self.searchEdit.text())
         self.__engine.setSuggestionsUrlTemplate(self.suggestionsEdit.text())
         
-        super().accept()
+        super(OpenSearchEditDialog, self).accept()

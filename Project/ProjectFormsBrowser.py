@@ -7,6 +7,12 @@
 Module implementing a class used to display the forms part of the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import sys
 import shutil

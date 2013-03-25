@@ -7,6 +7,8 @@
 Module implemting a dialog to show repository information.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_RepositoryInfoDialog import Ui_VcsRepositoryInfoDialog
@@ -17,6 +19,6 @@ class VcsRepositoryInfoDialog(QDialog, Ui_VcsRepositoryInfoDialog):
     Class implemting a dialog to show repository information.
     """
     def __init__(self, parent, info):
-        super().__init__(parent)
+        super(VcsRepositoryInfoDialog, self).__init__(parent)
         self.setupUi(self)
         self.infoBrowser.setHtml(info)

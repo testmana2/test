@@ -7,6 +7,8 @@
 Module implementing a base class for all of eric5s XML stream writers.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import pickle
 import base64
 
@@ -23,7 +25,7 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         
         @param device reference to the I/O device to write to (QIODevice)
         """
-        super().__init__(device)
+        super(XMLStreamWriterBase, self).__init__(device)
         
         self.basics = {
             type(None): self._write_none,

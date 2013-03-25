@@ -11,6 +11,8 @@ generated tasks are derived from a comment with a special
 introductory text. This text is configurable.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -46,7 +48,7 @@ class TaskViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param project reference to the project object
         """
-        super().__init__(parent)
+        super(TaskViewer, self).__init__(parent)
         
         self.setRootIsDecorated(False)
         self.setItemsExpandable(False)

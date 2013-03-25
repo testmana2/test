@@ -12,6 +12,8 @@ this script that gets called via the API generation interface.
 This script can be used via the commandline as well.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import glob
 import os
 import sys

@@ -7,6 +7,8 @@
 Module implementing a module item.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
 from .UMLItem import UMLModel, UMLItem
@@ -23,7 +25,7 @@ class ModuleModel(UMLModel):
         @param name the module name (string)
         @param classlist list of class names (list of strings)
         """
-        super().__init__(name)
+        super(ModuleModel, self).__init__(name)
         
         self.classlist = classlist
     

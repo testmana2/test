@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for FTP.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtNetwork import QNetworkAccessManager
 
 from .SchemeAccessHandler import SchemeAccessHandler
@@ -22,7 +24,7 @@ class FtpAccessHandler(SchemeAccessHandler):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(FtpAccessHandler, self).__init__(parent)
         
         self.__authenticatorCache = {}
         self.__proxyAuthenticator = None

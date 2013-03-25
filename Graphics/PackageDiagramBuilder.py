@@ -7,6 +7,8 @@
 Module implementing a dialog showing a UML like class diagram of a package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import glob
 import os.path
 import itertools
@@ -33,7 +35,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         @param package name of a python package to be shown (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(PackageDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("PackageDiagram")
         
         self.package = Utilities.normabspath(package)

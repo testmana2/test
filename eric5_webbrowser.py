@@ -12,6 +12,8 @@ of the web browser and starts the Qt event loop. This is a standalone version
 of the integrated helpviewer.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 

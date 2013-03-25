@@ -7,6 +7,8 @@
 Module implementing a dialog to preview the contents of an icon directory.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os.path
 
 from PyQt4.QtGui import QListWidgetItem, QDialog, QIcon
@@ -26,7 +28,7 @@ class IconsPreviewDialog(QDialog, Ui_IconsPreviewDialog):
         @param parent parent widget (QWidget)
         @param dirName name of directory to show (string)
         """
-        super().__init__(parent)
+        super(IconsPreviewDialog, self).__init__(parent)
         self.setupUi(self)
         
         dir = QDir(dirName)

@@ -8,6 +8,8 @@ Module implementing some graphical utility functions.
 """
 
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 class RecursionError(OverflowError, ValueError):
     """
     Unable to calculate result because of recursive structure.

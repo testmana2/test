@@ -7,6 +7,8 @@
 Module implementing the history filter model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QDateTime, QModelIndex
 from PyQt4.QtGui import QAbstractProxyModel
 
@@ -66,7 +68,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryFilterModel, self).__init__(parent)
         
         self.__loaded = False
         self.__filteredRows = []
@@ -123,7 +125,7 @@ class HistoryFilterModel(QAbstractProxyModel):
             self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
-        super().setSourceModel(sourceModel)
+        super(HistoryFilterModel, self).setSourceModel(sourceModel)
         
         if self.sourceModel() is not None:
             self.__loaded = False

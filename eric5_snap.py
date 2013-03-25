@@ -11,6 +11,8 @@ This is the main Python script that performs the necessary initialization
 of the snapshot module and starts the Qt event loop.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 
 for arg in sys.argv:

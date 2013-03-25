@@ -12,6 +12,8 @@ this script that gets called via the source documentation interface.
 This script can be used via the commandline as well.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import glob
 import os
 import sys

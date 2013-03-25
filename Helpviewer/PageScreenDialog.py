@@ -7,6 +7,8 @@
 Module implementing a dialog to save a screenshot of a web page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractButton, QImage, QPainter,  \
     QPixmap
@@ -28,7 +30,7 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
             (HelpBrowser)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PageScreenDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__view = view

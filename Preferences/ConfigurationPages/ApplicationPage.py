@@ -7,6 +7,8 @@
 Module implementing the Application configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ApplicationPage import Ui_ApplicationPage
 
@@ -21,7 +23,7 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         """
         Constructor
         """
-        super().__init__()
+        super(ApplicationPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("ApplicationPage")
         

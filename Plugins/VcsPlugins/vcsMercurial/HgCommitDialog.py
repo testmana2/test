@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the commit message.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox
 
@@ -32,7 +34,7 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent, Qt.WindowFlags(Qt.Window))
+        super(HgCommitDialog, self).__init__(parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
         if vcs.version < (2, 2):

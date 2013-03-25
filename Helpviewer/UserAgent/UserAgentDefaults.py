@@ -7,6 +7,8 @@
 Module defining the default user agent strings.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 UserAgentDefaults = """
 <useragentswitcher>
     <useragentmenu title="Firefox">

@@ -7,6 +7,12 @@
 Module implementing the project management functionality.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 import time
 import shutil
@@ -159,7 +165,7 @@ class Project(QObject):
         @param parent parent widget (usually the ui object) (QWidget)
         @param filename optional filename of a project file to open (string)
         """
-        super().__init__(parent)
+        super(Project, self).__init__(parent)
         
         self.ui = parent
         

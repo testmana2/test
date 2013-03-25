@@ -7,6 +7,8 @@
 Module implementing a dialog for entering multiple template variables.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QSize, Qt
 from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
     QPushButton, QTextEdit, QDialog, QScrollArea, QFrame, QGridLayout, QVBoxLayout, QLabel
@@ -23,7 +25,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         @param variables list of template variable names (list of strings)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(TemplateMultipleVariablesDialog, self).__init__(parent)
 
         self.TemplateMultipleVariablesDialogLayout = QVBoxLayout(self)
         self.TemplateMultipleVariablesDialogLayout.setMargin(6)

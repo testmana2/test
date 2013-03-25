@@ -7,6 +7,8 @@
 Module implementing the Editor General configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorGeneralPage import Ui_EditorGeneralPage
 
@@ -21,7 +23,7 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorGeneralPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorGeneralPage")
         

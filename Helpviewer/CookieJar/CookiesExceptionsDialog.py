@@ -7,6 +7,8 @@
 Module implementing a dialog for the configuration of cookie exceptions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, QFontMetrics
 
@@ -27,7 +29,7 @@ class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
         @param cookieJar reference to the cookie jar (CookieJar)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CookiesExceptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__cookieJar = cookieJar

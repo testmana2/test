@@ -7,6 +7,8 @@
 Module implementing a dialog for entering project specific debugger settings.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sys
 
@@ -35,7 +37,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        super().__init__(parent)
+        super(DebuggerPropertiesDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)
