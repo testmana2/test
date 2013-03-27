@@ -19,6 +19,7 @@ to import it.
 import os
 import fnmatch
 import shutil
+import json
 
 from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
     QByteArray, QSize, QUrl, Qt, QLibraryInfo
@@ -129,7 +130,7 @@ class Prefs(object):
         # Numbers
         "ViewProfiles": {
             "edit": [
-                    # visibility (0)
+                    # visibility (0) OBSOLETE
                     [True, False, False, True, True, True, True,  True,
                      True, True,  True,  True],
                     # saved state main window with dock windows (1) OBSOLETE
@@ -150,7 +151,7 @@ class Prefs(object):
                     [b"", b"", b"", b"", b"", b""],
                 ],
             "debug": [
-                    # visibility (0)
+                    # visibility (0) OBSOLETE
                     [False, False, True,  True, True, True, False, False,
                      True,  False, False, False],
                     # saved state main window with dock windows (1) OBSOLETE
@@ -169,6 +170,32 @@ class Prefs(object):
                     # left splitter, vertical splitter, left sidebar, bottom sidebar,
                     # right splitter, right sidebar
                     [b"", b"", b"", b"", b"", b""],
+                ],
+        },
+        "ViewProfiles2": {
+            "edit": [
+                    # saved state main window with toolbox windows (0)
+                    QByteArray(),
+                    # visibility of the toolboxes/sidebars (1)
+                    # left, bottom, right
+                    [True,  True, True],
+                    # saved states of the splitters and sidebars of the
+                    # sidebars layout (2)
+                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
+                    # right splitter, right sidebar
+                    [QByteArray(), QByteArray(), QByteArray(),
+                     QByteArray(), QByteArray(), QByteArray()],
+                ],
+            "debug": [
+                    # saved state main window with toolbox windows (0)
+                    QByteArray(),
+                    # visibility of the toolboxes/sidebars (1)
+                    # left, bottom, right
+                    [False,  True, True],
+                    # saved states of the splitters and sidebars of the
+                    # sidebars layout (2)
+                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
+                    # right splitter, right sidebar
                 ],
         },
         "ToolbarManagerState": QByteArray(),
@@ -1433,6 +1460,39 @@ def getUI(key, prefClass=Prefs):
         else:
             viewProfiles = prefClass.uiDefaults["ViewProfiles"]
         return viewProfiles
+    elif key in "ViewProfiles2":
+        profiles = prefClass.settings.value("UI/ViewProfiles2")
+        if profiles is not None:
+            viewProfiles = {}
+            profiles = json.loads(profiles)
+            for name in ["edit", "debug"]:
+                viewProfiles[name] = [
+                    QByteArray.fromBase64(profiles[name][0].encode()),
+                    profiles[name][1][:],
+                    []
+                ]
+                for bs in profiles[name][2]:
+                    viewProfiles[name][2].append(QByteArray.fromBase64(bs.encode()))
+        else:
+            # migrate from the old ViewProfiles settings
+            try:
+                profiles = prefClass.settings.value("UI/ViewProfiles")
+            except TypeError:
+                profiles = None
+            if profiles is not None:
+                viewProfiles = {}
+                for name in ["edit", "debug"]:
+                    viewProfiles[name] = [
+                        QByteArray(profiles[name][4]),
+                        profiles[name][5][:],
+                        []
+                    ]
+                    for b in profiles[name][6]:
+                        viewProfiles[name][2].append(QByteArray(b))
+            else:
+                # use the defaults
+                viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
+        return viewProfiles
     elif key in ["ToolbarManagerState", "PreviewSplitterState"]:
         state = prefClass.settings.value("UI/" + key)
         if state is not None:
@@ -1459,6 +1519,17 @@ def setUI(key, value, prefClass=Prefs):
     """
     if key == "ViewProfiles":
         prefClass.settings.setValue("UI/" + key, value)
+    elif key == "ViewProfiles2":
+        profiles = {}
+        for name in ["edit", "debug"]:
+            profiles[name] = [
+                bytes(value[name][0].toBase64()).decode(),
+                value[name][1][:],
+                []
+            ]
+            for ba in value[name][2]:
+                profiles[name][2].append(bytes(ba.toBase64()).decode())
+        prefClass.settings.setValue("UI/" + key, json.dumps(profiles))
     elif key == "LogStdErrColour":
         prefClass.settings.setValue("UI/" + key, value.name())
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",

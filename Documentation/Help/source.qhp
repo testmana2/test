@@ -11968,7 +11968,7 @@
       <keyword name="ViewProfileDialog" id="ViewProfileDialog" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog" />
       <keyword name="ViewProfileDialog (Constructor)" id="ViewProfileDialog (Constructor)" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog.__init__" />
       <keyword name="ViewProfileDialog (Module)" id="ViewProfileDialog (Module)" ref="eric5.Preferences.ViewProfileDialog.html" />
-      <keyword name="ViewProfileDialog.getProfiles" id="ViewProfileDialog.getProfiles" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog.getProfiles" />
+      <keyword name="ViewProfileDialog.getVisibilities" id="ViewProfileDialog.getVisibilities" ref="eric5.Preferences.ViewProfileDialog.html#ViewProfileDialog.getVisibilities" />
       <keyword name="ViewmanagerPage" id="ViewmanagerPage" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage" />
       <keyword name="ViewmanagerPage (Constructor)" id="ViewmanagerPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.__init__" />
       <keyword name="ViewmanagerPage (Module)" id="ViewmanagerPage (Module)" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html" />
