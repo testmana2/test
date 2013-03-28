@@ -60,8 +60,8 @@ QDialog
 <td><a href="#ViewProfileDialog.__init__">ViewProfileDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#ViewProfileDialog.getProfiles">getProfiles</a></td>
-<td>Public method to retrieve the configured profiles.</td>
+<td><a href="#ViewProfileDialog.getVisibilities">getVisibilities</a></td>
+<td>Public method to retrieve the visibilities configuration.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -70,39 +70,35 @@ QDialog
 </table>
 <a NAME="ViewProfileDialog.__init__" ID="ViewProfileDialog.__init__"></a>
 <h4>ViewProfileDialog (Constructor)</h4>
-<b>ViewProfileDialog</b>(<i>layout, profiles, separateShell, separateBrowser, parent=None</i>)
+<b>ViewProfileDialog</b>(<i>layout, editVisibilities, debugVisibilities, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>layout</i></dt>
 <dd>
 type of the window layout (string)
-</dd><dt><i>profiles</i></dt>
+</dd><dt><i>editVisibilities</i></dt>
 <dd>
-dictionary of tuples containing the visibility
-            of the windows for the various profiles
-</dd><dt><i>separateShell</i></dt>
+list  of flags giving the visibilities
+            of the various parts for the 'edit' view profile (list of boolean)
+</dd><dt><i>debugVisibilities</i></dt>
 <dd>
-flag indicating that the Python shell
-            is a separate window (boolean)
-</dd><dt><i>separateBrowser</i></dt>
-<dd>
-flag indicating that the file browser
-            is a separate window (boolean)
+list  of flags giving the visibilities
+            of the various parts for the 'debug' view profile (list of boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this dialog (QWidget)
 </dd>
-</dl><a NAME="ViewProfileDialog.getProfiles" ID="ViewProfileDialog.getProfiles"></a>
-<h4>ViewProfileDialog.getProfiles</h4>
-<b>getProfiles</b>(<i></i>)
+</dl><a NAME="ViewProfileDialog.getVisibilities" ID="ViewProfileDialog.getVisibilities"></a>
+<h4>ViewProfileDialog.getVisibilities</h4>
+<b>getVisibilities</b>(<i></i>)
 <p>
-        Public method to retrieve the configured profiles.
+        Public method to retrieve the visibilities configuration.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-dictionary of tuples containing the visibility
-            of the windows for the various profiles
+tuple of two lists giving the visibilities of the
+            various parts ( two lists of boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

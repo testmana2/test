@@ -18,7 +18,7 @@ import sys
 import logging
 
 from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
-    QIODevice, QByteArray, qVersion, QProcess, QSize, QUrl, QObject, Qt
+    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
     QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QProgressDialog, \
     QVBoxLayout, QDockWidget, QAction, QLabel
@@ -187,7 +187,7 @@ class UserInterface(E5MainWindow):
         self.__setWindowCaption()
         
         # load the view profiles
-        self.profiles = Preferences.getUI("ViewProfiles")
+        self.profiles = Preferences.getUI("ViewProfiles2")
         
         # Generate the debug server object
         from Debugger.DebugServer import DebugServer
@@ -3140,30 +3140,30 @@ class UserInterface(E5MainWindow):
             # step 1: save the window geometries of the active profile
             if self.layout in ["Toolboxes", "Sidebars"]:
                 state = self.saveState()
-                self.profiles[self.currentProfile][4] = bytes(state)
+                self.profiles[self.currentProfile][0] = state
                 if self.layout == "Sidebars":
                     state = self.leftSplitter.saveState()
-                    self.profiles[self.currentProfile][6][0] = bytes(state)
+                    self.profiles[self.currentProfile][2][0] = state
                     state = self.verticalSplitter.saveState()
-                    self.profiles[self.currentProfile][6][1] = bytes(state)
+                    self.profiles[self.currentProfile][2][1] = state
                     state = self.leftSidebar.saveState()
-                    self.profiles[self.currentProfile][6][2] = bytes(state)
+                    self.profiles[self.currentProfile][2][2] = state
                     state = self.bottomSidebar.saveState()
-                    self.profiles[self.currentProfile][6][3] = bytes(state)
+                    self.profiles[self.currentProfile][2][3] = state
                     state = self.rightSplitter.saveState()
-                    self.profiles[self.currentProfile][6][4] = bytes(state)
+                    self.profiles[self.currentProfile][2][4] = state
                     state = self.rightSidebar.saveState()
-                    self.profiles[self.currentProfile][6][5] = bytes(state)
+                    self.profiles[self.currentProfile][2][5] = state
             # step 2: save the visibility of the windows of the active profile
             if self.layout == "Toolboxes":
-                self.profiles[self.currentProfile][5][0] = self.lToolboxDock.isVisible()
-                self.profiles[self.currentProfile][5][1] = self.hToolboxDock.isVisible()
-                self.profiles[self.currentProfile][5][2] = self.rToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][0] = self.lToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][1] = self.hToolboxDock.isVisible()
+                self.profiles[self.currentProfile][1][2] = self.rToolboxDock.isVisible()
             elif self.layout == "Sidebars":
-                self.profiles[self.currentProfile][5][0] = self.leftSidebar.isVisible()
-                self.profiles[self.currentProfile][5][1] = self.bottomSidebar.isVisible()
-                self.profiles[self.currentProfile][5][2] = self.rightSidebar.isVisible()
-            Preferences.setUI("ViewProfiles", self.profiles)
+                self.profiles[self.currentProfile][1][0] = self.leftSidebar.isVisible()
+                self.profiles[self.currentProfile][1][1] = self.bottomSidebar.isVisible()
+                self.profiles[self.currentProfile][1][2] = self.rightSidebar.isVisible()
+            Preferences.setUI("ViewProfiles2", self.profiles)
     
     def __activateViewProfile(self, name, save=True):
         """
@@ -3179,39 +3179,39 @@ class UserInterface(E5MainWindow):
             
             # step 2: set the window geometries of the new profile
             if self.layout in ["Toolboxes", "Sidebars"]:
-                state = QByteArray(self.profiles[name][4])
+                state = self.profiles[name][0]
                 if not state.isEmpty():
                     self.restoreState(state)
                 if self.layout == "Sidebars":
-                    state = QByteArray(self.profiles[name][6][0])
+                    state = self.profiles[name][2][0]
                     if not state.isEmpty():
                         self.leftSplitter.restoreState(state)
-                    state = QByteArray(self.profiles[name][6][1])
+                    state = self.profiles[name][2][1]
                     if not state.isEmpty():
                         self.verticalSplitter.restoreState(state)
-                    state = QByteArray(self.profiles[name][6][2])
+                    state = self.profiles[name][2][2]
                     if not state.isEmpty():
                         self.leftSidebar.restoreState(state)
-                    state = QByteArray(self.profiles[name][6][3])
+                    state = self.profiles[name][2][3]
                     if not state.isEmpty():
                         self.bottomSidebar.restoreState(state)
-                    state = QByteArray(self.profiles[name][6][4])
+                    state = self.profiles[name][2][4]
                     if not state.isEmpty():
                         self.rightSplitter.restoreState(state)
-                    state = QByteArray(self.profiles[name][6][5])
+                    state = self.profiles[name][2][5]
                     if not state.isEmpty():
                         self.rightSidebar.restoreState(state)
                 self.__configureDockareaCornerUsage()
             
             # step 3: activate the windows of the new profile
             if self.layout == "Toolboxes":
-                self.lToolboxDock.setVisible(self.profiles[name][5][0])
-                self.hToolboxDock.setVisible(self.profiles[name][5][1])
-                self.rToolboxDock.setVisible(self.profiles[name][5][2])
+                self.lToolboxDock.setVisible(self.profiles[name][1][0])
+                self.hToolboxDock.setVisible(self.profiles[name][1][1])
+                self.rToolboxDock.setVisible(self.profiles[name][1][2])
             elif self.layout == "Sidebars":
-                self.leftSidebar.setVisible(self.profiles[name][5][0])
-                self.bottomSidebar.setVisible(self.profiles[name][5][1])
-                self.rightSidebar.setVisible(self.profiles[name][5][2])
+                self.leftSidebar.setVisible(self.profiles[name][1][0])
+                self.bottomSidebar.setVisible(self.profiles[name][1][1])
+                self.rightSidebar.setVisible(self.profiles[name][1][2])
             
             # step 4: remember the new profile
             self.currentProfile = name
@@ -4733,11 +4733,13 @@ class UserInterface(E5MainWindow):
         Private slot to configure the various view profiles.
         """
         from Preferences.ViewProfileDialog import ViewProfileDialog
-        dlg = ViewProfileDialog(self.layout, self.profiles,
-            not self.embeddedShell, not self.embeddedFileBrowser)
+        dlg = ViewProfileDialog(self.layout,
+            self.profiles['edit'][1], self.profiles['debug'][1])
         if dlg.exec_() == QDialog.Accepted:
-            self.profiles = dlg.getProfiles()
-            Preferences.setUI("ViewProfiles", self.profiles)
+            edit, debug = dlg.getVisibilities()
+            self.profiles['edit'][1] = edit
+            self.profiles['debug'][1] = debug
+            Preferences.setUI("ViewProfiles2", self.profiles)
             if self.currentProfile == "edit":
                 self.__setEditProfile(False)
             elif self.currentProfile == "debug":
