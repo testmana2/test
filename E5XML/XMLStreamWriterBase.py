@@ -8,7 +8,12 @@ Module implementing a base class for all of eric5s XML stream writers.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
 
+import sys
 import pickle
 import base64
 
@@ -34,7 +39,6 @@ class XMLStreamWriterBase(QXmlStreamWriter):
             complex: self._write_complex,
             bool: self._write_bool,
             str: self._write_string,
-            bytes: self._write_bytes,
             bytearray: self._write_bytearray,
             tuple: self._write_tuple,
             list: self._write_list,
@@ -42,7 +46,10 @@ class XMLStreamWriterBase(QXmlStreamWriter):
             set: self._write_set,
             frozenset: self._write_frozenset,
         }
-        
+        # 'bytes' is identical to 'str' in Py2
+        if sys.version_info[0] >= 3:
+            self.basics[bytes] = self._write_bytes
+
         self.setAutoFormatting(True)
         self.setAutoFormattingIndent(2)
     
