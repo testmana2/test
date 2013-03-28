@@ -196,6 +196,8 @@ class Prefs(object):
                     # sidebars layout (2)
                     # left splitter, vertical splitter, left sidebar, bottom sidebar,
                     # right splitter, right sidebar
+                    [QByteArray(), QByteArray(), QByteArray(),
+                     QByteArray(), QByteArray(), QByteArray()],
                 ],
         },
         "ToolbarManagerState": QByteArray(),
