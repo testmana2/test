@@ -1113,6 +1113,9 @@ def initPreferences():
     QCoreApplication.setOrganizationName(settingsNameOrganization)
     QCoreApplication.setApplicationName(settingsNameGlobal)
     
+    # Avoid nasty behavior of QSettings in combination with Py2
+    Prefs.settings.value("UI/SingleApplicationMode")    
+    
 
 def syncPreferences(prefClass=Prefs):
     """
