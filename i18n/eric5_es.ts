@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1931,8 +1930,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2173,8 +2172,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -14393,7 +14392,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -32131,27 +32130,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1103"/>
+        <location filename="Preferences/__init__.py" line="1132"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1130"/>
+        <location filename="Preferences/__init__.py" line="1159"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1130"/>
+        <location filename="Preferences/__init__.py" line="1159"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1224"/>
+        <location filename="Preferences/__init__.py" line="1253"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1224"/>
+        <location filename="Preferences/__init__.py" line="1253"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -34008,16 +34007,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/ProjectFormsBrowser.py" line="732"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
-    </message>
-    <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="90"/>
-        <source>Wizard</source>
-        <translation type="obsolete">Asistente</translation>
-    </message>
-    <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="91"/>
-        <source>Wizard Page</source>
-        <translation type="obsolete">Página de Asistente</translation>
     </message>
     <message>
         <location filename="Project/ProjectFormsBrowser.py" line="94"/>
@@ -50751,7 +50740,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Atajos de Teclado&lt;/b&gt;&lt;p&gt;Establezca los atajos de teclado para la aplicación con sus valores preferidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4763"/>
+        <location filename="UI/UserInterface.py" line="4765"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar Atajos de Teclado</translation>
     </message>
@@ -50771,7 +50760,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Exportar Atajos de Teclado&lt;/b&gt;&lt;p&gt;Exporte  los atajos de teclado de la aplicación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4787"/>
+        <location filename="UI/UserInterface.py" line="4789"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Importar Atajos de Teclado</translation>
     </message>
@@ -51001,7 +50990,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;h3&gt;Números de Versiones&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5478"/>
+        <location filename="UI/UserInterface.py" line="5480"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -51081,47 +51070,47 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;P&gt;El punto de entrada de documentación de PyQt4 no ha sido configurado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4921"/>
+        <location filename="UI/UserInterface.py" line="4923"/>
         <source>Save tasks</source>
         <translation>Guardar tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4945"/>
+        <location filename="UI/UserInterface.py" line="4947"/>
         <source>Read tasks</source>
         <translation>Leer tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5164"/>
+        <location filename="UI/UserInterface.py" line="5166"/>
         <source>Drop Error</source>
         <translation>Error de volcado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5446"/>
         <source>Error during updates check</source>
         <translation>Error durante la verificación de actualización</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5303"/>
+        <location filename="UI/UserInterface.py" line="5305"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5431"/>
+        <location filename="UI/UserInterface.py" line="5433"/>
         <source>Update available</source>
         <translation>Actualizaciones disponibles</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5444"/>
+        <location filename="UI/UserInterface.py" line="5446"/>
         <source>Could not perform updates check.</source>
         <translation>No se puede llevar a cabo la verificación de actualizaciones.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5465"/>
+        <location filename="UI/UserInterface.py" line="5467"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versiones disponibles&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5505"/>
+        <location filename="UI/UserInterface.py" line="5507"/>
         <source>First time usage</source>
         <translation>Usado por primera vez</translation>
     </message>
@@ -51196,12 +51185,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Visor de &amp;Multiproyecto</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4961"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4985"/>
+        <location filename="UI/UserInterface.py" line="4987"/>
         <source>Read session</source>
         <translation>Cargar sesión</translation>
     </message>
@@ -51599,52 +51588,52 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;P&gt;El punto de entrada de documentación &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; no ha podido encontrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4921"/>
+        <location filename="UI/UserInterface.py" line="4923"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4945"/>
+        <location filename="UI/UserInterface.py" line="4947"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4961"/>
+        <location filename="UI/UserInterface.py" line="4963"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4985"/>
+        <location filename="UI/UserInterface.py" line="4987"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5164"/>
+        <location filename="UI/UserInterface.py" line="5166"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5308"/>
+        <location filename="UI/UserInterface.py" line="5310"/>
         <source>Trying host {0}</source>
         <translation>Probando host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5431"/>
+        <location filename="UI/UserInterface.py" line="5433"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>La actualización para &lt;b&gt;{0}&lt;/b&gt; de eric5 está disponible en &lt;b&gt;{1}&lt;/b&gt;. ¿Le gustaría obtenerla?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5440"/>
+        <location filename="UI/UserInterface.py" line="5442"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 está actualizado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5440"/>
+        <location filename="UI/UserInterface.py" line="5442"/>
         <source>You are using the latest version of eric5</source>
         <translation>Está utilizando la última versión de eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5505"/>
+        <location filename="UI/UserInterface.py" line="5507"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 todavía no está configurado. El diálogo de configuración va a ser iniciado.</translation>
     </message>
@@ -51679,7 +51668,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4787"/>
+        <location filename="UI/UserInterface.py" line="4789"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Archivo de atajos de teclado (*.e4k)</translation>
     </message>
@@ -51724,12 +51713,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Documentación de Python 2&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 2. Si no se ha configurado un directorio con esta documentación, la ubicación de la documentación de Python 2 se asumirá en el directorio de documentación bajo la ubicación del ejecutable configurado de Python 2 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON2DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5358"/>
+        <location filename="UI/UserInterface.py" line="5360"/>
         <source>Error getting versions information</source>
         <translation>Error al obtener información de versiones</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5352"/>
+        <location filename="UI/UserInterface.py" line="5354"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar. Póngase online por favor e inténtelo de nuevo.</translation>
     </message>
@@ -51744,7 +51733,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>No se ha podido iniciar el navegador web</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5358"/>
+        <location filename="UI/UserInterface.py" line="5360"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
@@ -51860,7 +51849,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Pantallazos.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5523"/>
+        <location filename="UI/UserInterface.py" line="5525"/>
         <source>Select Workspace Directory</source>
         <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
