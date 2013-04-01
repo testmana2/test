@@ -12364,6 +12364,7 @@
       <keyword name="getEditorTyping" id="getEditorTyping" ref="eric5.Preferences.__init__.html#getEditorTyping" />
       <keyword name="getEnvironmentEntry" id="getEnvironmentEntry" ref="eric5.Utilities.__init__.html#getEnvironmentEntry" />
       <keyword name="getExecutablePath" id="getExecutablePath" ref="eric5.Utilities.__init__.html#getExecutablePath" />
+      <keyword name="getExecutablePaths" id="getExecutablePaths" ref="eric5.Utilities.__init__.html#getExecutablePaths" />
       <keyword name="getExistingDirectory" id="getExistingDirectory" ref="eric5.E5Gui.E5FileDialog.html#getExistingDirectory" />
       <keyword name="getExporter" id="getExporter" ref="eric5.QScintilla.Exporters.__init__.html#getExporter" />
       <keyword name="getFileNameFromUrl" id="getFileNameFromUrl" ref="eric5.Helpviewer.HelpUtilities.html#getFileNameFromUrl" />
