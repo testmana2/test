@@ -769,6 +769,41 @@ def getExecutablePath(file):
     return ""
     
 
+def getExecutablePaths(file):
+    """
+    Function to build all full path of an executable file from the environment.
+    
+    @param file filename of the executable (string)
+    @return list of full executable names (list of strings), if the executable file
+        is accessible via the searchpath defined by the PATH environment variable,
+        or an empty list otherwise.
+    """
+    paths = []
+    
+    if os.path.isabs(file):
+        if os.access(file, os.X_OK):
+            return [file]
+        else:
+            return []
+        
+    cur_path = os.path.join(os.curdir, file)
+    if os.path.exists(cur_path):
+        if os.access(cur_path, os.X_OK):
+            paths.append(cur_path)
+
+    path = os.getenv('PATH')
+    
+    # environment variable not defined
+    if path is not None:
+        dirs = path.split(os.pathsep)
+        for dir in dirs:
+            exe = os.path.join(dir, file)
+            if os.access(exe, os.X_OK) and exe not in paths:
+                paths.append(exe)
+    
+    return paths
+    
+
 def isExecutable(exe):
     """
     Function to check, if a file is executable.
