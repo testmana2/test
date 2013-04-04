@@ -1034,9 +1034,12 @@ class UserInterface(E5MainWindow):
                 else:
                     argsStr = "{0} {1}".format(argsStr, arg)
                 continue
-
-            ext = os.path.splitext(arg)[1]
-            ext = os.path.normcase(ext)
+            
+            try:
+                ext = os.path.splitext(arg)[1]
+                ext = os.path.normcase(ext)
+            except IndexError:
+                ext = ""
 
             if ext in ['.e4p']:
                 self.project.openProject(arg)
