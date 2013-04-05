@@ -4175,9 +4175,8 @@ class UserInterface(E5MainWindow):
                toolProcData[1] not in ["insert", "replaceSelection"]:
                 # not connected to an editor or wrong mode
                 while toolProc.canReadLine():
-                    s = "{0} - ".format(program)
                     output = str(toolProc.readLine(), ioEncoding, 'replace')
-                    s.append(output)
+                    s = "{0} - {1}".format(program, output)
                     self.appendToStdout(s)
             else:
                 if toolProcData[1] == "insert":
@@ -4198,9 +4197,8 @@ class UserInterface(E5MainWindow):
             toolProc.setReadChannel(QProcess.StandardError)
             
             while toolProc.canReadLine():
-                s = "{0} - ".format(program)
                 error = str(toolProc.readLine(), ioEncoding, 'replace')
-                s.append(error)
+                s = "{0} - {1}".format(program, error)
                 self.appendToStderr(s)
         
     def __toolFinished(self, exitCode, exitStatus):
