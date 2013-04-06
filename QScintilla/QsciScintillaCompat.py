@@ -111,10 +111,14 @@ class QsciScintillaCompat(QsciScintilla):
         weight = -font.weight()
         italic = font.italic()
         underline = font.underline()
+        bold = font.bold()
         for style in rangeLow + rangeHigh:
             self.SendScintilla(QsciScintilla.SCI_STYLESETFONT, style, f)
             self.SendScintilla(QsciScintilla.SCI_STYLESETSIZE, style, ps)
-            self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight)
+            try:
+                self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight)
+            except AttributeError:
+                self.SendScintilla(QsciScintilla.SCI_STYLESETBOLD, style, bold)
             self.SendScintilla(QsciScintilla.SCI_STYLESETITALIC, style, italic)
             self.SendScintilla(QsciScintilla.SCI_STYLESETUNDERLINE, style, underline)
     
