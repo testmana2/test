@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
+<!-- Saved: 2013-04-08, 07:48:51 -->
+<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -801,10 +803,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
     <Source>UtilitiesPython2/__init__.py</Source>
-    <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
-    <Source>UtilitiesPython2/py2flakes/__init__.py</Source>
-    <Source>UtilitiesPython2/py2flakes/checker.py</Source>
-    <Source>UtilitiesPython2/py2flakes/messages.py</Source>
     <Source>UtilitiesPython2/Tools.py</Source>
     <Source>UtilitiesPython2/Tabnanny.py</Source>
     <Source>UtilitiesPython2/TabnannyChecker.py</Source>
@@ -1076,6 +1074,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
     <Source>E5Network/E5SslInfoWidget.py</Source>
     <Source>Utilities/compatibility_fixes.py</Source>
+    <Source>Utilities/SyntaxCheck.py</Source>
+    <Source>Utilities/py2flakes/checker.py</Source>
+    <Source>Utilities/py2flakes/messages.py</Source>
+    <Source>Utilities/py2flakes/__init__.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

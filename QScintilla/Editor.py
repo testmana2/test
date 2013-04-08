@@ -4749,62 +4749,31 @@ class Editor(QsciScintillaCompat):
         return self.fileName is not None and \
                not self.autosaveManuallyDisabled and \
                not self.isReadOnly()
-        
+
+
     def __autoSyntaxCheck(self):
         """
         Private method to perform an automatic syntax check of the file.
         """
+        isPy2 = self.isPy2File()
+        if (isPy2 or self.isPy3File()) == False:
+            return
+        
         if Preferences.getEditor("AutoCheckSyntax"):
             self.clearSyntaxError()
             self.clearFlakesWarnings()
-            if self.isPy3File():
-                syntaxError, _fn, errorline, errorindex, _code, _error = \
-                    Utilities.compile(self.fileName or "(Unnamed)", self.text())
-                if syntaxError:
-                    self.toggleSyntaxError(
-                        int(errorline), int(errorindex), True, _error)
-                else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        from Utilities.py3flakes.checker import Checker
-                        from Utilities.py3flakes.messages import ImportStarUsed
-                        
-                        ignoreStarImportWarnings = \
-                            Preferences.getFlakes("IgnoreStarImportWarnings")
-                        try:
-                            txt = self.text()\
-                                .replace("\r\n", "\n")\
-                                .replace("\r", "\n")
-                            warnings = Checker(txt, self.fileName or "(Unnamed)")
-                            warnings.messages.sort(key=lambda a: a.lineno)
-                            for warning in warnings.messages:
-                                if ignoreStarImportWarnings and \
-                                   isinstance(warning, ImportStarUsed):
-                                    continue
-                                
-                                _fn, lineno, message = warning.getMessageData()
-                                if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
-                                        self.text(lineno - 1).strip()):
-                                    self.toggleFlakesWarning(
-                                        lineno, True, message)
-                        except SyntaxError as err:
-                            if err.text.strip():
-                                msg = err.text.strip()
-                            else:
-                                msg = err.msg
-                            self.toggleSyntaxError(err.lineno, True, msg)
-            elif self.isPy2File() and self.fileName is not None:
-                syntaxError, _fn, errorline, errorindex, _code, _error, \
-                warnings = Utilities.py2compile(
-                    self.fileName,
-                    checkFlakes=Preferences.getFlakes("IncludeInSyntaxCheck"))
-                if syntaxError:
-                    self.toggleSyntaxError(
-                        int(errorline), int(errorindex), True, _error)
-                else:
-                    for warning in warnings:
-                        self.toggleFlakesWarning(
-                            int(warning[1]), True, warning[2])
-        
+
+            syntaxError, _fn, errorline, errorindex, _code, _error, warnings = \
+                Utilities.compile(self.fileName or "(Unnamed)", self.text(), isPy2)
+            if syntaxError:
+                self.toggleSyntaxError(errorline, errorindex, True, _error)
+            else:
+                for warning in warnings:
+                    self.toggleFlakesWarning(
+                        warning[2], True, warning[3])
+            return
+
+
     def __initOnlineSyntaxCheck(self):
         """
         Private slot to initialize the online syntax check.
