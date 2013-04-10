@@ -1167,10 +1167,9 @@ def compile_extern(file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False
     interpreter_name = 'Python' if isPy2 else 'Python3'
     interpreter = Preferences.getDebugger(interpreter_name+"Interpreter")
     if interpreter == "" or not isinpath(interpreter):
-        return (False, "", -1, -1, "", "", [(
-            "", "", 1, QCoreApplication.translate("Utilities",
-                "{0} interpreter not configured.").format(interpreter_name)
-            )])
+        return (True, file, 1, 0, "", 
+                QCoreApplication.translate("Utilities",
+                "{0} interpreter not configured.").format(interpreter_name), [])
     syntaxChecker = os.path.join(getConfig('ericDir'),
                                  "Utilities", "SyntaxCheck.py")
     args = [syntaxChecker]
