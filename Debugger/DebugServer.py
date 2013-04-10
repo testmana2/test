@@ -187,6 +187,11 @@ class DebugServer(QTcpServer):
                 self.clientType = 'Python2'
             else:
                 self.clientType = 'Python3'
+        # Change clientType if dependent interpreter not exist anymore (maybe deinstalled,...)
+        elif self.clientType == 'Python2' and Preferences.getDebugger("PythonInterpreter") == '':
+            self.clientType = 'Python3'
+        elif self.clientType == 'Python3' and Preferences.getDebugger("Python3Interpreter") == '':
+            self.clientType = 'Python2'
         
         self.lastClientType = ''
         self.__autoClearShell = False

@@ -12434,7 +12434,7 @@
       <keyword name="filename_match" id="filename_match" ref="eric5.UtilitiesPython2.pep8.html#filename_match" />
       <keyword name="fileno" id="fileno" ref="eric5.DebugClients.Ruby.AsyncFile.html#fileno" />
       <keyword name="filterCharsFromFilename" id="filterCharsFromFilename" ref="eric5.Helpviewer.HelpUtilities.html#filterCharsFromFilename" />
-      <keyword name="findPython2Interpreters" id="findPython2Interpreters" ref="eric5.Globals.__init__.html#findPython2Interpreters" />
+      <keyword name="findPythonInterpreters" id="findPythonInterpreters" ref="eric5.Globals.__init__.html#findPythonInterpreters" />
       <keyword name="find_checks" id="find_checks" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#find_checks" />
       <keyword name="find_checks" id="find_checks" ref="eric5.UtilitiesPython2.pep8.html#find_checks" />
       <keyword name="find_module" id="find_module" ref="eric5.Utilities.ClassBrowsers.__init__.html#find_module" />

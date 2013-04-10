@@ -1747,7 +1747,7 @@ eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase?1(device)
 eric5.Globals.AppInfo.makeAppInfo?4(argv, name, arg, description, options=[])
 eric5.Globals.checkBlacklistedVersions?4()
 eric5.Globals.configDir?7
-eric5.Globals.findPython2Interpreters?4()
+eric5.Globals.findPythonInterpreters?4(pyVersion)
 eric5.Globals.getConfigDir?4()
 eric5.Globals.isLinuxPlatform?4()
 eric5.Globals.isMacPlatform?4()

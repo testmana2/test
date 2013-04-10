@@ -36,7 +36,7 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters
+    isWindowsPlatform, findPythonInterpreters
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -1247,11 +1247,15 @@ def getDebugger(key, prefClass=Prefs):
     elif key in ["AllowedHosts"]:
         return toList(
             prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
-    elif key == "PythonInterpreter":
+    elif key in ["PythonInterpreter", "Python3Interpreter"]:
         interpreter = \
             prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
         if not interpreter:
-            interpreters = findPython2Interpreters()
+            pyVersion = 2 if key == "PythonInterpreter" else 3
+            if sys.version_info[0] == pyVersion:
+                return sys.executable
+
+            interpreters = findPythonInterpreters(pyVersion)
             if interpreters:
                 if len(interpreters) == 1:
                     interpreter = interpreters[0]
@@ -1259,15 +1263,15 @@ def getDebugger(key, prefClass=Prefs):
                     selection, ok = QInputDialog.getItem(
                         None,
                         QCoreApplication.translate("Preferences",
-                            "Select Python2 Interpreter"),
+                            "Select Python{0} Interpreter").format(pyVersion),
                         QCoreApplication.translate("Preferences",
-                            "Select the Python2 interpreter to be used:"),
+                            "Select the Python{0} interpreter to be used:").format(pyVersion),
                         interpreters,
                         0, False)
                     if ok and selection != "":
                         interpreter = selection
                 if interpreter:
-                    setDebugger("PythonInterpreter", interpreter)
+                    setDebugger(key, interpreter)
         return interpreter
     else:
         return \
