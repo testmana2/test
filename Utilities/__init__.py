@@ -11,7 +11,7 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 try:
     str = unicode   # __IGNORE_WARNING__
 except (NameError):
-    pass
+    basestring = str
 
 import os
 import sys
@@ -446,8 +446,8 @@ def extractFlags(text):
     @return dictionary of string, boolean, complex, float and int
     """
     flags = {}
-    if isinstance(text, str):
-        lines = text.splitlines()
+    if isinstance(text, basestring):
+        lines = text.rstrip().splitlines()
     else:
         lines = text
     for line in reversed(lines):
