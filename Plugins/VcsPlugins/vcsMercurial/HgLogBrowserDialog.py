@@ -906,6 +906,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__updateDiffButtons()
         self.__updatePhaseButton()
+        self.__updateGraftButton()
     
     def __readStdout(self):
         """
@@ -1034,15 +1035,18 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private slot to update the status of the graft button.
         """
         if self.graftButton.isVisible():
-            # step 1: count selected entries not belonging to the current branch
-            otherBranches = 0
-            for itm in self.logTree.selectedItems():
-                branch = itm.text(self.BranchColumn)
-                if branch != self.__projectBranch:
-                    otherBranches += 1
-            
-            # step 2: set the status of the graft button
-            self.graftButton.setEnabled(otherBranches > 0)
+            if self.initialCommandMode == "log":
+                # step 1: count selected entries not belonging to the current branch
+                otherBranches = 0
+                for itm in self.logTree.selectedItems():
+                    branch = itm.text(self.BranchColumn)
+                    if branch != self.__projectBranch:
+                        otherBranches += 1
+                
+                # step 2: set the status of the graft button
+                self.graftButton.setEnabled(otherBranches > 0)
+            else:
+                self.graftButton.setEnabled(False)
     
     def __updateGui(self, itm):
         """
