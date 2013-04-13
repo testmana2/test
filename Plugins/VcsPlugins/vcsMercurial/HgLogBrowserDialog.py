@@ -903,6 +903,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__filterLogsEnabled = True
         self.__filterLogs()
+        
+        self.__updateDiffButtons()
+        self.__updatePhaseButton()
     
     def __readStdout(self):
         """
@@ -1002,24 +1005,27 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to update the status of the phase button.
         """
-        # step 1: count entries with changeable phases
-        secret = 0
-        draft = 0
-        public = 0
-        for itm in self.logTree.selectedItems():
-            phase = itm.text(self.PhaseColumn)
-            if phase == "draft":
-                draft += 1
-            elif phase == "secret":
-                secret += 1
+        if self.initialCommandMode == "log":
+            # step 1: count entries with changeable phases
+            secret = 0
+            draft = 0
+            public = 0
+            for itm in self.logTree.selectedItems():
+                phase = itm.text(self.PhaseColumn)
+                if phase == "draft":
+                    draft += 1
+                elif phase == "secret":
+                    secret += 1
+                else:
+                    public += 1
+            
+            # step 2: set the status of the phase button
+            if public == 0 and \
+               ((secret > 0 and draft == 0) or \
+                (secret == 0 and draft > 0)):
+                self.phaseButton.setEnabled(True)
             else:
-                public += 1
-        
-        # step 2: set the status of the phase button
-        if public == 0 and \
-           ((secret > 0 and draft == 0) or \
-            (secret == 0 and draft > 0)):
-            self.phaseButton.setEnabled(True)
+                self.phaseButton.setEnabled(False)
         else:
             self.phaseButton.setEnabled(False)
     
