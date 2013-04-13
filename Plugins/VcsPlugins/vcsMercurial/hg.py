@@ -101,6 +101,7 @@ class Hg(VersionControl):
         self.serveDlg = None
         
         self.bundleFile = None
+        self.__lastChangeGroupPath = None
         
         self.statusCache = {}
         
@@ -2141,7 +2142,7 @@ class Hg(VersionControl):
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
                 self.trUtf8("Create changegroup"),
-                repodir,
+                self.__lastChangeGroupPath or repodir,
                 self.trUtf8("Mercurial Changegroup Files (*.hg)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
@@ -2164,6 +2165,7 @@ class Hg(VersionControl):
                 if not res:
                     return
             fname = Utilities.toNativeSeparators(fname)
+            self.__lastChangeGroupPath = os.path.dirname(fname)
             
             args = []
             args.append('bundle')
@@ -2204,9 +2206,11 @@ class Hg(VersionControl):
         file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
+            self.__lastChangeGroupPath = os.path.dirname(self.__lastChangeGroupPath)
+            
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 from .HgLogBrowserDialog import HgLogBrowserDialog
                 self.logBrowser = \
@@ -2237,9 +2241,11 @@ class Hg(VersionControl):
         file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
+            self.__lastChangeGroupPath = os.path.dirname(self.__lastChangeGroupPath)
+            
             args = []
             args.append('identify')
             args.append(file)
@@ -2270,9 +2276,11 @@ class Hg(VersionControl):
         files = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Apply changegroups"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
+            self.__lastChangeGroupPath = os.path.dirname(files[0])
+            
             update = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),
