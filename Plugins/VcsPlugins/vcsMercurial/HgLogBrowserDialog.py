@@ -1069,7 +1069,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 1 button.
         """
-        itm = self.logTree.selectedItems()[0]
+        if len(self.logTree.selectedItems()):
+            itm = self.logTree.selectedItems()[0]
+        else:
+            itm = self.logTree.currentItem()
         if itm is None:
             self.diffP1Button.setEnabled(False)
             return
@@ -1087,7 +1090,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 2 button.
         """
-        itm = self.logTree.selectedItems()[0]
+        if len(self.logTree.selectedItems()):
+            itm = self.logTree.selectedItems()[0]
+        else:
+            itm = self.logTree.currentItem()
         if itm is None:
             self.diffP2Button.setEnabled(False)
             return
