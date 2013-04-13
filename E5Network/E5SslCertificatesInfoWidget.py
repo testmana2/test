@@ -44,9 +44,15 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         self.__chain = certificateChain[:]
         
         for cert in self.__chain:
-            name = cert.subjectInfo(QSslCertificate.CommonName)
+            if qVersion() >= "5.0.0":
+                name = ", ".join(cert.subjectInfo(QSslCertificate.CommonName))
+            else:
+                name = cert.subjectInfo(QSslCertificate.CommonName)
             if not name:
-                name = cert.subjectInfo(QSslCertificate.Organization)
+                if qVersion() >= "5.0.0":
+                    name = ", ".join(cert.subjectInfo(QSslCertificate.Organization))
+                else:
+                    name = cert.subjectInfo(QSslCertificate.Organization)
             if not name:
                 name = cert.serialNumber()
             self.chainComboBox.addItem(name)
