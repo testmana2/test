@@ -372,51 +372,52 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         errMsg = ""
         parents = [-1]
         
-        args = []
-        args.append("parents")
-        if self.commandMode == "incoming":
-            if self.bundle:
-                args.append("--repository")
-                args.append(self.bundle)
-            elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
-                args.append("--repository")
-                args.append(self.vcs.bundleFile)
-        args.append("--template")
-        args.append("{rev}\n")
-        args.append("-r")
-        args.append(rev)
-        if not self.projectMode:
-            args.append(self.filename)
-        
-        output = ""
-        if self.__hgClient:
-            output, errMsg = self.__hgClient.runcommand(args)
-        else:
-            process = QProcess()
-            process.setWorkingDirectory(self.repodir)
-            process.start('hg', args)
-            procStarted = process.waitForStarted()
-            if procStarted:
-                finished = process.waitForFinished(30000)
-                if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
-                else:
-                    if not finished:
-                        errMsg = self.trUtf8(
-                            "The hg process did not finish within 30s.")
+        if int(rev) > 0:
+            args = []
+            args.append("parents")
+            if self.commandMode == "incoming":
+                if self.bundle:
+                    args.append("--repository")
+                    args.append(self.bundle)
+                elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+                    args.append("--repository")
+                    args.append(self.vcs.bundleFile)
+            args.append("--template")
+            args.append("{rev}\n")
+            args.append("-r")
+            args.append(rev)
+            if not self.projectMode:
+                args.append(self.filename)
+            
+            output = ""
+            if self.__hgClient:
+                output, errMsg = self.__hgClient.runcommand(args)
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
-        
-        if errMsg:
-            E5MessageBox.critical(self,
-                self.trUtf8("Mercurial Error"),
-                errMsg)
-        
-        if output:
-            parents = [int(p) for p in output.strip().splitlines()]
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished and process.exitCode() == 0:
+                        output = \
+                            str(process.readAllStandardOutput(),
+                                Preferences.getSystem("IOEncoding"),
+                                'replace')
+                    else:
+                        if not finished:
+                            errMsg = self.trUtf8(
+                                "The hg process did not finish within 30s.")
+                else:
+                    errMsg = self.trUtf8("Could not start the hg executable.")
+            
+            if errMsg:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Mercurial Error"),
+                    errMsg)
+            
+            if output:
+                parents = [int(p) for p in output.strip().splitlines()]
         
         return parents
     
