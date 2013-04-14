@@ -216,10 +216,9 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         if isGuiScript:
             wrapper = \
                 '''@echo off\n''' \
-                '''set PYDIR=%~dp0\n''' \
-                '''start "" "%PYDIR%\\pythonw.exe"''' \
+                '''start "" "{2}\\pythonw.exe"''' \
                 ''' "{0}\\{1}.pyw"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile)
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile, sys.exec_prefix)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
