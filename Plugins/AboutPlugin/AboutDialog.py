@@ -11,7 +11,7 @@ from PyQt4.QtGui import QApplication, QDialog
 
 from .Ui_AboutDialog import Ui_AboutDialog
 
-import Utilities
+import Preferences
 
 import UI.PixmapCache
 import UI.Info
@@ -763,10 +763,9 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         ## LICENSE
         ####################################################################
         
-        if Utilities.isWindowsPlatform():
-            self.licenseEdit.setFontFamily("Lucida Console")
-        else:
-            self.licenseEdit.setFontFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.contents.setFontFamily(font.family())
+        self.contents.setFontPointSize(font.pointSize())
         
         self.licenseEdit.setPlainText(licenseText)
         

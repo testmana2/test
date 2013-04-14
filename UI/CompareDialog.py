@@ -120,12 +120,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         
         self.on_synchronizeCheckBox_toggled(True)
         
-        if Utilities.isWindowsPlatform():
-            self.contents_1.setFontFamily("Lucida Console")
-            self.contents_2.setFontFamily("Lucida Console")
-        else:
-            self.contents_1.setFontFamily("Monospace")
-            self.contents_2.setFontFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.contents_1.setFontFamily(font.family())
+        self.contents_1.setFontPointSize(font.pointSize())
+        self.contents_2.setFontFamily(font.family())
+        self.contents_2.setFontPointSize(font.pointSize())
         self.fontHeight = QFontMetrics(self.contents_1.currentFont()).height()
         
         self.cNormalFormat = self.contents_1.currentCharFormat()

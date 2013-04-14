@@ -22,6 +22,7 @@ from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 
 import Utilities
+import Preferences
 
 
 class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
@@ -45,10 +46,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         self.vcs = vcs
         
-        if Utilities.isWindowsPlatform():
-            self.contents.setFontFamily("Lucida Console")
-        else:
-            self.contents.setFontFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.contents.setFontFamily(font.family())
+        self.contents.setFontPointSize(font.pointSize())
         
         self.cNormalFormat = self.contents.currentCharFormat()
         self.cAddedFormat = self.contents.currentCharFormat()

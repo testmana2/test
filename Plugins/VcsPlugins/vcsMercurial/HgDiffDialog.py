@@ -43,10 +43,9 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.vcs = vcs
         self.__hgClient = self.vcs.getClient()
         
-        if Utilities.isWindowsPlatform():
-            self.contents.setFontFamily("Lucida Console")
-        else:
-            self.contents.setFontFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.contents.setFontFamily(font.family())
+        self.contents.setFontPointSize(font.pointSize())
         
         self.cNormalFormat = self.contents.currentCharFormat()
         self.cAddedFormat = self.contents.currentCharFormat()

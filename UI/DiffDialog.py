@@ -224,10 +224,9 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         
         self.updateInterval = 20    # update every 20 lines
         
-        if Utilities.isWindowsPlatform():
-            self.contents.setFontFamily("Lucida Console")
-        else:
-            self.contents.setFontFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.contents.setFontFamily(font.family())
+        self.contents.setFontPointSize(font.pointSize())
         
         self.cNormalFormat = self.contents.currentCharFormat()
         self.cAddedFormat = self.contents.currentCharFormat()
