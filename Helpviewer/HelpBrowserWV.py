@@ -486,6 +486,14 @@ class HelpWebPage(QWebPage):
         sslInfo.url = QUrl(self.__sslConfiguration.url)
         return sslInfo
     
+    def getSslConfiguration(self):
+        """
+        Public method to return a reference to the current SSL configuration.
+        
+        @return reference to the SSL configuration in use (QSslConfiguration)
+        """
+        return self.__sslConfiguration
+    
     def showSslInfo(self):
         """
         Public slot to show some SSL information for the loaded page.

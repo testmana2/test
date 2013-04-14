@@ -202,6 +202,10 @@ class UrlBar(E5LineEdit):
                         valid = not sslInfo.isBlacklisted()
                     else:
                         valid = sslInfo.isValid()
+                    if valid:
+                        config = self.__browser.page().getSslConfiguration()
+                        if config is None or config.sessionCipher().isNull():
+                            valid = False
                     self.__sslLabel.setValidity(valid)
                     return
             

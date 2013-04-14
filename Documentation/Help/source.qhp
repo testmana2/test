@@ -5069,6 +5069,7 @@
       <keyword name="HelpWebPage.event" id="HelpWebPage.event" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.event" />
       <keyword name="HelpWebPage.extension" id="HelpWebPage.extension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.extension" />
       <keyword name="HelpWebPage.getAdBlockedPageEntries" id="HelpWebPage.getAdBlockedPageEntries" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getAdBlockedPageEntries" />
+      <keyword name="HelpWebPage.getSslConfiguration" id="HelpWebPage.getSslConfiguration" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslConfiguration" />
       <keyword name="HelpWebPage.getSslInfo" id="HelpWebPage.getSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslInfo" />
       <keyword name="HelpWebPage.hasValidSslInfo" id="HelpWebPage.hasValidSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.hasValidSslInfo" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
