@@ -490,6 +490,14 @@ class HelpWebPage(QWebPage):
         chain = self.__sslConfiguration.peerCertificateChain()
         return chain
     
+    def getSslConfiguration(self):
+        """
+        Public method to return a reference to the current SSL configuration.
+        
+        @return reference to the SSL configuration in use (QSslConfiguration)
+        """
+        return self.__sslConfiguration
+    
     def showSslInfo(self, pos):
         """
         Public slot to show some SSL information for the loaded page.

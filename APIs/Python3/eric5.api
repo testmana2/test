@@ -2473,6 +2473,7 @@ eric5.Helpviewer.HelpBrowserWV.HelpWebPage.extension?4(extension, option, output
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getAdBlockedPageEntries?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslCertificate?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslCertificateChain?4()
+eric5.Helpviewer.HelpBrowserWV.HelpWebPage.getSslConfiguration?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.hasValidSslInfo?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.pageAttributeId?4()
 eric5.Helpviewer.HelpBrowserWV.HelpWebPage.populateNetworkRequest?4(request)
@@ -8693,6 +8694,7 @@ eric5.install.progLanguages?7
 eric5.install.progName?7
 eric5.install.pyModDir?7
 eric5.install.pyName?4(py_dir, py_file)
+eric5.install.scriptsDir?7
 eric5.install.shutilCopy?4(src, dst, perm=0o644)
 eric5.install.sourceDir?7
 eric5.install.usage?4(rcode=2)

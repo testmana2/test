@@ -5151,6 +5151,7 @@
       <keyword name="HelpWebPage.getAdBlockedPageEntries" id="HelpWebPage.getAdBlockedPageEntries" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getAdBlockedPageEntries" />
       <keyword name="HelpWebPage.getSslCertificate" id="HelpWebPage.getSslCertificate" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificate" />
       <keyword name="HelpWebPage.getSslCertificateChain" id="HelpWebPage.getSslCertificateChain" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificateChain" />
+      <keyword name="HelpWebPage.getSslConfiguration" id="HelpWebPage.getSslConfiguration" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslConfiguration" />
       <keyword name="HelpWebPage.hasValidSslInfo" id="HelpWebPage.hasValidSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.hasValidSslInfo" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
