@@ -25,7 +25,6 @@ currDir = os.getcwd()
 modDir = None
 pyModDir = None
 platBinDir = None
-scriptsDir = None
 distDir = None
 apisDir = None
 doCleanup = True
@@ -88,7 +87,7 @@ def usage(rcode=2):
 
     @param rcode the return code passed back to the calling process.
     """
-    global progName, scriptsDir, modDir, distDir, apisDir, macAppBundleName
+    global progName, modDir, distDir, apisDir, macAppBundleName
     global macPythonExe
 
     print()
@@ -110,7 +109,7 @@ def usage(rcode=2):
     else:
         print("              (no default value)")
     print("    -b dir    where the binaries will be installed")
-    print("              (default: {0})".format(scriptsDir))
+    print("              (default: {0})".format(platBinDir))
     print("    -d dir    where eric5 python files will be installed")
     print("              (default: {0})".format(modDir))
     print("    -f file   configuration file naming the various installation paths")
@@ -141,16 +140,14 @@ def initGlobals():
     """
     Sets the values of globals that need more than a simple assignment.
     """
-    global platBinDir, scriptsDir, modDir, pyModDir, apisDir
+    global platBinDir, modDir, pyModDir, apisDir
 
     if sys.platform.startswith("win"):
         platBinDir = sys.exec_prefix
         if platBinDir.endswith("\\"):
             platBinDir = platBinDir[:-1]
-        scriptsDir = os.path.join(platBinDir, "Scripts")
     else:
         platBinDir = "/usr/local/bin"
-        scriptsDir = platBinDir
 
     modDir = distutils.sysconfig.get_python_lib(True)
     pyModDir = modDir
@@ -314,7 +311,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global macAppBundleName, platBinDir, scriptsDir
+    global macAppBundleName, platBinDir
     
     try:
         from eric5config import getConfig
@@ -360,7 +357,7 @@ def cleanUp():
     
     try:
         for rem_wname in rem_wnames:
-            for d in [platBinDir, scriptsDir, getConfig('bindir')]:
+            for d in [platBinDir, getConfig('bindir')]:
                 rwname = wrapperName(d, rem_wname)
                 if os.path.exists(rwname):
                     os.remove(rwname)
@@ -684,7 +681,7 @@ def createInstallConfig():
     """
     Create the installation config dictionary.
     """
-    global modDir, scriptsDir, cfg, apisDir
+    global modDir, platBinDir, cfg, apisDir
         
     ericdir = os.path.join(modDir, "eric5")
     cfg = {
@@ -700,7 +697,7 @@ def createInstallConfig():
         'ericTemplatesDir': os.path.join(ericdir, "DesignerTemplates"),
         'ericCodeTemplatesDir': os.path.join(ericdir, 'CodeTemplates'),
         'ericOthersDir': ericdir,
-        'bindir': scriptsDir,
+        'bindir': platBinDir,
         'mdir': modDir,
     }
     if apisDir:
@@ -1028,7 +1025,7 @@ def main(argv):
     except getopt.GetoptError:
         usage()
 
-    global scriptsDir
+    global platBinDir
     
     depChecks = True
 
@@ -1038,7 +1035,7 @@ def main(argv):
         elif opt == "-a":
             apisDir = arg
         elif opt == "-b":
-            scriptsDir = arg
+            platBinDir = arg
         elif opt == "-d":
             modDir = arg
         elif opt == "-i":
