@@ -474,6 +474,14 @@ class QsciScintillaCompat(QsciScintilla):
         """
         self.SendScintilla(QsciScintilla.SCI_LINEENDEXTEND)
     
+    def selectionIsRectangle(self):
+        """
+        Public method to check, if the current selection is rectangular.
+        
+        @return flag indicating a rectangular selection.
+        """
+        return self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
+    
     def getLineSeparator(self):
         """
         Public method to get the line separator for the current eol mode.

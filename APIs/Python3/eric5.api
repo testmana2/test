@@ -6999,6 +6999,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromLineIndex?4
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromPoint?4(point)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.replaceTarget?4(replaceStr)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.scrollVertical?4(lines)
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.selectionIsRectangle?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setContractedFolds?4(folds)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCurrentIndicator?4(indicator)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCursorFlashTime?4(time)
@@ -8694,7 +8695,6 @@ eric5.install.progLanguages?7
 eric5.install.progName?7
 eric5.install.pyModDir?7
 eric5.install.pyName?4(py_dir, py_file)
-eric5.install.scriptsDir?7
 eric5.install.shutilCopy?4(src, dst, perm=0o644)
 eric5.install.sourceDir?7
 eric5.install.usage?4(rcode=2)

@@ -8975,6 +8975,7 @@
       <keyword name="QsciScintillaCompat.positionFromPoint" id="QsciScintillaCompat.positionFromPoint" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionFromPoint" />
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
+      <keyword name="QsciScintillaCompat.selectionIsRectangle" id="QsciScintillaCompat.selectionIsRectangle" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.selectionIsRectangle" />
       <keyword name="QsciScintillaCompat.setContractedFolds" id="QsciScintillaCompat.setContractedFolds" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setContractedFolds" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
       <keyword name="QsciScintillaCompat.setCursorFlashTime" id="QsciScintillaCompat.setCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCursorFlashTime" />
