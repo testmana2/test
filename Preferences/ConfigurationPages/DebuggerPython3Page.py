@@ -37,8 +37,6 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         
         # set initial values
-        self.customPyCheckBox.setChecked(
-            Preferences.getDebugger("CustomPython3Interpreter"))
         self.interpreterEdit.setText(
             Preferences.getDebugger("Python3Interpreter"))
         dct = Preferences.getDebugger("DebugClientType3")
@@ -61,8 +59,6 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Public slot to save the Debugger Python configuration.
         """
-        Preferences.setDebugger("CustomPython3Interpreter",
-            self.customPyCheckBox.isChecked())
         Preferences.setDebugger("Python3Interpreter",
             self.interpreterEdit.text())
         if self.standardButton.isChecked():

@@ -49,16 +49,17 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
     qVersion, PYQT_VERSION_STR, QCoreApplication, QCryptographicHash
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
+# import these methods into the Utilities namespace
 from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
 from Globals import getConfigDir, setConfigDir  # __IGNORE_WARNING__
-# import these methods into the Utilities namespace
 
 from E5Gui.E5Application import e5App
 
 from UI.Info import Program, Version
 
 import Preferences
-from .SyntaxCheck import *
+from .SyntaxCheck import readEncodedFile, decode, \
+    extractLineFlags, normalizeCode, compile_and_check  # __IGNORE_WARNING__
 
 from eric5config import getConfig
 

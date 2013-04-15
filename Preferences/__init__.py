@@ -68,7 +68,6 @@ class Prefs(object):
         "BreakAlways": False,
         "PythonInterpreter": "",
         "Python3Interpreter": "",
-        "CustomPython3Interpreter": False,
         "RubyInterpreter": "/usr/bin/ruby",
         "DebugClientType": "standard",     # supported "standard", "threaded", "custom"
         "DebugClient": "",
@@ -127,54 +126,7 @@ class Prefs(object):
         "ShowFilePreview": True,
         "ShowFilePreviewJS": True,
         "ShowFilePreviewSSI": True,
-        # the order in ViewProfiles is Project-Viewer, File-Browser,
-        # Debug-Viewer, Python-Shell, Log-Viewer, Task-Viewer,
-        # Templates-Viewer, Multiproject-Viewer, Terminal, Chat, Symbols,
-        # Numbers
-        "ViewProfiles": {
-            "edit": [
-                    # visibility (0) OBSOLETE
-                    [True, False, False, True, True, True, True,  True,
-                     True, True,  True,  True],
-                    # saved state main window with dock windows (1) OBSOLETE
-                    b"",
-                    # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3) OBSOLETE
-                    b"",
-                    # saved state main window with toolbox windows (4)
-                    b"",
-                    # visibility of the toolboxes/sidebars (5)
-                    # left, bottom, right
-                    [True,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
-                    [b"", b"", b"", b"", b"", b""],
-                ],
-            "debug": [
-                    # visibility (0) OBSOLETE
-                    [False, False, True,  True, True, True, False, False,
-                     True,  False, False, False],
-                    # saved state main window with dock windows (1) OBSOLETE
-                    b"",
-                    # saved states floating windows (2) OBSOLETE
-                    [b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b"", b""],
-                    # saved state main window with floating windows (3) OBSOLETE
-                    b"",
-                    # saved state main window with toolbox windows (4)
-                    b"",
-                    # visibility of the toolboxes/sidebars (5)
-                    # left, bottom, right
-                    [False,  True, True],
-                    # saved states of the splitters and sidebars of the
-                    # sidebars layout (6)
-                    # left splitter, vertical splitter, left sidebar, bottom sidebar,
-                    # right splitter, right sidebar
-                    [b"", b"", b"", b"", b"", b""],
-                ],
-        },
+        # ViewProfiles is obsolete (used till Eric5.3)
         "ViewProfiles2": {
             "edit": [
                     # saved state main window with toolbox windows (0)
@@ -253,7 +205,6 @@ class Prefs(object):
         "NotificationTimeout": 5,      # time in seconds the notification is shown
         "NotificationPosition": QPoint(10, 10),
     }
-    viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][0])
     
     iconsDefaults = {
         "Path": [],
@@ -1229,7 +1180,6 @@ def getDebugger(key, prefClass=Prefs):
     @return the requested debugger setting
     """
     if key in ["RemoteDbgEnabled", "PassiveDbgEnabled",
-                "CustomPython3Interpreter",
                 "AutomaticReset", "DebugEnvironmentReplace",
                 "PythonRedirect", "PythonNoEncoding",
                 "Python3Redirect", "Python3NoEncoding",
@@ -1443,35 +1393,6 @@ def getUI(key, prefClass=Prefs):
             return QColor(col)
         else:
             return prefClass.uiDefaults[key]
-    elif key == "ViewProfiles":
-        profiles = prefClass.settings.value("UI/ViewProfiles")
-        if profiles is not None:
-            viewProfiles = profiles
-            for name in ["edit", "debug"]:
-                # adjust entries for individual windows
-                vpLength = len(viewProfiles[name][0])
-                if vpLength < prefClass.viewProfilesLength:
-                    viewProfiles[name][0].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][0][vpLength:])
-                
-                # adjust profile
-                vpLength = len(viewProfiles[name])
-                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name]):
-                    viewProfiles[name].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][vpLength:])
-                
-                # adjust entries for toolboxes and sidebars
-                vpLength = len(viewProfiles[name][5])
-                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][5]):
-                    viewProfiles[name][5].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][5][vpLength:])
-                vpLength = len(viewProfiles[name][6])
-                if vpLength < len(prefClass.uiDefaults["ViewProfiles"][name][6]):
-                    viewProfiles[name][6].extend(
-                        prefClass.uiDefaults["ViewProfiles"][name][6][vpLength:])
-        else:
-            viewProfiles = prefClass.uiDefaults["ViewProfiles"]
-        return viewProfiles
     elif key in "ViewProfiles2":
         profiles = prefClass.settings.value("UI/ViewProfiles2")
         if profiles is not None:
@@ -1532,9 +1453,7 @@ def setUI(key, value, prefClass=Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    if key == "ViewProfiles":
-        prefClass.settings.setValue("UI/" + key, value)
-    elif key == "ViewProfiles2":
+    if key == "ViewProfiles2":
         profiles = {}
         for name in ["edit", "debug"]:
             profiles[name] = [
