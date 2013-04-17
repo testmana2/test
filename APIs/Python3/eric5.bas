@@ -585,6 +585,7 @@ SnapshotFreehandGrabber QWidget
 SnapshotPreview QLabel
 SnapshotRegionGrabber QWidget
 SnapshotTimer QWidget
+SortOptionsDialog QDialog Ui_SortOptionsDialog
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpeedDial QObject

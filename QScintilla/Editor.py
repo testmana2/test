@@ -6732,3 +6732,63 @@ class Editor(QsciScintillaCompat):
                     match = matches[-1]
             line, index = self.lineIndexFromPosition(match.start())
             self.setSelection(line, index + len(match.group(0)), line, index)
+    
+    #######################################################################
+    ## Sort related methods
+    #######################################################################
+    
+    def sortLines(self):
+        """
+        Public slot to sort the lines spanned by a rectangular selection.
+        """
+        if not self.hasSelectedText() or not self.selectionIsRectangle():
+            return
+        
+        from .SortOptionsDialog import SortOptionsDialog
+        dlg = SortOptionsDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            ascending, alnum, caseSensitive = dlg.getData()
+            startLine, startIndex, endLine, endIndex = self.getRectangularSelection()
+            
+            # step 1: extract the text of the rectangular selection and the lines
+            selText = {}
+            txtLines = {}
+            for line in range(startLine, endLine + 1):
+                txtLines[line] = self.text(line)
+                txt = txtLines[line][startIndex:endIndex].strip()
+                if not alnum:
+                    try:
+                        txt = float(txt)
+                    except ValueError:
+                        E5MessageBox.critical(self,
+                            self.trUtf8("Sort Lines"),
+                            self.trUtf8("""The selection contains illegal data for a"""
+                                        """ numerical sort."""))
+                        return
+                
+                if txt in selText:
+                    selText[txt].append(line)
+                else:
+                    selText[txt] = [line]
+            
+            # step 2: calculate the sort parameters
+            reverse = not ascending
+            if alnum and not caseSensitive:
+                keyFun = str.lower
+            else:
+                keyFun = None
+            
+            # step 3: sort the lines
+            newLines = []
+            for txt in sorted(selText.keys(), key=keyFun, reverse=reverse):
+                for line in selText[txt]:
+                    newLines.append(txtLines[line])
+            
+            # step 4: replace the lines by the sorted ones
+            self.setSelection(startLine, 0, endLine + 1, 0)
+            self.beginUndoAction()
+            self.replaceSelectedText("".join(newLines))
+            self.endUndoAction()
+            
+            # step 5: reset the rectangular selection
+            self.setRectangularSelection(startLine, startIndex, endLine, endIndex)

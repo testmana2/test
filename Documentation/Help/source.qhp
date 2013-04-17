@@ -858,6 +858,7 @@
             <section title="eric5.QScintilla.SearchReplaceWidget" ref="eric5.QScintilla.SearchReplaceWidget.html" />
             <section title="eric5.QScintilla.Shell" ref="eric5.QScintilla.Shell.html" />
             <section title="eric5.QScintilla.ShellHistoryDialog" ref="eric5.QScintilla.ShellHistoryDialog.html" />
+            <section title="eric5.QScintilla.SortOptionsDialog" ref="eric5.QScintilla.SortOptionsDialog.html" />
             <section title="eric5.QScintilla.SpellChecker" ref="eric5.QScintilla.SpellChecker.html" />
             <section title="eric5.QScintilla.SpellCheckingDialog" ref="eric5.QScintilla.SpellCheckingDialog.html" />
             <section title="eric5.QScintilla.SpellingDictionaryEditDialog" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html" />
@@ -4193,6 +4194,7 @@
       <keyword name="Editor.shortenEmptyLines" id="Editor.shortenEmptyLines" ref="eric5.QScintilla.Editor.html#Editor.shortenEmptyLines" />
       <keyword name="Editor.shouldAutosave" id="Editor.shouldAutosave" ref="eric5.QScintilla.Editor.html#Editor.shouldAutosave" />
       <keyword name="Editor.smartIndentLineOrSelection" id="Editor.smartIndentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.smartIndentLineOrSelection" />
+      <keyword name="Editor.sortLines" id="Editor.sortLines" ref="eric5.QScintilla.Editor.html#Editor.sortLines" />
       <keyword name="Editor.startSharedEdit" id="Editor.startSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.startSharedEdit" />
       <keyword name="Editor.streamCommentLine" id="Editor.streamCommentLine" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLine" />
       <keyword name="Editor.streamCommentLineOrSelection" id="Editor.streamCommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLineOrSelection" />
@@ -8954,6 +8956,7 @@
       <keyword name="QsciScintillaCompat.getFileName" id="QsciScintillaCompat.getFileName" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFileName" />
       <keyword name="QsciScintillaCompat.getFoundTarget" id="QsciScintillaCompat.getFoundTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFoundTarget" />
       <keyword name="QsciScintillaCompat.getLineSeparator" id="QsciScintillaCompat.getLineSeparator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getLineSeparator" />
+      <keyword name="QsciScintillaCompat.getRectangularSelection" id="QsciScintillaCompat.getRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getRectangularSelection" />
       <keyword name="QsciScintillaCompat.getZoom" id="QsciScintillaCompat.getZoom" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getZoom" />
       <keyword name="QsciScintillaCompat.hasIndicator" id="QsciScintillaCompat.hasIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasIndicator" />
       <keyword name="QsciScintillaCompat.indentationGuideView" id="QsciScintillaCompat.indentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indentationGuideView" />
@@ -8986,6 +8989,7 @@
       <keyword name="QsciScintillaCompat.setIndicator" id="QsciScintillaCompat.setIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicator" />
       <keyword name="QsciScintillaCompat.setIndicatorRange" id="QsciScintillaCompat.setIndicatorRange" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicatorRange" />
       <keyword name="QsciScintillaCompat.setLexer" id="QsciScintillaCompat.setLexer" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setLexer" />
+      <keyword name="QsciScintillaCompat.setRectangularSelection" id="QsciScintillaCompat.setRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setRectangularSelection" />
       <keyword name="QsciScintillaCompat.setStyleBits" id="QsciScintillaCompat.setStyleBits" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyleBits" />
       <keyword name="QsciScintillaCompat.setStyling" id="QsciScintillaCompat.setStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyling" />
       <keyword name="QsciScintillaCompat.showUserList" id="QsciScintillaCompat.showUserList" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.showUserList" />
@@ -9519,6 +9523,10 @@
       <keyword name="SnapshotTimer.paintEvent" id="SnapshotTimer.paintEvent" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.paintEvent" />
       <keyword name="SnapshotTimer.start" id="SnapshotTimer.start" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.start" />
       <keyword name="SnapshotTimer.stop" id="SnapshotTimer.stop" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.stop" />
+      <keyword name="SortOptionsDialog" id="SortOptionsDialog" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog" />
+      <keyword name="SortOptionsDialog (Constructor)" id="SortOptionsDialog (Constructor)" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog.__init__" />
+      <keyword name="SortOptionsDialog (Module)" id="SortOptionsDialog (Module)" ref="eric5.QScintilla.SortOptionsDialog.html" />
+      <keyword name="SortOptionsDialog.getData" id="SortOptionsDialog.getData" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog.getData" />
       <keyword name="SourceStat" id="SourceStat" ref="eric5.DataViews.CodeMetrics.html#SourceStat" />
       <keyword name="SourceStat (Constructor)" id="SourceStat (Constructor)" ref="eric5.DataViews.CodeMetrics.html#SourceStat.__init__" />
       <keyword name="SourceStat.dedent" id="SourceStat.dedent" ref="eric5.DataViews.CodeMetrics.html#SourceStat.dedent" />
@@ -11770,6 +11778,7 @@
       <keyword name="ViewManager.__editSelectBrace" id="ViewManager.__editSelectBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSelectBrace" />
       <keyword name="ViewManager.__editShowCallTips" id="ViewManager.__editShowCallTips" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editShowCallTips" />
       <keyword name="ViewManager.__editSmartIndent" id="ViewManager.__editSmartIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSmartIndent" />
+      <keyword name="ViewManager.__editSortSelectedLines" id="ViewManager.__editSortSelectedLines" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSortSelectedLines" />
       <keyword name="ViewManager.__editSpellingDictionary" id="ViewManager.__editSpellingDictionary" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSpellingDictionary" />
       <keyword name="ViewManager.__editStreamComment" id="ViewManager.__editStreamComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editStreamComment" />
       <keyword name="ViewManager.__editToggleComment" id="ViewManager.__editToggleComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editToggleComment" />
@@ -11783,6 +11792,7 @@
       <keyword name="ViewManager.__editorConfigChanged" id="ViewManager.__editorConfigChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorConfigChanged" />
       <keyword name="ViewManager.__editorOpened" id="ViewManager.__editorOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorOpened" />
       <keyword name="ViewManager.__editorSaved" id="ViewManager.__editorSaved" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorSaved" />
+      <keyword name="ViewManager.__editorSelectionChanged" id="ViewManager.__editorSelectionChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorSelectionChanged" />
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
       <keyword name="ViewManager.__eolPixmap" id="ViewManager.__eolPixmap" ref="eric5.ViewManager.ViewManager.html#ViewManager.__eolPixmap" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
@@ -13556,6 +13566,7 @@
       <file>eric5.QScintilla.SearchReplaceWidget.html</file>
       <file>eric5.QScintilla.Shell.html</file>
       <file>eric5.QScintilla.ShellHistoryDialog.html</file>
+      <file>eric5.QScintilla.SortOptionsDialog.html</file>
       <file>eric5.QScintilla.SpellChecker.html</file>
       <file>eric5.QScintilla.SpellCheckingDialog.html</file>
       <file>eric5.QScintilla.SpellingDictionaryEditDialog.html</file>

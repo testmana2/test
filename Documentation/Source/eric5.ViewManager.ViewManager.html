@@ -311,6 +311,9 @@ QObject
 <td><a href="#ViewManager.__editSmartIndent">__editSmartIndent</a></td>
 <td>Private method to handle the smart indent action</td>
 </tr><tr>
+<td><a href="#ViewManager.__editSortSelectedLines">__editSortSelectedLines</a></td>
+<td>Private slot to sort the selected lines.</td>
+</tr><tr>
 <td><a href="#ViewManager.__editSpellingDictionary">__editSpellingDictionary</a></td>
 <td>Private slot to edit the given spelling dictionary.</td>
 </tr><tr>
@@ -349,6 +352,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__editorSaved">__editorSaved</a></td>
 <td>Private slot to handle the editorSaved signal.</td>
+</tr><tr>
+<td><a href="#ViewManager.__editorSelectionChanged">__editorSelectionChanged</a></td>
+<td>Private slot to handle changes of the current editors selection.</td>
 </tr><tr>
 <td><a href="#ViewManager.__enableSpellingActions">__enableSpellingActions</a></td>
 <td>Private method to set the enabled state of the spelling actions.</td>
@@ -1143,6 +1149,11 @@ position in line of the cursor (int)
 <b>__editSmartIndent</b>(<i></i>)
 <p>
         Private method to handle the smart indent action
+</p><a NAME="ViewManager.__editSortSelectedLines" ID="ViewManager.__editSortSelectedLines"></a>
+<h4>ViewManager.__editSortSelectedLines</h4>
+<b>__editSortSelectedLines</b>(<i></i>)
+<p>
+        Private slot to sort the selected lines.
 </p><a NAME="ViewManager.__editSpellingDictionary" ID="ViewManager.__editSpellingDictionary"></a>
 <h4>ViewManager.__editSpellingDictionary</h4>
 <b>__editSpellingDictionary</b>(<i>dictionaryFile</i>)
@@ -1220,7 +1231,12 @@ the scintilla command to be sent
 <dd>
 filename of the saved editor
 </dd>
-</dl><a NAME="ViewManager.__enableSpellingActions" ID="ViewManager.__enableSpellingActions"></a>
+</dl><a NAME="ViewManager.__editorSelectionChanged" ID="ViewManager.__editorSelectionChanged"></a>
+<h4>ViewManager.__editorSelectionChanged</h4>
+<b>__editorSelectionChanged</b>(<i></i>)
+<p>
+        Private slot to handle changes of the current editors selection.
+</p><a NAME="ViewManager.__enableSpellingActions" ID="ViewManager.__enableSpellingActions"></a>
 <h4>ViewManager.__enableSpellingActions</h4>
 <b>__enableSpellingActions</b>(<i></i>)
 <p>

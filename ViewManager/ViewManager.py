@@ -1173,6 +1173,22 @@ class ViewManager(QObject):
         self.calltipsAct.triggered[()].connect(self.__editShowCallTips)
         self.editActions.append(self.calltipsAct)
         
+        self.sortAct = E5Action(QApplication.translate('ViewManager', 'Sort'),
+                QApplication.translate('ViewManager', 'Sort'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Alt+S", "Edit|Sort")),
+                0,
+                self.editActGrp, 'vm_edit_sort')
+        self.sortAct.setStatusTip(QApplication.translate('ViewManager',
+            'Sort the lines containing the rectangular selection'))
+        self.sortAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Sort</b>"""
+            """<p>Sort the lines spanned by a rectangular selection based on the"""
+            """ selection ignoring leading and trailing whitespace.</p>"""
+        ))
+        self.sortAct.triggered[()].connect(self.__editSortSelectedLines)
+        self.editActions.append(self.sortAct)
+        
         self.editActGrp.setEnabled(False)
         self.copyActGrp.setEnabled(False)
         
@@ -2349,6 +2365,8 @@ class ViewManager(QObject):
         menu.addMenu(autocompletionMenu)
         menu.addSeparator()
         menu.addMenu(searchMenu)
+        menu.addSeparator()
+        menu.addAction(self.sortAct)
         menu.addSeparator()
         menu.addAction(self.gotoAct)
         menu.addAction(self.gotoBraceAct)
@@ -3882,6 +3900,7 @@ class ViewManager(QObject):
         editor.encodingChanged.connect(self.__editorConfigChanged)
         editor.selectionChanged.connect(self.__searchWidget.selectionChanged)
         editor.selectionChanged.connect(self.__replaceWidget.selectionChanged)
+        editor.selectionChanged.connect(self.__editorSelectionChanged)
         editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
         editor.zoomValueChanged.connect(self.zoomValueChanged)
         
@@ -5723,6 +5742,8 @@ class ViewManager(QObject):
                 self.gotoPreviousDefAct.setEnabled(False)
                 self.gotoNextDefAct.setEnabled(False)
             
+            self.sortAct.setEnabled(editor.selectionIsRectangle())
+            
             if setSb:
                 line, pos = editor.getCursorPosition()
                 enc = editor.getEncoding()
@@ -5878,6 +5899,24 @@ class ViewManager(QObject):
         self.__setSbFile(
             fn, line + 1, pos, encoding=enc, language=lang, eol=eol, zoom=zoom)
         self._checkActions(editor, False)
+    
+    def __editorSelectionChanged(self):
+        """
+        Private slot to handle changes of the current editors selection.
+        """
+        editor = self.sender()
+        if editor:
+            self.sortAct.setEnabled(editor.selectionIsRectangle())
+        else:
+            self.sortAct.setEnabled(False)
+    
+    def __editSortSelectedLines(self):
+        """
+        Private slot to sort the selected lines.
+        """
+        editor = self.activeWindow()
+        if editor:
+            editor.sortLines()
     
     ##################################################################
     ## Below are protected utility methods

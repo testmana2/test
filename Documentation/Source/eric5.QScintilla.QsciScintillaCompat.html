@@ -199,6 +199,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.getLineSeparator">getLineSeparator</a></td>
 <td>Public method to get the line separator for the current eol mode.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.getRectangularSelection">getRectangularSelection</a></td>
+<td>Public method to retrieve the start and end of a rectangular selection.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.getZoom">getZoom</a></td>
 <td>Public method used to retrieve the current zoom factor.</td>
 </tr><tr>
@@ -294,6 +297,9 @@ QsciScintilla
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setLexer">setLexer</a></td>
 <td>Public method to set the lexer.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.setRectangularSelection">setRectangularSelection</a></td>
+<td>Public method to set a rectangular selection.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setStyleBits">setStyleBits</a></td>
 <td>Public method to set the number of bits to be used for styling.</td>
@@ -792,6 +798,17 @@ found target as a tuple of starting position and target length
 <dd>
 eol string (string)
 </dd>
+</dl><a NAME="QsciScintillaCompat.getRectangularSelection" ID="QsciScintillaCompat.getRectangularSelection"></a>
+<h4>QsciScintillaCompat.getRectangularSelection</h4>
+<b>getRectangularSelection</b>(<i></i>)
+<p>
+        Public method to retrieve the start and end of a rectangular selection.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start line and index and end line and index
+            (tuple of four int)
+</dd>
 </dl><a NAME="QsciScintillaCompat.getZoom" ID="QsciScintillaCompat.getZoom"></a>
 <h4>QsciScintillaCompat.getZoom</h4>
 <b>getZoom</b>(<i></i>)
@@ -1204,6 +1221,25 @@ the indicator or style are not valid
 <dt><i>lex</i></dt>
 <dd>
 the lexer to be set or None to reset it.
+</dd>
+</dl><a NAME="QsciScintillaCompat.setRectangularSelection" ID="QsciScintillaCompat.setRectangularSelection"></a>
+<h4>QsciScintillaCompat.setRectangularSelection</h4>
+<b>setRectangularSelection</b>(<i>startLine, startIndex, endLine, endIndex</i>)
+<p>
+        Public method to set a rectangular selection.
+</p><dl>
+<dt><i>startLine</i></dt>
+<dd>
+line number of the start of the selection (int)
+</dd><dt><i>startIndex</i></dt>
+<dd>
+index number of the start of the selection (int)
+</dd><dt><i>endLine</i></dt>
+<dd>
+line number of the end of the selection (int)
+</dd><dt><i>endIndex</i></dt>
+<dd>
+index number of the end of the selection (int)
 </dd>
 </dl><a NAME="QsciScintillaCompat.setStyleBits" ID="QsciScintillaCompat.setStyleBits"></a>
 <h4>QsciScintillaCompat.setStyleBits</h4>

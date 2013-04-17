@@ -1075,6 +1075,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
     <Source>E5Network/E5SslInfoWidget.py</Source>
+    <Source>QScintilla/SortOptionsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1387,6 +1388,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>UI/Previewer.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
+    <Form>QScintilla/SortOptionsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

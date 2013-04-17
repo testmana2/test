@@ -482,6 +482,38 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
     
+    def getRectangularSelection(self):
+        """
+        Public method to retrieve the start and end of a rectangular selection.
+        
+        @return tuple with start line and index and end line and index
+            (tuple of four int)
+        """
+        if not self.selectionIsRectangle():
+            return (-1, -1, -1, -1)
+        
+        startPos = self.SendScintilla(QsciScintilla.SCI_GETRECTANGULARSELECTIONANCHOR)
+        endPos = self.SendScintilla(QsciScintilla.SCI_GETRECTANGULARSELECTIONCARET)
+        startLine, startIndex = self.lineIndexFromPosition(startPos)
+        endLine, endIndex = self.lineIndexFromPosition(endPos)
+        
+        return (startLine, startIndex, endLine, endIndex)
+    
+    def setRectangularSelection(self, startLine, startIndex, endLine, endIndex):
+        """
+        Public method to set a rectangular selection.
+        
+        @param startLine line number of the start of the selection (int)
+        @param startIndex index number of the start of the selection (int)
+        @param endLine line number of the end of the selection (int)
+        @param endIndex index number of the end of the selection (int)
+        """
+        startPos = self.positionFromLineIndex(startLine, startIndex)
+        endPos = self.positionFromLineIndex(endLine, endIndex)
+        
+        self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONANCHOR, startPos)
+        self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONCARET, endPos)
+    
     def getLineSeparator(self):
         """
         Public method to get the line separator for the current eol mode.
