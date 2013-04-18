@@ -187,7 +187,7 @@ def guess_lexer_for_filename(_fn, _text, **options):
         if rv == 1.0:
             return lexer(**options)
         result.append((rv, lexer))
-    result.sort()
+    result.sort(key=lambda k: k[0])
     if not result[-1][0] and primary is not None:
         return primary(**options)
     return result[-1][1](**options)
