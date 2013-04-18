@@ -6741,14 +6741,20 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to sort the lines spanned by a rectangular selection.
         """
-        if not self.hasSelectedText() or not self.selectionIsRectangle():
+        if not self.selectionIsRectangle():
             return
         
         from .SortOptionsDialog import SortOptionsDialog
         dlg = SortOptionsDialog()
         if dlg.exec_() == QDialog.Accepted:
             ascending, alnum, caseSensitive = dlg.getData()
-            startLine, startIndex, endLine, endIndex = self.getRectangularSelection()
+            origStartLine, origStartIndex, origEndLine, origEndIndex = \
+                self.getRectangularSelection()
+            # convert to upper-left to lower-right
+            startLine = min(origStartLine, origEndLine)
+            startIndex = min(origStartIndex, origEndIndex)
+            endLine = max(origStartLine, origEndLine)
+            endIndex = max(origStartIndex, origEndIndex)
             
             # step 1: extract the text of the rectangular selection and the lines
             selText = {}
@@ -6779,10 +6785,18 @@ class Editor(QsciScintillaCompat):
                 keyFun = None
             
             # step 3: sort the lines
+            eol = self.getLineSeparator()
+            lastWithEol = True
             newLines = []
             for txt in sorted(selText.keys(), key=keyFun, reverse=reverse):
                 for line in selText[txt]:
-                    newLines.append(txtLines[line])
+                    txt = txtLines[line]
+                    if not txt.endswith(eol):
+                        lastWithEol = False
+                        txt += eol
+                    newLines.append(txt)
+            if not lastWithEol:
+                newLines[-1] = newLines[-1][:-len(eol)]
             
             # step 4: replace the lines by the sorted ones
             self.setSelection(startLine, 0, endLine + 1, 0)
@@ -6791,4 +6805,6 @@ class Editor(QsciScintillaCompat):
             self.endUndoAction()
             
             # step 5: reset the rectangular selection
-            self.setRectangularSelection(startLine, startIndex, endLine, endIndex)
+            self.setRectangularSelection(origStartLine, origStartIndex,
+                                         origEndLine, origEndIndex)
+            self.selectionChanged.emit()
