@@ -17,6 +17,8 @@ Version 5.4-snapshot-2013mmdd:
   -- added the capability to preview HTML, Mardown and ReST files
   -- added the capability to sort lines spanned by a rectangular selection
      based on the selected text
+  -- added entires to convert the selection to upper/lower case to the
+     edit menu
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way

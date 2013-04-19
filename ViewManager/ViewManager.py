@@ -1806,28 +1806,6 @@ class ViewManager(QObject):
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_lower')
-        self.esm.setMapping(act, QsciScintilla.SCI_LOWERCASE)
-        act.triggered[()].connect(self.esm.map)
-        self.editActions.append(act)
-        
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_upper')
-        self.esm.setMapping(act, QsciScintilla.SCI_UPPERCASE)
-        act.triggered[()].connect(self.esm.map)
-        self.editActions.append(act)
-        
-        act = E5Action(QApplication.translate('ViewManager',
                         'Move to end of display line'),
                       QApplication.translate('ViewManager',
                         'Move to end of display line'),
@@ -2304,6 +2282,28 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         self.editorActGrp.setEnabled(False)
+        
+        self.editLowerCaseAct = E5Action(QApplication.translate('ViewManager',
+                        'Convert selection to lower case'),
+                    QApplication.translate('ViewManager',
+                        'Convert selection to lower case'),
+                    QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
+                    0,
+                    self.editActGrp, 'vm_edit_convert_selection_lower')
+        self.esm.setMapping(self.editLowerCaseAct, QsciScintilla.SCI_LOWERCASE)
+        self.editLowerCaseAct.triggered[()].connect(self.esm.map)
+        self.editActions.append(self.editLowerCaseAct)
+        
+        self.editUpperCaseAct = E5Action(QApplication.translate('ViewManager',
+                        'Convert selection to upper case'),
+                    QApplication.translate('ViewManager',
+                        'Convert selection to upper case'),
+                    QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+U')),
+                    0,
+                    self.editActGrp, 'vm_edit_convert_selection_upper')
+        self.esm.setMapping(self.editUpperCaseAct, QsciScintilla.SCI_UPPERCASE)
+        self.editUpperCaseAct.triggered[()].connect(self.esm.map)
+        self.editActions.append(self.editUpperCaseAct)
     
     def initEditMenu(self):
         """
@@ -2362,11 +2362,13 @@ class ViewManager(QObject):
         menu.addAction(self.streamCommentAct)
         menu.addAction(self.boxCommentAct)
         menu.addSeparator()
+        menu.addAction(self.editUpperCaseAct)
+        menu.addAction(self.editLowerCaseAct)
+        menu.addAction(self.sortAct)
+        menu.addSeparator()
         menu.addMenu(autocompletionMenu)
         menu.addSeparator()
         menu.addMenu(searchMenu)
-        menu.addSeparator()
-        menu.addAction(self.sortAct)
         menu.addSeparator()
         menu.addAction(self.gotoAct)
         menu.addAction(self.gotoBraceAct)
@@ -5743,6 +5745,9 @@ class ViewManager(QObject):
                 self.gotoNextDefAct.setEnabled(False)
             
             self.sortAct.setEnabled(editor.selectionIsRectangle())
+            enable = editor.hasSelection()
+            self.editUpperCaseAct.setEnabled(enable)
+            self.editLowerCaseAct.setEnabled(enable)
             
             if setSb:
                 line, pos = editor.getCursorPosition()
@@ -5907,6 +5912,9 @@ class ViewManager(QObject):
         editor = self.sender()
         if editor:
             self.sortAct.setEnabled(editor.selectionIsRectangle())
+            enable = editor.hasSelection()
+            self.editUpperCaseAct.setEnabled(enable)
+            self.editLowerCaseAct.setEnabled(enable)
         else:
             self.sortAct.setEnabled(False)
     

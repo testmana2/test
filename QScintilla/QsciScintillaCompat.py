@@ -474,6 +474,14 @@ class QsciScintillaCompat(QsciScintilla):
         """
         self.SendScintilla(QsciScintilla.SCI_LINEENDEXTEND)
     
+    def hasSelection(self):
+        """
+        Public method to check for a selection.
+        
+        @return flag indicating the presence of a selection (boolean)
+        """
+        return self.getSelection()[0] != -1
+    
     def selectionIsRectangle(self):
         """
         Public method to check, if the current selection is rectangular.

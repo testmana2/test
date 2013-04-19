@@ -8959,6 +8959,7 @@
       <keyword name="QsciScintillaCompat.getRectangularSelection" id="QsciScintillaCompat.getRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getRectangularSelection" />
       <keyword name="QsciScintillaCompat.getZoom" id="QsciScintillaCompat.getZoom" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getZoom" />
       <keyword name="QsciScintillaCompat.hasIndicator" id="QsciScintillaCompat.hasIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasIndicator" />
+      <keyword name="QsciScintillaCompat.hasSelection" id="QsciScintillaCompat.hasSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasSelection" />
       <keyword name="QsciScintillaCompat.indentationGuideView" id="QsciScintillaCompat.indentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indentationGuideView" />
       <keyword name="QsciScintillaCompat.indicatorDefine" id="QsciScintillaCompat.indicatorDefine" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indicatorDefine" />
       <keyword name="QsciScintillaCompat.lineAt" id="QsciScintillaCompat.lineAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineAt" />
