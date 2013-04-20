@@ -2209,7 +2209,7 @@ class Hg(VersionControl):
             self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
-            self.__lastChangeGroupPath = os.path.dirname(self.__lastChangeGroupPath)
+            self.__lastChangeGroupPath = os.path.dirname(file)
             
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 from .HgLogBrowserDialog import HgLogBrowserDialog
@@ -2244,7 +2244,7 @@ class Hg(VersionControl):
             self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
-            self.__lastChangeGroupPath = os.path.dirname(self.__lastChangeGroupPath)
+            self.__lastChangeGroupPath = os.path.dirname(file)
             
             args = []
             args.append('identify')
