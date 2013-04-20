@@ -8,6 +8,10 @@ Module implementing the <a href="http://www.virustotal.com">VirusTotal</a> API c
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
 
 import json
 

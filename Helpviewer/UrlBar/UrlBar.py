@@ -317,8 +317,8 @@ class UrlBar(E5LineEdit):
                 
                 gradient = QLinearGradient(QPointF(0, 0), QPointF(self.width(), 0))
                 gradient.setColorAt(0, loadingColor)
-                gradient.setColorAt(progress / 100 - 0.000001, loadingColor)
-                gradient.setColorAt(progress / 100, backgroundColor)
+                gradient.setColorAt(progress / 100.0 - 0.000001, loadingColor)
+                gradient.setColorAt(progress / 100.0, backgroundColor)
                 p.setBrush(QPalette.Base, gradient)
             
             self.setPalette(p)
