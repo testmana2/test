@@ -764,8 +764,8 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         ####################################################################
         
         font = Preferences.getEditorOtherFonts("MonospacedFont")
-        self.contents.setFontFamily(font.family())
-        self.contents.setFontPointSize(font.pointSize())
+        self.licenseEdit.setFontFamily(font.family())
+        self.licenseEdit.setFontPointSize(font.pointSize())
         
         self.licenseEdit.setPlainText(licenseText)
         
