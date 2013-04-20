@@ -232,21 +232,30 @@ class SymbolsModel(QAbstractTableModel):
             if col == 0:
                 return str(id)
             elif col == 1:
-                return chr(id)
+                try:
+                    return chr(id)
+                except ValueError:
+                    return chr(65533)
             elif col == 2:
                 return "0x{0:04x}".format(id)
             elif col == 3:
                 if id in html_entities.codepoint2name:
                     return "&{0};".format(html_entities.codepoint2name[id])
             elif col == 4:
-                return unicodedata.name(chr(id), '').title()
+                try:
+                    return unicodedata.name(chr(id), '').title()
+                except ValueError:
+                    return self.trUtf8("not possible: narrow Python build")
         
         if role == Qt.BackgroundColorRole:
             if index.column() == 0:
                 return QColor(Qt.lightGray)
         
         if role == Qt.TextColorRole:
-            char = chr(id)
+            try:
+                char = chr(id)
+            except ValueError:
+                char = chr(65533)
             if self.__isDigit(char):
                 return QColor(Qt.darkBlue)
             elif self.__isLetter(char):
