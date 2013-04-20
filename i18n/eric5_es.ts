@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -8602,12 +8603,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="6763"/>
         <source>Sort Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar Líneas</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="6763"/>
         <source>The selection contains illegal data for a numerical sort.</source>
-        <translation type="unfinished"></translation>
+        <translation>La selección contiene datos ilegales para una ordenación numérica.</translation>
     </message>
 </context>
 <context>
@@ -14402,7 +14403,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -40361,82 +40362,82 @@ Not connected</source>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="14"/>
         <source>Sort Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de Ordenación</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="23"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="29"/>
         <source>Select to sort in ascending order</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para ordenar en orden ascendente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="32"/>
         <source>Ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascendente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="42"/>
         <source>Select to sort in descending order</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para ordenar en orden descendente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="45"/>
         <source>Descending</source>
-        <translation type="unfinished"></translation>
+        <translation>Descendente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="58"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="64"/>
         <source>Select to sort alphanumerically</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para ordenar alfanuméricamente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="67"/>
         <source>Alphanumerical</source>
-        <translation type="unfinished"></translation>
+        <translation>Alfanuméricamente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="77"/>
         <source>Select to sort numerically</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para ordenar numéricamente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="80"/>
         <source>Numerical</source>
-        <translation type="unfinished"></translation>
+        <translation>Numéricamente</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="90"/>
         <source>Case Sensitivity</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensible a Mayúsculas/Minúsculas</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="96"/>
         <source>Select to respect the case while sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para respetar mayúsculas/minúsculas al ordenar</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="99"/>
         <source>Respect Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Respetar Mayúsculas/Minúsculas</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="109"/>
         <source>Select to ignore the case while sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para ignorar mayúsculas/minúsculas al ordenar</translation>
     </message>
     <message>
         <location filename="QScintilla/SortOptionsDialog.ui" line="112"/>
         <source>Ignore Case</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar Mayúsculas/Minúsculas</translation>
     </message>
 </context>
 <context>
@@ -56158,23 +56159,23 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="1176"/>
         <source>Sort</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="1176"/>
         <source>Ctrl+Alt+S</source>
         <comment>Edit|Sort</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+S</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="1182"/>
         <source>Sort the lines containing the rectangular selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar las líneas que contienen la selección rectangular</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="1184"/>
         <source>&lt;b&gt;Sort&lt;/b&gt;&lt;p&gt;Sort the lines spanned by a rectangular selection based on the selection ignoring leading and trailing whitespace.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ordenar&lt;/b&gt;&lt;p&gt;Ordenar las líneas contenidas en una selección rectangular basada en la selección, ignorando espacios en blanco delante y detrás.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
