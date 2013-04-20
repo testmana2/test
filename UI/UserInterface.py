@@ -12,7 +12,7 @@ import sys
 import logging
 
 from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
-    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt
+    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt, QLibraryInfo
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
     QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QProgressDialog, \
     QVBoxLayout, QDockWidget, QAction, QLabel
@@ -1602,7 +1602,9 @@ class UserInterface(E5MainWindow):
             designerExe = Utilities.getQtMacBundle("designer")
         else:
             designerExe = Utilities.generateQtToolName("designer")
-        if Utilities.isinpath(designerExe):
+        if Utilities.isinpath(designerExe) or \
+           os.path.exists(os.path.join(
+                QLibraryInfo.location(QLibraryInfo.BinariesPath), designerExe)):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer'),
                     UI.PixmapCache.getIcon("designer4.png"),
                     self.trUtf8('Qt-&Designer...'), 0, 0, self, 'qt_designer4')
@@ -1622,7 +1624,9 @@ class UserInterface(E5MainWindow):
             linguistExe = Utilities.getQtMacBundle("linguist")
         else:
             linguistExe = Utilities.generateQtToolName("linguist")
-        if Utilities.isinpath(linguistExe):
+        if Utilities.isinpath(linguistExe) or \
+           os.path.exists(os.path.join(
+                QLibraryInfo.location(QLibraryInfo.BinariesPath), linguistExe)):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist'),
                     UI.PixmapCache.getIcon("linguist4.png"),
                     self.trUtf8('Qt-&Linguist...'), 0, 0, self, 'qt_linguist4')
@@ -3751,9 +3755,11 @@ class UserInterface(E5MainWindow):
             designer, args = Utilities.prepareQtMacBundle("designer", version, args)
         else:
             if version == 4:
-                designer = Utilities.generateQtToolName("designer")
+                designer = os.path.join(
+                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.generateQtToolName("designer"))
             if Utilities.isWindowsPlatform():
-                designer = designer + '.exe'
+                designer += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(designer, args):
@@ -3808,9 +3814,11 @@ class UserInterface(E5MainWindow):
             linguist, args = Utilities.prepareQtMacBundle("linguist", version, args)
         else:
             if version == 4:
-                linguist = Utilities.generateQtToolName("linguist")
+                linguist = os.path.join(
+                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.generateQtToolName("linguist"))
             if Utilities.isWindowsPlatform():
-                linguist = linguist + '.exe'
+                linguist += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(linguist, args):
@@ -3852,9 +3860,11 @@ class UserInterface(E5MainWindow):
             assistant, args = Utilities.prepareQtMacBundle("assistant", version, args)
         else:
             if version == 4:
-                assistant = Utilities.generateQtToolName("assistant")
+                assistant = os.path.join(
+                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.generateQtToolName("assistant"))
             if Utilities.isWindowsPlatform():
-                assistant = assistant + '.exe'
+                assistant += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(assistant, args):

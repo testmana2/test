@@ -12,6 +12,8 @@ import os
 import shutil
 import subprocess
 
+from PyQt4.QtCore import QLibraryInfo
+
 from Utilities import joinext, relpath, html_encode
 
 HelpCollection = r"""<?xml version="1.0" encoding="utf-8" ?>
@@ -259,8 +261,9 @@ class QtHelpGenerator(object):
         # generate the compressed files
         shutil.copy(os.path.join(self.outputDir, HelpProjectFile), self.htmlDir)
         os.chdir(self.htmlDir)
-        subprocess.call(["qhelpgenerator", "source.qhp",
-                         "-o", os.path.join(self.outputDir, HelpHelpFile)])
+        subprocess.call([os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                            "qhelpgenerator"),
+                         "source.qhp", "-o", os.path.join(self.outputDir, HelpHelpFile)])
         os.remove(HelpProjectFile)
         
         if self.createCollection:
@@ -268,6 +271,9 @@ class QtHelpGenerator(object):
             sys.stdout.flush()
             sys.stderr.flush()
             os.chdir(self.outputDir)
-            subprocess.call(["qcollectiongenerator", "source.qhcp", "-o", "collection.qhc"])
+            subprocess.call([os.path.join(
+                                QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                                "qcollectiongenerator"),
+                             "source.qhcp", "-o", "collection.qhc"])
         
         os.chdir(cwd)

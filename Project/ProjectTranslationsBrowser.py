@@ -11,7 +11,7 @@ import os
 import shutil
 import fnmatch
 
-from PyQt4.QtCore import pyqtSignal, QProcess
+from PyQt4.QtCore import pyqtSignal, QProcess, QLibraryInfo
 from PyQt4.QtGui import QDialog, QMenu
 
 from E5Gui import E5MessageBox
@@ -1053,7 +1053,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
-            lrelease = Utilities.generateQtToolName("lrelease")
+            lrelease = os.path.join(
+                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.generateQtToolName("lrelease"))
         else:
             return
         if Utilities.isWindowsPlatform():
