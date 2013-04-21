@@ -27,6 +27,8 @@ Version 5.4-snapshot-2013mmdd:
      --- added a context menu entry to delete the selected directory
   -- Project Forms Viewer
      --- added support for more widgets in the code creation dialog
+- Symbols Viewer
+  -- extended the list of supported unicode code blocks
 - Template Viewer
   -- added a context menu entry to reload the templates
   -- changed logic such, that the templates are only written, if they contain
