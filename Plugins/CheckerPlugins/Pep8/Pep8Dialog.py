@@ -11,6 +11,7 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
 import fnmatch
+import tokenize
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
@@ -125,7 +126,40 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.positionRole, int(pos))
         itm.setData(0, self.messageRole, message)
-    
+
+    def __createErrorItem(self, file, line, pos, message):
+        """
+        Private method to create an entry in the result list.
+        
+        @param file file name of the file (string)
+        @param line line number of issue (integer or string)
+        @param pos character position of issue (integer or string)
+        @param message message text (string)
+        @param fixed flag indicating a fixed issue (boolean)
+        """
+        if self.__lastFileItem is None:
+            # It's a new file
+            self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
+            self.__lastFileItem.setFirstColumnSpanned(True)
+            self.__lastFileItem.setExpanded(True)
+            self.__lastFileItem.setData(0, self.filenameRole, file)
+        
+        itm = QTreeWidgetItem(self.__lastFileItem,
+            ["{0:6}".format(line), '', message])
+        itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
+        
+        itm.setTextAlignment(0, Qt.AlignRight)
+        itm.setTextAlignment(1, Qt.AlignHCenter)
+        
+        itm.setTextAlignment(0, Qt.AlignVCenter)
+        itm.setTextAlignment(1, Qt.AlignVCenter)
+        itm.setTextAlignment(2, Qt.AlignVCenter)
+        
+        itm.setData(0, self.filenameRole, file)
+        itm.setData(0, self.lineRole, int(line))
+        itm.setData(0, self.positionRole, int(pos))
+        itm.setData(0, self.messageRole, message)
+
     def __updateStatistics(self, statistics, fixer):
         """
         Private method to update the collected statistics.
@@ -222,12 +256,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             files = fn[:]
         elif os.path.isdir(fn):
             files = []
-            for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
+                files.extend(Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         
@@ -241,15 +273,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
         
-        py3files = [f for f in files \
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files \
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
-        
-        if len(py3files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+        if len(files) > 0:
+            self.checkProgress.setMaximum(len(files))
             QApplication.processEvents()
             
             # extract the configuration values
@@ -266,7 +291,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 
                 # now go through all the files
                 progress = 0
-                for file in py3files + py2files:
+                for file in files:
                     self.checkProgress.setValue(progress)
                     QApplication.processEvents()
                     
@@ -281,58 +306,57 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         source = source.splitlines(True)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", "1",
+                        self.__createResultItem(file, 1, 1,
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], False)
                         progress += 1
                         continue
                     
-                    flags = Utilities.extractFlags(source)
-                    ext = os.path.splitext(file)[1]
                     if fixIssues:
                         from .Pep8Fixer import Pep8Fixer
                         fixer = Pep8Fixer(self.__project, file, source,
                                           fixCodes, True)  # always fix in place
                     else:
                         fixer = None
-                    if ("FileType" in flags and
-                        flags["FileType"] in ["Python", "Python2"]) or \
-                       file in py2files or \
-                       (ext in [".py", ".pyw"] and \
-                        Preferences.getProject("DeterminePyFromProject") and \
-                        self.__project.isOpen() and \
-                        self.__project.isProjectFile(file) and \
-                        self.__project.getProjectLanguage() in ["Python",
-                                                                "Python2"]):
-                        from .Pep8Checker import Pep8Py2Checker
-                        checker = Pep8Py2Checker(file, [],
-                            repeat=repeatMessages,
-                            select=includeMessages,
-                            ignore=excludeMessages)
-                    else:
-                        from .Pep8Checker import Pep8Checker
-                        checker = Pep8Checker(file, source,
-                            repeat=repeatMessages,
-                            select=includeMessages,
-                            ignore=excludeMessages)
+                    from .Pep8Checker import Pep8Checker
+                    checker = Pep8Checker(file, source,
+                        repeat=repeatMessages,
+                        select=includeMessages,
+                        ignore=excludeMessages)
+                    try:
                         checker.check_all()
-                    checker.messages.sort(key=lambda a: a[1])
-                    for message in checker.messages:
-                        fname, lineno, position, text = message
-                        if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
-                                source[lineno - 1].strip()):
-                            self.noResults = False
-                            fixed = False
-                            if fixer:
-                                fixed, msg = fixer.fixIssue(lineno, position, text)
-                                if fixed:
-                                    text += "\n" + \
-                                            self.trUtf8("Fix: {0}").format(msg)
-                            self.__createResultItem(
-                                fname, lineno, position, text, fixed)
-                    fixer and fixer.saveFile(encoding)
-                    self.__updateStatistics(checker.statistics, fixer)
-                    progress += 1
+                    except tokenize.TokenError as msg:
+                        self.noResults = False
+                        self.__createErrorItem(file, 1, -1,
+                            self.trUtf8("Token Error: {0}".format(str(msg))))
+                    except IndentationError as err:
+                        self.noResults = False
+                        self.__createErrorItem(file, err.lineno, -1,
+                            self.trUtf8("Indentation Error: {0}".format(str(err.msg))))
+                    except Exception as err:
+                        self.noResults = False
+                        self.__createErrorItem(file, 1, -1,
+                            self.trUtf8("Unspecific Error: {0}".format(str(err))))
+                    else:
+                        checker.messages.sort(key=lambda a: a[1])
+                        for message in checker.messages:
+                            fname, lineno, position, text = message
+                            if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
+                                    source[lineno - 1].strip()):
+                                self.noResults = False
+                                fixed = False
+                                if fixer:
+                                    fixed, msg = fixer.fixIssue(lineno, position, text)
+                                    if fixed:
+                                        text += "\n" + \
+                                                self.trUtf8("Fix: {0}").format(msg)
+                                self.__createResultItem(
+                                    fname, lineno, position, text, fixed)
+                        if fixer:
+                            fixer.saveFile(encoding)
+                        self.__updateStatistics(checker.statistics, fixer)
+                    finally:
+                        progress += 1
             finally:
                 # reenable updates of the list
                 self.resultList.setSortingEnabled(True)
@@ -450,7 +474,11 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             vm.openSourceFile(fn, lineno=lineno, pos=position)
             editor = vm.getOpenEditor(fn)
             
-            editor.toggleFlakesWarning(lineno, True, message)
+            if position > 0:
+                editor.toggleFlakesWarning(lineno, True, message)
+            else:
+                error = message.split(':', 1)[-1]
+                editor.toggleSyntaxError(lineno, 1, True, error.strip(), show=True)
     
     @pyqtSlot()
     def on_showButton_clicked(self):

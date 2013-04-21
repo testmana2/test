@@ -5851,7 +5851,6 @@ eric5.Preferences.Prefs.uiDefaults?7
 eric5.Preferences.Prefs.userDefaults?7
 eric5.Preferences.Prefs.varDefaults?7
 eric5.Preferences.Prefs.vcsDefaults?7
-eric5.Preferences.Prefs.viewProfilesLength?7
 eric5.Preferences.Prefs.webSettingsIntitialized?7
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_buttonBox_clicked?4(button)
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_programsSearchButton_clicked?4()
@@ -8260,12 +8259,6 @@ eric5.Utilities.win32_GetUserName?4()
 eric5.Utilities.win32_Kill?4(pid)
 eric5.Utilities.win32_getRealName?4()
 eric5.Utilities.writeEncodedFile?4(filename, text, orig_coding)
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker.filename?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker.ignore?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker.repeat?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker.report_error_args?4(line_number, offset, code, check, *args)
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker.select?7
-eric5.UtilitiesPython2.Pep8Checker.Pep8Checker?1(filename, lines, repeat=False, select="", ignore="")
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_line?4()
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_lineno?4()
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_msg?4()
@@ -8286,78 +8279,6 @@ eric5.UtilitiesPython2.Tools.extractLineFlags?4(line, startComment=")
 eric5.UtilitiesPython2.Tools.get_coding?4(text)
 eric5.UtilitiesPython2.Tools.normalizeCode?4(codestring)
 eric5.UtilitiesPython2.Tools.readEncodedFile?4(filename)
-eric5.UtilitiesPython2.pep8.BENCHMARK_KEYS?7
-eric5.UtilitiesPython2.pep8.BINARY_OPERATORS?7
-eric5.UtilitiesPython2.pep8.Checker.build_tokens_line?4()
-eric5.UtilitiesPython2.pep8.Checker.check_all?4(expected=None, line_offset=0)
-eric5.UtilitiesPython2.pep8.Checker.check_logical?4()
-eric5.UtilitiesPython2.pep8.Checker.check_physical?4(line)
-eric5.UtilitiesPython2.pep8.Checker.readline?4()
-eric5.UtilitiesPython2.pep8.Checker.readline_check_physical?4()
-eric5.UtilitiesPython2.pep8.Checker.report_error?4(line_number, offset, text, check)
-eric5.UtilitiesPython2.pep8.Checker.run_check?4(check, argument_names)
-eric5.UtilitiesPython2.pep8.Checker?1(filename, lines=None)
-eric5.UtilitiesPython2.pep8.DEFAULT_EXCLUDE?7
-eric5.UtilitiesPython2.pep8.DEFAULT_IGNORE?7
-eric5.UtilitiesPython2.pep8.DOCSTRING_REGEX?7
-eric5.UtilitiesPython2.pep8.E225NOT_KEYWORDS?7
-eric5.UtilitiesPython2.pep8.ERRORCODE_REGEX?7
-eric5.UtilitiesPython2.pep8.EXTRANEOUS_WHITESPACE_REGEX?7
-eric5.UtilitiesPython2.pep8.INDENT_REGEX?7
-eric5.UtilitiesPython2.pep8.MAX_LINE_LENGTH?7
-eric5.UtilitiesPython2.pep8.OPERATORS?7
-eric5.UtilitiesPython2.pep8.RAISE_COMMA_REGEX?7
-eric5.UtilitiesPython2.pep8.SELFTEST_REGEX?7
-eric5.UtilitiesPython2.pep8.SKIP_TOKENS?7
-eric5.UtilitiesPython2.pep8.UNARY_OPERATORS?7
-eric5.UtilitiesPython2.pep8.WHITESPACE?7
-eric5.UtilitiesPython2.pep8.WHITESPACE_AROUND_NAMED_PARAMETER_REGEX?7
-eric5.UtilitiesPython2.pep8.WHITESPACE_AROUND_OPERATOR_REGEX?7
-eric5.UtilitiesPython2.pep8._main?5()
-eric5.UtilitiesPython2.pep8.args?7
-eric5.UtilitiesPython2.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level, blank_lines_before_comment)
-eric5.UtilitiesPython2.pep8.compound_statements?4(logical_line)
-eric5.UtilitiesPython2.pep8.excluded?4(filename)
-eric5.UtilitiesPython2.pep8.expand_indent?4(line)
-eric5.UtilitiesPython2.pep8.extraneous_whitespace?4(logical_line)
-eric5.UtilitiesPython2.pep8.filename_match?4(filename)
-eric5.UtilitiesPython2.pep8.find_checks?4(argument_name)
-eric5.UtilitiesPython2.pep8.get_count?4(prefix='')
-eric5.UtilitiesPython2.pep8.get_error_statistics?4()
-eric5.UtilitiesPython2.pep8.get_statistics?4(prefix='')
-eric5.UtilitiesPython2.pep8.get_warning_statistics?4()
-eric5.UtilitiesPython2.pep8.ignore_code?4(code)
-eric5.UtilitiesPython2.pep8.imports_on_separate_lines?4(logical_line)
-eric5.UtilitiesPython2.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
-eric5.UtilitiesPython2.pep8.input_dir?4(dirname, runner=None)
-eric5.UtilitiesPython2.pep8.input_file?4(filename)
-eric5.UtilitiesPython2.pep8.maximum_line_length?4(physical_line)
-eric5.UtilitiesPython2.pep8.message?4(text)
-eric5.UtilitiesPython2.pep8.missing_newline?4(physical_line)
-eric5.UtilitiesPython2.pep8.missing_whitespace?4(logical_line)
-eric5.UtilitiesPython2.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.mute_string?4(text)
-eric5.UtilitiesPython2.pep8.options?7
-eric5.UtilitiesPython2.pep8.print_benchmark?4(elapsed)
-eric5.UtilitiesPython2.pep8.print_statistics?4(prefix='')
-eric5.UtilitiesPython2.pep8.process_options?4(arglist=None)
-eric5.UtilitiesPython2.pep8.python_3000_backticks?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_has_key?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_not_equal?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_raise_comma?4(logical_line)
-eric5.UtilitiesPython2.pep8.readlines?4(filename)
-eric5.UtilitiesPython2.pep8.reset_counters?4()
-eric5.UtilitiesPython2.pep8.run_tests?4(filename)
-eric5.UtilitiesPython2.pep8.selftest?4()
-eric5.UtilitiesPython2.pep8.tabs_obsolete?4(physical_line)
-eric5.UtilitiesPython2.pep8.tabs_or_spaces?4(physical_line, indent_char)
-eric5.UtilitiesPython2.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
-eric5.UtilitiesPython2.pep8.trailing_whitespace?4(physical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_comma?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_named_parameter_equals?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_operator?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.VCS.CommandOptionsDialog.vcsCommandOptionsDialog.getOptions?4()
 eric5.VCS.CommandOptionsDialog.vcsCommandOptionsDialog?1(vcs, parent=None)
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSAdd?5()

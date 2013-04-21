@@ -364,13 +364,12 @@ def maximum_line_length(physical_line):
     """
     line = physical_line.rstrip()
     length = len(line)
-    if length > MAX_LINE_LENGTH:
-        try:
-            # The line could contain multi-byte characters
-            if hasattr(line, 'decode'):   # Python 2 only
-                length = len(line.decode('utf-8'))
-        except UnicodeDecodeError:
-            pass
+    try:
+        # The line could contain multi-byte characters
+        if hasattr(line, 'decode'):   # Python 2 only
+            length = len(line.decode('utf-8'))
+    except (UnicodeDecodeError, UnicodeEncodeError):
+        pass    
     if length > MAX_LINE_LENGTH:
         return MAX_LINE_LENGTH, "E501", length
 
@@ -985,7 +984,8 @@ class Checker(object):
         for name, check, argument_names in options.physical_checks:
             result = self.run_check(check, argument_names)
             if result is not None:
-                offset, code, *args = result
+                offset, code = result[:2]
+                args = result[2:]
                 self.report_error_args(self.line_number, offset, code, check,
                     *args)
 
@@ -1041,7 +1041,8 @@ class Checker(object):
                 print('   ' + name)
             result = self.run_check(check, argument_names)
             if result is not None:
-                offset, code, *args = result
+                offset, code = result[:2]
+                args = result[2:]
                 if isinstance(offset, tuple):
                     original_number, original_offset = offset
                 else:

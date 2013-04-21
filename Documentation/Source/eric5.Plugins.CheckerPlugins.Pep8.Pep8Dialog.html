@@ -63,6 +63,9 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.__clearErrors">__clearErrors</a></td>
 <td>Private method to clear all warning markers of open editors.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.__createErrorItem">__createErrorItem</a></td>
+<td>Private method to create an entry in the result list.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
 </tr><tr>
@@ -134,7 +137,29 @@ reference to the parent widget (QWidget)
 <b>__clearErrors</b>(<i></i>)
 <p>
         Private method to clear all warning markers of open editors.
-</p><a NAME="Pep8Dialog.__createResultItem" ID="Pep8Dialog.__createResultItem"></a>
+</p><a NAME="Pep8Dialog.__createErrorItem" ID="Pep8Dialog.__createErrorItem"></a>
+<h4>Pep8Dialog.__createErrorItem</h4>
+<b>__createErrorItem</b>(<i>file, line, pos, message</i>)
+<p>
+        Private method to create an entry in the result list.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+file name of the file (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of issue (integer or string)
+</dd><dt><i>pos</i></dt>
+<dd>
+character position of issue (integer or string)
+</dd><dt><i>message</i></dt>
+<dd>
+message text (string)
+</dd><dt><i>fixed</i></dt>
+<dd>
+flag indicating a fixed issue (boolean)
+</dd>
+</dl><a NAME="Pep8Dialog.__createResultItem" ID="Pep8Dialog.__createResultItem"></a>
 <h4>Pep8Dialog.__createResultItem</h4>
 <b>__createResultItem</b>(<i>file, line, pos, message, fixed</i>)
 <p>
