@@ -7,6 +7,7 @@
 Module implementing a widget to select a symbol in various formats.
 """
 
+import sys
 import unicodedata
 import html.entities
 
@@ -41,7 +42,7 @@ class SymbolsModel(QAbstractTableModel):
             self.trUtf8("Name"),
         ]
         
-        self.__tables = (
+        self.__tables = [
             # first   last     display name
             (0x0,    0x1f,   self.trUtf8("Control Characters")),
             (0x20,   0x7f,   self.trUtf8("Basic Latin")),
@@ -150,16 +151,19 @@ class SymbolsModel(QAbstractTableModel):
             (0xfeff, 0xfeff, self.trUtf8("Specials")),
             (0xff00, 0xffef, self.trUtf8("Half- and Fullwidth Forms")),
             (0xfff0, 0xffff, self.trUtf8("Specials")),
-            (0x10300, 0x1032f, self.trUtf8("Old Italic")),
-            (0x10330, 0x1034f, self.trUtf8("Gothic")),
-            (0x10400, 0x1044f, self.trUtf8("Deseret")),
-            (0x1d000, 0x1d0ff, self.trUtf8("Byzantine Musical Symbols")),
-            (0x1d100, 0x1d1ff, self.trUtf8("Musical Symbols")),
-            (0x1d400, 0x1d7ff, self.trUtf8("Mathematical Alphanumeric Symbols")),
-            (0x20000, 0x2a6d6, self.trUtf8("CJK Unified Ideogr. Ext. B")),
-            (0x2f800, 0x2fa1f, self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
-            (0xe0000, 0xe007f, self.trUtf8("Tags")),
-        )
+        ]
+        if sys.maxunicode > 0xffff:
+            self.__tables.extend([
+                (0x10300, 0x1032f, self.trUtf8("Old Italic")),
+                (0x10330, 0x1034f, self.trUtf8("Gothic")),
+                (0x10400, 0x1044f, self.trUtf8("Deseret")),
+                (0x1d000, 0x1d0ff, self.trUtf8("Byzantine Musical Symbols")),
+                (0x1d100, 0x1d1ff, self.trUtf8("Musical Symbols")),
+                (0x1d400, 0x1d7ff, self.trUtf8("Mathematical Alphanumeric Symbols")),
+                (0x20000, 0x2a6d6, self.trUtf8("CJK Unified Ideogr. Ext. B")),
+                (0x2f800, 0x2fa1f, self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
+                (0xe0000, 0xe007f, self.trUtf8("Tags")),
+            ])
         self.__currentTableIndex = 0
     
     def getTableNames(self):
