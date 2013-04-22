@@ -12407,7 +12407,7 @@
       <keyword name="getProjectBrowserFlags" id="getProjectBrowserFlags" ref="eric5.Preferences.__init__.html#getProjectBrowserFlags" />
       <keyword name="getPython" id="getPython" ref="eric5.Preferences.__init__.html#getPython" />
       <keyword name="getPythonLibPath" id="getPythonLibPath" ref="eric5.Utilities.__init__.html#getPythonLibPath" />
-      <keyword name="getPythonModulesDirectory" id="getPythonModulesDirectory" ref="eric5.Utilities.__init__.html#getPythonModulesDirectory" />
+      <keyword name="getPythonModulesDirectory" id="getPythonModulesDirectory" ref="eric5.Globals.__init__.html#getPythonModulesDirectory" />
       <keyword name="getPythonVersion" id="getPythonVersion" ref="eric5.Utilities.__init__.html#getPythonVersion" />
       <keyword name="getQt" id="getQt" ref="eric5.Preferences.__init__.html#getQt" />
       <keyword name="getQt4DocDir" id="getQt4DocDir" ref="eric5.Preferences.__init__.html#getQt4DocDir" />

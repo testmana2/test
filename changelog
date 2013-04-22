@@ -8,6 +8,7 @@ Version 5.3.1:
 
 Version 5.3.0:
 - bug fixes
+  -- changed code to be compatible with latest PyQt4 Windows installers
 
 Version 5.3-snapshot-20130106:
 - bug fixes

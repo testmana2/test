@@ -34,7 +34,7 @@ from E5Network.E5Ftp import E5FtpProxyType
 import QScintilla.Lexers
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters
+    isWindowsPlatform, findPython2Interpreters, getPythonModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -2251,8 +2251,8 @@ def getQt4TranslationsDir(prefClass=Prefs):
     if s == "":
         s = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     if s == "" and isWindowsPlatform():
-        from PyQt4 import pyqtconfig
-        transPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "translations")
+        transPath = os.path.join(getPythonModulesDirectory(),
+                                 "PyQt4", "translations")
         if os.path.exists(transPath):
             s = transPath
     return s

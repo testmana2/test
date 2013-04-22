@@ -207,16 +207,13 @@ def main():
         splash = SplashScreen()
 
     # modify the executable search path for the PyQt4 installer
-    try:
-        from PyQt4 import pyqtconfig
-        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
+    if Globals.isWindowsPlatform():
+        pyqtDataDir = os.path.join(Globals.getPythonModulesDirectory(), "PyQt4")
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
             path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
         else:
             path = pyqtDataDir + os.pathsep + os.environ["PATH"]
         os.environ["PATH"] = path
-    except (AttributeError, ImportError):
-        pass
     
     pluginFile = None
     noopen = False
