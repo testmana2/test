@@ -1597,14 +1597,14 @@ class UserInterface(E5MainWindow):
         
         # check for Qt4/Qt5 designer and linguist
         if Utilities.isWindowsPlatform():
-            designerExe = "{0}.exe".format(Utilities.generateQtToolName("designer"))
+            designerExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                "{0}.exe".format(Utilities.generateQtToolName("designer")))
         elif Utilities.isMacPlatform():
             designerExe = Utilities.getQtMacBundle("designer")
         else:
-            designerExe = Utilities.generateQtToolName("designer")
-        if Utilities.isinpath(designerExe) or \
-           os.path.exists(os.path.join(
-                QLibraryInfo.location(QLibraryInfo.BinariesPath), designerExe)):
+            designerExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                Utilities.generateQtToolName("designer"))
+        if os.path.exists(designerExe):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer'),
                     UI.PixmapCache.getIcon("designer4.png"),
                     self.trUtf8('Qt-&Designer...'), 0, 0, self, 'qt_designer4')
@@ -1619,14 +1619,14 @@ class UserInterface(E5MainWindow):
             self.designer4Act = None
         
         if Utilities.isWindowsPlatform():
-            linguistExe = "{0}.exe".format(Utilities.generateQtToolName("linguist"))
+            linguistExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                "{0}.exe".format(Utilities.generateQtToolName("linguist")))
         elif Utilities.isMacPlatform():
             linguistExe = Utilities.getQtMacBundle("linguist")
         else:
-            linguistExe = Utilities.generateQtToolName("linguist")
-        if Utilities.isinpath(linguistExe) or \
-           os.path.exists(os.path.join(
-                QLibraryInfo.location(QLibraryInfo.BinariesPath), linguistExe)):
+            linguistExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                Utilities.generateQtToolName("linguist"))
+        if os.path.exists(linguistExe):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist'),
                     UI.PixmapCache.getIcon("linguist4.png"),
                     self.trUtf8('Qt-&Linguist...'), 0, 0, self, 'qt_linguist4')
