@@ -145,6 +145,16 @@ def setConfigDir(d):
     configDir = os.path.expanduser(d)
 
 
+def getPythonModulesDirectory():
+    """
+    Function to determine the path to Python's modules directory.
+    
+    @return path to the Python modules directory (string)
+    """
+    import distutils.sysconfig
+    return distutils.sysconfig.get_python_lib(True)
+    
+
 ################################################################################
 ## functions for searching a Python2 interpreter
 ################################################################################

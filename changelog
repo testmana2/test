@@ -9,6 +9,7 @@ Version 5.4-snapshot-2013mmdd:
   -- changed the 'import' statements to improve startup behavior
   -- removed the QtHelp dependancy; support is only available,
      if the QtHelp module could be imported
+  -- changed code to be compatible with latest PyQt4 Windows installers
 - Debugger
   -- Variables Viewer
      --- changed the way multi line strings are shown in the value

@@ -152,16 +152,16 @@ def initGlobals():
     modDir = distutils.sysconfig.get_python_lib(True)
     pyModDir = modDir
     
-    try:
-        from PyQt4 import pyqtconfig
-        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
-        if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
-            # it's the installer
-            qtDataDir = pyqtDataDir
-        else:
-            qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
-    except (AttributeError, ImportError):
-        qtDataDir = None
+    pyqtDataDir = os.path.join(modDir, "PyQt4")
+    if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
+        # it's the installer
+        qtDataDir = pyqtDataDir
+    else:
+        try:
+            from PyQt4.QtCore import QLibraryInfo
+            qtDataDir = QLibraryInfo.location(QLibraryInfo.DataPath)
+        except ImportError:
+            qtDataDir = None
     if qtDataDir:
         apisDir = os.path.join(qtDataDir, "qsci", "api")
     else:

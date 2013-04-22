@@ -44,6 +44,7 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
 from Globals import getConfigDir, setConfigDir  # __IGNORE_WARNING__
+from Globals import getPythonModulesDirectory   # __IGNORE_WARNING__
 # import these methods into the Utilities namespace
 
 from E5Gui.E5Application import e5App
@@ -1194,16 +1195,6 @@ def getHomeDir():
     @return home directory (string)
     """
     return QDir.homePath()
-    
-
-def getPythonModulesDirectory():
-    """
-    Function to determine the path to Python's modules directory.
-    
-    @return path to the Python modules directory (string)
-    """
-    import distutils.sysconfig
-    return distutils.sysconfig.get_python_lib(True)
     
 
 def getPythonLibPath():
