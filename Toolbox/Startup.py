@@ -131,7 +131,7 @@ def setLibraryPaths():
     Module function to set the Qt library paths correctly for windows systems.
     """
     if Globals.isWindowsPlatform():
-        libPath = os.path.join(Globals.getPythonModulesDirectory(), "PyQt4", "plugins")
+        libPath = os.path.join(Globals.getPyQt4ModulesDirectory(), "plugins")
         if os.path.exists(libPath):
             libPath = QDir.fromNativeSeparators(libPath)
             libraryPaths = QApplication.libraryPaths()

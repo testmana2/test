@@ -14,7 +14,7 @@ from PyQt4.Qsci import QsciAPIs
 
 from . import Lexers
 import Preferences
-import Utilities
+import Globals
 
 
 class APIs(QObject):
@@ -165,9 +165,8 @@ class APIs(QObject):
         @return list of installed API files (list of strings)
         """
         if self.__apis is not None:
-            if Utilities.isWindowsPlatform():
-                qsciPath = os.path.join(Utilities.getPythonModulesDirectory(),
-                                        "PyQt4", "qsci")
+            if Globals.isWindowsPlatform():
+                qsciPath = os.path.join(Globals.getPyQt4ModulesDirectory(), "qsci")
                 if os.path.exists(qsciPath):
                     # it's the installer
                     apidir = os.path.join(qsciPath, "api", self.__lexer.lexer())

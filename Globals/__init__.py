@@ -153,6 +153,16 @@ def getPythonModulesDirectory():
     """
     import distutils.sysconfig
     return distutils.sysconfig.get_python_lib(True)
+
+
+def getPyQt4ModulesDirectory():
+    """
+    Function to determine the path to PyQt4's modules directory.
+    
+    @return path to the PyQt4 modules directory (string)
+    """
+    import distutils.sysconfig
+    return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt4")
     
 
 ################################################################################

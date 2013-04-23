@@ -33,7 +33,7 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters, getPythonModulesDirectory
+    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -2332,8 +2332,7 @@ def getQt4TranslationsDir(prefClass=Prefs):
     if s == "":
         s = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     if s == "" and isWindowsPlatform():
-        transPath = os.path.join(getPythonModulesDirectory(),
-                                 "PyQt4", "translations")
+        transPath = os.path.join(getPyQt4ModulesDirectory(), "translations")
         if os.path.exists(transPath):
             s = transPath
     return s

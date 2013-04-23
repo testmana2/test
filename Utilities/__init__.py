@@ -44,7 +44,7 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
 from Globals import getConfigDir, setConfigDir  # __IGNORE_WARNING__
-from Globals import getPythonModulesDirectory   # __IGNORE_WARNING__
+from Globals import getPythonModulesDirectory, getPyQt4ModulesDirectory  # __IGNORE_WARNING__
 # import these methods into the Utilities namespace
 
 from E5Gui.E5Application import e5App

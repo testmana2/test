@@ -208,7 +208,7 @@ def main():
 
     # modify the executable search path for the PyQt4 installer
     if Globals.isWindowsPlatform():
-        pyqtDataDir = os.path.join(Globals.getPythonModulesDirectory(), "PyQt4")
+        pyqtDataDir = Globals.getPyQt4ModulesDirectory()
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
             path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
         else:

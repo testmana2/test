@@ -1749,6 +1749,7 @@ eric5.Globals.checkBlacklistedVersions?4()
 eric5.Globals.configDir?7
 eric5.Globals.findPython2Interpreters?4()
 eric5.Globals.getConfigDir?4()
+eric5.Globals.getPyQt4ModulesDirectory?4()
 eric5.Globals.getPythonModulesDirectory?4()
 eric5.Globals.isLinuxPlatform?4()
 eric5.Globals.isMacPlatform?4()
