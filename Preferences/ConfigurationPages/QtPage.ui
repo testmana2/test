@@ -32,39 +32,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="qt4Group">
-     <property name="title">
-      <string>Qt Directory</string>
-     </property>
-     <layout class="QGridLayout" name="_2">
-      <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="TextLabel1_2_2_4">
-        <property name="text">
-         <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="qt4Edit">
-        <property name="toolTip">
-         <string>Enter the path of the Qt directory.</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="qt4Button">
-        <property name="toolTip">
-         <string>Press to select the Qt directory via a directory selection dialog</string>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
       <string>Qt Translations Directory</string>
@@ -186,8 +153,6 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>qt4Edit</tabstop>
-  <tabstop>qt4Button</tabstop>
   <tabstop>qt4TransEdit</tabstop>
   <tabstop>qt4TransButton</tabstop>
   <tabstop>qt4PrefixEdit</tabstop>

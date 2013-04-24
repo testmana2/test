@@ -2373,27 +2373,27 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="UI/BrowserModel.py" line="44"/>
+        <location filename="UI/BrowserModel.py" line="51"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="602"/>
+        <location filename="UI/BrowserModel.py" line="604"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="561"/>
+        <location filename="UI/BrowserModel.py" line="563"/>
         <source>Globals</source>
         <translation>Globales</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="556"/>
+        <location filename="UI/BrowserModel.py" line="558"/>
         <source>Coding: {0}</source>
         <translation>Codificación: {0}</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="612"/>
+        <location filename="UI/BrowserModel.py" line="614"/>
         <source>Class Attributes</source>
         <translation></translation>
     </message>
@@ -3026,7 +3026,7 @@ Razón: {1}</translation>
 <context>
     <name>CodingError</name>
     <message>
-        <location filename="Utilities/__init__.py" line="94"/>
+        <location filename="Utilities/__init__.py" line="96"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation>La codificación &apos;{0}&apos; es incorrecta para el texto indicado.</translation>
     </message>
@@ -12621,27 +12621,27 @@ selección completa.&lt;/li&gt;
         <translation>Generador de Documentación de Eric5</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate documentation (eric5_doc)</source>
         <translation>Generar documentación (eric5_doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
         <translation>Generar &amp;documentación (eric5_doc)</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="135"/>
+        <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate API documentation using eric5_doc</source>
         <translation>Generar documentación de API utilizando eric5_doc</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="137"/>
+        <location filename="Plugins/PluginEricdoc.py" line="135"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Generar documentación&lt;/b&gt;&lt;p&gt;Generar documentación de API utilizando eric5_doc.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <location filename="Plugins/PluginEricdoc.py" line="86"/>
         <source>Qt Help Tools</source>
         <translation>Herramientas de Ayuda de Qt</translation>
     </message>
@@ -23055,7 +23055,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>No hay cambios pendientes de commit disponibles/seleccionados.</translation>
     </message>
@@ -23070,7 +23070,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>No hay entradas sin versionar disponibles/seleccionadas.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>Revert</source>
         <translation>Revertir</translation>
     </message>
@@ -23085,7 +23085,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>There are no missing entries available/selected.</source>
         <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
@@ -23175,7 +23175,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>todo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>Differences</source>
         <translation>Diferencias</translation>
     </message>
@@ -32140,27 +32140,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1131"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -38028,97 +38028,97 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <translation>&lt;b&gt;Configurar Qt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="46"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="80"/>
         <source>Qt Tools</source>
         <translation>Herramientas Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="130"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Proporciona un ejemplo del nombre completo de la herramienta</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="166"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="133"/>
         <source>designer</source>
         <translation>designer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.py" line="75"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.py" line="55"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Seleccionar el directorio de Traducciones Qt4</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="60"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Estas opciones de configuración serán activadas la siguiente vez que se inicie la aplicación.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
         <source>Select Qt4 Directory</source>
-        <translation>Seleccione directorio de Qt4</translation>
+        <translation type="obsolete">Seleccione directorio de Qt4</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>El ejecutable de la herramienta se compone del prefijo, el nombre de la herramienta y el postfijo. Para win, la extensión se añade automáticamente.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt Directory</source>
-        <translation>Directorio de Qt</translation>
+        <translation type="obsolete">Directorio de Qt</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
         <source>Enter the path of the Qt directory.</source>
-        <translation>Introducir la ruta del directorio de Qt.</translation>
+        <translation type="obsolete">Introducir la ruta del directorio de Qt.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
         <source>Press to select the Qt directory via a directory selection dialog</source>
-        <translation>Pulse para seleccionar el directorio de Qt a través de un diálogo de selección de directorio</translation>
+        <translation type="obsolete">Pulse para seleccionar el directorio de Qt a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
         <source>Qt Translations Directory</source>
         <translation>Directorio de Traducciones de Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>Press to select the Qt translations directory via a directory selection dialog</source>
         <translation>Pulse para seleccionar el directorio de traducciones de Qt a través de un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="53"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation>Introeucir la ruta del directorio de traducciones de Qt.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="67"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno QT4TRANSLATIONSDIR o la ruta compilada en la biblioteca de Qt.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="96"/>
         <source>Qt-Prefix:</source>
         <translation>Prefijo de Qt:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="103"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation>Introducir el prefijo para nombre de las herramientas Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="110"/>
         <source>Qt-Postfix:</source>
         <translation>Postfijo de Qt:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="117"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation>Introducir el postfijo para nombre de las herramientas Qt</translation>
     </message>
@@ -45013,12 +45013,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>Lock</source>
         <translation>Bloquear</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="721"/>
         <source>Unlock</source>
         <translation>Desbloquear</translation>
     </message>
@@ -45138,7 +45138,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>No hay cambios pendientes de commit disponibles/seleccionados.</translation>
     </message>
@@ -45153,27 +45153,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>No hay entradas sin versionar disponibles/seleccionadas.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>Revert</source>
         <translation>Revertir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>No hay archivos desbloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>There are no locked files available/selected.</source>
         <translation>No hay archivos bloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="736"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="738"/>
         <source>Break Lock</source>
         <translation>Romper Bloqueo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>Steal Lock</source>
         <translation>Robar Bloqueo</translation>
     </message>
@@ -45188,17 +45188,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Añadir a la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>Remove from Changelist</source>
         <translation>Quitar de la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="769"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="771"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que no pertenezcan a una lista de cambios.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que pertenezcan a una lista de cambios.</translation>
     </message>
@@ -45283,7 +45283,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>todo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>Differences</source>
         <translation>Diferencias</translation>
     </message>
@@ -45293,7 +45293,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>No hay entradas seleccionads sobre las que hacer commit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>There are no missing entries available/selected.</source>
         <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
@@ -52870,17 +52870,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1145"/>
+        <location filename="Utilities/__init__.py" line="1147"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Puede utilizar %-códigos como marcadores en la cadena. Los valores sportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;columna del cursos en el editor actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directorio del editor actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nombre de archivo del editor actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;directorio home del usuario actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;línea del cursor en el editor actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;ruta del proyecto actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texto seleccionado en el editor actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nombre de usuario del usuario actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;signo de porcentaje&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1345"/>
+        <location filename="Utilities/__init__.py" line="1337"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Intérprete de Python2 no configurado.</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1395"/>
+        <location filename="Utilities/__init__.py" line="1387"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation>El intérprete de Python2 no terminó en un plazo de 30s.</translation>
     </message>
@@ -57240,12 +57240,12 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="253"/>
+        <location filename="eric5.py" line="250"/>
         <source>Generating Main Window...</source>
         <translation>Generando Ventana Principal...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="248"/>
+        <location filename="eric5.py" line="245"/>
         <source>Starting...</source>
         <translation>Comenzando...</translation>
     </message>

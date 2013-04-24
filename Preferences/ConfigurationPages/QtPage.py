@@ -31,14 +31,9 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.setupUi(self)
         self.setObjectName("QtPage")
         
-        self.qt4Completer = E5DirCompleter(self.qt4Edit)
         self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
         
-        if not Utilities.isMacPlatform():
-            self.qt4Group.hide()
-        
         # set initial values
-        self.qt4Edit.setText(Preferences.getQt("Qt4Dir"))
         self.qt4TransEdit.setText(Preferences.getQt("Qt4TranslationsDir"))
         self.qt4PrefixEdit.setText(Preferences.getQt("QtToolsPrefix4"))
         self.qt4PostfixEdit.setText(Preferences.getQt("QtToolsPostfix4"))
@@ -48,24 +43,9 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Public slot to save the Qt configuration.
         """
-        Preferences.setQt("Qt4Dir", self.qt4Edit.text())
         Preferences.setQt("Qt4TranslationsDir", self.qt4TransEdit.text())
         Preferences.setQt("QtToolsPrefix4", self.qt4PrefixEdit.text())
         Preferences.setQt("QtToolsPostfix4", self.qt4PostfixEdit.text())
-        
-    @pyqtSlot()
-    def on_qt4Button_clicked(self):
-        """
-        Private slot to handle the Qt4 directory selection.
-        """
-        dir = E5FileDialog.getExistingDirectory(
-            self,
-            self.trUtf8("Select Qt4 Directory"),
-            self.qt4Edit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if dir:
-            self.qt4Edit.setText(Utilities.toNativeSeparators(dir))
         
     @pyqtSlot()
     def on_qt4TransButton_clicked(self):

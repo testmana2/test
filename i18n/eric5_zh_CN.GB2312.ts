@@ -2589,7 +2589,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="UI/BrowserModel.py" line="44"/>
+        <location filename="UI/BrowserModel.py" line="51"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
@@ -2599,12 +2599,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">代码：%1</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="561"/>
+        <location filename="UI/BrowserModel.py" line="563"/>
         <source>Globals</source>
         <translation>全局</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="602"/>
+        <location filename="UI/BrowserModel.py" line="604"/>
         <source>Attributes</source>
         <translation>属性</translation>
     </message>
@@ -2614,12 +2614,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">属性（全局）</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="556"/>
+        <location filename="UI/BrowserModel.py" line="558"/>
         <source>Coding: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="612"/>
+        <location filename="UI/BrowserModel.py" line="614"/>
         <source>Class Attributes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3259,7 +3259,7 @@ Reason: {1}</source>
         <translation type="obsolete">给定文本编码 &apos;%1&apos; 错误。</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="94"/>
+        <location filename="Utilities/__init__.py" line="96"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13730,27 +13730,27 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;b&gt;生成文档&lt;/b&gt;&lt;p&gt;使用 eric4-doc 生成 API 文档。&lt;/p&gt; {5-?}</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate documentation (eric5_doc)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="135"/>
+        <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate API documentation using eric5_doc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="137"/>
+        <location filename="Plugins/PluginEricdoc.py" line="135"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <location filename="Plugins/PluginEricdoc.py" line="86"/>
         <source>Qt Help Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24717,7 +24717,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">提交</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished">没有未提交的更改可用或被选择。</translation>
     </message>
@@ -24732,7 +24732,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">没有未版本化的条目可用或被选择。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>Revert</source>
         <translation type="unfinished">还原</translation>
     </message>
@@ -24747,7 +24747,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">移除</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24842,7 +24842,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">差异</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34784,27 +34784,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1131"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41722,7 +41722,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">点击通过文件夹选择对话框选择 Qt3 文件夹</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="46"/>
         <source>...</source>
         <translation>……</translation>
     </message>
@@ -41747,7 +41747,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">&lt;b&gt;注意：&lt;/b&gt; 为空则使用 QT4TRANSLATIONSDIR 环境变量或者编译到 Qt4 库中的路径。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="80"/>
         <source>Qt Tools</source>
         <translation>Qt 工具</translation>
     </message>
@@ -41797,12 +41797,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">输入 Qt4 工具名称的后缀</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="130"/>
         <source>This gives an example of the complete tool name</source>
         <translation>这里给出了完整工具名称的一个范例</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="166"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="133"/>
         <source>designer</source>
         <translation>设计师</translation>
     </message>
@@ -41812,7 +41812,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">选择 Qt3 文件夹</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.py" line="75"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.py" line="55"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>选择 Qt4 翻译文件夹</translation>
     </message>
@@ -41827,7 +41827,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">Qt3 文件夹 {4 ?}</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="60"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 该设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
@@ -41844,65 +41844,50 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
         <source>Select Qt4 Directory</source>
-        <translation type="unfinished">选择 Qt3 文件夹 {4 ?}</translation>
+        <translation type="obsolete">选择 Qt3 文件夹 {4 ?}</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
-        <source>Qt Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
-        <source>Enter the path of the Qt directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
-        <source>Press to select the Qt directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt Translations Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>Press to select the Qt translations directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="53"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="67"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="96"/>
         <source>Qt-Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="103"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="110"/>
         <source>Qt-Postfix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="117"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49726,17 +49711,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>添加更改列表</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>Remove from Changelist</source>
         <translation>从更改列表中移除</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>Lock</source>
         <translation>闭锁</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="721"/>
         <source>Unlock</source>
         <translation>解锁</translation>
     </message>
@@ -49861,7 +49846,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>提交</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>没有未提交的更改可用或被选择。</translation>
     </message>
@@ -49876,37 +49861,37 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>没有未版本化的条目可用或被选择。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>Revert</source>
         <translation>还原</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>没有未解锁的文件可用或被选择。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>There are no locked files available/selected.</source>
         <translation>没有闭锁的文件可用或被选择。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="736"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="738"/>
         <source>Break Lock</source>
         <translation>Break Lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>Steal Lock</source>
         <translation>Steal Lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="769"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="771"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>没有不属于更改列表的文件可用或被选择。</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>没有属于更改列表的文件可用或被选择。</translation>
     </message>
@@ -49996,7 +49981,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">差异</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50006,7 +49991,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -58832,17 +58817,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1145"/>
+        <location filename="Utilities/__init__.py" line="1147"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;可以在字符串中使用“%-代码”作为占位符。支持的代码有：&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在列&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;当前编辑器的文件夹&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;当前编辑器的文件名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;当前用户的根目录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在行&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;当前项目的路径&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;当前编辑器中选择的文本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;当前用户的用户名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;百分比符号&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1345"/>
+        <location filename="Utilities/__init__.py" line="1337"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1395"/>
+        <location filename="Utilities/__init__.py" line="1387"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63726,12 +63711,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">正在导入程序包……</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="253"/>
+        <location filename="eric5.py" line="250"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="248"/>
+        <location filename="eric5.py" line="245"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>

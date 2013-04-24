@@ -2479,22 +2479,22 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="UI/BrowserModel.py" line="44"/>
+        <location filename="UI/BrowserModel.py" line="51"/>
         <source>Name</source>
         <translation>Adı</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="556"/>
+        <location filename="UI/BrowserModel.py" line="558"/>
         <source>Coding: {0}</source>
         <translation>Kodlama: {0}</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="561"/>
+        <location filename="UI/BrowserModel.py" line="563"/>
         <source>Globals</source>
         <translation>Evrensel</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="602"/>
+        <location filename="UI/BrowserModel.py" line="604"/>
         <source>Attributes</source>
         <translation>Nitelikler</translation>
     </message>
@@ -2504,7 +2504,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Nitelikler (Küresel)</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="612"/>
+        <location filename="UI/BrowserModel.py" line="614"/>
         <source>Class Attributes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3170,7 +3170,7 @@ Reason: {1}</source>
 <context>
     <name>CodingError</name>
     <message>
-        <location filename="Utilities/__init__.py" line="94"/>
+        <location filename="Utilities/__init__.py" line="96"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation>Verilen metin için &apos;{0}&apos;nun kodlaması hatalı.</translation>
     </message>
@@ -13036,27 +13036,27 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;b&gt;Belge Üretimi&lt;/b&gt;&lt;p&gt;Eric-5doc kullanılarak API belgelerini üret.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate documentation (eric5_doc)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="132"/>
+        <location filename="Plugins/PluginEricdoc.py" line="130"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="135"/>
+        <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate API documentation using eric5_doc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="137"/>
+        <location filename="Plugins/PluginEricdoc.py" line="135"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="88"/>
+        <location filename="Plugins/PluginEricdoc.py" line="86"/>
         <source>Qt Help Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23718,7 +23718,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Teslimat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23738,12 +23738,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="646"/>
         <source>Revert</source>
         <translation>Başa Dönme</translation>
     </message>
@@ -23838,7 +23838,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Farklılık</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="663"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33301,27 +33301,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1131"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1158"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1252"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39340,7 +39340,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">Qt4 Dizini</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="93"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="60"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
@@ -39355,7 +39355,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">Dizin seçme diyaloğu ile Qt4 dizinini seçmek için basınız</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="46"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -39380,12 +39380,12 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">&lt;b&gt;Not:&lt;/b&gt; Ayarlandığında Boş bıraktıysanız QT4TRANSLATIONSDIR ortam değişkeni veya Qt3 kütüphanesi için belirlenen yol kullanılır.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="113"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="80"/>
         <source>Qt Tools</source>
         <translation>QT Araçları</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>çalışabilen araçların kendiliğinden oluşan ön eki. başarı için, kendiliğinden eklenir.</translation>
     </message>
@@ -39410,77 +39410,62 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <translation type="obsolete">Qt4 araç adlarının son ekini giriniz</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="163"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="130"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Bu tüm araç isimlerinin bir örneğini verir</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="166"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="133"/>
         <source>designer</source>
         <translation>dizayncı</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.py" line="61"/>
         <source>Select Qt4 Directory</source>
-        <translation>Qt4 Dizinini Seç</translation>
+        <translation type="obsolete">Qt4 Dizinini Seç</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.py" line="75"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.py" line="55"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Qt4 Çeviri Dizinini Seç</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="37"/>
-        <source>Qt Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="50"/>
-        <source>Enter the path of the Qt directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="57"/>
-        <source>Press to select the Qt directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="70"/>
         <source>Qt Translations Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="76"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>Press to select the Qt translations directory via a directory selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="86"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="53"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="67"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="96"/>
         <source>Qt-Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="103"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="143"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="110"/>
         <source>Qt-Postfix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="150"/>
+        <location filename="Preferences/ConfigurationPages/QtPage.ui" line="117"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46429,17 +46414,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Değişiklik Listesine Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>Remove from Changelist</source>
         <translation>DEğişiklik listesinden çıkar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>Lock</source>
         <translation>Kilitli</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="721"/>
         <source>Unlock</source>
         <translation>Kilitsiz</translation>
     </message>
@@ -46564,7 +46549,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Teslimat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46579,37 +46564,37 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>Revert</source>
         <translation>Başa Dönme</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="703"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="705"/>
         <source>There are no unlocked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>There are no locked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="736"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="738"/>
         <source>Break Lock</source>
         <translation>Kırma Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="753"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
         <source>Steal Lock</source>
         <translation>Hırsızlık Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="769"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="771"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="787"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="789"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46694,7 +46679,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Farklılık</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="685"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46704,7 +46689,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="668"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54884,17 +54869,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1145"/>
+        <location filename="Utilities/__init__.py" line="1147"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;%-alanlarda çeşitli kodları kullanabilirsiniz. Tanımlanan kodlar:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;geçerli düzenleyicinin imlecinin sütunu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;geçerli düzenleyicinin dizini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;geçerli düzenleyicinin dosya adı&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;geçerli kullancının ana dizini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;geçerli düzenleyicinin imlecinin satırı&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;geçerli projenin yolu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;Geçici kullanıcının kullanıcı adı&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;oran işareti&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1345"/>
+        <location filename="Utilities/__init__.py" line="1337"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Python2 yorumlayıcı ayarlanmadı.</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1395"/>
+        <location filename="Utilities/__init__.py" line="1387"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished">Python2 yorumlayıcı 15 s. de bitmedi. {2 ?} {30s?}</translation>
     </message>
@@ -59567,12 +59552,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Paketler içeri aktarılıyor...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="253"/>
+        <location filename="eric5.py" line="250"/>
         <source>Generating Main Window...</source>
         <translation>Anapencere üretiliyor...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="248"/>
+        <location filename="eric5.py" line="245"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
