@@ -12515,6 +12515,7 @@
       <keyword name="getQt4DocDir" id="getQt4DocDir" ref="eric5.Preferences.__init__.html#getQt4DocDir" />
       <keyword name="getQt4TranslationsDir" id="getQt4TranslationsDir" ref="eric5.Preferences.__init__.html#getQt4TranslationsDir" />
       <keyword name="getQt5DocDir" id="getQt5DocDir" ref="eric5.Preferences.__init__.html#getQt5DocDir" />
+      <keyword name="getQtBinariesPath" id="getQtBinariesPath" ref="eric5.Globals.__init__.html#getQtBinariesPath" />
       <keyword name="getQtMacBundle" id="getQtMacBundle" ref="eric5.Utilities.__init__.html#getQtMacBundle" />
       <keyword name="getRealName" id="getRealName" ref="eric5.Utilities.__init__.html#getRealName" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfaceNone.html#getRegistryData" />

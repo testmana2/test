@@ -9,7 +9,7 @@ Module implementing the Ericdoc plugin.
 
 import os
 
-from PyQt4.QtCore import QObject, QLibraryInfo
+from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog, QApplication
 
 from E5Gui.E5Application import e5App
@@ -64,8 +64,7 @@ def exeDisplayDataList():
     })
     
     # 2. Qt Help Generator
-    exe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
-                       'qhelpgenerator')
+    exe = os.path.join(Utilities.getQtBinariesPath(), 'qhelpgenerator')
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({
@@ -81,8 +80,7 @@ def exeDisplayDataList():
     })
     
     # 3. Qt Collection Generator
-    exe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
-                       'qcollectiongenerator')
+    exe = os.path.join(Utilities.getQtBinariesPath(), 'qcollectiongenerator')
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({

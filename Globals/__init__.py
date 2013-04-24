@@ -10,7 +10,7 @@ Module defining common data to be used by all modules.
 import sys
 import os
 
-from PyQt4.QtCore import QDir
+from PyQt4.QtCore import QDir, QLibraryInfo
 
 # names of the various settings objects
 settingsNameOrganization = "Eric5"
@@ -164,6 +164,29 @@ def getPyQt4ModulesDirectory():
     import distutils.sysconfig
     return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt4")
     
+
+def getQtBinariesPath():
+    """
+    Module function to get the path of the Qt binaries.
+    
+    @return path of the Qt binaries (string)
+    """
+    path = ""
+    if isWindowsPlatform():
+        # check for PyQt4 installer first (designer is test object)
+        modDir = getPyQt4ModulesDirectory()
+        if os.path.exists(os.path.join(modDir, "bin", "designer.exe")):
+            path = os.path.join(modDir, "bin")
+        elif os.path.exists(os.path.join(modDir, "designer.exe")):
+            path = modDir
+    
+    if not path:
+        path = QLibraryInfo.location(QLibraryInfo.BinariesPath)
+        if not os.path.exists(path):
+            path = ""
+    
+    return QDir.toNativeSeparators(path)
+
 
 ################################################################################
 ## functions for searching a Python2 interpreter

@@ -12,7 +12,7 @@ import sys
 import logging
 
 from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
-    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt, QLibraryInfo
+    QIODevice, qVersion, QProcess, QSize, QUrl, QObject, Qt
 from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
     QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QProgressDialog, \
     QVBoxLayout, QDockWidget, QAction, QLabel
@@ -1597,12 +1597,12 @@ class UserInterface(E5MainWindow):
         
         # check for Qt4/Qt5 designer and linguist
         if Utilities.isWindowsPlatform():
-            designerExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+            designerExe = os.path.join(Utilities.getQtBinariesPath(),
                 "{0}.exe".format(Utilities.generateQtToolName("designer")))
         elif Utilities.isMacPlatform():
             designerExe = Utilities.getQtMacBundle("designer")
         else:
-            designerExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+            designerExe = os.path.join(Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("designer"))
         if os.path.exists(designerExe):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer'),
@@ -1619,12 +1619,12 @@ class UserInterface(E5MainWindow):
             self.designer4Act = None
         
         if Utilities.isWindowsPlatform():
-            linguistExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+            linguistExe = os.path.join(Utilities.getQtBinariesPath(),
                 "{0}.exe".format(Utilities.generateQtToolName("linguist")))
         elif Utilities.isMacPlatform():
             linguistExe = Utilities.getQtMacBundle("linguist")
         else:
-            linguistExe = os.path.join(QLibraryInfo.location(QLibraryInfo.BinariesPath),
+            linguistExe = os.path.join(Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("linguist"))
         if os.path.exists(linguistExe):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist'),
@@ -3756,7 +3756,7 @@ class UserInterface(E5MainWindow):
         else:
             if version == 4:
                 designer = os.path.join(
-                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("designer"))
             if Utilities.isWindowsPlatform():
                 designer += '.exe'
@@ -3815,7 +3815,7 @@ class UserInterface(E5MainWindow):
         else:
             if version == 4:
                 linguist = os.path.join(
-                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("linguist"))
             if Utilities.isWindowsPlatform():
                 linguist += '.exe'
@@ -3861,7 +3861,7 @@ class UserInterface(E5MainWindow):
         else:
             if version == 4:
                 assistant = os.path.join(
-                    QLibraryInfo.location(QLibraryInfo.BinariesPath),
+                    Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("assistant"))
             if Utilities.isWindowsPlatform():
                 assistant += '.exe'

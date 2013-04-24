@@ -33,7 +33,8 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory
+    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory, \
+    getQtBinariesPath
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -2351,7 +2352,7 @@ def getQt(key, prefClass=Prefs):
     elif key == "Qt4Dir":
         p = prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
         if p == "":
-            p = QLibraryInfo.location(QLibraryInfo.BinariesPath)
+            p = getQtBinariesPath()
         return p
     else:
         return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
