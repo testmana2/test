@@ -51,7 +51,7 @@ class VariableItem(QTreeWidgetItem):
                 # indicate skipped lines by <...> at the
                 # beginning and/or end
                 index = 0
-                while index < len(lines) and lines[index] == "":
+                while index < len(lines) - 1 and lines[index] == "":
                     index += 1
                 dvalue = ""
                 if index > 0:
