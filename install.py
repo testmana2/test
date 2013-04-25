@@ -224,12 +224,15 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
 
     # Mac OS X
     elif sys.platform == "darwin":
+        pyexec = "{0}/bin/pythonw3".format(sys.exec_prefix)
+        if not os.path.exists(pyexec):
+            pyexec = "{0}/bin/python3".format(sys.exec_prefix)
         wname = wfile
         wrapper = \
 '''#!/bin/sh
 
-exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
-'''.format(sys.exec_prefix, pydir, wfile)
+exec "{0}" "{1}/{2}.py" "$@"
+'''.format(pyexec, pydir, wfile)
 
     # *nix systems
     else:

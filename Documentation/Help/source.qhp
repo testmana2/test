@@ -9033,7 +9033,6 @@
       <keyword name="QtPage (Constructor)" id="QtPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.__init__" />
       <keyword name="QtPage (Module)" id="QtPage (Module)" ref="eric5.Preferences.ConfigurationPages.QtPage.html" />
       <keyword name="QtPage.__updateQt4Sample" id="QtPage.__updateQt4Sample" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.__updateQt4Sample" />
-      <keyword name="QtPage.on_qt4Button_clicked" id="QtPage.on_qt4Button_clicked" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4Button_clicked" />
       <keyword name="QtPage.on_qt4PostfixEdit_textChanged" id="QtPage.on_qt4PostfixEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PostfixEdit_textChanged" />
       <keyword name="QtPage.on_qt4PrefixEdit_textChanged" id="QtPage.on_qt4PrefixEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PrefixEdit_textChanged" />
       <keyword name="QtPage.on_qt4TransButton_clicked" id="QtPage.on_qt4TransButton_clicked" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4TransButton_clicked" />

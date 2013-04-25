@@ -1457,7 +1457,7 @@ def getQtMacBundle(toolname):
     @param toolname  plain name of the tool (e.g. "designer") (string)
     @return bundle name of the Qt tool (string)
     """
-    qtDir = Preferences.getQt("Qt4Dir")
+    qtDir = getQtBinariesPath()
     bundles = [
         os.path.join(qtDir, 'bin', generateQtToolName(toolname.capitalize())) + ".app",
         os.path.join(qtDir, 'bin', generateQtToolName(toolname)) + ".app",

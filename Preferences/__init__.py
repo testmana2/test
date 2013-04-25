@@ -33,8 +33,7 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory, \
-    getQtBinariesPath
+    isWindowsPlatform, findPython2Interpreters, getPyQt4ModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -854,7 +853,6 @@ class Prefs(object):
         "Qt4TranslationsDir": "",
         "QtToolsPrefix4": "",
         "QtToolsPostfix4": "",
-        "Qt4Dir": "",
     }
     
     # defaults for corba related stuff
@@ -2349,11 +2347,6 @@ def getQt(key, prefClass=Prefs):
     """
     if key == "Qt4TranslationsDir":
         return getQt4TranslationsDir(prefClass)
-    elif key == "Qt4Dir":
-        p = prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
-        if p == "":
-            p = getQtBinariesPath()
-        return p
     else:
         return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
     
