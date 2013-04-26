@@ -1076,6 +1076,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
     <Source>E5Network/E5SslInfoWidget.py</Source>
     <Source>QScintilla/SortOptionsDialog.py</Source>
+    <Source>Debugger/CallStackViewer.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

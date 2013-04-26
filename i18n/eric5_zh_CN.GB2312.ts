@@ -2625,6 +2625,62 @@ the button to the right.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>CallStackViewer</name>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="47"/>
+        <source>Show source</source>
+        <translation type="unfinished">显示源代码</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="49"/>
+        <source>Clear</source>
+        <translation type="unfinished">清除</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="51"/>
+        <source>Save</source>
+        <translation type="unfinished">保存</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="58"/>
+        <source>File: {0}
+Line: {1}
+{2}{3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="60"/>
+        <source>File: {0}
+Line: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>Save Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="154"/>
+        <source>Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>Error saving Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CallTraceViewer</name>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="14"/>
@@ -2657,37 +2713,37 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>From</source>
         <translation type="unfinished">从</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>To</source>
         <translation type="unfinished">到</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>Save Call Trace Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="116"/>
+        <location filename="Debugger/CallTraceViewer.py" line="117"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>Error saving Call Trace Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4691,7 +4747,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1606"/>
+        <location filename="Debugger/DebugUI.py" line="1610"/>
         <source>Run Script</source>
         <translation>运行脚本</translation>
     </message>
@@ -4711,7 +4767,7 @@ Not connected
         <translation>&lt;b&gt;运行脚本&lt;/b&gt;&lt;p&gt;设置命令行参数，并在调试器之外运行脚本。如果文件未对更改进行保存，则可能会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>Run Project</source>
         <translation>运行项目</translation>
     </message>
@@ -4851,7 +4907,7 @@ Not connected
         <translation type="obsolete">&lt;b&gt;循环项目&lt;/b&gt;&lt;p&gt;设置命令行参数，并通过循环运行当前项目。如果当前项目的文件未保存则会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1718"/>
+        <location filename="Debugger/DebugUI.py" line="1724"/>
         <source>Debug Script</source>
         <translation>调试脚本</translation>
     </message>
@@ -4871,7 +4927,7 @@ Not connected
         <translation>&lt;b&gt;调试脚本&lt;/b&gt;&lt;p&gt;设置命令行参数，并将当前行设为当前编辑窗口首先执行的 Python 声明。如果文件未保存则会先行保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>Debug Project</source>
         <translation>调试项目</translation>
     </message>
@@ -5041,7 +5097,7 @@ Not connected
         <translation>&lt;b&gt;中止&lt;/b&gt;&lt;p&gt;中止正在运行中的调试会话。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Evaluate</source>
         <translation>赋值</translation>
     </message>
@@ -5061,7 +5117,7 @@ Not connected
         <translation>&lt;b&gt;赋值&lt;/b&gt;&lt;p&gt;在调试程序的当前上下文中为表达式赋值。结果显示在命令行窗口中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Execute</source>
         <translation>执行</translation>
     </message>
@@ -5324,17 +5380,17 @@ Not connected
         <translation>脚本覆盖率</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>当前项目未定义主脚本。终止</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1508"/>
+        <location filename="Debugger/DebugUI.py" line="1510"/>
         <source>Profile of Project</source>
         <translation>项目轮廓</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1497"/>
+        <location filename="Debugger/DebugUI.py" line="1499"/>
         <source>Profile of Script</source>
         <translation>脚本轮廓</translation>
     </message>
@@ -5359,17 +5415,17 @@ Not connected
         <translation type="obsolete">&lt;p&gt;要循环一个模块，相应模块必须定义一个函数作为循环的进入点。模块 &lt;b&gt;%1&lt;/b&gt; 未定义函数 &lt;b&gt;%2&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>当前项目未定义主脚本。不能进行调试。</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Enter the statement to evaluate</source>
         <translation>输入赋值语句</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Enter the statement to execute</source>
         <translation>输入执行语句</translation>
     </message>
@@ -5481,32 +5537,32 @@ Not connected
         <translation>源文件</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="224"/>
+        <location filename="Debugger/DebugViewer.py" line="233"/>
         <source>Threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>Name</source>
         <translation type="unfinished">名称</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>State</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="461"/>
+        <location filename="Debugger/DebugViewer.py" line="483"/>
         <source>waiting at breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="463"/>
+        <location filename="Debugger/DebugViewer.py" line="485"/>
         <source>running</source>
         <translation type="unfinished"></translation>
     </message>

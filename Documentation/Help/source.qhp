@@ -77,6 +77,7 @@
           <section title="eric5.Debugger" ref="index-eric5.Debugger.html">
             <section title="eric5.Debugger.BreakPointModel" ref="eric5.Debugger.BreakPointModel.html" />
             <section title="eric5.Debugger.BreakPointViewer" ref="eric5.Debugger.BreakPointViewer.html" />
+            <section title="eric5.Debugger.CallStackViewer" ref="eric5.Debugger.CallStackViewer.html" />
             <section title="eric5.Debugger.CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html" />
             <section title="eric5.Debugger.Config" ref="eric5.Debugger.Config.html" />
             <section title="eric5.Debugger.DebugClientCapabilities" ref="eric5.Debugger.DebugClientCapabilities.html" />
@@ -1855,6 +1856,16 @@
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
       <keyword name="BrowserSysPathItem" id="BrowserSysPathItem" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem" />
       <keyword name="BrowserSysPathItem (Constructor)" id="BrowserSysPathItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.__init__" />
+      <keyword name="CallStackViewer" id="CallStackViewer" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer" />
+      <keyword name="CallStackViewer (Constructor)" id="CallStackViewer (Constructor)" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__init__" />
+      <keyword name="CallStackViewer (Module)" id="CallStackViewer (Module)" ref="eric5.Debugger.CallStackViewer.html" />
+      <keyword name="CallStackViewer.__itemDoubleClicked" id="CallStackViewer.__itemDoubleClicked" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__itemDoubleClicked" />
+      <keyword name="CallStackViewer.__openSource" id="CallStackViewer.__openSource" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__openSource" />
+      <keyword name="CallStackViewer.__saveStackTrace" id="CallStackViewer.__saveStackTrace" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__saveStackTrace" />
+      <keyword name="CallStackViewer.__showCallStack" id="CallStackViewer.__showCallStack" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__showCallStack" />
+      <keyword name="CallStackViewer.__showContextMenu" id="CallStackViewer.__showContextMenu" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__showContextMenu" />
+      <keyword name="CallStackViewer.setDebugger" id="CallStackViewer.setDebugger" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.setDebugger" />
+      <keyword name="CallStackViewer.setProjectMode" id="CallStackViewer.setProjectMode" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.setProjectMode" />
       <keyword name="CallTraceViewer" id="CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer" />
       <keyword name="CallTraceViewer (Constructor)" id="CallTraceViewer (Constructor)" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.__init__" />
       <keyword name="CallTraceViewer (Module)" id="CallTraceViewer (Module)" ref="eric5.Debugger.CallTraceViewer.html" />
@@ -2940,6 +2951,7 @@
       <keyword name="DebugViewer" id="DebugViewer" ref="eric5.Debugger.DebugViewer.html#DebugViewer" />
       <keyword name="DebugViewer (Constructor)" id="DebugViewer (Constructor)" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__init__" />
       <keyword name="DebugViewer (Module)" id="DebugViewer (Module)" ref="eric5.Debugger.DebugViewer.html" />
+      <keyword name="DebugViewer.__callStackFrameSelected" id="DebugViewer.__callStackFrameSelected" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__callStackFrameSelected" />
       <keyword name="DebugViewer.__frameSelected" id="DebugViewer.__frameSelected" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__frameSelected" />
       <keyword name="DebugViewer.__setGlobalsFilter" id="DebugViewer.__setGlobalsFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__setGlobalsFilter" />
       <keyword name="DebugViewer.__setLocalsFilter" id="DebugViewer.__setLocalsFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__setLocalsFilter" />
@@ -2951,6 +2963,7 @@
       <keyword name="DebugViewer.handleDebuggingStarted" id="DebugViewer.handleDebuggingStarted" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleDebuggingStarted" />
       <keyword name="DebugViewer.handleRawInput" id="DebugViewer.handleRawInput" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleRawInput" />
       <keyword name="DebugViewer.handleResetUI" id="DebugViewer.handleResetUI" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleResetUI" />
+      <keyword name="DebugViewer.initCallStackViewer" id="DebugViewer.initCallStackViewer" ref="eric5.Debugger.DebugViewer.html#DebugViewer.initCallStackViewer" />
       <keyword name="DebugViewer.isCallTraceEnabled" id="DebugViewer.isCallTraceEnabled" ref="eric5.Debugger.DebugViewer.html#DebugViewer.isCallTraceEnabled" />
       <keyword name="DebugViewer.preferencesChanged" id="DebugViewer.preferencesChanged" ref="eric5.Debugger.DebugViewer.html#DebugViewer.preferencesChanged" />
       <keyword name="DebugViewer.restoreCurrentPage" id="DebugViewer.restoreCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.restoreCurrentPage" />
@@ -12948,6 +12961,7 @@
       <file>eric5.DebugClients.Ruby.__init__.html</file>
       <file>eric5.Debugger.BreakPointModel.html</file>
       <file>eric5.Debugger.BreakPointViewer.html</file>
+      <file>eric5.Debugger.CallStackViewer.html</file>
       <file>eric5.Debugger.CallTraceViewer.html</file>
       <file>eric5.Debugger.Config.html</file>
       <file>eric5.Debugger.DebugClientCapabilities.html</file>

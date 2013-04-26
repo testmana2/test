@@ -2517,6 +2517,62 @@ the button to the right.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>CallStackViewer</name>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="47"/>
+        <source>Show source</source>
+        <translation type="unfinished">Показать исходник</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="49"/>
+        <source>Clear</source>
+        <translation type="unfinished">Очистить</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="51"/>
+        <source>Save</source>
+        <translation type="unfinished">Сохранить</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="58"/>
+        <source>File: {0}
+Line: {1}
+{2}{3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="60"/>
+        <source>File: {0}
+Line: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>Save Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="154"/>
+        <source>Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished">Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>Error saving Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CallTraceViewer</name>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="14"/>
@@ -2549,37 +2605,37 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Сохранить трассировка вызовов как текстовый файл</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>From</source>
         <translation>От</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>To</source>
         <translation>До</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>Save Call Trace Info</source>
         <translation>Сохраненить информацию о трассировке вызовов</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="116"/>
+        <location filename="Debugger/CallTraceViewer.py" line="117"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>Error saving Call Trace Info</source>
         <translation>Ошибка при сохранении информации о трассировке вызовов</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Информация о трассировка вызовов не может быт записана в &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
@@ -4553,7 +4609,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1606"/>
+        <location filename="Debugger/DebugUI.py" line="1610"/>
         <source>Run Script</source>
         <translation>Выполнить сценарий</translation>
     </message>
@@ -4574,7 +4630,7 @@ Not connected
 &lt;p&gt;Задайте аргументы и выполните сценарий без отладки. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>Run Project</source>
         <translation>Выполнить проект</translation>
     </message>
@@ -4679,7 +4735,7 @@ Not connected
 &lt;p&gt;Задайте аргументы и запустите проект на профилирование. Если файлы проекта не были сохранёны, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1718"/>
+        <location filename="Debugger/DebugUI.py" line="1724"/>
         <source>Debug Script</source>
         <translation>Отладить сценарий</translation>
     </message>
@@ -4700,7 +4756,7 @@ Not connected
 &lt;p&gt;Задайте аргументы командной строки и запустите сценарий на отладку. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>Debug Project</source>
         <translation>Отладить проект</translation>
     </message>
@@ -4910,42 +4966,42 @@ Not connected
         <translation>Охват сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1508"/>
+        <location filename="Debugger/DebugUI.py" line="1510"/>
         <source>Profile of Project</source>
         <translation>Профиль проекта</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1497"/>
+        <location filename="Debugger/DebugUI.py" line="1499"/>
         <source>Profile of Script</source>
         <translation>Профиль сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Для текущего проекта не определён главный сценарий. Отладка невозможна.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Evaluate</source>
         <translation>Вычислить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Enter the statement to evaluate</source>
         <translation>Задайте выражение для вычисления</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Execute</source>
         <translation>Выполнить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Enter the statement to execute</source>
         <translation>Задайте выражение для выполнения</translation>
     </message>
@@ -5259,32 +5315,32 @@ Not connected
         <translation>Исходный текст</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="224"/>
+        <location filename="Debugger/DebugViewer.py" line="233"/>
         <source>Threads:</source>
         <translation>Потоки:</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>ID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>State</source>
         <translation>Состояние</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="461"/>
+        <location filename="Debugger/DebugViewer.py" line="483"/>
         <source>waiting at breakpoint</source>
         <translation>В точке останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="463"/>
+        <location filename="Debugger/DebugViewer.py" line="485"/>
         <source>running</source>
         <translation>Выполяется</translation>
     </message>

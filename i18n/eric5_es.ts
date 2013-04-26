@@ -2399,6 +2399,62 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>CallStackViewer</name>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="47"/>
+        <source>Show source</source>
+        <translation type="unfinished">Mostrar código fuente</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="49"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="51"/>
+        <source>Save</source>
+        <translation type="unfinished">Guardar</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="58"/>
+        <source>File: {0}
+Line: {1}
+{2}{3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="60"/>
+        <source>File: {0}
+Line: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>Save Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="154"/>
+        <source>Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished">Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>Error saving Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CallTraceViewer</name>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="14"/>
@@ -2431,37 +2487,37 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Pulsar para guardar el trazado de llamadas como archivo de texto</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>From</source>
         <translation>Desde</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>To</source>
         <translation>Hasta</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>Save Call Trace Info</source>
         <translation>Guardar Información de Trazado de Llamadas</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="116"/>
+        <location filename="Debugger/CallTraceViewer.py" line="117"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>Error saving Call Trace Info</source>
         <translation>Error al guardar Información de Trazado de Llamadas</translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La información del trazado de llamadas no se ha podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
@@ -4348,7 +4404,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1606"/>
+        <location filename="Debugger/DebugUI.py" line="1610"/>
         <source>Run Script</source>
         <translation>Ejecutar Script</translation>
     </message>
@@ -4368,7 +4424,7 @@ Not connected
         <translation>&lt;b&gt;Ejecutar Script&lt;/b&gt;&lt;p&gt;Establece los parámetros de la línea de comandos y ejecuta el script fuera del depurador. Si tiene cambios sin guardar, deben ser guardados primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>Run Project</source>
         <translation>Ejecutar Proyecto</translation>
     </message>
@@ -4468,7 +4524,7 @@ Not connected
         <translation>&lt;b&gt;Hacer Profiling del Proyecto&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y hacer profiling del proyecto actual. Si hay archivos que tienen cambios sin guardar, se puede guardar primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1718"/>
+        <location filename="Debugger/DebugUI.py" line="1724"/>
         <source>Debug Script</source>
         <translation>Depurar Script</translation>
     </message>
@@ -4488,7 +4544,7 @@ Not connected
         <translation>&lt;b&gt;Depurar Script&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y establecer la línea actual en la ventana actual de edición como la primera sentencia Python ejecutable. Si el archivo tiene cambios sin guardar, se puede guardar primero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>Debug Project</source>
         <translation>Depurar proyecto</translation>
     </message>
@@ -4658,7 +4714,7 @@ Not connected
         <translation>&lt;b&gt;Detener&lt;/b&gt;&lt;p&gt;Detener la sesión de depuración en ejecución.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Evaluate</source>
         <translation>Evaluar</translation>
     </message>
@@ -4673,7 +4729,7 @@ Not connected
         <translation>Evaluar en el contexto actual</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Execute</source>
         <translation>Ejecutar</translation>
     </message>
@@ -4861,32 +4917,32 @@ Not connected
         <translation>Cobertura del Script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1508"/>
+        <location filename="Debugger/DebugUI.py" line="1510"/>
         <source>Profile of Project</source>
         <translation>Profiling del proyecto</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1497"/>
+        <location filename="Debugger/DebugUI.py" line="1499"/>
         <source>Profile of Script</source>
         <translation>Profiling del script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>No hay script principal definido para el proyecto actual. La depuración no es posible.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Enter the statement to evaluate</source>
         <translation>Introduzca la sentencia a evaluar</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Enter the statement to execute</source>
         <translation>Introduzca la sentencia a ejecutar</translation>
     </message>
@@ -5035,32 +5091,32 @@ Not connected
         <translation>Código fuente</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="224"/>
+        <location filename="Debugger/DebugViewer.py" line="233"/>
         <source>Threads:</source>
         <translation>Hilos:</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>ID</source>
         <translation>ID</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>State</source>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="461"/>
+        <location filename="Debugger/DebugViewer.py" line="483"/>
         <source>waiting at breakpoint</source>
         <translation>esperando en el punto de ruptura</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="463"/>
+        <location filename="Debugger/DebugViewer.py" line="485"/>
         <source>running</source>
         <translation>en ejecución</translation>
     </message>

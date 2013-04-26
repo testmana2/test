@@ -573,6 +573,13 @@ eric5.Debugger.BreakPointViewer.BreakPointViewer.highlightBreakpoint?4(fn, linen
 eric5.Debugger.BreakPointViewer.BreakPointViewer.setModel?4(model)
 eric5.Debugger.BreakPointViewer.BreakPointViewer.sourceFile?7
 eric5.Debugger.BreakPointViewer.BreakPointViewer?1(parent=None)
+eric5.Debugger.CallStackViewer.CallStackViewer.FilenameRole?7
+eric5.Debugger.CallStackViewer.CallStackViewer.LinenoRole?7
+eric5.Debugger.CallStackViewer.CallStackViewer.frameSelected?7
+eric5.Debugger.CallStackViewer.CallStackViewer.setDebugger?4(debugUI)
+eric5.Debugger.CallStackViewer.CallStackViewer.setProjectMode?4(enabled)
+eric5.Debugger.CallStackViewer.CallStackViewer.sourceFile?7
+eric5.Debugger.CallStackViewer.CallStackViewer?1(debugServer, parent=None)
 eric5.Debugger.CallTraceViewer.CallTraceViewer.clear?4()
 eric5.Debugger.CallTraceViewer.CallTraceViewer.isCallTraceEnabled?4()
 eric5.Debugger.CallTraceViewer.CallTraceViewer.on_callTrace_itemDoubleClicked?4(item, column)
@@ -791,6 +798,7 @@ eric5.Debugger.DebugViewer.DebugViewer.handleClientStack?4(stack)
 eric5.Debugger.DebugViewer.DebugViewer.handleDebuggingStarted?4()
 eric5.Debugger.DebugViewer.DebugViewer.handleRawInput?4()
 eric5.Debugger.DebugViewer.DebugViewer.handleResetUI?4()
+eric5.Debugger.DebugViewer.DebugViewer.initCallStackViewer?4(projectMode)
 eric5.Debugger.DebugViewer.DebugViewer.isCallTraceEnabled?4()
 eric5.Debugger.DebugViewer.DebugViewer.preferencesChanged?4()
 eric5.Debugger.DebugViewer.DebugViewer.restoreCurrentPage?4()

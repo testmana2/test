@@ -58,6 +58,7 @@ BrowserMethodItem BrowserItem
 BrowserModel QAbstractItemModel
 BrowserSortFilterProxyModel QSortFilterProxyModel
 BrowserSysPathItem BrowserItem
+CallStackViewer QTreeWidget
 CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget

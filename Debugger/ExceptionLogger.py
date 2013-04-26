@@ -106,9 +106,9 @@ class ExceptionLogger(QTreeWidget):
             itm.setText(0, "{0}, {1}".format(exceptionType, exceptionMessage))
         
         # now add the call stack, most recent call first
-        for fn, ln in stackTrace:
+        for entry in stackTrace:
             excitm = QTreeWidgetItem(itm)
-            excitm.setText(0, "{0}, {1:d}".format(fn, ln))
+            excitm.setText(0, "{0}, {1:d}".format(entry[0], entry[1]))
             
     def debuggingStarted(self):
         """

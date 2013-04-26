@@ -2375,6 +2375,62 @@ the button to the right.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>CallStackViewer</name>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="47"/>
+        <source>Show source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="49"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="51"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="58"/>
+        <source>File: {0}
+Line: {1}
+{2}{3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="60"/>
+        <source>File: {0}
+Line: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>Save Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="154"/>
+        <source>Text Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="168"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>Error saving Call Stack Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/CallStackViewer.py" line="186"/>
+        <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CallTraceViewer</name>
     <message>
         <location filename="Debugger/CallTraceViewer.ui" line="14"/>
@@ -2407,37 +2463,37 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>From</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="48"/>
+        <location filename="Debugger/CallTraceViewer.py" line="49"/>
         <source>To</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>Save Call Trace Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="116"/>
+        <location filename="Debugger/CallTraceViewer.py" line="117"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="130"/>
+        <location filename="Debugger/CallTraceViewer.py" line="131"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>Error saving Call Trace Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/CallTraceViewer.py" line="153"/>
+        <location filename="Debugger/CallTraceViewer.py" line="154"/>
         <source>&lt;p&gt;The call trace info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4311,7 +4367,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1606"/>
+        <location filename="Debugger/DebugUI.py" line="1610"/>
         <source>Run Script</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4331,7 +4387,7 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>Run Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4431,7 +4487,7 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1718"/>
+        <location filename="Debugger/DebugUI.py" line="1724"/>
         <source>Debug Script</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4451,7 +4507,7 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>Debug Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4621,7 +4677,7 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Evaluate</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4641,7 +4697,7 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Execute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4916,32 +4972,32 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1619"/>
+        <location filename="Debugger/DebugUI.py" line="1623"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1508"/>
+        <location filename="Debugger/DebugUI.py" line="1510"/>
         <source>Profile of Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1497"/>
+        <location filename="Debugger/DebugUI.py" line="1499"/>
         <source>Profile of Script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1731"/>
+        <location filename="Debugger/DebugUI.py" line="1737"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1992"/>
+        <location filename="Debugger/DebugUI.py" line="2005"/>
         <source>Enter the statement to evaluate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="2021"/>
+        <location filename="Debugger/DebugUI.py" line="2034"/>
         <source>Enter the statement to execute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4996,32 +5052,32 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="224"/>
+        <location filename="Debugger/DebugViewer.py" line="233"/>
         <source>Threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="226"/>
+        <location filename="Debugger/DebugViewer.py" line="235"/>
         <source>State</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="461"/>
+        <location filename="Debugger/DebugViewer.py" line="483"/>
         <source>waiting at breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="463"/>
+        <location filename="Debugger/DebugViewer.py" line="485"/>
         <source>running</source>
         <translation type="unfinished"></translation>
     </message>

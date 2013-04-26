@@ -84,6 +84,9 @@ QWidget
 <td><a href="#DebugViewer.__init__">DebugViewer</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#DebugViewer.__callStackFrameSelected">__callStackFrameSelected</a></td>
+<td>Private slot to handle the selection of a call stack entry of the call stack viewer.</td>
+</tr><tr>
 <td><a href="#DebugViewer.__frameSelected">__frameSelected</a></td>
 <td>Private slot to handle the selection of a new stack frame number.</td>
 </tr><tr>
@@ -116,6 +119,9 @@ QWidget
 </tr><tr>
 <td><a href="#DebugViewer.handleResetUI">handleResetUI</a></td>
 <td>Public method to reset the SBVviewer.</td>
+</tr><tr>
+<td><a href="#DebugViewer.initCallStackViewer">initCallStackViewer</a></td>
+<td>Public method to initialize the call stack viewer.</td>
 </tr><tr>
 <td><a href="#DebugViewer.isCallTraceEnabled">isCallTraceEnabled</a></td>
 <td>Public method to get the state of the call trace function.</td>
@@ -188,6 +194,17 @@ flag indicating whether the file browser should
                 have the file browser in a separate window or embedded
                 in the project browser instead.
 </dd>
+</dl><a NAME="DebugViewer.__callStackFrameSelected" ID="DebugViewer.__callStackFrameSelected"></a>
+<h4>DebugViewer.__callStackFrameSelected</h4>
+<b>__callStackFrameSelected</b>(<i>frameNo</i>)
+<p>
+        Private slot to handle the selection of a call stack entry of the
+        call stack viewer.
+</p><dl>
+<dt><i>frameNo</i></dt>
+<dd>
+frame number (index) of the selected entry (integer)
+</dd>
 </dl><a NAME="DebugViewer.__frameSelected" ID="DebugViewer.__frameSelected"></a>
 <h4>DebugViewer.__frameSelected</h4>
 <b>__frameSelected</b>(<i>frmnr</i>)
@@ -246,7 +263,13 @@ reference to the current widget (QWidget)
 <b>handleClientStack</b>(<i>stack</i>)
 <p>
         Public slot to show the call stack of the program being debugged.
-</p><a NAME="DebugViewer.handleDebuggingStarted" ID="DebugViewer.handleDebuggingStarted"></a>
+</p><dl>
+<dt><i>stack</i></dt>
+<dd>
+list of tuples with call stack data (file name, line number,
+            function name, formatted argument/values list)
+</dd>
+</dl><a NAME="DebugViewer.handleDebuggingStarted" ID="DebugViewer.handleDebuggingStarted"></a>
 <h4>DebugViewer.handleDebuggingStarted</h4>
 <b>handleDebuggingStarted</b>(<i></i>)
 <p>
@@ -263,7 +286,17 @@ reference to the current widget (QWidget)
 <b>handleResetUI</b>(<i></i>)
 <p>
         Public method to reset the SBVviewer.
-</p><a NAME="DebugViewer.isCallTraceEnabled" ID="DebugViewer.isCallTraceEnabled"></a>
+</p><a NAME="DebugViewer.initCallStackViewer" ID="DebugViewer.initCallStackViewer"></a>
+<h4>DebugViewer.initCallStackViewer</h4>
+<b>initCallStackViewer</b>(<i>projectMode</i>)
+<p>
+        Public method to initialize the call stack viewer.
+</p><dl>
+<dt><i>projectMode</i></dt>
+<dd>
+flag indicating to enable the project mode (boolean)
+</dd>
+</dl><a NAME="DebugViewer.isCallTraceEnabled" ID="DebugViewer.isCallTraceEnabled"></a>
 <h4>DebugViewer.isCallTraceEnabled</h4>
 <b>isCallTraceEnabled</b>(<i></i>)
 <p>
@@ -319,7 +352,7 @@ reference to the widget (QWidget)
 </p><dl>
 <dt><i>debugUI</i></dt>
 <dd>
-reference to the DebugUI objectTrees
+reference to the DebugUI object (DebugUI)
 </dd>
 </dl><a NAME="DebugViewer.setVariablesFilter" ID="DebugViewer.setVariablesFilter"></a>
 <h4>DebugViewer.setVariablesFilter</h4>

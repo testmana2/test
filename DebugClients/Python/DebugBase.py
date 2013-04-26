@@ -672,13 +672,25 @@ class DebugBase(bdb.Bdb):
                 
                 for fr in frlist:
                     filename = self._dbgClient.absPath(self.fix_frame_filename(fr))
-                    linenr = fr.f_lineno
                     
                     if os.path.basename(filename).startswith("DebugClient") or \
                        os.path.basename(filename) == "bdb.py":
                         break
                     
-                    exclist.append([filename, linenr])
+                    linenr = fr.f_lineno
+                    ffunc = fr.f_code.co_name
+                    
+                    if ffunc == '?':
+                        ffunc = ''
+                    
+                    if ffunc and not ffunc.startswith("<"):
+                        argInfo = inspect.getargvalues(fr)
+                        fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
+                                                        argInfo[2], argInfo[3])
+                    else:
+                        fargs = ""
+                    
+                    exclist.append([filename, linenr, ffunc, fargs])
             
             self._dbgClient.write("%s%s\n" % (ResponseException, unicode(exclist)))
             
