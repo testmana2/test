@@ -99,6 +99,7 @@ class Prefs(object):
         "StyleSheet": "",
         "ViewManager": "tabview",
         "LayoutType": "Sidebars",
+        "SidebarDelay": 200,
         # allowed values are "Toolboxes" and "Sidebars"
         "LayoutShellEmbedded": 0,           # 0 = separate
                                             # 1 = embedded in debug browser
@@ -1417,7 +1418,8 @@ def getUI(key, prefClass=Prefs):
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp",
                  "ProxyType/Ftp", "OpenOnStartup",
-                 "PerformVersionCheck", "RecentNumber", "NotificationTimeout"]:
+                 "PerformVersionCheck", "RecentNumber", "NotificationTimeout",
+                 "SidebarDelay"]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",

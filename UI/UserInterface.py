@@ -707,14 +707,15 @@ class UserInterface(E5MainWindow):
         """
         from E5Gui.E5SideBar import E5SideBar
         
+        delay = Preferences.getUI("SidebarDelay")
         # Create the left sidebar
-        self.leftSidebar = E5SideBar(E5SideBar.West)
+        self.leftSidebar = E5SideBar(E5SideBar.West, delay)
         
         # Create the bottom sidebar
-        self.bottomSidebar = E5SideBar(E5SideBar.South)
+        self.bottomSidebar = E5SideBar(E5SideBar.South, delay)
         
         # Create the right sidebar
-        self.rightSidebar = E5SideBar(E5SideBar.East)
+        self.rightSidebar = E5SideBar(E5SideBar.East, delay)
         
         # Create the project browser
         logging.debug("Creating Project Browser...")
@@ -4699,6 +4700,12 @@ class UserInterface(E5MainWindow):
         from QScintilla.SpellChecker import SpellChecker
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
+        
+        if self.layout == "Sidebars":
+            delay = Preferences.getUI("SidebarDelay")
+            self.leftSidebar.setDelay(delay)
+            self.bottomSidebar.setDelay(delay)
+            self.rightSidebar.setDelay(delay)
         
         self.preferencesChanged.emit()
         

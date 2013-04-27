@@ -3615,12 +3615,17 @@
       <keyword name="E5SideBar (Module)" id="E5SideBar (Module)" ref="eric5.E5Gui.E5SideBar.html" />
       <keyword name="E5SideBar.__appFocusChanged" id="E5SideBar.__appFocusChanged" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__appFocusChanged" />
       <keyword name="E5SideBar.__autoHideToggled" id="E5SideBar.__autoHideToggled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__autoHideToggled" />
+      <keyword name="E5SideBar.__cancelDelayTimer" id="E5SideBar.__cancelDelayTimer" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__cancelDelayTimer" />
+      <keyword name="E5SideBar.__delayedAction" id="E5SideBar.__delayedAction" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__delayedAction" />
+      <keyword name="E5SideBar.__expandIt" id="E5SideBar.__expandIt" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__expandIt" />
+      <keyword name="E5SideBar.__shrinkIt" id="E5SideBar.__shrinkIt" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__shrinkIt" />
       <keyword name="E5SideBar.__splitterMoved" id="E5SideBar.__splitterMoved" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__splitterMoved" />
       <keyword name="E5SideBar.addTab" id="E5SideBar.addTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.addTab" />
       <keyword name="E5SideBar.clear" id="E5SideBar.clear" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.clear" />
       <keyword name="E5SideBar.count" id="E5SideBar.count" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.count" />
       <keyword name="E5SideBar.currentIndex" id="E5SideBar.currentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentIndex" />
       <keyword name="E5SideBar.currentWidget" id="E5SideBar.currentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentWidget" />
+      <keyword name="E5SideBar.delay" id="E5SideBar.delay" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.delay" />
       <keyword name="E5SideBar.enterEvent" id="E5SideBar.enterEvent" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.enterEvent" />
       <keyword name="E5SideBar.eventFilter" id="E5SideBar.eventFilter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.eventFilter" />
       <keyword name="E5SideBar.expand" id="E5SideBar.expand" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.expand" />
@@ -3638,6 +3643,7 @@
       <keyword name="E5SideBar.saveState" id="E5SideBar.saveState" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.saveState" />
       <keyword name="E5SideBar.setCurrentIndex" id="E5SideBar.setCurrentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentIndex" />
       <keyword name="E5SideBar.setCurrentWidget" id="E5SideBar.setCurrentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentWidget" />
+      <keyword name="E5SideBar.setDelay" id="E5SideBar.setDelay" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setDelay" />
       <keyword name="E5SideBar.setOrientation" id="E5SideBar.setOrientation" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setOrientation" />
       <keyword name="E5SideBar.setSplitter" id="E5SideBar.setSplitter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setSplitter" />
       <keyword name="E5SideBar.setTabEnabled" id="E5SideBar.setTabEnabled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabEnabled" />

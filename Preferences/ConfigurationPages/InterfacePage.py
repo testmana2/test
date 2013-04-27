@@ -106,6 +106,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.initColour("LogStdErrColour", self.stderrTextColourButton,
             Preferences.getUI)
         
+        self.delaySpinBox.setValue(Preferences.getUI("SidebarDelay"))
+        
     def save(self):
         """
         Public slot to save the Interface configuration.
@@ -177,6 +179,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         
         Preferences.setUI("SingleCloseButton",
             self.tabsCloseButtonCheckBox.isChecked())
+        
+        Preferences.setUI("SidebarDelay", self.delaySpinBox.value())
         
         self.saveColours(Preferences.setUI)
         
