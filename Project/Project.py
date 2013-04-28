@@ -2852,7 +2852,7 @@ class Project(QObject):
             if path == self.ppath:
                 return True
             elif Utilities.normcasepath(Utilities.toNativeSeparators(path)).startswith(
-                 Utilities.normcasepath(Utilities.toNativeSeparators(self.ppath))):
+                 Utilities.normcasepath(Utilities.toNativeSeparators(self.ppath +"/"))):
                 return True
             else:
                 return False
@@ -2913,10 +2913,7 @@ class Project(QObject):
             if self.ppath and path == self.ppath:
                 return ""
             else:
-                p = path[len(self.ppath):]
-                if p.startswith(("\\","/")):
-                    p = p[1:]
-                return p
+                return path[len(self.ppath) + 1:]
         else:
             return path
         
