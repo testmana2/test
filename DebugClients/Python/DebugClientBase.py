@@ -1231,6 +1231,9 @@ class DebugClientBase(object):
         @param scope 1 to report global variables, 0 for local variables (int)
         @param filter the indices of variable types to be filtered (list of int)
         """
+        if self.currentThread is None:
+            return
+        
         if scope == 0:
             self.framenr = frmnr
         
@@ -1270,6 +1273,9 @@ class DebugClientBase(object):
         @param scope 1 to report global variables, 0 for local variables (int)
         @param filter the indices of variable types to be filtered (list of int)
         """
+        if self.currentThread is None:
+            return
+        
         f = self.currentThread.getCurrentFrame()
         
         while f is not None and frmnr > 0:
