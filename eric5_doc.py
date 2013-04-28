@@ -251,6 +251,10 @@ def main():
         qtHelpFolder == "" or '/' in qtHelpFolder or \
         qtHelpTitle == ""):
         usage()
+    
+    if qtHelpCreation:
+        from PyQt4.QtCore import QCoreApplication
+        app = QCoreApplication(sys.argv)    # __IGNORE_WARNING__
 
     input = output = 0
     basename = ""
