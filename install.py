@@ -1086,6 +1086,7 @@ def main(argv):
         pass
     
     # cleanup old installation
+    print("Cleaning up old installation ...")
     try:
         if doCleanup:
             if distDir:
@@ -1097,10 +1098,11 @@ def main(argv):
         exit(7)
 
     # Create a config file and delete the default one
+    print("\nCreating configuration file ...")
     createConfig()
 
     # Compile .ui files
-    print("Compiling user interface files...")
+    print("\nCompiling user interface files ...")
     # step 1: remove old Ui_*.py files
     for root, _, files in os.walk(sourceDir):
         for file in [f for f in files if fnmatch.fnmatch(f, 'Ui_*.py')]:
@@ -1109,7 +1111,7 @@ def main(argv):
     compileUiFiles()
     
     if doCompile:
-        print("\nCompiling source files...")
+        print("\nCompiling source files ...")
         if distDir:
             compileall.compile_dir(sourceDir,
                 ddir=os.path.join(distDir, modDir, cfg['ericDir']),
