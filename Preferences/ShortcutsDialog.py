@@ -426,7 +426,6 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                     itm.setHidden(False)
             topItem.setHidden(childHiddenCount == topItem.childCount())
     
-    
     @pyqtSlot(bool)
     def on_actionButton_toggled(self, checked):
         """

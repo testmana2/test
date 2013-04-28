@@ -67,7 +67,6 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Preferences.setUser("MailServerUseTLS",
             self.useTlsCheckBox.isChecked())
     
-    
     def __updateTestButton(self):
         """
         Private slot to update the enabled state of the test button.

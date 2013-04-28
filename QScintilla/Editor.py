@@ -3675,7 +3675,6 @@ class Editor(QsciScintillaCompat):
                     lineNo -= 1
                 else:
                     lineNo += 1
-            
     
     ############################################################################
     ## Setup methods below

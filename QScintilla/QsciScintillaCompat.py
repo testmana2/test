@@ -962,7 +962,6 @@ class QsciScintillaCompat(QsciScintilla):
             QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
-        
     
     ###########################################################################
     # interface methods to the standard keyboard command set

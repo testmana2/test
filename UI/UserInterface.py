@@ -4677,7 +4677,6 @@ class UserInterface(E5MainWindow):
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
         self.preferencesChanged.emit()
-        
     
     def __masterPasswordChanged(self, oldPassword, newPassword):
         """

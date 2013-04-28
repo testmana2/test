@@ -43,7 +43,6 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
             Preferences.getHelp("VirusTotalSecure"))
         self.vtServiceKeyEdit.setText(
             Preferences.getHelp("VirusTotalServiceKey"))
-        
     
     def save(self):
         """
