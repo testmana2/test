@@ -140,7 +140,6 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
         """
         self.__updateOK()
     
-    
     @pyqtSlot(str)
     def on_id1Edit_textChanged(self, txt):
         """

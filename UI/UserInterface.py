@@ -4708,7 +4708,6 @@ class UserInterface(E5MainWindow):
             self.rightSidebar.setDelay(delay)
         
         self.preferencesChanged.emit()
-        
     
     def __masterPasswordChanged(self, oldPassword, newPassword):
         """

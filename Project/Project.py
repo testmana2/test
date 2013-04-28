@@ -801,7 +801,6 @@ class Project(QObject):
         self.sessActGrp.findChild(QAction, "project_load_session").setEnabled(enable)
         self.sessActGrp.findChild(QAction, "project_delete_session").setEnabled(enable)
         
-        
     def __readSession(self, quiet=False, indicator=""):
         """
         Private method to read in the project session file (.e4s)
@@ -2109,7 +2108,6 @@ class Project(QObject):
             else:
                 self.newProjectHooks.emit()
                 self.newProject.emit()
-            
 
     def newProjectAddFiles(self, mainscript):
         """
@@ -2852,7 +2850,7 @@ class Project(QObject):
             if path == self.ppath:
                 return True
             elif Utilities.normcasepath(Utilities.toNativeSeparators(path)).startswith(
-                 Utilities.normcasepath(Utilities.toNativeSeparators(self.ppath +"/"))):
+                 Utilities.normcasepath(Utilities.toNativeSeparators(self.ppath + "/"))):
                 return True
             else:
                 return False

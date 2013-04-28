@@ -932,7 +932,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
             "{0} {1}".format(match.group(1), ircFilter(match.group(2))))
         return True
     
-    
     def __handleCtcp(self, match):
         """
         Private method to handle a CTCP channel command.
