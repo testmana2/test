@@ -7821,847 +7821,847 @@ selección completa.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2617"/>
+        <location filename="QScintilla/Editor.py" line="2618"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="592"/>
+        <location filename="QScintilla/Editor.py" line="593"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="596"/>
         <source>Redo</source>
         <translation>Rehacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="599"/>
         <source>Revert to last saved state</source>
         <translation>Volver al último estado guardado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="602"/>
+        <location filename="QScintilla/Editor.py" line="603"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="605"/>
+        <location filename="QScintilla/Editor.py" line="606"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="607"/>
+        <location filename="QScintilla/Editor.py" line="608"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="612"/>
         <source>Indent</source>
         <translation>Indentar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="613"/>
+        <location filename="QScintilla/Editor.py" line="614"/>
         <source>Unindent</source>
         <translation>Desindentar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="616"/>
+        <location filename="QScintilla/Editor.py" line="617"/>
         <source>Comment</source>
         <translation>Pasar a comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="619"/>
+        <location filename="QScintilla/Editor.py" line="620"/>
         <source>Uncomment</source>
         <translation>Sacar de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="622"/>
+        <location filename="QScintilla/Editor.py" line="623"/>
         <source>Stream Comment</source>
         <translation>Bloque de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="625"/>
+        <location filename="QScintilla/Editor.py" line="626"/>
         <source>Box Comment</source>
         <translation>Caja de comentario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="628"/>
+        <location filename="QScintilla/Editor.py" line="629"/>
         <source>Select to brace</source>
         <translation>Seleccionar hasta la llave ( &apos;{&apos; o &apos;}&apos; )</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="630"/>
+        <location filename="QScintilla/Editor.py" line="631"/>
         <source>Select all</source>
         <translation>Seleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="631"/>
+        <location filename="QScintilla/Editor.py" line="632"/>
         <source>Deselect all</source>
         <translation>Deseleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="644"/>
+        <location filename="QScintilla/Editor.py" line="645"/>
         <source>Shorten empty lines</source>
         <translation>Acortar las líneas vacías</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="652"/>
+        <location filename="QScintilla/Editor.py" line="653"/>
         <source>Use Monospaced Font</source>
         <translation>Usar fuente monoespaciada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="657"/>
+        <location filename="QScintilla/Editor.py" line="658"/>
         <source>Autosave enabled</source>
         <translation>Autoguardar habilitado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="669"/>
+        <location filename="QScintilla/Editor.py" line="670"/>
         <source>Autocompletion enabled</source>
         <translation>Autocompletar habilitado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="686"/>
+        <location filename="QScintilla/Editor.py" line="687"/>
         <source>New view</source>
         <translation>Nueva vista</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="687"/>
+        <location filename="QScintilla/Editor.py" line="688"/>
         <source>New view (with new split)</source>
         <translation>Nueva vista (con nueva división)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="691"/>
+        <location filename="QScintilla/Editor.py" line="692"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="695"/>
+        <location filename="QScintilla/Editor.py" line="696"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="697"/>
+        <location filename="QScintilla/Editor.py" line="698"/>
         <source>Save As...</source>
         <translation>Guardar como...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="708"/>
+        <location filename="QScintilla/Editor.py" line="709"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="725"/>
+        <location filename="QScintilla/Editor.py" line="726"/>
         <source>Autocomplete</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="731"/>
+        <location filename="QScintilla/Editor.py" line="732"/>
         <source>from Document</source>
         <translation>desde Documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="734"/>
+        <location filename="QScintilla/Editor.py" line="735"/>
         <source>from APIs</source>
         <translation>desde APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="737"/>
+        <location filename="QScintilla/Editor.py" line="738"/>
         <source>from Document and APIs</source>
         <translation>desde Documento y APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="752"/>
         <source>Check</source>
         <translation>Verificar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="759"/>
+        <location filename="QScintilla/Editor.py" line="760"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="761"/>
+        <location filename="QScintilla/Editor.py" line="762"/>
         <source>Code metrics...</source>
         <translation>Métricas de código...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="763"/>
+        <location filename="QScintilla/Editor.py" line="764"/>
         <source>Code coverage...</source>
         <translation>Cobertura de código...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="765"/>
+        <location filename="QScintilla/Editor.py" line="766"/>
         <source>Show code coverage annotations</source>
         <translation>Mostrar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="768"/>
+        <location filename="QScintilla/Editor.py" line="769"/>
         <source>Hide code coverage annotations</source>
         <translation>Ocultar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="771"/>
+        <location filename="QScintilla/Editor.py" line="772"/>
         <source>Profile data...</source>
         <translation>Datos de profiling...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="781"/>
+        <location filename="QScintilla/Editor.py" line="782"/>
         <source>Diagrams</source>
         <translation>Diagramas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="783"/>
+        <location filename="QScintilla/Editor.py" line="784"/>
         <source>Class Diagram...</source>
         <translation>Diagrama de clases...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="785"/>
+        <location filename="QScintilla/Editor.py" line="786"/>
         <source>Package Diagram...</source>
         <translation>Diagrama de paquetes...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="787"/>
+        <location filename="QScintilla/Editor.py" line="788"/>
         <source>Imports Diagram...</source>
         <translation>Diagrama de imports...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="790"/>
+        <location filename="QScintilla/Editor.py" line="791"/>
         <source>Application Diagram...</source>
         <translation>Diagrama de aplicación...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="804"/>
+        <location filename="QScintilla/Editor.py" line="805"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="807"/>
+        <location filename="QScintilla/Editor.py" line="808"/>
         <source>No Language</source>
         <translation>Ningún Lenguaje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="903"/>
+        <location filename="QScintilla/Editor.py" line="904"/>
         <source>Export as</source>
         <translation>Exportar como</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1030"/>
+        <location filename="QScintilla/Editor.py" line="1031"/>
         <source>Toggle bookmark</source>
         <translation>Alternar marcador</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1033"/>
+        <location filename="QScintilla/Editor.py" line="1034"/>
         <source>Next bookmark</source>
         <translation>Nuevo marcador</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1036"/>
+        <location filename="QScintilla/Editor.py" line="1037"/>
         <source>Previous bookmark</source>
         <translation>Marcador anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1039"/>
+        <location filename="QScintilla/Editor.py" line="1040"/>
         <source>Clear all bookmarks</source>
         <translation>Borrar todos los marcadores</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1043"/>
+        <location filename="QScintilla/Editor.py" line="1044"/>
         <source>Goto syntax error</source>
         <translation>Ir al error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1046"/>
+        <location filename="QScintilla/Editor.py" line="1047"/>
         <source>Show syntax error message</source>
         <translation>Ver el mensaje de error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1049"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>Clear syntax error</source>
         <translation>Borrar error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1066"/>
+        <location filename="QScintilla/Editor.py" line="1067"/>
         <source>Toggle breakpoint</source>
         <translation>Alternar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1069"/>
+        <location filename="QScintilla/Editor.py" line="1070"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Alternar punto de interrupción temporal</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1072"/>
+        <location filename="QScintilla/Editor.py" line="1073"/>
         <source>Edit breakpoint...</source>
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4542"/>
+        <location filename="QScintilla/Editor.py" line="4549"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1078"/>
+        <location filename="QScintilla/Editor.py" line="1079"/>
         <source>Next breakpoint</source>
         <translation>Siguiente punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1081"/>
+        <location filename="QScintilla/Editor.py" line="1082"/>
         <source>Previous breakpoint</source>
         <translation>Punto de interrupción anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1085"/>
         <source>Clear all breakpoints</source>
         <translation>Borrar todos los puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1088"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>Next uncovered line</source>
         <translation>Siguiente línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1091"/>
+        <location filename="QScintilla/Editor.py" line="1092"/>
         <source>Previous uncovered line</source>
         <translation>Anterior línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1095"/>
+        <location filename="QScintilla/Editor.py" line="1096"/>
         <source>Next task</source>
         <translation>Nueva tarea</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1098"/>
+        <location filename="QScintilla/Editor.py" line="1099"/>
         <source>Previous task</source>
         <translation>Tarea anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1109"/>
+        <location filename="QScintilla/Editor.py" line="1110"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB (botón izquierdo del ratón) alterna marcadores</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1114"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB (botón izquierdo del ratón) alterna puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1148"/>
+        <location filename="QScintilla/Editor.py" line="1149"/>
         <source>Export source</source>
         <translation>Exportar fuente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1148"/>
+        <location filename="QScintilla/Editor.py" line="1149"/>
         <source>No export format given. Aborting...</source>
         <translation>No se ha proporcionado un formato de exportación. Abortando...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1598"/>
+        <location filename="QScintilla/Editor.py" line="1599"/>
         <source>Modification of Read Only file</source>
         <translation>Modificación de un archivo de solo lectura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1598"/>
+        <location filename="QScintilla/Editor.py" line="1599"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Usted está intentando modificar un archivo solo lectura. Por favor guarde en otro archivo primero.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2244"/>
+        <location filename="QScintilla/Editor.py" line="2245"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2261"/>
+        <location filename="QScintilla/Editor.py" line="2262"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2263"/>
+        <location filename="QScintilla/Editor.py" line="2264"/>
         <source>Error while printing</source>
         <translation>Error al imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2266"/>
+        <location filename="QScintilla/Editor.py" line="2267"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2569"/>
+        <location filename="QScintilla/Editor.py" line="2570"/>
         <source>File Modified</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2781"/>
+        <location filename="QScintilla/Editor.py" line="2782"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4051"/>
+        <location filename="QScintilla/Editor.py" line="4058"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4051"/>
+        <location filename="QScintilla/Editor.py" line="4058"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4545"/>
+        <location filename="QScintilla/Editor.py" line="4552"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4873"/>
+        <location filename="QScintilla/Editor.py" line="4880"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4873"/>
+        <location filename="QScintilla/Editor.py" line="4880"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4934"/>
+        <location filename="QScintilla/Editor.py" line="4941"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4928"/>
+        <location filename="QScintilla/Editor.py" line="4935"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4934"/>
+        <location filename="QScintilla/Editor.py" line="4941"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5026"/>
+        <location filename="QScintilla/Editor.py" line="5033"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5026"/>
+        <location filename="QScintilla/Editor.py" line="5033"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5164"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5164"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5382"/>
+        <location filename="QScintilla/Editor.py" line="5389"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5382"/>
+        <location filename="QScintilla/Editor.py" line="5389"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5410"/>
+        <location filename="QScintilla/Editor.py" line="5417"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5450"/>
+        <location filename="QScintilla/Editor.py" line="5457"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5431"/>
+        <location filename="QScintilla/Editor.py" line="5438"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5450"/>
+        <location filename="QScintilla/Editor.py" line="5457"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5474"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5482"/>
+        <location filename="QScintilla/Editor.py" line="5489"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5493"/>
+        <location filename="QScintilla/Editor.py" line="5500"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5493"/>
+        <location filename="QScintilla/Editor.py" line="5500"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5518"/>
+        <location filename="QScintilla/Editor.py" line="5525"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5518"/>
+        <location filename="QScintilla/Editor.py" line="5525"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5647"/>
+        <location filename="QScintilla/Editor.py" line="5654"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5907"/>
+        <location filename="QScintilla/Editor.py" line="5914"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5925"/>
+        <location filename="QScintilla/Editor.py" line="5932"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5927"/>
+        <location filename="QScintilla/Editor.py" line="5934"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5929"/>
+        <location filename="QScintilla/Editor.py" line="5936"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5931"/>
+        <location filename="QScintilla/Editor.py" line="5938"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5933"/>
+        <location filename="QScintilla/Editor.py" line="5940"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5936"/>
+        <location filename="QScintilla/Editor.py" line="5943"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5954"/>
+        <location filename="QScintilla/Editor.py" line="5961"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5970"/>
+        <location filename="QScintilla/Editor.py" line="5977"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5997"/>
+        <location filename="QScintilla/Editor.py" line="6004"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6059"/>
+        <location filename="QScintilla/Editor.py" line="6066"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6059"/>
+        <location filename="QScintilla/Editor.py" line="6066"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6077"/>
+        <location filename="QScintilla/Editor.py" line="6084"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6077"/>
+        <location filename="QScintilla/Editor.py" line="6084"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6089"/>
+        <location filename="QScintilla/Editor.py" line="6096"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6089"/>
+        <location filename="QScintilla/Editor.py" line="6096"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="728"/>
+        <location filename="QScintilla/Editor.py" line="729"/>
         <source>dynamic</source>
         <translation>dinámico</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="741"/>
+        <location filename="QScintilla/Editor.py" line="742"/>
         <source>Calltip</source>
         <translation>Consejo de llamada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="706"/>
+        <location filename="QScintilla/Editor.py" line="707"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="341"/>
+        <location filename="QScintilla/Editor.py" line="342"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Una Ventana de Edición de Códigos Fuente&lt;/b&gt;&lt;p&gt;Esta ventana se utiliza para mostrar y editar un archivo de código fuente.  Puede abrir tantas como desee. El nombre del archivo se muestra en la barra de título de la ventana.&lt;/p&gt;&lt;p&gt;Para insertar puntos de interrupción basta con hacer un click en el espacio entre los números de línea y los marcadores de plegado.  Pueden editarse con el menú de contexto de los márgenes.&lt;/p&gt;&lt;p&gt;Para insertar marcadores solo hay que hacer Shift-click en el espacio entre los números de línea y los marcadores de plegado.&lt;/p&gt;&lt;p&gt;Estas acciones se pueden revertir utilizando el menú de contexto.&lt;/p&gt;&lt;p&gt;Haciendo Ctrl-click en un marcador de error sintáctico se muestra información sobre el dicho error.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="662"/>
+        <location filename="QScintilla/Editor.py" line="663"/>
         <source>Typing aids enabled</source>
         <translation>Ayudas al tecleo habilitadas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="869"/>
+        <location filename="QScintilla/Editor.py" line="870"/>
         <source>End-of-Line Type</source>
         <translation>Typo de fin-de-línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="873"/>
+        <location filename="QScintilla/Editor.py" line="874"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="880"/>
+        <location filename="QScintilla/Editor.py" line="881"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="887"/>
+        <location filename="QScintilla/Editor.py" line="888"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="847"/>
+        <location filename="QScintilla/Editor.py" line="848"/>
         <source>Encodings</source>
         <translation>Codificaciones</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="829"/>
+        <location filename="QScintilla/Editor.py" line="830"/>
         <source>Guessed</source>
         <translation>Suposición</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1161"/>
+        <location filename="QScintilla/Editor.py" line="1162"/>
         <source>Alternatives</source>
         <translation>Alternativas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1177"/>
+        <location filename="QScintilla/Editor.py" line="1178"/>
         <source>Pygments Lexer</source>
         <translation>Analizador Léxico de Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1177"/>
+        <location filename="QScintilla/Editor.py" line="1178"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6365"/>
+        <location filename="QScintilla/Editor.py" line="6372"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="637"/>
+        <location filename="QScintilla/Editor.py" line="638"/>
         <source>Check spelling of selection...</source>
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6367"/>
+        <location filename="QScintilla/Editor.py" line="6374"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6369"/>
+        <location filename="QScintilla/Editor.py" line="6376"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="641"/>
+        <location filename="QScintilla/Editor.py" line="642"/>
         <source>Remove from dictionary</source>
         <translation>Eliminar del diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="288"/>
+        <location filename="QScintilla/Editor.py" line="289"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El tamaño del archivo &lt;b&gt;{0}&lt;/b&gt; es &lt;b&gt;{1} KB&lt;/b&gt;. ¿Desea cargarlo de todos modos?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1142"/>
+        <location filename="QScintilla/Editor.py" line="1143"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay un exportador disponible para el formato de exportación &lt;b&gt;{0}&lt;/b&gt;. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1157"/>
+        <location filename="QScintilla/Editor.py" line="1158"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativas ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2569"/>
+        <location filename="QScintilla/Editor.py" line="2570"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; tiene cambios sin guardar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2617"/>
+        <location filename="QScintilla/Editor.py" line="2618"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser abierto.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2718"/>
+        <location filename="QScintilla/Editor.py" line="2719"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5424"/>
+        <location filename="QScintilla/Editor.py" line="5431"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5431"/>
+        <location filename="QScintilla/Editor.py" line="5438"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5482"/>
+        <location filename="QScintilla/Editor.py" line="5489"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5638"/>
+        <location filename="QScintilla/Editor.py" line="5645"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5785"/>
+        <location filename="QScintilla/Editor.py" line="5792"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5907"/>
+        <location filename="QScintilla/Editor.py" line="5914"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5997"/>
+        <location filename="QScintilla/Editor.py" line="6004"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1053"/>
+        <location filename="QScintilla/Editor.py" line="1054"/>
         <source>Next warning</source>
         <translation>Siguiente advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1056"/>
+        <location filename="QScintilla/Editor.py" line="1057"/>
         <source>Previous warning</source>
         <translation>Anterior advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1059"/>
+        <location filename="QScintilla/Editor.py" line="1060"/>
         <source>Show warning message</source>
         <translation>Mostrar mensaje de advertencia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1062"/>
+        <location filename="QScintilla/Editor.py" line="1063"/>
         <source>Clear warnings</source>
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5283"/>
+        <location filename="QScintilla/Editor.py" line="5290"/>
         <source>py3flakes Warning</source>
         <translation>Advertencia de py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5283"/>
+        <location filename="QScintilla/Editor.py" line="5290"/>
         <source>No py3flakes warning message available.</source>
         <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2781"/>
+        <location filename="QScintilla/Editor.py" line="2782"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5467"/>
+        <location filename="QScintilla/Editor.py" line="5474"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5326"/>
+        <location filename="QScintilla/Editor.py" line="5333"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5332"/>
+        <location filename="QScintilla/Editor.py" line="5339"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5643"/>
+        <location filename="QScintilla/Editor.py" line="5650"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4147"/>
+        <location filename="QScintilla/Editor.py" line="4154"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Activando el Proveedor de Autocompletado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4147"/>
+        <location filename="QScintilla/Editor.py" line="4154"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de autocompletado no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4332"/>
+        <location filename="QScintilla/Editor.py" line="4339"/>
         <source>Activating Calltip Provider</source>
         <translation>Activando Proveedor de Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4332"/>
+        <location filename="QScintilla/Editor.py" line="4339"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de calltip no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="703"/>
+        <location filename="QScintilla/Editor.py" line="704"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="793"/>
+        <location filename="QScintilla/Editor.py" line="794"/>
         <source>Load Diagram...</source>
         <translation>Cargar Diagrama...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1102"/>
+        <location filename="QScintilla/Editor.py" line="1103"/>
         <source>Next change</source>
         <translation>Siguiente cambio</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1105"/>
+        <location filename="QScintilla/Editor.py" line="1106"/>
         <source>Previous change</source>
         <translation>Cambio anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6769"/>
+        <location filename="QScintilla/Editor.py" line="6776"/>
         <source>Sort Lines</source>
         <translation>Ordenar Líneas</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6769"/>
+        <location filename="QScintilla/Editor.py" line="6776"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>La selección contiene datos ilegales para una ordenación numérica.</translation>
     </message>
@@ -10793,12 +10793,12 @@ selección completa.&lt;/li&gt;
         <translation>Fuente Monoespacio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="480"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="428"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Pulse para seleccionar la fuente para números de línea en el editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="431"/>
         <source>Line Numbers Font</source>
         <translation>Fuente para números de Línea</translation>
     </message>
@@ -10808,7 +10808,7 @@ selección completa.&lt;/li&gt;
         <translation>Texto Monoespaciado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="447"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
@@ -10840,30 +10840,30 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
         <source>Linenumbers width:</source>
-        <translation>Ancho de números de línea:</translation>
+        <translation type="obsolete">Ancho de números de línea:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Move to set the width of the linenumbers margin.</source>
-        <translation>Mover para establecer la anchura del margen para números de línea.</translation>
+        <translation type="obsolete">Mover para establecer la anchura del margen para números de línea.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="269"/>
         <source>Displays the selected width of the linenumbers margin.</source>
-        <translation>Muestra la anchura seleccionada para el margen de números de línea.</translation>
+        <translation type="obsolete">Muestra la anchura seleccionada para el margen de números de línea.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="289"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
         <source>Folding style:</source>
         <translation>Estilo de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="302"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="250"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Seleccionar el estilo de plegado a utilizar en el margen de plegado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="305"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="253"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -10888,262 +10888,262 @@ selección completa.&lt;/li&gt;
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="319"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="267"/>
         <source>Plain</source>
         <translation>Plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="324"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="272"/>
         <source>Circled</source>
         <translation>Con círculo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="329"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="277"/>
         <source>Boxed</source>
         <translation>Con Caja</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="334"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="282"/>
         <source>Circled Tree</source>
         <translation>Árbol con Círculo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="287"/>
         <source>Boxed Tree</source>
         <translation>Árbol con Caja</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="530"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="478"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="538"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="486"/>
         <source>Select to use custom selection colours</source>
         <translation>Seleccione para usar colores personalizados para la selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="489"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Usar colores personalizados para la selección&lt;/b&gt;&lt;p&gt;Seleccione esta entrada para utilizar colores personalizados de selección en las ventanas de edición y shell. Los colores para el primer plano y para el fondo se definen en la página de colores&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="544"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="492"/>
         <source>Use custom selection colours</source>
         <translation>Usar colores personalizados para la selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Seleccione si el texto seleccionado debe ser coloreado por el analizador léxico.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="502"/>
         <source>Colourize selected text</source>
         <translation>Colorizar texto seleccionado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="561"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="509"/>
         <source>Select to extend selection to end of line</source>
         <translation>Seleccionar para extender la selección hasta el final de la línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="512"/>
         <source>Extend selection to end of line</source>
         <translation>Extender selección hasta el final de la línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="575"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="523"/>
         <source>Selection foreground:</source>
         <translation>Primer plano de la selección:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="588"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="536"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Seleccionar el color de primer plano para la selección.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="546"/>
         <source>Selection background:</source>
         <translation>Color de fondo de la selección:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="559"/>
         <source>Select the background colour for the selection.</source>
         <translation>Seleccione el color de fondo para la selección.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="626"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
         <source>Caret</source>
         <translation>Punto de inserción de texto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="632"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="580"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Seleccionar si la línea con el punto de inserción de texto debe ser resaltada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="635"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="583"/>
         <source>Caretline visible</source>
         <translation>Punto de inserción de texto visible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Caret width:</source>
         <translation>Anchura del punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="651"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="599"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Seleccionar ancho del punto de inserción de texto  (1, 2 o 3 píxeles)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="684"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="632"/>
         <source>Caret foreground:</source>
         <translation>Color de primer plano para el punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="697"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="645"/>
         <source>Select the colour for the caret.</source>
         <translation>Seleccionar el color para el punto de inserción de texto.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="707"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="655"/>
         <source>Caretline background:</source>
         <translation>Color de fondo para la línea con el punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="720"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="668"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Seleccionar el color de fondo para la línea que contiene el punto de inserción de texto.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="741"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="689"/>
         <source>Current line marker:</source>
         <translation>Marcador de línea actual:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="754"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="702"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Seleccionar el color para el marcador de línea actual.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="764"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="712"/>
         <source>Error line marker:</source>
         <translation>Marcador de línea con error:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="777"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="725"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Seleccionar el color para el marcador de línea con error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="790"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="738"/>
         <source>Braces</source>
         <translation>Llaves ( &apos;{&apos; y &apos;}&apos; )</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="796"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="744"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Seleccionar si las llaves coincidentes y las que no se han de resaltar.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="799"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="747"/>
         <source>Highlight braces</source>
         <translation>Resaltar llaves</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="806"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="754"/>
         <source>Matched braces:</source>
         <translation>Llaves coincidentes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="819"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="767"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Seleccione el color de resaltado de llaves coincidentes.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="829"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="777"/>
         <source>Matched braces background:</source>
         <translation>Fondo de llaves coincidentes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="790"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Seleccione el color de fondo para resaltar llaves coincidentes.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="858"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="806"/>
         <source>Unmatched brace:</source>
         <translation>Llave sin coincidencia:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="813"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Seleccione el color de resaltado de llaves sin coincidencia.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="881"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="829"/>
         <source>Unmatched brace background:</source>
         <translation>Fondo de llaves sin coincidencia:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="888"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="836"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Seleccione el color de fondo para resaltar llaves sin coincidencia.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="901"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="849"/>
         <source>End of Line</source>
         <translation>Final de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="907"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="855"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Seleccionar si el final de línea debe ser mostrado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="910"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="858"/>
         <source>Show End of Line</source>
         <translation>Mostrar final de línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="920"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="868"/>
         <source>Wrap long lines</source>
         <translation>Partir líneas largas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="973"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="921"/>
         <source>Edge Mode</source>
         <translation>Modo del Borde</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1017"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="965"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Seleccionar el color para el marcador del borde.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1027"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="975"/>
         <source>Background colour:</source>
         <translation>Color de fondo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1040"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="988"/>
         <source>Move to set the edge column.</source>
         <translation>Mover para establecer la columna del borde.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1068"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
         <source>Displays the selected tab width.</source>
         <translation>Muestra el ancho de tabulación seleccionado.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1084"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1032"/>
         <source>Column number:</source>
         <translation>Número de columnas:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1091"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1039"/>
         <source>Mode:</source>
         <translation>Modo:</translation>
     </message>
@@ -11153,67 +11153,67 @@ selección completa.&lt;/li&gt;
         <translation>Deshabilitado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1110"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1058"/>
         <source>Draw Line</source>
         <translation>Dibujar línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1115"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
         <source>Change Background Colour</source>
         <translation>Cambiar color de fondo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1525"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1470"/>
         <source>Various</source>
         <translation>Varios</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1422"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1367"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Seleccionar si los caracteres de espacio en blanco deben ser mostrados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1425"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1370"/>
         <source>Show Whitespace</source>
         <translation>Mostrar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1531"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1476"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Seleccionar mostrar un menú de contexto minimalista</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1534"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1479"/>
         <source>Show minimal context menu</source>
         <translation>Mostrar menú de contexto minimalista</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="361"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="309"/>
         <source>Margins foreground:</source>
         <translation>Color de primer plano para márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="374"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="322"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Seleccionar el color de primer plano para los márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="384"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="332"/>
         <source>Margins background:</source>
         <translation>Color de fondo para los márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="345"/>
         <source>Select the background colour for the margins</source>
         <translation>Seleccione el color de fondo para los márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="407"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="355"/>
         <source>Foldmargin background:</source>
         <translation>Color de fondo para los pliegues de los márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="420"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="368"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Seleccione el color de fondo para los pliegues de los márgenes</translation>
     </message>
@@ -11228,57 +11228,57 @@ selección completa.&lt;/li&gt;
         <translation>Mostrar márgenes unificados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="735"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="683"/>
         <source>Debugging Line Markers</source>
         <translation>Marcadores de Línea de Depuración</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1129"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1077"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1135"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1083"/>
         <source>Initial zoom factor:</source>
         <translation>Factor de zoom inicial:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1145"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1090"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Mover para establecer el factor de zoom inicial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1167"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1112"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Muestra el factor de zoom inicial seleccionado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="344"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="292"/>
         <source>Arrow</source>
         <translation>Flecha</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="349"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
         <source>Arrow Tree</source>
         <translation>Árbol de flechas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="430"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="378"/>
         <source>Foldmarkers foreground:</source>
         <translation>Color de primer plano para marcadores de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="443"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="391"/>
         <source>Select the foreground colour of the foldmarkers</source>
         <translation>Seleccionar el color de primer plano para los marcadores de plegado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="453"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="401"/>
         <source>Foldmarkers background:</source>
         <translation>Color de fondo para marcadores de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="466"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="414"/>
         <source>Select the background colour of the foldmarkers</source>
         <translation>Seleccionar el color de fondo para los marcadores de plegado</translation>
     </message>
@@ -11288,92 +11288,92 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Nota:&lt;/b&gt; Las fuentes y colores de los resaltadores de sintaxis deben ser configurados en la página de estilos de resaltado de sintaxis.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1186"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1131"/>
         <source>Annotations</source>
         <translation>Anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1192"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1137"/>
         <source>Select to enable the display of annotations</source>
         <translation>Seleccionar para habilitar la visualización de anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1195"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1140"/>
         <source>Show annotations</source>
         <translation>Mostrar anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1202"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1147"/>
         <source>Warnings</source>
         <translation>Advertencias</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1198"/>
         <source>Press to select the foreground colour</source>
         <translation>Pulse para seleccionar el color de primer plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1256"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1201"/>
         <source>Foreground</source>
         <translation>Primer plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1263"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1208"/>
         <source>Press to select the background colour</source>
         <translation>Pulse para seleccionar el color de fondo </translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1266"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1211"/>
         <source>Background</source>
         <translation>Fondo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1231"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
         <source>Warning: There might be an error.</source>
         <translation>Advertencia: podría haber un error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1192"/>
         <source>Errors</source>
         <translation>Errores</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1276"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
         <source>Error: There  is an error.</source>
         <translation>Error: hay un error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1416"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1361"/>
         <source>Whitespace</source>
         <translation>Espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1434"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1379"/>
         <source>Whitespace size:</source>
         <translation>Tamaño de espacio en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1441"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1386"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
         <translation>Seleccionar el tamaño de los puntos utilizados para visualizar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1474"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1419"/>
         <source>Whitespace foreground:</source>
         <translation>Color de primer plano para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1487"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1432"/>
         <source>Select the foreground colour for visible whitespace</source>
         <translation>Seleccionar el color de primer plano para espacios en blanco visibles</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1497"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1442"/>
         <source>Whitespace background:</source>
         <translation>Color de fondo para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1510"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1455"/>
         <source>Select the background colour for visible whitespace</source>
         <translation>Seleccionar el color de fondo para espacios en blanco visibles</translation>
     </message>
@@ -11413,67 +11413,67 @@ selección completa.&lt;/li&gt;
         <translation>Colores</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1295"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1240"/>
         <source>Change Tracing</source>
         <translation>Trazado de Cambios</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1301"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1246"/>
         <source>Select to mark changed lines</source>
         <translation>Seleccionar para marcar las líneas cambiadas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1304"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1249"/>
         <source>Mark changed lines</source>
         <translation>Marcar líneas cambiadas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1313"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1258"/>
         <source>Timeout for marking changed lines:</source>
         <translation>Tiempo de espera para marcar líneas cambiadas:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1320"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1265"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
         <translation>Introducir el tiempo en milisegundos despues de transcurrido el cual las líneas cambiadas serán marcadas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1332"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1277"/>
         <source> ms</source>
         <translation>ms</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1365"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1310"/>
         <source>Unsaved changes colour:</source>
         <translation>Color para cambios no guardados:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1378"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1323"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
         <translation>Seleccionar el color para el marcador de cambios para cambios sin guardar.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1388"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1333"/>
         <source>Saved changes colour:</source>
         <translation>Color para cambios guardados:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1401"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1346"/>
         <source>Select the colour for the change marker for saved changes.</source>
         <translation>Seleccionar el color para el marcador de cambios para cambios guardados.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="936"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="884"/>
         <source>Select the wrap mode for long lines</source>
         <translation>Seleccionar el modo de ajuste de línea para líneas largas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="956"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="904"/>
         <source>Indication:</source>
         <translation>Indicación:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="963"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="911"/>
         <source>Select, how wrapped lines are indicated</source>
         <translation>Seleccionar como se señalan las líneas con ajuste de línea</translation>
     </message>
@@ -11965,17 +11965,17 @@ selección completa.&lt;/li&gt;
         <translation>Probar Login</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="161"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="160"/>
         <source>Login Test</source>
         <translation>Prueba de Login</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="127"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="126"/>
         <source>The login test succeeded.</source>
         <translation>La prueba de login ha resultado con éxito.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="161"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="160"/>
         <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El login ha fallado.&lt;br/&gt; Razón: {0}&lt;/p&gt;</translation>
     </message>
@@ -13883,7 +13883,7 @@ selección completa.&lt;/li&gt;
         <translation>Abre el archivo seleccionado</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="190"/>
+        <location filename="UI/FindFileNameDialog.py" line="189"/>
         <source>Select search directory</source>
         <translation>Seleleccione el directorio de búsqueda</translation>
     </message>
@@ -15534,22 +15534,22 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Utilizar conexiones (https) seguras</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="73"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="72"/>
         <source>Checking validity of the service key...</source>
         <translation>Comprobando la validez de la service key...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="90"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="89"/>
         <source>The service key is valid.</source>
         <translation>La service key es válida.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="93"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="92"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;The service key is not valid.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;La service key no es válida.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="96"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="95"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</translation>
     </message>
@@ -25879,152 +25879,152 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1055"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1054"/>
         <source>--- New From Here ---</source>
         <translation>--- Nuevo a partir de Aquí ---</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1135"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1134"/>
         <source>Save Messages</source>
         <translation>Guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1118"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1117"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos HTML (*.{0});;Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1135"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1134"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1153"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1152"/>
         <source>Error saving Messages</source>
         <translation>Error al guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1153"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1152"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1165"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1164"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1170"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1169"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1174"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1173"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1179"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1178"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1184"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1183"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1189"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1188"/>
         <source>Mark Current Position</source>
         <translation>Marcar Posición Actual</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1192"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1191"/>
         <source>Remove Position Marker</source>
         <translation>Eliminar Posición del Marcador</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1241"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1240"/>
         <source>Who Is</source>
         <translation>Quien Es</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1245"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1244"/>
         <source>Private Chat</source>
         <translation>Chat Privado</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1356"/>
         <source>Who</source>
         <translation>Quien</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1335"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1334"/>
         <source>End of WHO list for {0}.</source>
         <translation>Fin de lista WHO para {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1356"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1355"/>
         <source> (Away)</source>
         <translation>.(No está)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1357"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1356"/>
         <source>{0} is {1}@{2} ({3}){4}</source>
         <translation>{0} es {1}@{2} ({3}){4}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1658"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1657"/>
         <source>Whois</source>
         <translation>Whois</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1377"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1376"/>
         <source>{0} is {1}@{2} ({3}).</source>
         <translation>{0} es {1}@{2} ({3}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1422"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1421"/>
         <source>{0} is a user on channels: {1}</source>
         <translation>{0} es un usuario en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1426"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1425"/>
         <source>{0} has voice on channels: {1}</source>
         <translation>{0} tiene voz en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1430"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1429"/>
         <source>{0} is a halfop on channels: {1}</source>
         <translation>{0} es un halfop en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1434"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1433"/>
         <source>{0} is an operator on channels: {1}</source>
         <translation>{0} is un operador en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1438"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1437"/>
         <source>{0} is owner of channels: {1}</source>
         <translation>{0} es propietario de los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1442"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1441"/>
         <source>{0} is admin on channels: {1}</source>
         <translation>{0} es un admin en los canales: {1}</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1460"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1459"/>
         <source>{0} is online via {1} ({2}).</source>
         <translation>{0} está online vía {1} ({2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1478"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1477"/>
         <source>{0} is an IRC Operator.</source>
         <translation>{0} es un Operador IRC.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1508"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1507"/>
         <source>%n day(s)</source>
         <translation>
             <numerusform>%n día</numerusform>
@@ -26032,7 +26032,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1519"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1518"/>
         <source>%n hour(s)</source>
         <translation>
             <numerusform>%n hora</numerusform>
@@ -26040,7 +26040,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1528"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1527"/>
         <source>%n minute(s)</source>
         <translation>
             <numerusform>%n minuto</numerusform>
@@ -26048,7 +26048,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1529"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1528"/>
         <source>%n second(s)</source>
         <translation>
             <numerusform>%n segundo</numerusform>
@@ -26056,25 +26056,25 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1512"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1511"/>
         <source>{0} has been idle for {1}, {2}, {3}, and {4}.</source>
         <comment>{0} = name of person, {1} = (x days), {2} = (x hours), {3} = (x minutes), {4} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, {3}, y {4}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1522"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1521"/>
         <source>{0} has been idle for {1}, {2}, and {3}.</source>
         <comment>{0} = name of person, {1} = (x hours), {2} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, {2}, y {3}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1530"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1529"/>
         <source>{0} has been idle for {1} and {2}.</source>
         <comment>{0} = name of person, {1} = (x minutes), {3} = (x seconds)</comment>
         <translation>{0} no ha mostrado actividad durante {1}, y {2}.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1536"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1535"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation>
             <numerusform>{0} no ha mostrado actividad durante %n segundo.</numerusform>
@@ -26082,67 +26082,67 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1541"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1540"/>
         <source>{0} has been online since {1}.</source>
         <translation>{0} ha estado online desde {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1559"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1558"/>
         <source>End of WHOIS list for {0}.</source>
         <translation>Fin de lista WHOIS para {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1575"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1574"/>
         <source>{0} is an identified user.</source>
         <translation>{0} is an usuario identificado.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1591"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1590"/>
         <source>{0} is available for help.</source>
         <translation>{0} está disponible para ayudar.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1607"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1606"/>
         <source>{0} is logged in as {1}.</source>
         <translation>{0} está conectado como {1}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1625"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1624"/>
         <source>{0} is actually using the host {1} (IP: {2}).</source>
         <translation>{0} está utilizando en realidad el host {1} (IP: {2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1641"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1640"/>
         <source>{0} is using a secure connection.</source>
         <translation>{0} está utilizando una conexión segura.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1658"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1657"/>
         <source>{0} is connecting from {1} (IP: {2}).</source>
         <translation>{0} está conectando desde {1} (IP: {2}).</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="972"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="971"/>
         <source>CTCP</source>
         <translation>CTCP</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="956"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="955"/>
         <source>Received Version request from {0}.</source>
         <translation>Recibida Solicitud de Versión desde {0}.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="961"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="960"/>
         <source>Received CTCP-PING request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-PING desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="966"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="965"/>
         <source>Received CTCP-CLIENTINFO request from {0}, sending answer.</source>
         <translation>Recibida solicitud CTCP-CLIENTINFO desde {0}, enviando respuesta.</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="972"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="971"/>
         <source>Received unknown CTCP-{0} request from {1}.</source>
         <translation>Recibida solicitud CTCP desconocida desde {1}.</translation>
     </message>
@@ -26152,17 +26152,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Pulsar para cambiar el tema</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1249"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1248"/>
         <source>Refresh</source>
         <translation>Actualizar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1678"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1677"/>
         <source>Edit Channel Topic</source>
         <translation>Editar Tema del Canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcChannelWidget.py" line="1678"/>
+        <location filename="Network/IRC/IrcChannelWidget.py" line="1677"/>
         <source>Enter the topic for this channel:</source>
         <translation>Introducir el tema para este canal:</translation>
     </message>
@@ -28855,614 +28855,614 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>MiniEditor</name>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="352"/>
+        <location filename="QScintilla/MiniEditor.py" line="353"/>
         <source>New</source>
         <translation>Nuevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="352"/>
+        <location filename="QScintilla/MiniEditor.py" line="353"/>
         <source>&amp;New</source>
         <translation>&amp;Nuevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="352"/>
+        <location filename="QScintilla/MiniEditor.py" line="353"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="357"/>
+        <location filename="QScintilla/MiniEditor.py" line="358"/>
         <source>Open an empty editor window</source>
         <translation>Abre una ventana vacia en el editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="358"/>
+        <location filename="QScintilla/MiniEditor.py" line="359"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;An empty editor window will be created.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo&lt;/b&gt;&lt;p&gt;Se creará una ventana vacia en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="365"/>
+        <location filename="QScintilla/MiniEditor.py" line="366"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="365"/>
+        <location filename="QScintilla/MiniEditor.py" line="366"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="365"/>
+        <location filename="QScintilla/MiniEditor.py" line="366"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="370"/>
+        <location filename="QScintilla/MiniEditor.py" line="371"/>
         <source>Open a file</source>
         <translation>Abrir un archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="371"/>
+        <location filename="QScintilla/MiniEditor.py" line="372"/>
         <source>&lt;b&gt;Open a file&lt;/b&gt;&lt;p&gt;You will be asked for the name of a file to be opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir un archivo&lt;/b&gt;&lt;p&gt;Le preguntará el nombre del archivo para ser abierto en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="378"/>
+        <location filename="QScintilla/MiniEditor.py" line="379"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="378"/>
+        <location filename="QScintilla/MiniEditor.py" line="379"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="378"/>
+        <location filename="QScintilla/MiniEditor.py" line="379"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="383"/>
+        <location filename="QScintilla/MiniEditor.py" line="384"/>
         <source>Save the current file</source>
         <translation>Guarda el archivo actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="384"/>
+        <location filename="QScintilla/MiniEditor.py" line="385"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar archivo&lt;/b&gt;&lt;p&gt;Almacena el contenido de la ventana de edición actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="391"/>
+        <location filename="QScintilla/MiniEditor.py" line="392"/>
         <source>Save as</source>
         <translation>Guardar como</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="391"/>
+        <location filename="QScintilla/MiniEditor.py" line="392"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="391"/>
+        <location filename="QScintilla/MiniEditor.py" line="392"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="396"/>
+        <location filename="QScintilla/MiniEditor.py" line="397"/>
         <source>Save the current file to a new one</source>
         <translation>Guarda el archivo actual en uno nuevo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="397"/>
+        <location filename="QScintilla/MiniEditor.py" line="398"/>
         <source>&lt;b&gt;Save File as&lt;/b&gt;&lt;p&gt;Save the contents of current editor window to a new file. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar archivo como&lt;/b&gt;&lt;p&gt;Guarda el contenido del archivo actual en uno nuevo. El archivo puede ser introducido en el cuadro de selección de archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="405"/>
+        <location filename="QScintilla/MiniEditor.py" line="406"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="405"/>
+        <location filename="QScintilla/MiniEditor.py" line="406"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="405"/>
+        <location filename="QScintilla/MiniEditor.py" line="406"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="410"/>
+        <location filename="QScintilla/MiniEditor.py" line="411"/>
         <source>Close the editor window</source>
         <translation>Cierra la ventanas del editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="411"/>
+        <location filename="QScintilla/MiniEditor.py" line="412"/>
         <source>&lt;b&gt;Close Window&lt;/b&gt;&lt;p&gt;Close the current window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cierra la ventana&lt;/b&gt;&lt;p&gt;Cierra la ventana actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="449"/>
+        <location filename="QScintilla/MiniEditor.py" line="450"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="449"/>
+        <location filename="QScintilla/MiniEditor.py" line="450"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="449"/>
+        <location filename="QScintilla/MiniEditor.py" line="450"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="449"/>
+        <location filename="QScintilla/MiniEditor.py" line="450"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation>Alt+Backspace</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="455"/>
+        <location filename="QScintilla/MiniEditor.py" line="456"/>
         <source>Undo the last change</source>
         <translation>Revierte el último cambio</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="456"/>
+        <location filename="QScintilla/MiniEditor.py" line="457"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Deshacer&lt;/b&gt;&lt;p&gt;Deshace el último cambio hecho en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="463"/>
+        <location filename="QScintilla/MiniEditor.py" line="464"/>
         <source>Redo</source>
         <translation>Rehacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="463"/>
+        <location filename="QScintilla/MiniEditor.py" line="464"/>
         <source>&amp;Redo</source>
         <translation>&amp;Rehacer</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="463"/>
+        <location filename="QScintilla/MiniEditor.py" line="464"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="468"/>
+        <location filename="QScintilla/MiniEditor.py" line="469"/>
         <source>Redo the last change</source>
         <translation>Rehace el último cambio</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="469"/>
+        <location filename="QScintilla/MiniEditor.py" line="470"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rehacer&lt;/b&gt;&lt;p&gt;Rehace el último cambio hecho en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="476"/>
+        <location filename="QScintilla/MiniEditor.py" line="477"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="476"/>
+        <location filename="QScintilla/MiniEditor.py" line="477"/>
         <source>Cu&amp;t</source>
         <translation>Cor&amp;tar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="476"/>
+        <location filename="QScintilla/MiniEditor.py" line="477"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="476"/>
+        <location filename="QScintilla/MiniEditor.py" line="477"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation>Shift+Del</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="482"/>
+        <location filename="QScintilla/MiniEditor.py" line="483"/>
         <source>Cut the selection</source>
         <translation>Corta la selección</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="483"/>
+        <location filename="QScintilla/MiniEditor.py" line="484"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cortar&lt;/b&gt;&lt;p&gt;Cortar el texto seleccionado y lo envia al portapapeles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="490"/>
+        <location filename="QScintilla/MiniEditor.py" line="491"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="490"/>
+        <location filename="QScintilla/MiniEditor.py" line="491"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="490"/>
+        <location filename="QScintilla/MiniEditor.py" line="491"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="490"/>
+        <location filename="QScintilla/MiniEditor.py" line="491"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+Ins</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="496"/>
+        <location filename="QScintilla/MiniEditor.py" line="497"/>
         <source>Copy the selection</source>
         <translation>Copia lo seleccionado</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="497"/>
+        <location filename="QScintilla/MiniEditor.py" line="498"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Copiar&lt;/b&gt;&lt;p&gt;Copiar el texto seleccionado al portapapeles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="504"/>
+        <location filename="QScintilla/MiniEditor.py" line="505"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="504"/>
+        <location filename="QScintilla/MiniEditor.py" line="505"/>
         <source>&amp;Paste</source>
         <translation>&amp;Pegar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="504"/>
+        <location filename="QScintilla/MiniEditor.py" line="505"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="504"/>
+        <location filename="QScintilla/MiniEditor.py" line="505"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="510"/>
+        <location filename="QScintilla/MiniEditor.py" line="511"/>
         <source>Paste the last cut/copied text</source>
         <translation>Pega el último texto copiado/cortado</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="511"/>
+        <location filename="QScintilla/MiniEditor.py" line="512"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the last cut/copied text from the clipboard to the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pegar&lt;/b&gt;&lt;p&gt;Pegar el contenido del portapapeles en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="519"/>
+        <location filename="QScintilla/MiniEditor.py" line="520"/>
         <source>Clear</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="519"/>
+        <location filename="QScintilla/MiniEditor.py" line="520"/>
         <source>Cl&amp;ear</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="519"/>
+        <location filename="QScintilla/MiniEditor.py" line="520"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation>Alt+Shift+C</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="525"/>
+        <location filename="QScintilla/MiniEditor.py" line="526"/>
         <source>Clear all text</source>
         <translation>Borra todo el texto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="526"/>
+        <location filename="QScintilla/MiniEditor.py" line="527"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Delete all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar&lt;/b&gt;&lt;p&gt;Borra todo el texto del editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1751"/>
+        <location filename="QScintilla/MiniEditor.py" line="1752"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1751"/>
+        <location filename="QScintilla/MiniEditor.py" line="1752"/>
         <source>&amp;About</source>
         <translation>&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1754"/>
+        <location filename="QScintilla/MiniEditor.py" line="1755"/>
         <source>Display information about this software</source>
         <translation>Muestra información acerca de este software</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1755"/>
+        <location filename="QScintilla/MiniEditor.py" line="1756"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Acerca de&lt;/b&gt;&lt;p&gt;Muestra información acerca de este software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1761"/>
+        <location filename="QScintilla/MiniEditor.py" line="1762"/>
         <source>About Qt</source>
         <translation>Acerca de Qt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1761"/>
+        <location filename="QScintilla/MiniEditor.py" line="1762"/>
         <source>About &amp;Qt</source>
         <translation>Acerca de &amp;Qt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1763"/>
+        <location filename="QScintilla/MiniEditor.py" line="1764"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Muestra información sobre las herramientas Qt</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1765"/>
+        <location filename="QScintilla/MiniEditor.py" line="1766"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Acerca de Qt&lt;/b&gt;&lt;p&gt;Muestra información sobre las herramientas Qt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1772"/>
+        <location filename="QScintilla/MiniEditor.py" line="1773"/>
         <source>What&apos;s This?</source>
         <translation>¿Qué es esto?</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1772"/>
+        <location filename="QScintilla/MiniEditor.py" line="1773"/>
         <source>&amp;What&apos;s This?</source>
         <translation>¿&amp;Qué es esto?</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1772"/>
+        <location filename="QScintilla/MiniEditor.py" line="1773"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1777"/>
+        <location filename="QScintilla/MiniEditor.py" line="1778"/>
         <source>Context sensitive help</source>
         <translation>Ayuda sensible al contexto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1778"/>
+        <location filename="QScintilla/MiniEditor.py" line="1779"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar ayuda sensible al contexto&lt;/b&gt;&lt;p&gt;En modo ¿Qué es esto? el puntero del ratón muestra una flecha con un interrogante, y se puede hacer click en elementos de la interfaz gráfica para obtener una descripción corta de lo que hacen y de cómo se utilizan. En los diálogos, se puede acceder a esta característica utilizando el botón de ayuda de contexto en la barra de título.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1793"/>
+        <location filename="QScintilla/MiniEditor.py" line="1794"/>
         <source>&amp;File</source>
         <translation>&amp;Archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1804"/>
+        <location filename="QScintilla/MiniEditor.py" line="1805"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1821"/>
+        <location filename="QScintilla/MiniEditor.py" line="1822"/>
         <source>&amp;Help</source>
         <translation>A&amp;yuda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1833"/>
+        <location filename="QScintilla/MiniEditor.py" line="1834"/>
         <source>File</source>
         <translation>Archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1845"/>
+        <location filename="QScintilla/MiniEditor.py" line="1846"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1855"/>
+        <location filename="QScintilla/MiniEditor.py" line="1856"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1862"/>
+        <location filename="QScintilla/MiniEditor.py" line="1863"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1875"/>
+        <location filename="QScintilla/MiniEditor.py" line="1876"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra una indicación  de las propiedades de escritura de los archivos del  editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1882"/>
+        <location filename="QScintilla/MiniEditor.py" line="1883"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra el número de línea en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1889"/>
+        <location filename="QScintilla/MiniEditor.py" line="1890"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra la posición del cursor en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1894"/>
+        <location filename="QScintilla/MiniEditor.py" line="1895"/>
         <source>Ready</source>
         <translation>Listo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1960"/>
+        <location filename="QScintilla/MiniEditor.py" line="1961"/>
         <source>File loaded</source>
         <translation>Archivo cargado</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1988"/>
+        <location filename="QScintilla/MiniEditor.py" line="1989"/>
         <source>File saved</source>
         <translation>Archivo guardado</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2279"/>
+        <location filename="QScintilla/MiniEditor.py" line="2288"/>
         <source>Untitled</source>
         <translation>Sin título</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2007"/>
+        <location filename="QScintilla/MiniEditor.py" line="2008"/>
         <source>Mini Editor</source>
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2319"/>
+        <location filename="QScintilla/MiniEditor.py" line="2328"/>
         <source>Select all</source>
         <translation>Seleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2320"/>
+        <location filename="QScintilla/MiniEditor.py" line="2329"/>
         <source>Deselect all</source>
         <translation>Deseleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2331"/>
+        <location filename="QScintilla/MiniEditor.py" line="2340"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2334"/>
+        <location filename="QScintilla/MiniEditor.py" line="2343"/>
         <source>No Language</source>
         <translation>Ningún Lenguaje</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1941"/>
+        <location filename="QScintilla/MiniEditor.py" line="1942"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="418"/>
+        <location filename="QScintilla/MiniEditor.py" line="419"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="418"/>
+        <location filename="QScintilla/MiniEditor.py" line="419"/>
         <source>&amp;Print</source>
         <translation>Im&amp;primir</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="418"/>
+        <location filename="QScintilla/MiniEditor.py" line="419"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="423"/>
+        <location filename="QScintilla/MiniEditor.py" line="424"/>
         <source>Print the current file</source>
         <translation>Imprime el archivo actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2244"/>
+        <location filename="QScintilla/MiniEditor.py" line="2253"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2260"/>
+        <location filename="QScintilla/MiniEditor.py" line="2269"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2262"/>
+        <location filename="QScintilla/MiniEditor.py" line="2271"/>
         <source>Error while printing</source>
         <translation>Error mientras se imprimía</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2265"/>
+        <location filename="QScintilla/MiniEditor.py" line="2274"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="424"/>
+        <location filename="QScintilla/MiniEditor.py" line="425"/>
         <source>&lt;b&gt;Print File&lt;/b&gt;&lt;p&gt;Print the contents of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Imprimir Archivo&lt;/b&gt;&lt;p&gt;Imprime el contenido del archivo en edición.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="432"/>
+        <location filename="QScintilla/MiniEditor.py" line="433"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="436"/>
+        <location filename="QScintilla/MiniEditor.py" line="437"/>
         <source>Print preview of the current file</source>
         <translation>Impirmir la selección del archivo actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="438"/>
+        <location filename="QScintilla/MiniEditor.py" line="439"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Presentación Preliminar&lt;/b&gt;&lt;p&gt;Presentación preliminar del texto de ayuda mostrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2356"/>
+        <location filename="QScintilla/MiniEditor.py" line="2365"/>
         <source>Guessed</source>
         <translation>Suposición</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2376"/>
+        <location filename="QScintilla/MiniEditor.py" line="2385"/>
         <source>Alternatives</source>
         <translation>Alternativas</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2390"/>
+        <location filename="QScintilla/MiniEditor.py" line="2399"/>
         <source>Pygments Lexer</source>
         <translation>Analizador Léxico de Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2390"/>
+        <location filename="QScintilla/MiniEditor.py" line="2399"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Seleccionar el Analizador Léxico de Pygments a aplicar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="240"/>
+        <location filename="QScintilla/MiniEditor.py" line="241"/>
         <source>About eric5 Mini Editor</source>
         <translation>Acerca del Mini Editor de eric5</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="240"/>
+        <location filename="QScintilla/MiniEditor.py" line="241"/>
         <source>The eric5 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
         <translation>El Mini Editor de eric5 es un componente de edición basado en QScintilla. Puede utilizarse para tareas simples de edición que no necesitan la potencia de un editor más completo. </translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="299"/>
+        <location filename="QScintilla/MiniEditor.py" line="300"/>
         <source>Line: {0:5}</source>
         <translation>Línea: {0:5}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="303"/>
+        <location filename="QScintilla/MiniEditor.py" line="304"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1921"/>
+        <location filename="QScintilla/MiniEditor.py" line="1922"/>
         <source>eric5 Mini Editor</source>
         <translation>Mini Editor de eric5</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1941"/>
+        <location filename="QScintilla/MiniEditor.py" line="1942"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser abierto.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1974"/>
+        <location filename="QScintilla/MiniEditor.py" line="1975"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1974"/>
+        <location filename="QScintilla/MiniEditor.py" line="1975"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2007"/>
+        <location filename="QScintilla/MiniEditor.py" line="2008"/>
         <source>{0}[*] - {1}</source>
         <translation>{0}[*] - {1}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2373"/>
+        <location filename="QScintilla/MiniEditor.py" line="2382"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativas ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1921"/>
+        <location filename="QScintilla/MiniEditor.py" line="1922"/>
         <source>The document has unsaved changes.</source>
         <translation>El documento tiene cambios sin guardar.</translation>
     </message>
@@ -32206,27 +32206,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1130"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1157"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1157"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1251"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1251"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -32527,222 +32527,222 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Project</name>
     <message>
-        <location filename="Project/Project.py" line="186"/>
+        <location filename="Project/Project.py" line="185"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Archivos Ruby (*.rb);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="232"/>
+        <location filename="Project/Project.py" line="231"/>
         <source>Console</source>
         <translation>Consola</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="233"/>
+        <location filename="Project/Project.py" line="232"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="653"/>
+        <location filename="Project/Project.py" line="636"/>
         <source>Read project file</source>
         <translation>Leer archivo de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="747"/>
+        <location filename="Project/Project.py" line="729"/>
         <source>Save project file</source>
         <translation>Guardar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="782"/>
+        <location filename="Project/Project.py" line="763"/>
         <source>Read user project properties</source>
         <translation>Leer las propiedades de proyecto del usuario</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="803"/>
+        <location filename="Project/Project.py" line="784"/>
         <source>Save user project properties</source>
         <translation>Guardar propiedades de proyecto del usuario</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="851"/>
+        <location filename="Project/Project.py" line="831"/>
         <source>Read project session</source>
         <translation>Leer sesion de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1041"/>
+        <location filename="Project/Project.py" line="1021"/>
         <source>Please save the project first.</source>
         <translation>Por favor guarde primero el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="882"/>
+        <location filename="Project/Project.py" line="862"/>
         <source>Save project session</source>
         <translation>Guardar sesion de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="904"/>
+        <location filename="Project/Project.py" line="884"/>
         <source>Delete project session</source>
         <translation>Borrar sesion de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="930"/>
+        <location filename="Project/Project.py" line="910"/>
         <source>Read tasks</source>
         <translation>Leer tareas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="948"/>
+        <location filename="Project/Project.py" line="928"/>
         <source>Save tasks</source>
         <translation>Guardar Tareas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1000"/>
+        <location filename="Project/Project.py" line="980"/>
         <source>Read debugger properties</source>
         <translation>Leer propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1030"/>
+        <location filename="Project/Project.py" line="1010"/>
         <source>Save debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1053"/>
+        <location filename="Project/Project.py" line="1033"/>
         <source>Delete debugger properties</source>
         <translation>Borrar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1147"/>
+        <location filename="Project/Project.py" line="1127"/>
         <source>Add Language</source>
         <translation>Añadir lenguaje</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1257"/>
+        <location filename="Project/Project.py" line="1237"/>
         <source>Delete translation</source>
         <translation>Borrar traducción</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1397"/>
+        <location filename="Project/Project.py" line="1377"/>
         <source>Add file</source>
         <translation>Agregar archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1502"/>
+        <location filename="Project/Project.py" line="1482"/>
         <source>The target directory must not be empty.</source>
         <translation>El directorio de destino no puede estar vacío.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1512"/>
+        <location filename="Project/Project.py" line="1492"/>
         <source>Add directory</source>
         <translation>Añadir directorio</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1426"/>
+        <location filename="Project/Project.py" line="1406"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de origen no contiene archivos que pertenezcan a la categoría seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1512"/>
+        <location filename="Project/Project.py" line="1492"/>
         <source>The source directory must not be empty.</source>
         <translation>El directorio de origen no puede estar vacío.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1632"/>
+        <location filename="Project/Project.py" line="1612"/>
         <source>Rename file</source>
         <translation>Renombrar archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1655"/>
+        <location filename="Project/Project.py" line="1635"/>
         <source>Rename File</source>
         <translation>Renombrar Archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1840"/>
+        <location filename="Project/Project.py" line="1820"/>
         <source>Delete file</source>
         <translation>Borrar archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1863"/>
+        <location filename="Project/Project.py" line="1843"/>
         <source>Delete directory</source>
         <translation>Borrar directorio</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1943"/>
+        <location filename="Project/Project.py" line="1922"/>
         <source>Create project directory</source>
         <translation>Crear directorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2404"/>
+        <location filename="Project/Project.py" line="2382"/>
         <source>New Project</source>
         <translation>Proyecto nuevo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2005"/>
+        <location filename="Project/Project.py" line="1984"/>
         <source>Add existing files to the project?</source>
         <translation>¿Agregar archivos existentes al proyecto?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2404"/>
+        <location filename="Project/Project.py" line="2382"/>
         <source>Select Version Control System</source>
         <translation>Seleccion el Sistema de control de versiones (VCS)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2112"/>
+        <location filename="Project/Project.py" line="2091"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>¿Le gustaría editar las opciones de comando para VCS?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3079"/>
+        <location filename="Project/Project.py" line="3061"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2065"/>
+        <location filename="Project/Project.py" line="2044"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>¿Debe añadirse el archivo de proyecto al repositorio?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2092"/>
+        <location filename="Project/Project.py" line="2071"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2086"/>
+        <location filename="Project/Project.py" line="2065"/>
         <source>Select version control system for the project</source>
         <translation>Seleccione el sistema de control de versiones para el proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3092"/>
+        <location filename="Project/Project.py" line="3074"/>
         <source>Open project</source>
         <translation>Abrir proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2528"/>
+        <location filename="Project/Project.py" line="2506"/>
         <source>Project Files (*.e4p)</source>
         <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3126"/>
+        <location filename="Project/Project.py" line="3108"/>
         <source>Save project as</source>
         <translation>Guardar proyecto como</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2543"/>
+        <location filename="Project/Project.py" line="2521"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2580"/>
+        <location filename="Project/Project.py" line="2558"/>
         <source>Close Project</source>
         <translation>Cerrar Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2580"/>
+        <location filename="Project/Project.py" line="2558"/>
         <source>The current project has unsaved changes.</source>
         <translation>El proyecto actual tiene cambios sin guardar.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2739"/>
+        <location filename="Project/Project.py" line="2717"/>
         <source>Syntax errors detected</source>
         <translation>Se detectaron errores de sintaxis</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="2739"/>
+        <location filename="Project/Project.py" line="2717"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>El archivo contiene %n archivo(s) con errores de sintaxis.</numerusform>
@@ -32750,892 +32750,892 @@ Seleccione Actualizar.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3079"/>
+        <location filename="Project/Project.py" line="3061"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuevo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3083"/>
+        <location filename="Project/Project.py" line="3065"/>
         <source>Generate a new project</source>
         <translation>Generar un nuevo proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3084"/>
+        <location filename="Project/Project.py" line="3066"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo...&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir la información para un nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3092"/>
+        <location filename="Project/Project.py" line="3074"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3096"/>
+        <location filename="Project/Project.py" line="3078"/>
         <source>Open an existing project</source>
         <translation>Abrir un proyecto existente</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3097"/>
+        <location filename="Project/Project.py" line="3079"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir...&lt;/b&gt;&lt;p&gt;Abre un proyecto existente..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3104"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>Close project</source>
         <translation>Cerrar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3104"/>
+        <location filename="Project/Project.py" line="3086"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3107"/>
+        <location filename="Project/Project.py" line="3089"/>
         <source>Close the current project</source>
         <translation>Cierra el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3108"/>
+        <location filename="Project/Project.py" line="3090"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra el proyecto actualt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3115"/>
+        <location filename="Project/Project.py" line="3097"/>
         <source>Save project</source>
         <translation>Guardar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3269"/>
+        <location filename="Project/Project.py" line="3251"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3118"/>
+        <location filename="Project/Project.py" line="3100"/>
         <source>Save the current project</source>
         <translation>Guarda el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3119"/>
+        <location filename="Project/Project.py" line="3101"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar&lt;/b&gt;&lt;p&gt;Guarda el proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3126"/>
+        <location filename="Project/Project.py" line="3108"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3129"/>
+        <location filename="Project/Project.py" line="3111"/>
         <source>Save the current project to a new file</source>
         <translation>Guardar el proyecto actual en un nuevo archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3130"/>
+        <location filename="Project/Project.py" line="3112"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar como&lt;/b&gt;&lt;p&gt;Guarda el proyecto en otro archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3139"/>
+        <location filename="Project/Project.py" line="3121"/>
         <source>Add files to project</source>
         <translation>Agregar archivos al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3139"/>
+        <location filename="Project/Project.py" line="3121"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Agregar archivos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3143"/>
+        <location filename="Project/Project.py" line="3125"/>
         <source>Add files to the current project</source>
         <translation>Añadir archivos al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3144"/>
+        <location filename="Project/Project.py" line="3126"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir archivos...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir archivos al proyecto actual. El lugar donde se van a añadir es determinado por la extensión del nombre de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3153"/>
+        <location filename="Project/Project.py" line="3135"/>
         <source>Add directory to project</source>
         <translation>Agregar directorio al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3153"/>
+        <location filename="Project/Project.py" line="3135"/>
         <source>Add directory...</source>
         <translation>Agregar directorio...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3157"/>
+        <location filename="Project/Project.py" line="3139"/>
         <source>Add a directory to the current project</source>
         <translation>Agregar directorio al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3159"/>
+        <location filename="Project/Project.py" line="3141"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir directorio...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir un directorio al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3167"/>
+        <location filename="Project/Project.py" line="3149"/>
         <source>Add translation to project</source>
         <translation>Añadir traducción al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3167"/>
+        <location filename="Project/Project.py" line="3149"/>
         <source>Add &amp;translation...</source>
         <translation>Añadir &amp;Traducción...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3171"/>
+        <location filename="Project/Project.py" line="3153"/>
         <source>Add a translation to the current project</source>
         <translation>Añadir una traducción al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3173"/>
+        <location filename="Project/Project.py" line="3155"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir traducción...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir una traducción al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3181"/>
+        <location filename="Project/Project.py" line="3163"/>
         <source>Search new files</source>
         <translation>Buscar archivos nuevos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3181"/>
+        <location filename="Project/Project.py" line="3163"/>
         <source>Searc&amp;h new files...</source>
         <translation>Bus&amp;car archivos nuevos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3184"/>
+        <location filename="Project/Project.py" line="3166"/>
         <source>Search new files in the project directory.</source>
         <translation>Bucar nuevos archivos en el directorio de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3185"/>
+        <location filename="Project/Project.py" line="3167"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar nuevos archivos...&lt;/b&gt;&lt;p&gt;Busca nuevos archivos (fuentes, *.ui, *.idl) en el directorio del proyecto y en los subdirectorios registrados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3193"/>
+        <location filename="Project/Project.py" line="3175"/>
         <source>Project properties</source>
         <translation>Propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3193"/>
+        <location filename="Project/Project.py" line="3175"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propiedades...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3196"/>
+        <location filename="Project/Project.py" line="3178"/>
         <source>Show the project properties</source>
         <translation>Ver las propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3197"/>
+        <location filename="Project/Project.py" line="3179"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las propiedades del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3204"/>
+        <location filename="Project/Project.py" line="3186"/>
         <source>User project properties</source>
         <translation>Propiedades del usuario del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3204"/>
+        <location filename="Project/Project.py" line="3186"/>
         <source>&amp;User Properties...</source>
         <translation>Propiedades del &amp;Usuario...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3207"/>
+        <location filename="Project/Project.py" line="3189"/>
         <source>Show the user specific project properties</source>
         <translation>Muestra propiedades del proyecto específicas del usuario</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3209"/>
+        <location filename="Project/Project.py" line="3191"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Usuario...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del proyecto específicas del usuario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3216"/>
+        <location filename="Project/Project.py" line="3198"/>
         <source>Filetype Associations</source>
         <translation>Asociación de tipos de archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3216"/>
+        <location filename="Project/Project.py" line="3198"/>
         <source>Filetype Associations...</source>
         <translation>Asociación de tipos de archivo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3219"/>
+        <location filename="Project/Project.py" line="3201"/>
         <source>Show the project filetype associations</source>
         <translation>Ver las asociaciones del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3221"/>
+        <location filename="Project/Project.py" line="3203"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Tipo de Archivo...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de los tipos de archivos del proyecto. Estas asociaciones determinan el tipo (fuente, formulario, interfaz u otras) con un patrón de nombres de archivo. Se usan cuando se añade un archivo al proyecto y cuando se realiza una búsqueda de nuevos archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3247"/>
+        <location filename="Project/Project.py" line="3229"/>
         <source>Debugger Properties</source>
         <translation>Propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3247"/>
+        <location filename="Project/Project.py" line="3229"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Propiedades del depurador...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3250"/>
+        <location filename="Project/Project.py" line="3232"/>
         <source>Show the debugger properties</source>
         <translation>Muestra las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3251"/>
+        <location filename="Project/Project.py" line="3233"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Depurador...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3258"/>
+        <location filename="Project/Project.py" line="3240"/>
         <source>Load</source>
         <translation>Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3258"/>
+        <location filename="Project/Project.py" line="3240"/>
         <source>&amp;Load</source>
         <translation>&amp;Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3261"/>
+        <location filename="Project/Project.py" line="3243"/>
         <source>Load the debugger properties</source>
         <translation>Cargar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3262"/>
+        <location filename="Project/Project.py" line="3244"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Carga las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3269"/>
+        <location filename="Project/Project.py" line="3251"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3272"/>
+        <location filename="Project/Project.py" line="3254"/>
         <source>Save the debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3273"/>
+        <location filename="Project/Project.py" line="3255"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Guarda las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3280"/>
+        <location filename="Project/Project.py" line="3262"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3280"/>
+        <location filename="Project/Project.py" line="3262"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3283"/>
+        <location filename="Project/Project.py" line="3265"/>
         <source>Delete the debugger properties</source>
         <translation>Borrar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3284"/>
+        <location filename="Project/Project.py" line="3266"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Borra el archivo que contiene las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3292"/>
+        <location filename="Project/Project.py" line="3274"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3292"/>
+        <location filename="Project/Project.py" line="3274"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3295"/>
+        <location filename="Project/Project.py" line="3277"/>
         <source>Reset the debugger properties</source>
         <translation>Restablecer las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3296"/>
+        <location filename="Project/Project.py" line="3278"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restablecer Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Restablece las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3305"/>
+        <location filename="Project/Project.py" line="3287"/>
         <source>Load session</source>
         <translation>Cargar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3308"/>
+        <location filename="Project/Project.py" line="3290"/>
         <source>Load the projects session file.</source>
         <translation>Cargar archivo de sesión de proyectos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3309"/>
+        <location filename="Project/Project.py" line="3291"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar sesión&lt;/b&gt;&lt;p&gt;Carga el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3322"/>
+        <location filename="Project/Project.py" line="3304"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3325"/>
+        <location filename="Project/Project.py" line="3307"/>
         <source>Save the projects session file.</source>
         <translation>Guardar archivos de sessión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3326"/>
+        <location filename="Project/Project.py" line="3308"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar sesión&lt;/b&gt;&lt;p&gt;Guarda el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3339"/>
+        <location filename="Project/Project.py" line="3321"/>
         <source>Delete session</source>
         <translation>Borrar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3342"/>
+        <location filename="Project/Project.py" line="3324"/>
         <source>Delete the projects session file.</source>
         <translation>Borrar el archivo de sesión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3343"/>
+        <location filename="Project/Project.py" line="3325"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar sesión&lt;/b&gt;&lt;p&gt;Borra el archivo de sesión del proyecto&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3352"/>
+        <location filename="Project/Project.py" line="3334"/>
         <source>Code Metrics</source>
         <translation>Métricas de código</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3352"/>
+        <location filename="Project/Project.py" line="3334"/>
         <source>&amp;Code Metrics...</source>
         <translation>Métricas de &amp;código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3355"/>
+        <location filename="Project/Project.py" line="3337"/>
         <source>Show some code metrics for the project.</source>
         <translation>Muestra algunas métricas del código para este proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3357"/>
+        <location filename="Project/Project.py" line="3339"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas de Código...&lt;/b&gt;&lt;p&gt;Muestra algunas métricas de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3364"/>
+        <location filename="Project/Project.py" line="3346"/>
         <source>Python Code Coverage</source>
         <translation>Cobertura de Código Python</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3364"/>
+        <location filename="Project/Project.py" line="3346"/>
         <source>Code Co&amp;verage...</source>
         <translation>Co&amp;bertura de código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3367"/>
+        <location filename="Project/Project.py" line="3349"/>
         <source>Show code coverage information for the project.</source>
         <translation>Muestra información de cobertura de código para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3369"/>
+        <location filename="Project/Project.py" line="3351"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código...&lt;/b&gt;&lt;p&gt;Muestra la información de cobertura de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4087"/>
+        <location filename="Project/Project.py" line="4069"/>
         <source>Profile Data</source>
         <translation>Datos de perfil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3377"/>
+        <location filename="Project/Project.py" line="3359"/>
         <source>&amp;Profile Data...</source>
         <translation>Datos de &amp;pefil...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3380"/>
+        <location filename="Project/Project.py" line="3362"/>
         <source>Show profiling data for the project.</source>
         <translation>Mostrar datos de profiling para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3382"/>
+        <location filename="Project/Project.py" line="3364"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datos de Profiling...&lt;/b&gt;&lt;p&gt;Muestra datos de profiling para el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4141"/>
+        <location filename="Project/Project.py" line="4123"/>
         <source>Application Diagram</source>
         <translation>Diagrama de Aplicación</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3391"/>
+        <location filename="Project/Project.py" line="3373"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagrama de &amp;Aplicación...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3394"/>
+        <location filename="Project/Project.py" line="3376"/>
         <source>Show a diagram of the project.</source>
         <translation>Mostrar diagrama del proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3396"/>
+        <location filename="Project/Project.py" line="3378"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4285"/>
+        <location filename="Project/Project.py" line="4267"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3417"/>
+        <location filename="Project/Project.py" line="3399"/>
         <source>Create &amp;Package List</source>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4453"/>
+        <location filename="Project/Project.py" line="4435"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3431"/>
+        <location filename="Project/Project.py" line="3413"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Crear &amp;Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3480"/>
+        <location filename="Project/Project.py" line="3462"/>
         <source>&amp;Project</source>
         <translation>&amp;Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3481"/>
+        <location filename="Project/Project.py" line="3463"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Abrir Proyectos &amp;Recientes</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3482"/>
+        <location filename="Project/Project.py" line="3464"/>
         <source>&amp;Version Control</source>
         <translation>Control de &amp;Versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3486"/>
+        <location filename="Project/Project.py" line="3468"/>
         <source>Chec&amp;k</source>
         <translation>Veri&amp;ficar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3488"/>
+        <location filename="Project/Project.py" line="3470"/>
         <source>Sho&amp;w</source>
         <translation>V&amp;er</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3489"/>
+        <location filename="Project/Project.py" line="3471"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3490"/>
+        <location filename="Project/Project.py" line="3472"/>
         <source>Session</source>
         <translation>Sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3491"/>
+        <location filename="Project/Project.py" line="3473"/>
         <source>Source &amp;Documentation</source>
         <translation>Origen de &amp;Documentación </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3493"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3494"/>
+        <location filename="Project/Project.py" line="3476"/>
         <source>Pac&amp;kagers</source>
         <translation>Empa&amp;quetadores</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3600"/>
+        <location filename="Project/Project.py" line="3582"/>
         <source>Project</source>
         <translation>Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3661"/>
+        <location filename="Project/Project.py" line="3643"/>
         <source>&amp;Clear</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3771"/>
+        <location filename="Project/Project.py" line="3753"/>
         <source>Search New Files</source>
         <translation>Buscar nuevos archivos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3771"/>
+        <location filename="Project/Project.py" line="3753"/>
         <source>There were no new files found to be added.</source>
         <translation>No se han encontrado nuevos archivos para ser añadidos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3911"/>
+        <location filename="Project/Project.py" line="3893"/>
         <source>Version Control System</source>
         <translation>Sistema de control de versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4019"/>
+        <location filename="Project/Project.py" line="4001"/>
         <source>Coverage Data</source>
         <translation>Datos de Cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4066"/>
+        <location filename="Project/Project.py" line="4048"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4040"/>
+        <location filename="Project/Project.py" line="4022"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4040"/>
+        <location filename="Project/Project.py" line="4022"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4087"/>
+        <location filename="Project/Project.py" line="4069"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4141"/>
+        <location filename="Project/Project.py" line="4123"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4257"/>
+        <location filename="Project/Project.py" line="4239"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4302"/>
+        <location filename="Project/Project.py" line="4284"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4310"/>
+        <location filename="Project/Project.py" line="4292"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="320"/>
+        <location filename="Project/Project.py" line="319"/>
         <source>Registering Project Type</source>
         <translation>Registrando Tipo de Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3446"/>
+        <location filename="Project/Project.py" line="3428"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Crear un Archivo de Plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3446"/>
+        <location filename="Project/Project.py" line="3428"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Crear un Archivo de Plugin (&amp;Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1147"/>
+        <location filename="Project/Project.py" line="1127"/>
         <source>You have to specify a translation pattern first.</source>
         <translation>Debe especificar primero un patrón de traducción.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2180"/>
+        <location filename="Project/Project.py" line="2158"/>
         <source>Translation Pattern</source>
         <translation>Patrón de Traducción</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2180"/>
+        <location filename="Project/Project.py" line="2158"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Introduzca el patrón de ruta para los archivos de traducción (use &apos;%language%&apos; in lugar del código de idioma):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3231"/>
+        <location filename="Project/Project.py" line="3213"/>
         <source>Lexer Associations</source>
         <translation>Asociaciones de Analizador Léxico</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3231"/>
+        <location filename="Project/Project.py" line="3213"/>
         <source>Lexer Associations...</source>
         <translation>Asociaciones de Analizador Léxico...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3234"/>
+        <location filename="Project/Project.py" line="3216"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Ver las asociaciones de analizador léxico del proyecto (sobreescribiendo valores por defecto)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3236"/>
+        <location filename="Project/Project.py" line="3218"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Analizador Léxico ...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de analizador léxico del proyecto. Estas asociaciones sobreescriben las asociaciones de analizador léxico globales. Los analizadores léxicos se utilizan para resaltar el texto en el editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="243"/>
+        <location filename="Project/Project.py" line="242"/>
         <source>PySide GUI</source>
         <translation>GUI de PySide</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="244"/>
+        <location filename="Project/Project.py" line="243"/>
         <source>PySide Console</source>
         <translation>Consola PySide</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="183"/>
+        <location filename="Project/Project.py" line="182"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation>Archivos Python3 (*.py *.py3);;Archivos de GUI Python3 (*.pyw *.pyw3);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="231"/>
+        <location filename="Project/Project.py" line="230"/>
         <source>Eric Plugin</source>
         <translation>Plugin para Eric</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="653"/>
+        <location filename="Project/Project.py" line="636"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="747"/>
+        <location filename="Project/Project.py" line="729"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="782"/>
+        <location filename="Project/Project.py" line="763"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades de proyecto específicas del usuario &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="803"/>
+        <location filename="Project/Project.py" line="784"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades de proyecto específicas del usuario &lt;b&gt;{0}&lt;/b&gt; no ha podido ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="851"/>
+        <location filename="Project/Project.py" line="831"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="882"/>
+        <location filename="Project/Project.py" line="862"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="904"/>
+        <location filename="Project/Project.py" line="884"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido borrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="930"/>
+        <location filename="Project/Project.py" line="910"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="948"/>
+        <location filename="Project/Project.py" line="928"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1000"/>
+        <location filename="Project/Project.py" line="980"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades del depurador del proyecto  &lt;b&gt;{0}&lt;/b&gt; no ha podido leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1030"/>
+        <location filename="Project/Project.py" line="1010"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades del depurador del proyecto  &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1053"/>
+        <location filename="Project/Project.py" line="1033"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de propiedades del depurador del proyecto  &lt;b&gt;{0}&lt;/b&gt; no pudo ser borrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1257"/>
+        <location filename="Project/Project.py" line="1237"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de traducción seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha podido ser borrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1452"/>
+        <location filename="Project/Project.py" line="1432"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2543"/>
+        <location filename="Project/Project.py" line="2521"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1655"/>
+        <location filename="Project/Project.py" line="1635"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser renombrado.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1840"/>
+        <location filename="Project/Project.py" line="1820"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha podido borrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1863"/>
+        <location filename="Project/Project.py" line="1843"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha podido borrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1943"/>
+        <location filename="Project/Project.py" line="1922"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3421"/>
+        <location filename="Project/Project.py" line="3403"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Crear un archivo inicial PKGLIST para un plugin  para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3423"/>
+        <location filename="Project/Project.py" line="3405"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Lista del Paquete&lt;/b&gt;&lt;p&gt;Crea una lista inicial de archivos a incluir en un archivo para plugin de eric5. Esta lista se crea a partir del archivo de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3435"/>
+        <location filename="Project/Project.py" line="3417"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Crear un archivo de plugin para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3437"/>
+        <location filename="Project/Project.py" line="3419"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Archivo de Plugin&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin para eric5 utilizando la lista de archivos dada en el archivo PKGLIST. El nombre de archivo se determina a partir del nombr del script principal.&lt;/p&gt; </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3450"/>
+        <location filename="Project/Project.py" line="3432"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Crear un archivo de plugin de eric5 (snapshot release).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3452"/>
+        <location filename="Project/Project.py" line="3434"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un archivo de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin utilizando la lista de archivos proporcionada en el archivo PKGLIST. El nombre del archivo se determina por el nombre del script principal. La entrada para la versión del script proncipal se modifica para reflejar una versión snapshot.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3902"/>
+        <location filename="Project/Project.py" line="3884"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Revirtiendo sobreescritura.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3911"/>
+        <location filename="Project/Project.py" line="3893"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4285"/>
+        <location filename="Project/Project.py" line="4267"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4322"/>
+        <location filename="Project/Project.py" line="4304"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4333"/>
+        <location filename="Project/Project.py" line="4315"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4354"/>
+        <location filename="Project/Project.py" line="4336"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4373"/>
+        <location filename="Project/Project.py" line="4355"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4453"/>
+        <location filename="Project/Project.py" line="4435"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1388"/>
+        <location filename="Project/Project.py" line="1368"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha podido se añadido a &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Razón: {2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1436"/>
+        <location filename="Project/Project.py" line="1416"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El directorio de destino &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="180"/>
+        <location filename="Project/Project.py" line="179"/>
         <source>Python2 Files (*.py2);;Python2 GUI Files (*.pyw2);;</source>
         <translation>Archivos Python2(*.py2);;Archivos de GUI Python2 (*.pyw2);;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1995"/>
+        <location filename="Project/Project.py" line="1974"/>
         <source>Create main script</source>
         <translation>Crear script principal</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1995"/>
+        <location filename="Project/Project.py" line="1974"/>
         <source>&lt;p&gt;The mainscript &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El script principal &lt;b&gt;{0}&lt;/b&gt; no se ha podido crear.&lt;br/&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3403"/>
+        <location filename="Project/Project.py" line="3385"/>
         <source>Load Diagram</source>
         <translation>Cargar Diagrama</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3403"/>
+        <location filename="Project/Project.py" line="3385"/>
         <source>&amp;Load Diagram...</source>
         <translation>&amp;Cargar Diagrama...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3406"/>
+        <location filename="Project/Project.py" line="3388"/>
         <source>Load a diagram from file.</source>
         <translation>CArgar diagrama desde archivo.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3408"/>
+        <location filename="Project/Project.py" line="3390"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Diagrama...&lt;/b&gt;&lt;p&gt;Carga un diagrama desde un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="301"/>
+        <location filename="Project/Project.py" line="300"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El Lenguaje de Programación &lt;b&gt;{0}&lt;/b&gt; no está soportado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="320"/>
+        <location filename="Project/Project.py" line="319"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El Tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="310"/>
+        <location filename="Project/Project.py" line="309"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado con el Lenguaje de Programación &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="229"/>
+        <location filename="Project/Project.py" line="228"/>
         <source>Qt GUI</source>
         <translation>Qt GUI</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="230"/>
+        <location filename="Project/Project.py" line="229"/>
         <source>Qt Console</source>
         <translation>Consola Qt</translation>
     </message>
@@ -38705,17 +38705,17 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <translation>&lt;b&gt;Ir a Patch&lt;/b&gt;&lt;p&gt;Hace push o pop de patches hasta que un patch con nombre está arriba de la pila, sobreescribiendo cualquier cambio local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="656"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="655"/>
         <source>Queues</source>
         <translation>Colas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="577"/>
         <source>Push/Pop</source>
         <translation>Push/Pop</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="590"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="589"/>
         <source>Push/Pop (force)</source>
         <translation>Push/Pop (forzar)</translation>
     </message>
@@ -38730,257 +38730,257 @@ de varias expresiones regulares posibles. Ejemplo &apos;cat|dog|mouse|fish&apos;
         <translation>&lt;b&gt;Push de Patches&lt;/b&gt;&lt;p&gt;Hace push de patches a la pila de patches aplicados hasta que un patch con nombre está arriba de la pila.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="384"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="383"/>
         <source>Define Guards</source>
         <translation>Definir Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="384"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="383"/>
         <source>Define Guards...</source>
         <translation>Definir Guards...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="387"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="386"/>
         <source>Define guards for the current or a named patch</source>
         <translation>Definir guards para el patch actual o un patch con nombre</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="390"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="389"/>
         <source>&lt;b&gt;Define Guards&lt;/b&gt;&lt;p&gt;This opens a dialog to define guards for the current or a named patch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Definir Guards&lt;/b&gt;&lt;p&gt;Abre un diálogo para definir guards para el patch actual o para un patch con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="398"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="397"/>
         <source>Drop All Guards</source>
         <translation>Abandonar Todos los Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="398"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="397"/>
         <source>Drop All Guards...</source>
         <translation>Abandonar Todos los Guards...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="401"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="400"/>
         <source>Drop all guards of the current or a named patch</source>
         <translation>Abandonar todos los guards para el patch actual o un patch con nombre</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="403"/>
         <source>&lt;b&gt;Drop All Guards&lt;/b&gt;&lt;p&gt;This drops all guards of the current or a named patch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abandonar Todos los Guarsd&lt;/b&gt;&lt;p&gt;Abandona todos los guards del patch actual o de un patch con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="411"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="410"/>
         <source>List Guards</source>
         <translation>Listar Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="411"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="410"/>
         <source>List Guards...</source>
         <translation>Listar Guards...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="414"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="413"/>
         <source>List guards of the current or a named patch</source>
         <translation>Listar guards para el patch actual o un patch con nombre</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="416"/>
         <source>&lt;b&gt;List Guards&lt;/b&gt;&lt;p&gt;This lists the guards of the current or a named patch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar Guards&lt;/b&gt;&lt;p&gt;Lista los guards para el patch actual o para un patch con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="424"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="423"/>
         <source>List All Guards</source>
         <translation>Listar Todos los Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="424"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="423"/>
         <source>List All Guards...</source>
         <translation>Listar Todos los Guards...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="426"/>
         <source>List all guards of all patches</source>
         <translation>Listar todos los guards de todos los patches</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="430"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="429"/>
         <source>&lt;b&gt;List All Guards&lt;/b&gt;&lt;p&gt;This lists all guards of all patches.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar Todos los Guards&lt;/b&gt;&lt;p&gt;Lista todos los guards de todos los patches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="437"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="436"/>
         <source>Set Active Guards</source>
         <translation>Establecer Guards Activos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="437"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="436"/>
         <source>Set Active Guards...</source>
         <translation>Establecer Guards Activos...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="440"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="439"/>
         <source>Set the list of active guards</source>
         <translation>Establecer la lista de los guards activos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="443"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="442"/>
         <source>&lt;b&gt;Set Active Guards&lt;/b&gt;&lt;p&gt;This opens a dialog to set the active guards.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Establecer Guards Activos&lt;/b&gt;&lt;p&gt;Abre un diálogo para establecer los guards activos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="450"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="449"/>
         <source>Deactivate Guards</source>
         <translation>Desactivar Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="450"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="449"/>
         <source>Deactivate Guards...</source>
         <translation>Desactivar Guards...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="453"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="452"/>
         <source>Deactivate all active guards</source>
         <translation>Desactivar todos los guards activos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="456"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="455"/>
         <source>&lt;b&gt;Deactivate Guards&lt;/b&gt;&lt;p&gt;This deactivates all active guards.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Desactivar Guards&lt;/b&gt;&lt;p&gt;Desactiva todos los guards activos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="464"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="463"/>
         <source>Identify Active Guards</source>
         <translation>Identificar Guards activos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="464"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="463"/>
         <source>Identify Active Guards...</source>
         <translation>Identificar Guards activos...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="468"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="467"/>
         <source>Show a list of active guards</source>
         <translation>Mostrar una lista de los guards activos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="471"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="470"/>
         <source>&lt;b&gt;Identify Active Guards&lt;/b&gt;&lt;p&gt;This opens a dialog showing a list of active guards.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Identificar Guards Activos&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra una lista de los guards activos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="602"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="601"/>
         <source>Guards</source>
         <translation>Guards</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="483"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="482"/>
         <source>Create Queue</source>
         <translation>Crear Cola</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="486"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="485"/>
         <source>Create a new patch queue</source>
         <translation>Crear una nueva cola de  patch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="489"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="488"/>
         <source>&lt;b&gt;Create Queue&lt;/b&gt;&lt;p&gt;This creates a new patch queue.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Cola&lt;/b&gt;&lt;p&gt;Crea una nueva cola de patch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="497"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="496"/>
         <source>Rename Queue</source>
         <translation>Renombrar Cola</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="500"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="499"/>
         <source>Rename the active patch queue</source>
         <translation>Renombrar la cola de patch activa</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="503"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="502"/>
         <source>&lt;b&gt;Rename Queue&lt;/b&gt;&lt;p&gt;This renames the active patch queue.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Renombrar Cola&lt;/b&gt;&lt;p&gt;Renombra la cola de patch activa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="511"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="510"/>
         <source>Delete Queue</source>
         <translation>Borrar Cola</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="514"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="513"/>
         <source>Delete the reference to a patch queue</source>
         <translation>Borra la referencia a una cola de patch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="517"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="516"/>
         <source>&lt;b&gt;Delete Queue&lt;/b&gt;&lt;p&gt;This deletes the reference to a patch queue.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Cola&lt;/b&gt;&lt;p&gt;Borra la referencia a una cola de patch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="525"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="524"/>
         <source>Purge Queue</source>
         <translation>Purgar Cola</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="528"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="527"/>
         <source>Delete the reference to a patch queue and remove the patch directory</source>
         <translation>Borra la referencia a una cola de patch y elimina el directorio de patch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="531"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="530"/>
         <source>&lt;b&gt;Purge Queue&lt;/b&gt;&lt;p&gt;This deletes the reference to a patch queue and removes the patch directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Purgar Cola&lt;/b&gt;&lt;p&gt;Borra la referencia a una cola de patch y elimina el directorio de patch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="540"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="539"/>
         <source>Activate Queue</source>
         <translation>Activar Cola</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="543"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="542"/>
         <source>Set the active queue</source>
         <translation>Establece la cola activa</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="545"/>
         <source>&lt;b&gt;Activate Queue&lt;/b&gt;&lt;p&gt;This sets the active queue.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Activar Cola&lt;/b&gt;&lt;p&gt;Establece la cola activa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="554"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="553"/>
         <source>List Queues</source>
         <translation>Listar Colas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="554"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="553"/>
         <source>List Queues...</source>
         <translation>Listar Colas...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="557"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="556"/>
         <source>List the available queues</source>
         <translation>Listar las colas disponibles</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="560"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="559"/>
         <source>&lt;b&gt;List Queues&lt;/b&gt;&lt;p&gt;This opens a dialog showing all available queues.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar Colas&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra todas las colas disponibles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="615"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="614"/>
         <source>Queue Management</source>
         <translation>Gestión de Colas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="712"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="710"/>
         <source>The project should be reread. Do this now?</source>
         <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="712"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="710"/>
         <source>Changing Applied Patches</source>
         <translation>Cambiando los Patches Aplicados</translation>
     </message>
@@ -39502,125 +39502,125 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>&lt;b&gt;Ventana de Shell&lt;/b&gt;&lt;p&gt;Es implemente un intérprete ejecutándose en una ventana. El intérprete es el que se usa para ejecutar el programa en depuración. Esto significa que puede ejecutar cualquier comando mientras se ejecuta el programa en depuración&lt;/p&gt;&lt;p&gt;Puede utilizar las teclas del cursor para entrar comandos. Tambien hay un historial de comandos que pueden ser re-invocados utilizando las teclas de cursor arriba y abajo. Presionando las teclas de arriba o abajo despues de que se ha introducido un texto comenzará una búsqueda incremental.&lt;/p&gt;&lt;p&gt;La shell tiene algunos comandos especiales. &apos;reset&apos; mata la shell y comienza una nueva. &apos;clear&apos; limpia la pantalla de la ventana de shell. &apos;start&apos; se utiliza para cambiar el lenguaje de shell y debe estar seguido por un lenguaje soportado. Los lenguajes soportados se listan utilizando el comando &apos;lenguages&apos;. Estos comandos, excepto &apos;lenguages&apos;, están tambien disponibles a traves del menú de contexto.&lt;/p&gt;&lt;p&gt;Presionando la tecla Tab despues de haber introducido texto mostrará una lista de los posibles &apos;completados&apos; de la línea de comandos. La entrada relevante puede ser seleccionada de esta lista. Si sólamente hay disponible una entrada, se inserta automáticamente.&lt;/p&gt;&lt;p&gt;En modo pasivo de depuración la shell sólamente está disponible despues de que el programa en depuración ha conectado con la IDE, y hasta que termina. Esto se indica con un &apos;prompt&apos; distinto y con una indicación en la leyenda de la ventana.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="181"/>
+        <location filename="QScintilla/Shell.py" line="182"/>
         <source>Passive &gt;&gt;&gt; </source>
         <translation>Pasivo &gt;&gt;&gt; </translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="196"/>
+        <location filename="QScintilla/Shell.py" line="197"/>
         <source>Start</source>
         <translation>Comienzo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="213"/>
+        <location filename="QScintilla/Shell.py" line="214"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="214"/>
+        <location filename="QScintilla/Shell.py" line="215"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="219"/>
+        <location filename="QScintilla/Shell.py" line="220"/>
         <source>Clear</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="220"/>
+        <location filename="QScintilla/Shell.py" line="221"/>
         <source>Reset</source>
         <translation>Restaurar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="221"/>
+        <location filename="QScintilla/Shell.py" line="222"/>
         <source>Reset and Clear</source>
         <translation>Restaurar y borrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="607"/>
+        <location filename="QScintilla/Shell.py" line="616"/>
         <source>Passive Debug Mode</source>
         <translation>Modo de depuración pasiva</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="610"/>
+        <location filename="QScintilla/Shell.py" line="619"/>
         <source>No.</source>
         <translation>No.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1494"/>
+        <location filename="QScintilla/Shell.py" line="1503"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="205"/>
+        <location filename="QScintilla/Shell.py" line="206"/>
         <source>History</source>
         <translation>Historial</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="206"/>
+        <location filename="QScintilla/Shell.py" line="207"/>
         <source>Select entry</source>
         <translation>Seleccionar entrada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="207"/>
+        <location filename="QScintilla/Shell.py" line="208"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="557"/>
+        <location filename="QScintilla/Shell.py" line="566"/>
         <source>Select History</source>
         <translation>Seleccionar historial</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="557"/>
+        <location filename="QScintilla/Shell.py" line="566"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Seleccionar la entrada del historial a ejecutar (las más recientes mostradas en último lugar).</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="608"/>
+        <location filename="QScintilla/Shell.py" line="617"/>
         <source>
 Not connected</source>
         <translation>No conectado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="226"/>
+        <location filename="QScintilla/Shell.py" line="227"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="212"/>
+        <location filename="QScintilla/Shell.py" line="213"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="612"/>
+        <location filename="QScintilla/Shell.py" line="621"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} en {1}, {2}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="673"/>
+        <location filename="QScintilla/Shell.py" line="682"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="681"/>
+        <location filename="QScintilla/Shell.py" line="690"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1224"/>
+        <location filename="QScintilla/Shell.py" line="1233"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Lenguaje de Shell  &quot;{0}&quot; no soportado.
 </translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1494"/>
+        <location filename="QScintilla/Shell.py" line="1503"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="217"/>
+        <location filename="QScintilla/Shell.py" line="218"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
@@ -39683,130 +39683,130 @@ Not connected</source>
     <message>
         <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="39"/>
         <source>Linenumbers width:</source>
-        <translation>Ancho de números de línea:</translation>
+        <translation type="obsolete">Ancho de números de línea:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="46"/>
         <source>Move to set the width of the linenumbers margin.</source>
-        <translation>Mover para establecer la anchura del margen para números de línea.</translation>
+        <translation type="obsolete">Mover para establecer la anchura del margen para números de línea.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="68"/>
         <source>Displays the selected width of the linenumbers margin.</source>
-        <translation>Muestra la anchura seleccionada para el margen de números de línea.</translation>
+        <translation type="obsolete">Muestra la anchura seleccionada para el margen de números de línea.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="88"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="39"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Seleccionar si el margen para números de línea debe ser mostrado.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="91"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="42"/>
         <source>Show Line Numbers Margin</source>
         <translation>Mostrar margen para números de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="98"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="49"/>
         <source>Select this to enable calltips</source>
         <translation>Seleccionar para habilitar consejos de llamada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="101"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="52"/>
         <source>Calltips Enabled</source>
         <translation>Consejos de llamada (Calltips) habilitados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="108"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="59"/>
         <source>Select to enable wrapping at word boundaries</source>
         <translation>Seleccionar para habilitar envolver en límites de palabra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="111"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="62"/>
         <source>Word Wrap Enabled</source>
         <translation>Envolver palabra habilitado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="118"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="69"/>
         <source>Select this to enable autocompletion</source>
         <translation>Seleccione para habilitar autocompletar</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="121"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="72"/>
         <source>Autocompletion Enabled</source>
         <translation>Autocompletar habilitado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="128"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="79"/>
         <source>Select to enable syntax highlighting</source>
         <translation>Seleccionar para habilitar el resaltado de sintaxis</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="131"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="82"/>
         <source>Syntax Highlighting Enabled</source>
         <translation>Resaltado de sintaxis habilitado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="142"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="93"/>
         <source>max. History Entries:</source>
         <translation>máx. número de Entradas de Historial:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="149"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="100"/>
         <source>Enter the number of history entries allowed</source>
         <translation>Introducir el número de entradas de historial permitidas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="186"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="137"/>
         <source>Select to show debuggee stdout and stderr</source>
         <translation>Seleccionar para mostrar el stdout y stderr del programa en depuración</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="189"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="140"/>
         <source>Show stdout and stderr of debuggee</source>
         <translation>Mostrar stdout y stderr del programa en depuracion</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="196"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="147"/>
         <source>Font</source>
         <translation>Fuente</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="202"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="153"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Pulse para seleccionar la fuente para utilizar como fuente monoespacio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="205"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="156"/>
         <source>Monospaced Font</source>
         <translation>Fuente Monoespacio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="166"/>
         <source>Monospaced Text</source>
         <translation>Texto Monoespaciado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="179"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Seleccionar si la fuente monoespacio se debe usar por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="182"/>
         <source>Use monospaced as default</source>
         <translation>Usar monoespacio por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="241"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="192"/>
         <source>Line Numbers Font</source>
         <translation>Fuente para números de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="257"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="208"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="238"/>
+        <location filename="Preferences/ConfigurationPages/ShellPage.ui" line="189"/>
         <source>Press to select the font for the line numbers</source>
         <translation>Pulse para seleccionar la fuente para los números de línea</translation>
     </message>
@@ -51434,7 +51434,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Atajos de Teclado&lt;/b&gt;&lt;p&gt;Establezca los atajos de teclado para la aplicación con sus valores preferidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4783"/>
+        <location filename="UI/UserInterface.py" line="4782"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar Atajos de Teclado</translation>
     </message>
@@ -51454,7 +51454,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Exportar Atajos de Teclado&lt;/b&gt;&lt;p&gt;Exporte  los atajos de teclado de la aplicación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4807"/>
+        <location filename="UI/UserInterface.py" line="4806"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Importar Atajos de Teclado</translation>
     </message>
@@ -51684,7 +51684,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;h3&gt;Números de Versiones&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5498"/>
+        <location filename="UI/UserInterface.py" line="5497"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -51764,47 +51764,47 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;P&gt;El punto de entrada de documentación de PyQt4 no ha sido configurado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4941"/>
+        <location filename="UI/UserInterface.py" line="4940"/>
         <source>Save tasks</source>
         <translation>Guardar tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4965"/>
+        <location filename="UI/UserInterface.py" line="4964"/>
         <source>Read tasks</source>
         <translation>Leer tareas</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5184"/>
+        <location filename="UI/UserInterface.py" line="5183"/>
         <source>Drop Error</source>
         <translation>Error de volcado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5464"/>
+        <location filename="UI/UserInterface.py" line="5463"/>
         <source>Error during updates check</source>
         <translation>Error durante la verificación de actualización</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5323"/>
+        <location filename="UI/UserInterface.py" line="5322"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5451"/>
+        <location filename="UI/UserInterface.py" line="5450"/>
         <source>Update available</source>
         <translation>Actualizaciones disponibles</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5464"/>
+        <location filename="UI/UserInterface.py" line="5463"/>
         <source>Could not perform updates check.</source>
         <translation>No se puede llevar a cabo la verificación de actualizaciones.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5485"/>
+        <location filename="UI/UserInterface.py" line="5484"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versiones disponibles&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5525"/>
+        <location filename="UI/UserInterface.py" line="5524"/>
         <source>First time usage</source>
         <translation>Usado por primera vez</translation>
     </message>
@@ -51879,12 +51879,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Visor de &amp;Multiproyecto</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4981"/>
+        <location filename="UI/UserInterface.py" line="4980"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5005"/>
+        <location filename="UI/UserInterface.py" line="5004"/>
         <source>Read session</source>
         <translation>Cargar sesión</translation>
     </message>
@@ -52282,52 +52282,52 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;P&gt;El punto de entrada de documentación &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; no ha podido encontrarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4941"/>
+        <location filename="UI/UserInterface.py" line="4940"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4965"/>
+        <location filename="UI/UserInterface.py" line="4964"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de tareas &lt;b&gt;{0}&lt;/b&gt; no puede leerse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4981"/>
+        <location filename="UI/UserInterface.py" line="4980"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5005"/>
+        <location filename="UI/UserInterface.py" line="5004"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de sesión &lt;b&gt;&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5184"/>
+        <location filename="UI/UserInterface.py" line="5183"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5328"/>
+        <location filename="UI/UserInterface.py" line="5327"/>
         <source>Trying host {0}</source>
         <translation>Probando host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5451"/>
+        <location filename="UI/UserInterface.py" line="5450"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>La actualización para &lt;b&gt;{0}&lt;/b&gt; de eric5 está disponible en &lt;b&gt;{1}&lt;/b&gt;. ¿Le gustaría obtenerla?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5459"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 está actualizado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5459"/>
         <source>You are using the latest version of eric5</source>
         <translation>Está utilizando la última versión de eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5525"/>
+        <location filename="UI/UserInterface.py" line="5524"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 todavía no está configurado. El diálogo de configuración va a ser iniciado.</translation>
     </message>
@@ -52362,7 +52362,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4807"/>
+        <location filename="UI/UserInterface.py" line="4806"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Archivo de atajos de teclado (*.e4k)</translation>
     </message>
@@ -52407,12 +52407,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Documentación de Python 2&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 2. Si no se ha configurado un directorio con esta documentación, la ubicación de la documentación de Python 2 se asumirá en el directorio de documentación bajo la ubicación del ejecutable configurado de Python 2 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON2DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5378"/>
+        <location filename="UI/UserInterface.py" line="5377"/>
         <source>Error getting versions information</source>
         <translation>Error al obtener información de versiones</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5372"/>
+        <location filename="UI/UserInterface.py" line="5371"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar. Póngase online por favor e inténtelo de nuevo.</translation>
     </message>
@@ -52427,7 +52427,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>No se ha podido iniciar el navegador web</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5378"/>
+        <location filename="UI/UserInterface.py" line="5377"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
@@ -52543,7 +52543,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Pantallazos.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5543"/>
+        <location filename="UI/UserInterface.py" line="5542"/>
         <source>Select Workspace Directory</source>
         <translation>Seleccionar Directorio para el Espacio de Trabajo</translation>
     </message>
@@ -54442,572 +54442,572 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Autocompletar desde Documento y APIs&lt;/b&gt;&lt;p&gt;Lleva a cabo un autocompletado de la palabra que contiene el cursor a partir del documento y de las APIs.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="547"/>
+        <location filename="QScintilla/MiniEditor.py" line="548"/>
         <source>Move left one character</source>
         <translation>Mover a la izquierda un carácter</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="547"/>
+        <location filename="QScintilla/MiniEditor.py" line="548"/>
         <source>Left</source>
         <translation>Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="558"/>
+        <location filename="QScintilla/MiniEditor.py" line="559"/>
         <source>Move right one character</source>
         <translation>Mover a la derecha un carácter</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="558"/>
+        <location filename="QScintilla/MiniEditor.py" line="559"/>
         <source>Right</source>
         <translation>Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="569"/>
+        <location filename="QScintilla/MiniEditor.py" line="570"/>
         <source>Move up one line</source>
         <translation>Mover arriba una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="569"/>
+        <location filename="QScintilla/MiniEditor.py" line="570"/>
         <source>Up</source>
         <translation>Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="580"/>
+        <location filename="QScintilla/MiniEditor.py" line="581"/>
         <source>Move down one line</source>
         <translation>Mover abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="580"/>
+        <location filename="QScintilla/MiniEditor.py" line="581"/>
         <source>Down</source>
         <translation>Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="591"/>
+        <location filename="QScintilla/MiniEditor.py" line="592"/>
         <source>Move left one word part</source>
         <translation>Mover a la izquierda una parte de palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="618"/>
+        <location filename="QScintilla/MiniEditor.py" line="619"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="602"/>
+        <location filename="QScintilla/MiniEditor.py" line="603"/>
         <source>Move right one word part</source>
         <translation>Mover a la derecha una parte de palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1390"/>
+        <location filename="QScintilla/MiniEditor.py" line="1391"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="613"/>
+        <location filename="QScintilla/MiniEditor.py" line="614"/>
         <source>Move left one word</source>
         <translation>Mover a la izquierda una palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="661"/>
+        <location filename="QScintilla/MiniEditor.py" line="662"/>
         <source>Ctrl+Left</source>
         <translation>Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="627"/>
+        <location filename="QScintilla/MiniEditor.py" line="628"/>
         <source>Move right one word</source>
         <translation>Mover a la derecha una palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1173"/>
+        <location filename="QScintilla/MiniEditor.py" line="1174"/>
         <source>Ctrl+Right</source>
         <translation>Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1348"/>
+        <location filename="QScintilla/MiniEditor.py" line="1349"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="664"/>
+        <location filename="QScintilla/MiniEditor.py" line="665"/>
         <source>Alt+Home</source>
         <translation>Alt+Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1362"/>
+        <location filename="QScintilla/MiniEditor.py" line="1363"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="686"/>
+        <location filename="QScintilla/MiniEditor.py" line="687"/>
         <source>Scroll view down one line</source>
         <translation>Scroll hacia abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="756"/>
+        <location filename="QScintilla/MiniEditor.py" line="757"/>
         <source>Ctrl+Down</source>
         <translation>Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="694"/>
+        <location filename="QScintilla/MiniEditor.py" line="695"/>
         <source>Scroll view up one line</source>
         <translation>Scroll hacia arriba una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="742"/>
+        <location filename="QScintilla/MiniEditor.py" line="743"/>
         <source>Ctrl+Up</source>
         <translation>Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="702"/>
+        <location filename="QScintilla/MiniEditor.py" line="703"/>
         <source>Move up one paragraph</source>
         <translation>Mover arriba un párrafo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="702"/>
+        <location filename="QScintilla/MiniEditor.py" line="703"/>
         <source>Alt+Up</source>
         <translation>Alt+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="710"/>
+        <location filename="QScintilla/MiniEditor.py" line="711"/>
         <source>Move down one paragraph</source>
         <translation>Mover abajo un párrafo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="710"/>
+        <location filename="QScintilla/MiniEditor.py" line="711"/>
         <source>Alt+Down</source>
         <translation>Alt+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="718"/>
+        <location filename="QScintilla/MiniEditor.py" line="719"/>
         <source>Move up one page</source>
         <translation>Mover arriba una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="718"/>
+        <location filename="QScintilla/MiniEditor.py" line="719"/>
         <source>PgUp</source>
         <translation>PgUp</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="726"/>
+        <location filename="QScintilla/MiniEditor.py" line="727"/>
         <source>Move down one page</source>
         <translation>Mover abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="726"/>
+        <location filename="QScintilla/MiniEditor.py" line="727"/>
         <source>PgDown</source>
         <translation>PgDown</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="745"/>
+        <location filename="QScintilla/MiniEditor.py" line="746"/>
         <source>Ctrl+Home</source>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="759"/>
+        <location filename="QScintilla/MiniEditor.py" line="760"/>
         <source>Ctrl+End</source>
         <translation>Ctrl+End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="765"/>
+        <location filename="QScintilla/MiniEditor.py" line="766"/>
         <source>Indent one level</source>
         <translation>Indentar un nivel</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="765"/>
+        <location filename="QScintilla/MiniEditor.py" line="766"/>
         <source>Tab</source>
         <translation>Tab</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="773"/>
+        <location filename="QScintilla/MiniEditor.py" line="774"/>
         <source>Unindent one level</source>
         <translation>Desindentar un nivel</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="773"/>
+        <location filename="QScintilla/MiniEditor.py" line="774"/>
         <source>Shift+Tab</source>
         <translation>Shift+Tab</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="781"/>
+        <location filename="QScintilla/MiniEditor.py" line="782"/>
         <source>Extend selection left one character</source>
         <translation>Extender selección un carácter a la izquierda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="781"/>
+        <location filename="QScintilla/MiniEditor.py" line="782"/>
         <source>Shift+Left</source>
         <translation>Shift+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="795"/>
+        <location filename="QScintilla/MiniEditor.py" line="796"/>
         <source>Extend selection right one character</source>
         <translation>Extender selección un carácter a la derecha</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="795"/>
+        <location filename="QScintilla/MiniEditor.py" line="796"/>
         <source>Shift+Right</source>
         <translation>Shift+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="809"/>
+        <location filename="QScintilla/MiniEditor.py" line="810"/>
         <source>Extend selection up one line</source>
         <translation>Extender selección hacia arriba una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="809"/>
+        <location filename="QScintilla/MiniEditor.py" line="810"/>
         <source>Shift+Up</source>
         <translation>Shift+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="822"/>
+        <location filename="QScintilla/MiniEditor.py" line="823"/>
         <source>Extend selection down one line</source>
         <translation>Extender selección hacia abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="822"/>
+        <location filename="QScintilla/MiniEditor.py" line="823"/>
         <source>Shift+Down</source>
         <translation>Shift+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="836"/>
+        <location filename="QScintilla/MiniEditor.py" line="837"/>
         <source>Extend selection left one word part</source>
         <translation>Extender selección a la izquierda una parte de palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="869"/>
+        <location filename="QScintilla/MiniEditor.py" line="870"/>
         <source>Alt+Shift+Left</source>
         <translation>Alt+Shift+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="849"/>
+        <location filename="QScintilla/MiniEditor.py" line="850"/>
         <source>Extend selection right one word part</source>
         <translation>Extender selección a la derecha una parte de palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1404"/>
+        <location filename="QScintilla/MiniEditor.py" line="1405"/>
         <source>Alt+Shift+Right</source>
         <translation>Alt+Shift+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="862"/>
+        <location filename="QScintilla/MiniEditor.py" line="863"/>
         <source>Extend selection left one word</source>
         <translation>Extender selección a la izquierda una palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1482"/>
+        <location filename="QScintilla/MiniEditor.py" line="1483"/>
         <source>Ctrl+Shift+Left</source>
         <translation>Ctrl+Shift+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="878"/>
+        <location filename="QScintilla/MiniEditor.py" line="879"/>
         <source>Extend selection right one word</source>
         <translation>Extender selección a la derecha una palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1189"/>
+        <location filename="QScintilla/MiniEditor.py" line="1190"/>
         <source>Ctrl+Shift+Right</source>
         <translation>Ctrl+Shift+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="901"/>
+        <location filename="QScintilla/MiniEditor.py" line="902"/>
         <source>Shift+Home</source>
         <translation>Shift+Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1280"/>
+        <location filename="QScintilla/MiniEditor.py" line="1281"/>
         <source>Alt+Shift+Home</source>
         <translation>Alt+Shift+Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="917"/>
+        <location filename="QScintilla/MiniEditor.py" line="918"/>
         <source>Shift+End</source>
         <translation>Shift+End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="923"/>
+        <location filename="QScintilla/MiniEditor.py" line="924"/>
         <source>Extend selection up one paragraph</source>
         <translation>Extender selección hacia arriba un párrafo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="923"/>
+        <location filename="QScintilla/MiniEditor.py" line="924"/>
         <source>Alt+Shift+Up</source>
         <translation>Alt+Shift+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="934"/>
+        <location filename="QScintilla/MiniEditor.py" line="935"/>
         <source>Extend selection down one paragraph</source>
         <translation>Extender selección hacia abajo un párrafo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="934"/>
+        <location filename="QScintilla/MiniEditor.py" line="935"/>
         <source>Alt+Shift+Down</source>
         <translation>Alt+Shift+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="946"/>
+        <location filename="QScintilla/MiniEditor.py" line="947"/>
         <source>Extend selection up one page</source>
         <translation>Extender selección arriba una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="946"/>
+        <location filename="QScintilla/MiniEditor.py" line="947"/>
         <source>Shift+PgUp</source>
         <translation>Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="957"/>
+        <location filename="QScintilla/MiniEditor.py" line="958"/>
         <source>Extend selection down one page</source>
         <translation>Extender selección hacia abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="957"/>
+        <location filename="QScintilla/MiniEditor.py" line="958"/>
         <source>Shift+PgDown</source>
         <translation>Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="981"/>
+        <location filename="QScintilla/MiniEditor.py" line="982"/>
         <source>Ctrl+Shift+Home</source>
         <translation>Ctrl+Shift+Home</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="997"/>
+        <location filename="QScintilla/MiniEditor.py" line="998"/>
         <source>Ctrl+Shift+End</source>
         <translation>Ctrl+Shift+End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1003"/>
+        <location filename="QScintilla/MiniEditor.py" line="1004"/>
         <source>Delete previous character</source>
         <translation>Borrar carácter anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1003"/>
+        <location filename="QScintilla/MiniEditor.py" line="1004"/>
         <source>Backspace</source>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1013"/>
+        <location filename="QScintilla/MiniEditor.py" line="1014"/>
         <source>Shift+Backspace</source>
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1029"/>
+        <location filename="QScintilla/MiniEditor.py" line="1030"/>
         <source>Delete current character</source>
         <translation>Borrar carácter actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1029"/>
+        <location filename="QScintilla/MiniEditor.py" line="1030"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1040"/>
+        <location filename="QScintilla/MiniEditor.py" line="1041"/>
         <source>Delete word to left</source>
         <translation>Borrar palabra a la izquierda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1040"/>
+        <location filename="QScintilla/MiniEditor.py" line="1041"/>
         <source>Ctrl+Backspace</source>
         <translation>Ctrl+Backspace</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1050"/>
+        <location filename="QScintilla/MiniEditor.py" line="1051"/>
         <source>Delete word to right</source>
         <translation>Borrar palabra a la derecha</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1050"/>
+        <location filename="QScintilla/MiniEditor.py" line="1051"/>
         <source>Ctrl+Del</source>
         <translation>Ctrl+Del</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1058"/>
+        <location filename="QScintilla/MiniEditor.py" line="1059"/>
         <source>Delete line to left</source>
         <translation>Borrar línea a la izquierda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1058"/>
+        <location filename="QScintilla/MiniEditor.py" line="1059"/>
         <source>Ctrl+Shift+Backspace</source>
         <translation>Ctrl+Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1068"/>
+        <location filename="QScintilla/MiniEditor.py" line="1069"/>
         <source>Delete line to right</source>
         <translation>Borrar línea a la derecha</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1076"/>
+        <location filename="QScintilla/MiniEditor.py" line="1077"/>
         <source>Ctrl+Shift+Del</source>
         <translation>Ctrl+Shift+Del</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1082"/>
+        <location filename="QScintilla/MiniEditor.py" line="1083"/>
         <source>Insert new line</source>
         <translation>Insertar nueva línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1082"/>
+        <location filename="QScintilla/MiniEditor.py" line="1083"/>
         <source>Return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1082"/>
+        <location filename="QScintilla/MiniEditor.py" line="1083"/>
         <source>Enter</source>
         <translation>Enter</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1091"/>
+        <location filename="QScintilla/MiniEditor.py" line="1092"/>
         <source>Delete current line</source>
         <translation>Borrar línea actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1091"/>
+        <location filename="QScintilla/MiniEditor.py" line="1092"/>
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1100"/>
+        <location filename="QScintilla/MiniEditor.py" line="1101"/>
         <source>Duplicate current line</source>
         <translation>Duplicar línea actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1100"/>
+        <location filename="QScintilla/MiniEditor.py" line="1101"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1108"/>
+        <location filename="QScintilla/MiniEditor.py" line="1109"/>
         <source>Swap current and previous lines</source>
         <translation>Intercambiar línea actual con la anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1108"/>
+        <location filename="QScintilla/MiniEditor.py" line="1109"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1118"/>
+        <location filename="QScintilla/MiniEditor.py" line="1119"/>
         <source>Cut current line</source>
         <translation>Cortar línea actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1118"/>
+        <location filename="QScintilla/MiniEditor.py" line="1119"/>
         <source>Alt+Shift+L</source>
         <translation>Alt+Shift+L</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1127"/>
+        <location filename="QScintilla/MiniEditor.py" line="1128"/>
         <source>Copy current line</source>
         <translation>Copiar línea actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1127"/>
+        <location filename="QScintilla/MiniEditor.py" line="1128"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1136"/>
+        <location filename="QScintilla/MiniEditor.py" line="1137"/>
         <source>Toggle insert/overtype</source>
         <translation>Alternar insertar/sobreescribir</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1136"/>
+        <location filename="QScintilla/MiniEditor.py" line="1137"/>
         <source>Ins</source>
         <translation>Ins</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1144"/>
+        <location filename="QScintilla/MiniEditor.py" line="1145"/>
         <source>Convert selection to lower case</source>
         <translation>Convertir selección a minúsculas</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1144"/>
+        <location filename="QScintilla/MiniEditor.py" line="1145"/>
         <source>Alt+Shift+U</source>
         <translation>Alt+Shift+U</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1155"/>
+        <location filename="QScintilla/MiniEditor.py" line="1156"/>
         <source>Convert selection to upper case</source>
         <translation>Convertir selección a mayúsculas</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1155"/>
+        <location filename="QScintilla/MiniEditor.py" line="1156"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1176"/>
+        <location filename="QScintilla/MiniEditor.py" line="1177"/>
         <source>Alt+End</source>
         <translation>Alt+End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1195"/>
+        <location filename="QScintilla/MiniEditor.py" line="1196"/>
         <source>Formfeed</source>
         <translation>Formfeed</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1203"/>
+        <location filename="QScintilla/MiniEditor.py" line="1204"/>
         <source>Escape</source>
         <translation>Escape</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1203"/>
+        <location filename="QScintilla/MiniEditor.py" line="1204"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1211"/>
+        <location filename="QScintilla/MiniEditor.py" line="1212"/>
         <source>Extend rectangular selection down one line</source>
         <translation>Extender selección rectangular hacia abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1211"/>
+        <location filename="QScintilla/MiniEditor.py" line="1212"/>
         <source>Alt+Ctrl+Down</source>
         <translation>Alt+Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1226"/>
+        <location filename="QScintilla/MiniEditor.py" line="1227"/>
         <source>Extend rectangular selection up one line</source>
         <translation>Extender selección rectangular hacia arriba una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1226"/>
+        <location filename="QScintilla/MiniEditor.py" line="1227"/>
         <source>Alt+Ctrl+Up</source>
         <translation>Alt+Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1240"/>
+        <location filename="QScintilla/MiniEditor.py" line="1241"/>
         <source>Extend rectangular selection left one character</source>
         <translation>Extender selección rectangular a la izquierda un carácter</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1240"/>
+        <location filename="QScintilla/MiniEditor.py" line="1241"/>
         <source>Alt+Ctrl+Left</source>
         <translation>Alt+Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1255"/>
+        <location filename="QScintilla/MiniEditor.py" line="1256"/>
         <source>Extend rectangular selection right one character</source>
         <translation>Extender selección rectangular a la derecha un carácter</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1255"/>
+        <location filename="QScintilla/MiniEditor.py" line="1256"/>
         <source>Alt+Ctrl+Right</source>
         <translation>Alt+Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1302"/>
+        <location filename="QScintilla/MiniEditor.py" line="1303"/>
         <source>Extend rectangular selection up one page</source>
         <translation>Extender selección rectangular hacia arriba una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1314"/>
+        <location filename="QScintilla/MiniEditor.py" line="1315"/>
         <source>Extend rectangular selection down one page</source>
         <translation>Extender selección rectangular hacia abajo una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1642"/>
+        <location filename="QScintilla/MiniEditor.py" line="1643"/>
         <source>Duplicate current selection</source>
         <translation>Duplicar selección actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1642"/>
+        <location filename="QScintilla/MiniEditor.py" line="1643"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
@@ -55027,86 +55027,86 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1659"/>
+        <location filename="QScintilla/MiniEditor.py" line="1660"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1659"/>
+        <location filename="QScintilla/MiniEditor.py" line="1660"/>
         <source>&amp;Search...</source>
         <translation>&amp;Buscar...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1659"/>
+        <location filename="QScintilla/MiniEditor.py" line="1660"/>
         <source>Ctrl+F</source>
         <comment>Search|Search</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1666"/>
+        <location filename="QScintilla/MiniEditor.py" line="1667"/>
         <source>Search for a text</source>
         <translation>Buscar un texto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1668"/>
+        <location filename="QScintilla/MiniEditor.py" line="1669"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Search for some text in the current editor. A dialog is shown to enter the searchtext and options for the search.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar&lt;/b&gt;&lt;p&gt;Buscar texto en el editor. En el diálogo muestra opciones e indica el texto de búsqueda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1677"/>
+        <location filename="QScintilla/MiniEditor.py" line="1678"/>
         <source>Search next</source>
         <translation>Buscar siguiente</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1677"/>
+        <location filename="QScintilla/MiniEditor.py" line="1678"/>
         <source>Search &amp;next</source>
         <translation>Buscar &amp;Siguiente</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1677"/>
+        <location filename="QScintilla/MiniEditor.py" line="1678"/>
         <source>F3</source>
         <comment>Search|Search next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1695"/>
+        <location filename="QScintilla/MiniEditor.py" line="1696"/>
         <source>Search previous</source>
         <translation>Buscar anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1695"/>
+        <location filename="QScintilla/MiniEditor.py" line="1696"/>
         <source>Search &amp;previous</source>
         <translation>Buscar a&amp;nterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1695"/>
+        <location filename="QScintilla/MiniEditor.py" line="1696"/>
         <source>Shift+F3</source>
         <comment>Search|Search previous</comment>
         <translation>Shift+F3</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1730"/>
+        <location filename="QScintilla/MiniEditor.py" line="1731"/>
         <source>Replace</source>
         <translation>Reemplazar</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1730"/>
+        <location filename="QScintilla/MiniEditor.py" line="1731"/>
         <source>&amp;Replace...</source>
         <translation>&amp;Reemplazar...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1730"/>
+        <location filename="QScintilla/MiniEditor.py" line="1731"/>
         <source>Ctrl+R</source>
         <comment>Search|Replace</comment>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1736"/>
+        <location filename="QScintilla/MiniEditor.py" line="1737"/>
         <source>Replace some text</source>
         <translation>Reemplazar un texto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1738"/>
+        <location filename="QScintilla/MiniEditor.py" line="1739"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Search for some text in the current editor and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and replace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reemplazar&lt;/b&gt;&lt;p&gt;Buscar un texto en el editor actual y reemplazarlo. Se muestra un diálogo para introducir el texto de búsqueda, el texto de reemplazo y las opciones para buscar y reemplazar.&lt;/p&gt;</translation>
     </message>
@@ -55811,43 +55811,43 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Editor de texto de Búsqueda Rápida</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1713"/>
+        <location filename="QScintilla/MiniEditor.py" line="1714"/>
         <source>Clear search markers</source>
         <translation>Limpiar marcadores de búsqueda</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1713"/>
+        <location filename="QScintilla/MiniEditor.py" line="1714"/>
         <source>Ctrl+3</source>
         <comment>Search|Clear search markers</comment>
         <translation>Ctrl+3</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1721"/>
+        <location filename="QScintilla/MiniEditor.py" line="1722"/>
         <source>Clear all displayed search markers</source>
         <translation>Limpiar todos los marcadores de texto mostrados</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1723"/>
+        <location filename="QScintilla/MiniEditor.py" line="1724"/>
         <source>&lt;b&gt;Clear search markers&lt;/b&gt;&lt;p&gt;Clear all displayed search markers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar marcadores de búsqueda&lt;/b&gt;&lt;p&gt;Limpiar todos los marcadores de búsqueda mostrados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1685"/>
+        <location filename="QScintilla/MiniEditor.py" line="1686"/>
         <source>Search next occurrence of text</source>
         <translation>Buscar siguiente ocurrencia del texto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1687"/>
+        <location filename="QScintilla/MiniEditor.py" line="1688"/>
         <source>&lt;b&gt;Search next&lt;/b&gt;&lt;p&gt;Search the next occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar siguiente&lt;/b&gt;&lt;p&gt;Buscar la siguiente ocurrencia de un texto en el editor actual. Se reutilizan el texto de búsqueda introducido anteriormente y sus opciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1703"/>
+        <location filename="QScintilla/MiniEditor.py" line="1704"/>
         <source>Search previous occurrence of text</source>
         <translation>Buscar anterior ocurrencia del texto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1705"/>
+        <location filename="QScintilla/MiniEditor.py" line="1706"/>
         <source>&lt;b&gt;Search previous&lt;/b&gt;&lt;p&gt;Search the previous occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar anterior&lt;/b&gt;&lt;p&gt;Buscar la anterior ocurrencia de un texto en el editor actual. Se reutilizan el texto de búsqueda introducido anteriormente y sus opciones.&lt;/p&gt;</translation>
     </message>
@@ -55893,7 +55893,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Consejo de llamada (calltip)&lt;/b&gt;&lt;p&gt;Muestra consejos de llamada basándose en los caracteres inmediatamente a la izquierda del cursor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="432"/>
+        <location filename="QScintilla/MiniEditor.py" line="433"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
@@ -56139,347 +56139,347 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Vista Previa&lt;/b&gt;&lt;p&gt;Abre el navegador web con una vista previa del archivo actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="553"/>
+        <location filename="QScintilla/MiniEditor.py" line="554"/>
         <source>Meta+B</source>
         <translation>Meta+B</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="563"/>
+        <location filename="QScintilla/MiniEditor.py" line="564"/>
         <source>Meta+F</source>
         <translation>Meta+F</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="574"/>
+        <location filename="QScintilla/MiniEditor.py" line="575"/>
         <source>Meta+P</source>
         <translation>Meta+P</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="585"/>
+        <location filename="QScintilla/MiniEditor.py" line="586"/>
         <source>Meta+N</source>
         <translation>Meta+N</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="641"/>
+        <location filename="QScintilla/MiniEditor.py" line="642"/>
         <source>Move to first visible character in document line</source>
         <translation>Mover al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="654"/>
+        <location filename="QScintilla/MiniEditor.py" line="655"/>
         <source>Move to start of display line</source>
         <translation>Mover al principio de la línea mostrada</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="670"/>
+        <location filename="QScintilla/MiniEditor.py" line="671"/>
         <source>Move to end of document line</source>
         <translation>Mover al final de la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="677"/>
+        <location filename="QScintilla/MiniEditor.py" line="678"/>
         <source>Meta+E</source>
         <translation>Meta+E</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="731"/>
+        <location filename="QScintilla/MiniEditor.py" line="732"/>
         <source>Meta+V</source>
         <translation>Meta+V</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="737"/>
+        <location filename="QScintilla/MiniEditor.py" line="738"/>
         <source>Move to start of document</source>
         <translation>Mover al principio del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="751"/>
+        <location filename="QScintilla/MiniEditor.py" line="752"/>
         <source>Move to end of document</source>
         <translation>Mover al final del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="789"/>
+        <location filename="QScintilla/MiniEditor.py" line="790"/>
         <source>Meta+Shift+B</source>
         <translation>Meta+Shift+B</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="803"/>
+        <location filename="QScintilla/MiniEditor.py" line="804"/>
         <source>Meta+Shift+F</source>
         <translation>Meta+Shift+F</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="816"/>
+        <location filename="QScintilla/MiniEditor.py" line="817"/>
         <source>Meta+Shift+P</source>
         <translation>Meta+Shift+P</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="830"/>
+        <location filename="QScintilla/MiniEditor.py" line="831"/>
         <source>Meta+Shift+N</source>
         <translation>Meta+Shift+N</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="894"/>
+        <location filename="QScintilla/MiniEditor.py" line="895"/>
         <source>Extend selection to first visible character in document line</source>
         <translation>Extender selección al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="907"/>
+        <location filename="QScintilla/MiniEditor.py" line="908"/>
         <source>Extend selection to end of document line</source>
         <translation>Extender selección hasta el final de la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="914"/>
+        <location filename="QScintilla/MiniEditor.py" line="915"/>
         <source>Meta+Shift+E</source>
         <translation>Meta+Shift+E</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="965"/>
+        <location filename="QScintilla/MiniEditor.py" line="966"/>
         <source>Meta+Shift+V</source>
         <translation>Meta+Shift+V</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="971"/>
+        <location filename="QScintilla/MiniEditor.py" line="972"/>
         <source>Extend selection to start of document</source>
         <translation>Extender selección al principio del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="978"/>
+        <location filename="QScintilla/MiniEditor.py" line="979"/>
         <source>Ctrl+Shift+Up</source>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="987"/>
+        <location filename="QScintilla/MiniEditor.py" line="988"/>
         <source>Extend selection to end of document</source>
         <translation>Extender selección al final del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="994"/>
+        <location filename="QScintilla/MiniEditor.py" line="995"/>
         <source>Ctrl+Shift+Down</source>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1010"/>
+        <location filename="QScintilla/MiniEditor.py" line="1011"/>
         <source>Meta+H</source>
         <translation>Meta+H</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1019"/>
+        <location filename="QScintilla/MiniEditor.py" line="1020"/>
         <source>Delete previous character if not at start of line</source>
         <translation>Borrar carácter anterior si no se está al principio de la línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1034"/>
+        <location filename="QScintilla/MiniEditor.py" line="1035"/>
         <source>Meta+D</source>
         <translation>Meta+D</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1073"/>
+        <location filename="QScintilla/MiniEditor.py" line="1074"/>
         <source>Meta+K</source>
         <translation>Meta+K</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1166"/>
+        <location filename="QScintilla/MiniEditor.py" line="1167"/>
         <source>Move to end of display line</source>
         <translation>Mover al final de la línea mostrada</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1182"/>
+        <location filename="QScintilla/MiniEditor.py" line="1183"/>
         <source>Extend selection to end of display line</source>
         <translation>Extender selección hasta el final de la línea mostrada</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1220"/>
+        <location filename="QScintilla/MiniEditor.py" line="1221"/>
         <source>Meta+Alt+Shift+N</source>
         <translation>Meta+Alt+Shift+N</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1234"/>
+        <location filename="QScintilla/MiniEditor.py" line="1235"/>
         <source>Meta+Alt+Shift+P</source>
         <translation>Meta+Alt+Shift+P</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1249"/>
+        <location filename="QScintilla/MiniEditor.py" line="1250"/>
         <source>Meta+Alt+Shift+B</source>
         <translation>Meta+Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1264"/>
+        <location filename="QScintilla/MiniEditor.py" line="1265"/>
         <source>Meta+Alt+Shift+F</source>
         <translation>Meta+Alt+Shift+F</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1270"/>
+        <location filename="QScintilla/MiniEditor.py" line="1271"/>
         <source>Extend rectangular selection to first visible character in document line</source>
         <translation>Extender selección rectangular al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1286"/>
+        <location filename="QScintilla/MiniEditor.py" line="1287"/>
         <source>Extend rectangular selection to end of document line</source>
         <translation>Extender selección rectangular hasta el final de la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1293"/>
+        <location filename="QScintilla/MiniEditor.py" line="1294"/>
         <source>Meta+Alt+Shift+E</source>
         <translation>Meta+Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1296"/>
+        <location filename="QScintilla/MiniEditor.py" line="1297"/>
         <source>Alt+Shift+End</source>
         <translation>Alt+Shift+End</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1314"/>
+        <location filename="QScintilla/MiniEditor.py" line="1315"/>
         <source>Alt+Shift+PgDown</source>
         <translation>Alt+Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1323"/>
+        <location filename="QScintilla/MiniEditor.py" line="1324"/>
         <source>Meta+Alt+Shift+V</source>
         <translation>Meta+Alt+Shift+V</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1341"/>
+        <location filename="QScintilla/MiniEditor.py" line="1342"/>
         <source>Scroll to start of document</source>
         <translation>Desplazamiento hasta el principio del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1355"/>
+        <location filename="QScintilla/MiniEditor.py" line="1356"/>
         <source>Scroll to end of document</source>
         <translation>Desplazamiento hasta el final del documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1369"/>
+        <location filename="QScintilla/MiniEditor.py" line="1370"/>
         <source>Scroll vertically to center current line</source>
         <translation>Desplazamiento vertical para centrar la línea actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1376"/>
+        <location filename="QScintilla/MiniEditor.py" line="1377"/>
         <source>Meta+L</source>
         <translation>Meta+L</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1383"/>
+        <location filename="QScintilla/MiniEditor.py" line="1384"/>
         <source>Move to end of next word</source>
         <translation>Mover al final de la palabra siguiente</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1397"/>
+        <location filename="QScintilla/MiniEditor.py" line="1398"/>
         <source>Extend selection to end of next word</source>
         <translation>Extender selección al final de la siguiente palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1411"/>
+        <location filename="QScintilla/MiniEditor.py" line="1412"/>
         <source>Move to end of previous word</source>
         <translation>Mover al final de la palabra anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1422"/>
+        <location filename="QScintilla/MiniEditor.py" line="1423"/>
         <source>Extend selection to end of previous word</source>
         <translation>Extender selección al final de la palabra anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1433"/>
+        <location filename="QScintilla/MiniEditor.py" line="1434"/>
         <source>Move to start of document line</source>
         <translation>Mover al principio de la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1440"/>
+        <location filename="QScintilla/MiniEditor.py" line="1441"/>
         <source>Meta+A</source>
         <translation>Meta+A</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1447"/>
+        <location filename="QScintilla/MiniEditor.py" line="1448"/>
         <source>Extend selection to start of document line</source>
         <translation>Extender selección hasta el inicio de la línea documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1454"/>
+        <location filename="QScintilla/MiniEditor.py" line="1455"/>
         <source>Meta+Shift+A</source>
         <translation>/media/110106_1117</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1461"/>
+        <location filename="QScintilla/MiniEditor.py" line="1462"/>
         <source>Extend rectangular selection to start of document line</source>
         <translation>Extender selección rectangular hasta el principio de la línea de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1468"/>
+        <location filename="QScintilla/MiniEditor.py" line="1469"/>
         <source>Meta+Alt+Shift+A</source>
         <translation>Meta+Alt+Shift+A</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1475"/>
+        <location filename="QScintilla/MiniEditor.py" line="1476"/>
         <source>Extend selection to start of display line</source>
         <translation>Extender selección hasta el principio de la línea mostrada</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1489"/>
+        <location filename="QScintilla/MiniEditor.py" line="1490"/>
         <source>Move to start of display or document line</source>
         <translation>Mover al principio de línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1500"/>
+        <location filename="QScintilla/MiniEditor.py" line="1501"/>
         <source>Extend selection to start of display or document line</source>
         <translation>Extender selección hasta el inicio de la línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1512"/>
+        <location filename="QScintilla/MiniEditor.py" line="1513"/>
         <source>Move to first visible character in display or document line</source>
         <translation>Mover al primer carácter visible en la línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1526"/>
+        <location filename="QScintilla/MiniEditor.py" line="1527"/>
         <source>Extend selection to first visible character in display or document line</source>
         <translation>Extender selección al primer carácter visible en la línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1540"/>
+        <location filename="QScintilla/MiniEditor.py" line="1541"/>
         <source>Move to end of display or document line</source>
         <translation>Mover al final de la línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1551"/>
+        <location filename="QScintilla/MiniEditor.py" line="1552"/>
         <source>Extend selection to end of display or document line</source>
         <translation>Extender selección al final de la línea mostrada o de documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1563"/>
+        <location filename="QScintilla/MiniEditor.py" line="1564"/>
         <source>Stuttered move up one page</source>
         <translation>Mover progresivamente hacia arriba una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1574"/>
+        <location filename="QScintilla/MiniEditor.py" line="1575"/>
         <source>Stuttered extend selection up one page</source>
         <translation>Extender progresivamente la selección arriba una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1585"/>
+        <location filename="QScintilla/MiniEditor.py" line="1586"/>
         <source>Stuttered move down one page</source>
         <translation>Mover progresivamente hacia abajo una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1596"/>
+        <location filename="QScintilla/MiniEditor.py" line="1597"/>
         <source>Stuttered extend selection down one page</source>
         <translation>Extender progresivamente la selección abajo una página</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1607"/>
+        <location filename="QScintilla/MiniEditor.py" line="1608"/>
         <source>Delete right to end of next word</source>
         <translation>Borrar a la derecha hasta el final de la siguiente palabra</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1614"/>
+        <location filename="QScintilla/MiniEditor.py" line="1615"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1621"/>
+        <location filename="QScintilla/MiniEditor.py" line="1622"/>
         <source>Move selected lines up one line</source>
         <translation>Mover las líneas seleccionadas arriba una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1632"/>
+        <location filename="QScintilla/MiniEditor.py" line="1633"/>
         <source>Move selected lines down one line</source>
         <translation>Mover las líneas seleccionadas abajo una línea</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1302"/>
+        <location filename="QScintilla/MiniEditor.py" line="1303"/>
         <source>Alt+Shift+PgUp</source>
         <translation>Alt+Shift+PgUp</translation>
     </message>

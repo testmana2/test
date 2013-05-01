@@ -77,8 +77,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.monospacedFontSample.setFont(self.monospacedFont)
         self.monospacedCheckBox.setChecked(
             Preferences.getEditor("UseMonospacedFont"))
-        self.linenowidthSlider.setValue(
-            Preferences.getEditor("LinenoWidth"))
         self.linenoCheckBox.setChecked(
             Preferences.getEditor("LinenoMargin"))
         self.foldingCheckBox.setChecked(
@@ -206,8 +204,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         Preferences.setEditor("UseMonospacedFont",
             self.monospacedCheckBox.isChecked())
         
-        Preferences.setEditor("LinenoWidth",
-            self.linenowidthSlider.value())
         Preferences.setEditor("LinenoMargin",
             self.linenoCheckBox.isChecked())
         Preferences.setEditor("FoldingMargin",

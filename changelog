@@ -23,6 +23,9 @@ Version 5.4-snapshot-2013mmdd:
      based on the selected text
   -- added entires to convert the selection to upper/lower case to the
      edit menu
+  -- changed the line numbers margin to adjust themselves to the size needed
+- Mini Editor
+  -- changed the line numbers margin to adjust themselves to the size needed
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
@@ -31,6 +34,8 @@ Version 5.4-snapshot-2013mmdd:
      --- added a context menu entry to delete the selected directory
   -- Project Forms Viewer
      --- added support for more widgets in the code creation dialog
+- Shell
+  -- changed the line numbers margin to adjust themselves to the size needed
 - Symbols Viewer
   -- extended the list of supported unicode code blocks
 - Template Viewer

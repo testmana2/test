@@ -138,6 +138,7 @@ class Shell(QsciScintillaCompat):
         ))
         
         self.userListActivated.connect(self.__completionListSelected)
+        self.linesChanged.connect(self.__resizeLinenoMargin)
         
         self.__showStdOutErr = Preferences.getShell("ShowStdOutErr")
         if self.__showStdOutErr:
@@ -154,7 +155,7 @@ class Shell(QsciScintillaCompat):
         dbs.clientSyntaxError.connect(self.__clientError)
         self.dbs = dbs
         
-        # Initialise instance variables.
+        # Initialize instance variables.
         self.__initialise()
         self.prline = 0
         self.prcol = 0
@@ -273,6 +274,14 @@ class Shell(QsciScintillaCompat):
         
         self.grabGesture(Qt.PinchGesture)
         
+    def __resizeLinenoMargin(self):
+        """
+        Private slot to resize the line numbers margin.
+        """
+        linenoMargin = Preferences.getShell("LinenoMargin")
+        if linenoMargin:
+            self.setMarginWidth(0, '8' * (len(str(self.lines())) + 1))
+        
     def closeShell(self):
         """
         Public method to shutdown the shell.
@@ -331,7 +340,7 @@ class Shell(QsciScintillaCompat):
         linenoMargin = Preferences.getShell("LinenoMargin")
         self.setMarginLineNumbers(0, linenoMargin)
         if linenoMargin:
-            self.setMarginWidth(0, ' ' + '8' * Preferences.getShell("LinenoWidth"))
+            self.__resizeLinenoMargin()
         else:
             self.setMarginWidth(0, 0)
         

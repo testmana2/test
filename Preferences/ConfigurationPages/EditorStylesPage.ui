@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>587</width>
-    <height>1913</height>
+    <width>591</width>
+    <height>1966</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -224,58 +224,6 @@
           </property>
           <property name="text">
            <string>Show unified margins</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout">
-        <item>
-         <widget class="QLabel" name="TextLabel13_2_2_2">
-          <property name="text">
-           <string>Linenumbers width:</string>
-          </property>
-          <property name="buddy">
-           <cstring>linenowidthSlider</cstring>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="linenowidthSlider">
-          <property name="toolTip">
-           <string>Move to set the width of the linenumbers margin.</string>
-          </property>
-          <property name="minimum">
-           <number>2</number>
-          </property>
-          <property name="maximum">
-           <number>8</number>
-          </property>
-          <property name="value">
-           <number>4</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="tickInterval">
-           <number>1</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLCDNumber" name="linenowidthLCD">
-          <property name="toolTip">
-           <string>Displays the selected width of the linenumbers margin.</string>
-          </property>
-          <property name="digitCount">
-           <number>1</number>
-          </property>
-          <property name="segmentStyle">
-           <enum>QLCDNumber::Flat</enum>
-          </property>
-          <property name="value" stdset="0">
-           <double>4.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -1134,9 +1082,6 @@
         <property name="text">
          <string>Initial zoom factor:</string>
         </property>
-        <property name="buddy">
-         <cstring>linenowidthSlider</cstring>
-        </property>
        </widget>
       </item>
       <item>
@@ -1563,7 +1508,6 @@
   <tabstop>linenoCheckBox</tabstop>
   <tabstop>foldingCheckBox</tabstop>
   <tabstop>unifiedMarginsCheckBox</tabstop>
-  <tabstop>linenowidthSlider</tabstop>
   <tabstop>foldingStyleComboBox</tabstop>
   <tabstop>marginsForegroundButton</tabstop>
   <tabstop>marginsBackgroundButton</tabstop>
@@ -1611,22 +1555,6 @@
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>linenowidthSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>linenowidthLCD</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>483</x>
-     <y>378</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>554</x>
-     <y>382</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>edgeLineColumnSlider</sender>
    <signal>valueChanged(int)</signal>
