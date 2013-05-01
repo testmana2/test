@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>585</width>
+    <width>587</width>
     <height>538</height>
    </rect>
   </property>
@@ -30,55 +30,6 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout">
-     <item>
-      <widget class="QLabel" name="TextLabel13_2_2_2_2">
-       <property name="text">
-        <string>Linenumbers width:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSlider" name="shellLinenowidthSlider">
-       <property name="toolTip">
-        <string>Move to set the width of the linenumbers margin.</string>
-       </property>
-       <property name="minimum">
-        <number>2</number>
-       </property>
-       <property name="maximum">
-        <number>8</number>
-       </property>
-       <property name="value">
-        <number>2</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="tickInterval">
-        <number>1</number>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLCDNumber" name="shellLinenowidthLCD">
-       <property name="toolTip">
-        <string>Displays the selected width of the linenumbers margin.</string>
-       </property>
-       <property name="digitCount">
-        <number>1</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-       <property name="value" stdset="0">
-        <double>2.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
    <item>
     <layout class="QGridLayout">
@@ -283,7 +234,6 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>shellLinenowidthSlider</tabstop>
   <tabstop>shellLinenoCheckBox</tabstop>
   <tabstop>shellACEnabledCheckBox</tabstop>
   <tabstop>shellSyntaxHighlightingCheckBox</tabstop>
@@ -292,22 +242,5 @@
   <tabstop>shellHistorySpinBox</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>shellLinenowidthSlider</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>shellLinenowidthLCD</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>209</x>
-     <y>74</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>366</x>
-     <y>73</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

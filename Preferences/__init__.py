@@ -272,7 +272,6 @@ class Prefs(object):
         "AutosaveInterval": 0,
         "TabWidth": 4,
         "IndentWidth": 4,
-        "LinenoWidth": 4,
         "IndentationGuides": True,
         "UnifiedMargins": False,
         "LinenoMargin": True,
@@ -836,7 +835,6 @@ class Prefs(object):
     
     # defaults for the shell settings
     shellDefaults = {
-        "LinenoWidth": 4,
         "LinenoMargin": True,
         "AutoCompletionEnabled": True,
         "CallTipsEnabled": True,
@@ -1614,7 +1612,7 @@ def getEditor(key, prefClass=Prefs):
                "SpellCheckingDefaultLanguage", "SpellCheckingPersonalWordList",
                "SpellCheckingPersonalExcludeList"]:
         return prefClass.settings.value("Editor/" + key, prefClass.editorDefaults[key])
-    elif key in ["AutosaveInterval", "TabWidth", "IndentWidth", "LinenoWidth",
+    elif key in ["AutosaveInterval", "TabWidth", "IndentWidth",
                  "FoldingStyle", "WarnFilesize", "EdgeMode", "EdgeColumn",
                  "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold",
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
@@ -1953,7 +1951,7 @@ def getShell(key, prefClass=Prefs):
         f.fromString(prefClass.settings.value("Shell/" + key,
             prefClass.shellDefaults[key]))
         return f
-    elif key in ["LinenoWidth", "MaxHistoryEntries"]:
+    elif key in ["MaxHistoryEntries"]:
         return int(prefClass.settings.value("Shell/" + key,
             prefClass.shellDefaults[key]))
     else:

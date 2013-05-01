@@ -271,6 +271,7 @@ class Editor(QsciScintillaCompat):
         
         # configure the margins
         self.__setMarginsDisplay()
+        self.linesChanged.connect(self.__resizeLinenoMargin)
         
         self.marginClicked.connect(self.__marginClicked)
         
@@ -3823,8 +3824,7 @@ class Editor(QsciScintillaCompat):
         linenoMargin = Preferences.getEditor("LinenoMargin")
         self.setMarginLineNumbers(self.__linenoMargin, linenoMargin)
         if linenoMargin:
-            self.setMarginWidth(self.__linenoMargin,
-                                ' ' + '8' * Preferences.getEditor("LinenoWidth"))
+            self.__resizeLinenoMargin()
         else:
             self.setMarginWidth(self.__linenoMargin, 0)
         
@@ -3846,7 +3846,15 @@ class Editor(QsciScintillaCompat):
         else:
             self.setMarginWidth(self.__foldMargin, 0)
             self.setFolding(QsciScintilla.NoFoldStyle, self.__foldMargin)
-        
+    
+    def __resizeLinenoMargin(self):
+        """
+        Private slot to resize the line numbers margin.
+        """
+        linenoMargin = Preferences.getEditor("LinenoMargin")
+        if linenoMargin:
+            self.setMarginWidth(self.__linenoMargin, '8' * (len(str(self.lines())) + 1))
+    
     def __setTextDisplay(self):
         """
         Private method to configure the text display.

@@ -4024,6 +4024,7 @@
       <keyword name="Editor.__resetOnlineChangeTraceInfo" id="Editor.__resetOnlineChangeTraceInfo" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceInfo" />
       <keyword name="Editor.__resetOnlineChangeTraceTimer" id="Editor.__resetOnlineChangeTraceTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceTimer" />
       <keyword name="Editor.__resetOnlineSyntaxCheckTimer" id="Editor.__resetOnlineSyntaxCheckTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineSyntaxCheckTimer" />
+      <keyword name="Editor.__resizeLinenoMargin" id="Editor.__resizeLinenoMargin" ref="eric5.QScintilla.Editor.html#Editor.__resizeLinenoMargin" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
       <keyword name="Editor.__searchCurrentWord" id="Editor.__searchCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.__searchCurrentWord" />
@@ -7278,6 +7279,7 @@
       <keyword name="MiniEditor.__redo" id="MiniEditor.__redo" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__redo" />
       <keyword name="MiniEditor.__replace" id="MiniEditor.__replace" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__replace" />
       <keyword name="MiniEditor.__resetLanguage" id="MiniEditor.__resetLanguage" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__resetLanguage" />
+      <keyword name="MiniEditor.__resizeLinenoMargin" id="MiniEditor.__resizeLinenoMargin" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__resizeLinenoMargin" />
       <keyword name="MiniEditor.__save" id="MiniEditor.__save" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__save" />
       <keyword name="MiniEditor.__saveAs" id="MiniEditor.__saveAs" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__saveAs" />
       <keyword name="MiniEditor.__saveFile" id="MiniEditor.__saveFile" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__saveFile" />
@@ -9338,6 +9340,7 @@
       <keyword name="Shell.__raw_input" id="Shell.__raw_input" ref="eric5.QScintilla.Shell.html#Shell.__raw_input" />
       <keyword name="Shell.__reset" id="Shell.__reset" ref="eric5.QScintilla.Shell.html#Shell.__reset" />
       <keyword name="Shell.__resetAndClear" id="Shell.__resetAndClear" ref="eric5.QScintilla.Shell.html#Shell.__resetAndClear" />
+      <keyword name="Shell.__resizeLinenoMargin" id="Shell.__resizeLinenoMargin" ref="eric5.QScintilla.Shell.html#Shell.__resizeLinenoMargin" />
       <keyword name="Shell.__rsearchHistory" id="Shell.__rsearchHistory" ref="eric5.QScintilla.Shell.html#Shell.__rsearchHistory" />
       <keyword name="Shell.__searchHistory" id="Shell.__searchHistory" ref="eric5.QScintilla.Shell.html#Shell.__searchHistory" />
       <keyword name="Shell.__searchNext" id="Shell.__searchNext" ref="eric5.QScintilla.Shell.html#Shell.__searchNext" />

@@ -169,6 +169,7 @@ class MiniEditor(E5MainWindow):
         self.__textEdit.textChanged.connect(self.__documentWasModified)
         self.__textEdit.modificationChanged.connect(self.__modificationChanged)
         self.__textEdit.cursorPositionChanged.connect(self.__cursorPositionChanged)
+        self.__textEdit.linesChanged.connect(self.__resizeLinenoMargin)
         
         self.__textEdit.setContextMenuPolicy(Qt.CustomContextMenu)
         self.__textEdit.customContextMenuRequested.connect(self.__contextMenuRequested)
@@ -2092,8 +2093,7 @@ class MiniEditor(E5MainWindow):
         linenoMargin = Preferences.getEditor("LinenoMargin")
         self.__textEdit.setMarginLineNumbers(0, linenoMargin)
         if linenoMargin:
-            self.__textEdit.setMarginWidth(0,
-                ' ' + '8' * Preferences.getEditor("LinenoWidth"))
+            self.__resizeLinenoMargin()
         else:
             self.__textEdit.setMarginWidth(0, 16)
         
@@ -2117,6 +2117,15 @@ class MiniEditor(E5MainWindow):
                 Preferences.getEditorColour("FoldMarkersBackground"))
         else:
             self.__textEdit.setFolding(QsciScintilla.NoFoldStyle)
+    
+    def __resizeLinenoMargin(self):
+        """
+        Private slot to resize the line numbers margin.
+        """
+        linenoMargin = Preferences.getEditor("LinenoMargin")
+        if linenoMargin:
+            self.__textEdit.setMarginWidth(
+                0, '8' * (len(str(self.__textEdit.lines())) + 1))
     
     def __setTextDisplay(self):
         """
