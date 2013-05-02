@@ -470,7 +470,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.__projectRevision = outputList[0].strip()
                 if self.__projectRevision.endswith("+"):
                     self.__projectRevision = self.__projectRevision[:-1]
-                    self.__projectBranch = outputList[1].strip()
+                self.__projectBranch = outputList[1].strip()
     
     def __getClosedBranches(self):
         """
