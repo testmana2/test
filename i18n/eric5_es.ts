@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -2403,55 +2404,58 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="47"/>
         <source>Show source</source>
-        <translation type="unfinished">Mostrar código fuente</translation>
+        <translation>Mostrar código fuente</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="49"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpiar</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="51"/>
         <source>Save</source>
-        <translation type="unfinished">Guardar</translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="58"/>
         <source>File: {0}
 Line: {1}
 {2}{3}</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo: {0}
+Línea: {1}
+{2}{3}</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="60"/>
         <source>File: {0}
 Line: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo: {0}
+Línea: {1}</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="168"/>
         <source>Save Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Información de Pila de Llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="154"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
+        <translation>Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="168"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="186"/>
         <source>Error saving Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al guardar Información de Pila de Llamadas</translation>
     </message>
     <message>
         <location filename="Debugger/CallStackViewer.py" line="186"/>
         <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La información de la pila de llamadas no se ha podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14458,7 +14462,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -25524,12 +25528,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="389"/>
         <source>Delay:</source>
-        <translation type="unfinished">Retraso:</translation>
+        <translation>Retraso:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="399"/>
         <source> ms</source>
-        <translation type="unfinished">ms</translation>
+        <translation>ms</translation>
     </message>
 </context>
 <context>
@@ -46349,537 +46353,537 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/SymbolsWidget.py" line="50"/>
         <source>Latin Extended-A</source>
-        <translation type="unfinished">Latín Extendido A</translation>
+        <translation>Latín Extendido A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="51"/>
         <source>Latin Extended-B</source>
-        <translation type="unfinished">Latín Extendido B</translation>
+        <translation>Latín Extendido B</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="64"/>
         <source>Samaritan</source>
-        <translation type="unfinished"></translation>
+        <translation>Samaritano</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="65"/>
         <source>Mandaic</source>
-        <translation type="unfinished"></translation>
+        <translation>Mandaico</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="66"/>
         <source>Arabic Extended-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Arábico Extendido-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="84"/>
         <source>Ethiopic Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Etíope Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="86"/>
         <source>Unified Canadian Aboriginal Syllabics</source>
-        <translation type="unfinished">Silábicos Unificados Aborigen Canadiense</translation>
+        <translation>Silábicos Unificados Aborigen Canadiense</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="95"/>
         <source>Unified Canadian Aboriginal Syllabics Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>Silábicos Unificados Aborigen Canadiense Extendido</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="99"/>
         <source>Buginese</source>
-        <translation type="unfinished"></translation>
+        <translation>Buginés</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="100"/>
         <source>Tai Tham</source>
-        <translation type="unfinished"></translation>
+        <translation>Tai Tham</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="101"/>
         <source>Balinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Balinés</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="102"/>
         <source>Sundanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Sondanés</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="103"/>
         <source>Batak</source>
-        <translation type="unfinished"></translation>
+        <translation>Batak</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="104"/>
         <source>Lepcha</source>
-        <translation type="unfinished"></translation>
+        <translation>Lepcha</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="105"/>
         <source>Ol Chiki</source>
-        <translation type="unfinished"></translation>
+        <translation>Ol Chiki</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="106"/>
         <source>Sundanese Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Sondanés Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="107"/>
         <source>Vedic Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Extensiones Védicas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="109"/>
         <source>Phonetic Extensions Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Extensiones Fonéticas Suplementarias</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="110"/>
         <source>Combining Diacritical Marks Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcas Diacríticas de Combinación Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="137"/>
         <source>Glagolitic</source>
-        <translation type="unfinished"></translation>
+        <translation>Glagolético</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="138"/>
         <source>Latin Extended-C</source>
-        <translation type="unfinished"></translation>
+        <translation>Latín Extendido C</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="139"/>
         <source>Coptic</source>
-        <translation type="unfinished"></translation>
+        <translation>Copto</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="140"/>
         <source>Georgian Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Georgiano Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="141"/>
         <source>Tifinagh</source>
-        <translation type="unfinished"></translation>
+        <translation>Tifinagh</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="142"/>
         <source>Ethiopic Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>Etíope Extendido</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="143"/>
         <source>Cyrillic Extended-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirílico Extendido-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="144"/>
         <source>Supplemental Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntuación Suplementaria</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="155"/>
         <source>CJK Strokes</source>
-        <translation type="unfinished"></translation>
+        <translation>Trazos CJK</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="164"/>
         <source>Lisu</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisu</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="165"/>
         <source>Vai</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="166"/>
         <source>Cyrillic Extended-B</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirílico Extendido-B</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="167"/>
         <source>Bamum</source>
-        <translation type="unfinished"></translation>
+        <translation>Bamum</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="168"/>
         <source>Modifier Tone Letters</source>
-        <translation type="unfinished"></translation>
+        <translation>Letras Modificadoras de Tono</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="169"/>
         <source>Latin Extended-D</source>
-        <translation type="unfinished"></translation>
+        <translation>Latín Extendido D</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="170"/>
         <source>Syloti Nagri</source>
-        <translation type="unfinished"></translation>
+        <translation>Syloti Nagri</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="171"/>
         <source>Common Indic Number Forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Formas Numéricas Comunes Índicas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="172"/>
         <source>Phags-pa</source>
-        <translation type="unfinished"></translation>
+        <translation>Phags-pa</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="173"/>
         <source>Saurashtra</source>
-        <translation type="unfinished"></translation>
+        <translation>Saurashtra</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="174"/>
         <source>Devanagari Extended</source>
-        <translation type="unfinished"></translation>
+        <translation>Devanagari Extendido</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="175"/>
         <source>Kayah Li</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayah Li</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="176"/>
         <source>Rejang</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejang</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="177"/>
         <source>Hangul Jamo Extended-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Hangul Jamo Extendido-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="178"/>
         <source>Javanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Javanés</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="179"/>
         <source>Cham</source>
-        <translation type="unfinished"></translation>
+        <translation>Cham</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="180"/>
         <source>Myanmar Extended-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Birmano Extendido-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="181"/>
         <source>Tai Viet</source>
-        <translation type="unfinished"></translation>
+        <translation>Tai Viet</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="182"/>
         <source>Meetei Mayek Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Extensiones Meetei Mayek</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="183"/>
         <source>Ethiopic Extended-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Etíope Extendido-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="184"/>
         <source>Meetei Mayek</source>
-        <translation type="unfinished"></translation>
+        <translation>Meetei Mayek</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="186"/>
         <source>Hangul Jamo Extended-B</source>
-        <translation type="unfinished"></translation>
+        <translation>Hangul Jamo Extendido-B</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="195"/>
         <source>Vertical Forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Formas Verticales</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Linear B Syllabary</source>
-        <translation type="unfinished"></translation>
+        <translation>Linear B Sílabas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Linear B Ideograms</source>
-        <translation type="unfinished"></translation>
+        <translation>Linear B Ideogramas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Aegean Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Números Egeos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Ancient Greek Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Antiguos Números Griegos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Ancient Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos Antiguos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Phaistos Disc</source>
-        <translation type="unfinished"></translation>
+        <translation>Disco de Phaistos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Lycian</source>
-        <translation type="unfinished"></translation>
+        <translation>Liciano</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Carian</source>
-        <translation type="unfinished"></translation>
+        <translation>Cariano</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Ugaritic</source>
-        <translation type="unfinished"></translation>
+        <translation>Ugarítico</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Old Persian</source>
-        <translation type="unfinished"></translation>
+        <translation>Viejo Persa</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Shavian</source>
-        <translation type="unfinished"></translation>
+        <translation>Shaviano</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Osmanya</source>
-        <translation type="unfinished"></translation>
+        <translation>Osmanya</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Cypriot Syllabary</source>
-        <translation type="unfinished"></translation>
+        <translation>Sílabas Chipriotas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Imperial Aramaic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arameo Imperial</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Phoenician</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenicio</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Lydian</source>
-        <translation type="unfinished"></translation>
+        <translation>Lidiano</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Meroitic Hieroglyphs</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeroglifos Meroíticos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Meroitic Cursive</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursiva Meroítica</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Kharoshthi</source>
-        <translation type="unfinished"></translation>
+        <translation>Kharoshthi</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Old South Arabian</source>
-        <translation type="unfinished"></translation>
+        <translation>Viejo Árabe del Sur</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Avestan</source>
-        <translation type="unfinished"></translation>
+        <translation>Avéstico</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Inscriptional Parthian</source>
-        <translation type="unfinished"></translation>
+        <translation>Inscripciones Partas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Inscriptional Pahlavi</source>
-        <translation type="unfinished"></translation>
+        <translation>Inscripciones Pahlavi</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Old Turkic</source>
-        <translation type="unfinished"></translation>
+        <translation>Viejo Túrquico</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Rumi Numeral Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos Numéricos Rumi</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Brahmi</source>
-        <translation type="unfinished"></translation>
+        <translation>Brahmi</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Kaithi</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaithi</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Sora Sompeng</source>
-        <translation type="unfinished"></translation>
+        <translation>Sora Sompeng</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Chakma</source>
-        <translation type="unfinished"></translation>
+        <translation>Chakma</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Sharada</source>
-        <translation type="unfinished"></translation>
+        <translation>Sharada</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Takri</source>
-        <translation type="unfinished"></translation>
+        <translation>Takri</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Cuneiform</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuneiforme</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Cuneiform Numbers and Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation>Números y Puntuación Cuneiformes</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Egyptian Hieroglyphs</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeroglifos Egipcios</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Bamum Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Bamum Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Miao</source>
-        <translation type="unfinished"></translation>
+        <translation>Miao</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Kana Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Kana Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Ancient Greek Musical Notation</source>
-        <translation type="unfinished"></translation>
+        <translation>Antigua Notación Musical Griega</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Tai Xuan Jing Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos Tai Xuan Jing</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Counting Rod Numerals</source>
-        <translation type="unfinished"></translation>
+        <translation>Números de Conteo Rod</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Arabic Mathematical Alphabetic Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos Alfabéticos Matemáticos Arábicos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Mahjong Tiles</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichas Mahjong</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Domino Tiles</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichas Dominó</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Playing Cards</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartas</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Enclosed Alphanumeric Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Alfanuméricos Delimitados Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Enclosed Ideographic Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Ideográficos Delimitados Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Miscellaneous Symbols And Pictographs</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictografos y Símbolos Misceláneos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Emoticons</source>
-        <translation type="unfinished"></translation>
+        <translation>Emoticonos</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Transport And Map Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos de Mapas y Transportes</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Alchemical Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Símbolos de Alquimia</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>CJK Unified Ideographs Extension C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ideografos Unificados CJK Extensión C</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>CJK Unified Ideographs Extension D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ideografos Unificados CJK Extensión D</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Variation Selectors Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectores de Variación Suplementario</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Supplementary Private Use Area-A</source>
-        <translation type="unfinished"></translation>
+        <translation>Uso Privado Suplementario Área-A</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="204"/>
         <source>Supplementary Private Use Area-B</source>
-        <translation type="unfinished"></translation>
+        <translation>Uso Privado Suplementario Área-B</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="63"/>
         <source>N&apos;Ko</source>
-        <translation type="unfinished"></translation>
+        <translation>N&apos;Ko</translation>
     </message>
 </context>
 <context>
