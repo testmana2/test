@@ -1684,6 +1684,7 @@ class Editor(QsciScintillaCompat):
             return True
         
         if self.filetype == "":
+            # 1) Determine by first line
             line0 = self.text(0)
             if line0.startswith("#!") and \
                ("python2" in line0 or \
@@ -1693,15 +1694,23 @@ class Editor(QsciScintillaCompat):
             
             if self.fileName is not None:
                 ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"] and \
-                   Preferences.getProject("DeterminePyFromProject") and \
-                   self.project.isOpen() and \
-                   self.project.isProjectFile(self.fileName):
-                    isProjectPy2 = \
-                        self.project.getProjectLanguage() in ["Python", "Python2"]
-                    if isProjectPy2:
-                        self.filetype = "Python2"
-                    return isProjectPy2
+                if ext in [".py", ".pyw"]:
+                    # 2) .py and .pyw are ambiguous; determine from project
+                    if Preferences.getProject("DeterminePyFromProject") and \
+                       self.project.isOpen() and \
+                       self.project.isProjectFile(self.fileName):
+                        isProjectPy2 = \
+                            self.project.getProjectLanguage() in ["Python", "Python2"]
+                        if isProjectPy2:
+                            self.filetype = "Python2"
+                        return isProjectPy2
+                    else:
+                        # 3) determine by compiling the sources
+                        syntaxError = Utilities.py2compile(self.fileName,
+                            checkFlakes=False)[0]
+                        if not syntaxError:
+                            self.filetype = "Python2"
+                            return True
                 
                 if ext in self.dbs.getExtensions('Python2'):
                     self.filetype = "Python2"
@@ -1719,6 +1728,7 @@ class Editor(QsciScintillaCompat):
             return True
         
         if self.filetype == "":
+            # 1) Determine by first line
             line0 = self.text(0)
             if line0.startswith("#!") and \
                "python3" in line0:
@@ -1727,14 +1737,21 @@ class Editor(QsciScintillaCompat):
             
             if self.fileName is not None:
                 ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"] and \
-                   Preferences.getProject("DeterminePyFromProject") and \
-                   self.project.isOpen() and \
-                   self.project.isProjectFile(self.fileName):
-                    isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
-                    if isProjectPy3:
-                        self.filetype = "Python3"
-                    return isProjectPy3
+                if ext in [".py", ".pyw"]:
+                    # 2) .py and .pyw are ambiguous; determine from project
+                    if Preferences.getProject("DeterminePyFromProject") and \
+                       self.project.isOpen() and \
+                       self.project.isProjectFile(self.fileName):
+                        isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
+                        if isProjectPy3:
+                            self.filetype = "Python3"
+                        return isProjectPy3
+                    else:
+                        # 3) determine by compiling the sources
+                        syntaxError = Utilities.compile(self.fileName, self.text())
+                        if not syntaxError:
+                            self.filetype = "Python3"
+                            return True
                 
                 if ext in self.dbs.getExtensions('Python3'):
                     self.filetype = "Python3"
