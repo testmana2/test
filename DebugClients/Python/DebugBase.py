@@ -669,6 +669,8 @@ class DebugBase(bdb.Bdb):
                 frlist.reverse()
                 
                 self.currentFrame = frlist[0]
+                self.currentFrameLocals = frlist[0].f_locals
+                # remember the locals because it is reinitialized when accessed
                 
                 for fr in frlist:
                     filename = self._dbgClient.absPath(self.fix_frame_filename(fr))
