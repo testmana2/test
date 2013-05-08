@@ -486,7 +486,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to check, if the current selection is rectangular.
         
-        @return flag indicating a rectangular selection.
+        @return flag indicating a rectangular selection (boolean)
         """
         startLine, startIndex, endLine, endIndex = self.getSelection()
         return startLine != -1 and \
