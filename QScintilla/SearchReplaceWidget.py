@@ -449,7 +449,7 @@ character except an alphabetic character.</td></tr>
         @param editor reference to the editor (Editor)
         """
         if not self.__finding:
-            if editor.hasSelectedText():
+            if editor.hasSelectedText() and not editor.selectionIsRectangle():
                 line1, index1, line2, index2 = editor.getSelection()
                 if line1 != line2:
                     self.ui.selectionCheckBox.setEnabled(True)

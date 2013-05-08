@@ -471,6 +471,10 @@ class QsciScintillaCompat(QsciScintilla):
         """
         self.SendScintilla(QsciScintilla.SCI_LINEENDEXTEND)
     
+        startLine, startIndex, endLine, endIndex = self.getSelection()
+        return startLine != -1 and \
+               startLine != endLine and \
+               self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
     def getLineSeparator(self):
         """
         Public method to get the line separator for the current eol mode.
