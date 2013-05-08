@@ -6940,6 +6940,7 @@ eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromLineIndex?4
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.positionFromPoint?4(point)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.replaceTarget?4(replaceStr)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.scrollVertical?4(lines)
+eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.selectionIsRectangle?4()
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setContractedFolds?4(folds)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCurrentIndicator?4(indicator)
 eric5.QScintilla.QsciScintillaCompat.QsciScintillaCompat.setCursorFlashTime?4(time)
