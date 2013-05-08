@@ -488,7 +488,10 @@ class QsciScintillaCompat(QsciScintilla):
         
         @return flag indicating a rectangular selection.
         """
-        return self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
+        startLine, startIndex, endLine, endIndex = self.getSelection()
+        return startLine != -1 and \
+               startLine != endLine and \
+               self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
     
     def getRectangularSelection(self):
         """
