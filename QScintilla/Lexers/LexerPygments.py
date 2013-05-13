@@ -447,7 +447,7 @@ class LexerPygments(LexerContainer):
                 cpos += tlen
                 if tlen and cpos < textLen:
                     self.editor.setStyling(tlen, style)
-                else:
+                if cpos >= textLen:
                     break
             self.editor.startStyling(cpos, 0x3f)
     
