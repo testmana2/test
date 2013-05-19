@@ -525,6 +525,40 @@ class QsciScintillaCompat(QsciScintilla):
         self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONANCHOR, startPos)
         self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONCARET, endPos)
     
+    def getSelectionCount(self):
+        """
+        Public method to get the number of active selections.
+        
+        @return number of active selection (integer)
+        """
+        return self.SendScintilla(QsciScintilla.SCI_GETSELECTIONS)
+    
+    def getSelectionN(self, index):
+        """
+        Public method to get the start and end of a selection given by it's index.
+        
+        @return tuple with start line and index and end line and index
+            (tuple of four int) for the given selection
+        """
+        startPos = self.SendScintilla(QsciScintilla.SCI_GETSELECTIONNSTART, index)
+        endPos = self.SendScintilla(QsciScintilla.SCI_GETSELECTIONNEND, index)
+        startLine, startIndex = self.lineIndexFromPosition(startPos)
+        endLine, endIndex = self.lineIndexFromPosition(endPos)
+        
+        return (startLine, startIndex, endLine, endIndex)
+    
+    def getSelections(self):
+        """
+        Public method to get the start and end coordinates of all active selections.
+        
+        @return list of tuples with start line and index and end line and index
+            of each active selection (list of tuples of four int)
+        """
+        selections = []
+        for index in range(self.getSelectionCount()):
+            selections.append(self.getSelectionN(index))
+        return selections
+    
     def getLineSeparator(self):
         """
         Public method to get the line separator for the current eol mode.

@@ -202,6 +202,15 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.getRectangularSelection">getRectangularSelection</a></td>
 <td>Public method to retrieve the start and end of a rectangular selection.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.getSelectionCount">getSelectionCount</a></td>
+<td>Public method to get the number of active selections.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getSelectionN">getSelectionN</a></td>
+<td>Public method to get the start and end of a selection given by it's index.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getSelections">getSelections</a></td>
+<td>Public method to get the start and end coordinates of all active selections.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.getZoom">getZoom</a></td>
 <td>Public method used to retrieve the current zoom factor.</td>
 </tr><tr>
@@ -811,6 +820,38 @@ eol string (string)
 <dd>
 tuple with start line and index and end line and index
             (tuple of four int)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelectionCount" ID="QsciScintillaCompat.getSelectionCount"></a>
+<h4>QsciScintillaCompat.getSelectionCount</h4>
+<b>getSelectionCount</b>(<i></i>)
+<p>
+        Public method to get the number of active selections.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+number of active selection (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelectionN" ID="QsciScintillaCompat.getSelectionN"></a>
+<h4>QsciScintillaCompat.getSelectionN</h4>
+<b>getSelectionN</b>(<i>index</i>)
+<p>
+        Public method to get the start and end of a selection given by it's index.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start line and index and end line and index
+            (tuple of four int) for the given selection
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelections" ID="QsciScintillaCompat.getSelections"></a>
+<h4>QsciScintillaCompat.getSelections</h4>
+<b>getSelections</b>(<i></i>)
+<p>
+        Public method to get the start and end coordinates of all active selections.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of tuples with start line and index and end line and index
+            of each active selection (list of tuples of four int)
 </dd>
 </dl><a NAME="QsciScintillaCompat.getZoom" ID="QsciScintillaCompat.getZoom"></a>
 <h4>QsciScintillaCompat.getZoom</h4>

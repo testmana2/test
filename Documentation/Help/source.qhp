@@ -8977,6 +8977,9 @@
       <keyword name="QsciScintillaCompat.getFoundTarget" id="QsciScintillaCompat.getFoundTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFoundTarget" />
       <keyword name="QsciScintillaCompat.getLineSeparator" id="QsciScintillaCompat.getLineSeparator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getLineSeparator" />
       <keyword name="QsciScintillaCompat.getRectangularSelection" id="QsciScintillaCompat.getRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getRectangularSelection" />
+      <keyword name="QsciScintillaCompat.getSelectionCount" id="QsciScintillaCompat.getSelectionCount" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelectionCount" />
+      <keyword name="QsciScintillaCompat.getSelectionN" id="QsciScintillaCompat.getSelectionN" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelectionN" />
+      <keyword name="QsciScintillaCompat.getSelections" id="QsciScintillaCompat.getSelections" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelections" />
       <keyword name="QsciScintillaCompat.getZoom" id="QsciScintillaCompat.getZoom" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getZoom" />
       <keyword name="QsciScintillaCompat.hasIndicator" id="QsciScintillaCompat.hasIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasIndicator" />
       <keyword name="QsciScintillaCompat.hasSelection" id="QsciScintillaCompat.hasSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasSelection" />
@@ -12426,6 +12429,7 @@
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric5.Plugins.PluginVcsSubversion.html#exeDisplayData" />
       <keyword name="exeDisplayDataList" id="exeDisplayDataList" ref="eric5.Plugins.PluginEricdoc.html#exeDisplayDataList" />
       <keyword name="exit" id="exit" ref="eric5.install.html#exit" />
+      <keyword name="exit" id="exit" ref="eric5.uninstall.html#exit" />
       <keyword name="expand_indent" id="expand_indent" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#expand_indent" />
       <keyword name="expand_indent" id="expand_indent" ref="eric5.UtilitiesPython2.pep8.html#expand_indent" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />
