@@ -3977,6 +3977,8 @@ class Editor(QsciScintillaCompat):
         if Preferences.getEditor("OverrideEditAreaColours"):
             self.setColor(Preferences.getEditorColour("EditAreaForeground"))
             self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+        
+        self.setVirtualSpaceOptions(Preferences.getEditor("VirtualSpaceOptions"))
     
     def __setEolMode(self):
         """

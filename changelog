@@ -24,8 +24,10 @@ Version 5.4-snapshot-2013mmdd:
   -- added entires to convert the selection to upper/lower case to the
      edit menu
   -- changed the line numbers margin to adjust themselves to the size needed
+  -- added support for virtual space
 - Mini Editor
   -- changed the line numbers margin to adjust themselves to the size needed
+  -- added support for virtual space
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way

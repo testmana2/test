@@ -363,6 +363,8 @@ class Prefs(object):
         "PreviewMarkdownFileNameExtensions": ["md", "markdown"],
         "PreviewRestFileNameExtensions": ["rst"],
         
+        "VirtualSpaceOptions": QsciScintilla.SCVS_NONE,
+        
         # All (most) lexers
         "AllFoldCompact": True,
         
@@ -1619,7 +1621,8 @@ def getEditor(key, prefClass=Prefs):
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
                  "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
-                 "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition"]:
+                 "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition",
+                 "VirtualSpaceOptions"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",

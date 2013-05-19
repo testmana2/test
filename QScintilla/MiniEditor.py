@@ -2213,6 +2213,8 @@ class MiniEditor(E5MainWindow):
         if Preferences.getEditor("OverrideEditAreaColours"):
             self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
             self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+        
+        self.setVirtualSpaceOptions(Preferences.getEditor("VirtualSpaceOptions"))
     
     def __setEolMode(self):
         """

@@ -311,7 +311,7 @@ class QsciScintillaCompat(QsciScintilla):
         return self.SendScintilla(QsciScintilla.SCI_GETINDENTATIONGUIDES)
     
     ###########################################################################
-    # methods below are missing from QScintilla
+    ## methods below are missing from QScintilla
     ###########################################################################
 
     def zoomIn(self, zoom=1):
@@ -558,6 +558,14 @@ class QsciScintillaCompat(QsciScintilla):
         for index in range(self.getSelectionCount()):
             selections.append(self.getSelectionN(index))
         return selections
+    
+    def setVirtualSpaceOptions(self, options):
+        """
+        Public method to set the virtual space usage options.
+        
+        @param options usage options to set (integer, 0 to 3)
+        """
+        self.SendScintilla(QsciScintilla.SCI_SETVIRTUALSPACEOPTIONS, options)
     
     def getLineSeparator(self):
         """

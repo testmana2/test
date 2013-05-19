@@ -7,6 +7,8 @@
 Module implementing the Editor General configuration page.
 """
 
+from PyQt4.Qsci import QsciScintillaBase
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorGeneralPage import Ui_EditorGeneralPage
 
@@ -43,6 +45,12 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         self.comment0CheckBox.setChecked(
             Preferences.getEditor("CommentColumn0"))
         
+        virtualSpaceOptions = Preferences.getEditor("VirtualSpaceOptions")
+        self.vsSelectionCheckBox.setChecked(
+            virtualSpaceOptions & QsciScintillaBase.SCVS_RECTANGULARSELECTION)
+        self.vsUserCheckBox.setChecked(
+            virtualSpaceOptions & QsciScintillaBase.SCVS_USERACCESSIBLE)
+        
     def save(self):
         """
         Public slot to save the Editor General configuration.
@@ -63,6 +71,13 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
             self.autoindentCheckBox.isChecked())
         Preferences.setEditor("CommentColumn0",
             self.comment0CheckBox.isChecked())
+        
+        virtualSpaceOptions = QsciScintillaBase.SCVS_NONE
+        if self.vsSelectionCheckBox.isChecked():
+            virtualSpaceOptions |= QsciScintillaBase.SCVS_RECTANGULARSELECTION
+        if self.vsUserCheckBox.isChecked():
+            virtualSpaceOptions |= QsciScintillaBase.SCVS_USERACCESSIBLE
+        Preferences.setEditor("VirtualSpaceOptions", virtualSpaceOptions)
         
     def on_tabforindentationCheckBox_toggled(self, checked):
         """
