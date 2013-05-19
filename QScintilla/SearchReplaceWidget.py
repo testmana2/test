@@ -144,9 +144,33 @@ character except an alphabetic character.</td></tr>
         self.havefound = False
         self.__pos = None
         self.__findBackwards = False
-        self.__selection = None
+        self.__selections = []
         self.__finding = False
-
+    
+    def __selectionBoundary(self, selections=None):
+        """
+        Private method to calculate the current selection boundary.
+        
+        @param selections optional parameter giving the selections to
+            calculate the boundary for (list of tuples of four integer)
+        @return tuple of start line and index and end line and index
+            (tuple of four integer)
+        """
+        if selections is None:
+            selections = self.__selections
+        if selections:
+            lineNumbers = [sel[0] for sel in selections] + \
+                          [sel[2] for sel in selections]
+            indexNumbers = [sel[1] for sel in selections] + \
+                           [sel[3] for sel in selections]
+            startLine, startIndex, endLine, endIndex = (
+                min(lineNumbers), min(indexNumbers),
+                max(lineNumbers), max(indexNumbers))
+        else:
+            startLine, startIndex, endLine, endIndex = -1, -1, -1, -1
+        
+        return startLine, startIndex, endLine, endIndex
+    
     def on_findtextCombo_editTextChanged(self, txt):
         """
         Private slot to enable/disable the find buttons.
@@ -263,10 +287,7 @@ character except an alphabetic character.</td></tr>
         lineTo = -1
         indexTo = -1
         if self.ui.selectionCheckBox.isChecked():
-            lineFrom = self.__selection[0]
-            indexFrom = self.__selection[1]
-            lineTo = self.__selection[2]
-            indexTo = self.__selection[3]
+            lineFrom, indexFrom, lineTo, indexTo = self.__selectionBoundary()
         
         aw.clearSearchIndicators()
         ok = aw.findFirstTarget(txt,
@@ -278,7 +299,21 @@ character except an alphabetic character.</td></tr>
             tgtPos, tgtLen = aw.getFoundTarget()
             if tgtLen == 0:
                 break
-            aw.setSearchIndicator(tgtPos, tgtLen)
+            if len(self.__selections) > 1:
+                lineFrom, indexFrom = aw.lineIndexFromPosition(tgtPos)
+                lineTo, indexTo = aw.lineIndexFromPosition(tgtPos + tgtLen)
+                for sel in self.__selections:
+                    if lineFrom == sel[0] and \
+                       indexFrom >= sel[1] and \
+                       indexTo <= sel[3]:
+                        indicate = True
+                        break
+                else:
+                    indicate = False
+            else:
+                indicate = True
+            if indicate:
+                aw.setSearchIndicator(tgtPos, tgtLen)
             ok = aw.findNextTarget()
     
     def __findNextPrev(self, txt, backwards):
@@ -299,12 +334,12 @@ character except an alphabetic character.</td></tr>
         
         ok = True
         lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
+        boundary = self.__selectionBoundary()
         if backwards:
             if self.ui.selectionCheckBox.isChecked() and \
-               (lineFrom, indexFrom, lineTo, indexTo) == self.__selection:
+               (lineFrom, indexFrom, lineTo, indexTo) == boundary:
                 # initial call
-                line = self.__selection[2]
-                index = self.__selection[3]
+                line, index = boundary[2:]
             else:
                 if (lineFrom, indexFrom) == (-1, -1):
                     # no selection present
@@ -314,18 +349,17 @@ character except an alphabetic character.</td></tr>
                     line = lineFrom
                     index = indexFrom - 1
             if self.ui.selectionCheckBox.isChecked() and \
-               line == self.__selection[0] and \
+               line == boundary[0] and \
                index >= 0 and \
-               index < self.__selection[1]:
+               index < boundary[1]:
                 ok = False
             
             if ok and index < 0:
                 line -= 1
                 if self.ui.selectionCheckBox.isChecked():
-                    if line < self.__selection[0]:
+                    if line < boundary[0]:
                         if self.ui.wrapCheckBox.isChecked():
-                            line = self.__selection[2]
-                            index = self.__selection[3]
+                            line, index = boundary[2:]
                         else:
                             ok = False
                     else:
@@ -341,10 +375,9 @@ character except an alphabetic character.</td></tr>
                         index = aw.lineLength(line)
         else:
             if self.ui.selectionCheckBox.isChecked() and \
-               (lineFrom, indexFrom, lineTo, indexTo) == self.__selection:
+               (lineFrom, indexFrom, lineTo, indexTo) == boundary:
                 # initial call
-                line = self.__selection[0]
-                index = self.__selection[1]
+                line, index = boundary[:2]
             else:
                 line = lineTo
                 index = indexTo
@@ -360,19 +393,44 @@ character except an alphabetic character.</td></tr>
         
         if ok and self.ui.selectionCheckBox.isChecked():
             lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-            if (lineFrom == self.__selection[0] and indexFrom >= self.__selection[1]) or \
-               (lineFrom > self.__selection[0] and lineFrom < self.__selection[2]) or \
-               (lineFrom == self.__selection[2] and indexFrom <= self.__selection[3]):
+            if len(self.__selections) > 1:
+                for sel in self.__selections:
+                    if lineFrom == sel[0] and \
+                       indexFrom >= sel[1] and \
+                       indexTo <= sel[3]:
+                        ok = True
+                        break
+                else:
+                    ok = False
+            elif (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
+               (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
+               (lineFrom == boundary[2] and indexFrom <= boundary[3]):
                 ok = True
             else:
-                if self.ui.wrapCheckBox.isChecked():
-                    # try it again
-                    if backwards:
-                        line = self.__selection[2]
-                        index = self.__selection[3]
+                ok = False
+            if not ok and len(self.__selections) > 1:
+                # try again
+                while not ok and \
+                      ((backwards and lineFrom >= boundary[0]) or \
+                       (not backwards and lineFrom <= boundary[2])):
+                    for ind in range(len(self.__selections)):
+                        if lineFrom == self.__selections[ind][0]:
+                            after = indexTo > self.__selections[ind][3]
+                            if backwards:
+                                if after:
+                                    line, index = self.__selections[ind][2:]
+                                else:
+                                    if ind > 0:
+                                        line, index = self.__selections[ind - 1][2:]
+                            else:
+                                if after:
+                                    if ind < len(self.__selections) - 1:
+                                        line, index = self.__selections[ind + 1][:2]
+                                else:
+                                    line, index = self.__selections[ind][:2]
+                            break
                     else:
-                        line = self.__selection[0]
-                        index = self.__selection[1]
+                        break
                     ok = aw.findFirst(txt,
                         self.ui.regexpCheckBox.isChecked(),
                         self.ui.caseCheckBox.isChecked(),
@@ -382,23 +440,52 @@ character except an alphabetic character.</td></tr>
                         line, index)
                     if ok:
                         lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-                        if (lineFrom == self.__selection[0] and \
-                            indexFrom >= self.__selection[1]) or \
-                           (lineFrom > self.__selection[0] and \
-                            lineFrom < self.__selection[2]) or \
-                           (lineFrom == self.__selection[2] \
-                            and indexFrom <= self.__selection[3]):
+                        if lineFrom < boundary[0] or lineFrom > boundary[2] or \
+                           indexFrom < boundary[1] or indexFrom > boundary[3] or \
+                           indexTo < boundary[1] or indexTo > boundary[3]:
+                            ok = False
+                            break
+            if not ok:
+                if self.ui.wrapCheckBox.isChecked():
+                    # try it again
+                    if backwards:
+                        line, index = boundary[2:]
+                    else:
+                        line, index = boundary[:2]
+                    ok = aw.findFirst(txt,
+                        self.ui.regexpCheckBox.isChecked(),
+                        self.ui.caseCheckBox.isChecked(),
+                        self.ui.wordCheckBox.isChecked(),
+                        self.ui.wrapCheckBox.isChecked(),
+                        not backwards,
+                        line, index)
+                    if ok:
+                        lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
+                        if len(self.__selections) > 1:
+                            for sel in self.__selections:
+                                if lineFrom == sel[0] and \
+                                   indexFrom >= sel[1] and \
+                                   indexTo <= sel[3]:
+                                    ok = True
+                                    break
+                            else:
+                                ok = False
+                        elif (lineFrom == boundary[0] and \
+                            indexFrom >= boundary[1]) or \
+                           (lineFrom > boundary[0] and \
+                            lineFrom < boundary[2]) or \
+                           (lineFrom == boundary[2] \
+                            and indexFrom <= boundary[3]):
                             ok = True
                         else:
                             ok = False
-                            aw.selectAll(False)
-                            aw.setCursorPosition(cline, cindex)
-                            aw.ensureCursorVisible()
                 else:
                     ok = False
-                    aw.selectAll(False)
-                    aw.setCursorPosition(cline, cindex)
-                    aw.ensureCursorVisible()
+            
+            if not ok:
+                aw.selectAll(False)
+                aw.setCursorPosition(cline, cindex)
+                aw.ensureCursorVisible()
         
         self.__finding = False
         
@@ -454,17 +541,18 @@ character except an alphabetic character.</td></tr>
         @param editor reference to the editor (Editor)
         """
         if not self.__finding:
-            if editor.hasSelectedText() and not editor.selectionIsRectangle():
-                line1, index1, line2, index2 = editor.getSelection()
+            if editor.hasSelectedText():
+                selections = editor.getSelections()
+                line1, index1, line2, index2 = self.__selectionBoundary(selections)
                 if line1 != line2:
                     self.ui.selectionCheckBox.setEnabled(True)
                     self.ui.selectionCheckBox.setChecked(True)
-                    self.__selection = (line1, index1, line2, index2)
+                    self.__selections = selections
                     return
             
             self.ui.selectionCheckBox.setEnabled(False)
             self.ui.selectionCheckBox.setChecked(False)
-            self.__selection = None
+            self.__selections = []
 
     @pyqtSlot()
     def on_replaceButton_clicked(self):
@@ -548,9 +636,9 @@ character except an alphabetic character.</td></tr>
         
         aw = self.viewmanager.activeWindow()
         cline, cindex = aw.getCursorPosition()
+        boundary = self.__selectionBoundary()
         if self.ui.selectionCheckBox.isChecked():
-            line = self.__selection[0]
-            index = self.__selection[1]
+            line, index = boundary[:2]
         else:
             line = 0
             index = 0
@@ -562,9 +650,9 @@ character except an alphabetic character.</td></tr>
         
         if ok and self.ui.selectionCheckBox.isChecked():
             lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-            if (lineFrom == self.__selection[0] and indexFrom >= self.__selection[1]) or \
-               (lineFrom > self.__selection[0] and lineFrom < self.__selection[2]) or \
-               (lineFrom == self.__selection[2] and indexFrom <= self.__selection[3]):
+            if (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
+               (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
+               (lineFrom == boundary[2] and indexFrom <= boundary[3]):
                 ok = True
             else:
                 ok = False
