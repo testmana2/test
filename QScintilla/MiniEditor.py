@@ -2214,7 +2214,8 @@ class MiniEditor(E5MainWindow):
             self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
             self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
         
-        self.setVirtualSpaceOptions(Preferences.getEditor("VirtualSpaceOptions"))
+        self.__textEdit.setVirtualSpaceOptions(
+            Preferences.getEditor("VirtualSpaceOptions"))
     
     def __setEolMode(self):
         """
