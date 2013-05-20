@@ -168,7 +168,10 @@ class E5SslInfoWidget(QMenu):
         @param pos position to show at (QPoint)
         """
         self.adjustSize()
-        p = QPoint(pos.x() - self.width(), pos.y() + 10)
+        xpos = pos.x() - self.width()
+        if xpos < 0:
+            xpos = 10
+        p = QPoint(xpos, pos.y() + 10)
         self.move(p)
         self.show()
     
