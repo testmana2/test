@@ -24,10 +24,7 @@ for arg in sys.argv:
         break
 
 # make ThirdParty package available as a packages repository
-try:
-    import pygments     # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
-except ImportError:
-    sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
 from Globals import AppInfo
 
