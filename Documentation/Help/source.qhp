@@ -9226,6 +9226,7 @@
       <keyword name="SearchReplaceWidget.__findByReturnPressed" id="SearchReplaceWidget.__findByReturnPressed" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findByReturnPressed" />
       <keyword name="SearchReplaceWidget.__findNextPrev" id="SearchReplaceWidget.__findNextPrev" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findNextPrev" />
       <keyword name="SearchReplaceWidget.__markOccurrences" id="SearchReplaceWidget.__markOccurrences" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__markOccurrences" />
+      <keyword name="SearchReplaceWidget.__selectionBoundary" id="SearchReplaceWidget.__selectionBoundary" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__selectionBoundary" />
       <keyword name="SearchReplaceWidget.__showFind" id="SearchReplaceWidget.__showFind" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showFind" />
       <keyword name="SearchReplaceWidget.__showReplace" id="SearchReplaceWidget.__showReplace" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showReplace" />
       <keyword name="SearchReplaceWidget.findNext" id="SearchReplaceWidget.findNext" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findNext" />

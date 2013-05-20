@@ -232,6 +232,9 @@ QWidget
 <td><a href="#SearchReplaceWidget.__markOccurrences">__markOccurrences</a></td>
 <td>Private method to mark all occurrences of the search text.</td>
 </tr><tr>
+<td><a href="#SearchReplaceWidget.__selectionBoundary">__selectionBoundary</a></td>
+<td>Private method to calculate the current selection boundary.</td>
+</tr><tr>
 <td><a href="#SearchReplaceWidget.__showFind">__showFind</a></td>
 <td>Private method to display this widget in find mode.</td>
 </tr><tr>
@@ -344,6 +347,23 @@ flag indicating success (boolean)
 <dt><i>txt</i></dt>
 <dd>
 text to search for (string)
+</dd>
+</dl><a NAME="SearchReplaceWidget.__selectionBoundary" ID="SearchReplaceWidget.__selectionBoundary"></a>
+<h4>SearchReplaceWidget.__selectionBoundary</h4>
+<b>__selectionBoundary</b>(<i>selections=None</i>)
+<p>
+        Private method to calculate the current selection boundary.
+</p><dl>
+<dt><i>selections</i></dt>
+<dd>
+optional parameter giving the selections to
+            calculate the boundary for (list of tuples of four integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of start line and index and end line and index
+            (tuple of four integer)
 </dd>
 </dl><a NAME="SearchReplaceWidget.__showFind" ID="SearchReplaceWidget.__showFind"></a>
 <h4>SearchReplaceWidget.__showFind</h4>
