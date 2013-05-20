@@ -650,12 +650,49 @@ character except an alphabetic character.</td></tr>
         
         if ok and self.ui.selectionCheckBox.isChecked():
             lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
-            if (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
+            if len(self.__selections) > 1:
+                for sel in self.__selections:
+                    if lineFrom == sel[0] and \
+                       indexFrom >= sel[1] and \
+                       indexTo <= sel[3]:
+                        ok = True
+                        break
+                else:
+                    ok = False
+            elif (lineFrom == boundary[0] and indexFrom >= boundary[1]) or \
                (lineFrom > boundary[0] and lineFrom < boundary[2]) or \
                (lineFrom == boundary[2] and indexFrom <= boundary[3]):
                 ok = True
             else:
                 ok = False
+            if not ok and len(self.__selections) > 1:
+                # try again
+                while not ok and lineFrom <= boundary[2]:
+                    for ind in range(len(self.__selections)):
+                        if lineFrom == self.__selections[ind][0]:
+                            after = indexTo > self.__selections[ind][3]
+                            if after:
+                                if ind < len(self.__selections) - 1:
+                                    line, index = self.__selections[ind + 1][:2]
+                            else:
+                                line, index = self.__selections[ind][:2]
+                        break
+                    else:
+                        break
+                    ok = aw.findFirst(ftxt,
+                            self.ui.regexpCheckBox.isChecked(),
+                            self.ui.caseCheckBox.isChecked(),
+                            self.ui.wordCheckBox.isChecked(),
+                            False, True, line, index)
+                    if ok:
+                        lineFrom, indexFrom, lineTo, indexTo = aw.getSelection()
+                        if lineFrom < boundary[0] or lineFrom > boundary[2] or \
+                           indexFrom < boundary[1] or indexFrom > boundary[3] or \
+                           indexTo < boundary[1] or indexTo > boundary[3]:
+                            ok = False
+                            break
+            
+            if not ok:
                 aw.selectAll(False)
                 aw.setCursorPosition(cline, cindex)
                 aw.ensureCursorVisible()
