@@ -347,7 +347,7 @@ character except an alphabetic character.</td></tr>
                     index = cindex
                 else:
                     line = lineFrom
-                    index = indexFrom - 1
+                    index = indexFrom
             if self.ui.selectionCheckBox.isChecked() and \
                line == boundary[0] and \
                index >= 0 and \
