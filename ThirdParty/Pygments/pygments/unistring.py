@@ -12,6 +12,10 @@
     :license: BSD, see LICENSE for details.
 """
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try: 
+    chr = unichr
+except (NameError):
+    pass
 
 from pygments.util import u_prefix
 
