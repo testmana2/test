@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2013-04-08, 07:48:51 -->
-<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -813,8 +811,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Checker.py</Source>
     <Source>Plugins/PluginPep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
-    <Source>UtilitiesPython2/pep8.py</Source>
-    <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
     <Source>eric5_compare.py</Source>
