@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -9637,32 +9638,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="222"/>
         <source>Virtual Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacio Virtual</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="228"/>
         <source>Virtual space is the space after the last character of a line. It is not allocated unless some text is entered or copied into it. Usage of virtual space can be configured with these selections.</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacio virtual es el espacio detrás del último carácter en una línea. No es reservado a menos que se introduzca o se copie algún texto en él. El uso del espacio virtual puede ser configurado con estas selecciones.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="238"/>
         <source>Select to enable a rectangular selection to extend into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar una selección rectangular para extender en el espacio virtual</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="241"/>
         <source>Selection may access virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>La selección puede acceder el espacio virtual</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="248"/>
         <source>Select to allow the cursor to be moved into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir al cursor moverse dentro del espacio virtual</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorGeneralPage.ui" line="251"/>
         <source>Cursor can move into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>El cursor se puede mover dentro del espacio virtual</translation>
     </message>
 </context>
 <context>
@@ -14476,7 +14477,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>

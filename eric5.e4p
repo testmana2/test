@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
+<!-- Saved: 2013-05-26, 19:14:07 -->
+<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -57,10 +59,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>DebugClients/Ruby/Config.rb</Source>
     <Source>DebugClients/Ruby/__init__.rb</Source>
     <Source>DebugClients/Ruby/AsyncIO.rb</Source>
-    <Source>Examples/modpython.py</Source>
-    <Source>Examples/hallo.py</Source>
-    <Source>Examples/rhallo.py</Source>
-    <Source>Examples/modpython_dbg.py</Source>
     <Source>patch_modpython.py</Source>
     <Source>UI/DiffDialog.py</Source>
     <Source>UI/CompareDialog.py</Source>
@@ -1392,24 +1390,15 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>QScintilla/SortOptionsDialog.ui</Form>
   </Forms>
   <Translations>
-    <Translation>i18n/eric5_cs.qm</Translation>
     <Translation>i18n/eric5_cs.ts</Translation>
-    <Translation>i18n/eric5_de.qm</Translation>
     <Translation>i18n/eric5_de.ts</Translation>
-    <Translation>i18n/eric5_es.qm</Translation>
     <Translation>i18n/eric5_es.ts</Translation>
-    <Translation>i18n/eric5_fr.qm</Translation>
     <Translation>i18n/eric5_fr.ts</Translation>
-    <Translation>i18n/eric5_it.qm</Translation>
     <Translation>i18n/eric5_it.ts</Translation>
-    <Translation>i18n/eric5_ru.qm</Translation>
     <Translation>i18n/eric5_ru.ts</Translation>
-    <Translation>i18n/eric5_tr.qm</Translation>
     <Translation>i18n/eric5_tr.ts</Translation>
-    <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
     <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
     <Translation>i18n/eric5_en.ts</Translation>
-    <Translation>i18n/eric5_en.qm</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
@@ -1419,23 +1408,13 @@ bindings and the QScintilla2 editor widget.</Description>
   </Resources>
   <Interfaces/>
   <Others>
-    <Other>icons</Other>
-    <Other>CSSs</Other>
-    <Other>DTDs</Other>
-    <Other>Documentation/mod_python.pdf</Other>
-    <Other>DesignerTemplates</Other>
-    <Other>pixmaps</Other>
     <Other>README-PyXML.txt</Other>
     <Other>THANKS</Other>
     <Other>pylint.rc</Other>
     <Other>README-i18n.txt</Other>
     <Other>README-passive-debugging.txt</Other>
     <Other>README</Other>
-    <Other>Documentation/Source</Other>
-    <Other>Documentation/mod_python.odt</Other>
     <Other>default.e4k</Other>
-    <Other>Styles</Other>
-    <Other>CodeTemplates</Other>
     <Other>Plugins/ViewManagerPlugins/Listspace/preview.png</Other>
     <Other>Plugins/ViewManagerPlugins/Tabview/preview.png</Other>
     <Other>Plugins/VcsPlugins/vcsPySvn/icons/pysvn.png</Other>
@@ -1455,7 +1434,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>ThirdParty/Pygments/pygments/CHANGES</Other>
     <Other>ThirdParty/Pygments/pygments/AUTHORS</Other>
     <Other>ThirdParty/Pygments/pygments/PKG-INFO</Other>
-    <Other>Documentation/Help</Other>
     <Other>DebugClients/Python/coverage/htmlfiles</Other>
     <Other>IconEditor/cursors/aim-cursor.xpm</Other>
     <Other>IconEditor/cursors/colorpicker-cursor.xpm</Other>
@@ -1468,8 +1446,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>eric5config.linux</Other>
     <Other>eric5.e4p</Other>
     <Other>README-eric5-doc.txt</Other>
-    <Other>Documentation/eric5-plugin.odt</Other>
-    <Other>Documentation/eric5-plugin.pdf</Other>
     <Other>APIs/Ruby/eric5.api</Other>
     <Other>APIs/Python3/eric5.api</Other>
     <Other>eric5.desktop</Other>
@@ -1481,8 +1457,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>patches</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/startServer.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/stopServer.png</Other>
-    <Other>CSSs/blue.css</Other>
-    <Other>CSSs/default.css</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmark.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmark.style</Other>
     <Other>README-MacOSX.txt</Other>
