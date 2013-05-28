@@ -11760,6 +11760,7 @@
       <keyword name="ViewManager.__showBookmarkMenu" id="ViewManager.__showBookmarkMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkMenu" />
       <keyword name="ViewManager.__showBookmarkedMenu" id="ViewManager.__showBookmarkedMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkedMenu" />
       <keyword name="ViewManager.__showBookmarksMenu" id="ViewManager.__showBookmarksMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarksMenu" />
+      <keyword name="ViewManager.__showEditSpellingMenu" id="ViewManager.__showEditSpellingMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEditSpellingMenu" />
       <keyword name="ViewManager.__showFileMenu" id="ViewManager.__showFileMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showFileMenu" />
       <keyword name="ViewManager.__showRecentMenu" id="ViewManager.__showRecentMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showRecentMenu" />
       <keyword name="ViewManager.__spellCheck" id="ViewManager.__spellCheck" ref="eric5.ViewManager.ViewManager.html#ViewManager.__spellCheck" />
@@ -12305,6 +12306,7 @@
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric5.Plugins.PluginVcsSubversion.html#exeDisplayData" />
       <keyword name="exeDisplayDataList" id="exeDisplayDataList" ref="eric5.Plugins.PluginEricdoc.html#exeDisplayDataList" />
       <keyword name="exit" id="exit" ref="eric5.install.html#exit" />
+      <keyword name="exit" id="exit" ref="eric5.uninstall.html#exit" />
       <keyword name="expand_indent" id="expand_indent" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#expand_indent" />
       <keyword name="expand_indent" id="expand_indent" ref="eric5.UtilitiesPython2.pep8.html#expand_indent" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />

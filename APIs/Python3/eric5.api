@@ -8612,6 +8612,7 @@ eric5.patch_modpython.main?4(argv)
 eric5.patch_modpython.modDir?7
 eric5.patch_modpython.progName?7
 eric5.patch_modpython.usage?4(rcode=2)
+eric5.uninstall.exit?4(rcode=0)
 eric5.uninstall.initGlobals?4()
 eric5.uninstall.main?4(argv)
 eric5.uninstall.progLanguages?7
