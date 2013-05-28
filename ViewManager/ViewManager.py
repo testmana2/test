@@ -3635,14 +3635,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', "Project Exception List"),
             self.__editProjectPEL)
         self.__editSpellingMenu.addSeparator()
-        self.__editSpellingMenu.addAction(
+        self.__editUserPwlAct = self.__editSpellingMenu.addAction(
             QApplication.translate('ViewManager', "User Word List"),
             self.__editUserPWL)
-        self.__editSpellingMenu.addAction(
+        self.__editUserPelAct = self.__editSpellingMenu.addAction(
             QApplication.translate('ViewManager', "User Exception List"),
             self.__editUserPEL)
-        self.__editProjectPwlAct.setEnabled(False)
-        self.__editProjectPelAct.setEnabled(False)
+        self.__editSpellingMenu.aboutToShow.connect(self.__showEditSpellingMenu)
         
         menu.addAction(self.spellCheckAct)
         menu.addAction(self.autoSpellCheckAct)
@@ -5428,6 +5427,23 @@ class ViewManager(QObject):
     ## Below are the action methods for the spell checking functions
     ##################################################################
     
+    def __showEditSpellingMenu(self):
+        """
+        Private method to set up the edit dictionaries menu.
+        """
+        proj = e5App().getObject("Project")
+        projetOpen = proj.isOpen()
+        pwl = e5App().getObject("Project").getProjectDictionaries()[0]
+        self.__editProjectPwlAct.setEnabled(projetOpen and bool(pwl))
+        pel = e5App().getObject("Project").getProjectDictionaries()[1]
+        self.__editProjectPelAct.setEnabled(projetOpen and bool(pel))
+        
+        from QScintilla.SpellChecker import SpellChecker
+        pwl = SpellChecker.getUserDictionaryPath()
+        self.__editUserPwlAct.setEnabled(bool(pwl))
+        pel = SpellChecker.getUserDictionaryPath(True)
+        self.__editUserPelAct.setEnabled(bool(pel))
+    
     def __setAutoSpellChecking(self):
         """
         Private slot to set the automatic spell checking of all editors.
@@ -5450,26 +5466,14 @@ class ViewManager(QObject):
         Private slot to edit the project word list.
         """
         pwl = e5App().getObject("Project").getProjectDictionaries()[0]
-        if pwl:
-            self.__editSpellingDictionary(pwl)
-        else:
-            E5MessageBox.warning(self.ui,
-                QApplication.translate('ViewManager', "Edit Project Word List"),
-                QApplication.translate('ViewManager',
-                    """No word list defined for the current project."""))
+        self.__editSpellingDictionary(pwl)
     
     def __editProjectPEL(self):
         """
         Private slot to edit the project exception list.
         """
         pel = e5App().getObject("Project").getProjectDictionaries()[1]
-        if pel:
-            self.__editSpellingDictionary(pel)
-        else:
-            E5MessageBox.warning(self.ui,
-                QApplication.translate('ViewManager', "Edit Project Exception List"),
-                QApplication.translate('ViewManager',
-                    """No exception list defined for the current project."""))
+        self.__editSpellingDictionary(pel)
     
     def __editUserPWL(self):
         """
