@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2013-05-26, 19:14:07 -->
-<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -1075,6 +1073,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslInfoWidget.py</Source>
     <Source>QScintilla/SortOptionsDialog.py</Source>
     <Source>Debugger/CallStackViewer.py</Source>
+    <Source>Examples/hallo.py</Source>
+    <Source>Examples/modpython.py</Source>
+    <Source>Examples/modpython_dbg.py</Source>
+    <Source>Examples/rhallo.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1399,6 +1401,15 @@ bindings and the QScintilla2 editor widget.</Description>
     <Translation>i18n/eric5_tr.ts</Translation>
     <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
     <Translation>i18n/eric5_en.ts</Translation>
+    <Translation>i18n/eric5_cs.qm</Translation>
+    <Translation>i18n/eric5_de.qm</Translation>
+    <Translation>i18n/eric5_en.qm</Translation>
+    <Translation>i18n/eric5_es.qm</Translation>
+    <Translation>i18n/eric5_fr.qm</Translation>
+    <Translation>i18n/eric5_it.qm</Translation>
+    <Translation>i18n/eric5_ru.qm</Translation>
+    <Translation>i18n/eric5_tr.qm</Translation>
+    <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
@@ -1483,6 +1494,19 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Helpviewer/data/javascript/jquery.js</Other>
     <Other>README-Raspberry.txt</Other>
     <Other>eric5_webbrowser.desktop</Other>
+    <Other>icons</Other>
+    <Other>CSSs</Other>
+    <Other>DTDs</Other>
+    <Other>DesignerTemplates</Other>
+    <Other>pixmaps</Other>
+    <Other>Documentation/eric5-plugin.odt</Other>
+    <Other>Documentation/eric5-plugin.pdf</Other>
+    <Other>Documentation/mod_python.odt</Other>
+    <Other>Documentation/mod_python.pdf</Other>
+    <Other>Documentation/Source</Other>
+    <Other>Styles</Other>
+    <Other>CodeTemplates</Other>
+    <Other>Documentation/Help</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
