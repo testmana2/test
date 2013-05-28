@@ -31637,7 +31637,7 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">Impossible d&apos;écrire le fichier %1:%2.</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2288"/>
+        <location filename="QScintilla/MiniEditor.py" line="2291"/>
         <source>Untitled</source>
         <translation>SansTitre</translation>
     </message>
@@ -31652,22 +31652,22 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation>Mini éditeur</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2328"/>
+        <location filename="QScintilla/MiniEditor.py" line="2331"/>
         <source>Select all</source>
         <translation>Tout sélectionner</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2329"/>
+        <location filename="QScintilla/MiniEditor.py" line="2332"/>
         <source>Deselect all</source>
         <translation>Tout déselectionner</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2340"/>
+        <location filename="QScintilla/MiniEditor.py" line="2343"/>
         <source>Languages</source>
         <translation>Langages</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2343"/>
+        <location filename="QScintilla/MiniEditor.py" line="2346"/>
         <source>No Language</source>
         <translation>Pas de langage</translation>
     </message>
@@ -31759,22 +31759,22 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation>Imprime le fichier courant</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2253"/>
+        <location filename="QScintilla/MiniEditor.py" line="2256"/>
         <source>Printing...</source>
         <translation>Impression....</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2269"/>
+        <location filename="QScintilla/MiniEditor.py" line="2272"/>
         <source>Printing completed</source>
         <translation>Impression terminée</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2271"/>
+        <location filename="QScintilla/MiniEditor.py" line="2274"/>
         <source>Error while printing</source>
         <translation>Erreur durant l&apos;impression</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2274"/>
+        <location filename="QScintilla/MiniEditor.py" line="2277"/>
         <source>Printing aborted</source>
         <translation>Impression abandonnée</translation>
     </message>
@@ -31799,12 +31799,12 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation>&lt;b&gt;Aperçu avant impression&lt;/b&gt;&lt;p&gt;Aperçu avant impression du fichier courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2365"/>
+        <location filename="QScintilla/MiniEditor.py" line="2368"/>
         <source>Guessed</source>
         <translation>Suggestion</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2385"/>
+        <location filename="QScintilla/MiniEditor.py" line="2388"/>
         <source>Alternatives</source>
         <translation>Alternatives</translation>
     </message>
@@ -31814,12 +31814,12 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="obsolete">Alternatives (%1)</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Pygments Lexer</source>
         <translation>Analyseur Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Sélectionne l&apos;analyseur Pygments à appliquer.</translation>
     </message>
@@ -31869,7 +31869,7 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2382"/>
+        <location filename="QScintilla/MiniEditor.py" line="2385"/>
         <source>Alternatives ({0})</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43327,17 +43327,17 @@ Reason: {0}</source>
         <translation type="obsolete">Aucun remplacement car &apos;%1&apos; est introuvable.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="516"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="604"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="592"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="717"/>
         <source>Replaced {0} occurrences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="596"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="721"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61288,7 +61288,7 @@ Commentaires acceptés par C++ de la forme :
         <translation>&amp;Signets</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>File Modified</source>
         <translation>Fichier Modifié</translation>
     </message>
@@ -61308,17 +61308,17 @@ Commentaires acceptés par C++ de la forme :
         <translation type="obsolete">Pos: %1</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4410"/>
+        <location filename="ViewManager/ViewManager.py" line="4409"/>
         <source>&amp;Clear</source>
         <translation>&amp;Effacer</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4406"/>
+        <location filename="ViewManager/ViewManager.py" line="4405"/>
         <source>&amp;Add</source>
         <translation>&amp;Ajouter</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4408"/>
+        <location filename="ViewManager/ViewManager.py" line="4407"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Editer...</translation>
     </message>
@@ -61930,7 +61930,7 @@ Commentaires acceptés par C++ de la forme :
         <translation>Signets</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3689"/>
+        <location filename="ViewManager/ViewManager.py" line="3688"/>
         <source>Open files</source>
         <translation>Ouvrir Fichiers</translation>
     </message>
@@ -62211,12 +62211,12 @@ Commentaires acceptés par C++ de la forme :
         <translation>&lt;b&gt;Vérification orthographique&lt;/b&gt;&lt;p&gt;Active ou désactive la vérification orthographique automatique dans tous les éditeurs.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3662"/>
+        <location filename="ViewManager/ViewManager.py" line="3661"/>
         <source>Spelling</source>
         <translation>Orthographe</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le fichier &lt;b&gt;{0}&lt;/b&gt; a des modifications non enregistrées. &lt;/p&gt;</translation>
     </message>
@@ -62226,12 +62226,12 @@ Commentaires acceptés par C++ de la forme :
         <translation type="obsolete">Fichier: {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4026"/>
+        <location filename="ViewManager/ViewManager.py" line="4025"/>
         <source>Line: {0:5}</source>
         <translation>Ligne: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4031"/>
+        <location filename="ViewManager/ViewManager.py" line="4030"/>
         <source>Pos: {0:5}</source>
         <translation>Position: {0:5}</translation>
     </message>
@@ -62949,47 +62949,27 @@ Zoom avant</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>Edit Project Word List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>No word list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>Edit Project Exception List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>No exception list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5500"/>
+        <location filename="ViewManager/ViewManager.py" line="5504"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5512"/>
+        <location filename="ViewManager/ViewManager.py" line="5516"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5522"/>
+        <location filename="ViewManager/ViewManager.py" line="5526"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63895,12 +63875,12 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="obsolete">Importation des packages...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="250"/>
+        <location filename="eric5.py" line="247"/>
         <source>Generating Main Window...</source>
         <translation>Création de la fenêtre principale...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="245"/>
+        <location filename="eric5.py" line="242"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>

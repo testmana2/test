@@ -30383,7 +30383,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Файл загружен</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2288"/>
+        <location filename="QScintilla/MiniEditor.py" line="2291"/>
         <source>Untitled</source>
         <translation>Без имени</translation>
     </message>
@@ -30398,22 +30398,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Мини-редактор</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2328"/>
+        <location filename="QScintilla/MiniEditor.py" line="2331"/>
         <source>Select all</source>
         <translation>Выбрать всё</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2329"/>
+        <location filename="QScintilla/MiniEditor.py" line="2332"/>
         <source>Deselect all</source>
         <translation>Снять выделение</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2340"/>
+        <location filename="QScintilla/MiniEditor.py" line="2343"/>
         <source>Languages</source>
         <translation>Языки</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2343"/>
+        <location filename="QScintilla/MiniEditor.py" line="2346"/>
         <source>No Language</source>
         <translation>Нет языка</translation>
     </message>
@@ -30501,22 +30501,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Распечатать текущий файл</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2253"/>
+        <location filename="QScintilla/MiniEditor.py" line="2256"/>
         <source>Printing...</source>
         <translation>Печать...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2269"/>
+        <location filename="QScintilla/MiniEditor.py" line="2272"/>
         <source>Printing completed</source>
         <translation>Печать завершена</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2271"/>
+        <location filename="QScintilla/MiniEditor.py" line="2274"/>
         <source>Error while printing</source>
         <translation>Ошибка печати</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2274"/>
+        <location filename="QScintilla/MiniEditor.py" line="2277"/>
         <source>Printing aborted</source>
         <translation>Печать отменена</translation>
     </message>
@@ -30541,27 +30541,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предварительный просмотр печати&lt;/b&gt;&lt;p&gt;Предварительный просмотр печати текущего файла.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2365"/>
+        <location filename="QScintilla/MiniEditor.py" line="2368"/>
         <source>Guessed</source>
         <translation>Догадки</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2385"/>
+        <location filename="QScintilla/MiniEditor.py" line="2388"/>
         <source>Alternatives</source>
         <translation>Альтернативы</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2382"/>
+        <location filename="QScintilla/MiniEditor.py" line="2385"/>
         <source>Alternatives ({0})</source>
         <translation>Альтернативы ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Pygments Lexer</source>
         <translation>Pygments лексер</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
@@ -40829,17 +40829,17 @@ Reason: {0}</source>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="516"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="604"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; не найдено.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="592"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="717"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Заменено в {0} местах.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="596"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="721"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Ничего не заменено, потому что &apos;{0}&apos; не найдено.</translation>
     </message>
@@ -57182,7 +57182,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Свернуть/развернуть текущую ветвь текущего редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>File Modified</source>
         <translation>Файл изменён</translation>
     </message>
@@ -57996,17 +57996,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Открыть &amp;закладки на файлы</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4410"/>
+        <location filename="ViewManager/ViewManager.py" line="4409"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4406"/>
+        <location filename="ViewManager/ViewManager.py" line="4405"/>
         <source>&amp;Add</source>
         <translation>&amp;Добавить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4408"/>
+        <location filename="ViewManager/ViewManager.py" line="4407"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Правка...</translation>
     </message>
@@ -58271,7 +58271,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
@@ -58747,7 +58747,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Закладки</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3689"/>
+        <location filename="ViewManager/ViewManager.py" line="3688"/>
         <source>Open files</source>
         <translation>Открыть файлы</translation>
     </message>
@@ -59029,17 +59029,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Автоматическая проверка орфографии&lt;/b&gt;&lt;p&gt;Запретить или разрешить автоматическую проверку орфографии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3662"/>
+        <location filename="ViewManager/ViewManager.py" line="3661"/>
         <source>Spelling</source>
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4026"/>
+        <location filename="ViewManager/ViewManager.py" line="4025"/>
         <source>Line: {0:5}</source>
         <translation>Строка: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4031"/>
+        <location filename="ViewManager/ViewManager.py" line="4030"/>
         <source>Pos: {0:5}</source>
         <translation>Позиция: {0:5}</translation>
     </message>
@@ -59662,47 +59662,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>Edit Project Word List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>No word list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>Edit Project Exception List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>No exception list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5512"/>
+        <location filename="ViewManager/ViewManager.py" line="5516"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5500"/>
+        <location filename="ViewManager/ViewManager.py" line="5504"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5522"/>
+        <location filename="ViewManager/ViewManager.py" line="5526"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60482,12 +60462,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Импорт пакетов...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="250"/>
+        <location filename="eric5.py" line="247"/>
         <source>Generating Main Window...</source>
         <translation>Создание главного окна...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="245"/>
+        <location filename="eric5.py" line="242"/>
         <source>Starting...</source>
         <translation>Запуск...</translation>
     </message>

@@ -31677,7 +31677,7 @@ Do you want to save your changes?</source>
         <translation>文件已保存</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2288"/>
+        <location filename="QScintilla/MiniEditor.py" line="2291"/>
         <source>Untitled</source>
         <translation>未命名</translation>
     </message>
@@ -31692,52 +31692,52 @@ Do you want to save your changes?</source>
         <translation>小型编辑器</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2253"/>
+        <location filename="QScintilla/MiniEditor.py" line="2256"/>
         <source>Printing...</source>
         <translation>打印中……</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2269"/>
+        <location filename="QScintilla/MiniEditor.py" line="2272"/>
         <source>Printing completed</source>
         <translation>打印已完成</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2271"/>
+        <location filename="QScintilla/MiniEditor.py" line="2274"/>
         <source>Error while printing</source>
         <translation>打印时出错</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2274"/>
+        <location filename="QScintilla/MiniEditor.py" line="2277"/>
         <source>Printing aborted</source>
         <translation>打印失败</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2328"/>
+        <location filename="QScintilla/MiniEditor.py" line="2331"/>
         <source>Select all</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2329"/>
+        <location filename="QScintilla/MiniEditor.py" line="2332"/>
         <source>Deselect all</source>
         <translation>全部取消选择</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2340"/>
+        <location filename="QScintilla/MiniEditor.py" line="2343"/>
         <source>Languages</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2343"/>
+        <location filename="QScintilla/MiniEditor.py" line="2346"/>
         <source>No Language</source>
         <translation>无语言</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2365"/>
+        <location filename="QScintilla/MiniEditor.py" line="2368"/>
         <source>Guessed</source>
         <translation>已推测</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2385"/>
+        <location filename="QScintilla/MiniEditor.py" line="2388"/>
         <source>Alternatives</source>
         <translation>备选</translation>
     </message>
@@ -31747,12 +31747,12 @@ Do you want to save your changes?</source>
         <translation type="obsolete">备选 (%1)</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Pygments Lexer</source>
         <translation>Pygments 词法分析器</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2399"/>
+        <location filename="QScintilla/MiniEditor.py" line="2402"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>选择要应用的 Pygments 词法分析器。</translation>
     </message>
@@ -31812,7 +31812,7 @@ Do you want to save your changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2382"/>
+        <location filename="QScintilla/MiniEditor.py" line="2385"/>
         <source>Alternatives ({0})</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43274,17 +43274,17 @@ Reason: {0}</source>
         <translation type="obsolete">没有替换任何东西，因为“%1”未找到。</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="516"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="604"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="592"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="717"/>
         <source>Replaced {0} occurrences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="596"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="721"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62097,17 +62097,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;自动拼写检查&lt;/b&gt;&lt;p&gt;激活或不激活所有编辑器的自动拼写检查功能。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3662"/>
+        <location filename="ViewManager/ViewManager.py" line="3661"/>
         <source>Spelling</source>
         <translation>拼写法</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3689"/>
+        <location filename="ViewManager/ViewManager.py" line="3688"/>
         <source>Open files</source>
         <translation>打开多个文件</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>File Modified</source>
         <translation>文件已改变</translation>
     </message>
@@ -62132,32 +62132,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">位置： %1</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4410"/>
+        <location filename="ViewManager/ViewManager.py" line="4409"/>
         <source>&amp;Clear</source>
         <translation>清除(&amp;C)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4406"/>
+        <location filename="ViewManager/ViewManager.py" line="4405"/>
         <source>&amp;Add</source>
         <translation>添加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4408"/>
+        <location filename="ViewManager/ViewManager.py" line="4407"/>
         <source>&amp;Edit...</source>
         <translation>编辑(&amp;E)……</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3725"/>
+        <location filename="ViewManager/ViewManager.py" line="3724"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4026"/>
+        <location filename="ViewManager/ViewManager.py" line="4025"/>
         <source>Line: {0:5}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="4031"/>
+        <location filename="ViewManager/ViewManager.py" line="4030"/>
         <source>Pos: {0:5}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62780,47 +62780,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>Edit Project Word List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5456"/>
-        <source>No word list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>Edit Project Exception List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5469"/>
-        <source>No exception list defined for the current project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>Edit Spelling Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5512"/>
+        <location filename="ViewManager/ViewManager.py" line="5516"/>
         <source>Editing {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5500"/>
+        <location filename="ViewManager/ViewManager.py" line="5504"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5522"/>
+        <location filename="ViewManager/ViewManager.py" line="5526"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="5531"/>
+        <location filename="ViewManager/ViewManager.py" line="5535"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63807,12 +63787,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">正在导入程序包……</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="250"/>
+        <location filename="eric5.py" line="247"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="245"/>
+        <location filename="eric5.py" line="242"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
