@@ -278,6 +278,7 @@ class Editor(QsciScintillaCompat):
         
         # configure the margins
         self.__setMarginsDisplay()
+        self.linesChanged.connect(self.__resizeLinenoMargin)
         
         self.marginClicked.connect(self.__marginClicked)
         
@@ -1690,6 +1691,7 @@ class Editor(QsciScintillaCompat):
             return True
         
         if self.filetype == "":
+            # 1) Determine by first line
             line0 = self.text(0)
             if line0.startswith("#!") and \
                ("python2" in line0 or \
@@ -1699,15 +1701,23 @@ class Editor(QsciScintillaCompat):
             
             if self.fileName is not None:
                 ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"] and \
-                   Preferences.getProject("DeterminePyFromProject") and \
-                   self.project.isOpen() and \
-                   self.project.isProjectFile(self.fileName):
-                    isProjectPy2 = \
-                        self.project.getProjectLanguage() in ["Python", "Python2"]
-                    if isProjectPy2:
-                        self.filetype = "Python2"
-                    return isProjectPy2
+                if ext in [".py", ".pyw"]:
+                    # 2) .py and .pyw are ambiguous; determine from project
+                    if Preferences.getProject("DeterminePyFromProject") and \
+                       self.project.isOpen() and \
+                       self.project.isProjectFile(self.fileName):
+                        isProjectPy2 = \
+                            self.project.getProjectLanguage() in ["Python", "Python2"]
+                        if isProjectPy2:
+                            self.filetype = "Python2"
+                        return isProjectPy2
+                    else:
+                        # 3) determine by compiling the sources
+                        syntaxError = Utilities.compile(self.fileName,
+                            self.text(), True)[0]
+                        if not syntaxError:
+                            self.filetype = "Python2"
+                            return True
                 
                 if ext in self.dbs.getExtensions('Python2'):
                     self.filetype = "Python2"
@@ -1725,6 +1735,7 @@ class Editor(QsciScintillaCompat):
             return True
         
         if self.filetype == "":
+            # 1) Determine by first line
             line0 = self.text(0)
             if line0.startswith("#!") and \
                "python3" in line0:
@@ -1733,14 +1744,22 @@ class Editor(QsciScintillaCompat):
             
             if self.fileName is not None:
                 ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"] and \
-                   Preferences.getProject("DeterminePyFromProject") and \
-                   self.project.isOpen() and \
-                   self.project.isProjectFile(self.fileName):
-                    isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
-                    if isProjectPy3:
-                        self.filetype = "Python3"
-                    return isProjectPy3
+                if ext in [".py", ".pyw"]:
+                    # 2) .py and .pyw are ambiguous; determine from project
+                    if Preferences.getProject("DeterminePyFromProject") and \
+                       self.project.isOpen() and \
+                       self.project.isProjectFile(self.fileName):
+                        isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
+                        if isProjectPy3:
+                            self.filetype = "Python3"
+                        return isProjectPy3
+                    else:
+                        # 3) determine by compiling the sources
+                        syntaxError = Utilities.compile(self.fileName, 
+                            self.text(), False)[0]
+                        if not syntaxError:
+                            self.filetype = "Python3"
+                            return True
                 
                 if ext in self.dbs.getExtensions('Python3'):
                     self.filetype = "Python3"
@@ -3658,7 +3677,6 @@ class Editor(QsciScintillaCompat):
                     lineNo -= 1
                 else:
                     lineNo += 1
-            
     
     ############################################################################
     ## Setup methods below
@@ -3831,8 +3849,7 @@ class Editor(QsciScintillaCompat):
         linenoMargin = Preferences.getEditor("LinenoMargin")
         self.setMarginLineNumbers(self.__linenoMargin, linenoMargin)
         if linenoMargin:
-            self.setMarginWidth(self.__linenoMargin,
-                                ' ' + '8' * Preferences.getEditor("LinenoWidth"))
+            self.__resizeLinenoMargin()
         else:
             self.setMarginWidth(self.__linenoMargin, 0)
         
@@ -3854,7 +3871,15 @@ class Editor(QsciScintillaCompat):
         else:
             self.setMarginWidth(self.__foldMargin, 0)
             self.setFolding(QsciScintilla.NoFoldStyle, self.__foldMargin)
-        
+    
+    def __resizeLinenoMargin(self):
+        """
+        Private slot to resize the line numbers margin.
+        """
+        linenoMargin = Preferences.getEditor("LinenoMargin")
+        if linenoMargin:
+            self.setMarginWidth(self.__linenoMargin, '8' * (len(str(self.lines())) + 1))
+    
     def __setTextDisplay(self):
         """
         Private method to configure the text display.
@@ -3960,6 +3985,8 @@ class Editor(QsciScintillaCompat):
         if Preferences.getEditor("OverrideEditAreaColours"):
             self.setColor(Preferences.getEditorColour("EditAreaForeground"))
             self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+        
+        self.setVirtualSpaceOptions(Preferences.getEditor("VirtualSpaceOptions"))
     
     def __setEolMode(self):
         """
@@ -6709,3 +6736,79 @@ class Editor(QsciScintillaCompat):
                     match = matches[-1]
             line, index = self.lineIndexFromPosition(match.start())
             self.setSelection(line, index + len(match.group(0)), line, index)
+    
+    #######################################################################
+    ## Sort related methods
+    #######################################################################
+    
+    def sortLines(self):
+        """
+        Public slot to sort the lines spanned by a rectangular selection.
+        """
+        if not self.selectionIsRectangle():
+            return
+        
+        from .SortOptionsDialog import SortOptionsDialog
+        dlg = SortOptionsDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            ascending, alnum, caseSensitive = dlg.getData()
+            origStartLine, origStartIndex, origEndLine, origEndIndex = \
+                self.getRectangularSelection()
+            # convert to upper-left to lower-right
+            startLine = min(origStartLine, origEndLine)
+            startIndex = min(origStartIndex, origEndIndex)
+            endLine = max(origStartLine, origEndLine)
+            endIndex = max(origStartIndex, origEndIndex)
+            
+            # step 1: extract the text of the rectangular selection and the lines
+            selText = {}
+            txtLines = {}
+            for line in range(startLine, endLine + 1):
+                txtLines[line] = self.text(line)
+                txt = txtLines[line][startIndex:endIndex].strip()
+                if not alnum:
+                    try:
+                        txt = float(txt)
+                    except ValueError:
+                        E5MessageBox.critical(self,
+                            self.trUtf8("Sort Lines"),
+                            self.trUtf8("""The selection contains illegal data for a"""
+                                        """ numerical sort."""))
+                        return
+                
+                if txt in selText:
+                    selText[txt].append(line)
+                else:
+                    selText[txt] = [line]
+            
+            # step 2: calculate the sort parameters
+            reverse = not ascending
+            if alnum and not caseSensitive:
+                keyFun = str.lower
+            else:
+                keyFun = None
+            
+            # step 3: sort the lines
+            eol = self.getLineSeparator()
+            lastWithEol = True
+            newLines = []
+            for txt in sorted(selText.keys(), key=keyFun, reverse=reverse):
+                for line in selText[txt]:
+                    txt = txtLines[line]
+                    if not txt.endswith(eol):
+                        lastWithEol = False
+                        txt += eol
+                    newLines.append(txt)
+            if not lastWithEol:
+                newLines[-1] = newLines[-1][:-len(eol)]
+            
+            # step 4: replace the lines by the sorted ones
+            self.setSelection(startLine, 0, endLine + 1, 0)
+            self.beginUndoAction()
+            self.replaceSelectedText("".join(newLines))
+            self.endUndoAction()
+            
+            # step 5: reset the rectangular selection
+            self.setRectangularSelection(origStartLine, origStartIndex,
+                                         origEndLine, origEndIndex)
+            self.selectionChanged.emit()

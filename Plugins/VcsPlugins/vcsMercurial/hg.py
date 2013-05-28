@@ -10,16 +10,13 @@ Module implementing the version control systems interface to Mercurial.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 try:
     str = unicode
+    import urllib as parse
 except (NameError):
-    pass
+    import urllib.parse as parse    # __IGNORE_WARNING__
 
 import os
 import shutil
 import re
-try:  # Py3
-    import urllib.parse as parse
-except:
-    import urllib as parse
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
 from PyQt4.QtGui import QApplication, QDialog, QInputDialog
@@ -108,6 +105,7 @@ class Hg(VersionControl):
         self.serveDlg = None
         
         self.bundleFile = None
+        self.__lastChangeGroupPath = None
         
         self.statusCache = {}
         
@@ -2148,7 +2146,7 @@ class Hg(VersionControl):
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
                 self.trUtf8("Create changegroup"),
-                repodir,
+                self.__lastChangeGroupPath or repodir,
                 self.trUtf8("Mercurial Changegroup Files (*.hg)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
@@ -2171,6 +2169,7 @@ class Hg(VersionControl):
                 if not res:
                     return
             fname = Utilities.toNativeSeparators(fname)
+            self.__lastChangeGroupPath = os.path.dirname(fname)
             
             args = []
             args.append('bundle')
@@ -2211,9 +2210,11 @@ class Hg(VersionControl):
         file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
+            self.__lastChangeGroupPath = os.path.dirname(file)
+            
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 from .HgLogBrowserDialog import HgLogBrowserDialog
                 self.logBrowser = \
@@ -2244,9 +2245,11 @@ class Hg(VersionControl):
         file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
+            self.__lastChangeGroupPath = os.path.dirname(file)
+            
             args = []
             args.append('identify')
             args.append(file)
@@ -2277,9 +2280,11 @@ class Hg(VersionControl):
         files = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Apply changegroups"),
-            repodir,
+            self.__lastChangeGroupPath or repodir,
             self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
+            self.__lastChangeGroupPath = os.path.dirname(files[0])
+            
             update = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Apply changegroups"),
                 self.trUtf8("""Shall the working directory be updated?"""),

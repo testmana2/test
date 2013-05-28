@@ -1031,7 +1031,7 @@ class DebugUI(QObject):
             res = None
             if stackTrace:
                 try:
-                    file, line = stackTrace[0]
+                    file, line = stackTrace[0][:2]
                     source, encoding = Utilities.readEncodedFile(file)
                     source = source.splitlines(True)
                     if len(source) >= line and \
@@ -1075,8 +1075,8 @@ class DebugUI(QObject):
             if res == E5MessageBox.Yes:
                 self.exceptionInterrupt.emit()
                 stack = []
-                for fn, ln in stackTrace:
-                    stack.append((fn, ln, ''))
+                for fn, ln, func, args in stackTrace:
+                    stack.append((fn, ln, func, args))
                 self.clientStack.emit(stack)
                 self.__getClientVariables()
                 self.ui.setDebugProfile()
@@ -1458,6 +1458,8 @@ class DebugUI(QObject):
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                 
+                self.debugViewer.initCallStackViewer(runProject)
+                
                 # Ask the client to open the new program.
                 self.debugServer.remoteCoverage(fn, argv, wd, env,
                     autoClearShell=self.autoClearShell, erase=eraseCoverage,
@@ -1566,6 +1568,8 @@ class DebugUI(QObject):
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                
+                self.debugViewer.initCallStackViewer(runProject)
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteProfile(fn, argv, wd, env,
@@ -1678,6 +1682,8 @@ class DebugUI(QObject):
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                
+                self.debugViewer.initCallStackViewer(runProject)
                 
                 # Ask the client to open the new program.
                 self.debugServer.remoteRun(fn, argv, wd, env,
@@ -1799,6 +1805,8 @@ class DebugUI(QObject):
                     fn = os.path.join(getConfig('ericDir'), "eric5.py")
                     tracePython = True  # override flag because it must be true
                 
+                self.debugViewer.initCallStackViewer(debugProject)
+                
                 # Ask the client to send call trace info
                 enableCallTrace = self.debugViewer.isCallTraceEnabled()
                 self.debugViewer.clearCallTrace()
@@ -1854,6 +1862,8 @@ class DebugUI(QObject):
             if forProject and self.project.getProjectType() == "E4Plugin":
                 argv = '--plugin="{0}" {1}'.format(fn, argv)
                 fn = os.path.join(getConfig('ericDir'), "eric5.py")
+            
+            self.debugViewer.initCallStackViewer(forProject)
             
             if self.lastStartAction in [1, 2]:
                 # Ask the client to send call trace info
@@ -1919,6 +1929,9 @@ class DebugUI(QObject):
         
         # Signal that we have started a debugging session
         self.debuggingStarted.emit(fn)
+        
+        # Initialize the call stack viewer
+        self.debugViewer.initCallStackViewer(False)
         
     def __continue(self):
         """

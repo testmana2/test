@@ -384,51 +384,52 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         errMsg = ""
         parents = [-1]
         
-        args = []
-        args.append("parents")
-        if self.commandMode == "incoming":
-            if self.bundle:
-                args.append("--repository")
-                args.append(self.bundle)
-            elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
-                args.append("--repository")
-                args.append(self.vcs.bundleFile)
-        args.append("--template")
-        args.append("{rev}\n")
-        args.append("-r")
-        args.append(rev)
-        if not self.projectMode:
-            args.append(self.filename)
-        
-        output = ""
-        if self.__hgClient:
-            output, errMsg = self.__hgClient.runcommand(args)
-        else:
-            process = QProcess()
-            process.setWorkingDirectory(self.repodir)
-            process.start('hg', args)
-            procStarted = process.waitForStarted()
-            if procStarted:
-                finished = process.waitForFinished(30000)
-                if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
-                else:
-                    if not finished:
-                        errMsg = self.trUtf8(
-                            "The hg process did not finish within 30s.")
+        if int(rev) > 0:
+            args = []
+            args.append("parents")
+            if self.commandMode == "incoming":
+                if self.bundle:
+                    args.append("--repository")
+                    args.append(self.bundle)
+                elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+                    args.append("--repository")
+                    args.append(self.vcs.bundleFile)
+            args.append("--template")
+            args.append("{rev}\n")
+            args.append("-r")
+            args.append(rev)
+            if not self.projectMode:
+                args.append(self.filename)
+            
+            output = ""
+            if self.__hgClient:
+                output, errMsg = self.__hgClient.runcommand(args)
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
-        
-        if errMsg:
-            E5MessageBox.critical(self,
-                self.trUtf8("Mercurial Error"),
-                errMsg)
-        
-        if output:
-            parents = [int(p) for p in output.strip().splitlines()]
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished and process.exitCode() == 0:
+                        output = \
+                            str(process.readAllStandardOutput(),
+                                Preferences.getSystem("IOEncoding"),
+                                'replace')
+                    else:
+                        if not finished:
+                            errMsg = self.trUtf8(
+                                "The hg process did not finish within 30s.")
+                else:
+                    errMsg = self.trUtf8("Could not start the hg executable.")
+            
+            if errMsg:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Mercurial Error"),
+                    errMsg)
+            
+            if output:
+                parents = [int(p) for p in output.strip().splitlines()]
         
         return parents
     
@@ -475,7 +476,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.__projectRevision = outputList[0].strip()
                 if self.__projectRevision.endswith("+"):
                     self.__projectRevision = self.__projectRevision[:-1]
-                    self.__projectBranch = outputList[1].strip()
+                self.__projectBranch = outputList[1].strip()
     
     def __getClosedBranches(self):
         """
@@ -909,6 +910,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__filterLogsEnabled = True
         self.__filterLogs()
+        
+        self.__updateDiffButtons()
+        self.__updatePhaseButton()
+        self.__updateGraftButton()
     
     def __readStdout(self):
         """
@@ -1008,26 +1013,47 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to update the status of the phase button.
         """
-        # step 1: count entries with changeable phases
-        secret = 0
-        draft = 0
-        public = 0
-        for itm in self.logTree.selectedItems():
-            phase = itm.text(self.PhaseColumn)
-            if phase == "draft":
-                draft += 1
-            elif phase == "secret":
-                secret += 1
+        if self.initialCommandMode == "log":
+            # step 1: count entries with changeable phases
+            secret = 0
+            draft = 0
+            public = 0
+            for itm in self.logTree.selectedItems():
+                phase = itm.text(self.PhaseColumn)
+                if phase == "draft":
+                    draft += 1
+                elif phase == "secret":
+                    secret += 1
+                else:
+                    public += 1
+            
+            # step 2: set the status of the phase button
+            if public == 0 and \
+               ((secret > 0 and draft == 0) or \
+                (secret == 0 and draft > 0)):
+                self.phaseButton.setEnabled(True)
             else:
-                public += 1
-        
-        # step 2: set the status of the phase button
-        if public == 0 and \
-           ((secret > 0 and draft == 0) or \
-            (secret == 0 and draft > 0)):
-            self.phaseButton.setEnabled(True)
+                self.phaseButton.setEnabled(False)
         else:
             self.phaseButton.setEnabled(False)
+    
+    def __updateGraftButton(self):
+        """
+        Private slot to update the status of the graft button.
+        """
+        if self.graftButton.isVisible():
+            if self.initialCommandMode == "log":
+                # step 1: count selected entries not belonging to the current branch
+                otherBranches = 0
+                for itm in self.logTree.selectedItems():
+                    branch = itm.text(self.BranchColumn)
+                    if branch != self.__projectBranch:
+                        otherBranches += 1
+                
+                # step 2: set the status of the graft button
+                self.graftButton.setEnabled(otherBranches > 0)
+            else:
+                self.graftButton.setEnabled(False)
     
     def __updateGraftButton(self):
         """
@@ -1103,7 +1129,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 1 button.
         """
-        itm = self.logTree.selectedItems()[0]
+        if len(self.logTree.selectedItems()):
+            itm = self.logTree.selectedItems()[0]
+        else:
+            itm = self.logTree.currentItem()
         if itm is None:
             self.diffP1Button.setEnabled(False)
             return
@@ -1121,7 +1150,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 2 button.
         """
-        itm = self.logTree.selectedItems()[0]
+        if len(self.logTree.selectedItems()):
+            itm = self.logTree.selectedItems()[0]
+        else:
+            itm = self.logTree.currentItem()
         if itm is None:
             self.diffP2Button.setEnabled(False)
             return

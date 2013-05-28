@@ -1059,7 +1059,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
-            lrelease = Utilities.generateQtToolName("lrelease")
+            lrelease = os.path.join(
+                    Utilities.getQtBinariesPath(),
+                    Utilities.generateQtToolName("lrelease"))
         else:
             return
         if Utilities.isWindowsPlatform():

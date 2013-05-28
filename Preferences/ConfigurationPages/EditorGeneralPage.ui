@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>553</width>
+    <width>559</width>
     <height>593</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -210,6 +210,45 @@
         </property>
         <property name="text">
          <string>Insert comment at column 0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Virtual Space</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Virtual space is the space after the last character of a line. It is not allocated unless some text is entered or copied into it. Usage of virtual space can be configured with these selections.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="vsSelectionCheckBox">
+        <property name="toolTip">
+         <string>Select to enable a rectangular selection to extend into virtual space</string>
+        </property>
+        <property name="text">
+         <string>Selection may access virtual space</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="vsUserCheckBox">
+        <property name="toolTip">
+         <string>Select to allow the cursor to be moved into virtual space</string>
+        </property>
+        <property name="text">
+         <string>Cursor can move into virtual space</string>
         </property>
        </widget>
       </item>

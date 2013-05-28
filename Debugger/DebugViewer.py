@@ -178,9 +178,18 @@ class DebugViewer(QWidget):
         self.__tabWidget.setTabToolTip(index, self.localsViewer.windowTitle())
         
         self.sourceButton.clicked[()].connect(self.__showSource)
-        self.stackComboBox.activated[int].connect(self.__frameSelected)
+        self.stackComboBox.currentIndexChanged[int].connect(self.__frameSelected)
         self.setLocalsFilterButton.clicked[()].connect(self.__setLocalsFilter)
         self.localsFilterEdit.returnPressed.connect(self.__setLocalsFilter)
+        
+        from .CallStackViewer import CallStackViewer
+        # add the call stack viewer
+        self.callStackViewer = CallStackViewer(self.debugServer)
+        index = self.__tabWidget.addTab(self.callStackViewer,
+            UI.PixmapCache.getIcon("step.png"), "")
+        self.__tabWidget.setTabToolTip(index, self.callStackViewer.windowTitle())
+        self.callStackViewer.sourceFile.connect(self.sourceFile)
+        self.callStackViewer.frameSelected.connect(self.__callStackFrameSelected)
         
         from .CallTraceViewer import CallTraceViewer
         # add the call trace viewer
@@ -257,10 +266,11 @@ class DebugViewer(QWidget):
         """
         Public method to set a reference to the Debug UI.
         
-        @param debugUI reference to the DebugUI objectTrees
+        @param debugUI reference to the DebugUI object (DebugUI)
         """
         self.debugUI = debugUI
         self.debugUI.clientStack.connect(self.handleClientStack)
+        self.callStackViewer.setDebugger(debugUI)
         
     def handleResetUI(self):
         """
@@ -288,6 +298,15 @@ class DebugViewer(QWidget):
         if self.embeddedShell:
             self.saveCurrentPage()
             self.__tabWidget.setCurrentWidget(self.shellAssembly)
+        
+    def initCallStackViewer(self, projectMode):
+        """
+        Public method to initialize the call stack viewer.
+        
+        @param projectMode flag indicating to enable the project mode (boolean)
+        """
+        self.callStackViewer.clear()
+        self.callStackViewer.setProjectMode(projectMode)
         
     def isCallTraceEnabled(self):
         """
@@ -365,6 +384,9 @@ class DebugViewer(QWidget):
     def handleClientStack(self, stack):
         """
         Public slot to show the call stack of the program being debugged.
+        
+        @param stack list of tuples with call stack data (file name, line number,
+            function name, formatted argument/values list)
         """
         self.framenr = 0
         self.stackComboBox.clear()
@@ -486,3 +508,13 @@ class DebugViewer(QWidget):
         if current is not None and self.__doThreadListUpdate:
             tid = int(current.text(0))
             self.debugServer.remoteSetThread(tid)
+    
+    def __callStackFrameSelected(self, frameNo):
+        """
+        Private slot to handle the selection of a call stack entry of the
+        call stack viewer.
+        
+        @param frameNo frame number (index) of the selected entry (integer)
+        """
+        if frameNo >= 0:
+            self.stackComboBox.setCurrentIndex(frameNo)

@@ -20,7 +20,6 @@ import glob
 import fnmatch
 import copy
 import zipfile
-import re
 
 from PyQt4.QtCore import QFile, QFileInfo, pyqtSignal, QCryptographicHash, QIODevice, \
     QByteArray, QObject, Qt
@@ -367,7 +366,6 @@ class Project(QObject):
         self.__dirty = False      # dirty flag
         self.pfile = ""         # name of the project file
         self.ppath = ""         # name of the project directory
-        self.ppathRe = None
         self.translationsRoot = ""  # the translations prefix
         self.name = ""
         self.opened = False
@@ -625,21 +623,6 @@ class Project(QObject):
                 self.pdata[index].remove(file)
             self.setDirty(True)
         
-    def __makePpathRe(self):
-        """
-        Private method to generate a regular expression for the project path.
-        """
-        ppathRe = (self.ppath + os.sep)\
-            .replace("\\", "@@")\
-            .replace("/", "@@")\
-            .replace("@@", r"[\\/]")
-        if ppathRe.endswith(r"[\\/]"):
-            ppathRe += "*"
-        if Utilities.isWindowsPlatform():
-            self.ppathRe = re.compile(ppathRe, re.IGNORECASE)
-        else:
-            self.ppathRe = re.compile(ppathRe)
-        
     def __readProject(self, fn):
         """
         Private method to read in a project (.e4p) file.
@@ -664,7 +647,6 @@ class Project(QObject):
         
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
-        self.__makePpathRe()
         
         # insert filename into list of recently opened projects
         self.__syncRecent()
@@ -759,7 +741,6 @@ class Project(QObject):
         if res:
             self.pfile = os.path.abspath(fn)
             self.ppath = os.path.abspath(os.path.dirname(fn))
-            self.__makePpathRe()
             self.name = os.path.splitext(os.path.basename(fn))[0]
             self.setDirty(False)
             
@@ -825,7 +806,6 @@ class Project(QObject):
             enable = os.path.exists(fn)
         self.sessActGrp.findChild(QAction, "project_load_session").setEnabled(enable)
         self.sessActGrp.findChild(QAction, "project_delete_session").setEnabled(enable)
-        
         
     def __readSession(self, quiet=False, indicator=""):
         """
@@ -1907,7 +1887,6 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
             dlg.storeData()
-            self.__makePpathRe()
             self.pdata["VCS"] = ['None']
             self.opened = True
             if not self.pdata["FILETYPES"]:
@@ -2135,7 +2114,6 @@ class Project(QObject):
             else:
                 self.newProjectHooks.emit()
                 self.newProject.emit()
-            
 
     def newProjectAddFiles(self, mainscript):
         """
@@ -2874,10 +2852,14 @@ class Project(QObject):
         
         @param path path to be checked (string)
         """
-        if self.ppath and path == self.ppath:
-            return True
-        elif self.ppathRe:
-            return self.ppathRe.match(path) is not None
+        if self.ppath:
+            if path == self.ppath:
+                return True
+            elif Utilities.normcasepath(Utilities.toNativeSeparators(path)).startswith(
+                 Utilities.normcasepath(Utilities.toNativeSeparators(self.ppath + "/"))):
+                return True
+            else:
+                return False
         else:
             return False
         
@@ -2935,7 +2917,7 @@ class Project(QObject):
             if self.ppath and path == self.ppath:
                 return ""
             else:
-                return self.ppathRe.sub("", path, 1)
+                return path[len(self.ppath) + 1:]
         else:
             return path
         

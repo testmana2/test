@@ -182,7 +182,6 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         if self.searchDirCheckBox.isChecked():
             self.__searchFile()
         
-        
     @pyqtSlot()
     def on_searchDirButton_clicked(self):
         """

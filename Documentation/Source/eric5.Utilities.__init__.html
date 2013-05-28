@@ -109,6 +109,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#getExecutablePath">getExecutablePath</a></td>
 <td>Function to build the full path of an executable file from the environment.</td>
 </tr><tr>
+<td><a href="#getExecutablePaths">getExecutablePaths</a></td>
+<td>Function to build all full path of an executable file from the environment.</td>
+</tr><tr>
 <td><a href="#getHomeDir">getHomeDir</a></td>
 <td>Function to get a users home directory</td>
 </tr><tr>
@@ -120,9 +123,6 @@ Package implementing various functions/classes needed everywhere within eric5.
 </tr><tr>
 <td><a href="#getPythonLibPath">getPythonLibPath</a></td>
 <td>Function to determine the path to Python's library.</td>
-</tr><tr>
-<td><a href="#getPythonModulesDirectory">getPythonModulesDirectory</a></td>
-<td>Function to determine the path to Python's modules directory.</td>
 </tr><tr>
 <td><a href="#getPythonVersion">getPythonVersion</a></td>
 <td>Function to get the Python version (major, minor) as an integer value.</td>
@@ -802,6 +802,26 @@ full executable name, if the executable file is accessible
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="getExecutablePaths" ID="getExecutablePaths"></a>
+<h2>getExecutablePaths</h2>
+<b>getExecutablePaths</b>(<i>file</i>)
+<p>
+    Function to build all full path of an executable file from the environment.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename of the executable (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of full executable names (list of strings), if the executable file
+        is accessible via the searchpath defined by the PATH environment variable,
+        or an empty list otherwise.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="getHomeDir" ID="getHomeDir"></a>
 <h2>getHomeDir</h2>
 <b>getHomeDir</b>(<i></i>)
@@ -855,19 +875,6 @@ help text (string)
 <dt>Returns:</dt>
 <dd>
 path to the Python library (string)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="getPythonModulesDirectory" ID="getPythonModulesDirectory"></a>
-<h2>getPythonModulesDirectory</h2>
-<b>getPythonModulesDirectory</b>(<i></i>)
-<p>
-    Function to determine the path to Python's modules directory.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-path to the Python modules directory (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

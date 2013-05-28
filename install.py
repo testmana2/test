@@ -89,7 +89,7 @@ def usage(rcode=2):
 
     @param rcode the return code passed back to the calling process.
     """
-    global progName, platBinDir, modDir, distDir, apisDir, macAppBundleName
+    global progName, modDir, distDir, apisDir, macAppBundleName
     global macPythonExe
 
     print()
@@ -154,16 +154,16 @@ def initGlobals():
     modDir = distutils.sysconfig.get_python_lib(True)
     pyModDir = modDir
     
-    try:
-        from PyQt4 import pyqtconfig
-        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
-        if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
-            # it's the installer
-            qtDataDir = pyqtDataDir
-        else:
-            qtDataDir = pyqtconfig._pkg_config["qt_data_dir"]
-    except (AttributeError, ImportError):
-        qtDataDir = None
+    pyqtDataDir = os.path.join(modDir, "PyQt4")
+    if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
+        # it's the installer
+        qtDataDir = pyqtDataDir
+    else:
+        try:
+            from PyQt4.QtCore import QLibraryInfo
+            qtDataDir = QLibraryInfo.location(QLibraryInfo.DataPath)
+        except ImportError:
+            qtDataDir = None
     if qtDataDir:
         apisDir = os.path.join(qtDataDir, "qsci", "api")
     else:
@@ -215,24 +215,26 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         if isGuiScript:
             wrapper = \
                 '''@echo off\n''' \
-                '''set PYDIR=%~dp0\n''' \
-                '''start "" "%PYDIR%\\pythonw.exe"''' \
+                '''start "" "{2}\\pythonw.exe"''' \
                 ''' "{0}\\{1}.pyw"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile)
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile, sys.exec_prefix)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
                 ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
-                    platBinDir, pydir, wfile)
+                    sys.exec_prefix, pydir, wfile)
 
     # Mac OS X
     elif sys.platform == "darwin":
+        pyexec = "{0}/bin/pythonw3".format(sys.exec_prefix)
+        if not os.path.exists(pyexec):
+            pyexec = "{0}/bin/python3".format(sys.exec_prefix)
         wname = wfile
         wrapper = \
 '''#!/bin/sh
 
-exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
-'''.format(sys.exec_prefix, pydir, wfile)
+exec "{0}" "{1}/{2}.py" "$@"
+'''.format(pyexec, pydir, wfile)
 
     # *nix systems
     else:
@@ -314,7 +316,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global macAppBundleName
+    global macAppBundleName, platBinDir
     
     try:
         from eric5config import getConfig
@@ -360,9 +362,10 @@ def cleanUp():
     
     try:
         for rem_wname in rem_wnames:
-            rwname = wrapperName(getConfig('bindir'), rem_wname)
-            if os.path.exists(rwname):
-                os.remove(rwname)
+            for d in [platBinDir, getConfig('bindir')]:
+                rwname = wrapperName(d, rem_wname)
+                if os.path.exists(rwname):
+                    os.remove(rwname)
         
         # Cleanup our config file(s)
         for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
@@ -1085,6 +1088,7 @@ def main(argv):
         pass
     
     # cleanup old installation
+    print("Cleaning up old installation ...")
     try:
         if doCleanup:
             if distDir:
@@ -1096,10 +1100,11 @@ def main(argv):
         exit(7)
 
     # Create a config file and delete the default one
+    print("\nCreating configuration file ...")
     createConfig()
 
     # Compile .ui files
-    print("Compiling user interface files...")
+    print("\nCompiling user interface files ...")
     # step 1: remove old Ui_*.py files
     for root, _, files in os.walk(sourceDir):
         for file in [f for f in files if fnmatch.fnmatch(f, 'Ui_*.py')]:
@@ -1108,7 +1113,7 @@ def main(argv):
     compileUiFiles()
     
     if doCompile:
-        print("\nCompiling source files...")
+        print("\nCompiling source files ...")
         if distDir:
             compileall.compile_dir(sourceDir,
                 ddir=os.path.join(distDir, modDir, cfg['ericDir']),

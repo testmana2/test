@@ -9,6 +9,7 @@ Module implementing a widget to select a symbol in various formats.
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
+import sys
 import unicodedata
 try:  # Py3
     import html.entities as html_entities
@@ -47,13 +48,13 @@ class SymbolsModel(QAbstractTableModel):
             self.trUtf8("Name"),
         ]
         
-        self.__tables = (
+        self.__tables = [
             # first   last     display name
             (0x0,    0x1f,   self.trUtf8("Control Characters")),
             (0x20,   0x7f,   self.trUtf8("Basic Latin")),
-            (0x80,   0x100,  self.trUtf8("Latin-1 Supplement")),
-            (0x100,  0x180,  self.trUtf8("Latin Extended A")),
-            (0x180,  0x24f,  self.trUtf8("Latin Extended B")),
+            (0x80,   0xff,   self.trUtf8("Latin-1 Supplement")),
+            (0x100,  0x17f,  self.trUtf8("Latin Extended-A")),
+            (0x180,  0x24f,  self.trUtf8("Latin Extended-B")),
             (0x250,  0x2af,  self.trUtf8("IPA Extensions")),
             (0x2b0,  0x2ff,  self.trUtf8("Spacing Modifier Letters")),
             (0x300,  0x36f,  self.trUtf8("Combining Diacritical Marks")),
@@ -65,6 +66,10 @@ class SymbolsModel(QAbstractTableModel):
             (0x600,  0x6ff,  self.trUtf8("Arabic")),
             (0x700,  0x74f,  self.trUtf8("Syriac")),
             (0x780,  0x7bf,  self.trUtf8("Thaana")),
+            (0x7c0,  0x7ff,  self.trUtf8("N'Ko")),
+            (0x800,  0x83f,  self.trUtf8("Samaritan")),
+            (0x840,  0x85f,  self.trUtf8("Mandaic")),
+            (0x8a0,  0x8ff,  self.trUtf8("Arabic Extended-A")),
             (0x900,  0x97f,  self.trUtf8("Devanagari")),
             (0x980,  0x9ff,  self.trUtf8("Bengali")),
             (0xa00,  0xa7f,  self.trUtf8("Gurmukhi")),
@@ -82,8 +87,9 @@ class SymbolsModel(QAbstractTableModel):
             (0x10a0, 0x10ff, self.trUtf8("Georgian")),
             (0x1100, 0x11ff, self.trUtf8("Hangul Jamo")),
             (0x1200, 0x137f, self.trUtf8("Ethiopic")),
+            (0x1380, 0x139f, self.trUtf8("Ethiopic Supplement")),
             (0x13a0, 0x13ff, self.trUtf8("Cherokee")),
-            (0x1400, 0x167f, self.trUtf8("Canadian Aboriginal Syllabics")),
+            (0x1400, 0x167f, self.trUtf8("Unified Canadian Aboriginal Syllabics")),
             (0x1680, 0x169f, self.trUtf8("Ogham")),
             (0x16a0, 0x16ff, self.trUtf8("Runic")),
             (0x1700, 0x171f, self.trUtf8("Tagalog")),
@@ -92,10 +98,22 @@ class SymbolsModel(QAbstractTableModel):
             (0x1760, 0x177f, self.trUtf8("Tagbanwa")),
             (0x1780, 0x17ff, self.trUtf8("Khmer")),
             (0x1800, 0x18af, self.trUtf8("Mongolian")),
+            (0x18b0, 0x18ff, self.trUtf8("Unified Canadian Aboriginal Syllabics Extended")),
             (0x1900, 0x194f, self.trUtf8("Limbu")),
             (0x1950, 0x197f, self.trUtf8("Tai Le")),
             (0x19e0, 0x19ff, self.trUtf8("Khmer Symbols")),
+            (0x1a00, 0x1a1f, self.trUtf8("Buginese")),
+            (0x1a20, 0x1aaf, self.trUtf8("Tai Tham")),
+            (0x1b00, 0x1b7f, self.trUtf8("Balinese")),
+            (0x1b80, 0x1bbf, self.trUtf8("Sundanese")),
+            (0x1bc0, 0x1bff, self.trUtf8("Batak")),
+            (0x1c00, 0x1c4f, self.trUtf8("Lepcha")),
+            (0x1c50, 0x1c7f, self.trUtf8("Ol Chiki")),
+            (0x1cc0, 0x1ccf, self.trUtf8("Sundanese Supplement")),
+            (0x1cd0, 0x1cff, self.trUtf8("Vedic Extensions")),
             (0x1d00, 0x1d7f, self.trUtf8("Phonetic Extensions")),
+            (0x1d80, 0x1dbf, self.trUtf8("Phonetic Extensions Supplement")),
+            (0x1dc0, 0x1dff, self.trUtf8("Combining Diacritical Marks Supplement")),
             (0x1e00, 0x1eff, self.trUtf8("Latin Extended Additional")),
             (0x1f00, 0x1fff, self.trUtf8("Greek Extended")),
             (0x2000, 0x206f, self.trUtf8("General Punctuation")),
@@ -122,6 +140,14 @@ class SymbolsModel(QAbstractTableModel):
             (0x2980, 0x29ff, self.trUtf8("Miscellaneous Mathematical Symbols-B")),
             (0x2a00, 0x2aff, self.trUtf8("Supplemental Mathematical Operators")),
             (0x2b00, 0x2bff, self.trUtf8("Miscellaneous Symbols and Arcolumns")),
+            (0x2c00, 0x2c5f, self.trUtf8("Glagolitic")),
+            (0x2c60, 0x2c7f, self.trUtf8("Latin Extended-C")),
+            (0x2c80, 0x2cff, self.trUtf8("Coptic")),
+            (0x2d00, 0x2d2f, self.trUtf8("Georgian Supplement")),
+            (0x2d30, 0x2d7f, self.trUtf8("Tifinagh")),
+            (0x2d80, 0x2ddf, self.trUtf8("Ethiopic Extended")),
+            (0x2de0, 0x2dff, self.trUtf8("Cyrillic Extended-A")),
+            (0x2e00, 0x2e7f, self.trUtf8("Supplemental Punctuation")),
             (0x2e80, 0x2eff, self.trUtf8("CJK Radicals Supplement")),
             (0x2f00, 0x2fdf, self.trUtf8("KangXi Radicals")),
             (0x2ff0, 0x2fff, self.trUtf8("Ideographic Description Chars")),
@@ -132,15 +158,38 @@ class SymbolsModel(QAbstractTableModel):
             (0x3130, 0x318f, self.trUtf8("Hangul Compatibility Jamo")),
             (0x3190, 0x319f, self.trUtf8("Kanbun")),
             (0x31a0, 0x31bf, self.trUtf8("Bopomofo Extended")),
+            (0x31c0, 0x31ef, self.trUtf8("CJK Strokes")),
             (0x31f0, 0x31ff, self.trUtf8("Katakana Phonetic Extensions")),
             (0x3200, 0x32ff, self.trUtf8("Enclosed CJK Letters and Months")),
             (0x3300, 0x33ff, self.trUtf8("CJK Compatibility")),
-            (0x3400, 0x4db5, self.trUtf8("CJK Unified Ideogr. Ext. A")),
+            (0x3400, 0x4dbf, self.trUtf8("CJK Unified Ideogr. Ext. A")),
             (0x4dc0, 0x4dff, self.trUtf8("Yijing Hexagram Symbols")),
-            (0x4e00, 0x9fbb, self.trUtf8("CJK Unified Ideographs")),
+            (0x4e00, 0x9fff, self.trUtf8("CJK Unified Ideographs")),
             (0xa000, 0xa48f, self.trUtf8("Yi Syllables")),
             (0xa490, 0xa4cf, self.trUtf8("Yi Radicals")),
-            (0xac00, 0xd7a3, self.trUtf8("Hangul Syllables")),
+            (0xa4d0, 0xa4ff, self.trUtf8("Lisu")),
+            (0xa500, 0xa63f, self.trUtf8("Vai")),
+            (0xa640, 0xa69f, self.trUtf8("Cyrillic Extended-B")),
+            (0xa6a0, 0xa6ff, self.trUtf8("Bamum")),
+            (0xa700, 0xa71f, self.trUtf8("Modifier Tone Letters")),
+            (0xa720, 0xa7ff, self.trUtf8("Latin Extended-D")),
+            (0xa800, 0xa82f, self.trUtf8("Syloti Nagri")),
+            (0xa830, 0xa83f, self.trUtf8("Common Indic Number Forms")),
+            (0xa840, 0xa87f, self.trUtf8("Phags-pa")),
+            (0xa880, 0xa8df, self.trUtf8("Saurashtra")),
+            (0xa8e0, 0xa8ff, self.trUtf8("Devanagari Extended")),
+            (0xa900, 0xa92f, self.trUtf8("Kayah Li")),
+            (0xa930, 0xa95f, self.trUtf8("Rejang")),
+            (0xa960, 0xa97f, self.trUtf8("Hangul Jamo Extended-A")),
+            (0xa980, 0xa9df, self.trUtf8("Javanese")),
+            (0xaa00, 0xaa5f, self.trUtf8("Cham")),
+            (0xaa60, 0xaa7f, self.trUtf8("Myanmar Extended-A")),
+            (0xaa80, 0xaadf, self.trUtf8("Tai Viet")),
+            (0xaae0, 0xaaff, self.trUtf8("Meetei Mayek Extensions")),
+            (0xab00, 0xab2f, self.trUtf8("Ethiopic Extended-A")),
+            (0xabc0, 0xabff, self.trUtf8("Meetei Mayek")),
+            (0xac00, 0xd7af, self.trUtf8("Hangul Syllables")),
+            (0xd7b0, 0xd7ff, self.trUtf8("Hangul Jamo Extended-B")),
             (0xd800, 0xdb7f, self.trUtf8("High Surrogates")),
             (0xdb80, 0xdbff, self.trUtf8("High Private Use Surrogates")),
             (0xdc00, 0xdfff, self.trUtf8("Low Surrogates")),
@@ -149,23 +198,81 @@ class SymbolsModel(QAbstractTableModel):
             (0xfb00, 0xfb4f, self.trUtf8("Alphabetic Presentation Forms")),
             (0xfb50, 0xfdff, self.trUtf8("Arabic Presentation Forms-A")),
             (0xfe00, 0xfe0f, self.trUtf8("Variation Selectors")),
+            (0xfe10, 0xfe1f, self.trUtf8("Vertical Forms")),
             (0xfe20, 0xfe2f, self.trUtf8("Combining Half Marks")),
             (0xfe30, 0xfe4f, self.trUtf8("CJK Compatibility Forms")),
             (0xfe50, 0xfe6f, self.trUtf8("Small Form Variants")),
-            (0xfe70, 0xfefe, self.trUtf8("Arabic Presentation Forms-B")),
-            (0xfeff, 0xfeff, self.trUtf8("Specials")),
+            (0xfe70, 0xfeff, self.trUtf8("Arabic Presentation Forms-B")),
             (0xff00, 0xffef, self.trUtf8("Half- and Fullwidth Forms")),
             (0xfff0, 0xffff, self.trUtf8("Specials")),
-            (0x10300, 0x1032f, self.trUtf8("Old Italic")),
-            (0x10330, 0x1034f, self.trUtf8("Gothic")),
-            (0x10400, 0x1044f, self.trUtf8("Deseret")),
-            (0x1d000, 0x1d0ff, self.trUtf8("Byzantine Musical Symbols")),
-            (0x1d100, 0x1d1ff, self.trUtf8("Musical Symbols")),
-            (0x1d400, 0x1d7ff, self.trUtf8("Mathematical Alphanumeric Symbols")),
-            (0x20000, 0x2a6d6, self.trUtf8("CJK Unified Ideogr. Ext. B")),
-            (0x2f800, 0x2fa1f, self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
-            (0xe0000, 0xe007f, self.trUtf8("Tags")),
-        )
+        ]
+        if sys.maxunicode > 0xffff:
+            self.__tables.extend([
+                (0x10000, 0x1007f, self.trUtf8("Linear B Syllabary")),
+                (0x10080, 0x100ff, self.trUtf8("Linear B Ideograms")),
+                (0x10100, 0x1013f, self.trUtf8("Aegean Numbers")),
+                (0x10140, 0x1018f, self.trUtf8("Ancient Greek Numbers")),
+                (0x10190, 0x101cf, self.trUtf8("Ancient Symbols")),
+                (0x101d0, 0x101ff, self.trUtf8("Phaistos Disc")),
+                (0x10280, 0x1029f, self.trUtf8("Lycian")),
+                (0x102a0, 0x102df, self.trUtf8("Carian")),
+                (0x10300, 0x1032f, self.trUtf8("Old Italic")),
+                (0x10330, 0x1034f, self.trUtf8("Gothic")),
+                (0x10380, 0x1039f, self.trUtf8("Ugaritic")),
+                (0x103a0, 0x103df, self.trUtf8("Old Persian")),
+                (0x10400, 0x1044f, self.trUtf8("Deseret")),
+                (0x10450, 0x1047f, self.trUtf8("Shavian")),
+                (0x10480, 0x104af, self.trUtf8("Osmanya")),
+                (0x10800, 0x1083f, self.trUtf8("Cypriot Syllabary")),
+                (0x10840, 0x1085f, self.trUtf8("Imperial Aramaic")),
+                (0x10900, 0x1091f, self.trUtf8("Phoenician")),
+                (0x10920, 0x1093f, self.trUtf8("Lydian")),
+                (0x10980, 0x1099f, self.trUtf8("Meroitic Hieroglyphs")),
+                (0x109a0, 0x109ff, self.trUtf8("Meroitic Cursive")),
+                (0x10a00, 0x10a5f, self.trUtf8("Kharoshthi")),
+                (0x10a60, 0x10a7f, self.trUtf8("Old South Arabian")),
+                (0x10b00, 0x10b3f, self.trUtf8("Avestan")),
+                (0x10b40, 0x10b5f, self.trUtf8("Inscriptional Parthian")),
+                (0x10b60, 0x10b7f, self.trUtf8("Inscriptional Pahlavi")),
+                (0x10c00, 0x10c4f, self.trUtf8("Old Turkic")),
+                (0x10e60, 0x10e7f, self.trUtf8("Rumi Numeral Symbols")),
+                (0x11000, 0x1107f, self.trUtf8("Brahmi")),
+                (0x11080, 0x110cf, self.trUtf8("Kaithi")),
+                (0x110d0, 0x110ff, self.trUtf8("Sora Sompeng")),
+                (0x11100, 0x1114f, self.trUtf8("Chakma")),
+                (0x11180, 0x111df, self.trUtf8("Sharada")),
+                (0x11680, 0x116cf, self.trUtf8("Takri")),
+                (0x12000, 0x123ff, self.trUtf8("Cuneiform")),
+                (0x12400, 0x1247f, self.trUtf8("Cuneiform Numbers and Punctuation")),
+                (0x13000, 0x1342f, self.trUtf8("Egyptian Hieroglyphs")),
+                (0x16800, 0x16a3f, self.trUtf8("Bamum Supplement")),
+                (0x16f00, 0x16f9f, self.trUtf8("Miao")),
+                (0x1b000, 0x1b0ff, self.trUtf8("Kana Supplement")),
+                (0x1d000, 0x1d0ff, self.trUtf8("Byzantine Musical Symbols")),
+                (0x1d100, 0x1d1ff, self.trUtf8("Musical Symbols")),
+                (0x1d200, 0x1d24f, self.trUtf8("Ancient Greek Musical Notation")),
+                (0x1d300, 0x1d35f, self.trUtf8("Tai Xuan Jing Symbols")),
+                (0x1d360, 0x1d37f, self.trUtf8("Counting Rod Numerals")),
+                (0x1d400, 0x1d7ff, self.trUtf8("Mathematical Alphanumeric Symbols")),
+                (0x1ee00, 0x1eeff, self.trUtf8("Arabic Mathematical Alphabetic Symbols")),
+                (0x1f000, 0x1f02f, self.trUtf8("Mahjong Tiles")),
+                (0x1f030, 0x1f09f, self.trUtf8("Domino Tiles")),
+                (0x1f0a0, 0x1f0ff, self.trUtf8("Playing Cards")),
+                (0x1f100, 0x1f1ff, self.trUtf8("Enclosed Alphanumeric Supplement")),
+                (0x1f200, 0x1f2ff, self.trUtf8("Enclosed Ideographic Supplement")),
+                (0x1f300, 0x1f5ff, self.trUtf8("Miscellaneous Symbols And Pictographs")),
+                (0x1f600, 0x1f64f, self.trUtf8("Emoticons")),
+                (0x1f680, 0x1f6ff, self.trUtf8("Transport And Map Symbols")),
+                (0x1f700, 0x1f77f, self.trUtf8("Alchemical Symbols")),
+                (0x20000, 0x2a6df, self.trUtf8("CJK Unified Ideogr. Ext. B")),
+                (0x2a700, 0x2b73f, self.trUtf8("CJK Unified Ideographs Extension C")),
+                (0x2b740, 0x2b81f, self.trUtf8("CJK Unified Ideographs Extension D")),
+                (0x2f800, 0x2fa1f, self.trUtf8("CJK Compatapility Ideogr. Suppl.")),
+                (0xe0000, 0xe007f, self.trUtf8("Tags")),
+                (0xe0100, 0xe01ef, self.trUtf8("Variation Selectors Supplement")),
+                (0xf0000, 0xfffff, self.trUtf8("Supplementary Private Use Area-A")),
+                (0x100000, 0x10ffff, self.trUtf8("Supplementary Private Use Area-B")),
+            ])
         self.__currentTableIndex = 0
     
     def getTableNames(self):
@@ -232,30 +339,21 @@ class SymbolsModel(QAbstractTableModel):
             if col == 0:
                 return str(id)
             elif col == 1:
-                try:
-                    return chr(id)
-                except ValueError:
-                    return chr(65533)
+                return chr(id)
             elif col == 2:
                 return "0x{0:04x}".format(id)
             elif col == 3:
                 if id in html_entities.codepoint2name:
                     return "&{0};".format(html_entities.codepoint2name[id])
             elif col == 4:
-                try:
-                    return unicodedata.name(chr(id), '').title()
-                except ValueError:
-                    return self.trUtf8("not possible: narrow Python build")
+                return unicodedata.name(chr(id), '').title()
         
         if role == Qt.BackgroundColorRole:
             if index.column() == 0:
                 return QColor(Qt.lightGray)
         
         if role == Qt.TextColorRole:
-            try:
-                char = chr(id)
-            except ValueError:
-                char = chr(65533)
+            char = chr(id)
             if self.__isDigit(char):
                 return QColor(Qt.darkBlue)
             elif self.__isLetter(char):

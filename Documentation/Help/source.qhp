@@ -77,6 +77,7 @@
           <section title="eric5.Debugger" ref="index-eric5.Debugger.html">
             <section title="eric5.Debugger.BreakPointModel" ref="eric5.Debugger.BreakPointModel.html" />
             <section title="eric5.Debugger.BreakPointViewer" ref="eric5.Debugger.BreakPointViewer.html" />
+            <section title="eric5.Debugger.CallStackViewer" ref="eric5.Debugger.CallStackViewer.html" />
             <section title="eric5.Debugger.CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html" />
             <section title="eric5.Debugger.Config" ref="eric5.Debugger.Config.html" />
             <section title="eric5.Debugger.DebugClientCapabilities" ref="eric5.Debugger.DebugClientCapabilities.html" />
@@ -858,6 +859,7 @@
             <section title="eric5.QScintilla.SearchReplaceWidget" ref="eric5.QScintilla.SearchReplaceWidget.html" />
             <section title="eric5.QScintilla.Shell" ref="eric5.QScintilla.Shell.html" />
             <section title="eric5.QScintilla.ShellHistoryDialog" ref="eric5.QScintilla.ShellHistoryDialog.html" />
+            <section title="eric5.QScintilla.SortOptionsDialog" ref="eric5.QScintilla.SortOptionsDialog.html" />
             <section title="eric5.QScintilla.SpellChecker" ref="eric5.QScintilla.SpellChecker.html" />
             <section title="eric5.QScintilla.SpellCheckingDialog" ref="eric5.QScintilla.SpellCheckingDialog.html" />
             <section title="eric5.QScintilla.SpellingDictionaryEditDialog" ref="eric5.QScintilla.SpellingDictionaryEditDialog.html" />
@@ -1853,6 +1855,16 @@
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
       <keyword name="BrowserSysPathItem" id="BrowserSysPathItem" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem" />
       <keyword name="BrowserSysPathItem (Constructor)" id="BrowserSysPathItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.__init__" />
+      <keyword name="CallStackViewer" id="CallStackViewer" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer" />
+      <keyword name="CallStackViewer (Constructor)" id="CallStackViewer (Constructor)" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__init__" />
+      <keyword name="CallStackViewer (Module)" id="CallStackViewer (Module)" ref="eric5.Debugger.CallStackViewer.html" />
+      <keyword name="CallStackViewer.__itemDoubleClicked" id="CallStackViewer.__itemDoubleClicked" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__itemDoubleClicked" />
+      <keyword name="CallStackViewer.__openSource" id="CallStackViewer.__openSource" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__openSource" />
+      <keyword name="CallStackViewer.__saveStackTrace" id="CallStackViewer.__saveStackTrace" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__saveStackTrace" />
+      <keyword name="CallStackViewer.__showCallStack" id="CallStackViewer.__showCallStack" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__showCallStack" />
+      <keyword name="CallStackViewer.__showContextMenu" id="CallStackViewer.__showContextMenu" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__showContextMenu" />
+      <keyword name="CallStackViewer.setDebugger" id="CallStackViewer.setDebugger" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.setDebugger" />
+      <keyword name="CallStackViewer.setProjectMode" id="CallStackViewer.setProjectMode" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.setProjectMode" />
       <keyword name="CallTraceViewer" id="CallTraceViewer" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer" />
       <keyword name="CallTraceViewer (Constructor)" id="CallTraceViewer (Constructor)" ref="eric5.Debugger.CallTraceViewer.html#CallTraceViewer.__init__" />
       <keyword name="CallTraceViewer (Module)" id="CallTraceViewer (Module)" ref="eric5.Debugger.CallTraceViewer.html" />
@@ -2938,6 +2950,7 @@
       <keyword name="DebugViewer" id="DebugViewer" ref="eric5.Debugger.DebugViewer.html#DebugViewer" />
       <keyword name="DebugViewer (Constructor)" id="DebugViewer (Constructor)" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__init__" />
       <keyword name="DebugViewer (Module)" id="DebugViewer (Module)" ref="eric5.Debugger.DebugViewer.html" />
+      <keyword name="DebugViewer.__callStackFrameSelected" id="DebugViewer.__callStackFrameSelected" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__callStackFrameSelected" />
       <keyword name="DebugViewer.__frameSelected" id="DebugViewer.__frameSelected" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__frameSelected" />
       <keyword name="DebugViewer.__setGlobalsFilter" id="DebugViewer.__setGlobalsFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__setGlobalsFilter" />
       <keyword name="DebugViewer.__setLocalsFilter" id="DebugViewer.__setLocalsFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.__setLocalsFilter" />
@@ -2949,6 +2962,7 @@
       <keyword name="DebugViewer.handleDebuggingStarted" id="DebugViewer.handleDebuggingStarted" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleDebuggingStarted" />
       <keyword name="DebugViewer.handleRawInput" id="DebugViewer.handleRawInput" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleRawInput" />
       <keyword name="DebugViewer.handleResetUI" id="DebugViewer.handleResetUI" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleResetUI" />
+      <keyword name="DebugViewer.initCallStackViewer" id="DebugViewer.initCallStackViewer" ref="eric5.Debugger.DebugViewer.html#DebugViewer.initCallStackViewer" />
       <keyword name="DebugViewer.isCallTraceEnabled" id="DebugViewer.isCallTraceEnabled" ref="eric5.Debugger.DebugViewer.html#DebugViewer.isCallTraceEnabled" />
       <keyword name="DebugViewer.preferencesChanged" id="DebugViewer.preferencesChanged" ref="eric5.Debugger.DebugViewer.html#DebugViewer.preferencesChanged" />
       <keyword name="DebugViewer.restoreCurrentPage" id="DebugViewer.restoreCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.restoreCurrentPage" />
@@ -3601,12 +3615,17 @@
       <keyword name="E5SideBar (Module)" id="E5SideBar (Module)" ref="eric5.E5Gui.E5SideBar.html" />
       <keyword name="E5SideBar.__appFocusChanged" id="E5SideBar.__appFocusChanged" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__appFocusChanged" />
       <keyword name="E5SideBar.__autoHideToggled" id="E5SideBar.__autoHideToggled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__autoHideToggled" />
+      <keyword name="E5SideBar.__cancelDelayTimer" id="E5SideBar.__cancelDelayTimer" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__cancelDelayTimer" />
+      <keyword name="E5SideBar.__delayedAction" id="E5SideBar.__delayedAction" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__delayedAction" />
+      <keyword name="E5SideBar.__expandIt" id="E5SideBar.__expandIt" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__expandIt" />
+      <keyword name="E5SideBar.__shrinkIt" id="E5SideBar.__shrinkIt" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__shrinkIt" />
       <keyword name="E5SideBar.__splitterMoved" id="E5SideBar.__splitterMoved" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__splitterMoved" />
       <keyword name="E5SideBar.addTab" id="E5SideBar.addTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.addTab" />
       <keyword name="E5SideBar.clear" id="E5SideBar.clear" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.clear" />
       <keyword name="E5SideBar.count" id="E5SideBar.count" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.count" />
       <keyword name="E5SideBar.currentIndex" id="E5SideBar.currentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentIndex" />
       <keyword name="E5SideBar.currentWidget" id="E5SideBar.currentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.currentWidget" />
+      <keyword name="E5SideBar.delay" id="E5SideBar.delay" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.delay" />
       <keyword name="E5SideBar.enterEvent" id="E5SideBar.enterEvent" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.enterEvent" />
       <keyword name="E5SideBar.eventFilter" id="E5SideBar.eventFilter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.eventFilter" />
       <keyword name="E5SideBar.expand" id="E5SideBar.expand" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.expand" />
@@ -3624,6 +3643,7 @@
       <keyword name="E5SideBar.saveState" id="E5SideBar.saveState" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.saveState" />
       <keyword name="E5SideBar.setCurrentIndex" id="E5SideBar.setCurrentIndex" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentIndex" />
       <keyword name="E5SideBar.setCurrentWidget" id="E5SideBar.setCurrentWidget" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setCurrentWidget" />
+      <keyword name="E5SideBar.setDelay" id="E5SideBar.setDelay" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setDelay" />
       <keyword name="E5SideBar.setOrientation" id="E5SideBar.setOrientation" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setOrientation" />
       <keyword name="E5SideBar.setSplitter" id="E5SideBar.setSplitter" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setSplitter" />
       <keyword name="E5SideBar.setTabEnabled" id="E5SideBar.setTabEnabled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.setTabEnabled" />
@@ -4004,6 +4024,7 @@
       <keyword name="Editor.__resetOnlineChangeTraceInfo" id="Editor.__resetOnlineChangeTraceInfo" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceInfo" />
       <keyword name="Editor.__resetOnlineChangeTraceTimer" id="Editor.__resetOnlineChangeTraceTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceTimer" />
       <keyword name="Editor.__resetOnlineSyntaxCheckTimer" id="Editor.__resetOnlineSyntaxCheckTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineSyntaxCheckTimer" />
+      <keyword name="Editor.__resizeLinenoMargin" id="Editor.__resizeLinenoMargin" ref="eric5.QScintilla.Editor.html#Editor.__resizeLinenoMargin" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
       <keyword name="Editor.__searchCurrentWord" id="Editor.__searchCurrentWord" ref="eric5.QScintilla.Editor.html#Editor.__searchCurrentWord" />
@@ -4193,6 +4214,7 @@
       <keyword name="Editor.shortenEmptyLines" id="Editor.shortenEmptyLines" ref="eric5.QScintilla.Editor.html#Editor.shortenEmptyLines" />
       <keyword name="Editor.shouldAutosave" id="Editor.shouldAutosave" ref="eric5.QScintilla.Editor.html#Editor.shouldAutosave" />
       <keyword name="Editor.smartIndentLineOrSelection" id="Editor.smartIndentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.smartIndentLineOrSelection" />
+      <keyword name="Editor.sortLines" id="Editor.sortLines" ref="eric5.QScintilla.Editor.html#Editor.sortLines" />
       <keyword name="Editor.startSharedEdit" id="Editor.startSharedEdit" ref="eric5.QScintilla.Editor.html#Editor.startSharedEdit" />
       <keyword name="Editor.streamCommentLine" id="Editor.streamCommentLine" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLine" />
       <keyword name="Editor.streamCommentLineOrSelection" id="Editor.streamCommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLineOrSelection" />
@@ -5158,6 +5180,7 @@
       <keyword name="HelpWebPage.getAdBlockedPageEntries" id="HelpWebPage.getAdBlockedPageEntries" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getAdBlockedPageEntries" />
       <keyword name="HelpWebPage.getSslCertificate" id="HelpWebPage.getSslCertificate" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificate" />
       <keyword name="HelpWebPage.getSslCertificateChain" id="HelpWebPage.getSslCertificateChain" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslCertificateChain" />
+      <keyword name="HelpWebPage.getSslConfiguration" id="HelpWebPage.getSslConfiguration" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.getSslConfiguration" />
       <keyword name="HelpWebPage.hasValidSslInfo" id="HelpWebPage.hasValidSslInfo" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.hasValidSslInfo" />
       <keyword name="HelpWebPage.pageAttributeId" id="HelpWebPage.pageAttributeId" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.pageAttributeId" />
       <keyword name="HelpWebPage.populateNetworkRequest" id="HelpWebPage.populateNetworkRequest" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.populateNetworkRequest" />
@@ -7263,6 +7286,7 @@
       <keyword name="MiniEditor.__redo" id="MiniEditor.__redo" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__redo" />
       <keyword name="MiniEditor.__replace" id="MiniEditor.__replace" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__replace" />
       <keyword name="MiniEditor.__resetLanguage" id="MiniEditor.__resetLanguage" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__resetLanguage" />
+      <keyword name="MiniEditor.__resizeLinenoMargin" id="MiniEditor.__resizeLinenoMargin" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__resizeLinenoMargin" />
       <keyword name="MiniEditor.__save" id="MiniEditor.__save" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__save" />
       <keyword name="MiniEditor.__saveAs" id="MiniEditor.__saveAs" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__saveAs" />
       <keyword name="MiniEditor.__saveFile" id="MiniEditor.__saveFile" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__saveFile" />
@@ -8232,7 +8256,6 @@
       <keyword name="Project.__initProjectTypes" id="Project.__initProjectTypes" ref="eric5.Project.Project.html#Project.__initProjectTypes" />
       <keyword name="Project.__loadDiagram" id="Project.__loadDiagram" ref="eric5.Project.Project.html#Project.__loadDiagram" />
       <keyword name="Project.__loadRecent" id="Project.__loadRecent" ref="eric5.Project.Project.html#Project.__loadRecent" />
-      <keyword name="Project.__makePpathRe" id="Project.__makePpathRe" ref="eric5.Project.Project.html#Project.__makePpathRe" />
       <keyword name="Project.__openRecent" id="Project.__openRecent" ref="eric5.Project.Project.html#Project.__openRecent" />
       <keyword name="Project.__pluginCreateArchive" id="Project.__pluginCreateArchive" ref="eric5.Project.Project.html#Project.__pluginCreateArchive" />
       <keyword name="Project.__pluginCreatePkgList" id="Project.__pluginCreatePkgList" ref="eric5.Project.Project.html#Project.__pluginCreatePkgList" />
@@ -8957,8 +8980,13 @@
       <keyword name="QsciScintillaCompat.getFileName" id="QsciScintillaCompat.getFileName" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFileName" />
       <keyword name="QsciScintillaCompat.getFoundTarget" id="QsciScintillaCompat.getFoundTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getFoundTarget" />
       <keyword name="QsciScintillaCompat.getLineSeparator" id="QsciScintillaCompat.getLineSeparator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getLineSeparator" />
+      <keyword name="QsciScintillaCompat.getRectangularSelection" id="QsciScintillaCompat.getRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getRectangularSelection" />
+      <keyword name="QsciScintillaCompat.getSelectionCount" id="QsciScintillaCompat.getSelectionCount" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelectionCount" />
+      <keyword name="QsciScintillaCompat.getSelectionN" id="QsciScintillaCompat.getSelectionN" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelectionN" />
+      <keyword name="QsciScintillaCompat.getSelections" id="QsciScintillaCompat.getSelections" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getSelections" />
       <keyword name="QsciScintillaCompat.getZoom" id="QsciScintillaCompat.getZoom" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.getZoom" />
       <keyword name="QsciScintillaCompat.hasIndicator" id="QsciScintillaCompat.hasIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasIndicator" />
+      <keyword name="QsciScintillaCompat.hasSelection" id="QsciScintillaCompat.hasSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.hasSelection" />
       <keyword name="QsciScintillaCompat.indentationGuideView" id="QsciScintillaCompat.indentationGuideView" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indentationGuideView" />
       <keyword name="QsciScintillaCompat.indicatorDefine" id="QsciScintillaCompat.indicatorDefine" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indicatorDefine" />
       <keyword name="QsciScintillaCompat.lineAt" id="QsciScintillaCompat.lineAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineAt" />
@@ -8978,6 +9006,7 @@
       <keyword name="QsciScintillaCompat.positionFromPoint" id="QsciScintillaCompat.positionFromPoint" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionFromPoint" />
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
+      <keyword name="QsciScintillaCompat.selectionIsRectangle" id="QsciScintillaCompat.selectionIsRectangle" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.selectionIsRectangle" />
       <keyword name="QsciScintillaCompat.setContractedFolds" id="QsciScintillaCompat.setContractedFolds" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setContractedFolds" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
       <keyword name="QsciScintillaCompat.setCursorFlashTime" id="QsciScintillaCompat.setCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCursorFlashTime" />
@@ -8988,8 +9017,10 @@
       <keyword name="QsciScintillaCompat.setIndicator" id="QsciScintillaCompat.setIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicator" />
       <keyword name="QsciScintillaCompat.setIndicatorRange" id="QsciScintillaCompat.setIndicatorRange" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicatorRange" />
       <keyword name="QsciScintillaCompat.setLexer" id="QsciScintillaCompat.setLexer" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setLexer" />
+      <keyword name="QsciScintillaCompat.setRectangularSelection" id="QsciScintillaCompat.setRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setRectangularSelection" />
       <keyword name="QsciScintillaCompat.setStyleBits" id="QsciScintillaCompat.setStyleBits" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyleBits" />
       <keyword name="QsciScintillaCompat.setStyling" id="QsciScintillaCompat.setStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyling" />
+      <keyword name="QsciScintillaCompat.setVirtualSpaceOptions" id="QsciScintillaCompat.setVirtualSpaceOptions" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setVirtualSpaceOptions" />
       <keyword name="QsciScintillaCompat.showUserList" id="QsciScintillaCompat.showUserList" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.showUserList" />
       <keyword name="QsciScintillaCompat.startStyling" id="QsciScintillaCompat.startStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.startStyling" />
       <keyword name="QsciScintillaCompat.styleAt" id="QsciScintillaCompat.styleAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.styleAt" />
@@ -9030,7 +9061,6 @@
       <keyword name="QtPage (Constructor)" id="QtPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.__init__" />
       <keyword name="QtPage (Module)" id="QtPage (Module)" ref="eric5.Preferences.ConfigurationPages.QtPage.html" />
       <keyword name="QtPage.__updateQt4Sample" id="QtPage.__updateQt4Sample" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.__updateQt4Sample" />
-      <keyword name="QtPage.on_qt4Button_clicked" id="QtPage.on_qt4Button_clicked" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4Button_clicked" />
       <keyword name="QtPage.on_qt4PostfixEdit_textChanged" id="QtPage.on_qt4PostfixEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PostfixEdit_textChanged" />
       <keyword name="QtPage.on_qt4PrefixEdit_textChanged" id="QtPage.on_qt4PrefixEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PrefixEdit_textChanged" />
       <keyword name="QtPage.on_qt4TransButton_clicked" id="QtPage.on_qt4TransButton_clicked" ref="eric5.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4TransButton_clicked" />
@@ -9201,6 +9231,7 @@
       <keyword name="SearchReplaceWidget.__findByReturnPressed" id="SearchReplaceWidget.__findByReturnPressed" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findByReturnPressed" />
       <keyword name="SearchReplaceWidget.__findNextPrev" id="SearchReplaceWidget.__findNextPrev" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findNextPrev" />
       <keyword name="SearchReplaceWidget.__markOccurrences" id="SearchReplaceWidget.__markOccurrences" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__markOccurrences" />
+      <keyword name="SearchReplaceWidget.__selectionBoundary" id="SearchReplaceWidget.__selectionBoundary" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__selectionBoundary" />
       <keyword name="SearchReplaceWidget.__showFind" id="SearchReplaceWidget.__showFind" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showFind" />
       <keyword name="SearchReplaceWidget.__showReplace" id="SearchReplaceWidget.__showReplace" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showReplace" />
       <keyword name="SearchReplaceWidget.findNext" id="SearchReplaceWidget.findNext" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findNext" />
@@ -9319,6 +9350,7 @@
       <keyword name="Shell.__raw_input" id="Shell.__raw_input" ref="eric5.QScintilla.Shell.html#Shell.__raw_input" />
       <keyword name="Shell.__reset" id="Shell.__reset" ref="eric5.QScintilla.Shell.html#Shell.__reset" />
       <keyword name="Shell.__resetAndClear" id="Shell.__resetAndClear" ref="eric5.QScintilla.Shell.html#Shell.__resetAndClear" />
+      <keyword name="Shell.__resizeLinenoMargin" id="Shell.__resizeLinenoMargin" ref="eric5.QScintilla.Shell.html#Shell.__resizeLinenoMargin" />
       <keyword name="Shell.__rsearchHistory" id="Shell.__rsearchHistory" ref="eric5.QScintilla.Shell.html#Shell.__rsearchHistory" />
       <keyword name="Shell.__searchHistory" id="Shell.__searchHistory" ref="eric5.QScintilla.Shell.html#Shell.__searchHistory" />
       <keyword name="Shell.__searchNext" id="Shell.__searchNext" ref="eric5.QScintilla.Shell.html#Shell.__searchNext" />
@@ -9522,6 +9554,10 @@
       <keyword name="SnapshotTimer.paintEvent" id="SnapshotTimer.paintEvent" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.paintEvent" />
       <keyword name="SnapshotTimer.start" id="SnapshotTimer.start" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.start" />
       <keyword name="SnapshotTimer.stop" id="SnapshotTimer.stop" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.stop" />
+      <keyword name="SortOptionsDialog" id="SortOptionsDialog" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog" />
+      <keyword name="SortOptionsDialog (Constructor)" id="SortOptionsDialog (Constructor)" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog.__init__" />
+      <keyword name="SortOptionsDialog (Module)" id="SortOptionsDialog (Module)" ref="eric5.QScintilla.SortOptionsDialog.html" />
+      <keyword name="SortOptionsDialog.getData" id="SortOptionsDialog.getData" ref="eric5.QScintilla.SortOptionsDialog.html#SortOptionsDialog.getData" />
       <keyword name="SourceStat" id="SourceStat" ref="eric5.DataViews.CodeMetrics.html#SourceStat" />
       <keyword name="SourceStat (Constructor)" id="SourceStat (Constructor)" ref="eric5.DataViews.CodeMetrics.html#SourceStat.__init__" />
       <keyword name="SourceStat.dedent" id="SourceStat.dedent" ref="eric5.DataViews.CodeMetrics.html#SourceStat.dedent" />
@@ -11774,6 +11810,7 @@
       <keyword name="ViewManager.__editSelectBrace" id="ViewManager.__editSelectBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSelectBrace" />
       <keyword name="ViewManager.__editShowCallTips" id="ViewManager.__editShowCallTips" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editShowCallTips" />
       <keyword name="ViewManager.__editSmartIndent" id="ViewManager.__editSmartIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSmartIndent" />
+      <keyword name="ViewManager.__editSortSelectedLines" id="ViewManager.__editSortSelectedLines" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSortSelectedLines" />
       <keyword name="ViewManager.__editSpellingDictionary" id="ViewManager.__editSpellingDictionary" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSpellingDictionary" />
       <keyword name="ViewManager.__editStreamComment" id="ViewManager.__editStreamComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editStreamComment" />
       <keyword name="ViewManager.__editToggleComment" id="ViewManager.__editToggleComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editToggleComment" />
@@ -11787,6 +11824,7 @@
       <keyword name="ViewManager.__editorConfigChanged" id="ViewManager.__editorConfigChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorConfigChanged" />
       <keyword name="ViewManager.__editorOpened" id="ViewManager.__editorOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorOpened" />
       <keyword name="ViewManager.__editorSaved" id="ViewManager.__editorSaved" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorSaved" />
+      <keyword name="ViewManager.__editorSelectionChanged" id="ViewManager.__editorSelectionChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editorSelectionChanged" />
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
       <keyword name="ViewManager.__eolPixmap" id="ViewManager.__eolPixmap" ref="eric5.ViewManager.ViewManager.html#ViewManager.__eolPixmap" />
       <keyword name="ViewManager.__exportMenuTriggered" id="ViewManager.__exportMenuTriggered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__exportMenuTriggered" />
@@ -11853,6 +11891,7 @@
       <keyword name="ViewManager.__showBookmarkMenu" id="ViewManager.__showBookmarkMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkMenu" />
       <keyword name="ViewManager.__showBookmarkedMenu" id="ViewManager.__showBookmarkedMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarkedMenu" />
       <keyword name="ViewManager.__showBookmarksMenu" id="ViewManager.__showBookmarksMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showBookmarksMenu" />
+      <keyword name="ViewManager.__showEditSpellingMenu" id="ViewManager.__showEditSpellingMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showEditSpellingMenu" />
       <keyword name="ViewManager.__showFileMenu" id="ViewManager.__showFileMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showFileMenu" />
       <keyword name="ViewManager.__showRecentMenu" id="ViewManager.__showRecentMenu" ref="eric5.ViewManager.ViewManager.html#ViewManager.__showRecentMenu" />
       <keyword name="ViewManager.__spellCheck" id="ViewManager.__spellCheck" ref="eric5.ViewManager.ViewManager.html#ViewManager.__spellCheck" />
@@ -12397,6 +12436,7 @@
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric5.Plugins.PluginVcsSubversion.html#exeDisplayData" />
       <keyword name="exeDisplayDataList" id="exeDisplayDataList" ref="eric5.Plugins.PluginEricdoc.html#exeDisplayDataList" />
       <keyword name="exit" id="exit" ref="eric5.install.html#exit" />
+      <keyword name="exit" id="exit" ref="eric5.uninstall.html#exit" />
       <keyword name="expand_indent" id="expand_indent" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#expand_indent" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />
       <keyword name="exportShortcuts" id="exportShortcuts" ref="eric5.Preferences.Shortcuts.html#exportShortcuts" />
@@ -12452,6 +12492,7 @@
       <keyword name="getEditorTyping" id="getEditorTyping" ref="eric5.Preferences.__init__.html#getEditorTyping" />
       <keyword name="getEnvironmentEntry" id="getEnvironmentEntry" ref="eric5.Utilities.__init__.html#getEnvironmentEntry" />
       <keyword name="getExecutablePath" id="getExecutablePath" ref="eric5.Utilities.__init__.html#getExecutablePath" />
+      <keyword name="getExecutablePaths" id="getExecutablePaths" ref="eric5.Utilities.__init__.html#getExecutablePaths" />
       <keyword name="getExistingDirectory" id="getExistingDirectory" ref="eric5.E5Gui.E5FileDialog.html#getExistingDirectory" />
       <keyword name="getExporter" id="getExporter" ref="eric5.QScintilla.Exporters.__init__.html#getExporter" />
       <keyword name="getFileNameFromUrl" id="getFileNameFromUrl" ref="eric5.Helpviewer.HelpUtilities.html#getFileNameFromUrl" />
@@ -12492,14 +12533,16 @@
       <keyword name="getProject" id="getProject" ref="eric5.Preferences.__init__.html#getProject" />
       <keyword name="getProjectBrowserColour" id="getProjectBrowserColour" ref="eric5.Preferences.__init__.html#getProjectBrowserColour" />
       <keyword name="getProjectBrowserFlags" id="getProjectBrowserFlags" ref="eric5.Preferences.__init__.html#getProjectBrowserFlags" />
+      <keyword name="getPyQt4ModulesDirectory" id="getPyQt4ModulesDirectory" ref="eric5.Globals.__init__.html#getPyQt4ModulesDirectory" />
       <keyword name="getPython" id="getPython" ref="eric5.Preferences.__init__.html#getPython" />
       <keyword name="getPythonLibPath" id="getPythonLibPath" ref="eric5.Utilities.__init__.html#getPythonLibPath" />
-      <keyword name="getPythonModulesDirectory" id="getPythonModulesDirectory" ref="eric5.Utilities.__init__.html#getPythonModulesDirectory" />
+      <keyword name="getPythonModulesDirectory" id="getPythonModulesDirectory" ref="eric5.Globals.__init__.html#getPythonModulesDirectory" />
       <keyword name="getPythonVersion" id="getPythonVersion" ref="eric5.Utilities.__init__.html#getPythonVersion" />
       <keyword name="getQt" id="getQt" ref="eric5.Preferences.__init__.html#getQt" />
       <keyword name="getQt4DocDir" id="getQt4DocDir" ref="eric5.Preferences.__init__.html#getQt4DocDir" />
       <keyword name="getQt4TranslationsDir" id="getQt4TranslationsDir" ref="eric5.Preferences.__init__.html#getQt4TranslationsDir" />
       <keyword name="getQt5DocDir" id="getQt5DocDir" ref="eric5.Preferences.__init__.html#getQt5DocDir" />
+      <keyword name="getQtBinariesPath" id="getQtBinariesPath" ref="eric5.Globals.__init__.html#getQtBinariesPath" />
       <keyword name="getQtMacBundle" id="getQtMacBundle" ref="eric5.Utilities.__init__.html#getQtMacBundle" />
       <keyword name="getRealName" id="getRealName" ref="eric5.Utilities.__init__.html#getRealName" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric5.Debugger.DebuggerInterfaceNone.html#getRegistryData" />
@@ -12898,6 +12941,7 @@
       <file>eric5.DebugClients.Ruby.__init__.html</file>
       <file>eric5.Debugger.BreakPointModel.html</file>
       <file>eric5.Debugger.BreakPointViewer.html</file>
+      <file>eric5.Debugger.CallStackViewer.html</file>
       <file>eric5.Debugger.CallTraceViewer.html</file>
       <file>eric5.Debugger.Config.html</file>
       <file>eric5.Debugger.DebugClientCapabilities.html</file>
@@ -13517,6 +13561,7 @@
       <file>eric5.QScintilla.SearchReplaceWidget.html</file>
       <file>eric5.QScintilla.Shell.html</file>
       <file>eric5.QScintilla.ShellHistoryDialog.html</file>
+      <file>eric5.QScintilla.SortOptionsDialog.html</file>
       <file>eric5.QScintilla.SpellChecker.html</file>
       <file>eric5.QScintilla.SpellCheckingDialog.html</file>
       <file>eric5.QScintilla.SpellingDictionaryEditDialog.html</file>

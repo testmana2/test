@@ -58,6 +58,7 @@ BrowserMethodItem BrowserItem
 BrowserModel QAbstractItemModel
 BrowserSortFilterProxyModel QSortFilterProxyModel
 BrowserSysPathItem BrowserItem
+CallStackViewer QTreeWidget
 CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
@@ -590,6 +591,7 @@ SnapshotFreehandGrabber QWidget
 SnapshotPreview QLabel
 SnapshotRegionGrabber QWidget
 SnapshotTimer QWidget
+SortOptionsDialog QDialog Ui_SortOptionsDialog
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpeedDial QObject

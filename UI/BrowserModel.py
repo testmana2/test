@@ -35,23 +35,25 @@ class BrowserModel(QAbstractItemModel):
     """
     Class implementing the browser model.
     """
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, nopopulate=False):
         """
         Constructor
         
         @param parent reference to parent object (QObject)
+        @keyparam nopopulate flag indicating to not populate the model (boolean)
         """
         super(BrowserModel, self).__init__(parent)
-        
-        rootData = QApplication.translate("BrowserModel", "Name")
-        self.rootItem = BrowserItem(None, rootData)
         
         self.progDir = None
         self.watchedItems = {}
         self.watcher = QFileSystemWatcher(self)
         self.watcher.directoryChanged.connect(self.directoryChanged)
         
-        self.__populateModel()
+        if not nopopulate:
+            rootData = QApplication.translate("BrowserModel", "Name")
+            self.rootItem = BrowserItem(None, rootData)
+            
+            self.__populateModel()
     
     def columnCount(self, parent=QModelIndex()):
         """

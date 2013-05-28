@@ -223,7 +223,7 @@ class ProjectBrowserModel(BrowserModel):
         
         @param parent reference to parent object (Project.Project)
         """
-        super(ProjectBrowserModel, self).__init__(parent)
+        super(ProjectBrowserModel, self).__init__(parent, nopopulate=True)
         
         rootData = self.trUtf8("Name")
         self.rootItem = BrowserItem(None, rootData)

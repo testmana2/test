@@ -125,7 +125,8 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         """
         Private slot to remove a filter.
         """
-        itm = self.filtersList.takeItem(self.filtersList.currentRow())
+        row = self.filtersList.currentRow()
+        itm = self.filtersList.takeItem(row)
         if itm is None:
             return
         
@@ -133,7 +134,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         self.__removedFilters.append(itm.text())
         del itm
         if self.filtersList.count():
-            self.filtersList.setCurrentRow(0)
+            self.filtersList.setCurrentRow(row)
     
     @pyqtSlot()
     def on_removeAttributeButton_clicked(self):

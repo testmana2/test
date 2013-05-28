@@ -378,7 +378,6 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         self.hgQueueGotoForceAct.triggered[()].connect(self.__hgQueueGotoPatchForced)
         self.actions.append(self.hgQueueGotoForceAct)
     
-    
     def __initGuardsActions(self):
         """
         Public method to generate the guards action objects.
@@ -691,7 +690,6 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueShowHeader(self.project.getProjectPath())
-    
     
     def __hgQueuePushPopPatches(self, name, operation, all=False, named=False,
                                 force=False):

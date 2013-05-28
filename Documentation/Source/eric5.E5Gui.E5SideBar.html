@@ -67,6 +67,18 @@ QWidget
 <td><a href="#E5SideBar.__autoHideToggled">__autoHideToggled</a></td>
 <td>Private slot to handle the toggling of the autohide button.</td>
 </tr><tr>
+<td><a href="#E5SideBar.__cancelDelayTimer">__cancelDelayTimer</a></td>
+<td>Private method to cancel the current delay timer.</td>
+</tr><tr>
+<td><a href="#E5SideBar.__delayedAction">__delayedAction</a></td>
+<td>Private slot to handle the firing of the delay timer.</td>
+</tr><tr>
+<td><a href="#E5SideBar.__expandIt">__expandIt</a></td>
+<td>Private method to expand the sidebar.</td>
+</tr><tr>
+<td><a href="#E5SideBar.__shrinkIt">__shrinkIt</a></td>
+<td>Private method to shrink the sidebar.</td>
+</tr><tr>
 <td><a href="#E5SideBar.__splitterMoved">__splitterMoved</a></td>
 <td>Private slot to react on splitter moves.</td>
 </tr><tr>
@@ -85,6 +97,9 @@ QWidget
 <td><a href="#E5SideBar.currentWidget">currentWidget</a></td>
 <td>Public method to get a reference to the current widget.</td>
 </tr><tr>
+<td><a href="#E5SideBar.delay">delay</a></td>
+<td>Public method to get the delay value for the expand/shrink delay in milliseconds.</td>
+</tr><tr>
 <td><a href="#E5SideBar.enterEvent">enterEvent</a></td>
 <td>Protected method to handle the mouse entering this widget.</td>
 </tr><tr>
@@ -92,7 +107,7 @@ QWidget
 <td>Protected method to handle some events for the tabbar.</td>
 </tr><tr>
 <td><a href="#E5SideBar.expand">expand</a></td>
-<td>Public method to expand the sidebar.</td>
+<td>Public method to record a expand request.</td>
 </tr><tr>
 <td><a href="#E5SideBar.indexOf">indexOf</a></td>
 <td>Public method to get the index of the given widget.</td>
@@ -136,6 +151,9 @@ QWidget
 <td><a href="#E5SideBar.setCurrentWidget">setCurrentWidget</a></td>
 <td>Public slot to set the current widget.</td>
 </tr><tr>
+<td><a href="#E5SideBar.setDelay">setDelay</a></td>
+<td>Public method to set the delay value for the expand/shrink delay in milliseconds.</td>
+</tr><tr>
 <td><a href="#E5SideBar.setOrientation">setOrientation</a></td>
 <td>Public method to set the orientation of the sidebar.</td>
 </tr><tr>
@@ -158,7 +176,7 @@ QWidget
 <td>Public method to set the WhatsThis text of a tab.</td>
 </tr><tr>
 <td><a href="#E5SideBar.shrink">shrink</a></td>
-<td>Public method to shrink the sidebar.</td>
+<td>Public method to record a shrink request.</td>
 </tr><tr>
 <td><a href="#E5SideBar.shutdown">shutdown</a></td>
 <td>Public method to shut down the object.</td>
@@ -185,13 +203,16 @@ QWidget
 </table>
 <a NAME="E5SideBar.__init__" ID="E5SideBar.__init__"></a>
 <h4>E5SideBar (Constructor)</h4>
-<b>E5SideBar</b>(<i>orientation=None, parent=None</i>)
+<b>E5SideBar</b>(<i>orientation=None, delay=200, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>orientation</i></dt>
 <dd>
 orientation of the sidebar widget (North, East, South, West)
+</dd><dt><i>delay</i></dt>
+<dd>
+value for the expand/shrink delay in milliseconds (integer)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -219,7 +240,27 @@ reference to the widget having the focus (QWidget or None)
 <dd>
 flag indicating the checked state of the button (boolean)
 </dd>
-</dl><a NAME="E5SideBar.__splitterMoved" ID="E5SideBar.__splitterMoved"></a>
+</dl><a NAME="E5SideBar.__cancelDelayTimer" ID="E5SideBar.__cancelDelayTimer"></a>
+<h4>E5SideBar.__cancelDelayTimer</h4>
+<b>__cancelDelayTimer</b>(<i></i>)
+<p>
+        Private method to cancel the current delay timer.
+</p><a NAME="E5SideBar.__delayedAction" ID="E5SideBar.__delayedAction"></a>
+<h4>E5SideBar.__delayedAction</h4>
+<b>__delayedAction</b>(<i></i>)
+<p>
+        Private slot to handle the firing of the delay timer.
+</p><a NAME="E5SideBar.__expandIt" ID="E5SideBar.__expandIt"></a>
+<h4>E5SideBar.__expandIt</h4>
+<b>__expandIt</b>(<i></i>)
+<p>
+        Private method to expand the sidebar.
+</p><a NAME="E5SideBar.__shrinkIt" ID="E5SideBar.__shrinkIt"></a>
+<h4>E5SideBar.__shrinkIt</h4>
+<b>__shrinkIt</b>(<i></i>)
+<p>
+        Private method to shrink the sidebar.
+</p><a NAME="E5SideBar.__splitterMoved" ID="E5SideBar.__splitterMoved"></a>
 <h4>E5SideBar.__splitterMoved</h4>
 <b>__splitterMoved</b>(<i>pos, index</i>)
 <p>
@@ -285,6 +326,16 @@ index of the current tab (integer)
 <dd>
 reference to the current widget (QWidget)
 </dd>
+</dl><a NAME="E5SideBar.delay" ID="E5SideBar.delay"></a>
+<h4>E5SideBar.delay</h4>
+<b>delay</b>(<i></i>)
+<p>
+        Public method to get the delay value for the expand/shrink delay in milliseconds.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+value for the expand/shrink delay in milliseconds (integer)
+</dd>
 </dl><a NAME="E5SideBar.enterEvent" ID="E5SideBar.enterEvent"></a>
 <h4>E5SideBar.enterEvent</h4>
 <b>enterEvent</b>(<i>event</i>)
@@ -317,7 +368,7 @@ flag indicating, if the event was handled (boolean)
 <h4>E5SideBar.expand</h4>
 <b>expand</b>(<i></i>)
 <p>
-        Public method to expand the sidebar.
+        Public method to record a expand request.
 </p><a NAME="E5SideBar.indexOf" ID="E5SideBar.indexOf"></a>
 <h4>E5SideBar.indexOf</h4>
 <b>indexOf</b>(<i>widget</i>)
@@ -474,6 +525,16 @@ the index to set as the current index (integer)
 <dd>
 reference to the widget to become the current widget (QWidget)
 </dd>
+</dl><a NAME="E5SideBar.setDelay" ID="E5SideBar.setDelay"></a>
+<h4>E5SideBar.setDelay</h4>
+<b>setDelay</b>(<i>delay</i>)
+<p>
+        Public method to set the delay value for the expand/shrink delay in milliseconds.
+</p><dl>
+<dt><i>delay</i></dt>
+<dd>
+value for the expand/shrink delay in milliseconds (integer)
+</dd>
 </dl><a NAME="E5SideBar.setOrientation" ID="E5SideBar.setOrientation"></a>
 <h4>E5SideBar.setOrientation</h4>
 <b>setOrientation</b>(<i>orient</i>)
@@ -563,7 +624,7 @@ text text to set (string)
 <h4>E5SideBar.shrink</h4>
 <b>shrink</b>(<i></i>)
 <p>
-        Public method to shrink the sidebar.
+        Public method to record a shrink request.
 </p><a NAME="E5SideBar.shutdown" ID="E5SideBar.shutdown"></a>
 <h4>E5SideBar.shutdown</h4>
 <b>shutdown</b>(<i></i>)

@@ -14,7 +14,7 @@ import os
 import shutil
 import subprocess
 
-from Utilities import joinext, relpath, html_encode
+from Utilities import joinext, relpath, html_encode, getQtBinariesPath
 
 HelpCollection = r"""<?xml version="1.0" encoding="utf-8" ?>
 <QHelpCollectionProject version="1.0">
@@ -261,8 +261,8 @@ class QtHelpGenerator(object):
         # generate the compressed files
         shutil.copy(os.path.join(self.outputDir, HelpProjectFile), self.htmlDir)
         os.chdir(self.htmlDir)
-        subprocess.call(["qhelpgenerator", "source.qhp",
-                         "-o", os.path.join(self.outputDir, HelpHelpFile)])
+        subprocess.call([os.path.join(getQtBinariesPath(), "qhelpgenerator"),
+                         "source.qhp", "-o", os.path.join(self.outputDir, HelpHelpFile)])
         os.remove(HelpProjectFile)
         
         if self.createCollection:
@@ -270,6 +270,7 @@ class QtHelpGenerator(object):
             sys.stdout.flush()
             sys.stderr.flush()
             os.chdir(self.outputDir)
-            subprocess.call(["qcollectiongenerator", "source.qhcp", "-o", "collection.qhc"])
+            subprocess.call([os.path.join(getQtBinariesPath(), "qcollectiongenerator"),
+                             "source.qhcp", "-o", "collection.qhc"])
         
         os.chdir(cwd)

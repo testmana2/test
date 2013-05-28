@@ -54,10 +54,7 @@ for arg in sys.argv:
         break
 
 # make Third-Party package available as a packages repository
-try:
-    import pygments     # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
-except ImportError:
-    sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
 
 from E5Gui.E5Application import E5Application
 
@@ -218,16 +215,13 @@ def main():
         splash = SplashScreen()
 
     # modify the executable search path for the PyQt4 installer
-    try:
-        from PyQt4 import pyqtconfig
-        pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
+    if Globals.isWindowsPlatform():
+        pyqtDataDir = Globals.getPyQt4ModulesDirectory()
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
             path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
         else:
             path = pyqtDataDir + os.pathsep + os.environ["PATH"]
         os.environ["PATH"] = path
-    except (AttributeError, ImportError):
-        pass
     
     pluginFile = None
     noopen = False

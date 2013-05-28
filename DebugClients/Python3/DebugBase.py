@@ -539,13 +539,21 @@ class DebugBase(bdb.Bdb):
         stack = []
         while fr is not None:
             fname = self._dbgClient.absPath(self.fix_frame_filename(fr))
-            fline = fr.f_lineno
-            ffunc = fr.f_code.co_name
-            
-            if ffunc == '?':
-                ffunc = ''
-            
-            stack.append([fname, fline, ffunc])
+            if not fname.startswith("<"):
+                fline = fr.f_lineno
+                ffunc = fr.f_code.co_name
+                
+                if ffunc == '?':
+                    ffunc = ''
+                
+                if ffunc and not ffunc.startswith("<"):
+                    argInfo = inspect.getargvalues(fr)
+                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
+                                                    argInfo.keywords, argInfo.locals)
+                else:
+                    fargs = ""
+                
+                stack.append([fname, fline, ffunc, fargs])
             
             if fr == self._dbgClient.mainFrame:
                 fr = None
@@ -588,13 +596,21 @@ class DebugBase(bdb.Bdb):
             # return from dispatch_call
             fr.f_trace = self.trace_dispatch
             fname = self._dbgClient.absPath(self.fix_frame_filename(fr))
-            fline = fr.f_lineno
-            ffunc = fr.f_code.co_name
-            
-            if ffunc == '?':
-                ffunc = ''
-            
-            stack.append([fname, fline, ffunc])
+            if not fname.startswith("<"):
+                fline = fr.f_lineno
+                ffunc = fr.f_code.co_name
+                
+                if ffunc == '?':
+                    ffunc = ''
+                
+                if ffunc and not ffunc.startswith("<"):
+                    argInfo = inspect.getargvalues(fr)
+                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
+                                                    argInfo.keywords, argInfo.locals)
+                else:
+                    fargs = ""
+                
+                stack.append([fname, fline, ffunc, fargs])
             
             if fr == self._dbgClient.mainFrame:
                 fr = None
@@ -661,16 +677,30 @@ class DebugBase(bdb.Bdb):
                 frlist.reverse()
                 
                 self.currentFrame = frlist[0]
+                self.currentFrameLocals = frlist[0].f_locals
+                # remember the locals because it is reinitialized when accessed
                 
                 for fr in frlist:
                     filename = self._dbgClient.absPath(self.fix_frame_filename(fr))
-                    linenr = fr.f_lineno
                     
                     if os.path.basename(filename).startswith("DebugClient") or \
                        os.path.basename(filename) == "bdb.py":
                         break
                     
-                    exclist.append([filename, linenr])
+                    linenr = fr.f_lineno
+                    ffunc = fr.f_code.co_name
+                    
+                    if ffunc == '?':
+                        ffunc = ''
+                    
+                    if ffunc and not ffunc.startswith("<"):
+                        argInfo = inspect.getargvalues(fr)
+                        fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
+                                                        argInfo.keywords, argInfo.locals)
+                    else:
+                        fargs = ""
+                    
+                    exclist.append([filename, linenr, ffunc, fargs])
             
             self._dbgClient.write("{0}{1}\n".format(ResponseException, str(exclist)))
             

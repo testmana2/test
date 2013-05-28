@@ -17,12 +17,26 @@ import shutil
 import glob
 import distutils.sysconfig
 
+# get a local eric5config.py out of the way
+if os.path.exists("eric5config.py"):
+    os.rename("eric5config.py", "eric5config.py.orig")
 from eric5config import getConfig
 
 # Define the globals.
 progName = None
 pyModDir = None
 progLanguages = ["Python", "Ruby"]
+
+
+def exit(rcode=0):
+    """
+    Exit the uninstall script.
+    """
+    # restore the local eric5config.py
+    if os.path.exists("eric5config.py.orig"):
+        if os.path.exists("eric5config.py"):
+            os.remove("eric5config.py")
+        os.rename("eric5config.py.orig", "eric5config.py")
 
 
 def usage(rcode=2):
@@ -37,7 +51,7 @@ def usage(rcode=2):
     print("where:")
     print("    -h             display this help message")
 
-    sys.exit(rcode)
+    exit(rcode)
 
 
 def initGlobals():
@@ -143,7 +157,7 @@ def uninstallEric():
             shutil.rmtree("/Developer/Applications/Eric5")
         if os.path.exists("/Applications/eric5.app"):
             shutil.rmtree("/Applications/eric5.app")
-    
+
 
 def main(argv):
     """The main function of the script.
@@ -176,7 +190,9 @@ def main(argv):
     except OSError as msg:
         sys.stderr.write('OSError: {0}\nTry uninstall with admin rights.\n'.format(msg))
     
-    
+    exit(0)
+
+
 if __name__ == "__main__":
     try:
         main(sys.argv)

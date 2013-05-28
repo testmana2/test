@@ -12,7 +12,7 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 import sys
 import os
 
-from PyQt4.QtCore import QDir
+from PyQt4.QtCore import QDir, QLibraryInfo
 
 # names of the various settings objects
 settingsNameOrganization = "Eric5"
@@ -145,6 +145,49 @@ def setConfigDir(d):
     """
     global configDir
     configDir = os.path.expanduser(d)
+
+
+def getPythonModulesDirectory():
+    """
+    Function to determine the path to Python's modules directory.
+    
+    @return path to the Python modules directory (string)
+    """
+    import distutils.sysconfig
+    return distutils.sysconfig.get_python_lib(True)
+
+
+def getPyQt4ModulesDirectory():
+    """
+    Function to determine the path to PyQt4's modules directory.
+    
+    @return path to the PyQt4 modules directory (string)
+    """
+    import distutils.sysconfig
+    return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt4")
+    
+
+def getQtBinariesPath():
+    """
+    Module function to get the path of the Qt binaries.
+    
+    @return path of the Qt binaries (string)
+    """
+    path = ""
+    if isWindowsPlatform():
+        # check for PyQt4 installer first (designer is test object)
+        modDir = getPyQt4ModulesDirectory()
+        if os.path.exists(os.path.join(modDir, "bin", "designer.exe")):
+            path = os.path.join(modDir, "bin")
+        elif os.path.exists(os.path.join(modDir, "designer.exe")):
+            path = modDir
+    
+    if not path:
+        path = QLibraryInfo.location(QLibraryInfo.BinariesPath)
+        if not os.path.exists(path):
+            path = ""
+    
+    return QDir.toNativeSeparators(path)
 
 
 ################################################################################

@@ -1175,6 +1175,22 @@ class ViewManager(QObject):
         self.calltipsAct.triggered[()].connect(self.__editShowCallTips)
         self.editActions.append(self.calltipsAct)
         
+        self.sortAct = E5Action(QApplication.translate('ViewManager', 'Sort'),
+                QApplication.translate('ViewManager', 'Sort'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Alt+S", "Edit|Sort")),
+                0,
+                self.editActGrp, 'vm_edit_sort')
+        self.sortAct.setStatusTip(QApplication.translate('ViewManager',
+            'Sort the lines containing the rectangular selection'))
+        self.sortAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Sort</b>"""
+            """<p>Sort the lines spanned by a rectangular selection based on the"""
+            """ selection ignoring leading and trailing whitespace.</p>"""
+        ))
+        self.sortAct.triggered[()].connect(self.__editSortSelectedLines)
+        self.editActions.append(self.sortAct)
+        
         self.editActGrp.setEnabled(False)
         self.copyActGrp.setEnabled(False)
         
@@ -1792,28 +1808,6 @@ class ViewManager(QObject):
         self.editActions.append(act)
         
         act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to lower case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_lower')
-        self.esm.setMapping(act, QsciScintilla.SCI_LOWERCASE)
-        act.triggered[()].connect(self.esm.map)
-        self.editActions.append(act)
-        
-        act = E5Action(QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QApplication.translate('ViewManager',
-                        'Convert selection to upper case'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+U')),
-                      0,
-                      self.editorActGrp, 'vm_edit_convert_selection_upper')
-        self.esm.setMapping(act, QsciScintilla.SCI_UPPERCASE)
-        act.triggered[()].connect(self.esm.map)
-        self.editActions.append(act)
-        
-        act = E5Action(QApplication.translate('ViewManager',
                         'Move to end of display line'),
                       QApplication.translate('ViewManager',
                         'Move to end of display line'),
@@ -2290,6 +2284,28 @@ class ViewManager(QObject):
             self.editActions.append(act)
         
         self.editorActGrp.setEnabled(False)
+        
+        self.editLowerCaseAct = E5Action(QApplication.translate('ViewManager',
+                        'Convert selection to lower case'),
+                    QApplication.translate('ViewManager',
+                        'Convert selection to lower case'),
+                    QKeySequence(QApplication.translate('ViewManager', 'Alt+Shift+U')),
+                    0,
+                    self.editActGrp, 'vm_edit_convert_selection_lower')
+        self.esm.setMapping(self.editLowerCaseAct, QsciScintilla.SCI_LOWERCASE)
+        self.editLowerCaseAct.triggered[()].connect(self.esm.map)
+        self.editActions.append(self.editLowerCaseAct)
+        
+        self.editUpperCaseAct = E5Action(QApplication.translate('ViewManager',
+                        'Convert selection to upper case'),
+                    QApplication.translate('ViewManager',
+                        'Convert selection to upper case'),
+                    QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+U')),
+                    0,
+                    self.editActGrp, 'vm_edit_convert_selection_upper')
+        self.esm.setMapping(self.editUpperCaseAct, QsciScintilla.SCI_UPPERCASE)
+        self.editUpperCaseAct.triggered[()].connect(self.esm.map)
+        self.editActions.append(self.editUpperCaseAct)
     
     def initEditMenu(self):
         """
@@ -2347,6 +2363,10 @@ class ViewManager(QObject):
         menu.addAction(self.toggleCommentAct)
         menu.addAction(self.streamCommentAct)
         menu.addAction(self.boxCommentAct)
+        menu.addSeparator()
+        menu.addAction(self.editUpperCaseAct)
+        menu.addAction(self.editLowerCaseAct)
+        menu.addAction(self.sortAct)
         menu.addSeparator()
         menu.addMenu(autocompletionMenu)
         menu.addSeparator()
@@ -3617,14 +3637,13 @@ class ViewManager(QObject):
             QApplication.translate('ViewManager', "Project Exception List"),
             self.__editProjectPEL)
         self.__editSpellingMenu.addSeparator()
-        self.__editSpellingMenu.addAction(
+        self.__editUserPwlAct = self.__editSpellingMenu.addAction(
             QApplication.translate('ViewManager', "User Word List"),
             self.__editUserPWL)
-        self.__editSpellingMenu.addAction(
+        self.__editUserPelAct = self.__editSpellingMenu.addAction(
             QApplication.translate('ViewManager', "User Exception List"),
             self.__editUserPEL)
-        self.__editProjectPwlAct.setEnabled(False)
-        self.__editProjectPelAct.setEnabled(False)
+        self.__editSpellingMenu.aboutToShow.connect(self.__showEditSpellingMenu)
         
         menu.addAction(self.spellCheckAct)
         menu.addAction(self.autoSpellCheckAct)
@@ -3884,6 +3903,7 @@ class ViewManager(QObject):
         editor.encodingChanged.connect(self.__editorConfigChanged)
         editor.selectionChanged.connect(self.__searchWidget.selectionChanged)
         editor.selectionChanged.connect(self.__replaceWidget.selectionChanged)
+        editor.selectionChanged.connect(self.__editorSelectionChanged)
         editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
         editor.zoomValueChanged.connect(self.zoomValueChanged)
         
@@ -5409,6 +5429,23 @@ class ViewManager(QObject):
     ## Below are the action methods for the spell checking functions
     ##################################################################
     
+    def __showEditSpellingMenu(self):
+        """
+        Private method to set up the edit dictionaries menu.
+        """
+        proj = e5App().getObject("Project")
+        projetOpen = proj.isOpen()
+        pwl = e5App().getObject("Project").getProjectDictionaries()[0]
+        self.__editProjectPwlAct.setEnabled(projetOpen and bool(pwl))
+        pel = e5App().getObject("Project").getProjectDictionaries()[1]
+        self.__editProjectPelAct.setEnabled(projetOpen and bool(pel))
+        
+        from QScintilla.SpellChecker import SpellChecker
+        pwl = SpellChecker.getUserDictionaryPath()
+        self.__editUserPwlAct.setEnabled(bool(pwl))
+        pel = SpellChecker.getUserDictionaryPath(True)
+        self.__editUserPelAct.setEnabled(bool(pel))
+    
     def __setAutoSpellChecking(self):
         """
         Private slot to set the automatic spell checking of all editors.
@@ -5431,26 +5468,14 @@ class ViewManager(QObject):
         Private slot to edit the project word list.
         """
         pwl = e5App().getObject("Project").getProjectDictionaries()[0]
-        if pwl:
-            self.__editSpellingDictionary(pwl)
-        else:
-            E5MessageBox.warning(self.ui,
-                QApplication.translate('ViewManager', "Edit Project Word List"),
-                QApplication.translate('ViewManager',
-                    """No word list defined for the current project."""))
+        self.__editSpellingDictionary(pwl)
     
     def __editProjectPEL(self):
         """
         Private slot to edit the project exception list.
         """
         pel = e5App().getObject("Project").getProjectDictionaries()[1]
-        if pel:
-            self.__editSpellingDictionary(pel)
-        else:
-            E5MessageBox.warning(self.ui,
-                QApplication.translate('ViewManager', "Edit Project Exception List"),
-                QApplication.translate('ViewManager',
-                    """No exception list defined for the current project."""))
+        self.__editSpellingDictionary(pel)
     
     def __editUserPWL(self):
         """
@@ -5725,6 +5750,11 @@ class ViewManager(QObject):
                 self.gotoPreviousDefAct.setEnabled(False)
                 self.gotoNextDefAct.setEnabled(False)
             
+            self.sortAct.setEnabled(editor.selectionIsRectangle())
+            enable = editor.hasSelection()
+            self.editUpperCaseAct.setEnabled(enable)
+            self.editLowerCaseAct.setEnabled(enable)
+            
             if setSb:
                 line, pos = editor.getCursorPosition()
                 enc = editor.getEncoding()
@@ -5880,6 +5910,27 @@ class ViewManager(QObject):
         self.__setSbFile(
             fn, line + 1, pos, encoding=enc, language=lang, eol=eol, zoom=zoom)
         self._checkActions(editor, False)
+    
+    def __editorSelectionChanged(self):
+        """
+        Private slot to handle changes of the current editors selection.
+        """
+        editor = self.sender()
+        if editor:
+            self.sortAct.setEnabled(editor.selectionIsRectangle())
+            enable = editor.hasSelection()
+            self.editUpperCaseAct.setEnabled(enable)
+            self.editLowerCaseAct.setEnabled(enable)
+        else:
+            self.sortAct.setEnabled(False)
+    
+    def __editSortSelectedLines(self):
+        """
+        Private slot to sort the selected lines.
+        """
+        editor = self.activeWindow()
+        if editor:
+            editor.sortLines()
     
     ##################################################################
     ## Below are protected utility methods

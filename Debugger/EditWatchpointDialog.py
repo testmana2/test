@@ -82,7 +82,6 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
             # should not happen
             self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
-        
     def getData(self):
         """
         Public method to retrieve the entered data.

@@ -713,14 +713,15 @@ class UserInterface(E5MainWindow):
         """
         from E5Gui.E5SideBar import E5SideBar
         
+        delay = Preferences.getUI("SidebarDelay")
         # Create the left sidebar
-        self.leftSidebar = E5SideBar(E5SideBar.West)
+        self.leftSidebar = E5SideBar(E5SideBar.West, delay)
         
         # Create the bottom sidebar
-        self.bottomSidebar = E5SideBar(E5SideBar.South)
+        self.bottomSidebar = E5SideBar(E5SideBar.South, delay)
         
         # Create the right sidebar
-        self.rightSidebar = E5SideBar(E5SideBar.East)
+        self.rightSidebar = E5SideBar(E5SideBar.East, delay)
         
         # Create the project browser
         logging.debug("Creating Project Browser...")
@@ -1024,9 +1025,12 @@ class UserInterface(E5MainWindow):
                 else:
                     argsStr = "{0} {1}".format(argsStr, arg)
                 continue
-
-            ext = os.path.splitext(arg)[1]
-            ext = os.path.normcase(ext)
+            
+            try:
+                ext = os.path.splitext(arg)[1]
+                ext = os.path.normcase(ext)
+            except IndexError:
+                ext = ""
 
             if ext in ['.e4p']:
                 self.project.openProject(arg)
@@ -1600,12 +1604,14 @@ class UserInterface(E5MainWindow):
         
         # check for Qt4/Qt5 designer and linguist
         if Utilities.isWindowsPlatform():
-            designerExe = "{0}.exe".format(Utilities.generateQtToolName("designer"))
+            designerExe = os.path.join(Utilities.getQtBinariesPath(),
+                "{0}.exe".format(Utilities.generateQtToolName("designer")))
         elif Utilities.isMacPlatform():
             designerExe = Utilities.getQtMacBundle("designer")
         else:
-            designerExe = Utilities.generateQtToolName("designer")
-        if Utilities.isinpath(designerExe):
+            designerExe = os.path.join(Utilities.getQtBinariesPath(),
+                Utilities.generateQtToolName("designer"))
+        if os.path.exists(designerExe):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer'),
                     UI.PixmapCache.getIcon("designer4.png"),
                     self.trUtf8('Qt-&Designer...'), 0, 0, self, 'qt_designer4')
@@ -1620,12 +1626,14 @@ class UserInterface(E5MainWindow):
             self.designer4Act = None
         
         if Utilities.isWindowsPlatform():
-            linguistExe = "{0}.exe".format(Utilities.generateQtToolName("linguist"))
+            linguistExe = os.path.join(Utilities.getQtBinariesPath(),
+                "{0}.exe".format(Utilities.generateQtToolName("linguist")))
         elif Utilities.isMacPlatform():
             linguistExe = Utilities.getQtMacBundle("linguist")
         else:
-            linguistExe = Utilities.generateQtToolName("linguist")
-        if Utilities.isinpath(linguistExe):
+            linguistExe = os.path.join(Utilities.getQtBinariesPath(),
+                Utilities.generateQtToolName("linguist"))
+        if os.path.exists(linguistExe):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist'),
                     UI.PixmapCache.getIcon("linguist4.png"),
                     self.trUtf8('Qt-&Linguist...'), 0, 0, self, 'qt_linguist4')
@@ -3754,9 +3762,11 @@ class UserInterface(E5MainWindow):
             designer, args = Utilities.prepareQtMacBundle("designer", version, args)
         else:
             if version == 4:
-                designer = Utilities.generateQtToolName("designer")
+                designer = os.path.join(
+                    Utilities.getQtBinariesPath(),
+                    Utilities.generateQtToolName("designer"))
             if Utilities.isWindowsPlatform():
-                designer = designer + '.exe'
+                designer += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(designer, args):
@@ -3811,9 +3821,11 @@ class UserInterface(E5MainWindow):
             linguist, args = Utilities.prepareQtMacBundle("linguist", version, args)
         else:
             if version == 4:
-                linguist = Utilities.generateQtToolName("linguist")
+                linguist = os.path.join(
+                    Utilities.getQtBinariesPath(),
+                    Utilities.generateQtToolName("linguist"))
             if Utilities.isWindowsPlatform():
-                linguist = linguist + '.exe'
+                linguist += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(linguist, args):
@@ -3855,9 +3867,11 @@ class UserInterface(E5MainWindow):
             assistant, args = Utilities.prepareQtMacBundle("assistant", version, args)
         else:
             if version == 4:
-                assistant = Utilities.generateQtToolName("assistant")
+                assistant = os.path.join(
+                    Utilities.getQtBinariesPath(),
+                    Utilities.generateQtToolName("assistant"))
             if Utilities.isWindowsPlatform():
-                assistant = assistant + '.exe'
+                assistant += '.exe'
         
         proc = QProcess()
         if not proc.startDetached(assistant, args):
@@ -4178,9 +4192,8 @@ class UserInterface(E5MainWindow):
                toolProcData[1] not in ["insert", "replaceSelection"]:
                 # not connected to an editor or wrong mode
                 while toolProc.canReadLine():
-                    s = "{0} - ".format(program)
                     output = str(toolProc.readLine(), ioEncoding, 'replace')
-                    s.append(output)
+                    s = "{0} - {1}".format(program, output)
                     self.appendToStdout(s)
             else:
                 if toolProcData[1] == "insert":
@@ -4201,9 +4214,8 @@ class UserInterface(E5MainWindow):
             toolProc.setReadChannel(QProcess.StandardError)
             
             while toolProc.canReadLine():
-                s = "{0} - ".format(program)
                 error = str(toolProc.readLine(), ioEncoding, 'replace')
-                s.append(error)
+                s = "{0} - {1}".format(program, error)
                 self.appendToStderr(s)
         
     def __toolFinished(self, exitCode, exitStatus):
@@ -4695,8 +4707,13 @@ class UserInterface(E5MainWindow):
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
-        self.preferencesChanged.emit()
+        if self.layout == "Sidebars":
+            delay = Preferences.getUI("SidebarDelay")
+            self.leftSidebar.setDelay(delay)
+            self.bottomSidebar.setDelay(delay)
+            self.rightSidebar.setDelay(delay)
         
+        self.preferencesChanged.emit()
     
     def __masterPasswordChanged(self, oldPassword, newPassword):
         """

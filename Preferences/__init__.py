@@ -36,7 +36,7 @@ from E5Gui import E5FileDialog
 from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, findPythonInterpreters
+    isWindowsPlatform, findPythonInterpreters, getPyQt4ModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -101,6 +101,7 @@ class Prefs(object):
         "StyleSheet": "",
         "ViewManager": "tabview",
         "LayoutType": "Sidebars",
+        "SidebarDelay": 200,
         # allowed values are "Toolboxes" and "Sidebars"
         "LayoutShellEmbedded": 0,           # 0 = separate
                                             # 1 = embedded in debug browser
@@ -225,7 +226,6 @@ class Prefs(object):
         "AutosaveInterval": 0,
         "TabWidth": 4,
         "IndentWidth": 4,
-        "LinenoWidth": 4,
         "IndentationGuides": True,
         "UnifiedMargins": False,
         "LinenoMargin": True,
@@ -316,6 +316,8 @@ class Prefs(object):
         "PreviewHtmlFileNameExtensions": ["html", "htm", "svg", "asp", "kid"],
         "PreviewMarkdownFileNameExtensions": ["md", "markdown"],
         "PreviewRestFileNameExtensions": ["rst"],
+        
+        "VirtualSpaceOptions": QsciScintilla.SCVS_NONE,
         
         # All (most) lexers
         "AllFoldCompact": True,
@@ -789,7 +791,6 @@ class Prefs(object):
     
     # defaults for the shell settings
     shellDefaults = {
-        "LinenoWidth": 4,
         "LinenoMargin": True,
         "AutoCompletionEnabled": True,
         "CallTipsEnabled": True,
@@ -807,7 +808,6 @@ class Prefs(object):
         "Qt4TranslationsDir": "",
         "QtToolsPrefix4": "",
         "QtToolsPostfix4": "",
-        "Qt4Dir": "",
     }
     
     # defaults for corba related stuff
@@ -1378,7 +1378,8 @@ def getUI(key, prefClass=Prefs):
     elif key in ["TabViewManagerFilenameLength", "CaptionFilenameLength",
                  "ProxyPort/Http", "ProxyPort/Https", "ProxyPort/Ftp",
                  "ProxyType/Ftp", "OpenOnStartup",
-                 "PerformVersionCheck", "RecentNumber", "NotificationTimeout"]:
+                 "PerformVersionCheck", "RecentNumber", "NotificationTimeout",
+                 "SidebarDelay"]:
         return int(prefClass.settings.value("UI/" + key,
             prefClass.uiDefaults[key]))
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",
@@ -1428,6 +1429,39 @@ def getUI(key, prefClass=Prefs):
         # Remove unused setting in Python 2. Otherwise Eric 5.3 would get problems
         if sys.version_info[0] == 2:
             prefClass.settings.remove("UI/ViewProfiles")
+        return viewProfiles
+    elif key in "ViewProfiles2":
+        profiles = prefClass.settings.value("UI/ViewProfiles2")
+        if profiles is not None:
+            viewProfiles = {}
+            profiles = json.loads(profiles)
+            for name in ["edit", "debug"]:
+                viewProfiles[name] = [
+                    QByteArray.fromBase64(profiles[name][0].encode()),
+                    profiles[name][1][:],
+                    []
+                ]
+                for bs in profiles[name][2]:
+                    viewProfiles[name][2].append(QByteArray.fromBase64(bs.encode()))
+        else:
+            # migrate from the old ViewProfiles settings
+            try:
+                profiles = prefClass.settings.value("UI/ViewProfiles")
+            except TypeError:
+                profiles = None
+            if profiles is not None:
+                viewProfiles = {}
+                for name in ["edit", "debug"]:
+                    viewProfiles[name] = [
+                        QByteArray(profiles[name][4]),
+                        profiles[name][5][:],
+                        []
+                    ]
+                    for b in profiles[name][6]:
+                        viewProfiles[name][2].append(QByteArray(b))
+            else:
+                # use the defaults
+                viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
         return viewProfiles
     elif key in ["ToolbarManagerState", "PreviewSplitterState"]:
         state = prefClass.settings.value("UI/" + key)
@@ -1545,14 +1579,15 @@ def getEditor(key, prefClass=Prefs):
                "SpellCheckingDefaultLanguage", "SpellCheckingPersonalWordList",
                "SpellCheckingPersonalExcludeList"]:
         return prefClass.settings.value("Editor/" + key, prefClass.editorDefaults[key])
-    elif key in ["AutosaveInterval", "TabWidth", "IndentWidth", "LinenoWidth",
+    elif key in ["AutosaveInterval", "TabWidth", "IndentWidth",
                  "FoldingStyle", "WarnFilesize", "EdgeMode", "EdgeColumn",
                  "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold",
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
                  "OnlineSyntaxCheckInterval", "OnlineChangeTraceInterval",
-                 "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition"]:
+                 "WrapLongLinesMode", "WrapVisualFlag", "CallTipsPosition",
+                 "VirtualSpaceOptions"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
@@ -1884,7 +1919,7 @@ def getShell(key, prefClass=Prefs):
         f.fromString(prefClass.settings.value("Shell/" + key,
             prefClass.shellDefaults[key]))
         return f
-    elif key in ["LinenoWidth", "MaxHistoryEntries"]:
+    elif key in ["MaxHistoryEntries"]:
         return int(prefClass.settings.value("Shell/" + key,
             prefClass.shellDefaults[key]))
     else:
@@ -2264,8 +2299,7 @@ def getQt4TranslationsDir(prefClass=Prefs):
     if s == "":
         s = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     if s == "" and isWindowsPlatform():
-        from PyQt4 import pyqtconfig
-        transPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "translations")
+        transPath = os.path.join(getPyQt4ModulesDirectory(), "translations")
         if os.path.exists(transPath):
             s = transPath
     return s
@@ -2281,11 +2315,6 @@ def getQt(key, prefClass=Prefs):
     """
     if key == "Qt4TranslationsDir":
         return getQt4TranslationsDir(prefClass)
-    elif key == "Qt4Dir":
-        p = prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
-        if p == "":
-            p = QLibraryInfo.location(QLibraryInfo.BinariesPath)
-        return p
     else:
         return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
     

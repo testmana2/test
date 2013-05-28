@@ -66,7 +66,7 @@ def exeDisplayDataList():
     })
     
     # 2. Qt Help Generator
-    exe = 'qhelpgenerator'
+    exe = os.path.join(Utilities.getQtBinariesPath(), 'qhelpgenerator')
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({
@@ -82,7 +82,7 @@ def exeDisplayDataList():
     })
     
     # 3. Qt Collection Generator
-    exe = 'qcollectiongenerator'
+    exe = os.path.join(Utilities.getQtBinariesPath(), 'qcollectiongenerator')
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({

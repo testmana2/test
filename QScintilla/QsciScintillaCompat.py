@@ -113,10 +113,14 @@ class QsciScintillaCompat(QsciScintilla):
         weight = -font.weight()
         italic = font.italic()
         underline = font.underline()
+        bold = font.bold()
         for style in rangeLow + rangeHigh:
             self.SendScintilla(QsciScintilla.SCI_STYLESETFONT, style, f)
             self.SendScintilla(QsciScintilla.SCI_STYLESETSIZE, style, ps)
-            self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight)
+            try:
+                self.SendScintilla(QsciScintilla.SCI_STYLESETWEIGHT, style, weight)
+            except AttributeError:
+                self.SendScintilla(QsciScintilla.SCI_STYLESETBOLD, style, bold)
             self.SendScintilla(QsciScintilla.SCI_STYLESETITALIC, style, italic)
             self.SendScintilla(QsciScintilla.SCI_STYLESETUNDERLINE, style, underline)
     
@@ -309,7 +313,7 @@ class QsciScintillaCompat(QsciScintilla):
         return self.SendScintilla(QsciScintilla.SCI_GETINDENTATIONGUIDES)
     
     ###########################################################################
-    # methods below are missing from QScintilla
+    ## methods below are missing from QScintilla
     ###########################################################################
 
     def zoomIn(self, zoom=1):
@@ -471,6 +475,99 @@ class QsciScintillaCompat(QsciScintilla):
         Public method to extend the selection to the end of the line.
         """
         self.SendScintilla(QsciScintilla.SCI_LINEENDEXTEND)
+    
+    def hasSelection(self):
+        """
+        Public method to check for a selection.
+        
+        @return flag indicating the presence of a selection (boolean)
+        """
+        return self.getSelection()[0] != -1
+    
+    def selectionIsRectangle(self):
+        """
+        Public method to check, if the current selection is rectangular.
+        
+        @return flag indicating a rectangular selection (boolean)
+        """
+        startLine, startIndex, endLine, endIndex = self.getSelection()
+        return startLine != -1 and \
+               startLine != endLine and \
+               self.SendScintilla(QsciScintilla.SCI_SELECTIONISRECTANGLE)
+    
+    def getRectangularSelection(self):
+        """
+        Public method to retrieve the start and end of a rectangular selection.
+        
+        @return tuple with start line and index and end line and index
+            (tuple of four int)
+        """
+        if not self.selectionIsRectangle():
+            return (-1, -1, -1, -1)
+        
+        startPos = self.SendScintilla(QsciScintilla.SCI_GETRECTANGULARSELECTIONANCHOR)
+        endPos = self.SendScintilla(QsciScintilla.SCI_GETRECTANGULARSELECTIONCARET)
+        startLine, startIndex = self.lineIndexFromPosition(startPos)
+        endLine, endIndex = self.lineIndexFromPosition(endPos)
+        
+        return (startLine, startIndex, endLine, endIndex)
+    
+    def setRectangularSelection(self, startLine, startIndex, endLine, endIndex):
+        """
+        Public method to set a rectangular selection.
+        
+        @param startLine line number of the start of the selection (int)
+        @param startIndex index number of the start of the selection (int)
+        @param endLine line number of the end of the selection (int)
+        @param endIndex index number of the end of the selection (int)
+        """
+        startPos = self.positionFromLineIndex(startLine, startIndex)
+        endPos = self.positionFromLineIndex(endLine, endIndex)
+        
+        self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONANCHOR, startPos)
+        self.SendScintilla(QsciScintilla.SCI_SETRECTANGULARSELECTIONCARET, endPos)
+    
+    def getSelectionCount(self):
+        """
+        Public method to get the number of active selections.
+        
+        @return number of active selection (integer)
+        """
+        return self.SendScintilla(QsciScintilla.SCI_GETSELECTIONS)
+    
+    def getSelectionN(self, index):
+        """
+        Public method to get the start and end of a selection given by it's index.
+        
+        @return tuple with start line and index and end line and index
+            (tuple of four int) for the given selection
+        """
+        startPos = self.SendScintilla(QsciScintilla.SCI_GETSELECTIONNSTART, index)
+        endPos = self.SendScintilla(QsciScintilla.SCI_GETSELECTIONNEND, index)
+        startLine, startIndex = self.lineIndexFromPosition(startPos)
+        endLine, endIndex = self.lineIndexFromPosition(endPos)
+        
+        return (startLine, startIndex, endLine, endIndex)
+    
+    def getSelections(self):
+        """
+        Public method to get the start and end coordinates of all active selections.
+        
+        @return list of tuples with start line and index and end line and index
+            of each active selection (list of tuples of four int)
+        """
+        selections = []
+        for index in range(self.getSelectionCount()):
+            selections.append(self.getSelectionN(index))
+        return selections
+    
+    def setVirtualSpaceOptions(self, options):
+        """
+        Public method to set the virtual space usage options.
+        
+        @param options usage options to set (integer, 0 to 3)
+        """
+        self.SendScintilla(QsciScintilla.SCI_SETVIRTUALSPACEOPTIONS, options)
     
     def getLineSeparator(self):
         """
@@ -963,7 +1060,6 @@ class QsciScintillaCompat(QsciScintilla):
             QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
         self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
-        
     
     ###########################################################################
     # interface methods to the standard keyboard command set

@@ -500,7 +500,7 @@ Method to handle an exception
                 exclist = ["%s" % $!.class, "%s" % $!, [file, line]]
                 @frames.each do |_binding, _file, _line, _id|
                     next if [_file, _line] == exclist[-1]
-                    exclist << [_file, _line]
+                    exclist << [_file, _line, '', '']
                 end
                 stdout.printf_excn(exclist)
             end
@@ -1051,7 +1051,7 @@ Method to report the current line and the current stack trace to the IDE.
             for bind, file, line, id in frames
                 break unless bind
                 break if file =~ /\(eval\)/
-                fr_list << [file, line, id ? id.id2name : '']
+                fr_list << [file, line, id ? id.id2name : '', '']
             end
             
             @debugger.write("%s%s\n" % [ResponseLine, fr_list.inspect])

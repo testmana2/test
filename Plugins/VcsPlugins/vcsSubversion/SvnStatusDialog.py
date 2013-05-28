@@ -766,6 +766,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             return
         
         self.vcs.vcsRevert(names)
+        self.raise_()
+        self.activateWindow()
         self.on_refreshButton_clicked()
         
         project = e5App().getObject("Project")

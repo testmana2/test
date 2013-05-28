@@ -52,6 +52,8 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 # import these methods into the Utilities namespace
 from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
 from Globals import getConfigDir, setConfigDir  # __IGNORE_WARNING__
+from Globals import getPythonModulesDirectory, getPyQt4ModulesDirectory  # __IGNORE_WARNING__
+from Globals import getQtBinariesPath  # __IGNORE_WARNING__
 
 from E5Gui.E5Application import e5App
 
@@ -659,6 +661,41 @@ def getExecutablePath(file):
     return ""
     
 
+def getExecutablePaths(file):
+    """
+    Function to build all full path of an executable file from the environment.
+    
+    @param file filename of the executable (string)
+    @return list of full executable names (list of strings), if the executable file
+        is accessible via the searchpath defined by the PATH environment variable,
+        or an empty list otherwise.
+    """
+    paths = []
+    
+    if os.path.isabs(file):
+        if os.access(file, os.X_OK):
+            return [file]
+        else:
+            return []
+        
+    cur_path = os.path.join(os.curdir, file)
+    if os.path.exists(cur_path):
+        if os.access(cur_path, os.X_OK):
+            paths.append(cur_path)
+
+    path = os.getenv('PATH')
+    
+    # environment variable not defined
+    if path is not None:
+        dirs = path.split(os.pathsep)
+        for dir in dirs:
+            exe = os.path.join(dir, file)
+            if os.access(exe, os.X_OK) and exe not in paths:
+                paths.append(exe)
+    
+    return paths
+    
+
 def isExecutable(exe):
     """
     Function to check, if a file is executable.
@@ -1070,16 +1107,6 @@ def getHomeDir():
     return QDir.homePath()
     
 
-def getPythonModulesDirectory():
-    """
-    Function to determine the path to Python's modules directory.
-    
-    @return path to the Python modules directory (string)
-    """
-    import distutils.sysconfig
-    return distutils.sysconfig.get_python_lib(True)
-    
-
 def getPythonLibPath():
     """
     Function to determine the path to Python's library.
@@ -1286,7 +1313,7 @@ def getQtMacBundle(toolname):
     @param toolname  plain name of the tool (e.g. "designer") (string)
     @return bundle name of the Qt tool (string)
     """
-    qtDir = Preferences.getQt("Qt4Dir")
+    qtDir = getQtBinariesPath()
     bundles = [
         os.path.join(qtDir, 'bin', generateQtToolName(toolname.capitalize())) + ".app",
         os.path.join(qtDir, 'bin', generateQtToolName(toolname)) + ".app",

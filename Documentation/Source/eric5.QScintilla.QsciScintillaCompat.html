@@ -199,11 +199,26 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.getLineSeparator">getLineSeparator</a></td>
 <td>Public method to get the line separator for the current eol mode.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.getRectangularSelection">getRectangularSelection</a></td>
+<td>Public method to retrieve the start and end of a rectangular selection.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getSelectionCount">getSelectionCount</a></td>
+<td>Public method to get the number of active selections.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getSelectionN">getSelectionN</a></td>
+<td>Public method to get the start and end of a selection given by it's index.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.getSelections">getSelections</a></td>
+<td>Public method to get the start and end coordinates of all active selections.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.getZoom">getZoom</a></td>
 <td>Public method used to retrieve the current zoom factor.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.hasIndicator">hasIndicator</a></td>
 <td>Public method to test for the existence of an indicator.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.hasSelection">hasSelection</a></td>
+<td>Public method to check for a selection.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.indentationGuideView">indentationGuideView</a></td>
 <td>Public method to get the indentation guide view.</td>
@@ -262,6 +277,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.scrollVertical">scrollVertical</a></td>
 <td>Public method to scroll the text area.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.selectionIsRectangle">selectionIsRectangle</a></td>
+<td>Public method to check, if the current selection is rectangular.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.setContractedFolds">setContractedFolds</a></td>
 <td>Public method to set a list of line numbers of collapsed folds.</td>
 </tr><tr>
@@ -292,11 +310,17 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.setLexer">setLexer</a></td>
 <td>Public method to set the lexer.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.setRectangularSelection">setRectangularSelection</a></td>
+<td>Public method to set a rectangular selection.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.setStyleBits">setStyleBits</a></td>
 <td>Public method to set the number of bits to be used for styling.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.setStyling">setStyling</a></td>
 <td>Public method to style some text.</td>
+</tr><tr>
+<td><a href="#QsciScintillaCompat.setVirtualSpaceOptions">setVirtualSpaceOptions</a></td>
+<td>Public method to set the virtual space usage options.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.showUserList">showUserList</a></td>
 <td>Public method to show a user supplied list.</td>
@@ -789,6 +813,49 @@ found target as a tuple of starting position and target length
 <dd>
 eol string (string)
 </dd>
+</dl><a NAME="QsciScintillaCompat.getRectangularSelection" ID="QsciScintillaCompat.getRectangularSelection"></a>
+<h4>QsciScintillaCompat.getRectangularSelection</h4>
+<b>getRectangularSelection</b>(<i></i>)
+<p>
+        Public method to retrieve the start and end of a rectangular selection.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start line and index and end line and index
+            (tuple of four int)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelectionCount" ID="QsciScintillaCompat.getSelectionCount"></a>
+<h4>QsciScintillaCompat.getSelectionCount</h4>
+<b>getSelectionCount</b>(<i></i>)
+<p>
+        Public method to get the number of active selections.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+number of active selection (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelectionN" ID="QsciScintillaCompat.getSelectionN"></a>
+<h4>QsciScintillaCompat.getSelectionN</h4>
+<b>getSelectionN</b>(<i>index</i>)
+<p>
+        Public method to get the start and end of a selection given by it's index.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start line and index and end line and index
+            (tuple of four int) for the given selection
+</dd>
+</dl><a NAME="QsciScintillaCompat.getSelections" ID="QsciScintillaCompat.getSelections"></a>
+<h4>QsciScintillaCompat.getSelections</h4>
+<b>getSelections</b>(<i></i>)
+<p>
+        Public method to get the start and end coordinates of all active selections.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of tuples with start line and index and end line and index
+            of each active selection (list of tuples of four int)
+</dd>
 </dl><a NAME="QsciScintillaCompat.getZoom" ID="QsciScintillaCompat.getZoom"></a>
 <h4>QsciScintillaCompat.getZoom</h4>
 <b>getZoom</b>(<i></i>)
@@ -817,6 +884,16 @@ position to test (integer)
 <dt>Returns:</dt>
 <dd>
 flag indicating the existence of the indicator (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.hasSelection" ID="QsciScintillaCompat.hasSelection"></a>
+<h4>QsciScintillaCompat.hasSelection</h4>
+<b>hasSelection</b>(<i></i>)
+<p>
+        Public method to check for a selection.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of a selection (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.indentationGuideView" ID="QsciScintillaCompat.indentationGuideView"></a>
 <h4>QsciScintillaCompat.indentationGuideView</h4>
@@ -1043,6 +1120,16 @@ replacement string or regexp (string)
 number of lines to scroll (negative scrolls up,
             positive scrolls down) (integer)
 </dd>
+</dl><a NAME="QsciScintillaCompat.selectionIsRectangle" ID="QsciScintillaCompat.selectionIsRectangle"></a>
+<h4>QsciScintillaCompat.selectionIsRectangle</h4>
+<b>selectionIsRectangle</b>(<i></i>)
+<p>
+        Public method to check, if the current selection is rectangular.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a rectangular selection (boolean)
+</dd>
 </dl><a NAME="QsciScintillaCompat.setContractedFolds" ID="QsciScintillaCompat.setContractedFolds"></a>
 <h4>QsciScintillaCompat.setContractedFolds</h4>
 <b>setContractedFolds</b>(<i>folds</i>)
@@ -1192,6 +1279,25 @@ the indicator or style are not valid
 <dd>
 the lexer to be set or None to reset it.
 </dd>
+</dl><a NAME="QsciScintillaCompat.setRectangularSelection" ID="QsciScintillaCompat.setRectangularSelection"></a>
+<h4>QsciScintillaCompat.setRectangularSelection</h4>
+<b>setRectangularSelection</b>(<i>startLine, startIndex, endLine, endIndex</i>)
+<p>
+        Public method to set a rectangular selection.
+</p><dl>
+<dt><i>startLine</i></dt>
+<dd>
+line number of the start of the selection (int)
+</dd><dt><i>startIndex</i></dt>
+<dd>
+index number of the start of the selection (int)
+</dd><dt><i>endLine</i></dt>
+<dd>
+line number of the end of the selection (int)
+</dd><dt><i>endIndex</i></dt>
+<dd>
+index number of the end of the selection (int)
+</dd>
 </dl><a NAME="QsciScintillaCompat.setStyleBits" ID="QsciScintillaCompat.setStyleBits"></a>
 <h4>QsciScintillaCompat.setStyleBits</h4>
 <b>setStyleBits</b>(<i>bits</i>)
@@ -1214,6 +1320,16 @@ length of text to style (integer)
 </dd><dt><i>style</i></dt>
 <dd>
 style to set for text (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.setVirtualSpaceOptions" ID="QsciScintillaCompat.setVirtualSpaceOptions"></a>
+<h4>QsciScintillaCompat.setVirtualSpaceOptions</h4>
+<b>setVirtualSpaceOptions</b>(<i>options</i>)
+<p>
+        Public method to set the virtual space usage options.
+</p><dl>
+<dt><i>options</i></dt>
+<dd>
+usage options to set (integer, 0 to 3)
 </dd>
 </dl><a NAME="QsciScintillaCompat.showUserList" ID="QsciScintillaCompat.showUserList"></a>
 <h4>QsciScintillaCompat.showUserList</h4>

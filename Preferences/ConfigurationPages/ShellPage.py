@@ -30,8 +30,6 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         self.setObjectName("ShellPage")
         
         # set initial values
-        self.shellLinenowidthSlider.setValue(
-            Preferences.getShell("LinenoWidth"))
         self.shellLinenoCheckBox.setChecked(
             Preferences.getShell("LinenoMargin"))
         self.shellWordWrapCheckBox.setChecked(
@@ -58,8 +56,6 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         """
         Public slot to save the Shell configuration.
         """
-        Preferences.setShell("LinenoWidth",
-            self.shellLinenowidthSlider.value())
         Preferences.setShell("LinenoMargin",
             self.shellLinenoCheckBox.isChecked())
         Preferences.setShell("WrapEnabled",

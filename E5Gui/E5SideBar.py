@@ -9,7 +9,7 @@ Module implementing a sidebar class.
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 
-from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice
+from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice, QTimer
 from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, \
     QSizePolicy
 
@@ -30,11 +30,12 @@ class E5SideBar(QWidget):
     South = 2
     West = 3
     
-    def __init__(self, orientation=None, parent=None):
+    def __init__(self, orientation=None, delay=200, parent=None):
         """
         Constructor
         
         @param orientation orientation of the sidebar widget (North, East, South, West)
+        @param delay value for the expand/shrink delay in milliseconds (integer)
         @param parent parent widget (QWidget)
         """
         super(E5SideBar, self).__init__(parent)
@@ -62,6 +63,13 @@ class E5SideBar(QWidget):
         self.layout.addLayout(self.barLayout)
         self.layout.addWidget(self.__stackedWidget)
         self.setLayout(self.layout)
+        
+        # initialize the delay timer
+        self.__actionMethod = None
+        self.__delayTimer = QTimer(self)
+        self.__delayTimer.setSingleShot(True)
+        self.__delayTimer.setInterval(delay)
+        self.__delayTimer.timeout.connect(self.__delayedAction)
         
         self.__minimized = False
         self.__minSize = 0
@@ -107,9 +115,47 @@ class E5SideBar(QWidget):
         if self.splitter:
             self.splitterSizes = self.splitter.sizes()
     
+    def __delayedAction(self):
+        """
+        Private slot to handle the firing of the delay timer.
+        """
+        if self.__actionMethod is not None:
+            self.__actionMethod()
+    
+    def setDelay(self, delay):
+        """
+        Public method to set the delay value for the expand/shrink delay in milliseconds.
+        
+        @param delay value for the expand/shrink delay in milliseconds (integer)
+        """
+        self.__delayTimer.setInterval(delay)
+    
+    def delay(self):
+        """
+        Public method to get the delay value for the expand/shrink delay in milliseconds.
+        
+        @return value for the expand/shrink delay in milliseconds (integer)
+        """
+        return self.__delayTimer.interval()
+    
+    def __cancelDelayTimer(self):
+        """
+        Private method to cancel the current delay timer.
+        """
+        self.__delayTimer.stop()
+        self.__actionMethod = None
+    
     def shrink(self):
         """
-        Public method to shrink the sidebar.
+        Public method to record a shrink request.
+        """
+        self.__delayTimer.stop()
+        self.__actionMethod = self.__shrinkIt
+        self.__delayTimer.start()
+   
+    def __shrinkIt(self):
+        """
+        Private method to shrink the sidebar.
         """
         self.__minimized = True
         self.__bigSize = self.size()
@@ -128,10 +174,20 @@ class E5SideBar(QWidget):
             self.setFixedHeight(self.__tabBar.minimumSizeHint().height())
         else:
             self.setFixedWidth(self.__tabBar.minimumSizeHint().width())
+        
+        self.__actionMethod = None
     
     def expand(self):
         """
-        Public method to expand the sidebar.
+        Public method to record a expand request.
+        """
+        self.__delayTimer.stop()
+        self.__actionMethod = self.__expandIt
+        self.__delayTimer.start()
+    
+    def __expandIt(self):
+        """
+        Private method to expand the sidebar.
         """
         self.__minimized = False
         self.__stackedWidget.show()
@@ -146,6 +202,8 @@ class E5SideBar(QWidget):
             self.setMaximumWidth(self.__maxSize)
         if self.splitter:
             self.splitter.setSizes(self.splitterSizes)
+        
+        self.__actionMethod = None
     
     def isMinimized(self):
         """
@@ -587,6 +645,8 @@ class E5SideBar(QWidget):
         """
         if self.__autoHide and self.isMinimized():
             self.expand()
+        else:
+            self.__cancelDelayTimer()
     
     def leaveEvent(self, event):
         """
@@ -596,6 +656,8 @@ class E5SideBar(QWidget):
         """
         if self.__autoHide and not self.__hasFocus and not self.isMinimized():
             self.shrink()
+        else:
+            self.__cancelDelayTimer()
     
     def shutdown(self):
         """

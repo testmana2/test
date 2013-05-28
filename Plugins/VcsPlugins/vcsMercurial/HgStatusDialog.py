@@ -633,6 +633,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             return
         
         self.vcs.hgRevert(names)
+        self.raise_()
+        self.activateWindow()
         self.on_refreshButton_clicked()
         
         project = e5App().getObject("Project")

@@ -34,6 +34,7 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         """
         Constructor
         
+        @param debugServer reference to the debug server object (DebugServer)
         @param parent reference to the parent widget (QWidget)
         """
         super(CallTraceViewer, self).__init__(parent)

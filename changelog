@@ -9,12 +9,25 @@ Version 5.4-snapshot-2013mmdd:
   -- changed the 'import' statements to improve startup behavior
   -- removed the QtHelp dependancy; support is only available,
      if the QtHelp module could be imported
+  -- changed code to be compatible with latest PyQt4 Windows installers
+  -- introduced a configurable delay timer to get smoother sidebars behavior
 - Debugger
+  -- Debug Viewer
+     --- added a viewer for the call stack leading to the current line
   -- Variables Viewer
      --- changed the way multi line strings are shown in the value
          column
 - Editor
   -- added the capability to preview HTML, Mardown and ReST files
+  -- added the capability to sort lines spanned by a rectangular selection
+     based on the selected text
+  -- added entires to convert the selection to upper/lower case to the
+     edit menu
+  -- changed the line numbers margin to adjust themselves to the size needed
+  -- added support for virtual space
+- Mini Editor
+  -- changed the line numbers margin to adjust themselves to the size needed
+  -- added support for virtual space
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
@@ -23,6 +36,10 @@ Version 5.4-snapshot-2013mmdd:
      --- added a context menu entry to delete the selected directory
   -- Project Forms Viewer
      --- added support for more widgets in the code creation dialog
+- Shell
+  -- changed the line numbers margin to adjust themselves to the size needed
+- Symbols Viewer
+  -- extended the list of supported unicode code blocks
 - Template Viewer
   -- added a context menu entry to reload the templates
   -- changed logic such, that the templates are only written, if they contain
