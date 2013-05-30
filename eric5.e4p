@@ -798,10 +798,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
-    <Source>UtilitiesPython2/__init__.py</Source>
-    <Source>UtilitiesPython2/Tools.py</Source>
-    <Source>UtilitiesPython2/Tabnanny.py</Source>
-    <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/__init__.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/pep8.py</Source>
