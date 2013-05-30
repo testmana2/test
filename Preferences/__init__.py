@@ -1430,39 +1430,6 @@ def getUI(key, prefClass=Prefs):
         if sys.version_info[0] == 2:
             prefClass.settings.remove("UI/ViewProfiles")
         return viewProfiles
-    elif key in "ViewProfiles2":
-        profiles = prefClass.settings.value("UI/ViewProfiles2")
-        if profiles is not None:
-            viewProfiles = {}
-            profiles = json.loads(profiles)
-            for name in ["edit", "debug"]:
-                viewProfiles[name] = [
-                    QByteArray.fromBase64(profiles[name][0].encode()),
-                    profiles[name][1][:],
-                    []
-                ]
-                for bs in profiles[name][2]:
-                    viewProfiles[name][2].append(QByteArray.fromBase64(bs.encode()))
-        else:
-            # migrate from the old ViewProfiles settings
-            try:
-                profiles = prefClass.settings.value("UI/ViewProfiles")
-            except TypeError:
-                profiles = None
-            if profiles is not None:
-                viewProfiles = {}
-                for name in ["edit", "debug"]:
-                    viewProfiles[name] = [
-                        QByteArray(profiles[name][4]),
-                        profiles[name][5][:],
-                        []
-                    ]
-                    for b in profiles[name][6]:
-                        viewProfiles[name][2].append(QByteArray(b))
-            else:
-                # use the defaults
-                viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
-        return viewProfiles
     elif key in ["ToolbarManagerState", "PreviewSplitterState"]:
         state = prefClass.settings.value("UI/" + key)
         if state is not None:
