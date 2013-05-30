@@ -1365,13 +1365,16 @@ def generatePySideToolPath(toolname):
     """
     if isWindowsPlatform():
         try:
-            # step 1: try Python3 variant of PySide
+            # step 1: try internal Python variant of PySide
             import PySide       # __IGNORE_EXCEPTION__
             del PySide
             prefix = sys.prefix
         except ImportError:
-            # step 2: check for a Python2 variant
-            prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
+            # step 2: check for a external Python variant
+            if sys.version_info[0] == 2:
+                prefix = os.path.dirname(Preferences.getDebugger("Python3Interpreter"))
+            else:
+                prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
         if toolname == "pyside-uic":
             return os.path.join(prefix, "Scripts", toolname + '.exe')
         else:
@@ -1390,21 +1393,24 @@ def checkPyside():
     """
 
     try:
-        # step 1: try Python3 variant of PySide
+        # step 1: try internal Python variant of PySide
         import PySide       # __IGNORE_EXCEPTION__
         del PySide
-        py3 = True
+        int_py = True
     except ImportError:
-        py3 = False
+        int_py = False
     
-    # step 2: check for a Python2 variant
-    interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        py2 = False
+    # step 2: check for a external Python variant
+    if sys.version_info[0] == 2:
+        interpreter = Preferences.getDebugger("Python3Interpreter")
     else:
-        py2 = False
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+    if interpreter == "" or not isinpath(interpreter):
+        ext_py = False
+    else:
+        ext_py = False
         checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "PySideImporter.py")
+                               "Utilities", "PySideImporter.py")
         args = [checker]
         proc = QProcess()
         proc.setProcessChannelMode(QProcess.MergedChannels)
@@ -1412,9 +1418,12 @@ def checkPyside():
         finished = proc.waitForFinished(30000)
         if finished:
             if proc.exitCode() == 0:
-                py2 = True
+                ext_py = True
     
-    return py2, py3
+    if sys.version_info[0] == 2:
+        return int_py, ext_py
+    else:
+        return ext_py, int_py
 
 ################################################################################
 # Other utility functions below
