@@ -247,10 +247,10 @@ class QsciScintillaCompat(QsciScintilla):
         """
         char = self.SendScintilla(QsciScintilla.SCI_GETCHARAT, pos)
         if char == 0:
-            return b""
+            return bytearray()
         if char < 0:
             char += 256
-        return bytes.fromhex("{0:02x}".format(char))
+        return bytearray((char,))
     
     def foldLevelAt(self, line):
         """
