@@ -332,6 +332,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                     project = e5App().getObject("Project")
                     if project.isOpen() and project.isProjectSource(prog):
                         mainScript = project.getMainScript(True)
+                        if not mainScript:
+                            mainScript = os.path.abspath(prog)
                     else:
                         mainScript = os.path.abspath(prog)
                 else:
