@@ -43231,7 +43231,12 @@ Non connesso</translation>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
-        <translation>Debug del processo figlio</translation>
+        <translation type="obsolete">Debug del processo figlio</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43569,7 +43574,12 @@ Non connesso</translation>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
-        <translation>Debug del processo figlio</translation>
+        <translation type="obsolete">Debug del processo figlio</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

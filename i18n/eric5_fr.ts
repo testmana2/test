@@ -45851,14 +45851,14 @@ Plus d&apos;infos sur Cyclops et les objets SCC dans la documentation d&apos;Eri
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
-        <source>Debug Child Process</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Debugger/StartDebugDialog.ui" line="269"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
+        <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -46188,7 +46188,7 @@ Plus d&apos;infos sur Cyclops et les objets SCC dans la documentation d&apos;Eri
     </message>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
-        <source>Debug Child Process</source>
+        <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

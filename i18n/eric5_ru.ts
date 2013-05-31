@@ -43369,7 +43369,7 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
-        <translation>Отлаживать дочерний процесс</translation>
+        <translation type="obsolete">Отлаживать дочерний процесс</translation>
     </message>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="269"/>
@@ -43377,6 +43377,11 @@ Not connected</source>
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отлаживать дочерний процесс&lt;/b&gt;
 &lt;p&gt;После форка отлаживать дочерний процесс. Если эта опция не выбрана, то будет отлаживаться родительский процесс. Действительна только в случае если выбрана опция &quot;Форк без отановки&quot;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43713,7 +43718,12 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
-        <translation>Отлаживать дочерний процесс</translation>
+        <translation type="obsolete">Отлаживать дочерний процесс</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

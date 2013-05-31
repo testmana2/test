@@ -41458,16 +41458,16 @@ nicht verbunden</translation>
         <translation>Auswählen, um den Kindprozess nach dem Fork zu debuggen</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
-        <source>Debug Child Process</source>
-        <translation>Kindprozess debuggen</translation>
-    </message>
-    <message>
         <location filename="Debugger/StartDebugDialog.ui" line="269"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kindprozess debuggen&lt;/b&gt;
 &lt;p&gt;Auswählen, um den Kindprozess nach dem Fork zu debuggen. Ist dies nicht ausgewählt, so wird der Vaterprozess debuggt. Diese Auswahl hat keinen Effekt, wenn Forken ohne Pause nicht ausgewählt ist.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
+        <source>Follow Child Process</source>
+        <translation>Folge Kindprozess</translation>
     </message>
 </context>
 <context>
@@ -41804,8 +41804,8 @@ nicht verbunden</translation>
     </message>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
-        <source>Debug Child Process</source>
-        <translation>Kindprozess debuggen</translation>
+        <source>Follow Child Process</source>
+        <translation>Folge Kindprozess</translation>
     </message>
 </context>
 <context>

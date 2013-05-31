@@ -41112,7 +41112,7 @@ Not connected</source>
     </message>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
-        <source>Debug Child Process</source>
+        <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -41433,7 +41433,7 @@ Not connected</source>
     </message>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
-        <source>Debug Child Process</source>
+        <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -41434,7 +41434,7 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
-        <translation>Depurar Proceso Hijo</translation>
+        <translation type="obsolete">Depurar Proceso Hijo</translation>
     </message>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="269"/>
@@ -41442,6 +41442,11 @@ Not connected</source>
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Depurar Proceso Hijo&lt;/b&gt;
 &lt;p&gt;Seleccionar para depurar el proceso hijo despues del fork. Si no se selecciona, se depurará el proceso padre. No tiene efecto si no se selecciona &apos;fork sin pausa&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -41779,7 +41784,12 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
-        <translation>Depurar Proceso Hijo</translation>
+        <translation type="obsolete">Depurar Proceso Hijo</translation>
+    </message>
+    <message>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
+        <source>Follow Child Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
