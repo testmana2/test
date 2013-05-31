@@ -9,7 +9,7 @@ Module implementing a QNetworkAccessManager subclass.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray
+from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 
@@ -232,9 +232,11 @@ class NetworkAccessManager(QNetworkAccessManager):
         Private method to set the disk cache.
         """
         if Preferences.getHelp("DiskCacheEnabled"):
+            from PyQt4.QtWebKit import qWebKitVersion
             from .NetworkDiskCache import NetworkDiskCache
             diskCache = NetworkDiskCache(self)
-            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache')
+            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache',
+                                    "{0}-Qt{1}".format(qWebKitVersion(), qVersion()))
             size = Preferences.getHelp("DiskCacheSize") * 1024 * 1024
             diskCache.setCacheDirectory(location)
             diskCache.setMaximumCacheSize(size)
