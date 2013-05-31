@@ -7374,6 +7374,49 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>E5ErrorMessage</name>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="77"/>
+        <source>Debug Message:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="79"/>
+        <source>Warning:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="81"/>
+        <source>Critical:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="83"/>
+        <source>Fatal Error:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="100"/>
+        <source>Warning</source>
+        <translation type="unfinished">警告</translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="102"/>
+        <source>Critical</source>
+        <translation type="unfinished">危险</translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="104"/>
+        <source>Fatal Error</source>
+        <translation type="unfinished">严重错误</translation>
+    </message>
+    <message>
+        <location filename="E5Gui/E5ErrorMessage.py" line="98"/>
+        <source>Debug Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>E5GraphicsView</name>
     <message>
         <location filename="E5Graphics/E5GraphicsView.py" line="54"/>
@@ -55754,7 +55797,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="374"/>
+        <location filename="PyUnit/UnittestDialog.py" line="376"/>
         <source>Unittest</source>
         <translation>单元测试</translation>
     </message>
@@ -55975,7 +56018,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法运行测试 &lt;b&gt;%1&lt;/b&gt; 。&lt;br&gt;%2&lt;br&gt;%3&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="439"/>
+        <location filename="PyUnit/UnittestDialog.py" line="441"/>
         <source>Running</source>
         <translation>正在运行</translation>
     </message>
@@ -56000,7 +56043,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">错误： %1</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="601"/>
+        <location filename="PyUnit/UnittestDialog.py" line="603"/>
         <source>Show Source</source>
         <translation>显示源代码</translation>
     </message>
@@ -56015,27 +56058,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="374"/>
+        <location filename="PyUnit/UnittestDialog.py" line="376"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="463"/>
+        <location filename="PyUnit/UnittestDialog.py" line="465"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="466"/>
+        <location filename="PyUnit/UnittestDialog.py" line="468"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="482"/>
+        <location filename="PyUnit/UnittestDialog.py" line="484"/>
         <source>Failure: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="497"/>
+        <location filename="PyUnit/UnittestDialog.py" line="499"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56070,17 +56113,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="512"/>
+        <location filename="PyUnit/UnittestDialog.py" line="514"/>
         <source>    Skipped: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="526"/>
+        <location filename="PyUnit/UnittestDialog.py" line="528"/>
         <source>    Expected Failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="540"/>
+        <location filename="PyUnit/UnittestDialog.py" line="542"/>
         <source>    Unexpected Success</source>
         <translation type="unfinished"></translation>
     </message>

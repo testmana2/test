@@ -1208,6 +1208,10 @@ eric5.E5Gui.E5ComboBox.E5ComboBox?1(parent=None, inactiveText="")
 eric5.E5Gui.E5Completers.E5DirCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5FileCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5StringListCompleter?1(parent=None, strings=[], completionMode=QCompleter.PopupCompletion)
+eric5.E5Gui.E5ErrorMessage.E5ErrorMessage.showMessage?4(message, msgType="")
+eric5.E5Gui.E5ErrorMessage.E5ErrorMessage?1(parent=None)
+eric5.E5Gui.E5ErrorMessage.messageHandler?4(msgType, message)
+eric5.E5Gui.E5ErrorMessage.qtHandler?4()
 eric5.E5Gui.E5FileDialog.DontConfirmOverwrite?7
 eric5.E5Gui.E5FileDialog.DontResolveSymlinks?7
 eric5.E5Gui.E5FileDialog.DontUseNativeDialog?7
@@ -7343,7 +7347,7 @@ eric5.Toolbox.Startup.loadTranslatorForLocale?4(dirs, tn)
 eric5.Toolbox.Startup.loadTranslators?4(qtTransDir, app, translationFiles=())
 eric5.Toolbox.Startup.loaded_translators?7
 eric5.Toolbox.Startup.setLibraryPaths?4()
-eric5.Toolbox.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True)
+eric5.Toolbox.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True, installErrorHandler=False)
 eric5.Toolbox.Startup.usage?4(appinfo, optlen=12)
 eric5.Toolbox.Startup.version?4(appinfo)
 eric5.Tools.TRPreviewer.TRPreviewer.closeEvent?4(event)

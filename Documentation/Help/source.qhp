@@ -119,6 +119,7 @@
             <section title="eric5.E5Gui.E5ClickableLabel" ref="eric5.E5Gui.E5ClickableLabel.html" />
             <section title="eric5.E5Gui.E5ComboBox" ref="eric5.E5Gui.E5ComboBox.html" />
             <section title="eric5.E5Gui.E5Completers" ref="eric5.E5Gui.E5Completers.html" />
+            <section title="eric5.E5Gui.E5ErrorMessage" ref="eric5.E5Gui.E5ErrorMessage.html" />
             <section title="eric5.E5Gui.E5FileDialog" ref="eric5.E5Gui.E5FileDialog.html" />
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
             <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
@@ -3381,6 +3382,11 @@
       <keyword name="E5DnDTabBar.dropEvent" id="E5DnDTabBar.dropEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.dropEvent" />
       <keyword name="E5DnDTabBar.mouseMoveEvent" id="E5DnDTabBar.mouseMoveEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.mouseMoveEvent" />
       <keyword name="E5DnDTabBar.mousePressEvent" id="E5DnDTabBar.mousePressEvent" ref="eric5.E5Gui.E5TabWidget.html#E5DnDTabBar.mousePressEvent" />
+      <keyword name="E5ErrorMessage" id="E5ErrorMessage" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage" />
+      <keyword name="E5ErrorMessage (Constructor)" id="E5ErrorMessage (Constructor)" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.__init__" />
+      <keyword name="E5ErrorMessage (Module)" id="E5ErrorMessage (Module)" ref="eric5.E5Gui.E5ErrorMessage.html" />
+      <keyword name="E5ErrorMessage.__filterMessage" id="E5ErrorMessage.__filterMessage" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.__filterMessage" />
+      <keyword name="E5ErrorMessage.showMessage" id="E5ErrorMessage.showMessage" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.showMessage" />
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric5.E5Gui.E5FileDialog.html" />
@@ -12681,6 +12687,7 @@
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.UtilitiesPython2.pep8.html#maximum_line_length" />
       <keyword name="message" id="message" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#message" />
       <keyword name="message" id="message" ref="eric5.UtilitiesPython2.pep8.html#message" />
+      <keyword name="messageHandler" id="messageHandler" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messages (Module)" id="messages (Module)" ref="eric5.Utilities.py3flakes.messages.html" />
       <keyword name="messages (Module)" id="messages (Module)" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#missing_newline" />
@@ -12748,6 +12755,7 @@
       <keyword name="python_3000_not_equal" id="python_3000_not_equal" ref="eric5.UtilitiesPython2.pep8.html#python_3000_not_equal" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_raise_comma" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.UtilitiesPython2.pep8.html#python_3000_raise_comma" />
+      <keyword name="qtHandler" id="qtHandler" ref="eric5.E5Gui.E5ErrorMessage.html#qtHandler" />
       <keyword name="question" id="question" ref="eric5.E5Gui.E5MessageBox.html#question" />
       <keyword name="queues (Module)" id="queues (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
       <keyword name="rbclbr (Module)" id="rbclbr (Module)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
@@ -13012,6 +13020,7 @@
       <file>eric5.E5Gui.E5ClickableLabel.html</file>
       <file>eric5.E5Gui.E5ComboBox.html</file>
       <file>eric5.E5Gui.E5Completers.html</file>
+      <file>eric5.E5Gui.E5ErrorMessage.html</file>
       <file>eric5.E5Gui.E5FileDialog.html</file>
       <file>eric5.E5Gui.E5Led.html</file>
       <file>eric5.E5Gui.E5LineEdit.html</file>

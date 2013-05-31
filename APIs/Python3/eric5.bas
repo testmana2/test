@@ -138,6 +138,7 @@ E5ClickableLabel QLabel
 E5ComboBox QComboBox
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
+E5ErrorMessage QErrorMessage
 E5FileCompleter QCompleter
 E5Ftp ftplib.FTP
 E5FtpProxyError ftplib.Error

@@ -11,6 +11,7 @@ Version 5.4-snapshot-2013mmdd:
      if the QtHelp module could be imported
   -- changed code to be compatible with latest PyQt4 Windows installers
   -- introduced a configurable delay timer to get smoother sidebars behavior
+  -- added a specialized error message handler allowing to filter messages
 - Debugger
   -- Debug Viewer
      --- added a viewer for the call stack leading to the current line

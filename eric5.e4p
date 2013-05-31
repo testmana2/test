@@ -1077,6 +1077,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Examples/modpython.py</Source>
     <Source>Examples/modpython_dbg.py</Source>
     <Source>Examples/rhallo.py</Source>
+    <Source>E5Gui/E5ErrorMessage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

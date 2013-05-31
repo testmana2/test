@@ -19,7 +19,7 @@ import time
 import logging
 
 from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer
-from PyQt4.QtGui import QApplication, QErrorMessage
+from PyQt4.QtGui import QApplication
 
 # some global variables needed to start the application
 args = None
@@ -253,7 +253,8 @@ def main():
         QTimer.singleShot(0, uiStartUp)
         
         # generate a graphical error handler
-        eMsg = QErrorMessage.qtHandler()
+        from E5Gui import E5ErrorMessage
+        eMsg = E5ErrorMessage.qtHandler()
         eMsg.setMinimumSize(600, 400)
         
         # start the event loop

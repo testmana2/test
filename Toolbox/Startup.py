@@ -185,7 +185,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
 
 
 def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
-    app=None, raiseIt=True):
+    app=None, raiseIt=True, installErrorHandler=False):
     """
     Module function to start up an application that doesn't need a specialized start up.
     
@@ -203,6 +203,8 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
         if the last window was closed (boolean)
     @keyparam app reference to the application object (QApplication or None)
     @keyparam raiseIt flag indicating to raise the generated application window (boolean)
+    @keyparam installErrorHandler flag indicating to install an error
+        handler dialog (boolean)
     """
     handleArgs(argv, appinfo)
     if app is None:
@@ -227,5 +229,11 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     w.show()
     if raiseIt:
         w.raise_()
+    
+    if installErrorHandler:
+        # generate a graphical error handler
+        from E5Gui import E5ErrorMessage
+        eMsg = E5ErrorMessage.qtHandler()
+        eMsg.setMinimumSize(600, 400)
     
     return app.exec_()
