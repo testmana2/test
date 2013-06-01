@@ -302,6 +302,7 @@
               <section title="eric5.Helpviewer.Network.NetworkDiskCache" ref="eric5.Helpviewer.Network.NetworkDiskCache.html" />
               <section title="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply" ref="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html" />
               <section title="eric5.Helpviewer.Network.NetworkReply" ref="eric5.Helpviewer.Network.NetworkReply.html" />
+              <section title="eric5.Helpviewer.Network.NoCacheHostsDialog" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html" />
               <section title="eric5.Helpviewer.Network.QtHelpAccessHandler" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.SchemeAccessHandler" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.SendRefererWhitelistDialog" ref="eric5.Helpviewer.Network.SendRefererWhitelistDialog.html" />
@@ -5164,6 +5165,7 @@
       <keyword name="HelpWebBrowserPage (Constructor)" id="HelpWebBrowserPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.__init__" />
       <keyword name="HelpWebBrowserPage (Module)" id="HelpWebBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
       <keyword name="HelpWebBrowserPage.on_defaultHomeButton_clicked" id="HelpWebBrowserPage.on_defaultHomeButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_defaultHomeButton_clicked" />
+      <keyword name="HelpWebBrowserPage.on_noCacheHostsButton_clicked" id="HelpWebBrowserPage.on_noCacheHostsButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_noCacheHostsButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_refererWhitelistButton_clicked" id="HelpWebBrowserPage.on_refererWhitelistButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_refererWhitelistButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_setCurrentPageButton_clicked" id="HelpWebBrowserPage.on_setCurrentPageButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_setCurrentPageButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" id="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_startupCombo_currentIndexChanged" />
@@ -7532,6 +7534,11 @@
       <keyword name="NewPythonPackageDialog (Module)" id="NewPythonPackageDialog (Module)" ref="eric5.Project.NewPythonPackageDialog.html" />
       <keyword name="NewPythonPackageDialog.getData" id="NewPythonPackageDialog.getData" ref="eric5.Project.NewPythonPackageDialog.html#NewPythonPackageDialog.getData" />
       <keyword name="NewPythonPackageDialog.on_packageEdit_textChanged" id="NewPythonPackageDialog.on_packageEdit_textChanged" ref="eric5.Project.NewPythonPackageDialog.html#NewPythonPackageDialog.on_packageEdit_textChanged" />
+      <keyword name="NoCacheHostsDialog" id="NoCacheHostsDialog" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog" />
+      <keyword name="NoCacheHostsDialog (Constructor)" id="NoCacheHostsDialog (Constructor)" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog.__init__" />
+      <keyword name="NoCacheHostsDialog (Module)" id="NoCacheHostsDialog (Module)" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html" />
+      <keyword name="NoCacheHostsDialog.accept" id="NoCacheHostsDialog.accept" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog.accept" />
+      <keyword name="NoCacheHostsDialog.on_addButton_clicked" id="NoCacheHostsDialog.on_addButton_clicked" ref="eric5.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog.on_addButton_clicked" />
       <keyword name="NoneSplashScreen" id="NoneSplashScreen" ref="eric5.UI.SplashScreen.html#NoneSplashScreen" />
       <keyword name="NoneSplashScreen (Constructor)" id="NoneSplashScreen (Constructor)" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.__init__" />
       <keyword name="NoneSplashScreen.clearMessage" id="NoneSplashScreen.clearMessage" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.clearMessage" />
@@ -13190,6 +13197,7 @@
       <file>eric5.Helpviewer.Network.NetworkDiskCache.html</file>
       <file>eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html</file>
       <file>eric5.Helpviewer.Network.NetworkReply.html</file>
+      <file>eric5.Helpviewer.Network.NoCacheHostsDialog.html</file>
       <file>eric5.Helpviewer.Network.QtHelpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SchemeAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SendRefererWhitelistDialog.html</file>

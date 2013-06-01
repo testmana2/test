@@ -16219,37 +16219,37 @@ You have %n tab(s) open.</source>
         <translation>Кэш просмотрщика</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="469"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
         <source>Enable disk cache</source>
         <translation>Запретить кэш на диске</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
         <source>Cache size:</source>
         <translation>Размер кэша:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="549"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Максимальный размер кэша на диске</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="528"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="596"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
         <source>Printing</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="602"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
         <source>Select to print background colours and images</source>
         <translation>Печатать фон и изображения</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="605"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
         <source>Print background colours and images</source>
         <translation>Печатать фон и изображения</translation>
     </message>
@@ -16404,37 +16404,37 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Использовать прелзагрузку DNS для улучшения загрузки страниц</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="476"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
         <source>Policy</source>
         <translation>Правила</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="482"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
         <source>Select to prefer the network</source>
         <translation>Предпочитать сеть</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="485"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
         <source>Keep cache in sync</source>
         <translation>Держать кэш синхронизированным</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="519"/>
         <source>Select to prefer cached data</source>
         <translation>Предпочитать данные из кэша</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="495"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Use cache whenever possible</source>
         <translation>По возможности использовать данные из кэша</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="529"/>
         <source>Select to use cached data only</source>
         <translation>Использовать данные только из кэша</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
         <source>Offline browsing mode</source>
         <translation>Offline режим</translation>
     </message>
@@ -16449,27 +16449,27 @@ You have %n tab(s) open.</source>
         <translation>Показывать содержимое страницы когда мышь находиться на закладке</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="649"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
         <source>Select to enable support for access keys</source>
         <translation>Разрешить поддержку ключей доступа</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="652"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
         <source>Enable access keys</source>
         <translation>Разрешить ключи доступа</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="557"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
         <source>Web Search</source>
         <translation>Веб поиск</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="563"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Language:</source>
         <translation>Язык:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="570"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
         <source>Select the language to be used for web searches</source>
         <translation>Выбор языка для веб поиска</translation>
     </message>
@@ -16504,41 +16504,41 @@ You have %n tab(s) open.</source>
         <translation>Разрешить XSS проверку</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="615"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
         <source>Navigation</source>
         <translation>Навигация</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation>Разрешить пространственную навигацию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="624"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разрешить пространственную навигацию&lt;/b&gt;
 &lt;p&gt;Это включает или выключает функцию пространственной навигации, которая состоит в способности перемещаться между фокусом элементов на веб-странице, например, гиперссылки и формы управления, с помощью влево, вправо, вверх и вниз стрелками. Например, если пользователь нажимает правую клавишу, эвристически определяется, есть ли элемент, и он, возможно, пытается достичь вправо, и какой элемент возможно хочет.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="628"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Enable Spatial Navigation</source>
         <translation>Разрешить пространственную навигацию</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Select to include links in focus chain</source>
         <translation>Выбор включения ссылок в фокусной цепочке</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="638"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Включать ссылки в фокусную цепочку&lt;/b&gt;
 &lt;p&gt;Выбирать, будут ли гиперссылки включены в цепь фокуса клавиатуры.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Include Links in Focus Chain</source>
         <translation>Включить ссылки в фокусную цепочку</translation>
     </message>
@@ -16593,6 +16593,16 @@ You have %n tab(s) open.</source>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
         <source>Edit Referer Whitelist ...</source>
         <translation>Редактировать Белый список запросов...</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <source>Press to edit the list of hosts exempted from caching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
+        <source>Edit Exempted Hosts ...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -30972,12 +30982,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="188"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="185"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;; realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
@@ -31387,6 +31397,54 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Project/NewPythonPackageDialog.ui" line="26"/>
         <source>Enter the dotted package name</source>
         <translation>Задайте имя пакета</translation>
+    </message>
+</context>
+<context>
+    <name>NoCacheHostsDialog</name>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
+        <source>Not Cached Hosts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="40"/>
+        <source>Enter search term for hosts</source>
+        <translation type="unfinished">Введите условия поиска хостов</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="77"/>
+        <source>Press to add site to the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="80"/>
+        <source>&amp;Add...</source>
+        <translation type="unfinished">&amp;Добавить...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="97"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="100"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished">&amp;Удалить</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="110"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="113"/>
+        <source>R&amp;emove All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
+        <source>Enter host name to add to the list:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -33534,27 +33592,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1133"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1160"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1160"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Файлы свойств (*.ini);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1254"/>
         <source>Select Python2 Interpreter</source>
         <translation>Выбрать интерпретатор Python 2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1254"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Выбрать интерпретатор Python 2 для использования:</translation>
     </message>

@@ -719,6 +719,7 @@ class Prefs(object):
         "DoNotTrack": False,
         "SendReferer": True,
         "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"],
+        "NoCacheHosts": ["qt-project.org"],
         "RssFeeds": [],
         "SyncEnabled": False,
         "SyncBookmarks": True,
@@ -2229,7 +2230,8 @@ def getHelp(key, prefClass=Prefs):
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions", "AdBlockExceptions", "ClickToFlashWhitelist",
-                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts"]:
+                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts",
+                 "NoCacheHosts"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

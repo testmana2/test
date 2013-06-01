@@ -55,6 +55,7 @@ Version 5.4-snapshot-2013mmdd:
      --- added a 'Copy Changesets' button to the log browser dialog
 - Web Browser
   -- reworked the various SSL info widgets to show more info
+  -- added a dialog to configure hosts to be exempted from caching
 - Third Party packages
   -- updated to Pygments 1.6
 

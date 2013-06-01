@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>1158</height>
+    <width>616</width>
+    <height>1224</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -464,11 +464,38 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0" colspan="3">
-       <widget class="QCheckBox" name="diskCacheCheckBox">
-        <property name="text">
-         <string>Enable disk cache</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QCheckBox" name="diskCacheCheckBox">
+          <property name="text">
+           <string>Enable disk cache</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="noCacheHostsButton">
+          <property name="toolTip">
+           <string>Press to edit the list of hosts exempted from caching</string>
+          </property>
+          <property name="text">
+           <string>Edit Exempted Hosts ...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item row="1" column="0" colspan="3">
        <widget class="QGroupBox" name="groupBox_4">
@@ -694,6 +721,7 @@
   <tabstop>xssAuditingCheckBox</tabstop>
   <tabstop>expireHistory</tabstop>
   <tabstop>diskCacheCheckBox</tabstop>
+  <tabstop>noCacheHostsButton</tabstop>
   <tabstop>cacheKeepButton</tabstop>
   <tabstop>cachePreferButton</tabstop>
   <tabstop>cacheOfflineButton</tabstop>
@@ -717,8 +745,8 @@
      <y>422</y>
     </hint>
     <hint type="destinationlabel">
-     <x>89</x>
-     <y>443</y>
+     <x>145</x>
+     <y>465</y>
     </hint>
    </hints>
   </connection>

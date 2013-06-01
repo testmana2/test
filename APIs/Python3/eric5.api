@@ -2839,6 +2839,9 @@ eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent=None)
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog.accept?4()
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog.on_addButton_clicked?4()
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog?1(parent=None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.ExtensionMap?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtDocPath?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4(op, request, outgoingData=None)
@@ -5715,6 +5718,7 @@ eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.save?
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage?1(parent=None)
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_defaultHomeButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_noCacheHostsButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_refererWhitelistButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_setCurrentPageButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_startupCombo_currentIndexChanged?4(index)

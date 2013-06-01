@@ -282,6 +282,15 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         from Helpviewer.Network.SendRefererWhitelistDialog import \
             SendRefererWhitelistDialog
         SendRefererWhitelistDialog(self).exec_()
+    
+    @pyqtSlot()
+    def on_noCacheHostsButton_clicked(self):
+        """
+        Private slot to edit the list of hosts exempted from caching.
+        """
+        from Helpviewer.Network.NoCacheHostsDialog import \
+            NoCacheHostsDialog
+        NoCacheHostsDialog(self).exec_()
 
 
 def create(dlg):

@@ -36,10 +36,6 @@ class NetworkAccessManager(QNetworkAccessManager):
     requestCreated = pyqtSignal(
         QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)
     
-    NoCacheHosts = [
-        "qt-project.org",
-    ]
-    
     def __init__(self, engine, parent=None):
         """
         Constructor
@@ -157,7 +153,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         # set cache policy
         urlHost = req.url().host()
-        for host in self.NoCacheHosts:
+        for host in Preferences.getHelp("NoCacheHosts"):
             if host in urlHost:
                 req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                     QNetworkRequest.AlwaysNetwork)

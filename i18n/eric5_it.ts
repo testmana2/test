@@ -16100,37 +16100,37 @@ Hai %n schede aperta.</numerusform>
         <translation>Cache del Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="469"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
         <source>Enable disk cache</source>
         <translation>Abilita cache su disco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
         <source>Cache size:</source>
         <translation>Dimensione cache:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="549"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Inserisci la dimensione massima della cache su disco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="528"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="596"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
         <source>Printing</source>
         <translation>Stampa in corso</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="602"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
         <source>Select to print background colours and images</source>
         <translation>Seleziona per stampare i colori di background e le immagini</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="605"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
         <source>Print background colours and images</source>
         <translation>Stampa colori di background e le immagini</translation>
     </message>
@@ -16285,37 +16285,37 @@ Hai %n schede aperta.</numerusform>
         <translation type="obsolete">Usa il prescarico del DNS per migliorare il caricamento della pagina</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="476"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
         <source>Policy</source>
         <translation>Policy</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="482"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
         <source>Select to prefer the network</source>
         <translation>Seleziona per preferire la rete</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="485"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
         <source>Keep cache in sync</source>
         <translation>Mantieni sincronizzata la cache</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="519"/>
         <source>Select to prefer cached data</source>
         <translation>Seleziona per preferire i dati in cache</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="495"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Use cache whenever possible</source>
         <translation>Usa la cache quando possibile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="529"/>
         <source>Select to use cached data only</source>
         <translation>Seleziona per usare solo i dati della cache</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
         <source>Offline browsing mode</source>
         <translation>Modalità navigazione offline</translation>
     </message>
@@ -16330,27 +16330,27 @@ Hai %n schede aperta.</numerusform>
         <translation>Mostra anteprima passando il mouse sulla scheda</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="649"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
         <source>Select to enable support for access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="652"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
         <source>Enable access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="557"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
         <source>Web Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="563"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Language:</source>
         <translation type="unfinished">Linguaggio:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="570"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
         <source>Select the language to be used for web searches</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16385,39 +16385,39 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="615"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="621"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="624"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="628"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Enable Spatial Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Select to include links in focus chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="638"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Include Links in Focus Chain</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16470,6 +16470,16 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
         <source>Edit Referer Whitelist ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <source>Press to edit the list of hosts exempted from caching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
+        <source>Edit Exempted Hosts ...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -30831,12 +30841,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="obsolete">Certificati</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="188"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Inserisci utente e password per &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="185"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Inserisci utente e password per &apos;{0}&apos;, dominio &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>
@@ -31241,6 +31251,54 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="Project/NewPythonPackageDialog.ui" line="26"/>
         <source>Enter the dotted package name</source>
         <translation>Inserisci il nome puntato del pacchetto</translation>
+    </message>
+</context>
+<context>
+    <name>NoCacheHostsDialog</name>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
+        <source>Not Cached Hosts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="40"/>
+        <source>Enter search term for hosts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="77"/>
+        <source>Press to add site to the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="80"/>
+        <source>&amp;Add...</source>
+        <translation type="unfinished">&amp;Aggiungi...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="97"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished">Premi per rimuovere gli elementi selezionati</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="100"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished">&amp;Rimuovi</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="110"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished">Premi per rimuovere tutti gli elementi</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="113"/>
+        <source>R&amp;emove All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
+        <source>Enter host name to add to the list:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -33379,27 +33437,27 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="1132"/>
+        <location filename="Preferences/__init__.py" line="1133"/>
         <source>Export Preferences</source>
         <translation>Esporta Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1160"/>
         <source>Import Preferences</source>
         <translation>Importa Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1159"/>
+        <location filename="Preferences/__init__.py" line="1160"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>File proprietà (*.ini);;Tutti i file(*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1254"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1253"/>
+        <location filename="Preferences/__init__.py" line="1254"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
