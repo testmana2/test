@@ -1011,6 +1011,10 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, macAppBundleName, macPythonExe
     
+    if sys.version_info > (3, 9, 9) or sys.version_info < (3, 0, 0):
+        print('Sorry, eric5 requires Python 3 for running.')
+        exit(5)
+    
     progName = os.path.basename(argv[0])
     
     if os.path.dirname(argv[0]):
