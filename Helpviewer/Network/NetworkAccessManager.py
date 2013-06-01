@@ -36,6 +36,10 @@ class NetworkAccessManager(QNetworkAccessManager):
     requestCreated = pyqtSignal(
         QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)
     
+    NoCacheHosts = [
+        "qt-project.org",
+    ]
+    
     def __init__(self, engine, parent=None):
         """
         Constructor
@@ -141,10 +145,6 @@ class NetworkAccessManager(QNetworkAccessManager):
         if not self.__acceptLanguage.isEmpty():
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
-        # set cache policy
-        req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-            Preferences.getHelp("CachePolicy"))
-        
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:
             if self.__adblockNetwork is None:
@@ -154,6 +154,17 @@ class NetworkAccessManager(QNetworkAccessManager):
             if reply is not None:
                 reply.setParent(self)
                 return reply
+        
+        # set cache policy
+        urlHost = req.url().host()
+        for host in self.NoCacheHosts:
+            if host in urlHost:
+                req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                    QNetworkRequest.AlwaysNetwork)
+                break
+        else:
+            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                Preferences.getHelp("CachePolicy"))
         
         # Do Not Track feature
         if self.__doNotTrack:
