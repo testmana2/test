@@ -75,15 +75,21 @@ def messageHandler(msgType, message):
     if __msgHandlerDialog:
         try:
             if msgType == QtDebugMsg:
-                messageType = QCoreApplication.translate("E5ErrorMessage", "Debug Message:")
+                messageType = QCoreApplication.translate(
+                    "E5ErrorMessage", "Debug Message:")
             elif msgType == QtWarningMsg:
-                messageType = QCoreApplication.translate("E5ErrorMessage", "Warning:")
+                messageType = QCoreApplication.translate(
+                    "E5ErrorMessage", "Warning:")
             elif msgType == QtCriticalMsg:
-                messageType = QCoreApplication.translate("E5ErrorMessage", "Critical:")
+                messageType = QCoreApplication.translate(
+                    "E5ErrorMessage", "Critical:")
             elif msgType == QtFatalMsg:
-                messageType = QCoreApplication.translate("E5ErrorMessage", "Fatal Error:")
+                messageType = QCoreApplication.translate(
+                    "E5ErrorMessage", "Fatal Error:")
+            if isinstance(message, bytes):
+                message = message.decode()
             msg = "<p><b>{0}</b></p><p>{1}</p>".format(
-                messageType, Utilities.html_uencode(message.decode()))
+                messageType, Utilities.html_uencode(message))
             if QThread.currentThread() == qApp.thread():
                 __msgHandlerDialog.showMessage(msg)
             else:
@@ -107,7 +113,9 @@ def messageHandler(msgType, message):
         messageType = QCoreApplication.translate("E5ErrorMessage", "Critical")
     elif msgType == QtFatalMsg:
         messageType = QCoreApplication.translate("E5ErrorMessage", "Fatal Error")
-    print("{0}: {1}".format(messageType, message.decode()))
+    if isinstance(message, bytes):
+        message = message.decode()
+    print("{0}: {1}".format(messageType, message))
 
 
 def qtHandler():
