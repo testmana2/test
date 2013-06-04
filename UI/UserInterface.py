@@ -26,7 +26,7 @@ from . import Config
 from E5Gui.E5SingleApplication import E5SingleApplicationServer
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui.E5ToolBarManager import E5ToolBarManager
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox, E5FileDialog, E5ErrorMessage
 from E5Gui.E5Application import e5App
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5ZoomWidget import E5ZoomWidget
@@ -1882,6 +1882,20 @@ class UserInterface(E5MainWindow):
             self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
             self.actions.append(self.certificatesAct)
         
+        self.editMessageFilterAct = E5Action(self.trUtf8('Edit Message Filters'),
+                UI.PixmapCache.getIcon("warning.png"),
+                self.trUtf8('Edit Message Filters...'), 0, 0, self,
+                'manage_message_filters')
+        self.editMessageFilterAct.setStatusTip(self.trUtf8(
+            'Edit the message filters used to suppress unwanted messages'))
+        self.editMessageFilterAct.setWhatsThis(self.trUtf8(
+            """<b>Edit Message Filters</b>"""
+            """<p>Opens a dialog to edit the message filters used to suppress"""
+            """ unwanted messages been shown in an error window.</p>"""
+        ))
+        self.editMessageFilterAct.triggered[()].connect(E5ErrorMessage.editMessageFilters)
+        self.actions.append(self.editMessageFilterAct)
+
         self.viewmanagerActivateAct = E5Action(self.trUtf8('Activate current editor'),
                 self.trUtf8('Activate current editor'),
                 QKeySequence(self.trUtf8("Alt+Shift+E")),
@@ -2170,6 +2184,8 @@ class UserInterface(E5MainWindow):
         if SSL_AVAILABLE:
             self.__menus["settings"].addSeparator()
             self.__menus["settings"].addAction(self.certificatesAct)
+        self.__menus["settings"].addSeparator()
+        self.__menus["settings"].addAction(self.editMessageFilterAct)
         
         self.__menus["window"] = QMenu(self.trUtf8('&Window'), self)
         mb.addMenu(self.__menus["window"])
@@ -2576,6 +2592,14 @@ class UserInterface(E5MainWindow):
         self.showVersionsAct.setEnabled(not self.__inVersionCheck)
         
         self.showMenu.emit("Help", self.__menus["help"])
+    
+    def __showSettingsMenu(self):
+        """
+        Private slot to show the Settings menu.
+        """
+        self.editMessageFilterAct.setEnabled(E5ErrorMessage.messageHandlerInstalled())
+        
+        self.showMenu.emit("Settings", self.__menus["settings"])
     
     def __showNext(self):
         """

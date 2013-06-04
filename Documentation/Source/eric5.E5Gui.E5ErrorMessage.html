@@ -37,8 +37,14 @@ Module implementing a specialized error message dialog.
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#editMessageFilters">editMessageFilters</a></td>
+<td>Module function to edit the list of message filters.</td>
+</tr><tr>
 <td><a href="#messageHandler">messageHandler</a></td>
 <td>Module function handling messages.</td>
+</tr><tr>
+<td><a href="#messageHandlerInstalled">messageHandlerInstalled</a></td>
+<td>Module function to check, if a message handler was installed.</td>
 </tr><tr>
 <td><a href="#qtHandler">qtHandler</a></td>
 <td>Module function to install an E5ErrorMessage dialog as the global message handler.</td>
@@ -68,6 +74,9 @@ QErrorMessage
 </tr><tr>
 <td><a href="#E5ErrorMessage.__filterMessage">__filterMessage</a></td>
 <td>Private method to filter messages.</td>
+</tr><tr>
+<td><a href="#E5ErrorMessage.editMessageFilters">editMessageFilters</a></td>
+<td>Public method to edit the list of message filters.</td>
 </tr><tr>
 <td><a href="#E5ErrorMessage.showMessage">showMessage</a></td>
 <td>Public method to show a message.</td>
@@ -102,7 +111,12 @@ message to be checked (string)
 <dd>
 flag indicating that the message should be filtered out (boolean)
 </dd>
-</dl><a NAME="E5ErrorMessage.showMessage" ID="E5ErrorMessage.showMessage"></a>
+</dl><a NAME="E5ErrorMessage.editMessageFilters" ID="E5ErrorMessage.editMessageFilters"></a>
+<h4>E5ErrorMessage.editMessageFilters</h4>
+<b>editMessageFilters</b>(<i></i>)
+<p>
+        Public method to edit the list of message filters.
+</p><a NAME="E5ErrorMessage.showMessage" ID="E5ErrorMessage.showMessage"></a>
 <h4>E5ErrorMessage.showMessage</h4>
 <b>showMessage</b>(<i>message, msgType=""</i>)
 <p>
@@ -118,6 +132,14 @@ type of the error message (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="editMessageFilters" ID="editMessageFilters"></a>
+<h2>editMessageFilters</h2>
+<b>editMessageFilters</b>(<i></i>)
+<p>
+    Module function to edit the list of message filters.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="messageHandler" ID="messageHandler"></a>
 <h2>messageHandler</h2>
 <b>messageHandler</b>(<i>msgType, message</i>)
@@ -130,6 +152,19 @@ type of the message (integer, QtMsgType)
 </dd><dt><i>message</i></dt>
 <dd>
 message to be shown (bytes)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="messageHandlerInstalled" ID="messageHandlerInstalled"></a>
+<h2>messageHandlerInstalled</h2>
+<b>messageHandlerInstalled</b>(<i></i>)
+<p>
+    Module function to check, if a message handler was installed.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an installed message handler (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

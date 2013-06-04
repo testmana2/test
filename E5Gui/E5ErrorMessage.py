@@ -8,9 +8,11 @@ Module implementing a specialized error message dialog.
 """
 
 from PyQt4.QtCore import qInstallMsgHandler, QCoreApplication, QtDebugMsg, \
-    QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, QMetaObject, Qt, Q_ARG
-from PyQt4.QtGui import QErrorMessage, qApp
+    QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, QMetaObject, Qt, Q_ARG, \
+    QSettings
+from PyQt4.QtGui import QErrorMessage, qApp, QDialog
 
+import Globals
 import Utilities
 
 
@@ -30,8 +32,12 @@ class E5ErrorMessage(QErrorMessage):
         """
         super().__init__(parent)
         
-        # TODO: make this list configurable by the user
-        self.__filters = [
+        self.settings = QSettings(QSettings.IniFormat,
+            QSettings.UserScope,
+            Globals.settingsNameOrganization,
+            "eric5messagefilters")
+        
+        self.__defaultFilters = [
             "QFont::",
             "QCocoaMenu::removeMenuItem",
             "QCocoaMenu::insertNative",
@@ -45,7 +51,7 @@ class E5ErrorMessage(QErrorMessage):
         @param message message to be checked (string)
         @return flag indicating that the message should be filtered out (boolean)
         """
-        for filter in self.__filters:
+        for filter in self.settings.value("MessageFilters", self.__defaultFilters):
             if filter in message:
                 return True
         
@@ -63,6 +69,17 @@ class E5ErrorMessage(QErrorMessage):
                 super().showMessage(message, msgType)
             else:
                 super().showMessage(message)
+    
+    def editMessageFilters(self):
+        """
+        Public method to edit the list of message filters.
+        """
+        from .E5ErrorMessageFilterDialog import E5ErrorMessageFilterDialog
+        dlg = E5ErrorMessageFilterDialog(
+            self.settings.value("MessageFilters", self.__defaultFilters))
+        if dlg.exec_() == QDialog.Accepted:
+            filters = dlg.getFilters()
+            self.settings.setValue("MessageFilters", filters)
 
 
 def messageHandler(msgType, message):
@@ -131,3 +148,23 @@ def qtHandler():
         __origMsgHandler = qInstallMsgHandler(messageHandler)
     
     return __msgHandlerDialog
+
+
+def editMessageFilters():
+    """
+    Module function to edit the list of message filters.
+    """
+    if __msgHandlerDialog:
+        __msgHandlerDialog.editMessageFilters()
+    else:
+        print(QCoreApplication.translate( "E5ErrorMessage",
+            "No message handler installed."))
+
+
+def messageHandlerInstalled():
+    """
+    Module function to check, if a message handler was installed.
+    
+    @return flag indicating an installed message handler (boolean)
+    """
+    return __msgHandlerDialog is not None

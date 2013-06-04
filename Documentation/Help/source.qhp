@@ -120,6 +120,7 @@
             <section title="eric5.E5Gui.E5ComboBox" ref="eric5.E5Gui.E5ComboBox.html" />
             <section title="eric5.E5Gui.E5Completers" ref="eric5.E5Gui.E5Completers.html" />
             <section title="eric5.E5Gui.E5ErrorMessage" ref="eric5.E5Gui.E5ErrorMessage.html" />
+            <section title="eric5.E5Gui.E5ErrorMessageFilterDialog" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html" />
             <section title="eric5.E5Gui.E5FileDialog" ref="eric5.E5Gui.E5FileDialog.html" />
             <section title="eric5.E5Gui.E5Led" ref="eric5.E5Gui.E5Led.html" />
             <section title="eric5.E5Gui.E5LineEdit" ref="eric5.E5Gui.E5LineEdit.html" />
@@ -3387,7 +3388,13 @@
       <keyword name="E5ErrorMessage (Constructor)" id="E5ErrorMessage (Constructor)" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.__init__" />
       <keyword name="E5ErrorMessage (Module)" id="E5ErrorMessage (Module)" ref="eric5.E5Gui.E5ErrorMessage.html" />
       <keyword name="E5ErrorMessage.__filterMessage" id="E5ErrorMessage.__filterMessage" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.__filterMessage" />
+      <keyword name="E5ErrorMessage.editMessageFilters" id="E5ErrorMessage.editMessageFilters" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.editMessageFilters" />
       <keyword name="E5ErrorMessage.showMessage" id="E5ErrorMessage.showMessage" ref="eric5.E5Gui.E5ErrorMessage.html#E5ErrorMessage.showMessage" />
+      <keyword name="E5ErrorMessageFilterDialog" id="E5ErrorMessageFilterDialog" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog" />
+      <keyword name="E5ErrorMessageFilterDialog (Constructor)" id="E5ErrorMessageFilterDialog (Constructor)" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.__init__" />
+      <keyword name="E5ErrorMessageFilterDialog (Module)" id="E5ErrorMessageFilterDialog (Module)" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html" />
+      <keyword name="E5ErrorMessageFilterDialog.getFilters" id="E5ErrorMessageFilterDialog.getFilters" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.getFilters" />
+      <keyword name="E5ErrorMessageFilterDialog.on_addButton_clicked" id="E5ErrorMessageFilterDialog.on_addButton_clicked" ref="eric5.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.on_addButton_clicked" />
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric5.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric5.E5Gui.E5FileDialog.html" />
@@ -5219,6 +5226,7 @@
       <keyword name="HelpWindow (Module)" id="HelpWindow (Module)" ref="eric5.Helpviewer.HelpWindow.html" />
       <keyword name="HelpWindow.__about" id="HelpWindow.__about" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__about" />
       <keyword name="HelpWindow.__aboutQt" id="HelpWindow.__aboutQt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutQt" />
+      <keyword name="HelpWindow.__aboutToShowSettingsMenu" id="HelpWindow.__aboutToShowSettingsMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutToShowSettingsMenu" />
       <keyword name="HelpWindow.__aboutToShowTextEncodingMenu" id="HelpWindow.__aboutToShowTextEncodingMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutToShowTextEncodingMenu" />
       <keyword name="HelpWindow.__activateCurrentBrowser" id="HelpWindow.__activateCurrentBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__activateCurrentBrowser" />
       <keyword name="HelpWindow.__activateDock" id="HelpWindow.__activateDock" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__activateDock" />
@@ -11484,6 +11492,7 @@
       <keyword name="UserInterface.__showQt4Doc" id="UserInterface.__showQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showQt4Doc" />
       <keyword name="UserInterface.__showQt5Doc" id="UserInterface.__showQt5Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showQt5Doc" />
       <keyword name="UserInterface.__showQtDoc" id="UserInterface.__showQtDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showQtDoc" />
+      <keyword name="UserInterface.__showSettingsMenu" id="UserInterface.__showSettingsMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showSettingsMenu" />
       <keyword name="UserInterface.__showSubWindowMenu" id="UserInterface.__showSubWindowMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showSubWindowMenu" />
       <keyword name="UserInterface.__showSvg" id="UserInterface.__showSvg" ref="eric5.UI.UserInterface.html#UserInterface.__showSvg" />
       <keyword name="UserInterface.__showSystemEmailClient" id="UserInterface.__showSystemEmailClient" ref="eric5.UI.UserInterface.html#UserInterface.__showSystemEmailClient" />
@@ -12405,6 +12414,7 @@
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
       <keyword name="drawPolygon" id="drawPolygon" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#drawPolygon" />
       <keyword name="drawRect" id="drawRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#drawRect" />
+      <keyword name="editMessageFilters" id="editMessageFilters" ref="eric5.E5Gui.E5ErrorMessage.html#editMessageFilters" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="encryptData" id="encryptData" ref="eric5.Utilities.crypto.py3AES.html#encryptData" />
       <keyword name="ensureUniqueFilename" id="ensureUniqueFilename" ref="eric5.Helpviewer.HelpUtilities.html#ensureUniqueFilename" />
@@ -12695,6 +12705,7 @@
       <keyword name="message" id="message" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#message" />
       <keyword name="message" id="message" ref="eric5.UtilitiesPython2.pep8.html#message" />
       <keyword name="messageHandler" id="messageHandler" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandler" />
+      <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
       <keyword name="messages (Module)" id="messages (Module)" ref="eric5.Utilities.py3flakes.messages.html" />
       <keyword name="messages (Module)" id="messages (Module)" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#missing_newline" />
@@ -13028,6 +13039,7 @@
       <file>eric5.E5Gui.E5ComboBox.html</file>
       <file>eric5.E5Gui.E5Completers.html</file>
       <file>eric5.E5Gui.E5ErrorMessage.html</file>
+      <file>eric5.E5Gui.E5ErrorMessageFilterDialog.html</file>
       <file>eric5.E5Gui.E5FileDialog.html</file>
       <file>eric5.E5Gui.E5Led.html</file>
       <file>eric5.E5Gui.E5LineEdit.html</file>

@@ -1079,6 +1079,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Examples/rhallo.py</Source>
     <Source>E5Gui/E5ErrorMessage.py</Source>
     <Source>Helpviewer/Network/NoCacheHostsDialog.py</Source>
+    <Source>E5Gui/E5ErrorMessageFilterDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1393,6 +1394,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
     <Form>QScintilla/SortOptionsDialog.ui</Form>
     <Form>Helpviewer/Network/NoCacheHostsDialog.ui</Form>
+    <Form>E5Gui/E5ErrorMessageFilterDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
