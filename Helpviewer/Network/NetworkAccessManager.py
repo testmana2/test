@@ -144,8 +144,12 @@ class NetworkAccessManager(QNetworkAccessManager):
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
         # set cache policy
-        req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-            Preferences.getHelp("CachePolicy"))
+        if op == QNetworkAccessManager.GetOperation:
+            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                Preferences.getHelp("CachePolicy"))
+        else:
+            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                QNetworkRequest.AlwaysNetwork)
         
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:
