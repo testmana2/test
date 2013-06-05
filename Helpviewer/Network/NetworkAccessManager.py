@@ -152,15 +152,19 @@ class NetworkAccessManager(QNetworkAccessManager):
                 return reply
         
         # set cache policy
-        urlHost = req.url().host()
-        for host in Preferences.getHelp("NoCacheHosts"):
-            if host in urlHost:
+        if op == QNetworkAccessManager.GetOperation:
+            urlHost = req.url().host()
+            for host in Preferences.getHelp("NoCacheHosts"):
+                if host in urlHost:
+                    req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                        QNetworkRequest.AlwaysNetwork)
+                    break
+            else:
                 req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-                    QNetworkRequest.AlwaysNetwork)
-                break
+                    Preferences.getHelp("CachePolicy"))
         else:
             req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-                Preferences.getHelp("CachePolicy"))
+                QNetworkRequest.AlwaysNetwork)
         
         # Do Not Track feature
         if self.__doNotTrack:
