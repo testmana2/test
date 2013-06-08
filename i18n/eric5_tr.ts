@@ -1123,54 +1123,54 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Proje Ekle</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="24"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="25"/>
         <source>&amp;Name:</source>
         <translation>A&amp;dı:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="34"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="35"/>
         <source>Enter the name of the project</source>
         <translation>Projenin adını giriniz</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="41"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="42"/>
         <source>Project&amp;file:</source>
         <translation>Proje &amp;Dosyası:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="51"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="52"/>
         <source>Enter the name of the project file</source>
         <translation>Proje dosyasının adını giriniz</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="58"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="59"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Dosya seçme diyaloğu ile bir proje dosyası seç</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="61"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="62"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="68"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="69"/>
         <source>&amp;Description:</source>
         <translation>A&amp;çıklama:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="81"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="82"/>
         <source>Enter a short description for the project</source>
         <translation>Proje için kısa bir açıklama giriniz</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="94"/>
         <source>Select to make this project the master project</source>
-        <translation>Bu projeyi ana proje yapmak için seçiniz</translation>
+        <translation type="obsolete">Bu projeyi ana proje yapmak için seçiniz</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="97"/>
         <source>Is &amp;master project</source>
-        <translation>Ana proje &amp;mi</translation>
+        <translation type="obsolete">Ana proje &amp;mi</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="44"/>
@@ -1186,6 +1186,16 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="MultiProject/AddProjectDialog.py" line="62"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="95"/>
+        <source>Select to make this project the main project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="98"/>
+        <source>Is &amp;main project</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

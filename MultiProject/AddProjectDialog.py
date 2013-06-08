@@ -74,7 +74,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         
         @return tuple of four values (string, string, boolean, string) giving the
             project name, the name of the project file, a flag telling, whether
-            the project shall be the master project and a short description
+            the project shall be the main project and a short description
             for the project
         """
         return (self.nameEdit.text(), self.filenameEdit.text(),

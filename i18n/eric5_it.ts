@@ -1127,54 +1127,54 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Aggiungi progetto</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="24"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="25"/>
         <source>&amp;Name:</source>
         <translation>&amp;Nome:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="34"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="35"/>
         <source>Enter the name of the project</source>
         <translation>Inserisci il nome del progetto</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="41"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="42"/>
         <source>Project&amp;file:</source>
         <translation>&amp;File Progetto:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="51"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="52"/>
         <source>Enter the name of the project file</source>
         <translation>Inserisci il nome del file progetto</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="58"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="59"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Seleziona il file progetto con il dialogo</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="61"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="62"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="68"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="69"/>
         <source>&amp;Description:</source>
         <translation>&amp;Descrizione:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="81"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="82"/>
         <source>Enter a short description for the project</source>
         <translation>Inserisci una breve descrizione per il progetto</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="94"/>
         <source>Select to make this project the master project</source>
-        <translation>Seleziona per rendere questo il progetto principale</translation>
+        <translation type="obsolete">Seleziona per rendere questo il progetto principale</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="97"/>
         <source>Is &amp;master project</source>
-        <translation>E&apos; il progetto &amp;master</translation>
+        <translation type="obsolete">E&apos; il progetto &amp;master</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="44"/>
@@ -1185,6 +1185,16 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="MultiProject/AddProjectDialog.py" line="62"/>
         <source>Project Files (*.e4p)</source>
         <translation>File progetto (*.e4p)</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="95"/>
+        <source>Select to make this project the main project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="98"/>
+        <source>Is &amp;main project</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

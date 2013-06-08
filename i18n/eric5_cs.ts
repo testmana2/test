@@ -1122,49 +1122,49 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Nový projekt</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="24"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="25"/>
         <source>&amp;Name:</source>
         <translation>Jmé&amp;no:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="34"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="35"/>
         <source>Enter the name of the project</source>
         <translation>Zadejte jméno projektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="41"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="42"/>
         <source>Project&amp;file:</source>
         <translation>Sou&amp;bor projektu:</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="51"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="52"/>
         <source>Enter the name of the project file</source>
         <translation>Zadejte název souboru projektu</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="58"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="59"/>
         <source>Select the project file via a file selection dialog</source>
         <translation>Výběr projektu přes dialogové okno výběru souboru</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="61"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="62"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="81"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="82"/>
         <source>Enter a short description for the project</source>
         <translation>Zadejte krátký popis projektu</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="94"/>
         <source>Select to make this project the master project</source>
-        <translation>Vybrat pro nastavení projektu jako hlavní projekt</translation>
+        <translation type="obsolete">Vybrat pro nastavení projektu jako hlavní projekt</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="97"/>
         <source>Is &amp;master project</source>
-        <translation>Je &amp;hlavní projekt</translation>
+        <translation type="obsolete">Je &amp;hlavní projekt</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="60"/>
@@ -1172,7 +1172,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Soubory projektu (*.e4p *.e4pz)</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.ui" line="68"/>
+        <location filename="MultiProject/AddProjectDialog.ui" line="69"/>
         <source>&amp;Description:</source>
         <translation>&amp;Popis:</translation>
     </message>
@@ -1185,6 +1185,16 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="MultiProject/AddProjectDialog.py" line="62"/>
         <source>Project Files (*.e4p)</source>
         <translation>Soubory projektu (*.e4p)</translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="95"/>
+        <source>Select to make this project the main project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="MultiProject/AddProjectDialog.ui" line="98"/>
+        <source>Is &amp;main project</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
