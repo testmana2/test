@@ -4757,7 +4757,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart Script</source>
-        <translation>Riavvia lo Script</translation>
+        <translation type="obsolete">Riavvia lo Script</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
@@ -4767,7 +4767,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="274"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Riavvia lo Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e imposta la linea corrente per essere la prima istruzione eseguibile di Python dell&apos;ultimo script debuggato. Se il file ha modifiche non salvate è possibile salvarle prima.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Riavvia lo Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e imposta la linea corrente per essere la prima istruzione eseguibile di Python dell&apos;ultimo script debuggato. Se il file ha modifiche non salvate è possibile salvarle prima.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="297"/>
@@ -5125,7 +5125,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="283"/>
         <source>Stop Script</source>
-        <translation>Ferma lo script</translation>
+        <translation type="obsolete">Ferma lo script</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
@@ -5135,7 +5135,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="288"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Ferma lo script&lt;/b&gt;&lt;p&gt;Questo ferma lo script in esecuzione nel backend del debugger.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Ferma lo script&lt;/b&gt;&lt;p&gt;Questo ferma lo script in esecuzione nel backend del debugger.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="390"/>
@@ -5254,6 +5254,21 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -30914,12 +30929,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="obsolete">Certificati</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Inserisci utente e password per &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Inserisci utente e password per &apos;{0}&apos;, dominio &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>

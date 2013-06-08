@@ -4779,7 +4779,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart Script</source>
-        <translation>Перезапустить сценарий</translation>
+        <translation type="obsolete">Перезапустить сценарий</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
@@ -4789,7 +4789,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="274"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Перезапустить сценарий&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Перезапустить сценарий&lt;/b&gt;
 &lt;p&gt;Запустится последний отлаживаемый сценарий с последними параметрами командной строки. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -5190,7 +5190,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="283"/>
         <source>Stop Script</source>
-        <translation>Остановить сценарий</translation>
+        <translation type="obsolete">Остановить сценарий</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
@@ -5200,7 +5200,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="288"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Остановить сценарий&lt;/b&gt;&lt;p&gt;Остановить сценарий, выполняющийся в отладчике.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Остановить сценарий&lt;/b&gt;&lt;p&gt;Остановить сценарий, выполняющийся в отладчике.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="390"/>
@@ -5290,6 +5290,21 @@ Not connected
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
         <translation>{0} завершился с кодом выхода {1}.</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -31055,12 +31070,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Введите имя пользователя и пароль для &apos;{0}&apos;; realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>

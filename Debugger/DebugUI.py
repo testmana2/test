@@ -267,12 +267,12 @@ class DebugUI(QObject):
         self.debugProjectAct.triggered[()].connect(self.__debugProject)
         self.actions.append(self.debugProjectAct)
 
-        self.restartAct = E5Action(self.trUtf8('Restart Script'),
+        self.restartAct = E5Action(self.trUtf8('Restart'),
                 UI.PixmapCache.getIcon("restart.png"),
-                self.trUtf8('Restart Script'), Qt.Key_F4, 0, self, 'dbg_restart_script')
+                self.trUtf8('Restart'), Qt.Key_F4, 0, self, 'dbg_restart_script')
         self.restartAct.setStatusTip(self.trUtf8('Restart the last debugged script'))
         self.restartAct.setWhatsThis(self.trUtf8(
-            """<b>Restart Script</b>"""
+            """<b>Restart</b>"""
             """<p>Set the command line arguments and set the current line to be the"""
             """ first executable Python statement of the script that was debugged last."""
             """ If there are unsaved changes, they may be saved first.</p>"""
@@ -280,13 +280,13 @@ class DebugUI(QObject):
         self.restartAct.triggered[()].connect(self.__doRestart)
         self.actions.append(self.restartAct)
 
-        self.stopAct = E5Action(self.trUtf8('Stop Script'),
+        self.stopAct = E5Action(self.trUtf8('Stop'),
                 UI.PixmapCache.getIcon("stopScript.png"),
-                self.trUtf8('Stop Script'), Qt.SHIFT + Qt.Key_F10, 0,
+                self.trUtf8('Stop'), Qt.SHIFT + Qt.Key_F10, 0,
                 self, 'dbg_stop_script')
         self.stopAct.setStatusTip(self.trUtf8("""Stop the running script."""))
         self.stopAct.setWhatsThis(self.trUtf8(
-            """<b>Stop Script</b>"""
+            """<b>Stop</b>"""
             """<p>This stops the script running in the debugger backend.</p>"""
         ))
         self.stopAct.triggered[()].connect(self.__stopScript)

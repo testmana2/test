@@ -4569,7 +4569,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart Script</source>
-        <translation>Reiniciar script</translation>
+        <translation type="obsolete">Reiniciar script</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
@@ -4579,12 +4579,12 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="274"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Reiniciar Script&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y establecer la línea actual en el script que se depuró en último lugar como la primera sentencia Python ejecutable. Si hay cambios sin guardar, se pueden guardar primero.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Reiniciar Script&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y establecer la línea actual en el script que se depuró en último lugar como la primera sentencia Python ejecutable. Si hay cambios sin guardar, se pueden guardar primero.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="283"/>
         <source>Stop Script</source>
-        <translation>Detener script</translation>
+        <translation type="obsolete">Detener script</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
@@ -4594,7 +4594,7 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="288"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Detener Script&lt;/b&gt;&lt;p&gt;Detiene el script que haya en ejecución en el extremo del depurador.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Detener Script&lt;/b&gt;&lt;p&gt;Detiene el script que haya en ejecución en el extremo del depurador.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="297"/>
@@ -5069,6 +5069,21 @@ Not connected
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
         <translation>&quot;{0}&quot; ha terminado con un estado de salida de {1}.</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -29930,12 +29945,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Introduzca nombre de usuario y contraseña para &apos;{0}&apos;, reino {1}&apos;&lt;/b&gt;</translation>
     </message>

@@ -4609,19 +4609,9 @@ Nicht verbunden
         <translation>E&amp;inzelanweisung ausführen...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="270"/>
-        <source>Restart Script</source>
-        <translation>Skript neu starten</translation>
-    </message>
-    <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
         <source>Restart the last debugged script</source>
         <translation>Das zuletzt untersuchte Skript neu starten</translation>
-    </message>
-    <message>
-        <location filename="Debugger/DebugUI.py" line="274"/>
-        <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Skript neu starten&lt;/b&gt;&lt;p&gt;Setzt die Kommandozeilenparameter und setzt die erste ausführbare Python Zeile des zuletzt untersuchten Skriptes. Falls ungesicherte Änderungen vorliegen, so werden diese zunächst gesichert.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="425"/>
@@ -4962,19 +4952,9 @@ Nicht verbunden
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält den Syntaxfehler &lt;b&gt;{1}&lt;/b&gt; in Zeile &lt;b&gt;{2}&lt;/b&gt;, Position &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="283"/>
-        <source>Stop Script</source>
-        <translation>Skript anhalten</translation>
-    </message>
-    <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
         <source>Stop the running script.</source>
         <translation>Halte das laufende Skript an.</translation>
-    </message>
-    <message>
-        <location filename="Debugger/DebugUI.py" line="288"/>
-        <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Skript anhalten&lt;/b&gt;&lt;p&gt;Dies hält das Skript, das im Debugger läuft, an.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="390"/>
@@ -5071,6 +5051,21 @@ Nicht verbunden
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
         <translation>&quot;{0}&quot; wurde mit dem Status {1} beendet.</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation>Neu starten</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Neu starten&lt;/b&gt;&lt;p&gt;Setzt die Kommandozeilenparameter und setzt die erste ausführbare Python Zeile des zuletzt untersuchten Skriptes. Falls ungesicherte Änderungen vorliegen, so werden diese zunächst gesichert.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Anhalten&lt;/b&gt;&lt;p&gt;Dies hält das Skript, das im Debugger läuft, an.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -29926,12 +29921,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; und Realm &apos;{1}&apos; ein&lt;/b&gt;</translation>
     </message>

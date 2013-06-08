@@ -4763,7 +4763,7 @@ Nepřipojen
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart Script</source>
-        <translation>Restartovat skript</translation>
+        <translation type="obsolete">Restartovat skript</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
@@ -4773,7 +4773,7 @@ Nepřipojen
     <message>
         <location filename="Debugger/DebugUI.py" line="274"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Restart skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a aktuální řádky jako první python příkaz v naposled debugovaném skriptu. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Restart skript&lt;/b&gt;&lt;p&gt;Nastavení parametrů příkazové řádky a aktuální řádky jako první python příkaz v naposled debugovaném skriptu. Pokud jsou ve skriptu neuložené změny, měly by se nejdříve uložit.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="297"/>
@@ -5131,7 +5131,7 @@ Nepřipojen
     <message>
         <location filename="Debugger/DebugUI.py" line="283"/>
         <source>Stop Script</source>
-        <translation>Stopnout skript</translation>
+        <translation type="obsolete">Stopnout skript</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
@@ -5141,7 +5141,7 @@ Nepřipojen
     <message>
         <location filename="Debugger/DebugUI.py" line="288"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Stopnout skript&lt;/b&gt;&lt;p&gt;Zastaví skript, který běží v debugeru na pozadí.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Stopnout skript&lt;/b&gt;&lt;p&gt;Zastaví skript, který běží v debugeru na pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="390"/>
@@ -5260,6 +5260,21 @@ Nepřipojen
     <message>
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -31175,12 +31190,12 @@ Do you want to save your changes?</source>
         <translation type="obsolete">Certifikáty</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro &apos;{0}&apos;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Zadejte uživatelské jméno a heslo pro {0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</translation>
     </message>

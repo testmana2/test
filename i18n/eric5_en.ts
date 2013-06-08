@@ -4527,33 +4527,13 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="270"/>
-        <source>Restart Script</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
         <source>Restart the last debugged script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="274"/>
-        <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Debugger/DebugUI.py" line="283"/>
-        <source>Stop Script</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
         <source>Stop the running script.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Debugger/DebugUI.py" line="288"/>
-        <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5026,6 +5006,21 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -29774,12 +29769,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>

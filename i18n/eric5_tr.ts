@@ -4767,7 +4767,7 @@ Bağlantı yok
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart Script</source>
-        <translation>Betiği Yeniden Çalıştır</translation>
+        <translation type="obsolete">Betiği Yeniden Çalıştır</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="273"/>
@@ -4775,24 +4775,14 @@ Bağlantı yok
         <translation>En son hata ayıklama yapılan betiği yeniden çalıştır</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="274"/>
-        <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Debugger/DebugUI.py" line="283"/>
         <source>Stop Script</source>
-        <translation>Betiği Durdur</translation>
+        <translation type="obsolete">Betiği Durdur</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="287"/>
         <source>Stop the running script.</source>
         <translation>Çalışan betiği durdur.</translation>
-    </message>
-    <message>
-        <location filename="Debugger/DebugUI.py" line="288"/>
-        <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="297"/>
@@ -5264,6 +5254,21 @@ Bağlantı yok
     <message>
         <location filename="Debugger/DebugUI.py" line="959"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="270"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="274"/>
+        <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Debugger/DebugUI.py" line="288"/>
+        <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -30955,12 +30960,12 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="195"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="199"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt; &apos;{0}&apos; için kullanıcı adını ve parolayı giriniz&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="192"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="196"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt; &apos;{1}&apos; alanı, &apos;{0}&apos; için kullanıcı adı ve parola giriniz&lt;/b&gt;</translation>
     </message>
