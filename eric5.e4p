@@ -1512,6 +1512,13 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Styles</Other>
     <Other>CodeTemplates</Other>
     <Other>Documentation/Help</Other>
+    <Other>APIs/Ruby/eric5.bas</Other>
+    <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
+    <Other>APIs/Ruby/Ruby-1.9.1.api</Other>
+    <Other>APIs/Ruby/Ruby-1.9.1.bas</Other>
+    <Other>APIs/Python3/eric5.bas</Other>
+    <Other>APIs/Python3/PyQt4.bas</Other>
+    <Other>APIs/Python3/QScintilla2.bas</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
