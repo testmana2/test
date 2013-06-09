@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1147,12 +1148,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="95"/>
         <source>Select to make this project the main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer este proyecto el proyecto principal</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.ui" line="98"/>
         <source>Is &amp;main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Es el proyecto &amp;principal</translation>
     </message>
 </context>
 <context>
@@ -1940,8 +1941,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
@@ -2182,8 +2183,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
@@ -5083,17 +5084,17 @@ Not connected
     <message>
         <location filename="Debugger/DebugUI.py" line="270"/>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="274"/>
         <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Reiniciar&lt;/b&gt;&lt;p&gt;Establecer los argumentos de línea de comandos y la línea actual para que sea la primera sentencia del script que se depuró en último lugar. Si hay cambios sin guardar, pueden ser guardados primero.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="288"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Detener&lt;/b&gt;&lt;p&gt;Esto detiene el script que está corriendo en el backend del depurador.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6607,47 +6608,47 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="95"/>
         <source>Debug Message:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensaje de Depuración:</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="98"/>
         <source>Warning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Advertencia:</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="101"/>
         <source>Critical:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso Crítico:</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="104"/>
         <source>Fatal Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Error Fatal:</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="128"/>
         <source>Warning</source>
-        <translation type="unfinished">Advertencia</translation>
+        <translation>Advertencia</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="130"/>
         <source>Critical</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso Crítico</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="132"/>
         <source>Fatal Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error Fatal</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="126"/>
         <source>Debug Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensaje de Depuración</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessage.py" line="160"/>
         <source>No message handler installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay gestor de mensajes instalado.</translation>
     </message>
 </context>
 <context>
@@ -6655,47 +6656,47 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.py" line="48"/>
         <source>Error Messages Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro de Mensajes de Error</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="40"/>
         <source>Enter search term for message</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca término de búsqueda para mensaje</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="77"/>
         <source>Press to add filter to the list</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir el filtro a la lista</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="80"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Añadir...</translation>
+        <translation>&amp;Añadir...</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="100"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar &amp;Todas</translation>
     </message>
     <message>
         <location filename="E5Gui/E5ErrorMessageFilterDialog.py" line="48"/>
         <source>Enter message filter to add to the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir filtro de mensaje para añadir a la lista:</translation>
     </message>
 </context>
 <context>
@@ -14597,7 +14598,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -16139,12 +16140,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
         <source>Press to edit the list of hosts exempted from caching</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para editar la lista de hosts exentos de caching</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
         <source>Edit Exempted Hosts ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Hosts exentos ...</translation>
     </message>
 </context>
 <context>
@@ -17916,22 +17917,22 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1028"/>
         <source>Edit Message Filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Filtros de Mensajes</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1028"/>
         <source>Edit Message Filters...</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Filtros de Mensajes...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1032"/>
         <source>Edit the message filters used to suppress unwanted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar los filtros de mensajes utilizados para suprimir mensajes no deseados</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1034"/>
         <source>&lt;b&gt;Edit Message Filters&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the message filters used to suppress unwanted messages been shown in an error window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Editar Filtros de Mensajes&lt;/b&gt;&lt;p&gt;Abre un diálogo para editar los filtros de mensajes utilizados para suprimir mensajes no deseados y que no se muestren en la ventana de error.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -30327,47 +30328,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
         <source>Not Cached Hosts</source>
-        <translation type="unfinished"></translation>
+        <translation>Hosts no en Caché</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="40"/>
         <source>Enter search term for hosts</source>
-        <translation type="unfinished">Introducir término de búsqueda para hosts</translation>
+        <translation>Introducir término de búsqueda para hosts</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="77"/>
         <source>Press to add site to the list</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir el site a la lista</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="80"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Añadir...</translation>
+        <translation>&amp;Añadir...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="100"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar Todas</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NoCacheHostsDialog.py" line="49"/>
         <source>Enter host name to add to the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir nombre de host para añadir a la lista:</translation>
     </message>
 </context>
 <context>
@@ -32170,12 +32171,12 @@ Destination:
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
         <source>Select to enable external plugins to be loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar la carga de plugins externos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
         <source>Load external plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar plugins externos</translation>
     </message>
 </context>
 <context>
@@ -41612,7 +41613,7 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Follow Child Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Seguir Proceso Hijo</translation>
     </message>
 </context>
 <context>
@@ -41955,7 +41956,7 @@ Not connected</source>
     <message>
         <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Follow Child Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Seguir Proceso Hijo</translation>
     </message>
 </context>
 <context>
@@ -53072,22 +53073,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1885"/>
         <source>Edit Message Filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Filtros de Mensajes</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1885"/>
         <source>Edit Message Filters...</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Filtros de Mensajes...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1889"/>
         <source>Edit the message filters used to suppress unwanted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar los filtros de mensajes utilizados para suprimir mensajes no deseados</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1891"/>
         <source>&lt;b&gt;Edit Message Filters&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the message filters used to suppress unwanted messages been shown in an error window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Editar Filtros de Mensajes&lt;/b&gt;&lt;p&gt;Abre un diálogo para editar los filtros de mensajes utilizados para suprimir mensajes no deseados y que no se muestren en la ventana de error.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
