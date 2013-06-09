@@ -34714,49 +34714,59 @@ Destination:
 <context>
     <name>PluginManagerPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure plugin manager&lt;/b&gt;</source>
         <translation>&lt;b&gt;配置插件管理器&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
         <source>Plugins download directory:</source>
         <translation>插件下载文件夹：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="44"/>
         <source>Enter the plugins download directory</source>
         <translation>输入插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="50"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="51"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation>通过文件夹选择对话框选择插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="54"/>
         <source>...</source>
         <translation>……</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="60"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 以下设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="67"/>
         <source>Select to enable third party plugins to be loaded</source>
-        <translation>选择允许载入第三方插件</translation>
+        <translation type="obsolete">选择允许载入第三方插件</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
         <source>Load third party plugins</source>
-        <translation>载入第三方插件</translation>
+        <translation type="obsolete">载入第三方插件</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.py" line="58"/>
         <source>Select plugins download directory</source>
         <translation>选择插件下载文件夹</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <source>Select to enable external plugins to be loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
+        <source>Load external plugins</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

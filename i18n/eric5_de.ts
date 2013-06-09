@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1943,8 +1944,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2181,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14855,8 +14856,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1083"/>
@@ -32092,42 +32093,42 @@ Ziel:
 <context>
     <name>PluginManagerPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure plugin manager&lt;/b&gt;</source>
         <translation>&lt;b&gt;Plugin Manager Einstellungen&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="60"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Hinweis:&lt;/b&gt; Die folgende Einstellung wird erst beim nächsten Programmstart aktiv.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="67"/>
         <source>Select to enable third party plugins to be loaded</source>
-        <translation>Auswählen, um Plugins von Fremdanbietern zu laden</translation>
+        <translation type="obsolete">Auswählen, um Plugins von Fremdanbietern zu laden</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
         <source>Load third party plugins</source>
-        <translation>Plugins von Fremdanbietern laden</translation>
+        <translation type="obsolete">Plugins von Fremdanbietern laden</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
         <source>Plugins download directory:</source>
         <translation>Plugin Downloadverzeichnis:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="44"/>
         <source>Enter the plugins download directory</source>
         <translation>Gib das Verzeichnis für Plugin Downloads ein</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="50"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="51"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation>Wähle das Verzeichnis für Plugin Downloads mit einem Verzeichnisauswahldialog aus</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="54"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -32135,6 +32136,16 @@ Ziel:
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.py" line="58"/>
         <source>Select plugins download directory</source>
         <translation>Wähle das Plugin Downloadverzeichnis</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <source>Select to enable external plugins to be loaded</source>
+        <translation>Auswählen, um externe Plugins zu laden</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
+        <source>Load external plugins</source>
+        <translation>Externe Plugins laden</translation>
     </message>
 </context>
 <context>

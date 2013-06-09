@@ -33380,42 +33380,42 @@ Destination:
 <context>
     <name>PluginManagerPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure plugin manager&lt;/b&gt;</source>
         <translation>&lt;b&gt;Настроить менеджер плагинов&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="60"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="61"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Примечание:&lt;/b&gt; Эти изменения вступят в силу при следующем запуске приложения.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="67"/>
         <source>Select to enable third party plugins to be loaded</source>
-        <translation>Разрешить загружать плагины сторонних производителей</translation>
+        <translation type="obsolete">Разрешить загружать плагины сторонних производителей</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
         <source>Load third party plugins</source>
-        <translation>Загружать сторонние плагины</translation>
+        <translation type="obsolete">Загружать сторонние плагины</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
         <source>Plugins download directory:</source>
         <translation>Каталог для скачивания плагинов:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="43"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="44"/>
         <source>Enter the plugins download directory</source>
         <translation>Задайте каталог, в который будут скачиваться плагины</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="50"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="51"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
         <translation>Задайте каталог, в который будут скачиваться плагины, с помощью файлового диалога</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="54"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -33423,6 +33423,16 @@ Destination:
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.py" line="58"/>
         <source>Select plugins download directory</source>
         <translation>Выберите каталог, в который будут скачиваться плагины</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <source>Select to enable external plugins to be loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="71"/>
+        <source>Load external plugins</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
