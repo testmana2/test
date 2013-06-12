@@ -406,7 +406,7 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
         ])
     
     for name in LexerRegistry:
-        openFileFiltersList.append(LexerRegistry[name][3])
+        openFileFiltersList.extend(LexerRegistry[name][3])
     
     if withAdditional:
         openFileFiltersList.extend(Preferences.getEditor("AdditionalOpenFilters"))
@@ -543,7 +543,7 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
         ])
     
     for name in LexerRegistry:
-        saveFileFiltersList.append(LexerRegistry[name][4])
+        saveFileFiltersList.extend(LexerRegistry[name][4])
     
     if withAdditional:
         saveFileFiltersList.extend(Preferences.getEditor("AdditionalSaveFilters"))
