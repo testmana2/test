@@ -103,7 +103,7 @@ class Prefs(object):
         # allowed values are "Toolboxes" and "Sidebars"
         "LayoutShellEmbedded": 0,           # 0 = separate
                                             # 1 = embedded in debug browser
-        "LayoutFileBrowserEmbedded": 1,     # 0 = separate
+        "LayoutFileBrowserEmbedded": 0,     # 0 = separate
                                             # 1 = embedded in debug browser
                                             # 2 = embedded in project browser
         "BrowsersListFoldersFirst": True,
