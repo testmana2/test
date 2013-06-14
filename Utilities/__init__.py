@@ -240,7 +240,7 @@ def decodeString(text):
             buf += bytes(qb)
             index += 4
         else:
-            buf += bytes(text[index], encoding="utf-8")
+            buf += codecs.encode(text[index], "utf-8")
             index += 1
     buf = buf.replace(b"\x00", b"")
     return decodeBytes(buf)
