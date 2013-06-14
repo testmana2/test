@@ -8,6 +8,10 @@ Module implementing the variables viewer widget.
 """
 
 from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
 
 from PyQt4.QtCore import Qt, QRegExp, qVersion
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
