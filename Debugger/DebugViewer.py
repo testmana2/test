@@ -365,6 +365,7 @@ class DebugViewer(QWidget):
         """
         Public slot to show the call stack of the program being debugged.
         """
+        block = self.stackComboBox.blockSignals(True)
         self.framenr = 0
         self.stackComboBox.clear()
         self.currentStack = stack
@@ -373,6 +374,7 @@ class DebugViewer(QWidget):
             # just show base filename to make it readable
             s = (os.path.basename(s[0]), s[1], s[2])
             self.stackComboBox.addItem('{0}:{1}:{2}'.format(*s))
+        self.stackComboBox.blockSignals(block)
         
     def setVariablesFilter(self, globalsFilter, localsFilter):
         """
