@@ -35,8 +35,11 @@ Version 5.4-snapshot-2013mmdd:
 - Project Viewer
   -- All
      --- added a context menu entry to delete the selected directory
-  -- Project Forms Viewer
+  -- Forms Viewer
      --- added support for more widgets in the code creation dialog
+     --- added a plug-in hook for the 'open' action
+  -- Translations Viewer
+     --- added a plug-in hook for the 'open' action
 - Shell
   -- changed the line numbers margin to adjust themselves to the size needed
 - Symbols Viewer
