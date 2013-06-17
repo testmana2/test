@@ -386,6 +386,7 @@ class DebugViewer(QWidget):
         @param stack list of tuples with call stack data (file name, line number,
             function name, formatted argument/values list)
         """
+        block = self.stackComboBox.blockSignals(True)
         self.framenr = 0
         self.stackComboBox.clear()
         self.currentStack = stack
@@ -394,6 +395,7 @@ class DebugViewer(QWidget):
             # just show base filename to make it readable
             s = (os.path.basename(s[0]), s[1], s[2])
             self.stackComboBox.addItem('{0}:{1}:{2}'.format(*s))
+        self.stackComboBox.blockSignals(block)
         
     def setVariablesFilter(self, globalsFilter, localsFilter):
         """
