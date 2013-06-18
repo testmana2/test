@@ -181,7 +181,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 act = self.menu.addAction(
                     self.hooksMenuEntries.get("open",
                         self.trUtf8('Open')),
-                    self.__openItem)
+                    self._openItem)
                 self.tsMenuActions.append(act)
             act = self.menu.addAction(self.trUtf8('Open in Editor'),
                 self._openFileInEditor)
