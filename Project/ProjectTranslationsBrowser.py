@@ -184,7 +184,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self._openItem)
                 self.tsMenuActions.append(act)
             act = self.menu.addAction(self.trUtf8('Open in Editor'),
-                self._openFileInEditor)
+                self.__openFileInEditor)
             self.tsMenuActions.append(act)
             self.menu.addSeparator()
             if self.hooks["releaseSelected"] is not None:
