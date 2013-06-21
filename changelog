@@ -1,5 +1,10 @@
 Change Log
 ----------
+Version 5.3.5:
+- bug fixes
+- added a plug-in hook for the 'open' action to the project forms and
+  translations viewers
+
 Version 5.3.4:
 - bug fixes
 

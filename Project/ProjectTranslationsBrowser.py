@@ -178,6 +178,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__generateObsoleteAll)
                 self.tsprocMenuActions.append(act)
             self.menu.addSeparator()
+            if self.hooks["open"] is not None:
+                act = self.menu.addAction(
+                    self.hooksMenuEntries.get("open",
+                        self.trUtf8('Open')),
+                    self._openItem)
+                self.tsMenuActions.append(act)
             act = self.menu.addAction(self.trUtf8('Open in Editor'),
                 self.__openFileInEditor)
             self.tsMenuActions.append(act)
@@ -314,6 +320,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.tsMultiMenuActions.append(act)
                 self.tsprocMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
+            if self.hooks["open"] is not None:
+                act = self.multiMenu.addAction(
+                    self.hooksMenuEntries.get("open",
+                        self.trUtf8('Open')),
+                    self._openItem)
+                self.tsMultiMenuActions.append(act)
             act = self.multiMenu.addAction(self.trUtf8('Open in Editor'),
                 self.__openFileInEditor)
             self.tsMultiMenuActions.append(act)
@@ -569,7 +581,10 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         itmList = self.getSelectedItems()
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
-                if itm.isLinguistFile():
+                # hook support
+                if self.hooks["open"] is not None:
+                    self.hooks["open"](itm.fileName())
+                elif itm.isLinguistFile():
                     if itm.fileExt() == '.ts':
                         self.linguistFile.emit(itm.fileName())
                     else:
@@ -1104,6 +1119,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         <li>generateSelectedWithObsolete: takes list of filenames as parameter</li>
         <li>releaseAll: takes list of filenames as parameter</li>
         <li>releaseSelected: takes list of filenames as parameter</li>
+        <li>open: takes a filename as parameter</li>
         </ul>
         
         <b>Note</b>: Filenames are relative to the project directory.
@@ -1116,4 +1132,5 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             "generateSelectedWithObsolete": None,
             "releaseAll": None,
             "releaseSelected": None,
+            "open": None,
         }

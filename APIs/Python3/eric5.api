@@ -2742,6 +2742,7 @@ eric5.Helpviewer.Network.FtpReply.FtpReply.isSequential?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.readData?4(maxlen)
 eric5.Helpviewer.Network.FtpReply.FtpReply?1(url, accessHandler, parent=None)
 eric5.Helpviewer.Network.FtpReply.ftpListPage_html?7
+eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.NoCacheHosts?7
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.languagesChanged?4()
 eric5.Helpviewer.Network.NetworkAccessManager.NetworkAccessManager.preferencesChanged?4()
