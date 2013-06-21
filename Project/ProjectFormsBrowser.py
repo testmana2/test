@@ -137,6 +137,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                self.hooks["compileAllForms"] is not None or \
                self.hooks["generateDialogCode"] is not None:
                 self.menu.addSeparator()
+            if self.hooks["open"] is not None:
+                self.menu.addAction(
+                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.__openFile)
             self.menu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
         self.menu.addSeparator()
         act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
@@ -211,6 +215,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8('Compile forms')),
                     self.__compileSelectedForms)
                 self.multiMenu.addSeparator()
+            if self.hooks["open"] is not None:
+                self.multiMenu.addAction(
+                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.__openFile)
             self.multiMenu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
@@ -410,7 +418,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         for itm in itmList[:]:
             try:
                 if isinstance(itm, ProjectBrowserFileItem):
-                    self.designerFile.emit(itm.fileName())
+                    # hook support
+                    if self.hooks["open"] is not None:
+                        self.hooks["open"](itm.fileName())
+                    else:
+                        self.designerFile.emit(itm.fileName())
             except:
                 pass
         
@@ -906,6 +918,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         <li>compileChangedForms: takes list of filenames as parameter</li>
         <li>generateDialogCode: takes filename as parameter</li>
         <li>newForm: takes full directory path of new file as parameter</li>
+        <li>open: takes a filename as parameter</li>
         </ul>
         
         <b>Note</b>: Filenames are relative to the project directory, if not
@@ -918,4 +931,5 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             "compileSelectedForms": None,
             "generateDialogCode": None,
             "newForm": None,
+            "open": None,
         }
