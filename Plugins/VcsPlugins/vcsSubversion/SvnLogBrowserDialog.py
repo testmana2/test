@@ -413,7 +413,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         if self.diff is None:
             from .SvnDiffDialog import SvnDiffDialog
-            self.diff = SvnDiffDialog(self.vcs)
+            self.diff = SvnDiffDialog(self.vcs, self)
         self.diff.show()
         self.diff.start(self.filename, [rev1, rev2])
     
