@@ -955,8 +955,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if self.diff is None:
             from .HgDiffDialog import HgDiffDialog
-            self.diff = HgDiffDialog(self.vcs, self)
+            self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
+        self.diff.raise_()
         self.diff.start(self.filename, [rev1, rev2], self.bundle)
     
     def on_buttonBox_clicked(self, button):
