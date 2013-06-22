@@ -638,7 +638,10 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
                 self.__formatCharacter(char2, format))
         
         if regexp:
-            if regexp.startswith("\\") and regexp.count("\\") == 1 and "-" not in regexp:
+            if (regexp.startswith("\\") and \
+                regexp.count("\\") == 1 and \
+                "-" not in regexp) or \
+               len(regexp) == 1:
                 return regexp
             else:
                 return "[{0}]".format(regexp)
