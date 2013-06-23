@@ -347,7 +347,7 @@ def cleanUp():
         "eric5-webbrowser", "eric5-iconeditor",
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
-        "eric5_doc",
+        "eric5_doc", "eric5_qregularexpression",
         "eric5_qregexp", "eric5_re",
         "eric5_trpreviewer", "eric5_uipreviewer",
         "eric5_unittest", "eric5",
@@ -449,6 +449,7 @@ def installEric():
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginrepository"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginuninstall"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregexp"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregularexpression"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_re"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_snap"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_sqlbrowser"))

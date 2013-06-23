@@ -678,6 +678,11 @@
                 <section title="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.html" />
                 <section title="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.html" />
               </section>
+              <section title="eric5.Plugins.WizardPlugins.QRegularExpressionWizard" ref="index-eric5.Plugins.WizardPlugins.QRegularExpressionWizard.html">
+                <section title="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html" />
+                <section title="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html" />
+                <section title="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html" />
+              </section>
             </section>
             <section title="eric5.Plugins.PluginAbout" ref="eric5.Plugins.PluginAbout.html" />
             <section title="eric5.Plugins.PluginEricapi" ref="eric5.Plugins.PluginEricapi.html" />
@@ -698,6 +703,7 @@
             <section title="eric5.Plugins.PluginWizardQInputDialog" ref="eric5.Plugins.PluginWizardQInputDialog.html" />
             <section title="eric5.Plugins.PluginWizardQMessageBox" ref="eric5.Plugins.PluginWizardQMessageBox.html" />
             <section title="eric5.Plugins.PluginWizardQRegExp" ref="eric5.Plugins.PluginWizardQRegExp.html" />
+            <section title="eric5.Plugins.PluginWizardQRegularExpression" ref="eric5.Plugins.PluginWizardQRegularExpression.html" />
           </section>
           <section title="eric5.Preferences" ref="index-eric5.Preferences.html">
             <section title="eric5.Preferences.ConfigurationPages" ref="index-eric5.Preferences.ConfigurationPages.html">
@@ -994,6 +1000,7 @@
           <section title="eric5.eric5_pluginrepository" ref="eric5.eric5_pluginrepository.html" />
           <section title="eric5.eric5_pluginuninstall" ref="eric5.eric5_pluginuninstall.html" />
           <section title="eric5.eric5_qregexp" ref="eric5.eric5_qregexp.html" />
+          <section title="eric5.eric5_qregularexpression" ref="eric5.eric5_qregularexpression.html" />
           <section title="eric5.eric5_re" ref="eric5.eric5_re.html" />
           <section title="eric5.eric5_snap" ref="eric5.eric5_snap.html" />
           <section title="eric5.eric5_sqlbrowser" ref="eric5.eric5_sqlbrowser.html" />
@@ -8176,6 +8183,7 @@
       <keyword name="PluginWizardQInputDialog (Module)" id="PluginWizardQInputDialog (Module)" ref="eric5.Plugins.PluginWizardQInputDialog.html" />
       <keyword name="PluginWizardQMessageBox (Module)" id="PluginWizardQMessageBox (Module)" ref="eric5.Plugins.PluginWizardQMessageBox.html" />
       <keyword name="PluginWizardQRegExp (Module)" id="PluginWizardQRegExp (Module)" ref="eric5.Plugins.PluginWizardQRegExp.html" />
+      <keyword name="PluginWizardQRegularExpression (Module)" id="PluginWizardQRegularExpression (Module)" ref="eric5.Plugins.PluginWizardQRegularExpression.html" />
       <keyword name="Plugins (Package)" id="Plugins (Package)" ref="index-eric5.Plugins.html" />
       <keyword name="Preferences (Package)" id="Preferences (Package)" ref="index-eric5.Preferences.html" />
       <keyword name="PreferencesLexer" id="PreferencesLexer" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexer" />
@@ -8950,6 +8958,72 @@
       <keyword name="QRegExpWizardWidget.on_wordboundButton_clicked" id="QRegExpWizardWidget.on_wordboundButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.html#QRegExpWizardWidget.on_wordboundButton_clicked" />
       <keyword name="QRegExpWizardWindow" id="QRegExpWizardWindow" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.html#QRegExpWizardWindow" />
       <keyword name="QRegExpWizardWindow (Constructor)" id="QRegExpWizardWindow (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.html#QRegExpWizardWindow.__init__" />
+      <keyword name="QRegularExpressionWizard" id="QRegularExpressionWizard" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard" />
+      <keyword name="QRegularExpressionWizard (Constructor)" id="QRegularExpressionWizard (Constructor)" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.__init__" />
+      <keyword name="QRegularExpressionWizard (Package)" id="QRegularExpressionWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.QRegularExpressionWizard.html" />
+      <keyword name="QRegularExpressionWizard.__callForm" id="QRegularExpressionWizard.__callForm" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.__callForm" />
+      <keyword name="QRegularExpressionWizard.__handle" id="QRegularExpressionWizard.__handle" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.__handle" />
+      <keyword name="QRegularExpressionWizard.__initAction" id="QRegularExpressionWizard.__initAction" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.__initAction" />
+      <keyword name="QRegularExpressionWizard.__initMenu" id="QRegularExpressionWizard.__initMenu" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.__initMenu" />
+      <keyword name="QRegularExpressionWizard.activate" id="QRegularExpressionWizard.activate" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.activate" />
+      <keyword name="QRegularExpressionWizard.deactivate" id="QRegularExpressionWizard.deactivate" ref="eric5.Plugins.PluginWizardQRegularExpression.html#QRegularExpressionWizard.deactivate" />
+      <keyword name="QRegularExpressionWizardCharactersDialog" id="QRegularExpressionWizardCharactersDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog" />
+      <keyword name="QRegularExpressionWizardCharactersDialog (Constructor)" id="QRegularExpressionWizardCharactersDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__init__" />
+      <keyword name="QRegularExpressionWizardCharactersDialog (Module)" id="QRegularExpressionWizardCharactersDialog (Module)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__addRangesLine" id="QRegularExpressionWizardCharactersDialog.__addRangesLine" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__addRangesLine" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__addSinglesLine" id="QRegularExpressionWizardCharactersDialog.__addSinglesLine" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__addSinglesLine" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__formatCharacter" id="QRegularExpressionWizardCharactersDialog.__formatCharacter" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__formatCharacter" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__initCharacterSelectors" id="QRegularExpressionWizardCharactersDialog.__initCharacterSelectors" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__initCharacterSelectors" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__performSelectedAction" id="QRegularExpressionWizardCharactersDialog.__performSelectedAction" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__performSelectedAction" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__populateCharTypeCombo" id="QRegularExpressionWizardCharactersDialog.__populateCharTypeCombo" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__populateCharTypeCombo" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__populateCharacterCombo" id="QRegularExpressionWizardCharactersDialog.__populateCharacterCombo" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__populateCharacterCombo" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__rangesCharTypeSelected" id="QRegularExpressionWizardCharactersDialog.__rangesCharTypeSelected" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__rangesCharTypeSelected" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.__singlesCharTypeSelected" id="QRegularExpressionWizardCharactersDialog.__singlesCharTypeSelected" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.__singlesCharTypeSelected" />
+      <keyword name="QRegularExpressionWizardCharactersDialog.getCharacters" id="QRegularExpressionWizardCharactersDialog.getCharacters" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html#QRegularExpressionWizardCharactersDialog.getCharacters" />
+      <keyword name="QRegularExpressionWizardDialog" id="QRegularExpressionWizardDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardDialog" />
+      <keyword name="QRegularExpressionWizardDialog (Constructor)" id="QRegularExpressionWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardDialog.__init__" />
+      <keyword name="QRegularExpressionWizardDialog (Module)" id="QRegularExpressionWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html" />
+      <keyword name="QRegularExpressionWizardDialog.getCode" id="QRegularExpressionWizardDialog.getCode" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardDialog.getCode" />
+      <keyword name="QRegularExpressionWizardRepeatDialog" id="QRegularExpressionWizardRepeatDialog" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html#QRegularExpressionWizardRepeatDialog" />
+      <keyword name="QRegularExpressionWizardRepeatDialog (Constructor)" id="QRegularExpressionWizardRepeatDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html#QRegularExpressionWizardRepeatDialog.__init__" />
+      <keyword name="QRegularExpressionWizardRepeatDialog (Module)" id="QRegularExpressionWizardRepeatDialog (Module)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html" />
+      <keyword name="QRegularExpressionWizardRepeatDialog.getRepeat" id="QRegularExpressionWizardRepeatDialog.getRepeat" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html#QRegularExpressionWizardRepeatDialog.getRepeat" />
+      <keyword name="QRegularExpressionWizardRepeatDialog.on_lowerSpin_valueChanged" id="QRegularExpressionWizardRepeatDialog.on_lowerSpin_valueChanged" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html#QRegularExpressionWizardRepeatDialog.on_lowerSpin_valueChanged" />
+      <keyword name="QRegularExpressionWizardRepeatDialog.on_upperSpin_valueChanged" id="QRegularExpressionWizardRepeatDialog.on_upperSpin_valueChanged" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html#QRegularExpressionWizardRepeatDialog.on_upperSpin_valueChanged" />
+      <keyword name="QRegularExpressionWizardWidget" id="QRegularExpressionWizardWidget" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget" />
+      <keyword name="QRegularExpressionWizardWidget (Constructor)" id="QRegularExpressionWizardWidget (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.__init__" />
+      <keyword name="QRegularExpressionWizardWidget.__insertString" id="QRegularExpressionWizardWidget.__insertString" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.__insertString" />
+      <keyword name="QRegularExpressionWizardWidget.getCode" id="QRegularExpressionWizardWidget.getCode" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.getCode" />
+      <keyword name="QRegularExpressionWizardWidget.on_altnButton_clicked" id="QRegularExpressionWizardWidget.on_altnButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_altnButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_anycharButton_clicked" id="QRegularExpressionWizardWidget.on_anycharButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_anycharButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_atomicGroupButton_clicked" id="QRegularExpressionWizardWidget.on_atomicGroupButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_atomicGroupButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_beglineButton_clicked" id="QRegularExpressionWizardWidget.on_beglineButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_beglineButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_buttonBox_clicked" id="QRegularExpressionWizardWidget.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_buttonBox_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_charButton_clicked" id="QRegularExpressionWizardWidget.on_charButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_charButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_commentButton_clicked" id="QRegularExpressionWizardWidget.on_commentButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_commentButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_copyButton_clicked" id="QRegularExpressionWizardWidget.on_copyButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_copyButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_endlineButton_clicked" id="QRegularExpressionWizardWidget.on_endlineButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_endlineButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_executeButton_clicked" id="QRegularExpressionWizardWidget.on_executeButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_executeButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_groupButton_clicked" id="QRegularExpressionWizardWidget.on_groupButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_groupButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_loadButton_clicked" id="QRegularExpressionWizardWidget.on_loadButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_loadButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_namedGroupButton_clicked" id="QRegularExpressionWizardWidget.on_namedGroupButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_namedGroupButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_namedReferenceButton_clicked" id="QRegularExpressionWizardWidget.on_namedReferenceButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_namedReferenceButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_neglookaheadButton_clicked" id="QRegularExpressionWizardWidget.on_neglookaheadButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_neglookaheadButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_neglookbehindButton_clicked" id="QRegularExpressionWizardWidget.on_neglookbehindButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_neglookbehindButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_nextButton_clicked" id="QRegularExpressionWizardWidget.on_nextButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_nextButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_nonGroupButton_clicked" id="QRegularExpressionWizardWidget.on_nonGroupButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_nonGroupButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_nonwordboundButton_clicked" id="QRegularExpressionWizardWidget.on_nonwordboundButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_nonwordboundButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_poslookaheadButton_clicked" id="QRegularExpressionWizardWidget.on_poslookaheadButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_poslookaheadButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_poslookbehindButton_clicked" id="QRegularExpressionWizardWidget.on_poslookbehindButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_poslookbehindButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_redoButton_clicked" id="QRegularExpressionWizardWidget.on_redoButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_redoButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_regexpTextEdit_textChanged" id="QRegularExpressionWizardWidget.on_regexpTextEdit_textChanged" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_regexpTextEdit_textChanged" />
+      <keyword name="QRegularExpressionWizardWidget.on_repeatButton_clicked" id="QRegularExpressionWizardWidget.on_repeatButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_repeatButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_saveButton_clicked" id="QRegularExpressionWizardWidget.on_saveButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_saveButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_undoButton_clicked" id="QRegularExpressionWizardWidget.on_undoButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_undoButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_validateButton_clicked" id="QRegularExpressionWizardWidget.on_validateButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_validateButton_clicked" />
+      <keyword name="QRegularExpressionWizardWidget.on_wordboundButton_clicked" id="QRegularExpressionWizardWidget.on_wordboundButton_clicked" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWidget.on_wordboundButton_clicked" />
+      <keyword name="QRegularExpressionWizardWindow" id="QRegularExpressionWizardWindow" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWindow" />
+      <keyword name="QRegularExpressionWizardWindow (Constructor)" id="QRegularExpressionWizardWindow (Constructor)" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html#QRegularExpressionWizardWindow.__init__" />
       <keyword name="QSCINTILLA_VERSION" id="QSCINTILLA_VERSION" ref="eric5.QScintilla.QsciScintillaCompat.html#QSCINTILLA_VERSION" />
       <keyword name="QScintilla (Package)" id="QScintilla (Package)" ref="index-eric5.QScintilla.html" />
       <keyword name="QsciScintillaCompat" id="QsciScintillaCompat" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat" />
@@ -12384,6 +12458,7 @@
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_pluginrepository.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_pluginuninstall.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_qregexp.html#createMainWidget" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_qregularexpression.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_re.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_snap.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_sqlbrowser.html#createMainWidget" />
@@ -12431,6 +12506,7 @@
       <keyword name="eric5_pluginrepository (Module)" id="eric5_pluginrepository (Module)" ref="eric5.eric5_pluginrepository.html" />
       <keyword name="eric5_pluginuninstall (Module)" id="eric5_pluginuninstall (Module)" ref="eric5.eric5_pluginuninstall.html" />
       <keyword name="eric5_qregexp (Module)" id="eric5_qregexp (Module)" ref="eric5.eric5_qregexp.html" />
+      <keyword name="eric5_qregularexpression (Module)" id="eric5_qregularexpression (Module)" ref="eric5.eric5_qregularexpression.html" />
       <keyword name="eric5_re (Module)" id="eric5_re (Module)" ref="eric5.eric5_re.html" />
       <keyword name="eric5_snap (Module)" id="eric5_snap (Module)" ref="eric5.eric5_snap.html" />
       <keyword name="eric5_sqlbrowser (Module)" id="eric5_sqlbrowser (Module)" ref="eric5.eric5_sqlbrowser.html" />
@@ -12686,6 +12762,7 @@
       <keyword name="main" id="main" ref="eric5.eric5_pluginrepository.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_pluginuninstall.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_qregexp.html#main" />
+      <keyword name="main" id="main" ref="eric5.eric5_qregularexpression.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_re.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_snap.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_sqlbrowser.html#main" />
@@ -13334,6 +13411,7 @@
       <file>eric5.Plugins.PluginWizardQInputDialog.html</file>
       <file>eric5.Plugins.PluginWizardQMessageBox.html</file>
       <file>eric5.Plugins.PluginWizardQRegExp.html</file>
+      <file>eric5.Plugins.PluginWizardQRegularExpression.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html</file>
@@ -13482,6 +13560,9 @@
       <file>eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.html</file>
+      <file>eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.html</file>
+      <file>eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.html</file>
+      <file>eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.html</file>
       <file>eric5.Preferences.ConfigurationDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.ApplicationPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ConfigurationPageBase.html</file>
@@ -13731,6 +13812,7 @@
       <file>eric5.eric5_pluginrepository.html</file>
       <file>eric5.eric5_pluginuninstall.html</file>
       <file>eric5.eric5_qregexp.html</file>
+      <file>eric5.eric5_qregularexpression.html</file>
       <file>eric5.eric5_re.html</file>
       <file>eric5.eric5_snap.html</file>
       <file>eric5.eric5_sqlbrowser.html</file>
@@ -13820,6 +13902,7 @@
       <file>index-eric5.Plugins.WizardPlugins.MessageBoxWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.PyRegExpWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.QRegExpWizard.html</file>
+      <file>index-eric5.Plugins.WizardPlugins.QRegularExpressionWizard.html</file>
       <file>index-eric5.Plugins.WizardPlugins.html</file>
       <file>index-eric5.Plugins.html</file>
       <file>index-eric5.Preferences.ConfigurationPages.html</file>

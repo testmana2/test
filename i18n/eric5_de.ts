@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1944,8 +1943,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2181,8 +2180,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14861,8 +14860,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1083"/>
@@ -32108,16 +32107,6 @@ Ziel:
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Hinweis:&lt;/b&gt; Die folgende Einstellung wird erst beim nächsten Programmstart aktiv.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="67"/>
-        <source>Select to enable third party plugins to be loaded</source>
-        <translation type="obsolete">Auswählen, um Plugins von Fremdanbietern zu laden</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
-        <source>Load third party plugins</source>
-        <translation type="obsolete">Plugins von Fremdanbietern laden</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/PluginManagerPage.ui" line="37"/>
         <source>Plugins download directory:</source>
         <translation>Plugin Downloadverzeichnis:</translation>
@@ -36622,7 +36611,7 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="75"/>
         <source>Execute</source>
-        <translation></translation>
+        <translation>Ausführen</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="76"/>
@@ -37752,7 +37741,7 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="88"/>
         <source>Execute</source>
-        <translation></translation>
+        <translation>Ausführen</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="89"/>
@@ -38184,6 +38173,1649 @@ Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|M
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="551"/>
         <source>Alt+M</source>
         <translation>Alt+M</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpressionWizard</name>
+    <message>
+        <location filename="Plugins/PluginWizardQRegularExpression.py" line="73"/>
+        <source>QRegularExpression Wizard</source>
+        <translation>QRegularExpression Autopilot</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardQRegularExpression.py" line="70"/>
+        <source>QRegularE&amp;xpression Wizard...</source>
+        <translation>QRegularE&amp;xpression Autopilot...</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardQRegularExpression.py" line="74"/>
+        <source>&lt;b&gt;QRegularExpression Wizard&lt;/b&gt;&lt;p&gt;This wizard opens a dialog for entering all the parameters needed to create a QRegularExpression string. The generated code is inserted at the current cursor position.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;QRegularExpression Autopilot&lt;/b&gt;&lt;p&gt;Dieser Autopilot öffnet einen Dialog zur Eingabe der Parameter, die zur Erzeugung eines QRegularExpression Ausdruckes benötigt werden. Der erzeugte Quelltext wird an der aktuellen Cursorposition eingefügt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardQRegularExpression.py" line="120"/>
+        <source>No current editor</source>
+        <translation>Kein aktueller Editor</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginWizardQRegularExpression.py" line="120"/>
+        <source>Please open or create a file first.</source>
+        <translation>Bitte öffnen oder erzeugen Sie zuerst eine Datei.</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpressionWizardCharactersDialog</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="14"/>
+        <source>Editor for character sets</source>
+        <translation>Editor für Zeichenbereiche</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="23"/>
+        <source>The defined characters should not match</source>
+        <translation>Die angegebenen Zeichen sollen nicht übereinstimmen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="30"/>
+        <source>Predefined character ranges</source>
+        <translation>Vordefinierte Zeichenbereiche</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="36"/>
+        <source>Word character</source>
+        <translation>Ein Buchstabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="43"/>
+        <source>Digit</source>
+        <translation>Eine Ziffer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="50"/>
+        <source>Newline</source>
+        <translation>Zeilenvorschub</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="57"/>
+        <source>Non-word character</source>
+        <translation>Kein Buchstabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="64"/>
+        <source>Non-digit</source>
+        <translation>Keine Ziffer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="71"/>
+        <source>Non-newline</source>
+        <translation>Kein Zeilenvorschub</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="78"/>
+        <source>Whitespace character</source>
+        <translation>Ein Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="85"/>
+        <source>Horizontal whitespace character</source>
+        <translation>Ein Horizontales Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="92"/>
+        <source>Vertical whitespace character</source>
+        <translation>Ein Verticales Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="99"/>
+        <source>Non-whitespace character</source>
+        <translation>Kein Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="106"/>
+        <source>Non-horizontal whitespace character</source>
+        <translation>Kein Horizontales Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="113"/>
+        <source>Non-vertical whitespace character</source>
+        <translation>Kein Verticales Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="129"/>
+        <source>Single character</source>
+        <translation>Einzelnes Zeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui" line="142"/>
+        <source>Character ranges</source>
+        <translation>Zeichenbereiche</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="36"/>
+        <source>Normal character</source>
+        <translation>Normales Zeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="37"/>
+        <source>Unicode character in hexadecimal notation</source>
+        <translation>Unicode-Zeichen in Hexadezimal-Schreibweise</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="39"/>
+        <source>ASCII/Latin1 character in octal notation</source>
+        <translation>ASCII/Latin1-Zeichen in Oktal-Schreibweise</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Bell character (\a)</source>
+        <translation>Alarmzeichen (\a)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Escape character (\e)</source>
+        <translation>Escape Zeichen (\e)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Page break (\f)</source>
+        <translation>Seitenvorschub (\f)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Line feed (\n)</source>
+        <translation>Zeilenvorschub (\n)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Carriage return (\r)</source>
+        <translation>Wagenrücklauf (\r)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Horizontal tabulator (\t)</source>
+        <translation>horizontaler Tabulator (\t)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Character Category</source>
+        <translation>Zeichenkategorie</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Special Character Category</source>
+        <translation>Spezielle Zeichenkategorie</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Character Block</source>
+        <translation>Zeichenblock</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>POSIX Named Set</source>
+        <translation>Benanntes POSIX Set</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Not Character Category</source>
+        <translation>Nicht in Zeichenkategorie</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Not Character Block</source>
+        <translation>Nicht in Zeichenblock</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Not Special Character Category</source>
+        <translation>Nicht in spezieller Zeichenkategorie</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="41"/>
+        <source>Not POSIX Named Set</source>
+        <translation>Nicht in benanntem POSIX Set</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="123"/>
+        <source>Additional Entries</source>
+        <translation>Weitere Einträge</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Any</source>
+        <translation>Buchstabe, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Lower case</source>
+        <translation>Buchstabe, klein</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Modifier</source>
+        <translation>Buchstabe, Modifizierer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Other</source>
+        <translation>Buchstabe, sonstige</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Title case</source>
+        <translation>Buchstabe, Überschrift</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Upper case</source>
+        <translation>Buchstabe, groß</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Letter, Lower, Upper or Title</source>
+        <translation>Buchstabe, klein, groß oder Überschrift</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Mark, Any</source>
+        <translation>Zeichen, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Mark, Spacing</source>
+        <translation>Zeichen, separierend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Mark, Enclosing</source>
+        <translation>Zeichen, einschließend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Mark, Non-spacing</source>
+        <translation>Zeichen, nicht separierend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Number, Any</source>
+        <translation>Ziffer, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Number, Decimal</source>
+        <translation>Ziffer, dezimal</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Number, Letter</source>
+        <translation>Ziffer, Buchstabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Number, Other</source>
+        <translation>Ziffer, sonstige</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Any</source>
+        <translation>Satzzeichen, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Connector</source>
+        <translation>Satzzeichen, verbindend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Dash</source>
+        <translation>Satzzeichen, Bindestrich</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Close</source>
+        <translation>Satzzeichen, schließend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Final</source>
+        <translation>Satzzeichen, abschließend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Initial</source>
+        <translation>Satzzeichen, beginnend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Other</source>
+        <translation>Satzzeichen, sonstige</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Punctuation, Open</source>
+        <translation>Satzzeichen, öffnend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Symbol, Any</source>
+        <translation>Symbol, beliebeig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Symbol, Currency</source>
+        <translation>Symbol, Währung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Symbol, Modifier</source>
+        <translation>Symbol, Modifizierer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Symbol, Mathematical</source>
+        <translation>Symbol, mathematisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Symbol, Other</source>
+        <translation>Symbol, sonstige</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Separator, Any</source>
+        <translation>Trenner, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Separator, Line</source>
+        <translation>Trenner, Zeile</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Separator, Paragraph</source>
+        <translation>Trenner, Abschnitt</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Separator, Space</source>
+        <translation>Trenner, Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Any</source>
+        <translation>Andere, beliebig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Control</source>
+        <translation>Andere, Steuerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Format</source>
+        <translation>Andere, Formatierung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Unassigned</source>
+        <translation>Andere, nicht zugewiesen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Private Use</source>
+        <translation>Andere, private Verwendung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="136"/>
+        <source>Other, Surrogat</source>
+        <translation>Andere, Ersatzzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Alphanumeric</source>
+        <translation>Alphanumerisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="178"/>
+        <source>POSIX Space</source>
+        <translation>POSIX Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="178"/>
+        <source>Perl Space</source>
+        <translation>Perl Leerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="178"/>
+        <source>Universal Character</source>
+        <translation>Universeles Zeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="178"/>
+        <source>Perl Word</source>
+        <translation>Perl Wortzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Arabic</source>
+        <translation>Arabisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Armenian</source>
+        <translation>Armenisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Avestan</source>
+        <translation>Avestisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Balinese</source>
+        <translation>Balinesisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Bamum</source>
+        <translation>Bamum</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Batak</source>
+        <translation>Batak</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Bengali</source>
+        <translation>Bengalisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Bopomofo</source>
+        <translation>Bopomofo</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Brahmi</source>
+        <translation>Brahmi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Braille</source>
+        <translation>Braille</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Buginese</source>
+        <translation>Buginesisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Buhid</source>
+        <translation>Buhid</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Canadian Aboriginal</source>
+        <translation>Kanadische Ureinwohner</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Carian</source>
+        <translation>Karisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Chakma</source>
+        <translation>Chakma</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Cham</source>
+        <translation>Cham</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Cherokee</source>
+        <translation>Cherokee-Schrift</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Common</source>
+        <translation>Gemeinsam</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Coptic</source>
+        <translation>Koptisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Cuneiform</source>
+        <translation>Keilschrift</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Cypriot</source>
+        <translation>Zyprisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Cyrillic</source>
+        <translation>Kyrillisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Devanagari</source>
+        <translation>Devanagari</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Egyptian Hieroglyphs</source>
+        <translation>Ägyptische Hieroglyphen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Ethiopic</source>
+        <translation>Äthiopisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Georgian</source>
+        <translation>Georgisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Glagolitic</source>
+        <translation>Glagolitisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Gothic</source>
+        <translation>Gothisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Greek</source>
+        <translation>Griechisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Gujarati</source>
+        <translation>Gujarati</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Gurmukhi</source>
+        <translation>Gurmukhi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Han</source>
+        <translation>Han</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Hangul</source>
+        <translation>Hangul</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Hanunoo</source>
+        <translation>Hanunoo</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Hebrew</source>
+        <translation>Hebräisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Hiragana</source>
+        <translation>Hiragana</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Imperial Aramaic</source>
+        <translation>Aramäisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Inherited</source>
+        <translation>Ererbt</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Inscriptional Pahlavi</source>
+        <translation>Inschriften Pahlavi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Inscriptional Parthian</source>
+        <translation>Inschriften Parthisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Javanese</source>
+        <translation>Javanisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Kaithi</source>
+        <translation>Kaithi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Kannada</source>
+        <translation>Kannada</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Katakana</source>
+        <translation>Katakana</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Kayah Li</source>
+        <translation>Kayah Li</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Kharoshthi</source>
+        <translation>Kharoshthi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Khmer</source>
+        <translation>Khmer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Lao</source>
+        <translation>Laotisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Latin</source>
+        <translation>Lateinisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Lepcha</source>
+        <translation>Lepcha</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Limbu</source>
+        <translation>Limbu</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Linear B</source>
+        <translation>Linear B</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Lisu</source>
+        <translation>Lisu</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Lycian</source>
+        <translation>Lykisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Lydian</source>
+        <translation>Lydisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Malayalam</source>
+        <translation>Malayisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Mandaic</source>
+        <translation>Mandäisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Meetei Mayek</source>
+        <translation>Meetei Mayek</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Meroitic Cursive</source>
+        <translation>Meroitisch Kursiv</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Meroitic Hieroglyphs</source>
+        <translation>Meroitische Hieroglyphen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Miao</source>
+        <translation>Miao</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Mongolian</source>
+        <translation>Mongolisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Myanmar</source>
+        <translation>Burmesisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>New Tai Lue</source>
+        <translation>Tai Lue Neu</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Ogham</source>
+        <translation>Ogham</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Old Italic</source>
+        <translation>Altindisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Old Persian</source>
+        <translation>Altpersisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Old South Arabian</source>
+        <translation>Altsüdarabisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Ol Chiki</source>
+        <translation>Ol Chiki</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Oriya</source>
+        <translation>Oriya</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Osmanya</source>
+        <translation>Osmanya</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Phoenician</source>
+        <translation>Phönizisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Rejang</source>
+        <translation>Rejang</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Runic</source>
+        <translation>Runen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Samaritan</source>
+        <translation>Samaritanisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Saurashtra</source>
+        <translation>Saurashtra</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Sharada</source>
+        <translation>Sharada</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Shavian</source>
+        <translation>Shaw-Alphabet</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Sinhala</source>
+        <translation>Sinhala</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Sora Sompeng</source>
+        <translation>Sora Sompeng</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Sundanese</source>
+        <translation>Sudanesisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Syloti Nagri</source>
+        <translation>Syloti Nagri</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Syriac</source>
+        <translation>Syrisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tagalog</source>
+        <translation>Tagalog</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tagbanwa</source>
+        <translation>Tagbanwa</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tai Le</source>
+        <translation>Tai Le</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tai Tham</source>
+        <translation>Tai Tham</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tai Viet</source>
+        <translation>Tai Viet</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Takri</source>
+        <translation>Takri</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tamil</source>
+        <translation>Tamil</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Telugu</source>
+        <translation>Telugu</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Thaana</source>
+        <translation>Thaana</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Thai</source>
+        <translation>Thai</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tibetan</source>
+        <translation>Tibetisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Tifinagh</source>
+        <translation>Tifinagh</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Ugaritic</source>
+        <translation>Ugaritisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Vai</source>
+        <translation>Vai</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Yi</source>
+        <translation>Yi</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Alphabetic</source>
+        <translation>Alphabetisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>ASCII</source>
+        <translation>ASCII</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Word Letter</source>
+        <translation>Wortzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Lower Case Letter</source>
+        <translation>Kleiner Buchstabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Upper Case Letter</source>
+        <translation>Großer Buchstabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Decimal Digit</source>
+        <translation>Dezimalziffer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Hexadecimal Digit</source>
+        <translation>Hexadezimalziffer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Space or Tab</source>
+        <translation>Leerzeichen oder Tabulator</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>White Space</source>
+        <translation>Leerraum</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Printing (excl. space)</source>
+        <translation>Druckend (ohne Leerraum)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Printing (incl. space)</source>
+        <translation>Druckend (mit Leerraum)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Printing (excl. alphanumeric)</source>
+        <translation>Druckend (ohne alphanumerische)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="293"/>
+        <source>Control Character</source>
+        <translation>Steuerzeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="381"/>
+        <source>Between:</source>
+        <translation>Zwischen:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="386"/>
+        <source>And:</source>
+        <translation>Und:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Deseret</source>
+        <translation>Deseret</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>N&apos;Ko</source>
+        <translation>N&apos;Ko</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Old Turkic</source>
+        <translation>Alttürkisch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py" line="187"/>
+        <source>Phags-pa</source>
+        <translation>Phags-pa</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpressionWizardDialog</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="14"/>
+        <source>QRegularExpression Wizard</source>
+        <translation>QRegularExpression Autopilot</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="25"/>
+        <source>Variable Name:</source>
+        <translation>Variablenname:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="52"/>
+        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
+&lt;p&gt;Insert some comment inside your regexp.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Kommentar: (?#)&lt;/b&gt;
+&lt;p&gt;Fügt einen Kommentar in den regulären Ausdruck ein.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="56"/>
+        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
+&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
+The following example could clarify the regexp which match a valid date: &lt;/p&gt;
+&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Kommentar: (?#)&lt;/b&gt;
+&lt;p&gt;Fügt einen Kommentar in den regulären Ausdruck ein. Der Interpreter für reguläre Ausdrücke ignoriert alles nach (?# bis zur ersten schließenden Klammer. 
+Das folgende Beispiel verdeutlicht dies mit einem regulären Ausdruck, der auf ein gültiges Datum passt:&lt;/p&gt;
+&lt;p&gt;(?#Jahr)(19|20)\d\d[- /.](?#Monat)(0[1-9]|1[012])[- /.](?#Tag)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="381"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
+        <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Ein einzelnes Zeichen aus einem Bereich (z.B. [abcd])&lt;/b&gt;&lt;p&gt;Wählt ein einzelnes Zeichen aus einem Bereich mit einem spezifischen Dialog aus.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="72"/>
+        <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
+        <translation>&lt;b&gt;Ein einzelnes Zeichen aus einem Bereich (z.B. [abcd])&lt;/b&gt;&lt;p&gt;Wählt ein einzelnes Zeichen aus einem Bereich mit einem spezifischen Dialog aus. Dieser Dialog hilft beim Editieren des Zeichenbereiches und spezifischer Konditionen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="82"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Beliebiges Zeichen: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um einen Punkt (.) in den regulären Ausdruck einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="86"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
+character class is faster and more precise.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Beliebiges Zeichen: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um einen Punkt (.) in den regulären Ausdruck einzufügen. Der Punkt passt auf alle Einzelzeichen mit Ausnahme des Zeilenendezeichens (standard). 
+Z.B. passt &apos;gr.y&apos; auf &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, usw. Verwende den Punkt sparsam. Oft ist es schneller und genauer, eine Zeichenklasse 
+oder eine negierte Zeichenklasse zu verwenden.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="103"/>
+        <source>&lt;b&gt;Repeat contents&lt;/b&gt;
+&lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Wiederholter Inhalt&lt;/b&gt;
+&lt;p&gt;Wähle eine Wiederholungsbedingung mit einem Dialog aus. Dieser Dialog hilft, die zulässige Anzahl an Wiederholungen festzulegen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="114"/>
+        <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
+&lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Nicht gruppierende Klammern: (?:)&lt;/b&gt;
+&lt;p&gt;Auswählen, um nicht gruppierende Klammern einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="118"/>
+        <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
+&lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
+group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
+means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Nicht gruppierende Klammern: (?:)&lt;/b&gt;
+&lt;p&gt;Auswählen, um nicht gruppierende Klammern einzufügen. Diese können verwendet werden, um eine Quantifizierer (z.B. &apos;?&apos; oder &apos;+&apos;) auf die ganze in Klammern angegebene Gruppe anzuwenden. Der reguläre Ausdruck &apos;Set(?:Value)? passt z.B. auf &apos;Set&apos; oder &apos;SetValue&apos;. &apos;?:&apos; 
+innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur weiteren Verwendung gespeichert wird.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="131"/>
+        <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some atomic non capturing brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Atomare nicht gruppierende Klammern: (?&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um atomare nicht gruppierende Klammern einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="135"/>
+        <source>&lt;b&gt;Atomic non capturing parentheses: (?&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some atomic non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
+group of characters inside the brakets. E.g. the regex &apos;Set(?&gt;Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?&gt;&apos; inside the brakets
+means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Atomare nicht gruppierende Klammern: (?&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um atomare nicht gruppierende Klammern einzufügen. Diese können verwendet werden, um eine Quantifizierer (z.B. &apos;?&apos; oder &apos;+&apos;) auf die ganze in Klammern angegebene Gruppe anzuwenden. Der reguläre Ausdruck &apos;Set(?&gt;Value)? passt z.B. auf &apos;Set&apos; oder &apos;SetValue&apos;. &apos;?&gt;&apos; 
+innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur weiteren Verwendung gespeichert wird.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="148"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Gruppierung: ()&lt;/b&gt;
+&lt;p&gt;Auswählen, um gruppierende Klammern einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="152"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
+&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Gruppierung: ()&lt;/b&gt;
+&lt;p&gt;Auswählen, um gruppierende Klammern einzufügen. Diese können verwendet werden, um eine Quantifizierer (z.B. &apos;?&apos; oder &apos;+&apos;) 
+auf die ganze in Klammern angegebene Gruppe anzuwenden. Der reguläre Ausdruck &apos;Set(?:Value)? passt z.B. auf &apos;Set&apos; oder &apos;SetValue&apos;. 
+Im Gegensatz zu nicht gruppierenden Klammern wird die gefundene Übereinstimmung zur weiteren Verwendung gespeichert (&apos;Value&apos; im obigen Beispiel). 
+Diese Referenz kann mit dem &apos;\1&apos; Ausdruck verwendet werden.&lt;/p&gt;
+&lt;p&gt;Z.B. &apos;([a-c])x\1x\1&apos; passt auf &apos;axaxa&apos;, &apos;bxbxb&apos; und &apos;cxcxc&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="167"/>
+        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Benannte Gruppe&lt;/b&gt;:  (?P&amp;lt;&lt;i&gt;Gruppenname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für eine benannte Gruppe einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="171"/>
+        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
+backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
+the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
+E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Benannte Gruppe&lt;/b&gt;:  (?P&amp;lt;&lt;i&gt;Gruppenname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für eine benannte Gruppe einzufügen. Die verwendung ist ähnlich zu der normaler Gruppen, da ebenfalls 
+eine Referenz gespeichert wird. Der Unterschied ist, dass die Referenz einen Namen besitzt. Dies ist nützlich, wenn der reguläre Ausdruck komplizierter wird. Die Refernz kann über den Gruppennamen verwendet werden (d.h. (?P=&lt;i&gt;Gruppenname&lt;/i&gt;)).
+Z.B.  (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x passt auf  &apos;axaxax&apos;,&apos;bxbxbx&apos; oder &apos;cxcxcx&apos; (&apos;foo&apos; ist der Gruppenname)&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="185"/>
+        <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert a reference to named group previously declared.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Referenz auf benannte Gruppe: (?P=&lt;i&gt;Gruppenname&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um eine Referenz auf eine vorher definierte benannte Gruppe einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="189"/>
+        <source>&lt;b&gt;Reference named group: (?P=&lt;i&gt;groupname&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
+ found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters &apos;a&apos;,&apos;b&apos; or &apos;c&apos;.&lt;/p&gt;
+&lt;p&gt;E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Referenz auf benannte Gruppe: (?P=&lt;i&gt;Gruppenname&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um eine Referenz auf eine vorher definierte benannte Gruppe einzufügen. Jede Gruppenreferenz bezieht sich auf eine
+Übereinstimmung der entsprechenden benannten Gruppe. Im Beispiel kann (?P=foo) das Zeichen &apos;a&apos;, &apos;b&apos; oder &apos;c&apos; sein.&lt;/p&gt;
+&lt;p&gt;Z.B. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x passt auf &apos;axaxax&apos;,&apos;bxbxbx&apos; oder &apos;cxcxcx&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="202"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
+        <translation>&lt;b&gt;Alternativen: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Alternativenzeichen &apos;|&apos; einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="206"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
+Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
+ words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Alternativen: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Alternativenzeichen &apos;|&apos; einzufügen. Die Alternative wird verwendet, um einen regulären Ausdruck aus einer
+Auswahl an regulären Ausdrücken zu überprüfen. Z.B. passt &apos;Katze|Hund|Maus|Fisch&apos; auf alle Zeichenketten, die das Wort &apos;Katze&apos;, &apos;Hund&apos;, 
+&apos;Maus&apos; oder &apos;Fisch&apos; enthalten. Beachten sie, dass die Alternativen auf ganze Worte aber auch Wortteile passen. Sollen sie genau auf das ganze Wort 
+&apos;Katze&apos;, &apos;Hund&apos;, ... passen, sollte dies genau im regulären Ausdruck angegeben werden: &apos;\b(Katze|Hund|Maus|Fisch)\b&apos;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="220"/>
+        <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Zeilenanfang: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeilenanfangzeichen (^) einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="224"/>
+        <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
+E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
+        <translation>&lt;b&gt;Zeilenanfang: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeilenanfangzeichen (^) einzufügen. Es wird verwendet, um einen Ausdruck am Zeilenanfang zu finden.
+Z.B. &apos;^[A-Z]&apos; findet Zeilen, die mit einem Großbuchstaben anfangen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="236"/>
+        <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Zeilenende: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeilenendezeichen ($) einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="240"/>
+        <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Zeilenende: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeilenendezeichen ($) einzufügen. Es wird verwendet, um einen Ausdruck am Zeilenende zu finden.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="251"/>
+        <source>&lt;b&gt;Word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Wortgrenze&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeichen für eine Wortgrenze (\b) einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
+        <source>&lt;b&gt;Word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Wortgrenze&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeichen für eine Wortgrenze (\b) einzufügen. Dies wird verwendet, um auszudrücken, dass ein Wort an
+dieser Stelle anfangen oder aufhören muss. Z.B. passt &apos;\bKatze\b&apos; auf das Wort &apos;Katze&apos; aber nicht auf &apos;Katzenfutter&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="267"/>
+        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Nichtwort-Grenze&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeichen für eine Nichtwort-Grenze (\B) einzufügen. \B ist die Umkegrung von \b.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="271"/>
+        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Nichtwort-Grenze&lt;/b&gt;
+&lt;p&gt;Auswählen, um das Zeichen für eine Nichtwort-Grenze (\B) einzufügen. \B ist die Umkegrung von \b. \B passt auf alle Stellen, an 
+denen \b nicht passt. \B passt an allen Stellen zwischen zwei Wortzeichen aber auch an Positionen zwischen zwei Nicht-Wortzeichen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
+        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Positives Vorausschauen: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für positives Vorausschauen einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
+        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Positives Vorausschauen: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für positives Vorausschauen einzufügen. Positives Vorausschauen wird verwendet, um einen Ausdruck nur zu finden, wenn er von einem anderen gefolgt wird.
+Schreibt man &apos;q(?=u)&apos;, so bedeutet dies, finde das Zeichen &apos;q&apos; nur, wenn es von dem Zeichen &apos;u&apos; gefolgt wird. In diesem Beispiel ist &apos;u&apos; ein
+trivialer regulärer Ausdruck, der durch eine komplexeren ersetzt werden kann: &apos;q(?=[abc])&apos; findet ein &apos;q&apos; gefolgt von &apos;a&apos;, &apos;b&apos; oder &apos;c&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="300"/>
+        <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Negatives Vorausschauen: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für negatives Vorausschauen einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="304"/>
+        <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
+followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
+trivial regexp which may be replaced by a more complex expression; &apos;q(?![abc])&apos; will match a &apos;q&apos; if it is followed by anything else than &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Negatives Vorausschauen: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für negatives Vorausschauen einzufügen. Negatives Vorausschauen wird verwendet, um einen Ausdruck nur zu finden, wenn er nicht von einem anderen gefolgt wird.
+Schreibt man &apos;q(?!u)&apos;, so bedeutet dies, finde das Zeichen &apos;q&apos; nur, wenn es nicht von dem Zeichen &apos;u&apos; gefolgt wird. In diesem Beispiel ist &apos;u&apos; ein
+trivialer regulärer Ausdruck, der durch eine komplexeren ersetzt werden kann: &apos;q(?![abc])&apos; findet ein &apos;q&apos; gefolgt einem Zeichen mit Ausnahme von &apos;a&apos;, &apos;b&apos; oder &apos;c&apos;.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="317"/>
+        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookbehind brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Positives Zurückschauen: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für positives Zurückschauen einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="321"/>
+        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
+It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
+only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Positives Zurückschauen: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für positives Zurückschauen einzufügen. Zurückschauen hat den gleichen Effekt wie Vorausschauen, arbeitet aber rückwärts.
+Es wird verwendet, um einen Ausdruck nur zu finden, wenn ihm ein anderer vorausgeht.
+Schreibt man &apos;(?&amp;lt;=u)q&apos;, so bedeutet dies, finde das Zeichen &apos;q&apos; nur, wenn ihm das Zeichen &apos;u&apos; vorausgeht. Wie beim Vorausschauen kann
+&apos;u&apos; durch einen komplexeren Ausdruck ersetzt werden: &apos;(?&amp;lt;=[abc])q&apos; findet ein &apos;q&apos;, wenn &apos;a&apos;, &apos;b&apos; oder &apos;c&apos; vorausgeht.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="334"/>
+        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Negatives Zurückschauen: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für negatives Zurückschauen einzufügen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="338"/>
+        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
+but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
+character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex 
+expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Negatives Zurückschauen: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Auswählen, um Klammern für negatives Zurückschauen einzufügen. Zurückschauen hat den gleichen Effekt wie Vorausschauen, arbeitet aber rückwärts.
+Es wird verwendet, um einen Ausdruck nur zu finden, wenn ihm ein anderer nicht vorausgeht.
+Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &apos;q&apos; nur, wenn ihm das Zeichen &apos;u&apos; nicht vorausgeht. Wie beim Vorausschauen kann
+&apos;u&apos; durch einen komplexeren Ausdruck ersetzt werden: &apos;(?&amp;lt;![abc])q&apos; findet ein &apos;q&apos;, wenn &apos;a&apos;, &apos;b&apos; oder &apos;c&apos; nicht vorausgeht.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="368"/>
+        <source>&lt;b&gt;Undo last edit&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Die letzte Änderung rückgängig machen&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="378"/>
+        <source>&lt;b&gt;Redo last edit&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Die letzte Änderung wiederherstellen&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="408"/>
+        <source>Regexp:</source>
+        <translation>Regexp:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="431"/>
+        <source>Text:</source>
+        <translation>Text:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="456"/>
+        <source>Case Insensitive</source>
+        <translation>Schreibweise nicht beachten</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="463"/>
+        <source>&quot;^&quot; matches beginning of line, &quot;$&quot; matches end of line</source>
+        <translation>&quot;^&quot; findet Zeilenbeginn, &quot;$&quot; findet Zeilenende</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="466"/>
+        <source>Match Linebreaks</source>
+        <translation>Zeilenumbruch finden</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="473"/>
+        <source>&quot;.&quot; matches everything including linebreaks</source>
+        <translation>&quot;.&quot; findet alles inklusive einem Zeilenumbruch</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="476"/>
+        <source>Dot matches everything</source>
+        <translation>Punkt findet alles</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="483"/>
+        <source>Extended Pattern Syntax</source>
+        <translation>Erweiterte Suchmustersyntax</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="490"/>
+        <source>Inverted Greediness</source>
+        <translation>Umgekehrte Gierigkeit</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="497"/>
+        <source>Unicode</source>
+        <translation>Unicode</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="504"/>
+        <source>Non-named capturing groups do not capture substrings</source>
+        <translation>Unbenannte Gruppen erfassen keine Teilzeichenketten</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="507"/>
+        <source>Don&apos;t Capture</source>
+        <translation>Nicht erfassen</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpressionWizardRepeatDialog</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="14"/>
+        <source>Number of repetitions</source>
+        <translation>Anzahl Wiederholungen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="23"/>
+        <source>Quantifier</source>
+        <translation>Quantifizierer</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="43"/>
+        <source>times</source>
+        <translation>mal</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="76"/>
+        <source>and</source>
+        <translation>und</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="83"/>
+        <source>Between</source>
+        <translation>Zwischen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="103"/>
+        <source>Exactly</source>
+        <translation>Genau</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="123"/>
+        <source>Maximum</source>
+        <translation>Höchstens</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="130"/>
+        <source>Minimum</source>
+        <translation>Mindestens</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="150"/>
+        <source>Unlimited (incl. zero times)</source>
+        <translation>Beliebig viele (inkl. Null mal)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="160"/>
+        <source>Greediness</source>
+        <translation>Gierigkeit</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="166"/>
+        <source>Greedy</source>
+        <translation>Gierig</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="173"/>
+        <source>Possessive</source>
+        <translation>Besitzergreifend</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui" line="180"/>
+        <source>Lazy</source>
+        <translation>Minimalistisch</translation>
+    </message>
+</context>
+<context>
+    <name>QRegularExpressionWizardWidget</name>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="72"/>
+        <source>Save</source>
+        <translation>Speichern</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="73"/>
+        <source>Save the regular expression to a file</source>
+        <translation>Speichere den Regulären Ausdruck in einer Datei</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="75"/>
+        <source>Load</source>
+        <translation>Laden</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="76"/>
+        <source>Load a regular expression from a file</source>
+        <translation>Lade einen Regulären Ausdruck aus einer Datei</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="78"/>
+        <source>Validate</source>
+        <translation>Validieren</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="80"/>
+        <source>Validate the regular expression</source>
+        <translation>Den regulären Ausdruck validieren</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="81"/>
+        <source>Execute</source>
+        <translation>Ausführen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="83"/>
+        <source>Execute the regular expression</source>
+        <translation>Den regulären Ausdruck ausführen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="84"/>
+        <source>Next match</source>
+        <translation>Nächste Position</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="86"/>
+        <source>Show the next match of the regular expression</source>
+        <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="99"/>
+        <source>Copy</source>
+        <translation>Kopieren</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="100"/>
+        <source>Copy the regular expression to the clipboard</source>
+        <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <source>Named reference</source>
+        <translation>Benannte Referenz</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="207"/>
+        <source>No named groups have been defined yet.</source>
+        <translation>Es wurden noch keine benannten Gruppen erstellt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <source>Select group name:</source>
+        <translation>Wähle einen Gruppennamen:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <source>Save regular expression</source>
+        <translation>Sichere den Regulären Ausdruck</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="336"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Der Reguläre Ausdruck konnte nicht gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <source>Load regular expression</source>
+        <translation>Lade einen Regulären Ausdruck</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <source>Validation</source>
+        <translation>Validation</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <source>The regular expression is valid.</source>
+        <translation>Der reguläre Ausdruck ist gültig.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <source>Error</source>
+        <translation>Fehler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
+        <source>Invalid regular expression: {0}</source>
+        <translation>Ungültiger regulärer Ausdruck: {0}</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="435"/>
+        <source>A regular expression must be given.</source>
+        <translation>Ein regulärer Ausdruck muß eingegeben werden.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="497"/>
+        <source>Regexp</source>
+        <translation>Regexp</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="506"/>
+        <source>Offset</source>
+        <translation>Offset</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="512"/>
+        <source>Captures</source>
+        <translation>Speicherung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="517"/>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="519"/>
+        <source>Characters</source>
+        <translation>Zeichen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="523"/>
+        <source>Match</source>
+        <translation>Übereinstimmung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="534"/>
+        <source>Capture #{0}</source>
+        <translation>Speicher #{0}</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="551"/>
+        <source>No more matches</source>
+        <translation>Keine weitere Übereinstimmung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="554"/>
+        <source>No matches</source>
+        <translation>Keine Übereinstimmung</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <source>A regular expression and a text must be given.</source>
+        <translation>Ein regulärer Ausdruck und ein Text müssen eingegeben werden.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <source>RegExp Files (*.rx);;All Files (*)</source>
+        <translation>RegExp Dateien (*.rx);;Alle Dateien (*)</translation>
     </message>
 </context>
 <context>
