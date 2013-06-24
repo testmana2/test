@@ -2017,7 +2017,7 @@ class UserInterface(E5MainWindow):
         self.actions.append(self.qt5DocAct)
       
         self.pyqt4DocAct = E5Action(self.trUtf8('PyQt4 Documentation'),
-                self.trUtf8('P&yQt4 Documentation'), 0, 0, self, 'pyqt4_documentation')
+                self.trUtf8('PyQt&4 Documentation'), 0, 0, self, 'pyqt4_documentation')
         self.pyqt4DocAct.setStatusTip(self.trUtf8('Open PyQt4 Documentation'))
         self.pyqt4DocAct.setWhatsThis(self.trUtf8(
             """<b>PyQt4 Documentation</b>"""
@@ -2028,7 +2028,21 @@ class UserInterface(E5MainWindow):
         self.pyqt4DocAct.triggered[()].connect(self.__showPyQt4Doc)
         self.actions.append(self.pyqt4DocAct)
         
-        # TODO: add PyQt5
+        try:
+            import PyQt5        # __IGNORE_WARNING__
+            self.pyqt5DocAct = E5Action(self.trUtf8('PyQt5 Documentation'),
+                self.trUtf8('PyQt&5 Documentation'),0, 0, self, 'pyqt5_documentation')
+            self.pyqt5DocAct.setStatusTip(self.trUtf8('Open PyQt5 Documentation'))
+            self.pyqt5DocAct.setWhatsThis(self.trUtf8(
+                """<b>PyQt5 Documentation</b>"""
+                """<p>Display the PyQt5 Documentation. Dependant upon your settings,"""
+                """ this will either show the help in Eric's internal help viewer,"""
+                """ or execute a web browser or Qt Assistant. </p>"""
+            ))
+            self.pyqt5DocAct.triggered[()].connect(self.__showPyQt5Doc)
+            self.actions.append(self.pyqt5DocAct)
+        except ImportError:
+            self.pyqt5DocAct = None
         
     def __initPythonDocActions(self):
         """
@@ -2249,6 +2263,8 @@ class UserInterface(E5MainWindow):
         self.__menus["help"].addAction(self.qt4DocAct)
         self.__menus["help"].addAction(self.qt5DocAct)
         self.__menus["help"].addAction(self.pyqt4DocAct)
+        if self.pyqt5DocAct is not None:
+            self.__menus["help"].addAction(self.pyqt5DocAct)
         if self.pysideDocAct is not None:
             self.__menus["help"].addAction(self.pysideDocAct)
         self.__menus["help"].addSeparator()
@@ -4458,7 +4474,6 @@ class UserInterface(E5MainWindow):
                 if not os.path.splitext(pyqt4DocDir)[1]:
                     possibleHomes = [\
                         Utilities.normjoinpath(pyqt4DocDir, 'index.html'),
-                        Utilities.normjoinpath(pyqt4DocDir, 'pyqt4ref.html'),
                         Utilities.normjoinpath(pyqt4DocDir, 'classes.html'),
                     ]
                     for possibleHome in possibleHomes:
@@ -4482,6 +4497,64 @@ class UserInterface(E5MainWindow):
                 home = "file://" + home
         else:
             home = pyqt4DocDir
+        
+        hvType = Preferences.getHelp("HelpViewerType")
+        if hvType == 1:
+            self.launchHelpViewer(home)
+        elif hvType == 2:
+            self.__assistant(home, version=4)
+        elif hvType == 3:
+            self.__webBrowser(home)
+        else:
+            self.__customViewer(home)
+        
+    def __showPyQt5Doc(self):
+        """
+        Private slot to show the PyQt5 documentation.
+        """
+        pyqt5DocDir = Preferences.getHelp("PyQt5DocDir")
+        if not pyqt5DocDir:
+            pyqt5DocDir = Utilities.getEnvironmentEntry("PYQT5DOCDIR", None)
+        
+        if not pyqt5DocDir:
+            E5MessageBox.warning(self,
+                self.trUtf8("Documentation"),
+                self.trUtf8("""<p>The PyQt5 documentation starting point"""
+                            """ has not been configured.</p>"""))
+            return
+        
+        if not pyqt5DocDir.startswith("http://") and \
+           not pyqt5DocDir.startswith("https://"):
+            home = ""
+            if pyqt5DocDir:
+                if pyqt5DocDir.startswith("file://"):
+                    pyqt5DocDir = pyqt5DocDir[7:]
+                if not os.path.splitext(pyqt5DocDir)[1]:
+                    possibleHomes = [\
+                        Utilities.normjoinpath(pyqt5DocDir, 'index.html'),
+                        Utilities.normjoinpath(pyqt5DocDir, 'class_reference.html'),
+                    ]
+                    for possibleHome in possibleHomes:
+                        if os.path.exists(possibleHome):
+                            home = possibleHome
+                            break
+                else:
+                    home = pyqt5DocDir
+            
+            if not home or not os.path.exists(home):
+                E5MessageBox.warning(self,
+                    self.trUtf8("Documentation Missing"),
+                    self.trUtf8("""<p>The documentation starting point"""
+                                """ "<b>{0}</b>" could not be found.</p>""")\
+                        .format(home))
+                return
+            
+            if Utilities.isWindowsPlatform():
+                home = "file:///" + Utilities.fromNativeSeparators(home)
+            else:
+                home = "file://" + home
+        else:
+            home = pyqt5DocDir
         
         hvType = Preferences.getHelp("HelpViewerType")
         if hvType == 1:
