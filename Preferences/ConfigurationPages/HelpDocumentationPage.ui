@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>526</width>
-    <height>674</height>
+    <height>842</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -212,6 +212,42 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="pyqt5Group">
+     <property name="title">
+      <string>PyQt5 Documentation</string>
+     </property>
+     <layout class="QGridLayout" name="_4">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pyqt5DocDirButton">
+        <property name="toolTip">
+         <string>Press to select the PyQt5 documentation directory via a dialog</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="pyqt5DocDirEdit">
+        <property name="toolTip">
+         <string>Enter the PyQt5 documentation directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="textLabel1_8_2_2_5">
+        <property name="text">
+         <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="pysideGroup">
      <property name="title">
       <string>PySide Documentation</string>
@@ -273,6 +309,8 @@
   <tabstop>qt5DocDirButton</tabstop>
   <tabstop>pyqt4DocDirEdit</tabstop>
   <tabstop>pyqt4DocDirButton</tabstop>
+  <tabstop>pyqt5DocDirEdit</tabstop>
+  <tabstop>pyqt5DocDirButton</tabstop>
   <tabstop>pysideDocDirEdit</tabstop>
   <tabstop>pysideDocDirButton</tabstop>
  </tabstops>

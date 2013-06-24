@@ -77,6 +77,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.menu.addAction(self.trUtf8('Compile resource'),
                 self.__compileResource)
             self.menu.addAction(self.trUtf8('Compile all resources'),
@@ -106,6 +107,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.menu.addAction(self.trUtf8('New resource...'), self.__newResource)
         else:
             if self.hooks["newResource"] is not None:
@@ -128,6 +130,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.backMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
@@ -159,6 +162,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             act = self.multiMenu.addAction(self.trUtf8('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
@@ -186,6 +190,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.dirMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
@@ -218,6 +223,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
@@ -575,6 +581,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         args.append("-py2")
                     else:
                         args.append("-py3")
+            # TODO: add PyQt5
             elif self.project.getProjectType() == "PySide":
                 self.rccCompiler = Utilities.generatePySideToolPath('pyside-rcc')
                 if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:

@@ -115,16 +115,28 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         
         # 2. do the PyQt programs
         # 2a. Translation Extractor PyQt4
-        self.__createProgramEntry(self.trUtf8("Translation Extractor (Python, Qt)"),
+        self.__createProgramEntry(self.trUtf8("Translation Extractor (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pylupdate4.exe" or "pylupdate4",
             '-version', 'pylupdate', -1)
         # 2b. Forms Compiler PyQt4
-        self.__createProgramEntry(self.trUtf8("Forms Compiler (Python, Qt)"),
+        self.__createProgramEntry(self.trUtf8("Forms Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyuic4.bat" or "pyuic4",
             '--version', 'Python User', 4)
         # 2c. Resource Compiler PyQt4
-        self.__createProgramEntry(self.trUtf8("Resource Compiler (Python, Qt)"),
+        self.__createProgramEntry(self.trUtf8("Resource Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyrcc4.exe" or "pyrcc4",
+            '-version', 'Resource Compiler', -1)
+        # 2d. Translation Extractor PyQt5
+        self.__createProgramEntry(self.trUtf8("Translation Extractor (Python, PyQt5)"),
+            Utilities.isWindowsPlatform() and "pylupdate5.exe" or "pylupdate5",
+            '-version', 'pylupdate', -1)
+        # 2e. Forms Compiler PyQt4
+        self.__createProgramEntry(self.trUtf8("Forms Compiler (Python, PyQt5)"),
+            Utilities.isWindowsPlatform() and "pyuic5.bat" or "pyuic5",
+            '--version', 'Python User', 4)
+        # 2f. Resource Compiler PyQt4
+        self.__createProgramEntry(self.trUtf8("Resource Compiler (Python, PyQt5)"),
+            Utilities.isWindowsPlatform() and "pyrcc5.exe" or "pyrcc5",
             '-version', 'Resource Compiler', -1)
         
         # 3. do the PySide programs

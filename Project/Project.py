@@ -227,11 +227,13 @@ class Project(QObject):
         
         self.__projectTypes["Qt4"] = self.trUtf8("Qt GUI")
         self.__projectTypes["Qt4C"] = self.trUtf8("Qt Console")
+        # TODO: add PyQt5
         self.__projectTypes["E4Plugin"] = self.trUtf8("Eric Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")
         
         self.__projectProgLanguages = {
+            # TODO: add PyQt5
             "Python2": ["Qt4", "Qt4C", "E4Plugin", "Console", "Other"],
             "Python3": ["Qt4", "Qt4C", "E4Plugin", "Console", "Other"],
             "Ruby": ["Qt4", "Qt4C", "Console", "Other"],
@@ -471,13 +473,16 @@ class Project(QObject):
             self.pdata["FILETYPES"]["*{0}".format(ext)] = "SOURCES"
         self.pdata["FILETYPES"]["*.idl"] = "INTERFACES"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.pdata["FILETYPES"]["*.ui"] = "FORMS"
             self.pdata["FILETYPES"]["*.ui.h"] = "FORMS"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
+            # TODO: add PyQt5
             self.pdata["FILETYPES"]["*.qrc"] = "RESOURCES"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
+            # TODO: add PyQt5
             self.pdata["FILETYPES"]["*.ts"] = "TRANSLATIONS"
             self.pdata["FILETYPES"]["*.qm"] = "TRANSLATIONS"
         try:
@@ -494,6 +499,7 @@ class Project(QObject):
         """
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
+            # TODO: add PyQt5
             if "*.ts" not in self.pdata["FILETYPES"]:
                 self.pdata["FILETYPES"]["*.ts"] = "TRANSLATIONS"
             if "*.qm" not in self.pdata["FILETYPES"]:
@@ -1135,6 +1141,7 @@ class Project(QObject):
             lang = dlg.getSelectedLanguage()
             if self.pdata["PROJECTTYPE"][0] in \
                     ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                # TODO: add PyQt5
                 langFile = self.pdata["TRANSLATIONPATTERN"][0].replace("%language%", lang)
                 self.appendFile(langFile)
             self.projectLanguageAddedByCode.emit(lang)

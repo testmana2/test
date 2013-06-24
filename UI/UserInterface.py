@@ -2028,6 +2028,8 @@ class UserInterface(E5MainWindow):
         self.pyqt4DocAct.triggered[()].connect(self.__showPyQt4Doc)
         self.actions.append(self.pyqt4DocAct)
         
+        # TODO: add PyQt5
+        
     def __initPythonDocActions(self):
         """
         Private slot to initialize the actions to show the Python documentation.

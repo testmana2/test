@@ -35,7 +35,13 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.pythonDocDirCompleter = E5FileCompleter(self.pythonDocDirEdit)
         self.qt4DocDirCompleter = E5FileCompleter(self.qt4DocDirEdit)
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
+        self.pyqt5DocDirCompleter = E5FileCompleter(self.pyqt5DocDirEdit)
         self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)
+        
+        try:
+            import PyQt5        # __IGNORE_WARNING__
+        except ImportError:
+            self.pyqt5Group.setEnabled(False)
         
         pyside2, pyside3 = Utilities.checkPyside()
         if pyside2 or pyside3:
@@ -54,6 +60,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             Preferences.getHelp("Qt5DocDir"))
         self.pyqt4DocDirEdit.setText(
             Preferences.getHelp("PyQt4DocDir"))
+        self.pyqt5DocDirEdit.setText(
+            Preferences.getHelp("PyQt5DocDir"))
         self.pysideDocDirEdit.setText(
             Preferences.getHelp("PySideDocDir"))
         
@@ -71,6 +79,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self.qt5DocDirEdit.text())
         Preferences.setHelp("PyQt4DocDir",
             self.pyqt4DocDirEdit.text())
+        Preferences.setHelp("PyQt5DocDir",
+            self.pyqt5DocDirEdit.text())
         Preferences.setHelp("PySideDocDir",
             self.pysideDocDirEdit.text())
         
@@ -147,6 +157,20 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         
         if entry:
             self.pyqt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
+        
+    @pyqtSlot()
+    def on_pyqt5DocDirButton_clicked(self):
+        """
+        Private slot to select the PyQt5 documentation directory.
+        """
+        entry = E5FileDialog.getOpenFileName(
+            self,
+            self.trUtf8("Select PyQt5 documentation entry"),
+            QUrl(self.pyqt4DocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+        
+        if entry:
+            self.pyqt5DocDirEdit.setText(Utilities.toNativeSeparators(entry))
         
     @pyqtSlot()
     def on_pysideDocDirButton_clicked(self):

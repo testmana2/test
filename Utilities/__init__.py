@@ -1499,7 +1499,7 @@ def prepareQtMacBundle(toolname, version, args):
 # Qt utility functions below
 ################################################################################
 
-
+# TODO: add PyQt5 (both)
 def generatePySideToolPath(toolname):
     """
     Module function to generate the executable path for a PySide tool.

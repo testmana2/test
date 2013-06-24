@@ -104,6 +104,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             act = self.menu.addAction(self.trUtf8('Generate translation'),
                 self.__generateSelected)
             self.tsMenuActions.append(act)
@@ -220,6 +221,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             act = self.backMenu.addAction(self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocBackMenuActions.append(act)
@@ -271,6 +273,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             act = self.multiMenu.addAction(self.trUtf8('Generate translations'),
                 self.__generateSelected)
             self.tsMultiMenuActions.append(act)
@@ -348,6 +351,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             act = self.dirMenu.addAction(self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocDirMenuActions.append(act)
@@ -454,6 +458,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -494,6 +499,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -533,6 +539,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             if self.pylupdateProcRunning:
                 for act in self.tsprocDirMenuActions:
                     act.setEnabled(False)
@@ -551,6 +558,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         """
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             if self.pylupdateProcRunning:
                 for act in self.tsprocBackMenuActions:
                     act.setEnabled(False)
@@ -930,6 +938,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdate = 'pylupdate4'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
+        # TODO: add PyQt5
         elif self.project.getProjectType() in ["PySide", "PySideC"]:
             self.pylupdate = Utilities.generatePySideToolPath('pyside-lupdate')
         else:
@@ -1068,6 +1077,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+            # TODO: add PyQt5
             lrelease = os.path.join(
                     Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("lrelease"))

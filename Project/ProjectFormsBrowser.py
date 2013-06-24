@@ -118,6 +118,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.menu.addAction(self.trUtf8('Compile form'), self.__compileForm)
             self.menu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
@@ -162,6 +163,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.menu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -183,6 +185,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
+        # TODO: add PyQt5
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"] or \
            self.hooks["compileAllForms"] is not None:
             self.backMenu.addAction(self.trUtf8('Compile all forms'),
@@ -209,6 +212,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             act = self.multiMenu.addAction(self.trUtf8('Compile forms'),
                 self.__compileSelectedForms)
             self.multiMenu.addSeparator()
@@ -247,6 +251,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.dirMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMenu.addSeparator()
@@ -263,6 +268,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.dirMenu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -285,6 +291,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            # TODO: add PyQt5
             self.dirMultiMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
@@ -499,6 +506,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["newForm"](path)
         else:
             if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+                # TODO: add PyQt5
                 self.__newUiForm(path)
         
     def __newUiForm(self, path):
@@ -697,6 +705,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                     uic = self.uicompiler + '.bat'
                 else:
                     uic = self.uicompiler
+            # TODO: add PyQt5
             elif self.project.getProjectType() == "PySide":
                 self.uicompiler = 'pyside-uic'
                 uic = Utilities.generatePySideToolPath(self.uicompiler)
@@ -861,6 +870,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         else:
             if self.project.getProjectType() not in \
                ["Qt4", "Qt4C", "E4Plugin", "PySide"]:
+                # TODO: add PyQt5
                 # ignore the request for non Qt projects
                 return
             

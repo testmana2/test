@@ -630,6 +630,19 @@ class Prefs(object):
             TranslationsBrowserFlag | \
             InterfacesBrowserFlag | \
             OthersBrowserFlag,
+        "PyQt5":
+            SourcesBrowserFlag | \
+            FormsBrowserFlag | \
+            ResourcesBrowserFlag | \
+            TranslationsBrowserFlag | \
+            InterfacesBrowserFlag | \
+            OthersBrowserFlag,
+        "PyQt5C":
+            SourcesBrowserFlag | \
+            ResourcesBrowserFlag | \
+            TranslationsBrowserFlag | \
+            InterfacesBrowserFlag | \
+            OthersBrowserFlag,
         "E4Plugin":
             SourcesBrowserFlag | \
             FormsBrowserFlag | \
@@ -682,6 +695,7 @@ class Prefs(object):
         "Qt4DocDir": "",
         "Qt5DocDir": "",
         "PyQt4DocDir": "",
+        "PyQt5DocDir": "",
         "PySideDocDir": "",
         "SingleHelpWindow": True,
         "SaveGeometry": True,
