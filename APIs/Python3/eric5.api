@@ -5752,6 +5752,7 @@ eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.setMo
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage?1()
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pyqt4DocDirButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pyqt5DocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pysideDocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_python2DocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pythonDocDirButton_clicked?4()

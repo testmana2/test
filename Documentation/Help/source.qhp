@@ -5040,6 +5040,7 @@
       <keyword name="HelpDocumentationPage (Constructor)" id="HelpDocumentationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.__init__" />
       <keyword name="HelpDocumentationPage (Module)" id="HelpDocumentationPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html" />
       <keyword name="HelpDocumentationPage.on_pyqt4DocDirButton_clicked" id="HelpDocumentationPage.on_pyqt4DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pyqt4DocDirButton_clicked" />
+      <keyword name="HelpDocumentationPage.on_pyqt5DocDirButton_clicked" id="HelpDocumentationPage.on_pyqt5DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pyqt5DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_pysideDocDirButton_clicked" id="HelpDocumentationPage.on_pysideDocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pysideDocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_python2DocDirButton_clicked" id="HelpDocumentationPage.on_python2DocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_python2DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_pythonDocDirButton_clicked" id="HelpDocumentationPage.on_pythonDocDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pythonDocDirButton_clicked" />
@@ -11560,6 +11561,7 @@
       <keyword name="UserInterface.__showPluginsAvailable" id="UserInterface.__showPluginsAvailable" ref="eric5.UI.UserInterface.html#UserInterface.__showPluginsAvailable" />
       <keyword name="UserInterface.__showPrevious" id="UserInterface.__showPrevious" ref="eric5.UI.UserInterface.html#UserInterface.__showPrevious" />
       <keyword name="UserInterface.__showPyQt4Doc" id="UserInterface.__showPyQt4Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt4Doc" />
+      <keyword name="UserInterface.__showPyQt5Doc" id="UserInterface.__showPyQt5Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPyQt5Doc" />
       <keyword name="UserInterface.__showPySideDoc" id="UserInterface.__showPySideDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showPySideDoc" />
       <keyword name="UserInterface.__showPython2Doc" id="UserInterface.__showPython2Doc" ref="eric5.UI.UserInterface.html#UserInterface.__showPython2Doc" />
       <keyword name="UserInterface.__showPythonDoc" id="UserInterface.__showPythonDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showPythonDoc" />
