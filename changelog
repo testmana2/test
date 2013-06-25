@@ -32,6 +32,8 @@ Version 5.4-snapshot-2013mmdd:
 - Multi Project
   -- extended the context menus of the multi project browser to be able
      to add projects this way
+- Project
+  -- added support for PyQt5 projects
 - Project Viewer
   -- All
      --- added a context menu entry to delete the selected directory
