@@ -105,6 +105,9 @@ def messageHandler(msgType, message):
                     "E5ErrorMessage", "Fatal Error:")
             if isinstance(message, bytes):
                 message = message.decode()
+            message = message.replace("\r\n", "<br/>")\
+                             .replace("\n", "<br/>")\
+                             .replace("\r", "<br/>")
             msg = "<p><b>{0}</b></p><p>{1}</p>".format(
                 messageType, Utilities.html_uencode(message))
             if QThread.currentThread() == qApp.thread():
