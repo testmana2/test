@@ -12,7 +12,7 @@ import re
 
 from PyQt4.QtCore import QFileInfo, pyqtSlot, qVersion
 try:
-    from PyQt5.QtCore import QRegularExpression
+    from PyQt4.QtCore import QRegularExpression
     AVAILABLE = True
 except ImportError:
     AVAILABLE = False
