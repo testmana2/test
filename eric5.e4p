@@ -1087,6 +1087,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.py</Source>
     <Source>eric5_qregularexpression.py</Source>
     <Source>eric5_qregularexpression.pyw</Source>
+    <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardServer.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

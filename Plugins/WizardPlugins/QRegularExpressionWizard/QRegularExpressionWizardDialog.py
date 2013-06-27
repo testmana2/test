@@ -9,13 +9,10 @@ Module implementing the QRegularExpression wizard dialog.
 
 import os
 import re
+import sys
+import json
 
-from PyQt4.QtCore import QFileInfo, pyqtSlot, qVersion
-try:
-    from PyQt4.QtCore import QRegularExpression
-    AVAILABLE = True
-except ImportError:
-    AVAILABLE = False
+from PyQt4.QtCore import QFileInfo, pyqtSlot, qVersion, QProcess, QByteArray
 from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, QClipboard, \
     QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
@@ -68,13 +65,25 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         
         self.namedGroups = re.compile(r"""\(?P<([^>]+)>""").findall
         
+        # start the PyQt5 server part
+        self.__pyqt5Available = False
+        self.__pyqt5Server = QProcess(self)
+        self.__pyqt5Server.start(sys.executable, [
+            os.path.join(os.path.dirname(__file__), "QRegularExpressionWizardServer.py")])
+        if self.__pyqt5Server.waitForStarted(10000):
+            self.__pyqt5Server.setReadChannel(QProcess.StandardOutput)
+            if self.__sendCommand("available"):
+                response = self.__receiveResponse()
+                if response and response["available"]:
+                    self.__pyqt5Available = True
+        
         self.saveButton = \
             self.buttonBox.addButton(self.trUtf8("Save"), QDialogButtonBox.ActionRole)
         self.saveButton.setToolTip(self.trUtf8("Save the regular expression to a file"))
         self.loadButton = \
             self.buttonBox.addButton(self.trUtf8("Load"), QDialogButtonBox.ActionRole)
         self.loadButton.setToolTip(self.trUtf8("Load a regular expression from a file"))
-        if qVersion() >= "5.0.0" and AVAILABLE:
+        if qVersion() >= "5.0.0" and self.__pyqt5Available:
             self.validateButton = self.buttonBox.addButton(
                 self.trUtf8("Validate"), QDialogButtonBox.ActionRole)
             self.validateButton.setToolTip(self.trUtf8("Validate the regular expression"))
@@ -106,7 +115,51 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             self.variableLine.hide()
             self.importCheckBox.hide()
             self.regexpTextEdit.setFocus()
-
+    
+    def __sendCommand(self, command, **kw):
+        """
+        Private method to send a command to the PyQt5 server.
+        
+        @param commandDict dictionary with command string and related data (dict)
+        @return flag indicating a successful transmission (boolean)
+        """
+        result = False
+        if command:
+            commandDict = {"command": command}
+            commandDict.update(kw)
+            commandStr = json.dumps(commandDict) + "\n"
+            data = QByteArray(commandStr.encode("utf-8"))
+            self.__pyqt5Server.write(data)
+            result = self.__pyqt5Server.waitForBytesWritten(10000)
+        return result
+    
+    def __receiveResponse(self):
+        """
+        Private method to receive a response from the PyQt5 server.
+        
+        @return response dictionary (dict)
+        """
+        responseDict = {}
+        if self.__pyqt5Server.waitForReadyRead(10000):
+            data = bytes(self.__pyqt5Server.readAllStandardOutput())
+            responseStr = data.decode("utf-8")
+            responseDict = json.loads(responseStr)
+            if responseDict["error"]:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Communication Error"),
+                    self.trUtf8("""<p>The PyQt5 backend reported an error.</p>"""
+                                """<p>{0}</p>""").format(responseDict["error"]))
+                responseDict = {}
+        
+        return responseDict
+    
+    def shutdown(self):
+        """
+        Public method to shut down the PyQt5 server part.
+        """
+        self.__sendCommand("exit")
+        self.__pyqt5Server.waitForFinished(5000)
+    
     def __insertString(self, s, steps=0):
         """
         Private method to insert a string into line edit and move cursor.
@@ -393,44 +446,55 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         """
         Private slot to validate the entered QRegularExpression.
         """
-        if qVersion() < "5.0.0" or not AVAILABLE:
+        if qVersion() < "5.0.0" or not self.__pyqt5Available:
             # only available for Qt5
             return
         
-        regex = self.regexpTextEdit.toPlainText()
-        if regex:
-            options = QRegularExpression.NoPatternOption
+        regexp = self.regexpTextEdit.toPlainText()
+        if regexp:
+            options = []
             if self.caseInsensitiveCheckBox.isChecked():
-                options |= QRegularExpression.CaseInsensitiveOption
+                options.append("CaseInsensitiveOption")
             if self.multilineCheckBox.isChecked():
-                options |= QRegularExpression.MultilineOption
+                options.append("MultilineOption")
             if self.dotallCheckBox.isChecked():
-                options |= QRegularExpression.DotMatchesEverythingOption
+                options.append("DotMatchesEverythingOption")
             if self.extendedCheckBox.isChecked():
-                options |= QRegularExpression.ExtendedPatternSyntaxOption
+                options.append("ExtendedPatternSyntaxOption")
             if self.greedinessCheckBox.isChecked():
-                options |= QRegularExpression.InvertedGreedinessOption
+                options.append("InvertedGreedinessOption")
             if self.unicodeCheckBox.isChecked():
-                options |= QRegularExpression.UseUnicodePropertiesOption
+                options.append("UseUnicodePropertiesOption")
             if self.captureCheckBox.isChecked():
-                options |= QRegularExpression.DontCaptureOption
+                options.append("DontCaptureOption")
             
-            re = QRegularExpression(regex, options)
-            if re.isValid():
-                E5MessageBox.information(self,
-                    self.trUtf8("Validation"),
-                    self.trUtf8("""The regular expression is valid."""))
+            if self.__sendCommand("validate", options=options, regexp=regexp):
+                response = self.__receiveResponse()
+                if response and "valid" in response:
+                    if response["valid"]:
+                        E5MessageBox.information(self,
+                            self.trUtf8("Validation"),
+                            self.trUtf8("""The regular expression is valid."""))
+                    else:
+                        E5MessageBox.critical(self,
+                            self.trUtf8("Error"),
+                            self.trUtf8("""Invalid regular expression: {0}""")
+                                .format(response["errorMessage"]))
+                        # move cursor to error offset
+                        offset = response["errorOffset"]
+                        tc = self.regexpTextEdit.textCursor()
+                        tc.setPosition(offset)
+                        self.regexpTextEdit.setTextCursor(tc)
+                        self.regexpTextEdit.setFocus()
+                        return
+                else:
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Communication Error"),
+                        self.trUtf8("""Invalid response received from PyQt5 backend."""))
             else:
                 E5MessageBox.critical(self,
-                    self.trUtf8("Error"),
-                    self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(re.errorString()))
-                # move cursor to error offset
-                offset = re.errorPatternOffset()
-                tc = self.regexpTextEdit.textCursor()
-                tc.setPosition(offset)
-                self.regexpTextEdit.setTextCursor(tc)
-                return
+                    self.trUtf8("Communication Error"),
+                    self.trUtf8("""Communication with PyQt5 backend failed."""))
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Error"),
@@ -446,7 +510,7 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         
         @param startpos starting position for the QRegularExpression matching
         """
-        if qVersion() < "5.0.0" or not AVAILABLE:
+        if qVersion() < "5.0.0" or not self.__pyqt5Available:
             # only available for Qt5
             return
         
@@ -664,6 +728,20 @@ class QRegularExpressionWizardDialog(QDialog):
         @return generated code (string)
         """
         return self.cw.getCode(indLevel, indString)
+    
+    def accept(self):
+        """
+        Public slot to hide the dialog and set the result code to Accepted.
+        """
+        self.cw.shutdown()
+        super().accept()
+    
+    def reject(self):
+        """
+        Public slot to hide the dialog and set the result code to Rejected.
+        """
+        self.cw.shutdown()
+        super().reject()
 
 
 class QRegularExpressionWizardWindow(E5MainWindow):
@@ -687,3 +765,12 @@ class QRegularExpressionWizardWindow(E5MainWindow):
         
         self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)
+    
+    def closeEvent(self, evt):
+        """
+        Protected method handling the close event.
+        
+        @param evt close event (QCloseEvent)
+        """
+        self.cw.shutdown()
+        super().closeEvent(evt)
