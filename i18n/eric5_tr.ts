@@ -40933,179 +40933,199 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
 <context>
     <name>QRegularExpressionWizardWidget</name>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="72"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="81"/>
         <source>Save</source>
         <translation type="unfinished">Kaydet</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="73"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="82"/>
         <source>Save the regular expression to a file</source>
         <translation type="unfinished">Düzzenli ifadeleri bir dosyaya kaydet</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="75"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="84"/>
         <source>Load</source>
         <translation type="unfinished">Yükle</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="76"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="85"/>
         <source>Load a regular expression from a file</source>
         <translation type="unfinished">Düzenli ifadeyi bir dosyadan yükle</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="78"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="87"/>
         <source>Validate</source>
         <translation type="unfinished">Geçerli</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="80"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="89"/>
         <source>Validate the regular expression</source>
         <translation type="unfinished">Düzenli ifadeyi doğrula</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="81"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="90"/>
         <source>Execute</source>
         <translation type="unfinished">Gerçekleştir</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="83"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="92"/>
         <source>Execute the regular expression</source>
         <translation type="unfinished">Düzenli ifadeyi gerçekleştir</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="84"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="93"/>
         <source>Next match</source>
         <translation type="unfinished">Sonraki eşleşme</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="86"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="95"/>
         <source>Show the next match of the regular expression</source>
         <translation type="unfinished">Düzneli ifadeninin bir sonraki sonucunu göster</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="99"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="109"/>
         <source>Copy</source>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="100"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="110"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation type="unfinished">Düzenli ifadeyi panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="264"/>
         <source>Named reference</source>
         <translation type="unfinished">Tanımlanmış kaynaklar</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="207"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="259"/>
         <source>No named groups have been defined yet.</source>
         <translation type="unfinished">Henüz hiçbir grup tanımlanmamış.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="264"/>
         <source>Select group name:</source>
         <translation type="unfinished">Grup adı seç:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="423"/>
         <source>Save regular expression</source>
         <translation type="unfinished">Düzenli ifadeleri kaydet</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="336"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="388"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="423"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Düzenli ifade kaydedilemedi.&lt;/p&gt;&lt;p&gt;Sebep: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="411"/>
         <source>Load regular expression</source>
         <translation type="unfinished">Düzenli ifadeleri yükle</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
         <source>Validation</source>
         <translation type="unfinished">Onaylama</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
         <source>The regular expression is valid.</source>
         <translation type="unfinished">Düzenli ifade geçerli.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="640"/>
         <source>Error</source>
         <translation type="unfinished">Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="540"/>
         <source>Invalid regular expression: {0}</source>
         <translation type="unfinished">Geçersiz düzenli ifade: {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="435"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="498"/>
         <source>A regular expression must be given.</source>
         <translation type="unfinished">Bir düzenli ifade girilmeli.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="497"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="559"/>
         <source>Regexp</source>
         <translation type="unfinished">Regexp</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="506"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="570"/>
         <source>Offset</source>
         <translation type="unfinished">Ofset</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="512"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="576"/>
         <source>Captures</source>
         <translation type="unfinished">Ekran yakalamalar</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="517"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="581"/>
         <source>Text</source>
         <translation type="unfinished">Metin</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="519"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="583"/>
         <source>Characters</source>
         <translation type="unfinished">Karakterler</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="523"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="587"/>
         <source>Match</source>
         <translation type="unfinished">Eşleşme</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="534"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="598"/>
         <source>Capture #{0}</source>
         <translation type="unfinished">Yakala #{0}</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="551"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="616"/>
         <source>No more matches</source>
         <translation type="unfinished">Başka eşleşme yok</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="554"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="619"/>
         <source>No matches</source>
         <translation type="unfinished">Eşleşme yok</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="640"/>
         <source>A regular expression and a text must be given.</source>
         <translation type="unfinished">Bir düzenli ifade ve metin verilmelidir.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="411"/>
         <source>RegExp Files (*.rx);;All Files (*)</source>
         <translation type="unfinished">RegExp Dosyaları (*.rx);;Tüm Dosyalar (*)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="636"/>
+        <source>Communication Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="147"/>
+        <source>&lt;p&gt;The PyQt5 backend reported an error.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="632"/>
+        <source>Invalid response received from PyQt5 backend.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="636"/>
+        <source>Communication with PyQt5 backend failed.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

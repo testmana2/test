@@ -39693,179 +39693,199 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
 <context>
     <name>QRegularExpressionWizardWidget</name>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="72"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="81"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="73"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="82"/>
         <source>Save the regular expression to a file</source>
         <translation>Speichere den Regulären Ausdruck in einer Datei</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="75"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="84"/>
         <source>Load</source>
         <translation>Laden</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="76"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="85"/>
         <source>Load a regular expression from a file</source>
         <translation>Lade einen Regulären Ausdruck aus einer Datei</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="78"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="87"/>
         <source>Validate</source>
         <translation>Validieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="80"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="89"/>
         <source>Validate the regular expression</source>
         <translation>Den regulären Ausdruck validieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="81"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="90"/>
         <source>Execute</source>
         <translation>Ausführen</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="83"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="92"/>
         <source>Execute the regular expression</source>
         <translation>Den regulären Ausdruck ausführen</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="84"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="93"/>
         <source>Next match</source>
         <translation>Nächste Position</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="86"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="95"/>
         <source>Show the next match of the regular expression</source>
         <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="99"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="109"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="100"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="110"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="264"/>
         <source>Named reference</source>
         <translation>Benannte Referenz</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="207"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="259"/>
         <source>No named groups have been defined yet.</source>
         <translation>Es wurden noch keine benannten Gruppen erstellt.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="212"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="264"/>
         <source>Select group name:</source>
         <translation>Wähle einen Gruppennamen:</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="423"/>
         <source>Save regular expression</source>
         <translation>Sichere den Regulären Ausdruck</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="336"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="388"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="371"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="423"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Reguläre Ausdruck konnte nicht gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="411"/>
         <source>Load regular expression</source>
         <translation>Lade einen Regulären Ausdruck</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
         <source>Validation</source>
         <translation>Validation</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="420"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
         <source>The regular expression is valid.</source>
         <translation>Der reguläre Ausdruck ist gültig.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="640"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="474"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="540"/>
         <source>Invalid regular expression: {0}</source>
         <translation>Ungültiger regulärer Ausdruck: {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="435"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="498"/>
         <source>A regular expression must be given.</source>
         <translation>Ein regulärer Ausdruck muß eingegeben werden.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="497"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="559"/>
         <source>Regexp</source>
         <translation>Regexp</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="506"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="570"/>
         <source>Offset</source>
         <translation>Offset</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="512"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="576"/>
         <source>Captures</source>
         <translation>Speicherung</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="517"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="581"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="519"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="583"/>
         <source>Characters</source>
         <translation>Zeichen</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="523"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="587"/>
         <source>Match</source>
         <translation>Übereinstimmung</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="534"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="598"/>
         <source>Capture #{0}</source>
         <translation>Speicher #{0}</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="551"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="616"/>
         <source>No more matches</source>
         <translation>Keine weitere Übereinstimmung</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="554"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="619"/>
         <source>No matches</source>
         <translation>Keine Übereinstimmung</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="567"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="640"/>
         <source>A regular expression and a text must be given.</source>
         <translation>Ein regulärer Ausdruck und ein Text müssen eingegeben werden.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="359"/>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="411"/>
         <source>RegExp Files (*.rx);;All Files (*)</source>
         <translation>RegExp Dateien (*.rx);;Alle Dateien (*)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="636"/>
+        <source>Communication Error</source>
+        <translation>Kommunikationsfehler</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="147"/>
+        <source>&lt;p&gt;The PyQt5 backend reported an error.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Das PyQt5 Backend hat einen Fehler gemeldet.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="632"/>
+        <source>Invalid response received from PyQt5 backend.</source>
+        <translation>Es wurde eine ungültige Antwort vom PyQt5 Backend empfangen.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.py" line="636"/>
+        <source>Communication with PyQt5 backend failed.</source>
+        <translation>Die Kommunikation mit dem PyQt5 Backend ist fehlgeschlagen.</translation>
     </message>
 </context>
 <context>
