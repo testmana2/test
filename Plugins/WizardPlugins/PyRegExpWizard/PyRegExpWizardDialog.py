@@ -85,15 +85,15 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         self.nextButton.setEnabled(False)
         
         if fromEric:
-            self.buttonBox.button(QDialogButtonBox.Close).hide()
+            self.buttonBox.setStandardButtons(
+                QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
             self.copyButton = None
         else:
             self.copyButton = \
                 self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
-            self.buttonBox.button(QDialogButtonBox.Ok).hide()
-            self.buttonBox.button(QDialogButtonBox.Cancel).hide()
+            self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
             self.variableLabel.hide()
             self.variableLineEdit.hide()
             self.variableLine.hide()
