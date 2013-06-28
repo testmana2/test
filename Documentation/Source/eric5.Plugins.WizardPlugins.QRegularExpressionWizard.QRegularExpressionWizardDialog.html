@@ -66,8 +66,14 @@ QDialog
 <td><a href="#QRegularExpressionWizardDialog.__init__">QRegularExpressionWizardDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#QRegularExpressionWizardDialog.accept">accept</a></td>
+<td>Public slot to hide the dialog and set the result code to Accepted.</td>
+</tr><tr>
 <td><a href="#QRegularExpressionWizardDialog.getCode">getCode</a></td>
 <td>Public method to get the source code.</td>
+</tr><tr>
+<td><a href="#QRegularExpressionWizardDialog.reject">reject</a></td>
+<td>Public slot to hide the dialog and set the result code to Rejected.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -87,7 +93,12 @@ parent widget (QWidget)
 <dd>
 flag indicating a call from within eric5
 </dd>
-</dl><a NAME="QRegularExpressionWizardDialog.getCode" ID="QRegularExpressionWizardDialog.getCode"></a>
+</dl><a NAME="QRegularExpressionWizardDialog.accept" ID="QRegularExpressionWizardDialog.accept"></a>
+<h4>QRegularExpressionWizardDialog.accept</h4>
+<b>accept</b>(<i></i>)
+<p>
+        Public slot to hide the dialog and set the result code to Accepted.
+</p><a NAME="QRegularExpressionWizardDialog.getCode" ID="QRegularExpressionWizardDialog.getCode"></a>
 <h4>QRegularExpressionWizardDialog.getCode</h4>
 <b>getCode</b>(<i>indLevel, indString</i>)
 <p>
@@ -105,7 +116,12 @@ string used for indentation (space or tab) (string)
 <dd>
 generated code (string)
 </dd>
-</dl>
+</dl><a NAME="QRegularExpressionWizardDialog.reject" ID="QRegularExpressionWizardDialog.reject"></a>
+<h4>QRegularExpressionWizardDialog.reject</h4>
+<b>reject</b>(<i></i>)
+<p>
+        Public slot to hide the dialog and set the result code to Rejected.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="QRegularExpressionWizardWidget" ID="QRegularExpressionWizardWidget"></a>
@@ -131,6 +147,12 @@ QWidget, Ui_QRegularExpressionWizardDialog
 </tr><tr>
 <td><a href="#QRegularExpressionWizardWidget.__insertString">__insertString</a></td>
 <td>Private method to insert a string into line edit and move cursor.</td>
+</tr><tr>
+<td><a href="#QRegularExpressionWizardWidget.__receiveResponse">__receiveResponse</a></td>
+<td>Private method to receive a response from the PyQt5 server.</td>
+</tr><tr>
+<td><a href="#QRegularExpressionWizardWidget.__sendCommand">__sendCommand</a></td>
+<td>Private method to send a command to the PyQt5 server.</td>
 </tr><tr>
 <td><a href="#QRegularExpressionWizardWidget.getCode">getCode</a></td>
 <td>Public method to get the source code.</td>
@@ -218,6 +240,9 @@ QWidget, Ui_QRegularExpressionWizardDialog
 </tr><tr>
 <td><a href="#QRegularExpressionWizardWidget.on_wordboundButton_clicked">on_wordboundButton_clicked</a></td>
 <td>Private slot to handle the word boundary toolbutton.</td>
+</tr><tr>
+<td><a href="#QRegularExpressionWizardWidget.shutdown">shutdown</a></td>
+<td>Public method to shut down the PyQt5 server part.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -251,6 +276,31 @@ string to be inserted into the regexp line edit
 <dd>
 number of characters to move the cursor (integer).
             Negative steps moves cursor back, positives forward.
+</dd>
+</dl><a NAME="QRegularExpressionWizardWidget.__receiveResponse" ID="QRegularExpressionWizardWidget.__receiveResponse"></a>
+<h4>QRegularExpressionWizardWidget.__receiveResponse</h4>
+<b>__receiveResponse</b>(<i></i>)
+<p>
+        Private method to receive a response from the PyQt5 server.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+response dictionary (dict)
+</dd>
+</dl><a NAME="QRegularExpressionWizardWidget.__sendCommand" ID="QRegularExpressionWizardWidget.__sendCommand"></a>
+<h4>QRegularExpressionWizardWidget.__sendCommand</h4>
+<b>__sendCommand</b>(<i>command, **kw</i>)
+<p>
+        Private method to send a command to the PyQt5 server.
+</p><dl>
+<dt><i>commandDict</i></dt>
+<dd>
+dictionary with command string and related data (dict)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a successful transmission (boolean)
 </dd>
 </dl><a NAME="QRegularExpressionWizardWidget.getCode" ID="QRegularExpressionWizardWidget.getCode"></a>
 <h4>QRegularExpressionWizardWidget.getCode</h4>
@@ -425,6 +475,11 @@ starting position for the QRegularExpression matching
 <b>on_wordboundButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the word boundary toolbutton.
+</p><a NAME="QRegularExpressionWizardWidget.shutdown" ID="QRegularExpressionWizardWidget.shutdown"></a>
+<h4>QRegularExpressionWizardWidget.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to shut down the PyQt5 server part.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -448,6 +503,9 @@ E5MainWindow
 <tr>
 <td><a href="#QRegularExpressionWizardWindow.__init__">QRegularExpressionWizardWindow</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#QRegularExpressionWizardWindow.closeEvent">closeEvent</a></td>
+<td>Protected method handling the close event.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -463,6 +521,16 @@ E5MainWindow
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="QRegularExpressionWizardWindow.closeEvent" ID="QRegularExpressionWizardWindow.closeEvent"></a>
+<h4>QRegularExpressionWizardWindow.closeEvent</h4>
+<b>closeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling the close event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+close event (QCloseEvent)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
