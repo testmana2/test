@@ -3,12 +3,13 @@
 # Copyright (c) 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+"""
+Module implementing the PyQt5 server part of the QRegularExpression wizzard.
+"""
+
 import json
 import sys
 
-def printerr(string):
-    sys.stderr.write(string)
-    sys.stderr.flush()
 
 def rxValidate(regexp, options):
     """
@@ -52,13 +53,66 @@ def rxValidate(regexp, options):
     return valid, error, errorOffset
 
 
-if __name__ == "__main__":
+def rxExecute(regexp, options, text, startpos):
+    """
+    Function to execute the given regular expression for a given text.
+    
+    @param regexp regular expression to validate (string)
+    @param options list of options (list of string)
+    @param text text to execute on (string)
+    @param startpos start position for the execution (integer)
+    @return tuple of a flag indicating a successful match (boolean) and
+        a list of captures containing the complete match as matched string
+        (string), match start (integer), match end (integer) and match length
+        (integer) for each entry
+    """
+    valid, error, errorOffset = rxValidate(regexp, options)
+    if not valid:
+        return valid, error, errorOffset
+    
+    from PyQt5.QtCore import QRegularExpression
+    rxOptions = QRegularExpression.NoPatternOption
+    if "CaseInsensitiveOption" in options:
+        rxOptions |= QRegularExpression.CaseInsensitiveOption
+    if "MultilineOption" in options:
+        rxOptions |= QRegularExpression.MultilineOption
+    if "DotMatchesEverythingOption" in options:
+        rxOptions |= QRegularExpression.DotMatchesEverythingOption
+    if "ExtendedPatternSyntaxOption" in options:
+        rxOptions |= QRegularExpression.ExtendedPatternSyntaxOption
+    if "InvertedGreedinessOption" in options:
+        rxOptions |= QRegularExpression.InvertedGreedinessOption
+    if "UseUnicodePropertiesOption" in options:
+        rxOptions |= QRegularExpression.UseUnicodePropertiesOption
+    if "DontCaptureOption" in options:
+        rxOptions |= QRegularExpression.DontCaptureOption
+    
+    matched = False
+    captures = []
+    re = QRegularExpression(regexp, rxOptions)
+    match = re.match(text, startpos)
+    if match.hasMatch():
+        matched = True
+        for index in range(match.lastCapturedIndex() + 1):
+            captures.append([
+                match.captured(index),
+                match.capturedStart(index),
+                match.capturedEnd(index),
+                match.capturedLength(index)
+            ])
+    
+    return matched, captures
+
+
+def main():
+    """
+    Function containing the main routine.
+    """
     while True:
         commandStr = sys.stdin.readline()
         try:
             commandDict = json.loads(commandStr)
             responseDict = {"error": ""}
-            printerr(str(commandDict))
             if "command" in commandDict:
                 command = commandDict["command"]
                 if command == "exit":
@@ -75,6 +129,19 @@ if __name__ == "__main__":
                     responseDict["valid"] = valid
                     responseDict["errorMessage"] = error
                     responseDict["errorOffset"] = errorOffset
+                elif command == "execute":
+                    valid, error, errorOffset = rxValidate(commandDict["regexp"],
+                                                           commandDict["options"])
+                    if not valid:
+                        responseDict["valid"] = valid
+                        responseDict["errorMessage"] = error
+                        responseDict["errorOffset"] = errorOffset
+                    else:
+                        matched, captures = rxExecute(commandDict["regexp"],
+                            commandDict["options"], commandDict["text"],
+                            commandDict["startpos"])
+                        responseDict["matched"] = matched
+                        responseDict["captures"] = captures
         except ValueError as err:
             responseDict = {"error": str(err)}
         except Exception as err:
@@ -84,3 +151,7 @@ if __name__ == "__main__":
         sys.stdout.flush()
     
     sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

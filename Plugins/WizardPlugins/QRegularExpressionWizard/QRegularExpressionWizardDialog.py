@@ -101,19 +101,18 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             self.nextButton = None
         
         if fromEric:
-            self.buttonBox.button(QDialogButtonBox.Close).hide()
+            self.buttonBox.setStandardButtons(
+                QDialogButtonBox.Cancel | QDialogButtonBox.Ok)
             self.copyButton = None
         else:
             self.copyButton = \
                 self.buttonBox.addButton(self.trUtf8("Copy"), QDialogButtonBox.ActionRole)
             self.copyButton.setToolTip(
                 self.trUtf8("Copy the regular expression to the clipboard"))
-            self.buttonBox.button(QDialogButtonBox.Ok).hide()
-            self.buttonBox.button(QDialogButtonBox.Cancel).hide()
+            self.buttonBox.setStandardButtons(QDialogButtonBox.Close)
             self.variableLabel.hide()
             self.variableLineEdit.hide()
             self.variableLine.hide()
-            self.importCheckBox.hide()
             self.regexpTextEdit.setFocus()
     
     def __sendCommand(self, command, **kw):
@@ -514,119 +513,129 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             # only available for Qt5
             return
         
-        regex = self.regexpTextEdit.toPlainText()
+        regexp = self.regexpTextEdit.toPlainText()
         text = self.textTextEdit.toPlainText()
-        if regex and text:
-            options = QRegularExpression.NoPatternOption
+        if regexp and text:
+            options = []
             if self.caseInsensitiveCheckBox.isChecked():
-                options |= QRegularExpression.CaseInsensitiveOption
+                options.append("CaseInsensitiveOption")
             if self.multilineCheckBox.isChecked():
-                options |= QRegularExpression.MultilineOption
+                options.append("MultilineOption")
             if self.dotallCheckBox.isChecked():
-                options |= QRegularExpression.DotMatchesEverythingOption
+                options.append("DotMatchesEverythingOption")
             if self.extendedCheckBox.isChecked():
-                options |= QRegularExpression.ExtendedPatternSyntaxOption
+                options.append("ExtendedPatternSyntaxOption")
             if self.greedinessCheckBox.isChecked():
-                options |= QRegularExpression.InvertedGreedinessOption
+                options.append("InvertedGreedinessOption")
             if self.unicodeCheckBox.isChecked():
-                options |= QRegularExpression.UseUnicodePropertiesOption
+                options.append("UseUnicodePropertiesOption")
             if self.captureCheckBox.isChecked():
-                options |= QRegularExpression.DontCaptureOption
+                options.append("DontCaptureOption")
             
-            re = QRegularExpression(regex, options)
-            if not re.isValid():
-                E5MessageBox.critical(self,
-                    self.trUtf8("Error"),
-                    self.trUtf8("""Invalid regular expression: {0}""")
-                        .format(re.errorString()))
-                # move cursor to error offset
-                offset = re.errorPatternOffset()
-                tc = self.regexpTextEdit.textCursor()
-                tc.setPosition(offset)
-                self.regexpTextEdit.setTextCursor(tc)
-                return
-            
-            match = re.match(text, startpos)
-            if match.hasMatch():
-                captures = match.lastCapturedIndex()
-            else:
-                captures = 0
-            row = 0
-            OFFSET = 5
-            
-            self.resultTable.setColumnCount(0)
-            self.resultTable.setColumnCount(3)
-            self.resultTable.setRowCount(0)
-            self.resultTable.setRowCount(OFFSET)
-            self.resultTable.setItem(row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
-            self.resultTable.setItem(row, 1, QTableWidgetItem(regex))
-            
-            if match.hasMatch():
-                # index 0 is the complete match
-                offset = match.capturedStart(0)
-                self.lastMatchEnd = match.capturedEnd(0)
-                self.nextButton.setEnabled(True)
-                row += 1
-                self.resultTable.setItem(row, 0,
-                    QTableWidgetItem(self.trUtf8("Offset")))
-                self.resultTable.setItem(row, 1,
-                    QTableWidgetItem("{0:d}".format(match.capturedStart(0))))
-                
-                row += 1
-                self.resultTable.setItem(row, 0,
-                    QTableWidgetItem(self.trUtf8("Captures")))
-                self.resultTable.setItem(row, 1,
-                    QTableWidgetItem("{0:d}".format(captures)))
-                row += 1
-                self.resultTable.setItem(row, 1,
-                    QTableWidgetItem(self.trUtf8("Text")))
-                self.resultTable.setItem(row, 2,
-                    QTableWidgetItem(self.trUtf8("Characters")))
-                
-                row += 1
-                self.resultTable.setItem(row, 0,
-                    QTableWidgetItem(self.trUtf8("Match")))
-                self.resultTable.setItem(row, 1,
-                    QTableWidgetItem(match.captured(0)))
-                self.resultTable.setItem(row, 2,
-                    QTableWidgetItem("{0:d}".format(match.capturedLength(0))))
-                
-                for i in range(1, captures + 1):
-                    if match.captured(i):
-                        row += 1
-                        self.resultTable.insertRow(row)
-                        self.resultTable.setItem(row, 0,
-                            QTableWidgetItem(self.trUtf8("Capture #{0}").format(i)))
-                        self.resultTable.setItem(row, 1,
-                            QTableWidgetItem(match.captured(i)))
-                        self.resultTable.setItem(row, 2,
-                            QTableWidgetItem("{0:d}".format(match.capturedLength(i))))
-                
-                # highlight the matched text
-                tc = self.textTextEdit.textCursor()
-                tc.setPosition(offset)
-                tc.setPosition(self.lastMatchEnd, QTextCursor.KeepAnchor)
-                self.textTextEdit.setTextCursor(tc)
-            else:
-                self.nextButton.setEnabled(False)
-                self.resultTable.setRowCount(2)
-                row += 1
-                if startpos > 0:
-                    self.resultTable.setItem(row, 0,
-                        QTableWidgetItem(self.trUtf8("No more matches")))
+            if self.__sendCommand("execute", options=options, regexp=regexp,
+                                  text=text, startpos=startpos):
+                response = self.__receiveResponse()
+                if response and ("valid" in response or "matched" in response):
+                    if "valid" in response:
+                        E5MessageBox.critical(self,
+                            self.trUtf8("Error"),
+                            self.trUtf8("""Invalid regular expression: {0}""")
+                                .format(response["errorMessage"]))
+                        # move cursor to error offset
+                        offset = response["errorOffset"]
+                        tc = self.regexpTextEdit.textCursor()
+                        tc.setPosition(offset)
+                        self.regexpTextEdit.setTextCursor(tc)
+                        self.regexpTextEdit.setFocus()
+                        return
+                    else:
+                        row = 0
+                        OFFSET = 5
+                        
+                        self.resultTable.setColumnCount(0)
+                        self.resultTable.setColumnCount(3)
+                        self.resultTable.setRowCount(0)
+                        self.resultTable.setRowCount(OFFSET)
+                        self.resultTable.setItem(
+                            row, 0, QTableWidgetItem(self.trUtf8("Regexp")))
+                        self.resultTable.setItem(
+                            row, 1, QTableWidgetItem(regexp))
+                        if response["matched"]:
+                            captures = response["captures"]
+                            # index 0 is the complete match
+                            offset = captures[0][1]
+                            self.lastMatchEnd = captures[0][2]
+                            self.nextButton.setEnabled(True)
+                            row += 1
+                            self.resultTable.setItem(row, 0,
+                                QTableWidgetItem(self.trUtf8("Offset")))
+                            self.resultTable.setItem(row, 1,
+                                QTableWidgetItem("{0:d}".format(offset)))
+                            
+                            row += 1
+                            self.resultTable.setItem(row, 0,
+                                QTableWidgetItem(self.trUtf8("Captures")))
+                            self.resultTable.setItem(row, 1,
+                                QTableWidgetItem("{0:d}".format(len(captures) - 1)))
+                            row += 1
+                            self.resultTable.setItem(row, 1,
+                                QTableWidgetItem(self.trUtf8("Text")))
+                            self.resultTable.setItem(row, 2,
+                                QTableWidgetItem(self.trUtf8("Characters")))
+                            
+                            row += 1
+                            self.resultTable.setItem(row, 0,
+                                QTableWidgetItem(self.trUtf8("Match")))
+                            self.resultTable.setItem(row, 1,
+                                QTableWidgetItem(captures[0][0]))
+                            self.resultTable.setItem(row, 2,
+                                QTableWidgetItem("{0:d}".format(captures[0][3])))
+                            
+                            for i in range(1, len(captures)):
+                                if captures[i][0]:
+                                    row += 1
+                                    self.resultTable.insertRow(row)
+                                    self.resultTable.setItem(row, 0,
+                                        QTableWidgetItem(
+                                            self.trUtf8("Capture #{0}").format(i)))
+                                    self.resultTable.setItem(row, 1,
+                                        QTableWidgetItem(captures[i][0]))
+                                    self.resultTable.setItem(row, 2,
+                                        QTableWidgetItem("{0:d}".format(captures[i][3])))
+                            
+                            # highlight the matched text
+                            tc = self.textTextEdit.textCursor()
+                            tc.setPosition(offset)
+                            tc.setPosition(self.lastMatchEnd, QTextCursor.KeepAnchor)
+                            self.textTextEdit.setTextCursor(tc)
+                        else:
+                            self.nextButton.setEnabled(False)
+                            self.resultTable.setRowCount(2)
+                            row += 1
+                            if startpos > 0:
+                                self.resultTable.setItem(row, 0,
+                                    QTableWidgetItem(self.trUtf8("No more matches")))
+                            else:
+                                self.resultTable.setItem(row, 0,
+                                    QTableWidgetItem(self.trUtf8("No matches")))
+                            
+                            # remove the highlight
+                            tc = self.textTextEdit.textCursor()
+                            tc.setPosition(0)
+                            self.textTextEdit.setTextCursor(tc)
+                        
+                        self.resultTable.resizeColumnsToContents()
+                        self.resultTable.resizeRowsToContents()
+                        self.resultTable.verticalHeader().hide()
+                        self.resultTable.horizontalHeader().hide()
                 else:
-                    self.resultTable.setItem(row, 0,
-                        QTableWidgetItem(self.trUtf8("No matches")))
-                
-                # remove the highlight
-                tc = self.textTextEdit.textCursor()
-                tc.setPosition(0)
-                self.textTextEdit.setTextCursor(tc)
-            
-            self.resultTable.resizeColumnsToContents()
-            self.resultTable.resizeRowsToContents()
-            self.resultTable.verticalHeader().hide()
-            self.resultTable.horizontalHeader().hide()
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Communication Error"),
+                        self.trUtf8("""Invalid response received from PyQt5 backend."""))
+            else:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Communication Error"),
+                    self.trUtf8("""Communication with PyQt5 backend failed."""))
         else:
             E5MessageBox.critical(self,
                 self.trUtf8("Error"),
