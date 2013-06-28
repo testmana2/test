@@ -62,7 +62,7 @@ Version 5.4-snapshot-2013mmdd:
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching
 - Wizards
-  -- added a wizard for the Qt5 QRegularExpression class
+  -- added a wizard for the Qt5 QRegularExpression class (requires PyQt5)
 - Third Party packages
   -- updated to Pygments 1.6
 
