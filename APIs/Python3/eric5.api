@@ -7514,6 +7514,7 @@ eric5.UI.FindFileNameDialog.FindFileNameDialog.checkStop?4()
 eric5.UI.FindFileNameDialog.FindFileNameDialog.designerFile?7
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_buttonBox_clicked?4(button)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileExtEdit_textChanged?4(text)
+eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileList_currentItemChanged?4(current, previous)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileList_itemActivated?4(itm, column)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileNameEdit_textChanged?4(text)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_projectCheckBox_toggled?4(checked)
