@@ -4692,6 +4692,7 @@
       <keyword name="FindFileNameDialog.checkStop" id="FindFileNameDialog.checkStop" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.checkStop" />
       <keyword name="FindFileNameDialog.on_buttonBox_clicked" id="FindFileNameDialog.on_buttonBox_clicked" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_buttonBox_clicked" />
       <keyword name="FindFileNameDialog.on_fileExtEdit_textChanged" id="FindFileNameDialog.on_fileExtEdit_textChanged" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileExtEdit_textChanged" />
+      <keyword name="FindFileNameDialog.on_fileList_currentItemChanged" id="FindFileNameDialog.on_fileList_currentItemChanged" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileList_currentItemChanged" />
       <keyword name="FindFileNameDialog.on_fileList_itemActivated" id="FindFileNameDialog.on_fileList_itemActivated" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileList_itemActivated" />
       <keyword name="FindFileNameDialog.on_fileNameEdit_textChanged" id="FindFileNameDialog.on_fileNameEdit_textChanged" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileNameEdit_textChanged" />
       <keyword name="FindFileNameDialog.on_projectCheckBox_toggled" id="FindFileNameDialog.on_projectCheckBox_toggled" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_projectCheckBox_toggled" />
