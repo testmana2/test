@@ -48,7 +48,7 @@
      <item>
       <widget class="QToolButton" name="connectButton">
        <property name="toolTip">
-        <string>Press to connect to the selected network</string>
+        <string/>
        </property>
        <property name="text">
         <string/>

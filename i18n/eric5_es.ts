@@ -14027,7 +14027,7 @@ selección completa.&lt;/li&gt;
         <translation>Abre el archivo seleccionado</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="189"/>
+        <location filename="UI/FindFileNameDialog.py" line="196"/>
         <source>Select search directory</source>
         <translation>Seleleccione el directorio de búsqueda</translation>
     </message>
@@ -26826,7 +26826,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar una red para conectarse</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="51"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="292"/>
         <source>Press to connect to the selected network</source>
         <translation>Pulsar para conectar a la red seleccionada</translation>
     </message>
@@ -26856,54 +26856,59 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Pulsar para unirse al canal</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>Save Messages</source>
         <translation>Guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="353"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="359"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>Archivos HTML (*.{0});;Archivos de Texto (*.txt);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>Error saving Messages</source>
         <translation>Error al guardar Mensajes</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los contenidos de mensajes no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="400"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
         <source>Cut all</source>
         <translation>Cortar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="409"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="415"/>
         <source>Copy all</source>
         <translation>Copiar todo</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="414"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="420"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="419"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="425"/>
         <source>Save</source>
         <translation>Guardar</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="288"/>
+        <source>Press to disconnect from the network</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -36709,12 +36714,12 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Mostrar la siguiente coincidencia de la expresión regular</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="89"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="91"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Copiar la expresión regular al portapapeles</translation>
     </message>
@@ -37839,12 +37844,12 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>Mostrar la siguiente coincidencia de la expresión regular</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="102"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="104"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Copiar la expresión regular al portapapeles</translation>
     </message>

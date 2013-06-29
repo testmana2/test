@@ -15277,7 +15277,7 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Cliquer pour stopper la recherche</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="189"/>
+        <location filename="UI/FindFileNameDialog.py" line="196"/>
         <source>Select search directory</source>
         <translation>Sélectionne un répertoire de recherche</translation>
     </message>
@@ -28749,7 +28749,7 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="51"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="292"/>
         <source>Press to connect to the selected network</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28779,27 +28779,27 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>Save Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="353"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="359"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Le fichier &lt;b&gt;{0}&lt;/b&gt;existe déjà. Écraser ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>Error saving Messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28809,28 +28809,33 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="obsolete">Couper</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="400"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
         <source>Copy</source>
         <translation type="unfinished">Copier</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
         <source>Cut all</source>
         <translation type="unfinished">Couper tous</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="409"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="415"/>
         <source>Copy all</source>
         <translation type="unfinished">Copier tous</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="414"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="420"/>
         <source>Clear</source>
         <translation type="unfinished">Effacer</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="419"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="425"/>
         <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="288"/>
+        <source>Press to disconnect from the network</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -40061,12 +40066,12 @@ Elle est utilisée pour trouver un caractère uniquement s&apos;il n&apos;est pa
         <translation>Affiche la capture suivante de l&apos;expression régulière</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="89"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
         <source>Copy</source>
         <translation>Copier</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="91"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Copie l&apos;expression régulière dans le presse-papier</translation>
     </message>
@@ -41518,12 +41523,12 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>Affiche la capture suivante de l&apos;expression régulière</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="102"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
         <source>Copy</source>
         <translation>Copier</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="104"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Copie l&apos;expression régulière dans le presse-papier</translation>
     </message>

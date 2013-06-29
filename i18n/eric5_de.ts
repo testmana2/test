@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1943,8 +1944,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2181,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -13990,7 +13991,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Drücken, um die Suche anzuhalten</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="189"/>
+        <location filename="UI/FindFileNameDialog.py" line="196"/>
         <source>Select search directory</source>
         <translation>Wähle das Suchverzeichnis</translation>
     </message>
@@ -14860,8 +14861,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1083"/>
@@ -26792,7 +26793,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Wähle ein zu verbindendes Netzwerk aus</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.ui" line="51"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="292"/>
         <source>Press to connect to the selected network</source>
         <translation>Drücken, um zum ausgewählten Netzwerk zu verbinden</translation>
     </message>
@@ -26822,54 +26823,59 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Drücken, um den Kanal zu betreten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>Save Messages</source>
         <translation>Nachrichten speichern</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="353"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="359"/>
         <source>HTML Files (*.{0});;Text Files (*.txt);;All Files (*)</source>
         <translation>HTML Dateien (*.{0});;Text Dateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="370"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="376"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>Error saving Messages</source>
         <translation>Fehler beim Speichern der Nachrichten</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="388"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="394"/>
         <source>&lt;p&gt;The messages contents could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Nachrichteninhalt konnte nicht nach &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="400"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="406"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="405"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="411"/>
         <source>Cut all</source>
         <translation>Alles ausschneiden</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="409"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="415"/>
         <source>Copy all</source>
         <translation>Alles kopieren</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="414"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="420"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Network/IRC/IrcNetworkWidget.py" line="419"/>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="425"/>
         <source>Save</source>
         <translation>Speichern</translation>
+    </message>
+    <message>
+        <location filename="Network/IRC/IrcNetworkWidget.py" line="288"/>
+        <source>Press to disconnect from the network</source>
+        <translation>Drücken, um die Verbindung zum Netzwerk zu beenden</translation>
     </message>
 </context>
 <context>
@@ -36679,12 +36685,12 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="89"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="90"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="91"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
     </message>
@@ -37809,12 +37815,12 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="102"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="103"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="104"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
     </message>
