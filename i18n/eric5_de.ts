@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1943,8 +1944,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2181,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -5057,12 +5058,12 @@ Nicht verbunden
         <translation>Status</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="462"/>
+        <location filename="Debugger/DebugViewer.py" line="464"/>
         <source>waiting at breakpoint</source>
         <translation>am Haltepunkt wartend</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugViewer.py" line="464"/>
+        <location filename="Debugger/DebugViewer.py" line="466"/>
         <source>running</source>
         <translation>ausführend</translation>
     </message>
@@ -13411,7 +13412,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Drücken, um die Suche anzuhalten</translation>
     </message>
     <message>
-        <location filename="UI/FindFileNameDialog.py" line="189"/>
+        <location filename="UI/FindFileNameDialog.py" line="196"/>
         <source>Select search directory</source>
         <translation>Wähle das Suchverzeichnis</translation>
     </message>
@@ -14281,8 +14282,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="990"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1048"/>
@@ -17416,27 +17417,27 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Erzeuge Zweig im Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1944"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1945"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Verifiziere die Integrität des Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1969"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1970"/>
         <source>Showing the combined configuration settings</source>
         <translation>Zeige die kombinierten Einstellungen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1992"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1993"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Zeige Namen für entfernte Repositories</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2015"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2016"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Setze abgebrochene Transaktion zurück</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2258"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2259"/>
         <source>Shall the working directory be updated?</source>
         <translation>Soll das Arbeitsverzeichnis aktualisiert werden?</translation>
     </message>
@@ -17446,87 +17447,87 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Zeige aktuellen Zweig</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2167"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2168"/>
         <source>Create changegroup</source>
         <translation>Änderungsgruppe erzeugen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2270"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2271"/>
         <source>Apply changegroups</source>
         <translation>Änderungsgruppen anwenden</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2287"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2288"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Ungültiger Bisect Unterbefehl ({0}).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2321"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2322"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2219"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2220"/>
         <source>Preview changegroup</source>
         <translation>Änderungsgruppe ansehen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2038"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2039"/>
         <source>Identifying project directory</source>
         <translation>Projektverzeichnis identifizieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
         <source>Create .hgignore file</source>
         <translation>.hgignore Datei erstellen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2074"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2075"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2353"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2354"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Lösche Dateien nur aus dem Mercurial Repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2125"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial Änderungsgruppendateien (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2252"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2253"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial Änderungsgruppendateien (*.hg);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2229"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2230"/>
         <source>Identifying changegroup file</source>
         <translation>Identifiziere Änderungsgruppendatei</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2409"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2410"/>
         <source>Backing out changeset</source>
         <translation>Änderungssatz umkehren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2389"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2390"/>
         <source>No revision given. Aborting...</source>
         <translation>Keine Revision angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2142"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2143"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Mercurial Änderungsgruppendatei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2434"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2435"/>
         <source>Rollback last transaction</source>
         <translation>Letzte Transaktion zurücksetzen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2429"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2430"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation>Wollen sie die letzte Transaktion wirklich zurücksetzen?</translation>
     </message>
@@ -17536,72 +17537,72 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Pflege Änderungen in das Mercurial Repository ein</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
         <source>Mercurial Command Server</source>
         <translation>Mercurial Befehlsserver</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2827"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2828"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht wiedergestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2954"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2955"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht gestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2501"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2502"/>
         <source>Import Patch</source>
         <translation>Patch importieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2548"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2549"/>
         <source>Export Patches</source>
         <translation>Patches exportieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2594"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2595"/>
         <source>Change Phase</source>
         <translation>Phase ändern</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2645"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2646"/>
         <source>Copy Changesets</source>
         <translation>Änderungssätze kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2672"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2673"/>
         <source>Copy Changesets (Continue)</source>
         <translation>Änderungssätze kopieren (Fortsetzung)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2752"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
         <source>Add Sub-repository</source>
         <translation>Unterrepository hinzufügen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2782"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2783"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gelesen werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2735"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2736"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub enthält bereits einen Eintrag &lt;b&gt;{0}&lt;/b&gt;. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub konnte nicht gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2798"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2799"/>
         <source>Remove Sub-repositories</source>
         <translation>Unterrepositories löschen</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2771"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2772"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Unterrepositorydatei .hgsub existiert nicht. Abbruch...&lt;/p&gt;</translation>
     </message>
@@ -29327,52 +29328,52 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>NetworkAccessManager</name>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="206"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="222"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="203"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="219"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
         <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; und Realm &apos;{1}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="261"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="277"/>
         <source>SSL Errors</source>
         <translation>SSL Fehler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="261"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="277"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;SSL Fehler für &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Sollen diese Fehler ignoriert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="274"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="290"/>
         <source>Certificates</source>
         <translation>Zertifikate</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="274"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="290"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zertifikate:&lt;br/&gt;{0}&lt;br/&gt;Sollen alle diese Zertifikate akzeptiert werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="341"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="357"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Aussteller: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="345"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="361"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Gültig ab: {0}&lt;br/&gt;Gültig bis: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="333"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="349"/>
         <source>Name: {0}</source>
         <translation>Name: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="337"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="353"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation>&lt;br/&gt;Organisation: {0}</translation>
     </message>
@@ -33413,57 +33414,57 @@ Bitte Aktualisieren.</translation>
         <translation>Formular übersetzen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="272"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="280"/>
         <source>Compile all forms</source>
         <translation>Alle Formulare übersetzen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="241"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="249"/>
         <source>Remove from project</source>
         <translation>Aus dem Projekt entfernen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="219"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="227"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
         <source>Form Compilation</source>
         <translation>Formular übersetzen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="627"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Die Übersetzung des Formulars war erfolgreich.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
         <source>Compiling forms...</source>
         <translation>Formular übersetzen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="806"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="818"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="200"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="204"/>
         <source>Open in Qt-Designer</source>
         <translation>Mit Qt-Designer öffnen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="279"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="287"/>
         <source>Add forms directory...</source>
         <translation>Formularverzeichnis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="649"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="661"/>
         <source>The compilation of the form file failed.</source>
         <translation>Die Übersetzung des Formulars ist fehlgeschlagen.</translation>
     </message>
@@ -33488,57 +33489,57 @@ Bitte Aktualisieren.</translation>
         <translation>Dialog mit Knöpfen (rechts)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="248"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="256"/>
         <source>New form...</source>
         <translation>Neues Formular...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="541"/>
         <source>New Form</source>
         <translation>Neues Formular</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="485"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="497"/>
         <source>Select a form type:</source>
         <translation>Wähle einen Formulartyp:</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="282"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="290"/>
         <source>Expand all directories</source>
         <translation>Alle Verzeichnisse aufklappen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="284"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="292"/>
         <source>Collapse all directories</source>
         <translation>Alle Verzeichnisse einklappen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="202"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="206"/>
         <source>Open in Editor</source>
         <translation>Mit Editor öffnen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="142"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="146"/>
         <source>Rename file</source>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="209"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="213"/>
         <source>Compile forms</source>
         <translation>Formulare übersetzen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
         <source>Delete forms</source>
         <translation>Formulare löschen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="552"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="564"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Wollen Sie wirklich diese Formulare aus dem Projekt löschen?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="529"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="541"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die neue Formulardatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht erzeugt werden.&lt;br&gt;Problem: {1}&lt;/p&gt;</translation>
     </message>
@@ -33548,22 +33549,22 @@ Bitte Aktualisieren.</translation>
         <translation>Formularvorschau</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="205"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="209"/>
         <source>Preview translations</source>
         <translation>Übersetzungsvorschau</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="639"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="651"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Übersetzung des Formulars ist fehlgeschlagen.&lt;/p&lt;p&gt;Grund: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="718"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="730"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>{0} konnte nicht gestartet werden.&lt;br&gt;Stellen sie sicher, dass es sich im Suchpfad befindet.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="277"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="285"/>
         <source>Add forms...</source>
         <translation>Formulare hinzufügen...</translation>
     </message>
@@ -33578,17 +33579,17 @@ Bitte Aktualisieren.</translation>
         <translation>Dialog mit Knöpfen (unten Mitte)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="841"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="853"/>
         <source>Determining changed forms...</source>
         <translation>Ermittle veränderte Formulare...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="868"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="880"/>
         <source>Compiling changed forms...</source>
         <translation>Übersetze veränderte Formulare...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="518"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="530"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Die Datei existiert bereits. Überschreiben?</translation>
     </message>
@@ -33608,22 +33609,22 @@ Bitte Aktualisieren.</translation>
         <translation>Erzeuge Dialogcode...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="214"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="222"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="499"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="511"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt Formulare (*.ui);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="287"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="295"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="255"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="263"/>
         <source>Copy Path to Clipboard</source>
         <translation>Pfad in die Zwischenablage kopieren</translation>
     </message>
@@ -34411,82 +34412,82 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;b&gt;Projekt Übersetzungen Browser&lt;/b&gt;&lt;p&gt;Dies bietet eine Übersicht aller im Projekt enthaltenen Übersetzungen an. Verschieden Aktionen können über das Kontextmenü ausgeführt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="303"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="309"/>
         <source>Generate translations</source>
         <translation>Übersetzungen erzeugen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="310"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="316"/>
         <source>Generate translations (with obsolete)</source>
         <translation>Übersetzungen erzeugen (mit überholten Texten)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="322"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="334"/>
         <source>Release translations</source>
         <translation>Übersetzungen freigeben</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="329"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="341"/>
         <source>Remove from project</source>
         <translation>Aus dem Projekt entfernen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="332"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="344"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="392"/>
         <source>Add translation...</source>
         <translation>Übersetzung hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="865"/>
         <source>Translation file generation</source>
         <translation>Übersetzungsdatei erzeugen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="845"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="860"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>Das Erzeugen der Übersetzungsdateien (*.ts) war erfolgreich.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="850"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="865"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>Das Erzeugen der Übersetzungsdateien (*.ts) ist fehlgeschlagen.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1020"/>
         <source>Translation file release</source>
         <translation>Übersetzungsdatei freigeben</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="991"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1006"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Die Freigabe der Übersetzungsdatei (*.qm) war erfolgreich.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1005"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1020"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>Die Freigabe der Übersetzungsdatei (*.qm) ist fehlgeschlagen.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="279"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="285"/>
         <source>Open in Qt-Linguist</source>
         <translation>Mit Qt-Linguist öffnen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1086"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="754"/>
         <source>Write temporary project file</source>
         <translation>Temporäre Projektdatei schreiben</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="317"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="329"/>
         <source>Open in Editor</source>
         <translation>Mit Editor öffnen</translation>
     </message>
@@ -34501,32 +34502,32 @@ Bitte Aktualisieren.</translation>
         <translation>Übersetzung erzeugen (mit überholten Texten)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="362"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
         <source>Generate all translations</source>
         <translation>Alle Übersetzungen erzeugen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="368"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="380"/>
         <source>Generate all translations (with obsolete)</source>
         <translation>Alle Übersetzungen erzeugen (mit überholten Texten)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="186"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="192"/>
         <source>Release translation</source>
         <translation>Übersetzung freigeben</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="374"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="386"/>
         <source>Release all translations</source>
         <translation>Alle Übersetzungen freigeben</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="739"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="754"/>
         <source>&lt;p&gt;The temporary project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die temporäre Projektdatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="1071"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="1086"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;lrelease konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
@@ -34536,54 +34537,59 @@ Bitte Aktualisieren.</translation>
         <translation>Übersetzungsvorschau</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="291"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="297"/>
         <source>Preview translations</source>
         <translation>Übersetzungsvorschau</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="622"/>
         <source>Delete translation files</source>
         <translation>Übersetzungsdateien löschen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="607"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="622"/>
         <source>Do you really want to delete these translation files from the project?</source>
         <translation>Wollen Sie wirklich diese Übersetzungsdateien aus dem Projekt löschen?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="712"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="727"/>
         <source>No translation files (*.ts) selected.</source>
         <translation>Keine Überstzungsdateien (*.ts) ausgewählt.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="935"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="950"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>{0} konnte nicht gestartet werden.&lt;br&gt;Stellen sie sicher, dass es sich im Suchpfad befindet.</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="351"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="363"/>
         <source>Preview all translations</source>
         <translation>Übersetzungsvorschau (alle)</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="382"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="394"/>
         <source>Add translation files...</source>
         <translation>Übersetzungsdateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="388"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="400"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="355"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="367"/>
         <source>Extract messages</source>
         <translation>Texte extrahieren</translation>
     </message>
     <message>
-        <location filename="Project/ProjectTranslationsBrowser.py" line="385"/>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="397"/>
         <source>Copy Path to Clipboard</source>
         <translation>Pfad in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectTranslationsBrowser.py" line="324"/>
+        <source>Open</source>
+        <translation>Öffnen</translation>
     </message>
 </context>
 <context>
@@ -35936,12 +35942,12 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="92"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="93"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="93"/>
+        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="94"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
     </message>
@@ -37066,12 +37072,12 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <translation>Zeige die nächste Übereinstimmung des Regulären Ausdrucks</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="105"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="106"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="106"/>
+        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="107"/>
         <source>Copy the regular expression to the clipboard</source>
         <translation>Den regulären Ausdruck in die Zwischenablage kopieren</translation>
     </message>
@@ -39973,9 +39979,14 @@ nicht verbunden</translation>
 <context>
     <name>SpeedDialReader</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="56"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="62"/>
         <source>The file is not a SpeedDial version 1.0 file.</source>
         <translation>Die Datei ist keine Schnellwahl Datei der Version 1.0.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="47"/>
+        <source>The file {0} could not be opened. Error: {1}</source>
+        <translation>Die Datei {0} konnte nicht geöffnet werden. Fehler: {1}</translation>
     </message>
 </context>
 <context>
@@ -49619,7 +49630,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="375"/>
+        <location filename="PyUnit/UnittestDialog.py" line="377"/>
         <source>Unittest</source>
         <translation>Modultest</translation>
     </message>
@@ -49634,12 +49645,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Bereite Modultest vor</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="483"/>
+        <location filename="PyUnit/UnittestDialog.py" line="485"/>
         <source>Failure: {0}</source>
         <translation>Mißerfolge: {0}</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="498"/>
+        <location filename="PyUnit/UnittestDialog.py" line="500"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
@@ -49654,12 +49665,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>^Fehler: </translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="440"/>
+        <location filename="PyUnit/UnittestDialog.py" line="442"/>
         <source>Running</source>
         <translation>Führe aus</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="375"/>
+        <location filename="PyUnit/UnittestDialog.py" line="377"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Modultest &lt;b&gt;{0}&lt;/b&gt; kann nicht ausgeführt werden.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</translation>
     </message>
@@ -49847,7 +49858,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Modultest anhalten&lt;/b&gt;&lt;p&gt;Dieser Knopf hält den laufenden Modultest an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="601"/>
+        <location filename="PyUnit/UnittestDialog.py" line="603"/>
         <source>Show Source</source>
         <translation>Zeige Quelltext</translation>
     </message>
@@ -49862,12 +49873,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Python3 Dateien ({1});;Python2 Dateien ({0});;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="464"/>
+        <location filename="PyUnit/UnittestDialog.py" line="466"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation>{0} Test in {1:.3f}s ausgeführt</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="467"/>
+        <location filename="PyUnit/UnittestDialog.py" line="469"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation>{0} Tests in {1:.3f}s ausgeführt</translation>
     </message>
@@ -49902,17 +49913,17 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Anzahl der Tests, die unerwartet erfolgreich waren</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="513"/>
+        <location filename="PyUnit/UnittestDialog.py" line="515"/>
         <source>    Skipped: {0}</source>
         <translation>   Übersprungen: {0}</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="527"/>
+        <location filename="PyUnit/UnittestDialog.py" line="529"/>
         <source>    Expected Failure</source>
         <translation>    Erwarteter Mißerfolg</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="541"/>
+        <location filename="PyUnit/UnittestDialog.py" line="543"/>
         <source>    Unexpected Success</source>
         <translation>    Unerwarteter Erfolg</translation>
     </message>
