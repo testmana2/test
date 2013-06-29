@@ -42436,9 +42436,14 @@ Not connected</source>
 <context>
     <name>SpeedDialReader</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="54"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="60"/>
         <source>The file is not a SpeedDial version 1.0 file.</source>
         <translation>El archivo no es un archivo de versión 1.0 de Marcación Rápida.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="45"/>
+        <source>The file {0} could not be opened. Error: {1}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

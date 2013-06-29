@@ -42433,9 +42433,14 @@ nicht verbunden</translation>
 <context>
     <name>SpeedDialReader</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="54"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="60"/>
         <source>The file is not a SpeedDial version 1.0 file.</source>
         <translation>Die Datei ist keine Schnellwahl Datei der Version 1.0.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="45"/>
+        <source>The file {0} could not be opened. Error: {1}</source>
+        <translation>Die Datei {0} konnte nicht geöffnet werden. Fehler: {1}</translation>
     </message>
 </context>
 <context>

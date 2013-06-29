@@ -40,7 +40,13 @@ class SpeedDialReader(QXmlStreamReader):
             f = QFile(fileNameOrDevice)
             if not f.exists():
                 return self.__pages, self.__pagesPerRow, self.__sdSize
-            f.open(QFile.ReadOnly)
+            opened = f.open(QFile.ReadOnly)
+            if not opened:
+                self.raiseError(QCoreApplication.translate(
+                    "SpeedDialReader",
+                    "The file {0} could not be opened. Error: {1}").format(
+                    fileNameOrDevice, f.errorString()))
+                return self.__pages, self.__pagesPerRow, self.__sdSize
             self.setDevice(f)
         
         while not self.atEnd():
