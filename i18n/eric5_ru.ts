@@ -30,7 +30,12 @@
     <message>
         <location filename="Plugins/AboutPlugin/AboutDialog.py" line="22"/>
         <source>&lt;p&gt;{0} is an Integrated Development Environment for the Python programming language. It is written using the PyQt Python bindings for the Qt GUI toolkit and the QScintilla editor widget.&lt;/p&gt;&lt;p&gt;For more information see &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Please send bug reports to &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;To request a new feature please send an email to &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} uses third party software which is copyrighted by it&apos;s respective copyright holder. For details see the copyright notice of the individual package.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;{0} - это интегрированная среда разработки программ на языке Питон. Написана с использованием питоновского интерфейса к графической библиотеке Qt и библиотеке редактора текстов QScintilla.&lt;/p&gt;&lt;p&gt;Дополнительная информация имеется здесь: &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Сообщения об ошибках посылать сюда: &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Предложения и просьбы о новой функциональности посылать по адресу &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0}использует дополнительное программное обеспечение со своими собственными лицензионными правилами. Более детальную лицензионную информацию можно найти внутри соответствующего програмного пакета.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;{0} - это интегрированная среда разработки программ на языке Питон. Написана с использованием питоновского интерфейса к графической библиотеке Qt и библиотеке редактора текстов QScintilla.&lt;/p&gt;&lt;p&gt;Дополнительная информация имеется здесь: &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Сообщения об ошибках посылать сюда: &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Предложения и просьбы о новой функциональности посылать по адресу &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0}использует дополнительное программное обеспечение со своими собственными лицензионными правилами. Более детальную лицензионную информацию можно найти внутри соответствующего програмного пакета.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/AboutPlugin/AboutDialog.py" line="22"/>
+        <source>&lt;p&gt;{0} is an Integrated Development Environment for the Python programming language. It is written using the PyQt Python bindings for the Qt GUI toolkit and the QScintilla editor widget.&lt;/p&gt;&lt;p&gt;For more information see &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Please send bug reports to &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;To request a new feature please send an email to &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} uses third party software which is copyrighted by its respective copyright holder. For details see the copyright notice of the individual package.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2407,7 +2412,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="UI/Browser.py" line="89"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierachy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierachies.&lt;/p&gt;&lt;p&gt;The first hierachy is only shown if you have opened a program for debugging and it&apos;s root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierachy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierachy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierachies allow you navigate your system as a whole. On a UNIX system there will be a hierachy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierachy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierachies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Окно обозревателя&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Окно обозревателя&lt;/b&gt;
 &lt;p&gt;Помогает легко перемещаться по дереву каталогов и файлов вашей системы, находить программы на Python и открывать их в окне исходных текстов. Окно показывает несколько разных деревьев&lt;/p&gt;
 &lt;p&gt;Первое дерево показывается только тогда, когда вы отлаживаете программу и корень дерева является каталогом, содержащим программу. Обычно все файлы, составляющие приложение на Python, находятся в одном каталоге, так что это дерево даёт почти всю необходимую информацию.&lt;/p&gt;
 &lt;p&gt;Следующее дерево используется для лёгкого перемещения по каталогам, перечисленным в переменной Python &lt;tt&gt;sys.path&lt;/tt&gt;.
@@ -2491,6 +2496,11 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="UI/Browser.py" line="347"/>
         <source>Line {0}</source>
         <translation>Строка: {0}</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="89"/>
+        <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierachy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierachies.&lt;/p&gt;&lt;p&gt;The first hierachy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierachy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierachy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierachies allow you navigate your system as a whole. On a UNIX system there will be a hierachy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierachy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierachies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10353,7 +10363,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="126"/>
         <source>Press to set the current style to it&apos;s default values</source>
-        <translation>Установить значения по умолчанию для текущего стиля</translation>
+        <translation type="obsolete">Установить значения по умолчанию для текущего стиля</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="129"/>
@@ -10449,6 +10459,11 @@ whole selection.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="63"/>
         <source>Size only</source>
         <translation>Только размер</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="126"/>
+        <source>Press to set the current style to its default values</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
