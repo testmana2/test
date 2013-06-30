@@ -279,7 +279,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
     
     def __addEngineFromUrl(self):
         """
-        Private slot to add a search engine given it's URL.
+        Private slot to add a search engine given its URL.
         """
         action = self.sender()
         if action is not None:

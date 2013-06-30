@@ -1165,7 +1165,7 @@ class Tabview(QSplitter, ViewManager):
         
     def getTabWidgetById(self, id_):
         """
-        Public method to get a reference to a tab widget knowing it's ID.
+        Public method to get a reference to a tab widget knowing its ID.
         
         @param id_ id of the tab widget (long)
         @return reference to the tab widget (TabWidget)

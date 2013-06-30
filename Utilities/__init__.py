@@ -150,7 +150,7 @@ def get_coding(text):
 
 def readEncodedFile(filename):
     """
-    Function to read a file and decode it's contents into proper text.
+    Function to read a file and decode its contents into proper text.
     
     @param filename name of the file to read (string)
     @return tuple of decoded text and encoding (string, string)
@@ -163,7 +163,7 @@ def readEncodedFile(filename):
 
 def readEncodedFileWithHash(filename):
     """
-    Function to read a file, calculate a hash value and decode it's contents
+    Function to read a file, calculate a hash value and decode its contents
     into proper text.
     
     @param filename name of the file to read (string)

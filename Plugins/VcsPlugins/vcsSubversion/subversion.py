@@ -1928,7 +1928,7 @@ class Subversion(VersionControl):
         
     def svnRemoveFromChangelist(self, names):
         """
-        Public method to remove a file or directory from it's changelist.
+        Public method to remove a file or directory from its changelist.
         
         Note: Directories will be removed recursively.
         

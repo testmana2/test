@@ -435,7 +435,7 @@ class ProjectBrowserModel(BrowserModel):
 
     def findParentItemByName(self, type_, name, dontSplit=False):
         """
-        Public method to find an item given it's name.
+        Public method to find an item given its name.
         
         <b>Note</b>: This method creates all necessary parent items, if they
         don't exist.
@@ -554,7 +554,7 @@ class ProjectBrowserModel(BrowserModel):
     
     def findItem(self, name):
         """
-        Public method to find an item given it's name.
+        Public method to find an item given its name.
         
         @param name name of the item (string)
         @return reference to the item found
@@ -575,7 +575,7 @@ class ProjectBrowserModel(BrowserModel):
     
     def itemIndexByName(self, name):
         """
-        Public method to find an item's index given it's name.
+        Public method to find an item's index given its name.
         
         @param name name of the item (string)
         @return index of the item found (QModelIndex)

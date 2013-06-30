@@ -84,7 +84,7 @@ class StackedWidget(QStackedWidget):
         
     def setCurrentIndex(self, index):
         """
-        Overwritten method to set the current widget by it's index.
+        Overwritten method to set the current widget by its index.
         
         @param index index of widget to be made current (integer)
         """

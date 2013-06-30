@@ -449,7 +449,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     
     def __restoreCurrentToolbarToDefault(self):
         """
-        Private method to set the current toolbar to it's default configuration.
+        Private method to set the current toolbar to its default configuration.
         """
         if not self.__currentToolBarItem.isDefault:
             return
