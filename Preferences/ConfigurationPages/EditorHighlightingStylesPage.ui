@@ -123,7 +123,7 @@
       <item row="5" column="1" >
        <widget class="QPushButton" name="defaultButton" >
         <property name="toolTip" >
-         <string>Press to set the current style to it's default values</string>
+         <string>Press to set the current style to its default values</string>
         </property>
         <property name="text" >
          <string>to Default</string>

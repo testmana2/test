@@ -535,7 +535,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def getSelectionN(self, index):
         """
-        Public method to get the start and end of a selection given by it's index.
+        Public method to get the start and end of a selection given by its index.
         
         @return tuple with start line and index and end line and index
             (tuple of four int) for the given selection

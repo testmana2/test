@@ -15,7 +15,7 @@ from Utilities import compactPath
 
 class E5SqueezeLabel(QLabel):
     """
-    Class implementing a label that squeezes its contents to fit it's size.
+    Class implementing a label that squeezes its contents to fit its size.
     """
     def __init__(self, parent=None):
         """
@@ -54,7 +54,7 @@ class E5SqueezeLabel(QLabel):
 
 class E5SqueezeLabelPath(QLabel):
     """
-    Class implementing a label showing a file path compacted to fit it's size.
+    Class implementing a label showing a file path compacted to fit its size.
     """
     def __init__(self, parent=None):
         """

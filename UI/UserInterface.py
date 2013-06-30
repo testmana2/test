@@ -5678,7 +5678,7 @@ class UserInterface(E5MainWindow):
         Private method to get the geometry of a floating windows.
         
         @param w reference to the widget to be saved (QWidget)
-        @return list giving the widget's geometry and it's visibility
+        @return list giving the widget's geometry and its visibility
         """
         s = w.size()
         p = w.pos()

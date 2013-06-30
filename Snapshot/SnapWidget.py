@@ -8,7 +8,7 @@ Module implementing the snapshot widget.
 """
 
 #
-# SnapWidget and it's associated modules are PyQt4 ports of Ksnapshot.
+# SnapWidget and its associated modules are PyQt4 ports of Ksnapshot.
 #
 
 import os

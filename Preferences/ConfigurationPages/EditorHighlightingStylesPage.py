@@ -297,7 +297,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_defaultButton_clicked(self):
         """
-        Private method to set the current style to it's default values.
+        Private method to set the current style to its default values.
         """
         if len(self.styleElementList.selectedItems()) > 1:
             for selItem in self.styleElementList.selectedItems():
@@ -318,7 +318,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
     def __setToDefault(self, style):
         """
-        Private method to set a specific style to it's default values.
+        Private method to set a specific style to its default values.
         
         @param style style to be reset (integer)
         """

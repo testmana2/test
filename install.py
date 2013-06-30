@@ -809,7 +809,7 @@ def doDependancyChecks():
         from PyQt4 import Qsci      # __IGNORE_WARNING__
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
-        print("it's PyQt4 wrapper.")
+        print("its PyQt4 wrapper.")
         print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")

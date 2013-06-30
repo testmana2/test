@@ -160,7 +160,7 @@ class OpenSearchManager(QObject):
     
     def __addEngineByUrl(self, url):
         """
-        Private method to add a new search engine given it's URL.
+        Private method to add a new search engine given its URL.
         
         @param url URL of the engine definition file (QUrl)
         @return flag indicating success (boolean)
