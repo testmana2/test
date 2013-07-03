@@ -25,6 +25,15 @@ class _ClbrBase(object):
         self.name = name
         self.file = file
         self.lineno = lineno
+        self.endlineno = -1     # marker for "not set"
+        
+    def setEndLine(self, endLineNo):
+        """
+        Public method to set the ending line number.
+        
+        @param endLineNo number of the last line (integer)
+        """
+        self.endlineno = endLineNo
 
 
 class ClbrBase(_ClbrBase):
@@ -121,7 +130,7 @@ class ClbrBase(_ClbrBase):
         @param _class Class object to be added (Class)
         """
         self.classes[name] = _class
-        
+
 
 class ClbrVisibilityMixinBase(object):
     """

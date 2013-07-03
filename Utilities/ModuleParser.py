@@ -501,6 +501,7 @@ class Module(object):
         @param src the source text to be scanned (string)
         """
         lineno, last_lineno_pos = 1, 0
+        lastGlobalEntry = None
         classstack = []  # stack of (class, indent) pairs
         conditionalsstack = []  # stack of indents of conditional defines
         deltastack = []
@@ -564,11 +565,9 @@ class Module(object):
                 # close all classes indented at least as much
                 while classstack and \
                       classstack[-1][1] >= thisindent:
-                    if classstack[-1][1] == thisindent and \
-                       classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], Class):
-                        # we got a class at the same indentation level;
-                        # record the end line of this class
+                    if classstack[-1][0] is not None and \
+                       isinstance(classstack[-1][0], (Class, Function)):
+                        # record the end line of this class or function
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
                 if classstack:
@@ -599,6 +598,12 @@ class Module(object):
                                  meth_sig, meth_pyqtSig, modifierType=modifier)
                     self.__py_setVisibility(f)
                     self.addFunction(meth_name, f)
+                if not classstack:
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = f
+                if cur_obj and isinstance(cur_obj, Function):
+                    cur_obj.setEndLine(lineno - 1)
                 cur_obj = f
                 classstack.append((None, thisindent))  # Marker for nested fns
                 
@@ -644,11 +649,9 @@ class Module(object):
                 # close all classes indented at least as much
                 while classstack and \
                       classstack[-1][1] >= thisindent:
-                    if classstack[-1][1] == thisindent and \
-                       classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], Class):
-                        # we got a class at the same indentation level;
-                        # record the end line of this class
+                    if classstack[-1][0] is not None and \
+                       isinstance(classstack[-1][0], (Class,  Function)):
+                        # record the end line of this class or function
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
                 class_name = m.group("ClassName")
@@ -684,6 +687,10 @@ class Module(object):
                 cur_obj = cur_class
                 # add nested classes to the module
                 self.addClass(class_name, cur_class)
+                if not classstack:
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = cur_class
                 classstack.append((cur_class, thisindent))
             
             elif m.start("Attribute") >= 0:
@@ -712,6 +719,9 @@ class Module(object):
                                      isSignal=isSignal)
                     self.__py_setVisibility(attr)
                     self.addGlobal(variable_name, attr)
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = None
                 else:
                     index = -1
                     while index >= -len(classstack):
@@ -772,6 +782,7 @@ class Module(object):
         indent = 0
         i = 0
         cur_obj = self
+        lastGlobalEntry = None
         while True:
             m = self._getnext(src, i)
             if not m:
@@ -796,6 +807,10 @@ class Module(object):
                 # close all classes/modules indented at least as much
                 while classstack and \
                       classstack[-1][1] >= thisindent:
+                    if classstack[-1][0] is not None and \
+                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                        # record the end line of this class, function or module
+                        classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
                 while acstack and \
                       acstack[-1][1] >= thisindent:
@@ -833,6 +848,12 @@ class Module(object):
                     # it's a function
                     f = Function(self.name, meth_name, self.file, lineno, meth_sig)
                     self.addFunction(meth_name, f)
+                if not classstack:
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = f
+                if cur_obj and isinstance(cur_obj, Function):
+                    cur_obj.setEndLine(lineno - 1)
                 cur_obj = f
                 classstack.append((None, thisindent))  # Marker for nested fns
             
@@ -856,12 +877,16 @@ class Module(object):
                 # we found a class definition
                 thisindent = indent
                 indent += 1
+                lineno = lineno + src.count('\n', last_lineno_pos, start)
+                last_lineno_pos = start
                 # close all classes/modules indented at least as much
                 while classstack and \
                       classstack[-1][1] >= thisindent:
+                    if classstack[-1][0] is not None and \
+                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                        # record the end line of this class, function or module
+                        classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
-                lineno = lineno + src.count('\n', last_lineno_pos, start)
-                last_lineno_pos = start
                 class_name = m.group("ClassName") or m.group("ClassName2")
                 inherit = m.group("ClassSupers")
                 if inherit:
@@ -884,23 +909,32 @@ class Module(object):
                     cur_class = classstack[-1][0]
                 else:
                     parent_obj.addClass(class_name, cur_class)
+                if not classstack:
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = cur_class
                 cur_obj = cur_class
                 classstack.append((cur_class, thisindent))
                 while acstack and \
                       acstack[-1][1] >= thisindent:
                     del acstack[-1]
-                acstack.append(["public", thisindent])  # default access control is 'public'
+                acstack.append(["public", thisindent])
+                # default access control is 'public'
             
             elif m.start("Module") >= 0:
                 # we found a module definition
                 thisindent = indent
                 indent += 1
+                lineno = lineno + src.count('\n', last_lineno_pos, start)
+                last_lineno_pos = start
                 # close all classes/modules indented at least as much
                 while classstack and \
                       classstack[-1][1] >= thisindent:
+                    if classstack[-1][0] is not None and \
+                       isinstance(classstack[-1][0], (Class, Function, RbModule)):
+                        # record the end line of this class, function or module
+                        classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
-                lineno = lineno + src.count('\n', last_lineno_pos, start)
-                last_lineno_pos = start
                 module_name = m.group("ModuleName")
                 # remember this class
                 cur_class = RbModule(self.name, module_name,
@@ -910,12 +944,17 @@ class Module(object):
                     cur_class = self.modules[module_name]
                 else:
                     self.addModule(module_name, cur_class)
+                if not classstack:
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = cur_class
                 cur_obj = cur_class
                 classstack.append((cur_class, thisindent))
                 while acstack and \
                       acstack[-1][1] >= thisindent:
                     del acstack[-1]
-                acstack.append(["public", thisindent])  # default access control is 'public'
+                acstack.append(["public", thisindent])
+                # default access control is 'public'
             
             elif m.start("AccessControl") >= 0:
                 aclist = m.group("AccessControlList")
@@ -976,6 +1015,9 @@ class Module(object):
                     if attrName[0] != "@":
                         attr = Attribute(self.name, attrName, self.file, lineno)
                         self.addGlobal(attrName, attr)
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = None
             
             elif m.start("Attr") >= 0:
                 lineno = lineno + src.count('\n', last_lineno_pos, start)
@@ -1290,6 +1332,7 @@ class Function(VisibilityBase):
         self.name = name
         self.file = file
         self.lineno = lineno
+        self.endlineno = -1     # marker for "not set"
         signature = _commentsub('', signature)
         self.parameters = [e.strip() for e in signature.split(',')]
         self.description = ""
@@ -1304,6 +1347,14 @@ class Function(VisibilityBase):
         @param description the docstring to be stored (string)
         """
         self.description = description
+    
+    def setEndLine(self, endLineNo):
+        """
+        Public method to record the number of the last line of a class.
+        
+        @param endLineNo number of the last line (integer)
+        """
+        self.endlineno = endLineNo
 
 
 class Attribute(VisibilityBase):

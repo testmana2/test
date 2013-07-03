@@ -4274,6 +4274,7 @@
       <keyword name="EditorAssembly" id="EditorAssembly" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly" />
       <keyword name="EditorAssembly (Constructor)" id="EditorAssembly (Constructor)" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__init__" />
       <keyword name="EditorAssembly (Module)" id="EditorAssembly (Module)" ref="eric5.QScintilla.EditorAssembly.html" />
+      <keyword name="EditorAssembly.__editorCursorLineChanged" id="EditorAssembly.__editorCursorLineChanged" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__editorCursorLineChanged" />
       <keyword name="EditorAssembly.__globalsActivated" id="EditorAssembly.__globalsActivated" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__globalsActivated" />
       <keyword name="EditorAssembly.__membersActivated" id="EditorAssembly.__membersActivated" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__membersActivated" />
       <keyword name="EditorAssembly.__parseEditor" id="EditorAssembly.__parseEditor" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__parseEditor" />
@@ -4803,6 +4804,7 @@
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Function.__init__" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ModuleParser.html#Function.__init__" />
       <keyword name="Function.addDescription" id="Function.addDescription" ref="eric5.Utilities.ModuleParser.html#Function.addDescription" />
+      <keyword name="Function.setEndLine" id="Function.setEndLine" ref="eric5.Utilities.ModuleParser.html#Function.setEndLine" />
       <keyword name="FunctionDefinition" id="FunctionDefinition" ref="eric5.Utilities.py3flakes.checker.html#FunctionDefinition" />
       <keyword name="FunctionDefinition" id="FunctionDefinition" ref="eric5.UtilitiesPython2.py2flakes.checker.html#FunctionDefinition" />
       <keyword name="FunctionScope" id="FunctionScope" ref="eric5.Utilities.py3flakes.checker.html#FunctionScope" />
@@ -12336,6 +12338,7 @@
       <keyword name="ZoomDialog.getZoomSize" id="ZoomDialog.getZoomSize" ref="eric5.QScintilla.ZoomDialog.html#ZoomDialog.getZoomSize" />
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
+      <keyword name="_ClbrBase.setEndLine" id="_ClbrBase.setEndLine" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.setEndLine" />
       <keyword name="_StrikeThroughExtension" id="_StrikeThroughExtension" ref="eric5.UI.Previewer.html#_StrikeThroughExtension" />
       <keyword name="_StrikeThroughExtension.extendMarkdown" id="_StrikeThroughExtension.extendMarkdown" ref="eric5.UI.Previewer.html#_StrikeThroughExtension.extendMarkdown" />
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric5.Utilities.crypto.__init__.html#__getMasterPassword" />

@@ -6569,6 +6569,7 @@ eric5.QScintilla.Editor.Editor.contextMenuEvent?4(evt)
 eric5.QScintilla.Editor.Editor.coverageMarkersShown?7
 eric5.QScintilla.Editor.Editor.curLineHasBreakpoint?4()
 eric5.QScintilla.Editor.Editor.cursorChanged?7
+eric5.QScintilla.Editor.Editor.cursorLineChanged?7
 eric5.QScintilla.Editor.Editor.determineFileType?4()
 eric5.QScintilla.Editor.Editor.dragEnterEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragLeaveEvent?4(event)
@@ -7887,6 +7888,7 @@ eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.General?7
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static?7
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=General)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Module?1(module, name, file, lineno)
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase.setEndLine?4(endLineNo)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase?2(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.IDL_SOURCE?7
 eric5.Utilities.ClassBrowsers.PTL_SOURCE?7
@@ -7949,6 +7951,7 @@ eric5.Utilities.ModuleParser.Function.Class?7
 eric5.Utilities.ModuleParser.Function.General?7
 eric5.Utilities.ModuleParser.Function.Static?7
 eric5.Utilities.ModuleParser.Function.addDescription?4(description)
+eric5.Utilities.ModuleParser.Function.setEndLine?4(endLineNo)
 eric5.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General)
 eric5.Utilities.ModuleParser.Module.addClass?4(name, _class)
 eric5.Utilities.ModuleParser.Module.addDescription?4(description)

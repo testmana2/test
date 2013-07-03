@@ -320,6 +320,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             # close all classes indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             if classstack:
                 # it's a class method
@@ -354,6 +357,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             # close all classes indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start

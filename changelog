@@ -26,6 +26,8 @@ Version 5.4-snapshot-2013mmdd:
      edit menu
   -- changed the line numbers margin to adjust themselves to the size needed
   -- added support for virtual space
+  -- added support to show the current class/method name in the combo boxes
+     at the top of the editor
 - Mini Editor
   -- changed the line numbers margin to adjust themselves to the size needed
   -- added support for virtual space
