@@ -267,9 +267,9 @@ class DebugViewer(QWidget):
         """
         self.globalsViewer.handleResetUI()
         self.localsViewer.handleResetUI()
-        self.stackComboBox.clear()
         self.sourceButton.setEnabled(False)
         self.currentStack = None
+        self.stackComboBox.clear()
         self.__threadList.clear()
         if self.embeddedShell:
             self.__tabWidget.setCurrentWidget(self.shellAssembly)
@@ -390,8 +390,10 @@ class DebugViewer(QWidget):
         """
         Private slot to handle the source button press to show the selected file.
         """
-        s = self.currentStack[self.stackComboBox.currentIndex()]
-        self.sourceFile.emit(s[0], int(s[1]))
+        index = self.stackComboBox.currentIndex()
+        if index > -1 and self.currentStack:
+            s = self.currentStack[index]
+            self.sourceFile.emit(s[0], int(s[1]))
         
     def __frameSelected(self, frmnr):
         """
