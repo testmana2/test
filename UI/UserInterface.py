@@ -2033,7 +2033,7 @@ class UserInterface(E5MainWindow):
         try:
             import PyQt5        # __IGNORE_WARNING__
             self.pyqt5DocAct = E5Action(self.trUtf8('PyQt5 Documentation'),
-                self.trUtf8('PyQt&5 Documentation'),0, 0, self, 'pyqt5_documentation')
+                self.trUtf8('PyQt&5 Documentation'), 0, 0, self, 'pyqt5_documentation')
             self.pyqt5DocAct.setStatusTip(self.trUtf8('Open PyQt5 Documentation'))
             self.pyqt5DocAct.setWhatsThis(self.trUtf8(
                 """<b>PyQt5 Documentation</b>"""

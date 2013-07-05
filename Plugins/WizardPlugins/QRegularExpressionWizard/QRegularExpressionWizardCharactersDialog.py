@@ -39,22 +39,22 @@ class QRegularExpressionWizardCharactersDialog(
         self.comboItems.append((self.trUtf8(
             "ASCII/Latin1 character in octal notation"), "-o"))
         self.singleComboItems.extend([
-            ("---", "-i"), 
-            (self.trUtf8("Bell character (\\a)"), "\\a"), 
-            (self.trUtf8("Escape character (\\e)"), "\\e"), 
-            (self.trUtf8("Page break (\\f)"), "\\f"), 
-            (self.trUtf8("Line feed (\\n)"), "\\n"), 
-            (self.trUtf8("Carriage return (\\r)"), "\\r"), 
-            (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"), 
-            ("---", "-i"), 
-            (self.trUtf8("Character Category"), "-ccp"), 
-            (self.trUtf8("Special Character Category"), "-csp"), 
-            (self.trUtf8("Character Block"), "-cbp"), 
-            (self.trUtf8("POSIX Named Set"), "-psp"), 
-            (self.trUtf8("Not Character Category"), "-ccn"), 
-            (self.trUtf8("Not Character Block"), "-cbn"), 
-            (self.trUtf8("Not Special Character Category"), "-csn"), 
-            (self.trUtf8("Not POSIX Named Set"), "-psn"), 
+            ("---", "-i"),
+            (self.trUtf8("Bell character (\\a)"), "\\a"),
+            (self.trUtf8("Escape character (\\e)"), "\\e"),
+            (self.trUtf8("Page break (\\f)"), "\\f"),
+            (self.trUtf8("Line feed (\\n)"), "\\n"),
+            (self.trUtf8("Carriage return (\\r)"), "\\r"),
+            (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"),
+            ("---", "-i"),
+            (self.trUtf8("Character Category"), "-ccp"),
+            (self.trUtf8("Special Character Category"), "-csp"),
+            (self.trUtf8("Character Block"), "-cbp"),
+            (self.trUtf8("POSIX Named Set"), "-psp"),
+            (self.trUtf8("Not Character Category"), "-ccn"),
+            (self.trUtf8("Not Character Block"), "-cbn"),
+            (self.trUtf8("Not Special Character Category"), "-csn"),
+            (self.trUtf8("Not POSIX Named Set"), "-psn"),
         ])
         
         self.charValidator = QRegExpValidator(QRegExp(".{0,1}"), self)

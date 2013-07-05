@@ -160,7 +160,7 @@ def editMessageFilters():
     if __msgHandlerDialog:
         __msgHandlerDialog.editMessageFilters()
     else:
-        print(QCoreApplication.translate( "E5ErrorMessage",
+        print(QCoreApplication.translate("E5ErrorMessage",
             "No message handler installed."))
 
 

@@ -375,7 +375,7 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
             self,
             self.trUtf8("Save regular expression"),
             "",
-            self.trUtf8("RegExp Files (*.rx);;All Files (*)"), 
+            self.trUtf8("RegExp Files (*.rx);;All Files (*)"),
             None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if fname:

@@ -370,7 +370,7 @@ class TabWidget(E5TabWidget):
         if not editor in self.editors:
             self.editors.append(editor)
             editor.captionChanged.connect(self.__captionChange)
-            editor.cursorLineChanged.connect(self.__cursorLineChanged)        
+            editor.cursorLineChanged.connect(self.__cursorLineChanged)
         emptyIndex = self.indexOf(self.emptyLabel)
         if emptyIndex > -1:
             self.removeTab(emptyIndex)
