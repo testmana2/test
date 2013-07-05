@@ -338,6 +338,9 @@ BrowserModel
 <td><a href="#ProjectBrowserModel.itemIndexByName">itemIndexByName</a></td>
 <td>Public method to find an item's index given its name.</td>
 </tr><tr>
+<td><a href="#ProjectBrowserModel.itemIndexByNameAndLine">itemIndexByNameAndLine</a></td>
+<td>Public method to find an item's index given its name.</td>
+</tr><tr>
 <td><a href="#ProjectBrowserModel.populateItem">populateItem</a></td>
 <td>Public method to populate an item's subtree.</td>
 </tr><tr>
@@ -561,6 +564,24 @@ reference to the item found and the new display name (string)
 <dt><i>name</i></dt>
 <dd>
 name of the item (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+index of the item found (QModelIndex)
+</dd>
+</dl><a NAME="ProjectBrowserModel.itemIndexByNameAndLine" ID="ProjectBrowserModel.itemIndexByNameAndLine"></a>
+<h4>ProjectBrowserModel.itemIndexByNameAndLine</h4>
+<b>itemIndexByNameAndLine</b>(<i>name, lineno</i>)
+<p>
+        Public method to find an item's index given its name.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the item (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+one based line number of the item (integer)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

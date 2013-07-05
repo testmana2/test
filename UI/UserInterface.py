@@ -383,6 +383,8 @@ class UserInterface(E5MainWindow):
         self.viewmanager.changeCaption.connect(self.__setWindowCaption)
         self.viewmanager.checkActions.connect(self.__checkActions)
         self.viewmanager.editorChanged.connect(self.projectBrowser.handleEditorChanged)
+        self.viewmanager.editorLineChanged.connect(
+            self.projectBrowser.handleEditorLineChanged)
         self.viewmanager.checkActions.connect(self.cooperation.checkEditorActions)
         
         self.shell.zoomValueChanged.connect(self.viewmanager.zoomValueChanged)

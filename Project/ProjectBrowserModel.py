@@ -587,6 +587,44 @@ class ProjectBrowserModel(BrowserModel):
             index = self.createIndex(itm.row(), 0, itm)
         return index
     
+    def itemIndexByNameAndLine(self, name, lineno):
+        """
+        Public method to find an item's index given its name.
+        
+        @param name name of the item (string)
+        @param lineno one based line number of the item (integer)
+        @return index of the item found (QModelIndex)
+        """
+        index = QModelIndex()
+        itm = self.findItem(name)
+        if itm is not None and \
+           isinstance(itm, ProjectBrowserFileItem):
+            olditem = itm
+            autoPopulate = Preferences.getProject("AutoPopulateItems")
+            while itm is not None:
+                if not itm.isPopulated():
+                    if itm.isLazyPopulated() and autoPopulate:
+                        self.populateItem(itm)
+                    else:
+                        break
+                for child in itm.children():
+                    try:
+                        start, end = child.boundaries()
+                        if end == -1:
+                            end = 1000000   # assume end of file
+                        if start <= lineno <= end:
+                            itm = child
+                            break
+                    except AttributeError:
+                        pass
+                else:
+                    itm = None
+                if itm:
+                    olditem = itm
+            index = self.createIndex(olditem.row(), 0, olditem)
+        
+        return index
+    
     def directoryChanged(self, path):
         """
         Public slot to handle the directoryChanged signal of the watcher.

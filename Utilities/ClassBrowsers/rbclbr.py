@@ -281,6 +281,8 @@ def readmodule_ex(module, path=[]):
         return dict
 
     lineno, last_lineno_pos = 1, 0
+    cur_obj = None
+    lastGlobalEntry = None
     i = 0
     while True:
         m = _getnext(src, i)
@@ -307,6 +309,9 @@ def readmodule_ex(module, path=[]):
             # close all classes/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             while acstack and \
                   acstack[-1][1] >= thisindent:
@@ -341,6 +346,13 @@ def readmodule_ex(module, path=[]):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = f
+            if cur_obj and isinstance(cur_obj, Function):
+                cur_obj.setEndLine(lineno - 1)
+            cur_obj = f
             classstack.append((f, thisindent))  # Marker for nested fns
 
         elif m.start("String") >= 0:
@@ -356,12 +368,15 @@ def readmodule_ex(module, path=[]):
             # we found a class definition
             thisindent = indent
             indent += 1
+            lineno = lineno + src.count('\n', last_lineno_pos, start)
+            last_lineno_pos = start
             # close all classes/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
-            lineno = lineno + src.count('\n', last_lineno_pos, start)
-            last_lineno_pos = start
             class_name = m.group("ClassName") or m.group("ClassName2")
             inherit = m.group("ClassSupers")
             if inherit:
@@ -384,6 +399,11 @@ def readmodule_ex(module, path=[]):
                     cur_class = cls
                 else:
                     cls._addclass(class_name, cur_class)
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = cur_class
+            cur_obj = cur_class
             classstack.append((cur_class, thisindent))
             while acstack and \
                   acstack[-1][1] >= thisindent:
@@ -394,12 +414,15 @@ def readmodule_ex(module, path=[]):
             # we found a module definition
             thisindent = indent
             indent += 1
+            lineno = lineno + src.count('\n', last_lineno_pos, start)
+            last_lineno_pos = start
             # close all classes/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
-            lineno = lineno + src.count('\n', last_lineno_pos, start)
-            last_lineno_pos = start
             module_name = m.group("ModuleName")
             # remember this class
             cur_class = Module(module, module_name, file, lineno)
@@ -416,6 +439,11 @@ def readmodule_ex(module, path=[]):
                     cur_class = cls
                 else:
                     cls._addclass(module_name, cur_class)
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = cur_class
+            cur_obj = cur_class
             classstack.append((cur_class, thisindent))
             while acstack and \
                   acstack[-1][1] >= thisindent:
@@ -472,6 +500,9 @@ def readmodule_ex(module, path=[]):
                     break
                 else:
                     index -= 1
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = None
 
         elif m.start("Attr") >= 0:
             lineno = lineno + src.count('\n', last_lineno_pos, start)

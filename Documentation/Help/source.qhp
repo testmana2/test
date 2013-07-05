@@ -1765,6 +1765,7 @@
       <keyword name="BrowserClassAttributesItem.lessThan" id="BrowserClassAttributesItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.lessThan" />
       <keyword name="BrowserClassItem" id="BrowserClassItem" ref="eric5.UI.BrowserModel.html#BrowserClassItem" />
       <keyword name="BrowserClassItem (Constructor)" id="BrowserClassItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserClassItem.__init__" />
+      <keyword name="BrowserClassItem.boundaries" id="BrowserClassItem.boundaries" ref="eric5.UI.BrowserModel.html#BrowserClassItem.boundaries" />
       <keyword name="BrowserClassItem.classObject" id="BrowserClassItem.classObject" ref="eric5.UI.BrowserModel.html#BrowserClassItem.classObject" />
       <keyword name="BrowserClassItem.fileName" id="BrowserClassItem.fileName" ref="eric5.UI.BrowserModel.html#BrowserClassItem.fileName" />
       <keyword name="BrowserClassItem.isPublic" id="BrowserClassItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserClassItem.isPublic" />
@@ -1821,6 +1822,7 @@
       <keyword name="BrowserItem.type" id="BrowserItem.type" ref="eric5.UI.BrowserModel.html#BrowserItem.type" />
       <keyword name="BrowserMethodItem" id="BrowserMethodItem" ref="eric5.UI.BrowserModel.html#BrowserMethodItem" />
       <keyword name="BrowserMethodItem (Constructor)" id="BrowserMethodItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.__init__" />
+      <keyword name="BrowserMethodItem.boundaries" id="BrowserMethodItem.boundaries" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.boundaries" />
       <keyword name="BrowserMethodItem.fileName" id="BrowserMethodItem.fileName" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.fileName" />
       <keyword name="BrowserMethodItem.functionObject" id="BrowserMethodItem.functionObject" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.functionObject" />
       <keyword name="BrowserMethodItem.isPublic" id="BrowserMethodItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.isPublic" />
@@ -7177,6 +7179,7 @@
       <keyword name="Listspace.__contextMenuSaveAll" id="Listspace.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveAll" />
       <keyword name="Listspace.__contextMenuSaveAs" id="Listspace.__contextMenuSaveAs" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveAs" />
       <keyword name="Listspace.__currentChanged" id="Listspace.__currentChanged" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__currentChanged" />
+      <keyword name="Listspace.__cursorLineChanged" id="Listspace.__cursorLineChanged" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__cursorLineChanged" />
       <keyword name="Listspace.__initMenu" id="Listspace.__initMenu" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__initMenu" />
       <keyword name="Listspace.__showMenu" id="Listspace.__showMenu" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__showMenu" />
       <keyword name="Listspace.__showSelectedView" id="Listspace.__showSelectedView" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__showSelectedView" />
@@ -8469,6 +8472,7 @@
       <keyword name="ProjectBaseBrowser.currentItem" id="ProjectBaseBrowser.currentItem" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.currentItem" />
       <keyword name="ProjectBaseBrowser.removeHookMethod" id="ProjectBaseBrowser.removeHookMethod" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.removeHookMethod" />
       <keyword name="ProjectBaseBrowser.selectFile" id="ProjectBaseBrowser.selectFile" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectFile" />
+      <keyword name="ProjectBaseBrowser.selectFileLine" id="ProjectBaseBrowser.selectFileLine" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectFileLine" />
       <keyword name="ProjectBaseBrowser.selectLocalDirEntries" id="ProjectBaseBrowser.selectLocalDirEntries" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectLocalDirEntries" />
       <keyword name="ProjectBaseBrowser.selectLocalEntries" id="ProjectBaseBrowser.selectLocalEntries" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectLocalEntries" />
       <keyword name="ProjectBaseBrowser.selectVCSDirEntries" id="ProjectBaseBrowser.selectVCSDirEntries" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectVCSDirEntries" />
@@ -8487,6 +8491,7 @@
       <keyword name="ProjectBrowser.getProjectBrowser" id="ProjectBrowser.getProjectBrowser" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowser" />
       <keyword name="ProjectBrowser.getProjectBrowsers" id="ProjectBrowser.getProjectBrowsers" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowsers" />
       <keyword name="ProjectBrowser.handleEditorChanged" id="ProjectBrowser.handleEditorChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handleEditorChanged" />
+      <keyword name="ProjectBrowser.handleEditorLineChanged" id="ProjectBrowser.handleEditorLineChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handleEditorLineChanged" />
       <keyword name="ProjectBrowser.handlePreferencesChanged" id="ProjectBrowser.handlePreferencesChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handlePreferencesChanged" />
       <keyword name="ProjectBrowser.showEvent" id="ProjectBrowser.showEvent" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.showEvent" />
       <keyword name="ProjectBrowserDirectoryItem" id="ProjectBrowserDirectoryItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserDirectoryItem" />
@@ -8520,6 +8525,7 @@
       <keyword name="ProjectBrowserModel.findItem" id="ProjectBrowserModel.findItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.findItem" />
       <keyword name="ProjectBrowserModel.findParentItemByName" id="ProjectBrowserModel.findParentItemByName" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.findParentItemByName" />
       <keyword name="ProjectBrowserModel.itemIndexByName" id="ProjectBrowserModel.itemIndexByName" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.itemIndexByName" />
+      <keyword name="ProjectBrowserModel.itemIndexByNameAndLine" id="ProjectBrowserModel.itemIndexByNameAndLine" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.itemIndexByNameAndLine" />
       <keyword name="ProjectBrowserModel.populateItem" id="ProjectBrowserModel.populateItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.populateItem" />
       <keyword name="ProjectBrowserModel.populateProjectDirectoryItem" id="ProjectBrowserModel.populateProjectDirectoryItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.populateProjectDirectoryItem" />
       <keyword name="ProjectBrowserModel.preferencesChanged" id="ProjectBrowserModel.preferencesChanged" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserModel.preferencesChanged" />
@@ -8535,6 +8541,8 @@
       <keyword name="ProjectBrowserPage (Module)" id="ProjectBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html" />
       <keyword name="ProjectBrowserPage.__setProjectBrowsersCheckBoxes" id="ProjectBrowserPage.__setProjectBrowsersCheckBoxes" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.__setProjectBrowsersCheckBoxes" />
       <keyword name="ProjectBrowserPage.__storeProjectBrowserFlags" id="ProjectBrowserPage.__storeProjectBrowserFlags" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.__storeProjectBrowserFlags" />
+      <keyword name="ProjectBrowserPage.on_followCursorLineCheckBox_toggled" id="ProjectBrowserPage.on_followCursorLineCheckBox_toggled" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.on_followCursorLineCheckBox_toggled" />
+      <keyword name="ProjectBrowserPage.on_followEditorCheckBox_toggled" id="ProjectBrowserPage.on_followEditorCheckBox_toggled" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.on_followEditorCheckBox_toggled" />
       <keyword name="ProjectBrowserPage.on_projectTypeCombo_activated" id="ProjectBrowserPage.on_projectTypeCombo_activated" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.on_projectTypeCombo_activated" />
       <keyword name="ProjectBrowserPage.save" id="ProjectBrowserPage.save" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#ProjectBrowserPage.save" />
       <keyword name="ProjectBrowserSimpleDirectoryItem" id="ProjectBrowserSimpleDirectoryItem" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem" />
@@ -10858,6 +10866,7 @@
       <keyword name="TabWidget.__contextMenuSaveAs" id="TabWidget.__contextMenuSaveAs" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAs" />
       <keyword name="TabWidget.__copyTab" id="TabWidget.__copyTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__copyTab" />
       <keyword name="TabWidget.__copyTabOther" id="TabWidget.__copyTabOther" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__copyTabOther" />
+      <keyword name="TabWidget.__cursorLineChanged" id="TabWidget.__cursorLineChanged" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__cursorLineChanged" />
       <keyword name="TabWidget.__initMenu" id="TabWidget.__initMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__initMenu" />
       <keyword name="TabWidget.__navigationMenuTriggered" id="TabWidget.__navigationMenuTriggered" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__navigationMenuTriggered" />
       <keyword name="TabWidget.__relocateTab" id="TabWidget.__relocateTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__relocateTab" />

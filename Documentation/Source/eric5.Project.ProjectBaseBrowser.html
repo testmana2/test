@@ -171,6 +171,9 @@ Browser
 <td><a href="#ProjectBaseBrowser.selectFile">selectFile</a></td>
 <td>Public method to highlight a node given its filename.</td>
 </tr><tr>
+<td><a href="#ProjectBaseBrowser.selectFileLine">selectFileLine</a></td>
+<td>Public method to highlight a node given its filename.</td>
+</tr><tr>
 <td><a href="#ProjectBaseBrowser.selectLocalDirEntries">selectLocalDirEntries</a></td>
 <td>Public slot to handle the select local directories context menu entries</td>
 </tr><tr>
@@ -512,6 +515,19 @@ for the hook method (string)
 <dt><i>fn</i></dt>
 <dd>
 filename of file to be highlighted (string)
+</dd>
+</dl><a NAME="ProjectBaseBrowser.selectFileLine" ID="ProjectBaseBrowser.selectFileLine"></a>
+<h4>ProjectBaseBrowser.selectFileLine</h4>
+<b>selectFileLine</b>(<i>fn, lineno</i>)
+<p>
+        Public method to highlight a node given its filename.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of file to be highlighted (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+one based line number of the item (integer)
 </dd>
 </dl><a NAME="ProjectBaseBrowser.selectLocalDirEntries" ID="ProjectBaseBrowser.selectLocalDirEntries"></a>
 <h4>ProjectBaseBrowser.selectLocalDirEntries</h4>

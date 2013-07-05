@@ -81,6 +81,10 @@ emitted just before an editor window gets closed
 <dd>
 emitted to signal a change of an
             editors language
+</dd><dt>editorLineChanged(str,int)</dt>
+<dd>
+emitted to signal a change of an editor's
+            current line (line is given one based)
 </dd><dt>editorOpened(str)</dt>
 <dd>
 emitted after an editor window was opened
@@ -152,6 +156,9 @@ QSplitter, ViewManager
 </tr><tr>
 <td><a href="#Listspace.__currentChanged">__currentChanged</a></td>
 <td>Private slot to handle the currentChanged signal.</td>
+</tr><tr>
+<td><a href="#Listspace.__cursorLineChanged">__cursorLineChanged</a></td>
+<td>Private slot to handle a change of the current editor's cursor line.</td>
 </tr><tr>
 <td><a href="#Listspace.__initMenu">__initMenu</a></td>
 <td>Private method to initialize the viewlist context menu.</td>
@@ -315,6 +322,16 @@ Editor to update the caption for
 <dt><i>index</i></dt>
 <dd>
 index of the current editor
+</dd>
+</dl><a NAME="Listspace.__cursorLineChanged" ID="Listspace.__cursorLineChanged"></a>
+<h4>Listspace.__cursorLineChanged</h4>
+<b>__cursorLineChanged</b>(<i>lineno</i>)
+<p>
+        Private slot to handle a change of the current editor's cursor line.
+</p><dl>
+<dt><i>lineno</i></dt>
+<dd>
+line number of the current editor's cursor (zero based)
 </dd>
 </dl><a NAME="Listspace.__initMenu" ID="Listspace.__initMenu"></a>
 <h4>Listspace.__initMenu</h4>

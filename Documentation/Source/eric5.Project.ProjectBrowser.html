@@ -100,6 +100,9 @@ E5TabWidget
 <td><a href="#ProjectBrowser.handleEditorChanged">handleEditorChanged</a></td>
 <td>Public slot to handle the editorChanged signal.</td>
 </tr><tr>
+<td><a href="#ProjectBrowser.handleEditorLineChanged">handleEditorLineChanged</a></td>
+<td>Public slot to handle the editorLineChanged signal.</td>
+</tr><tr>
 <td><a href="#ProjectBrowser.handlePreferencesChanged">handlePreferencesChanged</a></td>
 <td>Public slot used to handle the preferencesChanged signal.</td>
 </tr><tr>
@@ -216,6 +219,19 @@ list of references to project browsers
 <dt><i>fn</i></dt>
 <dd>
 filename of the changed file (string)
+</dd>
+</dl><a NAME="ProjectBrowser.handleEditorLineChanged" ID="ProjectBrowser.handleEditorLineChanged"></a>
+<h4>ProjectBrowser.handleEditorLineChanged</h4>
+<b>handleEditorLineChanged</b>(<i>fn, lineno</i>)
+<p>
+        Public slot to handle the editorLineChanged signal.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the changed file (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+one based line number of the item (integer)
 </dd>
 </dl><a NAME="ProjectBrowser.handlePreferencesChanged" ID="ProjectBrowser.handlePreferencesChanged"></a>
 <h4>ProjectBrowser.handlePreferencesChanged</h4>

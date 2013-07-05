@@ -109,6 +109,8 @@ class ViewManager(QObject):
     @signal editorLanguageChanged(Editor) emitted to signal a change of an
             editor's language
     @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
+    @signal editorLineChanged(str,int) emitted to signal a change of an editor's
+            current line (line is given one based)
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -127,6 +129,7 @@ class ViewManager(QObject):
     previewStateChanged = pyqtSignal(bool)
     editorLanguageChanged = pyqtSignal(Editor)
     editorTextChanged = pyqtSignal(Editor)
+    editorLineChanged = pyqtSignal(str, int)
     
     def __init__(self):
         """

@@ -603,6 +603,8 @@ class Prefs(object):
         "AutoSaveDbgProperties": False,
         "HideGeneratedForms": False,
         "FollowEditor": True,
+        "FollowCursorLine": True,
+        "AutoPopulateItems": True,
         "RecentNumber": 9,
         "DeterminePyFromProject": True,
     }

@@ -42,6 +42,9 @@ Version 5.4-snapshot-2013mmdd:
   -- Forms Viewer
      --- added support for more widgets in the code creation dialog
      --- added a plug-in hook for the 'open' action
+  -- Sources Viewer
+     --- added support to highlight the current class/method name of the current
+         editor
   -- Translations Viewer
      --- added a plug-in hook for the 'open' action
 - Shell

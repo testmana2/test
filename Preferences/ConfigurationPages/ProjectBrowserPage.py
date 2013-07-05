@@ -49,6 +49,10 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         self.followEditorCheckBox.setChecked(
             Preferences.getProject("FollowEditor"))
+        self.followCursorLineCheckBox.setChecked(
+            Preferences.getProject("FollowCursorLine"))
+        self.autoPopulateCheckBox.setChecked(
+            Preferences.getProject("AutoPopulateItems"))
         self.hideGeneratedCheckBox.setChecked(
             Preferences.getProject("HideGeneratedForms"))
         
@@ -60,6 +64,10 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         Preferences.setProject("FollowEditor",
             self.followEditorCheckBox.isChecked())
+        Preferences.setProject("FollowCursorLine",
+            self.followCursorLineCheckBox.isChecked())
+        Preferences.setProject("AutoPopulateItems",
+            self.autoPopulateCheckBox.isChecked())
         Preferences.setProject("HideGeneratedForms",
             self.hideGeneratedCheckBox.isChecked())
         
@@ -131,6 +139,26 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         self.__setProjectBrowsersCheckBoxes(
             self.projectTypeCombo.itemData(index))
         self.__currentProjectTypeIndex = index
+    
+    @pyqtSlot(bool)
+    def on_followEditorCheckBox_toggled(self, checked):
+        """
+        Private slot to handle the change of the 'Follow Editor' checkbox.
+        
+        @param checked flag indicating the state of the checkbox
+        """
+        if not checked:
+            self.followCursorLineCheckBox.setChecked(False)
+    
+    @pyqtSlot(bool)
+    def on_followCursorLineCheckBox_toggled(self, checked):
+        """
+        Private slot to handle the change of the 'Follow Cursor Line' checkbox.
+        
+        @param checked flag indicating the state of the checkbox
+        """
+        if checked:
+            self.followEditorCheckBox.setChecked(True)
     
 
 def create(dlg):

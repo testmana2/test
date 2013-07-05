@@ -5299,6 +5299,7 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLanguageChanged?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLineChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
@@ -5367,6 +5368,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLanguageChanged?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLineChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
@@ -5843,6 +5845,8 @@ eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage.polishPage?4()
 eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage.save?4()
 eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage?1()
 eric5.Preferences.ConfigurationPages.PrinterPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_followCursorLineCheckBox_toggled?4(checked)
+eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_followEditorCheckBox_toggled?4(checked)
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_projectTypeCombo_activated?4(index)
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.save?4()
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage?1()
@@ -6329,6 +6333,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.closeSourceWindow?7
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.currentItem?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.removeHookMethod?4(key)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectFile?4(fn)
+eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectFileLine?4(fn, lineno)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectLocalDirEntries?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectLocalEntries?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectVCSDirEntries?4()
@@ -6337,6 +6342,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser?1(project, type_, parent=Non
 eric5.Project.ProjectBrowser.ProjectBrowser.getProjectBrowser?4(name)
 eric5.Project.ProjectBrowser.ProjectBrowser.getProjectBrowsers?4()
 eric5.Project.ProjectBrowser.ProjectBrowser.handleEditorChanged?4(fn)
+eric5.Project.ProjectBrowser.ProjectBrowser.handleEditorLineChanged?4(fn, lineno)
 eric5.Project.ProjectBrowser.ProjectBrowser.handlePreferencesChanged?4()
 eric5.Project.ProjectBrowser.ProjectBrowser.showEvent?4(evt)
 eric5.Project.ProjectBrowser.ProjectBrowser?1(project, parent=None, embeddedBrowser=True)
@@ -6369,6 +6375,7 @@ eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findChildItem?4(text, colu
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findItem?4(name)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findParentItemByName?4(type_, name, dontSplit=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.itemIndexByName?4(name)
+eric5.Project.ProjectBrowserModel.ProjectBrowserModel.itemIndexByNameAndLine?4(name, lineno)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.populateItem?4(parentItem, repopulate=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.populateProjectDirectoryItem?4(parentItem, repopulate=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.preferencesChanged?4()
@@ -7509,6 +7516,7 @@ eric5.UI.BrowserModel.BrowserClassAttributesItem.attributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.isClassAttributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.lessThan?4(other, column, order)
 eric5.UI.BrowserModel.BrowserClassAttributesItem?1(parent, attributes, text, isClass=False)
+eric5.UI.BrowserModel.BrowserClassItem.boundaries?4()
 eric5.UI.BrowserModel.BrowserClassItem.classObject?4()
 eric5.UI.BrowserModel.BrowserClassItem.fileName?4()
 eric5.UI.BrowserModel.BrowserClassItem.isPublic?4()
@@ -7569,6 +7577,7 @@ eric5.UI.BrowserModel.BrowserItemFile?7
 eric5.UI.BrowserModel.BrowserItemMethod?7
 eric5.UI.BrowserModel.BrowserItemRoot?7
 eric5.UI.BrowserModel.BrowserItemSysPath?7
+eric5.UI.BrowserModel.BrowserMethodItem.boundaries?4()
 eric5.UI.BrowserModel.BrowserMethodItem.fileName?4()
 eric5.UI.BrowserModel.BrowserMethodItem.functionObject?4()
 eric5.UI.BrowserModel.BrowserMethodItem.isPublic?4()
@@ -8613,6 +8622,7 @@ eric5.ViewManager.ViewManager.ViewManager.editorChangedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosed?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorLanguageChanged?7
+eric5.ViewManager.ViewManager.ViewManager.editorLineChanged?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpened?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpenedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorSaved?7
