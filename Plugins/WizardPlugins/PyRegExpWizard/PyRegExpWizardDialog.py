@@ -378,21 +378,24 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         regex = self.regexpTextEdit.toPlainText()
         if regex:
             try:
+                flags = 0
+                if not self.caseSensitiveCheckBox.isChecked():
+                    flags |= re.IGNORECASE
+                if self.multilineCheckBox.isChecked():
+                    flags |= re.MULTILINE
+                if self.dotallCheckBox.isChecked():
+                    flags |= re.DOTALL
+                if self.verboseCheckBox.isChecked():
+                    flags |= re.VERBOSE
                 if self.py2Button.isChecked():
-                    re.compile(regex,
-                        (not self.caseSensitiveCheckBox.isChecked() and re.IGNORECASE or 0) | \
-                        self.multilineCheckBox.isChecked() and re.MULTILINE or 0 | \
-                        self.dotallCheckBox.isChecked() and re.DOTALL or 0 | \
-                        self.verboseCheckBox.isChecked() and re.VERBOSE or 0 | \
-                        self.localeCheckBox.isChecked() and re.LOCALE or 0 | \
-                        self.unicodeCheckBox.isChecked() and re.UNICODE or 0)
+                    if self.localeCheckBox.isChecked():
+                        flags |= re.LOCALE
+                    if self.unicodeCheckBox.isChecked():
+                        flags |= re.UNICODE
                 else:
-                    re.compile(regex,
-                        (not self.caseSensitiveCheckBox.isChecked() and re.IGNORECASE or 0) | \
-                        self.multilineCheckBox.isChecked() and re.MULTILINE or 0 | \
-                        self.dotallCheckBox.isChecked() and re.DOTALL or 0 | \
-                        self.verboseCheckBox.isChecked() and re.VERBOSE or 0 | \
-                        (not self.unicodeCheckBox.isChecked() and re.UNICODE or 0))
+                    if self.unicodeCheckBox.isChecked():
+                        flags |= re.ASCII
+                re.compile(regex, flags)
                 E5MessageBox.information(self,
                     self.trUtf8("Validation"),
                     self.trUtf8("""The regular expression is valid."""))
@@ -441,8 +444,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     if self.unicodeCheckBox.isChecked():
                         flags |= re.UNICODE
                 else:
-                    if not self.unicodeCheckBox.isChecked():
-                        flags |= re.UNICODE
+                    if self.unicodeCheckBox.isChecked():
+                        flags |= re.ASCII
                 regobj = re.compile(regex, flags)
                 matchobj = regobj.search(text, startpos)
                 if matchobj is not None:
