@@ -586,8 +586,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         while self.compileProc and self.compileProc.canReadLine():
             self.buf += str(self.compileProc.readLine(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                            "utf-8", 'replace')
         
     def __readStderr(self):
         """
