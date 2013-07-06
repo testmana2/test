@@ -159,7 +159,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         args.append(url)
         
         process.start('svn', args)
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished:
@@ -243,7 +243,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         args.append(url)
         
         self.process.start('svn', args)
-        procStarted = self.process.waitForStarted()
+        procStarted = self.process.waitForStarted(5000)
         if not procStarted:
             self.__finish()
             self.inputGroup.setEnabled(False)

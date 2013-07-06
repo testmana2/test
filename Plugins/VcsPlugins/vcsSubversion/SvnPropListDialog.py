@@ -118,7 +118,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.process.setWorkingDirectory(dname)
         
         self.process.start('svn', args)
-        procStarted = self.process.waitForStarted()
+        procStarted = self.process.waitForStarted(5000)
         if not procStarted:
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),

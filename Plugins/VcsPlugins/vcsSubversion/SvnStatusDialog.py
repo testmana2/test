@@ -382,7 +382,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.setWindowTitle(self.trUtf8('Subversion Status'))
         
         self.process.start('svn', args)
-        procStarted = self.process.waitForStarted()
+        procStarted = self.process.waitForStarted(5000)
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()

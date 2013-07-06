@@ -146,7 +146,7 @@ class Subversion(VersionControl):
         
         process = QProcess()
         process.start('svn', ['--version'])
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
@@ -1263,7 +1263,7 @@ class Subversion(VersionControl):
             args.append('--non-interactive')
             args.append(dname)
             process.start('svn', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -1328,7 +1328,7 @@ class Subversion(VersionControl):
             args.append('--non-interactive')
             args.append(dname)
             process.start('svn', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -1473,7 +1473,7 @@ class Subversion(VersionControl):
         args.append('--xml')
         args.append(ppath)
         process.start('svn', args)
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
@@ -1548,7 +1548,7 @@ class Subversion(VersionControl):
         args.append('--non-interactive')
         args.append(path)
         process.start('svn', args)
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
@@ -2038,7 +2038,7 @@ class Subversion(VersionControl):
         process = QProcess()
         process.setWorkingDirectory(ppath)
         process.start('svn', args)
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:

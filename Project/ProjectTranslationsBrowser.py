@@ -950,7 +950,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
         
         self.pylupdateProc.start(self.pylupdate, args)
-        procStarted = self.pylupdateProc.waitForStarted()
+        procStarted = self.pylupdateProc.waitForStarted(5000)
         if procStarted:
             self.pylupdateProcRunning = True
         else:
@@ -1088,7 +1088,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.lreleaseProc.readyReadStandardError.connect(self.__readStderrLrelease)
         
         self.lreleaseProc.start(lrelease, args)
-        procStarted = self.lreleaseProc.waitForStarted()
+        procStarted = self.lreleaseProc.waitForStarted(5000)
         if procStarted:
             self.lreleaseProcRunning = True
         else:

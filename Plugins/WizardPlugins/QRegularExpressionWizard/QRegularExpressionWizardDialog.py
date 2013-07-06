@@ -70,7 +70,7 @@ class QRegularExpressionWizardWidget(QWidget, Ui_QRegularExpressionWizardDialog)
         self.__pyqt5Server = QProcess(self)
         self.__pyqt5Server.start(sys.executable, [
             os.path.join(os.path.dirname(__file__), "QRegularExpressionWizardServer.py")])
-        if self.__pyqt5Server.waitForStarted(10000):
+        if self.__pyqt5Server.waitForStarted(5000):
             self.__pyqt5Server.setReadChannel(QProcess.StandardOutput)
             if self.__sendCommand("available"):
                 response = self.__receiveResponse()

@@ -178,7 +178,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.process.setWorkingDirectory(self.repodir)
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
@@ -223,7 +223,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 process = QProcess()
                 process.setWorkingDirectory(self.repodir)
                 process.start('hg', args)
-                procStarted = process.waitForStarted()
+                procStarted = process.waitForStarted(5000)
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:

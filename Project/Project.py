@@ -2372,8 +2372,9 @@ class Project(QObject):
                     QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
                     QApplication.processEvents()
                     
+                    oldState = self.isDirty()
                     self.vcs = self.initVCS()
-                    if self.vcs is None:
+                    if self.vcs is None and self.isDirty() == oldState:
                         # check, if project is version controlled
                         pluginManager = e5App().getObject("PluginManager")
                         for indicator, vcsData in \

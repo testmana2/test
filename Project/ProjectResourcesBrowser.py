@@ -617,7 +617,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.noDialog = noDialog
         self.compileProc.start(rcc, args)
-        procStarted = self.compileProc.waitForStarted()
+        procStarted = self.compileProc.waitForStarted(5000)
         if procStarted:
             self.compileRunning = True
             e5App().getObject("ViewManager").enableEditorsCheckFocusIn(False)

@@ -80,7 +80,7 @@ class HgClient(QObject):
             self.__server.setProcessEnvironment(env)
         
         self.__server.start('hg', self.__serverArgs)
-        serverStarted = self.__server.waitForStarted()
+        serverStarted = self.__server.waitForStarted(5000)
         if not serverStarted:
             return False, self.trUtf8(
                     'The process {0} could not be started. '

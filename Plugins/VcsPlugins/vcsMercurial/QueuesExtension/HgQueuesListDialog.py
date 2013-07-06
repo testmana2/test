@@ -142,7 +142,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             self.process.setWorkingDirectory(self.__repodir)
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
@@ -183,7 +183,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             self.process.setWorkingDirectory(self.__repodir)
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()

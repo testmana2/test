@@ -121,7 +121,7 @@ class HgServeDialog(E5MainWindow):
         self.process.setWorkingDirectory(self.__repoPath)
         
         self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
+        procStarted = self.process.waitForStarted(5000)
         if procStarted:
             self.__startAct.setEnabled(False)
             self.__stopAct.setEnabled(True)
