@@ -1,0 +1,52 @@
+228a229,231
+> %If (Qt_4_6_0 -)
+>         ErrorPageExtension,
+> %End
+230a234,242
+> %If (Qt_4_6_0 -)
+>     enum ErrorDomain
+>     {
+>         QtNetwork,
+>         Http,
+>         WebKit,
+>     };
+> %End
+> 
+318a331,367
+>     };
+> 
+> %End
+> 
+> %If (Qt_4_6_0 -)
+> 
+>     class ErrorPageExtensionOption : QWebPage::ExtensionOption
+>     {
+> 
+> %TypeHeaderCode
+> #include <qwebpage.h>
+> %End
+> 
+>     public:
+>         QUrl url;
+>         QWebFrame* frame;
+>         QWebPage::ErrorDomain domain;
+>         int error;
+>         QString errorString;
+>     };
+> 
+> %End
+> %If (Qt_4_6_0 -)
+> 
+>     class ErrorPageExtensionReturn : QWebPage::ExtensionReturn
+>     {
+> 
+> %TypeHeaderCode
+> #include <qwebpage.h>
+> %End
+> 
+>     public:
+>         ErrorPageExtensionReturn();
+>         QString contentType;
+>         QString encoding;
+>         QUrl baseUrl;
+>         QByteArray content;
