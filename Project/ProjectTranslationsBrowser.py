@@ -81,6 +81,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.lreleaseProcRunning = False
         self.pylupdateProc = None
         self.pylupdateProcRunning = False
+        self.tmpProject = []
         
     def _createPopupMenus(self):
         """
@@ -690,7 +691,6 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     break
             if addIt:
                 sources.append(s)
-        sections = [("SOURCES", sources)]
         
         _forms = [f for f in self.project.pdata["FORMS"] if f.endswith('.ui')]
         forms = []
@@ -702,55 +702,72 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     break
             if addIt:
                 forms.append(f)
-        sections.append(("FORMS", forms))
         
         if langs:
-            l = [self.project.getRelativePath(lang.fileName()) \
+            langs = [self.project.getRelativePath(lang.fileName()) \
                  for lang in langs if lang.fileName().endswith('.ts')]
         else:
             try:
                 pattern = self.project.pdata["TRANSLATIONPATTERN"][0]\
                           .replace("%language%", "*")
-                l = [lang for lang in self.project.pdata["TRANSLATIONS"] \
+                langs = [lang for lang in self.project.pdata["TRANSLATIONS"] \
                      if fnmatch.fnmatch(lang, pattern)]
             except IndexError:
-                l = []
-        if l:
-            sections.append(("TRANSLATIONS", l))
-        else:
+                langs = []
+        if not langs:
             E5MessageBox.warning(self,
                 self.trUtf8("Write temporary project file"),
                 self.trUtf8("""No translation files (*.ts) selected."""))
             return False
         
-        try:
-            pf = open(pfile, "w", encoding="utf-8")
-            for key, list in sections:
-                if len(list) > 0:
-                    pf.write('{0} = '.format(key))
-                    last = len(list) - 1
-                    if last > 0:
-                        pf.write('{0} \\{1}'.format(
-                            list[0].replace(os.sep, '/'), "\n"))
-                        for i in range(1, last):
-                            pf.write('\t{0} \\{1}'.format(
-                                list[i].replace(os.sep, '/'), "\n"))
-                        pf.write('\t{0} {1}{2}'.format(
-                            list[last].replace(os.sep, '/'), "\n", "\n"))
-                    else:
-                        pf.write('{0} {1}{2}'.format(
-                            list[0].replace(os.sep, '/'), "\n", "\n"))
-                
-            pf.close()
-            self.tmpProject = pfile
-            return True
-        except IOError:
-            E5MessageBox.critical(self,
-                self.trUtf8("Write temporary project file"),
-                self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
-                    " be written.</p>").format(pfile))
-            self.tmpProject = None
-            return False
+        # create a prefix relative from the *.ts down to the project path
+        langLevel = {}
+        for lang in langs:
+            level = lang.count(os.sep)
+            lst = langLevel.get(level, [])
+            lst.append(lang)
+            langLevel[level] = lst
+
+        for level, langs in langLevel.items():
+            prefix = '../' * level
+            sections = [("SOURCES",
+                [prefix + src for src in sources])]
+            sections.append(("FORMS",
+                [prefix + form for form in forms]))
+            sections.append(("TRANSLATIONS",
+                [prefix + lang for lang in langs]))
+            
+            dir, name = os.path.split(pfile)
+            outFile = os.path.join(dir, os.path.dirname(langs[0]), name)
+            try:
+                pf = open(outFile, "w", encoding="utf-8")
+                for key, list in sections:
+                    if len(list) > 0:
+                        pf.write('{0} = '.format(key))
+                        last = len(list) - 1
+                        if last > 0:
+                            pf.write('{0} \\{1}'.format(
+                                list[0].replace(os.sep, '/'), "\n"))
+                            for i in range(1, last):
+                                pf.write('\t{0} \\{1}'.format(
+                                    list[i].replace(os.sep, '/'), "\n"))
+                            pf.write('\t{0} {1}{2}'.format(
+                                list[last].replace(os.sep, '/'), "\n", "\n"))
+                        else:
+                            pf.write('{0} {1}{2}'.format(
+                                list[0].replace(os.sep, '/'), "\n", "\n"))
+                    
+                pf.close()
+                self.tmpProject.append(outFile)
+            except IOError:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Write temporary project file"),
+                    self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
+                        " be written.</p>").format(outFile))
+                self.tmpProject = []
+                return False
+            
+        return True
         
     def __readStdoutLupdate(self):
         """
@@ -860,12 +877,6 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.trUtf8("Translation file generation"),
                 self.trUtf8("The generation of the translation files (*.ts) has failed."))
         self.pylupdateProc = None
-        self.pylupdate = ""
-        try:
-            os.remove(self.tmpProject)
-        except EnvironmentError:
-            pass
-        self.tmpProject = None
         
     def __generateTSFile(self, noobsolete=False, generateAll=True):
         """
@@ -914,9 +925,6 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if not ok:
             return
         
-        self.pylupdateProc = QProcess()
-        args = []
-        
         if self.project.getProjectType() in ["Qt4", "Qt4C", "E4Plugin"]:
             self.pylupdate = 'pylupdate4'
             if Utilities.isWindowsPlatform():
@@ -925,28 +933,41 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdate = Utilities.generatePySideToolPath('pyside-lupdate')
         else:
             return
-        
-        if noobsolete:
-            args.append('-noobsolete')
-        
-        args.append('-verbose')
-        args.append(self.tmpProject)
-        self.pylupdateProc.setWorkingDirectory(self.project.ppath)
-        self.pylupdateProc.finished.connect(self.__generateTSFileDone)
-        self.pylupdateProc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
-        self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
-        
-        self.pylupdateProc.start(self.pylupdate, args)
-        procStarted = self.pylupdateProc.waitForStarted()
-        if procStarted:
-            self.pylupdateProcRunning = True
-        else:
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'Could not start {0}.<br>'
-                    'Ensure that it is in the search path.'
-                ).format(self.pylupdate))
+
+        for tempProjectFile in self.tmpProject:
+            self.pylupdateProc = QProcess()
+            args = []
+
+            if noobsolete:
+                args.append('-noobsolete')
+            
+            args.append('-verbose')
+            path, filename = os.path.split(tempProjectFile)
+            args.append(filename)
+            self.pylupdateProc.setWorkingDirectory(os.path.join(self.project.ppath, path))
+            self.pylupdateProc.finished.connect(self.__generateTSFileDone)
+            self.pylupdateProc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
+            self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
+            
+            self.pylupdateProc.start(self.pylupdate, args)
+            procStarted = self.pylupdateProc.waitForStarted()
+            if procStarted:
+                self.pylupdateProcRunning = True
+                self.pylupdateProc.waitForFinished(10000)
+            else:
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'Could not start {0}.<br>'
+                        'Ensure that it is in the search path.'
+                    ).format(self.pylupdate))
+        # cleanup
+        try:
+            for fn in self.tmpProject:
+                os.remove(fn)
+        except EnvironmentError:
+            pass
+        self.tmpProject = []
         
     def __generateAll(self):
         """
