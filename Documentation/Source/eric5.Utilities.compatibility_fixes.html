@@ -22,7 +22,7 @@ a { color: #BA6D36; }
 <h1>eric5.Utilities.compatibility_fixes</h1>
 <p>
 Module implementing the open behavior of Python3 for use with Eric5.
-The from Eric5 used features are emulated only. The not emulated features
+The Eric5 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 </p>
 <h3>Global Attributes</h3>
@@ -40,7 +40,7 @@ should throw a NotImplementedError exception.
 <table>
 <tr>
 <td><a href="#open">open</a></td>
-<td></td>
+<td>Replacement for the build in open function.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -61,22 +61,22 @@ file
 <table>
 <tr>
 <td><a href="#File.__init__">File</a></td>
-<td></td>
+<td>Constructor, checks for unimplemented parameters.</td>
 </tr><tr>
 <td><a href="#File.next">next</a></td>
-<td></td>
+<td>Method if used in a iterator.</td>
 </tr><tr>
 <td><a href="#File.read">read</a></td>
-<td></td>
+<td>Read n bytes or all if n=-1 from file.</td>
 </tr><tr>
 <td><a href="#File.readline">readline</a></td>
-<td></td>
+<td>Read one line from file.</td>
 </tr><tr>
 <td><a href="#File.readlines">readlines</a></td>
-<td></td>
+<td>Read all lines from file.</td>
 </tr><tr>
 <td><a href="#File.write">write</a></td>
-<td></td>
+<td>Write given data to file.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -86,28 +86,128 @@ file
 <a NAME="File.__init__" ID="File.__init__"></a>
 <h4>File (Constructor)</h4>
 <b>File</b>(<i>filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True</i>)
-<a NAME="File.next" ID="File.next"></a>
+<p>
+        Constructor, checks for unimplemented parameters.
+</p><dl>
+<dt><i>filein</i></dt>
+<dd>
+filename or file descriptor (string)
+</dd><dt><i>mode=</i></dt>
+<dd>
+access mode (string)
+</dd><dt><i>buffering=</i></dt>
+<dd>
+size of the read buffer (string)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+character encoding for reading/ writing (string)
+</dd><dt><i>errors=</i></dt>
+<dd>
+behavior for the character encoding ('strict', 'explicit', ...) (string)
+</dd><dt><i>newline=</i></dt>
+<dd>
+controls how universal newlines works (string)
+</dd><dt><i>closefd=</i></dt>
+<dd>
+close underlying file descriptor if given as file parameter (boolean)
+</dd>
+</dl><a NAME="File.next" ID="File.next"></a>
 <h4>File.next</h4>
 <b>next</b>(<i></i>)
-<a NAME="File.read" ID="File.read"></a>
+<p>
+        Method if used in a iterator.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+decoded data read
+</dd>
+</dl><a NAME="File.read" ID="File.read"></a>
 <h4>File.read</h4>
 <b>read</b>(<i>n=-1</i>)
-<a NAME="File.readline" ID="File.readline"></a>
+<p>
+        Read n bytes or all if n=-1 from file.
+</p><dl>
+<dt><i>n=</i></dt>
+<dd>
+bytecount or all if n=-1 (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+decoded bytes read
+</dd>
+</dl><a NAME="File.readline" ID="File.readline"></a>
 <h4>File.readline</h4>
 <b>readline</b>(<i>limit=-1</i>)
-<a NAME="File.readlines" ID="File.readlines"></a>
+<p>
+        Read one line from file.
+</p><dl>
+<dt><i>limit=</i></dt>
+<dd>
+maximum bytes to read or all if limit=-1 (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+decoded line read
+</dd>
+</dl><a NAME="File.readlines" ID="File.readlines"></a>
 <h4>File.readlines</h4>
 <b>readlines</b>(<i>hint=-1</i>)
-<a NAME="File.write" ID="File.write"></a>
+<p>
+        Read all lines from file.
+</p><dl>
+<dt><i>hint=</i></dt>
+<dd>
+maximum bytes to read or all if hint=-1 (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+decoded lines read
+</dd>
+</dl><a NAME="File.write" ID="File.write"></a>
 <h4>File.write</h4>
 <b>write</b>(<i>txt</i>)
-
+<p>
+        Write given data to file. Encode if needed.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+data to write. (str, bytes)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="open" ID="open"></a>
 <h2>open</h2>
 <b>open</b>(<i>file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True</i>)
-
+<p>
+    Replacement for the build in open function.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename or file descriptor (string)
+</dd><dt><i>mode=</i></dt>
+<dd>
+access mode (string)
+</dd><dt><i>buffering=</i></dt>
+<dd>
+size of the read buffer (string)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+character encoding for reading/ writing (string)
+</dd><dt><i>errors=</i></dt>
+<dd>
+behavior for the character encoding ('strict', 'explicit', ...) (string)
+</dd><dt><i>newline=</i></dt>
+<dd>
+controls how universal newlines works (string)
+</dd><dt><i>closefd=</i></dt>
+<dd>
+close underlying file descriptor if given as file parameter (boolean)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>
