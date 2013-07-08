@@ -86,7 +86,7 @@ class StackedWidget(QStackedWidget):
         
     def setCurrentIndex(self, index):
         """
-        Overwritten method to set the current widget by it's index.
+        Overwritten method to set the current widget by its index.
         
         @param index index of widget to be made current (integer)
         """
@@ -159,6 +159,8 @@ class Listspace(QSplitter, ViewManager):
     @signal editorLanguageChanged(Editor) emitted to signal a change of an
             editors language
     @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
+    @signal editorLineChanged(str,int) emitted to signal a change of an editor's
+            current line (line is given one based)
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -177,6 +179,7 @@ class Listspace(QSplitter, ViewManager):
     previewStateChanged = pyqtSignal(bool)
     editorLanguageChanged = pyqtSignal(Editor)
     editorTextChanged = pyqtSignal(Editor)
+    editorLineChanged = pyqtSignal(str, int)
     
     def __init__(self, parent):
         """
@@ -351,6 +354,7 @@ class Listspace(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(aw)
@@ -380,6 +384,7 @@ class Listspace(QSplitter, ViewManager):
         self.currentStack.addWidget(win)
         self.currentStack.setCurrentWidget(win)
         editor.captionChanged.connect(self.__captionChange)
+        editor.cursorLineChanged.connect(self.__cursorLineChanged)
         
         index = self.editors.index(editor)
         self.viewlist.setCurrentRow(index)
@@ -387,6 +392,7 @@ class Listspace(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -403,6 +409,18 @@ class Listspace(QSplitter, ViewManager):
         fn = editor.getFileName()
         if fn:
             self.setEditorName(editor, fn)
+        
+    def __cursorLineChanged(self, lineno):
+        """
+        Private slot to handle a change of the current editor's cursor line.
+        
+        @param lineno line number of the current editor's cursor (zero based)
+        """
+        editor = self.sender()
+        if editor:
+            fn = editor.getFileName()
+            if fn:
+                self.editorLineChanged.emit(fn, lineno + 1)
         
     def _showView(self, win, fn=None):
         """
@@ -424,6 +442,7 @@ class Listspace(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -708,6 +727,7 @@ class Listspace(QSplitter, ViewManager):
             self.changeCaption.emit(fn)
             if not self.__inRemoveView:
                 self.editorChanged.emit(fn)
+                self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -748,6 +768,7 @@ class Listspace(QSplitter, ViewManager):
                     self.changeCaption.emit(fn)
                     if switched:
                         self.editorChanged.emit(fn)
+                        self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
                 else:
                     self.changeCaption.emit("")
                 self.editorChangedEd.emit(aw)

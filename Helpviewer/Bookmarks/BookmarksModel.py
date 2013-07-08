@@ -451,7 +451,7 @@ class BookmarksModel(QAbstractItemModel):
     
     def node(self, index):
         """
-        Public method to get a bookmark node given it's index.
+        Public method to get a bookmark node given its index.
         
         @param index index of the node (QModelIndex)
         @return bookmark node (BookmarkNode)

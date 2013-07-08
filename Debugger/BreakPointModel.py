@@ -298,7 +298,7 @@ class BreakPointModel(QAbstractItemModel):
     
     def isBreakPointTemporaryByIndex(self, index):
         """
-        Public method to test, if a breakpoint given by it's index is temporary.
+        Public method to test, if a breakpoint given by its index is temporary.
         
         @param index index of the breakpoint to test (QModelIndex)
         @return flag indicating a temporary breakpoint (boolean)

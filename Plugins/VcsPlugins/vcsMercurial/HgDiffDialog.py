@@ -191,7 +191,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.process.setWorkingDirectory(repodir)
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 QApplication.restoreOverrideCursor()
                 self.inputGroup.setEnabled(False)

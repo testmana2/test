@@ -542,7 +542,7 @@ character except an alphabetic character.</td></tr>
         
         @param editor reference to the editor (Editor)
         """
-        if not self.__finding:
+        if not self.__finding and isinstance(editor, Editor):
             if editor.hasSelectedText():
                 selections = editor.getSelections()
                 line1, index1, line2, index2 = self.__selectionBoundary(selections)

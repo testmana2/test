@@ -143,7 +143,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         if workingDir:
             self.proc.setWorkingDirectory(workingDir)
         self.proc.start('svn', args)
-        procStarted = self.proc.waitForStarted()
+        procStarted = self.proc.waitForStarted(5000)
         if not procStarted:
             self.buttonBox.setFocus()
             self.inputGroup.setEnabled(False)

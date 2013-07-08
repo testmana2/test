@@ -1208,6 +1208,16 @@ eric5.E5Gui.E5ComboBox.E5ComboBox?1(parent=None, inactiveText="")
 eric5.E5Gui.E5Completers.E5DirCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5FileCompleter?1(parent=None, completionMode=QCompleter.PopupCompletion, showHidden=False)
 eric5.E5Gui.E5Completers.E5StringListCompleter?1(parent=None, strings=[], completionMode=QCompleter.PopupCompletion)
+eric5.E5Gui.E5ErrorMessage.E5ErrorMessage.editMessageFilters?4()
+eric5.E5Gui.E5ErrorMessage.E5ErrorMessage.showMessage?4(message, msgType="")
+eric5.E5Gui.E5ErrorMessage.E5ErrorMessage?1(parent=None)
+eric5.E5Gui.E5ErrorMessage.editMessageFilters?4()
+eric5.E5Gui.E5ErrorMessage.messageHandler?4(msgType, message)
+eric5.E5Gui.E5ErrorMessage.messageHandlerInstalled?4()
+eric5.E5Gui.E5ErrorMessage.qtHandler?4()
+eric5.E5Gui.E5ErrorMessageFilterDialog.E5ErrorMessageFilterDialog.getFilters?4()
+eric5.E5Gui.E5ErrorMessageFilterDialog.E5ErrorMessageFilterDialog.on_addButton_clicked?4()
+eric5.E5Gui.E5ErrorMessageFilterDialog.E5ErrorMessageFilterDialog?1(messageFilters, parent=None)
 eric5.E5Gui.E5FileDialog.DontConfirmOverwrite?7
 eric5.E5Gui.E5FileDialog.DontResolveSymlinks?7
 eric5.E5Gui.E5FileDialog.DontUseNativeDialog?7
@@ -2835,6 +2845,9 @@ eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent=None)
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog.accept?4()
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog.on_addButton_clicked?4()
+eric5.Helpviewer.Network.NoCacheHostsDialog.NoCacheHostsDialog?1(parent=None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.ExtensionMap?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtDocPath?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4(op, request, outgoingData=None)
@@ -4192,6 +4205,20 @@ eric5.Plugins.PluginWizardQRegExp.packageName?7
 eric5.Plugins.PluginWizardQRegExp.pyqtApi?7
 eric5.Plugins.PluginWizardQRegExp.shortDescription?7
 eric5.Plugins.PluginWizardQRegExp.version?7
+eric5.Plugins.PluginWizardQRegularExpression.QRegularExpressionWizard.activate?4()
+eric5.Plugins.PluginWizardQRegularExpression.QRegularExpressionWizard.deactivate?4()
+eric5.Plugins.PluginWizardQRegularExpression.QRegularExpressionWizard?1(ui)
+eric5.Plugins.PluginWizardQRegularExpression.author?7
+eric5.Plugins.PluginWizardQRegularExpression.autoactivate?7
+eric5.Plugins.PluginWizardQRegularExpression.className?7
+eric5.Plugins.PluginWizardQRegularExpression.deactivateable?7
+eric5.Plugins.PluginWizardQRegularExpression.error?7
+eric5.Plugins.PluginWizardQRegularExpression.longDescription?7
+eric5.Plugins.PluginWizardQRegularExpression.name?7
+eric5.Plugins.PluginWizardQRegularExpression.packageName?7
+eric5.Plugins.PluginWizardQRegularExpression.pyqtApi?7
+eric5.Plugins.PluginWizardQRegularExpression.shortDescription?7
+eric5.Plugins.PluginWizardQRegularExpression.version?7
 eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.HgBookmarkDialog.DEFINE_MODE?7
 eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.HgBookmarkDialog.MOVE_MODE?7
 eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.HgBookmarkDialog.getData?4()
@@ -5271,6 +5298,7 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorClosedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLanguageChanged?7
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLineChanged?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
@@ -5339,6 +5367,7 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorChangedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosed?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorClosedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLanguageChanged?7
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLineChanged?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpened?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
@@ -5483,6 +5512,52 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizar
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_lowerSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog.on_upperSpin_valueChanged?4(value)
 eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizardRepeatDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.QRegularExpressionWizardCharactersDialog.getCharacters?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardCharactersDialog.QRegularExpressionWizardCharactersDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardDialog.accept?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardDialog.getCode?4(indLevel, indString)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardDialog.reject?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardDialog?1(parent=None, fromEric=True)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.getCode?4(indLevel, indString)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_altnButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_anycharButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_atomicGroupButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_beglineButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_buttonBox_clicked?4(button)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_charButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_commentButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_copyButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_endlineButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_executeButton_clicked?4(startpos=0)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_groupButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_loadButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_namedGroupButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_namedReferenceButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_neglookaheadButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_neglookbehindButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_nextButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_nonGroupButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_nonwordboundButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_poslookaheadButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_poslookbehindButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_redoButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_regexpTextEdit_textChanged?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_repeatButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_saveButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_undoButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_validateButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.on_wordboundButton_clicked?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget.shutdown?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWidget?1(parent=None, fromEric=True)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWindow.closeEvent?4(evt)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardDialog.QRegularExpressionWizardWindow?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.QRegularExpressionWizardRepeatDialog.getRepeat?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.QRegularExpressionWizardRepeatDialog.on_lowerSpin_valueChanged?4(value)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.QRegularExpressionWizardRepeatDialog.on_upperSpin_valueChanged?4(value)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardRepeatDialog.QRegularExpressionWizardRepeatDialog?1(parent=None)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardServer.main?4()
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardServer.rxExecute?4(regexp, options, text, startpos)
+eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardServer.rxValidate?4(regexp, options)
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
@@ -5685,6 +5760,7 @@ eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.setMo
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage?1()
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pyqt4DocDirButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pyqt5DocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pysideDocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_python2DocDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pythonDocDirButton_clicked?4()
@@ -5710,6 +5786,7 @@ eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.save?
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage?1(parent=None)
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_defaultHomeButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_noCacheHostsButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_refererWhitelistButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_setCurrentPageButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_startupCombo_currentIndexChanged?4(index)
@@ -5767,6 +5844,8 @@ eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage.polishPage?4()
 eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage.save?4()
 eric5.Preferences.ConfigurationPages.PrinterPage.PrinterPage?1()
 eric5.Preferences.ConfigurationPages.PrinterPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_followCursorLineCheckBox_toggled?4(checked)
+eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_followEditorCheckBox_toggled?4(checked)
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.on_projectTypeCombo_activated?4(index)
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage.save?4()
 eric5.Preferences.ConfigurationPages.ProjectBrowserPage.ProjectBrowserPage?1()
@@ -6252,6 +6331,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.closeSourceWindow?7
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.currentItem?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.removeHookMethod?4(key)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectFile?4(fn)
+eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectFileLine?4(fn, lineno)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectLocalDirEntries?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectLocalEntries?4()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser.selectVCSDirEntries?4()
@@ -6260,6 +6340,7 @@ eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser?1(project, type_, parent=Non
 eric5.Project.ProjectBrowser.ProjectBrowser.getProjectBrowser?4(name)
 eric5.Project.ProjectBrowser.ProjectBrowser.getProjectBrowsers?4()
 eric5.Project.ProjectBrowser.ProjectBrowser.handleEditorChanged?4(fn)
+eric5.Project.ProjectBrowser.ProjectBrowser.handleEditorLineChanged?4(fn, lineno)
 eric5.Project.ProjectBrowser.ProjectBrowser.handlePreferencesChanged?4()
 eric5.Project.ProjectBrowser.ProjectBrowser.showEvent?4(evt)
 eric5.Project.ProjectBrowser.ProjectBrowser?1(project, parent=None, embeddedBrowser=True)
@@ -6292,6 +6373,7 @@ eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findChildItem?4(text, colu
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findItem?4(name)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.findParentItemByName?4(type_, name, dontSplit=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.itemIndexByName?4(name)
+eric5.Project.ProjectBrowserModel.ProjectBrowserModel.itemIndexByNameAndLine?4(name, lineno)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.populateItem?4(parentItem, repopulate=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.populateProjectDirectoryItem?4(parentItem, repopulate=False)
 eric5.Project.ProjectBrowserModel.ProjectBrowserModel.preferencesChanged?4()
@@ -6492,6 +6574,7 @@ eric5.QScintilla.Editor.Editor.contextMenuEvent?4(evt)
 eric5.QScintilla.Editor.Editor.coverageMarkersShown?7
 eric5.QScintilla.Editor.Editor.curLineHasBreakpoint?4()
 eric5.QScintilla.Editor.Editor.cursorChanged?7
+eric5.QScintilla.Editor.Editor.cursorLineChanged?7
 eric5.QScintilla.Editor.Editor.determineFileType?4()
 eric5.QScintilla.Editor.Editor.dragEnterEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragLeaveEvent?4(event)
@@ -7341,7 +7424,7 @@ eric5.Toolbox.Startup.loadTranslatorForLocale?4(dirs, tn)
 eric5.Toolbox.Startup.loadTranslators?4(qtTransDir, app, translationFiles=())
 eric5.Toolbox.Startup.loaded_translators?7
 eric5.Toolbox.Startup.setLibraryPaths?4()
-eric5.Toolbox.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True)
+eric5.Toolbox.Startup.simpleAppStartup?4(argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True, installErrorHandler=False)
 eric5.Toolbox.Startup.usage?4(appinfo, optlen=12)
 eric5.Toolbox.Startup.version?4(appinfo)
 eric5.Tools.TRPreviewer.TRPreviewer.closeEvent?4(event)
@@ -7431,6 +7514,7 @@ eric5.UI.BrowserModel.BrowserClassAttributesItem.attributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.isClassAttributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.lessThan?4(other, column, order)
 eric5.UI.BrowserModel.BrowserClassAttributesItem?1(parent, attributes, text, isClass=False)
+eric5.UI.BrowserModel.BrowserClassItem.boundaries?4()
 eric5.UI.BrowserModel.BrowserClassItem.classObject?4()
 eric5.UI.BrowserModel.BrowserClassItem.fileName?4()
 eric5.UI.BrowserModel.BrowserClassItem.isPublic?4()
@@ -7491,6 +7575,7 @@ eric5.UI.BrowserModel.BrowserItemFile?7
 eric5.UI.BrowserModel.BrowserItemMethod?7
 eric5.UI.BrowserModel.BrowserItemRoot?7
 eric5.UI.BrowserModel.BrowserItemSysPath?7
+eric5.UI.BrowserModel.BrowserMethodItem.boundaries?4()
 eric5.UI.BrowserModel.BrowserMethodItem.fileName?4()
 eric5.UI.BrowserModel.BrowserMethodItem.functionObject?4()
 eric5.UI.BrowserModel.BrowserMethodItem.isPublic?4()
@@ -7602,6 +7687,7 @@ eric5.UI.FindFileNameDialog.FindFileNameDialog.checkStop?4()
 eric5.UI.FindFileNameDialog.FindFileNameDialog.designerFile?7
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_buttonBox_clicked?4(button)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileExtEdit_textChanged?4(text)
+eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileList_currentItemChanged?4(current, previous)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileList_itemActivated?4(itm, column)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_fileNameEdit_textChanged?4(text)
 eric5.UI.FindFileNameDialog.FindFileNameDialog.on_projectCheckBox_toggled?4(checked)
@@ -7809,6 +7895,7 @@ eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.General?7
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static?7
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=General)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Module?1(module, name, file, lineno)
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase.setEndLine?4(endLineNo)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase?2(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.IDL_SOURCE?7
 eric5.Utilities.ClassBrowsers.PTL_SOURCE?7
@@ -7871,6 +7958,7 @@ eric5.Utilities.ModuleParser.Function.Class?7
 eric5.Utilities.ModuleParser.Function.General?7
 eric5.Utilities.ModuleParser.Function.Static?7
 eric5.Utilities.ModuleParser.Function.addDescription?4(description)
+eric5.Utilities.ModuleParser.Function.setEndLine?4(endLineNo)
 eric5.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General)
 eric5.Utilities.ModuleParser.Module.addClass?4(name, _class)
 eric5.Utilities.ModuleParser.Module.addDescription?4(description)
@@ -8455,6 +8543,7 @@ eric5.ViewManager.ViewManager.ViewManager.editorChangedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosed?7
 eric5.ViewManager.ViewManager.ViewManager.editorClosedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorLanguageChanged?7
+eric5.ViewManager.ViewManager.ViewManager.editorLineChanged?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpened?7
 eric5.ViewManager.ViewManager.ViewManager.editorOpenedEd?7
 eric5.ViewManager.ViewManager.ViewManager.editorSaved?7
@@ -8577,6 +8666,8 @@ eric5.eric5_pluginuninstall.createMainWidget?4(argv)
 eric5.eric5_pluginuninstall.main?4()
 eric5.eric5_qregexp.createMainWidget?4(argv)
 eric5.eric5_qregexp.main?4()
+eric5.eric5_qregularexpression.createMainWidget?4(argv)
+eric5.eric5_qregularexpression.main?4()
 eric5.eric5_re.createMainWidget?4(argv)
 eric5.eric5_re.main?4()
 eric5.eric5_snap.createMainWidget?4(argv)

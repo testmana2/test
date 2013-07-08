@@ -168,7 +168,7 @@ class AdBlockManager(QObject):
     
     def subscription(self, location):
         """
-        Public method to get a subscription based on it's location.
+        Public method to get a subscription based on its location.
         
         @param location location of the subscription to search for (string)
         @return subscription or None (AdBlockSubscription)

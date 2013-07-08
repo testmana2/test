@@ -346,6 +346,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     if self.project.getProjectType() == "PySide":
                         tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
                                                 "impl_pyside.py2.tmpl")
+                    elif self.project.getProjectType() == "PyQt5":
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyqt5.py2.tmpl")
                     else:
                         tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
                                                 "impl_pyqt.py2.tmpl")
@@ -353,6 +356,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     if self.project.getProjectType() == "PySide":
                         tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
                                                 "impl_pyside.py.tmpl")
+                    elif self.project.getProjectType() == "PyQt5":
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyqt5.py.tmpl")
                     else:
                         tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
                                                 "impl_pyqt.py.tmpl")
@@ -422,6 +428,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         if self.project.getProjectLanguage() == "Python2":
             if self.project.getProjectType() == "PySide":
                 pyqtSignatureFormat = '@Slot({0})'
+            elif self.project.getProjectType() == "PyQt5":
+                pyqtSignatureFormat = '@pyqtSlot({0})'
             else:
                 pyqtSignatureFormat = '@pyqtSignature("{0}")'
         else:

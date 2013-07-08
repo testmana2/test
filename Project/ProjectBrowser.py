@@ -304,6 +304,18 @@ class ProjectBrowser(E5TabWidget):
             elif self.project.isProjectInterface(fn):
                 self.piBrowser.selectFile(fn)
     
+    def handleEditorLineChanged(self, fn, lineno):
+        """
+        Public slot to handle the editorLineChanged signal.
+        
+        @param fn filename of the changed file (string)
+        @param lineno one based line number of the item (integer)
+        """
+        if Preferences.getProject("FollowEditor") and \
+           Preferences.getProject("FollowCursorLine"):
+            if self.project.isProjectSource(fn):
+                self.psBrowser.selectFileLine(fn, lineno)
+    
     def getProjectBrowsers(self):
         """
         Public method to get references to the individual project browsers.

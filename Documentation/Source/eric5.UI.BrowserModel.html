@@ -313,6 +313,9 @@ BrowserItem
 <td><a href="#BrowserClassItem.__init__">BrowserClassItem</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#BrowserClassItem.boundaries">boundaries</a></td>
+<td>Public method returning the boundaries of the method definition.</td>
+</tr><tr>
 <td><a href="#BrowserClassItem.classObject">classObject</a></td>
 <td>Public method returning the class object.</td>
 </tr><tr>
@@ -348,6 +351,16 @@ Class object to be shown
 </dd><dt><i>filename</i></dt>
 <dd>
 filename of the file defining this class
+</dd>
+</dl><a NAME="BrowserClassItem.boundaries" ID="BrowserClassItem.boundaries"></a>
+<h4>BrowserClassItem.boundaries</h4>
+<b>boundaries</b>(<i></i>)
+<p>
+        Public method returning the boundaries of the method definition.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start end end line number (integer, integer)
 </dd>
 </dl><a NAME="BrowserClassItem.classObject" ID="BrowserClassItem.classObject"></a>
 <h4>BrowserClassItem.classObject</h4>
@@ -1192,6 +1205,9 @@ BrowserItem
 <td><a href="#BrowserMethodItem.__init__">BrowserMethodItem</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#BrowserMethodItem.boundaries">boundaries</a></td>
+<td>Public method returning the boundaries of the method definition.</td>
+</tr><tr>
 <td><a href="#BrowserMethodItem.fileName">fileName</a></td>
 <td>Public method returning the filename.</td>
 </tr><tr>
@@ -1227,6 +1243,16 @@ Function object to be shown
 </dd><dt><i>filename</i></dt>
 <dd>
 filename of the file defining this class (string)
+</dd>
+</dl><a NAME="BrowserMethodItem.boundaries" ID="BrowserMethodItem.boundaries"></a>
+<h4>BrowserMethodItem.boundaries</h4>
+<b>boundaries</b>(<i></i>)
+<p>
+        Public method returning the boundaries of the method definition.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with start end end line number (integer, integer)
 </dd>
 </dl><a NAME="BrowserMethodItem.fileName" ID="BrowserMethodItem.fileName"></a>
 <h4>BrowserMethodItem.fileName</h4>
@@ -1284,9 +1310,12 @@ true, if this item is less than other (boolean)
 <b>lineno</b>(<i></i>)
 <p>
         Public method returning the line number defining this object.
-</p><p>
-        return line number defining the object (integer)
-</p>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+line number defining the object (integer)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="BrowserModel" ID="BrowserModel"></a>

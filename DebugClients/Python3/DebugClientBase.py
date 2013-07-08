@@ -1203,6 +1203,11 @@ class DebugClientBase(object):
             if afn.startswith(d):
                 return True
         
+        # special treatment for paths containing site-packages or dist-packages
+        for part in ["site-packages", "dist-packages"]:
+            if part in afn:
+                return True
+        
         return False
     
     def getRunning(self):

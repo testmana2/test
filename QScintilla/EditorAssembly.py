@@ -52,6 +52,7 @@ class EditorAssembly(QWidget):
         
         self.__globalsCombo.activated[int].connect(self.__globalsActivated)
         self.__membersCombo.activated[int].connect(self.__membersActivated)
+        self.__editor.cursorLineChanged.connect(self.__editorCursorLineChanged)
         
         self.__parseTimer = QTimer(self)
         self.__parseTimer.setSingleShot(True)
@@ -62,6 +63,8 @@ class EditorAssembly(QWidget):
         
         self.__selectedGlobal = ""
         self.__selectedMember = ""
+        self.__globalsBoundaries = {}
+        self.__membersBoundaries = {}
         
         QTimer.singleShot(0, self.__parseEditor)
     
@@ -101,6 +104,9 @@ class EditorAssembly(QWidget):
             
             # step 2: populate the members combo, if the entry is a class
             self.__membersCombo.clear()
+            self.__membersBoundaries = {}
+            self.__membersCombo.addItem("")
+            memberIndex = 0
             entryName = self.__globalsCombo.itemText(index)
             if self.__module:
                 if entryName in self.__module.classes:
@@ -116,10 +122,12 @@ class EditorAssembly(QWidget):
                             icon = UI.PixmapCache.getIcon("class_protected.png")
                         else:
                             icon = UI.PixmapCache.getIcon("class.png")
-                        items[cl.name] = (icon, cl.lineno)
+                        items[cl.name] = (icon, cl.lineno, cl.endlineno)
                     for key in sorted(items.keys()):
                         itm = items[key]
                         self.__membersCombo.addItem(itm[0], key, itm[1])
+                        memberIndex += 1
+                        self.__membersBoundaries[(itm[1], itm[2])] = memberIndex
                 else:
                     return
                 
@@ -137,10 +145,12 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("method_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("method.png")
-                    items[meth.name] = (icon, meth.lineno)
+                    items[meth.name] = (icon, meth.lineno, meth.endlineno)
                 for key in sorted(items.keys()):
                     itm = items[key]
                     self.__membersCombo.addItem(itm[0], key, itm[1])
+                    memberIndex += 1
+                    self.__membersBoundaries[(itm[1], itm[2])] = memberIndex
                 
                 # step 2.2: add class instance attributes
                 items = {}
@@ -209,17 +219,22 @@ class EditorAssembly(QWidget):
                 
                 self.__globalsCombo.clear()
                 self.__membersCombo.clear()
+                self.__globalsBoundaries = {}
+                self.__membersBoundaries = {}
                 
                 self.__globalsCombo.addItem("")
+                index = 0
                 
                 # step 1: add modules
                 items = {}
                 for module in self.__module.modules.values():
                     items[module.name] = (UI.PixmapCache.getIcon("module.png"),
-                                          module.lineno)
+                                          module.lineno, module.endlineno)
                 for key in sorted(items.keys()):
                     itm = items[key]
                     self.__globalsCombo.addItem(itm[0], key, itm[1])
+                    index += 1
+                    self.__globalsBoundaries[(itm[1], itm[2])] = index
                 
                 # step 2: add classes
                 items = {}
@@ -230,10 +245,12 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("class_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("class.png")
-                    items[cl.name] = (icon, cl.lineno)
+                    items[cl.name] = (icon, cl.lineno, cl.endlineno)
                 for key in sorted(items.keys()):
                     itm = items[key]
                     self.__globalsCombo.addItem(itm[0], key, itm[1])
+                    index += 1
+                    self.__globalsBoundaries[(itm[1], itm[2])] = index
                 
                 # step 3: add functions
                 items = {}
@@ -244,10 +261,12 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("method_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("method.png")
-                    items[func.name] = (icon, func.lineno)
+                    items[func.name] = (icon, func.lineno, func.endlineno)
                 for key in sorted(items.keys()):
                     itm = items[key]
                     self.__globalsCombo.addItem(itm[0], key, itm[1])
+                    index += 1
+                    self.__globalsBoundaries[(itm[1], itm[2])] = index
                 
                 # step 4: add attributes
                 items = {}
@@ -272,3 +291,33 @@ class EditorAssembly(QWidget):
                 if index != -1:
                     self.__membersCombo.setCurrentIndex(index)
                     self.__membersActivated(index, moveCursor=False)
+    
+    def __editorCursorLineChanged(self, lineno):
+        """
+        Private slot handling a line change of the cursor of the editor.
+        
+        @param lineno line number of the cursor (integer)
+        """
+        lineno += 1     # cursor position is zero based, code info one based
+        
+        # step 1: search in the globals
+        for (lower, upper), index in self.__globalsBoundaries.items():
+            if upper == -1:
+                upper = 1000000     # it is the last line
+            if lower <= lineno <= upper:
+                break
+        else:
+            index = 0
+        self.__globalsCombo.setCurrentIndex(index)
+        self.__globalsActivated(index, moveCursor=False)
+        
+        # step 2: search in members
+        for (lower, upper), index in self.__membersBoundaries.items():
+            if upper == -1:
+                upper = 1000000     # it is the last line
+            if lower <= lineno <= upper:
+                break
+        else:
+            index = 0
+        self.__membersCombo.setCurrentIndex(index)
+        self.__membersActivated(index, moveCursor=False)

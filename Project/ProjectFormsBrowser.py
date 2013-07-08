@@ -123,7 +123,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menusAboutToBeCreated.emit()
         
         self.menu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('Compile form'), self.__compileForm)
             self.menu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
@@ -154,6 +154,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                self.hooks["compileAllForms"] is not None or \
                self.hooks["generateDialogCode"] is not None:
                 self.menu.addSeparator()
+            if self.hooks["open"] is not None:
+                self.menu.addAction(
+                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.__openFile)
             self.menu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
         self.menu.addSeparator()
         act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
@@ -163,7 +167,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -185,7 +189,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"] or \
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"] or \
            self.hooks["compileAllForms"] is not None:
             self.backMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
@@ -210,7 +214,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             act = self.multiMenu.addAction(self.trUtf8('Compile forms'),
                 self.__compileSelectedForms)
             self.multiMenu.addSeparator()
@@ -228,6 +232,10 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.trUtf8('Compile forms')),
                     self.__compileSelectedForms)
                 self.multiMenu.addSeparator()
+            if self.hooks["open"] is not None:
+                self.multiMenu.addAction(
+                    self.hooksMenuEntries.get("open", self.trUtf8('Open')),
+                    self.__openFile)
             self.multiMenu.addAction(self.trUtf8('Open'), self.__openFileInEditor)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
@@ -244,7 +252,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMenu.addSeparator()
@@ -260,7 +268,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         act = self.dirMenu.addAction(self.trUtf8('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -282,7 +290,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMultiMenu.addAction(self.trUtf8('Compile all forms'),
                 self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
@@ -429,7 +437,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         for itm in itmList[:]:
             try:
                 if isinstance(itm, ProjectBrowserFileItem):
-                    self.designerFile.emit(itm.fileName())
+                    # hook support
+                    if self.hooks["open"] is not None:
+                        self.hooks["open"](itm.fileName())
+                    else:
+                        self.designerFile.emit(itm.fileName())
             except:
                 pass
         
@@ -492,7 +504,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         if self.hooks["newForm"] is not None:
             self.hooks["newForm"](path)
         else:
-            if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+            if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
                 self.__newUiForm(path)
         
     def __newUiForm(self, path):
@@ -594,8 +606,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         while self.compileProc and self.compileProc.canReadLine():
             self.buf += str(self.compileProc.readLine(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                            "utf-8", 'replace')
         
     def __readStderr(self):
         """
@@ -691,6 +702,12 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                     uic = self.uicompiler + '.bat'
                 else:
                     uic = self.uicompiler
+            elif self.project.getProjectType() == "PyQt5":
+                self.uicompiler = 'pyuic5'
+                if Utilities.isWindowsPlatform():
+                    uic = self.uicompiler + '.bat'
+                else:
+                    uic = self.uicompiler
             elif self.project.getProjectType() == "PySide":
                 self.uicompiler = 'pyside-uic'
                 uic = Utilities.generatePySideToolPath(self.uicompiler)
@@ -726,7 +743,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         self.noDialog = noDialog
         self.compileProc.start(uic, args)
-        procStarted = self.compileProc.waitForStarted()
+        procStarted = self.compileProc.waitForStarted(5000)
         if procStarted:
             self.compileRunning = True
             e5App().getObject("ViewManager").enableEditorsCheckFocusIn(False)
@@ -854,8 +871,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["compileChangedForms"](self.project.pdata["FORMS"])
         else:
             if self.project.getProjectType() not in \
-               ["Qt4", "Qt4C", "E4Plugin", "PySide"]:
-                # ignore the request for non Qt projects
+               ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                # ignore the request for non Qt GUI projects
                 return
             
             progress = QProgressDialog(self.trUtf8("Determining changed forms..."),
@@ -926,6 +943,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         <li>compileChangedForms: takes list of filenames as parameter</li>
         <li>generateDialogCode: takes filename as parameter</li>
         <li>newForm: takes full directory path of new file as parameter</li>
+        <li>open: takes a filename as parameter</li>
         </ul>
         
         <b>Note</b>: Filenames are relative to the project directory, if not
@@ -938,4 +956,5 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             "compileSelectedForms": None,
             "generateDialogCode": None,
             "newForm": None,
+            "open": None,
         }

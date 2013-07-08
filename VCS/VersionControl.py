@@ -544,7 +544,7 @@ class VersionControl(QObject):
         if workingDir:
             proc.setWorkingDirectory(workingDir)
         proc.start(program, arguments)
-        procStarted = proc.waitForStarted()
+        procStarted = proc.waitForStarted(5000)
         if not procStarted:
             E5MessageBox.critical(None,
                 self.trUtf8('Process Generation Error'),

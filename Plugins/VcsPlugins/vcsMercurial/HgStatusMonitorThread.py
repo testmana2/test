@@ -91,7 +91,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             process = QProcess()
             process.setWorkingDirectory(self.projectDir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:
@@ -133,7 +133,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         else:
             process.setWorkingDirectory(self.projectDir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:

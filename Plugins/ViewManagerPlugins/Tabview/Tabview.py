@@ -343,6 +343,7 @@ class TabWidget(E5TabWidget):
         if not editor in self.editors:
             self.editors.append(editor)
             editor.captionChanged.connect(self.__captionChange)
+            editor.cursorLineChanged.connect(self.__cursorLineChanged)
         
         emptyIndex = self.indexOf(self.emptyLabel)
         if emptyIndex > -1:
@@ -371,7 +372,7 @@ class TabWidget(E5TabWidget):
         if not editor in self.editors:
             self.editors.append(editor)
             editor.captionChanged.connect(self.__captionChange)
-        
+            editor.cursorLineChanged.connect(self.__cursorLineChanged)
         emptyIndex = self.indexOf(self.emptyLabel)
         if emptyIndex > -1:
             self.removeTab(emptyIndex)
@@ -380,7 +381,7 @@ class TabWidget(E5TabWidget):
         
     def __captionChange(self, cap, editor):
         """
-        Private method to handle Caption change signals from the editor.
+        Private slot to handle Caption change signals from the editor.
         
         Updates the tab text and tooltip text to reflect the new caption information.
         
@@ -406,6 +407,18 @@ class TabWidget(E5TabWidget):
                 self.setTabText(index, txt)
                 self.setTabToolTip(index, fn)
         
+    def __cursorLineChanged(self, lineno):
+        """
+        Private slot to handle a change of the current editor's cursor line.
+        
+        @param lineno line number of the current editor's cursor (zero based)
+        """
+        editor = self.sender()
+        if editor:
+            fn = editor.getFileName()
+            if fn:
+                self.vm.editorLineChanged.emit(fn, lineno + 1)
+        
     def removeWidget(self, object):
         """
         Public method to remove a widget.
@@ -413,6 +426,7 @@ class TabWidget(E5TabWidget):
         @param object object to be removed (QWidget)
         """
         if isinstance(object, QScintilla.Editor.Editor):
+            object.cursorLineChanged.disconnect(self.__cursorLineChanged)
             object.captionChanged.disconnect(self.__captionChange)
             self.editors.remove(object)
             index = self.indexOf(object.parent())
@@ -682,6 +696,8 @@ class Tabview(QSplitter, ViewManager):
     @signal editorLanguageChanged(Editor) emitted to signal a change of an
             editors language
     @signal editorTextChanged(Editor) emitted to signal a change of an editor's text
+    @signal editorLineChanged(str,int) emitted to signal a change of an editor's
+            current line (line is given one based)
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -700,6 +716,7 @@ class Tabview(QSplitter, ViewManager):
     previewStateChanged = pyqtSignal(bool)
     editorLanguageChanged = pyqtSignal(Editor)
     editorTextChanged = pyqtSignal(Editor)
+    editorLineChanged = pyqtSignal(str, int)
     
     def __init__(self, parent):
         """
@@ -800,6 +817,7 @@ class Tabview(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(aw)
@@ -837,6 +855,7 @@ class Tabview(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -875,6 +894,7 @@ class Tabview(QSplitter, ViewManager):
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
+            self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -1106,6 +1126,7 @@ class Tabview(QSplitter, ViewManager):
             self.changeCaption.emit(fn)
             if not self.__inRemoveView:
                 self.editorChanged.emit(fn)
+                self.editorLineChanged.emit(fn, editor.getCursorPosition()[0] + 1)
         else:
             self.changeCaption.emit("")
         self.editorChangedEd.emit(editor)
@@ -1147,6 +1168,7 @@ class Tabview(QSplitter, ViewManager):
                     self.changeCaption.emit(fn)
                     if switched:
                         self.editorChanged.emit(fn)
+                        self.editorLineChanged.emit(fn, aw.getCursorPosition()[0] + 1)
                 else:
                     self.changeCaption.emit("")
                 self.editorChangedEd.emit(aw)
@@ -1180,7 +1202,7 @@ class Tabview(QSplitter, ViewManager):
         
     def getTabWidgetById(self, id_):
         """
-        Public method to get a reference to a tab widget knowing it's ID.
+        Public method to get a reference to a tab widget knowing its ID.
         
         @param id_ id of the tab widget (long)
         @return reference to the tab widget (TabWidget)

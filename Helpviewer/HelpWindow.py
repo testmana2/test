@@ -36,7 +36,7 @@ from .data import html_rc           # __IGNORE_WARNING__
 from .data import javascript_rc     # __IGNORE_WARNING__
 
 from E5Gui.E5Action import E5Action
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox, E5FileDialog, E5ErrorMessage
 from E5Gui.E5MainWindow import E5MainWindow
 from E5Gui.E5Application import e5App
 from E5Gui.E5ZoomWidget import E5ZoomWidget
@@ -1031,6 +1031,22 @@ class HelpWindow(E5MainWindow):
                 self.__showGreaseMonkeyConfigDialog)
         self.__actions.append(self.greaseMonkeyAct)
         
+        self.editMessageFilterAct = E5Action(self.trUtf8('Edit Message Filters'),
+                UI.PixmapCache.getIcon("warning.png"),
+                self.trUtf8('Edit Message Filters...'), 0, 0, self,
+                'help_manage_message_filters')
+        self.editMessageFilterAct.setStatusTip(self.trUtf8(
+            'Edit the message filters used to suppress unwanted messages'))
+        self.editMessageFilterAct.setWhatsThis(self.trUtf8(
+            """<b>Edit Message Filters</b>"""
+            """<p>Opens a dialog to edit the message filters used to suppress"""
+            """ unwanted messages been shown in an error window.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.editMessageFilterAct.triggered[()].connect(
+                E5ErrorMessage.editMessageFilters)
+        self.__actions.append(self.editMessageFilterAct)
+
         if self.useQtHelp or self.initShortcutsOnly:
             self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
                 UI.PixmapCache.getIcon("syncToc.png"),
@@ -1429,6 +1445,8 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.personalDataAct)
         menu.addAction(self.greaseMonkeyAct)
         menu.addSeparator()
+        menu.addAction(self.editMessageFilterAct)
+        menu.addSeparator()
         menu.addAction(self.searchEnginesAct)
         menu.addSeparator()
         menu.addAction(self.passwordsAct)
@@ -1438,6 +1456,9 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.adblockAct)
         menu.addAction(self.flashblockAct)
         menu.addSeparator()
+        self.__settingsMenu = menu
+        self.__settingsMenu.aboutToShow.connect(
+            self.__aboutToShowSettingsMenu)
         
         from .UserAgent.UserAgentMenu import UserAgentMenu
         self.__userAgentMenu = UserAgentMenu(self.trUtf8("Global User Agent"))
@@ -2645,6 +2666,12 @@ class HelpWindow(E5MainWindow):
         """
         E5MessageBox.warning(self,
             self.trUtf8("Help Engine"), msg)
+        
+    def __aboutToShowSettingsMenu(self):
+        """
+        Private slot to show the Settings menu.
+        """
+        self.editMessageFilterAct.setEnabled(E5ErrorMessage.messageHandlerInstalled())
         
     def __showBackMenu(self):
         """

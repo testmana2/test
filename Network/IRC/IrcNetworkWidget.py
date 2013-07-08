@@ -65,6 +65,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.nickCombo.lineEdit().returnPressed.connect(
             self.on_nickCombo_currentIndexChanged)
         
+        self.setConnected(False)
+        
         self.__initMessagesMenu()
         
         self.__manager = None
@@ -285,8 +287,12 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.__connected = connected
         if self.__connected:
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircDisconnect.png"))
+            self.connectButton.setToolTip(
+                self.trUtf8("Press to disconnect from the network"))
         else:
             self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
+            self.connectButton.setToolTip(
+                self.trUtf8("Press to connect to the selected network"))
     
     def isConnected(self):
         """

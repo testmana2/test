@@ -55,7 +55,7 @@ class E5ToolBarManager(QObject):
     
     def __toolBarByName(self, name):
         """
-        Private slot to get a toolbar by it's object name.
+        Private slot to get a toolbar by its object name.
         
         @param name object name of the toolbar (string)
         @return reference to the toolbar (QToolBar)
@@ -261,7 +261,7 @@ class E5ToolBarManager(QObject):
     
     def resetToolBar(self, toolBar):
         """
-        Public method to reset a toolbar to it's default state.
+        Public method to reset a toolbar to its default state.
         
         @param toolBar reference to the toolbar to configure (QToolBar)
         """
@@ -636,7 +636,7 @@ class E5ToolBarManager(QObject):
     
     def actionById(self, aID):
         """
-        Public method to get an action given it's id.
+        Public method to get an action given its id.
         
         @param aID id of the action object (integer)
         @return reference to the action (QAction)
@@ -647,7 +647,7 @@ class E5ToolBarManager(QObject):
     
     def toolBarById(self, tbID):
         """
-        Public method to get a toolbar given it's id.
+        Public method to get a toolbar given its id.
         
         @param tbID id of the toolbar object (integer)
         @return reference to the toolbar (QToolBar)
@@ -658,7 +658,7 @@ class E5ToolBarManager(QObject):
     
     def toolBarActions(self, tbID):
         """
-        Public method to get a toolbar's actions given it's id.
+        Public method to get a toolbar's actions given its id.
         
         @param tbID id of the toolbar object (integer)
         @return list of actions (list of QAction)
@@ -678,7 +678,7 @@ class E5ToolBarManager(QObject):
     
     def defaultToolBarActions(self, tbID):
         """
-        Public method to get a default toolbar's actions given it's id.
+        Public method to get a default toolbar's actions given its id.
         
         @param tbID id of the default toolbar object (integer)
         @return list of actions (list of QAction)

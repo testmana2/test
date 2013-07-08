@@ -322,6 +322,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             from .SvnDiffDialog import SvnDiffDialog
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
+        self.diff.raise_()
         QApplication.processEvents()
         self.diff.start(self.filename, [rev1, rev2], pegRev=peg_rev)
     

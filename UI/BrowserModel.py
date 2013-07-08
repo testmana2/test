@@ -1286,6 +1286,14 @@ class BrowserClassItem(BrowserItem):
         """
         return self._classObject.lineno
     
+    def boundaries(self):
+        """
+        Public method returning the boundaries of the method definition.
+        
+        @return tuple with start end end line number (integer, integer)
+        """
+        return (self._classObject.lineno, self._classObject.endlineno)
+    
     def lessThan(self, other, column, order):
         """
         Public method to check, if the item is less than the other one.
@@ -1378,9 +1386,17 @@ class BrowserMethodItem(BrowserItem):
         """
         Public method returning the line number defining this object.
         
-        return line number defining the object (integer)
+        @return line number defining the object (integer)
         """
         return self._functionObject.lineno
+    
+    def boundaries(self):
+        """
+        Public method returning the boundaries of the method definition.
+        
+        @return tuple with start end end line number (integer, integer)
+        """
+        return (self._functionObject.lineno, self._functionObject.endlineno)
     
     def lessThan(self, other, column, order):
         """

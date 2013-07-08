@@ -273,6 +273,8 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
         return dict
 
     lineno, last_lineno_pos = 1, 0
+    lastGlobalEntry = None
+    cur_obj = None
     i = 0
     modifierType = ClbrBaseClasses.Function.General
     modifierIndent = -1
@@ -322,6 +324,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             # close all classes indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             if classstack:
                 # it's a class method
@@ -341,6 +346,13 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = f
+            if cur_obj and isinstance(cur_obj, Function):
+                cur_obj.setEndLine(lineno - 1)
+            cur_obj = f
             classstack.append((f, thisindent))  # Marker for nested fns
             
             # reset the modifier settings
@@ -356,6 +368,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             # close all classes indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
@@ -399,6 +414,10 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                 dict[class_name] = cur_class
             else:
                 classstack[-1][0]._addclass(class_name, cur_class)
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = cur_class
             classstack.append((cur_class, thisindent))
 
         elif m.start("Attribute") >= 0:
@@ -426,6 +445,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                         ClbrBaseClasses.ClbrBase(module, "Globals", file, lineno)
                 dict["@@Globals@@"]._addglobal(
                     Attribute(module, variable_name, file, lineno))
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = None
             else:
                 index = -1
                 while index >= -len(classstack):

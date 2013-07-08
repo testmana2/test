@@ -150,7 +150,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.process.setWorkingDirectory(dname)
         
         self.process.start('svn', args)
-        procStarted = self.process.waitForStarted()
+        procStarted = self.process.waitForStarted(5000)
         if not procStarted:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()

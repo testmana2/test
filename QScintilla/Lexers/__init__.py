@@ -40,7 +40,7 @@ def registerLexer(name, displayString, filenameSample, getLexerFunc,
     @param displayString display string (string)
     @param filenameSample dummy filename to derive lexer name (string)
     @param getLexerFunc reference to a function instantiating the specific lexer.
-        This function must take a reference to the parent as it's only argument.
+        This function must take a reference to the parent as its only argument.
     @keyparam openFilters list of open file filters (list of strings)
     @keyparam saveFilters list of save file filters (list of strings)
     @keyparam defaultAssocs default lexer associations (list of strings of filename
@@ -408,7 +408,7 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
         ])
     
     for name in LexerRegistry:
-        openFileFiltersList.append(LexerRegistry[name][3])
+        openFileFiltersList.extend(LexerRegistry[name][3])
     
     if withAdditional:
         openFileFiltersList.extend(Preferences.getEditor("AdditionalOpenFilters"))
@@ -545,7 +545,7 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
         ])
     
     for name in LexerRegistry:
-        saveFileFiltersList.append(LexerRegistry[name][4])
+        saveFileFiltersList.extend(LexerRegistry[name][4])
     
     if withAdditional:
         saveFileFiltersList.extend(Preferences.getEditor("AdditionalSaveFilters"))

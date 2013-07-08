@@ -504,7 +504,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
         self.noDialog = noDialog
         self.compileProc.start(self.omniidl, args)
-        procStarted = self.compileProc.waitForStarted()
+        procStarted = self.compileProc.waitForStarted(5000)
         if procStarted:
             self.compileRunning = True
             return self.compileProc

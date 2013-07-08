@@ -334,6 +334,22 @@ class ProjectBaseBrowser(Browser):
                 self._selectSingleItem(index)
                 self.scrollTo(index, QAbstractItemView.PositionAtTop)
         
+    def selectFileLine(self, fn, lineno):
+        """
+        Public method to highlight a node given its filename.
+        
+        @param fn filename of file to be highlighted (string)
+        @param lineno one based line number of the item (integer)
+        """
+        newfn = os.path.abspath(fn)
+        newfn = self.project.getRelativePath(newfn)
+        sindex = self._model.itemIndexByNameAndLine(newfn, lineno)
+        if sindex.isValid():
+            index = self.model().mapFromSource(sindex)
+            if index.isValid():
+                self._selectSingleItem(index)
+                self.scrollTo(index)
+        
     def _expandAllDirs(self):
         """
         Protected slot to handle the 'Expand all directories' menu action.

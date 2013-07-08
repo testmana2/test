@@ -672,7 +672,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
     
     def __hgQueueRefreshPatchMessage(self):
         """
-        Private slot used to refresh the current patch and it's commit message.
+        Private slot used to refresh the current patch and its commit message.
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueRefreshPatch(self.project.getProjectPath(), editMessage=True)

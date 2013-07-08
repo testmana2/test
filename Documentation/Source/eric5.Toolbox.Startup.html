@@ -147,7 +147,7 @@ the requested locale (string)
 <hr /><hr />
 <a NAME="simpleAppStartup" ID="simpleAppStartup"></a>
 <h2>simpleAppStartup</h2>
-<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True</i>)
+<b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True, installErrorHandler=False</i>)
 <p>
     Module function to start up an application that doesn't need a specialized start up.
 </p><p>
@@ -177,6 +177,10 @@ reference to the application object (QApplication or None)
 </dd><dt><i>raiseIt=</i></dt>
 <dd>
 flag indicating to raise the generated application window (boolean)
+</dd><dt><i>installErrorHandler=</i></dt>
+<dd>
+flag indicating to install an error
+        handler dialog (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

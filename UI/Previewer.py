@@ -178,7 +178,7 @@ class Previewer(QWidget, Ui_Previewer):
         @param on flag indicating to show a preview (boolean)
         """
         editor = self.__vm.activeWindow()
-        if on and self.__isPreviewable(editor):
+        if on and editor and self.__isPreviewable(editor):
             self.show()
         else:
             self.hide()
@@ -190,16 +190,18 @@ class Previewer(QWidget, Ui_Previewer):
         @param editor reference to an editor (Editor)
         @return flag indicating if a preview can be shown (boolean)
         """
-        if editor.getFileName() is not None:
-            extension = os.path.normcase(os.path.splitext(editor.getFileName())[1][1:])
-            return extension in \
-                Preferences.getEditor("PreviewHtmlFileNameExtensions") + \
-                Preferences.getEditor("PreviewMarkdownFileNameExtensions") + \
-                Preferences.getEditor("PreviewRestFileNameExtensions")
-        elif editor.getLanguage() == "HTML":
-            return True
-        else:
-            return False
+        if editor:
+            if editor.getFileName() is not None:
+                extension = os.path.normcase(
+                    os.path.splitext(editor.getFileName())[1][1:])
+                return extension in \
+                    Preferences.getEditor("PreviewHtmlFileNameExtensions") + \
+                    Preferences.getEditor("PreviewMarkdownFileNameExtensions") + \
+                    Preferences.getEditor("PreviewRestFileNameExtensions")
+            elif editor.getLanguage() == "HTML":
+                return True
+        
+        return False
     
     def __runProcessingThread(self):
         """

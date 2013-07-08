@@ -31,7 +31,7 @@ aboutText = QApplication.translate("AboutDialog",
     """<p>To request a new feature please send an email to"""
     """ <a href="mailto:{3}">{3}</a>.</p>"""
     """<p>{0} uses third party software which is copyrighted"""
-    """ by it's respective copyright holder. For details see"""
+    """ by its respective copyright holder. For details see"""
     """ the copyright notice of the individual package.</p>"""
 ).format(UI.Info.Program, UI.Info.Homepage, UI.Info.BugAddress, UI.Info.FeatureAddress)
 

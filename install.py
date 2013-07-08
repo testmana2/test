@@ -356,7 +356,7 @@ def cleanUp():
         "eric5-webbrowser", "eric5-iconeditor",
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
-        "eric5_doc",
+        "eric5_doc", "eric5_qregularexpression",
         "eric5_qregexp", "eric5_re",
         "eric5_trpreviewer", "eric5_uipreviewer",
         "eric5_unittest", "eric5",
@@ -458,6 +458,7 @@ def installEric():
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginrepository"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginuninstall"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregexp"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregularexpression"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_re"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_snap"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_sqlbrowser"))
@@ -820,7 +821,7 @@ def doDependancyChecks():
         from PyQt4 import Qsci      # __IGNORE_WARNING__
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
-        print("it's PyQt4 wrapper.")
+        print("its PyQt4 wrapper.")
         print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")
@@ -1022,6 +1023,10 @@ def main(argv):
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, macAppBundleName, macPythonExe
+    
+    if sys.version_info > (3, 9, 9) or sys.version_info < (3, 0, 0):
+        print('Sorry, eric5 requires Python 3 for running.')
+        exit(5)
     
     progName = os.path.basename(argv[0])
     

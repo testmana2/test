@@ -179,7 +179,7 @@ E5TabWidget
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#TabWidget.__captionChange">__captionChange</a></td>
-<td>Private method to handle Caption change signals from the editor.</td>
+<td>Private slot to handle Caption change signals from the editor.</td>
 </tr><tr>
 <td><a href="#TabWidget.__closeButtonClicked">__closeButtonClicked</a></td>
 <td>Private method to handle the press of the close button.</td>
@@ -231,6 +231,9 @@ E5TabWidget
 </tr><tr>
 <td><a href="#TabWidget.__copyTabOther">__copyTabOther</a></td>
 <td>Private method to copy an editor from another TabWidget.</td>
+</tr><tr>
+<td><a href="#TabWidget.__cursorLineChanged">__cursorLineChanged</a></td>
+<td>Private slot to handle a change of the current editor's cursor line.</td>
 </tr><tr>
 <td><a href="#TabWidget.__initMenu">__initMenu</a></td>
 <td>Private method to initialize the tab context menu.</td>
@@ -296,7 +299,7 @@ view manager widget (Tabview)
 <h4>TabWidget.__captionChange</h4>
 <b>__captionChange</b>(<i>cap, editor</i>)
 <p>
-        Private method to handle Caption change signals from the editor.
+        Private slot to handle Caption change signals from the editor.
 </p><p>
         Updates the tab text and tooltip text to reflect the new caption information.
 </p><dl>
@@ -415,6 +418,16 @@ index of the tab in the old tab widget (integer)
 </dd><dt><i>targetIndex</i></dt>
 <dd>
 index position to place it to (integer)
+</dd>
+</dl><a NAME="TabWidget.__cursorLineChanged" ID="TabWidget.__cursorLineChanged"></a>
+<h4>TabWidget.__cursorLineChanged</h4>
+<b>__cursorLineChanged</b>(<i>lineno</i>)
+<p>
+        Private slot to handle a change of the current editor's cursor line.
+</p><dl>
+<dt><i>lineno</i></dt>
+<dd>
+line number of the current editor's cursor (zero based)
 </dd>
 </dl><a NAME="TabWidget.__initMenu" ID="TabWidget.__initMenu"></a>
 <h4>TabWidget.__initMenu</h4>
@@ -635,6 +648,10 @@ emitted just before an editor window gets closed
 <dd>
 emitted to signal a change of an
             editors language
+</dd><dt>editorLineChanged(str,int)</dt>
+<dd>
+emitted to signal a change of an editor's
+            current line (line is given one based)
 </dd><dt>editorOpened(str)</dt>
 <dd>
 emitted after an editor window was opened
@@ -720,7 +737,7 @@ QSplitter, ViewManager
 <td>Public method called to filter the event queue.</td>
 </tr><tr>
 <td><a href="#Tabview.getTabWidgetById">getTabWidgetById</a></td>
-<td>Public method to get a reference to a tab widget knowing it's ID.</td>
+<td>Public method to get a reference to a tab widget knowing its ID.</td>
 </tr><tr>
 <td><a href="#Tabview.insertView">insertView</a></td>
 <td>Protected method to add a view (i.e.</td>
@@ -924,7 +941,7 @@ always False
 <h4>Tabview.getTabWidgetById</h4>
 <b>getTabWidgetById</b>(<i>id_</i>)
 <p>
-        Public method to get a reference to a tab widget knowing it's ID.
+        Public method to get a reference to a tab widget knowing its ID.
 </p><dl>
 <dt><i>id_</i></dt>
 <dd>

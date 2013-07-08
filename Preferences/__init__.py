@@ -105,7 +105,7 @@ class Prefs(object):
         # allowed values are "Toolboxes" and "Sidebars"
         "LayoutShellEmbedded": 0,           # 0 = separate
                                             # 1 = embedded in debug browser
-        "LayoutFileBrowserEmbedded": 1,     # 0 = separate
+        "LayoutFileBrowserEmbedded": 0,     # 0 = separate
                                             # 1 = embedded in debug browser
                                             # 2 = embedded in project browser
         "BrowsersListFoldersFirst": True,
@@ -557,6 +557,8 @@ class Prefs(object):
         "AutoSaveDbgProperties": False,
         "HideGeneratedForms": False,
         "FollowEditor": True,
+        "FollowCursorLine": True,
+        "AutoPopulateItems": True,
         "RecentNumber": 9,
         "DeterminePyFromProject": True,
     }
@@ -579,6 +581,19 @@ class Prefs(object):
             InterfacesBrowserFlag | \
             OthersBrowserFlag,
         "Qt4C":
+            SourcesBrowserFlag | \
+            ResourcesBrowserFlag | \
+            TranslationsBrowserFlag | \
+            InterfacesBrowserFlag | \
+            OthersBrowserFlag,
+        "PyQt5":
+            SourcesBrowserFlag | \
+            FormsBrowserFlag | \
+            ResourcesBrowserFlag | \
+            TranslationsBrowserFlag | \
+            InterfacesBrowserFlag | \
+            OthersBrowserFlag,
+        "PyQt5C":
             SourcesBrowserFlag | \
             ResourcesBrowserFlag | \
             TranslationsBrowserFlag | \
@@ -636,6 +651,7 @@ class Prefs(object):
         "Qt4DocDir": "",
         "Qt5DocDir": "",
         "PyQt4DocDir": "",
+        "PyQt5DocDir": "",
         "PySideDocDir": "",
         "SingleHelpWindow": True,
         "SaveGeometry": True,
@@ -673,6 +689,7 @@ class Prefs(object):
         "DoNotTrack": False,
         "SendReferer": True,
         "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"],
+        "NoCacheHosts": ["qt-project.org"],
         "RssFeeds": [],
         "SyncEnabled": False,
         "SyncBookmarks": True,
@@ -2161,7 +2178,8 @@ def getHelp(key, prefClass=Prefs):
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions", "AdBlockExceptions", "ClickToFlashWhitelist",
-                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts"]:
+                 "SendRefererWhitelist", "GreaseMonkeyDisabledScripts",
+                 "NoCacheHosts"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

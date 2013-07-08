@@ -214,6 +214,8 @@ def readmodule_ex(module, path=[]):
         return dict
 
     lineno, last_lineno_pos = 1, 0
+    lastGlobalEntry = None
+    cur_obj = None
     i = 0
     while True:
         m = _getnext(src, i)
@@ -234,6 +236,9 @@ def readmodule_ex(module, path=[]):
             # close all interfaces/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             if classstack:
                 # it's an interface/module method
@@ -244,6 +249,8 @@ def readmodule_ex(module, path=[]):
                                  file, lineno, meth_sig)
                     cur_class._addmethod(meth_name, f)
                 # else it's a nested def
+                else:
+                    f = None
             else:
                 # it's a function
                 f = Function(module, meth_name,
@@ -254,6 +261,13 @@ def readmodule_ex(module, path=[]):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = f
+            if cur_obj and isinstance(cur_obj, Function):
+                cur_obj.setEndLine(lineno - 1)
+            cur_obj = f
             classstack.append((f, thisindent))  # Marker for nested fns
 
         elif m.start("String") >= 0:
@@ -269,6 +283,9 @@ def readmodule_ex(module, path=[]):
             # close all interfaces/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
@@ -286,6 +303,13 @@ def readmodule_ex(module, path=[]):
             else:
                 cls = classstack[-1][0]
                 cls._addclass(class_name, cur_class)
+            if not classstack:
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = cur_class
+            if cur_obj and isinstance(cur_obj, Function):
+                cur_obj.setEndLine(lineno - 1)
+            cur_obj = cur_class
             classstack.append((cur_class, thisindent))
 
         elif m.start("Module") >= 0:
@@ -295,6 +319,9 @@ def readmodule_ex(module, path=[]):
             # close all interfaces/modules indented at least as much
             while classstack and \
                   classstack[-1][1] >= thisindent:
+                if classstack[-1][0] is not None:
+                    # record the end line
+                    classstack[-1][0].setEndLine(lineno - 1)
                 del classstack[-1]
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
@@ -303,6 +330,12 @@ def readmodule_ex(module, path=[]):
             cur_class = Module(module, module_name, file, lineno)
             if not classstack:
                 dict[module_name] = cur_class
+                if lastGlobalEntry:
+                    lastGlobalEntry.setEndLine(lineno - 1)
+                lastGlobalEntry = cur_class
+            if cur_obj and isinstance(cur_obj, Function):
+                cur_obj.setEndLine(lineno - 1)
+            cur_obj = cur_class
             classstack.append((cur_class, thisindent))
 
         elif m.start("Attribute") >= 0:
@@ -323,6 +356,9 @@ def readmodule_ex(module, path=[]):
                     break
                 else:
                     index -= 1
+                    if lastGlobalEntry:
+                        lastGlobalEntry.setEndLine(lineno - 1)
+                    lastGlobalEntry = None
 
         elif m.start("Begin") >= 0:
             # a begin of a block we are not interested in

@@ -87,7 +87,8 @@ def main():
     
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
-                                   createMainWidget)
+                                   createMainWidget,
+                                   installErrorHandler=True)
     sys.exit(res)
 
 if __name__ == '__main__':

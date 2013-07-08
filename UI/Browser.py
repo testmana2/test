@@ -95,7 +95,7 @@ class Browser(QTreeView):
             """ a Source Viewer window. The window displays several separate"""
             """ hierachies.</p>"""
             """<p>The first hierachy is only shown if you have opened a program for"""
-            """ debugging and it's root is the directory containing that program."""
+            """ debugging and its root is the directory containing that program."""
             """ Usually all of the separate files that make up a Python application are"""
             """ held in the same directory, so this hierachy gives you easy access to"""
             """ most of what you will need.</p>"""

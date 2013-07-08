@@ -44,6 +44,7 @@ class CallStackViewer(QTreeWidget):
         self.setAlternatingRowColors(True)
         self.setItemsExpandable(False)
         self.setRootIsDecorated(False)
+        self.setWindowTitle(self.trUtf8("Call Stack"))
         
         self.__menu = QMenu(self)
         self.__sourceAct = self.__menu.addAction(

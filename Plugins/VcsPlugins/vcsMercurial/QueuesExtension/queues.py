@@ -110,7 +110,7 @@ class Queues(HgExtension):
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -150,7 +150,7 @@ class Queues(HgExtension):
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -180,7 +180,7 @@ class Queues(HgExtension):
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -214,7 +214,7 @@ class Queues(HgExtension):
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -656,7 +656,7 @@ class Queues(HgExtension):
                     process = QProcess()
                     process.setWorkingDirectory(repodir)
                     process.start('hg', args)
-                    procStarted = process.waitForStarted()
+                    procStarted = process.waitForStarted(5000)
                     if procStarted:
                         process.waitForFinished(30000)
         else:
@@ -782,7 +782,7 @@ class Queues(HgExtension):
                     process = QProcess()
                     process.setWorkingDirectory(repodir)
                     process.start('hg', args)
-                    procStarted = process.waitForStarted()
+                    procStarted = process.waitForStarted(5000)
                     if procStarted:
                         finished = process.waitForFinished(30000)
                         if finished:
@@ -854,7 +854,7 @@ class Queues(HgExtension):
                     process = QProcess()
                     process.setWorkingDirectory(repodir)
                     process.start('hg', args)
-                    procStarted = process.waitForStarted()
+                    procStarted = process.waitForStarted(5000)
                     if procStarted:
                         finished = process.waitForFinished(30000)
                         if finished:

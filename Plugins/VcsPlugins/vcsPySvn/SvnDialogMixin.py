@@ -63,7 +63,7 @@ class SvnDialogMixin(object):
             password should be saved.
         """
         from .SvnLoginDialog import SvnLoginDialog
-        cursor = QApplication.overrideCursor()
+        cursor = QCursor(QApplication.overrideCursor())
         if cursor is not None:
             QApplication.restoreOverrideCursor()
         parent = isinstance(self, QWidget) and self or None

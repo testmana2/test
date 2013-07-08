@@ -58,6 +58,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         self.stopButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Open).setToolTip(
             self.trUtf8("Opens the selected file"))
+        self.buttonBox.button(QDialogButtonBox.Open).setEnabled(False)
         
         self.project = project
         self.extsepLabel.setText(os.extsep)
@@ -75,21 +76,25 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         elif button == self.buttonBox.button(QDialogButtonBox.Open):
             self.__openFile()
     
-    def __openFile(self):
+    def __openFile(self, itm=None):
         """
         Private slot to open a file.
         
-        It emits the signal
-        sourceFile or designerFile depending on the file extension.
-        """
-        itm = self.fileList.currentItem()
-        fileName = itm.text(0)
-        filePath = itm.text(1)
+        It emits the signal sourceFile or designerFile depending on the
+        file extension.
         
-        if fileName.endswith('.ui'):
-            self.designerFile.emit(os.path.join(filePath, fileName))
-        else:
-            self.sourceFile.emit(os.path.join(filePath, fileName))
+        @param itm item to be opened (QTreeWidgetItem)
+        """
+        if itm is None:
+            itm = self.fileList.currentItem()
+        if itm is not None:
+            fileName = itm.text(0)
+            filePath = itm.text(1)
+            
+            if fileName.endswith('.ui'):
+                self.designerFile.emit(os.path.join(filePath, fileName))
+            else:
+                self.sourceFile.emit(os.path.join(filePath, fileName))
 
     def __searchFile(self):
         """
@@ -104,7 +109,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             self.fileList.clear()
             return
         
-        patternFormat = fileExt and "{0}{1}{2}*" or "{0}*{1}{2}"
+        patternFormat = fileExt and "{0}{1}{2}" or "{0}*{1}{2}"
         fileNamePattern = patternFormat.format(fileName, os.extsep,
             fileExt and fileExt or '*')
         
@@ -142,10 +147,12 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
                     QApplication.processEvents()
             
         del locations
-        self.buttonBox.button(QDialogButtonBox.Open).setEnabled(found)
         self.stopButton.setEnabled(False)
         self.fileList.header().resizeSections(QHeaderView.ResizeToContents)
         self.fileList.header().setStretchLastSection(True)
+        
+        if found:
+            self.fileList.setCurrentItem(self.fileList.topLevelItem(0))
 
     def checkStop(self):
         """
@@ -226,13 +233,23 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         """
         Private slot to handle the double click on a file item.
         
-        It emits the signal
-        sourceFile or designerFile depending on the file extension.
+        It emits the signal sourceFile or designerFile depending on the
+        file extension.
         
         @param itm the double clicked listview item (QTreeWidgetItem)
         @param column column that was double clicked (integer) (ignored)
         """
-        self.__openFile()
+        self.__openFile(itm)
+        
+    @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
+    def on_fileList_currentItemChanged(self, current, previous):
+        """
+        Private slot handling a change of the current item.
+        
+        @param current current item (QTreeWidgetItem)
+        @param previous prevoius current item (QTreeWidgetItem)
+        """
+        self.buttonBox.button(QDialogButtonBox.Open).setEnabled(current is not None)
         
     def show(self):
         """

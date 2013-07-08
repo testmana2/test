@@ -120,7 +120,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
             self.process.setWorkingDirectory(repodir)
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()

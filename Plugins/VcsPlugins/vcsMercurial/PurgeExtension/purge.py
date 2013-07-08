@@ -71,7 +71,7 @@ class Purge(HgExtension):
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:

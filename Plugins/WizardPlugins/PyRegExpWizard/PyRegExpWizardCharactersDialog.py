@@ -301,7 +301,9 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
                 self.__formatCharacter(index, char2))
         
         if regexp:
-            if len(regexp) == 2 and regexp in self.predefinedClasses:
+            if (len(regexp) == 2 and \
+                (regexp in self.predefinedClasses or regexp in self.specialChars)) or \
+               len(regexp) == 1:
                 return regexp
             else:
                 return "[{0}]".format(regexp)

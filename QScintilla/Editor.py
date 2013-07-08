@@ -48,6 +48,7 @@ class Editor(QsciScintillaCompat):
     @signal redoAvailable(bool) emitted to signal the redo availability
     @signal cursorChanged(str, int, int) emitted when the cursor position
             was changed
+    @signal cursorLineChanged(int) emitted when the cursor line was changed
     @signal editorAboutToBeSaved(str) emitted before the editor is saved
     @signal editorSaved(str) emitted after the editor has been saved
     @signal editorRenamed(str) emitted after the editor got a new name
@@ -82,6 +83,7 @@ class Editor(QsciScintillaCompat):
     undoAvailable = pyqtSignal(bool)
     redoAvailable = pyqtSignal(bool)
     cursorChanged = pyqtSignal(str, int, int)
+    cursorLineChanged = pyqtSignal(int)
     editorAboutToBeSaved = pyqtSignal(str)
     editorSaved = pyqtSignal(str)
     editorRenamed = pyqtSignal(str)
@@ -1584,6 +1586,9 @@ class Editor(QsciScintillaCompat):
         if Preferences.getEditor("MarkOccurrencesEnabled"):
             self.__markOccurrencesTimer.stop()
             self.__markOccurrencesTimer.start()
+        
+        if self.lastLine != line:
+            self.cursorLineChanged.emit(line)
         
         if self.spell is not None:
             # do spell checking

@@ -74,7 +74,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         args.append('.')
         process.setWorkingDirectory(self.projectDir)
         process.start('svn', args)
-        procStarted = process.waitForStarted()
+        procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(300000)
             if finished and process.exitCode() == 0:

@@ -410,7 +410,7 @@ class HelpTabWidget(E5TabWidget):
     
     def closeBrowserAt(self, index):
         """
-        Public slot to close a browser based on it's index.
+        Public slot to close a browser based on its index.
         
         @param index index of browser to close (integer)
         """

@@ -88,6 +88,9 @@ QWidget, Ui_FindFileNameDialog
 <td><a href="#FindFileNameDialog.on_fileExtEdit_textChanged">on_fileExtEdit_textChanged</a></td>
 <td>Private slot to handle the textChanged signal of the file extension edit.</td>
 </tr><tr>
+<td><a href="#FindFileNameDialog.on_fileList_currentItemChanged">on_fileList_currentItemChanged</a></td>
+<td>Private slot handling a change of the current item.</td>
+</tr><tr>
 <td><a href="#FindFileNameDialog.on_fileList_itemActivated">on_fileList_itemActivated</a></td>
 <td>Private slot to handle the double click on a file item.</td>
 </tr><tr>
@@ -132,13 +135,18 @@ parent widget of this dialog (QWidget)
 </dd>
 </dl><a NAME="FindFileNameDialog.__openFile" ID="FindFileNameDialog.__openFile"></a>
 <h4>FindFileNameDialog.__openFile</h4>
-<b>__openFile</b>(<i></i>)
+<b>__openFile</b>(<i>itm=None</i>)
 <p>
         Private slot to open a file.
 </p><p>
-        It emits the signal
-        sourceFile or designerFile depending on the file extension.
-</p><a NAME="FindFileNameDialog.__searchFile" ID="FindFileNameDialog.__searchFile"></a>
+        It emits the signal sourceFile or designerFile depending on the
+        file extension.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+item to be opened (QTreeWidgetItem)
+</dd>
+</dl><a NAME="FindFileNameDialog.__searchFile" ID="FindFileNameDialog.__searchFile"></a>
 <h4>FindFileNameDialog.__searchFile</h4>
 <b>__searchFile</b>(<i></i>)
 <p>
@@ -173,14 +181,27 @@ button that was clicked (QAbstractButton)
 <dd>
 (ignored)
 </dd>
+</dl><a NAME="FindFileNameDialog.on_fileList_currentItemChanged" ID="FindFileNameDialog.on_fileList_currentItemChanged"></a>
+<h4>FindFileNameDialog.on_fileList_currentItemChanged</h4>
+<b>on_fileList_currentItemChanged</b>(<i>current, previous</i>)
+<p>
+        Private slot handling a change of the current item.
+</p><dl>
+<dt><i>current</i></dt>
+<dd>
+current item (QTreeWidgetItem)
+</dd><dt><i>previous</i></dt>
+<dd>
+prevoius current item (QTreeWidgetItem)
+</dd>
 </dl><a NAME="FindFileNameDialog.on_fileList_itemActivated" ID="FindFileNameDialog.on_fileList_itemActivated"></a>
 <h4>FindFileNameDialog.on_fileList_itemActivated</h4>
 <b>on_fileList_itemActivated</b>(<i>itm, column</i>)
 <p>
         Private slot to handle the double click on a file item.
 </p><p>
-        It emits the signal
-        sourceFile or designerFile depending on the file extension.
+        It emits the signal sourceFile or designerFile depending on the
+        file extension.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>

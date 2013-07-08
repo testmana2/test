@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>488</width>
-    <height>253</height>
+    <height>254</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -241,7 +241,7 @@
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</string>
         </property>
         <property name="text">
-         <string>Debug Child Process</string>
+         <string>Follow Child Process</string>
         </property>
        </widget>
       </item>

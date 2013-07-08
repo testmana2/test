@@ -11,7 +11,7 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray
+from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 
@@ -143,14 +143,6 @@ class NetworkAccessManager(QNetworkAccessManager):
         if not self.__acceptLanguage.isEmpty():
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
-        # set cache policy
-        if op == QNetworkAccessManager.GetOperation:
-            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-                Preferences.getHelp("CachePolicy"))
-        else:
-            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
-                QNetworkRequest.AlwaysNetwork)
-        
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:
             if self.__adblockNetwork is None:
@@ -160,6 +152,21 @@ class NetworkAccessManager(QNetworkAccessManager):
             if reply is not None:
                 reply.setParent(self)
                 return reply
+        
+        # set cache policy
+        if op == QNetworkAccessManager.GetOperation:
+            urlHost = req.url().host()
+            for host in Preferences.getHelp("NoCacheHosts"):
+                if host in urlHost:
+                    req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                        QNetworkRequest.AlwaysNetwork)
+                    break
+            else:
+                req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                    Preferences.getHelp("CachePolicy"))
+        else:
+            req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                QNetworkRequest.AlwaysNetwork)
         
         # Do Not Track feature
         if self.__doNotTrack:
@@ -238,9 +245,11 @@ class NetworkAccessManager(QNetworkAccessManager):
         Private method to set the disk cache.
         """
         if Preferences.getHelp("DiskCacheEnabled"):
+            from PyQt4.QtWebKit import qWebKitVersion
             from .NetworkDiskCache import NetworkDiskCache
             diskCache = NetworkDiskCache(self)
-            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache')
+            location = os.path.join(Utilities.getConfigDir(), "browser", 'cache',
+                                    "{0}-Qt{1}".format(qWebKitVersion(), qVersion()))
             size = Preferences.getHelp("DiskCacheSize") * 1024 * 1024
             diskCache.setCacheDirectory(location)
             diskCache.setMaximumCacheSize(size)

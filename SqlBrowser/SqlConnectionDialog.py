@@ -56,7 +56,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
     
     def __updateDialog(self):
         """
-        Private slot to update the dialog depending on it's contents.
+        Private slot to update the dialog depending on its contents.
         """
         driver = self.driverCombo.currentText()
         if driver.startswith("QSQLITE"):

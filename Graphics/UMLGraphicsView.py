@@ -646,7 +646,7 @@ class UMLGraphicsView(E5GraphicsView):
     
     def findItemByName(self, name):
         """
-        Public method to find an UML item based on it's name.
+        Public method to find an UML item based on its name.
         
         @param name name to look for (string)
         @return item found (UMLItem) or None

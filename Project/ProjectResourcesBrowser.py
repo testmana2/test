@@ -82,7 +82,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMultiMenuActions = []
         
         self.menu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('Compile resource'),
                 self.__compileResource)
             self.menu.addAction(self.trUtf8('Compile all resources'),
@@ -111,7 +111,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.menu.addAction(self.trUtf8('New resource...'), self.__newResource)
         else:
             if self.hooks["newResource"] is not None:
@@ -133,7 +133,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.backMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
@@ -164,7 +164,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             act = self.multiMenu.addAction(self.trUtf8('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
@@ -191,7 +191,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
@@ -223,7 +223,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
-        if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
+        if self.project.getProjectType() in ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
             self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
@@ -581,6 +581,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         args.append("-py2")
                     else:
                         args.append("-py3")
+            elif self.project.getProjectType() == "PyQt5":
+                self.rccCompiler = 'pyrcc5'
+                if Utilities.isWindowsPlatform():
+                    self.rccCompiler += '.exe'
             elif self.project.getProjectType() == "PySide":
                 self.rccCompiler = Utilities.generatePySideToolPath('pyside-rcc')
                 if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
@@ -619,7 +623,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.noDialog = noDialog
         self.compileProc.start(rcc, args)
-        procStarted = self.compileProc.waitForStarted()
+        procStarted = self.compileProc.waitForStarted(5000)
         if procStarted:
             self.compileRunning = True
             e5App().getObject("ViewManager").enableEditorsCheckFocusIn(False)

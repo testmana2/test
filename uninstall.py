@@ -103,7 +103,7 @@ def uninstallEric():
         "eric5-webbrowser", "eric5-iconeditor",
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
-        "eric5_doc",
+        "eric5_doc", "eric5_qregularexpression",
         "eric5_qregexp", "eric5_re",
         "eric5_trpreviewer", "eric5_uipreviewer",
         "eric5_unittest", "eric5",

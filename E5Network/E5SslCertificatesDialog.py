@@ -149,7 +149,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
             server = itm.text(1)
             cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
             
-            # delete the selected entry and it's parent entry, if it was the only one
+            # delete the selected entry and its parent entry, if it was the only one
             parent = itm.parent()
             parent.takeChild(parent.indexOfChild(itm))
             if parent.childCount() == 0:
@@ -344,7 +344,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         if res:
             cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
             
-            # delete the selected entry and it's parent entry, if it was the only one
+            # delete the selected entry and its parent entry, if it was the only one
             parent = itm.parent()
             parent.takeChild(parent.indexOfChild(itm))
             if parent.childCount() == 0:

@@ -142,7 +142,7 @@ class HgDialog(QDialog, Ui_HgDialog):
             if workingDir:
                 self.proc.setWorkingDirectory(workingDir)
             self.proc.start('hg', args)
-            procStarted = self.proc.waitForStarted()
+            procStarted = self.proc.waitForStarted(5000)
             if not procStarted:
                 self.buttonBox.setFocus()
                 self.inputGroup.setEnabled(False)

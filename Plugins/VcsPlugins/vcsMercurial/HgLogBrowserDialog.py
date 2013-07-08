@@ -408,7 +408,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 process = QProcess()
                 process.setWorkingDirectory(self.repodir)
                 process.start('hg', args)
-                procStarted = process.waitForStarted()
+                procStarted = process.waitForStarted(5000)
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
@@ -450,7 +450,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             process = QProcess()
             process.setWorkingDirectory(self.repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -496,7 +496,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             process = QProcess()
             process.setWorkingDirectory(self.repodir)
             process.start('hg', args)
-            procStarted = process.waitForStarted()
+            procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
@@ -700,7 +700,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.inputGroup.show()
             
             self.process.start('hg', args)
-            procStarted = self.process.waitForStarted()
+            procStarted = self.process.waitForStarted(5000)
             if not procStarted:
                 self.inputGroup.setEnabled(False)
                 self.inputGroup.hide()
@@ -963,6 +963,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
+        self.diff.raise_()
         self.diff.start(self.filename, [rev1, rev2], self.bundle)
     
     def on_buttonBox_clicked(self, button):

@@ -110,7 +110,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             act = self.menu.addAction(self.trUtf8('Generate translation'),
                 self.__generateSelected)
             self.tsMenuActions.append(act)
@@ -184,6 +184,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__generateObsoleteAll)
                 self.tsprocMenuActions.append(act)
             self.menu.addSeparator()
+            if self.hooks["open"] is not None:
+                act = self.menu.addAction(
+                    self.hooksMenuEntries.get("open",
+                        self.trUtf8('Open')),
+                    self._openItem)
+                self.tsMenuActions.append(act)
             act = self.menu.addAction(self.trUtf8('Open in Editor'),
                 self.__openFileInEditor)
             self.tsMenuActions.append(act)
@@ -220,7 +226,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             act = self.backMenu.addAction(self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocBackMenuActions.append(act)
@@ -271,7 +277,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             act = self.multiMenu.addAction(self.trUtf8('Generate translations'),
                 self.__generateSelected)
             self.tsMultiMenuActions.append(act)
@@ -320,6 +326,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 self.tsMultiMenuActions.append(act)
                 self.tsprocMultiMenuActions.append(act)
             self.multiMenu.addSeparator()
+            if self.hooks["open"] is not None:
+                act = self.multiMenu.addAction(
+                    self.hooksMenuEntries.get("open",
+                        self.trUtf8('Open')),
+                    self._openItem)
+                self.tsMultiMenuActions.append(act)
             act = self.multiMenu.addAction(self.trUtf8('Open in Editor'),
                 self.__openFileInEditor)
             self.tsMultiMenuActions.append(act)
@@ -342,7 +354,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             act = self.dirMenu.addAction(self.trUtf8('Generate all translations'),
                 self.__generateAll)
             self.tsprocDirMenuActions.append(act)
@@ -448,7 +460,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the menu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -488,7 +500,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the multiMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
             itmList = self.getSelectedItems()
@@ -527,7 +539,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the dirMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocDirMenuActions:
                     act.setEnabled(False)
@@ -545,7 +557,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the backMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocBackMenuActions:
                     act.setEnabled(False)
@@ -578,7 +590,10 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         itmList = self.getSelectedItems()
         for itm in itmList:
             if isinstance(itm, ProjectBrowserFileItem):
-                if itm.isLinguistFile():
+                # hook support
+                if self.hooks["open"] is not None:
+                    self.hooks["open"](itm.fileName())
+                elif itm.isLinguistFile():
                     if itm.fileExt() == '.ts':
                         self.linguistFile.emit(itm.fileName())
                     else:
@@ -929,6 +944,10 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdate = 'pylupdate4'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
+        elif self.project.getProjectType() in ["PyQt5", "PyQt5C"]:
+            self.pylupdate = 'pylupdate5'
+            if Utilities.isWindowsPlatform():
+                self.pylupdate = self.pylupdate + '.exe'
         elif self.project.getProjectType() in ["PySide", "PySideC"]:
             self.pylupdate = Utilities.generatePySideToolPath('pyside-lupdate')
         else:
@@ -950,7 +969,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
             
             self.pylupdateProc.start(self.pylupdate, args)
-            procStarted = self.pylupdateProc.waitForStarted()
+            procStarted = self.pylupdateProc.waitForStarted(5000)
             if procStarted:
                 self.pylupdateProcRunning = True
                 self.pylupdateProc.waitForFinished(10000)
@@ -1079,7 +1098,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         args = []
         
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"]:
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
             lrelease = os.path.join(
                     Utilities.getQtBinariesPath(),
                     Utilities.generateQtToolName("lrelease"))
@@ -1096,7 +1115,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         self.lreleaseProc.readyReadStandardError.connect(self.__readStderrLrelease)
         
         self.lreleaseProc.start(lrelease, args)
-        procStarted = self.lreleaseProc.waitForStarted()
+        procStarted = self.lreleaseProc.waitForStarted(5000)
         if procStarted:
             self.lreleaseProcRunning = True
         else:
@@ -1136,6 +1155,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         <li>generateSelectedWithObsolete: takes list of filenames as parameter</li>
         <li>releaseAll: takes list of filenames as parameter</li>
         <li>releaseSelected: takes list of filenames as parameter</li>
+        <li>open: takes a filename as parameter</li>
         </ul>
         
         <b>Note</b>: Filenames are relative to the project directory.
@@ -1148,4 +1168,5 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             "generateSelectedWithObsolete": None,
             "releaseAll": None,
             "releaseSelected": None,
+            "open": None,
         }
