@@ -25,13 +25,15 @@ PY_SOURCE = imp.PY_SOURCE
 PTL_SOURCE = 128
 RB_SOURCE = 129
 IDL_SOURCE = 130
+JS_SOURCE = 131
 
-SUPPORTED_TYPES = [PY_SOURCE, PTL_SOURCE, RB_SOURCE, IDL_SOURCE]
+SUPPORTED_TYPES = [PY_SOURCE, PTL_SOURCE, RB_SOURCE, IDL_SOURCE, JS_SOURCE]
 
 __extensions = {
     "IDL": [".idl"],
     "Python": [".py", ".pyw", ".ptl"],  # currently not used
     "Ruby": [".rb"],
+    "JavaScript": [".js"],
 }
 
 
@@ -56,6 +58,10 @@ def readmodule(module, path=[], isPyFile=False):
         from . import rbclbr
         dict = rbclbr.readmodule_ex(module, path)
         rbclbr._modules.clear()
+    elif ext in __extensions["JavaScript"]:
+        from . import jsclbr
+        dict = jsclbr.readmodule_ex(module, path)
+        jsclbr._modules.clear()
     elif ext in Preferences.getPython("PythonExtensions") or \
          ext in Preferences.getPython("Python3Extensions") or \
          isPyFile:
@@ -100,6 +106,13 @@ def find_module(name, path, isPyFile=False):
             pathname = os.path.join(p, name)
             if os.path.exists(pathname):
                 return (open(pathname), pathname, (ext, 'r', IDL_SOURCE))
+        raise ImportError
+    
+    elif ext in __extensions["JavaScript"]:
+        for p in path:      # only search in path
+            pathname = os.path.join(p, name)
+            if os.path.exists(pathname):
+                return (open(pathname), pathname, (ext, 'r', JS_SOURCE))
         raise ImportError
     
     elif ext == '.ptl':
