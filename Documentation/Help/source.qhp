@@ -940,6 +940,7 @@
               <section title="eric5.Utilities.ClassBrowsers.ClbrBaseClasses" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html" />
               <section title="eric5.Utilities.ClassBrowsers.__init__" ref="eric5.Utilities.ClassBrowsers.__init__.html" />
               <section title="eric5.Utilities.ClassBrowsers.idlclbr" ref="eric5.Utilities.ClassBrowsers.idlclbr.html" />
+              <section title="eric5.Utilities.ClassBrowsers.jsclbr" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
               <section title="eric5.Utilities.ClassBrowsers.pyclbr" ref="eric5.Utilities.ClassBrowsers.pyclbr.html" />
               <section title="eric5.Utilities.ClassBrowsers.rbclbr" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
             </section>
@@ -1434,11 +1435,13 @@
       <keyword name="AsyncPendingWrite" id="AsyncPendingWrite" ref="eric5.DebugClients.Ruby.AsyncFile.html#AsyncPendingWrite" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Attribute" />
+      <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ModuleParser.html#Attribute" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Attribute.__init__" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Attribute.__init__" />
+      <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Attribute.__init__" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Attribute.__init__" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Attribute.__init__" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ModuleParser.html#Attribute.__init__" />
@@ -1788,6 +1791,7 @@
       <keyword name="BrowserFileItem.isDFile" id="BrowserFileItem.isDFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isDFile" />
       <keyword name="BrowserFileItem.isDesignerFile" id="BrowserFileItem.isDesignerFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isDesignerFile" />
       <keyword name="BrowserFileItem.isIdlFile" id="BrowserFileItem.isIdlFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isIdlFile" />
+      <keyword name="BrowserFileItem.isJavaScriptFile" id="BrowserFileItem.isJavaScriptFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isJavaScriptFile" />
       <keyword name="BrowserFileItem.isLinguistFile" id="BrowserFileItem.isLinguistFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isLinguistFile" />
       <keyword name="BrowserFileItem.isMultiProjectFile" id="BrowserFileItem.isMultiProjectFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isMultiProjectFile" />
       <keyword name="BrowserFileItem.isPixmapFile" id="BrowserFileItem.isPixmapFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isPixmapFile" />
@@ -4797,11 +4801,13 @@
       <keyword name="FtpUtilities (Module)" id="FtpUtilities (Module)" ref="eric5.Utilities.FtpUtilities.html" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Function" />
+      <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ModuleParser.html#Function" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Function.__init__" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Function.__init__" />
+      <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Function.__init__" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Function.__init__" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Function.__init__" />
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ModuleParser.html#Function.__init__" />
@@ -12151,11 +12157,22 @@
       <keyword name="VisibilityBase.setProtected" id="VisibilityBase.setProtected" ref="eric5.Utilities.ModuleParser.html#VisibilityBase.setProtected" />
       <keyword name="VisibilityBase.setPublic" id="VisibilityBase.setPublic" ref="eric5.Utilities.ModuleParser.html#VisibilityBase.setPublic" />
       <keyword name="VisibilityMixin" id="VisibilityMixin" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#VisibilityMixin" />
+      <keyword name="VisibilityMixin" id="VisibilityMixin" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#VisibilityMixin" />
       <keyword name="VisibilityMixin" id="VisibilityMixin" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#VisibilityMixin" />
       <keyword name="VisibilityMixin" id="VisibilityMixin" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#VisibilityMixin" />
       <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#VisibilityMixin.__init__" />
+      <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#VisibilityMixin.__init__" />
       <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#VisibilityMixin.__init__" />
       <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#VisibilityMixin.__init__" />
+      <keyword name="Visitor" id="Visitor" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor" />
+      <keyword name="Visitor (Constructor)" id="Visitor (Constructor)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.__init__" />
+      <keyword name="Visitor.__visit" id="Visitor.__visit" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.__visit" />
+      <keyword name="Visitor.parse" id="Visitor.parse" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.parse" />
+      <keyword name="Visitor.visit_const" id="Visitor.visit_const" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.visit_const" />
+      <keyword name="Visitor.visit_function" id="Visitor.visit_function" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.visit_function" />
+      <keyword name="Visitor.visit_noop" id="Visitor.visit_noop" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.visit_noop" />
+      <keyword name="Visitor.visit_property_init" id="Visitor.visit_property_init" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.visit_property_init" />
+      <keyword name="Visitor.visit_var" id="Visitor.visit_var" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#Visitor.visit_var" />
       <keyword name="VmListspacePlugin" id="VmListspacePlugin" ref="eric5.Plugins.PluginVmListspace.html#VmListspacePlugin" />
       <keyword name="VmListspacePlugin (Constructor)" id="VmListspacePlugin (Constructor)" ref="eric5.Plugins.PluginVmListspace.html#VmListspacePlugin.__init__" />
       <keyword name="VmListspacePlugin.activate" id="VmListspacePlugin.activate" ref="eric5.Plugins.PluginVmListspace.html#VmListspacePlugin.activate" />
@@ -12768,6 +12785,7 @@
       <keyword name="isinpath" id="isinpath" ref="eric5.Utilities.__init__.html#isinpath" />
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
+      <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
       <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric5.Toolbox.Startup.html#loadTranslatorForLocale" />
       <keyword name="loadTranslators" id="loadTranslators" ref="eric5.Toolbox.Startup.html#loadTranslators" />
@@ -12896,6 +12914,7 @@
       <keyword name="readlines_1" id="readlines_1" ref="eric5.UtilitiesPython2.pep8.html#readlines_1" />
       <keyword name="readmodule" id="readmodule" ref="eric5.Utilities.ClassBrowsers.__init__.html#readmodule" />
       <keyword name="readmodule_ex" id="readmodule_ex" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#readmodule_ex" />
+      <keyword name="readmodule_ex" id="readmodule_ex" ref="eric5.Utilities.ClassBrowsers.jsclbr.html#readmodule_ex" />
       <keyword name="readmodule_ex" id="readmodule_ex" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#readmodule_ex" />
       <keyword name="readmodule_ex" id="readmodule_ex" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#readmodule_ex" />
       <keyword name="rebase (Module)" id="rebase (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html" />
@@ -13793,6 +13812,7 @@
       <file>eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html</file>
       <file>eric5.Utilities.ClassBrowsers.__init__.html</file>
       <file>eric5.Utilities.ClassBrowsers.idlclbr.html</file>
+      <file>eric5.Utilities.ClassBrowsers.jsclbr.html</file>
       <file>eric5.Utilities.ClassBrowsers.pyclbr.html</file>
       <file>eric5.Utilities.ClassBrowsers.rbclbr.html</file>
       <file>eric5.Utilities.FtpUtilities.html</file>

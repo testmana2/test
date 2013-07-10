@@ -7536,6 +7536,7 @@ eric5.UI.BrowserModel.BrowserFileItem.fileName?4()
 eric5.UI.BrowserModel.BrowserFileItem.isDFile?4()
 eric5.UI.BrowserModel.BrowserFileItem.isDesignerFile?4()
 eric5.UI.BrowserModel.BrowserFileItem.isIdlFile?4()
+eric5.UI.BrowserModel.BrowserFileItem.isJavaScriptFile?4()
 eric5.UI.BrowserModel.BrowserFileItem.isLinguistFile?4()
 eric5.UI.BrowserModel.BrowserFileItem.isMultiProjectFile?4()
 eric5.UI.BrowserModel.BrowserFileItem.isPixmapFile?4()
@@ -7900,6 +7901,7 @@ eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Module?1(module, name, file, linen
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase.setEndLine?4(endLineNo)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase?2(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.IDL_SOURCE?7
+eric5.Utilities.ClassBrowsers.JS_SOURCE?7
 eric5.Utilities.ClassBrowsers.PTL_SOURCE?7
 eric5.Utilities.ClassBrowsers.PY_SOURCE?7
 eric5.Utilities.ClassBrowsers.RB_SOURCE?7
@@ -7916,6 +7918,19 @@ eric5.Utilities.ClassBrowsers.idlclbr._getnext?8
 eric5.Utilities.ClassBrowsers.idlclbr._modules?8
 eric5.Utilities.ClassBrowsers.idlclbr._normalize?8
 eric5.Utilities.ClassBrowsers.idlclbr.readmodule_ex?4(module, path=[])
+eric5.Utilities.ClassBrowsers.jsclbr.Attribute?1(module, name, file, lineno)
+eric5.Utilities.ClassBrowsers.jsclbr.Function?1(module, name, file, lineno, signature='', separator=', ')
+eric5.Utilities.ClassBrowsers.jsclbr.SUPPORTED_TYPES?7
+eric5.Utilities.ClassBrowsers.jsclbr.VisibilityMixin?1()
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.parse?4()
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.visit_const?4(node)
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.visit_function?4(node)
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.visit_noop?4(node)
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.visit_property_init?4(node)
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor.visit_var?4(node)
+eric5.Utilities.ClassBrowsers.jsclbr.Visitor?1(src, module, filename)
+eric5.Utilities.ClassBrowsers.jsclbr._modules?8
+eric5.Utilities.ClassBrowsers.jsclbr.readmodule_ex?4(module, path=[])
 eric5.Utilities.ClassBrowsers.pyclbr.Attribute?1(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.pyclbr.Class?1(module, name, super, file, lineno)
 eric5.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=ClbrBaseClasses.Function.General)
