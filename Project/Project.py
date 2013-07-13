@@ -4231,7 +4231,7 @@ class Project(QObject):
             else:
                 newline = self.getEolString()
             pkglistFile = open(pkglist, "w", encoding="utf-8", newline=newline)
-            pkglistFile.write("\n".join(lst))
+            pkglistFile.write("\n".join([Utilities.fromNativeSeparators(f) for f in lst]))
             pkglistFile.write("\n")  # ensure the file ends with an empty line
             pkglistFile.close()
         except IOError as why:
