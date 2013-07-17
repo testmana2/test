@@ -894,6 +894,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         for index in range(len(self.__pylupdateProcesses)):
             if proc == self.__pylupdateProcesses[index][0]:
                 try:
+                    self.__tmpProjects.remove(self.__pylupdateProcesses[index][1])
                     os.remove(self.__pylupdateProcesses[index][1])
                 except EnvironmentError:
                     pass
@@ -943,6 +944,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     return
         
         # generate a minimal temporary projectfile suitable for pylupdate
+        self.__tmpProjects = []
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
@@ -1070,6 +1072,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         for index in range(len(self.__lreleaseProcesses)):
             if proc == self.__lreleaseProcesses[index][0]:
                 try:
+                    self.__tmpProjects.remove(self.__lreleaseProcesses[index][1])
                     os.remove(self.__lreleaseProcesses[index][1])
                 except EnvironmentError:
                     pass
@@ -1105,6 +1108,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 return
         
         # generate a minimal temporary projectfile suitable for lrelease
+        self.__tmpProjects = []
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
