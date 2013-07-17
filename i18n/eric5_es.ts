@@ -31309,7 +31309,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="359"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="361"/>
         <source>No issues found.</source>
         <translation>No se han encontrado problemas.</translation>
     </message>
@@ -31349,7 +31349,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="328"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="330"/>
         <source>Fix: {0}</source>
         <translation>Arreglar: {0}</translation>
     </message>
@@ -33432,7 +33432,7 @@ Seleccione Actualizar.</translation>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4273"/>
+        <location filename="../Project/Project.py" line="4281"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
@@ -33442,7 +33442,7 @@ Seleccione Actualizar.</translation>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4441"/>
+        <location filename="../Project/Project.py" line="4449"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
@@ -33562,12 +33562,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4290"/>
+        <location filename="../Project/Project.py" line="4298"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4298"/>
+        <location filename="../Project/Project.py" line="4306"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
@@ -33777,32 +33777,32 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4273"/>
+        <location filename="../Project/Project.py" line="4281"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4310"/>
+        <location filename="../Project/Project.py" line="4318"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4321"/>
+        <location filename="../Project/Project.py" line="4329"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4342"/>
+        <location filename="../Project/Project.py" line="4350"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4361"/>
+        <location filename="../Project/Project.py" line="4369"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4441"/>
+        <location filename="../Project/Project.py" line="4449"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
@@ -35285,37 +35285,37 @@ Seleccione Actualizar.</translation>
         <translation>No se han seleccionado archivos de traducción (*.ts).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="887"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="889"/>
         <source>Translation file generation</source>
         <translation>Generación de archivo de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="882"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="884"/>
         <source>The generation of the translation files (*.ts) was successful.</source>
         <translation>La generación de archivos de traducción (*.ts) ha sido satisfactoria.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="887"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="889"/>
         <source>The generation of the translation files (*.ts) has failed.</source>
         <translation>La generación de archivos de traducción (*.ts) ha fallado.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1131"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1144"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1063"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1065"/>
         <source>Translation file release</source>
         <translation>Crear versión release del archivo de traducción</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1049"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1051"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha sido satisfactoria.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1063"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1065"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La versión release de los archivos de traducción (*.qm) ha fallado.</translation>
     </message>
@@ -35340,12 +35340,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo temporal de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido guardarse.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="986"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="988"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1131"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1144"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar lrelease.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -59308,179 +59308,184 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>pep8</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="165"/>
         <source>indentation contains mixed spaces and tabs</source>
         <translation>la indentación contiene espacios y tabuladores mezclados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="166"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="167"/>
         <source>indentation is not a multiple of four</source>
         <translation>la indentación no es un múltiplo de cuatro</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="168"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="169"/>
         <source>expected an indented block</source>
         <translation>se esperaba un bloque indentado</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="171"/>
         <source>unexpected indentation</source>
         <translation>indentación inesperada</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="173"/>
         <source>indentation contains tabs</source>
         <translation>la indentación contiene tabuladores</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="175"/>
         <source>whitespace after &apos;{0}&apos;</source>
         <translation>espacio en blanco después de&apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="181"/>
         <source>whitespace before &apos;{0}&apos;</source>
         <translation>espacio en blanco antes de&apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="183"/>
         <source>multiple spaces before operator</source>
         <translation>múltiples espacios antes de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="185"/>
         <source>multiple spaces after operator</source>
         <translation>múltiples espacios después de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="187"/>
         <source>tab before operator</source>
         <translation>tabulador antes de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="189"/>
         <source>tab after operator</source>
         <translation>tabulador después de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="191"/>
         <source>missing whitespace around operator</source>
         <translation>falta espacio en blanco alrededor de un operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="193"/>
         <source>missing whitespace after &apos;{0}&apos;</source>
         <translation>falta espacio en blanco después de {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="195"/>
         <source>multiple spaces after &apos;{0}&apos;</source>
         <translation>múltiples espacios en blanco después de &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="197"/>
         <source>tab after &apos;{0}&apos;</source>
         <translation>tabulador después de &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="199"/>
         <source>no spaces around keyword / parameter equals</source>
         <translation>no hay espacios alrededor de palabra clave / parámetro </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="201"/>
         <source>at least two spaces before inline comment</source>
         <translation>al menos dos espacios antes de comentario inline</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="203"/>
         <source>inline comment should start with &apos;# &apos;</source>
         <translation>un comentario inline debe comenzar con &apos;#&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="205"/>
         <source>trailing whitespace</source>
         <translation>espacio en blanco por detrás</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="207"/>
         <source>no newline at end of file</source>
         <translation>no hay carácter de nueva línea al final del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="209"/>
         <source>blank line contains whitespace</source>
         <translation> línea en blanco contiene espacio en blanco</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="211"/>
         <source>expected 1 blank line, found 0</source>
         <translation>se esperaba una línea en blanco, se han encontrado 0</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="213"/>
         <source>expected 2 blank lines, found {0}</source>
         <translation>se esperaban dos líneas en blanco, se han encontrado {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="215"/>
         <source>too many blank lines ({0})</source>
         <translation>demasiadas líneas en blanco ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="217"/>
         <source>blank lines found after function decorator</source>
         <translation>encontradas líneas en blanco después de decorador de función</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="219"/>
         <source>blank line at end of file</source>
         <translation>línea en blanco al final del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="221"/>
         <source>multiple imports on one line</source>
         <translation>múltiples import en una línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="223"/>
         <source>line too long ({0} characters)</source>
         <translation>línea demasiado larga ({0} caracteres)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="225"/>
         <source>.has_key() is deprecated, use &apos;in&apos;</source>
         <translation>.has_key()está obsoleto, use &apos;in&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="227"/>
         <source>deprecated form of raising exception</source>
         <translation>forma obsoleta de lanzar una excepción</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="229"/>
         <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
         <translation>&apos;&lt;&gt;&apos; está obsoleto, use &apos;!=&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="231"/>
         <source>backticks are deprecated, use &apos;repr()&apos;</source>
         <translation>las comillas hacia atrás están obsoletas, use &apos;repr()&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="233"/>
         <source>multiple statements on one line (colon)</source>
         <translation>múltiples sentencias en una línea (dos puntos)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="235"/>
         <source>multiple statements on one line (semicolon)</source>
         <translation>múltiples sentencias en una línea (punto y coma)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="267"/>
         <source>no message for this code defined</source>
         <translation>no hay definido un mensaje para este código</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="237"/>
+        <source>Token Error: {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
