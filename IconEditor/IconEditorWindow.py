@@ -7,10 +7,12 @@
 Module implementing the icon editor main window.
 """
 
+import os
+
 from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile, \
     QEvent
 from PyQt4.QtGui import QScrollArea, QPalette, QImage, QImageReader, QImageWriter, \
-    QKeySequence, qApp, QLabel, QDockWidget, QWhatsThis
+    QKeySequence, QLabel, QDockWidget, QWhatsThis
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox
@@ -36,7 +38,7 @@ class IconEditorWindow(E5MainWindow):
     windows = []
     
     def __init__(self, fileName="", parent=None, fromEric=False,
-                 initShortcutsOnly=False):
+                 initShortcutsOnly=False, project=None):
         """
         Constructor
         
@@ -46,6 +48,7 @@ class IconEditorWindow(E5MainWindow):
             eric5 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
             shortcuts (boolean)
+        @keyparam project reference to the project object (Project)
         """
         super().__init__(parent)
         self.setObjectName("eric5_icon_editor")
@@ -103,6 +106,10 @@ class IconEditorWindow(E5MainWindow):
                 self.__loadIconFile(fileName)
             
             self.__checkActions()
+            
+            self.__project = project
+            self.__lastOpenPath = ""
+            self.__lastSavePath = ""
             
             self.grabGesture(Qt.PinchGesture)
     
@@ -273,10 +280,8 @@ class IconEditorWindow(E5MainWindow):
                 """<b>Quit</b>"""
                 """<p>Quit the icon editor.</p>"""
         ))
-        if self.fromEric:
-            self.exitAct.triggered[()].connect(self.close)
-        else:
-            self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        if not self.fromEric:
+            self.exitAct.triggered[()].connect(self.__closeAll)
         self.__actions.append(self.exitAct)
     
     def __initEditActions(self):
@@ -752,8 +757,9 @@ class IconEditorWindow(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.closeAct)
         menu.addAction(self.closeAllAct)
-        menu.addSeparator()
-        menu.addAction(self.exitAct)
+        if not self.fromEric:
+            menu.addSeparator()
+            menu.addAction(self.exitAct)
         
         menu = mb.addMenu(self.trUtf8("&Edit"))
         menu.setTearOffEnabled(True)
@@ -819,7 +825,8 @@ class IconEditorWindow(E5MainWindow):
         filetb.addAction(self.saveAsAct)
         filetb.addSeparator()
         filetb.addAction(self.closeAct)
-        filetb.addAction(self.exitAct)
+        if not self.fromEric:
+            filetb.addAction(self.exitAct)
         
         edittb = self.addToolBar(self.trUtf8("Edit"))
         edittb.setObjectName("EditToolBar")
@@ -930,7 +937,8 @@ class IconEditorWindow(E5MainWindow):
             Preferences.setGeometry("IconEditorGeometry", self.saveGeometry())
             
             try:
-                del self.__class__.windows[self.__class__.windows.index(self)]
+                if self.fromEric or len(self.__class__.windows) > 1:
+                    del self.__class__.windows[self.__class__.windows.index(self)]
             except ValueError:
                 pass
             
@@ -956,7 +964,9 @@ class IconEditorWindow(E5MainWindow):
         """
         Public slot called to open a new icon editor window.
         """
-        ie = IconEditorWindow(parent=self.parent(), fromEric=self.fromEric)
+        ie = IconEditorWindow(parent=self.parent(), fromEric=self.fromEric,
+                              project=self.__project)
+        ie.setRecentPaths(self.__lastOpenPath, self.__lastSavePath)
         ie.show()
     
     def __openIcon(self):
@@ -964,14 +974,19 @@ class IconEditorWindow(E5MainWindow):
         Private slot to open an icon file.
         """
         if self.__maybeSave():
+            if not self.__lastOpenPath:
+                if self.__project and self.__project.isOpen():
+                    self.__lastOpenPath = self.__project.getProjectPath()
+            
             fileName = E5FileDialog.getOpenFileNameAndFilter(
                 self,
                 self.trUtf8("Open icon file"),
-                "",
+                self.__lastOpenPath,
                 self.__inputFilter,
                 self.__defaultFilter)[0]
             if fileName:
                 self.__loadIconFile(fileName)
+                self.__lastOpenPath = os.path.dirname(fileName)
         self.__checkActions()
     
     def __saveIcon(self):
@@ -987,10 +1002,16 @@ class IconEditorWindow(E5MainWindow):
         """
         Private slot to save the icon with a new name.
         """
+        if not self.__lastSavePath:
+            if self.__project and self.__project.isOpen():
+                self.__lastSavePath = self.__project.getProjectPath()
+        if not self.__lastSavePath and self.__lastOpenPath:
+            self.__lastSavePath = self.__lastOpenPath
+        
         fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save icon file"),
-            "",
+            self.__lastSavePath,
             self.__outputFilter,
             self.__defaultFilter,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
@@ -1011,6 +1032,8 @@ class IconEditorWindow(E5MainWindow):
             if not res:
                 return False
         
+        self.__lastSavePath = os.path.dirname(fileName)
+        
         return self.__saveIconFile(fileName)
     
     def __closeAll(self):
@@ -1020,6 +1043,7 @@ class IconEditorWindow(E5MainWindow):
         for win in self.__class__.windows[:]:
             if win != self:
                 win.close()
+        self.close()
     
     def __loadIconFile(self, fileName):
         """
@@ -1125,6 +1149,18 @@ class IconEditorWindow(E5MainWindow):
             if not ret:
                 return False
         return True
+    
+    def setRecentPaths(self, openPath, savePath):
+        """
+        Public method to set the last open and save paths.
+        
+        @param openPath least recently used open path (string)
+        @param savePath least recently used save path (string)
+        """
+        if openPath:
+            self.__lastOpenPath = openPath
+        if savePath:
+            self.__lastSavePath = savePath
     
     def __checkActions(self):
         """
