@@ -2078,7 +2078,8 @@ class HelpWindow(E5MainWindow):
             Preferences.setGeometry("HelpViewerGeometry", QByteArray())
         
         try:
-            del self.__class__.helpwindows[self.__class__.helpwindows.index(self)]
+            if self.fromEric or len(self.__class__.helpwindows) > 1:
+                del self.__class__.helpwindows[self.__class__.helpwindows.index(self)]
         except ValueError:
             pass
         
