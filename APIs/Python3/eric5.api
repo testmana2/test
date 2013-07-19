@@ -3353,9 +3353,10 @@ eric5.IconEditor.IconEditorWindow.IconEditorWindow.closeEvent?4(evt)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.editorClosed?7
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.event?4(evt)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.gestureEvent?4(evt)
+eric5.IconEditor.IconEditorWindow.IconEditorWindow.setRecentPaths?4(openPath, savePath)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.wheelEvent?4(evt)
 eric5.IconEditor.IconEditorWindow.IconEditorWindow.windows?7
-eric5.IconEditor.IconEditorWindow.IconEditorWindow?1(fileName="", parent=None, fromEric=False, initShortcutsOnly=False)
+eric5.IconEditor.IconEditorWindow.IconEditorWindow?1(fileName="", parent=None, fromEric=False, initShortcutsOnly=False, project=None)
 eric5.IconEditor.IconSizeDialog.IconSizeDialog.getData?4()
 eric5.IconEditor.IconSizeDialog.IconSizeDialog?1(width, height, parent=None)
 eric5.IconEditor.cursors.cursors_rc.qCleanupResources?4()

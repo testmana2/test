@@ -6477,6 +6477,7 @@
       <keyword name="IconEditorWindow.closeEvent" id="IconEditorWindow.closeEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.closeEvent" />
       <keyword name="IconEditorWindow.event" id="IconEditorWindow.event" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.event" />
       <keyword name="IconEditorWindow.gestureEvent" id="IconEditorWindow.gestureEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.gestureEvent" />
+      <keyword name="IconEditorWindow.setRecentPaths" id="IconEditorWindow.setRecentPaths" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.setRecentPaths" />
       <keyword name="IconEditorWindow.wheelEvent" id="IconEditorWindow.wheelEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.wheelEvent" />
       <keyword name="IconSizeDialog" id="IconSizeDialog" ref="eric5.IconEditor.IconSizeDialog.html#IconSizeDialog" />
       <keyword name="IconSizeDialog (Constructor)" id="IconSizeDialog (Constructor)" ref="eric5.IconEditor.IconSizeDialog.html#IconSizeDialog.__init__" />
