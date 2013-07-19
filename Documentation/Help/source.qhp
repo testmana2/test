@@ -5292,6 +5292,7 @@
       <keyword name="HelpWindow.__reload" id="HelpWindow.__reload" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__reload" />
       <keyword name="HelpWindow.__savePageAs" id="HelpWindow.__savePageAs" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageAs" />
       <keyword name="HelpWindow.__savePageScreen" id="HelpWindow.__savePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageScreen" />
+      <keyword name="HelpWindow.__saveVisiblePageScreen" id="HelpWindow.__saveVisiblePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__saveVisiblePageScreen" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
       <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />

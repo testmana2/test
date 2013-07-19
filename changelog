@@ -69,6 +69,8 @@ Version 5.4-snapshot-2013mmdd:
 - Web Browser
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching
+  -- added the capability to save the visible part of the current page
+     as a screen shot
 - Wizards
   -- added a wizard for the Qt5 QRegularExpression class (requires PyQt5)
 - Third Party packages

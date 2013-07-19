@@ -76,7 +76,7 @@ QDialog, Ui_PageScreenDialog
 </table>
 <a NAME="PageScreenDialog.__init__" ID="PageScreenDialog.__init__"></a>
 <h4>PageScreenDialog (Constructor)</h4>
-<b>PageScreenDialog</b>(<i>view, parent=None</i>)
+<b>PageScreenDialog</b>(<i>view, visibleOnly=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -84,16 +84,26 @@ QDialog, Ui_PageScreenDialog
 <dd>
 reference to the web view containing the page to be saved
             (HelpBrowser)
+</dd><dt><i>visibleOnly</i></dt>
+<dd>
+flag indicating to just save the visible part
+            of the page (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="PageScreenDialog.__createPixmap" ID="PageScreenDialog.__createPixmap"></a>
 <h4>PageScreenDialog.__createPixmap</h4>
-<b>__createPixmap</b>(<i></i>)
+<b>__createPixmap</b>(<i>visibleOnly</i>)
 <p>
         Private slot to create a pixmap of the associated view's page.
-</p><a NAME="PageScreenDialog.__savePageScreen" ID="PageScreenDialog.__savePageScreen"></a>
+</p><dl>
+<dt><i>visibleOnly</i></dt>
+<dd>
+flag indicating to just save the visible part
+            of the page (boolean)
+</dd>
+</dl><a NAME="PageScreenDialog.__savePageScreen" ID="PageScreenDialog.__savePageScreen"></a>
 <h4>PageScreenDialog.__savePageScreen</h4>
 <b>__savePageScreen</b>(<i></i>)
 <p>

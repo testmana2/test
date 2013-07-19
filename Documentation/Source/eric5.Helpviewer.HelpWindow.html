@@ -271,6 +271,9 @@ E5MainWindow
 <td><a href="#HelpWindow.__savePageScreen">__savePageScreen</a></td>
 <td>Private slot to save the current page as a screen shot.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__saveVisiblePageScreen">__saveVisiblePageScreen</a></td>
+<td>Private slot to save the visible part of the current page as a screen shot.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__searchForWord">__searchForWord</a></td>
 <td>Private slot to search for a word.</td>
 </tr><tr>
@@ -1041,9 +1044,20 @@ reference to the action selected in the navigation menu (QAction)
         Private slot to save the current page.
 </p><a NAME="HelpWindow.__savePageScreen" ID="HelpWindow.__savePageScreen"></a>
 <h4>HelpWindow.__savePageScreen</h4>
-<b>__savePageScreen</b>(<i></i>)
+<b>__savePageScreen</b>(<i>visibleOnly=False</i>)
 <p>
         Private slot to save the current page as a screen shot.
+</p><dl>
+<dt><i>visibleOnly</i></dt>
+<dd>
+flag indicating to just save the visible part
+            of the page (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__saveVisiblePageScreen" ID="HelpWindow.__saveVisiblePageScreen"></a>
+<h4>HelpWindow.__saveVisiblePageScreen</h4>
+<b>__saveVisiblePageScreen</b>(<i></i>)
+<p>
+        Private slot to save the visible part of the current page as a screen shot.
 </p><a NAME="HelpWindow.__searchForWord" ID="HelpWindow.__searchForWord"></a>
 <h4>HelpWindow.__searchForWord</h4>
 <b>__searchForWord</b>(<i></i>)

@@ -2951,7 +2951,7 @@ eric5.Helpviewer.OpenSearch.OpenSearchReader.OpenSearchReader.read?4(device)
 eric5.Helpviewer.OpenSearch.OpenSearchWriter.OpenSearchWriter.write?4(device, engine)
 eric5.Helpviewer.OpenSearch.OpenSearchWriter.OpenSearchWriter?1()
 eric5.Helpviewer.PageScreenDialog.PageScreenDialog.on_buttonBox_clicked?4(button)
-eric5.Helpviewer.PageScreenDialog.PageScreenDialog?1(view, parent=None)
+eric5.Helpviewer.PageScreenDialog.PageScreenDialog?1(view, visibleOnly=False, parent=None)
 eric5.Helpviewer.Passwords.LoginForm.LoginForm.isValid?4()
 eric5.Helpviewer.Passwords.LoginForm.LoginForm?1()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.FORMS?7

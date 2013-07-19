@@ -453,7 +453,7 @@ class HelpWindow(E5MainWindow):
         self.__actions.append(self.saveAsAct)
         
         self.savePageScreenAct = E5Action(self.trUtf8('Save Page Screen'),
-            UI.PixmapCache.getIcon("filePixmap.png"),
+            UI.PixmapCache.getIcon("fileSavePixmap.png"),
             self.trUtf8('Save Page Screen...'),
             0, 0, self, 'help_file_save_page_screen')
         self.savePageScreenAct.setStatusTip(
@@ -465,6 +465,21 @@ class HelpWindow(E5MainWindow):
         if not self.initShortcutsOnly:
             self.savePageScreenAct.triggered[()].connect(self.__savePageScreen)
         self.__actions.append(self.savePageScreenAct)
+        
+        self.saveVisiblePageScreenAct = E5Action(self.trUtf8('Save Visible Page Screen'),
+            UI.PixmapCache.getIcon("fileSaveVisiblePixmap.png"),
+            self.trUtf8('Save Visible Page Screen...'),
+            0, 0, self, 'help_file_save_visible_page_screen')
+        self.saveVisiblePageScreenAct.setStatusTip(
+            self.trUtf8('Save the visible part of the current page as a screen shot'))
+        self.saveVisiblePageScreenAct.setWhatsThis(self.trUtf8(
+                """<b>Save Visible Page Screen...</b>"""
+                """<p>Saves the visible part of the current page as a screen shot.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.saveVisiblePageScreenAct.triggered[()].connect(
+                self.__saveVisiblePageScreen)
+        self.__actions.append(self.saveVisiblePageScreenAct)
         
         bookmarksManager = self.bookmarksManager()
         self.importBookmarksAct = E5Action(self.trUtf8('Import Bookmarks'),
@@ -1356,6 +1371,7 @@ class HelpWindow(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.saveAsAct)
         menu.addAction(self.savePageScreenAct)
+        menu.addAction(self.saveVisiblePageScreenAct)
         menu.addSeparator()
         menu.addAction(self.printPreviewAct)
         menu.addAction(self.printAct)
@@ -1516,6 +1532,13 @@ class HelpWindow(E5MainWindow):
         filetb.addSeparator()
         filetb.addAction(self.closeAct)
         filetb.addAction(self.exitAct)
+        
+        self.savePageScreenMenu = QMenu(self)
+        self.savePageScreenMenu.addAction(self.savePageScreenAct)
+        self.savePageScreenMenu.addAction(self.saveVisiblePageScreenAct)
+        savePageScreenButton = filetb.widgetForAction(self.savePageScreenAct)
+        savePageScreenButton.setMenu(self.savePageScreenMenu)
+        savePageScreenButton.setPopupMode(QToolButton.MenuButtonPopup)
         
         edittb = self.addToolBar(self.trUtf8("Edit"))
         edittb.setObjectName("EditToolBar")
@@ -1835,13 +1858,23 @@ class HelpWindow(E5MainWindow):
         if browser is not None:
             browser.saveAs()
         
-    def __savePageScreen(self):
+    def __savePageScreen(self, visibleOnly=False):
         """
         Private slot to save the current page as a screen shot.
+        
+        @param visibleOnly flag indicating to just save the visible part
+            of the page (boolean)
         """
         from .PageScreenDialog import PageScreenDialog
-        self.__pageScreen = PageScreenDialog(self.currentBrowser())
+        self.__pageScreen = PageScreenDialog(
+            self.currentBrowser(), visibleOnly=visibleOnly)
         self.__pageScreen.show()
+        
+    def __saveVisiblePageScreen(self):
+        """
+        Private slot to save the visible part of the current page as a screen shot.
+        """
+        self.__savePageScreen(visibleOnly=True)
         
     def __about(self):
         """
