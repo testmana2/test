@@ -491,6 +491,7 @@
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html" />
                 </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
@@ -7249,6 +7250,10 @@
       <keyword name="MercurialPage (Module)" id="MercurialPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
       <keyword name="MercurialPage.on_configButton_clicked" id="MercurialPage.on_configButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.on_configButton_clicked" />
       <keyword name="MercurialPage.save" id="MercurialPage.save" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.save" />
+      <keyword name="MercurialUserDataDialog" id="MercurialUserDataDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog" />
+      <keyword name="MercurialUserDataDialog (Constructor)" id="MercurialUserDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.__init__" />
+      <keyword name="MercurialUserDataDialog (Module)" id="MercurialUserDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html" />
+      <keyword name="MercurialUserDataDialog.getData" id="MercurialUserDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.getData" />
       <keyword name="Message" id="Message" ref="eric5.Utilities.py3flakes.messages.html#Message" />
       <keyword name="Message" id="Message" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message" />
       <keyword name="Message (Constructor)" id="Message (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#Message.__init__" />
@@ -13467,6 +13472,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html</file>

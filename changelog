@@ -66,6 +66,7 @@ Version 5.4-snapshot-2013mmdd:
      --- added a confirmation dialog to the 'revert' actions
   -- Mercurial
      --- added a 'Copy Changesets' button to the log browser dialog
+     --- editing the config file will generate a minimal one if none exists
 - Web Browser
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching

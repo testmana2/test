@@ -420,6 +420,7 @@ LogViewer QWidget
 LogViewerEdit QTextEdit
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
+MercurialUserDataDialog QDialog Ui_MercurialUserDataDialog
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
 MiniEditor E5MainWindow

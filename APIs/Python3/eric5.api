@@ -4277,6 +4277,8 @@ eric5.Plugins.VcsPlugins.vcsMercurial.Config.ConfigHgProtocols?7
 eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.MercurialPage.on_configButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.MercurialPage.save?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.MercurialPage?1(plugin)
+eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.MercurialUserDataDialog.getData?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.MercurialUserDataDialog?1(parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.HgFetchDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.HgFetchDialog.on_recentComboBox_activated?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.HgFetchDialog?1(parent=None)

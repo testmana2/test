@@ -16786,7 +16786,7 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2652"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2653"/>
         <source>eric5 Web Browser</source>
         <translation>Eric5 Web Gözatıcısı</translation>
     </message>
@@ -17643,7 +17643,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Sayfa kaynağını göster&lt;/b&gt;&lt;p&gt;Sayfa kaynağını bir düzenleyicide göster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2168"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2169"/>
         <source>Full Screen</source>
         <translation>Tam Ekran</translation>
     </message>
@@ -18133,27 +18133,27 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Yükleme bitirildi</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2465"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2466"/>
         <source>Could not find an associated content.</source>
         <translation>Birleştirilmiş bir içerek bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2587"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2588"/>
         <source>Updating search index</source>
         <translation>Arama index yenileniyor</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2643"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2644"/>
         <source>Looking for Documentation...</source>
         <translation>Dökümanlara bakılıyor...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2675"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2676"/>
         <source>Unfiltered</source>
         <translation>Süzülmemiş</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2694"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2695"/>
         <source>Help Engine</source>
         <translation>Yardım Motoru</translation>
     </message>
@@ -18218,42 +18218,42 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2197"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2198"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3114"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3115"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3115"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3116"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3116"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3117"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3117"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3118"/>
         <source>Unicode</source>
         <translation>Evrensel kod</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3118"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3119"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3119"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3120"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3141"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3142"/>
         <source>Default Encoding</source>
         <translation>Varsayılan Kodlama</translation>
     </message>
@@ -18278,12 +18278,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3398"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3399"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="3398"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="3399"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -18388,7 +18388,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2174"/>
+        <location filename="../Helpviewer/HelpWindow.py" line="2175"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24743,627 +24743,627 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>IconEditorWindow</name>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="114"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="121"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap Dosyası (*.bmp)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="115"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="122"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format Dosyası (*.gif)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="116"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="123"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows İkon Dosyası (*.ico)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="117"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="124"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG Dosyası (*.jpg)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="119"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="126"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Çoklu-Resim Ağ Grafik Dosyası (*.mng)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="120"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="127"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap Dosyası (*.pbm)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="121"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="128"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap Dosyası (*.pcx)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="122"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="129"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap Dosyası (*.pgm)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="123"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="130"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics Dosyası (*.png)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="124"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="131"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap Dosyası (*.ppm)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="125"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="132"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silikon Gragik Resim Dosyası (*.sgi)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="126"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="133"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Ölçeklenebilir Vektörel Grafik Dosyası (*.svg)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="128"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="135"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Gragik Dosyası (*.tga)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="129"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="136"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF Dosyası (*.tif)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="132"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="139"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap Dosyası (*.xbm)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="133"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="140"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap Dosyası (*.xpm)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="144"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="151"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="176"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="183"/>
         <source>New</source>
         <translation>Yeni</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="176"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="183"/>
         <source>&amp;New</source>
         <translation>Ye&amp;ni</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="176"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="183"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="181"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="188"/>
         <source>Create a new icon</source>
         <translation>Yeni bir ikon oluştur</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="182"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="189"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;This creates a new icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni&lt;/b&gt;&lt;p&gt;Bu yeni bir icon oluşturur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="189"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="196"/>
         <source>New Window</source>
         <translation>Yeni Pencere</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="189"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="196"/>
         <source>New &amp;Window</source>
         <translation>Yeni &amp;Pencere</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="193"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="200"/>
         <source>Open a new icon editor window</source>
         <translation>Yeni bir ikon düzenlem penceresi aç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="194"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="201"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni Pencere&lt;/b&gt;&lt;p&gt;Bu yeni bir ikon düzenleme penceresi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="201"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="208"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="201"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="208"/>
         <source>&amp;Open...</source>
         <translation>&amp;Aç...</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="201"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="208"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="206"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="213"/>
         <source>Open an icon file for editing</source>
         <translation>Düzenlemek için bir ikon dosyası aç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="207"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="214"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new icon file for editing. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="222"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="222"/>
         <source>&amp;Save</source>
         <translation>&amp;Kaydet</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="215"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="222"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="220"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="227"/>
         <source>Save the current icon</source>
         <translation>Geçerli ikonu kaydet</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="221"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="228"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of the icon editor window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="228"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="235"/>
         <source>Save As</source>
         <translation>Farklı Kaydet</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="228"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="235"/>
         <source>Save &amp;As...</source>
         <translation>Farklı K&amp;aydet...</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="228"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="235"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="233"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="240"/>
         <source>Save the current icon to a new file</source>
         <translation>Geçerli ikonu yeni bir dosyaya kaydet</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="235"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="242"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current icon to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Farklı Kaydet...&lt;/b&gt;&lt;p&gt;Geçerli ikonu yeni bir dosyaya kaydet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="242"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="249"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="242"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="249"/>
         <source>&amp;Close</source>
         <translation>&amp;Kapat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="242"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="249"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="247"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="254"/>
         <source>Close the current icon editor window</source>
         <translation>Geçerli ikon düzenleme penceresini kapat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="248"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="255"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current icon editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kapat&lt;/b&gt;&lt;p&gt;Geçerli ikon düzenleyici penceresini kapat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="255"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="262"/>
         <source>Close All</source>
         <translation>Hepsini Kapat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="255"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="262"/>
         <source>Close &amp;All</source>
         <translation>Hepsini K&amp;apat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="258"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="265"/>
         <source>Close all icon editor windows</source>
         <translation>Tüm ikon düzenleme pencerelerini kapat</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="259"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="266"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all icon editor windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hepsini Kapat&lt;/b&gt;&lt;p&gt;İlk açılan haricinde tüm ikon düzenleme pencerelerini kapat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="266"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="273"/>
         <source>Quit</source>
         <translation>Çık</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="266"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="273"/>
         <source>&amp;Quit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="266"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="273"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="271"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="278"/>
         <source>Quit the icon editor</source>
         <translation>İkon düzenleyiciden çık</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="272"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="279"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the icon editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Çıkış&lt;/b&gt;&lt;p&gt;İcon düzenleyicidn çık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="286"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="291"/>
         <source>Undo</source>
         <translation>Geri Al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="286"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="291"/>
         <source>&amp;Undo</source>
         <translation>&amp;Geri al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="286"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="291"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="286"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="291"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation>Alt+Backspace</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="292"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="297"/>
         <source>Undo the last change</source>
         <translation>Enson değişikliği geri al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="293"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="298"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="305"/>
         <source>Redo</source>
         <translation>İleri al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="305"/>
         <source>&amp;Redo</source>
         <translation>&amp;İleri al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="300"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="305"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="305"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="310"/>
         <source>Redo the last change</source>
         <translation>Son değişikliği ileri al</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="306"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="311"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="313"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="318"/>
         <source>Cut</source>
         <translation>Kes</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="313"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="318"/>
         <source>Cu&amp;t</source>
         <translation>Ke&amp;s</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="313"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="318"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="313"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="318"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation>Shift+Del</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="319"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="324"/>
         <source>Cut the selection</source>
         <translation>Seçimi kes</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="320"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="325"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kes&lt;/b&gt;&lt;p&gt;Seçilen resim alanı panoya aktararak keser.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="327"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="332"/>
         <source>Copy</source>
         <translation>Kopyala</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="327"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="332"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="327"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="332"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="327"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="332"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+Ins</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="333"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="338"/>
         <source>Copy the selection</source>
         <translation>Seçimi kopyala</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="334"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="339"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected image area to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopya&lt;/b&gt;&lt;p&gt;Seçilen görüntüyü panoya kopyala.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="341"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="346"/>
         <source>Paste</source>
         <translation>Yapıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="341"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="346"/>
         <source>&amp;Paste</source>
         <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="341"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="346"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="341"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="346"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="347"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="352"/>
         <source>Paste the clipboard image</source>
         <translation>Panodaki görüntüyü yapıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="348"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="353"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the clipboard image.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yapıştır&lt;/b&gt;&lt;p&gt;Panodaki resmi yapıştır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="355"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="360"/>
         <source>Paste as New</source>
         <translation>Yeni olarak yapıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="355"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="360"/>
         <source>Paste as &amp;New</source>
         <translation>Ye&amp;ni olarak yapıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="358"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="363"/>
         <source>Paste the clipboard image replacing the current one</source>
         <translation>Mevcut bir tanesinin üzerine panodan bir resim yapıştır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="360"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="365"/>
         <source>&lt;b&gt;Paste as New&lt;/b&gt;&lt;p&gt;Paste the clipboard image replacing the current one.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="367"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="372"/>
         <source>Clear</source>
         <translation>Temizle</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="367"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="372"/>
         <source>Cl&amp;ear</source>
         <translation>T&amp;emizle</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="367"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="372"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation>Alt+Shift+C</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="373"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="378"/>
         <source>Clear the icon image</source>
         <translation>İkon görüntüsünü temizle</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="374"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="379"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Clear the icon image and set it to be completely transparent.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Temizle&lt;/b&gt;&lt;p&gt;İkon resmini temizle ve tamamını transparan yap.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="381"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="386"/>
         <source>Select All</source>
         <translation>Hepsini Seç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="381"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="386"/>
         <source>&amp;Select All</source>
         <translation>Hep&amp;sini Seç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="381"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="386"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select All</comment>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="386"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="391"/>
         <source>Select the complete icon image</source>
         <translation>Tüm ikon resmini seç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="387"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="392"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Selects the complete icon image.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="394"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="399"/>
         <source>Change Size</source>
         <translation>Boyutları Değiştir</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="394"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="399"/>
         <source>Change Si&amp;ze...</source>
         <translation>Boyutları De&amp;ğiştir...</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="399"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="404"/>
         <source>Change the icon size</source>
         <translation>İkon boyutunu değiştir</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="400"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="405"/>
         <source>&lt;b&gt;Change Size...&lt;/b&gt;&lt;p&gt;Changes the icon size.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Boyut Değşikliği...&lt;/b&gt;&lt;p&gt;İkon boyutunu değiştirir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="407"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="412"/>
         <source>Grayscale</source>
         <translation>Griskala</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="407"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="412"/>
         <source>&amp;Grayscale</source>
         <translation>&amp;Griskala</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="412"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="417"/>
         <source>Change the icon to grayscale</source>
         <translation>İkonu griskala ya çevir</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="413"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="418"/>
         <source>&lt;b&gt;Grayscale&lt;/b&gt;&lt;p&gt;Changes the icon to grayscale.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="447"/>
         <source>Zoom in</source>
         <translation>Büyüt</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="447"/>
         <source>Zoom &amp;in</source>
         <translation>Bü&amp;yült</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="442"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="447"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="447"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="452"/>
         <source>Zoom in on the icon</source>
         <translation>İkın üzerinde büyüt</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="448"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="453"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the icon. This makes the grid bigger.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="460"/>
         <source>Zoom out</source>
         <translation>Küçült</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="460"/>
         <source>Zoom &amp;out</source>
         <translation>Küçü&amp;lt</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="455"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="460"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="460"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="465"/>
         <source>Zoom out on the icon</source>
         <translation>İkon üzerinde küçült</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="461"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="466"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the icon. This makes the grid smaller.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="468"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="473"/>
         <source>Zoom reset</source>
         <translation>Büyütmeyi sıfırla</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="468"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="473"/>
         <source>Zoom &amp;reset</source>
         <translation>Büyütmeyi sıfı&amp;rla</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="468"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="473"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="473"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="478"/>
         <source>Reset the zoom of the icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="474"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="479"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the icon. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25389,343 +25389,343 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">İconu büyüt</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="482"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="487"/>
         <source>Show Grid</source>
         <translation>Grid Çizgilerini Göster</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="482"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="487"/>
         <source>Show &amp;Grid</source>
         <translation>&amp;Grid Çizgilerini Göster</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="487"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="492"/>
         <source>Toggle the display of the grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="488"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="493"/>
         <source>&lt;b&gt;Show Grid&lt;/b&gt;&lt;p&gt;Toggle the display of the grid.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="507"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="512"/>
         <source>Freehand</source>
         <translation>Serbest çizim</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="507"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="512"/>
         <source>&amp;Freehand</source>
         <translation>&amp;Serbest çizim</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="512"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="517"/>
         <source>&lt;b&gt;Free hand&lt;/b&gt;&lt;p&gt;Draws non linear lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Serbest Çizim&lt;/b&gt;&lt;p&gt;Düzgün olmayan çizgiler çizer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="521"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="526"/>
         <source>Color Picker</source>
         <translation>Renk Toplayıcı</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="521"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="526"/>
         <source>&amp;Color Picker</source>
         <translation>Renk Toplayı&amp;cı</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="526"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="531"/>
         <source>&lt;b&gt;Color Picker&lt;/b&gt;&lt;p&gt;The color of the pixel clicked on will become the current draw color.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="536"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="541"/>
         <source>Rectangle</source>
         <translation>Dikdörtgen</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="536"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="541"/>
         <source>&amp;Rectangle</source>
         <translation>Dikdö&amp;rtgen</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="541"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="546"/>
         <source>&lt;b&gt;Rectangle&lt;/b&gt;&lt;p&gt;Draw a rectangle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dikdörtgen&lt;/b&gt;&lt;p&gt;Bir dikdörtgen çiz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="550"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="555"/>
         <source>Filled Rectangle</source>
         <translation>İçidolu Dikdörtgen</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="550"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="555"/>
         <source>F&amp;illed Rectangle</source>
         <translation>İçido&amp;lu Dikdörtgen</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="555"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="560"/>
         <source>&lt;b&gt;Filled Rectangle&lt;/b&gt;&lt;p&gt;Draw a filled rectangle.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="564"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="569"/>
         <source>Circle</source>
         <translation>Çember</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="569"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="574"/>
         <source>&lt;b&gt;Circle&lt;/b&gt;&lt;p&gt;Draw a circle.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Çember&lt;/b&gt;&lt;p&gt;Bir çember çiz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="578"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="583"/>
         <source>Filled Circle</source>
         <translation>Daire</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="578"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="583"/>
         <source>Fille&amp;d Circle</source>
         <translation>&amp;Daire</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="583"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="588"/>
         <source>&lt;b&gt;Filled Circle&lt;/b&gt;&lt;p&gt;Draw a filled circle.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="592"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="597"/>
         <source>Ellipse</source>
         <translation>Elips</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="592"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="597"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elips</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="597"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="602"/>
         <source>&lt;b&gt;Ellipse&lt;/b&gt;&lt;p&gt;Draw an ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Elips&lt;/b&gt;&lt;p&gt;Bir elips çiz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="606"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="611"/>
         <source>Filled Ellipse</source>
         <translation>İçidolu Elips</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="606"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="611"/>
         <source>Fille&amp;d Elli&amp;pse</source>
         <translation>İçi dolu Eli&amp;ps</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="611"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="616"/>
         <source>&lt;b&gt;Filled Ellipse&lt;/b&gt;&lt;p&gt;Draw a filled ellipse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;İçi dolu Elips&lt;/b&gt;&lt;p&gt;İçi dolu bir elips çiz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="620"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="625"/>
         <source>Flood Fill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="620"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="625"/>
         <source>Fl&amp;ood Fill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="625"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="630"/>
         <source>&lt;b&gt;Flood Fill&lt;/b&gt;&lt;p&gt;Fill adjoining pixels with the same color with the current color.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="635"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="640"/>
         <source>Line</source>
         <translation>Satır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="635"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="640"/>
         <source>&amp;Line</source>
         <translation>&amp;Satır</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="640"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="645"/>
         <source>&lt;b&gt;Line&lt;/b&gt;&lt;p&gt;Draw a line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="649"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="654"/>
         <source>Eraser (Transparent)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="649"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="654"/>
         <source>Eraser (&amp;Transparent)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="654"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="659"/>
         <source>&lt;b&gt;Eraser (Transparent)&lt;/b&gt;&lt;p&gt;Erase pixels by setting them to transparent.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="663"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="668"/>
         <source>Rectangular Selection</source>
         <translation>Köşeli Seçim</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="678"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="683"/>
         <source>Rect&amp;angular Selection</source>
         <translation>Kö&amp;şeli Seçim</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="668"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="673"/>
         <source>&lt;b&gt;Rectangular Selection&lt;/b&gt;&lt;p&gt;Select a rectangular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="678"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="683"/>
         <source>Circular Selection</source>
         <translation>Dairesel Seçim</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="683"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="688"/>
         <source>&lt;b&gt;Circular Selection&lt;/b&gt;&lt;p&gt;Select a circular section of the icon using the mouse.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dairesel seçim&lt;/b&gt;&lt;p&gt;Fareyi kullanarak ikon üzerinde dairesel bir alanı seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="699"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="704"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="699"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="704"/>
         <source>&amp;About</source>
         <translation>H&amp;akkında</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="702"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="707"/>
         <source>Display information about this software</source>
         <translation>Bu yazılım hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="703"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="708"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hakkında&lt;/b&gt;&lt;p&gt;Bu yazılım hakkındaki çeşitli bilgileri gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="709"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="714"/>
         <source>About Qt</source>
         <translation>Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="709"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="714"/>
         <source>About &amp;Qt</source>
         <translation>&amp;Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="712"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="717"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Qt araçkiti hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="714"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="719"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt Hakkında&lt;/b&gt;&lt;p&gt;Qt Araçkiti hakkında bazı bilgiler gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="721"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="726"/>
         <source>What&apos;s This?</source>
         <translation>Bu nedir?</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="721"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="726"/>
         <source>&amp;What&apos;s This?</source>
         <translation>Bu &amp;Nedir?</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="721"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="726"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="726"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="731"/>
         <source>Context sensitive help</source>
         <translation>Duyarlı yardım</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="727"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="732"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Duyarlı yardım içeriğini görüntüle&lt;/b&gt;&lt;p&gt;Bu Nedir? modunda, Fare imleci soru işeretiyle beraber bir ok şeklindedir ve bir arayüz elemanı üzerinde tıklarsanız bu elemanın nasıl kullanılacağı ve hakkında kısa bilgi verir. bu özellik diyaloglarda başlık çubuğu üzerindeyken çıkarılan açılır menülerde de bulunmaktadır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="744"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="749"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="758"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="764"/>
         <source>&amp;Edit</source>
         <translation>Düz&amp;en</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="774"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="780"/>
         <source>&amp;View</source>
         <translation>&amp;Görünüm</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="782"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="788"/>
         <source>&amp;Tools</source>
         <translation>&amp;Araçlar</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="801"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="807"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="811"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="817"/>
         <source>File</source>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="824"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="831"/>
         <source>Edit</source>
         <translation>Düzen</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="837"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="844"/>
         <source>View</source>
         <translation>Görünüm</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="842"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="849"/>
         <source>Tools</source>
         <translation>Araçlar</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="860"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="867"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="874"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="881"/>
         <source>&lt;p&gt;This part of the status bar displays the icon size.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="881"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="888"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="967"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="981"/>
         <source>Open icon file</source>
         <translation>İkon dosyasını aç</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1006"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1027"/>
         <source>Save icon file</source>
         <translation>İkon dosyasını kaydet</translation>
     </message>
@@ -25735,86 +25735,86 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1121"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1145"/>
         <source>eric5 Icon Editor</source>
         <translation>eric5 İkon Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1032"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1056"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>&apos;{0}&apos; dosyası mevcut değil.</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1038"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1062"/>
         <source>Cannot read file &apos;{0}:
 {1}.</source>
         <translation>Dosya okunumıyor &apos;{0}:
 {1}.</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1070"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1094"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Dosyaya yazılamıyor &apos;{0}:
 {1}.</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1081"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1105"/>
         <source>Icon saved</source>
         <translation>İkon kaydedildi</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1096"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1120"/>
         <source>Untitled</source>
         <translation>Başlıksız</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1100"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1124"/>
         <source>{0}[*] - {1}</source>
         <translation>{0}[*] - {1}</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1100"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1124"/>
         <source>Icon Editor</source>
         <translation>İkon Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1196"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1232"/>
         <source>About eric5 Icon Editor</source>
         <translation>eric5 İkon Düzenleyici Hakkında</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1196"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1232"/>
         <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
         <translation>Eric5İcon Düzenleyici icon çizme görevlerini yerine getirmek için hazırlanmış basit bir düzenleyici bileşenidir.</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1006"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1027"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1121"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1145"/>
         <source>The icon image has unsaved changes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="118"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="125"/>
         <source>JPEG File (*.jpeg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="127"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="134"/>
         <source>Compressed Scalable Vector Graphics File (*.svgz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="130"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="137"/>
         <source>TIFF File (*.tiff)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="131"/>
+        <location filename="../IconEditor/IconEditorWindow.py" line="138"/>
         <source>WAP Bitmap File (*.wbmp)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29781,6 +29781,34 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="185"/>
         <source>Create Backup Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MercurialUserDataDialog</name>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="14"/>
+        <source>Mercurial User Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="23"/>
+        <source>&amp;Username:</source>
+        <translation type="unfinished">K&amp;ullanıcı Adı:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="33"/>
+        <source>Enter the name of the user (first name and last name)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="40"/>
+        <source>&amp;Email:</source>
+        <translation type="unfinished">&amp;E-Posta:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui" line="50"/>
+        <source>Enter the email address</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -10,6 +10,7 @@ Module implementing the Mercurial configuration page.
 import os
 
 from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
 from .Ui_MercurialPage import Ui_MercurialPage
@@ -62,8 +63,20 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         from QScintilla.MiniEditor import MiniEditor
         cfgFile = self.__plugin.getConfigPath()
         if not os.path.exists(cfgFile):
+            username = ""
+            from .MercurialUserDataDialog import MercurialUserDataDialog
+            dlg = MercurialUserDataDialog()
+            if dlg.exec_() == QDialog.Accepted:
+                name, email = dlg.getData()
+                if name and email:
+                    username = "{0} <{1}>".format(name, email)
+                elif name:
+                    username = name
+                elif email:
+                    username = email
             try:
                 f = open(cfgFile, "w")
+                f.write(os.linesep.join(["[ui]", "username = {0}".format(username), ""]))
                 f.close()
             except (IOError, OSError):
                 # ignore these
