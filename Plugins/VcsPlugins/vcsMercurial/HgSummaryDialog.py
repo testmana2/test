@@ -88,7 +88,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         else:
             self.process = QProcess()
             env = QProcessEnvironment.systemEnvironment()
-            env.insert("LANG", "C")
+            env.insert("LANGUAGE", "C")
             self.process.setProcessEnvironment(env)
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
