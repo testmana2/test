@@ -563,6 +563,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html" />
@@ -5447,6 +5448,7 @@
       <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
       <keyword name="Hg.hgShowConfig" id="Hg.hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowConfig" />
       <keyword name="Hg.hgShowPaths" id="Hg.hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowPaths" />
+      <keyword name="Hg.hgSummary" id="Hg.hgSummary" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgSummary" />
       <keyword name="Hg.hgUnbundle" id="Hg.hgUnbundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgUnbundle" />
       <keyword name="Hg.hgVerify" id="Hg.hgVerify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgVerify" />
       <keyword name="Hg.isExtensionActive" id="Hg.isExtensionActive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.isExtensionActive" />
@@ -5936,6 +5938,7 @@
       <keyword name="HgProjectHelper.__hgShowBranch" id="HgProjectHelper.__hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowBranch" />
       <keyword name="HgProjectHelper.__hgShowConfig" id="HgProjectHelper.__hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowConfig" />
       <keyword name="HgProjectHelper.__hgShowPaths" id="HgProjectHelper.__hgShowPaths" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowPaths" />
+      <keyword name="HgProjectHelper.__hgSummary" id="HgProjectHelper.__hgSummary" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgSummary" />
       <keyword name="HgProjectHelper.__hgTagList" id="HgProjectHelper.__hgTagList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgTagList" />
       <keyword name="HgProjectHelper.__hgTip" id="HgProjectHelper.__hgTip" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgTip" />
       <keyword name="HgProjectHelper.__hgUnbundle" id="HgProjectHelper.__hgUnbundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgUnbundle" />
@@ -6174,6 +6177,20 @@
       <keyword name="HgStatusMonitorThread (Module)" id="HgStatusMonitorThread (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html" />
       <keyword name="HgStatusMonitorThread._performMonitor" id="HgStatusMonitorThread._performMonitor" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html#HgStatusMonitorThread._performMonitor" />
       <keyword name="HgStatusMonitorThread._shutdown" id="HgStatusMonitorThread._shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html#HgStatusMonitorThread._shutdown" />
+      <keyword name="HgSummaryDialog" id="HgSummaryDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog" />
+      <keyword name="HgSummaryDialog (Constructor)" id="HgSummaryDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__init__" />
+      <keyword name="HgSummaryDialog (Module)" id="HgSummaryDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html" />
+      <keyword name="HgSummaryDialog.__committed" id="HgSummaryDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__committed" />
+      <keyword name="HgSummaryDialog.__finish" id="HgSummaryDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__finish" />
+      <keyword name="HgSummaryDialog.__procFinished" id="HgSummaryDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__procFinished" />
+      <keyword name="HgSummaryDialog.__processOutput" id="HgSummaryDialog.__processOutput" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__processOutput" />
+      <keyword name="HgSummaryDialog.__readStderr" id="HgSummaryDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__readStderr" />
+      <keyword name="HgSummaryDialog.__readStdout" id="HgSummaryDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__readStdout" />
+      <keyword name="HgSummaryDialog.__showError" id="HgSummaryDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.__showError" />
+      <keyword name="HgSummaryDialog.closeEvent" id="HgSummaryDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.closeEvent" />
+      <keyword name="HgSummaryDialog.on_buttonBox_clicked" id="HgSummaryDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.on_buttonBox_clicked" />
+      <keyword name="HgSummaryDialog.on_refreshButton_clicked" id="HgSummaryDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.on_refreshButton_clicked" />
+      <keyword name="HgSummaryDialog.start" id="HgSummaryDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html#HgSummaryDialog.start" />
       <keyword name="HgTagBranchListDialog" id="HgTagBranchListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html#HgTagBranchListDialog" />
       <keyword name="HgTagBranchListDialog (Constructor)" id="HgTagBranchListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html#HgTagBranchListDialog.__init__" />
       <keyword name="HgTagBranchListDialog (Module)" id="HgTagBranchListDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html" />
@@ -13509,6 +13526,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgSummaryDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgTagDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html</file>

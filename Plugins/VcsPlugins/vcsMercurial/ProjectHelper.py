@@ -286,7 +286,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.vcsStatusAct = E5Action(self.trUtf8('Show status'),
                 UI.PixmapCache.getIcon("vcsStatus.png"),
-                self.trUtf8('Show &status'),
+                self.trUtf8('Show &status...'),
                 0, 0, self, 'mercurial_status')
         self.vcsStatusAct.setStatusTip(self.trUtf8(
             'Show the status of the local project'
@@ -297,6 +297,22 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
+        
+        self.hgSummaryAct = E5Action(
+                self.trUtf8('Show Summary'),
+                UI.PixmapCache.getIcon("vcsSummary.png"),
+                self.trUtf8('Show summary...'),
+                0, 0, self, 'mercurial_summary')
+        self.hgSummaryAct.setStatusTip(self.trUtf8(
+            'Show summary information of the working directory status'
+        ))
+        self.hgSummaryAct.setWhatsThis(self.trUtf8(
+            """<b>Show summary</b>"""
+            """<p>This shows some summary information of the working"""
+            """ directory status.</p>"""
+        ))
+        self.hgSummaryAct.triggered[()].connect(self.__hgSummary)
+        self.actions.append(self.hgSummaryAct)
         
         self.hgHeadsAct = E5Action(self.trUtf8('Show heads'),
                 self.trUtf8('Show heads'),
@@ -1031,6 +1047,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgLogBrowserAct)
         menu.addSeparator()
         menu.addAction(self.vcsStatusAct)
+        menu.addAction(self.hgSummaryAct)
         menu.addSeparator()
         menu.addAction(self.vcsDiffAct)
         menu.addAction(self.hgExtDiffAct)
@@ -1409,3 +1426,9 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to remove sub-repositories.
         """
         self.vcs.hgRemoveSubrepositories()
+    
+    def __hgSummary(self):
+        """
+        Private slot to show a working directory summary.
+        """
+        self.vcs.hgSummary()

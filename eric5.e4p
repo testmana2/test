@@ -1105,6 +1105,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/__init__.py</Source>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/Lang.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1424,6 +1425,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

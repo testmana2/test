@@ -94,6 +94,7 @@ class Hg(VersionControl):
         self.logBrowser = None
         self.diff = None
         self.status = None
+        self.summary = None
         self.tagbranchList = None
         self.annotate = None
         self.repoEditor = None
@@ -159,6 +160,8 @@ class Hg(VersionControl):
             self.diff.close()
         if self.status is not None:
             self.status.close()
+        if self.summary is not None:
+            self.summary.close()
         if self.tagbranchList is not None:
             self.tagbranchList.close()
         if self.annotate is not None:
@@ -821,6 +824,18 @@ class Hg(VersionControl):
         self.status.show()
         self.status.start(name)
     
+    def hgSummary(self, mq=False):
+        """
+        Public method used to show some summary information of the
+        working directory state.
+        
+        @param mq flag indicating to show the queue status as well (boolean)
+        """
+        from .HgSummaryDialog import HgSummaryDialog
+        self.summary = HgSummaryDialog(self)
+        self.summary.show()
+        self.summary.start(self.__projectHelper.getProject().getProjectPath(), mq=mq)
+    
     def vcsTag(self, name):
         """
         Public method used to set the tag in the Mercurial repository.
@@ -1250,8 +1265,6 @@ class Hg(VersionControl):
         @param ppath local path to get the repository infos (string)
         @return string with ready formated info for display (string)
         """
-        info = []
-        
         args = []
         args.append('parents')
         args.append('--template')
@@ -1272,13 +1285,14 @@ class Hg(VersionControl):
         else:
             output, error = self.__client.runcommand(args)
         
+        infoBlock = []
         if output:
             index = 0
             for line in output.splitlines():
                 index += 1
                 changeset, tags, author, date, branches, bookmarks = line.split("@@@")
                 cdate, ctime = date.split()[:2]
-                info.append("""<p><table>""")
+                info = []
                 info.append(QApplication.translate("mercurial",
                     """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                     """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
@@ -1300,7 +1314,11 @@ class Hg(VersionControl):
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
                     """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
                     .format(author, cdate, ctime))
-                info.append("""</table></p>""")
+                infoBlock.append("\n".join(info))
+        if infoBlock:
+            infoStr = """<tr></tr>{0}""".format("<tr></tr>".join(infoBlock))
+        else:
+            infoStr = ""
         
         url = ""
         args = []
@@ -1331,9 +1349,9 @@ class Hg(VersionControl):
             """<tr><td><b>Mercurial V.</b></td><td>{0}</td></tr>\n"""
             """<tr></tr>\n"""
             """<tr><td><b>URL</b></td><td>{1}</td></tr>\n"""
-            """</table></p>\n"""
             """{2}"""
-            ).format(self.versionStr, url, "\n".join(info))
+            """</table></p>\n"""
+            ).format(self.versionStr, url, infoStr)
 
     ############################################################################
     ## Private Mercurial specific methods are below.

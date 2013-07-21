@@ -331,6 +331,7 @@ HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
 HgServeDialog E5MainWindow
 HgStatusDialog QWidget Ui_HgStatusDialog
 HgStatusMonitorThread VcsStatusMonitorThread
+HgSummaryDialog QDialog Ui_HgSummaryDialog
 HgTagBranchListDialog QDialog Ui_HgTagBranchListDialog
 HgTagDialog QDialog Ui_HgTagDialog
 HighlightingStylesReader XMLStreamReaderBase
