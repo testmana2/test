@@ -367,7 +367,7 @@ class Hg(VersionControl):
             os.remove(os.path.join(projectDir, '.hgignore'))
         return status
     
-    def vcsCommit(self, name, message, noDialog=False, closeBranch=False):
+    def vcsCommit(self, name, message, noDialog=False, closeBranch=False, mq=False):
         """
         Public method used to make the change of a file/directory permanent in the
         Mercurial repository.
@@ -376,14 +376,19 @@ class Hg(VersionControl):
         @param message message for this operation (string)
         @param noDialog flag indicating quiet operations
         @keyparam closeBranch flag indicating a close branch commit (boolean)
+        @keyparam mq flag indicating a queue commit (boolean)
         """
         msg = message
+        
+        if mq:
+            # ensure dialog is shown for a queue commit
+            noDialog = False
         
         if not noDialog and not msg:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 from .HgCommitDialog import HgCommitDialog
-                self.__commitDialog = HgCommitDialog(self, self.__ui)
+                self.__commitDialog = HgCommitDialog(self, mq, self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
@@ -393,6 +398,7 @@ class Hg(VersionControl):
         self.__commitData["msg"] = msg
         self.__commitData["noDialog"] = noDialog
         self.__commitData["closeBranch"] = closeBranch
+        self.__commitData["mq"] = mq
         
         if noDialog:
             self.__vcsCommit_Step2()
@@ -405,6 +411,7 @@ class Hg(VersionControl):
         msg = self.__commitData["msg"]
         noDialog = self.__commitData["noDialog"]
         closeBranch = self.__commitData["closeBranch"]
+        mq = self.__commitData["mq"]
         
         if not noDialog:
             # check, if there are unsaved changes, that should be committed
@@ -441,7 +448,6 @@ class Hg(VersionControl):
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()
             commitSubrepositories = self.__commitDialog.commitSubrepositories()
-##            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
             self.__commitDialog.deleteLater()
             self.__commitDialog = None
         else:
@@ -456,12 +462,15 @@ class Hg(VersionControl):
         self.addArguments(args, self.options['global'])
         self.addArguments(args, self.options['commit'])
         args.append("-v")
-        if closeBranch:
-            args.append("--close-branch")
-        if amend:
-            args.append("--amend")
-        if commitSubrepositories:
-            args.append("--subrepos")
+        if mq:
+            args.append("--mq")
+        else:
+            if closeBranch:
+                args.append("--close-branch")
+            if amend:
+                args.append("--amend")
+            if commitSubrepositories:
+                args.append("--subrepos")
         if msg:
             args.append("--message")
             args.append(msg)

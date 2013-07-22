@@ -31,6 +31,34 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         """
         Public method to generate the action objects.
         """
+        self.hgQueueInitAct = E5Action(self.trUtf8('Init Queue Repository'),
+                self.trUtf8('Init Queue Repository'),
+                0, 0, self, 'mercurial_queues_init')
+        self.hgQueueInitAct.setStatusTip(self.trUtf8(
+            'Initialize a new versioned queue repository'
+        ))
+        self.hgQueueInitAct.setWhatsThis(self.trUtf8(
+            """<b>Init Queue Repository</b>"""
+            """<p>This initializes a new versioned queue repository inside the"""
+            """ current repository.</p>"""
+        ))
+        self.hgQueueInitAct.triggered[()].connect(self.__hgQueueInit)
+        self.actions.append(self.hgQueueInitAct)
+        
+        self.hgQueueCommitAct = E5Action(
+                self.trUtf8('Commit changes'),
+                self.trUtf8('Commit changes...'),
+                0, 0, self, 'mercurial_queues_commit')
+        self.hgQueueCommitAct.setStatusTip(self.trUtf8(
+            'Commit changes in the queue repository'
+        ))
+        self.hgQueueCommitAct.setWhatsThis(self.trUtf8(
+            """<b>Commit changes...</b>"""
+            """<p>This commits changes in the queue repository.</p>"""
+        ))
+        self.hgQueueCommitAct.triggered[()].connect(self.__hgQueueCommit)
+        self.actions.append(self.hgQueueCommitAct)
+        
         self.hgQueueNewAct = E5Action(self.trUtf8('New Patch'),
                 self.trUtf8('New Patch...'),
                 0, 0, self, 'mercurial_queues_new')
@@ -166,6 +194,19 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         ))
         self.hgQueueFoldAct.triggered[()].connect(self.__hgQueueFoldUnappliedPatches)
         self.actions.append(self.hgQueueFoldAct)
+        
+        self.hgQueueStatusAct = E5Action(self.trUtf8('Show Status'),
+                self.trUtf8('Show &Status...'),
+                0, 0, self, 'mercurial_queues_status')
+        self.hgQueueStatusAct.setStatusTip(self.trUtf8(
+            'Show the status of the queue repository'
+        ))
+        self.hgQueueStatusAct.setWhatsThis(self.trUtf8(
+            """<b>Show Status</b>"""
+            """<p>This shows the status of the queue repository.</p>"""
+        ))
+        self.hgQueueStatusAct.triggered[()].connect(self.__hgQueueStatus)
+        self.actions.append(self.hgQueueStatusAct)
         
         self.__initPushPopActions()
         self.__initPushPopForceActions()
@@ -622,10 +663,15 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         queuesMenu.addSeparator()
         queuesMenu.addAction(self.hgQueueListQueuesAct)
         
+        menu.addAction(self.hgQueueInitAct)
+        menu.addAction(self.hgQueueCommitAct)
+        menu.addSeparator()
         menu.addAction(self.hgQueueNewAct)
         menu.addAction(self.hgQueueRefreshAct)
         menu.addAction(self.hgQueueRefreshMessageAct)
         menu.addAction(self.hgQueueFinishAct)
+        menu.addSeparator()
+        menu.addAction(self.hgQueueStatusAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueDiffAct)
         menu.addAction(self.hgQueueHeaderAct)
@@ -951,3 +997,23 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueListQueues(self.project.getProjectPath())
+    
+    def __hgQueueInit(self):
+        """
+        Private slot to initialize a new queue repository.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueInit(self.project.getProjectPath())
+    
+    def __hgQueueCommit(self):
+        """
+        Private slot to commit changes in the queue repository.
+        """
+        self.vcs.vcsCommit(self.project.getProjectPath(), "", mq=True)
+    
+    def __hgQueueStatus(self):
+        """
+        Private slot to show the status of the queue repository.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueStatus(self.project.getProjectPath())

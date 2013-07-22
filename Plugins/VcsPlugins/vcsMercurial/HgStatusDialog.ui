@@ -105,7 +105,7 @@
       </widget>
      </item>
      <item>
-      <widget class="Line" name="line">
+      <widget class="Line" name="buttonsLine">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>

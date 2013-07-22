@@ -25,11 +25,12 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     """
     Class implementing a dialog to show the output of the hg status command process.
     """
-    def __init__(self, vcs, parent=None):
+    def __init__(self, vcs, mq=False, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param mq flag indicating to show a queue repo status (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -52,37 +53,47 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
         self.__hgClient = self.vcs.getClient()
+        self.__mq = mq
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)
         
+        if mq:
+            self.buttonsLine.setVisible(False)
+            self.addButton.setVisible(False)
+            self.diffButton.setVisible(False)
+            self.revertButton.setVisible(False)
+            self.forgetButton.setVisible(False)
+            self.restoreButton.setVisible(False)
+        
         self.menuactions = []
         self.menu = QMenu()
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Commit changes to repository..."), self.__commit))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Select all for commit"), self.__commitSelectAll))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
-        self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Add to repository"), self.__add))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Show differences"), self.__diff))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Remove from repository"), self.__forget))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Revert changes"), self.__revert))
-        self.menuactions.append(self.menu.addAction(
-            self.trUtf8("Restore missing"), self.__restoreMissing))
-        self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(self.trUtf8("Adjust column sizes"),
-            self.__resizeColumns))
-        for act in self.menuactions:
-            act.setEnabled(False)
-        
-        self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
+        if not mq:
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Commit changes to repository..."), self.__commit))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Select all for commit"), self.__commitSelectAll))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
+            self.menu.addSeparator()
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Add to repository"), self.__add))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Show differences"), self.__diff))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Remove from repository"), self.__forget))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Revert changes"), self.__revert))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Restore missing"), self.__restoreMissing))
+            self.menu.addSeparator()
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Adjust column sizes"), self.__resizeColumns))
+            for act in self.menuactions:
+                act.setEnabled(False)
+            
+            self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
+            self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
         
         self.modifiedIndicators = [
             self.trUtf8('added'),
@@ -190,22 +201,32 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.statusFilterCombo.clear()
         self.__statusFilters = []
         
-        self.setWindowTitle(self.trUtf8('Mercurial Status'))
+        if self.__mq:
+            self.setWindowTitle(self.trUtf8("Mercurial Queue Repository Status"))
+        else:
+            self.setWindowTitle(self.trUtf8('Mercurial Status'))
         
         args = []
         args.append('status')
         self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['status'])
-        
-        if self.vcs.hasSubrepositories():
-            args.append("--subrepos")
-        
-        if isinstance(fn, list):
-            self.dname, fnames = self.vcs.splitPathList(fn)
-            self.vcs.addArguments(args, fn)
+        if self.__mq:
+            args.append('--mq')
+            if isinstance(fn, list):
+                self.dname, fnames = self.vcs.splitPathList(fn)
+            else:
+                self.dname, fname = self.vcs.splitPath(fn)
         else:
-            self.dname, fname = self.vcs.splitPath(fn)
-            args.append(fn)
+            self.vcs.addArguments(args, self.vcs.options['status'])
+            
+            if self.vcs.hasSubrepositories():
+                args.append("--subrepos")
+            
+            if isinstance(fn, list):
+                self.dname, fnames = self.vcs.splitPathList(fn)
+                self.vcs.addArguments(args, fn)
+            else:
+                self.dname, fname = self.vcs.splitPath(fn)
+                args.append(fn)
         
         # find the root of the repo
         repodir = self.dname
@@ -541,20 +562,23 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to handle the Commit context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
-                 for itm in self.__getCommitableItems()]
-        if not names:
-            E5MessageBox.information(self,
-                self.trUtf8("Commit"),
-                self.trUtf8("""There are no entries selected to be"""
-                            """ committed."""))
-            return
-        
-        if Preferences.getVCS("AutoSaveFiles"):
-            vm = e5App().getObject("ViewManager")
-            for name in names:
-                vm.saveEditor(name)
-        self.vcs.vcsCommit(names, '')
+        if self.__mq:
+            self.vcs.vcsCommit(self.dname, "", mq=True)
+        else:
+            names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+                     for itm in self.__getCommitableItems()]
+            if not names:
+                E5MessageBox.information(self,
+                    self.trUtf8("Commit"),
+                    self.trUtf8("""There are no entries selected to be"""
+                                """ committed."""))
+                return
+            
+            if Preferences.getVCS("AutoSaveFiles"):
+                vm = e5App().getObject("ViewManager")
+                for name in names:
+                    vm.saveEditor(name)
+            self.vcs.vcsCommit(names, '')
     
     def __committed(self):
         """
