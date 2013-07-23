@@ -9233,6 +9233,7 @@
       <keyword name="Queues.hgQueueGuardsList" id="Queues.hgQueueGuardsList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueGuardsList" />
       <keyword name="Queues.hgQueueGuardsListAll" id="Queues.hgQueueGuardsListAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueGuardsListAll" />
       <keyword name="Queues.hgQueueGuardsSetActive" id="Queues.hgQueueGuardsSetActive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueGuardsSetActive" />
+      <keyword name="Queues.hgQueueInit" id="Queues.hgQueueInit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueInit" />
       <keyword name="Queues.hgQueueListPatches" id="Queues.hgQueueListPatches" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueListPatches" />
       <keyword name="Queues.hgQueueListQueues" id="Queues.hgQueueListQueues" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueListQueues" />
       <keyword name="Queues.hgQueueNewPatch" id="Queues.hgQueueNewPatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueNewPatch" />
@@ -9241,11 +9242,13 @@
       <keyword name="Queues.hgQueueRenamePatch" id="Queues.hgQueueRenamePatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueRenamePatch" />
       <keyword name="Queues.hgQueueShowHeader" id="Queues.hgQueueShowHeader" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueShowHeader" />
       <keyword name="Queues.hgQueueShowPatch" id="Queues.hgQueueShowPatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueShowPatch" />
+      <keyword name="Queues.hgQueueStatus" id="Queues.hgQueueStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.hgQueueStatus" />
       <keyword name="Queues.shutdown" id="Queues.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html#Queues.shutdown" />
       <keyword name="QueuesExtension (Package)" id="QueuesExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html" />
       <keyword name="QueuesProjectHelper" id="QueuesProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper" />
       <keyword name="QueuesProjectHelper (Constructor)" id="QueuesProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__init__" />
       <keyword name="QueuesProjectHelper.__hgQueueActivateQueue" id="QueuesProjectHelper.__hgQueueActivateQueue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueActivateQueue" />
+      <keyword name="QueuesProjectHelper.__hgQueueCommit" id="QueuesProjectHelper.__hgQueueCommit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueCommit" />
       <keyword name="QueuesProjectHelper.__hgQueueCreateQueue" id="QueuesProjectHelper.__hgQueueCreateQueue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueCreateQueue" />
       <keyword name="QueuesProjectHelper.__hgQueueDeletePatch" id="QueuesProjectHelper.__hgQueueDeletePatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueDeletePatch" />
       <keyword name="QueuesProjectHelper.__hgQueueDeleteQueue" id="QueuesProjectHelper.__hgQueueDeleteQueue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueDeleteQueue" />
@@ -9260,6 +9263,7 @@
       <keyword name="QueuesProjectHelper.__hgQueueGuardsList" id="QueuesProjectHelper.__hgQueueGuardsList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueGuardsList" />
       <keyword name="QueuesProjectHelper.__hgQueueGuardsListAll" id="QueuesProjectHelper.__hgQueueGuardsListAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueGuardsListAll" />
       <keyword name="QueuesProjectHelper.__hgQueueGuardsSetActive" id="QueuesProjectHelper.__hgQueueGuardsSetActive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueGuardsSetActive" />
+      <keyword name="QueuesProjectHelper.__hgQueueInit" id="QueuesProjectHelper.__hgQueueInit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueInit" />
       <keyword name="QueuesProjectHelper.__hgQueueListPatches" id="QueuesProjectHelper.__hgQueueListPatches" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueListPatches" />
       <keyword name="QueuesProjectHelper.__hgQueueListQueues" id="QueuesProjectHelper.__hgQueueListQueues" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueListQueues" />
       <keyword name="QueuesProjectHelper.__hgQueueNewPatch" id="QueuesProjectHelper.__hgQueueNewPatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueNewPatch" />
@@ -9283,6 +9287,7 @@
       <keyword name="QueuesProjectHelper.__hgQueueRenameQueue" id="QueuesProjectHelper.__hgQueueRenameQueue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueRenameQueue" />
       <keyword name="QueuesProjectHelper.__hgQueueShowHeader" id="QueuesProjectHelper.__hgQueueShowHeader" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueShowHeader" />
       <keyword name="QueuesProjectHelper.__hgQueueShowPatch" id="QueuesProjectHelper.__hgQueueShowPatch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueShowPatch" />
+      <keyword name="QueuesProjectHelper.__hgQueueStatus" id="QueuesProjectHelper.__hgQueueStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__hgQueueStatus" />
       <keyword name="QueuesProjectHelper.__initGuardsActions" id="QueuesProjectHelper.__initGuardsActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initGuardsActions" />
       <keyword name="QueuesProjectHelper.__initPushPopActions" id="QueuesProjectHelper.__initPushPopActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initPushPopActions" />
       <keyword name="QueuesProjectHelper.__initPushPopForceActions" id="QueuesProjectHelper.__initPushPopForceActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initPushPopForceActions" />
@@ -12874,6 +12879,7 @@
       <keyword name="pendingWrite" id="pendingWrite" ref="eric5.DebugClients.Ruby.AsyncFile.html#pendingWrite" />
       <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
       <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric5.UtilitiesPython2.pep8.html" />
+      <keyword name="prepareProcess" id="prepareProcess" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html#prepareProcess" />
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric5.Utilities.__init__.html#prepareQtMacBundle" />
       <keyword name="prepareUninstall" id="prepareUninstall" ref="eric5.Plugins.PluginVcsMercurial.html#prepareUninstall" />
       <keyword name="prepareUninstall" id="prepareUninstall" ref="eric5.Plugins.PluginVcsPySvn.html#prepareUninstall" />

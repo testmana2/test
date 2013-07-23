@@ -10,10 +10,12 @@ directory state.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QProcessEnvironment, QTimer
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
+
+from .HgUtilities import prepareProcess
 
 from .Ui_HgSummaryDialog import Ui_HgSummaryDialog
 
@@ -87,9 +89,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.kill()
         else:
             self.process = QProcess()
-            env = QProcessEnvironment.systemEnvironment()
-            env.insert("LANGUAGE", "C")
-            self.process.setProcessEnvironment(env)
+            prepareProcess(self.process, Preferences.getSystem("IOEncoding"), "C")
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)

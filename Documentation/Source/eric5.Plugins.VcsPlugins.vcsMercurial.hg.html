@@ -1111,7 +1111,7 @@ directory name of the working directory (string)
 </dd>
 </dl><a NAME="Hg.vcsCommit" ID="Hg.vcsCommit"></a>
 <h4>Hg.vcsCommit</h4>
-<b>vcsCommit</b>(<i>name, message, noDialog=False, closeBranch=False</i>)
+<b>vcsCommit</b>(<i>name, message, noDialog=False, closeBranch=False, mq=False</i>)
 <p>
         Public method used to make the change of a file/directory permanent in the
         Mercurial repository.
@@ -1128,6 +1128,9 @@ flag indicating quiet operations
 </dd><dt><i>closeBranch=</i></dt>
 <dd>
 flag indicating a close branch commit (boolean)
+</dd><dt><i>mq=</i></dt>
+<dd>
+flag indicating a queue commit (boolean)
 </dd>
 </dl><a NAME="Hg.vcsConvertProject" ID="Hg.vcsConvertProject"></a>
 <h4>Hg.vcsConvertProject</h4>

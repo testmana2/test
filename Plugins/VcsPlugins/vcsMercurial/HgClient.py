@@ -10,9 +10,10 @@ Module implementing an interface to the Mercurial command server.
 import struct
 import io
 
-from PyQt4.QtCore import QProcess, QProcessEnvironment, QObject, QByteArray, \
-    QCoreApplication, QThread
+from PyQt4.QtCore import QProcess, QObject, QByteArray, QCoreApplication, QThread
 from PyQt4.QtGui import QDialog
+
+from .HgUtilities import prepareProcess
 
 import Preferences
 
@@ -73,11 +74,7 @@ class HgClient(QObject):
         # connect signals
         self.__server.finished.connect(self.__serverFinished)
         
-        # set the encoding for the server
-        if self.__encoding:
-            env = QProcessEnvironment.systemEnvironment()
-            env.insert("HGENCODING", self.__encoding)
-            self.__server.setProcessEnvironment(env)
+        prepareProcess(self.__server, self.__encoding)
         
         self.__server.start('hg', self.__serverArgs)
         serverStarted = self.__server.waitForStarted(5000)
