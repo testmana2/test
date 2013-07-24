@@ -216,7 +216,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
-                0, 0, self, 'subversion_export')
+                0, 0, self, 'mercurial_export_repo')
         self.vcsExportAct.setStatusTip(self.trUtf8(
             'Export a project from the repository'
         ))
