@@ -12,6 +12,7 @@ from PyQt4.QtGui import QCompleter, QDirModel, QStringListModel
 
 from Globals import isWindowsPlatform
 
+# TODO: replace obsoleted QDirModel by QFileSystemModel
 
 class E5FileCompleter(QCompleter):
     """

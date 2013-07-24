@@ -917,6 +917,20 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgRemoveSubreposAct.triggered[()].connect(self.__hgRemoveSubrepositories)
         self.actions.append(self.hgRemoveSubreposAct)
+        
+        self.hgArchiveAct = E5Action(self.trUtf8('Create unversioned archive'),
+                UI.PixmapCache.getIcon("vcsExport.png"),
+                self.trUtf8('Create unversioned archive...'),
+                0, 0, self, 'mercurial_archive')
+        self.hgArchiveAct.setStatusTip(self.trUtf8(
+            'Create an unversioned archive from the repository'
+        ))
+        self.hgArchiveAct.setWhatsThis(self.trUtf8(
+            """<b>Create unversioned archive...</b>"""
+            """<p>This creates an unversioned archive from the repository.</p>"""
+        ))
+        self.hgArchiveAct.triggered[()].connect(self.__hgArchive)
+        self.actions.append(self.hgArchiveAct)
     
     def initMenu(self, menu):
         """
@@ -953,6 +967,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         specialsMenu = QMenu(self.trUtf8("Specials"), menu)
         specialsMenu.setTearOffEnabled(True)
+        specialsMenu.addAction(self.hgArchiveAct)
+        specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgPushForcedAct)
         specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgServeAct)
@@ -1432,3 +1448,9 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot to show a working directory summary.
         """
         self.vcs.hgSummary()
+    
+    def __hgArchive(self):
+        """
+        Private slot to create an unversioned archive from the repository.
+        """
+        self.vcs.hgArchive()

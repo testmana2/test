@@ -2739,6 +2739,39 @@ class Hg(VersionControl):
             self.checkVCSStatus()
         return res
     
+    def hgArchive(self):
+        """
+        Public method to create an unversioned archive from the repository.
+        """
+        # find the root of the repo
+        repodir = self.__projectHelper.getProject().getProjectPath()
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        from .HgArchiveDialog import HgArchiveDialog
+        dlg = HgArchiveDialog(self)
+        if dlg.exec_() == QDialog.Accepted:
+            archive, type_, prefix, subrepos = dlg.getData()
+            
+            args = []
+            args.append("archive")
+            if type_:
+                args.append("--type")
+                args.append(type_)
+            if prefix:
+                args.append("--prefix")
+                args.append(prefix)
+            if subrepos:
+                args.append("--subrepos")
+            args.append(archive)
+            
+            dia = HgDialog(self.trUtf8("Create Unversioned Archive"), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
     ############################################################################
     ## Methods to deal with subrepositories are below.
     ############################################################################
