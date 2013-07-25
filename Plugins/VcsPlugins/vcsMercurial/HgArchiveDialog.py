@@ -36,6 +36,7 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         self.__archiveDirCompleter = E5DirCompleter()
         self.__activeCompleter = self.__archiveFileCompleter
         self.archiveEdit.setCompleter(self.__activeCompleter)
+        self.__activeCompleter.model().setNameFilters([])
         
         self.typeComboBox.addItem(self.trUtf8("Detect Automatically"), "")
         self.typeComboBox.addItem(self.trUtf8("Directory of Files"), "files")
@@ -61,6 +62,14 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
             self.__fileFilters = ";;".join(
                 self.__unixFileFilters + self.__windowsFileFilters)
         self.__fileFilters += ";;" + self.trUtf8("All Files (*)")
+        
+        self.__typeFilters = {
+            "tar": ["*.tar"],
+            "tbz2": ["*.tar.bz2", "*.tbz2"],
+            "tgz": ["*.tar.gz", "*.tgz"],
+            "uzip": ["*.uzip", "*.zip"],
+            "zip": ["*.zip"],
+        }
         
         self.subReposCheckBox.setEnabled(vcs.hasSubrepositories())
         
@@ -124,10 +133,13 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
                 self.__activeCompleter = self.__archiveDirCompleter
                 self.archiveEdit.setCompleter(self.__activeCompleter)
         else:
-            # TODO: add name filter to completer based upon selected type
             if self.__activeCompleter != self.__archiveFileCompleter:
                 self.__activeCompleter = self.__archiveFileCompleter
                 self.archiveEdit.setCompleter(self.__activeCompleter)
+            if type_ in self.__typeFilters:
+                self.__activeCompleter.model().setNameFilters(self.__typeFilters[type_])
+            else:
+                self.__activeCompleter.model().setNameFilters([])
     
     def getData(self):
         """
