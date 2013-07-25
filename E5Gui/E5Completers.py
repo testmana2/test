@@ -8,7 +8,7 @@ Module implementing various kinds of completers.
 """
 
 from PyQt4.QtCore import QDir, Qt
-from PyQt4.QtGui import QCompleter, QDirModel, QStringListModel
+from PyQt4.QtGui import QCompleter, QFileSystemModel, QStringListModel
 
 from Globals import isWindowsPlatform
 
@@ -29,7 +29,7 @@ class E5FileCompleter(QCompleter):
         @keyparam showHidden flag indicating to show hidden entries as well (boolean)
         """
         super().__init__(parent)
-        self.__model = QDirModel(self)
+        self.__model = QFileSystemModel(self)
         if showHidden:
             self.__model.setFilter(
                 QDir.Filters(QDir.Dirs | QDir.Files | QDir.Drives | \
@@ -61,7 +61,7 @@ class E5DirCompleter(QCompleter):
         @keyparam showHidden flag indicating to show hidden entries as well (boolean)
         """
         super().__init__(parent)
-        self.__model = QDirModel(self)
+        self.__model = QFileSystemModel(self)
         if showHidden:
             self.__model.setFilter(
                 QDir.Filters(QDir.Drives | QDir.AllDirs | QDir.Hidden))
