@@ -387,12 +387,14 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                 if infoDict["update"][0] == "@CURRENT@":
                     uinfo = self.trUtf8("current")
                 elif infoDict["update"][0] == "@UPDATE@":
-                    uinfo = self.trUtf8("{0} new changesets<br/>Update required")\
-                            .format(infoDict["update"][1])
+                    uinfo = self.trUtf8("%n new changeset(s)<br/>Update required", "",
+                        infoDict["update"][1])
                 elif infoDict["update"][0] == "@MERGE@":
-                    uinfo = self.trUtf8(
-                        "{0} new changesets<br/>{1} branch heads<br/>Merge required")\
-                        .format(infoDict["update"][1], infoDict["update"][2])
+                    uinfo1 = self.trUtf8("%n new changeset(s)", "", infoDict["update"][1])
+                    uinfo2 = self.trUtf8("%n branch head(s)", "", infoDict["update"][2])
+                    uinfo = self.trUtf8("{0}<br/>{1}<br/>Merge required",
+                        "0 is changesets, 1 is branch heads")\
+                        .format(uinfo1, uinfo2)
                 else:
                     uinfo = self.trUtf8("unknown status")
                 info.append(
@@ -409,11 +411,11 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
                         l.append(self.trUtf8("{0} outgoing")\
                             .format(infoDict["remote"][1]))
                     if infoDict["remote"][2]:
-                        l.append(self.trUtf8("{0} incoming bookmarks")
-                                 .format(infoDict["remote"][2]))
+                        l.append(self.trUtf8("%n incoming bookmark(s)", "",
+                                 infoDict["remote"][2]))
                     if infoDict["remote"][3]:
-                        l.append(self.trUtf8("{0} outgoing bookmarks")
-                                 .format(infoDict["remote"][3]))
+                        l.append(self.trUtf8("%n outgoing bookmark(s)", "",
+                                 infoDict["remote"][3]))
                     rinfo = "<br/>".join(l)
                 info.append(
                     self.trUtf8("<tr><td><b>Remote Status</b></td><td>{0}</td></tr>")
