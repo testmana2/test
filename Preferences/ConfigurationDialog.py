@@ -397,7 +397,7 @@ class ConfigurationWidget(QWidget):
         self.resize(900, 650)
         self.verticalLayout_2 = QVBoxLayout(self)
         self.verticalLayout_2.setSpacing(6)
-        self.verticalLayout_2.setMargin(6)
+        self.verticalLayout_2.setContentsMargins(6, 6, 6, 6)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         
         self.configSplitter = QSplitter(self)
@@ -406,7 +406,7 @@ class ConfigurationWidget(QWidget):
         
         self.configListWidget = QWidget(self.configSplitter)
         self.leftVBoxLayout = QVBoxLayout(self.configListWidget)
-        self.leftVBoxLayout.setMargin(0)
+        self.leftVBoxLayout.setContentsMargins(0, 0, 0, 0)
         self.leftVBoxLayout.setSpacing(0)
         self.leftVBoxLayout.setObjectName("leftVBoxLayout")
         self.configListFilter = E5ClearableLineEdit(self,
@@ -436,7 +436,7 @@ class ConfigurationWidget(QWidget):
         self.emptyPage.setObjectName("emptyPage")
         self.vboxlayout = QVBoxLayout(self.emptyPage)
         self.vboxlayout.setSpacing(6)
-        self.vboxlayout.setMargin(6)
+        self.vboxlayout.setContentsMargins(6, 6, 6, 6)
         self.vboxlayout.setObjectName("vboxlayout")
         spacerItem = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.vboxlayout.addItem(spacerItem)
@@ -750,7 +750,7 @@ class ConfigurationDialog(QDialog):
             self.setObjectName(name)
         self.setModal(modal)
         self.layout = QVBoxLayout(self)
-        self.layout.setMargin(0)
+        self.layout.setContentsMargins(0, 0, 0, 0)
         self.layout.setSpacing(0)
         
         self.cw = ConfigurationWidget(self, fromEric=fromEric,

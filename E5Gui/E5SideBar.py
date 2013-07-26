@@ -51,9 +51,9 @@ class E5SideBar(QWidget):
         self.__autoHideButton.setToolTip(
             self.trUtf8("Deselect to activate automatic collapsing"))
         self.barLayout = QBoxLayout(QBoxLayout.LeftToRight)
-        self.barLayout.setMargin(0)
+        self.barLayout.setContentsMargins(0, 0, 0, 0)
         self.layout = QBoxLayout(QBoxLayout.TopToBottom)
-        self.layout.setMargin(0)
+        self.layout.setContentsMargins(0, 0, 0, 0)
         self.layout.setSpacing(0)
         self.barLayout.addWidget(self.__autoHideButton)
         self.barLayout.addWidget(self.__tabBar)

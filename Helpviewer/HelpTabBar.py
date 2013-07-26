@@ -64,7 +64,7 @@ class HelpTabBar(E5WheelTabBar):
         
         self.__previewPopup.setView(l)
         self.__previewPopup.layout().setAlignment(Qt.AlignTop)
-        self.__previewPopup.layout().setMargin(0)
+        self.__previewPopup.layout().setContentsMargins(0, 0, 0, 0)
         
         tr = self.tabRect(self.__currentTabPreviewIndex)
         pos = QPoint(tr.x(), tr.y() + tr.height())
