@@ -80,7 +80,7 @@ class HelpTabWidget(E5TabWidget):
         
         self.__rightCornerWidget = QWidget(self)
         self.__rightCornerWidgetLayout = QHBoxLayout(self.__rightCornerWidget)
-        self.__rightCornerWidgetLayout.setMargin(0)
+        self.__rightCornerWidgetLayout.setContentsMargins(0, 0, 0, 0)
         self.__rightCornerWidgetLayout.setSpacing(0)
         
         self.__navigationMenu = QMenu(self)

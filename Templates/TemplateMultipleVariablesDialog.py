@@ -26,7 +26,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         super().__init__(parent)
 
         self.TemplateMultipleVariablesDialogLayout = QVBoxLayout(self)
-        self.TemplateMultipleVariablesDialogLayout.setMargin(6)
+        self.TemplateMultipleVariablesDialogLayout.setContentsMargins(6, 6, 6, 6)
         self.TemplateMultipleVariablesDialogLayout.setSpacing(6)
         self.TemplateMultipleVariablesDialogLayout.setObjectName(
             "TemplateMultipleVariablesDialogLayout")
@@ -43,7 +43,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.top = QWidget(self)
         self.variablesView.setWidget(self.top)
         self.grid = QGridLayout(self.top)
-        self.grid.setMargin(0)
+        self.grid.setContentsMargins(0, 0, 0, 0)
         self.grid.setSpacing(6)
         self.top.setLayout(self.grid)
 
@@ -73,7 +73,7 @@ class TemplateMultipleVariablesDialog(QDialog):
 
         # generate the buttons
         layout1 = QHBoxLayout()
-        layout1.setMargin(0)
+        layout1.setContentsMargins(0, 0, 0, 0)
         layout1.setSpacing(6)
         layout1.setObjectName("layout1")
         

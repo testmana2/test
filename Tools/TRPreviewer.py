@@ -61,12 +61,12 @@ class TRPreviewer(E5MainWindow):
         self.cw.setObjectName("qt_central_widget")
         
         self.TRPreviewerLayout = QVBoxLayout(self.cw)
-        self.TRPreviewerLayout.setMargin(6)
+        self.TRPreviewerLayout.setContentsMargins(6, 6, 6, 6)
         self.TRPreviewerLayout.setSpacing(6)
         self.TRPreviewerLayout.setObjectName("TRPreviewerLayout")
 
         self.languageLayout = QHBoxLayout()
-        self.languageLayout.setMargin(0)
+        self.languageLayout.setContentsMargins(0, 0, 0, 0)
         self.languageLayout.setSpacing(6)
         self.languageLayout.setObjectName("languageLayout")
 

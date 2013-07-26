@@ -2582,7 +2582,7 @@ class HelpWindow(E5MainWindow):
             if self.__indexingProgress is None:
                 self.__indexingProgress = QWidget()
                 layout = QHBoxLayout(self.__indexingProgress)
-                layout.setMargin(0)
+                layout.setContentsMargins(0, 0, 0, 0)
                 sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
                 
                 label = QLabel(self.trUtf8("Updating search index"))

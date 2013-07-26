@@ -70,7 +70,7 @@ class DebugViewer(QWidget):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
         self.__mainLayout = QVBoxLayout()
-        self.__mainLayout.setMargin(0)
+        self.__mainLayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__mainLayout)
         
         self.__tabWidget = E5TabWidget()
@@ -99,7 +99,7 @@ class DebugViewer(QWidget):
         # add the global variables viewer
         self.glvWidget = QWidget()
         self.glvWidgetVLayout = QVBoxLayout(self.glvWidget)
-        self.glvWidgetVLayout.setMargin(0)
+        self.glvWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.glvWidgetVLayout.setSpacing(3)
         self.glvWidget.setLayout(self.glvWidgetVLayout)
         
@@ -107,7 +107,7 @@ class DebugViewer(QWidget):
         self.glvWidgetVLayout.addWidget(self.globalsViewer)
         
         self.glvWidgetHLayout = QHBoxLayout()
-        self.glvWidgetHLayout.setMargin(3)
+        self.glvWidgetHLayout.setContentsMargins(3, 3, 3, 3)
         
         self.globalsFilterEdit = QLineEdit(self.glvWidget)
         self.globalsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
@@ -134,12 +134,12 @@ class DebugViewer(QWidget):
         # add the local variables viewer
         self.lvWidget = QWidget()
         self.lvWidgetVLayout = QVBoxLayout(self.lvWidget)
-        self.lvWidgetVLayout.setMargin(0)
+        self.lvWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.lvWidgetVLayout.setSpacing(3)
         self.lvWidget.setLayout(self.lvWidgetVLayout)
         
         self.lvWidgetHLayout1 = QHBoxLayout()
-        self.lvWidgetHLayout1.setMargin(3)
+        self.lvWidgetHLayout1.setContentsMargins(3, 3, 3, 3)
         
         self.stackComboBox = QComboBox(self.lvWidget)
         self.stackComboBox.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
@@ -154,7 +154,7 @@ class DebugViewer(QWidget):
         self.lvWidgetVLayout.addWidget(self.localsViewer)
         
         self.lvWidgetHLayout2 = QHBoxLayout()
-        self.lvWidgetHLayout2.setMargin(3)
+        self.lvWidgetHLayout2.setContentsMargins(3, 3, 3, 3)
         
         self.localsFilterEdit = QLineEdit(self.lvWidget)
         self.localsFilterEdit.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
