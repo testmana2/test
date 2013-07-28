@@ -63,7 +63,7 @@ CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassModel UMLModel
 ClassScope Scope
@@ -283,6 +283,7 @@ HelpWindow E5MainWindow
 Hg VersionControl
 HgAddSubrepositoryDialog QDialog Ui_HgAddSubrepositoryDialog
 HgAnnotateDialog QDialog Ui_HgAnnotateDialog
+HgArchiveDialog QDialog Ui_HgArchiveDialog
 HgBackoutDialog QDialog Ui_HgBackoutDialog
 HgBookmarkDialog QDialog Ui_HgBookmarkDialog
 HgBookmarkRenameDialog QDialog Ui_HgBookmarkRenameDialog
