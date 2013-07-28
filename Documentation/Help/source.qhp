@@ -5152,6 +5152,7 @@
       <keyword name="HelpWindow.__prevTab" id="HelpWindow.__prevTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__prevTab" />
       <keyword name="HelpWindow.__privateBrowsing" id="HelpWindow.__privateBrowsing" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__privateBrowsing" />
       <keyword name="HelpWindow.__reload" id="HelpWindow.__reload" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__reload" />
+      <keyword name="HelpWindow.__removeOldDocumentation" id="HelpWindow.__removeOldDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__removeOldDocumentation" />
       <keyword name="HelpWindow.__savePageAs" id="HelpWindow.__savePageAs" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageAs" />
       <keyword name="HelpWindow.__savePageScreen" id="HelpWindow.__savePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageScreen" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
