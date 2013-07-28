@@ -130,6 +130,7 @@ class HelpWindow(E5MainWindow):
                 self.__helpEngine = \
                     QHelpEngine(os.path.join(Utilities.getConfigDir(),
                                              "browser", "eric5help.qhc"), self)
+                self.__removeOldDocumentation()
                 self.__helpEngine.warning.connect(self.__warning)
             else:
                 self.__helpEngine = None
@@ -2629,6 +2630,15 @@ class HelpWindow(E5MainWindow):
         if self.useQtHelp:
                 self.__searchWord = word
                 self.__searchForWord()
+        
+    def __removeOldDocumentation(self):
+        """
+        Private slot to remove non-existing documentation from the help engine.
+        """
+        for namespace in self.__helpEngine.registeredDocumentations():
+            docFile = self.__helpEngine.documentationFileName(namespace)
+            if not os.path.exists(docFile):
+                self.__helpEngine.unregisterDocumentation(namespace)
         
     def __lookForNewDocumentation(self):
         """
