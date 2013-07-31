@@ -2199,10 +2199,12 @@
       <keyword name="CompareDialog (Constructor)" id="CompareDialog (Constructor)" ref="eric5.UI.CompareDialog.html#CompareDialog.__init__" />
       <keyword name="CompareDialog (Module)" id="CompareDialog (Module)" ref="eric5.UI.CompareDialog.html" />
       <keyword name="CompareDialog.__appendText" id="CompareDialog.__appendText" ref="eric5.UI.CompareDialog.html#CompareDialog.__appendText" />
+      <keyword name="CompareDialog.__compare" id="CompareDialog.__compare" ref="eric5.UI.CompareDialog.html#CompareDialog.__compare" />
       <keyword name="CompareDialog.__fileChanged" id="CompareDialog.__fileChanged" ref="eric5.UI.CompareDialog.html#CompareDialog.__fileChanged" />
       <keyword name="CompareDialog.__moveTextToCurrentDiffPos" id="CompareDialog.__moveTextToCurrentDiffPos" ref="eric5.UI.CompareDialog.html#CompareDialog.__moveTextToCurrentDiffPos" />
       <keyword name="CompareDialog.__scrollBarMoved" id="CompareDialog.__scrollBarMoved" ref="eric5.UI.CompareDialog.html#CompareDialog.__scrollBarMoved" />
       <keyword name="CompareDialog.__selectFile" id="CompareDialog.__selectFile" ref="eric5.UI.CompareDialog.html#CompareDialog.__selectFile" />
+      <keyword name="CompareDialog.compare" id="CompareDialog.compare" ref="eric5.UI.CompareDialog.html#CompareDialog.compare" />
       <keyword name="CompareDialog.on_buttonBox_clicked" id="CompareDialog.on_buttonBox_clicked" ref="eric5.UI.CompareDialog.html#CompareDialog.on_buttonBox_clicked" />
       <keyword name="CompareDialog.on_diffButton_clicked" id="CompareDialog.on_diffButton_clicked" ref="eric5.UI.CompareDialog.html#CompareDialog.on_diffButton_clicked" />
       <keyword name="CompareDialog.on_downButton_clicked" id="CompareDialog.on_downButton_clicked" ref="eric5.UI.CompareDialog.html#CompareDialog.on_downButton_clicked" />

@@ -7638,6 +7638,7 @@ eric5.UI.BrowserSortFilterProxyModel.BrowserSortFilterProxyModel.lessThan?4(left
 eric5.UI.BrowserSortFilterProxyModel.BrowserSortFilterProxyModel.preferencesChanged?4()
 eric5.UI.BrowserSortFilterProxyModel.BrowserSortFilterProxyModel.sort?4(column, order)
 eric5.UI.BrowserSortFilterProxyModel.BrowserSortFilterProxyModel?1(parent=None)
+eric5.UI.CompareDialog.CompareDialog.compare?4(lines1, lines2, name1="", name2="")
 eric5.UI.CompareDialog.CompareDialog.on_buttonBox_clicked?4(button)
 eric5.UI.CompareDialog.CompareDialog.on_diffButton_clicked?4()
 eric5.UI.CompareDialog.CompareDialog.on_downButton_clicked?4()
