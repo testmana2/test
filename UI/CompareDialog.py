@@ -332,8 +332,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.vsb2.setValue(0)
         self.firstButton.setEnabled(False)
         self.upButton.setEnabled(False)
-        self.downButton.setEnabled(len(self.diffParas) > 0)
-        self.lastButton.setEnabled(len(self.diffParas) > 0)
+        self.downButton.setEnabled(len(self.diffParas) > 0 and 
+            (self.vsb1.isVisible() or self.vsb2.isVisible()))
+        self.lastButton.setEnabled(len(self.diffParas) > 0 and 
+            (self.vsb1.isVisible() or self.vsb2.isVisible()))
         
         self.totalLabel.setText(self.trUtf8('Total: {0}')\
                                     .format(added + deleted + changed))
@@ -345,9 +347,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         Private slot to move the text display to the current diff position.
         """
-        value = (self.diffParas[self.currentDiffPos] - 1) * self.fontHeight
-        self.vsb1.setValue(value)
-        self.vsb2.setValue(value)
+        if 0<= self.currentDiffPos < len(self.diffParas):
+            value = (self.diffParas[self.currentDiffPos] - 1) * self.fontHeight
+            self.vsb1.setValue(value)
+            self.vsb2.setValue(value)
     
     def __scrollBarMoved(self, value):
         """
