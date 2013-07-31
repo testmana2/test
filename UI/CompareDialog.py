@@ -347,7 +347,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         Private slot to move the text display to the current diff position.
         """
-        if 0<= self.currentDiffPos < len(self.diffParas):
+        if 0 <= self.currentDiffPos < len(self.diffParas):
             value = (self.diffParas[self.currentDiffPos] - 1) * self.fontHeight
             self.vsb1.setValue(value)
             self.vsb2.setValue(value)

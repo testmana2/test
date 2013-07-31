@@ -5449,6 +5449,7 @@
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
       <keyword name="Hg.hgRevert" id="Hg.hgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRevert" />
       <keyword name="Hg.hgRollback" id="Hg.hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRollback" />
+      <keyword name="Hg.hgSbsDiff" id="Hg.hgSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgSbsDiff" />
       <keyword name="Hg.hgServe" id="Hg.hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgServe" />
       <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
       <keyword name="Hg.hgShowConfig" id="Hg.hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowConfig" />
@@ -5898,6 +5899,7 @@
       <keyword name="HgProjectBrowserHelper.__HgMove" id="HgProjectBrowserHelper.__HgMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgMove" />
       <keyword name="HgProjectBrowserHelper.__HgResolve" id="HgProjectBrowserHelper.__HgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgResolve" />
       <keyword name="HgProjectBrowserHelper.__HgRevert" id="HgProjectBrowserHelper.__HgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgRevert" />
+      <keyword name="HgProjectBrowserHelper.__HgSbsDiff" id="HgProjectBrowserHelper.__HgSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgSbsDiff" />
       <keyword name="HgProjectBrowserHelper._addVCSMenu" id="HgProjectBrowserHelper._addVCSMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenu" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuBack" id="HgProjectBrowserHelper._addVCSMenuBack" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuBack" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuDir" id="HgProjectBrowserHelper._addVCSMenuDir" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuDir" />

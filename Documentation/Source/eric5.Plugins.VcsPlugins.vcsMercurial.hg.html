@@ -214,6 +214,9 @@ VersionControl
 <td><a href="#Hg.hgRollback">hgRollback</a></td>
 <td>Public method used to rollback the last transaction.</td>
 </tr><tr>
+<td><a href="#Hg.hgSbsDiff">hgSbsDiff</a></td>
+<td>Public method used to view the difference of a file to the Mercurial repository side-by-side.</td>
+</tr><tr>
 <td><a href="#Hg.hgServe">hgServe</a></td>
 <td>Public method used to serve the project.</td>
 </tr><tr>
@@ -917,6 +920,17 @@ flag indicating, that the update contained an add
 <dt><i>name</i></dt>
 <dd>
 directory name (string or list of strings)
+</dd>
+</dl><a NAME="Hg.hgSbsDiff" ID="Hg.hgSbsDiff"></a>
+<h4>Hg.hgSbsDiff</h4>
+<b>hgSbsDiff</b>(<i>name</i>)
+<p>
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to be diffed (string)
 </dd>
 </dl><a NAME="Hg.hgServe" ID="Hg.hgServe"></a>
 <h4>Hg.hgServe</h4>

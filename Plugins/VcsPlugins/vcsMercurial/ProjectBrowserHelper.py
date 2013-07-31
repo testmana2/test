@@ -230,6 +230,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
+            self.trUtf8('Show difference side-by-side'), self.__HgSbsDiff)
+        self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
@@ -566,6 +569,15 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             except AttributeError:
                 names.append(itm.dirName())
         self.vcs.hgExtendedDiff(names)
+    
+    def __HgSbsDiff(self):
+        """
+        Private slot called by the context menu to show the difference of a file to
+        the repository side-by-side.
+        """
+        itm = self.browser.currentItem()
+        fn = itm.fileName()
+        self.vcs.hgSbsDiff(fn)
     
     def __HgAnnotate(self):
         """

@@ -1628,6 +1628,58 @@ class Hg(VersionControl):
             self.diff.show()
             self.diff.start(name, revisions)
     
+    def hgSbsDiff(self, name):
+        """
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+        
+        @param name file name to be diffed (string)
+        """
+        if isinstance(name, list):
+            raise ValueError("Wrong parameter type")
+        
+        args = []
+        args.append("cat")
+        args.append(name)
+        
+        output1 = ""
+        if self.__client is None:
+            # find the root of the repo
+            repodir = self.splitPath(name)[0]
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return
+            
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output1 = str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output1, error = self.__client.runcommand(args)
+        
+        try:
+            f1 = open(name, "r", encoding="utf-8")
+            output2 = f1.read()
+            f1.close()
+        except IOError:
+            E5MessageBox.critical(self,
+                self.trUtf8("Mercurial Side-by-Side Difference"),
+                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                    .format(name))
+            return
+        
+        if output1 and output2:
+            from UI.CompareDialog import CompareDialog
+            self.sbsDiff = CompareDialog()
+            self.sbsDiff.show()
+            self.sbsDiff.compare(output1, output2, "{0}@.".format(name), name)
+    
     def hgLogBrowser(self, path):
         """
         Public method used to browse the log of a file/directory from the
