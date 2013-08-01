@@ -229,16 +229,14 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
-        # TODO: create an icon for SBS mode
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
             self.trUtf8('Show difference side-by-side'), self.__HgSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
-        # TODO: create an icon for SBS mode
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
             self.trUtf8('Show difference side-by-side (extended)'),
             self.__HgSbsExtendedDiff)
         self.vcsMenuActions.append(act)
