@@ -62,6 +62,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.buttonsLine.setVisible(False)
             self.addButton.setVisible(False)
             self.diffButton.setVisible(False)
+            self.sbsDiffButton.setVisible(False)
             self.revertButton.setVisible(False)
             self.forgetButton.setVisible(False)
             self.restoreButton.setVisible(False)
@@ -80,6 +81,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.trUtf8("Add to repository"), self.__add))
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Show differences"), self.__diff))
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Show differences side-by-side"), self.__sbsDiff))
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Remove from repository"), self.__forget))
             self.menuactions.append(self.menu.addAction(
@@ -194,6 +197,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.addButton.setEnabled(False)
         self.commitButton.setEnabled(False)
         self.diffButton.setEnabled(False)
+        self.sbsDiffButton.setEnabled(False)
         self.revertButton.setEnabled(False)
         self.forgetButton.setEnabled(False)
         self.restoreButton.setEnabled(False)
@@ -459,6 +463,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
 
         self.addButton.setEnabled(unversioned)
         self.diffButton.setEnabled(modified)
+        self.sbsDiffButton.setEnabled(modified == 1)
         self.revertButton.setEnabled(modified)
         self.forgetButton.setEnabled(missing)
         self.restoreButton.setEnabled(missing)
@@ -524,6 +529,13 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         Private slot to handle the press of the Differences button.
         """
         self.__diff()
+    
+    @pyqtSlot()
+    def on_sbsDiffButton_clicked(self):
+        """
+        Private slot to handle the press of the Side-by-Side Diff button.
+        """
+        self.__sbsDiff()
     
     @pyqtSlot()
     def on_revertButton_clicked(self):
@@ -690,13 +702,33 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                             """ available/selected."""))
             return
         
-        # add SBS option (file mode only)
         if self.diff is None:
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(names)
+    
+    def __sbsDiff(self):
+        """
+        Private slot to handle the Diff context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getModifiedItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Side-by-Side Diff"),
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
+            return
+        elif len(names) > 1:
+            E5MessageBox.information(self,
+                self.trUtf8("Side-by-Side Diff"),
+                self.trUtf8("""Only one file with uncommitted changes"""
+                            """ must be selected."""))
+            return
         
+        self.vcs.hgSbsDiff(names[0])
+    
     def __getCommitableItems(self):
         """
         Private method to retrieve all entries the user wants to commit.

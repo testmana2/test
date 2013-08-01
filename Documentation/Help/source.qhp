@@ -6168,6 +6168,7 @@
       <keyword name="HgStatusDialog.__resort" id="HgStatusDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__resort" />
       <keyword name="HgStatusDialog.__restoreMissing" id="HgStatusDialog.__restoreMissing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__restoreMissing" />
       <keyword name="HgStatusDialog.__revert" id="HgStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__revert" />
+      <keyword name="HgStatusDialog.__sbsDiff" id="HgStatusDialog.__sbsDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__sbsDiff" />
       <keyword name="HgStatusDialog.__showContextMenu" id="HgStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__showContextMenu" />
       <keyword name="HgStatusDialog.__showError" id="HgStatusDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__showError" />
       <keyword name="HgStatusDialog.__updateButtons" id="HgStatusDialog.__updateButtons" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__updateButtons" />
@@ -6184,6 +6185,7 @@
       <keyword name="HgStatusDialog.on_refreshButton_clicked" id="HgStatusDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_refreshButton_clicked" />
       <keyword name="HgStatusDialog.on_restoreButton_clicked" id="HgStatusDialog.on_restoreButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_restoreButton_clicked" />
       <keyword name="HgStatusDialog.on_revertButton_clicked" id="HgStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_revertButton_clicked" />
+      <keyword name="HgStatusDialog.on_sbsDiffButton_clicked" id="HgStatusDialog.on_sbsDiffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_sbsDiffButton_clicked" />
       <keyword name="HgStatusDialog.on_sendButton_clicked" id="HgStatusDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_sendButton_clicked" />
       <keyword name="HgStatusDialog.on_statusFilterCombo_activated" id="HgStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusFilterCombo_activated" />
       <keyword name="HgStatusDialog.on_statusList_itemChanged" id="HgStatusDialog.on_statusList_itemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemChanged" />

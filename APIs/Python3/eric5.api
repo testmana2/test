@@ -4558,6 +4558,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_passwordC
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_refreshButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_restoreButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_revertButton_clicked?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_sbsDiffButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_sendButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_statusFilterCombo_activated?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_statusList_itemChanged?4(item, column)
