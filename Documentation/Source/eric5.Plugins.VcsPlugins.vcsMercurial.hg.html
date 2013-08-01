@@ -73,6 +73,9 @@ VersionControl
 <td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
 <td>Private method to get the active extensions from Mercurial.</td>
 </tr><tr>
+<td><a href="#Hg.__hgGetFileForRevision">__hgGetFileForRevision</a></td>
+<td>Private method to get a file for a specific revision from the repository.</td>
+</tr><tr>
 <td><a href="#Hg.__hgURL">__hgURL</a></td>
 <td>Private method to format a url for Mercurial.</td>
 </tr><tr>
@@ -360,7 +363,25 @@ name of this object (string)
 <b>__getExtensionsInfo</b>(<i></i>)
 <p>
         Private method to get the active extensions from Mercurial.
-</p><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
+</p><a NAME="Hg.__hgGetFileForRevision" ID="Hg.__hgGetFileForRevision"></a>
+<h4>Hg.__hgGetFileForRevision</h4>
+<b>__hgGetFileForRevision</b>(<i>name, rev=""</i>)
+<p>
+        Private method to get a file for a specific revision from the repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to get from the repository (string)
+</dd><dt><i>rev=</i></dt>
+<dd>
+revision to retrieve (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+contents of the file (string) and an error message (string)
+</dd>
+</dl><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
 <h4>Hg.__hgURL</h4>
 <b>__hgURL</b>(<i>url</i>)
 <p>
@@ -923,7 +944,7 @@ directory name (string or list of strings)
 </dd>
 </dl><a NAME="Hg.hgSbsDiff" ID="Hg.hgSbsDiff"></a>
 <h4>Hg.hgSbsDiff</h4>
-<b>hgSbsDiff</b>(<i>name</i>)
+<b>hgSbsDiff</b>(<i>name, extended=False, revisions=None</i>)
 <p>
         Public method used to view the difference of a file to the Mercurial repository
         side-by-side.
@@ -931,6 +952,12 @@ directory name (string or list of strings)
 <dt><i>name</i></dt>
 <dd>
 file name to be diffed (string)
+</dd><dt><i>extended=</i></dt>
+<dd>
+flag indicating the extended variant (boolean)
+</dd><dt><i>revisions=</i></dt>
+<dd>
+tuple of two revisions (tuple of strings)
 </dd>
 </dl><a NAME="Hg.hgServe" ID="Hg.hgServe"></a>
 <h4>Hg.hgServe</h4>

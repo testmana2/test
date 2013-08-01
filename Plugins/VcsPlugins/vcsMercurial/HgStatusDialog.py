@@ -690,6 +690,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                             """ available/selected."""))
             return
         
+        # add SBS option (file mode only)
         if self.diff is None:
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)

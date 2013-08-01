@@ -93,6 +93,7 @@ class Hg(VersionControl):
         self.log = None
         self.logBrowser = None
         self.diff = None
+        self.sbsDiff = None
         self.status = None
         self.summary = None
         self.tagbranchList = None
@@ -158,6 +159,8 @@ class Hg(VersionControl):
             self.logBrowser.close()
         if self.diff is not None:
             self.diff.close()
+        if self.sbsDiff is not None:
+            self.sbsDiff.close()
         if self.status is not None:
             self.status.close()
         if self.summary is not None:
@@ -1628,22 +1631,25 @@ class Hg(VersionControl):
             self.diff.show()
             self.diff.start(name, revisions)
     
-    def hgSbsDiff(self, name):
+    def __hgGetFileForRevision(self, name, rev=""):
         """
-        Public method used to view the difference of a file to the Mercurial repository
-        side-by-side.
+        Private method to get a file for a specific revision from the repository.
         
-        @param name file name to be diffed (string)
+        @param name file name to get from the repository (string)
+        @keyparam rev revision to retrieve (string)
+        @return contents of the file (string) and an error message (string)
         """
-        if isinstance(name, list):
-            raise ValueError("Wrong parameter type")
-        
         args = []
         args.append("cat")
+        if rev:
+            args.append("--rev")
+            args.append(rev)
         args.append(name)
         
-        output1 = ""
         if self.__client is None:
+            output = ""
+            error = ""
+            
             # find the root of the repo
             repodir = self.splitPath(name)[0]
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
@@ -1657,28 +1663,95 @@ class Hg(VersionControl):
             procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
-                if finished and process.exitCode() == 0:
-                    output1 = str(process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                if finished:
+                    if process.exitCode() == 0:
+                        output = str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"), 'replace')
+                    else:
+                        error = str(process.readAllStandardError(),
+                            Preferences.getSystem("IOEncoding"), 'replace')
+                else:
+                    error = self.trUtf8("The hg process did not finish within 30s.")
+            else:
+                error = self.trUtf8('The process {0} could not be started. '
+                    'Ensure, that it is in the search path.').format('hg')
         else:
-            output1, error = self.__client.runcommand(args)
+            output, error = self.__client.runcommand(args)
         
-        try:
-            f1 = open(name, "r", encoding="utf-8")
-            output2 = f1.read()
-            f1.close()
-        except IOError:
+        return output, error
+    
+    def hgSbsDiff(self, name, extended=False, revisions=None):
+        """
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+        
+        @param name file name to be diffed (string)
+        @keyparam extended flag indicating the extended variant (boolean)
+        @keyparam revisions tuple of two revisions (tuple of strings)
+        """
+        if isinstance(name, list):
+            raise ValueError("Wrong parameter type")
+        
+        if extended:
+            # find the root of the repo
+            repodir = self.splitPath(name)[0]
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return
+            
+            if self.isExtensionActive("bookmarks"):
+                bookmarksList = \
+                    self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+            else:
+                bookmarksList = None
+            
+            from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
+            dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
+                                             self.hgGetBranchesList(repodir),
+                                             bookmarksList)
+            if dlg.exec_() == QDialog.Accepted:
+                rev1, rev2 = dlg.getRevisions()
+        elif revisions:
+            rev1, rev2 = revisions[0], revisions[1]
+        else:
+            rev1, rev2 = "", ""
+        
+        output1, error = self.__hgGetFileForRevision(name, rev=rev1)
+        if error:
             E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Side-by-Side Difference"),
-                self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
-                    .format(name))
+                error)
             return
+        name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
+        
+        if rev2:
+            output2, error = self.__hgGetFileForRevision(name, rev=rev2)
+            if error:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    error)
+                return
+            name2 = "{0} (rev. {1})".format(name, rev2)
+        else:
+            try:
+                f1 = open(name, "r", encoding="utf-8")
+                output2 = f1.read()
+                f1.close()
+                name2 = name
+            except IOError:
+                E5MessageBox.critical(self,
+                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                        .format(name))
+                return
         
         if output1 and output2:
-            from UI.CompareDialog import CompareDialog
-            self.sbsDiff = CompareDialog()
+            if self.sbsDiff is None:
+                from UI.CompareDialog import CompareDialog
+                self.sbsDiff = CompareDialog()
             self.sbsDiff.show()
-            self.sbsDiff.compare(output1, output2, "{0}@.".format(name), name)
+            self.sbsDiff.compare(output1, output2, name1, name2)
     
     def hgLogBrowser(self, path):
         """

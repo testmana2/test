@@ -953,6 +953,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param rev1 first revision number (integer)
         @param rev2 second revision number (integer)
         """
+        # TODO: add SBS option (file mode only)
         if self.diff is None:
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)

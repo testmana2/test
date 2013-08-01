@@ -443,6 +443,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             return
         self.contents.scrollToAnchor(ver)
         
+        # TODO: add SBS option (file mode only)
         if self.diff is None:
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
