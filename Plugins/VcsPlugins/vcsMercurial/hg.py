@@ -10,9 +10,7 @@ Module implementing the version control systems interface to Mercurial.
 import os
 import shutil
 import re
-import urllib.request
 import urllib.parse
-import urllib.error
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
 from PyQt4.QtGui import QApplication, QDialog, QInputDialog

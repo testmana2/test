@@ -10,9 +10,7 @@ Module implementing the version control systems interface to Subversion.
 import os
 import re
 import shutil
-import urllib.request
 import urllib.parse
-import urllib.error
 
 from PyQt4.QtCore import pyqtSignal, QProcess, QRegExp
 from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
