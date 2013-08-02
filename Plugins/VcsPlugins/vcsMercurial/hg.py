@@ -764,6 +764,7 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         dname, fname = self.splitPath(name)
+        isFile = os.path.isfile(name)
         
         # find the root of the repo
         repodir = dname
@@ -789,7 +790,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             revs, noEntries = dlg.getRevisions()
             from .HgLogDialog import HgLogDialog
-            self.log = HgLogDialog(self)
+            self.log = HgLogDialog(self, isFile=isFile)
             self.log.show()
             self.log.start(name, noEntries=noEntries, revisions=revs)
     
@@ -1753,15 +1754,16 @@ class Hg(VersionControl):
             self.sbsDiff.show()
             self.sbsDiff.compare(output1, output2, name1, name2)
     
-    def hgLogBrowser(self, path):
+    def hgLogBrowser(self, path, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Mercurial repository.
         
         @param path file/directory name to show the log of (string)
+        @keyparam isFile flag indicating log for a file is to be shown (boolean)
         """
         from .HgLogBrowserDialog import HgLogBrowserDialog
-        self.logBrowser = HgLogBrowserDialog(self)
+        self.logBrowser = HgLogBrowserDialog(self, isFile=isFile)
         self.logBrowser.show()
         self.logBrowser.start(path)
     

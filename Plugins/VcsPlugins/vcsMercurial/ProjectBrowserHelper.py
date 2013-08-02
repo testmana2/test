@@ -607,9 +607,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         itm = self.browser.currentItem()
         try:
             fn = itm.fileName()
+            isFile = True
         except AttributeError:
             fn = itm.dirName()
-        self.vcs.hgLogBrowser(fn)
+            isFile = False
+        self.vcs.hgLogBrowser(fn, isFile=isFile)
     
     def __HgResolve(self):
         """

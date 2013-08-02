@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Mercurial Log</string>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="contentsGroup">
      <property name="sizePolicy">
@@ -37,6 +37,16 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="sbsCheckBox">
+     <property name="toolTip">
+      <string>Select to show differences side-by-side</string>
+     </property>
+     <property name="text">
+      <string>Show differences side-by-side</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -139,6 +149,7 @@
  </widget>
  <tabstops>
   <tabstop>contents</tabstop>
+  <tabstop>sbsCheckBox</tabstop>
   <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>

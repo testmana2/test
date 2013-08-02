@@ -41,13 +41,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     MessageColumn = 6
     TagsColumn = 7
     
-    def __init__(self, vcs, mode="log", bundle=None, parent=None):
+    def __init__(self, vcs, mode="log", bundle=None, isFile=False, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
         @param bundle name of a bundle file (string)
+        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -71,6 +72,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.refreshButton.setToolTip(
             self.trUtf8("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
+        
+        self.sbsCheckBox.setEnabled(isFile)
         
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
@@ -953,13 +956,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param rev1 first revision number (integer)
         @param rev2 second revision number (integer)
         """
-        # TODO: add SBS option (file mode only)
-        if self.diff is None:
-            from .HgDiffDialog import HgDiffDialog
-            self.diff = HgDiffDialog(self.vcs)
-        self.diff.show()
-        self.diff.raise_()
-        self.diff.start(self.filename, [rev1, rev2], self.bundle)
+        if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
+            self.vcs.hgSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+        else:
+            if self.diff is None:
+                from .HgDiffDialog import HgDiffDialog
+                self.diff = HgDiffDialog(self.vcs)
+            self.diff.show()
+            self.diff.raise_()
+            self.diff.start(self.filename, [rev1, rev2], self.bundle)
     
     def on_buttonBox_clicked(self, button):
         """
