@@ -1745,12 +1745,11 @@ class Hg(VersionControl):
                         .format(name))
                 return
         
-        if output1 and output2:
-            if self.sbsDiff is None:
-                from UI.CompareDialog import CompareDialog
-                self.sbsDiff = CompareDialog()
-            self.sbsDiff.show()
-            self.sbsDiff.compare(output1, output2, name1, name2)
+        if self.sbsDiff is None:
+            from UI.CompareDialog import CompareDialog
+            self.sbsDiff = CompareDialog()
+        self.sbsDiff.show()
+        self.sbsDiff.compare(output1, output2, name1, name2)
     
     def hgLogBrowser(self, path, isFile=False):
         """
