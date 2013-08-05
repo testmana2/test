@@ -27,11 +27,12 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
     The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the versions.
     """
-    def __init__(self, vcs, parent=None):
+    def __init__(self, vcs, isFile=False, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -76,6 +77,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         
         self.buf = []        # buffer for stdout
         self.diff = None
+        
+        self.sbsCheckBox.setEnabled(isFile)
         
     def closeEvent(self, e):
         """
@@ -266,11 +269,14 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
             return
         self.contents.scrollToAnchor(ver)
         
-        if self.diff is None:
-            from .SvnDiffDialog import SvnDiffDialog
-            self.diff = SvnDiffDialog(self.vcs)
-        self.diff.show()
-        self.diff.start(filename, [v1, v2])
+        if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
+            self.vcs.svnSbsDiff(filename, revisions=(v1, v2))
+        else:
+            if self.diff is None:
+                from .SvnDiffDialog import SvnDiffDialog
+                self.diff = SvnDiffDialog(self.vcs)
+            self.diff.show()
+            self.diff.start(filename, [v1, v2])
         
     def on_passwordCheckBox_toggled(self, isOn):
         """

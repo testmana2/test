@@ -185,6 +185,16 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="sbsDiffButton">
+       <property name="toolTip">
+        <string>Show differences of the selected entry to the repository in a side-by-side manner</string>
+       </property>
+       <property name="text">
+        <string>Side-b&amp;y-Side Diff</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="revertButton">
        <property name="toolTip">
         <string>Revert the selected entries to the last revision in the repository</string>
@@ -264,6 +274,7 @@
   <tabstop>commitButton</tabstop>
   <tabstop>addButton</tabstop>
   <tabstop>diffButton</tabstop>
+  <tabstop>sbsDiffButton</tabstop>
   <tabstop>revertButton</tabstop>
   <tabstop>restoreButton</tabstop>
   <tabstop>errors</tabstop>

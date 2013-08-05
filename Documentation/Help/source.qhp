@@ -9937,6 +9937,8 @@
       <keyword name="Subversion" id="Subversion" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__init__" />
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__init__" />
+      <keyword name="Subversion.__svnGetFileForRevision" id="Subversion.__svnGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnGetFileForRevision" />
+      <keyword name="Subversion.__svnGetFileForRevision" id="Subversion.__svnGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__svnGetFileForRevision" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnURL" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__svnURL" />
       <keyword name="Subversion.__vcsAllRegisteredStates_wc" id="Subversion.__vcsAllRegisteredStates_wc" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsAllRegisteredStates_wc" />
@@ -9989,6 +9991,8 @@
       <keyword name="Subversion.svnRepoBrowser" id="Subversion.svnRepoBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnRepoBrowser" />
       <keyword name="Subversion.svnResolve" id="Subversion.svnResolve" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnResolve" />
       <keyword name="Subversion.svnResolve" id="Subversion.svnResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnResolve" />
+      <keyword name="Subversion.svnSbsDiff" id="Subversion.svnSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnSbsDiff" />
+      <keyword name="Subversion.svnSbsDiff" id="Subversion.svnSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnSbsDiff" />
       <keyword name="Subversion.svnSetProp" id="Subversion.svnSetProp" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnSetProp" />
       <keyword name="Subversion.svnSetProp" id="Subversion.svnSetProp" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnSetProp" />
       <keyword name="Subversion.svnShowChangelists" id="Subversion.svnShowChangelists" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnShowChangelists" />
@@ -10421,6 +10425,10 @@
       <keyword name="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" id="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNRemoveFromChangelist" />
       <keyword name="SvnProjectBrowserHelper.__SVNResolve" id="SvnProjectBrowserHelper.__SVNResolve" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNResolve" />
       <keyword name="SvnProjectBrowserHelper.__SVNResolve" id="SvnProjectBrowserHelper.__SVNResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNResolve" />
+      <keyword name="SvnProjectBrowserHelper.__SVNSbsDiff" id="SvnProjectBrowserHelper.__SVNSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSbsDiff" />
+      <keyword name="SvnProjectBrowserHelper.__SVNSbsDiff" id="SvnProjectBrowserHelper.__SVNSbsDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSbsDiff" />
+      <keyword name="SvnProjectBrowserHelper.__SVNSbsExtendedDiff" id="SvnProjectBrowserHelper.__SVNSbsExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSbsExtendedDiff" />
+      <keyword name="SvnProjectBrowserHelper.__SVNSbsExtendedDiff" id="SvnProjectBrowserHelper.__SVNSbsExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSbsExtendedDiff" />
       <keyword name="SvnProjectBrowserHelper.__SVNSetProp" id="SvnProjectBrowserHelper.__SVNSetProp" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSetProp" />
       <keyword name="SvnProjectBrowserHelper.__SVNSetProp" id="SvnProjectBrowserHelper.__SVNSetProp" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNSetProp" />
       <keyword name="SvnProjectBrowserHelper.__SVNStealLock" id="SvnProjectBrowserHelper.__SVNStealLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNStealLock" />
@@ -10639,6 +10647,8 @@
       <keyword name="SvnStatusDialog.__restoreMissing" id="SvnStatusDialog.__restoreMissing" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__restoreMissing" />
       <keyword name="SvnStatusDialog.__revert" id="SvnStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__revert" />
       <keyword name="SvnStatusDialog.__revert" id="SvnStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__revert" />
+      <keyword name="SvnStatusDialog.__sbsDiff" id="SvnStatusDialog.__sbsDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__sbsDiff" />
+      <keyword name="SvnStatusDialog.__sbsDiff" id="SvnStatusDialog.__sbsDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__sbsDiff" />
       <keyword name="SvnStatusDialog.__showContextMenu" id="SvnStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__showContextMenu" />
       <keyword name="SvnStatusDialog.__showContextMenu" id="SvnStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__showContextMenu" />
       <keyword name="SvnStatusDialog.__showError" id="SvnStatusDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__showError" />
@@ -10668,6 +10678,8 @@
       <keyword name="SvnStatusDialog.on_restoreButton_clicked" id="SvnStatusDialog.on_restoreButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_restoreButton_clicked" />
       <keyword name="SvnStatusDialog.on_revertButton_clicked" id="SvnStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_revertButton_clicked" />
       <keyword name="SvnStatusDialog.on_revertButton_clicked" id="SvnStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_revertButton_clicked" />
+      <keyword name="SvnStatusDialog.on_sbsDiffButton_clicked" id="SvnStatusDialog.on_sbsDiffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_sbsDiffButton_clicked" />
+      <keyword name="SvnStatusDialog.on_sbsDiffButton_clicked" id="SvnStatusDialog.on_sbsDiffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_sbsDiffButton_clicked" />
       <keyword name="SvnStatusDialog.on_sendButton_clicked" id="SvnStatusDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_sendButton_clicked" />
       <keyword name="SvnStatusDialog.on_statusFilterCombo_activated" id="SvnStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_statusFilterCombo_activated" />
       <keyword name="SvnStatusDialog.on_statusFilterCombo_activated" id="SvnStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_statusFilterCombo_activated" />

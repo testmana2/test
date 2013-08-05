@@ -66,6 +66,9 @@ VersionControl
 <td><a href="#Subversion.__init__">Subversion</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Subversion.__svnGetFileForRevision">__svnGetFileForRevision</a></td>
+<td>Private method to get a file for a specific revision from the repository.</td>
+</tr><tr>
 <td><a href="#Subversion.__svnURL">__svnURL</a></td>
 <td>Private method to format a url for subversion.</td>
 </tr><tr>
@@ -140,6 +143,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Subversion.svnResolve">svnResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
+</tr><tr>
+<td><a href="#Subversion.svnSbsDiff">svnSbsDiff</a></td>
+<td>Public method used to view the difference of a file to the Mercurial repository side-by-side.</td>
 </tr><tr>
 <td><a href="#Subversion.svnSetProp">svnSetProp</a></td>
 <td>Public method used to add a property to a file/directory.</td>
@@ -269,6 +275,24 @@ parent widget (QWidget)
 </dd><dt><i>name</i></dt>
 <dd>
 name of this object (string)
+</dd>
+</dl><a NAME="Subversion.__svnGetFileForRevision" ID="Subversion.__svnGetFileForRevision"></a>
+<h4>Subversion.__svnGetFileForRevision</h4>
+<b>__svnGetFileForRevision</b>(<i>name, rev=""</i>)
+<p>
+        Private method to get a file for a specific revision from the repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to get from the repository (string)
+</dd><dt><i>rev=</i></dt>
+<dd>
+revision to retrieve (integer or string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+contents of the file (string) and an error message (string)
 </dd>
 </dl><a NAME="Subversion.__svnURL" ID="Subversion.__svnURL"></a>
 <h4>Subversion.__svnURL</h4>
@@ -558,7 +582,7 @@ reference to the parent object of the subversion dialog (QWidget)
 </dd>
 </dl><a NAME="Subversion.svnLogBrowser" ID="Subversion.svnLogBrowser"></a>
 <h4>Subversion.svnLogBrowser</h4>
-<b>svnLogBrowser</b>(<i>path</i>)
+<b>svnLogBrowser</b>(<i>path, isFile=False</i>)
 <p>
         Public method used to browse the log of a file/directory from the
         Subversion repository.
@@ -566,6 +590,9 @@ reference to the parent object of the subversion dialog (QWidget)
 <dt><i>path</i></dt>
 <dd>
 file/directory name to show the log of (string)
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd>
 </dl><a NAME="Subversion.svnNormalizeURL" ID="Subversion.svnNormalizeURL"></a>
 <h4>Subversion.svnNormalizeURL</h4>
@@ -624,6 +651,23 @@ path name of the project (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd>
+</dl><a NAME="Subversion.svnSbsDiff" ID="Subversion.svnSbsDiff"></a>
+<h4>Subversion.svnSbsDiff</h4>
+<b>svnSbsDiff</b>(<i>name, extended=False, revisions=None</i>)
+<p>
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to be diffed (string)
+</dd><dt><i>extended=</i></dt>
+<dd>
+flag indicating the extended variant (boolean)
+</dd><dt><i>revisions=</i></dt>
+<dd>
+tuple of two revisions (tuple of strings)
 </dd>
 </dl><a NAME="Subversion.svnSetProp" ID="Subversion.svnSetProp"></a>
 <h4>Subversion.svnSetProp</h4>

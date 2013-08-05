@@ -69,6 +69,8 @@ Version 5.4-snapshot-2013mmdd:
      --- editing the config file will generate a minimal one if none exists
      --- added support for the 'summary' command
      --- added capability to compare files side-by-side
+  -- Subversion
+     --- added capability to compare files side-by-side
 - Web Browser
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching

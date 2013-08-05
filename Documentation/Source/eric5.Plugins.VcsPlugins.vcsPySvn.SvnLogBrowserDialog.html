@@ -139,13 +139,16 @@ QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog
 </table>
 <a NAME="SvnLogBrowserDialog.__init__" ID="SvnLogBrowserDialog.__init__"></a>
 <h4>SvnLogBrowserDialog (Constructor)</h4>
-<b>SvnLogBrowserDialog</b>(<i>vcs, parent=None</i>)
+<b>SvnLogBrowserDialog</b>(<i>vcs, isFile=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the vcs object
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)

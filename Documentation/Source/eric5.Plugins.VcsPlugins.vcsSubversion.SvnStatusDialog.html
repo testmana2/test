@@ -143,6 +143,9 @@ QWidget, Ui_SvnStatusDialog
 <td><a href="#SvnStatusDialog.__revert">__revert</a></td>
 <td>Private slot to handle the Revert context menu entry.</td>
 </tr><tr>
+<td><a href="#SvnStatusDialog.__sbsDiff">__sbsDiff</a></td>
+<td>Private slot to handle the Side-by-Side Diff context menu entry.</td>
+</tr><tr>
 <td><a href="#SvnStatusDialog.__showContextMenu">__showContextMenu</a></td>
 <td>Protected slot to show the context menu of the status list.</td>
 </tr><tr>
@@ -190,6 +193,9 @@ QWidget, Ui_SvnStatusDialog
 </tr><tr>
 <td><a href="#SvnStatusDialog.on_revertButton_clicked">on_revertButton_clicked</a></td>
 <td>Private slot to handle the press of the Revert button.</td>
+</tr><tr>
+<td><a href="#SvnStatusDialog.on_sbsDiffButton_clicked">on_sbsDiffButton_clicked</a></td>
+<td>Private slot to handle the press of the Side-by-Side Diff button.</td>
 </tr><tr>
 <td><a href="#SvnStatusDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
 <td>Private slot to send the input to the subversion process.</td>
@@ -452,6 +458,11 @@ exit status of the process (QProcess.ExitStatus)
 <b>__revert</b>(<i></i>)
 <p>
         Private slot to handle the Revert context menu entry.
+</p><a NAME="SvnStatusDialog.__sbsDiff" ID="SvnStatusDialog.__sbsDiff"></a>
+<h4>SvnStatusDialog.__sbsDiff</h4>
+<b>__sbsDiff</b>(<i></i>)
+<p>
+        Private slot to handle the Side-by-Side Diff context menu entry.
 </p><a NAME="SvnStatusDialog.__showContextMenu" ID="SvnStatusDialog.__showContextMenu"></a>
 <h4>SvnStatusDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
@@ -557,6 +568,11 @@ flag indicating the status of the check box (boolean)
 <b>on_revertButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the press of the Revert button.
+</p><a NAME="SvnStatusDialog.on_sbsDiffButton_clicked" ID="SvnStatusDialog.on_sbsDiffButton_clicked"></a>
+<h4>SvnStatusDialog.on_sbsDiffButton_clicked</h4>
+<b>on_sbsDiffButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the press of the Side-by-Side Diff button.
 </p><a NAME="SvnStatusDialog.on_sendButton_clicked" ID="SvnStatusDialog.on_sendButton_clicked"></a>
 <h4>SvnStatusDialog.on_sendButton_clicked</h4>
 <b>on_sendButton_clicked</b>(<i></i>)
