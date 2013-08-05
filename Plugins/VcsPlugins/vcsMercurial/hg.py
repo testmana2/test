@@ -1718,7 +1718,7 @@ class Hg(VersionControl):
         
         output1, error = self.__hgGetFileForRevision(name, rev=rev1)
         if error:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(self.__ui,
                 self.trUtf8("Mercurial Side-by-Side Difference"),
                 error)
             return
@@ -1727,7 +1727,7 @@ class Hg(VersionControl):
         if rev2:
             output2, error = self.__hgGetFileForRevision(name, rev=rev2)
             if error:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Mercurial Side-by-Side Difference"),
                     error)
                 return
@@ -1739,7 +1739,7 @@ class Hg(VersionControl):
                 f1.close()
                 name2 = name
             except IOError:
-                E5MessageBox.critical(self,
+                E5MessageBox.critical(self.__ui,
                     self.trUtf8("Mercurial Side-by-Side Difference"),
                     self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
                         .format(name))
