@@ -12,9 +12,13 @@ Installation script for the eric5 IDE and all eric5 related tools.
 from __future__ import unicode_literals    # __IGNORE_WARNING__
 from __future__ import print_function    # __IGNORE_WARNING__
 try:
-    import io
+    import cStringIO as io
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    sip.setapi('QTextStream',  2)
 except (ImportError):
-    import StringIO as io
+    import io
 
 import sys
 import os
@@ -185,7 +189,9 @@ def copyToFile(name, text):
     @param text the contents to copy to the file.
     """
     f = open(name, "w")
-    f.write(codecs.encode(text, "utf-8"))
+    if sys.version_info[0] == 2:
+        text = codecs.encode(text, "utf-8")
+    f.write(text)
     f.close()
 
 
@@ -794,7 +800,7 @@ def doDependancyChecks():
     if sys.version_info < (2, 6, 0):
         print('Sorry, you must have Python 2.6.0 or higher or Python 3.1.0 or higher.')
         exit(5)
-    elif sys.version_info < (3, 1, 0):
+    elif sys.version_info < (3, 1, 0) and sys.version_info[0] == 3:
         print('Sorry, you must have Python 3.1.0 or higher.')
         exit(5)
     if sys.version_info > (3, 9, 9):
@@ -1024,8 +1030,8 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, macAppBundleName, macPythonExe
     
-    if sys.version_info > (3, 9, 9) or sys.version_info < (3, 0, 0):
-        print('Sorry, eric5 requires Python 3 for running.')
+    if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
+        print('Sorry, eric5 requires at least Python 2.6 or Python 3 for running.')
         exit(5)
     
     progName = os.path.basename(argv[0])
