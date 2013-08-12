@@ -55,6 +55,7 @@ for arg in sys.argv:
 
 # make Third-Party package available as a packages repository
 sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Pygments"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__), "ThirdParty", "Jasy"))
 
 from E5Gui.E5Application import E5Application
 

@@ -231,9 +231,16 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
+            self.trUtf8('Show difference side-by-side'), self.__HgSbsDiff)
+        self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
+        self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
+            self.trUtf8('Show difference side-by-side (extended)'),
+            self.__HgSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         self.annotateAct = menu.addAction(self.trUtf8('Show annotated file'),
             self.__HgAnnotate)
@@ -569,6 +576,24 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 names.append(itm.dirName())
         self.vcs.hgExtendedDiff(names)
     
+    def __HgSbsDiff(self):
+        """
+        Private slot called by the context menu to show the difference of a file to
+        the repository side-by-side.
+        """
+        itm = self.browser.currentItem()
+        fn = itm.fileName()
+        self.vcs.hgSbsDiff(fn)
+    
+    def __HgSbsExtendedDiff(self):
+        """
+        Private slot called by the context menu to show the difference of a file to
+        the repository side-by-side allowing the selection of revisions to compare.
+        """
+        itm = self.browser.currentItem()
+        fn = itm.fileName()
+        self.vcs.hgSbsDiff(fn, extended=True)
+    
     def __HgAnnotate(self):
         """
         Private slot called by the context menu to show the annotations of a file.
@@ -584,9 +609,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         itm = self.browser.currentItem()
         try:
             fn = itm.fileName()
+            isFile = True
         except AttributeError:
             fn = itm.dirName()
-        self.vcs.hgLogBrowser(fn)
+            isFile = False
+        self.vcs.hgLogBrowser(fn, isFile=isFile)
     
     def __HgResolve(self):
         """

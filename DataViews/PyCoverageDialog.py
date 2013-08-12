@@ -15,12 +15,14 @@ from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
     QApplication, QProgressDialog
 
+from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
 
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
 import Utilities
 from DebugClients.Python3.coverage import coverage
+from DebugClients.Python3.coverage.misc import CoverageException
 
 
 class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
@@ -172,6 +174,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         total_statements = 0
         total_executed = 0
+        total_exceptions = 0
         
         cover.exclude(self.excludeList[0])
         progress = 0
@@ -186,18 +189,22 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                 if self.cancelled:
                     return
                 
-                statements, excluded, missing, readable = cover.analysis2(file)[1:]
-                readableEx = excluded and self.__format_lines(excluded) or ''
-                n = len(statements)
-                m = n - len(missing)
-                if n > 0:
-                    pc = 100.0 * m / n
-                else:
-                    pc = 100.0
-                self.__createResultItem(file, str(n), str(m), pc, readableEx, readable)
-                
-                total_statements = total_statements + n
-                total_executed = total_executed + m
+                try:
+                    statements, excluded, missing, readable = cover.analysis2(file)[1:]
+                    readableEx = excluded and self.__format_lines(excluded) or ''
+                    n = len(statements)
+                    m = n - len(missing)
+                    if n > 0:
+                        pc = 100.0 * m / n
+                    else:
+                        pc = 100.0
+                    self.__createResultItem(
+                        file, str(n), str(m), pc, readableEx, readable)
+                    
+                    total_statements = total_statements + n
+                    total_executed = total_executed + m
+                except CoverageException:
+                    total_exceptions += 1
                 
                 progress += 1
                 self.checkProgress.setValue(progress)
@@ -223,6 +230,12 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                 itm.setTextAlignment(col, Qt.AlignRight)
         else:
             self.summaryGroup.hide()
+        
+        if total_exceptions:
+            E5MessageBox.warning(self,
+                self.trUtf8("Parse Error"),
+                self.trUtf8("""%n file(s) could not be parsed. Coverage info for"""
+                            """ these is not available.""", "", total_exceptions))
         
         self.__finish()
         

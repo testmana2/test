@@ -89,6 +89,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Show differences"), self.__diff))
         self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Show differences side-by-side"), self.__sbsDiff))
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Restore missing"), self.__restoreMissing))
@@ -339,6 +341,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.addButton.setEnabled(False)
         self.commitButton.setEnabled(False)
         self.diffButton.setEnabled(False)
+        self.sbsDiffButton.setEnabled(False)
         self.revertButton.setEnabled(False)
         self.restoreButton.setEnabled(False)
         
@@ -601,6 +604,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
 
         self.addButton.setEnabled(unversioned)
         self.diffButton.setEnabled(modified)
+        self.sbsDiffButton.setEnabled(modified == 1)
         self.revertButton.setEnabled(modified)
         self.restoreButton.setEnabled(missing)
     
@@ -665,6 +669,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         Private slot to handle the press of the Differences button.
         """
         self.__diff()
+    
+    @pyqtSlot()
+    def on_sbsDiffButton_clicked(self):
+        """
+        Private slot to handle the press of the Side-by-Side Diff button.
+        """
+        self.__sbsDiff()
     
     @pyqtSlot()
     def on_revertButton_clicked(self):
@@ -811,7 +822,28 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.diff.show()
         QApplication.processEvents()
         self.diff.start(names)
+    
+    def __sbsDiff(self):
+        """
+        Private slot to handle the Side-by-Side Diff context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getModifiedItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Side-by-Side Diff"),
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
+            return
+        elif len(names) > 1:
+            E5MessageBox.information(self,
+                self.trUtf8("Side-by-Side Diff"),
+                self.trUtf8("""Only one file with uncommitted changes"""
+                            """ must be selected."""))
+            return
         
+        self.vcs.svnSbsDiff(names[0])
+    
     def __lock(self):
         """
         Private slot to handle the Lock context menu entry.

@@ -58,12 +58,12 @@ class UIPreviewer(E5MainWindow):
         self.cw.setObjectName("centralWidget")
         
         self.UIPreviewerLayout = QVBoxLayout(self.cw)
-        self.UIPreviewerLayout.setMargin(6)
+        self.UIPreviewerLayout.setContentsMargins(6, 6, 6, 6)
         self.UIPreviewerLayout.setSpacing(6)
         self.UIPreviewerLayout.setObjectName("UIPreviewerLayout")
 
         self.styleLayout = QHBoxLayout()
-        self.styleLayout.setMargin(0)
+        self.styleLayout.setContentsMargins(0, 0, 0, 0)
         self.styleLayout.setSpacing(6)
         self.styleLayout.setObjectName("styleLayout")
 

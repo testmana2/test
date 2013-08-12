@@ -286,6 +286,7 @@ HelpWindow E5MainWindow
 Hg VersionControl
 HgAddSubrepositoryDialog QDialog Ui_HgAddSubrepositoryDialog
 HgAnnotateDialog QDialog Ui_HgAnnotateDialog
+HgArchiveDialog QDialog Ui_HgArchiveDialog
 HgBackoutDialog QDialog Ui_HgBackoutDialog
 HgBookmarkDialog QDialog Ui_HgBookmarkDialog
 HgBookmarkRenameDialog QDialog Ui_HgBookmarkRenameDialog
@@ -334,6 +335,7 @@ HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
 HgServeDialog E5MainWindow
 HgStatusDialog QWidget Ui_HgStatusDialog
 HgStatusMonitorThread VcsStatusMonitorThread
+HgSummaryDialog QDialog Ui_HgSummaryDialog
 HgTagBranchListDialog QDialog Ui_HgTagBranchListDialog
 HgTagDialog QDialog Ui_HgTagDialog
 HighlightingStylesReader XMLStreamReaderBase
@@ -423,6 +425,7 @@ LogViewer QWidget
 LogViewerEdit QTextEdit
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
+MercurialUserDataDialog QDialog Ui_MercurialUserDataDialog
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
 MiniEditor E5MainWindow

@@ -73,6 +73,9 @@ VersionControl
 <td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
 <td>Private method to get the active extensions from Mercurial.</td>
 </tr><tr>
+<td><a href="#Hg.__hgGetFileForRevision">__hgGetFileForRevision</a></td>
+<td>Private method to get a file for a specific revision from the repository.</td>
+</tr><tr>
 <td><a href="#Hg.__hgURL">__hgURL</a></td>
 <td>Private method to format a url for Mercurial.</td>
 </tr><tr>
@@ -111,6 +114,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgAnnotate">hgAnnotate</a></td>
 <td>Public method to show the output of the hg annotate command.</td>
+</tr><tr>
+<td><a href="#Hg.hgArchive">hgArchive</a></td>
+<td>Public method to create an unversioned archive from the repository.</td>
 </tr><tr>
 <td><a href="#Hg.hgBackout">hgBackout</a></td>
 <td>Public method used to backout an earlier changeset from the Mercurial repository.</td>
@@ -211,6 +217,9 @@ VersionControl
 <td><a href="#Hg.hgRollback">hgRollback</a></td>
 <td>Public method used to rollback the last transaction.</td>
 </tr><tr>
+<td><a href="#Hg.hgSbsDiff">hgSbsDiff</a></td>
+<td>Public method used to view the difference of a file to the Mercurial repository side-by-side.</td>
+</tr><tr>
 <td><a href="#Hg.hgServe">hgServe</a></td>
 <td>Public method used to serve the project.</td>
 </tr><tr>
@@ -222,6 +231,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgShowPaths">hgShowPaths</a></td>
 <td>Public method to show the path aliases for remote repositories.</td>
+</tr><tr>
+<td><a href="#Hg.hgSummary">hgSummary</a></td>
+<td>Public method used to show some summary information of the working directory state.</td>
 </tr><tr>
 <td><a href="#Hg.hgUnbundle">hgUnbundle</a></td>
 <td>Public method to apply changegroup files.</td>
@@ -351,7 +363,25 @@ name of this object (string)
 <b>__getExtensionsInfo</b>(<i></i>)
 <p>
         Private method to get the active extensions from Mercurial.
-</p><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
+</p><a NAME="Hg.__hgGetFileForRevision" ID="Hg.__hgGetFileForRevision"></a>
+<h4>Hg.__hgGetFileForRevision</h4>
+<b>__hgGetFileForRevision</b>(<i>name, rev=""</i>)
+<p>
+        Private method to get a file for a specific revision from the repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to get from the repository (string)
+</dd><dt><i>rev=</i></dt>
+<dd>
+revision to retrieve (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+contents of the file (string) and an error message (string)
+</dd>
+</dl><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
 <h4>Hg.__hgURL</h4>
 <b>__hgURL</b>(<i>url</i>)
 <p>
@@ -486,7 +516,12 @@ flag indicating the existence of sub-repositories (boolean)
 <dd>
 file name to show the annotations for (string)
 </dd>
-</dl><a NAME="Hg.hgBackout" ID="Hg.hgBackout"></a>
+</dl><a NAME="Hg.hgArchive" ID="Hg.hgArchive"></a>
+<h4>Hg.hgArchive</h4>
+<b>hgArchive</b>(<i></i>)
+<p>
+        Public method to create an unversioned archive from the repository.
+</p><a NAME="Hg.hgBackout" ID="Hg.hgBackout"></a>
 <h4>Hg.hgBackout</h4>
 <b>hgBackout</b>(<i>name</i>)
 <p>
@@ -759,7 +794,7 @@ flag indicating listing of branches or tags
 </dd>
 </dl><a NAME="Hg.hgLogBrowser" ID="Hg.hgLogBrowser"></a>
 <h4>Hg.hgLogBrowser</h4>
-<b>hgLogBrowser</b>(<i>path</i>)
+<b>hgLogBrowser</b>(<i>path, isFile=False</i>)
 <p>
         Public method used to browse the log of a file/directory from the
         Mercurial repository.
@@ -767,6 +802,9 @@ flag indicating listing of branches or tags
 <dt><i>path</i></dt>
 <dd>
 file/directory name to show the log of (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd>
 </dl><a NAME="Hg.hgNormalizeURL" ID="Hg.hgNormalizeURL"></a>
 <h4>Hg.hgNormalizeURL</h4>
@@ -907,6 +945,23 @@ flag indicating, that the update contained an add
 <dd>
 directory name (string or list of strings)
 </dd>
+</dl><a NAME="Hg.hgSbsDiff" ID="Hg.hgSbsDiff"></a>
+<h4>Hg.hgSbsDiff</h4>
+<b>hgSbsDiff</b>(<i>name, extended=False, revisions=None</i>)
+<p>
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file name to be diffed (string)
+</dd><dt><i>extended=</i></dt>
+<dd>
+flag indicating the extended variant (boolean)
+</dd><dt><i>revisions=</i></dt>
+<dd>
+tuple of two revisions (tuple of strings)
+</dd>
 </dl><a NAME="Hg.hgServe" ID="Hg.hgServe"></a>
 <h4>Hg.hgServe</h4>
 <b>hgServe</b>(<i>name</i>)
@@ -946,6 +1001,17 @@ file/directory name (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgSummary" ID="Hg.hgSummary"></a>
+<h4>Hg.hgSummary</h4>
+<b>hgSummary</b>(<i>mq=False</i>)
+<p>
+        Public method used to show some summary information of the
+        working directory state.
+</p><dl>
+<dt><i>mq</i></dt>
+<dd>
+flag indicating to show the queue status as well (boolean)
 </dd>
 </dl><a NAME="Hg.hgUnbundle" ID="Hg.hgUnbundle"></a>
 <h4>Hg.hgUnbundle</h4>
@@ -1097,7 +1163,7 @@ directory name of the working directory (string)
 </dd>
 </dl><a NAME="Hg.vcsCommit" ID="Hg.vcsCommit"></a>
 <h4>Hg.vcsCommit</h4>
-<b>vcsCommit</b>(<i>name, message, noDialog=False, closeBranch=False</i>)
+<b>vcsCommit</b>(<i>name, message, noDialog=False, closeBranch=False, mq=False</i>)
 <p>
         Public method used to make the change of a file/directory permanent in the
         Mercurial repository.
@@ -1114,6 +1180,9 @@ flag indicating quiet operations
 </dd><dt><i>closeBranch=</i></dt>
 <dd>
 flag indicating a close branch commit (boolean)
+</dd><dt><i>mq=</i></dt>
+<dd>
+flag indicating a queue commit (boolean)
 </dd>
 </dl><a NAME="Hg.vcsConvertProject" ID="Hg.vcsConvertProject"></a>
 <h4>Hg.vcsConvertProject</h4>

@@ -100,13 +100,16 @@ QWidget, Ui_HgCommitDialog
 </table>
 <a NAME="HgCommitDialog.__init__" ID="HgCommitDialog.__init__"></a>
 <h4>HgCommitDialog (Constructor)</h4>
-<b>HgCommitDialog</b>(<i>vcs, parent=None</i>)
+<b>HgCommitDialog</b>(<i>vcs, mq, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the vcs object
+</dd><dt><i>mq</i></dt>
+<dd>
+flag indicating a queue commit (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)

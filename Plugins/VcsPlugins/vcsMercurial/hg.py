@@ -97,7 +97,9 @@ class Hg(VersionControl):
         self.log = None
         self.logBrowser = None
         self.diff = None
+        self.sbsDiff = None
         self.status = None
+        self.summary = None
         self.tagbranchList = None
         self.annotate = None
         self.repoEditor = None
@@ -161,8 +163,12 @@ class Hg(VersionControl):
             self.logBrowser.close()
         if self.diff is not None:
             self.diff.close()
+        if self.sbsDiff is not None:
+            self.sbsDiff.close()
         if self.status is not None:
             self.status.close()
+        if self.summary is not None:
+            self.summary.close()
         if self.tagbranchList is not None:
             self.tagbranchList.close()
         if self.annotate is not None:
@@ -368,7 +374,7 @@ class Hg(VersionControl):
             os.remove(os.path.join(projectDir, '.hgignore'))
         return status
     
-    def vcsCommit(self, name, message, noDialog=False, closeBranch=False):
+    def vcsCommit(self, name, message, noDialog=False, closeBranch=False, mq=False):
         """
         Public method used to make the change of a file/directory permanent in the
         Mercurial repository.
@@ -377,14 +383,19 @@ class Hg(VersionControl):
         @param message message for this operation (string)
         @param noDialog flag indicating quiet operations
         @keyparam closeBranch flag indicating a close branch commit (boolean)
+        @keyparam mq flag indicating a queue commit (boolean)
         """
         msg = message
+        
+        if mq:
+            # ensure dialog is shown for a queue commit
+            noDialog = False
         
         if not noDialog and not msg:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 from .HgCommitDialog import HgCommitDialog
-                self.__commitDialog = HgCommitDialog(self, self.__ui)
+                self.__commitDialog = HgCommitDialog(self, mq, self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
@@ -394,6 +405,7 @@ class Hg(VersionControl):
         self.__commitData["msg"] = msg
         self.__commitData["noDialog"] = noDialog
         self.__commitData["closeBranch"] = closeBranch
+        self.__commitData["mq"] = mq
         
         if noDialog:
             self.__vcsCommit_Step2()
@@ -406,6 +418,7 @@ class Hg(VersionControl):
         msg = self.__commitData["msg"]
         noDialog = self.__commitData["noDialog"]
         closeBranch = self.__commitData["closeBranch"]
+        mq = self.__commitData["mq"]
         
         if not noDialog:
             # check, if there are unsaved changes, that should be committed
@@ -442,7 +455,6 @@ class Hg(VersionControl):
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()
             commitSubrepositories = self.__commitDialog.commitSubrepositories()
-##            self.__commitDialog.accepted.disconnect(self.__vcsCommit_Step2)
             self.__commitDialog.deleteLater()
             self.__commitDialog = None
         else:
@@ -457,12 +469,15 @@ class Hg(VersionControl):
         self.addArguments(args, self.options['global'])
         self.addArguments(args, self.options['commit'])
         args.append("-v")
-        if closeBranch:
-            args.append("--close-branch")
-        if amend:
-            args.append("--amend")
-        if commitSubrepositories:
-            args.append("--subrepos")
+        if mq:
+            args.append("--mq")
+        else:
+            if closeBranch:
+                args.append("--close-branch")
+            if amend:
+                args.append("--amend")
+            if commitSubrepositories:
+                args.append("--subrepos")
         if msg:
             args.append("--message")
             args.append(msg)
@@ -753,6 +768,7 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         dname, fname = self.splitPath(name)
+        isFile = os.path.isfile(name)
         
         # find the root of the repo
         repodir = dname
@@ -778,7 +794,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             revs, noEntries = dlg.getRevisions()
             from .HgLogDialog import HgLogDialog
-            self.log = HgLogDialog(self)
+            self.log = HgLogDialog(self, isFile=isFile)
             self.log.show()
             self.log.start(name, noEntries=noEntries, revisions=revs)
     
@@ -824,6 +840,18 @@ class Hg(VersionControl):
         self.status = HgStatusDialog(self)
         self.status.show()
         self.status.start(name)
+    
+    def hgSummary(self, mq=False):
+        """
+        Public method used to show some summary information of the
+        working directory state.
+        
+        @param mq flag indicating to show the queue status as well (boolean)
+        """
+        from .HgSummaryDialog import HgSummaryDialog
+        self.summary = HgSummaryDialog(self)
+        self.summary.show()
+        self.summary.start(self.__projectHelper.getProject().getProjectPath(), mq=mq)
     
     def vcsTag(self, name):
         """
@@ -1254,8 +1282,6 @@ class Hg(VersionControl):
         @param ppath local path to get the repository infos (string)
         @return string with ready formated info for display (string)
         """
-        info = []
-        
         args = []
         args.append('parents')
         args.append('--template')
@@ -1276,13 +1302,14 @@ class Hg(VersionControl):
         else:
             output, error = self.__client.runcommand(args)
         
+        infoBlock = []
         if output:
             index = 0
             for line in output.splitlines():
                 index += 1
                 changeset, tags, author, date, branches, bookmarks = line.split("@@@")
                 cdate, ctime = date.split()[:2]
-                info.append("""<p><table>""")
+                info = []
                 info.append(QApplication.translate("mercurial",
                     """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                     """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
@@ -1304,7 +1331,11 @@ class Hg(VersionControl):
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
                     """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
                     .format(author, cdate, ctime))
-                info.append("""</table></p>""")
+                infoBlock.append("\n".join(info))
+        if infoBlock:
+            infoStr = """<tr></tr>{0}""".format("<tr></tr>".join(infoBlock))
+        else:
+            infoStr = ""
         
         url = ""
         args = []
@@ -1335,9 +1366,9 @@ class Hg(VersionControl):
             """<tr><td><b>Mercurial V.</b></td><td>{0}</td></tr>\n"""
             """<tr></tr>\n"""
             """<tr><td><b>URL</b></td><td>{1}</td></tr>\n"""
-            """</table></p>\n"""
             """{2}"""
-            ).format(self.versionStr, url, "\n".join(info))
+            """</table></p>\n"""
+            ).format(self.versionStr, url, infoStr)
 
     ############################################################################
     ## Private Mercurial specific methods are below.
@@ -1605,15 +1636,137 @@ class Hg(VersionControl):
             self.diff.show()
             self.diff.start(name, revisions)
     
-    def hgLogBrowser(self, path):
+    def __hgGetFileForRevision(self, name, rev=""):
+        """
+        Private method to get a file for a specific revision from the repository.
+        
+        @param name file name to get from the repository (string)
+        @keyparam rev revision to retrieve (string)
+        @return contents of the file (string) and an error message (string)
+        """
+        args = []
+        args.append("cat")
+        if rev:
+            args.append("--rev")
+            args.append(rev)
+        args.append(name)
+        
+        if self.__client is None:
+            output = ""
+            error = ""
+            
+            # find the root of the repo
+            repodir = self.splitPath(name)[0]
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return
+            
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished:
+                    if process.exitCode() == 0:
+                        output = str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"), 'replace')
+                    else:
+                        error = str(process.readAllStandardError(),
+                            Preferences.getSystem("IOEncoding"), 'replace')
+                else:
+                    error = self.trUtf8("The hg process did not finish within 30s.")
+            else:
+                error = self.trUtf8('The process {0} could not be started. '
+                    'Ensure, that it is in the search path.').format('hg')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        return output, error
+    
+    def hgSbsDiff(self, name, extended=False, revisions=None):
+        """
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+        
+        @param name file name to be diffed (string)
+        @keyparam extended flag indicating the extended variant (boolean)
+        @keyparam revisions tuple of two revisions (tuple of strings)
+        """
+        if isinstance(name, list):
+            raise ValueError("Wrong parameter type")
+        
+        if extended:
+            # find the root of the repo
+            repodir = self.splitPath(name)[0]
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return
+            
+            if self.isExtensionActive("bookmarks"):
+                bookmarksList = \
+                    self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+            else:
+                bookmarksList = None
+            
+            from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
+            dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
+                                             self.hgGetBranchesList(repodir),
+                                             bookmarksList)
+            if dlg.exec_() == QDialog.Accepted:
+                rev1, rev2 = dlg.getRevisions()
+        elif revisions:
+            rev1, rev2 = revisions[0], revisions[1]
+        else:
+            rev1, rev2 = "", ""
+        
+        output1, error = self.__hgGetFileForRevision(name, rev=rev1)
+        if error:
+            E5MessageBox.critical(self.__ui,
+                self.trUtf8("Mercurial Side-by-Side Difference"),
+                error)
+            return
+        name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
+        
+        if rev2:
+            output2, error = self.__hgGetFileForRevision(name, rev=rev2)
+            if error:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    error)
+                return
+            name2 = "{0} (rev. {1})".format(name, rev2)
+        else:
+            try:
+                f1 = open(name, "r", encoding="utf-8")
+                output2 = f1.read()
+                f1.close()
+                name2 = name
+            except IOError:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                        .format(name))
+                return
+        
+        if self.sbsDiff is None:
+            from UI.CompareDialog import CompareDialog
+            self.sbsDiff = CompareDialog()
+        self.sbsDiff.show()
+        self.sbsDiff.compare(output1, output2, name1, name2)
+    
+    def hgLogBrowser(self, path, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Mercurial repository.
         
         @param path file/directory name to show the log of (string)
+        @keyparam isFile flag indicating log for a file is to be shown (boolean)
         """
         from .HgLogBrowserDialog import HgLogBrowserDialog
-        self.logBrowser = HgLogBrowserDialog(self)
+        self.logBrowser = HgLogBrowserDialog(self, isFile=isFile)
         self.logBrowser.show()
         self.logBrowser.start(path)
     
@@ -2715,6 +2868,39 @@ class Hg(VersionControl):
             res = dia.hasAddOrDelete()
             self.checkVCSStatus()
         return res
+    
+    def hgArchive(self):
+        """
+        Public method to create an unversioned archive from the repository.
+        """
+        # find the root of the repo
+        repodir = self.__projectHelper.getProject().getProjectPath()
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        from .HgArchiveDialog import HgArchiveDialog
+        dlg = HgArchiveDialog(self)
+        if dlg.exec_() == QDialog.Accepted:
+            archive, type_, prefix, subrepos = dlg.getData()
+            
+            args = []
+            args.append("archive")
+            if type_:
+                args.append("--type")
+                args.append(type_)
+            if prefix:
+                args.append("--prefix")
+                args.append(prefix)
+            if subrepos:
+                args.append("--subrepos")
+            args.append(archive)
+            
+            dia = HgDialog(self.trUtf8("Create Unversioned Archive"), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
     
     ############################################################################
     ## Methods to deal with subrepositories are below.

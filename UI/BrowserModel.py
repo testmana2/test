@@ -1010,6 +1010,11 @@ class BrowserFileItem(BrowserItem):
             pixName = "filePixmap.png"
         elif self.isDFile():
             pixName = "fileD.png"
+        elif self.isJavaScriptFile():
+            pixName = "fileJavascript.png"
+            self._populated = False
+            self._lazyPopulation = True
+            self._moduleName = os.path.basename(finfo)
         else:
             pixName = "fileMisc.png"
         
@@ -1147,6 +1152,14 @@ class BrowserFileItem(BrowserItem):
         @return flag indicating a CORBA IDL file (boolean)
         """
         return self.fileext == '.idl'
+    
+    def isJavaScriptFile(self):
+        """
+        Public method to check, if this file is a JavaScript file.
+        
+        @return flag indicating a JavaScript file (boolean)
+        """
+        return self.fileext == '.js'
     
     def isPixmapFile(self):
         """

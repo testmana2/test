@@ -29,11 +29,12 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    def __init__(self, vcs, parent=None):
+    def __init__(self, vcs, isFile=False, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super(SvnLogBrowserDialog, self).__init__(parent)
@@ -45,6 +46,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         
         self.filesTree.headerItem().setText(self.filesTree.columnCount(), "")
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
+        
+        self.sbsCheckBox.setEnabled(isFile)
         
         self.vcs = vcs
         
@@ -318,13 +321,16 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param rev2 second revision number (integer)
         @param peg_rev revision number to use as a reference (integer)
         """
-        if self.diff is None:
-            from .SvnDiffDialog import SvnDiffDialog
-            self.diff = SvnDiffDialog(self.vcs)
-        self.diff.show()
-        self.diff.raise_()
-        QApplication.processEvents()
-        self.diff.start(self.filename, [rev1, rev2], pegRev=peg_rev)
+        if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
+            self.vcs.svnSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+        else:
+            if self.diff is None:
+                from .SvnDiffDialog import SvnDiffDialog
+                self.diff = SvnDiffDialog(self.vcs)
+            self.diff.show()
+            self.diff.raise_()
+            QApplication.processEvents()
+            self.diff.start(self.filename, [rev1, rev2], pegRev=peg_rev)
     
     def on_buttonBox_clicked(self, button):
         """

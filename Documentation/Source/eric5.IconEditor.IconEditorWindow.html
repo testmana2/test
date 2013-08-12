@@ -174,6 +174,9 @@ E5MainWindow
 <td><a href="#IconEditorWindow.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
 </tr><tr>
+<td><a href="#IconEditorWindow.setRecentPaths">setRecentPaths</a></td>
+<td>Public method to set the last open and save paths.</td>
+</tr><tr>
 <td><a href="#IconEditorWindow.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
 </tr>
@@ -184,7 +187,7 @@ E5MainWindow
 </table>
 <a NAME="IconEditorWindow.__init__" ID="IconEditorWindow.__init__"></a>
 <h4>IconEditorWindow (Constructor)</h4>
-<b>IconEditorWindow</b>(<i>fileName="", parent=None, fromEric=False, initShortcutsOnly=False</i>)
+<b>IconEditorWindow</b>(<i>fileName="", parent=None, fromEric=False, initShortcutsOnly=False, project=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -202,6 +205,9 @@ flag indicating whether it was called from within
 <dd>
 flag indicating to just initialize the keyboard
             shortcuts (boolean)
+</dd><dt><i>project=</i></dt>
+<dd>
+reference to the project object (Project)
 </dd>
 </dl><a NAME="IconEditorWindow.__about" ID="IconEditorWindow.__about"></a>
 <h4>IconEditorWindow.__about</h4>
@@ -460,6 +466,19 @@ flag indicating, if the event was handled (boolean)
 <dt><i>evt</i></dt>
 <dd>
 reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="IconEditorWindow.setRecentPaths" ID="IconEditorWindow.setRecentPaths"></a>
+<h4>IconEditorWindow.setRecentPaths</h4>
+<b>setRecentPaths</b>(<i>openPath, savePath</i>)
+<p>
+        Public method to set the last open and save paths.
+</p><dl>
+<dt><i>openPath</i></dt>
+<dd>
+least recently used open path (string)
+</dd><dt><i>savePath</i></dt>
+<dd>
+least recently used save path (string)
 </dd>
 </dl><a NAME="IconEditorWindow.wheelEvent" ID="IconEditorWindow.wheelEvent"></a>
 <h4>IconEditorWindow.wheelEvent</h4>

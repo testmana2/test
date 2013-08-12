@@ -217,7 +217,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
-                0, 0, self, 'subversion_export')
+                0, 0, self, 'mercurial_export_repo')
         self.vcsExportAct.setStatusTip(self.trUtf8(
             'Export a project from the repository'
         ))
@@ -288,7 +288,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.vcsStatusAct = E5Action(self.trUtf8('Show status'),
                 UI.PixmapCache.getIcon("vcsStatus.png"),
-                self.trUtf8('Show &status'),
+                self.trUtf8('Show &status...'),
                 0, 0, self, 'mercurial_status')
         self.vcsStatusAct.setStatusTip(self.trUtf8(
             'Show the status of the local project'
@@ -299,6 +299,22 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
+        
+        self.hgSummaryAct = E5Action(
+                self.trUtf8('Show Summary'),
+                UI.PixmapCache.getIcon("vcsSummary.png"),
+                self.trUtf8('Show summary...'),
+                0, 0, self, 'mercurial_summary')
+        self.hgSummaryAct.setStatusTip(self.trUtf8(
+            'Show summary information of the working directory status'
+        ))
+        self.hgSummaryAct.setWhatsThis(self.trUtf8(
+            """<b>Show summary</b>"""
+            """<p>This shows some summary information of the working"""
+            """ directory status.</p>"""
+        ))
+        self.hgSummaryAct.triggered[()].connect(self.__hgSummary)
+        self.actions.append(self.hgSummaryAct)
         
         self.hgHeadsAct = E5Action(self.trUtf8('Show heads'),
                 self.trUtf8('Show heads'),
@@ -903,6 +919,20 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgRemoveSubreposAct.triggered[()].connect(self.__hgRemoveSubrepositories)
         self.actions.append(self.hgRemoveSubreposAct)
+        
+        self.hgArchiveAct = E5Action(self.trUtf8('Create unversioned archive'),
+                UI.PixmapCache.getIcon("vcsExport.png"),
+                self.trUtf8('Create unversioned archive...'),
+                0, 0, self, 'mercurial_archive')
+        self.hgArchiveAct.setStatusTip(self.trUtf8(
+            'Create an unversioned archive from the repository'
+        ))
+        self.hgArchiveAct.setWhatsThis(self.trUtf8(
+            """<b>Create unversioned archive...</b>"""
+            """<p>This creates an unversioned archive from the repository.</p>"""
+        ))
+        self.hgArchiveAct.triggered[()].connect(self.__hgArchive)
+        self.actions.append(self.hgArchiveAct)
     
     def initMenu(self, menu):
         """
@@ -939,6 +969,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         specialsMenu = QMenu(self.trUtf8("Specials"), menu)
         specialsMenu.setTearOffEnabled(True)
+        specialsMenu.addAction(self.hgArchiveAct)
+        specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgPushForcedAct)
         specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgServeAct)
@@ -1033,6 +1065,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgLogBrowserAct)
         menu.addSeparator()
         menu.addAction(self.vcsStatusAct)
+        menu.addAction(self.hgSummaryAct)
         menu.addSeparator()
         menu.addAction(self.vcsDiffAct)
         menu.addAction(self.hgExtDiffAct)
@@ -1411,3 +1444,15 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to remove sub-repositories.
         """
         self.vcs.hgRemoveSubrepositories()
+    
+    def __hgSummary(self):
+        """
+        Private slot to show a working directory summary.
+        """
+        self.vcs.hgSummary()
+    
+    def __hgArchive(self):
+        """
+        Private slot to create an unversioned archive from the repository.
+        """
+        self.vcs.hgArchive()

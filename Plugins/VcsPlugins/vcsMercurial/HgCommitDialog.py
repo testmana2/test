@@ -27,20 +27,25 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     accepted = pyqtSignal()
     rejected = pyqtSignal()
     
-    def __init__(self, vcs, parent=None):
+    def __init__(self, vcs, mq, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param mq flag indicating a queue commit (boolean)
         @param parent parent widget (QWidget)
         """
         super(HgCommitDialog, self).__init__(parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
-        if vcs.version < (2, 2):
-            self.amendCheckBox.setEnabled(False)
-        
-        self.subrepoCheckBox.setVisible(vcs.hasSubrepositories())
+        if mq:
+            self.amendCheckBox.setVisible(False)
+            self.subrepoCheckBox.setVisible(False)
+        else:
+            if vcs.version < (2, 2):
+                self.amendCheckBox.setEnabled(False)
+            
+            self.subrepoCheckBox.setVisible(vcs.hasSubrepositories())
     
     def showEvent(self, evt):
         """

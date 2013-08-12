@@ -259,9 +259,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
+            self.trUtf8('Show difference side-by-side'), self.__SVNSbsDiff)
+        self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference (extended)'),
             self.__SVNExtendedDiff)
+        self.vcsMenuActions.append(act)
+        act = menu.addAction(UI.PixmapCache.getIcon("vcsSbsDiff.png"),
+            self.trUtf8('Show difference side-by-side (extended)'),
+            self.__SVNSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show difference (URLs)'),
@@ -769,6 +776,24 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
                 names.append(itm.dirName())
         self.vcs.svnUrlDiff(names)
         
+    def __SVNSbsDiff(self):
+        """
+        Private slot called by the context menu to show the difference of a file to
+        the repository side-by-side.
+        """
+        itm = self.browser.currentItem()
+        fn = itm.fileName()
+        self.vcs.svnSbsDiff(fn)
+    
+    def __SVNSbsExtendedDiff(self):
+        """
+        Private slot called by the context menu to show the difference of a file to
+        the repository side-by-side allowing the selection of revisions to compare.
+        """
+        itm = self.browser.currentItem()
+        fn = itm.fileName()
+        self.vcs.svnSbsDiff(fn, extended=True)
+    
     def __SVNLogBrowser(self):
         """
         Private slot called by the context menu to show the log browser for a file.
@@ -776,9 +801,11 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         itm = self.browser.currentItem()
         try:
             fn = itm.fileName()
+            isFile = True
         except AttributeError:
             fn = itm.dirName()
-        self.vcs.svnLogBrowser(fn)
+            isFile = False
+        self.vcs.svnLogBrowser(fn, isFile=isFile)
         
     def __SVNBlame(self):
         """

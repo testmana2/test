@@ -72,6 +72,9 @@ QWidget, Ui_CompareDialog
 <td><a href="#CompareDialog.__appendText">__appendText</a></td>
 <td>Private method to append text to the end of the contents pane.</td>
 </tr><tr>
+<td><a href="#CompareDialog.__compare">__compare</a></td>
+<td>Private method to compare two lists of text.</td>
+</tr><tr>
 <td><a href="#CompareDialog.__fileChanged">__fileChanged</a></td>
 <td>Private slot to enable/disable the Compare button.</td>
 </tr><tr>
@@ -83,6 +86,9 @@ QWidget, Ui_CompareDialog
 </tr><tr>
 <td><a href="#CompareDialog.__selectFile">__selectFile</a></td>
 <td>Private slot to display a file selection dialog.</td>
+</tr><tr>
+<td><a href="#CompareDialog.compare">compare</a></td>
+<td>Public method to compare two lists of text.</td>
 </tr><tr>
 <td><a href="#CompareDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -155,6 +161,19 @@ text format to be used (QTextCharFormat)
 <dd>
 flag indicating interline changes (boolean)
 </dd>
+</dl><a NAME="CompareDialog.__compare" ID="CompareDialog.__compare"></a>
+<h4>CompareDialog.__compare</h4>
+<b>__compare</b>(<i>lines1, lines2</i>)
+<p>
+        Private method to compare two lists of text.
+</p><dl>
+<dt><i>lines1</i></dt>
+<dd>
+text to compare against (list of strings)
+</dd><dt><i>lines2</i></dt>
+<dd>
+text to compare (list of strings)
+</dd>
 </dl><a NAME="CompareDialog.__fileChanged" ID="CompareDialog.__fileChanged"></a>
 <h4>CompareDialog.__fileChanged</h4>
 <b>__fileChanged</b>(<i></i>)
@@ -186,6 +205,25 @@ scrollbar position (integer)
 <dd>
 field for the display of the selected filename
                 (QLineEdit)
+</dd>
+</dl><a NAME="CompareDialog.compare" ID="CompareDialog.compare"></a>
+<h4>CompareDialog.compare</h4>
+<b>compare</b>(<i>lines1, lines2, name1="", name2=""</i>)
+<p>
+        Public method to compare two lists of text.
+</p><dl>
+<dt><i>lines1</i></dt>
+<dd>
+text to compare against (string or list of strings)
+</dd><dt><i>lines2</i></dt>
+<dd>
+text to compare (string or list of strings)
+</dd><dt><i>name1=</i></dt>
+<dd>
+name to be shown for the first text (string)
+</dd><dt><i>name2=</i></dt>
+<dd>
+name to be shown for the second text (string)
 </dd>
 </dl><a NAME="CompareDialog.on_buttonBox_clicked" ID="CompareDialog.on_buttonBox_clicked"></a>
 <h4>CompareDialog.on_buttonBox_clicked</h4>

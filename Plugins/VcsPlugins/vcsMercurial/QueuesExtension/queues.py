@@ -57,6 +57,7 @@ class Queues(HgExtension):
         self.queuesListAllGuardsDialog = None
         self.queuesDefineGuardsDialog = None
         self.queuesListQueuesDialog = None
+        self.queueStatusDialog = None
     
     def shutdown(self):
         """
@@ -76,6 +77,8 @@ class Queues(HgExtension):
             self.queuesDefineGuardsDialog.close()
         if self.queuesListQueuesDialog is not None:
             self.queuesListQueuesDialog.close()
+        if self.queueStatusDialog is not None:
+            self.queueStatusDialog.close()
     
     def __getPatchesList(self, repodir, listType, withSummary=False):
         """
@@ -898,3 +901,37 @@ class Queues(HgExtension):
             self.trUtf8("Available Queues"),
             False, repodir, self.vcs)
         self.queuesListQueuesDialog.show()
+    
+    def hgQueueInit(self, name):
+        """
+        Public method to initialize a new queue repository.
+        
+        @param name directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        args = []
+        args.append('init')
+        args.append('--mq')
+        args.append(repodir)
+        # init is not possible with the command server
+        dia = HgDialog(self.trUtf8('Initializing new queue repository'), self.vcs)
+        res = dia.startProcess(args)
+        if res:
+            dia.exec_()
+    
+    def hgQueueStatus(self, name):
+        """
+        Public method used to view the status of a queue repository.
+        
+        @param name directory name (string)
+        """
+        from ..HgStatusDialog import HgStatusDialog
+        self.queueStatusDialog = HgStatusDialog(self.vcs, mq=True)
+        self.queueStatusDialog.show()
+        self.queueStatusDialog.start(name)

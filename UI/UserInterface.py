@@ -4095,7 +4095,7 @@ class UserInterface(E5MainWindow):
         @param fn filename of the file to show (string)
         """
         from IconEditor.IconEditorWindow import IconEditorWindow
-        dlg = IconEditorWindow(fn, self, fromEric=True)
+        dlg = IconEditorWindow(fn, self, fromEric=True, project=self.project)
         dlg.show()
         
     def __showPixmap(self, fn):

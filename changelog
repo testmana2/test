@@ -28,6 +28,8 @@ Version 5.4-snapshot-2013mmdd:
   -- added support for virtual space
   -- added support to show the current class/method name in the combo boxes
      at the top of the editor
+- File Browser
+  -- added a JavaScript parser in order to show the structure of JavaScript files
 - Mini Editor
   -- changed the line numbers margin to adjust themselves to the size needed
   -- added support for virtual space
@@ -45,6 +47,7 @@ Version 5.4-snapshot-2013mmdd:
   -- Sources Viewer
      --- added support to highlight the current class/method name of the current
          editor
+     --- added a JavaScript parser in order to show the structure of JavaScript files
   -- Translations Viewer
      --- added a plug-in hook for the 'open' action
 - Shell
@@ -63,9 +66,16 @@ Version 5.4-snapshot-2013mmdd:
      --- added a confirmation dialog to the 'revert' actions
   -- Mercurial
      --- added a 'Copy Changesets' button to the log browser dialog
+     --- editing the config file will generate a minimal one if none exists
+     --- added support for the 'summary' command
+     --- added capability to compare files side-by-side
+  -- Subversion
+     --- added capability to compare files side-by-side
 - Web Browser
   -- reworked the various SSL info widgets to show more info
   -- added a dialog to configure hosts to be exempted from caching
+  -- added the capability to save the visible part of the current page
+     as a screen shot
 - Wizards
   -- added a wizard for the Qt5 QRegularExpression class (requires PyQt5)
 - Third Party packages

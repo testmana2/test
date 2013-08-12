@@ -214,7 +214,7 @@ QDialog, Ui_HgLogBrowserDialog
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
 <h4>HgLogBrowserDialog (Constructor)</h4>
-<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", bundle=None, parent=None</i>)
+<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", bundle=None, isFile=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -227,6 +227,9 @@ mode of the dialog (string; one of log, incoming, outgoing)
 </dd><dt><i>bundle</i></dt>
 <dd>
 name of a bundle file (string)
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)

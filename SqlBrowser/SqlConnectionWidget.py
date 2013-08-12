@@ -36,7 +36,7 @@ class SqlConnectionWidget(QWidget):
         super(SqlConnectionWidget, self).__init__(parent)
         
         layout = QVBoxLayout(self)
-        layout.setMargin(0)
+        layout.setContentsMargins(0, 0, 0, 0)
         
         self.__connectionTree = QTreeWidget(self)
         self.__connectionTree.setObjectName("connectionTree")

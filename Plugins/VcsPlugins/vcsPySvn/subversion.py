@@ -11,12 +11,10 @@ from __future__ import unicode_literals    # __IGNORE_WARNING__
 
 import os
 import shutil
-import urllib.request
 import urllib.parse
-import urllib.error
 import time
 
-from PyQt4.QtCore import QMutexLocker, pyqtSignal, QRegExp
+from PyQt4.QtCore import Qt, QMutexLocker, pyqtSignal, QRegExp, QDateTime
 from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
 
 from E5Gui.E5Application import e5App
@@ -94,6 +92,7 @@ class Subversion(VersionControl):
         
         self.log = None
         self.diff = None
+        self.sbsDiff = None
         self.status = None
         self.propList = None
         self.tagbranchList = None
@@ -148,6 +147,8 @@ class Subversion(VersionControl):
             self.log.close()
         if self.diff is not None:
             self.diff.close()
+        if self.sbsDiff is not None:
+            self.sbsDiff.close()
         if self.status is not None:
             self.status.close()
         if self.propList is not None:
@@ -929,6 +930,7 @@ class Subversion(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
+        isFile = os.path.isfile(name)
         noEntries, ok = QInputDialog.getInt(
             None,
             self.trUtf8("Subversion Log"),
@@ -936,7 +938,7 @@ class Subversion(VersionControl):
             self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
         if ok:
             from .SvnLogDialog import SvnLogDialog
-            self.log = SvnLogDialog(self)
+            self.log = SvnLogDialog(self, isFile=isFile)
             self.log.show()
             QApplication.processEvents()
             self.log.start(name, noEntries)
@@ -1997,15 +1999,118 @@ class Subversion(VersionControl):
             QApplication.processEvents()
             self.diff.start(name, urls=urls, summary=summary)
         
-    def svnLogBrowser(self, path):
+    def __svnGetFileForRevision(self, name, rev=""):
+        """
+        Private method to get a file for a specific revision from the repository.
+        
+        @param name file name to get from the repository (string)
+        @keyparam rev revision to retrieve (integer or string)
+        @return contents of the file (string) and an error message (string)
+        """
+        output = ""
+        error = ""
+        
+        client = self.getClient()
+        try:
+            if rev:
+                if isinstance(rev, int) or rev.isdecimal():
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.number, int(rev))
+                elif rev.startswith("{"):
+                    dateStr = rev[1:-1]
+                    secs = QDateTime.fromString(dateStr, Qt.ISODate).toTime_t()
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.date, secs)
+                elif rev == "HEAD":
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.head)
+                elif rev == "COMMITTED":
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.committed)
+                elif rev == "BASE":
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.base)
+                elif rev == "WORKING":
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.working)
+                elif rev == "PREV":
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.previous)
+                else:
+                    rev = pysvn.Revision(pysvn.opt_revision_kind.unspecified)
+                output = client.cat(name, revision=rev)
+            else:
+                output = client.cat(name)
+            output = output.decode()
+        except pysvn.ClientError as e:
+            error = str(e)
+        
+        return output, error
+    
+    def svnSbsDiff(self, name, extended=False, revisions=None):
+        """
+        Public method used to view the difference of a file to the Mercurial repository
+        side-by-side.
+        
+        @param name file name to be diffed (string)
+        @keyparam extended flag indicating the extended variant (boolean)
+        @keyparam revisions tuple of two revisions (tuple of strings)
+        """
+        if isinstance(name, list):
+            raise ValueError("Wrong parameter type")
+        
+        if extended:
+            from .SvnRevisionSelectionDialog import SvnRevisionSelectionDialog
+            dlg = SvnRevisionSelectionDialog()
+            if dlg.exec_() == QDialog.Accepted:
+                rev1, rev2 = dlg.getRevisions()
+                if rev1 == "WORKING":
+                    rev1 = ""
+                if rev2 == "WORKING":
+                    rev2 = ""
+        elif revisions:
+            rev1, rev2 = revisions[0], revisions[1]
+        else:
+            rev1, rev2 = "", ""
+        
+        output1, error = self.__svnGetFileForRevision(name, rev=rev1)
+        if error:
+            E5MessageBox.critical(self.__ui,
+                self.trUtf8("Subversion Side-by-Side Difference"),
+                error)
+            return
+        name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
+        
+        if rev2:
+            output2, error = self.__svnGetFileForRevision(name, rev=rev2)
+            if error:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Subversion Side-by-Side Difference"),
+                    error)
+                return
+            name2 = "{0} (rev. {1})".format(name, rev2)
+        else:
+            try:
+                f1 = open(name, "r", encoding="utf-8")
+                output2 = f1.read()
+                f1.close()
+                name2 = name
+            except IOError:
+                E5MessageBox.critical(self.__ui,
+                    self.trUtf8("Subversion Side-by-Side Difference"),
+                    self.trUtf8("""<p>The file <b>{0}</b> could not be read.</p>""")
+                        .format(name))
+                return
+        
+        if self.sbsDiff is None:
+            from UI.CompareDialog import CompareDialog
+            self.sbsDiff = CompareDialog()
+        self.sbsDiff.show()
+        self.sbsDiff.compare(output1, output2, name1, name2)
+    
+    def svnLogBrowser(self, path, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Subversion repository.
         
         @param path file/directory name to show the log of (string)
+        @param isFile flag indicating log for a file is to be shown (boolean)
         """
         from .SvnLogBrowserDialog import SvnLogBrowserDialog
-        self.logBrowser = SvnLogBrowserDialog(self)
+        self.logBrowser = SvnLogBrowserDialog(self, isFile=isFile)
         self.logBrowser.show()
         QApplication.processEvents()
         self.logBrowser.start(path)

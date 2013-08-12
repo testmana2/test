@@ -36,6 +36,9 @@ Module implementing some common utility functions for the Mercurial package.
 <tr>
 <td><a href="#getConfigPath">getConfigPath</a></td>
 <td>Public method to get the filename of the config file.</td>
+</tr><tr>
+<td><a href="#prepareProcess">prepareProcess</a></td>
+<td>Public method to prepare the given process.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -48,6 +51,25 @@ Module implementing some common utility functions for the Mercurial package.
 <dt>Returns:</dt>
 <dd>
 filename of the config file (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="prepareProcess" ID="prepareProcess"></a>
+<h2>prepareProcess</h2>
+<b>prepareProcess</b>(<i>proc, encoding="", language=""</i>)
+<p>
+    Public method to prepare the given process.
+</p><dl>
+<dt><i>proc</i></dt>
+<dd>
+reference to the proces to be prepared (QProcess)
+</dd><dt><i>encoding</i></dt>
+<dd>
+encoding to be used by the process (string)
+</dd><dt><i>language</i></dt>
+<dd>
+language to be set (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

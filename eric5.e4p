@@ -1085,6 +1085,25 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>eric5_qregularexpression.py</Source>
     <Source>eric5_qregularexpression.pyw</Source>
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardServer.py</Source>
+    <Source>Utilities/ClassBrowsers/jsclbr.py</Source>
+    <Source>ThirdParty/Jasy/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/core/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/core/Console.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/util/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/api/Comment.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/api/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/parse/VanillaBuilder.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/parse/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/parse/Node.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/parse/Parser.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/tokenize/Tokenizer.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/tokenize/__init__.py</Source>
+    <Source>ThirdParty/Jasy/jasy/js/tokenize/Lang.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1403,6 +1422,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
@@ -1527,6 +1549,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>APIs/Python3/eric5.bas</Other>
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
+    <Other>ThirdParty/Jasy/jasy/license.md</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

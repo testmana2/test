@@ -92,7 +92,7 @@ class DirectorySyncHandler(SyncHandler):
         except IOError as err:
             self.syncStatus.emit(type_,
                 self.trUtf8("Cannot read remote file.\n{0}").format(str(err)))
-            self.syncFinished(type_, False, True)
+            self.syncFinished.emit(type_, False, True)
             return
         
         QCoreApplication.processEvents()
@@ -113,7 +113,7 @@ class DirectorySyncHandler(SyncHandler):
         data = self.readFile(fileName, type_)
         if data.isEmpty():
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
-            self.syncFinished(type_, False, False)
+            self.syncFinished.emit(type_, False, False)
             return
         else:
             try:
@@ -124,7 +124,7 @@ class DirectorySyncHandler(SyncHandler):
             except IOError as err:
                 self.syncStatus.emit(type_,
                     self.trUtf8("Cannot write remote file.\n{0}").format(str(err)))
-                self.syncFinished(type_, False, False)
+                self.syncFinished.emit(type_, False, False)
                 return
             
         self.syncFinished.emit(type_, True, False)

@@ -77,11 +77,11 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             """ project. Several actions can be executed via the context menu.</p>"""
         ))
         
-        self.lreleaseProc = None
+        self.__lreleaseProcesses = []
+        self.__pylupdateProcesses = []
         self.lreleaseProcRunning = False
-        self.pylupdateProc = None
         self.pylupdateProcRunning = False
-        self.tmpProject = []
+        self.__tmpProjects = []
         
     def _createPopupMenus(self):
         """
@@ -773,24 +773,26 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                                 list[0].replace(os.sep, '/'), "\n", "\n"))
                     
                 pf.close()
-                self.tmpProject.append(outFile)
+                self.__tmpProjects.append(outFile)
             except IOError:
                 E5MessageBox.critical(self,
                     self.trUtf8("Write temporary project file"),
                     self.trUtf8("<p>The temporary project file <b>{0}</b> could not"
                         " be written.</p>").format(outFile))
-                self.tmpProject = []
-                return False
+        
+        if len(self.__tmpProjects) == 0:
+            return False
             
         return True
-        
+    
     def __readStdoutLupdate(self):
         """
         Private slot to handle the readyReadStandardOutput signal of the
         pylupdate process.
         """
-        if self.pylupdateProc is not None:
-            self.__readStdout(self.pylupdateProc, '{0}: '.format(self.pylupdate))
+        proc = self.sender()
+        if proc is not None:
+            self.__readStdout(proc, '{0}: '.format(self.pylupdate))
         else:
             return
         
@@ -799,8 +801,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot to handle the readyReadStandardOutput signal of the
         lrelease process.
         """
-        if self.lreleaseProc is not None:
-            self.__readStdout(self.lreleaseProc, 'lrelease: ')
+        proc = self.sender()
+        if proc is not None:
+            self.__readStdout(proc, 'lrelease: ')
         else:
             return
         
@@ -825,8 +828,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot to handle the readyReadStandardError signal of the
         pylupdate process.
         """
-        if self.pylupdateProc is not None:
-            self.__readStderr(self.pylupdateProc, '{0}: '.format(self.pylupdate))
+        proc = self.sender()
+        if proc is not None:
+            self.__readStderr(proc, '{0}: '.format(self.pylupdate))
         else:
             return
         
@@ -835,8 +839,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot to handle the readyReadStandardError signal of the
         lrelease process.
         """
-        if self.lreleaseProc is not None:
-            self.__readStderr(self.lreleaseProc, 'lrelease: ')
+        proc = self.sender()
+        if proc is not None:
+            self.__readStderr(proc, 'lrelease: ')
         else:
             return
         
@@ -874,7 +879,6 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         @param exitCode exit code of the process (integer)
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
-        self.pylupdateProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:
             ui = e5App().getObject("UserInterface")
             if ui.notificationsEnabled():
@@ -891,7 +895,20 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             E5MessageBox.critical(self,
                 self.trUtf8("Translation file generation"),
                 self.trUtf8("The generation of the translation files (*.ts) has failed."))
-        self.pylupdateProc = None
+        
+        proc = self.sender()
+        for index in range(len(self.__pylupdateProcesses)):
+            if proc == self.__pylupdateProcesses[index][0]:
+                try:
+                    self.__tmpProjects.remove(self.__pylupdateProcesses[index][1])
+                    os.remove(self.__pylupdateProcesses[index][1])
+                except EnvironmentError:
+                    pass
+                del self.__pylupdateProcesses[index]
+                break
+        if not self.__pylupdateProcesses:
+            # all done
+            self.pylupdateProcRunning = False
         
     def __generateTSFile(self, noobsolete=False, generateAll=True):
         """
@@ -933,6 +950,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     return
         
         # generate a minimal temporary projectfile suitable for pylupdate
+        self.__tmpProjects = []
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
@@ -953,8 +971,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         else:
             return
 
-        for tempProjectFile in self.tmpProject:
-            self.pylupdateProc = QProcess()
+        self.__pylupdateProcesses = []
+        for tempProjectFile in self.__tmpProjects[:]:
+            proc = QProcess()
             args = []
 
             if noobsolete:
@@ -963,16 +982,16 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             args.append('-verbose')
             path, filename = os.path.split(tempProjectFile)
             args.append(filename)
-            self.pylupdateProc.setWorkingDirectory(os.path.join(self.project.ppath, path))
-            self.pylupdateProc.finished.connect(self.__generateTSFileDone)
-            self.pylupdateProc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
-            self.pylupdateProc.readyReadStandardError.connect(self.__readStderrLupdate)
+            proc.setWorkingDirectory(os.path.join(self.project.ppath, path))
+            proc.finished.connect(self.__generateTSFileDone)
+            proc.readyReadStandardOutput.connect(self.__readStdoutLupdate)
+            proc.readyReadStandardError.connect(self.__readStderrLupdate)
             
-            self.pylupdateProc.start(self.pylupdate, args)
-            procStarted = self.pylupdateProc.waitForStarted(5000)
+            proc.start(self.pylupdate, args)
+            procStarted = proc.waitForStarted()
             if procStarted:
                 self.pylupdateProcRunning = True
-                self.pylupdateProc.waitForFinished(10000)
+                self.__pylupdateProcesses.append((proc, tempProjectFile))
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8('Process Generation Error'),
@@ -980,13 +999,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                         'Could not start {0}.<br>'
                         'Ensure that it is in the search path.'
                     ).format(self.pylupdate))
-        # cleanup
-        try:
-            for fn in self.tmpProject:
-                os.remove(fn)
-        except EnvironmentError:
-            pass
-        self.tmpProject = []
+                # cleanup
+                try:
+                    self.__tmpProjects.remove(tempProjectFile)
+                    os.remove(tempProjectFile)
+                except EnvironmentError:
+                    pass
         
     def __generateAll(self):
         """
@@ -1054,13 +1072,21 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             E5MessageBox.critical(self,
                 self.trUtf8("Translation file release"),
                 self.trUtf8("The release of the translation files (*.qm) has failed."))
-        self.lreleaseProc = None
-        try:
-            os.remove(self.tmpProject)
-        except EnvironmentError:
-            pass
-        self.tmpProject = None
-        self.project.checkLanguageFiles()
+        
+        proc = self.sender()
+        for index in range(len(self.__lreleaseProcesses)):
+            if proc == self.__lreleaseProcesses[index][0]:
+                try:
+                    self.__tmpProjects.remove(self.__lreleaseProcesses[index][1])
+                    os.remove(self.__lreleaseProcesses[index][1])
+                except EnvironmentError:
+                    pass
+                del self.__lreleaseProcesses[index]
+                break
+        if not self.__lreleaseProcesses:
+            # all done
+            self.lreleaseProcRunning = False
+            self.project.checkLanguageFiles()
         
     def __releaseTSFile(self, generateAll=False):
         """
@@ -1087,15 +1113,13 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 return
         
         # generate a minimal temporary projectfile suitable for lrelease
+        self.__tmpProjects = []
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
             ok = False
         if not ok:
             return
-        
-        self.lreleaseProc = QProcess()
-        args = []
         
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "PySide", "PySideC"]:
@@ -1107,24 +1131,38 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         if Utilities.isWindowsPlatform():
             lrelease = lrelease + '.exe'
         
-        args.append('-verbose')
-        args.append(self.tmpProject)
-        self.lreleaseProc.setWorkingDirectory(self.project.ppath)
-        self.lreleaseProc.finished.connect(self.__releaseTSFileDone)
-        self.lreleaseProc.readyReadStandardOutput.connect(self.__readStdoutLrelease)
-        self.lreleaseProc.readyReadStandardError.connect(self.__readStderrLrelease)
-        
-        self.lreleaseProc.start(lrelease, args)
-        procStarted = self.lreleaseProc.waitForStarted(5000)
-        if procStarted:
-            self.lreleaseProcRunning = True
-        else:
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    '<p>Could not start lrelease.<br>'
-                    'Ensure that it is available as <b>{0}</b>.</p>'
-                ).format(lrelease))
+        self.__lreleaseProcesses = []
+        for tempProjectFile in self.__tmpProjects[:]:
+            proc = QProcess()
+            args = []
+
+            args.append('-verbose')
+            path, filename = os.path.split(tempProjectFile)
+            args.append(filename)
+            proc.setWorkingDirectory(os.path.join(self.project.ppath, path))
+            proc.finished.connect(self.__releaseTSFileDone)
+            proc.readyReadStandardOutput.connect(self.__readStdoutLrelease)
+            proc.readyReadStandardError.connect(self.__readStderrLrelease)
+            
+            proc.start(lrelease, args)
+            procStarted = proc.waitForStarted()
+            if procStarted:
+                self.lreleaseProcRunning = True
+                self.__lreleaseProcesses.append((proc, tempProjectFile))
+            else:
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        '<p>Could not start lrelease.<br>'
+                        'Ensure that it is available as <b>{0}</b>.</p>'
+                    ).format(lrelease))
+                
+                # cleanup
+                try:
+                    self.__tmpProjects.remove(tempProjectFile)
+                    os.remove(tempProjectFile)
+                except EnvironmentError:
+                    pass
         
     def __releaseSelected(self):
         """

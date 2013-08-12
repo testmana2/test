@@ -178,7 +178,7 @@ class TabWidget(E5TabWidget):
         
         self.rightCornerWidget = QWidget(self)
         self.rightCornerWidgetLayout = QHBoxLayout(self.rightCornerWidget)
-        self.rightCornerWidgetLayout.setMargin(0)
+        self.rightCornerWidgetLayout.setContentsMargins(0, 0, 0, 0)
         self.rightCornerWidgetLayout.setSpacing(0)
         
         self.__navigationMenu = QMenu(self)

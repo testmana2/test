@@ -108,6 +108,9 @@ HgExtension
 <td><a href="#Queues.hgQueueGuardsSetActive">hgQueueGuardsSetActive</a></td>
 <td>Public method to set the active guards.</td>
 </tr><tr>
+<td><a href="#Queues.hgQueueInit">hgQueueInit</a></td>
+<td>Public method to initialize a new queue repository.</td>
+</tr><tr>
 <td><a href="#Queues.hgQueueListPatches">hgQueueListPatches</a></td>
 <td>Public method to show a list of all patches.</td>
 </tr><tr>
@@ -131,6 +134,9 @@ HgExtension
 </tr><tr>
 <td><a href="#Queues.hgQueueShowPatch">hgQueueShowPatch</a></td>
 <td>Public method to show the contents of the current patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueStatus">hgQueueStatus</a></td>
+<td>Public method used to view the status of a queue repository.</td>
 </tr><tr>
 <td><a href="#Queues.shutdown">shutdown</a></td>
 <td>Public method used to shutdown the queues interface.</td>
@@ -348,6 +354,16 @@ file/directory name (string)
 <dd>
 file/directory name (string)
 </dd>
+</dl><a NAME="Queues.hgQueueInit" ID="Queues.hgQueueInit"></a>
+<h4>Queues.hgQueueInit</h4>
+<b>hgQueueInit</b>(<i>name</i>)
+<p>
+        Public method to initialize a new queue repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name (string)
+</dd>
 </dl><a NAME="Queues.hgQueueListPatches" ID="Queues.hgQueueListPatches"></a>
 <h4>Queues.hgQueueListPatches</h4>
 <b>hgQueueListPatches</b>(<i>name</i>)
@@ -450,6 +466,16 @@ file/directory name (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueStatus" ID="Queues.hgQueueStatus"></a>
+<h4>Queues.hgQueueStatus</h4>
+<b>hgQueueStatus</b>(<i>name</i>)
+<p>
+        Public method used to view the status of a queue repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name (string)
 </dd>
 </dl><a NAME="Queues.shutdown" ID="Queues.shutdown"></a>
 <h4>Queues.shutdown</h4>

@@ -22,28 +22,34 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
     """
     Class documentation goes here.
     """
-    def __init__(self, view, parent=None):
+    def __init__(self, view, visibleOnly=False, parent=None):
         """
         Constructor
         
         @param view reference to the web view containing the page to be saved
             (HelpBrowser)
+        @param visibleOnly flag indicating to just save the visible part
+            of the page (boolean)
         @param parent reference to the parent widget (QWidget)
         """
         super(PageScreenDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__view = view
-        self.__createPixmap()
+        self.__createPixmap(visibleOnly)
         self.pageScreenLabel.setPixmap(self.__pagePixmap)
     
-    def __createPixmap(self):
+    def __createPixmap(self, visibleOnly):
         """
         Private slot to create a pixmap of the associated view's page.
+        
+        @param visibleOnly flag indicating to just save the visible part
+            of the page (boolean)
         """
         page = self.__view.page()
         origSize = page.viewportSize()
-        page.setViewportSize(page.mainFrame().contentsSize())
+        if not visibleOnly:
+            page.setViewportSize(page.mainFrame().contentsSize())
         
         image = QImage(page.viewportSize(), QImage.Format_ARGB32)
         painter = QPainter(image)

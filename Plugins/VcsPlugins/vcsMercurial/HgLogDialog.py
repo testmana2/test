@@ -35,13 +35,14 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
     The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the revisions.
     """
-    def __init__(self, vcs, mode="log", bundle=None, parent=None):
+    def __init__(self, vcs, mode="log", bundle=None, isFile=False, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
         @param bundle name of a bundle file (string)
+        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super(HgLogDialog, self).__init__(parent)
@@ -78,6 +79,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.initialText = []
         
         self.diff = None
+        
+        self.sbsCheckBox.setEnabled(isFile)
     
     def closeEvent(self, e):
         """
@@ -449,11 +452,14 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             return
         self.contents.scrollToAnchor(ver)
         
-        if self.diff is None:
-            from .HgDiffDialog import HgDiffDialog
-            self.diff = HgDiffDialog(self.vcs)
-        self.diff.show()
-        self.diff.start(filename, [v1, v2], self.bundle)
+        if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
+            self.vcs.hgSbsDiff(filename, revisions=(v1, v2))
+        else:
+            if self.diff is None:
+                from .HgDiffDialog import HgDiffDialog
+                self.diff = HgDiffDialog(self.vcs)
+            self.diff.show()
+            self.diff.start(filename, [v1, v2], self.bundle)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

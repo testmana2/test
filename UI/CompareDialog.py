@@ -244,6 +244,43 @@ class CompareDialog(QWidget, Ui_CompareDialog):
                     .format(filename2))
             return
         
+        self.__compare(lines1, lines2)
+        
+    def compare(self, lines1, lines2, name1="", name2=""):
+        """
+        Public method to compare two lists of text.
+        
+        @param lines1 text to compare against (string or list of strings)
+        @param lines2 text to compare (string or list of strings)
+        @keyparam name1 name to be shown for the first text (string)
+        @keyparam name2 name to be shown for the second text (string)
+        """
+        if name1 == "" or name2 == "":
+            self.filesGroup.hide()
+        else:
+            self.file1Button.hide()
+            self.file2Button.hide()
+            self.file1Edit.setText(name1)
+            self.file1Edit.setReadOnly(True)
+            self.file2Edit.setText(name2)
+            self.file2Edit.setReadOnly(True)
+        self.diffButton.setEnabled(False)
+        self.diffButton.hide()
+        
+        if type(lines1) == type(""):
+            lines1 = lines1.splitlines(True)
+        if type(lines2) == type(""):
+            lines2 = lines2.splitlines(True)
+        
+        self.__compare(lines1, lines2)
+        
+    def __compare(self, lines1, lines2):
+        """
+        Private method to compare two lists of text.
+        
+        @param lines1 text to compare against (list of strings)
+        @param lines2 text to compare (list of strings)
+        """
         self.contents_1.clear()
         self.contents_2.clear()
         
@@ -297,8 +334,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.vsb2.setValue(0)
         self.firstButton.setEnabled(False)
         self.upButton.setEnabled(False)
-        self.downButton.setEnabled(len(self.diffParas) > 0)
-        self.lastButton.setEnabled(len(self.diffParas) > 0)
+        self.downButton.setEnabled(len(self.diffParas) > 0 and 
+            (self.vsb1.isVisible() or self.vsb2.isVisible()))
+        self.lastButton.setEnabled(len(self.diffParas) > 0 and 
+            (self.vsb1.isVisible() or self.vsb2.isVisible()))
         
         self.totalLabel.setText(self.trUtf8('Total: {0}')\
                                     .format(added + deleted + changed))
@@ -310,9 +349,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         Private slot to move the text display to the current diff position.
         """
-        value = (self.diffParas[self.currentDiffPos] - 1) * self.fontHeight
-        self.vsb1.setValue(value)
-        self.vsb2.setValue(value)
+        if 0 <= self.currentDiffPos < len(self.diffParas):
+            value = (self.diffParas[self.currentDiffPos] - 1) * self.fontHeight
+            self.vsb1.setValue(value)
+            self.vsb2.setValue(value)
     
     def __scrollBarMoved(self, value):
         """

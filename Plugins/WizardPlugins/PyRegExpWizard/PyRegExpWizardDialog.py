@@ -651,7 +651,7 @@ class PyRegExpWizardDialog(QDialog):
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
-        self.__layout.setMargin(0)
+        self.__layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.__layout)
         
         self.cw = PyRegExpWizardWidget(self, fromEric)

@@ -126,6 +126,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__revert">__revert</a></td>
 <td>Private slot to handle the Revert context menu entry.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__sbsDiff">__sbsDiff</a></td>
+<td>Private slot to handle the Diff context menu entry.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__showContextMenu">__showContextMenu</a></td>
 <td>Protected slot to show the context menu of the status list.</td>
 </tr><tr>
@@ -174,6 +177,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.on_revertButton_clicked">on_revertButton_clicked</a></td>
 <td>Private slot to handle the press of the Revert button.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.on_sbsDiffButton_clicked">on_sbsDiffButton_clicked</a></td>
+<td>Private slot to handle the press of the Side-by-Side Diff button.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
 <td>Private slot to send the input to the subversion process.</td>
 </tr><tr>
@@ -196,13 +202,16 @@ QWidget, Ui_HgStatusDialog
 </table>
 <a NAME="HgStatusDialog.__init__" ID="HgStatusDialog.__init__"></a>
 <h4>HgStatusDialog (Constructor)</h4>
-<b>HgStatusDialog</b>(<i>vcs, parent=None</i>)
+<b>HgStatusDialog</b>(<i>vcs, mq=False, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>vcs</i></dt>
 <dd>
 reference to the vcs object
+</dd><dt><i>mq</i></dt>
+<dd>
+flag indicating to show a queue repo status (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -369,6 +378,11 @@ output line to be processed (string)
 <b>__revert</b>(<i></i>)
 <p>
         Private slot to handle the Revert context menu entry.
+</p><a NAME="HgStatusDialog.__sbsDiff" ID="HgStatusDialog.__sbsDiff"></a>
+<h4>HgStatusDialog.__sbsDiff</h4>
+<b>__sbsDiff</b>(<i></i>)
+<p>
+        Private slot to handle the Diff context menu entry.
 </p><a NAME="HgStatusDialog.__showContextMenu" ID="HgStatusDialog.__showContextMenu"></a>
 <h4>HgStatusDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
@@ -479,6 +493,11 @@ flag indicating the status of the check box (boolean)
 <b>on_revertButton_clicked</b>(<i></i>)
 <p>
         Private slot to handle the press of the Revert button.
+</p><a NAME="HgStatusDialog.on_sbsDiffButton_clicked" ID="HgStatusDialog.on_sbsDiffButton_clicked"></a>
+<h4>HgStatusDialog.on_sbsDiffButton_clicked</h4>
+<b>on_sbsDiffButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the press of the Side-by-Side Diff button.
 </p><a NAME="HgStatusDialog.on_sendButton_clicked" ID="HgStatusDialog.on_sendButton_clicked"></a>
 <h4>HgStatusDialog.on_sendButton_clicked</h4>
 <b>on_sendButton_clicked</b>(<i></i>)

@@ -4257,10 +4257,18 @@ class Project(QObject):
                 return  # don't overwrite
         
         # build the list of entries
-        lst = []
+        lst_ = []
         for key in \
             ["SOURCES", "FORMS", "RESOURCES", "TRANSLATIONS", "INTERFACES", "OTHERS"]:
-            lst.extend(self.pdata[key])
+            lst_.extend(self.pdata[key])
+        lst = []
+        for entry in lst_:
+            if os.path.isdir(self.getAbsolutePath(entry)):
+                lst.extend([self.getRelativePath(p) for p in 
+                    Utilities.direntries(self.getAbsolutePath(entry), True)])
+                continue
+            else:
+                lst.append(entry)
         lst.sort()
         if "PKGLIST" in lst:
             lst.remove("PKGLIST")
@@ -4272,7 +4280,7 @@ class Project(QObject):
             else:
                 newline = self.getEolString()
             pkglistFile = open(pkglist, "w", encoding="utf-8", newline=newline)
-            pkglistFile.write("\n".join(lst))
+            pkglistFile.write("\n".join([Utilities.fromNativeSeparators(f) for f in lst]))
             pkglistFile.write("\n")  # ensure the file ends with an empty line
             pkglistFile.close()
         except IOError as why:
