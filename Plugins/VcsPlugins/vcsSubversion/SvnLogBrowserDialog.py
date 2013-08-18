@@ -42,6 +42,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
         
         self.vcs = vcs
         

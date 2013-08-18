@@ -61,6 +61,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.diff = None
         
         self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
         
         self.client = self.vcs.getClient()
         self.client.callback_cancel = \

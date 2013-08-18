@@ -74,6 +74,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.refreshButton.setEnabled(False)
         
         self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
         
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):

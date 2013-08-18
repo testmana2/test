@@ -75,6 +75,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.diff = None
         
         self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
     
     def closeEvent(self, e):
         """

@@ -79,6 +79,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.diff = None
         
         self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
         
     def closeEvent(self, e):
         """
