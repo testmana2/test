@@ -30,9 +30,11 @@ class VersionControl(QObject):
     @signal vcsStatusMonitorData(list of str) emitted to update the VCS status
     @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
         monitoring thread (ok, nok, op, off) and a status message
+    @signal vcsStatusChanged() emitted to indicate a change of the overall VCS status
     """
     vcsStatusMonitorData = pyqtSignal(list)
     vcsStatusMonitorStatus = pyqtSignal(str, str)
+    vcsStatusChanged = pyqtSignal()
     
     canBeCommitted = 1  # Indicates that a file/directory is in the vcs.
     canBeAdded = 2      # Indicates that a file/directory is not in vcs.
@@ -723,6 +725,8 @@ class VersionControl(QObject):
         """
         Public method to wake up the VCS status monitor thread.
         """
+        self.vcsStatusChanged.emit()
+        
         if self.statusMonitorThread is not None:
             self.statusMonitorThread.checkStatus()
     

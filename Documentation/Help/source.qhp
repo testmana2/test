@@ -8371,6 +8371,7 @@
       <keyword name="Project.__showUserProperties" id="Project.__showUserProperties" ref="eric5.Project.Project.html#Project.__showUserProperties" />
       <keyword name="Project.__statusMonitorStatus" id="Project.__statusMonitorStatus" ref="eric5.Project.Project.html#Project.__statusMonitorStatus" />
       <keyword name="Project.__syncRecent" id="Project.__syncRecent" ref="eric5.Project.Project.html#Project.__syncRecent" />
+      <keyword name="Project.__vcsStatusChanged" id="Project.__vcsStatusChanged" ref="eric5.Project.Project.html#Project.__vcsStatusChanged" />
       <keyword name="Project.__writeDebugProperties" id="Project.__writeDebugProperties" ref="eric5.Project.Project.html#Project.__writeDebugProperties" />
       <keyword name="Project.__writeProject" id="Project.__writeProject" ref="eric5.Project.Project.html#Project.__writeProject" />
       <keyword name="Project.__writeSession" id="Project.__writeSession" ref="eric5.Project.Project.html#Project.__writeSession" />

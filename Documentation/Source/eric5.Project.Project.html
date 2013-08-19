@@ -74,6 +74,9 @@ emitted before an item of the model is
 </dd><dt>projectAboutToBeCreated()</dt>
 <dd>
 emitted just before the project will be created
+</dd><dt>projectChanged()</dt>
+<dd>
+emitted to signal a change of the project
 </dd><dt>projectClosed()</dt>
 <dd>
 emitted after a project was closed
@@ -319,6 +322,9 @@ QObject
 </tr><tr>
 <td><a href="#Project.__syncRecent">__syncRecent</a></td>
 <td>Private method to synchronize the list of recently opened projects with the central store.</td>
+</tr><tr>
+<td><a href="#Project.__vcsStatusChanged">__vcsStatusChanged</a></td>
+<td>Private slot to handle a change of the overall VCS status.</td>
 </tr><tr>
 <td><a href="#Project.__writeDebugProperties">__writeDebugProperties</a></td>
 <td>Private method to write the project debugger properties file (.e4d)</td>
@@ -1073,6 +1079,11 @@ explanotory text for the signaled status (string)
 <p>
         Private method to synchronize the list of recently opened projects
         with the central store.
+</p><a NAME="Project.__vcsStatusChanged" ID="Project.__vcsStatusChanged"></a>
+<h4>Project.__vcsStatusChanged</h4>
+<b>__vcsStatusChanged</b>(<i></i>)
+<p>
+        Private slot to handle a change of the overall VCS status.
 </p><a NAME="Project.__writeDebugProperties" ID="Project.__writeDebugProperties"></a>
 <h4>Project.__writeDebugProperties</h4>
 <b>__writeDebugProperties</b>(<i>quiet=False</i>)

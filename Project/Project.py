@@ -83,6 +83,7 @@ class Project(QObject):
             of the menu and a reference to the menu are given.
     @signal lexerAssociationsChanged() emitted after the lexer associations have been
             changed
+    @signal projectChanged() emitted to signal a change of the project
     """
     dirty = pyqtSignal(int)
     projectLanguageAdded = pyqtSignal(str)
@@ -116,6 +117,7 @@ class Project(QObject):
     reinitVCS = pyqtSignal()
     showMenu = pyqtSignal(str, QMenu)
     lexerAssociationsChanged = pyqtSignal()
+    projectChanged = pyqtSignal()
     
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
@@ -583,6 +585,8 @@ class Project(QObject):
         self.__dirty = b
         self.saveAct.setEnabled(b)
         self.dirty.emit(bool(b))
+        if self.__dirty:
+            self.projectChanged.emit()
         
     def isDirty(self):
         """
@@ -2273,6 +2277,7 @@ class Project(QObject):
                     self.vcs.startStatusMonitor(self)
                     self.vcs.vcsStatusMonitorData.connect(self.__model.changeVCSStates)
                     self.vcs.vcsStatusMonitorStatus.connect(self.__statusMonitorStatus)
+                    self.vcs.vcsStatusChanged.connect(self.__vcsStatusChanged)
                 self.reinitVCS.emit()
             
             if self.pudata["VCSSTATUSMONITORINTERVAL"]:
@@ -2468,6 +2473,8 @@ class Project(QObject):
                             self.__model.changeVCSStates)
                         self.vcs.vcsStatusMonitorStatus.connect(
                             self.__statusMonitorStatus)
+                        self.vcs.vcsStatusChanged.connect(
+                            self.__vcsStatusChanged)
                 else:
                     QApplication.restoreOverrideCursor()
         
@@ -3952,6 +3959,12 @@ class Project(QObject):
         vcsSystemsDict = e5App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
         return len(vcsSystemsDict) != 0
+    
+    def __vcsStatusChanged(self):
+        """
+        Private slot to handle a change of the overall VCS status.
+        """
+        self.projectChanged.emit()
     
     #########################################################################
     ## Below is the interface to the checker tools

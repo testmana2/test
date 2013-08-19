@@ -6271,6 +6271,7 @@ eric5.Project.Project.Project.openProject?4(fn=None, restoreSession=True, reopen
 eric5.Project.Project.Project.othersAdded?4(fn, updateModel=True)
 eric5.Project.Project.Project.prepareRepopulateItem?7
 eric5.Project.Project.Project.projectAboutToBeCreated?7
+eric5.Project.Project.Project.projectChanged?7
 eric5.Project.Project.Project.projectClosed?7
 eric5.Project.Project.Project.projectClosedHooks?7
 eric5.Project.Project.Project.projectFileRenamed?7
@@ -8601,6 +8602,7 @@ eric5.VCS.VersionControl.VersionControl.vcsSetOptions?4(options)
 eric5.VCS.VersionControl.VersionControl.vcsSetOtherData?4(data)
 eric5.VCS.VersionControl.VersionControl.vcsShutdown?4()
 eric5.VCS.VersionControl.VersionControl.vcsStatus?4(name)
+eric5.VCS.VersionControl.VersionControl.vcsStatusChanged?7
 eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorData?7
 eric5.VCS.VersionControl.VersionControl.vcsStatusMonitorStatus?7
 eric5.VCS.VersionControl.VersionControl.vcsSwitch?4(name)
