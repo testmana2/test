@@ -13,6 +13,7 @@ import shutil
 import zipfile
 import compileall
 import urllib.parse
+import glob
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication, \
@@ -294,6 +295,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         internalPackages = []
         needsRestart = False
         pyqtApi = 0
+        doCompile = True
         for line in pluginSource.splitlines():
             if line.startswith("packageName"):
                 tokens = line.split("=")
@@ -317,6 +319,10 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                     pyqtApi = int(tokens[1].strip())
                 except ValueError:
                     pass
+            elif line.startswith("doNotCompile"):
+                tokens = line.split("=")
+                if tokens[1].strip() == "True":
+                    doCompile = False
             elif line.startswith("# End-Of-Header"):
                 break
         
@@ -434,7 +440,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 False
         
         # now compile the plugins
-        compileall.compile_dir(destination, quiet=True)
+        if doCompile:
+            compileall.compile_dir(destination, quiet=True)
         
         if not self.__external:
             # now load and activate the plugin
@@ -501,6 +508,16 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             fnamec = "{0}c".format(pluginFile)
             if os.path.exists(fnamec):
                 os.remove(fnamec)
+            
+            pluginDirCache = os.path.join(os.path.dirname(pluginFile), "__pycache__")
+            if os.path.exists(pluginDirCache):
+                pluginFileName = os.path.splitext(os.path.basename(pluginFile))[0]
+                for fnameo in glob.glob(
+                    os.path.join(pluginDirCache, "{0}*.pyo".format(pluginFileName))):
+                    os.remove(fnameo)
+                for fnamec in glob.glob(
+                    os.path.join(pluginDirCache, "{0}*.pyc".format(pluginFileName))):
+                    os.remove(fnamec)
             
             os.remove(pluginFile)
         except (IOError, OSError, os.error):

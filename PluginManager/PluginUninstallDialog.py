@@ -11,6 +11,7 @@ import sys
 import os
 import imp
 import shutil
+import glob
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal
 from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout
@@ -142,6 +143,16 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
             fnamec = "{0}c".format(pluginFile)
             if os.path.exists(fnamec):
                 os.remove(fnamec)
+            
+            pluginDirCache = os.path.join(os.path.dirname(pluginFile), "__pycache__")
+            if os.path.exists(pluginDirCache):
+                pluginFileName = os.path.splitext(os.path.basename(pluginFile))[0]
+                for fnameo in glob.glob(
+                    os.path.join(pluginDirCache, "{0}*.pyo".format(pluginFileName))):
+                    os.remove(fnameo)
+                for fnamec in glob.glob(
+                    os.path.join(pluginDirCache, "{0}*.pyc".format(pluginFileName))):
+                    os.remove(fnamec)
             
             os.remove(pluginFile)
         except OSError as err:
