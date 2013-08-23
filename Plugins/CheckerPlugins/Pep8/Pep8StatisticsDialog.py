@@ -47,9 +47,11 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
                 message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code]).format(
                         *pep8.pep8_messages_sample_args[code])
-            else:
+            elif code in pep8.pep8_messages:
                 message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code])
+            else:
+                continue
             self.__createItem(stats[code], code, message)
             totalIssues += stats[code]
         

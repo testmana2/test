@@ -25,6 +25,39 @@ import Preferences
 import Utilities
 
 
+class Pep8Report(pep8.BaseReport):
+    """
+    Class implementing a special report to be used with our dialog.
+    """
+    def __init__(self, options):
+        """
+        Constructor
+        
+        @param options options for the report (optparse.Values)
+        """
+        super().__init__(options)
+        
+        self.__repeat = options.repeat
+        self.errors = []
+    
+    def error_args(self, line_number, offset, code, check, *args):
+        """
+        Public method to collect the error messages.
+        
+        @param line_number line number of the issue (integer)
+        @param offset position within line of the issue (integer)
+        @param code message code (string)
+        @param check reference to the checker function (function)
+        @param args arguments for the message (list)
+        """
+        code = super().error_args(line_number, offset, code, check, *args)
+        if code and (self.counters[code] == 1 or self.__repeat):
+            text = pep8.getMessage(code, *args)
+            self.errors.append(
+                (self.filename, line_number, offset, text)
+            )
+        return code
+    
 class Pep8Dialog(QDialog, Ui_Pep8Dialog):
     """
     Class implementing a dialog to show the results of the PEP 8 check.
@@ -307,15 +340,31 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             repeat=repeatMessages,
                             select=includeMessages,
                             ignore=excludeMessages)
+                        checker.messages.sort(key=lambda a: a[1])
+                        messages = checker.messages
                     else:
-                        from .Pep8Checker import Pep8Checker
-                        checker = Pep8Checker(file, source,
+                        checker = None              # TODO: remove when Py2 is done
+                        if includeMessages:
+                            select = [s.strip() for s in includeMessages.split(',')
+                                      if s.strip()]
+                        else:
+                            select = []
+                        if excludeMessages:
+                            ignore = [i.strip() for i in excludeMessages.split(',')
+                                      if i.strip()]
+                        else:
+                            ignore = []
+                        styleGuide = pep8.StyleGuide(
+                            reporter=Pep8Report,
                             repeat=repeatMessages,
-                            select=includeMessages,
-                            ignore=excludeMessages)
-                        checker.check_all()
-                    checker.messages.sort(key=lambda a: a[1])
-                    for message in checker.messages:
+                            select=select,
+                            ignore=ignore,
+                            max_line_length=79,     # TODO: make configurable
+                        )
+                        report = styleGuide.check_files([file])
+                        report.errors.sort(key=lambda a: a[1])
+                        messages = report.errors
+                    for message in messages:
                         fname, lineno, position, text = message
                         if lineno > len(source):
                             lineno = len(source)
@@ -331,7 +380,11 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             self.__createResultItem(
                                 fname, lineno, position, text, fixed)
                     fixer and fixer.saveFile(encoding)
-                    self.__updateStatistics(checker.statistics, fixer)
+                    if checker:
+                        # TODO: remove when Py2 is done
+                        self.__updateStatistics(checker.statistics, fixer)
+                    else:
+                        self.__updateStatistics(report.counters, fixer)
                     progress += 1
             finally:
                 # reenable updates of the list
