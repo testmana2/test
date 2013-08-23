@@ -96,7 +96,7 @@ for space.
 """
 
 #
-# This is a modified version to make the original tabnanny better suitable
+# This is a modified version to make the original pep8.py better suitable
 # for being called from within the eric5 IDE. The modifications are as
 # follows:
 #
