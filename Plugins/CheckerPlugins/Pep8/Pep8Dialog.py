@@ -57,7 +57,8 @@ class Pep8Report(pep8.BaseReport):
                 (self.filename, line_number, offset, text)
             )
         return code
-    
+
+
 class Pep8Dialog(QDialog, Ui_Pep8Dialog):
     """
     Class implementing a dialog to show the results of the PEP 8 check.
