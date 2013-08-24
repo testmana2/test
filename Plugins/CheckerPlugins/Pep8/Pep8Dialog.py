@@ -172,8 +172,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         self.__data = self.__project.getData("CHECKERSPARMS", "Pep8Checker")
         if self.__data is None or \
-           "ExcludeFiles" not in self.__data or \
-           len(self.__data) != 6:
+           len(self.__data) < 6:
             # initialize the data structure
             self.__data = {
                 "ExcludeFiles": "",
