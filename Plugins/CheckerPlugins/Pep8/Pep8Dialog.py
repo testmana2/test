@@ -203,8 +203,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         self.__data = self.__project.getData("CHECKERSPARMS", "Pep8Checker")
         if self.__data is None or \
-           "ExcludeFiles" not in self.__data or \
-           len(self.__data) != 6:
+           len(self.__data) < 6:
             # initialize the data structure
             self.__data = {
                 "ExcludeFiles": "",
@@ -214,12 +213,19 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "FixCodes": "",
                 "FixIssues": False,
             }
+        if "MaxLineLength" not in self.__data:
+            self.__data["MaxLineLength"] = pep8.MAX_LINE_LENGTH,
+        if "HangClosing" not in self.__data:
+            self.__data["HangClosing"] = False
+        
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
         self.includeMessagesEdit.setText(self.__data["IncludeMessages"])
         self.repeatCheckBox.setChecked(self.__data["RepeatMessages"])
         self.fixIssuesEdit.setText(self.__data["FixCodes"])
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
+        self.lineLengthSpinBox.setValue(self.__data["MaxLineLength"])
+        self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -290,6 +296,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             repeatMessages = self.repeatCheckBox.isChecked()
             fixCodes = self.fixIssuesEdit.text()
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
+            maxLineLength = self.lineLengthSpinBox.value()
+            hangClosing = self.hangClosingCheckBox.isChecked()
             
             try:
                 # disable updates of the list for speed
@@ -341,8 +349,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             repeat=repeatMessages,
                             select=includeMessages,
                             ignore=excludeMessages,
-                            max_line_length=79,     # TODO: make configurable
-                            hang_closing=False,     # TODO: make configurable
+                            max_line_length=maxLineLength,
+                            hang_closing=hangClosing,
                         )
                         report.errors.sort(key=lambda a: a[1])
                     else:
@@ -361,8 +369,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             repeat=repeatMessages,
                             select=select,
                             ignore=ignore,
-                            max_line_length=79,     # TODO: make configurable
-                            hang_closing=False,     # TODO: make configurable
+                            max_line_length=maxLineLength,
+                            hang_closing=hangClosing,
                         )
                         report = styleGuide.check_files([file])
                         report.errors.sort(key=lambda a: a[1])
@@ -433,6 +441,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "RepeatMessages": self.repeatCheckBox.isChecked(),
                 "FixCodes": self.fixIssuesEdit.text(),
                 "FixIssues": self.fixIssuesCheckBox.isChecked(),
+                "MaxLineLength": self.lineLengthSpinBox.value(),
+                "HangClosing": self.hangClosingCheckBox.isChecked(),
             }
             if data != self.__data:
                 self.__data = data
@@ -565,6 +575,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/FixCodes"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/FixIssues")))
+        self.lineLengthSpinBox.setValue(int(Preferences.Prefs.settings.value(
+            "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)))
+        self.hangClosingCheckBox.setChecked(Preferences.toBool(
+            Preferences.Prefs.settings.value("PEP8/HangClosing")))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -582,6 +596,11 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.fixIssuesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/FixIssues",
             self.fixIssuesCheckBox.isChecked())
+        # TODO: extend for max_line_length and hang_closing
+        Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
+            self.lineLengthSpinBox.value())
+        Preferences.Prefs.settings.setValue("PEP8/HangClosing",
+            self.hangClosingCheckBox.isChecked())
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):

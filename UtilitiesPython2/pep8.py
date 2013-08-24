@@ -956,6 +956,7 @@ def comparison_type(logical_line):
         yield match.start(), "E721"
 
 
+def python_3000_has_key(logical_line):
     r"""
     The {}.has_key() method is removed in the Python 3.
     Use the 'in' operation instead.
