@@ -54,6 +54,7 @@ W warnings
 # follows:
 #
 # - made messages translatable via Qt
+# - added code for eric5 integration
 #
 # Copyright (c) 2011 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #

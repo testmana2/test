@@ -8,7 +8,6 @@ Class implementing the PEP 8 checker for Python2.
 """
 
 import sys
-import optparse
 import getopt
 
 from Tools import readEncodedFile, normalizeCode
@@ -16,77 +15,22 @@ from Tools import readEncodedFile, normalizeCode
 import pep8
 
 
-class Pep8Checker(pep8.Checker):
+class Pep8Report(pep8.BaseReport):
     """
-    Class implementing the PEP 8 checker for Python2.
+    Class implementing a special report to be used with our dialog.
     """
-    def __init__(self, filename, lines, repeat=False,
-                 select="", ignore=""):
+    def __init__(self, options):
         """
         Constructor
         
-        @param filename name of the file to check (string)
-        @param lines source of the file (list of strings)
-        @keyparam repeat flag indicating to repeat message categories (boolean)
-        @keyparam select list of message IDs to check for
-            (comma separated string)
-        @keyparam ignore list of message IDs to ignore
-            (comma separated string)
+        @param options options for the report (optparse.Values)
         """
-        pep8.options = optparse.Values()
+        super(Pep8Report, self).__init__(options)
         
-        pep8.options.verbose = 0
-        
-        pep8.options.repeat = repeat
-        if select:
-            pep8.options.select = [s.strip() for s in select.split(',')
-                                   if s.strip()]
-        else:
-            pep8.options.select = []
-        if ignore:
-            pep8.options.ignore = [i.strip() for i in ignore.split(',')
-                                   if i.strip()]
-        else:
-            pep8.options.ignore = []
-        pep8.options.physical_checks = pep8.find_checks('physical_line')
-        pep8.options.logical_checks = pep8.find_checks('logical_line')
-        pep8.options.counters = dict.fromkeys(pep8.BENCHMARK_KEYS, 0)
-        pep8.options.messages = {}
-        
-        pep8.Checker.__init__(self, filename, lines)
-        
-        self.messages = []
-        self.statistics = {}
+        self.__repeat = options.repeat
+        self.errors = []
     
-    def __ignore_code(self, code):
-        """
-        Private method to check, if the message for the given code should
-        be ignored.
-        
-        If codes are selected and the code has a selected prefix and does not
-        have an ignored prefix, it is not ignored. If codes are selected and
-        the code does not have a selected prefix, it is ignored. If no codes
-        are selected, the code is ignored, if it has a prefix, that is
-        contained in the ignored codes.
-        
-        @param code code to be checked (string)
-        @return flag indicating, that the code should be ignored (boolean)
-        """
-        if pep8.options.select:
-            if code.startswith(tuple(pep8.options.select)):
-                if code.startswith(tuple(pep8.options.ignore)):
-                    return True
-                else:
-                    return False
-            else:
-                return True
-        else:
-            if code.startswith(tuple(pep8.options.ignore)):
-                return True
-            else:
-                return False
-    
-    def report_error_args(self, line_number, offset, code, check, *args):
+    def error_args(self, line_number, offset, code, check, *args):
         """
         Public method to collect the error messages.
         
@@ -96,25 +40,21 @@ class Pep8Checker(pep8.Checker):
         @param check reference to the checker function (function)
         @param args arguments for the message (list)
         """
-        if self.__ignore_code(code):
-            return
-        
-        if code in self.statistics:
-            self.statistics[code] += 1
-        else:
-            self.statistics[code] = 1
-        self.file_errors += 1
-        if self.statistics[code] == 1 or pep8.options.repeat:
-            self.messages.append(
-                (self.filename, self.line_offset + line_number,
-                 offset + 1, code, args)
+        code = super(Pep8Report, self).error_args(line_number, offset, code, check, *args)
+        if code and (self.counters[code] == 1 or self.__repeat):
+            self.errors.append(
+                (self.filename, line_number, offset, code, args)
             )
+        return code
+
 
 if __name__ == "__main__":
     repeat = False
     select = ""
     ignore = ""
     filename = ""
+    max_line_length = 79
+    hang_closing = False
     
     if "-f" not in sys.argv:
         print "ERROR"
@@ -122,7 +62,7 @@ if __name__ == "__main__":
         print "No file name given."
     else:
         try:
-            optlist, args = getopt.getopt(sys.argv[1:], "rf:i:s:")
+            optlist, args = getopt.getopt(sys.argv[1:], "f:hi:m:rs:")
         except getopt.GetoptError:
             print "ERROR"
             print ""
@@ -138,6 +78,14 @@ if __name__ == "__main__":
                 ignore = arg
             elif opt == "-s":
                 select = arg
+            elif opt == "-m":
+                try:
+                    max_line_length = int(arg)
+                except ValueError:
+                    # ignore silently
+                    pass
+            elif opt == "-h":
+                hang_closing = True
         
         try:
             codestring = readEncodedFile(filename)[0]
@@ -149,13 +97,30 @@ if __name__ == "__main__":
             print "I/O Error: %s" % unicode(msg)
             sys.exit(1)
         
-        checker = Pep8Checker(filename, codestring, repeat=repeat,
-                              select=select, ignore=ignore)
-        checker.check_all()
-        if len(checker.messages) > 0:
-            checker.messages.sort(key=lambda a: a[1])
-            for message in checker.messages:
-                fname, lineno, position, code, args = message
+        if select:
+            select = [s.strip() for s in select.split(',')
+                      if s.strip()]
+        else:
+            select = []
+        if ignore:
+            ignore = [i.strip() for i in ignore.split(',')
+                      if i.strip()]
+        else:
+            ignore = []
+        styleGuide = pep8.StyleGuide(
+            reporter=Pep8Report,
+            repeat=repeat,
+            select=select,
+            ignore=ignore,
+            max_line_length=max_line_length,
+            hang_closing=hang_closing,
+        )
+        report = styleGuide.check_files([filename])
+        report.errors.sort(key=lambda a: a[1])
+        if len(report.errors) > 0:
+            report.errors.sort(key=lambda a: a[1])
+            for error in report.errors:
+                fname, lineno, position, code, args = error
                 print "PEP8"
                 print fname
                 print lineno
@@ -165,8 +130,9 @@ if __name__ == "__main__":
                 for a in args:
                     print a
             print "PEP8_STATISTICS"
-            for key in checker.statistics:
-                print key, checker.statistics[key]
+            for key in report.counters:
+                if key.startswith(("E", "W")):
+                    print key, report.counters[key]
         else:
             print "NO_PEP8"
             print filename

@@ -337,14 +337,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
                         from .Pep8Checker import Pep8Py2Checker
-                        checker = Pep8Py2Checker(file, [],
+                        report = Pep8Py2Checker(file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
-                            ignore=excludeMessages)
-                        checker.messages.sort(key=lambda a: a[1])
-                        messages = checker.messages
+                            ignore=excludeMessages,
+                            max_line_length=79,     # TODO: make configurable
+                            hang_closing=False,     # TODO: make configurable
+                        )
+                        report.errors.sort(key=lambda a: a[1])
                     else:
-                        checker = None              # TODO: remove when Py2 is done
                         if includeMessages:
                             select = [s.strip() for s in includeMessages.split(',')
                                       if s.strip()]
@@ -361,12 +362,12 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             select=select,
                             ignore=ignore,
                             max_line_length=79,     # TODO: make configurable
+                            hang_closing=False,     # TODO: make configurable
                         )
                         report = styleGuide.check_files([file])
                         report.errors.sort(key=lambda a: a[1])
-                        messages = report.errors
-                    for message in messages:
-                        fname, lineno, position, text = message
+                    for error in report.errors:
+                        fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
                         if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
@@ -381,11 +382,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             self.__createResultItem(
                                 fname, lineno, position, text, fixed)
                     fixer and fixer.saveFile(encoding)
-                    if checker:
-                        # TODO: remove when Py2 is done
-                        self.__updateStatistics(checker.statistics, fixer)
-                    else:
-                        self.__updateStatistics(report.counters, fixer)
+                    self.__updateStatistics(report.counters, fixer)
                     progress += 1
             finally:
                 # reenable updates of the list

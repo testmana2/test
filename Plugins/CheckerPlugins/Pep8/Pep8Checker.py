@@ -24,7 +24,8 @@ class Pep8Py2Checker(object):
     Class implementing the PEP 8 checker interface for Python 2.
     """
     def __init__(self, filename, lines, repeat=False,
-                 select="", ignore=""):
+                 select="", ignore="", max_line_length=79,
+                 hang_closing=False):
         """
         Constructor
         
@@ -35,13 +36,15 @@ class Pep8Py2Checker(object):
             (comma separated string)
         @keyparam ignore list of message IDs to ignore
             (comma separated string)
+        @keyparam max_line_length maximum allowed line length (integer)
+        @keyparam hang_closing flag indicating to allow hanging closing brackets (boolean)
         """
-        self.messages = []
-        self.statistics = {}
+        self.errors = []
+        self.counters = {}
         
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
-            self.messages.append((filename, 1, 1,
+            self.errors.append((filename, 1, 1,
                 QCoreApplication.translate("Pep8Py2Checker",
                     "Python2 interpreter not configured.")))
             return
@@ -58,6 +61,10 @@ class Pep8Py2Checker(object):
         if ignore:
             args.append("-i")
             args.append(ignore)
+        args.append("-m")
+        args.append(str(max_line_length))
+        if hang_closing:
+            args.append("-h")
         args.append("-f")
         args.append(filename)
         
@@ -71,7 +78,7 @@ class Pep8Py2Checker(object):
                         Preferences.getSystem("IOEncoding"),
                         'replace').splitlines()
             if output[0] == "ERROR":
-                self.messages.append((filename, 1, 1, output[2]))
+                self.errors.append((filename, 1, 1, output[2]))
                 return
             
             if output[0] == "NO_PEP8":
@@ -96,12 +103,12 @@ class Pep8Py2Checker(object):
                 index += 6 + arglen
                 
                 text = pep8.getMessage(code, *args)
-                self.messages.append((fname, lineno, position, text))
+                self.errors.append((fname, lineno, position, text))
             while index < len(output):
                 code, countStr = output[index].split(None, 1)
-                self.statistics[code] = int(countStr)
+                self.counters[code] = int(countStr)
                 index += 1
         else:
-            self.messages.append((filename, 1, 1,
+            self.errors.append((filename, 1, 1,
                 QCoreApplication.translate("Pep8Py2Checker",
                     "Python2 interpreter did not finish within 15s.")))
