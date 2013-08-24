@@ -122,6 +122,7 @@ DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
+DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
@@ -235,6 +236,7 @@ FileAccessHandler SchemeAccessHandler
 FileDialogWizard QObject
 FileDialogWizardDialog QDialog Ui_FileDialogWizardDialog
 FileReply QNetworkReply
+FileReport BaseReport
 FiletypeAssociationDialog QDialog Ui_FiletypeAssociationDialog
 FindFileDialog QDialog Ui_FindFileDialog
 FindFileNameDialog QWidget Ui_FindFileNameDialog
@@ -472,11 +474,11 @@ PasswordModel QAbstractTableModel
 PasswordReader QXmlStreamReader
 PasswordWriter QXmlStreamWriter
 PasswordsDialog QDialog Ui_PasswordsDialog
-Pep8Checker pep8.Checker
 Pep8CheckerPlugin QObject
 Pep8CodeSelectionDialog QDialog Ui_Pep8CodeSelectionDialog
 Pep8Dialog QDialog Ui_Pep8Dialog
 Pep8Fixer QObject
+Pep8Report pep8.BaseReport
 Pep8StatisticsDialog QDialog Ui_Pep8StatisticsDialog
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
@@ -616,6 +618,7 @@ SqlConnectionWidget QWidget
 SslLabel QLabel
 StackedUrlBar QStackedWidget
 StackedWidget QStackedWidget
+StandardReport BaseReport
 StartDialog QDialog
 StatusMonitorLed E5Led
 Subversion VersionControl

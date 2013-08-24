@@ -31754,82 +31754,82 @@ entry will open an editor window and position the cursor at the respective line 
 entrada se abre una ventana de editor y se posiciona el cursor en la línea y posición adecuadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="166"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="34"/>
         <source>Exclude Files:</source>
         <translation>Excluir Archivos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="173"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="41"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="107"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="60"/>
         <source>Press to start the PEP 8 check run</source>
         <translation>Pulse para comenzar la ejecución de la revisión de PEP 8</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="110"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="63"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="84"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="105"/>
         <source>Exclude Messages:</source>
         <translation>Excluir Mensajes:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="159"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="112"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation>Introduzca códigos de mensaje o categorías a excluir separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="170"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="200"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
         <source>Included Messages:</source>
         <translation>Mensajes Incluidos:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="152"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="136"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation>Introduzca códigos de mensaje o categorías a incluir separados por comas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="46"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Select to repeat each message type</source>
         <translation>Seleccione para repetir cada tipo de mensaje</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="49"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="225"/>
         <source>Repeat messages</source>
         <translation>Repetir mensajes</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="130"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="83"/>
         <source>Press to load the default values</source>
         <translation>Pulse para cargar los valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="133"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="86"/>
         <source>Load Defaults</source>
         <translation>Cargar Valores por Defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="140"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to store the current values as defaults</source>
         <translation>Pulse para almacenar los valores actuales como valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="143"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Store Defaults</source>
         <translation>Almacenar valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="220"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="290"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -31839,84 +31839,104 @@ the respective line and position.&lt;/p&gt;</source>
 y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="236"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="306"/>
         <source>File/Line</source>
         <translation>Archivo/Línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="241"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="311"/>
         <source>Code</source>
         <translation>Código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="246"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="316"/>
         <source>Message</source>
         <translation>Mensaje</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="254"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="324"/>
         <source>Shows the progress of the PEP 8 check action</source>
         <translation>Muestra el progreso de la acción de validacion de PEP 8</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="53"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="87"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="55"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="89"/>
         <source>Press to show all files containing an issue</source>
         <translation>Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="282"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="324"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="361"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="420"/>
         <source>No issues found.</source>
         <translation>No se han encontrado problemas.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="48"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="82"/>
         <source>Statistics...</source>
         <translation>Estadísticas...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="50"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="84"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Pulse para mostrar algunas estadísticas de la última ejecución</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="207"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="167"/>
         <source>Press to select the message codes from a list</source>
         <translation>Pulse para seleccionar los códigos de mensaje de una lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="91"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="153"/>
         <source>Fix Issues:</source>
         <translation>Arreglar Problemas:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="98"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="160"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation>Introduzca los códigos de mensaje de los problemas que se desea arreglar automáticamente (dejar en blanco para arreglar todos)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="59"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
         <source>Select to fix some issues</source>
         <translation>Seleccionar para arreglar algunos problemas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="62"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="238"/>
         <source>Fix issues automatically</source>
         <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="330"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="389"/>
         <source>Fix: {0}</source>
         <translation>Arreglar: {0}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="177"/>
+        <source>Max. Line Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="186"/>
+        <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="262"/>
+        <source>Select to allow hanging closing brackets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="265"/>
+        <source>Allow hanging closing brackets</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32011,12 +32031,12 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
 <context>
     <name>Pep8Py2Checker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="141"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="47"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Intérprete de Python2 no configurado.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="202"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="112"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>El intérprete de Python2 no terminó en un plazo de 15s.</translation>
     </message>
@@ -32044,7 +32064,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>Mensaje</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="56"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="58"/>
         <source>%n issue(s) found</source>
         <translation>
             <numerusform>%n problema encontrado</numerusform>
@@ -32052,7 +32072,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="60"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="62"/>
         <source>%n file(s) checked</source>
         <translation>
             <numerusform>%n archivo revisado</numerusform>
@@ -32060,7 +32080,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="62"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="64"/>
         <source>%n file(s) with issues found</source>
         <translation>
             <numerusform>Encontrado %n archivo con problemas</numerusform>
@@ -32068,7 +32088,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="58"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="60"/>
         <source>%n issue(s) fixed</source>
         <translation>
             <numerusform>%n problema solucionado</numerusform>
@@ -60016,184 +60036,299 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>pep8</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="165"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="136"/>
         <source>indentation contains mixed spaces and tabs</source>
         <translation>la indentación contiene espacios y tabuladores mezclados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="167"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="138"/>
         <source>indentation is not a multiple of four</source>
         <translation>la indentación no es un múltiplo de cuatro</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="169"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="140"/>
         <source>expected an indented block</source>
         <translation>se esperaba un bloque indentado</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="171"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="142"/>
         <source>unexpected indentation</source>
         <translation>indentación inesperada</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="173"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="162"/>
         <source>indentation contains tabs</source>
         <translation>la indentación contiene tabuladores</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="175"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
         <source>whitespace after &apos;{0}&apos;</source>
         <translation>espacio en blanco después de&apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="181"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
         <source>whitespace before &apos;{0}&apos;</source>
         <translation>espacio en blanco antes de&apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="183"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
         <source>multiple spaces before operator</source>
         <translation>múltiples espacios antes de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="185"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
         <source>multiple spaces after operator</source>
         <translation>múltiples espacios después de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="187"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="176"/>
         <source>tab before operator</source>
         <translation>tabulador antes de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="189"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="178"/>
         <source>tab after operator</source>
         <translation>tabulador después de operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="191"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
         <source>missing whitespace around operator</source>
         <translation>falta espacio en blanco alrededor de un operador</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="193"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
         <source>missing whitespace after &apos;{0}&apos;</source>
         <translation>falta espacio en blanco después de {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="195"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
         <source>multiple spaces after &apos;{0}&apos;</source>
         <translation>múltiples espacios en blanco después de &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="197"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
         <source>tab after &apos;{0}&apos;</source>
         <translation>tabulador después de &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="199"/>
         <source>no spaces around keyword / parameter equals</source>
-        <translation>no hay espacios alrededor de palabra clave / parámetro </translation>
+        <translation type="obsolete">no hay espacios alrededor de palabra clave / parámetro </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="201"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
         <source>at least two spaces before inline comment</source>
         <translation>al menos dos espacios antes de comentario inline</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="203"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
         <source>inline comment should start with &apos;# &apos;</source>
         <translation>un comentario inline debe comenzar con &apos;#&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="205"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
         <source>trailing whitespace</source>
         <translation>espacio en blanco por detrás</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="207"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
         <source>no newline at end of file</source>
         <translation>no hay carácter de nueva línea al final del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="209"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
         <source>blank line contains whitespace</source>
         <translation> línea en blanco contiene espacio en blanco</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="211"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
         <source>expected 1 blank line, found 0</source>
         <translation>se esperaba una línea en blanco, se han encontrado 0</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="213"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
         <source>expected 2 blank lines, found {0}</source>
         <translation>se esperaban dos líneas en blanco, se han encontrado {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="215"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
         <source>too many blank lines ({0})</source>
         <translation>demasiadas líneas en blanco ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="217"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
         <source>blank lines found after function decorator</source>
         <translation>encontradas líneas en blanco después de decorador de función</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="219"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
         <source>blank line at end of file</source>
         <translation>línea en blanco al final del archivo</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="221"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
         <source>multiple imports on one line</source>
         <translation>múltiples import en una línea</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="223"/>
         <source>line too long ({0} characters)</source>
-        <translation>línea demasiado larga ({0} caracteres)</translation>
+        <translation type="obsolete">línea demasiado larga ({0} caracteres)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="225"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
         <source>.has_key() is deprecated, use &apos;in&apos;</source>
         <translation>.has_key()está obsoleto, use &apos;in&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="227"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
         <source>deprecated form of raising exception</source>
         <translation>forma obsoleta de lanzar una excepción</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="229"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
         <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
         <translation>&apos;&lt;&gt;&apos; está obsoleto, use &apos;!=&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="231"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="236"/>
         <source>backticks are deprecated, use &apos;repr()&apos;</source>
         <translation>las comillas hacia atrás están obsoletas, use &apos;repr()&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="233"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="238"/>
         <source>multiple statements on one line (colon)</source>
         <translation>múltiples sentencias en una línea (dos puntos)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="235"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="240"/>
         <source>multiple statements on one line (semicolon)</source>
         <translation>múltiples sentencias en una línea (punto y coma)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="267"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="283"/>
         <source>no message for this code defined</source>
         <translation>no hay definido un mensaje para este código</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="237"/>
         <source>Token Error: {0}</source>
-        <translation>Error de Token: {0}</translation>
+        <translation type="obsolete">Error de Token: {0}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="144"/>
+        <source>continuation line indentation is not a multiple of four</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="146"/>
+        <source>continuation line missing indentation or outdented</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="148"/>
+        <source>closing bracket does not match indentation of opening bracket&apos;s line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="150"/>
+        <source>closing bracket does not match visual indentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="152"/>
+        <source>continuation line does not distinguish itself from next logical line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="154"/>
+        <source>continuation line over-indented for hanging indent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="156"/>
+        <source>continuation line over-indented for visual indent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="158"/>
+        <source>continuation line under-indented for visual indent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="160"/>
+        <source>closing bracket is missing indentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
+        <source>missing whitespace around arithmetic operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
+        <source>missing whitespace around bitwise or shift operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
+        <source>missing whitespace around modulo operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
+        <source>unexpected spaces around keyword / parameter equals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
+        <source>multiple spaces after keyword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
+        <source>multiple spaces before keyword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
+        <source>tab after keyword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
+        <source>tab before keyword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
+        <source>line too long ({0} &gt; {1} characters)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
+        <source>the backslash is redundant between brackets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="242"/>
+        <source>statement ends with a semicolon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="246"/>
+        <source>comparison to {0} should be {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="248"/>
+        <source>do not compare types, use &apos;isinstance()&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/pep8.py" line="250"/>
+        <source>{0}: {1}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

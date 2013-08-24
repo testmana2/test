@@ -30,9 +30,6 @@ Module implementing the PEP 8 checker.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#Pep8Checker">Pep8Checker</a></td>
-<td>Class implementing the PEP 8 checker.</td>
-</tr><tr>
 <td><a href="#Pep8Py2Checker">Pep8Py2Checker</a></td>
 <td>Class implementing the PEP 8 checker interface for Python 2.</td>
 </tr>
@@ -41,109 +38,6 @@ Module implementing the PEP 8 checker.
 <table>
 <tr><td>None</td></tr>
 </table>
-<hr /><hr />
-<a NAME="Pep8Checker" ID="Pep8Checker"></a>
-<h2>Pep8Checker</h2>
-<p>
-    Class implementing the PEP 8 checker.
-</p>
-<h3>Derived from</h3>
-pep8.Checker
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Class Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr>
-<td><a href="#Pep8Checker.__init__">Pep8Checker</a></td>
-<td>Constructor</td>
-</tr><tr>
-<td><a href="#Pep8Checker.__ignore_code">__ignore_code</a></td>
-<td>Private method to check, if the message for the given code should be ignored.</td>
-</tr><tr>
-<td><a href="#Pep8Checker.report_error_args">report_error_args</a></td>
-<td>Public method to collect the error messages.</td>
-</tr>
-</table>
-<h3>Static Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<a NAME="Pep8Checker.__init__" ID="Pep8Checker.__init__"></a>
-<h4>Pep8Checker (Constructor)</h4>
-<b>Pep8Checker</b>(<i>filename, lines, repeat=False, select="", ignore=""</i>)
-<p>
-        Constructor
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-name of the file to check (string)
-</dd><dt><i>lines</i></dt>
-<dd>
-source of the file (list of strings)
-</dd><dt><i>repeat=</i></dt>
-<dd>
-flag indicating to repeat message categories (boolean)
-</dd><dt><i>select=</i></dt>
-<dd>
-list of message IDs to check for
-            (comma separated string)
-</dd><dt><i>ignore=</i></dt>
-<dd>
-list of message IDs to ignore
-            (comma separated string)
-</dd>
-</dl><a NAME="Pep8Checker.__ignore_code" ID="Pep8Checker.__ignore_code"></a>
-<h4>Pep8Checker.__ignore_code</h4>
-<b>__ignore_code</b>(<i>code</i>)
-<p>
-        Private method to check, if the message for the given code should
-        be ignored.
-</p><p>
-        If codes are selected and the code has a selected prefix and does not
-        have an ignored prefix, it is not ignored. If codes are selected and
-        the code does not have a selected prefix, it is ignored. If no codes
-        are selected, the code is ignored, if it has a prefix, that is
-        contained in the ignored codes.
-</p><dl>
-<dt><i>code</i></dt>
-<dd>
-code to be checked (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating, that the code should be ignored (boolean)
-</dd>
-</dl><a NAME="Pep8Checker.report_error_args" ID="Pep8Checker.report_error_args"></a>
-<h4>Pep8Checker.report_error_args</h4>
-<b>report_error_args</b>(<i>line_number, offset, code, check, *args</i>)
-<p>
-        Public method to collect the error messages.
-</p><dl>
-<dt><i>line_number</i></dt>
-<dd>
-line number of the issue (integer)
-</dd><dt><i>offset</i></dt>
-<dd>
-position within line of the issue (integer)
-</dd><dt><i>code</i></dt>
-<dd>
-message code (string)
-</dd><dt><i>check</i></dt>
-<dd>
-reference to the checker function (function)
-</dd><dt><i>args</i></dt>
-<dd>
-arguments for the message (list)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="Pep8Py2Checker" ID="Pep8Py2Checker"></a>
 <h2>Pep8Py2Checker</h2>
@@ -173,7 +67,7 @@ object
 </table>
 <a NAME="Pep8Py2Checker.__init__" ID="Pep8Py2Checker.__init__"></a>
 <h4>Pep8Py2Checker (Constructor)</h4>
-<b>Pep8Py2Checker</b>(<i>filename, lines, repeat=False, select="", ignore=""</i>)
+<b>Pep8Py2Checker</b>(<i>filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -194,6 +88,12 @@ list of message IDs to check for
 <dd>
 list of message IDs to ignore
             (comma separated string)
+</dd><dt><i>max_line_length=</i></dt>
+<dd>
+maximum allowed line length (integer)
+</dd><dt><i>hang_closing=</i></dt>
+<dd>
+flag indicating to allow hanging closing brackets (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -596,7 +596,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.fixIssuesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/FixIssues",
             self.fixIssuesCheckBox.isChecked())
-        # TODO: extend for max_line_length and hang_closing
         Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
             self.lineLengthSpinBox.value())
         Preferences.Prefs.settings.setValue("PEP8/HangClosing",
