@@ -31942,57 +31942,57 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
 <context>
     <name>Pep8Fixer</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="102"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="130"/>
         <source>Fix PEP 8 issues</source>
         <translation>Arreglar problemas de PEP 8</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="102"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="130"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="172"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="250"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Tabulador convertido a 4 espacios.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="186"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="633"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Espacio eliminado del final de la línea.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="199"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="646"/>
         <source>newline added to end of file.</source>
         <translation>Carácter de nueva línea añadido al final del archivo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="218"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="665"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Eliminadas líneas en blanco sobrantes despues de final de archivo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="232"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="679"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; reemplazado por &apos;!=&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="257"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="483"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Eliminadas líneas en blanco sobrantes después de decorador de función.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="282"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Eliminadas líneas en blanco sobrantes.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="300"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="395"/>
         <source>One blank line inserted.</source>
         <translation>Insertada una línea en blanco.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="429"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>Insertada %n línea en blanco.</numerusform>
@@ -32000,7 +32000,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="336"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="431"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>Eliminada %n línea en blanco sobrante</numerusform>
@@ -32010,22 +32010,62 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="379"/>
         <source>Superfluous whitespace removed.</source>
-        <translation>Eliminadas espacio en blanco sobrante.</translation>
+        <translation type="obsolete">Eliminadas espacio en blanco sobrante.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="481"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="324"/>
         <source>Missing whitespace added.</source>
         <translation>Añadido espacio en blanco que faltaba.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="358"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Eliminado espacio en blanco extraño.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="505"/>
         <source>Whitespace after inline comment sign corrected.</source>
-        <translation>Corregido espacio en blanco despues de signo de comentario inline.</translation>
+        <translation type="obsolete">Corregido espacio en blanco despues de signo de comentario inline.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="252"/>
+        <source>Indentation adjusted to be a multiple of four.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
+        <source>Fix for {0} failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="297"/>
+        <source>Extraneous whitespace cannot be removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
+        <source>Whitespace around comment sign corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="515"/>
+        <source>Imports were put on separate lines.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="529"/>
+        <source>Redundant backslash in brackets removed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="585"/>
+        <source>Compound statement corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="619"/>
+        <source>Comparison to None/True/False corrected.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

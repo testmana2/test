@@ -3743,6 +3743,10 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, inPlace)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter?1(sourceLines)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7

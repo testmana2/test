@@ -8002,28 +8002,40 @@
       <keyword name="Pep8Fixer (Constructor)" id="Pep8Fixer (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__init__" />
       <keyword name="Pep8Fixer (Module)" id="Pep8Fixer (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
       <keyword name="Pep8Fixer.__finalize" id="Pep8Fixer.__finalize" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__finalize" />
-      <keyword name="Pep8Fixer.__fixBlankLinesAfterDecorator" id="Pep8Fixer.__fixBlankLinesAfterDecorator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixBlankLinesAfterDecorator" />
-      <keyword name="Pep8Fixer.__fixMissingWhitespaceAfter" id="Pep8Fixer.__fixMissingWhitespaceAfter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixMissingWhitespaceAfter" />
-      <keyword name="Pep8Fixer.__fixMissingWhitespaceAroundOperator" id="Pep8Fixer.__fixMissingWhitespaceAroundOperator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixMissingWhitespaceAroundOperator" />
-      <keyword name="Pep8Fixer.__fixNewline" id="Pep8Fixer.__fixNewline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixNewline" />
-      <keyword name="Pep8Fixer.__fixNotEqual" id="Pep8Fixer.__fixNotEqual" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixNotEqual" />
-      <keyword name="Pep8Fixer.__fixOneBlankLine" id="Pep8Fixer.__fixOneBlankLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixOneBlankLine" />
-      <keyword name="Pep8Fixer.__fixTabs" id="Pep8Fixer.__fixTabs" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTabs" />
-      <keyword name="Pep8Fixer.__fixTooManyBlankLines" id="Pep8Fixer.__fixTooManyBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTooManyBlankLines" />
-      <keyword name="Pep8Fixer.__fixTrailingBlankLines" id="Pep8Fixer.__fixTrailingBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTrailingBlankLines" />
-      <keyword name="Pep8Fixer.__fixTwoBlankLines" id="Pep8Fixer.__fixTwoBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTwoBlankLines" />
+      <keyword name="Pep8Fixer.__fixE101" id="Pep8Fixer.__fixE101" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE101" />
+      <keyword name="Pep8Fixer.__fixE201" id="Pep8Fixer.__fixE201" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE201" />
+      <keyword name="Pep8Fixer.__fixE221" id="Pep8Fixer.__fixE221" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE221" />
+      <keyword name="Pep8Fixer.__fixE231" id="Pep8Fixer.__fixE231" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE231" />
+      <keyword name="Pep8Fixer.__fixE251" id="Pep8Fixer.__fixE251" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE251" />
+      <keyword name="Pep8Fixer.__fixE261" id="Pep8Fixer.__fixE261" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE261" />
+      <keyword name="Pep8Fixer.__fixE301" id="Pep8Fixer.__fixE301" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE301" />
+      <keyword name="Pep8Fixer.__fixE302" id="Pep8Fixer.__fixE302" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE302" />
+      <keyword name="Pep8Fixer.__fixE303" id="Pep8Fixer.__fixE303" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE303" />
+      <keyword name="Pep8Fixer.__fixE304" id="Pep8Fixer.__fixE304" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE304" />
+      <keyword name="Pep8Fixer.__fixE401" id="Pep8Fixer.__fixE401" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE401" />
+      <keyword name="Pep8Fixer.__fixE502" id="Pep8Fixer.__fixE502" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE502" />
+      <keyword name="Pep8Fixer.__fixE701" id="Pep8Fixer.__fixE701" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE701" />
+      <keyword name="Pep8Fixer.__fixE702" id="Pep8Fixer.__fixE702" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE702" />
+      <keyword name="Pep8Fixer.__fixE711" id="Pep8Fixer.__fixE711" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE711" />
+      <keyword name="Pep8Fixer.__fixW291" id="Pep8Fixer.__fixW291" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW291" />
+      <keyword name="Pep8Fixer.__fixW292" id="Pep8Fixer.__fixW292" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW292" />
+      <keyword name="Pep8Fixer.__fixW391" id="Pep8Fixer.__fixW391" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW391" />
+      <keyword name="Pep8Fixer.__fixW603" id="Pep8Fixer.__fixW603" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW603" />
       <keyword name="Pep8Fixer.__fixWhitespace" id="Pep8Fixer.__fixWhitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespace" />
-      <keyword name="Pep8Fixer.__fixWhitespaceAfter" id="Pep8Fixer.__fixWhitespaceAfter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAfter" />
-      <keyword name="Pep8Fixer.__fixWhitespaceAfterInline" id="Pep8Fixer.__fixWhitespaceAfterInline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAfterInline" />
-      <keyword name="Pep8Fixer.__fixWhitespaceAroundEquals" id="Pep8Fixer.__fixWhitespaceAroundEquals" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAroundEquals" />
-      <keyword name="Pep8Fixer.__fixWhitespaceAroundOperator" id="Pep8Fixer.__fixWhitespaceAroundOperator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAroundOperator" />
-      <keyword name="Pep8Fixer.__fixWhitespaceBefore" id="Pep8Fixer.__fixWhitespaceBefore" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceBefore" />
-      <keyword name="Pep8Fixer.__fixWhitespaceBeforeInline" id="Pep8Fixer.__fixWhitespaceBeforeInline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceBeforeInline" />
       <keyword name="Pep8Fixer.__getEol" id="Pep8Fixer.__getEol" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getEol" />
+      <keyword name="Pep8Fixer.__getIndent" id="Pep8Fixer.__getIndent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndent" />
+      <keyword name="Pep8Fixer.__getIndentWord" id="Pep8Fixer.__getIndentWord" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndentWord" />
       <keyword name="Pep8Fixer.fixIssue" id="Pep8Fixer.fixIssue" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.fixIssue" />
       <keyword name="Pep8Fixer.saveFile" id="Pep8Fixer.saveFile" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.saveFile" />
       <keyword name="Pep8Py2Checker" id="Pep8Py2Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker" />
       <keyword name="Pep8Py2Checker (Constructor)" id="Pep8Py2Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker.__init__" />
+      <keyword name="Pep8Reindenter" id="Pep8Reindenter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter" />
+      <keyword name="Pep8Reindenter (Constructor)" id="Pep8Reindenter (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.__init__" />
+      <keyword name="Pep8Reindenter.__genStats" id="Pep8Reindenter.__genStats" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.__genStats" />
+      <keyword name="Pep8Reindenter.__getlspace" id="Pep8Reindenter.__getlspace" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.__getlspace" />
+      <keyword name="Pep8Reindenter.fixedLine" id="Pep8Reindenter.fixedLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.fixedLine" />
+      <keyword name="Pep8Reindenter.getline" id="Pep8Reindenter.getline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.getline" />
+      <keyword name="Pep8Reindenter.run" id="Pep8Reindenter.run" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter.run" />
       <keyword name="Pep8Report" id="Pep8Report" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Report" />
       <keyword name="Pep8Report" id="Pep8Report" ref="eric5.UtilitiesPython2.Pep8Checker.html#Pep8Report" />
       <keyword name="Pep8Report (Constructor)" id="Pep8Report (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Report.__init__" />

@@ -9,6 +9,8 @@ Module implementing a class to fix certain PEP 8 issues.
 
 import os
 import re
+import tokenize
+import io
 
 from PyQt4.QtCore import QObject
 
@@ -16,10 +18,14 @@ from E5Gui import E5MessageBox
 
 import Utilities
 
-Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "E211", "E221",
-                     "E222", "E225", "E231", "E241", "E251", "E261", "E262",
-                     "W291", "W292", "W293", "E301", "E302", "E303", "E304",
-                     "W391", "W603"]
+Pep8FixableIssues = ["E101", "E111", "W191", "E201", "E202", "E203",
+                     "E211", "E221", "E222", "E223", "E224", "E225",
+                     "E226", "E227", "E228", "E231", "E241", "E242",
+                     "E251", "E261", "E262", "E271", "E272", "E273",
+                     "E274", "W291", "W292", "W293", "E301", "E302",
+                     "E303", "E304", "W391", "E401", "E502", "W603",
+                     "E701", "E702", "E703", "E711", "E712"
+                    ]
 
 
 class Pep8Fixer(QObject):
@@ -47,35 +53,57 @@ class Pep8Fixer(QObject):
         self.__fixCodes = [c.strip() for c in fixCodes.split(",") if c.strip()]
         self.fixed = 0
         
+        self.__reindenter = None
+        self.__eol = ""
+        self.__indentWord = self.__getIndentWord()
+        
         if not inPlace:
             self.__origName = self.__filename
             self.__filename = os.path.join(os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
-            "E101": self.__fixTabs,
-            "W191": self.__fixTabs,
-            "E201": self.__fixWhitespaceAfter,
-            "E202": self.__fixWhitespaceBefore,
-            "E203": self.__fixWhitespaceBefore,
-            "E211": self.__fixWhitespaceBefore,
-            "E221": self.__fixWhitespaceAroundOperator,
-            "E222": self.__fixWhitespaceAroundOperator,
-            "E225": self.__fixMissingWhitespaceAroundOperator,
-            "E231": self.__fixMissingWhitespaceAfter,
-            "E241": self.__fixWhitespaceAroundOperator,
-            "E251": self.__fixWhitespaceAroundEquals,
-            "E261": self.__fixWhitespaceBeforeInline,
-            "E262": self.__fixWhitespaceAfterInline,
-            "W291": self.__fixWhitespace,
-            "W292": self.__fixNewline,
-            "W293": self.__fixWhitespace,
-            "E301": self.__fixOneBlankLine,
-            "E302": self.__fixTwoBlankLines,
-            "E303": self.__fixTooManyBlankLines,
-            "E304": self.__fixBlankLinesAfterDecorator,
-            "W391": self.__fixTrailingBlankLines,
-            "W603": self.__fixNotEqual,
+            "E101": self.__fixE101,
+            "E111": self.__fixE101,
+            "W191": self.__fixE101,
+            "E201": self.__fixE201,
+            "E202": self.__fixE201,
+            "E203": self.__fixE201,
+            "E211": self.__fixE201,
+            "E221": self.__fixE221,
+            "E222": self.__fixE221,
+            "E223": self.__fixE221,
+            "E224": self.__fixE221,
+            "E225": self.__fixE221,
+            "E226": self.__fixE221,
+            "E227": self.__fixE221,
+            "E228": self.__fixE221,
+            "E231": self.__fixE231,
+            "E241": self.__fixE221,
+            "E242": self.__fixE221,
+            "E251": self.__fixE251,
+            "E261": self.__fixE261,
+            "E262": self.__fixE261,
+            "E271": self.__fixE221,
+            "E272": self.__fixE221,
+            "E273": self.__fixE221,
+            "E274": self.__fixE221,
+            "W291": self.__fixW291,
+            "W292": self.__fixW292,
+            "W293": self.__fixW291,
+            "E301": self.__fixE301,
+            "E302": self.__fixE302,
+            "E303": self.__fixE303,
+            "E304": self.__fixE304,
+            "W391": self.__fixW391,
+            "E401": self.__fixE401,
+            "E502": self.__fixE502,
+            "W603": self.__fixW603,
+            "E701": self.__fixE701,
+            "E702": self.__fixE702,
+            "E703": self.__fixE702,
+            "E711": self.__fixE711,
+            "E712": self.__fixE711,
         }
         self.__modified = False
         self.__stack = []   # these need to be fixed before the file is saved
@@ -147,143 +175,210 @@ class Pep8Fixer(QObject):
         
         @return eol string (string)
         """
-        if self.__origName:
-            fn = self.__origName
-        else:
-            fn = self.__filename
-        
-        if self.__project.isOpen() and self.__project.isProjectFile(fn):
-            eol = self.__project.getEolString()
-        else:
-            eol = Utilities.linesep()
-        return eol
-    
-    def __fixTabs(self, code, line, pos):
-        """
-        Private method to fix obsolete tab usage.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        self.__source[line - 1] = self.__source[line - 1].replace("\t", "    ")
-        return (True, self.trUtf8("Tab converted to 4 spaces."))
-    
-    def __fixWhitespace(self, code, line, pos):
-        """
-        Private method to fix trailing whitespace.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        self.__source[line - 1] = re.sub(r'[\t ]+(\r?)$', r"\1",
-                                         self.__source[line - 1])
-        return (True, self.trUtf8("Whitespace stripped from end of line."))
-    
-    def __fixNewline(self, code, line, pos):
-        """
-        Private method to fix a missing newline at the end of file.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        self.__source[line - 1] += self.__getEol()
-        return (True, self.trUtf8("newline added to end of file."))
-    
-    def __fixTrailingBlankLines(self, code, line, pos):
-        """
-        Private method to fix trailing blank lines.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        index = line - 1
-        while index:
-            if self.__source[index].strip() == "":
-                del self.__source[index]
-                index -= 1
+        if not self.__eol:
+            if self.__origName:
+                fn = self.__origName
             else:
-                break
-        return (True, self.trUtf8(
-            "Superfluous trailing blank lines removed from end of file."))
+                fn = self.__filename
+            
+            if self.__project.isOpen() and self.__project.isProjectFile(fn):
+                self.__eol = self.__project.getEolString()
+            else:
+                self.__eol = Utilities.linesep()
+        return self.__eol
     
-    def __fixNotEqual(self, code, line, pos):
+    def __getIndentWord(self):
         """
-        Private method to fix the not equal notation.
+        Private method to determine the indentation type.
         
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+        @return string to be used for an indentation (string)
         """
-        self.__source[line - 1] = self.__source[line - 1].replace("<>", "!=")
-        return (True, self.trUtf8("'<>' replaced by '!='."))
-    
-    def __fixBlankLinesAfterDecorator(self, code, line, pos, apply=False):
-        """
-        Private method to fix superfluous blank lines after a function
-        decorator.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        if apply:
-            index = line - 2
-            while index:
-                if self.__source[index].strip() == "":
-                    del self.__source[index]
-                    index -= 1
-                else:
+        sio = io.StringIO("".join(self.__source))
+        indentWord = "    "     # default in case of failure
+        try:
+            for token in tokenize.generate_tokens(sio.readline):
+                if token[0] == tokenize.INDENT:
+                    indentWord = token[1]
                     break
-        else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8(
-            "Superfluous blank lines after function decorator removed."))
+        except (SyntaxError, tokenize.TokenError):
+            pass
+        return indentWord
     
-    def __fixTooManyBlankLines(self, code, line, pos, apply=False):
+    def __getIndent(self, line):
         """
-        Private method to fix superfluous blank lines.
+        Private method to get the indentation string.
+        
+        @param line line to determine the indentation string from (string)
+        @return indentation string (string)
+        """
+        return line.replace(line.lstrip(), "")
+    
+    def __fixWhitespace(self, line, offset, replacement):
+        """
+        Private method to correct whitespace at the given offset.
+        
+        @param line line to be corrected (string)
+        @param offset offset within line (integer)
+        @param replacement replacement string (string)
+        @return corrected line
+        """
+        left = line[:offset].rstrip(" \t")
+        right = line[offset:].lstrip(" \t")
+        if right.startswith("#"):
+            return line
+        else:
+            return left + replacement + right
+    
+    def __fixE101(self, code, line, pos):
+        """
+        Private method to fix obsolete tab usage and indentation errors
+        (E101, E111, W191).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        if apply:
-            index = line - 3
-            while index:
-                if self.__source[index].strip() == "":
-                    del self.__source[index]
-                    index -= 1
-                else:
-                    break
+        if self.__reindenter is None:
+            self.__reindenter = Pep8Reindenter(self.__source)
+            self.__reindenter.run()
+        fixedLine = self.__reindenter.fixedLine(line - 1)
+        if fixedLine is not None:
+            self.__source[line - 1] = fixedLine
+            if code in ["E101", "W191"]:
+                msg = self.trUtf8("Tab converted to 4 spaces.")
+            else:
+                msg = self.trUtf8("Indentation adjusted to be a multiple of four.")
+            return (True, msg)
         else:
-            self.__stack.append((code, line, pos))
-        return (True, self.trUtf8("Superfluous blank lines removed."))
+            return (False, self.trUtf8("Fix for {0} failed.").format(code))
     
-    def __fixOneBlankLine(self, code, line, pos, apply=False):
+    def __fixE201(self, code, line, pos):
         """
-        Private method to fix the need for one blank line.
+        Private method to fix extraneous whitespace (E201, E202,
+        E203, E211).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        text = self.__source[line]
+        
+        if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
+            return (False, self.trUtf8("Extraneous whitespace cannot be removed."))
+        
+        newText = self.__fixWhitespace(text, pos, '')
+        if newText == text:
+            return (False, "")
+        
+        self.__source[line] = newText
+        return (True, self.trUtf8("Extraneous whitespace removed."))
+    
+    def __fixE221(self, code, line, pos):
+        """
+        Private method to fix extraneous whitespace around operator or
+        keyword (E221, E222, E223, E224, E225, E226, E227, E228, E241,
+        E242, E271, E272, E273, E274).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        text = self.__source[line]
+        
+        if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
+            return (False, self.trUtf8("Extraneous whitespace cannot be removed."))
+        
+        newText = self.__fixWhitespace(text, pos, ' ')
+        if newText == text:
+            return (False, "")
+        
+        self.__source[line] = newText
+        if code in ["E225", "E226", "E227", "E228"]:
+            return (True, self.trUtf8("Missing whitespace added."))
+        else:
+            return (True, self.trUtf8("Extraneous whitespace removed."))
+    
+    def __fixE231(self, code, line, pos):
+        """
+        Private method to fix missing whitespace after ',;:'.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        pos = pos + 1
+        self.__source[line] = self.__source[line][:pos] + \
+                               " " + \
+                               self.__source[line][pos:]
+        return (True, self.trUtf8("Missing whitespace added."))
+    
+    def __fixE251(self, code, line, pos):
+        """
+        Private method to fix extraneous whitespace around keyword and
+        default parameter equals (E251).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        text = self.__source[line]
+        
+        # This is necessary since pep8 sometimes reports columns that goes
+        # past the end of the physical line. This happens in cases like,
+        # foo(bar\n=None)
+        col = min(pos, len(text) - 1)
+        if text[col].strip():
+            newText = text
+        else:
+            newText = text[:col].rstrip() + text[col:].lstrip()
+        
+        # There could be an escaped newline
+        #
+        #     def foo(a=\
+        #             1)
+        if newText.endswith(('=\\\n', '=\\\r\n', '=\\\r')):
+            self.__source[line] = newText.rstrip("\n\r \t\\")
+            self.__source[line + 1] = self.__source[line + 1].lstrip()
+        else:
+            self.__source[line] = newText
+        return (True, self.trUtf8("Extraneous whitespace removed."))
+    
+    def __fixE261(self, code, line, pos):
+        """
+        Private method to fix whitespace before or after inline comment
+        (E261, E262).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        text = self.__source[line]
+        left = text[:pos].rstrip(' \t#')
+        right = text[pos:].lstrip(' \t#')
+        newText = left + ("  # " + right if right.strip() else right)
+        self.__source[line] = newText
+        return (True, self.trUtf8("Whitespace around comment sign corrected."))
+    
+    def __fixE301(self, code, line, pos, apply=False):
+        """
+        Private method to fix the need for one blank line (E301).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -299,9 +394,9 @@ class Pep8Fixer(QObject):
             self.__stack.append((code, line, pos))
         return (True, self.trUtf8("One blank line inserted."))
     
-    def __fixTwoBlankLines(self, code, line, pos, apply=False):
+    def __fixE302(self, code, line, pos, apply=False):
         """
-        Private method to fix the need for two blank lines.
+        Private method to fix the need for two blank lines (E302).
         """
         # count blank lines
         index = line - 1
@@ -338,9 +433,9 @@ class Pep8Fixer(QObject):
             msg = ""
         return (True, msg)
     
-    def __fixWhitespaceAfter(self, code, line, pos, apply=False):
+    def __fixE303(self, code, line, pos, apply=False):
         """
-        Private method to fix superfluous whitespace after '([{'.
+        Private method to fix superfluous blank lines (E303).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -350,139 +445,22 @@ class Pep8Fixer(QObject):
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        line = line - 1
-        pos = pos - 1
-        while self.__source[line][pos] in [" ", "\t"]:
-            self.__source[line] = self.__source[line][:pos] + \
-                                  self.__source[line][pos + 1:]
-        return (True, self.trUtf8("Superfluous whitespace removed."))
-    
-    def __fixWhitespaceBefore(self, code, line, pos, apply=False):
-        """
-        Private method to fix superfluous whitespace before '}])',
-        ',;:' and '(['.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        pos = pos - 1
-        while self.__source[line][pos] in [" ", "\t"]:
-            self.__source[line] = self.__source[line][:pos] + \
-                                  self.__source[line][pos + 1:]
-            pos -= 1
-        return (True, self.trUtf8("Superfluous whitespace removed."))
-    
-    def __fixMissingWhitespaceAfter(self, code, line, pos, apply=False):
-        """
-        Private method to fix missing whitespace after ',;:'.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        self.__source[line] = self.__source[line][:pos] + \
-                               " " + \
-                               self.__source[line][pos:]
-        return (True, self.trUtf8("Missing whitespace added."))
-    
-    def __fixWhitespaceAroundOperator(self, code, line, pos, apply=False):
-        """
-        Private method to fix extraneous whitespace around operator.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        while self.__source[line][pos - 1] in [" ", "\t"]:
-            self.__source[line] = self.__source[line][:pos - 1] + \
-                                  self.__source[line][pos:]
-            pos -= 1
-        return (True, self.trUtf8("Extraneous whitespace removed."))
-    
-    def __fixMissingWhitespaceAroundOperator(self, code, line, pos,
-                                                   apply=False):
-        """
-        Private method to fix missing whitespace after ',;:'.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        pos = pos - 1
-        self.__source[line] = self.__source[line][:pos] + \
-                               " " + \
-                               self.__source[line][pos:]
-        return (True, self.trUtf8("Missing whitespace added."))
-    
-    def __fixWhitespaceAroundEquals(self, code, line, pos, apply=False):
-        """
-        Private method to fix extraneous whitespace around keyword and
-        default parameter equals.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        if self.__source[line][pos + 1] == " ":
-            self.__source[line] = self.__source[line][:pos + 1] + \
-                                   self.__source[line][pos + 2:]
-        if self.__source[line][pos - 1] == " ":
-            self.__source[line] = self.__source[line][:pos - 1] + \
-                                   self.__source[line][pos:]
-        return (True, self.trUtf8("Extraneous whitespace removed."))
-    
-    def __fixWhitespaceBeforeInline(self, code, line, pos, apply=False):
-        """
-        Private method to fix missing whitespace before inline comment.
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return flag indicating an applied fix (boolean) and a message for
-            the fix (string)
-        """
-        line = line - 1
-        pos = pos - 1
-        if self.__source[line][pos] == " ":
-            count = 1
+        if apply:
+            index = line - 3
+            while index:
+                if self.__source[index].strip() == "":
+                    del self.__source[index]
+                    index -= 1
+                else:
+                    break
         else:
-            count = 2
-        self.__source[line] = self.__source[line][:pos] + \
-                               count * " " + \
-                               self.__source[line][pos:]
-        return (True, self.trUtf8("Missing whitespace added."))
+            self.__stack.append((code, line, pos))
+        return (True, self.trUtf8("Superfluous blank lines removed."))
     
-    def __fixWhitespaceAfterInline(self, code, line, pos, apply=False):
+    def __fixE304(self, code, line, pos, apply=False):
         """
-        Private method to fix whitespace after inline comment.
+        Private method to fix superfluous blank lines after a function
+        decorator (E304).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -492,15 +470,401 @@ class Pep8Fixer(QObject):
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        line = line - 1
-        if self.__source[line][pos] == " ":
-            pos += 1
-            while self.__source[line][pos] == " ":
-                self.__source[line] = self.__source[line][:pos] + \
-                                      self.__source[line][pos + 1:]
+        if apply:
+            index = line - 2
+            while index:
+                if self.__source[index].strip() == "":
+                    del self.__source[index]
+                    index -= 1
+                else:
+                    break
         else:
-            self.__source[line] = self.__source[line][:pos] + \
-                                   " " + \
-                                   self.__source[line][pos:]
+            self.__stack.append((code, line, pos))
         return (True, self.trUtf8(
-            "Whitespace after inline comment sign corrected."))
+            "Superfluous blank lines after function decorator removed."))
+    
+    def __fixE401(self, code, line, pos, apply=False):
+        """
+        Private method to fix multiple imports on one line (E401).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            if not text.lstrip().startswith("import"):
+                return (False, "")
+            
+            # pep8 (1.3.1) reports false positive if there is an import
+            # statement followed by a semicolon and some unrelated
+            # statement with commas in it.
+            if ';' in text:
+                return (False, "")
+            
+            newText = text[:pos].rstrip("\t ,") + self.__getEol() + \
+                self.__getIndent(text) + "import " + text[pos:].lstrip("\t ,")
+            self.__source[line] = newText
+        else:
+            self.__stack.append((code, line, pos))
+        return (True, self.trUtf8("Imports were put on separate lines."))
+    
+    def __fixE502(self, code, line, pos):
+        """
+        Private method to fix redundant backslash within brackets (E502).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        self.__source[line - 1] = self.__source[line - 1].rstrip("\n\r \t\\") + \
+            self.__getEol()
+        return (True, self.trUtf8("Redundant backslash in brackets removed."))
+    
+    def __fixE701(self, code, line, pos, apply=False):
+        """
+        Private method to fix colon-separated compund statements (E701).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            pos = pos + 1
+            
+            newText = text[:pos] + self.__getEol() + self.__getIndent(text) + \
+                self.__indentWord + text[pos:].lstrip("\n\r \t\\") + \
+                self.__getEol()
+            self.__source[line] = newText
+        else:
+            self.__stack.append((code, line, pos))
+        return (True, self.trUtf8("Compound statement corrected."))
+    
+    def __fixE702(self, code, line, pos, apply=False):
+        """
+        Private method to fix semicolon-separated compound statements
+        (E702, E703).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            
+            if text.rstrip().endswith("\\"):
+                # normalize '1; \\\n2' into '1; 2'
+                self.__source[line] = text.rstrip("\n\r \t\\")
+                self.__source[line + 1] = self.__source[line + 1].lstrip()
+            elif text.rstrip().endswith(";"):
+                self.__source[line] = text.rstrip("\n\r \t;") + self.__getEol()
+            else:
+                first = text[:pos].rstrip("\n\r \t;") + self.__getEol()
+                second = text[pos:].lstrip("\n\r \t;")
+                self.__source[line] = first + self.__getIndent(text) + second
+        else:
+            self.__stack.append((code, line, pos))
+        return (True, self.trUtf8("Compound statement corrected."))
+    
+    def __fixE711(self, code, line, pos):
+        """
+        Private method to fix comparison with None (E711, E712).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        text = self.__source[line]
+        
+        rightPos = pos + 2
+        if rightPos >= len(text):
+            return (False, "")
+        
+        left = text[:pos].rstrip()
+        center = text[pos:rightPos]
+        right = text[rightPos:].lstrip()
+        
+        if not right.startswith(("None", "True", "False")):
+            return (False, "")
+        
+        if center.strip() == "==":
+            center = "is"
+        elif center.strip() == "!=":
+            center = "is not"
+        else:
+            return (False, "")
+        
+        self.__source[line] = " ".join([left, center, right])
+        return (True, self.trUtf8("Comparison to None/True/False corrected."))
+    
+    def __fixW291(self, code, line, pos):
+        """
+        Private method to fix trailing whitespace (W291, W293).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        self.__source[line - 1] = re.sub(r'[\t ]+(\r?)$', r"\1",
+                                         self.__source[line - 1])
+        return (True, self.trUtf8("Whitespace stripped from end of line."))
+    
+    def __fixW292(self, code, line, pos):
+        """
+        Private method to fix a missing newline at the end of file (W292).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        self.__source[line - 1] += self.__getEol()
+        return (True, self.trUtf8("newline added to end of file."))
+    
+    def __fixW391(self, code, line, pos):
+        """
+        Private method to fix trailing blank lines (W391).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        index = line - 1
+        while index:
+            if self.__source[index].strip() == "":
+                del self.__source[index]
+                index -= 1
+            else:
+                break
+        return (True, self.trUtf8(
+            "Superfluous trailing blank lines removed from end of file."))
+    
+    def __fixW603(self, code, line, pos):
+        """
+        Private method to fix the not equal notation (W603).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        self.__source[line - 1] = self.__source[line - 1].replace("<>", "!=")
+        return (True, self.trUtf8("'<>' replaced by '!='."))
+
+
+class Pep8Reindenter(object):
+    """
+    Class to reindent badly-indented code to uniformly use four-space indentation.
+
+    Released to the public domain, by Tim Peters, 03 October 2000.
+    """
+    def __init__(self, sourceLines):
+        """
+        Constructor
+        
+        @param sourceLines list of source lines including eol marker
+            (list of string)
+        """
+        # Raw file lines.
+        self.raw = sourceLines
+        self.after = []
+
+        # File lines, rstripped & tab-expanded.  Dummy at start is so
+        # that we can use tokenize's 1-based line numbering easily.
+        # Note that a line is all-blank iff it's "\n".
+        self.lines = [line.rstrip().expandtabs() + "\n"
+                      for line in self.raw]
+        self.lines.insert(0, None)
+        self.index = 1  # index into self.lines of next line
+
+        # List of (lineno, indentlevel) pairs, one for each stmt and
+        # comment line.  indentlevel is -1 for comment lines, as a
+        # signal that tokenize doesn't know what to do about them;
+        # indeed, they're our headache!
+        self.stats = []
+    
+    def run(self):
+        """
+        Public method to run the re-indenter.
+        """
+        try:
+            stats = self.__genStats(tokenize.generate_tokens(self.getline))
+        except (SyntaxError, tokenize.TokenError):
+            return False
+        
+        # Remove trailing empty lines.
+        lines = self.lines
+        while lines and lines[-1] == "\n":
+            lines.pop()
+        # Sentinel.
+        stats.append((len(lines), 0))
+        # Map count of leading spaces to # we want.
+        have2want = {}
+        # Program after transformation.
+        after = self.after = []
+        # Copy over initial empty lines -- there's nothing to do until
+        # we see a line with *something* on it.
+        i = stats[0][0]
+        after.extend(lines[1:i])
+        for i in range(len(stats)-1):
+            thisstmt, thislevel = stats[i]
+            nextstmt = stats[i+1][0]
+            have = self.__getlspace(lines[thisstmt])
+            want = thislevel * 4
+            if want < 0:
+                # A comment line.
+                if have:
+                    # An indented comment line.  If we saw the same
+                    # indentation before, reuse what it most recently
+                    # mapped to.
+                    want = have2want.get(have, -1)
+                    if want < 0:
+                        # Then it probably belongs to the next real stmt.
+                        for j in range(i + 1, len(stats) - 1):
+                            jline, jlevel = stats[j]
+                            if jlevel >= 0:
+                                if have == self.__getlspace(lines[jline]):
+                                    want = jlevel * 4
+                                break
+                    if want < 0:           # Maybe it's a hanging
+                                           # comment like this one,
+                        # in which case we should shift it like its base
+                        # line got shifted.
+                        for j in range(i - 1, -1, -1):
+                            jline, jlevel = stats[j]
+                            if jlevel >= 0:
+                                want = have + self.__getlspace(after[jline-1]) - \
+                                       self.__getlspace(lines[jline])
+                                break
+                    if want < 0:
+                        # Still no luck -- leave it alone.
+                        want = have
+                else:
+                    want = 0
+            assert want >= 0
+            have2want[have] = want
+            diff = want - have
+            if diff == 0 or have == 0:
+                after.extend(lines[thisstmt:nextstmt])
+            else:
+                for line in lines[thisstmt:nextstmt]:
+                    if diff > 0:
+                        if line == "\n":
+                            after.append(line)
+                        else:
+                            after.append(" " * diff + line)
+                    else:
+                        remove = min(self.__getlspace(line), -diff)
+                        after.append(line[remove:])
+        return self.raw != self.after
+    
+    def fixedLine(self, line):
+        """
+        Public method to get a fixed line.
+        
+        @param line number of the line to retrieve (integer)
+        @return fixed line (string)
+        """
+        if line < len(self.after):
+            return self.after[line]
+    
+    def getline(self):
+        """
+        Public method to get a line of text for tokenize.
+        
+        @return line of text (string)
+        """
+        if self.index >= len(self.lines):
+            line = ""
+        else:
+            line = self.lines[self.index]
+            self.index += 1
+        return line
+
+    def __genStats(self, tokens):
+        """
+        Private method to generate the re-indent statistics.
+        
+        @param tokens tokens generator (tokenize._tokenize)
+        """
+        find_stmt = True  # next token begins a fresh stmt?
+        level = 0  # current indent level
+        stats = []
+
+        for t in tokens:
+            token_type = t[0]
+            sline = t[2][0]
+            line = t[4]
+
+            if token_type == tokenize.NEWLINE:
+                # A program statement, or ENDMARKER, will eventually follow,
+                # after some (possibly empty) run of tokens of the form
+                #     (NL | COMMENT)* (INDENT | DEDENT+)?
+                self.find_stmt = True
+
+            elif token_type == tokenize.INDENT:
+                find_stmt = True
+                level += 1
+
+            elif token_type == tokenize.DEDENT:
+                find_stmt = True
+                level -= 1
+
+            elif token_type == tokenize.COMMENT:
+                if find_stmt:
+                    stats.append((sline, -1))
+                    # but we're still looking for a new stmt, so leave
+                    # find_stmt alone
+
+            elif token_type == tokenize.NL:
+                pass
+
+            elif find_stmt:
+                # This is the first "real token" following a NEWLINE, so it
+                # must be the first token of the next program statement, or an
+                # ENDMARKER.
+                find_stmt = False
+                if line:   # not endmarker
+                    stats.append((sline, level))
+        
+        return stats
+    
+    def __getlspace(self, line):
+        """
+        Private method to count number of leading blanks.
+        
+        @param line line to check (string)
+        @return number of leading blanks (integer)
+        """
+        i = 0
+        n = len(line)
+        while i < n and line[i] == " ":
+            i += 1
+        return i
