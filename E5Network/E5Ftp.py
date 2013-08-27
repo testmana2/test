@@ -73,6 +73,8 @@ class E5Ftp(ftplib.FTP):
         @param proxyAccount accounting info for the proxy (string)
         @param timeout timeout in seconds for blocking operations (integer)
         """
+        super().__init__()
+        
         self.__timeout = timeout
         
         self.__proxyType = proxyType
