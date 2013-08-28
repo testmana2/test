@@ -508,7 +508,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             message = item.data(0, self.messageRole)
             
             vm = e5App().getObject("ViewManager")
-            vm.openSourceFile(fn, lineno=lineno, pos=position)
+            vm.openSourceFile(fn, lineno=lineno, pos=position + 1)
             editor = vm.getOpenEditor(fn)
             
             editor.toggleFlakesWarning(lineno, True, message)
