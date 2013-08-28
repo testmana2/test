@@ -16,9 +16,12 @@ from PyQt4.QtCore import QObject
 
 from E5Gui import E5MessageBox
 
+from . import pep8
+
 import Utilities
 
-Pep8FixableIssues = ["E101", "E111", "W191", "E201", "E202", "E203",
+Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
+                     "E125", "E126", "E127", "E128", "E133", "W191", "E201", "E202", "E203",
                      "E211", "E221", "E222", "E223", "E224", "E225",
                      "E226", "E227", "E228", "E231", "E241", "E242",
                      "E251", "E261", "E262", "E271", "E272", "E273",
@@ -65,6 +68,15 @@ class Pep8Fixer(QObject):
         self.__fixes = {
             "E101": self.__fixE101,
             "E111": self.__fixE101,
+            "E121": self.__fixE121,
+            "E122": self.__fixE122,
+            "E123": self.__fixE123,
+            "E124": self.__fixE121,
+            "E125": self.__fixE125,
+            "E126": self.__fixE126,
+            "E127": self.__fixE127,
+            "E128": self.__fixE127,
+            "E133": self.__fixE126,
             "W191": self.__fixE101,
             "E201": self.__fixE201,
             "E202": self.__fixE201,
@@ -106,8 +118,11 @@ class Pep8Fixer(QObject):
             "E712": self.__fixE711,
         }
         self.__modified = False
-        self.__stack = []   # these need to be fixed before the file is saved
-                            # but after all inline fixes
+        self.__stackLogical = []    # these need to be fixed before the file
+                                    # is saved but after all other inline
+                                    # fixes. These work with logical lines.
+        self.__stack = []           # these need to be fixed before the file
+                                    # is saved but after all inline fixes
     
     def saveFile(self, encoding):
         """
@@ -166,6 +181,11 @@ class Pep8Fixer(QObject):
         """
         Private method to apply all deferred fixes.
         """
+        # step 1: do fixes operating on logical lines first
+        for code, line, pos in self.__stackLogical:
+            self.__fixes[code](code, line, pos, apply=True)
+        
+        # step 2: do fixes that change the number of lines
         for code, line, pos in reversed(self.__stack):
             self.__fixes[code](code, line, pos, apply=True)
     
@@ -186,6 +206,69 @@ class Pep8Fixer(QObject):
             else:
                 self.__eol = Utilities.linesep()
         return self.__eol
+    
+    def __findLogical(self):
+        """
+        Private method to extract the index of all the starts and ends of lines.
+        
+        @return tuple containing two lists of integer with start and end tuples
+            of lines
+        """
+        logical_start = []
+        logical_end = []
+        last_newline = True
+        sio = io.StringIO("".join(self.__source))
+        parens = 0
+        for t in tokenize.generate_tokens(sio.readline):
+            if t[0] in [tokenize.COMMENT, tokenize.DEDENT,
+                        tokenize.INDENT, tokenize.NL,
+                        tokenize.ENDMARKER]:
+                continue
+            if not parens and t[0] in [tokenize.NEWLINE, tokenize.SEMI]:
+                last_newline = True
+                logical_end.append((t[3][0] - 1, t[2][1]))
+                continue
+            if last_newline and not parens:
+                logical_start.append((t[2][0] - 1, t[2][1]))
+                last_newline = False
+            if t[0] == tokenize.OP:
+                if t[1] in '([{':
+                    parens += 1
+                elif t[1] in '}])':
+                    parens -= 1
+        return logical_start, logical_end
+    
+    def __getLogical(self, line, pos):
+        """
+        Private method to get the logical line corresponding to the given
+        position.
+        
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return tuple of a tuple of two integers giving the start of the
+            logical line, another tuple of two integers giving the end
+            of the logical line and a list of strings with the original
+            source lines
+        """
+        try:
+            (logical_start, logical_end) = self.__findLogical()
+        except (SyntaxError, tokenize.TokenError):
+            return None
+
+        line = line - 1
+        ls = None
+        le = None
+        for i in range(0, len(logical_start)):
+            x = logical_end[i]
+            if x[0] > line or (x[0] == line and x[1] > pos):
+                le = x
+                ls = logical_start[i]
+                break
+        if ls is None:
+            return None
+        
+        original = self.__source[ls[0]:le[0] + 1]
+        return ls, le, original
     
     def __getIndentWord(self):
         """
@@ -212,6 +295,48 @@ class Pep8Fixer(QObject):
         @return indentation string (string)
         """
         return line.replace(line.lstrip(), "")
+    
+    def __fixReindent(self, line, pos, logical):
+        """
+        Private method to fix a badly indented line.
+
+        This is done by adding or removing from its initial indent only.
+        
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return flag indicating a change was done (boolean)
+        """
+        assert logical
+        ls, _, original = logical
+
+        rewrapper = Pep8IndentationWrapper(original)
+        valid_indents = rewrapper.pep8Expected()
+        if not rewrapper.rel_indent:
+            return False
+        
+        if line > ls[0]:
+            # got a valid continuation line number
+            row = line - ls[0] - 1
+            # always pick the first option for this
+            valid = valid_indents[row]
+            got = rewrapper.rel_indent[row]
+        else:
+            return False
+        
+        line1 = ls[0] + row
+        # always pick the expected indent, for now.
+        indent_to = valid[0]
+
+        if got != indent_to:
+            orig_line = self.__source[line1]
+            new_line = ' ' * (indent_to) + orig_line.lstrip()
+            if new_line == orig_line:
+                return False
+            else:
+                self.__source[line1] = new_line
+                return True
+        else:
+            return False
     
     def __fixWhitespace(self, line, offset, replacement):
         """
@@ -253,6 +378,193 @@ class Pep8Fixer(QObject):
             return (True, msg)
         else:
             return (False, self.trUtf8("Fix for {0} failed.").format(code))
+    
+    def __fixE121(self, code, line, pos, apply=False):
+        """
+        Private method to fix the indentation of continuation lines and
+        closing brackets (E121,E124).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by adjusting initial indent level.
+                self.__fixReindent(line, pos, logical)
+        else:
+            self.__stackLogical.append((code, line, pos))
+        if code == "E121":
+            msg = self.trUtf8("Indentation of continuation line corrected.")
+        elif code == "E124":
+            msg = self.trUtf8("Indentation of closing bracket corrected.")
+        return (True, msg)
+    
+    def __fixE122(self, code, line, pos, apply=False):
+        """
+        Private method to fix a missing indentation of continuation lines (E122).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by adding an initial indent.
+                modified = self.__fixReindent(line, pos, logical)
+                if not modified:
+                    # fall back to simple method
+                    line = line - 1
+                    text = self.__source[line]
+                    indentation = self.__getIndent(text)
+                    self.__source[line] = indentation + \
+                        self.__indentWord + text.lstrip()
+        else:
+            self.__stackLogical.append((code, line, pos))
+        return (True, self.trUtf8("Missing indentation of continuation line corrected."))
+    
+    def __fixE123(self, code, line, pos, apply=False):
+        """
+        Private method to fix the indentation of a closing bracket lines (E123).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by deleting whitespace to the correct level.
+                logicalLines = logical[2]
+                row = line - 1
+                text = self.__source[row]
+                newText = self.__getIndent(logicalLines[0]) + text.lstrip()
+                if newText == text:
+                    # fall back to slower method
+                    self.__fixReindent(line, pos, logical)
+                else:
+                    self.__source[row] = newText
+        else:
+            self.__stackLogical.append((code, line, pos))
+        return (True, self.trUtf8("Closing bracket aligned to opening bracket."))
+    
+    def __fixE125(self, code, line, pos, apply=False):
+        """
+        Private method to fix the indentation of continuation lines not
+        distinguishable from next logical line (E125).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by adjusting initial indent level.
+                modified = self.__fixReindent(line, pos, logical)
+                if not modified:
+                    row = line - 1
+                    text = self.__source[row]
+                    self.__source[row] = self.__getIndent(text) + \
+                        self.__indentWord + text.lstrip()
+        else:
+            self.__stackLogical.append((code, line, pos))
+        return (True, self.trUtf8("Indentation level changed."))
+    
+    def __fixE126(self, code, line, pos, apply=False):
+        """
+        Private method to fix over-indented/under-indented hanging
+        indentation (E126, E133).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by deleting whitespace to the left.
+                logicalLines = logical[2]
+                row = line - 1
+                text = self.__source[row]
+                newText = self.__getIndent(logicalLines[0]) + \
+                    self.__indentWord + text.lstrip()
+                if newText == text:
+                    # fall back to slower method
+                    self.__fixReindent(line, pos, logical)
+                else:
+                    self.__source[row] = newText
+        else:
+            self.__stackLogical.append((code, line, pos))
+        return (True, self.trUtf8("Indentation level of hanging indentation changed."))
+    
+    def __fixE127(self, code, line, pos, apply=False):
+        """
+        Private method to fix over/under indented lines (E127, E128).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        if apply:
+            logical = self.__getLogical(line, pos)
+            if logical:
+                # Fix by inserting/deleting whitespace to the correct level.
+                logicalLines = logical[2]
+                row = line - 1
+                text = self.__source[row]
+                newText = text
+                
+                if logicalLines[0].rstrip().endswith('\\'):
+                    newText = self.__getIndent(logicalLines[0]) + \
+                        self.__indentWord + text.lstrip()
+                else:
+                    startIndex = None
+                    for symbol in '([{':
+                        if symbol in logicalLines[0]:
+                            foundIndex = logicalLines[0].find(symbol) + 1
+                            if startIndex is None:
+                                startIndex = foundIndex
+                            else:
+                                startIndex = min(startIndex, foundIndex)
+
+                    if startIndex is not None:
+                        newText = startIndex * ' ' + text.lstrip()
+                    
+                if newText == text:
+                    # fall back to slower method
+                    self.__fixReindent(line, pos, logical)
+                else:
+                    self.__source[row] = newText
+        else:
+            self.__stackLogical.append((code, line, pos))
+        return (True, self.trUtf8("Visual indentation corrected."))
     
     def __fixE201(self, code, line, pos):
         """
@@ -397,6 +709,14 @@ class Pep8Fixer(QObject):
     def __fixE302(self, code, line, pos, apply=False):
         """
         Private method to fix the need for two blank lines (E302).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
         """
         # count blank lines
         index = line - 1
@@ -868,3 +1188,232 @@ class Pep8Reindenter(object):
         while i < n and line[i] == " ":
             i += 1
         return i
+
+
+class Pep8IndentationWrapper(object):
+    """
+    Class used by fixers dealing with indentation.
+
+    Each instance operates on a single logical line.
+    """
+    
+    SKIP_TOKENS = frozenset([
+        tokenize.COMMENT, tokenize.NL, tokenize.INDENT,
+        tokenize.DEDENT, tokenize.NEWLINE, tokenize.ENDMARKER
+    ])
+
+    def __init__(self, physical_lines):
+        """
+        Constructor
+        
+        @param physical_lines list of physical lines to operate on
+            (list of strings)
+        """
+        self.lines = physical_lines
+        self.tokens = []
+        self.rel_indent = None
+        sio = io.StringIO(''.join(physical_lines))
+        for t in tokenize.generate_tokens(sio.readline):
+            if not len(self.tokens) and t[0] in self.SKIP_TOKENS:
+                continue
+            if t[0] != tokenize.ENDMARKER:
+                self.tokens.append(t)
+
+        self.logical_line = self.__buildTokensLogical(self.tokens)
+
+    def __buildTokensLogical(self, tokens):
+        """
+        Private method to build a logical line from a list of tokens.
+        
+        @param tokens list of tokens as generated by tokenize.generate_tokens
+        @return logical line (string)
+        """
+        # from pep8.py with minor modifications
+        logical = []
+        previous = None
+        for t in tokens:
+            token_type, text = t[0:2]
+            if token_type in self.SKIP_TOKENS:
+                continue
+            if previous:
+                end_line, end = previous[3]
+                start_line, start = t[2]
+                if end_line != start_line:  # different row
+                    prev_text = self.lines[end_line - 1][end - 1]
+                    if prev_text == ',' or (prev_text not in '{[('
+                                            and text not in '}])'):
+                        logical.append(' ')
+                elif end != start:  # different column
+                    fill = self.lines[end_line - 1][end:start]
+                    logical.append(fill)
+            logical.append(text)
+            previous = t
+        logical_line = ''.join(logical)
+        assert logical_line.lstrip() == logical_line
+        assert logical_line.rstrip() == logical_line
+        return logical_line
+
+    def pep8Expected(self):
+        """
+        Public method to replicate logic in pep8.py, to know what level to
+        indent things to.
+
+        @return list of lists, where each list represents valid indent levels for
+        the line in question, relative from the initial indent. However, the
+        first entry is the indent level which was expected.
+        """
+        # What follows is an adjusted version of
+        # pep8.py:continuation_line_indentation. All of the comments have been
+        # stripped and the 'yield' statements replaced with 'pass'.
+        if not self.tokens:
+            return
+
+        first_row = self.tokens[0][2][0]
+        nrows = 1 + self.tokens[-1][2][0] - first_row
+
+        # here are the return values
+        valid_indents = [list()] * nrows
+        indent_level = self.tokens[0][2][1]
+        valid_indents[0].append(indent_level)
+
+        if nrows == 1:
+            # bug, really.
+            return valid_indents
+
+        indent_next = self.logical_line.endswith(':')
+
+        row = depth = 0
+        parens = [0] * nrows
+        self.rel_indent = rel_indent = [0] * nrows
+        indent = [indent_level]
+        indent_chances = {}
+        last_indent = (0, 0)
+        last_token_multiline = None
+
+        for token_type, text, start, end, line in self.tokens:
+            newline = row < start[0] - first_row
+            if newline:
+                row = start[0] - first_row
+                newline = (not last_token_multiline and
+                           token_type not in (tokenize.NL, tokenize.NEWLINE))
+
+            if newline:
+                # This is where the differences start. Instead of looking at
+                # the line and determining whether the observed indent matches
+                # our expectations, we decide which type of indentation is in
+                # use at the given indent level, and return the offset. This
+                # algorithm is susceptible to "carried errors", but should
+                # through repeated runs eventually solve indentation for
+                # multiline expressions.
+
+                if depth:
+                    for open_row in range(row - 1, -1, -1):
+                        if parens[open_row]:
+                            break
+                else:
+                    open_row = 0
+
+                # That's all we get to work with. This code attempts to
+                # "reverse" the below logic, and place into the valid indents
+                # list
+                vi = []
+                add_second_chances = False
+                if token_type == tokenize.OP and text in ']})':
+                    # this line starts with a closing bracket, so it needs to
+                    # be closed at the same indent as the opening one.
+                    if indent[depth]:
+                        # hanging indent
+                        vi.append(indent[depth])
+                    else:
+                        # visual indent
+                        vi.append(indent_level + rel_indent[open_row])
+                elif depth and indent[depth]:
+                    # visual indent was previously confirmed.
+                    vi.append(indent[depth])
+                    add_second_chances = True
+                elif depth and True in indent_chances.values():
+                    # visual indent happened before, so stick to
+                    # visual indent this time.
+                    if depth > 1 and indent[depth - 1]:
+                        vi.append(indent[depth - 1])
+                    else:
+                        # stupid fallback
+                        vi.append(indent_level + 4)
+                    add_second_chances = True
+                elif not depth:
+                    vi.append(indent_level + 4)
+                else:
+                    # must be in hanging indent
+                    hang = rel_indent[open_row] + 4
+                    vi.append(indent_level + hang)
+
+                # about the best we can do without look-ahead
+                if (indent_next and vi[0] == indent_level + 4 and
+                        nrows == row + 1):
+                    vi[0] += 4
+
+                if add_second_chances:
+                    # visual indenters like to line things up.
+                    min_indent = vi[0]
+                    for col, what in indent_chances.items():
+                        if col > min_indent and (
+                            what is True or
+                            (what == str and token_type == tokenize.STRING) or
+                            (what == text and token_type == tokenize.OP)
+                        ):
+                            vi.append(col)
+                    vi = sorted(vi)
+
+                valid_indents[row] = vi
+
+                # Returning to original continuation_line_indentation() from
+                # pep8.
+                visual_indent = indent_chances.get(start[1])
+                last_indent = start
+                rel_indent[row] = pep8.expand_indent(line) - indent_level
+                hang = rel_indent[row] - rel_indent[open_row]
+
+                if token_type == tokenize.OP and text in ']})':
+                    pass
+                elif visual_indent is True:
+                    if not indent[depth]:
+                        indent[depth] = start[1]
+
+            # line altered: comments shouldn't define a visual indent
+            if parens[row] and not indent[depth] and token_type not in (
+                tokenize.NL, tokenize.COMMENT
+            ):
+                indent[depth] = start[1]
+                indent_chances[start[1]] = True
+            elif token_type == tokenize.STRING or text in (
+                'u', 'ur', 'b', 'br'
+            ):
+                indent_chances[start[1]] = str
+
+            if token_type == tokenize.OP:
+                if text in '([{':
+                    depth += 1
+                    indent.append(0)
+                    parens[row] += 1
+                elif text in ')]}' and depth > 0:
+                    prev_indent = indent.pop() or last_indent[1]
+                    for d in range(depth):
+                        if indent[d] > prev_indent:
+                            indent[d] = 0
+                    for ind in list(indent_chances):
+                        if ind >= prev_indent:
+                            del indent_chances[ind]
+                    depth -= 1
+                    if depth and indent[depth]:  # modified
+                        indent_chances[indent[depth]] = True
+                    for idx in range(row, -1, -1):
+                        if parens[idx]:
+                            parens[idx] -= 1
+                            break
+                assert len(indent) == depth + 1
+                if start[1] not in indent_chances:
+                    indent_chances[start[1]] = text
+
+            last_token_multiline = (start[0] != end[0])
+
+        return valid_indents
