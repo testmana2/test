@@ -505,6 +505,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/ExcludeMessages", pep8.DEFAULT_IGNORE))
         self.includeMessagesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/IncludeMessages"))
+        self.repeatCheckBox.setChecked(Preferences.toBool(
+            Preferences.Prefs.settings.value("PEP8/RepeatMessages")))
         self.fixIssuesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/FixCodes"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
@@ -522,6 +524,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.excludeMessagesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/IncludeMessages",
             self.includeMessagesEdit.text())
+        Preferences.Prefs.settings.setValue("PEP8/RepeatMessages",
+            self.repeatCheckBox.isChecked())
         Preferences.Prefs.settings.setValue("PEP8/FixCodes",
             self.fixIssuesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/FixIssues",
