@@ -3731,6 +3731,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixIssuesSelectButton
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_includeMessagesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_noFixIssuesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resetDefaultButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemSelectionChanged?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_showButton_clicked?4()
@@ -3745,6 +3746,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report.error_args?4(line_number
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report?1(options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.mutualStartswith?4(b)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.SKIP_TOKENS?7

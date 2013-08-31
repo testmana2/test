@@ -28,6 +28,9 @@ entry will open an editor window and position the cursor at the respective line 
       <enum>QFrame::NoFrame</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
+      <property name="margin">
+       <number>0</number>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
@@ -104,6 +107,16 @@ entry will open an editor window and position the cursor at the respective line 
           </property>
           <property name="text">
            <string>Store Defaults</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="resetDefaultButton">
+          <property name="toolTip">
+           <string>Press to reset the default values</string>
+          </property>
+          <property name="text">
+           <string>Reset Defaults</string>
           </property>
          </widget>
         </item>
@@ -212,7 +225,7 @@ entry will open an editor window and position the cursor at the respective line 
         </property>
        </widget>
       </item>
-      <item row="5" column="1" colspan="2">
+      <item row="5" column="1">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QSpinBox" name="lineLengthSpinBox">
@@ -248,7 +261,7 @@ entry will open an editor window and position the cursor at the respective line 
         </item>
        </layout>
       </item>
-      <item row="6" column="0" colspan="3">
+      <item row="6" column="0" colspan="2">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QCheckBox" name="hangClosingCheckBox">
@@ -405,6 +418,7 @@ the respective line and position.&lt;/p&gt;</string>
   <tabstop>storeDefaultButton</tabstop>
   <tabstop>resultList</tabstop>
   <tabstop>fixButton</tabstop>
+  <tabstop>resetDefaultButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

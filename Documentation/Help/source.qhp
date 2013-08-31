@@ -7998,6 +7998,7 @@
       <keyword name="Pep8Dialog.on_includeMessagesSelectButton_clicked" id="Pep8Dialog.on_includeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_includeMessagesSelectButton_clicked" />
       <keyword name="Pep8Dialog.on_loadDefaultButton_clicked" id="Pep8Dialog.on_loadDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_loadDefaultButton_clicked" />
       <keyword name="Pep8Dialog.on_noFixIssuesSelectButton_clicked" id="Pep8Dialog.on_noFixIssuesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_noFixIssuesSelectButton_clicked" />
+      <keyword name="Pep8Dialog.on_resetDefaultButton_clicked" id="Pep8Dialog.on_resetDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resetDefaultButton_clicked" />
       <keyword name="Pep8Dialog.on_resultList_itemActivated" id="Pep8Dialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resultList_itemActivated" />
       <keyword name="Pep8Dialog.on_resultList_itemSelectionChanged" id="Pep8Dialog.on_resultList_itemSelectionChanged" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resultList_itemSelectionChanged" />
       <keyword name="Pep8Dialog.on_showButton_clicked" id="Pep8Dialog.on_showButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_showButton_clicked" />
@@ -8009,6 +8010,7 @@
       <keyword name="Pep8Fixer" id="Pep8Fixer" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer" />
       <keyword name="Pep8Fixer (Constructor)" id="Pep8Fixer (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__init__" />
       <keyword name="Pep8Fixer (Module)" id="Pep8Fixer (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
+      <keyword name="Pep8Fixer.__codeMatch" id="Pep8Fixer.__codeMatch" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__codeMatch" />
       <keyword name="Pep8Fixer.__finalize" id="Pep8Fixer.__finalize" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__finalize" />
       <keyword name="Pep8Fixer.__findLogical" id="Pep8Fixer.__findLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__findLogical" />
       <keyword name="Pep8Fixer.__fixE101" id="Pep8Fixer.__fixE101" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE101" />
@@ -8043,6 +8045,7 @@
       <keyword name="Pep8Fixer.__getIndentWord" id="Pep8Fixer.__getIndentWord" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndentWord" />
       <keyword name="Pep8Fixer.__getLogical" id="Pep8Fixer.__getLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getLogical" />
       <keyword name="Pep8Fixer.fixIssue" id="Pep8Fixer.fixIssue" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.fixIssue" />
+      <keyword name="Pep8Fixer.mutualStartswith" id="Pep8Fixer.mutualStartswith" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.mutualStartswith" />
       <keyword name="Pep8Fixer.saveFile" id="Pep8Fixer.saveFile" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.saveFile" />
       <keyword name="Pep8IndentationWrapper" id="Pep8IndentationWrapper" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8IndentationWrapper" />
       <keyword name="Pep8IndentationWrapper (Constructor)" id="Pep8IndentationWrapper (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8IndentationWrapper.__init__" />

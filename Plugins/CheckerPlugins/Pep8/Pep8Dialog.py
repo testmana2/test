@@ -621,10 +621,12 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/ExcludeMessages", pep8.DEFAULT_IGNORE))
         self.includeMessagesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/IncludeMessages"))
+        self.repeatCheckBox.setChecked(Preferences.toBool(
+            Preferences.Prefs.settings.value("PEP8/RepeatMessages")))
         self.fixIssuesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/FixCodes"))
         self.noFixIssuesEdit.setText(Preferences.Prefs.settings.value(
-            "PEP8/NoFixCodes"))
+            "PEP8/NoFixCodes", "E501"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/FixIssues")))
         self.lineLengthSpinBox.setValue(int(Preferences.Prefs.settings.value(
@@ -644,6 +646,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.excludeMessagesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/IncludeMessages",
             self.includeMessagesEdit.text())
+        Preferences.Prefs.settings.setValue("PEP8/RepeatMessages",
+            self.repeatCheckBox.isChecked())
         Preferences.Prefs.settings.setValue("PEP8/FixCodes",
             self.fixIssuesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/NoFixCodes",
@@ -654,6 +658,24 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.lineLengthSpinBox.value())
         Preferences.Prefs.settings.setValue("PEP8/HangClosing",
             self.hangClosingCheckBox.isChecked())
+    
+    @pyqtSlot()
+    def on_resetDefaultButton_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        raise NotImplementedError
+        Preferences.Prefs.settings.setValue("PEP8/ExcludeFilePatterns", "")
+        Preferences.Prefs.settings.setValue("PEP8/ExcludeMessages",
+            pep8.DEFAULT_IGNORE)
+        Preferences.Prefs.settings.setValue("PEP8/IncludeMessages", "")
+        Preferences.Prefs.settings.setValue("PEP8/RepeatMessages", False)
+        Preferences.Prefs.settings.setValue("PEP8/FixCodes", "")
+        Preferences.Prefs.settings.setValue("PEP8/NoFixCodes", "E501")
+        Preferences.Prefs.settings.setValue("PEP8/FixIssues", False)
+        Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
+            pep8.MAX_LINE_LENGTH)
+        Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):

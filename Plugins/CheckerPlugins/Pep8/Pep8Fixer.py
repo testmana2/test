@@ -160,6 +160,36 @@ class Pep8Fixer(QObject):
         
         return True
     
+    def __codeMatch(self, code):
+        """
+        Private method to check, if the code should be fixed.
+        
+        @param code to check (string)
+        @return flag indicating it should be fixed (boolean)
+        """
+        def mutualStartswith(a, b):
+            """
+            Local helper method to compare the beginnings of two strings
+            against each other.
+            
+            @return flag indicating that one string starts with the other
+                (boolean)
+            """
+            return b.startswith(a) or a.startswith(b)
+        
+        if self.__noFixCodes:
+            for noFixCode in [c.strip() for c in self.__noFixCodes]:
+                if mutualStartswith(code.lower(), noFixCode.lower()):
+                    return False
+
+        if self.__fixCodes:
+            for fixCode in [c.strip() for c in self.__fixCodes]:
+                if mutualStartswith(code.lower(), fixCode.lower()):
+                    return True
+            return False
+
+        return True
+    
     def fixIssue(self, line, pos, message):
         """
         Public method to fix the fixable issues.
@@ -173,8 +203,7 @@ class Pep8Fixer(QObject):
         code = message.split(None, 1)[0].strip()
         
         if line <= len(self.__source) and \
-           code not in self.__noFixCodes and \
-           (code in self.__fixCodes or len(self.__fixCodes) == 0) and \
+           self.__codeMatch(code) and \
            code in self.__fixes:
             res = self.__fixes[code](code, line, pos)
             if res[0]:

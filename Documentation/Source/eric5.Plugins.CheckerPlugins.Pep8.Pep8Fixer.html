@@ -66,6 +66,9 @@ QObject
 <td><a href="#Pep8Fixer.__init__">Pep8Fixer</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__codeMatch">__codeMatch</a></td>
+<td>Private method to check, if the code should be fixed.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__finalize">__finalize</a></td>
 <td>Private method to apply all deferred fixes.</td>
 </tr><tr>
@@ -168,6 +171,9 @@ QObject
 <td><a href="#Pep8Fixer.fixIssue">fixIssue</a></td>
 <td>Public method to fix the fixable issues.</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.mutualStartswith">mutualStartswith</a></td>
+<td>Local helper method to compare the beginnings of two strings against each other.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.saveFile">saveFile</a></td>
 <td>Public method to save the modified file.</td>
 </tr>
@@ -206,6 +212,21 @@ maximum allowed line length (integer)
 </dd><dt><i>inPlace</i></dt>
 <dd>
 flag indicating to modify the file in place (boolean)
+</dd>
+</dl><a NAME="Pep8Fixer.__codeMatch" ID="Pep8Fixer.__codeMatch"></a>
+<h4>Pep8Fixer.__codeMatch</h4>
+<b>__codeMatch</b>(<i>code</i>)
+<p>
+        Private method to check, if the code should be fixed.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating it should be fixed (boolean)
 </dd>
 </dl><a NAME="Pep8Fixer.__finalize" ID="Pep8Fixer.__finalize"></a>
 <h4>Pep8Fixer.__finalize</h4>
@@ -955,6 +976,18 @@ message text (string)
 <dd>
 flag indicating an applied fix (boolean) and a message for
             the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.mutualStartswith" ID="Pep8Fixer.mutualStartswith"></a>
+<h4>Pep8Fixer.mutualStartswith</h4>
+<b>mutualStartswith</b>(<i>b</i>)
+<p>
+            Local helper method to compare the beginnings of two strings
+            against each other.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that one string starts with the other
+                (boolean)
 </dd>
 </dl><a NAME="Pep8Fixer.saveFile" ID="Pep8Fixer.saveFile"></a>
 <h4>Pep8Fixer.saveFile</h4>
