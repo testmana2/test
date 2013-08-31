@@ -33,6 +33,9 @@ Module implementing a class to fix certain PEP 8 issues.
 <td><a href="#Pep8Fixer">Pep8Fixer</a></td>
 <td>Class implementing a fixer for certain PEP 8 issues.</td>
 </tr><tr>
+<td><a href="#Pep8IndentationWrapper">Pep8IndentationWrapper</a></td>
+<td>Class used by fixers dealing with indentation.</td>
+</tr><tr>
 <td><a href="#Pep8Reindenter">Pep8Reindenter</a></td>
 <td>Class to reindent badly-indented code to uniformly use four-space indentation.</td>
 </tr>
@@ -66,8 +69,29 @@ QObject
 <td><a href="#Pep8Fixer.__finalize">__finalize</a></td>
 <td>Private method to apply all deferred fixes.</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__findLogical">__findLogical</a></td>
+<td>Private method to extract the index of all the starts and ends of lines.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__fixE101">__fixE101</a></td>
 <td>Private method to fix obsolete tab usage and indentation errors (E101, E111, W191).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE121">__fixE121</a></td>
+<td>Private method to fix the indentation of continuation lines and closing brackets (E121,E124).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE122">__fixE122</a></td>
+<td>Private method to fix a missing indentation of continuation lines (E122).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE123">__fixE123</a></td>
+<td>Private method to fix the indentation of a closing bracket lines (E123).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE125">__fixE125</a></td>
+<td>Private method to fix the indentation of continuation lines not distinguishable from next logical line (E125).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE126">__fixE126</a></td>
+<td>Private method to fix over-indented/under-indented hanging indentation (E126, E133).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixE127">__fixE127</a></td>
+<td>Private method to fix over/under indented lines (E127, E128).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE201">__fixE201</a></td>
 <td>Private method to fix extraneous whitespace (E201, E202, E203, E211).</td>
@@ -111,6 +135,9 @@ QObject
 <td><a href="#Pep8Fixer.__fixE711">__fixE711</a></td>
 <td>Private method to fix comparison with None (E711, E712).</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__fixReindent">__fixReindent</a></td>
+<td>Private method to fix a badly indented line.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__fixW291">__fixW291</a></td>
 <td>Private method to fix trailing whitespace (W291, W293).</td>
 </tr><tr>
@@ -135,6 +162,9 @@ QObject
 <td><a href="#Pep8Fixer.__getIndentWord">__getIndentWord</a></td>
 <td>Private method to determine the indentation type.</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__getLogical">__getLogical</a></td>
+<td>Private method to get the logical line corresponding to the given position.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.fixIssue">fixIssue</a></td>
 <td>Public method to fix the fixable issues.</td>
 </tr><tr>
@@ -148,7 +178,7 @@ QObject
 </table>
 <a NAME="Pep8Fixer.__init__" ID="Pep8Fixer.__init__"></a>
 <h4>Pep8Fixer (Constructor)</h4>
-<b>Pep8Fixer</b>(<i>project, filename, sourceLines, fixCodes, inPlace</i>)
+<b>Pep8Fixer</b>(<i>project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace</i>)
 <p>
         Constructor
 </p><dl>
@@ -166,6 +196,13 @@ list of source lines including eol marker
 <dd>
 list of codes to be fixed as a comma separated
             string (string)
+</dd><dt><i>noFixCodes</i></dt>
+<dd>
+list of codes not to be fixed as a comma
+            separated string (string)
+</dd><dt><i>maxLineLength</i></dt>
+<dd>
+maximum allowed line length (integer)
 </dd><dt><i>inPlace</i></dt>
 <dd>
 flag indicating to modify the file in place (boolean)
@@ -175,7 +212,18 @@ flag indicating to modify the file in place (boolean)
 <b>__finalize</b>(<i></i>)
 <p>
         Private method to apply all deferred fixes.
-</p><a NAME="Pep8Fixer.__fixE101" ID="Pep8Fixer.__fixE101"></a>
+</p><a NAME="Pep8Fixer.__findLogical" ID="Pep8Fixer.__findLogical"></a>
+<h4>Pep8Fixer.__findLogical</h4>
+<b>__findLogical</b>(<i></i>)
+<p>
+        Private method to extract the index of all the starts and ends of lines.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple containing two lists of integer with start and end tuples
+            of lines
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE101" ID="Pep8Fixer.__fixE101"></a>
 <h4>Pep8Fixer.__fixE101</h4>
 <b>__fixE101</b>(<i>code, line, pos</i>)
 <p>
@@ -191,6 +239,165 @@ line number of the issue (integer)
 </dd><dt><i>pos</i></dt>
 <dd>
 position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE121" ID="Pep8Fixer.__fixE121"></a>
+<h4>Pep8Fixer.__fixE121</h4>
+<b>__fixE121</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the indentation of continuation lines and
+        closing brackets (E121,E124).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE122" ID="Pep8Fixer.__fixE122"></a>
+<h4>Pep8Fixer.__fixE122</h4>
+<b>__fixE122</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a missing indentation of continuation lines (E122).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE123" ID="Pep8Fixer.__fixE123"></a>
+<h4>Pep8Fixer.__fixE123</h4>
+<b>__fixE123</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the indentation of a closing bracket lines (E123).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE125" ID="Pep8Fixer.__fixE125"></a>
+<h4>Pep8Fixer.__fixE125</h4>
+<b>__fixE125</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the indentation of continuation lines not
+        distinguishable from next logical line (E125).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE126" ID="Pep8Fixer.__fixE126"></a>
+<h4>Pep8Fixer.__fixE126</h4>
+<b>__fixE126</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix over-indented/under-indented hanging
+        indentation (E126, E133).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE127" ID="Pep8Fixer.__fixE127"></a>
+<h4>Pep8Fixer.__fixE127</h4>
+<b>__fixE127</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix over/under indented lines (E127, E128).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -344,7 +551,28 @@ flag indicating an applied fix (boolean) and a message for
 <b>__fixE302</b>(<i>code, line, pos, apply=False</i>)
 <p>
         Private method to fix the need for two blank lines (E302).
-</p><a NAME="Pep8Fixer.__fixE303" ID="Pep8Fixer.__fixE303"></a>
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixE303" ID="Pep8Fixer.__fixE303"></a>
 <h4>Pep8Fixer.__fixE303</h4>
 <b>__fixE303</b>(<i>code, line, pos, apply=False</i>)
 <p>
@@ -520,6 +748,26 @@ position inside line (integer)
 flag indicating an applied fix (boolean) and a message for
             the fix (string)
 </dd>
+</dl><a NAME="Pep8Fixer.__fixReindent" ID="Pep8Fixer.__fixReindent"></a>
+<h4>Pep8Fixer.__fixReindent</h4>
+<b>__fixReindent</b>(<i>line, pos, logical</i>)
+<p>
+        Private method to fix a badly indented line.
+</p><p>
+        This is done by adding or removing from its initial indent only.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a change was done (boolean)
+</dd>
 </dl><a NAME="Pep8Fixer.__fixW291" ID="Pep8Fixer.__fixW291"></a>
 <h4>Pep8Fixer.__fixW291</h4>
 <b>__fixW291</b>(<i>code, line, pos</i>)
@@ -664,6 +912,28 @@ indentation string (string)
 <dd>
 string to be used for an indentation (string)
 </dd>
+</dl><a NAME="Pep8Fixer.__getLogical" ID="Pep8Fixer.__getLogical"></a>
+<h4>Pep8Fixer.__getLogical</h4>
+<b>__getLogical</b>(<i>line, pos</i>)
+<p>
+        Private method to get the logical line corresponding to the given
+        position.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of a tuple of two integers giving the start of the
+            logical line, another tuple of two integers giving the end
+            of the logical line and a list of strings with the original
+            source lines
+</dd>
 </dl><a NAME="Pep8Fixer.fixIssue" ID="Pep8Fixer.fixIssue"></a>
 <h4>Pep8Fixer.fixIssue</h4>
 <b>fixIssue</b>(<i>line, pos, message</i>)
@@ -700,6 +970,82 @@ encoding of the source file (string)
 <dt>Returns:</dt>
 <dd>
 flag indicating success (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Pep8IndentationWrapper" ID="Pep8IndentationWrapper"></a>
+<h2>Pep8IndentationWrapper</h2>
+<p>
+    Class used by fixers dealing with indentation.
+</p><p>
+    Each instance operates on a single logical line.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>SKIP_TOKENS</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Pep8IndentationWrapper.__init__">Pep8IndentationWrapper</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Pep8IndentationWrapper.__buildTokensLogical">__buildTokensLogical</a></td>
+<td>Private method to build a logical line from a list of tokens.</td>
+</tr><tr>
+<td><a href="#Pep8IndentationWrapper.pep8Expected">pep8Expected</a></td>
+<td>Public method to replicate logic in pep8.py, to know what level to indent things to.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Pep8IndentationWrapper.__init__" ID="Pep8IndentationWrapper.__init__"></a>
+<h4>Pep8IndentationWrapper (Constructor)</h4>
+<b>Pep8IndentationWrapper</b>(<i>physical_lines</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>physical_lines</i></dt>
+<dd>
+list of physical lines to operate on
+            (list of strings)
+</dd>
+</dl><a NAME="Pep8IndentationWrapper.__buildTokensLogical" ID="Pep8IndentationWrapper.__buildTokensLogical"></a>
+<h4>Pep8IndentationWrapper.__buildTokensLogical</h4>
+<b>__buildTokensLogical</b>(<i>tokens</i>)
+<p>
+        Private method to build a logical line from a list of tokens.
+</p><dl>
+<dt><i>tokens</i></dt>
+<dd>
+list of tokens as generated by tokenize.generate_tokens
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+logical line (string)
+</dd>
+</dl><a NAME="Pep8IndentationWrapper.pep8Expected" ID="Pep8IndentationWrapper.pep8Expected"></a>
+<h4>Pep8IndentationWrapper.pep8Expected</h4>
+<b>pep8Expected</b>(<i></i>)
+<p>
+        Public method to replicate logic in pep8.py, to know what level to
+        indent things to.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lists, where each list represents valid indent levels for
+        the line in question, relative from the initial indent. However, the
+        first entry is the indent level which was expected.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

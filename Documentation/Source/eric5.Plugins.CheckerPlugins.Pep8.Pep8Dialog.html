@@ -51,7 +51,7 @@ Module implementing a dialog to show the results of the PEP 8 check.
 QDialog, Ui_Pep8Dialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>filenameRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr><tr><td>settingsKey</td></tr>
+<tr><td>codeRole</td></tr><tr><td>filenameRole</td></tr><tr><td>fixableRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -72,11 +72,26 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.__finish">__finish</a></td>
 <td>Private slot called when the PEP 8 check finished or the user pressed the cancel button.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.__getSelectedFixableItems">__getSelectedFixableItems</a></td>
+<td>Private method to extract all selected items for fixable issues.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.__itemFixable">__itemFixable</a></td>
+<td>Private method to check, if an item has a fixable issue.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.__modifyFixedResultItem">__modifyFixedResultItem</a></td>
+<td>Private method to modify a result list entry to show its positive fixed state.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.__resetStatistics">__resetStatistics</a></td>
 <td>Private slot to reset the statistics data.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.__selectCodes">__selectCodes</a></td>
+<td>Private method to select message codes via a selection dialog.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.__updateFixerStatistics">__updateFixerStatistics</a></td>
+<td>Private method to update the collected fixer related statistics.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.__updateStatistics">__updateStatistics</a></td>
 <td>Private method to update the collected statistics.</td>
@@ -87,6 +102,9 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.on_excludeMessagesSelectButton_clicked">on_excludeMessagesSelectButton_clicked</a></td>
 <td>Private slot to select the message codes to be excluded via a selection dialog.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.on_fixButton_clicked">on_fixButton_clicked</a></td>
+<td>Private slot to fix selected issues.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.on_fixIssuesSelectButton_clicked">on_fixIssuesSelectButton_clicked</a></td>
 <td>Private slot to select the issue codes to be fixed via a selection dialog.</td>
 </tr><tr>
@@ -96,8 +114,14 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.on_loadDefaultButton_clicked">on_loadDefaultButton_clicked</a></td>
 <td>Private slot to load the default configuration values.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.on_noFixIssuesSelectButton_clicked">on_noFixIssuesSelectButton_clicked</a></td>
+<td>Private slot to select the issue codes not to be fixed via a selection dialog.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.on_resultList_itemActivated">on_resultList_itemActivated</a></td>
 <td>Private slot to handle the activation of an item.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.on_resultList_itemSelectionChanged">on_resultList_itemSelectionChanged</a></td>
+<td>Private slot to change the dialog state depending on the selection.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.on_showButton_clicked">on_showButton_clicked</a></td>
 <td>Private slot to handle the "Show" button press.</td>
@@ -165,7 +189,46 @@ flag indicating a fixed issue (boolean)
 <p>
         Private slot called when the PEP 8 check finished or the user
         pressed the cancel button.
-</p><a NAME="Pep8Dialog.__resetStatistics" ID="Pep8Dialog.__resetStatistics"></a>
+</p><a NAME="Pep8Dialog.__getSelectedFixableItems" ID="Pep8Dialog.__getSelectedFixableItems"></a>
+<h4>Pep8Dialog.__getSelectedFixableItems</h4>
+<b>__getSelectedFixableItems</b>(<i></i>)
+<p>
+        Private method to extract all selected items for fixable issues.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+selected items for fixable issues (list of QTreeWidgetItem)
+</dd>
+</dl><a NAME="Pep8Dialog.__itemFixable" ID="Pep8Dialog.__itemFixable"></a>
+<h4>Pep8Dialog.__itemFixable</h4>
+<b>__itemFixable</b>(<i>itm</i>)
+<p>
+        Private method to check, if an item has a fixable issue.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+item to be checked (QTreeWidgetItem)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a fixable issue (boolean)
+</dd>
+</dl><a NAME="Pep8Dialog.__modifyFixedResultItem" ID="Pep8Dialog.__modifyFixedResultItem"></a>
+<h4>Pep8Dialog.__modifyFixedResultItem</h4>
+<b>__modifyFixedResultItem</b>(<i>itm, text</i>)
+<p>
+        Private method to modify a result list entry to show its
+        positive fixed state.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+reference to the item to modify (QTreeWidgetItem)
+</dd><dt><i>text</i></dt>
+<dd>
+text to be appended (string)
+</dd>
+</dl><a NAME="Pep8Dialog.__resetStatistics" ID="Pep8Dialog.__resetStatistics"></a>
 <h4>Pep8Dialog.__resetStatistics</h4>
 <b>__resetStatistics</b>(<i></i>)
 <p>
@@ -175,7 +238,31 @@ flag indicating a fixed issue (boolean)
 <b>__resort</b>(<i></i>)
 <p>
         Private method to resort the tree.
-</p><a NAME="Pep8Dialog.__updateStatistics" ID="Pep8Dialog.__updateStatistics"></a>
+</p><a NAME="Pep8Dialog.__selectCodes" ID="Pep8Dialog.__selectCodes"></a>
+<h4>Pep8Dialog.__selectCodes</h4>
+<b>__selectCodes</b>(<i>edit, showFixCodes</i>)
+<p>
+        Private method to select message codes via a selection dialog.
+</p><dl>
+<dt><i>edit</i></dt>
+<dd>
+reference of the line edit to be populated (QLineEdit)
+</dd><dt><i>showFixCodes</i></dt>
+<dd>
+flag indicating to show a list of fixable
+            issues (boolean)
+</dd>
+</dl><a NAME="Pep8Dialog.__updateFixerStatistics" ID="Pep8Dialog.__updateFixerStatistics"></a>
+<h4>Pep8Dialog.__updateFixerStatistics</h4>
+<b>__updateFixerStatistics</b>(<i>fixer</i>)
+<p>
+        Private method to update the collected fixer related statistics.
+</p><dl>
+<dt><i>fixer</i></dt>
+<dd>
+reference to the PEP 8 fixer (Pep8Fixer)
+</dd>
+</dl><a NAME="Pep8Dialog.__updateStatistics" ID="Pep8Dialog.__updateStatistics"></a>
 <h4>Pep8Dialog.__updateStatistics</h4>
 <b>__updateStatistics</b>(<i>statistics, fixer</i>)
 <p>
@@ -205,6 +292,11 @@ button that was clicked (QAbstractButton)
 <p>
         Private slot to select the message codes to be excluded via a
         selection dialog.
+</p><a NAME="Pep8Dialog.on_fixButton_clicked" ID="Pep8Dialog.on_fixButton_clicked"></a>
+<h4>Pep8Dialog.on_fixButton_clicked</h4>
+<b>on_fixButton_clicked</b>(<i></i>)
+<p>
+        Private slot to fix selected issues.
 </p><a NAME="Pep8Dialog.on_fixIssuesSelectButton_clicked" ID="Pep8Dialog.on_fixIssuesSelectButton_clicked"></a>
 <h4>Pep8Dialog.on_fixIssuesSelectButton_clicked</h4>
 <b>on_fixIssuesSelectButton_clicked</b>(<i></i>)
@@ -222,6 +314,12 @@ button that was clicked (QAbstractButton)
 <b>on_loadDefaultButton_clicked</b>(<i></i>)
 <p>
         Private slot to load the default configuration values.
+</p><a NAME="Pep8Dialog.on_noFixIssuesSelectButton_clicked" ID="Pep8Dialog.on_noFixIssuesSelectButton_clicked"></a>
+<h4>Pep8Dialog.on_noFixIssuesSelectButton_clicked</h4>
+<b>on_noFixIssuesSelectButton_clicked</b>(<i></i>)
+<p>
+        Private slot to select the issue codes not to be fixed via a
+        selection dialog.
 </p><a NAME="Pep8Dialog.on_resultList_itemActivated" ID="Pep8Dialog.on_resultList_itemActivated"></a>
 <h4>Pep8Dialog.on_resultList_itemActivated</h4>
 <b>on_resultList_itemActivated</b>(<i>item, column</i>)
@@ -235,7 +333,12 @@ reference to the activated item (QTreeWidgetItem)
 <dd>
 column the item was activated in (integer)
 </dd>
-</dl><a NAME="Pep8Dialog.on_showButton_clicked" ID="Pep8Dialog.on_showButton_clicked"></a>
+</dl><a NAME="Pep8Dialog.on_resultList_itemSelectionChanged" ID="Pep8Dialog.on_resultList_itemSelectionChanged"></a>
+<h4>Pep8Dialog.on_resultList_itemSelectionChanged</h4>
+<b>on_resultList_itemSelectionChanged</b>(<i></i>)
+<p>
+        Private slot to change the dialog state depending on the selection.
+</p><a NAME="Pep8Dialog.on_showButton_clicked" ID="Pep8Dialog.on_showButton_clicked"></a>
 <h4>Pep8Dialog.on_showButton_clicked</h4>
 <b>on_showButton_clicked</b>(<i></i>)
 <p>

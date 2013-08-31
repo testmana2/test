@@ -3719,22 +3719,26 @@ eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, showFixCodes, parent=None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.codeRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.filenameRole?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.fixableRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.lineRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.messageRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_excludeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixIssuesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_includeMessagesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_noFixIssuesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemSelectionChanged?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_showButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_startButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_statisticsButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_storeDefaultButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.positionRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.prepare?4(fileList, project)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.settingsKey?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, save=False, repeat=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report.error_args?4(line_number, offset, code, check, *args)
@@ -3742,7 +3746,10 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report?1(options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, inPlace)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.SKIP_TOKENS?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.pep8Expected?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper?1(physical_lines)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()

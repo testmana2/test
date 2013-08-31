@@ -67,8 +67,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
     lineRole = Qt.UserRole + 2
     positionRole = Qt.UserRole + 3
     messageRole = Qt.UserRole + 4
-    
-    settingsKey = "PEP8/"
+    fixableRole = Qt.UserRole + 5
+    codeRole = Qt.UserRole + 6
     
     def __init__(self, parent=None):
         """
@@ -134,6 +134,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__lastFileItem.setExpanded(True)
             self.__lastFileItem.setData(0, self.filenameRole, file)
         
+        fixable = False
         code, message = message.split(None, 1)
         itm = QTreeWidgetItem(self.__lastFileItem,
             ["{0:6}".format(line), code, message])
@@ -145,6 +146,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
         elif code in Pep8FixableIssues:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
+            fixable = True
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignHCenter)
@@ -157,6 +159,23 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.positionRole, int(pos))
         itm.setData(0, self.messageRole, message)
+        itm.setData(0, self.fixableRole, fixable)
+        itm.setData(0, self.codeRole, code)
+    
+    def __modifyFixedResultItem(self, itm, text):
+        """
+        Private method to modify a result list entry to show its
+        positive fixed state.
+        
+        @param itm reference to the item to modify (QTreeWidgetItem)
+        @param text text to be appended (string)
+        """
+        message = itm.data(0, self.messageRole) + text
+        itm.setText(2, message)
+        itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
+        
+        itm.setData(0, self.messageRole, message)
+        itm.setData(0, self.fixableRole, False)
     
     def __updateStatistics(self, statistics, fixer):
         """
@@ -176,6 +195,14 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     self.__statistics[key] = statistics[key]
         if fixer:
             self.__statistics["_IssuesFixed"] += fixer.fixed
+    
+    def __updateFixerStatistics(self, fixer):
+        """
+        Private method to update the collected fixer related statistics.
+        
+        @param fixer reference to the PEP 8 fixer (Pep8Fixer)
+        """
+        self.__statistics["_IssuesFixed"] += fixer.fixed
     
     def __resetStatistics(self):
         """
@@ -217,12 +244,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__data["MaxLineLength"] = pep8.MAX_LINE_LENGTH,
         if "HangClosing" not in self.__data:
             self.__data["HangClosing"] = False
+        if "NoFixCodes" not in self.__data:
+            self.__data["NoFixCodes"] = "E501"
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
         self.includeMessagesEdit.setText(self.__data["IncludeMessages"])
         self.repeatCheckBox.setChecked(self.__data["RepeatMessages"])
         self.fixIssuesEdit.setText(self.__data["FixCodes"])
+        self.noFixIssuesEdit.setText(self.__data["NoFixCodes"])
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
         self.lineLengthSpinBox.setValue(self.__data["MaxLineLength"])
         self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
@@ -247,6 +277,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         self.statisticsButton.setEnabled(False)
         self.showButton.setEnabled(False)
+        self.fixButton.setEnabled(False)
         if repeat is not None:
             self.repeatCheckBox.setChecked(repeat)
         QApplication.processEvents()
@@ -295,6 +326,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             includeMessages = self.includeMessagesEdit.text()
             repeatMessages = self.repeatCheckBox.isChecked()
             fixCodes = self.fixIssuesEdit.text()
+            noFixCodes = self.noFixIssuesEdit.text()
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             maxLineLength = self.lineLengthSpinBox.value()
             hangClosing = self.hangClosingCheckBox.isChecked()
@@ -332,7 +364,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     if fixIssues:
                         from .Pep8Fixer import Pep8Fixer
                         fixer = Pep8Fixer(self.__project, file, source,
-                                          fixCodes, True)  # always fix in place
+                                          fixCodes, noFixCodes, maxLineLength,
+                                          True)  # always fix in place
                     else:
                         fixer = None
                     if ("FileType" in flags and
@@ -440,6 +473,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "IncludeMessages": self.includeMessagesEdit.text(),
                 "RepeatMessages": self.repeatCheckBox.isChecked(),
                 "FixCodes": self.fixIssuesEdit.text(),
+                "NoFixCodes": self.noFixIssuesEdit.text(),
                 "FixIssues": self.fixIssuesCheckBox.isChecked(),
                 "MaxLineLength": self.lineLengthSpinBox.value(),
                 "HangClosing": self.hangClosingCheckBox.isChecked(),
@@ -454,17 +488,26 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.cancelled = False
         self.start(self.__fileOrFileList)
     
+    def __selectCodes(self, edit, showFixCodes):
+        """
+        Private method to select message codes via a selection dialog.
+        
+        @param edit reference of the line edit to be populated (QLineEdit)
+        @param showFixCodes flag indicating to show a list of fixable
+            issues (boolean)
+        """
+        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
+        dlg = Pep8CodeSelectionDialog(edit.text(), showFixCodes, self)
+        if dlg.exec_() == QDialog.Accepted:
+            edit.setText(dlg.getSelectedCodes())
+    
     @pyqtSlot()
     def on_excludeMessagesSelectButton_clicked(self):
         """
         Private slot to select the message codes to be excluded via a
         selection dialog.
         """
-        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
-        dlg = Pep8CodeSelectionDialog(
-            self.excludeMessagesEdit.text(), False, self)
-        if dlg.exec_() == QDialog.Accepted:
-            self.excludeMessagesEdit.setText(dlg.getSelectedCodes())
+        self.__selectCodes(self.excludeMessagesEdit, False)
     
     @pyqtSlot()
     def on_includeMessagesSelectButton_clicked(self):
@@ -472,11 +515,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the message codes to be included via a
         selection dialog.
         """
-        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
-        dlg = Pep8CodeSelectionDialog(
-            self.includeMessagesEdit.text(), False, self)
-        if dlg.exec_() == QDialog.Accepted:
-            self.includeMessagesEdit.setText(dlg.getSelectedCodes())
+        self.__selectCodes(self.includeMessagesEdit, False)
     
     @pyqtSlot()
     def on_fixIssuesSelectButton_clicked(self):
@@ -484,11 +523,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the issue codes to be fixed via a
         selection dialog.
         """
-        from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
-        dlg = Pep8CodeSelectionDialog(
-            self.fixIssuesEdit.text(), True, self)
-        if dlg.exec_() == QDialog.Accepted:
-            self.fixIssuesEdit.setText(dlg.getSelectedCodes())
+        self.__selectCodes(self.fixIssuesEdit, True)
+    
+    @pyqtSlot()
+    def on_noFixIssuesSelectButton_clicked(self):
+        """
+        Private slot to select the issue codes not to be fixed via a
+        selection dialog.
+        """
+        self.__selectCodes(self.noFixIssuesEdit, True)
     
     @pyqtSlot(QTreeWidgetItem, int)
     def on_resultList_itemActivated(self, item, column):
@@ -512,6 +555,13 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             editor = vm.getOpenEditor(fn)
             
             editor.toggleFlakesWarning(lineno, True, message)
+    
+    @pyqtSlot()
+    def on_resultList_itemSelectionChanged(self):
+        """
+        Private slot to change the dialog state depending on the selection.
+        """
+        self.fixButton.setEnabled(len(self.__getSelectedFixableItems()) > 0)
     
     @pyqtSlot()
     def on_showButton_clicked(self):
@@ -573,6 +623,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/IncludeMessages"))
         self.fixIssuesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/FixCodes"))
+        self.noFixIssuesEdit.setText(Preferences.Prefs.settings.value(
+            "PEP8/NoFixCodes"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/FixIssues")))
         self.lineLengthSpinBox.setValue(int(Preferences.Prefs.settings.value(
@@ -594,6 +646,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.includeMessagesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/FixCodes",
             self.fixIssuesEdit.text())
+        Preferences.Prefs.settings.setValue("PEP8/NoFixCodes",
+            self.noFixIssuesEdit.text())
         Preferences.Prefs.settings.setValue("PEP8/FixIssues",
             self.fixIssuesCheckBox.isChecked())
         Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
@@ -626,3 +680,96 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         for file in openFiles:
             editor = vm.getOpenEditor(file)
             editor.clearFlakesWarnings()
+    
+    @pyqtSlot()
+    def on_fixButton_clicked(self):
+        """
+        Private slot to fix selected issues.
+        """
+        # TODO: test this
+        from .Pep8Fixer import Pep8Fixer
+        
+        # build a dictionary of issues to fix
+        fixableItems = self.__getSelectedFixableItems()
+        fixesDict = {}      # dictionary of lists of tuples containing
+                            # the issue and the item
+        for itm in fixableItems:
+            filename = itm.data(0, self.filenameRole)
+            if filename not in fixesDict:
+                fixesDict[filename] = []
+            fixesDict[filename].append((
+                (itm.data(0, self.lineRole),
+                 itm.data(0, self.positionRole),
+                 "{0} {1}".format(itm.data(0, self.codeRole), 
+                                  itm.data(0, self.messageRole))),
+                itm
+            ))
+        
+        # extract the configuration values
+        fixCodes = self.fixIssuesEdit.text()
+        noFixCodes = self.noFixIssuesEdit.text()
+        maxLineLength = self.lineLengthSpinBox.value()
+        
+        # now go through all the files
+        if fixesDict:
+            self.checkProgress.setMaximum(len(fixesDict))
+            progress = 0
+            for file in fixesDict:
+                self.checkProgress.setValue(progress)
+                QApplication.processEvents()
+                
+                try:
+                    source, encoding = Utilities.readEncodedFile(file)
+                    source = source.splitlines(True)
+                except (UnicodeError, IOError) as msg:
+                    # skip silently because that should not happen
+                    progress += 1
+                    continue
+                
+                fixer = Pep8Fixer(self.__project, file, source,
+                                  fixCodes, noFixCodes, maxLineLength,
+                                  True)  # always fix in place
+                errors = fixesDict[file]
+                errors.sort(key=lambda a: a[0][0])
+                for error in errors:
+                    (lineno, position, text), itm = error
+                    if lineno > len(source):
+                        lineno = len(source)
+                    fixed, msg = fixer.fixIssue(lineno, position, text)
+                    if fixed:
+                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        self.__modifyFixedResultItem(itm, text)
+                fixer.saveFile(encoding)
+                
+                self.__updateFixerStatistics(fixer)
+                progress += 1
+            
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+
+    def __getSelectedFixableItems(self):
+        """
+        Private method to extract all selected items for fixable issues.
+        
+        @return selected items for fixable issues (list of QTreeWidgetItem)
+        """
+        fixableItems = []
+        for itm in self.resultList.selectedItems():
+            if itm.childCount() > 0:
+                for index in range(itm.childCount()):
+                    citm = itm.child(index)
+                    if self.__itemFixable(citm) and not citm in fixableItems:
+                        fixableItems.append(citm)
+            elif self.__itemFixable(itm) and not itm in fixableItems:
+                fixableItems.append(itm)
+        
+        return fixableItems
+    
+    def __itemFixable(self, itm):
+        """
+        Private method to check, if an item has a fixable issue.
+        
+        @param itm item to be checked (QTreeWidgetItem)
+        @return flag indicating a fixable issue (boolean)
+        """
+        return itm.data(0, self.fixableRole)

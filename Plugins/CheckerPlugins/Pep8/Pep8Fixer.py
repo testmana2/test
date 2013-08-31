@@ -21,13 +21,14 @@ from . import pep8
 import Utilities
 
 Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
-                     "E125", "E126", "E127", "E128", "E133", "W191", "E201", "E202", "E203",
-                     "E211", "E221", "E222", "E223", "E224", "E225",
-                     "E226", "E227", "E228", "E231", "E241", "E242",
-                     "E251", "E261", "E262", "E271", "E272", "E273",
-                     "E274", "W291", "W292", "W293", "E301", "E302",
-                     "E303", "E304", "W391", "E401", "E502", "W603",
-                     "E701", "E702", "E703", "E711", "E712"
+                     "E125", "E126", "E127", "E128", "E133", "W191",
+                     "E201", "E202", "E203", "E211", "E221", "E222",
+                     "E223", "E224", "E225", "E226", "E227", "E228",
+                     "E231", "E241", "E242", "E251", "E261", "E262",
+                     "E271", "E272", "E273", "E274", "W291", "W292",
+                     "W293", "E301", "E302", "E303", "E304", "W391",
+                     "E401", "E502", "W603", "E701", "E702", "E703",
+                     "E711", "E712"
                     ]
 
 
@@ -35,7 +36,8 @@ class Pep8Fixer(QObject):
     """
     Class implementing a fixer for certain PEP 8 issues.
     """
-    def __init__(self, project, filename, sourceLines, fixCodes, inPlace):
+    def __init__(self, project, filename, sourceLines, fixCodes, noFixCodes,
+                 maxLineLength, inPlace):
         """
         Constructor
         
@@ -45,6 +47,9 @@ class Pep8Fixer(QObject):
             (list of string)
         @param fixCodes list of codes to be fixed as a comma separated
             string (string)
+        @param noFixCodes list of codes not to be fixed as a comma
+            separated string (string)
+        @param maxLineLength maximum allowed line length (integer)
         @param inPlace flag indicating to modify the file in place (boolean)
         """
         super().__init__()
@@ -54,6 +59,8 @@ class Pep8Fixer(QObject):
         self.__origName = ""
         self.__source = sourceLines[:]  # save a copy
         self.__fixCodes = [c.strip() for c in fixCodes.split(",") if c.strip()]
+        self.__noFixCodes = [c.strip() for c in noFixCodes.split(",") if c.strip()]
+        self.__maxLineLength = maxLineLength
         self.fixed = 0
         
         self.__reindenter = None
@@ -146,7 +153,7 @@ class Pep8Fixer(QObject):
                 self.trUtf8("Fix PEP 8 issues"),
                 self.trUtf8(
                     """<p>Could not save the file <b>{0}</b>."""
-                    """ Skipping it.</p><p>Reason: {1}</p>""")\
+                    """ Skipping it.</p><p>Reason: {1}</p>""")
                     .format(self.__filename, str(err))
             )
             return False
@@ -166,6 +173,7 @@ class Pep8Fixer(QObject):
         code = message.split(None, 1)[0].strip()
         
         if line <= len(self.__source) and \
+           code not in self.__noFixCodes and \
            (code in self.__fixCodes or len(self.__fixCodes) == 0) and \
            code in self.__fixes:
             res = self.__fixes[code](code, line, pos)
@@ -1053,9 +1061,9 @@ class Pep8Reindenter(object):
         # we see a line with *something* on it.
         i = stats[0][0]
         after.extend(lines[1:i])
-        for i in range(len(stats)-1):
+        for i in range(len(stats) - 1):
             thisstmt, thislevel = stats[i]
-            nextstmt = stats[i+1][0]
+            nextstmt = stats[i + 1][0]
             have = self.__getlspace(lines[thisstmt])
             want = thislevel * 4
             if want < 0:
@@ -1080,7 +1088,7 @@ class Pep8Reindenter(object):
                         for j in range(i - 1, -1, -1):
                             jline, jlevel = stats[j]
                             if jlevel >= 0:
-                                want = have + self.__getlspace(after[jline-1]) - \
+                                want = have + self.__getlspace(after[jline - 1]) - \
                                        self.__getlspace(lines[jline])
                                 break
                     if want < 0:

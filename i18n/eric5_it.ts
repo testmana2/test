@@ -32889,32 +32889,32 @@ aprirà una finestra di edit posizionando il cursore alla riga e posizione corre
         <translation>Inizia</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="83"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to load the default values</source>
         <translation>Premi per caricare i valori di default</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="86"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Load Defaults</source>
         <translation>Carica default</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="103"/>
         <source>Press to store the current values as defaults</source>
         <translation>Premi per salvare i valori corrente come default</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="106"/>
         <source>Store Defaults</source>
         <translation>Salva default</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="105"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="115"/>
         <source>Exclude Messages:</source>
         <translation>Escludi messaggi:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="112"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="122"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation>Inserici il codice del messaggio o le categorie da escludere separate da una virgola</translation>
     </message>
@@ -32924,22 +32924,22 @@ aprirà una finestra di edit posizionando il cursore alla riga e posizione corre
         <translation type="obsolete">Prmei per pulire la lista dei messaggi da escludere</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="167"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="201"/>
         <source>Press to select the message codes from a list</source>
         <translation>Premi per selezionare il codice messaggi da una lista</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="170"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="204"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="139"/>
         <source>Included Messages:</source>
         <translation>Includi Messaggi:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="136"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="146"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation>Inserisci i codici messaggio o le categorie da includere separati da una virgola</translation>
     </message>
@@ -32949,12 +32949,12 @@ aprirà una finestra di edit posizionando il cursore alla riga e posizione corre
         <translation type="obsolete">Prmei per pulire la lista dei messaggi da includere</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="153"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
         <source>Fix Issues:</source>
         <translation>Problemi risolti:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="160"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="170"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation>Inserisci i codici messaggio dei problemi da correggere automaticamente (lascia vuote per correggerli tutti)</translation>
     </message>
@@ -32964,27 +32964,27 @@ aprirà una finestra di edit posizionando il cursore alla riga e posizione corre
         <translation type="obsolete">Premi per pulire i problemi corretti</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="283"/>
         <source>Select to repeat each message type</source>
         <translation>Seleziona per ripetere ogni tipo di messaggio</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="225"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="286"/>
         <source>Repeat messages</source>
         <translation>Ripetti messaggio</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="296"/>
         <source>Select to fix some issues</source>
         <translation>Seleziona per correggere alcuni problemi</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="238"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="299"/>
         <source>Fix issues automatically</source>
         <translation>Correggi automanticamente i problemi</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="290"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="324"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -32995,22 +32995,22 @@ su un elemento lo aprirà in una finestra di edit e posizionerà il cursore
 alla riga e colonna corretta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="306"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="340"/>
         <source>File/Line</source>
         <translation>File/Linea</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="311"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="345"/>
         <source>Code</source>
         <translation>Codice</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="316"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="350"/>
         <source>Message</source>
         <translation>Messaggio</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="324"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="358"/>
         <source>Shows the progress of the PEP 8 check action</source>
         <translation>Mostra l&apos;avanzamenteo del controllo PEP 8</translation>
     </message>
@@ -33035,95 +33035,115 @@ alla riga e colonna corretta.&lt;/p&gt;</translation>
         <translation>Premi per mostrare tutti i file che contengono errori di sintassi</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="324"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="356"/>
         <source>Error: {0}</source>
         <translation>Errore: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="389"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="740"/>
         <source>Fix: {0}</source>
         <translation>Corregge:{0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="420"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="453"/>
         <source>No issues found.</source>
         <translation>Nessun problema trovato.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="177"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="211"/>
         <source>Max. Line Length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="186"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="220"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="262"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="256"/>
         <source>Select to allow hanging closing brackets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="265"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="259"/>
         <source>Allow hanging closing brackets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="70"/>
+        <source>Press to fix the selected issues</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="73"/>
+        <source>Fix Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="187"/>
+        <source>Don&apos;t Fix Issues:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="194"/>
+        <source>Enter message codes of issues not to be fixed automatically</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Pep8Fixer</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="130"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="152"/>
         <source>Fix PEP 8 issues</source>
         <translation>Correggi problemi PEP 8</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="130"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="152"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="250"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="383"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Converti Tab a 4 spazi.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="633"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="961"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Elimina gli spazi alla fine della linea.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="646"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="974"/>
         <source>newline added to end of file.</source>
         <translation>aggiungi a capo alla fine del file.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="665"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="993"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Linee bianche superflue eliminate dalla fine del file.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="679"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1007"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; sostituito da &apos;!=&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="483"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="811"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Linee bianche superflue eliminate dopo a dichiarazione della funzione.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="786"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Linee bianche superflue eliminate.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="395"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="715"/>
         <source>One blank line inserted.</source>
         <translation>Una linea vuota inserita.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="429"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="757"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>%n linea vuota inserita.</numerusform>
@@ -33131,7 +33151,7 @@ alla riga e colonna corretta.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="431"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="759"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>%n linea superflua eliminata</numerusform>
@@ -33144,12 +33164,12 @@ alla riga e colonna corretta.&lt;/p&gt;</translation>
         <translation type="obsolete">Spazi superflui eliminati.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="324"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="644"/>
         <source>Missing whitespace added.</source>
         <translation>Spazi mancanti aggiunti.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="358"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="678"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Spazio non pertinente eliminato.</translation>
     </message>
@@ -33159,43 +33179,78 @@ alla riga e colonna corretta.&lt;/p&gt;</translation>
         <translation type="obsolete">Spazi dopo il carattere di commento inline corretti.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="252"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="385"/>
         <source>Indentation adjusted to be a multiple of four.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="388"/>
         <source>Fix for {0} failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="297"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="617"/>
         <source>Extraneous whitespace cannot be removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="697"/>
         <source>Whitespace around comment sign corrected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="515"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="843"/>
         <source>Imports were put on separate lines.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="529"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="857"/>
         <source>Redundant backslash in brackets removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="585"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="913"/>
         <source>Compound statement corrected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="619"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="947"/>
         <source>Comparison to None/True/False corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="411"/>
+        <source>Indentation of continuation line corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="413"/>
+        <source>Indentation of closing bracket corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="442"/>
+        <source>Missing indentation of continuation line corrected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="471"/>
+        <source>Closing bracket aligned to opening bracket.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="498"/>
+        <source>Indentation level changed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="529"/>
+        <source>Indentation level of hanging indentation changed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="575"/>
+        <source>Visual indentation corrected.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
