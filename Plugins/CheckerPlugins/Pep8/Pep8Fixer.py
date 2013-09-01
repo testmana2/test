@@ -1454,3 +1454,100 @@ class Pep8IndentationWrapper(object):
             last_token_multiline = (start[0] != end[0])
 
         return valid_indents
+
+
+class Pep8LineShortener(object):
+    """
+    Class used to shorten lines to a given maximum of characters.
+    """
+    def __init__(self, curLine, prevLine, nextLine,
+                 maxLength=79, eol="\n", indentWord="    "):
+        """
+        Constructor
+        
+        @param curLine text to work on (string)
+        @param prevLine line before the text to work on (string)
+        @param nextLine line after the text to work on (string)
+        @keyparam maxLength maximum allowed line length (integer)
+        @keyparam eol eond-of-line marker (string)
+        @keyparam indentWord string used for indentation (string)
+        """
+        self.__text = curLine
+        self.__prevText = prevLine
+        self.__nextText = nextLine
+        self.__maxLength = maxLength
+        self.__eol = eol
+        self.__indentWord = indentWord
+    
+    def shorten(self):
+        """
+        Public method to shorten the line wrapped by the class instance.
+        
+        @return tuple of a flag indicating successful shortening and the shortened line
+            (boolean, string)
+        """
+        # 1. check for comment
+        if self.__text.lstrip().startswith('#'):
+            lastComment = True
+            if self.__nextText.lstrip().startswith('#'):
+                lastComment = False
+
+            # Wrap commented lines.
+            newText = self.__shortenComment(lastComment)
+            return True, newText
+
+        indent = self.__getIndent(self.__text)
+        source = self.__text[len(indent):]
+        assert source.lstrip() == source
+        sio = io.StringIO(source)
+
+        # Check for multiline string.
+        try:
+            tokens = list(tokenize.generate_tokens(sio.readline))
+        except (SyntaxError, tokenize.TokenError):
+            multilineCandidate = self.__breakMultiline()
+            if multilineCandidate:
+                return True, multilineCandidate
+            else:
+                return False, ""
+
+        # Handle statements by putting the right hand side on a line by itself.
+        # This should let the next pass shorten it.
+        if source.startswith('return '):
+            newText = (
+                indent +
+                'return (' +
+                self.__eol +
+                indent + self.__indentWord + re.sub('^return ', '', source) +
+                indent + ')' + self.__eol
+            )
+            return True, newText
+
+        candidates = self.__shortenLine(tokens, source, indent)
+        candidates = list(sorted(
+            set(candidates).union([self.__text]),
+            key=lambda x: self.__lineShorteningRank(x)))
+        if candidates:
+            return True, candidates[0]
+        
+        return False, ""
+    
+    def __shortenComment(self, isLast):
+        """
+        Private method to shorten a comment line.
+        
+        @param isLast flag indicating, that the line is the last comment line
+            (boolean)
+        @return shortened comment line (string)
+        """
+        pass
+    
+    def __getIndent(self, line):
+        """
+        Private method to get the indentation string.
+        
+        @param line line to determine the indentation string from (string)
+        @return indentation string (string)
+        """
+        # copied from Pep8Fixer
+        return line.replace(line.lstrip(), "")
