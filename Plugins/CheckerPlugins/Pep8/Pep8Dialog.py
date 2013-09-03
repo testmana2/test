@@ -241,7 +241,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "FixIssues": False,
             }
         if "MaxLineLength" not in self.__data:
-            self.__data["MaxLineLength"] = pep8.MAX_LINE_LENGTH,
+            self.__data["MaxLineLength"] = pep8.MAX_LINE_LENGTH
         if "HangClosing" not in self.__data:
             self.__data["HangClosing"] = False
         if "NoFixCodes" not in self.__data:
