@@ -36,6 +36,9 @@ Module implementing a class to fix certain PEP 8 issues.
 <td><a href="#Pep8IndentationWrapper">Pep8IndentationWrapper</a></td>
 <td>Class used by fixers dealing with indentation.</td>
 </tr><tr>
+<td><a href="#Pep8LineShortener">Pep8LineShortener</a></td>
+<td>Class used to shorten lines to a given maximum of characters.</td>
+</tr><tr>
 <td><a href="#Pep8Reindenter">Pep8Reindenter</a></td>
 <td>Class to reindent badly-indented code to uniformly use four-space indentation.</td>
 </tr>
@@ -126,6 +129,9 @@ QObject
 <td><a href="#Pep8Fixer.__fixE401">__fixE401</a></td>
 <td>Private method to fix multiple imports on one line (E401).</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__fixE501">__fixE501</a></td>
+<td>Private method to fix the long lines by breaking them (E501).</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__fixE502">__fixE502</a></td>
 <td>Private method to fix redundant backslash within brackets (E502).</td>
 </tr><tr>
@@ -167,6 +173,9 @@ QObject
 </tr><tr>
 <td><a href="#Pep8Fixer.__getLogical">__getLogical</a></td>
 <td>Private method to get the logical line corresponding to the given position.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__multilineStringLines">__multilineStringLines</a></td>
+<td>Private method to determine the line numbers that are within multi line strings and these which are part of a documentation string.</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.fixIssue">fixIssue</a></td>
 <td>Public method to fix the fixable issues.</td>
@@ -237,7 +246,8 @@ flag indicating it should be fixed (boolean)
 <h4>Pep8Fixer.__findLogical</h4>
 <b>__findLogical</b>(<i></i>)
 <p>
-        Private method to extract the index of all the starts and ends of lines.
+        Private method to extract the index of all the starts and ends of
+        lines.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -298,7 +308,8 @@ flag indicating an applied fix (boolean) and a message for
 <h4>Pep8Fixer.__fixE122</h4>
 <b>__fixE122</b>(<i>code, line, pos, apply=False</i>)
 <p>
-        Private method to fix a missing indentation of continuation lines (E122).
+        Private method to fix a missing indentation of continuation lines
+        (E122).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
@@ -324,7 +335,8 @@ flag indicating an applied fix (boolean) and a message for
 <h4>Pep8Fixer.__fixE123</h4>
 <b>__fixE123</b>(<i>code, line, pos, apply=False</i>)
 <p>
-        Private method to fix the indentation of a closing bracket lines (E123).
+        Private method to fix the indentation of a closing bracket lines
+        (E123).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
@@ -672,6 +684,32 @@ flag indicating, that the fix should be applied
 flag indicating an applied fix (boolean) and a message for
             the fix (string)
 </dd>
+</dl><a NAME="Pep8Fixer.__fixE501" ID="Pep8Fixer.__fixE501"></a>
+<h4>Pep8Fixer.__fixE501</h4>
+<b>__fixE501</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix the long lines by breaking them (E501).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+</dd>
 </dl><a NAME="Pep8Fixer.__fixE502" ID="Pep8Fixer.__fixE502"></a>
 <h4>Pep8Fixer.__fixE502</h4>
 <b>__fixE502</b>(<i>code, line, pos</i>)
@@ -955,6 +993,19 @@ tuple of a tuple of two integers giving the start of the
             of the logical line and a list of strings with the original
             source lines
 </dd>
+</dl><a NAME="Pep8Fixer.__multilineStringLines" ID="Pep8Fixer.__multilineStringLines"></a>
+<h4>Pep8Fixer.__multilineStringLines</h4>
+<b>__multilineStringLines</b>(<i></i>)
+<p>
+        Private method to determine the line numbers that are within multi line
+        strings and these which are part of a documentation string.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of a set of line numbers belonging to a multi line
+            string and a set of line numbers belonging to a multi line
+            documentation string (tuple of two set of integer)
+</dd>
 </dl><a NAME="Pep8Fixer.fixIssue" ID="Pep8Fixer.fixIssue"></a>
 <h4>Pep8Fixer.fixIssue</h4>
 <b>fixIssue</b>(<i>line, pos, message</i>)
@@ -1076,9 +1127,254 @@ logical line (string)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-list of lists, where each list represents valid indent levels for
-        the line in question, relative from the initial indent. However, the
-        first entry is the indent level which was expected.
+list of lists, where each list represents valid indent levels
+        for the line in question, relative from the initial indent. However,
+        the first entry is the indent level which was expected.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Pep8LineShortener" ID="Pep8LineShortener"></a>
+<h2>Pep8LineShortener</h2>
+<p>
+    Class used to shorten lines to a given maximum of characters.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Pep8LineShortener.__init__">Pep8LineShortener</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__breakMultiline">__breakMultiline</a></td>
+<td>Private method to break multi line strings.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__checkSyntax">__checkSyntax</a></td>
+<td>Private method to check the syntax of the given code fragment.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__countUnbalancedBrackets">__countUnbalancedBrackets</a></td>
+<td>Private method to determine the number of unmatched open/close brackets.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__getIndent">__getIndent</a></td>
+<td>Private method to get the indentation string.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__isProbablyInsideStringOrComment">__isProbablyInsideStringOrComment</a></td>
+<td>Private method to check, if the given string might be inside a string or comment.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__lineShorteningRank">__lineShorteningRank</a></td>
+<td>Private method to rank a candidate.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__normalizeMultiline">__normalizeMultiline</a></td>
+<td>Private method to remove multiline-related code that will cause syntax error.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__shortenComment">__shortenComment</a></td>
+<td>Private method to shorten a comment line.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.__shortenLine">__shortenLine</a></td>
+<td>Private method to shorten a line of code at an operator.</td>
+</tr><tr>
+<td><a href="#Pep8LineShortener.shorten">shorten</a></td>
+<td>Public method to shorten the line wrapped by the class instance.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Pep8LineShortener.__init__" ID="Pep8LineShortener.__init__"></a>
+<h4>Pep8LineShortener (Constructor)</h4>
+<b>Pep8LineShortener</b>(<i>curLine, prevLine, nextLine, maxLength=79, eol="\n", indentWord="    ", isDocString=False</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>curLine</i></dt>
+<dd>
+text to work on (string)
+</dd><dt><i>prevLine</i></dt>
+<dd>
+line before the text to work on (string)
+</dd><dt><i>nextLine</i></dt>
+<dd>
+line after the text to work on (string)
+</dd><dt><i>maxLength=</i></dt>
+<dd>
+maximum allowed line length (integer)
+</dd><dt><i>eol=</i></dt>
+<dd>
+eond-of-line marker (string)
+</dd><dt><i>indentWord=</i></dt>
+<dd>
+string used for indentation (string)
+</dd><dt><i>isDocString=</i></dt>
+<dd>
+flag indicating that the line belongs to
+            a documentation string (boolean)
+</dd>
+</dl><a NAME="Pep8LineShortener.__breakMultiline" ID="Pep8LineShortener.__breakMultiline"></a>
+<h4>Pep8LineShortener.__breakMultiline</h4>
+<b>__breakMultiline</b>(<i></i>)
+<p>
+        Private method to break multi line strings.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of the shortened line and the changed next line
+            (string, string)
+</dd>
+</dl><a NAME="Pep8LineShortener.__checkSyntax" ID="Pep8LineShortener.__checkSyntax"></a>
+<h4>Pep8LineShortener.__checkSyntax</h4>
+<b>__checkSyntax</b>(<i>code</i>)
+<p>
+        Private method to check the syntax of the given code fragment.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code fragment to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating syntax is ok (boolean)
+</dd>
+</dl><a NAME="Pep8LineShortener.__countUnbalancedBrackets" ID="Pep8LineShortener.__countUnbalancedBrackets"></a>
+<h4>Pep8LineShortener.__countUnbalancedBrackets</h4>
+<b>__countUnbalancedBrackets</b>(<i>line</i>)
+<p>
+        Private method to determine the number of unmatched open/close
+        brackets.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to work at (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+number of unmatched open/close brackets (integer)
+</dd>
+</dl><a NAME="Pep8LineShortener.__getIndent" ID="Pep8LineShortener.__getIndent"></a>
+<h4>Pep8LineShortener.__getIndent</h4>
+<b>__getIndent</b>(<i>line</i>)
+<p>
+        Private method to get the indentation string.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to determine the indentation string from (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+indentation string (string)
+</dd>
+</dl><a NAME="Pep8LineShortener.__isProbablyInsideStringOrComment" ID="Pep8LineShortener.__isProbablyInsideStringOrComment"></a>
+<h4>Pep8LineShortener.__isProbablyInsideStringOrComment</h4>
+<b>__isProbablyInsideStringOrComment</b>(<i>line, index</i>)
+<p>
+        Private method to check, if the given string might be inside a string
+        or comment.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to check (string)
+</dd><dt><i>index</i></dt>
+<dd>
+position inside line to check (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the possibility of being inside a string
+            or comment
+</dd>
+</dl><a NAME="Pep8LineShortener.__lineShorteningRank" ID="Pep8LineShortener.__lineShorteningRank"></a>
+<h4>Pep8LineShortener.__lineShorteningRank</h4>
+<b>__lineShorteningRank</b>(<i>candidate</i>)
+<p>
+        Private method to rank a candidate.
+</p><dl>
+<dt><i>candidate</i></dt>
+<dd>
+candidate line to rank (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+rank of the candidate (integer)
+</dd>
+</dl><a NAME="Pep8LineShortener.__normalizeMultiline" ID="Pep8LineShortener.__normalizeMultiline"></a>
+<h4>Pep8LineShortener.__normalizeMultiline</h4>
+<b>__normalizeMultiline</b>(<i>text</i>)
+<p>
+        Private method to remove multiline-related code that will cause syntax
+        error.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+code line to work on (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+normalized code line (string)
+</dd>
+</dl><a NAME="Pep8LineShortener.__shortenComment" ID="Pep8LineShortener.__shortenComment"></a>
+<h4>Pep8LineShortener.__shortenComment</h4>
+<b>__shortenComment</b>(<i>isLast</i>)
+<p>
+        Private method to shorten a comment line.
+</p><dl>
+<dt><i>isLast</i></dt>
+<dd>
+flag indicating, that the line is the last comment line
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+shortened comment line (string)
+</dd>
+</dl><a NAME="Pep8LineShortener.__shortenLine" ID="Pep8LineShortener.__shortenLine"></a>
+<h4>Pep8LineShortener.__shortenLine</h4>
+<b>__shortenLine</b>(<i>tokens, source, indent</i>)
+<p>
+        Private method to shorten a line of code at an operator.
+</p><dl>
+<dt><i>tokens</i></dt>
+<dd>
+tokens of the line as generated by tokenize
+            (list of token)
+</dd><dt><i>source</i></dt>
+<dd>
+code string to work at (string)
+</dd><dt><i>indent</i></dt>
+<dd>
+indentation string of the code line (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of candidates (list of string)
+</dd>
+</dl><a NAME="Pep8LineShortener.shorten" ID="Pep8LineShortener.shorten"></a>
+<h4>Pep8LineShortener.shorten</h4>
+<b>shorten</b>(<i></i>)
+<p>
+        Public method to shorten the line wrapped by the class instance.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of a flag indicating successful shortening, the
+            shortened line and the changed next line (boolean, string, string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1086,7 +1382,8 @@ list of lists, where each list represents valid indent levels for
 <a NAME="Pep8Reindenter" ID="Pep8Reindenter"></a>
 <h2>Pep8Reindenter</h2>
 <p>
-    Class to reindent badly-indented code to uniformly use four-space indentation.
+    Class to reindent badly-indented code to uniformly use four-space
+    indentation.
 </p><p>
     Released to the public domain, by Tim Peters, 03 October 2000.
 </p>

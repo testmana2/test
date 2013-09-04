@@ -3752,6 +3752,8 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourc
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.SKIP_TOKENS?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper.pep8Expected?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8IndentationWrapper?1(physical_lines)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8LineShortener.shorten?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8LineShortener?1(curLine, prevLine, nextLine, maxLength=79, eol="\n", indentWord="    ", isDocString=False)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()

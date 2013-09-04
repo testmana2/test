@@ -8030,6 +8030,7 @@
       <keyword name="Pep8Fixer.__fixE303" id="Pep8Fixer.__fixE303" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE303" />
       <keyword name="Pep8Fixer.__fixE304" id="Pep8Fixer.__fixE304" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE304" />
       <keyword name="Pep8Fixer.__fixE401" id="Pep8Fixer.__fixE401" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE401" />
+      <keyword name="Pep8Fixer.__fixE501" id="Pep8Fixer.__fixE501" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE501" />
       <keyword name="Pep8Fixer.__fixE502" id="Pep8Fixer.__fixE502" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE502" />
       <keyword name="Pep8Fixer.__fixE701" id="Pep8Fixer.__fixE701" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE701" />
       <keyword name="Pep8Fixer.__fixE702" id="Pep8Fixer.__fixE702" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE702" />
@@ -8044,6 +8045,7 @@
       <keyword name="Pep8Fixer.__getIndent" id="Pep8Fixer.__getIndent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndent" />
       <keyword name="Pep8Fixer.__getIndentWord" id="Pep8Fixer.__getIndentWord" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndentWord" />
       <keyword name="Pep8Fixer.__getLogical" id="Pep8Fixer.__getLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getLogical" />
+      <keyword name="Pep8Fixer.__multilineStringLines" id="Pep8Fixer.__multilineStringLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__multilineStringLines" />
       <keyword name="Pep8Fixer.fixIssue" id="Pep8Fixer.fixIssue" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.fixIssue" />
       <keyword name="Pep8Fixer.mutualStartswith" id="Pep8Fixer.mutualStartswith" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.mutualStartswith" />
       <keyword name="Pep8Fixer.saveFile" id="Pep8Fixer.saveFile" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.saveFile" />
@@ -8051,6 +8053,18 @@
       <keyword name="Pep8IndentationWrapper (Constructor)" id="Pep8IndentationWrapper (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8IndentationWrapper.__init__" />
       <keyword name="Pep8IndentationWrapper.__buildTokensLogical" id="Pep8IndentationWrapper.__buildTokensLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8IndentationWrapper.__buildTokensLogical" />
       <keyword name="Pep8IndentationWrapper.pep8Expected" id="Pep8IndentationWrapper.pep8Expected" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8IndentationWrapper.pep8Expected" />
+      <keyword name="Pep8LineShortener" id="Pep8LineShortener" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener" />
+      <keyword name="Pep8LineShortener (Constructor)" id="Pep8LineShortener (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__init__" />
+      <keyword name="Pep8LineShortener.__breakMultiline" id="Pep8LineShortener.__breakMultiline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__breakMultiline" />
+      <keyword name="Pep8LineShortener.__checkSyntax" id="Pep8LineShortener.__checkSyntax" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__checkSyntax" />
+      <keyword name="Pep8LineShortener.__countUnbalancedBrackets" id="Pep8LineShortener.__countUnbalancedBrackets" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__countUnbalancedBrackets" />
+      <keyword name="Pep8LineShortener.__getIndent" id="Pep8LineShortener.__getIndent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__getIndent" />
+      <keyword name="Pep8LineShortener.__isProbablyInsideStringOrComment" id="Pep8LineShortener.__isProbablyInsideStringOrComment" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__isProbablyInsideStringOrComment" />
+      <keyword name="Pep8LineShortener.__lineShorteningRank" id="Pep8LineShortener.__lineShorteningRank" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__lineShorteningRank" />
+      <keyword name="Pep8LineShortener.__normalizeMultiline" id="Pep8LineShortener.__normalizeMultiline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__normalizeMultiline" />
+      <keyword name="Pep8LineShortener.__shortenComment" id="Pep8LineShortener.__shortenComment" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__shortenComment" />
+      <keyword name="Pep8LineShortener.__shortenLine" id="Pep8LineShortener.__shortenLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__shortenLine" />
+      <keyword name="Pep8LineShortener.shorten" id="Pep8LineShortener.shorten" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.shorten" />
       <keyword name="Pep8Py2Checker" id="Pep8Py2Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker" />
       <keyword name="Pep8Py2Checker (Constructor)" id="Pep8Py2Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker.__init__" />
       <keyword name="Pep8Reindenter" id="Pep8Reindenter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter" />
