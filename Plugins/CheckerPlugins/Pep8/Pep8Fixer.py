@@ -59,7 +59,8 @@ class Pep8Fixer(QObject):
         self.__origName = ""
         self.__source = sourceLines[:]  # save a copy
         self.__fixCodes = [c.strip() for c in fixCodes.split(",") if c.strip()]
-        self.__noFixCodes = [c.strip() for c in noFixCodes.split(",") if c.strip()]
+        self.__noFixCodes = [
+            c.strip() for c in noFixCodes.split(",") if c.strip()]
         self.__maxLineLength = maxLineLength
         self.fixed = 0
         
@@ -250,7 +251,8 @@ class Pep8Fixer(QObject):
     
     def __findLogical(self):
         """
-        Private method to extract the index of all the starts and ends of lines.
+        Private method to extract the index of all the starts and ends of
+        lines.
         
         @return tuple containing two lists of integer with start and end tuples
             of lines
@@ -342,9 +344,9 @@ class Pep8Fixer(QObject):
         Private method to determine the line numbers that are within multi line
         strings and these which are part of a documentation string.
         
-        @return tuple of a set of line numbers belonging to a multi line string 
-            and a set of line numbers belonging to a multi line documentation
-            string (tuple of two set of integer)
+        @return tuple of a set of line numbers belonging to a multi line
+            string and a set of line numbers belonging to a multi line
+            documentation string (tuple of two set of integer)
         """
         if self.__multiLineNumbers is None:
             source = "".join(self.__source)
@@ -360,9 +362,11 @@ class Pep8Fixer(QObject):
 
                     if (tokenType == tokenize.STRING and startRow != endRow):
                         if previousTokenType != tokenize.INDENT:
-                            self.__multiLineNumbers |= set(range(startRow, 1 + endRow))
+                            self.__multiLineNumbers |= set(
+                                range(startRow, 1 + endRow))
                         else:
-                            self.__docLineNumbers |= set(range(startRow, 1 + endRow))
+                            self.__docLineNumbers |= set(
+                                range(startRow, 1 + endRow))
 
                     previousTokenType = tokenType
             except (SyntaxError, tokenize.TokenError):
@@ -448,7 +452,8 @@ class Pep8Fixer(QObject):
             if code in ["E101", "W191"]:
                 msg = self.trUtf8("Tab converted to 4 spaces.")
             else:
-                msg = self.trUtf8("Indentation adjusted to be a multiple of four.")
+                msg = self.trUtf8(
+                    "Indentation adjusted to be a multiple of four.")
             return (True, msg)
         else:
             return (False, self.trUtf8("Fix for {0} failed.").format(code))
@@ -481,7 +486,8 @@ class Pep8Fixer(QObject):
     
     def __fixE122(self, code, line, pos, apply=False):
         """
-        Private method to fix a missing indentation of continuation lines (E122).
+        Private method to fix a missing indentation of continuation lines
+        (E122).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -505,11 +511,14 @@ class Pep8Fixer(QObject):
                         self.__indentWord + text.lstrip()
         else:
             self.__stackLogical.append((code, line, pos))
-        return (True, self.trUtf8("Missing indentation of continuation line corrected."))
+        return (
+            True,
+            self.trUtf8("Missing indentation of continuation line corrected."))
     
     def __fixE123(self, code, line, pos, apply=False):
         """
-        Private method to fix the indentation of a closing bracket lines (E123).
+        Private method to fix the indentation of a closing bracket lines
+        (E123).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -534,7 +543,8 @@ class Pep8Fixer(QObject):
                     self.__source[row] = newText
         else:
             self.__stackLogical.append((code, line, pos))
-        return (True, self.trUtf8("Closing bracket aligned to opening bracket."))
+        return (
+            True, self.trUtf8("Closing bracket aligned to opening bracket."))
     
     def __fixE125(self, code, line, pos, apply=False):
         """
@@ -592,7 +602,9 @@ class Pep8Fixer(QObject):
                     self.__source[row] = newText
         else:
             self.__stackLogical.append((code, line, pos))
-        return (True, self.trUtf8("Indentation level of hanging indentation changed."))
+        return (
+            True,
+            self.trUtf8("Indentation level of hanging indentation changed."))
     
     def __fixE127(self, code, line, pos, apply=False):
         """
@@ -655,7 +667,8 @@ class Pep8Fixer(QObject):
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (False, self.trUtf8("Extraneous whitespace cannot be removed."))
+            return (
+                False, self.trUtf8("Extraneous whitespace cannot be removed."))
         
         newText = self.__fixWhitespace(text, pos, '')
         if newText == text:
@@ -680,7 +693,8 @@ class Pep8Fixer(QObject):
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (False, self.trUtf8("Extraneous whitespace cannot be removed."))
+            return (
+                False, self.trUtf8("Extraneous whitespace cannot be removed."))
         
         newText = self.__fixWhitespace(text, pos, ' ')
         if newText == text:
@@ -956,8 +970,8 @@ class Pep8Fixer(QObject):
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        self.__source[line - 1] = self.__source[line - 1].rstrip("\n\r \t\\") + \
-            self.__getEol()
+        self.__source[line - 1] = \
+            self.__source[line - 1].rstrip("\n\r \t\\") + self.__getEol()
         return (True, self.trUtf8("Redundant backslash in brackets removed."))
     
     def __fixE701(self, code, line, pos, apply=False):
@@ -1113,7 +1127,8 @@ class Pep8Fixer(QObject):
 
 class Pep8Reindenter(object):
     """
-    Class to reindent badly-indented code to uniformly use four-space indentation.
+    Class to reindent badly-indented code to uniformly use four-space
+    indentation.
 
     Released to the public domain, by Tim Peters, 03 October 2000.
     """
@@ -1192,8 +1207,10 @@ class Pep8Reindenter(object):
                         for j in range(i - 1, -1, -1):
                             jline, jlevel = stats[j]
                             if jlevel >= 0:
-                                want = have + self.__getlspace(after[jline - 1]) - \
-                                       self.__getlspace(lines[jline])
+                                want = \
+                                    have + \
+                                    self.__getlspace(after[jline - 1]) - \
+                                    self.__getlspace(lines[jline])
                                 break
                     if want < 0:
                         # Still no luck -- leave it alone.
@@ -1370,9 +1387,9 @@ class Pep8IndentationWrapper(object):
         Public method to replicate logic in pep8.py, to know what level to
         indent things to.
 
-        @return list of lists, where each list represents valid indent levels for
-        the line in question, relative from the initial indent. However, the
-        first entry is the indent level which was expected.
+        @return list of lists, where each list represents valid indent levels
+        for the line in question, relative from the initial indent. However,
+        the first entry is the indent level which was expected.
         """
         # What follows is an adjusted version of
         # pep8.py:continuation_line_indentation. All of the comments have been
@@ -1535,13 +1552,6 @@ class Pep8LineShortener(object):
     """
     Class used to shorten lines to a given maximum of characters.
     """
-    ShortenOperatorGroups = frozenset([
-        frozenset([',']),
-        frozenset(['%']),
-        frozenset([',', '(', '[', '{']),
-        frozenset([',', '(', '[', '{', '%', '+', '-', '*', '/', '//']),
-    ])
-    
     def __init__(self, curLine, prevLine, nextLine, maxLength=79, eol="\n",
                  indentWord="    ", isDocString=False):
         """
@@ -1568,8 +1578,8 @@ class Pep8LineShortener(object):
         """
         Public method to shorten the line wrapped by the class instance.
         
-        @return tuple of a flag indicating successful shortening, the shortened line
-            and the changed next line (boolean, string, string)
+        @return tuple of a flag indicating successful shortening, the
+            shortened line and the changed next line (boolean, string, string)
         """
         # 1. check for comment
         if self.__text.lstrip().startswith('#'):
@@ -1583,15 +1593,45 @@ class Pep8LineShortener(object):
                 return False, "", ""
             else:
                 return True, newText, ""
+        elif '#' in self.__text:
+            pos = self.__text.rfind("#")
+            newText = self.__text[:pos].rstrip() + self.__eol + \
+                self.__getIndent(self.__text) + self.__text[pos:]
+            if newText == self.__text:
+                return False, "", ""
+            else:
+                return True, newText, ""
 
         # Do multi line doc strings
         if self.__isDocString:
             source = self.__text.rstrip()
-            while len(source) > self.__maxLength:
-                source, right = source.rsplit(None, 1)
-                self.__nextText = self.__getIndent(self.__nextText) + \
-                    right + " " + self.__nextText.lstrip()
-            return True, source + self.__eol, self.__nextText
+            blank = source.rfind(" ")
+            while blank > self.__maxLength and blank != -1:
+                blank = source.rfind(" ", 0, blank)
+            if blank == -1:
+                # Cannot break
+                return False, "", ""
+            else:
+                first = self.__text[:blank]
+                second = self.__text[blank:].lstrip()
+                if self.__nextText.strip():
+                    if self.__nextText.lstrip().startswith("@"):
+                        # eric doc comment
+                        # create a new line and indent it
+                        newText = first + self.__eol + \
+                            self.__getIndent(first) + self.__indentWord + \
+                            second
+                        newNext = ""
+                    else:
+                        newText = first + self.__eol
+                        newNext = self.__getIndent(self.__nextText) + \
+                            second.rstrip() + " " + self.__nextText.lstrip()
+                else:
+                    # empty line, add a new line
+                    newText = first + self.__eol + self.__getIndent(first) + \
+                        second
+                    newNext = ""
+            return True, newText, newNext
         
         indent = self.__getIndent(self.__text)
         source = self.__text[len(indent):]
@@ -1602,11 +1642,22 @@ class Pep8LineShortener(object):
         try:
             tokens = list(tokenize.generate_tokens(sio.readline))
         except (SyntaxError, tokenize.TokenError):
-            multilineCandidate = self.__breakMultiline()
-            if multilineCandidate:
-                return True, multilineCandidate, ""
+            if source.rstrip().endswith("\\"):
+                # just join the continuation line and let the next run
+                # handle it once it tokenizes ok
+                newText = indent + source.rstrip()[:-1].rstrip() + " " + \
+                    self.__nextText.lstrip()
+                if indent:
+                    newNext = indent
+                else:
+                    newNext = " "
+                return True, newText, newNext
             else:
-                return False, "", ""
+                multilineCandidate = self.__breakMultiline()
+                if multilineCandidate:
+                    return True, multilineCandidate[0], multilineCandidate[1]
+                else:
+                    return False, "", ""
 
         # Handle statements by putting the right hand side on a line by itself.
         # This should let the next pass shorten it.
@@ -1619,13 +1670,39 @@ class Pep8LineShortener(object):
                 indent + ')' + self.__eol
             )
             return True, newText, ""
-
+        
         candidates = self.__shortenLine(tokens, source, indent)
-        candidates = list(sorted(
-            set(candidates).union([self.__text]),
-            key=lambda x: self.__lineShorteningRank(x)))
         if candidates:
+            candidates = list(sorted(
+                set(candidates).union([self.__text]),
+                key=lambda x: self.__lineShorteningRank(x)))
             return True, candidates[0], ""
+        
+        source = self.__text
+        rs = source.rstrip()
+        if rs.endswith(("'", '"')) and " " in source:
+            if rs.endswith(('"""', "'''")):
+                quote = rs[-3:]
+            else:
+                quote = rs[-1]
+            blank = source.rfind(" ")
+            maxLen = self.__maxLength - 2 - len(quote)
+            while blank > maxLen and blank != -1:
+                blank = source.rfind(" ", 0, blank)
+            if blank != -1:
+                if source[blank + 1:].startswith(quote):
+                    first = source[:maxLen]
+                    second = source[maxLen:]
+                else:
+                    first = source[:blank]
+                    second = source[blank + 1:]
+                return (True,
+                    first + quote + " \\" + self.__eol +
+                    indent + self.__indentWord + quote + second,
+                    "")
+            else:
+                # Cannot break
+                return False, "", ""
         
         return False, "", ""
     
@@ -1648,7 +1725,8 @@ class Pep8LineShortener(object):
                         len(indentation) + 72)
 
         MIN_CHARACTER_REPEAT = 5
-        if (len(newText) - len(newText.rstrip(newText[-1])) >= MIN_CHARACTER_REPEAT and
+        if (len(newText) - len(newText.rstrip(newText[-1])) >= \
+                MIN_CHARACTER_REPEAT and
                 not newText[-1].isalnum()):
             # Trim comments that end with things like ---------
             return newText[:maxLength] + self.__eol
@@ -1668,12 +1746,12 @@ class Pep8LineShortener(object):
         """
         Private method to break multi line strings.
         
-        @return broken multi line string or None, if a break is not possible
-            (string or None)
+        @return tuple of the shortened line and the changed next line
+            (string, string)
         """
         indentation = self.__getIndent(self.__text)
 
-        # Handle special case only.
+        # Handle special case.
         for symbol in '([{':
             # Only valid if symbol is not on a line by itself.
             if (
@@ -1686,15 +1764,32 @@ class Pep8LineShortener(object):
                 if index <= len(self.__indentWord) + len(indentation):
                     continue
 
-                if self.__isProbablyInsideStringOrComment(self.__text, index - 1):
+                if self.__isProbablyInsideStringOrComment(
+                        self.__text, index - 1):
                     continue
 
                 return (self.__text[:index].rstrip() + self.__eol +
                         indentation + self.__indentWord +
-                        self.__text[index:].lstrip())
+                        self.__text[index:].lstrip(), "")
         
-        # TODO: implement the method wrapping the line (see doc strings)
-        return None
+        newText = self.__text
+        newNext = self.__nextText
+        blank = newText.rfind(" ")
+        while blank > self.__maxLength and blank != -1:
+            blank = newText.rfind(" ", 0, blank)
+        if blank != -1:
+            first = self.__text[:blank]
+            second = self.__text[blank:].strip()
+            if newNext.strip():
+                newText = first + self.__eol
+                newNext = self.__getIndent(newNext) + \
+                    second + " " + newNext.lstrip()
+            else:
+                # empty line, add a new line
+                newText = first + self.__eol
+                newNext = self.__getIndent(newNext) + \
+                    second + self.__eol + newNext.lstrip()
+        return newText, newNext
     
     def __isProbablyInsideStringOrComment(self, line, index):
         """
@@ -1723,7 +1818,8 @@ class Pep8LineShortener(object):
         """
         Private method to shorten a line of code at an operator.
         
-        @param tokens tokens of the line as generated by tokenize (list of token)
+        @param tokens tokens of the line as generated by tokenize
+            (list of token)
         @param source code string to work at (string)
         @param indent indentation string of the code line (string)
         @return list of candidates (list of string)
@@ -1781,18 +1877,12 @@ class Pep8LineShortener(object):
                 if self.__checkSyntax(self.__normalizeMultiline(newText)):
                     candidates.append(indent + newText)
         
-        for keyTokenStrings in self.ShortenOperatorGroups:
-            shortened = self.__shortenLineAtTokens(
-                tokens, source, indent, keyTokenStrings)
-
-            if shortened is not None and shortened != source:
-                candidates.append(shortened)
-        
         return candidates
     
     def __normalizeMultiline(self, text):
         """
-        Private method to remove multiline-related code that will cause syntax error.
+        Private method to remove multiline-related code that will cause syntax
+        error.
         
         @param line code line to work on (string)
         @return normalized code line (string)
@@ -1811,77 +1901,6 @@ class Pep8LineShortener(object):
                 return text[len('def'):].strip().rstrip(':')
 
         return text
-    
-    def __shortenLineAtTokens(self, tokens, source, indent, keyTokenStrings):
-        """
-        Private method to break lines at key tokens.
-        
-        @param tokens tokens of the line as generated by tokenize (list of token)
-        @param source code string to work at (string)
-        @param indent indentation string of the code line (string)
-        @param keyTokenStrings key tokens to break at
-        @return broken code line (string)
-        """
-        offsets = []
-        firstParen = True
-        for tkn in tokens:
-            tokenType = tkn[0]
-            tokenString = tkn[1]
-            nextOffset = tkn[2][1] + 1
-
-            assert tokenType != tokenize.INDENT
-
-            if tokenString in keyTokenStrings or (firstParen and
-                                                  tokenString == '('):
-                # Don't split right before newline.
-                if nextOffset < len(source) - 1:
-                    offsets.append(nextOffset)
-
-                if tokenString == '(':
-                    firstParen = False
-
-        currentIndent = None
-        newText = None
-        for text in self.__splitAtOffsets(source, offsets):
-            if newText:
-                newText += self.__eol + currentIndent + text
-
-                for symbol in '([{':
-                    if text.endswith(symbol):
-                        currentIndent += self.__indentWord
-            else:
-                # First line.
-                newText = text
-                assert not currentIndent
-                currentIndent = self.__indentWord
-
-        assert newText is not None
-
-        if self.__checkSyntax(self.__normalizeMultiline(newText)):
-            return indent + newText
-        else:
-            return None
-    
-    def __splitAtOffsets(self, line, offsets):
-        """
-        Private method to split the line at the given offsets.
-        
-        @param line line to split (string)
-        @param offsets offsets to split at (list of integer)
-        @return split line (list of string)
-        """
-        result = []
-
-        previousOffset = 0
-        currentOffset = 0
-        for currentOffset in sorted(offsets):
-            if currentOffset < len(line) and previousOffset != currentOffset:
-                result.append(line[previousOffset:currentOffset])
-            previousOffset = currentOffset
-
-        result.append(line[currentOffset:])
-
-        return result
     
     def __lineShorteningRank(self, candidate):
         """
@@ -1925,7 +1944,8 @@ class Pep8LineShortener(object):
                 for ending in '([{':
                     # Avoid lonely opening. They result in longer lines.
                     if (currentLine.endswith(ending) and
-                            len(currentLine.strip()) <= len(self.__indentWord)):
+                            len(currentLine.strip()) <= \
+                            len(self.__indentWord)):
                         rank += 100
 
                 if currentLine.endswith('%'):
@@ -1938,12 +1958,13 @@ class Pep8LineShortener(object):
                 rank += 10 * self.__countUnbalancedBrackets(currentLine)
         else:
             rank = 100000
-
+        
         return max(0, rank)
     
     def __countUnbalancedBrackets(self, line):
         """
-        Private method to determine the number of unmatched open/close brackets.
+        Private method to determine the number of unmatched open/close
+        brackets.
         
         @param line line to work at (string)
         @return number of unmatched open/close brackets (integer)
