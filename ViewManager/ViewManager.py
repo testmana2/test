@@ -5521,6 +5521,10 @@ class ViewManager(QObject):
         if self.autosaveTimer.isActive():
             self.autosaveTimer.stop()
         
+        # hide search and replace widgets
+        self.__searchWidget.hide()
+        self.__replaceWidget.hide()
+        
     def __editorOpened(self):
         """
         Private slot to handle the editorOpened signal.
