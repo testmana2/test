@@ -97,7 +97,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         pluginFile = self.pluginNameCombo\
                 .itemData(self.pluginNameCombo.currentIndex())
         
-        if not self.__pluginManager.unloadPlugin(pluginName, pluginDirectory):
+        if not self.__pluginManager.unloadPlugin(pluginName):
             E5MessageBox.critical(self,
                 self.trUtf8("Plugin Uninstallation"),
                 self.trUtf8("""<p>The plugin <b>{0}</b> could not be unloaded."""

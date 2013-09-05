@@ -3687,7 +3687,7 @@ eric5.PluginManager.PluginManager.PluginManager.pluginDeactivated?7
 eric5.PluginManager.PluginManager.PluginManager.preferencesChanged?4()
 eric5.PluginManager.PluginManager.PluginManager.removePluginFromSysModules?4(pluginName, package, internalPackages)
 eric5.PluginManager.PluginManager.PluginManager.shutdown?7
-eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name, directory)
+eric5.PluginManager.PluginManager.PluginManager.unloadPlugin?4(name)
 eric5.PluginManager.PluginManager.PluginManager?1(parent=None, doLoadPlugins=True, develPlugin=None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog.getDownloadedPlugins?4()
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryDialog?1(parent=None)
