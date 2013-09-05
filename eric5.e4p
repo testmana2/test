@@ -1912,13 +1912,31 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>FixIssues</string>
             </key>
             <value>
-              <bool>True</bool>
+              <bool>False</bool>
+            </value>
+            <key>
+              <string>HangClosing</string>
+            </key>
+            <value>
+              <bool>False</bool>
             </value>
             <key>
               <string>IncludeMessages</string>
             </key>
             <value>
-              <string></string>
+              <string>E501</string>
+            </value>
+            <key>
+              <string>MaxLineLength</string>
+            </key>
+            <value>
+              <int>79</int>
+            </value>
+            <key>
+              <string>NoFixCodes</string>
+            </key>
+            <value>
+              <string>E501</string>
             </value>
             <key>
               <string>RepeatMessages</string>

@@ -12,7 +12,7 @@ import fnmatch
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
-    QDialogButtonBox, QApplication, QHeaderView
+    QDialogButtonBox, QApplication, QHeaderView, QIcon
 
 from . import pep8
 
@@ -115,7 +115,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                   self.resultList.header().sortIndicatorOrder()
                                  )
     
-    def __createResultItem(self, file, line, pos, message, fixed):
+    def __createResultItem(self, file, line, pos, message, fixed, autofixing):
         """
         Private method to create an entry in the result list.
         
@@ -124,6 +124,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param pos character position of issue (integer or string)
         @param message message text (string)
         @param fixed flag indicating a fixed issue (boolean)
+        @param autofixing flag indicating, that we are fixing issues
+            automatically (boolean)
         """
         from .Pep8Fixer import Pep8FixableIssues
         
@@ -144,7 +146,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        elif code in Pep8FixableIssues:
+        elif code in Pep8FixableIssues and not autofixing:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
             fixable = True
         
@@ -162,19 +164,23 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm.setData(0, self.fixableRole, fixable)
         itm.setData(0, self.codeRole, code)
     
-    def __modifyFixedResultItem(self, itm, text):
+    def __modifyFixedResultItem(self, itm, text, fixed):
         """
         Private method to modify a result list entry to show its
         positive fixed state.
         
         @param itm reference to the item to modify (QTreeWidgetItem)
         @param text text to be appended (string)
+        @param fixed flag indicating a fixed issue (boolean)
         """
-        message = itm.data(0, self.messageRole) + text
-        itm.setText(2, message)
-        itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        
-        itm.setData(0, self.messageRole, message)
+        if fixed:
+            message = itm.data(0, self.messageRole) + text
+            itm.setText(2, message)
+            itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
+            
+            itm.setData(0, self.messageRole, message)
+        else:
+            itm.setIcon(0, QIcon())
         itm.setData(0, self.fixableRole, False)
     
     def __updateStatistics(self, statistics, fixer):
@@ -355,7 +361,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.noResults = False
                         self.__createResultItem(file, "1", "1",
                             self.trUtf8("Error: {0}").format(str(msg))\
-                                .rstrip()[1:-1], False)
+                                .rstrip()[1:-1], False, False)
                         progress += 1
                         continue
                     
@@ -421,7 +427,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                     text += "\n" + \
                                             self.trUtf8("Fix: {0}").format(msg)
                             self.__createResultItem(
-                                fname, lineno, position, text, fixed)
+                                fname, lineno, position, text, fixed, fixIssues)
                     fixer and fixer.saveFile(encoding)
                     self.__updateStatistics(report.counters, fixer)
                     progress += 1
@@ -708,7 +714,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         Private slot to fix selected issues.
         """
-        # TODO: test this
         from .Pep8Fixer import Pep8Fixer
         
         # build a dictionary of issues to fix
@@ -760,7 +765,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     fixed, msg = fixer.fixIssue(lineno, position, text)
                     if fixed:
                         text = "\n" + self.trUtf8("Fix: {0}").format(msg)
-                        self.__modifyFixedResultItem(itm, text)
+                    else:
+                        text = ""
+                    self.__modifyFixedResultItem(itm, text, fixed)
                 fixer.saveFile(encoding)
                 
                 self.__updateFixerStatistics(fixer)

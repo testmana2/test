@@ -32,6 +32,7 @@ Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
                     ]
 
 
+# TODO: refine behavior for non-fixable issues
 class Pep8Fixer(QObject):
     """
     Class implementing a fixer for certain PEP 8 issues.
