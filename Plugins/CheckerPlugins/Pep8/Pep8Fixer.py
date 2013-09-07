@@ -29,7 +29,7 @@ Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
                      "W293", "E301", "E302", "E303", "E304", "W391",
                      "E401", "E501", "E502", "W603", "E701", "E702",
                      "E703", "E711", "E712"
-                    ]
+                     ]
 
 
 class Pep8Fixer(QObject):
@@ -70,7 +70,8 @@ class Pep8Fixer(QObject):
         
         if not inPlace:
             self.__origName = self.__filename
-            self.__filename = os.path.join(os.path.dirname(self.__filename),
+            self.__filename = os.path.join(
+                os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
@@ -153,12 +154,13 @@ class Pep8Fixer(QObject):
         try:
             Utilities.writeEncodedFile(self.__filename, txt, encoding)
         except (IOError, Utilities.CodingError, UnicodeError) as err:
-            E5MessageBox.critical(self,
+            E5MessageBox.critical(
+                self,
                 self.trUtf8("Fix PEP 8 issues"),
                 self.trUtf8(
                     """<p>Could not save the file <b>{0}</b>."""
                     """ Skipping it.</p><p>Reason: {1}</p>""")
-                    .format(self.__filename, str(err))
+                .format(self.__filename, str(err))
             )
             return False
         
@@ -469,7 +471,7 @@ class Pep8Fixer(QObject):
             self.__reindenter = Pep8Reindenter(self.__source)
             self.__reindenter.run()
         fixedLine = self.__reindenter.fixedLine(line - 1)
-        if fixedLine is not None:
+        if fixedLine is not None and fixedLine != self.__source[line - 1]:
             self.__source[line - 1] = fixedLine
             if code in ["E101", "W191"]:
                 msg = self.trUtf8("Tab converted to 4 spaces.")
@@ -478,7 +480,7 @@ class Pep8Fixer(QObject):
                     "Indentation adjusted to be a multiple of four.")
             return (1, msg, 0)
         else:
-            return (0, self.trUtf8("Fix for {0} failed.").format(code), 0)
+            return (0, "", 0)
     
     def __fixE121(self, code, line, pos, apply=False):
         """
@@ -498,12 +500,16 @@ class Pep8Fixer(QObject):
             logical = self.__getLogical(line, pos)
             if logical:
                 # Fix by adjusting initial indent level.
-                self.__fixReindent(line, pos, logical)
-            if code == "E121":
-                msg = self.trUtf8("Indentation of continuation line corrected.")
-            elif code == "E124":
-                msg = self.trUtf8("Indentation of closing bracket corrected.")
-            return (1, msg, 0)
+                changed = self.__fixReindent(line, pos, logical)
+                if changed:
+                    if code == "E121":
+                        msg = self.trUtf8(
+                            "Indentation of continuation line corrected.")
+                    elif code == "E124":
+                        msg = self.trUtf8(
+                            "Indentation of closing bracket corrected.")
+                    return (1, msg, 0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -535,11 +541,12 @@ class Pep8Fixer(QObject):
                     indentation = self.__getIndent(text)
                     self.__source[line] = indentation + \
                         self.__indentWord + text.lstrip()
-            return (
-                1,
-                self.trUtf8(
-                    "Missing indentation of continuation line corrected."),
-                0)
+                return (
+                    1,
+                    self.trUtf8(
+                        "Missing indentation of continuation line corrected."),
+                    0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -569,13 +576,15 @@ class Pep8Fixer(QObject):
                 newText = self.__getIndent(logicalLines[0]) + text.lstrip()
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
-            return (
-                1,
-                self.trUtf8("Closing bracket aligned to opening bracket."),
-                0)
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8(
+                        "Closing bracket aligned to opening bracket."),
+                        0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -605,7 +614,8 @@ class Pep8Fixer(QObject):
                     text = self.__source[row]
                     self.__source[row] = self.__getIndent(text) + \
                         self.__indentWord + text.lstrip()
-            return (1, self.trUtf8("Indentation level changed."), 0)
+                return (1, self.trUtf8("Indentation level changed."), 0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -636,14 +646,15 @@ class Pep8Fixer(QObject):
                     self.__indentWord + text.lstrip()
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
-            return (
-                1,
-                self.trUtf8(
-                    "Indentation level of hanging indentation changed."),
-                0)
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8(
+                        "Indentation level of hanging indentation changed."),
+                        0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -689,10 +700,13 @@ class Pep8Fixer(QObject):
                     
                 if newText == text:
                     # fall back to slower method
-                    self.__fixReindent(line, pos, logical)
+                    changed = self.__fixReindent(line, pos, logical)
                 else:
                     self.__source[row] = newText
-            return (1, self.trUtf8("Visual indentation corrected."), 0)
+                    changed = True
+                if changed:
+                    return (1, self.trUtf8("Visual indentation corrected."), 0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stackLogical.append((id, code, line, pos))
@@ -714,8 +728,7 @@ class Pep8Fixer(QObject):
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (
-                0, self.trUtf8("Extraneous whitespace cannot be removed."), 0)
+            return (0, "", 0)
         
         newText = self.__fixWhitespace(text, pos, '')
         if newText == text:
@@ -741,8 +754,7 @@ class Pep8Fixer(QObject):
         text = self.__source[line]
         
         if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
-            return (
-                0, self.trUtf8("Extraneous whitespace cannot be removed."), 0)
+            return (0, "", 0)
         
         newText = self.__fixWhitespace(text, pos, ' ')
         if newText == text:
@@ -768,8 +780,7 @@ class Pep8Fixer(QObject):
         line = line - 1
         pos = pos + 1
         self.__source[line] = self.__source[line][:pos] + \
-                               " " + \
-                               self.__source[line][pos:]
+            " " + self.__source[line][pos:]
         return (1, self.trUtf8("Missing whitespace added."), 0)
     
     def __fixE251(self, code, line, pos):
@@ -879,20 +890,28 @@ class Pep8Fixer(QObject):
                 while delta < 0:
                     self.__source.insert(line, self.__getEol())
                     delta += 1
+                changed = True
             elif delta > 0:
                 # delete superfluous blank lines
                 while delta > 0:
                     del self.__source[line - 1]
                     line -= 1
                     delta -= 1
-            
-            if delta < 0:
-                msg = self.trUtf8("%n blank line(s) inserted.", "", -delta)
-            elif delta > 0:
-                msg = self.trUtf8("%n superfluous lines removed", "", delta)
+                changed = True
             else:
-                msg = ""
-            return (1, msg, 0)
+                changed = False
+            
+            if changed:
+                if delta < 0:
+                    msg = self.trUtf8(
+                        "%n blank line(s) inserted.", "", -delta)
+                elif delta > 0:
+                    msg = self.trUtf8(
+                        "%n superfluous lines removed", "", delta)
+                else:
+                    msg = ""
+                return (1, msg, 0)
+            return (0, "", 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
@@ -947,10 +966,8 @@ class Pep8Fixer(QObject):
                     index -= 1
                 else:
                     break
-            return (
-                1,
-                self.trUtf8("Superfluous blank lines after function"
-                            " decorator removed."),
+            return (1, self.trUtf8(
+                "Superfluous blank lines after function decorator removed."),
                 0)
         else:
             id = self.__getID()
@@ -1017,9 +1034,10 @@ class Pep8Fixer(QObject):
                 nextText = self.__source[line + 1]
             else:
                 nextText = ""
-            shortener = Pep8LineShortener(text, prevText, nextText,
-                 maxLength=self.__maxLineLength, eol=self.__getEol(),
-                 indentWord=self.__indentWord, isDocString=isDocString)
+            shortener = Pep8LineShortener(
+                text, prevText, nextText,
+                maxLength=self.__maxLineLength, eol=self.__getEol(),
+                indentWord=self.__indentWord, isDocString=isDocString)
             changed, newText, newNextText = shortener.shorten()
             if changed:
                 if newText != text:
@@ -1051,7 +1069,7 @@ class Pep8Fixer(QObject):
     
     def __fixE701(self, code, line, pos, apply=False):
         """
-        Private method to fix colon-separated compund statements (E701).
+        Private method to fix colon-separated compound statements (E701).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1784,7 +1802,8 @@ class Pep8LineShortener(object):
                 else:
                     first = source[:blank]
                     second = source[blank + 1:]
-                return (True,
+                return (
+                    True,
                     first + quote + " \\" + self.__eol +
                     indent + self.__indentWord + quote + second,
                     "")
@@ -1813,9 +1832,9 @@ class Pep8LineShortener(object):
                         len(indentation) + 72)
 
         MIN_CHARACTER_REPEAT = 5
-        if (len(newText) - len(newText.rstrip(newText[-1])) >= \
-                MIN_CHARACTER_REPEAT and
-                not newText[-1].isalnum()):
+        if len(newText) - len(newText.rstrip(newText[-1])) >= \
+                MIN_CHARACTER_REPEAT and \
+                not newText[-1].isalnum():
             # Trim comments that end with things like ---------
             return newText[:maxLength] + self.__eol
         elif isLast and re.match(r"\s*#+\s*\w+", newText):
@@ -1926,8 +1945,9 @@ class Pep8LineShortener(object):
                 offset = tkn[2][1]
                 first = source[:offset]
                 second = source[offset:]
-                candidates.append(indent + second.strip() + self.__eol +
-                       indent + first.strip() + self.__eol)
+                candidates.append(
+                    indent + second.strip() + self.__eol +
+                    indent + first.strip() + self.__eol)
             elif tokenType == tokenize.OP and tokenString != '=':
                 # Don't break on '=' after keyword as this violates PEP 8.
 
@@ -2035,9 +2055,8 @@ class Pep8LineShortener(object):
 
                 for ending in '([{':
                     # Avoid lonely opening. They result in longer lines.
-                    if (currentLine.endswith(ending) and
-                            len(currentLine.strip()) <= \
-                            len(self.__indentWord)):
+                    if currentLine.endswith(ending) and \
+                            len(currentLine.strip()) <= len(self.__indentWord):
                         rank += 100
 
                 if currentLine.endswith('%'):
