@@ -126,6 +126,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param fixed flag indicating a fixed issue (boolean)
         @param autofixing flag indicating, that we are fixing issues
             automatically (boolean)
+        @return reference to the created item (QTreeWidgetItem)
         """
         from .Pep8Fixer import Pep8FixableIssues
         
@@ -163,6 +164,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm.setData(0, self.messageRole, message)
         itm.setData(0, self.fixableRole, fixable)
         itm.setData(0, self.codeRole, code)
+        
+        return itm
     
     def __modifyFixedResultItem(self, itm, text, fixed):
         """
@@ -413,6 +416,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         )
                         report = styleGuide.check_files([file])
                         report.errors.sort(key=lambda a: a[1])
+                    deferredFixes = {}
                     for error in report.errors:
                         fname, lineno, position, text = error
                         if lineno > len(source):
@@ -420,15 +424,35 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
                                 source[lineno - 1].strip()):
                             self.noResults = False
-                            fixed = False
                             if fixer:
-                                fixed, msg = fixer.fixIssue(lineno, position, text)
-                                if fixed:
+                                res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                                if res == 1:
                                     text += "\n" + \
                                             self.trUtf8("Fix: {0}").format(msg)
-                            self.__createResultItem(
-                                fname, lineno, position, text, fixed, fixIssues)
-                    fixer and fixer.saveFile(encoding)
+                                    self.__createResultItem(
+                                        fname, lineno, position, text, True, True)
+                                elif res == 0:
+                                    self.__createResultItem(
+                                        fname, lineno, position, text, False, True)
+                                else:
+                                    itm = self.__createResultItem(
+                                        fname, lineno, position,
+                                        text, False, False)
+                                    deferredFixes[id_] = itm
+                            else:
+                                self.__createResultItem(
+                                    fname, lineno, position, text, False, False)
+                    if fixer:
+                        deferredResults = fixer.finalize()
+                        for id_ in deferredResults:
+                            fixed, msg = deferredResults[id_]
+                            itm = deferredFixes[id_]
+                            if fixed == 1:
+                                text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                                self.__modifyFixedResultItem(itm, text, True)
+                            else:
+                                self.__modifyFixedResultItem(itm, "", False)
+                        fixer.saveFile(encoding)
                     self.__updateStatistics(report.counters, fixer)
                     progress += 1
             finally:
@@ -753,6 +777,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     progress += 1
                     continue
                 
+                deferredFixes = {}
                 fixer = Pep8Fixer(self.__project, file, source,
                                   fixCodes, noFixCodes, maxLineLength,
                                   True)  # always fix in place
@@ -762,12 +787,24 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     (lineno, position, text), itm = error
                     if lineno > len(source):
                         lineno = len(source)
-                    fixed, msg = fixer.fixIssue(lineno, position, text)
-                    if fixed:
+                    fixed, msg, id_ = fixer.fixIssue(lineno, position, text)
+                    if fixed == 1:
                         text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        self.__modifyFixedResultItem(itm, text, True)
+                    elif fixed == 0:
+                        self.__modifyFixedResultItem(itm, "", False)
                     else:
-                        text = ""
-                    self.__modifyFixedResultItem(itm, text, fixed)
+                        # remember item for the deferred fix
+                        deferredFixes[id_] = itm
+                deferredResults = fixer.finalize()
+                for id_ in deferredResults:
+                    fixed, msg = deferredResults[id_]
+                    itm = deferredFixes[id_]
+                    if fixed == 1:
+                        text = "\n" + self.trUtf8("Fix: {0}").format(msg)
+                        self.__modifyFixedResultItem(itm, text, True)
+                    else:
+                        self.__modifyFixedResultItem(itm, "", False)
                 fixer.saveFile(encoding)
                 
                 self.__updateFixerStatistics(fixer)
