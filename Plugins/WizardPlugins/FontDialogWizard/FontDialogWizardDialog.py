@@ -31,8 +31,8 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
         
         self.font = None
         
@@ -69,8 +69,8 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
     @pyqtSlot()
     def on_fontButton_clicked(self):
         """
-        Private slot to handle the button press to select a font via a font selection
-        dialog.
+        Private slot to handle the button press to select a font via a
+        font selection dialog.
         """
         if self.font is None:
             font, ok = QFontDialog.getFont()

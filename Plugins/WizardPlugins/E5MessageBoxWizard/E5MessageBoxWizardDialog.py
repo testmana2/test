@@ -97,8 +97,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         
         self.defaultCombo.addItems(self.buttonsList)
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
         
         self.__enabledGroups()
 
@@ -134,7 +134,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rInformation_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rInformation radio button.
+        Private slot to handle the toggled signal of the rInformation
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -143,7 +144,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rQuestion_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rQuestion radio button.
+        Private slot to handle the toggled signal of the rQuestion
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -152,7 +154,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rWarning_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rWarning radio button.
+        Private slot to handle the toggled signal of the rWarning
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -161,7 +164,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rCritical_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rCritical radio button.
+        Private slot to handle the toggled signal of the rCritical
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -170,7 +174,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rYesNo_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rYesNo radio button.
+        Private slot to handle the toggled signal of the rYesNo
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -179,7 +184,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rRetryAbort_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rRetryAbort radio button.
+        Private slot to handle the toggled signal of the rRetryAbort
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -188,7 +194,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rOkToClearData_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rOkToClearData radio button.
+        Private slot to handle the toggled signal of the rOkToClearData
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -197,7 +204,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rAbout_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rAbout radio button.
+        Private slot to handle the toggled signal of the rAbout
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -206,7 +214,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rAboutQt_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rAboutQt radio button.
+        Private slot to handle the toggled signal of the rAboutQt
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -215,7 +224,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     @pyqtSlot(bool)
     def on_rStandard_toggled(self, checked):
         """
-        Private slot to handle the toggled signal of the rStandard radio button.
+        Private slot to handle the toggled signal of the rStandard
+        radio button.
         
         @param on toggle state (boolean) (ignored)
         """
@@ -289,7 +299,8 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             if buttons == E5MessageBox.NoButton:
                 buttons = E5MessageBox.Ok
             
-            defaultButton = self.buttonsCodeListBinary[self.defaultCombo.currentIndex()]
+            defaultButton = self.buttonsCodeListBinary[
+                self.defaultCombo.currentIndex()]
             
             if self.rInformation.isChecked():
                 E5MessageBox.information(self,
@@ -403,10 +414,13 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         istring2 = istring + indString
         joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
         if withIntro:
-            btnCode = ',{0}{1}E5MessageBox.StandardButtons('.format(os.linesep, istring)
+            btnCode = ',{0}{1}E5MessageBox.StandardButtons('.format(
+                os.linesep, istring)
         else:
-            btnCode = 'E5MessageBox.StandardButtons('.format(os.linesep, istring)
-        btnCode += '{0}{1}{2})'.format(os.linesep, istring2, joinstring.join(buttons))
+            btnCode = 'E5MessageBox.StandardButtons('.format(
+                os.linesep, istring)
+        btnCode += '{0}{1}{2})'.format(
+            os.linesep, istring2, joinstring.join(buttons))
         
         return btnCode
     
@@ -459,27 +473,29 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         
         if not self.rStandard.isChecked():
             if self.rAbout.isChecked():
-                msgdlg = "E5MessageBox.about({0},{1}".format(parent, os.linesep)
+                msgdlg = "E5MessageBox.about({0}".format(os.linesep)
             elif self.rAboutQt.isChecked():
-                msgdlg = "E5MessageBox.aboutQt({0},{1}".format(parent, os.linesep)
+                msgdlg = "E5MessageBox.aboutQt({0}".format(os.linesep)
             elif self.rInformation.isChecked():
-                msgdlg = "res = E5MessageBox.information({0},{1}".format(
-                    parent, os.linesep)
+                msgdlg = "res = E5MessageBox.information({0}".format(
+                    os.linesep)
             elif self.rQuestion.isChecked():
-                msgdlg = "res = E5MessageBox.question({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.question({0}".format(os.linesep)
             elif self.rWarning.isChecked():
-                msgdlg = "res = E5MessageBox.warning({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.warning({0}".format(os.linesep)
             elif self.rCritical.isChecked():
-                msgdlg = "res = E5MessageBox.critical({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.critical({0}".format(os.linesep)
             elif self.rYesNo.isChecked():
-                msgdlg = "res = E5MessageBox.yesNo({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.yesNo({0}".format(os.linesep)
             elif self.rRetryAbort.isChecked():
-                msgdlg = "res = E5MessageBox.retryAbort({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.retryAbort({0}".format(os.linesep)
             elif self.rOkToClearData.isChecked():
-                msgdlg = "res = E5MessageBox.okToClearData({0},{1}".format(
-                    parent, os.linesep)
+                msgdlg = "res = E5MessageBox.okToClearData({0}".format(
+                    os.linesep)
             
-            msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
+            msgdlg += '{0}{1}{2}'.format(istring, parent, os.linesep)
+            msgdlg += '{0}self.trUtf8("{1}")'.format(
+                istring, self.eCaption.text())
             
             if not self.rAboutQt.isChecked():
                 msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
@@ -493,29 +509,37 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 msgdlg += self.__getDefaultButtonCode(istring)
             elif self.rYesNo.isChecked():
                 if not self.iconQuestion.isChecked():
-                    msgdlg += ',{0}{1}icon={2}'.format(os.linesep, istring, icon)
+                    msgdlg += ',{0}{1}icon={2}'.format(
+                        os.linesep, istring, icon)
                 if self.yesDefaultCheck.isChecked():
-                    msgdlg += ',{0}{1}yesDefault=True'.format(os.linesep, istring)
+                    msgdlg += ',{0}{1}yesDefault=True'.format(
+                        os.linesep, istring)
             elif self.rRetryAbort.isChecked():
                 if not self.iconQuestion.isChecked():
-                    msgdlg += ',{0}{1}icon={2}'.format(os.linesep, istring, icon)
+                    msgdlg += ',{0}{1}icon={2}'.format(
+                        os.linesep, istring, icon)
             elif self.rOkToClearData.isChecked():
                 saveFunc = self.saveFuncEdit.text()
                 if saveFunc == "":
                     saveFunc = "lambda: True"
                 msgdlg += ',{0}{1}{2}'.format(os.linesep, istring, saveFunc)
         else:
-            msgdlg = "E5MessageBox.E5MessageBox({0}, {1}".format(icon, os.linesep)
-            msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
+            msgdlg = "E5MessageBox.E5MessageBox({0}".format(os.linesep)
+            msgdlg += '{0}{1}{2}'.format(istring, icon, os.linesep)
+            msgdlg += '{0}self.trUtf8("{1}")'.format(
+                istring, self.eCaption.text())
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
             if self.modalCheck.isChecked():
                 msgdlg += ',{0}{1}modal=True'.format(os.linesep, istring)
-            btnCode = self.__getStandardButtonCode(istring, indString, withIntro=False)
+            btnCode = self.__getStandardButtonCode(
+                istring, indString, withIntro=False)
             if btnCode:
-                msgdlg += ',{0}{1}buttons={2}'.format(os.linesep, istring, btnCode)
+                msgdlg += ',{0}{1}buttons={2}'.format(
+                    os.linesep, istring, btnCode)
             if not self.parentNone.isChecked():
-                msgdlg += ',{0}{1}parent={2}'.format(os.linesep, istring, parent)
+                msgdlg += ',{0}{1}parent={2}'.format(
+                    os.linesep, istring, parent)
         
         msgdlg += '){0}'.format(estring)
         return msgdlg

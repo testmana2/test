@@ -98,8 +98,8 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         self.defaultCombo.addItems(self.buttonsList)
         
-        self.bTest = \
-            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        self.bTest = self.buttonBox.addButton(
+            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
     
     def __testQt42(self):
         """
@@ -145,31 +145,36 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         if buttons == QMessageBox.NoButton:
             buttons = QMessageBox.Ok
         
-        defaultButton = self.buttonsCodeListBinary[self.defaultCombo.currentIndex()]
+        defaultButton = self.buttonsCodeListBinary[
+            self.defaultCombo.currentIndex()]
         
         if self.rInformation.isChecked():
-            QMessageBox.information(self,
+            QMessageBox.information(
+                self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rQuestion.isChecked():
-            QMessageBox.question(self,
+            QMessageBox.question(
+                self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rWarning.isChecked():
-            QMessageBox.warning(self,
+            QMessageBox.warning(
+                self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
         elif self.rCritical.isChecked():
-            QMessageBox.critical(self,
+            QMessageBox.critical(
+                self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 QMessageBox.StandardButtons(buttons),
@@ -191,12 +196,14 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         Private method to test the selected options.
         """
         if self.rAbout.isChecked():
-            QMessageBox.about(None,
+            QMessageBox.about(
+                None,
                 self.eCaption.text(),
                 self.eMessage.toPlainText()
             )
         elif self.rAboutQt.isChecked():
-            QMessageBox.aboutQt(None,
+            QMessageBox.aboutQt(
+                None,
                 self.eCaption.text()
             )
         else:
@@ -206,9 +213,9 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         """
         Private method to enable/disable some group boxes.
         """
-        self.standardButtons.setEnabled(not self.rAbout.isChecked() and \
+        self.standardButtons.setEnabled(not self.rAbout.isChecked() and
                                         not self.rAboutQt.isChecked()
-        )
+                                        )
         
         self.eMessage.setEnabled(not self.rAboutQt.isChecked())
     
@@ -278,11 +285,14 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         istring2 = istring + indString
         joinstring = ' | \\{0}{1}'.format(os.linesep, istring2)
-        btnCode = ',{0}{1}QMessageBox.StandardButtons('.format(os.linesep, istring)
-        btnCode += '{0}{1}{2})'.format(os.linesep, istring2, joinstring.join(buttons))
+        btnCode = ',{0}{1}QMessageBox.StandardButtons('.format(
+            os.linesep, istring)
+        btnCode += '{0}{1}{2})'.format(
+            os.linesep, istring2, joinstring.join(buttons))
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
-            btnCode += ',{0}{1}{2}'.format(os.linesep, istring,
+            btnCode += ',{0}{1}{2}'.format(
+                os.linesep, istring,
                 self.buttonsCodeListText[defaultIndex])
         return btnCode
     
@@ -310,18 +320,19 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
                 parent = "None"
         
         if self.rAbout.isChecked():
-            msgdlg = "QMessageBox.about({0},{1}".format(parent, os.linesep)
+            msgdlg = "QMessageBox.about({0}".format(os.linesep)
         elif self.rAboutQt.isChecked():
-            msgdlg = "QMessageBox.aboutQt({0},{1}".format(parent, os.linesep)
+            msgdlg = "QMessageBox.aboutQt({0}".format(os.linesep)
         elif self.rInformation.isChecked():
-            msgdlg = "res = QMessageBox.information({0},{1}".format(parent, os.linesep)
+            msgdlg = "res = QMessageBox.information({0}".format(os.linesep)
         elif self.rQuestion.isChecked():
-            msgdlg = "res = QMessageBox.question({0},{1}".format(parent, os.linesep)
+            msgdlg = "res = QMessageBox.question({0}".format(os.linesep)
         elif self.rWarning.isChecked():
-            msgdlg = "res = QMessageBox.warning({0},{1}".format(parent, os.linesep)
+            msgdlg = "res = QMessageBox.warning({0}".format(os.linesep)
         else:
-            msgdlg = "res = QMessageBox.critical({0},{1}".format(parent, os.linesep)
+            msgdlg = "res = QMessageBox.critical({0}".format(os.linesep)
         
+        msgdlg += '{0}{1}{2}'.format(istring, parent, os.linesep)
         msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
         if not self.rAboutQt.isChecked():
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
