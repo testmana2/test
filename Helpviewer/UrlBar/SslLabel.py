@@ -7,6 +7,8 @@
 Module implementing the label to show some SSL info.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, pyqtSignal, QPoint
 from PyQt4.QtGui import QLabel
 
@@ -26,7 +28,7 @@ class SslLabel(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SslLabel, self).__init__(parent)
         
         self.setFocusPolicy(Qt.NoFocus)
         self.setCursor(Qt.ArrowCursor)
@@ -40,7 +42,7 @@ class SslLabel(QLabel):
         if evt.button() == Qt.LeftButton:
             self.clicked.emit(evt.globalPos())
         else:
-            super().mouseReleaseEvent(evt)
+            super(SslLabel, self).mouseReleaseEvent(evt)
     
     def mouseDoubleClickEvent(self, evt):
         """
@@ -51,7 +53,7 @@ class SslLabel(QLabel):
         if evt.button() == Qt.LeftButton:
             self.clicked.emit(evt.globalPos())
         else:
-            super().mouseDoubleClickEvent(evt)
+            super(SslLabel, self).mouseDoubleClickEvent(evt)
     
     def setValidity(self, valid):
         """

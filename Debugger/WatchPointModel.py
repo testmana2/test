@@ -7,6 +7,8 @@
 Module implementing the Watch expression model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
@@ -22,7 +24,7 @@ class WatchPointModel(QAbstractItemModel):
         
         @param reference to the parent widget (QObject)
         """
-        super().__init__(parent)
+        super(WatchPointModel, self).__init__(parent)
         
         self.watchpoints = []
         self.header = [

@@ -10,6 +10,8 @@
 #   - Sebastian Werner <info@sebastian-werner.net> (Python Port) (2010)
 #
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import jasy.js.parse.Node
 
 class VanillaBuilder:

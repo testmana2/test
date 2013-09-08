@@ -7,6 +7,8 @@
 Module implementing a previewer widget for HTML, Markdown and ReST files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import threading
 import re
@@ -35,7 +37,7 @@ class Previewer(QWidget, Ui_Previewer):
         @param splitter reference to the embedding splitter (QSplitter)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Previewer, self).__init__(parent)
         self.setupUi(self)
         
         self.__vm = viewmanager
@@ -73,7 +75,7 @@ class Previewer(QWidget, Ui_Previewer):
         """
         Public method to show the preview widget.
         """
-        super().show()
+        super(Previewer, self).show()
         if self.__firstShow:
             self.__splitter.restoreState(Preferences.getUI("PreviewSplitterState"))
             self.jsCheckBox.setChecked(Preferences.getUI("ShowFilePreviewJS"))
@@ -85,7 +87,7 @@ class Previewer(QWidget, Ui_Previewer):
         """
         Public method to hide the preview widget.
         """
-        super().hide()
+        super(Previewer, self).hide()
         self.__typingTimer.stop()
     
     def shutdown(self):
@@ -333,7 +335,7 @@ class PreviewProcessingThread(QThread):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__()
+        super(PreviewProcessingThread, self).__init__()
         
         self.__lock = threading.Lock()
     

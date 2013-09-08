@@ -7,6 +7,8 @@
 Module implementing the task filter configuration dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Task import Task
@@ -25,7 +27,7 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         @param taskFilter the task filter object to be configured
         @param parent the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(TaskFilterConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.typeCombo.addItem("", Task.TypeNone)

@@ -7,6 +7,12 @@
 Module implementing the VCS status monitor thread class for Mercurial.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 from PyQt4.QtCore import QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread

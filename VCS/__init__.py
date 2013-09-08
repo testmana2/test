@@ -12,6 +12,8 @@ some repository information and an abstract base class. The individual
 interfaces (i.e. CVS) have to be subclasses of this base class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from E5Gui.E5Application import e5App
 
 ######################################################################

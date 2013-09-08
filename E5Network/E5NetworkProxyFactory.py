@@ -7,6 +7,8 @@
 Module implementing a network proxy factory.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QUrl, QCoreApplication
@@ -74,7 +76,7 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
         """
         Constructor
         """
-        super().__init__()
+        super(E5NetworkProxyFactory, self).__init__()
     
     def queryProxy(self, query):
         """

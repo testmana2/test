@@ -7,6 +7,8 @@
 Module implementing the multi project management functionality.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QFileInfo, QFile, QIODevice, QObject
@@ -62,7 +64,7 @@ class MultiProject(QObject):
         @param parent parent widget (usually the ui object) (QWidget)
         @param filename optional filename of a multi project file to open (string)
         """
-        super().__init__(parent)
+        super(MultiProject, self).__init__(parent)
         
         self.ui = parent
         self.projectObject = project

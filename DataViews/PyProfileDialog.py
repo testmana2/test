@@ -7,6 +7,8 @@
 Module implementing a dialog to display profile data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import pickle
 
@@ -58,7 +60,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PyProfileDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

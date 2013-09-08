@@ -7,6 +7,8 @@
 Module defining common data to be used by all modules.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 
@@ -189,19 +191,24 @@ def getQtBinariesPath():
 
 
 ################################################################################
-## functions for searching a Python2 interpreter
+## functions for searching a Python2/3 interpreter
 ################################################################################
 
 
-def findPython2Interpreters():
+def findPythonInterpreters(pyVersion):
     """
-    Module function for searching a Python2 interpreter.
+    Module function for searching a Python interpreter.
     
+    @param pyVersion major Python version
     @return list of interpreters found (list of strings)
     """
-    winPathList = ["C:\\Python25", "C:\\Python26", "C:\\Python27", "C:\\Python28"]
+    if pyVersion == 2:
+        winPathList = ["C:\\Python25", "C:\\Python26", "C:\\Python27", "C:\\Python28"]
+        posixVersionsList = ["2.5", "2.6", "2.7", "2.8"]
+    else:
+        winPathList = ["C:\\Python3{0}".format(x) for x in range(5)]
+        posixVersionsList = ["3.{0}".format(x) for x in range(5)]
     posixPathList = ["/usr/bin", "/usr/local/bin"]
-    posixVersionsList = ["2.5", "2.6", "2.7", "2.8"]
     
     interpreters = []
     if isWindowsPlatform():

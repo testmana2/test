@@ -7,6 +7,8 @@
 Module implementing a class to read XBEL bookmark files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, QIODevice, \
     QFile, QCoreApplication, QXmlStreamNamespaceDeclaration, QDateTime, Qt
 
@@ -37,7 +39,7 @@ class XbelReader(QXmlStreamReader):
         """
         Constructor
         """
-        super().__init__()
+        super(XbelReader, self).__init__()
         
         self.__resolver = XmlEntityResolver()
         self.setEntityResolver(self.__resolver)

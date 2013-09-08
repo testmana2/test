@@ -7,6 +7,8 @@
 Module implementing a disk cache respecting privacy.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtNetwork import QNetworkDiskCache
 

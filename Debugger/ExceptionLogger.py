@@ -7,6 +7,8 @@
 Module implementing the Exception Logger widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QMenu
 
@@ -30,7 +32,7 @@ class ExceptionLogger(QTreeWidget):
         
         @param parent the parent widget of this widget
         """
-        super().__init__(parent)
+        super(ExceptionLogger, self).__init__(parent)
         self.setObjectName("ExceptionLogger")
         
         self.setWindowTitle(self.trUtf8("Exceptions"))

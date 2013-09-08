@@ -9,6 +9,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from pygments.formatter import Formatter
 from pygments.util import OptionError, get_choice_opt, b
 from pygments.token import Token

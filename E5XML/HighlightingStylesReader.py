@@ -8,6 +8,8 @@
 Module implementing a class for reading a highlighting styles XML file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QColor, QFont
 
 from .Config import highlightingStylesFileFormatVersion

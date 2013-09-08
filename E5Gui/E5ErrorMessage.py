@@ -7,6 +7,8 @@
 Module implementing a specialized error message dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import qInstallMsgHandler, QCoreApplication, QtDebugMsg, \
     QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, QMetaObject, Qt, Q_ARG, \
     QSettings
@@ -30,7 +32,7 @@ class E5ErrorMessage(QErrorMessage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ErrorMessage, self).__init__(parent)
         
         self.settings = QSettings(QSettings.IniFormat,
             QSettings.UserScope,
@@ -66,9 +68,9 @@ class E5ErrorMessage(QErrorMessage):
         """
         if not self.__filterMessage(message):
             if msgType:
-                super().showMessage(message, msgType)
+                super(E5ErrorMessage, self).showMessage(message, msgType)
             else:
-                super().showMessage(message)
+                super(E5ErrorMessage, self).showMessage(message)
     
     def editMessageFilters(self):
         """

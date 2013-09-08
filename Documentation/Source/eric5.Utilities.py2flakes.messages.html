@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric5.UtilitiesPython2.py2flakes.messages</title>
+<title>eric5.Utilities.py2flakes.messages</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,7 +19,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.UtilitiesPython2.py2flakes.messages</h1>
+<h1>eric5.Utilities.py2flakes.messages</h1>
 
 <h3>Global Attributes</h3>
 <table>
@@ -43,8 +43,11 @@ a { color: #BA6D36; }
 <td><a href="#Message">Message</a></td>
 <td>Class defining the base for all specific message classes.</td>
 </tr><tr>
-<td><a href="#RedefinedFunction">RedefinedFunction</a></td>
-<td>Class defining the "Redefined Function" message.</td>
+<td><a href="#Redefined">Redefined</a></td>
+<td>Class defining the "Redefined" message.</td>
+</tr><tr>
+<td><a href="#RedefinedInListComp">RedefinedInListComp</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#RedefinedWhileUnused">RedefinedWhileUnused</a></td>
 <td>Class defining the "Redefined While Unused" message.</td>
@@ -67,7 +70,10 @@ a { color: #BA6D36; }
 </table>
 <h3>Functions</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#QT_TRANSLATE_NOOP">QT_TRANSLATE_NOOP</a></td>
+<td>Function to tell 'lupdate' which strings to keep for translation.</td>
+</tr>
 </table>
 <hr /><hr />
 <a NAME="DuplicateArgument" ID="DuplicateArgument"></a>
@@ -322,10 +328,10 @@ tuple containing file name, line number and message
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="RedefinedFunction" ID="RedefinedFunction"></a>
-<h2>RedefinedFunction</h2>
+<a NAME="Redefined" ID="Redefined"></a>
+<h2>Redefined</h2>
 <p>
-    Class defining the "Redefined Function" message.
+    Class defining the "Redefined" message.
 </p>
 <h3>Derived from</h3>
 Message
@@ -340,7 +346,7 @@ Message
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#RedefinedFunction.__init__">RedefinedFunction</a></td>
+<td><a href="#Redefined.__init__">Redefined</a></td>
 <td>Constructor</td>
 </tr>
 </table>
@@ -348,9 +354,9 @@ Message
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="RedefinedFunction.__init__" ID="RedefinedFunction.__init__"></a>
-<h4>RedefinedFunction (Constructor)</h4>
-<b>RedefinedFunction</b>(<i>filename, lineno, name, orig_lineno</i>)
+<a NAME="Redefined.__init__" ID="Redefined.__init__"></a>
+<h4>Redefined (Constructor)</h4>
+<b>Redefined</b>(<i>filename, lineno, name, orig_lineno</i>)
 <p>
         Constructor
 </p><dl>
@@ -363,6 +369,52 @@ line number (integer)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the redefined function (string)
+</dd><dt><i>orig_lineno</i></dt>
+<dd>
+line number of the original definition (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="RedefinedInListComp" ID="RedefinedInListComp"></a>
+<h2>RedefinedInListComp</h2>
+
+<h3>Derived from</h3>
+Message
+<h3>Class Attributes</h3>
+<table>
+<tr><td>message</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#RedefinedInListComp.__init__">RedefinedInListComp</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="RedefinedInListComp.__init__" ID="RedefinedInListComp.__init__"></a>
+<h4>RedefinedInListComp (Constructor)</h4>
+<b>RedefinedInListComp</b>(<i>filename, lineno, name, orig_lineno</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+line number (integer)
+</dd><dt><i>name</i></dt>
+<dd>
+name of the redefined object (string)
 </dd><dt><i>orig_lineno</i></dt>
 <dd>
 line number of the original definition (integer)
@@ -645,6 +697,27 @@ line number (integer)
 </dd><dt><i>name</i></dt>
 <dd>
 name of the unused variable (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="QT_TRANSLATE_NOOP" ID="QT_TRANSLATE_NOOP"></a>
+<h2>QT_TRANSLATE_NOOP</h2>
+<b>QT_TRANSLATE_NOOP</b>(<i>mod, txt</i>)
+<p>
+    Function to tell 'lupdate' which strings to keep for translation.
+</p><dl>
+<dt><i>mod</i></dt>
+<dd>
+module name
+</dd><dt><i>txt</i></dt>
+<dd>
+translatable string
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the untranslated! string
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

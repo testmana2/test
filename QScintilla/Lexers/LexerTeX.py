@@ -7,6 +7,8 @@
 Module implementing a Tex lexer with some additional methods.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.Qsci import QsciLexerTeX
 
 from .Lexer import Lexer
@@ -23,7 +25,7 @@ class LexerTeX(QsciLexerTeX, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        super(LexerTeX, self).__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "%"

@@ -389,10 +389,10 @@ def maximum_line_length(physical_line, max_line_length):
     length = len(line)
     if length > max_line_length and not noqa(line):
         if hasattr(line, 'decode'):   # Python 2
-            # The line could contain multi-byte characters
+        # The line could contain multi-byte characters
             try:
                 length = len(line.decode('utf-8'))
-            except UnicodeError:
+            except (UnicodeDecodeError, UnicodeEncodeError):
                 pass
         if length > max_line_length:
             return max_line_length, "E501", length, max_line_length
@@ -1430,7 +1430,8 @@ class Checker(object):
         for name, check, argument_names in self._physical_checks:
             result = self.run_check(check, argument_names)
             if result is not None:
-                offset, code, *args = result
+                offset, code = result[:2]
+                args = result[2:]
                 self.report_error_args(self.line_number, offset, code, check,
                     *args)
 
@@ -1490,7 +1491,8 @@ class Checker(object):
             if self.verbose >= 4:
                 print('   ' + name)
             for result in self.run_check(check, argument_names):
-                offset, code, *args = result
+                offset, code = result[:2]
+                args = result[2:]
                 if isinstance(offset, tuple):
                     orig_number, orig_offset = offset
                 else:
@@ -1509,9 +1511,10 @@ class Checker(object):
             return self.report_invalid_syntax()
         for name, cls, _ in self._ast_checks:
             checker = cls(tree, self.filename)
-            for lineno, offset, code, check, *args in checker.run():
+            for args in checker.run():
+                lineno = args.pop(0)
                 if not noqa(self.lines[lineno - 1]):
-                    self.report_error_args(lineno, offset, code, check, *args)
+                    self.report_error_args(lineno, *args)
 
     def generate_tokens(self):
         if self._io_error:

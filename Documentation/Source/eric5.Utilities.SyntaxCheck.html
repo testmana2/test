@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric5.UtilitiesPython2.Tools</title>
+<title>eric5.Utilities.SyntaxCheck</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,13 +19,13 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.UtilitiesPython2.Tools</h1>
+<h1>eric5.Utilities.SyntaxCheck</h1>
 <p>
-Module implementing tool functions.
+Module implementing the syntax check for Python 2/3.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>coding_regexps</td></tr>
+<tr><td>codingBytes_regexps</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -34,37 +34,74 @@ Module implementing tool functions.
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#compile_and_check">compile_and_check</a></td>
+<td>Function to compile one Python source file to Python bytecode and to perform a pyflakes check.</td>
+</tr><tr>
 <td><a href="#decode">decode</a></td>
-<td>Function to decode a text.</td>
+<td>Function to decode some byte text into a string.</td>
 </tr><tr>
 <td><a href="#extractLineFlags">extractLineFlags</a></td>
 <td>Function to extract flags starting and ending with '__' from a line comment.</td>
 </tr><tr>
-<td><a href="#get_coding">get_coding</a></td>
-<td>Function to get the coding of a text.</td>
+<td><a href="#get_codingBytes">get_codingBytes</a></td>
+<td>Function to get the coding of a bytes text.</td>
 </tr><tr>
 <td><a href="#normalizeCode">normalizeCode</a></td>
 <td>Function to normalize the given code.</td>
 </tr><tr>
 <td><a href="#readEncodedFile">readEncodedFile</a></td>
-<td>Function to read a file and decode its contents into proper text.</td>
+<td>Function to read a file and decode it's contents into proper text.</td>
 </tr>
 </table>
+<hr /><hr />
+<a NAME="compile_and_check" ID="compile_and_check"></a>
+<h2>compile_and_check</h2>
+<b>compile_and_check</b>(<i>file_, codestring="", checkFlakes=True, ignoreStarImportWarnings=False</i>)
+<p>
+    Function to compile one Python source file to Python bytecode
+    and to perform a pyflakes check.
+</p><dl>
+<dt><i>file_</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+string containing the code to compile (string)
+</dd><dt><i>checkFlakes=</i></dt>
+<dd>
+flag indicating to do a pyflakes check (boolean)
+</dd><dt><i>ignoreStarImportWarnings=</i></dt>
+<dd>
+flag indicating to
+        ignore 'star import' warnings (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+A tuple indicating status (True = an error was found), the
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). If checkFlakes is True, a list of strings containing the
+        warnings (marker, file name, line number, message)
+        The values are only valid, if the status is True.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="decode" ID="decode"></a>
 <h2>decode</h2>
 <b>decode</b>(<i>text</i>)
 <p>
-    Function to decode a text.
+    Function to decode some byte text into a string.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-text to decode (string)
+byte text to decode (bytes)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-decoded text and encoding
+tuple of decoded text and encoding (string, string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -93,15 +130,15 @@ list containing the extracted flags (list of strings)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="get_coding" ID="get_coding"></a>
-<h2>get_coding</h2>
-<b>get_coding</b>(<i>text</i>)
+<a NAME="get_codingBytes" ID="get_codingBytes"></a>
+<h2>get_codingBytes</h2>
+<b>get_codingBytes</b>(<i>text</i>)
 <p>
-    Function to get the coding of a text.
+    Function to get the coding of a bytes text.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
-text to inspect (string)
+bytes text to inspect (bytes)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -133,7 +170,7 @@ normalized code (string)
 <h2>readEncodedFile</h2>
 <b>readEncodedFile</b>(<i>filename</i>)
 <p>
-    Function to read a file and decode its contents into proper text.
+    Function to read a file and decode it's contents into proper text.
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>

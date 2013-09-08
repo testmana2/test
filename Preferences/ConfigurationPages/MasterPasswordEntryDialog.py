@@ -7,6 +7,8 @@
 Module implementing a dialog to enter or change the master password.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -24,7 +26,7 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
         @param oldPasswordHash hash of the current password (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(MasterPasswordEntryDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__oldPasswordHash = oldPasswordHash

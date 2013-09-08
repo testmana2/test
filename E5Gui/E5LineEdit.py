@@ -7,6 +7,8 @@
 Module implementing specialized line edits.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, QStyleOptionFrameV2, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
@@ -26,7 +28,7 @@ class E5LineEditSideWidget(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5LineEditSideWidget, self).__init__(parent)
     
     def event(self, evt):
         """
@@ -54,7 +56,7 @@ class E5LineEdit(QLineEdit):
         @param parent reference to the parent widget (QWidget)
         @param inactiveText text to be shown on inactivity (string)
         """
-        super().__init__(parent)
+        super(E5LineEdit, self).__init__(parent)
         
         self.setMinimumHeight(22)
         
@@ -142,7 +144,7 @@ class E5LineEdit(QLineEdit):
         
         @param evt reference to the paint event (QPaintEvent)
         """
-        super().paintEvent(evt)
+        super(E5LineEdit, self).paintEvent(evt)
         
         if qVersion() < "4.7.0":
             if not self.text() and \
@@ -282,7 +284,7 @@ class E5ClearableLineEdit(E5LineEdit):
         """
         assert side in [E5LineEdit.RightSide, E5LineEdit.LeftSide]
         
-        super().__init__(parent, inactiveText)
+        super(E5ClearableLineEdit, self).__init__(parent, inactiveText)
         
         from E5Gui.E5LineEditButton import E5LineEditButton
         self.__clearButton = E5LineEditButton(self)

@@ -7,6 +7,8 @@
 Module implementing the identities management dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import copy
 
 from PyQt4.QtCore import pyqtSlot, Qt, QEvent
@@ -34,7 +36,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         @param identityName name of the identity to be selected (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcIdentitiesEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.addButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
@@ -80,7 +82,7 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
                 self.on_nicknameAddButton_clicked()
                 return True
         
-        return super().eventFilter(obj, evt)
+        return super(IrcIdentitiesEditDialog, self).eventFilter(obj, evt)
 
     def __updateIdentitiesButtons(self):
         """
@@ -431,4 +433,4 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
         self.__refreshCurrentIdentity()
         self.__manager.setIdentities(self.__identities)
         
-        super().accept()
+        super(IrcIdentitiesEditDialog, self).accept()

@@ -7,6 +7,8 @@
 Module implementing the Translations Properties dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -32,7 +34,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         @param new flag indicating the generation of a new project
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(TranslationPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.project = project

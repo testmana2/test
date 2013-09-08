@@ -7,6 +7,8 @@
 Module implementing a tree widget for the AdBlock configuration dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QAbstractItemView, QFont, QTreeWidgetItem, QInputDialog, \
     QLineEdit, QMenu, QApplication, QColor
@@ -25,7 +27,7 @@ class AdBlockTreeWidget(E5TreeWidget):
         @param subscription reference to the subscription (AdBlockSubscription)
         @param parenbt reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(AdBlockTreeWidget, self).__init__(parent)
         
         self.__subscription = subscription
         self.__topItem = None
@@ -266,4 +268,4 @@ class AdBlockTreeWidget(E5TreeWidget):
         elif evt.key() == Qt.Key_Delete:
             self.removeRule()
         else:
-            super().keyPressEvent(evt)
+            super(AdBlockTreeWidget, self).keyPressEvent(evt)

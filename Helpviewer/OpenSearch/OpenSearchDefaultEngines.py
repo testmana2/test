@@ -7,6 +7,8 @@
 Module defining the default search engines.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 OpenSearchDefaultEngines = {
     "Amazon_com": """<?xml version="1.0" encoding="UTF-8"?>
         <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">

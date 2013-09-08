@@ -7,7 +7,11 @@
 Module implementing a dialog showing a UML like class diagram.
 """
 
-import itertools
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:  # Py3
+    from itertools import zip_longest
+except ImportError:
+    from itertools import izip_longest as zip_longest
 
 from PyQt4.QtGui import QGraphicsTextItem
 
@@ -31,7 +35,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         @param file file name of a python module to be shown (string)
         @keyparam noAttrs flag indicating, that no attributes should be shown (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(UMLClassDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("UMLClassDiagramBuilder")
         
         self.file = file
@@ -204,7 +208,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         # generations across height
         y = 10.0
         for currentWidth, currentHeight, generation in \
-                itertools.zip_longest(widths, heights, generations):
+                zip_longest(widths, heights, generations):
             x = 10.0
             # whiteSpace is the space between any two elements
             whiteSpace = (width - currentWidth - 20) / (len(generation) - 1.0 or 2.0)

@@ -7,9 +7,15 @@
 Module implementing a widget to select a symbol in various formats.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import unicodedata
-import html.entities
+try:  # Py3
+    import html.entities as html_entities
+except (ImportError):
+    chr = unichr
+    import htmlentitydefs as html_entities    # __IGNORE_WARNING__
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, QModelIndex, Qt, \
     qVersion
@@ -32,7 +38,7 @@ class SymbolsModel(QAbstractTableModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SymbolsModel, self).__init__(parent)
         
         self.__headerData = [
             self.trUtf8("Code"),
@@ -337,8 +343,8 @@ class SymbolsModel(QAbstractTableModel):
             elif col == 2:
                 return "0x{0:04x}".format(id)
             elif col == 3:
-                if id in html.entities.codepoint2name:
-                    return "&{0};".format(html.entities.codepoint2name[id])
+                if id in html_entities.codepoint2name:
+                    return "&{0};".format(html_entities.codepoint2name[id])
             elif col == 4:
                 return unicodedata.name(chr(id), '').title()
         
@@ -452,7 +458,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SymbolsWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

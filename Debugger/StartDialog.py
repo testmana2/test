@@ -7,6 +7,8 @@
 Module implementing the Start Program dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -55,7 +57,7 @@ class StartDialog(QDialog):
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
-        super().__init__(parent)
+        super(StartDialog, self).__init__(parent)
         self.setModal(True)
         
         self.type = type

@@ -7,6 +7,8 @@
 Module implementing an importer for XBEL files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QCoreApplication, QXmlStreamReader, QDate, Qt
@@ -85,7 +87,7 @@ class XbelImporter(BookmarksImporter):
         @param id source ID (string)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(id, parent)
+        super(XbelImporter, self).__init__(id, parent)
         
         self.__fileName = ""
     

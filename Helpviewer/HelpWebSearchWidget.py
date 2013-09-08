@@ -7,6 +7,8 @@
 Module implementing a web search widget for the web browser.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
 from PyQt4.QtGui import QMenu, QStandardItem, QStandardItemModel, \
     QCompleter, QFont, QIcon, QPixmap
@@ -33,7 +35,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HelpWebSearchWidget, self).__init__(parent)
         
         from E5Gui.E5LineEdit import E5LineEdit
         from E5Gui.E5LineEditButton import E5LineEditButton
@@ -303,7 +305,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         """
         self.__recentSearches = []
         self.__setupCompleterMenu()
-        super().clear()
+        super(HelpWebSearchWidget, self).clear()
         self.clearFocus()
     
     def preferencesChanged(self):
@@ -380,4 +382,4 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         elif evt.button() == Qt.XButton2:
             self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
         else:
-            super().mousePressEvent(evt)
+            super(HelpWebSearchWidget, self).mousePressEvent(evt)

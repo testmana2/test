@@ -7,6 +7,8 @@
 Module implementing a writer for open search engine descriptions.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QXmlStreamWriter, QIODevice
 
 
@@ -18,7 +20,7 @@ class OpenSearchWriter(QXmlStreamWriter):
         """
         Constructor
         """
-        super().__init__()
+        super(OpenSearchWriter, self).__init__()
         
         self.setAutoFormatting(True)
     

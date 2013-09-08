@@ -7,6 +7,8 @@
 Module implementing the bookmark model class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, QByteArray, \
     QDataStream, QIODevice, QBuffer, QMimeData
 
@@ -31,7 +33,7 @@ class BookmarksModel(QAbstractItemModel):
         @param manager reference to the bookmark manager object (BookmarksManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(BookmarksModel, self).__init__(parent)
         
         self.__endMacro = False
         self.__bookmarksManager = manager

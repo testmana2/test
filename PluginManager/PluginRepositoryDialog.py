@@ -8,6 +8,8 @@
 Module implementing a dialog showing the available plugins.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 import zipfile
@@ -57,7 +59,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginRepositoryWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.__updateButton = \
@@ -536,7 +538,7 @@ class PluginRepositoryDialog(QDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginRepositoryDialog, self).__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -577,7 +579,7 @@ class PluginRepositoryWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginRepositoryWindow, self).__init__(parent)
         self.cw = PluginRepositoryWidget(self, external=True)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

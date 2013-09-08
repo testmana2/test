@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the user data for a minimal hgrc file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_MercurialUserDataDialog import Ui_MercurialUserDataDialog
@@ -22,7 +24,7 @@ class MercurialUserDataDialog(QDialog, Ui_MercurialUserDataDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(MercurialUserDataDialog, self).__init__(parent)
         self.setupUi(self)
     
     def getData(self):

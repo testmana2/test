@@ -7,6 +7,8 @@
 Module to read the plug-in repository contents file.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .Config import pluginRepositoryFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 

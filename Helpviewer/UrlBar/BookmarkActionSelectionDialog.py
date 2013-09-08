@@ -7,6 +7,8 @@
 Module implementing a dialog to select the action to be performed on the bookmark.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
 
@@ -32,7 +34,7 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
         @param url URL to be worked on (QUrl)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BookmarkActionSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__action = self.Undefined

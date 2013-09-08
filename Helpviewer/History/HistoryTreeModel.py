@@ -7,6 +7,8 @@
 Module implementing the history tree model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import bisect
 
 from PyQt4.QtCore import Qt, QModelIndex, QDate
@@ -28,7 +30,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryTreeModel, self).__init__(parent)
         
         self.__sourceRowCache = []
         self.__removingDown = False
@@ -225,7 +227,7 @@ class HistoryTreeModel(QAbstractProxyModel):
             self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
-        super().setSourceModel(sourceModel)
+        super(HistoryTreeModel, self).setSourceModel(sourceModel)
         
         if self.sourceModel() is not None:
             self.__loaded = False

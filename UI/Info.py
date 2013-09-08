@@ -7,6 +7,8 @@
 Module defining some informational strings.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 Program = 'eric5'
 Version = '@@VERSION@@ (rev @@REVISION@@)'
 Copyright = 'Copyright (c) 2002 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>'

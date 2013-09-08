@@ -7,6 +7,8 @@
 Module implementing the PyQt5 server part of the QRegularExpression wizzard.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import json
 import sys
 

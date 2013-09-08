@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the Send Referer whitelist.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
     QInputDialog, QLineEdit
@@ -26,7 +28,7 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SendRefererWhitelistDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__model = QStringListModel(Preferences.getHelp("SendRefererWhitelist"), self)
@@ -63,4 +65,4 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         """
         Preferences.setHelp("SendRefererWhitelist", self.__model.stringList())
         
-        super().accept()
+        super(SendRefererWhitelistDialog, self).accept()

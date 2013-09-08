@@ -7,6 +7,8 @@
 Module implementing the Editor Properties configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -25,7 +27,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         
         @param lexers reference to the lexers dictionary
         """
-        super().__init__()
+        super(EditorPropertiesPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorPropertiesPage")
         

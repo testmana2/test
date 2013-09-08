@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the hg diff command process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo, Qt
@@ -33,7 +39,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgDiffDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
@@ -423,7 +429,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         eol = e5App().getObject("Project").getEolString()
         try:
-            f = open(fname, "w", encoding="utf-8", newline="")
+            f = open(fname, "w", encoding="utf-8")
             f.write(eol.join(self.contents.toPlainText().splitlines()))
             f.close()
         except IOError as why:
@@ -480,4 +486,4 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgDiffDialog, self).keyPressEvent(evt)

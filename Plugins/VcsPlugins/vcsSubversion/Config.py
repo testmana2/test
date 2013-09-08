@@ -7,6 +7,8 @@
 Module defining configuration variables for the subversion package
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # Available protocols for the repository URL
 ConfigSvnProtocols = [
     'file://',

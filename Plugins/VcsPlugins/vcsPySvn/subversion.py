@@ -7,6 +7,8 @@
 Module implementing the version control systems interface to Subversion.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import shutil
 import urllib.parse

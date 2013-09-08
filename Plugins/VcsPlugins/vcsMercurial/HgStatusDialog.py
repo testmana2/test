@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the hg status command process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QTimer
@@ -33,7 +39,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         @param mq flag indicating to show a queue repo status (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgStatusDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__toBeCommittedColumn = 0
@@ -434,7 +440,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgStatusDialog, self).keyPressEvent(evt)
     
     @pyqtSlot()
     def on_refreshButton_clicked(self):

@@ -7,6 +7,8 @@
 Module implementing the Py3Flakes configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_Py3FlakesPage import Ui_Py3FlakesPage
 
@@ -21,7 +23,7 @@ class Py3FlakesPage(ConfigurationPageBase, Ui_Py3FlakesPage):
         """
         Constructor
         """
-        super().__init__()
+        super(Py3FlakesPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("Py3FlakesPage")
         

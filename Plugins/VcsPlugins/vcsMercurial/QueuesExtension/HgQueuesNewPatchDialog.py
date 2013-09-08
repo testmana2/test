@@ -7,6 +7,8 @@
 Module implementing a dialog to get the data for a new patch.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QDateTime
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -29,7 +31,7 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
         @param message text to set as the commit message (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesNewPatchDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__mode = mode

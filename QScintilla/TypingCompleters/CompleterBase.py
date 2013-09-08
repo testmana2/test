@@ -11,6 +11,8 @@ that are performed while the user is typing (e.g. insert ')' when the
 user types '(').
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QObject
 
 
@@ -29,7 +31,7 @@ class CompleterBase(QObject):
         if parent is None:
             parent = editor
         
-        super().__init__(parent)
+        super(CompleterBase, self).__init__(parent)
         
         self.editor = editor
         self.enabled = False

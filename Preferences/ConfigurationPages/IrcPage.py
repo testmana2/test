@@ -7,6 +7,8 @@
 Module implementing the IRC configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_IrcPage import Ui_IrcPage
 
@@ -25,7 +27,7 @@ class IrcPage(ConfigurationPageBase, Ui_IrcPage):
         """
         Constructor
         """
-        super().__init__()
+        super(IrcPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("IrcPage")
         

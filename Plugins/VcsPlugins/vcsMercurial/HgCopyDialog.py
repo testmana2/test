@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a copy or rename operation.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os.path
 
 from PyQt4.QtCore import pyqtSlot
@@ -33,7 +35,7 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         @param move flag indicating a move operation (boolean)
         @param force flag indicating a forced operation (boolean)
         """
-        super().__init__(parent)
+        super(HgCopyDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.source = source

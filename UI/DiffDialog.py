@@ -7,6 +7,8 @@
 Module implementing a dialog to compare two files.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import time
 
@@ -202,7 +204,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         Constructor
         """
-        super().__init__(parent)
+        super(DiffDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.file1Completer = E5FileCompleter(self.file1Edit)
@@ -250,7 +252,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         if filename:
             self.file1Edit.setText(filename)
-        super().show()
+        super(DiffDialog, self).show()
         
     def on_buttonBox_clicked(self, button):
         """
@@ -499,7 +501,7 @@ class DiffWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(DiffWindow, self).__init__(parent)
         
         self.setStyle(Preferences.getUI("Style"), Preferences.getUI("StyleSheet"))
         

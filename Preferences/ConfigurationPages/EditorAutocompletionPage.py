@@ -7,6 +7,8 @@
 Module implementing the Editor Autocompletion configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage
 
@@ -21,7 +23,7 @@ class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPag
         """
         Constructor
         """
-        super().__init__()
+        super(EditorAutocompletionPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorAutocompletionPage")
         

@@ -7,6 +7,8 @@
 Module implementing the SQL Browser widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QVariant, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QStandardItemModel, QDialog, QAbstractItemView
 from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel, QSqlQuery
@@ -32,7 +34,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SqlBrowserWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.table.addAction(self.insertRowAction)

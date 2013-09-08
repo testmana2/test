@@ -7,6 +7,8 @@
 Module implementing the synchronization manager class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QObject, pyqtSignal
 
 import Preferences
@@ -40,7 +42,7 @@ class SyncManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SyncManager, self).__init__(parent)
         
         self.__handler = None
     

@@ -7,6 +7,8 @@
 Module implementing the search and replace widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, QSizePolicy, \
     QFrame
@@ -39,7 +41,7 @@ class SearchReplaceWidget(QWidget):
         @param sliding flag indicating the widget is embedded in the
             sliding widget (boolean)
         """
-        super().__init__(parent)
+        super(SearchReplaceWidget, self).__init__(parent)
         
         self.viewmanager = vm
         self.replace = replace
@@ -779,7 +781,7 @@ character except an alphabetic character.</td></tr>
             self.__showReplace(text)
         else:
             self.__showFind(text)
-        super().show()
+        super(SearchReplaceWidget, self).show()
         self.activateWindow()
 
     @pyqtSlot()
@@ -825,7 +827,7 @@ class SearchReplaceSlidingWidget(QWidget):
         @param vm reference to the viewmanager object
         @param parent parent widget of this widget (QWidget)
         """
-        super().__init__(parent)
+        super(SearchReplaceSlidingWidget, self).__init__(parent)
         
         self.__searchReplaceWidget = SearchReplaceWidget(replace, vm, self, True)
         srHeight = self.__searchReplaceWidget.height()
@@ -902,7 +904,7 @@ class SearchReplaceSlidingWidget(QWidget):
         @param text text to be shown in the findtext edit (string)
         """
         self.__searchReplaceWidget.show(text)
-        super().show()
+        super(SearchReplaceSlidingWidget, self).show()
         self.__enableScrollerButtons()
     
     def __slideLeft(self):
@@ -951,4 +953,4 @@ class SearchReplaceSlidingWidget(QWidget):
         """
         self.__enableScrollerButtons()
         
-        super().resizeEvent(evt)
+        super(SearchReplaceSlidingWidget, self).resizeEvent(evt)

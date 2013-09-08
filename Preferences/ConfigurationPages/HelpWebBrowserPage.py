@@ -7,6 +7,8 @@
 Module implementing the Help web browser configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QLocale
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
@@ -28,7 +30,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         @param configDialog reference to the configuration dialog (ConfigurationDialog)
         """
-        super().__init__()
+        super(HelpWebBrowserPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpWebBrowserPage")
         

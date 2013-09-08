@@ -7,6 +7,8 @@
 Module implementing the web plug-in factory.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtWebKit import QWebPluginFactory
 
 
@@ -20,7 +22,7 @@ class WebPluginFactory(QWebPluginFactory):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(WebPluginFactory, self).__init__(parent)
         
         self.__loaded = False
     
@@ -65,7 +67,7 @@ class WebPluginFactory(QWebPluginFactory):
         Public method to refresh the list of supported plug-ins.
         """
         self.__initialize()
-        super().refreshPlugins()
+        super(WebPluginFactory, self).refreshPlugins()
     
     def __initialize(self):
         """

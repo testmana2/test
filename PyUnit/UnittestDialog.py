@@ -7,6 +7,8 @@
 Module implementing the UI to the pyunit package.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import unittest
 import sys
 import time
@@ -54,7 +56,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        super().__init__(parent)
+        super(UnittestDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)
@@ -657,7 +659,7 @@ class QtTestResult(unittest.TestResult):
         
         @param parent The parent widget.
         """
-        super().__init__()
+        super(QtTestResult, self).__init__()
         self.parent = parent
         
     def addFailure(self, test, err):
@@ -667,7 +669,7 @@ class QtTestResult(unittest.TestResult):
         @param test reference to the test object
         @param err error traceback
         """
-        super().addFailure(test, err)
+        super(QtTestResult, self).addFailure(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
         self.parent.testFailed(str(test), tracebackLines, test.id())
         
@@ -678,7 +680,7 @@ class QtTestResult(unittest.TestResult):
         @param test reference to the test object
         @param err error traceback
         """
-        super().addError(test, err)
+        super(QtTestResult, self).addError(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
         self.parent.testErrored(str(test), tracebackLines, test.id())
         
@@ -689,7 +691,7 @@ class QtTestResult(unittest.TestResult):
         @param test reference to the test object
         @param reason reason for skipping the test (string)
         """
-        super().addSkip(test, reason)
+        super(QtTestResult, self).addSkip(test, reason)
         self.parent.testSkipped(str(test), reason, test.id())
         
     def addExpectedFailure(self, test, err):
@@ -699,7 +701,7 @@ class QtTestResult(unittest.TestResult):
         @param test reference to the test object
         @param err error traceback
         """
-        super().addExpectedFailure(test, err)
+        super(QtTestResult, self).addExpectedFailure(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
         self.parent.testFailedExpected(str(test), tracebackLines, test.id())
         
@@ -709,7 +711,7 @@ class QtTestResult(unittest.TestResult):
         
         @param test reference to the test object
         """
-        super().addUnexpectedSuccess(test)
+        super(QtTestResult, self).addUnexpectedSuccess(test)
         self.parent.testSucceededUnexpected(str(test), test.id())
         
     def startTest(self, test):
@@ -718,7 +720,7 @@ class QtTestResult(unittest.TestResult):
         
         @param test Reference to the test object
         """
-        super().startTest(test)
+        super(QtTestResult, self).startTest(test)
         self.parent.testStarted(str(test), test.shortDescription())
 
     def stopTest(self, test):
@@ -727,7 +729,7 @@ class QtTestResult(unittest.TestResult):
         
         @param test Reference to the test object
         """
-        super().stopTest(test)
+        super(QtTestResult, self).stopTest(test)
         self.parent.testFinished()
 
 
@@ -742,7 +744,7 @@ class UnittestWindow(E5MainWindow):
         @param prog filename of the program to open
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(UnittestWindow, self).__init__(parent)
         self.cw = UnittestDialog(prog=prog, parent=self)
         self.cw.installEventFilter(self)
         size = self.cw.size()

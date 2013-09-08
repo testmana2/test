@@ -7,6 +7,8 @@
 Module implementing the IRC channel widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import re
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, QTimer, QUrl
@@ -54,7 +56,7 @@ class IrcUserItem(QListWidgetItem):
         @param name string with user name and privilege prefix (string)
         @param parent reference to the parent widget (QListWidget or QListWidgetItem)
         """
-        super().__init__(name, parent)
+        super(IrcUserItem, self).__init__(name, parent)
         
         self.__privilege = IrcUserItem.Normal
         self.__name = name
@@ -200,7 +202,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcChannelWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.__ui = e5App().getObject("UserInterface")

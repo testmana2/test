@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the ericdoc process.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try:
+    str = unicode
+except (NameError):
+    pass
+
 import os.path
 
 from PyQt4.QtCore import QProcess, QTimer
@@ -33,7 +39,7 @@ class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
         @param cmdname name of the documentation generator (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(EricdocExecDialog, self).__init__(parent)
         self.setModal(True)
         self.setupUi(self)
         

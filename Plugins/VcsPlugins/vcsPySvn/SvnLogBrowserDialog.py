@@ -7,6 +7,8 @@
 Module implementing a dialog to browse the log history.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 import pysvn
@@ -35,7 +37,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         

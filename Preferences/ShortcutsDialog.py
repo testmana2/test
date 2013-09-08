@@ -7,6 +7,8 @@
 Module implementing a dialog for the configuration of eric5s keyboard shortcuts.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, QRegExp, Qt, pyqtSlot
 from PyQt4.QtGui import QKeySequence, QHeaderView, QDialog, QTreeWidgetItem
 
@@ -39,7 +41,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         @param name The name of this dialog. (string)
         @param modal Flag indicating a modal dialog. (boolean)
         """
-        super().__init__(parent)
+        super(ShortcutsDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)

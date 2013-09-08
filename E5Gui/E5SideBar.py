@@ -7,6 +7,8 @@
 Module implementing a sidebar class.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice, QTimer
 from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, \
     QSizePolicy
@@ -36,7 +38,7 @@ class E5SideBar(QWidget):
         @param delay value for the expand/shrink delay in milliseconds (integer)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SideBar, self).__init__(parent)
         
         self.__tabBar = QTabBar()
         self.__tabBar.setDrawBase(True)

@@ -7,6 +7,8 @@
 Module implementing the SQL Browser main window.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QTimer, QUrl
 from PyQt4.QtGui import QKeySequence, qApp
 from PyQt4.QtSql import QSqlError, QSqlDatabase
@@ -32,7 +34,7 @@ class SqlBrowser(E5MainWindow):
         @param connections list of database connections to add (list of strings)
         @param reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SqlBrowser, self).__init__(parent)
         self.setObjectName("SqlBrowser")
         
         self.setWindowTitle(self.trUtf8("SQL Browser"))

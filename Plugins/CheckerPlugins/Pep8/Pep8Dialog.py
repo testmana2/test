@@ -7,6 +7,8 @@
 Module implementing a dialog to show the results of the PEP 8 check.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import fnmatch
 
@@ -35,7 +37,7 @@ class Pep8Report(pep8.BaseReport):
         
         @param options options for the report (optparse.Values)
         """
-        super().__init__(options)
+        super(Pep8Report, self).__init__(options)
         
         self.__repeat = options.repeat
         self.errors = []
@@ -50,7 +52,7 @@ class Pep8Report(pep8.BaseReport):
         @param check reference to the checker function (function)
         @param args arguments for the message (list)
         """
-        code = super().error_args(line_number, offset, code, check, *args)
+        code = super(Pep8Report, self).error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
             text = pep8.getMessage(code, *args)
             self.errors.append(
@@ -76,7 +78,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Pep8Dialog, self).__init__(parent)
         self.setupUi(self)
         
         self.statisticsButton = self.buttonBox.addButton(
@@ -291,12 +293,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             files = fn[:]
         elif os.path.isdir(fn):
             files = []
-            for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
+                files.extend(Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         
@@ -310,15 +310,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
         
-        py3files = [f for f in files \
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files \
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
-        
-        if len(py3files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+        if len(files) > 0:
+            self.checkProgress.setMaximum(len(files))
             QApplication.processEvents()
             
             # extract the configuration values
@@ -338,7 +331,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 
                 # now go through all the files
                 progress = 0
-                for file in py3files + py2files:
+                for file in files:
                     self.checkProgress.setValue(progress)
                     QApplication.processEvents()
                     
@@ -353,14 +346,12 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         source = source.splitlines(True)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", "1",
+                        self.__createResultItem(file, 1, 1,
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], False)
                         progress += 1
                         continue
                     
-                    flags = Utilities.extractFlags(source)
-                    ext = os.path.splitext(file)[1]
                     if fixIssues:
                         from .Pep8Fixer import Pep8Fixer
                         fixer = Pep8Fixer(self.__project, file, source,
@@ -368,47 +359,28 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                           True)  # always fix in place
                     else:
                         fixer = None
-                    if ("FileType" in flags and
-                        flags["FileType"] in ["Python", "Python2"]) or \
-                       file in py2files or \
-                       (ext in [".py", ".pyw"] and \
-                        Preferences.getProject("DeterminePyFromProject") and \
-                        self.__project.isOpen() and \
-                        self.__project.isProjectFile(file) and \
-                        self.__project.getProjectLanguage() in ["Python",
-                                                                "Python2"]):
-                        from .Pep8Checker import Pep8Py2Checker
-                        report = Pep8Py2Checker(file, [],
-                            repeat=repeatMessages,
-                            select=includeMessages,
-                            ignore=excludeMessages,
-                            max_line_length=maxLineLength,
-                            hang_closing=hangClosing,
-                        )
-                        report.errors.sort(key=lambda a: a[1])
+                    if includeMessages:
+                        select = [s.strip() for s in includeMessages.split(',')
+                                  if s.strip()]
                     else:
-                        if includeMessages:
-                            select = [s.strip() for s in includeMessages.split(',')
-                                      if s.strip()]
-                        else:
-                            select = []
-                        if excludeMessages:
-                            ignore = [i.strip() for i in excludeMessages.split(',')
-                                      if i.strip()]
-                        else:
-                            ignore = []
-                        styleGuide = pep8.StyleGuide(
-                            reporter=Pep8Report,
-                            repeat=repeatMessages,
-                            select=select,
-                            ignore=ignore,
-                            max_line_length=maxLineLength,
-                            hang_closing=hangClosing,
-                        )
-                        report = styleGuide.check_files([file])
-                        report.errors.sort(key=lambda a: a[1])
-                    for error in report.errors:
-                        fname, lineno, position, text = error
+                        select = []
+                    if excludeMessages:
+                        ignore = [i.strip() for i in excludeMessages.split(',')
+                                  if i.strip()]
+                    else:
+                        ignore = []
+                    styleGuide = pep8.StyleGuide(
+                        reporter=Pep8Report,
+                        repeat=repeatMessages,
+                        select=select,
+                        ignore=ignore,
+                        max_line_length=maxLineLength,
+                        hang_closing=hangClosing,
+                    )
+                    report = styleGuide.check_files([file])
+                    report.errors.sort(key=lambda a: a[1])
+
+                    for fname, lineno, position, text in report.errors:
                         if lineno > len(source):
                             lineno = len(source)
                         if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
@@ -422,7 +394,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                             self.trUtf8("Fix: {0}").format(msg)
                             self.__createResultItem(
                                 fname, lineno, position, text, fixed)
-                    fixer and fixer.saveFile(encoding)
+                    if fixer:
+                        fixer.saveFile(encoding)
                     self.__updateStatistics(report.counters, fixer)
                     progress += 1
             finally:

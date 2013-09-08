@@ -7,6 +7,8 @@
 Module implementing the AdBlock configuration dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, QTimer, QCoreApplication
 from PyQt4.QtGui import QDialog, QMenu, QToolButton
 
@@ -26,7 +28,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         Constructor
         """
-        super().__init__(parent)
+        super(AdBlockDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus48.png"))

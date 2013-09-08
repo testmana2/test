@@ -10,6 +10,8 @@ This extension is necessary in order to support alternate keyboard
 shortcuts.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence, qApp
 
 
@@ -81,7 +83,7 @@ class E5Action(QAction):
                 7 + incr, len(args)))
             
         parent = args[4 + incr]
-        super().__init__(parent)
+        super(E5Action, self).__init__(parent)
         name = args[5 + incr]
         if name:
             self.setObjectName(name)
@@ -145,7 +147,7 @@ class E5Action(QAction):
         
         @param shortcut the accelerator (QKeySequence)
         """
-        super().setShortcut(shortcut)
+        super(E5Action, self).setShortcut(shortcut)
         self.__ammendToolTip()
         
     def setShortcuts(self, shortcuts):
@@ -156,7 +158,7 @@ class E5Action(QAction):
             or key for a platform dependent list of accelerators
             (QKeySequence.StandardKey)
         """
-        super().setShortcuts(shortcuts)
+        super(E5Action, self).setShortcuts(shortcuts)
         self.__ammendToolTip()
         
     def setIconText(self, text):
@@ -165,7 +167,7 @@ class E5Action(QAction):
         
         @param text new icon text (string)
         """
-        super().setIconText(text)
+        super(E5Action, self).setIconText(text)
         self.__ammendToolTip()
         
     def __ammendToolTip(self):

@@ -7,6 +7,8 @@
 Module implementing a scheme access handler for about schemes.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from .SchemeAccessHandler import SchemeAccessHandler
 
 

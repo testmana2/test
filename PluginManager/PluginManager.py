@@ -7,6 +7,8 @@
 Module implementing the Plugin Manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import sys
 import imp
@@ -67,7 +69,7 @@ class PluginManager(QObject):
         @keyparam develPlugin filename of a plugin to be loaded for
             development (string)
         """
-        super().__init__(parent)
+        super(PluginManager, self).__init__(parent)
         
         self.__ui = parent
         self.__develPluginFile = develPlugin

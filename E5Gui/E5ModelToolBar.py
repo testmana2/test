@@ -7,6 +7,8 @@
 Module implementing a tool bar populated from a QAbstractItemModel.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint, QEvent
 from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, QToolButton
 
@@ -27,9 +29,9 @@ class E5ModelToolBar(QToolBar):
         @param parent reference to the parent widget (QWidget)
         """
         if title is not None:
-            super().__init__(title, parent)
+            super(E5ModelToolBar, self).__init__(title, parent)
         else:
-            super().__init__(parent)
+            super(E5ModelToolBar, self).__init__(parent)
         
         self.__model = None
         
@@ -182,7 +184,7 @@ class E5ModelToolBar(QToolBar):
                 if evt.mimeData().hasFormat(mimeType):
                     evt.acceptProposedAction()
         
-        super().dragEnterEvent(evt)
+        super(E5ModelToolBar, self).dragEnterEvent(evt)
     
     def dropEvent(self, evt):
         """
@@ -209,7 +211,7 @@ class E5ModelToolBar(QToolBar):
             self.__model.dropMimeData(evt.mimeData(), evt.dropAction(),
                                       row, 0, parentIndex)
         
-        super().dropEvent(evt)
+        super(E5ModelToolBar, self).dropEvent(evt)
     
     def mouseMoveEvent(self, evt):
         """
@@ -218,21 +220,21 @@ class E5ModelToolBar(QToolBar):
         @param evt reference to the event (QMouseEvent)
         """
         if self.__model is None:
-            super().mouseMoveEvent(evt)
+            super(E5ModelToolBar, self).mouseMoveEvent(evt)
             return
         
         if not (evt.buttons() & Qt.LeftButton):
-            super().mouseMoveEvent(evt)
+            super(E5ModelToolBar, self).mouseMoveEvent(evt)
             return
         
         manhattanLength = (evt.pos() - self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
-            super().mouseMoveEvent(evt)
+            super(E5ModelToolBar, self).mouseMoveEvent(evt)
             return
         
         act = self.actionAt(self.__dragStartPosition)
         if act is None:
-            super().mouseMoveEvent(evt)
+            super(E5ModelToolBar, self).mouseMoveEvent(evt)
             return
         
         idx = self.index(act)
@@ -259,7 +261,7 @@ class E5ModelToolBar(QToolBar):
         @param evt reference to the hide event (QHideEvent)
         """
         self.clear()
-        super().hideEvent(evt)
+        super(E5ModelToolBar, self).hideEvent(evt)
     
     def showEvent(self, evt):
         """
@@ -269,7 +271,7 @@ class E5ModelToolBar(QToolBar):
         """
         if len(self.actions()) == 0:
             self._build()
-        super().showEvent(evt)
+        super(E5ModelToolBar, self).showEvent(evt)
     
     def resetFlags(self):
         """

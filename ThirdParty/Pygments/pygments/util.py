@@ -9,6 +9,12 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+try: 
+    chr = unichr
+except (NameError):
+    pass
+
 import re
 import sys
 import codecs
@@ -256,9 +262,9 @@ def unirange(a, b):
 if sys.version_info < (3,0):
     b = bytes = str
     u_prefix = 'u'
-    import io, io
-    BytesIO = io.StringIO
-    StringIO = io.StringIO
+    import StringIO, cStringIO
+    BytesIO = cStringIO.StringIO
+    StringIO = StringIO.StringIO
     uni_open = codecs.open
 else:
     import builtins

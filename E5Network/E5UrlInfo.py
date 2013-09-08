@@ -7,6 +7,8 @@
 Module implementing a class replacing QUrlInfo.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QDateTime
 
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
+<!-- Saved: 2013-09-07, 22:02:55 -->
+<!-- Copyright (C) 2013 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -796,23 +798,12 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
-    <Source>UtilitiesPython2/__init__.py</Source>
-    <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
-    <Source>UtilitiesPython2/py2flakes/__init__.py</Source>
-    <Source>UtilitiesPython2/py2flakes/checker.py</Source>
-    <Source>UtilitiesPython2/py2flakes/messages.py</Source>
-    <Source>UtilitiesPython2/Tools.py</Source>
-    <Source>UtilitiesPython2/Tabnanny.py</Source>
-    <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/__init__.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/pep8.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Dialog.py</Source>
-    <Source>Plugins/CheckerPlugins/Pep8/Pep8Checker.py</Source>
     <Source>Plugins/PluginPep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
-    <Source>UtilitiesPython2/pep8.py</Source>
-    <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
     <Source>eric5_compare.py</Source>
@@ -904,7 +895,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Utilities/crypto/py3AES.py</Source>
     <Source>Utilities/crypto/py3PBKDF2.py</Source>
     <Source>Preferences/ConfigurationPages/SecurityPage.py</Source>
-    <Source>UtilitiesPython2/PySideImporter.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClient.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py</Source>
@@ -1073,10 +1063,16 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>E5Network/E5SslInfoWidget.py</Source>
     <Source>QScintilla/SortOptionsDialog.py</Source>
     <Source>Debugger/CallStackViewer.py</Source>
+    <Source>Utilities/compatibility_fixes.py</Source>
+    <Source>Utilities/SyntaxCheck.py</Source>
+    <Source>Utilities/py2flakes/checker.py</Source>
+    <Source>Utilities/py2flakes/messages.py</Source>
+    <Source>Utilities/py2flakes/__init__.py</Source>
     <Source>Examples/hallo.py</Source>
     <Source>Examples/modpython.py</Source>
     <Source>Examples/modpython_dbg.py</Source>
     <Source>Examples/rhallo.py</Source>
+    <Source>Utilities/PySideImporter.py</Source>
     <Source>E5Gui/E5ErrorMessage.py</Source>
     <Source>Helpviewer/Network/NoCacheHostsDialog.py</Source>
     <Source>E5Gui/E5ErrorMessageFilterDialog.py</Source>

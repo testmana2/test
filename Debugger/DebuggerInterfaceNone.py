@@ -7,6 +7,8 @@
 Module implementing a dummy debugger interface for the debug server.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import QObject
 
 
@@ -36,7 +38,7 @@ class DebuggerInterfaceNone(QObject):
         @param debugServer reference to the debug server (DebugServer)
         @param passive flag indicating passive connection mode (boolean)
         """
-        super().__init__()
+        super(DebuggerInterfaceNone, self).__init__()
         
         self.debugServer = debugServer
         self.passive = passive

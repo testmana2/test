@@ -7,6 +7,8 @@
 Module implementing the log viewer widget and the log widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, pyqtSignal
 from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, QWidget, \
     QHBoxLayout, QTextDocument
@@ -27,7 +29,7 @@ class LogViewer(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(LogViewer, self).__init__(parent)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
@@ -90,7 +92,7 @@ class LogViewerEdit(QTextEdit):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(LogViewerEdit, self).__init__(parent)
         self.setAcceptRichText(False)
         self.setLineWrapMode(QTextEdit.NoWrap)
         self.setReadOnly(True)

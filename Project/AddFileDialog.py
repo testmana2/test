@@ -7,6 +7,8 @@
 Module implementing a dialog to add a file to the project.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -35,7 +37,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         @param name name of this dialog (string)
         @param startdir start directory for the selection dialog
         """
-        super().__init__(parent)
+        super(AddFileDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

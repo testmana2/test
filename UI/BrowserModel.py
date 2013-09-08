@@ -7,6 +7,8 @@
 Module implementing the browser model.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import sys
 import os
 import fnmatch
@@ -40,7 +42,7 @@ class BrowserModel(QAbstractItemModel):
         @param parent reference to parent object (QObject)
         @keyparam nopopulate flag indicating to not populate the model (boolean)
         """
-        super().__init__(parent)
+        super(BrowserModel, self).__init__(parent)
         
         self.progDir = None
         self.watchedItems = {}

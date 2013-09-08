@@ -7,6 +7,8 @@
 Module implementing a dialog to send bug reports.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 import mimetypes
 import smtplib
@@ -67,7 +69,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param mode mode of this dialog (string, "bug" or "feature")
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(EmailDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__mode = mode

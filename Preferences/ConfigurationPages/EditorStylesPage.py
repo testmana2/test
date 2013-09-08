@@ -7,6 +7,8 @@
 Module implementing the Editor Styles configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QColor, QPalette, QColorDialog
 from PyQt4.Qsci import QsciScintilla
@@ -25,7 +27,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorStylesPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorStylesPage")
         

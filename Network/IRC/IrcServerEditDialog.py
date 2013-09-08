@@ -7,6 +7,8 @@
 Module implementing a dialog for editing the IRC server configuration.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -24,7 +26,7 @@ class IrcServerEditDialog(QDialog, Ui_IrcServerEditDialog):
         @param server reference to the IRC server object (IrcServer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcServerEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)

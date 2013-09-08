@@ -7,6 +7,8 @@
 Module defining the debug protocol tokens.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 # The protocol "words".
 RequestOK = '>OK?<'
 RequestEnv = '>Environment<'

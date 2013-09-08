@@ -7,6 +7,8 @@
 Module implementing the Editor File Handling configuration page.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QListWidgetItem, QInputDialog, QLineEdit
 from PyQt4.Qsci import QsciScintilla
@@ -28,7 +30,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorFilePage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorFilePage")
         

@@ -7,6 +7,8 @@
 Module implementing labels that squeeze their contents to fit the size of the label.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QLabel
 
@@ -23,7 +25,7 @@ class E5SqueezeLabel(QLabel):
         
         @param parent reference to the parent Widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SqueezeLabel, self).__init__(parent)
         
         self.__text = ''
         self.__elided = ''
@@ -37,10 +39,10 @@ class E5SqueezeLabel(QLabel):
         fm = self.fontMetrics()
         if fm.width(self.__text) > self.contentsRect().width():
             self.__elided = fm.elidedText(self.text(), Qt.ElideMiddle, self.width())
-            super().setText(self.__elided)
+            super(E5SqueezeLabel, self).setText(self.__elided)
         else:
-            super().setText(self.__text)
-        super().paintEvent(event)
+            super(E5SqueezeLabel, self).setText(self.__text)
+        super(E5SqueezeLabel, self).paintEvent(event)
     
     def setText(self, txt):
         """
@@ -49,7 +51,7 @@ class E5SqueezeLabel(QLabel):
         @param txt the text to be shown (string)
         """
         self.__text = txt
-        super().setText(self.__text)
+        super(E5SqueezeLabel, self).setText(self.__text)
 
 
 class E5SqueezeLabelPath(QLabel):
@@ -62,7 +64,7 @@ class E5SqueezeLabelPath(QLabel):
         
         @param parent reference to the parent Widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SqueezeLabelPath, self).__init__(parent)
         
         self.__path = ''
         self.__surrounding = "{0}"
@@ -74,7 +76,7 @@ class E5SqueezeLabelPath(QLabel):
         @param surrounding the a string containg placeholders for the path (string)
         """
         self.__surrounding = surrounding
-        super().setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
     
     def setPath(self, path):
         """
@@ -83,7 +85,7 @@ class E5SqueezeLabelPath(QLabel):
         @param path path to be shown (string)
         """
         self.__path = path
-        super().setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
     
     def setTextPath(self, surrounding, path):
         """
@@ -94,7 +96,7 @@ class E5SqueezeLabelPath(QLabel):
         """
         self.__surrounding = surrounding
         self.__path = path
-        super().setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
     
     def paintEvent(self, event):
         """
@@ -104,14 +106,14 @@ class E5SqueezeLabelPath(QLabel):
         """
         fm = self.fontMetrics()
         if fm.width(self.__surrounding.format(self.__path)) > self.contentsRect().width():
-            super().setText(
+            super(E5SqueezeLabelPath, self).setText(
                 self.__surrounding.format(compactPath(self.__path,
                                           self.contentsRect().width(),
                                           self.length))
             )
         else:
-            super().setText(self.__surrounding.format(self.__path))
-        super().paintEvent(event)
+            super(E5SqueezeLabelPath, self).setText(self.__surrounding.format(self.__path))
+        super(E5SqueezeLabelPath, self).paintEvent(event)
     
     def length(self, txt):
         """

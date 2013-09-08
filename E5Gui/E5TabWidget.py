@@ -7,6 +7,8 @@
 Module implementing a TabWidget class substituting QTabWidget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
 from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
 
@@ -21,7 +23,7 @@ class E5WheelTabBar(QTabBar):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5WheelTabBar, self).__init__(parent)
         self._tabWidget = parent
     
     def wheelEvent(self, event):
@@ -138,7 +140,7 @@ class E5TabWidget(QTabWidget):
         @param parent reference to the parent widget (QWidget)
         @keyparam dnd flag indicating the support for Drag & Drop (boolean)
         """
-        super().__init__(parent)
+        super(E5TabWidget, self).__init__(parent)
         
         if dnd:
             if not hasattr(self, 'setMovable'):

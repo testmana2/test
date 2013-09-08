@@ -7,6 +7,8 @@
 Module implementing a dialog to edit channel data.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -29,7 +31,7 @@ class IrcChannelEditDialog(QDialog, Ui_IrcChannelEditDialog):
             channel (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(IrcChannelEditDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.nameEdit.setText(name)

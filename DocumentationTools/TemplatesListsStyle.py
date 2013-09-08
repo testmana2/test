@@ -7,6 +7,8 @@
 Module implementing templates for the documentation generator (lists style).
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 #################################################
 ##  Common templates for index and docu files  ##
 #################################################

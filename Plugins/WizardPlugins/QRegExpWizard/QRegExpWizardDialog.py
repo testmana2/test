@@ -7,6 +7,8 @@
 Module implementing the QRegExp wizard dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot, qVersion
@@ -35,7 +37,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardWidget):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(QRegExpWizardWidget, self).__init__(parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -625,7 +627,7 @@ class QRegExpWizardDialog(QDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        super().__init__(parent)
+        super(QRegExpWizardDialog, self).__init__(parent)
         self.setModal(fromEric)
         self.setSizeGripEnabled(True)
         
@@ -662,7 +664,7 @@ class QRegExpWizardWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(QRegExpWizardWindow, self).__init__(parent)
         self.cw = QRegExpWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

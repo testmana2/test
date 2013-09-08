@@ -7,6 +7,8 @@
 Module implementing the Call Trace viewer widget.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QRegExp, QFileInfo
 from PyQt4.QtGui import QWidget,  QTreeWidgetItem
 
@@ -35,7 +37,7 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         @param debugServer reference to the debug server object (DebugServer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CallTraceViewer, self).__init__(parent)
         self.setupUi(self)
         
         self.__dbs = debugServer

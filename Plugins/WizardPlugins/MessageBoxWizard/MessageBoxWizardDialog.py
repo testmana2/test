@@ -7,6 +7,8 @@
 Module implementing the message box wizard dialog.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -28,7 +30,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(MessageBoxWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         # keep the following three lists in sync

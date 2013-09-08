@@ -7,6 +7,8 @@
 Module implementing the history manager.
 """
 
+from __future__ import unicode_literals    # __IGNORE_WARNING__
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, QUrl, QTimer, \
@@ -98,7 +100,7 @@ class HistoryManager(QWebHistoryInterface):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryManager, self).__init__(parent)
         
         self.__saveTimer = AutoSaver(self, self.save)
         self.__daysToExpire = Preferences.getHelp("HistoryLimit")
@@ -126,7 +128,7 @@ class HistoryManager(QWebHistoryInterface):
         self.__historyFilterModel = HistoryFilterModel(self.__historyModel, self)
         self.__historyTreeModel = HistoryTreeModel(self.__historyFilterModel, self)
         
-        super().setDefaultInterface(self)
+        super(HistoryManager, self).setDefaultInterface(self)
         self.__startFrequencyTimer()
     
     def close(self):
@@ -465,7 +467,7 @@ class HistoryManager(QWebHistoryInterface):
             stream.writeUInt32(HISTORY_VERSION)
             stream.writeString(itm.url.encode())
             stream << itm.dateTime
-            stream.writeString(itm.title.encode())
+            stream.writeString(itm.title.encode('utf-8'))
             f.write(data)
         
         f.close()
