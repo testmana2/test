@@ -1107,6 +1107,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

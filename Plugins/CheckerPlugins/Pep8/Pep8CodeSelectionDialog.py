@@ -38,7 +38,9 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             selectableCodes = Pep8FixableIssues
         else:
             selectableCodes = pep8.pep8_messages.keys()
+            # TODO: include message from naming checker
         for code in sorted(selectableCodes, key=lambda a: a[1:]):
+            # TODO: sort by complete code
             if code in pep8.pep8_messages_sample_args:
                 message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code]).format(

@@ -24,6 +24,8 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+from .Pep8NamingChecker import Pep8NamingChecker
+
 
 class Pep8Report(pep8.BaseReport):
     """
@@ -52,7 +54,10 @@ class Pep8Report(pep8.BaseReport):
         """
         code = super().error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
-            text = pep8.getMessage(code, *args)
+            if code in Pep8NamingChecker.Codes:
+                text = Pep8NamingChecker.getMessage(code, *args)
+            else:
+                text = pep8.getMessage(code, *args)
             self.errors.append(
                 (self.filename, line_number, offset, text)
             )
@@ -106,6 +111,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.__statistics = {}
         
         self.on_loadDefaultButton_clicked()
+        
+        # register the name checker
+        pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
     
     def __resort(self):
         """
@@ -143,6 +151,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             ["{0:6}".format(line), code, message])
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
+        elif code.startswith("N"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
         else:
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:

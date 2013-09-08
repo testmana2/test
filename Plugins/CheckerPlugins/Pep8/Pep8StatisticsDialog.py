@@ -48,6 +48,7 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
                     pep8.pep8_messages[code]).format(
                         *pep8.pep8_messages_sample_args[code])
             elif code in pep8.pep8_messages:
+                # TODO: add naming checker messages
                 message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code])
             else:
