@@ -11,6 +11,7 @@ from PyQt4.QtCore import Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
 
 from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
 
@@ -42,15 +43,17 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         
         totalIssues = 0
         
-        for code in sorted(stats.keys(), key=lambda a: a[1:]):
+        for code in sorted(stats.keys()):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code]).format(
-                        *pep8.pep8_messages_sample_args[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code]).format(
+                    *pep8.pep8_messages_sample_args[code])
             elif code in pep8.pep8_messages:
-                # TODO: add naming checker messages
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code])
+            elif code in Pep8NamingChecker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep8NamingChecker", Pep8NamingChecker.Messages[code])
             else:
                 continue
             self.__createItem(stats[code], code, message)

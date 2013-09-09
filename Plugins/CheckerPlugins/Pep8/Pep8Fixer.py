@@ -21,18 +21,18 @@ from . import pep8
 import Utilities
 
 Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
-                     "E125", "E126", "E127", "E128", "E133", "W191",
-                     "E201", "E202", "E203", "E211", "E221", "E222",
-                     "E223", "E224", "E225", "E226", "E227", "E228",
-                     "E231", "E241", "E242", "E251", "E261", "E262",
-                     "E271", "E272", "E273", "E274", "W291", "W292",
-                     "W293", "E301", "E302", "E303", "E304", "W391",
-                     "E401", "E501", "E502", "W603", "E701", "E702",
-                     "E703", "E711", "E712"
+                     "E125", "E126", "E127", "E128", "E133", "E201",
+                     "E202", "E203", "E211", "E221", "E222", "E223",
+                     "E224", "E225", "E226", "E227", "E228", "E231",
+                     "E241", "E242", "E251", "E261", "E262", "E271",
+                     "E272", "E273", "E274", "E301", "E302", "E303",
+                     "E304", "E401", "E501", "E502", "E701", "E702",
+                     "E703", "E711", "E712",
+                     "N804", "N805", "N806",
+                     "W191", "W291", "W292", "W293", "W391", "W603",
                      ]
 
 
-# TODO: add fixes for N804, N805
 class Pep8Fixer(QObject):
     """
     Class implementing a fixer for certain PEP 8 issues.
@@ -87,7 +87,6 @@ class Pep8Fixer(QObject):
             "E127": self.__fixE127,
             "E128": self.__fixE127,
             "E133": self.__fixE126,
-            "W191": self.__fixE101,
             "E201": self.__fixE201,
             "E202": self.__fixE201,
             "E203": self.__fixE201,
@@ -110,23 +109,27 @@ class Pep8Fixer(QObject):
             "E272": self.__fixE221,
             "E273": self.__fixE221,
             "E274": self.__fixE221,
-            "W291": self.__fixW291,
-            "W292": self.__fixW292,
-            "W293": self.__fixW291,
             "E301": self.__fixE301,
             "E302": self.__fixE302,
             "E303": self.__fixE303,
             "E304": self.__fixE304,
-            "W391": self.__fixW391,
             "E401": self.__fixE401,
             "E501": self.__fixE501,
             "E502": self.__fixE502,
-            "W603": self.__fixW603,
             "E701": self.__fixE701,
             "E702": self.__fixE702,
             "E703": self.__fixE702,
             "E711": self.__fixE711,
             "E712": self.__fixE711,
+            "N804": self.__fixN804,
+            "N805": self.__fixN804,
+            "N806": self.__fixN806,
+            "W191": self.__fixE101,
+            "W291": self.__fixW291,
+            "W292": self.__fixW292,
+            "W293": self.__fixW291,
+            "W391": self.__fixW391,
+            "W603": self.__fixW603,
         }
         self.__modified = False
         self.__stackLogical = []    # these need to be fixed before the file
@@ -486,7 +489,7 @@ class Pep8Fixer(QObject):
     def __fixE121(self, code, line, pos, apply=False):
         """
         Private method to fix the indentation of continuation lines and
-        closing brackets (E121,E124).
+        closing brackets (E121, E124).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1164,6 +1167,106 @@ class Pep8Fixer(QObject):
         
         self.__source[line] = " ".join([left, center, right])
         return (1, self.trUtf8("Comparison to None/True/False corrected."), 0)
+    
+    def __fixN804(self, code, line, pos, apply=False):
+        """
+        Private method to fix a wrong first argument of normal and
+        class methods (N804, N805).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            if code == "N804":
+                arg = "cls"
+            else:
+                arg = "self"
+            
+            if text.rstrip().endswith("("):
+                newText = text + self.__getIndent(text) + \
+                    self.__indentWord + arg + "," + self.__getEol()
+            else:
+                index = text.find("(") + 1
+                left = text[:index]
+                right = text[index:]
+                if right.startswith(")"):
+                    center = arg
+                else:
+                    center = arg + ", "
+                newText = left + center + right
+            self.__source[line] = newText
+            return (1, self.trUtf8("'{0}' argument added.").format(arg), 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixN806(self, code, line, pos, apply=False):
+        """
+        Private method to fix a wrong first argument of static methods
+        (N806).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            text = self.__source[line]
+            index = text.find("(") + 1
+            left = text[:index]
+            right = text[index:]
+            
+            if right.startswith(("cls", "self")):
+                # cls or self are on the definition line
+                if right.startswith("cls"):
+                    right = right[3:]
+                    arg = "cls"
+                else:
+                    right = right[4:]
+                    arg = "self"
+                right = right.lstrip(", ")
+                newText = left + right
+                self.__source[line] = newText
+            else:
+                # they are on the next line
+                line = line + 1
+                text = self.__source[line]
+                indent = self.__getIndent(text)
+                right = text.lstrip()
+                if right.startswith("cls"):
+                    right = right[3:]
+                    arg = "cls"
+                else:
+                    right = right[4:]
+                    arg = "self"
+                right = right.lstrip(", ")
+                if right.startswith("):"):
+                    # merge with previous line
+                    self.__source[line - 1] = \
+                        self.__source[line - 1].rstrip() + right
+                    self.__source[line] = ""
+                else:
+                    self.__source[line] = indent + right
+            
+            return (1, self.trUtf8("'{0}' argument removed.").format(arg), 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixW291(self, code, line, pos):
         """

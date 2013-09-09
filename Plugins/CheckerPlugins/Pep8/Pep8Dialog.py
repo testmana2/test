@@ -14,8 +14,6 @@ from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
     QDialogButtonBox, QApplication, QHeaderView, QIcon
 
-from . import pep8
-
 from E5Gui.E5Application import e5App
 
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
@@ -24,7 +22,11 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
+
+# register the name checker
+pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 
 
 class Pep8Report(pep8.BaseReport):
@@ -111,9 +113,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.__statistics = {}
         
         self.on_loadDefaultButton_clicked()
-        
-        # register the name checker
-        pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
     
     def __resort(self):
         """

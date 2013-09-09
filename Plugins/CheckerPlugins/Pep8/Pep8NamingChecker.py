@@ -313,10 +313,15 @@ class Pep8NamingChecker(object):
                 return
         
         argNames = self.__getArgNames(node)
+        functionType = getattr(node, "function_type", "function")
+        
         if not argNames:
+            if functionType == "method":
+                yield self.__error(node, "N805")
+            elif functionType == "classmethod":
+                yield self.__error(node, "N804")
             return
         
-        functionType = getattr(node, "function_type", "function")
         if functionType == "method":
             if argNames[0] != "self":
                 yield self.__error(node, "N805")

@@ -11,6 +11,7 @@ from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
 
@@ -37,17 +38,22 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             from .Pep8Fixer import Pep8FixableIssues
             selectableCodes = Pep8FixableIssues
         else:
-            selectableCodes = pep8.pep8_messages.keys()
-            # TODO: include message from naming checker
-        for code in sorted(selectableCodes, key=lambda a: a[1:]):
-            # TODO: sort by complete code
+            selectableCodes = list(pep8.pep8_messages.keys())
+            selectableCodes.extend(Pep8NamingChecker.Messages.keys())
+        for code in sorted(selectableCodes):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code]).format(
-                        *pep8.pep8_messages_sample_args[code])
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code]).format(
+                    *pep8.pep8_messages_sample_args[code])
+            elif code in pep8.pep8_messages:
+                message = QCoreApplication.translate(
+                    "pep8", pep8.pep8_messages[code])
+            elif code in Pep8NamingChecker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep8NamingChecker",
+                    Pep8NamingChecker.Messages[code])
             else:
-                message = QCoreApplication.translate("pep8",
-                    pep8.pep8_messages[code])
+                continue
             itm = QTreeWidgetItem(self.codeTable, [code, message])
             if code in codeList:
                 itm.setSelected(True)
