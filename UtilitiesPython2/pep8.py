@@ -1230,8 +1230,8 @@ class Checker(object):
         else:
             offset = (1, 0)
         self.report_error_args(offset[0], offset[1] or 0,
-                          'E901', exc_type.__name__, exc.args[0],
-                          self.report_invalid_syntax)
+                          'E901', self.report_invalid_syntax,
+                          exc_type.__name__, exc.args[0])
     report_invalid_syntax.__doc__ = "    Check if the syntax is valid."
 
     def readline(self):
