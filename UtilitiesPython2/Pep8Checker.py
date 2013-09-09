@@ -13,6 +13,10 @@ import getopt
 from Tools import readEncodedFile, normalizeCode
 
 import pep8
+from Pep8NamingCheckerPy2 import Pep8NamingChecker
+
+# register the name checker
+pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 
 
 class Pep8Report(pep8.BaseReport):
@@ -40,7 +44,8 @@ class Pep8Report(pep8.BaseReport):
         @param check reference to the checker function (function)
         @param args arguments for the message (list)
         """
-        code = super(Pep8Report, self).error_args(line_number, offset, code, check, *args)
+        code = super(Pep8Report, self).error_args(
+            line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
             self.errors.append(
                 (self.filename, line_number, offset, code, args)
@@ -131,7 +136,7 @@ if __name__ == "__main__":
                     print a
             print "PEP8_STATISTICS"
             for key in report.counters:
-                if key.startswith(("E", "W")):
+                if key.startswith(("E", "N", "W")):
                     print key, report.counters[key]
         else:
             print "NO_PEP8"

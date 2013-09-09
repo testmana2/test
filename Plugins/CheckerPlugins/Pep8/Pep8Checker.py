@@ -12,6 +12,7 @@ import os
 from PyQt4.QtCore import QProcess, QCoreApplication
 
 from . import pep8
+from .Pep8NamingChecker import Pep8NamingChecker
 
 import Preferences
 import Utilities
@@ -37,7 +38,8 @@ class Pep8Py2Checker(object):
         @keyparam ignore list of message IDs to ignore
             (comma separated string)
         @keyparam max_line_length maximum allowed line length (integer)
-        @keyparam hang_closing flag indicating to allow hanging closing brackets (boolean)
+        @keyparam hang_closing flag indicating to allow hanging closing
+            brackets (boolean)
         """
         self.errors = []
         self.counters = {}
@@ -102,7 +104,10 @@ class Pep8Py2Checker(object):
                     argindex += 1
                 index += 6 + arglen
                 
-                text = pep8.getMessage(code, *args)
+                if code in Pep8NamingChecker.Codes:
+                    text = Pep8NamingChecker.getMessage(code, *args)
+                else:
+                    text = pep8.getMessage(code, *args)
                 self.errors.append((fname, lineno, position, text))
             while index < len(output):
                 code, countStr = output[index].split(None, 1)
