@@ -72,9 +72,6 @@ QObject
 <td><a href="#Pep8Fixer.__codeMatch">__codeMatch</a></td>
 <td>Private method to check, if the code should be fixed.</td>
 </tr><tr>
-<td><a href="#Pep8Fixer.__finalize">__finalize</a></td>
-<td>Private method to apply all deferred fixes.</td>
-</tr><tr>
 <td><a href="#Pep8Fixer.__findLogical">__findLogical</a></td>
 <td>Private method to extract the index of all the starts and ends of lines.</td>
 </tr><tr>
@@ -82,7 +79,7 @@ QObject
 <td>Private method to fix obsolete tab usage and indentation errors (E101, E111, W191).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE121">__fixE121</a></td>
-<td>Private method to fix the indentation of continuation lines and closing brackets (E121,E124).</td>
+<td>Private method to fix the indentation of continuation lines and closing brackets (E121, E124).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE122">__fixE122</a></td>
 <td>Private method to fix a missing indentation of continuation lines (E122).</td>
@@ -136,13 +133,19 @@ QObject
 <td>Private method to fix redundant backslash within brackets (E502).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE701">__fixE701</a></td>
-<td>Private method to fix colon-separated compund statements (E701).</td>
+<td>Private method to fix colon-separated compound statements (E701).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE702">__fixE702</a></td>
 <td>Private method to fix semicolon-separated compound statements (E702, E703).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE711">__fixE711</a></td>
 <td>Private method to fix comparison with None (E711, E712).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixN804">__fixN804</a></td>
+<td>Private method to fix a wrong first argument of normal and class methods (N804, N805).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixN806">__fixN806</a></td>
+<td>Private method to fix a wrong first argument of static methods (N806).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixReindent">__fixReindent</a></td>
 <td>Private method to fix a badly indented line.</td>
@@ -165,6 +168,9 @@ QObject
 <td><a href="#Pep8Fixer.__getEol">__getEol</a></td>
 <td>Private method to get the applicable eol string.</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__getID">__getID</a></td>
+<td>Private method to get the ID for a deferred fix.</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__getIndent">__getIndent</a></td>
 <td>Private method to get the indentation string.</td>
 </tr><tr>
@@ -176,6 +182,9 @@ QObject
 </tr><tr>
 <td><a href="#Pep8Fixer.__multilineStringLines">__multilineStringLines</a></td>
 <td>Private method to determine the line numbers that are within multi line strings and these which are part of a documentation string.</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.finalize">finalize</a></td>
+<td>Public method to apply all deferred fixes.</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.fixIssue">fixIssue</a></td>
 <td>Public method to fix the fixable issues.</td>
@@ -237,12 +246,7 @@ to check (string)
 <dd>
 flag indicating it should be fixed (boolean)
 </dd>
-</dl><a NAME="Pep8Fixer.__finalize" ID="Pep8Fixer.__finalize"></a>
-<h4>Pep8Fixer.__finalize</h4>
-<b>__finalize</b>(<i></i>)
-<p>
-        Private method to apply all deferred fixes.
-</p><a NAME="Pep8Fixer.__findLogical" ID="Pep8Fixer.__findLogical"></a>
+</dl><a NAME="Pep8Fixer.__findLogical" ID="Pep8Fixer.__findLogical"></a>
 <h4>Pep8Fixer.__findLogical</h4>
 <b>__findLogical</b>(<i></i>)
 <p>
@@ -274,15 +278,16 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE121" ID="Pep8Fixer.__fixE121"></a>
 <h4>Pep8Fixer.__fixE121</h4>
 <b>__fixE121</b>(<i>code, line, pos, apply=False</i>)
 <p>
         Private method to fix the indentation of continuation lines and
-        closing brackets (E121,E124).
+        closing brackets (E121, E124).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
@@ -301,8 +306,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE122" ID="Pep8Fixer.__fixE122"></a>
 <h4>Pep8Fixer.__fixE122</h4>
@@ -328,8 +334,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE123" ID="Pep8Fixer.__fixE123"></a>
 <h4>Pep8Fixer.__fixE123</h4>
@@ -355,8 +362,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE125" ID="Pep8Fixer.__fixE125"></a>
 <h4>Pep8Fixer.__fixE125</h4>
@@ -382,8 +390,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE126" ID="Pep8Fixer.__fixE126"></a>
 <h4>Pep8Fixer.__fixE126</h4>
@@ -409,8 +418,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE127" ID="Pep8Fixer.__fixE127"></a>
 <h4>Pep8Fixer.__fixE127</h4>
@@ -435,8 +445,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE201" ID="Pep8Fixer.__fixE201"></a>
 <h4>Pep8Fixer.__fixE201</h4>
@@ -458,8 +469,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE221" ID="Pep8Fixer.__fixE221"></a>
 <h4>Pep8Fixer.__fixE221</h4>
@@ -482,8 +494,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE231" ID="Pep8Fixer.__fixE231"></a>
 <h4>Pep8Fixer.__fixE231</h4>
@@ -504,8 +517,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE251" ID="Pep8Fixer.__fixE251"></a>
 <h4>Pep8Fixer.__fixE251</h4>
@@ -527,8 +541,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE261" ID="Pep8Fixer.__fixE261"></a>
 <h4>Pep8Fixer.__fixE261</h4>
@@ -550,8 +565,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE301" ID="Pep8Fixer.__fixE301"></a>
 <h4>Pep8Fixer.__fixE301</h4>
@@ -576,8 +592,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE302" ID="Pep8Fixer.__fixE302"></a>
 <h4>Pep8Fixer.__fixE302</h4>
@@ -602,8 +619,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE303" ID="Pep8Fixer.__fixE303"></a>
 <h4>Pep8Fixer.__fixE303</h4>
@@ -628,8 +646,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE304" ID="Pep8Fixer.__fixE304"></a>
 <h4>Pep8Fixer.__fixE304</h4>
@@ -655,8 +674,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE401" ID="Pep8Fixer.__fixE401"></a>
 <h4>Pep8Fixer.__fixE401</h4>
@@ -681,8 +701,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE501" ID="Pep8Fixer.__fixE501"></a>
 <h4>Pep8Fixer.__fixE501</h4>
@@ -707,8 +728,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE502" ID="Pep8Fixer.__fixE502"></a>
 <h4>Pep8Fixer.__fixE502</h4>
@@ -729,14 +751,15 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE701" ID="Pep8Fixer.__fixE701"></a>
 <h4>Pep8Fixer.__fixE701</h4>
 <b>__fixE701</b>(<i>code, line, pos, apply=False</i>)
 <p>
-        Private method to fix colon-separated compund statements (E701).
+        Private method to fix colon-separated compound statements (E701).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
@@ -755,8 +778,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE702" ID="Pep8Fixer.__fixE702"></a>
 <h4>Pep8Fixer.__fixE702</h4>
@@ -782,8 +806,9 @@ flag indicating, that the fix should be applied
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixE711" ID="Pep8Fixer.__fixE711"></a>
 <h4>Pep8Fixer.__fixE711</h4>
@@ -804,8 +829,65 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixN804" ID="Pep8Fixer.__fixN804"></a>
+<h4>Pep8Fixer.__fixN804</h4>
+<b>__fixN804</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a wrong first argument of normal and
+        class methods (N804, N805).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixN806" ID="Pep8Fixer.__fixN806"></a>
+<h4>Pep8Fixer.__fixN806</h4>
+<b>__fixN806</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a wrong first argument of static methods
+        (N806).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixReindent" ID="Pep8Fixer.__fixReindent"></a>
 <h4>Pep8Fixer.__fixReindent</h4>
@@ -846,8 +928,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixW292" ID="Pep8Fixer.__fixW292"></a>
 <h4>Pep8Fixer.__fixW292</h4>
@@ -868,8 +951,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixW391" ID="Pep8Fixer.__fixW391"></a>
 <h4>Pep8Fixer.__fixW391</h4>
@@ -890,8 +974,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixW603" ID="Pep8Fixer.__fixW603"></a>
 <h4>Pep8Fixer.__fixW603</h4>
@@ -912,8 +997,9 @@ position inside line (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixWhitespace" ID="Pep8Fixer.__fixWhitespace"></a>
 <h4>Pep8Fixer.__fixWhitespace</h4>
@@ -945,6 +1031,16 @@ corrected line
 <dt>Returns:</dt>
 <dd>
 eol string (string)
+</dd>
+</dl><a NAME="Pep8Fixer.__getID" ID="Pep8Fixer.__getID"></a>
+<h4>Pep8Fixer.__getID</h4>
+<b>__getID</b>(<i></i>)
+<p>
+        Private method to get the ID for a deferred fix.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+ID for a deferred fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__getIndent" ID="Pep8Fixer.__getIndent"></a>
 <h4>Pep8Fixer.__getIndent</h4>
@@ -1006,7 +1102,12 @@ tuple of a set of line numbers belonging to a multi line
             string and a set of line numbers belonging to a multi line
             documentation string (tuple of two set of integer)
 </dd>
-</dl><a NAME="Pep8Fixer.fixIssue" ID="Pep8Fixer.fixIssue"></a>
+</dl><a NAME="Pep8Fixer.finalize" ID="Pep8Fixer.finalize"></a>
+<h4>Pep8Fixer.finalize</h4>
+<b>finalize</b>(<i></i>)
+<p>
+        Public method to apply all deferred fixes.
+</p><a NAME="Pep8Fixer.fixIssue" ID="Pep8Fixer.fixIssue"></a>
 <h4>Pep8Fixer.fixIssue</h4>
 <b>fixIssue</b>(<i>line, pos, message</i>)
 <p>
@@ -1025,8 +1126,9 @@ message text (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating an applied fix (boolean) and a message for
-            the fix (string)
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.mutualStartswith" ID="Pep8Fixer.mutualStartswith"></a>
 <h4>Pep8Fixer.mutualStartswith</h4>

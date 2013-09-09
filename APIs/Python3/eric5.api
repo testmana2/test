@@ -3745,6 +3745,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report.error_args?4(line_number, offset, code, check, *args)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Report?1(options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.finalize?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.mutualStartswith?4(b)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
@@ -3758,6 +3759,15 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.fixedLine?4(line)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.getline?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter.run?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Reindenter?1(sourceLines)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.CamelcaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Codes?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.LowercaseRegex?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.Messages?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.MixedcaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.UppercaseRegexp?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.run?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker?1(tree, filename)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
@@ -8373,6 +8383,14 @@ eric5.UtilitiesPython2.Pep8Checker.Pep8Report.max_line_length?7
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report.repeat?7
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report.select?7
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report?1(options)
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.CamelcaseRegexp?7
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.Codes?7
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.LowercaseRegex?7
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.MixedcaseRegexp?7
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.UppercaseRegexp?7
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.run?4()
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.unpackArgs?4()
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker?1(tree, filename)
 eric5.UtilitiesPython2.Py2SyntaxChecker.compile?4(file, codestring)
 eric5.UtilitiesPython2.Py2SyntaxChecker.flakesCheck?4(fileName, codestring, ignoreStarImportWarnings)
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_line?4()

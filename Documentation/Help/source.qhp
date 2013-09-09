@@ -458,6 +458,7 @@
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.pep8" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
               </section>
@@ -970,6 +971,7 @@
               <section title="eric5.UtilitiesPython2.py2flakes.messages" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
             </section>
             <section title="eric5.UtilitiesPython2.Pep8Checker" ref="eric5.UtilitiesPython2.Pep8Checker.html" />
+            <section title="eric5.UtilitiesPython2.Pep8NamingCheckerPy2" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html" />
             <section title="eric5.UtilitiesPython2.Py2SyntaxChecker" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
             <section title="eric5.UtilitiesPython2.PySideImporter" ref="eric5.UtilitiesPython2.PySideImporter.html" />
             <section title="eric5.UtilitiesPython2.Tabnanny" ref="eric5.UtilitiesPython2.Tabnanny.html" />
@@ -8011,7 +8013,6 @@
       <keyword name="Pep8Fixer (Constructor)" id="Pep8Fixer (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__init__" />
       <keyword name="Pep8Fixer (Module)" id="Pep8Fixer (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
       <keyword name="Pep8Fixer.__codeMatch" id="Pep8Fixer.__codeMatch" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__codeMatch" />
-      <keyword name="Pep8Fixer.__finalize" id="Pep8Fixer.__finalize" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__finalize" />
       <keyword name="Pep8Fixer.__findLogical" id="Pep8Fixer.__findLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__findLogical" />
       <keyword name="Pep8Fixer.__fixE101" id="Pep8Fixer.__fixE101" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE101" />
       <keyword name="Pep8Fixer.__fixE121" id="Pep8Fixer.__fixE121" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE121" />
@@ -8035,6 +8036,8 @@
       <keyword name="Pep8Fixer.__fixE701" id="Pep8Fixer.__fixE701" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE701" />
       <keyword name="Pep8Fixer.__fixE702" id="Pep8Fixer.__fixE702" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE702" />
       <keyword name="Pep8Fixer.__fixE711" id="Pep8Fixer.__fixE711" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixE711" />
+      <keyword name="Pep8Fixer.__fixN804" id="Pep8Fixer.__fixN804" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixN804" />
+      <keyword name="Pep8Fixer.__fixN806" id="Pep8Fixer.__fixN806" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixN806" />
       <keyword name="Pep8Fixer.__fixReindent" id="Pep8Fixer.__fixReindent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixReindent" />
       <keyword name="Pep8Fixer.__fixW291" id="Pep8Fixer.__fixW291" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW291" />
       <keyword name="Pep8Fixer.__fixW292" id="Pep8Fixer.__fixW292" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW292" />
@@ -8042,10 +8045,12 @@
       <keyword name="Pep8Fixer.__fixW603" id="Pep8Fixer.__fixW603" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixW603" />
       <keyword name="Pep8Fixer.__fixWhitespace" id="Pep8Fixer.__fixWhitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespace" />
       <keyword name="Pep8Fixer.__getEol" id="Pep8Fixer.__getEol" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getEol" />
+      <keyword name="Pep8Fixer.__getID" id="Pep8Fixer.__getID" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getID" />
       <keyword name="Pep8Fixer.__getIndent" id="Pep8Fixer.__getIndent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndent" />
       <keyword name="Pep8Fixer.__getIndentWord" id="Pep8Fixer.__getIndentWord" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getIndentWord" />
       <keyword name="Pep8Fixer.__getLogical" id="Pep8Fixer.__getLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getLogical" />
       <keyword name="Pep8Fixer.__multilineStringLines" id="Pep8Fixer.__multilineStringLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__multilineStringLines" />
+      <keyword name="Pep8Fixer.finalize" id="Pep8Fixer.finalize" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.finalize" />
       <keyword name="Pep8Fixer.fixIssue" id="Pep8Fixer.fixIssue" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.fixIssue" />
       <keyword name="Pep8Fixer.mutualStartswith" id="Pep8Fixer.mutualStartswith" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.mutualStartswith" />
       <keyword name="Pep8Fixer.saveFile" id="Pep8Fixer.saveFile" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.saveFile" />
@@ -8065,6 +8070,42 @@
       <keyword name="Pep8LineShortener.__shortenComment" id="Pep8LineShortener.__shortenComment" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__shortenComment" />
       <keyword name="Pep8LineShortener.__shortenLine" id="Pep8LineShortener.__shortenLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.__shortenLine" />
       <keyword name="Pep8LineShortener.shorten" id="Pep8LineShortener.shorten" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8LineShortener.shorten" />
+      <keyword name="Pep8NamingChecker" id="Pep8NamingChecker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker" />
+      <keyword name="Pep8NamingChecker" id="Pep8NamingChecker" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker" />
+      <keyword name="Pep8NamingChecker (Constructor)" id="Pep8NamingChecker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__init__" />
+      <keyword name="Pep8NamingChecker (Constructor)" id="Pep8NamingChecker (Constructor)" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__init__" />
+      <keyword name="Pep8NamingChecker (Module)" id="Pep8NamingChecker (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html" />
+      <keyword name="Pep8NamingChecker.__checkClassName" id="Pep8NamingChecker.__checkClassName" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkClassName" />
+      <keyword name="Pep8NamingChecker.__checkClassName" id="Pep8NamingChecker.__checkClassName" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkClassName" />
+      <keyword name="Pep8NamingChecker.__checkFunctionArgumentNames" id="Pep8NamingChecker.__checkFunctionArgumentNames" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkFunctionArgumentNames" />
+      <keyword name="Pep8NamingChecker.__checkFunctionArgumentNames" id="Pep8NamingChecker.__checkFunctionArgumentNames" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkFunctionArgumentNames" />
+      <keyword name="Pep8NamingChecker.__checkFuntionName" id="Pep8NamingChecker.__checkFuntionName" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkFuntionName" />
+      <keyword name="Pep8NamingChecker.__checkFuntionName" id="Pep8NamingChecker.__checkFuntionName" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkFuntionName" />
+      <keyword name="Pep8NamingChecker.__checkImportAs" id="Pep8NamingChecker.__checkImportAs" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkImportAs" />
+      <keyword name="Pep8NamingChecker.__checkImportAs" id="Pep8NamingChecker.__checkImportAs" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkImportAs" />
+      <keyword name="Pep8NamingChecker.__checkModule" id="Pep8NamingChecker.__checkModule" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkModule" />
+      <keyword name="Pep8NamingChecker.__checkModule" id="Pep8NamingChecker.__checkModule" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkModule" />
+      <keyword name="Pep8NamingChecker.__checkVariablesInFunction" id="Pep8NamingChecker.__checkVariablesInFunction" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkVariablesInFunction" />
+      <keyword name="Pep8NamingChecker.__checkVariablesInFunction" id="Pep8NamingChecker.__checkVariablesInFunction" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkVariablesInFunction" />
+      <keyword name="Pep8NamingChecker.__error" id="Pep8NamingChecker.__error" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__error" />
+      <keyword name="Pep8NamingChecker.__error" id="Pep8NamingChecker.__error" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__error" />
+      <keyword name="Pep8NamingChecker.__findGlobalDefs" id="Pep8NamingChecker.__findGlobalDefs" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__findGlobalDefs" />
+      <keyword name="Pep8NamingChecker.__findGlobalDefs" id="Pep8NamingChecker.__findGlobalDefs" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__findGlobalDefs" />
+      <keyword name="Pep8NamingChecker.__getArgNames" id="Pep8NamingChecker.__getArgNames" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__getArgNames" />
+      <keyword name="Pep8NamingChecker.__getArgNames" id="Pep8NamingChecker.__getArgNames" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__getArgNames" />
+      <keyword name="Pep8NamingChecker.__isNameToBeAvoided" id="Pep8NamingChecker.__isNameToBeAvoided" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__isNameToBeAvoided" />
+      <keyword name="Pep8NamingChecker.__isNameToBeAvoided" id="Pep8NamingChecker.__isNameToBeAvoided" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__isNameToBeAvoided" />
+      <keyword name="Pep8NamingChecker.__tagClassFunctions" id="Pep8NamingChecker.__tagClassFunctions" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__tagClassFunctions" />
+      <keyword name="Pep8NamingChecker.__tagClassFunctions" id="Pep8NamingChecker.__tagClassFunctions" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__tagClassFunctions" />
+      <keyword name="Pep8NamingChecker.__visitNode" id="Pep8NamingChecker.__visitNode" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__visitNode" />
+      <keyword name="Pep8NamingChecker.__visitNode" id="Pep8NamingChecker.__visitNode" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__visitNode" />
+      <keyword name="Pep8NamingChecker.__visitTree" id="Pep8NamingChecker.__visitTree" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__visitTree" />
+      <keyword name="Pep8NamingChecker.__visitTree" id="Pep8NamingChecker.__visitTree" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__visitTree" />
+      <keyword name="Pep8NamingChecker.getMessage" id="Pep8NamingChecker.getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.getMessage" />
+      <keyword name="Pep8NamingChecker.run" id="Pep8NamingChecker.run" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.run" />
+      <keyword name="Pep8NamingChecker.run" id="Pep8NamingChecker.run" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.run" />
+      <keyword name="Pep8NamingChecker.unpackArgs" id="Pep8NamingChecker.unpackArgs" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.unpackArgs" />
+      <keyword name="Pep8NamingCheckerPy2 (Module)" id="Pep8NamingCheckerPy2 (Module)" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html" />
       <keyword name="Pep8Py2Checker" id="Pep8Py2Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker" />
       <keyword name="Pep8Py2Checker (Constructor)" id="Pep8Py2Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker.__init__" />
       <keyword name="Pep8Reindenter" id="Pep8Reindenter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Reindenter" />
@@ -13600,6 +13641,7 @@
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.pep8.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html</file>
@@ -14002,6 +14044,7 @@
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.UtilitiesPython2.Pep8Checker.html</file>
+      <file>eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html</file>
       <file>eric5.UtilitiesPython2.Py2SyntaxChecker.html</file>
       <file>eric5.UtilitiesPython2.PySideImporter.html</file>
       <file>eric5.UtilitiesPython2.Tabnanny.html</file>
