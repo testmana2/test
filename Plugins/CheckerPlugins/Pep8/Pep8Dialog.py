@@ -590,12 +590,16 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             lineno = item.data(0, self.lineRole)
             position = item.data(0, self.positionRole)
             message = item.data(0, self.messageRole)
+            code = item.data(0, self.codeRole)
             
             vm = e5App().getObject("ViewManager")
             vm.openSourceFile(fn, lineno=lineno, pos=position + 1)
             editor = vm.getOpenEditor(fn)
             
-            editor.toggleFlakesWarning(lineno, True, message)
+            if code == "E901":
+                editor.toggleSyntaxError(lineno, 0, True, message, True)
+            else:
+                editor.toggleFlakesWarning(lineno, True, message)
     
     @pyqtSlot()
     def on_resultList_itemSelectionChanged(self):

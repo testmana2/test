@@ -158,7 +158,7 @@ class Editor(QsciScintillaCompat):
         self.bookmarks = []         # bookmarks are just a list of handles to the
                                     # bookmark markers
         self.syntaxerrors = {}      # key:   marker handle
-                                    # value: error message, error index
+                                    # value: list of (error message, error index)
         self.warnings = {}          # key:   marker handle
                                     # value: list of warning messages
         self.notcoveredMarkers = []  # just a list of marker handles
@@ -5111,11 +5111,16 @@ class Editor(QsciScintillaCompat):
             if not (markers & (1 << self.syntaxerror)):
                 handle = self.markerAdd(line - 1, self.syntaxerror)
                 index += self.indentation(line - 1)
-                self.syntaxerrors[handle] = (msg, index)
+                self.syntaxerrors[handle] = [(msg, index)]
                 self.syntaxerrorToggled.emit(self)
-                if show:
-                    self.setCursorPosition(line - 1, index)
-                    self.ensureLineVisible(line - 1)
+            else:
+                for handle in list(self.syntaxerrors.keys()):
+                    if self.markerLine(handle) == line - 1 and \
+                       (msg, index) not in self.syntaxerrors[handle]:
+                        self.syntaxerrors[handle].append((msg, index))
+            if show:
+                self.setCursorPosition(line - 1, index)
+                self.ensureLineVisible(line - 1)
         else:
             for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line - 1:
@@ -5156,7 +5161,7 @@ class Editor(QsciScintillaCompat):
             index = 0
             for handle in self.syntaxerrors.keys():
                 if self.markerLine(handle) == seline:
-                    index = self.syntaxerrors[handle][1]
+                    index = self.syntaxerrors[handle][0][1]
             self.setCursorPosition(seline, index)
         self.ensureLineVisible(seline)
         
@@ -5180,9 +5185,10 @@ class Editor(QsciScintillaCompat):
         
         for handle in list(self.syntaxerrors.keys()):
             if self.markerLine(handle) == line:
+                errors = [e[0] for e in self.syntaxerrors[handle]]
                 E5MessageBox.critical(self,
                     self.trUtf8("Syntax Error"),
-                    self.syntaxerrors[handle][0])
+                    "\n".join(errors))
                 break
         else:
             E5MessageBox.critical(self,
@@ -5192,7 +5198,8 @@ class Editor(QsciScintillaCompat):
     ############################################################################
     ## Flakes warning handling methods below
     ############################################################################
-
+    
+    # TODO: add flag for PEP-8 messages and record this flag in self.warnings
     def toggleFlakesWarning(self, line, warning, msg=""):
         """
         Public method to toggle a flakes warning indicator.
@@ -5319,6 +5326,7 @@ class Editor(QsciScintillaCompat):
     ## Annotation handling methods below
     ############################################################################
     
+    # TODO: add additional annotations style (green) for PEP-8 warnings
     def __setAnnotationStyles(self):
         """
         Private slot to define the style used by inline annotations.
@@ -5340,6 +5348,7 @@ class Editor(QsciScintillaCompat):
                 self.annotationErrorStyle,
                 Preferences.getEditorColour("AnnotationsErrorBackground"))
         
+    # TODO: show pep-8 warnings in a different color (green) with prefix 'Style:'
     def __setAnnotation(self, line):
         """
         Private method to set the annotations for the given line.
@@ -5360,9 +5369,9 @@ class Editor(QsciScintillaCompat):
             # step 2: do syntax errors
             for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line:
-                    errorAnnotations.append(
-                        self.trUtf8("Error: {0}").format(
-                            self.syntaxerrors[handle][0]))
+                    for msg, _ in self.syntaxerrors[handle]:
+                        errorAnnotations.append(
+                            self.trUtf8("Error: {0}").format(msg))
             
             wLen = len(warningAnnotations)
             eLen = len(errorAnnotations)
