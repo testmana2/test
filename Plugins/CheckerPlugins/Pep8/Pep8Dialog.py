@@ -209,6 +209,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         self.statisticsButton.setEnabled(False)
         self.showButton.setEnabled(False)
+        self.startButton.setEnabled(False)
         if repeat is not None:
             self.repeatCheckBox.setChecked(repeat)
         QApplication.processEvents()
@@ -355,6 +356,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.statisticsButton.setEnabled(True)
         self.showButton.setEnabled(True)
+        self.startButton.setEnabled(True)
         
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
