@@ -1407,10 +1407,10 @@ class Editor(QsciScintillaCompat):
         if not language:
             ext = os.path.splitext(filename)[1]
             if ext in [".py", ".pyw"]:
-                if self.isPy2File():
-                    language = "Python2"
-                elif self.isPy3File():
+                if self.isPy3File():
                     language = "Python3"
+                elif self.isPy2File():
+                    language = "Python2"
                 else:
                     # default is Python 3
                     language = "Python3"
@@ -1529,10 +1529,10 @@ class Editor(QsciScintillaCompat):
         filename = os.path.basename(filename)
         apiLanguage = Preferences.getEditorLexerAssoc(filename)
         if apiLanguage == "":
-            if self.isPy2File():
-                apiLanguage = "Python2"
-            elif self.isPy3File():
+            if self.isPy3File():
                 apiLanguage = "Python3"
+            elif self.isPy2File():
+                apiLanguage = "Python2"
             elif self.isRubyFile():
                 apiLanguage = "Ruby"
         
@@ -1660,10 +1660,10 @@ class Editor(QsciScintillaCompat):
         if not ftype:
             ftype = self.getFileTypeByFlag()
         if not ftype:
-            if self.isPy2File():
-                ftype = "Python2"
-            elif self.isPy3File():
+            if self.isPy3File():
                 ftype = "Python3"
+            elif self.isPy2File():
+                ftype = "Python2"
             elif self.isRubyFile():
                 ftype = "Ruby"
             else:
