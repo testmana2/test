@@ -757,7 +757,6 @@
               <section title="eric5.Preferences.ConfigurationPages.PrinterPage" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ProjectBrowserPage" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ProjectPage" ref="eric5.Preferences.ConfigurationPages.ProjectPage.html" />
-              <section title="eric5.Preferences.ConfigurationPages.Py3FlakesPage" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.QtPage" ref="eric5.Preferences.ConfigurationPages.QtPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.SecurityPage" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html" />
@@ -8956,10 +8955,6 @@
       <keyword name="PurgeProjectHelper.initMenu" id="PurgeProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initMenu" />
       <keyword name="PurgeProjectHelper.menuTitle" id="PurgeProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.menuTitle" />
       <keyword name="Py2SyntaxChecker (Module)" id="Py2SyntaxChecker (Module)" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
-      <keyword name="Py3FlakesPage" id="Py3FlakesPage" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage" />
-      <keyword name="Py3FlakesPage (Constructor)" id="Py3FlakesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage.__init__" />
-      <keyword name="Py3FlakesPage (Module)" id="Py3FlakesPage (Module)" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html" />
-      <keyword name="Py3FlakesPage.save" id="Py3FlakesPage.save" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#Py3FlakesPage.save" />
       <keyword name="PyCoverageDialog" id="PyCoverageDialog" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog" />
       <keyword name="PyCoverageDialog (Constructor)" id="PyCoverageDialog (Constructor)" ref="eric5.DataViews.PyCoverageDialog.html#PyCoverageDialog.__init__" />
       <keyword name="PyCoverageDialog (Module)" id="PyCoverageDialog (Module)" ref="eric5.DataViews.PyCoverageDialog.html" />
@@ -12697,7 +12692,6 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ProjectPage.html#create" />
-      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.PythonPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.QtPage.html#create" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#create" />
@@ -13874,7 +13868,6 @@
       <file>eric5.Preferences.ConfigurationPages.PrinterPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ProjectBrowserPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ProjectPage.html</file>
-      <file>eric5.Preferences.ConfigurationPages.Py3FlakesPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PythonPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.QtPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.SecurityPage.html</file>

@@ -26,7 +26,7 @@ class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
         """
         super().__init__()
         self.setupUi(self)
-        self.setObjectName("Py3FlakesPage")
+        self.setObjectName("TrayStarterPage")
         
         self.standardButton.setIcon(UI.PixmapCache.getIcon("erict.png"))
         self.highContrastButton.setIcon(UI.PixmapCache.getIcon("erict-hc.png"))

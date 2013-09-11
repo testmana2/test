@@ -3487,209 +3487,209 @@ Razón: {1}</translation>
         <translation>Gestor de Plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="318"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="315"/>
         <source>Printer</source>
         <translation>Impresora</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="186"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="183"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="158"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="155"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="164"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="161"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="167"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="164"/>
         <source>Tasks</source>
         <translation>Tareas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="170"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="167"/>
         <source>Templates</source>
         <translation>Plantillas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="176"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="173"/>
         <source>Version Control Systems</source>
         <translation>Sistemas de Control de Versiones</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="177"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="192"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="189"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="196"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="193"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="199"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="196"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="202"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="199"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="209"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="206"/>
         <source>Calltips</source>
         <translation>Consejos de llamada (calltips)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="215"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="212"/>
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="233"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="230"/>
         <source>Typing</source>
         <translation>Tecleo de codigo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="236"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="233"/>
         <source>Exporters</source>
         <translation>Exportadores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="240"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="237"/>
         <source>Highlighters</source>
         <translation>Resaltado de código</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="243"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="240"/>
         <source>Filetype Associations</source>
         <translation>Asociación de tipos de archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="244"/>
         <source>Styles</source>
         <translation>Estilos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="325"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="322"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="331"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="328"/>
         <source>Help Documentation</source>
         <translation>Documentación de Ayuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="268"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="265"/>
         <source>Help Viewers</source>
         <translation>Visores de Ayuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="284"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="281"/>
         <source>Project</source>
         <translation>Proyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="281"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="278"/>
         <source>Project Viewer</source>
         <translation>Visor de proyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="287"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="284"/>
         <source>Multiproject</source>
         <translation>Multiproyecto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="312"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="309"/>
         <source>Interface</source>
         <translation>Interfaz de Usuario</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="297"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="294"/>
         <source>Viewmanager</source>
         <translation>Gestor de vistas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="540"/>
         <source>Configuration Page Error</source>
         <translation> Error de Configuración de Página</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="218"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="215"/>
         <source>Filehandling</source>
         <translation>Gestión de archivos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="218"/>
         <source>Searching</source>
         <translation>Búsquedas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="328"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="325"/>
         <source>Appearance</source>
         <translation>Apariencia</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="212"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="209"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="227"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
         <source>Style</source>
         <translation>Estilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="254"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="251"/>
         <source>Properties</source>
         <translation>Propiedades</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="468"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="465"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="473"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="470"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Por favor, seleccione una entrada de la lista
 para visualizar la página de configuración.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="315"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="312"/>
         <source>Network</source>
         <translation>Red</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
         <source>Spell checking</source>
         <translation>Corrección ortográfica</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="189"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="186"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="543"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="540"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La página de configuración  &lt;b&gt;{0}&lt;/b&gt; no puede ser cargada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="251"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="248"/>
         <source>Keywords</source>
         <translation>Palabras clave</translation>
     </message>
@@ -3699,37 +3699,37 @@ para visualizar la página de configuración.</translation>
         <translation>Cooperación</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="350"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="347"/>
         <source>Tray Starter</source>
         <translation>Lanzador de bandeja de sistema</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="152"/>
         <source>PyFlakes</source>
-        <translation>PyFlakes</translation>
+        <translation type="obsolete">PyFlakes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="335"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="332"/>
         <source>VirusTotal Interface</source>
         <translation>Interfaz de VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="321"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="318"/>
         <source>Security</source>
         <translation>Seguridad</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="338"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="335"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="230"/>
         <source>Syntax Checker</source>
-        <translation>Verificador sintaxis</translation>
+        <translation type="obsolete">Verificador sintaxis</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="409"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="406"/>
         <source>Enter filter text...</source>
         <translation>Introducir el texto de filtro...</translation>
     </message>
@@ -3742,6 +3742,11 @@ para visualizar la página de configuración.</translation>
         <location filename="../Preferences/ConfigurationDialog.py" line="137"/>
         <source>IRC</source>
         <translation>IRC</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="227"/>
+        <source>Code Checkers</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7920,849 +7925,864 @@ selección completa.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2640"/>
+        <location filename="../QScintilla/Editor.py" line="2654"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="595"/>
+        <location filename="../QScintilla/Editor.py" line="609"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="598"/>
+        <location filename="../QScintilla/Editor.py" line="612"/>
         <source>Redo</source>
         <translation>Rehacer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="601"/>
+        <location filename="../QScintilla/Editor.py" line="615"/>
         <source>Revert to last saved state</source>
         <translation>Volver al último estado guardado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="605"/>
+        <location filename="../QScintilla/Editor.py" line="619"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="608"/>
+        <location filename="../QScintilla/Editor.py" line="622"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="610"/>
+        <location filename="../QScintilla/Editor.py" line="624"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="614"/>
+        <location filename="../QScintilla/Editor.py" line="628"/>
         <source>Indent</source>
         <translation>Indentar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="616"/>
+        <location filename="../QScintilla/Editor.py" line="630"/>
         <source>Unindent</source>
         <translation>Desindentar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="619"/>
+        <location filename="../QScintilla/Editor.py" line="633"/>
         <source>Comment</source>
         <translation>Pasar a comentario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="622"/>
+        <location filename="../QScintilla/Editor.py" line="636"/>
         <source>Uncomment</source>
         <translation>Sacar de comentario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="625"/>
+        <location filename="../QScintilla/Editor.py" line="639"/>
         <source>Stream Comment</source>
         <translation>Bloque de comentario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="628"/>
+        <location filename="../QScintilla/Editor.py" line="642"/>
         <source>Box Comment</source>
         <translation>Caja de comentario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="631"/>
+        <location filename="../QScintilla/Editor.py" line="645"/>
         <source>Select to brace</source>
         <translation>Seleccionar hasta la llave ( &apos;{&apos; o &apos;}&apos; )</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="633"/>
+        <location filename="../QScintilla/Editor.py" line="647"/>
         <source>Select all</source>
         <translation>Seleccionar todo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="634"/>
+        <location filename="../QScintilla/Editor.py" line="648"/>
         <source>Deselect all</source>
         <translation>Deseleccionar todo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="647"/>
+        <location filename="../QScintilla/Editor.py" line="661"/>
         <source>Shorten empty lines</source>
         <translation>Acortar las líneas vacías</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="655"/>
+        <location filename="../QScintilla/Editor.py" line="669"/>
         <source>Use Monospaced Font</source>
         <translation>Usar fuente monoespaciada</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="660"/>
+        <location filename="../QScintilla/Editor.py" line="674"/>
         <source>Autosave enabled</source>
         <translation>Autoguardar habilitado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="672"/>
+        <location filename="../QScintilla/Editor.py" line="686"/>
         <source>Autocompletion enabled</source>
         <translation>Autocompletar habilitado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="689"/>
+        <location filename="../QScintilla/Editor.py" line="703"/>
         <source>New view</source>
         <translation>Nueva vista</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="690"/>
+        <location filename="../QScintilla/Editor.py" line="704"/>
         <source>New view (with new split)</source>
         <translation>Nueva vista (con nueva división)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="694"/>
+        <location filename="../QScintilla/Editor.py" line="708"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="698"/>
+        <location filename="../QScintilla/Editor.py" line="712"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="700"/>
+        <location filename="../QScintilla/Editor.py" line="714"/>
         <source>Save As...</source>
         <translation>Guardar como...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="711"/>
+        <location filename="../QScintilla/Editor.py" line="725"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="728"/>
+        <location filename="../QScintilla/Editor.py" line="742"/>
         <source>Autocomplete</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="734"/>
+        <location filename="../QScintilla/Editor.py" line="748"/>
         <source>from Document</source>
         <translation>desde Documento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="737"/>
+        <location filename="../QScintilla/Editor.py" line="751"/>
         <source>from APIs</source>
         <translation>desde APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="740"/>
+        <location filename="../QScintilla/Editor.py" line="754"/>
         <source>from Document and APIs</source>
         <translation>desde Documento y APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="754"/>
+        <location filename="../QScintilla/Editor.py" line="768"/>
         <source>Check</source>
         <translation>Verificar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="762"/>
+        <location filename="../QScintilla/Editor.py" line="776"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="764"/>
+        <location filename="../QScintilla/Editor.py" line="778"/>
         <source>Code metrics...</source>
         <translation>Métricas de código...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="766"/>
+        <location filename="../QScintilla/Editor.py" line="780"/>
         <source>Code coverage...</source>
         <translation>Cobertura de código...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="768"/>
+        <location filename="../QScintilla/Editor.py" line="782"/>
         <source>Show code coverage annotations</source>
         <translation>Mostrar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="771"/>
+        <location filename="../QScintilla/Editor.py" line="785"/>
         <source>Hide code coverage annotations</source>
         <translation>Ocultar anotaciones de cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="774"/>
+        <location filename="../QScintilla/Editor.py" line="788"/>
         <source>Profile data...</source>
         <translation>Datos de profiling...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="784"/>
+        <location filename="../QScintilla/Editor.py" line="798"/>
         <source>Diagrams</source>
         <translation>Diagramas</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="786"/>
+        <location filename="../QScintilla/Editor.py" line="800"/>
         <source>Class Diagram...</source>
         <translation>Diagrama de clases...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="788"/>
+        <location filename="../QScintilla/Editor.py" line="802"/>
         <source>Package Diagram...</source>
         <translation>Diagrama de paquetes...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="790"/>
+        <location filename="../QScintilla/Editor.py" line="804"/>
         <source>Imports Diagram...</source>
         <translation>Diagrama de imports...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="793"/>
+        <location filename="../QScintilla/Editor.py" line="807"/>
         <source>Application Diagram...</source>
         <translation>Diagrama de aplicación...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="807"/>
+        <location filename="../QScintilla/Editor.py" line="821"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="810"/>
+        <location filename="../QScintilla/Editor.py" line="824"/>
         <source>No Language</source>
         <translation>Ningún Lenguaje</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="906"/>
+        <location filename="../QScintilla/Editor.py" line="920"/>
         <source>Export as</source>
         <translation>Exportar como</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1033"/>
+        <location filename="../QScintilla/Editor.py" line="1047"/>
         <source>Toggle bookmark</source>
         <translation>Alternar marcador</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1036"/>
+        <location filename="../QScintilla/Editor.py" line="1050"/>
         <source>Next bookmark</source>
         <translation>Nuevo marcador</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1039"/>
+        <location filename="../QScintilla/Editor.py" line="1053"/>
         <source>Previous bookmark</source>
         <translation>Marcador anterior</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1042"/>
+        <location filename="../QScintilla/Editor.py" line="1056"/>
         <source>Clear all bookmarks</source>
         <translation>Borrar todos los marcadores</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1046"/>
+        <location filename="../QScintilla/Editor.py" line="1060"/>
         <source>Goto syntax error</source>
         <translation>Ir al error de sintaxis</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1049"/>
+        <location filename="../QScintilla/Editor.py" line="1063"/>
         <source>Show syntax error message</source>
         <translation>Ver el mensaje de error de sintaxis</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1052"/>
+        <location filename="../QScintilla/Editor.py" line="1066"/>
         <source>Clear syntax error</source>
         <translation>Borrar error de sintaxis</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1069"/>
+        <location filename="../QScintilla/Editor.py" line="1083"/>
         <source>Toggle breakpoint</source>
         <translation>Alternar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1072"/>
+        <location filename="../QScintilla/Editor.py" line="1086"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Alternar punto de interrupción temporal</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1075"/>
+        <location filename="../QScintilla/Editor.py" line="1089"/>
         <source>Edit breakpoint...</source>
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4573"/>
+        <location filename="../QScintilla/Editor.py" line="4587"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1081"/>
+        <location filename="../QScintilla/Editor.py" line="1095"/>
         <source>Next breakpoint</source>
         <translation>Siguiente punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1084"/>
+        <location filename="../QScintilla/Editor.py" line="1098"/>
         <source>Previous breakpoint</source>
         <translation>Punto de interrupción anterior</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1087"/>
+        <location filename="../QScintilla/Editor.py" line="1101"/>
         <source>Clear all breakpoints</source>
         <translation>Borrar todos los puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1091"/>
+        <location filename="../QScintilla/Editor.py" line="1105"/>
         <source>Next uncovered line</source>
         <translation>Siguiente línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1094"/>
+        <location filename="../QScintilla/Editor.py" line="1108"/>
         <source>Previous uncovered line</source>
         <translation>Anterior línea sin cobertura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1098"/>
+        <location filename="../QScintilla/Editor.py" line="1112"/>
         <source>Next task</source>
         <translation>Nueva tarea</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1101"/>
+        <location filename="../QScintilla/Editor.py" line="1115"/>
         <source>Previous task</source>
         <translation>Tarea anterior</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1112"/>
+        <location filename="../QScintilla/Editor.py" line="1126"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB (botón izquierdo del ratón) alterna marcadores</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1117"/>
+        <location filename="../QScintilla/Editor.py" line="1131"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB (botón izquierdo del ratón) alterna puntos de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1151"/>
+        <location filename="../QScintilla/Editor.py" line="1165"/>
         <source>Export source</source>
         <translation>Exportar fuente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1151"/>
+        <location filename="../QScintilla/Editor.py" line="1165"/>
         <source>No export format given. Aborting...</source>
         <translation>No se ha proporcionado un formato de exportación. Abortando...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1604"/>
+        <location filename="../QScintilla/Editor.py" line="1618"/>
         <source>Modification of Read Only file</source>
         <translation>Modificación de un archivo de solo lectura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1604"/>
+        <location filename="../QScintilla/Editor.py" line="1618"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Usted está intentando modificar un archivo solo lectura. Por favor guarde en otro archivo primero.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2267"/>
+        <location filename="../QScintilla/Editor.py" line="2281"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2284"/>
+        <location filename="../QScintilla/Editor.py" line="2298"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2286"/>
+        <location filename="../QScintilla/Editor.py" line="2300"/>
         <source>Error while printing</source>
         <translation>Error al imprimir</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2289"/>
+        <location filename="../QScintilla/Editor.py" line="2303"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2592"/>
+        <location filename="../QScintilla/Editor.py" line="2606"/>
         <source>File Modified</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2804"/>
+        <location filename="../QScintilla/Editor.py" line="2818"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4082"/>
+        <location filename="../QScintilla/Editor.py" line="4096"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4082"/>
+        <location filename="../QScintilla/Editor.py" line="4096"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4576"/>
+        <location filename="../QScintilla/Editor.py" line="4590"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4904"/>
+        <location filename="../QScintilla/Editor.py" line="4918"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4904"/>
+        <location filename="../QScintilla/Editor.py" line="4918"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4965"/>
+        <location filename="../QScintilla/Editor.py" line="4979"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4959"/>
+        <location filename="../QScintilla/Editor.py" line="4973"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4965"/>
+        <location filename="../QScintilla/Editor.py" line="4979"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5057"/>
+        <location filename="../QScintilla/Editor.py" line="5071"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5057"/>
+        <location filename="../QScintilla/Editor.py" line="5071"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5188"/>
+        <location filename="../QScintilla/Editor.py" line="5208"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5188"/>
+        <location filename="../QScintilla/Editor.py" line="5208"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5413"/>
+        <location filename="../QScintilla/Editor.py" line="5457"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5413"/>
+        <location filename="../QScintilla/Editor.py" line="5457"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5441"/>
+        <location filename="../QScintilla/Editor.py" line="5485"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5481"/>
+        <location filename="../QScintilla/Editor.py" line="5525"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5462"/>
+        <location filename="../QScintilla/Editor.py" line="5506"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5481"/>
+        <location filename="../QScintilla/Editor.py" line="5525"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5498"/>
+        <location filename="../QScintilla/Editor.py" line="5542"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5513"/>
+        <location filename="../QScintilla/Editor.py" line="5557"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5524"/>
+        <location filename="../QScintilla/Editor.py" line="5568"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5524"/>
+        <location filename="../QScintilla/Editor.py" line="5568"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5549"/>
+        <location filename="../QScintilla/Editor.py" line="5593"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5549"/>
+        <location filename="../QScintilla/Editor.py" line="5593"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5678"/>
+        <location filename="../QScintilla/Editor.py" line="5722"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5938"/>
+        <location filename="../QScintilla/Editor.py" line="5982"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5956"/>
+        <location filename="../QScintilla/Editor.py" line="6000"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5958"/>
+        <location filename="../QScintilla/Editor.py" line="6002"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5960"/>
+        <location filename="../QScintilla/Editor.py" line="6004"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5962"/>
+        <location filename="../QScintilla/Editor.py" line="6006"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5964"/>
+        <location filename="../QScintilla/Editor.py" line="6008"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5967"/>
+        <location filename="../QScintilla/Editor.py" line="6011"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5985"/>
+        <location filename="../QScintilla/Editor.py" line="6029"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6001"/>
+        <location filename="../QScintilla/Editor.py" line="6045"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6028"/>
+        <location filename="../QScintilla/Editor.py" line="6072"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6090"/>
+        <location filename="../QScintilla/Editor.py" line="6134"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6090"/>
+        <location filename="../QScintilla/Editor.py" line="6134"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6108"/>
+        <location filename="../QScintilla/Editor.py" line="6152"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6108"/>
+        <location filename="../QScintilla/Editor.py" line="6152"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6120"/>
+        <location filename="../QScintilla/Editor.py" line="6164"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6120"/>
+        <location filename="../QScintilla/Editor.py" line="6164"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="731"/>
+        <location filename="../QScintilla/Editor.py" line="745"/>
         <source>dynamic</source>
         <translation>dinámico</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="744"/>
+        <location filename="../QScintilla/Editor.py" line="758"/>
         <source>Calltip</source>
         <translation>Consejo de llamada</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="709"/>
+        <location filename="../QScintilla/Editor.py" line="723"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="344"/>
+        <location filename="../QScintilla/Editor.py" line="358"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Una Ventana de Edición de Códigos Fuente&lt;/b&gt;&lt;p&gt;Esta ventana se utiliza para mostrar y editar un archivo de código fuente.  Puede abrir tantas como desee. El nombre del archivo se muestra en la barra de título de la ventana.&lt;/p&gt;&lt;p&gt;Para insertar puntos de interrupción basta con hacer un click en el espacio entre los números de línea y los marcadores de plegado.  Pueden editarse con el menú de contexto de los márgenes.&lt;/p&gt;&lt;p&gt;Para insertar marcadores solo hay que hacer Shift-click en el espacio entre los números de línea y los marcadores de plegado.&lt;/p&gt;&lt;p&gt;Estas acciones se pueden revertir utilizando el menú de contexto.&lt;/p&gt;&lt;p&gt;Haciendo Ctrl-click en un marcador de error sintáctico se muestra información sobre el dicho error.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="665"/>
+        <location filename="../QScintilla/Editor.py" line="679"/>
         <source>Typing aids enabled</source>
         <translation>Ayudas al tecleo habilitadas</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="872"/>
+        <location filename="../QScintilla/Editor.py" line="886"/>
         <source>End-of-Line Type</source>
         <translation>Typo de fin-de-línea</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="876"/>
+        <location filename="../QScintilla/Editor.py" line="890"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="883"/>
+        <location filename="../QScintilla/Editor.py" line="897"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="890"/>
+        <location filename="../QScintilla/Editor.py" line="904"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="850"/>
+        <location filename="../QScintilla/Editor.py" line="864"/>
         <source>Encodings</source>
         <translation>Codificaciones</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="832"/>
+        <location filename="../QScintilla/Editor.py" line="846"/>
         <source>Guessed</source>
         <translation>Suposición</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1164"/>
+        <location filename="../QScintilla/Editor.py" line="1178"/>
         <source>Alternatives</source>
         <translation>Alternativas</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1180"/>
+        <location filename="../QScintilla/Editor.py" line="1194"/>
         <source>Pygments Lexer</source>
         <translation>Analizador Léxico de Pygments</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1180"/>
+        <location filename="../QScintilla/Editor.py" line="1194"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6396"/>
+        <location filename="../QScintilla/Editor.py" line="6440"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="640"/>
+        <location filename="../QScintilla/Editor.py" line="654"/>
         <source>Check spelling of selection...</source>
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6398"/>
+        <location filename="../QScintilla/Editor.py" line="6442"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6400"/>
+        <location filename="../QScintilla/Editor.py" line="6444"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="644"/>
+        <location filename="../QScintilla/Editor.py" line="658"/>
         <source>Remove from dictionary</source>
         <translation>Eliminar del diccionario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="291"/>
+        <location filename="../QScintilla/Editor.py" line="305"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El tamaño del archivo &lt;b&gt;{0}&lt;/b&gt; es &lt;b&gt;{1} KB&lt;/b&gt;. ¿Desea cargarlo de todos modos?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1145"/>
+        <location filename="../QScintilla/Editor.py" line="1159"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay un exportador disponible para el formato de exportación &lt;b&gt;{0}&lt;/b&gt;. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1160"/>
+        <location filename="../QScintilla/Editor.py" line="1174"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativas ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2592"/>
+        <location filename="../QScintilla/Editor.py" line="2606"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; tiene cambios sin guardar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2640"/>
+        <location filename="../QScintilla/Editor.py" line="2654"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser abierto.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2741"/>
+        <location filename="../QScintilla/Editor.py" line="2755"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5455"/>
+        <location filename="../QScintilla/Editor.py" line="5499"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5462"/>
+        <location filename="../QScintilla/Editor.py" line="5506"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5513"/>
+        <location filename="../QScintilla/Editor.py" line="5557"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5669"/>
+        <location filename="../QScintilla/Editor.py" line="5713"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5816"/>
+        <location filename="../QScintilla/Editor.py" line="5860"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5938"/>
+        <location filename="../QScintilla/Editor.py" line="5982"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6028"/>
+        <location filename="../QScintilla/Editor.py" line="6072"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1056"/>
+        <location filename="../QScintilla/Editor.py" line="1070"/>
         <source>Next warning</source>
         <translation>Siguiente advertencia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1059"/>
+        <location filename="../QScintilla/Editor.py" line="1073"/>
         <source>Previous warning</source>
         <translation>Anterior advertencia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1062"/>
+        <location filename="../QScintilla/Editor.py" line="1076"/>
         <source>Show warning message</source>
         <translation>Mostrar mensaje de advertencia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1065"/>
+        <location filename="../QScintilla/Editor.py" line="1079"/>
         <source>Clear warnings</source>
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5314"/>
         <source>py3flakes Warning</source>
-        <translation>Advertencia de py3flakes</translation>
+        <translation type="obsolete">Advertencia de py3flakes</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5314"/>
         <source>No py3flakes warning message available.</source>
-        <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
+        <translation type="obsolete">No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2804"/>
+        <location filename="../QScintilla/Editor.py" line="2818"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5498"/>
+        <location filename="../QScintilla/Editor.py" line="5542"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5357"/>
+        <location filename="../QScintilla/Editor.py" line="5393"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5363"/>
+        <location filename="../QScintilla/Editor.py" line="5400"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5674"/>
+        <location filename="../QScintilla/Editor.py" line="5718"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4178"/>
+        <location filename="../QScintilla/Editor.py" line="4192"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Activando el Proveedor de Autocompletado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4178"/>
+        <location filename="../QScintilla/Editor.py" line="4192"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de autocompletado no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4363"/>
+        <location filename="../QScintilla/Editor.py" line="4377"/>
         <source>Activating Calltip Provider</source>
         <translation>Activando Proveedor de Calltip</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4363"/>
+        <location filename="../QScintilla/Editor.py" line="4377"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de calltip no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="706"/>
+        <location filename="../QScintilla/Editor.py" line="720"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="796"/>
+        <location filename="../QScintilla/Editor.py" line="810"/>
         <source>Load Diagram...</source>
         <translation>Cargar Diagrama...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1105"/>
+        <location filename="../QScintilla/Editor.py" line="1119"/>
         <source>Next change</source>
         <translation>Siguiente cambio</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1108"/>
+        <location filename="../QScintilla/Editor.py" line="1122"/>
         <source>Previous change</source>
         <translation>Cambio anterior</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6800"/>
+        <location filename="../QScintilla/Editor.py" line="6844"/>
         <source>Sort Lines</source>
         <translation>Ordenar Líneas</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6800"/>
+        <location filename="../QScintilla/Editor.py" line="6844"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>La selección contiene datos ilegales para una ordenación numérica.</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="5337"/>
+        <source>Warning</source>
+        <translation type="unfinished">Advertencia</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="5337"/>
+        <source>No warning messages available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="5390"/>
+        <source>Style: {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11262,7 +11282,7 @@ selección completa.&lt;/li&gt;
         <translation>Modo:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="49"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="50"/>
         <source>Disabled</source>
         <translation>Deshabilitado</translation>
     </message>
@@ -11277,27 +11297,27 @@ selección completa.&lt;/li&gt;
         <translation>Cambiar color de fondo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1470"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1515"/>
         <source>Various</source>
         <translation>Varios</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1367"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1412"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Seleccionar si los caracteres de espacio en blanco deben ser mostrados</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1370"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1415"/>
         <source>Show Whitespace</source>
         <translation>Mostrar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1476"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1521"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Seleccionar mostrar un menú de contexto minimalista</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1479"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1524"/>
         <source>Show minimal context menu</source>
         <translation>Mostrar menú de contexto minimalista</translation>
     </message>
@@ -11422,29 +11442,29 @@ selección completa.&lt;/li&gt;
         <translation>Advertencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1198"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1243"/>
         <source>Press to select the foreground colour</source>
         <translation>Pulse para seleccionar el color de primer plano</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1201"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1246"/>
         <source>Foreground</source>
         <translation>Primer plano</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1208"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
         <source>Press to select the background colour</source>
         <translation>Pulse para seleccionar el color de fondo </translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1211"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1256"/>
         <source>Background</source>
         <translation>Fondo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
         <source>Warning: There might be an error.</source>
-        <translation>Advertencia: podría haber un error.</translation>
+        <translation type="obsolete">Advertencia: podría haber un error.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1192"/>
@@ -11454,40 +11474,40 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
         <source>Error: There  is an error.</source>
-        <translation>Error: hay un error.</translation>
+        <translation type="obsolete">Error: hay un error.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1361"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1406"/>
         <source>Whitespace</source>
         <translation>Espacios en blanco</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1379"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1424"/>
         <source>Whitespace size:</source>
         <translation>Tamaño de espacio en blanco:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1386"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1431"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
         <translation>Seleccionar el tamaño de los puntos utilizados para visualizar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1419"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1464"/>
         <source>Whitespace foreground:</source>
         <translation>Color de primer plano para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1432"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1477"/>
         <source>Select the foreground colour for visible whitespace</source>
         <translation>Seleccionar el color de primer plano para espacios en blanco visibles</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1442"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1487"/>
         <source>Whitespace background:</source>
         <translation>Color de fondo para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1455"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1500"/>
         <source>Select the background colour for visible whitespace</source>
         <translation>Seleccionar el color de fondo para espacios en blanco visibles</translation>
     </message>
@@ -11527,52 +11547,52 @@ selección completa.&lt;/li&gt;
         <translation>Colores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1240"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1285"/>
         <source>Change Tracing</source>
         <translation>Trazado de Cambios</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1246"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1291"/>
         <source>Select to mark changed lines</source>
         <translation>Seleccionar para marcar las líneas cambiadas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1249"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1294"/>
         <source>Mark changed lines</source>
         <translation>Marcar líneas cambiadas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1258"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1303"/>
         <source>Timeout for marking changed lines:</source>
         <translation>Tiempo de espera para marcar líneas cambiadas:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1265"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1310"/>
         <source>Enter the time in milliseconds after which changed lines will be marked</source>
         <translation>Introducir el tiempo en milisegundos despues de transcurrido el cual las líneas cambiadas serán marcadas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1277"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1322"/>
         <source> ms</source>
         <translation>ms</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1310"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1355"/>
         <source>Unsaved changes colour:</source>
         <translation>Color para cambios no guardados:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1323"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1368"/>
         <source>Select the colour for the change marker for unsaved changes.</source>
         <translation>Seleccionar el color para el marcador de cambios para cambios sin guardar.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1333"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1378"/>
         <source>Saved changes colour:</source>
         <translation>Color para cambios guardados:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1346"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1391"/>
         <source>Select the colour for the change marker for saved changes.</source>
         <translation>Seleccionar el color para el marcador de cambios para cambios guardados.</translation>
     </message>
@@ -11592,34 +11612,54 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar como se señalan las líneas con ajuste de línea</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="52"/>
         <source>Word Boundary</source>
         <translation>Límite de Palabra</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="54"/>
         <source>Character Boundary</source>
         <translation>Límite de Carácter</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="56"/>
         <source>No Indicator</source>
         <translation>Sin Indicador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="58"/>
         <source>Indicator by Text</source>
         <translation>Indicador por Texto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="60"/>
         <source>Indicator by Margin</source>
         <translation>Indicador por Margen</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.py" line="63"/>
         <source>Indicator in Line Number Margin</source>
         <translation>Indicador en el Margen de Número de Línea</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
+        <source>Warning: There might be an issue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
+        <source>Error: There is an issue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1237"/>
+        <source>Style</source>
+        <translation type="unfinished">Estilo</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1266"/>
+        <source>Style: There is a style issue.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11627,7 +11667,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="20"/>
         <source>&lt;b&gt;Configure Syntax Checker settings&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Configurar Ajustes de Revisión de Sintaxis&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Configurar Ajustes de Revisión de Sintaxis&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="40"/>
@@ -11678,6 +11718,36 @@ selección completa.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="74"/>
         <source> s</source>
         <translation> s</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="20"/>
+        <source>&lt;b&gt;Configure Code Checker settings&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="119"/>
+        <source>PyFlakes</source>
+        <translation type="unfinished">PyFlakes</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="125"/>
+        <source>Select to include a PyFlakes check after the syntax check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="128"/>
+        <source>Include PyFlakes Checks after syntax check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="135"/>
+        <source>Select to suppress star import warnings</source>
+        <translation type="unfinished">Seleccionar para suprimir advertencias de star import (&apos;import *&apos;)</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="138"/>
+        <source>Suppress star import warnings</source>
+        <translation type="unfinished">Suprimir advertencias de star import (&apos;import *&apos;)</translation>
     </message>
 </context>
 <context>
@@ -31869,12 +31939,12 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="374"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="375"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="492"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="494"/>
         <source>No issues found.</source>
         <translation>No se han encontrado problemas.</translation>
     </message>
@@ -31914,7 +31984,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="813"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="820"/>
         <source>Fix: {0}</source>
         <translation>Arreglar: {0}</translation>
     </message>
@@ -32141,77 +32211,77 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
 <context>
     <name>Pep8NamingChecker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="33"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="32"/>
         <source>class names should use CapWords convention</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="35"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="34"/>
         <source>function name should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="37"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="36"/>
         <source>argument name should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="39"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="38"/>
         <source>first argument of a class method should be named &apos;cls&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="41"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="40"/>
         <source>first argument of a method should be named &apos;self&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="43"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="42"/>
         <source>first argument of a static method should not be named &apos;self&apos; or &apos;cls</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="46"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="45"/>
         <source>module names should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="48"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="47"/>
         <source>package names should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="50"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="49"/>
         <source>constant imported as non constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="52"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="51"/>
         <source>lowercase imported as non lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="54"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="53"/>
         <source>camelcase imported as lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="56"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="55"/>
         <source>camelcase imported as constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="58"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="57"/>
         <source>variable in function should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="60"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="59"/>
         <source>names &apos;l&apos;, &apos;O&apos; and &apos;I&apos; should be avoided</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="111"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="110"/>
         <source>no message for this code defined</source>
         <translation type="unfinished">no hay definido un mensaje para este código</translation>
     </message>
@@ -33201,27 +33271,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1149"/>
+        <location filename="../Preferences/__init__.py" line="1151"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1176"/>
+        <location filename="../Preferences/__init__.py" line="1178"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1176"/>
+        <location filename="../Preferences/__init__.py" line="1178"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1270"/>
+        <location filename="../Preferences/__init__.py" line="1272"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1270"/>
+        <location filename="../Preferences/__init__.py" line="1272"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -36547,27 +36617,27 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/Py3FlakesPage.ui" line="37"/>
         <source>Select to include a py3flakes check after the syntax check</source>
-        <translation>Seleccionar para incluir una validación de py3flakes despues de la validación sintáctica</translation>
+        <translation type="obsolete">Seleccionar para incluir una validación de py3flakes despues de la validación sintáctica</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/Py3FlakesPage.ui" line="47"/>
         <source>Select to suppress star import warnings</source>
-        <translation>Seleccionar para suprimir advertencias de star import (&apos;import *&apos;)</translation>
+        <translation type="obsolete">Seleccionar para suprimir advertencias de star import (&apos;import *&apos;)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/Py3FlakesPage.ui" line="50"/>
         <source>Suppress star import warnings</source>
-        <translation>Suprimir advertencias de star import (&apos;import *&apos;)</translation>
+        <translation type="obsolete">Suprimir advertencias de star import (&apos;import *&apos;)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/Py3FlakesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure PyFlakes Behavior&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Configurar Comportamiento de  PyFlakes&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Configurar Comportamiento de  PyFlakes&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/Py3FlakesPage.ui" line="40"/>
         <source>Include PyFlakes Checks</source>
-        <translation>Incluir Validaciones de PyFlakes</translation>
+        <translation type="obsolete">Incluir Validaciones de PyFlakes</translation>
     </message>
 </context>
 <context>

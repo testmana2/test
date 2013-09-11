@@ -35,6 +35,12 @@ class EditorSyntaxPage(ConfigurationPageBase, Ui_EditorSyntaxPage):
         self.automaticSyntaxCheckCheckBox.setChecked(
             Preferences.getEditor("AutoCheckSyntax"))
         
+        # pyflakes related stuff
+        self.includeCheckBox.setChecked(
+            Preferences.getFlakes("IncludeInSyntaxCheck"))
+        self.ignoreStarImportCheckBox.setChecked(
+            Preferences.getFlakes("IgnoreStarImportWarnings"))
+    
     def save(self):
         """
         Public slot to save the Editor Syntax Checker configuration.
@@ -45,7 +51,13 @@ class EditorSyntaxPage(ConfigurationPageBase, Ui_EditorSyntaxPage):
             self.onlineTimeoutSpinBox.value())
         Preferences.setEditor("AutoCheckSyntax",
             self.automaticSyntaxCheckCheckBox.isChecked())
-    
+        
+        # pyflakes related stuff
+        Preferences.setFlakes("IncludeInSyntaxCheck",
+            self.includeCheckBox.isChecked())
+        Preferences.setFlakes("IgnoreStarImportWarnings",
+            self.ignoreStarImportCheckBox.isChecked())
+
 
 def create(dlg):
     """

@@ -7,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string notr="true"/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
-      <string>&lt;b&gt;Configure Syntax Checker settings&lt;/b&gt;</string>
+      <string>&lt;b&gt;Configure Code Checker settings&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
@@ -107,6 +107,35 @@
         </property>
         <property name="text">
          <string>Automatic Syntax Check</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>PyFlakes</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="includeCheckBox">
+        <property name="toolTip">
+         <string>Select to include a PyFlakes check after the syntax check</string>
+        </property>
+        <property name="text">
+         <string>Include PyFlakes Checks after syntax check</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="ignoreStarImportCheckBox">
+        <property name="toolTip">
+         <string>Select to suppress star import warnings</string>
+        </property>
+        <property name="text">
+         <string>Suppress star import warnings</string>
         </property>
        </widget>
       </item>

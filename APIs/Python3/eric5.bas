@@ -534,7 +534,6 @@ ProjectWriter XMLStreamWriterBase
 PropertiesDialog QDialog Ui_PropertiesDialog
 Purge HgExtension
 PurgeProjectHelper HgExtensionProjectHelper
-Py3FlakesPage ConfigurationPageBase Ui_Py3FlakesPage
 PyCoverageDialog QDialog Ui_PyCoverageDialog
 PyProfile profile.Profile
 PyProfileDialog QDialog Ui_PyProfileDialog
