@@ -18,6 +18,9 @@ Version 5.4-snapshot-2013mmdd:
   -- Variables Viewer
      --- changed the way multi line strings are shown in the value
          column
+- Checkers
+  -- PEP-8
+     --- extended the PEP-8 checker and its fixer
 - Editor
   -- added the capability to preview HTML, Mardown and ReST files
   -- added the capability to sort lines spanned by a rectangular selection
