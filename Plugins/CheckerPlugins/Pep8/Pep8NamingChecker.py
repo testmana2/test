@@ -15,7 +15,6 @@ import os
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
 
-# TODO: port this to Py2
 class Pep8NamingChecker(object):
     """
     Class implementing a checker for PEP-8 naming conventions.

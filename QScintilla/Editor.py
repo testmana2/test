@@ -95,6 +95,9 @@ class Editor(QsciScintillaCompat):
     lastEditPositionAvailable = pyqtSignal()
     refreshed = pyqtSignal()
     
+    WarningCode = 1
+    WarningStyle = 2
+    
     # Autocompletion icon definitions
     ClassID = 1
     ClassProtectedID = 2
@@ -152,15 +155,19 @@ class Editor(QsciScintillaCompat):
         self.lastErrorMarker = None   # remember the last error line
         self.lastCurrMarker = None   # remember the last current line
         
-        self.breaks = {}            # key:   marker handle,
-                                    # value: (lineno, condition, temporary,
-                                    #         enabled, ignorecount)
-        self.bookmarks = []         # bookmarks are just a list of handles to the
-                                    # bookmark markers
-        self.syntaxerrors = {}      # key:   marker handle
-                                    # value: list of (error message, error index)
-        self.warnings = {}          # key:   marker handle
-                                    # value: list of warning messages
+        self.breaks = {}
+            # key:   marker handle,
+            # value: (lineno, condition, temporary,
+            #         enabled, ignorecount)
+        self.bookmarks = []
+            # bookmarks are just a list of handles to the
+            # bookmark markers
+        self.syntaxerrors = {}
+            # key:   marker handle
+            # value: list of (error message, error index)
+        self.warnings = {}
+            # key:   marker handle
+            # value: list of (warning message, warning type)
         self.notcoveredMarkers = []  # just a list of marker handles
         self.showingNotcoveredMarkers = False
         
@@ -174,13 +181,20 @@ class Editor(QsciScintillaCompat):
         self.line = -1
         self.inReopenPrompt = False
             # true if the prompt to reload a changed source is present
-        self.inFileRenamed = False      # true if we are propagating a rename action
-        self.inLanguageChanged = False  # true if we are propagating a language change
-        self.inEolChanged = False       # true if we are propagating an eol change
-        self.inEncodingChanged = False  # true if we are propagating an encoding change
-        self.inDragDrop = False         # true if we are in drop mode
-        self.inLinesChanged = False     # true if we are propagating a lines changed event
-        self.__hasTaskMarkers = False   # no task markers present
+        self.inFileRenamed = False
+            # true if we are propagating a rename action
+        self.inLanguageChanged = False
+            # true if we are propagating a language change
+        self.inEolChanged = False
+            # true if we are propagating an eol change
+        self.inEncodingChanged = False
+            # true if we are propagating an encoding change
+        self.inDragDrop = False
+            # true if we are in drop mode
+        self.inLinesChanged = False
+            # true if we are propagating a lines changed event
+        self.__hasTaskMarkers = False
+            # no task markers present
             
         self.macros = {}    # list of defined macros
         self.curMacro = None
@@ -5199,8 +5213,8 @@ class Editor(QsciScintillaCompat):
     ## Flakes warning handling methods below
     ############################################################################
     
-    # TODO: add flag for PEP-8 messages and record this flag in self.warnings
-    def toggleFlakesWarning(self, line, warning, msg=""):
+    def toggleFlakesWarning(self, line, warning, msg="",
+                            warningType=WarningCode):
         """
         Public method to toggle a flakes warning indicator.
         
@@ -5210,22 +5224,24 @@ class Editor(QsciScintillaCompat):
         @param warning flag indicating if the warning marker should be
             set or deleted (boolean)
         @param msg warning message (string)
+        @keyparam warningType type of warning message (integer)
         """
         if line == 0:
             line = 1
             # hack to show a warning marker, if line is reported to be 0
         if warning:
             # set/ammend a new warning marker
+            warn = (msg, warningType)
             markers = self.markersAtLine(line - 1)
             if not (markers & (1 << self.warning)):
                 handle = self.markerAdd(line - 1, self.warning)
-                self.warnings[handle] = [msg]
+                self.warnings[handle] = [warn]
                 self.syntaxerrorToggled.emit(self)
             else:
                 for handle in list(self.warnings.keys()):
                     if self.markerLine(handle) == line - 1 and \
-                       msg not in self.warnings[handle]:
-                        self.warnings[handle].append(msg)
+                       warn not in self.warnings[handle]:
+                        self.warnings[handle].append(warn)
         else:
             for handle in list(self.warnings.keys()):
                 if self.markerLine(handle) == line - 1:
@@ -5314,19 +5330,18 @@ class Editor(QsciScintillaCompat):
         for handle in list(self.warnings.keys()):
             if self.markerLine(handle) == line:
                 E5MessageBox.warning(self,
-                    self.trUtf8("py3flakes Warning"),
+                    self.trUtf8("Warning"),
                     '\n'.join(self.warnings[handle]))
                 break
         else:
             E5MessageBox.warning(self,
-                self.trUtf8("py3flakes Warning"),
-                self.trUtf8("No py3flakes warning message available."))
+                self.trUtf8("Warning"),
+                self.trUtf8("No warning messages available."))
     
     ############################################################################
     ## Annotation handling methods below
     ############################################################################
     
-    # TODO: add additional annotations style (green) for PEP-8 warnings
     def __setAnnotationStyles(self):
         """
         Private slot to define the style used by inline annotations.
@@ -5347,8 +5362,15 @@ class Editor(QsciScintillaCompat):
             self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
                 self.annotationErrorStyle,
                 Preferences.getEditorColour("AnnotationsErrorBackground"))
+            
+            self.annotationStyleStyle = self.annotationErrorStyle + 1
+            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE,
+                self.annotationStyleStyle,
+                Preferences.getEditorColour("AnnotationsStyleForeground"))
+            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK,
+                self.annotationStyleStyle,
+                Preferences.getEditorColour("AnnotationsStyleBackground"))
         
-    # TODO: show pep-8 warnings in a different color (green) with prefix 'Style:'
     def __setAnnotation(self, line):
         """
         Private method to set the annotations for the given line.
@@ -5358,13 +5380,18 @@ class Editor(QsciScintillaCompat):
         if hasattr(QsciScintilla, "annotate"):
             warningAnnotations = []
             errorAnnotations = []
+            styleAnnotations = []
             
-            # step 1: do py3flakes warnings
+            # step 1: do warnings
             for handle in list(self.warnings.keys()):
                 if self.markerLine(handle) == line:
-                    for msg in self.warnings[handle]:
-                        warningAnnotations.append(
-                            self.trUtf8("Warning: {0}").format(msg))
+                    for msg, warningType in self.warnings[handle]:
+                        if warningType == self.WarningStyle:
+                            styleAnnotations.append(
+                                self.trUtf8("Style: {0}").format(msg))
+                        else:
+                            warningAnnotations.append(
+                                self.trUtf8("Warning: {0}").format(msg))
             
             # step 2: do syntax errors
             for handle in list(self.syntaxerrors.keys()):
@@ -5375,7 +5402,15 @@ class Editor(QsciScintillaCompat):
             
             wLen = len(warningAnnotations)
             eLen = len(errorAnnotations)
+            sLen = len(styleAnnotations)
             annotations = []
+            
+            if sLen:
+                annotationStyleTxt = "\n".join(styleAnnotations)
+                if wLen:
+                    annotationStyleTxt += "\n"
+                annotations.append(QsciStyledText(annotationStyleTxt,
+                    self.annotationStyleStyle))
             
             if wLen:
                 annotationWarningTxt = "\n".join(warningAnnotations)

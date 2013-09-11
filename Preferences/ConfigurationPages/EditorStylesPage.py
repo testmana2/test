@@ -29,7 +29,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.setupUi(self)
         self.setObjectName("EditorStylesPage")
         
-        from QScintilla.QsciScintillaCompat import QsciScintillaCompat, QSCINTILLA_VERSION
+        from QScintilla.QsciScintillaCompat import (
+            QsciScintillaCompat, QSCINTILLA_VERSION)
         self.foldStyles = [
             QsciScintilla.PlainFoldStyle,
             QsciScintilla.CircledFoldStyle,
@@ -46,18 +47,18 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QsciScintilla.EdgeBackground
         ]
         
-        self.wrapModeComboBox.addItem(self.trUtf8("Disabled"),
-            QsciScintilla.WrapNone)
-        self.wrapModeComboBox.addItem(self.trUtf8("Word Boundary"),
-            QsciScintilla.WrapWord)
-        self.wrapModeComboBox.addItem(self.trUtf8("Character Boundary"),
-            QsciScintilla.WrapCharacter)
-        self.wrapVisualComboBox.addItem(self.trUtf8("No Indicator"),
-            QsciScintilla.WrapFlagNone)
-        self.wrapVisualComboBox.addItem(self.trUtf8("Indicator by Text"),
-            QsciScintilla.WrapFlagByText)
-        self.wrapVisualComboBox.addItem(self.trUtf8("Indicator by Margin"),
-            QsciScintilla.WrapFlagByBorder)
+        self.wrapModeComboBox.addItem(
+            self.trUtf8("Disabled"), QsciScintilla.WrapNone)
+        self.wrapModeComboBox.addItem(
+            self.trUtf8("Word Boundary"), QsciScintilla.WrapWord)
+        self.wrapModeComboBox.addItem(
+            self.trUtf8("Character Boundary"), QsciScintilla.WrapCharacter)
+        self.wrapVisualComboBox.addItem(
+            self.trUtf8("No Indicator"), QsciScintilla.WrapFlagNone)
+        self.wrapVisualComboBox.addItem(
+            self.trUtf8("Indicator by Text"), QsciScintilla.WrapFlagByText)
+        self.wrapVisualComboBox.addItem(
+            self.trUtf8("Indicator by Margin"), QsciScintilla.WrapFlagByBorder)
         if QSCINTILLA_VERSION() >= 0x020700:
             self.wrapVisualComboBox.addItem(
                 self.trUtf8("Indicator in Line Number Margin"),
@@ -96,27 +97,30 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             Preferences.getEditor("ExtendSelectionToEol"))
         
         self.initColour("CaretForeground", self.caretForegroundButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         self.initColour("CaretLineBackground", self.caretlineBackgroundButton,
-            Preferences.getEditorColour, hasAlpha=True)
+                        Preferences.getEditorColour, hasAlpha=True)
         self.initColour("SelectionForeground", self.selectionForegroundButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         self.initColour("SelectionBackground", self.selectionBackgroundButton,
-            Preferences.getEditorColour, hasAlpha=True)
+                        Preferences.getEditorColour, hasAlpha=True)
         self.initColour("CurrentMarker", self.currentLineMarkerButton,
-            Preferences.getEditorColour, hasAlpha=True)
+                        Preferences.getEditorColour, hasAlpha=True)
         self.initColour("ErrorMarker", self.errorMarkerButton,
-            Preferences.getEditorColour, hasAlpha=True)
+                        Preferences.getEditorColour, hasAlpha=True)
         self.initColour("MarginsForeground", self.marginsForegroundButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         self.initColour("MarginsBackground", self.marginsBackgroundButton,
-            Preferences.getEditorColour)
-        self.initColour("FoldmarginBackground", self.foldmarginBackgroundButton,
-            Preferences.getEditorColour)
-        self.initColour("FoldMarkersForeground", self.foldmarkersForegroundButton,
-            Preferences.getEditorColour)
-        self.initColour("FoldMarkersBackground", self.foldmarkersBackgroundButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
+        self.initColour("FoldmarginBackground",
+                        self.foldmarginBackgroundButton,
+                        Preferences.getEditorColour)
+        self.initColour("FoldMarkersForeground",
+                        self.foldmarkersForegroundButton,
+                        Preferences.getEditorColour)
+        self.initColour("FoldMarkersBackground",
+                        self.foldmarkersBackgroundButton,
+                        Preferences.getEditorColour)
         
         self.editorColours = {}
         self.editorColours["AnnotationsWarningForeground"] = \
@@ -127,30 +131,37 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             QColor(Preferences.getEditorColour("AnnotationsErrorForeground"))
         self.editorColours["AnnotationsErrorBackground"] = \
             QColor(Preferences.getEditorColour("AnnotationsErrorBackground"))
+        self.editorColours["AnnotationsStyleForeground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsStyleForeground"))
+        self.editorColours["AnnotationsStyleBackground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsStyleBackground"))
         
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
         self.wrapModeComboBox.setCurrentIndex(self.wrapModeComboBox.findData(
             Preferences.getEditor("WrapLongLinesMode")))
-        self.wrapVisualComboBox.setCurrentIndex(self.wrapVisualComboBox.findData(
-            Preferences.getEditor("WrapVisualFlag")))
+        self.wrapVisualComboBox.setCurrentIndex(
+            self.wrapVisualComboBox.findData(
+                Preferences.getEditor("WrapVisualFlag")))
         
         self.edgeModeCombo.setCurrentIndex(
             self.edgeModes.index(Preferences.getEditor("EdgeMode")))
         self.edgeLineColumnSlider.setValue(
             Preferences.getEditor("EdgeColumn"))
-        self.initColour("Edge", self.edgeBackgroundColorButton,
+        self.initColour(
+            "Edge", self.edgeBackgroundColorButton,
             Preferences.getEditorColour)
         
         self.bracehighlightingCheckBox.setChecked(
             Preferences.getEditor("BraceHighlighting"))
         self.initColour("MatchingBrace", self.matchingBracesButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         self.initColour("MatchingBraceBack", self.matchingBracesBackButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
         self.initColour("NonmatchingBrace", self.nonmatchingBracesButton,
-            Preferences.getEditorColour)
-        self.initColour("NonmatchingBraceBack", self.nonmatchingBracesBackButton,
-            Preferences.getEditorColour)
+                        Preferences.getEditorColour)
+        self.initColour("NonmatchingBraceBack",
+                        self.nonmatchingBracesBackButton,
+                        Preferences.getEditorColour)
         
         self.zoomfactorSlider.setValue(
             Preferences.getEditor("ZoomFactor"))
@@ -159,10 +170,12 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             Preferences.getEditor("ShowWhitespace"))
         self.whitespaceSizeSpinBox.setValue(
             Preferences.getEditor("WhitespaceSize"))
-        self.initColour("WhitespaceForeground", self.whitespaceForegroundButton,
-            Preferences.getEditorColour)
-        self.initColour("WhitespaceBackground", self.whitespaceBackgroundButton,
-            Preferences.getEditorColour)
+        self.initColour("WhitespaceForeground",
+                        self.whitespaceForegroundButton,
+                        Preferences.getEditorColour)
+        self.initColour("WhitespaceBackground",
+                        self.whitespaceBackgroundButton,
+                        Preferences.getEditorColour)
         if not hasattr(QsciScintilla, "setWhitespaceForegroundColor"):
             self.whitespaceSizeSpinBox.setEnabled(False)
             self.whitespaceForegroundButton.setEnabled(False)
@@ -176,9 +189,11 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         self.editAreaOverrideCheckBox.setChecked(
             Preferences.getEditor("OverrideEditAreaColours"))
-        self.initColour("EditAreaForeground", self.editAreaForegroundButton,
+        self.initColour(
+            "EditAreaForeground", self.editAreaForegroundButton,
             Preferences.getEditorColour)
-        self.initColour("EditAreaBackground", self.editAreaBackgroundButton,
+        self.initColour(
+            "EditAreaBackground", self.editAreaBackgroundButton,
             Preferences.getEditorColour)
         
         self.enableChangeTraceCheckBox.setChecked(
@@ -186,77 +201,85 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.changeTraceTimeoutSpinBox.setValue(
             Preferences.getEditor("OnlineChangeTraceInterval"))
         self.initColour("OnlineChangeTraceMarkerUnsaved",
-            self.changeMarkerUnsavedColorButton,
-            Preferences.getEditorColour)
+                        self.changeMarkerUnsavedColorButton,
+                        Preferences.getEditorColour)
         self.initColour("OnlineChangeTraceMarkerSaved",
-            self.changeMarkerSavedColorButton,
-            Preferences.getEditorColour)
+                        self.changeMarkerSavedColorButton,
+                        Preferences.getEditorColour)
     
     def save(self):
         """
         Public slot to save the Editor Styles configuration.
         """
-        Preferences.setEditor("FoldingStyle",
+        Preferences.setEditor(
+            "FoldingStyle",
             self.foldStyles[self.foldingStyleComboBox.currentIndex()])
-        Preferences.setEditorOtherFonts("MarginsFont", self.marginsFont)
-        Preferences.setEditorOtherFonts("DefaultFont", self.defaultFont)
-        Preferences.setEditorOtherFonts("MonospacedFont", self.monospacedFont)
-        Preferences.setEditor("UseMonospacedFont",
-            self.monospacedCheckBox.isChecked())
+        Preferences.setEditorOtherFonts(
+            "MarginsFont", self.marginsFont)
+        Preferences.setEditorOtherFonts(
+            "DefaultFont", self.defaultFont)
+        Preferences.setEditorOtherFonts(
+            "MonospacedFont", self.monospacedFont)
+        Preferences.setEditor(
+            "UseMonospacedFont", self.monospacedCheckBox.isChecked())
         
-        Preferences.setEditor("LinenoMargin",
-            self.linenoCheckBox.isChecked())
-        Preferences.setEditor("FoldingMargin",
-            self.foldingCheckBox.isChecked())
-        Preferences.setEditor("UnifiedMargins",
-            self.unifiedMarginsCheckBox.isChecked())
+        Preferences.setEditor(
+            "LinenoMargin", self.linenoCheckBox.isChecked())
+        Preferences.setEditor(
+            "FoldingMargin", self.foldingCheckBox.isChecked())
+        Preferences.setEditor(
+            "UnifiedMargins", self.unifiedMarginsCheckBox.isChecked())
         
-        Preferences.setEditor("CaretLineVisible",
-            self.caretlineVisibleCheckBox.isChecked())
-        Preferences.setEditor("ColourizeSelText",
-            self.colourizeSelTextCheckBox.isChecked())
-        Preferences.setEditor("CustomSelectionColours",
-            self.customSelColourCheckBox.isChecked())
-        Preferences.setEditor("ExtendSelectionToEol",
-            self.extentSelEolCheckBox.isChecked())
+        Preferences.setEditor(
+            "CaretLineVisible", self.caretlineVisibleCheckBox.isChecked())
+        Preferences.setEditor(
+            "ColourizeSelText", self.colourizeSelTextCheckBox.isChecked())
+        Preferences.setEditor(
+            "CustomSelectionColours", self.customSelColourCheckBox.isChecked())
+        Preferences.setEditor(
+            "ExtendSelectionToEol", self.extentSelEolCheckBox.isChecked())
         
-        Preferences.setEditor("CaretWidth",
-            self.caretWidthSpinBox.value())
+        Preferences.setEditor(
+            "CaretWidth", self.caretWidthSpinBox.value())
         
-        Preferences.setEditor("ShowEOL",
-            self.eolCheckBox.isChecked())
-        Preferences.setEditor("WrapLongLinesMode",
-            self.wrapModeComboBox.itemData(self.wrapModeComboBox.currentIndex()))
-        Preferences.setEditor("WrapVisualFlag",
-            self.wrapVisualComboBox.itemData(self.wrapVisualComboBox.currentIndex()))
-        Preferences.setEditor("EdgeMode",
-            self.edgeModes[self.edgeModeCombo.currentIndex()])
-        Preferences.setEditor("EdgeColumn",
-            self.edgeLineColumnSlider.value())
+        Preferences.setEditor(
+            "ShowEOL", self.eolCheckBox.isChecked())
+        Preferences.setEditor(
+            "WrapLongLinesMode", self.wrapModeComboBox.itemData(
+                self.wrapModeComboBox.currentIndex()))
+        Preferences.setEditor(
+            "WrapVisualFlag", self.wrapVisualComboBox.itemData(
+                self.wrapVisualComboBox.currentIndex()))
+        Preferences.setEditor(
+            "EdgeMode", self.edgeModes[self.edgeModeCombo.currentIndex()])
+        Preferences.setEditor(
+            "EdgeColumn", self.edgeLineColumnSlider.value())
         
-        Preferences.setEditor("BraceHighlighting",
-            self.bracehighlightingCheckBox.isChecked())
+        Preferences.setEditor(
+            "BraceHighlighting", self.bracehighlightingCheckBox.isChecked())
         
-        Preferences.setEditor("ZoomFactor",
-            self.zoomfactorSlider.value())
+        Preferences.setEditor(
+            "ZoomFactor", self.zoomfactorSlider.value())
         
-        Preferences.setEditor("ShowWhitespace",
-            self.whitespaceCheckBox.isChecked())
-        Preferences.setEditor("WhitespaceSize",
-            self.whitespaceSizeSpinBox.value())
+        Preferences.setEditor(
+            "ShowWhitespace", self.whitespaceCheckBox.isChecked())
+        Preferences.setEditor(
+            "WhitespaceSize", self.whitespaceSizeSpinBox.value())
         
-        Preferences.setEditor("MiniContextMenu",
-            self.miniMenuCheckBox.isChecked())
+        Preferences.setEditor(
+            "MiniContextMenu", self.miniMenuCheckBox.isChecked())
         
-        Preferences.setEditor("AnnotationsEnabled",
-            self.enableAnnotationsCheckBox.isChecked())
+        Preferences.setEditor(
+            "AnnotationsEnabled", self.enableAnnotationsCheckBox.isChecked())
         
-        Preferences.setEditor("OverrideEditAreaColours",
+        Preferences.setEditor(
+            "OverrideEditAreaColours",
             self.editAreaOverrideCheckBox.isChecked())
         
-        Preferences.setEditor("OnlineChangeTrace",
-            self.enableChangeTraceCheckBox.isChecked())
-        Preferences.setEditor("OnlineChangeTraceInterval",
+        Preferences.setEditor(
+            "OnlineChangeTrace", self.enableChangeTraceCheckBox.isChecked())
+        Preferences.setEditor(
+            "OnlineChangeTraceInterval",
             self.changeTraceTimeoutSpinBox.value())
         
         self.saveColours(Preferences.setEditorColour)
@@ -268,22 +291,25 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Private method used to select the font for the editor margins.
         """
-        self.marginsFont = self.selectFont(self.marginsFontSample, self.marginsFont)
+        self.marginsFont = self.selectFont(
+            self.marginsFontSample, self.marginsFont)
         
     @pyqtSlot()
     def on_defaultFontButton_clicked(self):
         """
         Private method used to select the default font for the editor.
         """
-        self.defaultFont = self.selectFont(self.defaultFontSample, self.defaultFont)
+        self.defaultFont = self.selectFont(
+            self.defaultFontSample, self.defaultFont)
         
     @pyqtSlot()
     def on_monospacedFontButton_clicked(self):
         """
-        Private method used to select the font to be used as the monospaced font.
+        Private method used to select the font to be used as the monospaced
+        font.
         """
-        self.monospacedFont = \
-            self.selectFont(self.monospacedFontSample, self.monospacedFont)
+        self.monospacedFont = self.selectFont(
+            self.monospacedFontSample, self.monospacedFont)
         
     def polishPage(self):
         """
@@ -294,23 +320,36 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.monospacedFontSample.setFont(self.monospacedFont)
         
         pl = self.annotationsWarningSample.palette()
-        pl.setColor(QPalette.Text, self.editorColours["AnnotationsWarningForeground"])
-        pl.setColor(QPalette.Base, self.editorColours["AnnotationsWarningBackground"])
+        pl.setColor(QPalette.Text,
+                    self.editorColours["AnnotationsWarningForeground"])
+        pl.setColor(QPalette.Base,
+                    self.editorColours["AnnotationsWarningBackground"])
         self.annotationsWarningSample.setPalette(pl)
         self.annotationsWarningSample.repaint()
         
         pl = self.annotationsErrorSample.palette()
-        pl.setColor(QPalette.Text, self.editorColours["AnnotationsErrorForeground"])
-        pl.setColor(QPalette.Base, self.editorColours["AnnotationsErrorBackground"])
+        pl.setColor(QPalette.Text,
+                    self.editorColours["AnnotationsErrorForeground"])
+        pl.setColor(QPalette.Base,
+                    self.editorColours["AnnotationsErrorBackground"])
         self.annotationsErrorSample.setPalette(pl)
         self.annotationsErrorSample.repaint()
+        
+        pl = self.annotationsStyleWarningSample.palette()
+        pl.setColor(QPalette.Text,
+                    self.editorColours["AnnotationsStyleForeground"])
+        pl.setColor(QPalette.Base,
+                    self.editorColours["AnnotationsStyleBackground"])
+        self.annotationsStyleWarningSample.setPalette(pl)
+        self.annotationsStyleWarningSample.repaint()
     
     @pyqtSlot()
     def on_annotationsWarningFgButton_clicked(self):
         """
         Private slot to set the foreground colour of the warning annotations.
         """
-        colour = QColorDialog.getColor(self.editorColours["AnnotationsWarningForeground"])
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsWarningForeground"])
         if colour.isValid():
             pl = self.annotationsWarningSample.palette()
             pl.setColor(QPalette.Text, colour)
@@ -323,7 +362,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Private slot to set the background colour of the warning annotations.
         """
-        colour = QColorDialog.getColor(self.editorColours["AnnotationsWarningBackground"])
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsWarningBackground"])
         if colour.isValid():
             pl = self.annotationsWarningSample.palette()
             pl.setColor(QPalette.Base, colour)
@@ -336,7 +376,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Private slot to set the foreground colour of the error annotations.
         """
-        colour = QColorDialog.getColor(self.editorColours["AnnotationsErrorForeground"])
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsErrorForeground"])
         if colour.isValid():
             pl = self.annotationsErrorSample.palette()
             pl.setColor(QPalette.Text, colour)
@@ -349,13 +390,42 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Private slot to set the background colour of the error annotations.
         """
-        colour = QColorDialog.getColor(self.editorColours["AnnotationsErrorBackground"])
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsErrorBackground"])
         if colour.isValid():
             pl = self.annotationsErrorSample.palette()
             pl.setColor(QPalette.Base, colour)
             self.annotationsErrorSample.setPalette(pl)
             self.annotationsErrorSample.repaint()
             self.editorColours["AnnotationsErrorBackground"] = colour
+    
+    @pyqtSlot()
+    def on_annotationsStyleWarningFgButton_clicked(self):
+        """
+        Private slot to set the foreground colour of the style annotations.
+        """
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsStyleForeground"])
+        if colour.isValid():
+            pl = self.annotationsStyleWarningSample.palette()
+            pl.setColor(QPalette.Text, colour)
+            self.annotationsStyleWarningSample.setPalette(pl)
+            self.annotationsStyleWarningSample.repaint()
+            self.editorColours["AnnotationsStyleForeground"] = colour
+    
+    @pyqtSlot()
+    def on_annotationsStyleWarningBgButton_clicked(self):
+        """
+        Private slot to set the background colour of the style annotations.
+        """
+        colour = QColorDialog.getColor(
+            self.editorColours["AnnotationsStyleBackground"])
+        if colour.isValid():
+            pl = self.annotationsStyleWarningSample.palette()
+            pl.setColor(QPalette.Base, colour)
+            self.annotationsStyleWarningSample.setPalette(pl)
+            self.annotationsStyleWarningSample.repaint()
+            self.editorColours["AnnotationsStyleackground"] = colour
 
 
 def create(dlg):

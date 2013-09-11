@@ -599,7 +599,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             if code == "E901":
                 editor.toggleSyntaxError(lineno, 0, True, message, True)
             else:
-                editor.toggleFlakesWarning(lineno, True, message)
+                editor.toggleFlakesWarning(
+                    lineno, True, message, warningType=editor.WarningStyle)
     
     @pyqtSlot()
     def on_resultList_itemSelectionChanged(self):

@@ -5814,6 +5814,8 @@ eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.EditorSpellChecking
 eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsErrorBgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsErrorFgButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsStyleWarningBgButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsStyleWarningFgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsWarningBgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_annotationsWarningFgButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_defaultFontButton_clicked?4()
@@ -6631,6 +6633,8 @@ eric5.QScintilla.Editor.Editor.Separator?7
 eric5.QScintilla.Editor.Editor.StartEditToken?7
 eric5.QScintilla.Editor.Editor.SyncToken?7
 eric5.QScintilla.Editor.Editor.TemplateImageID?7
+eric5.QScintilla.Editor.Editor.WarningCode?7
+eric5.QScintilla.Editor.Editor.WarningStyle?7
 eric5.QScintilla.Editor.Editor.addClone?4(editor)
 eric5.QScintilla.Editor.Editor.addedToProject?4()
 eric5.QScintilla.Editor.Editor.autoComplete?4(auto=False, context=True)
@@ -6804,7 +6808,7 @@ eric5.QScintilla.Editor.Editor.syntaxerrorToggled?7
 eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
 eric5.QScintilla.Editor.Editor.toggleCommentBlock?4()
-eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg="")
+eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg="", warningType=WarningCode)
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, index, error, msg="", show=False)
 eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()

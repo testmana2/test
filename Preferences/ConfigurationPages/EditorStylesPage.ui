@@ -1130,7 +1130,7 @@
      <property name="title">
       <string>Annotations</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_5">
+     <layout class="QGridLayout" name="gridLayout_8">
       <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="enableAnnotationsCheckBox">
         <property name="statusTip">
@@ -1173,7 +1173,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>Warning: There might be an error.</string>
+            <string>Warning: There might be an issue.</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignHCenter</set>
@@ -1218,7 +1218,52 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>Error: There  is an error.</string>
+            <string>Error: There is an issue.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignHCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QGroupBox" name="annotationsStyleWarningGroup">
+        <property name="title">
+         <string>Style</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="annotationsStyleWarningFgButton">
+           <property name="toolTip">
+            <string>Press to select the foreground colour</string>
+           </property>
+           <property name="text">
+            <string>Foreground</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="annotationsStyleWarningBgButton">
+           <property name="toolTip">
+            <string>Press to select the background colour</string>
+           </property>
+           <property name="text">
+            <string>Background</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLineEdit" name="annotationsStyleWarningSample">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Style: There is a style issue.</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignHCenter</set>
@@ -1543,6 +1588,8 @@
   <tabstop>annotationsWarningBgButton</tabstop>
   <tabstop>annotationsErrorFgButton</tabstop>
   <tabstop>annotationsErrorBgButton</tabstop>
+  <tabstop>annotationsStyleWarningFgButton</tabstop>
+  <tabstop>annotationsStyleWarningBgButton</tabstop>
   <tabstop>enableChangeTraceCheckBox</tabstop>
   <tabstop>changeTraceTimeoutSpinBox</tabstop>
   <tabstop>changeMarkerUnsavedColorButton</tabstop>

@@ -131,7 +131,7 @@ emitted to signal the undo availability
 QsciScintillaCompat
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>CancelEditToken</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EndEditToken</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>RequestSyncToken</td></tr><tr><td>Separator</td></tr><tr><td>StartEditToken</td></tr><tr><td>SyncToken</td></tr><tr><td>TemplateImageID</td></tr>
+<tr><td>AttributeID</td></tr><tr><td>AttributePrivateID</td></tr><tr><td>AttributeProtectedID</td></tr><tr><td>CancelEditToken</td></tr><tr><td>ClassID</td></tr><tr><td>ClassPrivateID</td></tr><tr><td>ClassProtectedID</td></tr><tr><td>EndEditToken</td></tr><tr><td>EnumID</td></tr><tr><td>FromDocumentID</td></tr><tr><td>MethodID</td></tr><tr><td>MethodPrivateID</td></tr><tr><td>MethodProtectedID</td></tr><tr><td>RequestSyncToken</td></tr><tr><td>Separator</td></tr><tr><td>StartEditToken</td></tr><tr><td>SyncToken</td></tr><tr><td>TemplateImageID</td></tr><tr><td>WarningCode</td></tr><tr><td>WarningStyle</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -3611,7 +3611,7 @@ line number of the bookmark (integer)
         The later works independent of the current selection.
 </p><a NAME="Editor.toggleFlakesWarning" ID="Editor.toggleFlakesWarning"></a>
 <h4>Editor.toggleFlakesWarning</h4>
-<b>toggleFlakesWarning</b>(<i>line, warning, msg=""</i>)
+<b>toggleFlakesWarning</b>(<i>line, warning, msg="", warningType=WarningCode</i>)
 <p>
         Public method to toggle a flakes warning indicator.
 </p><p>
@@ -3627,6 +3627,9 @@ flag indicating if the warning marker should be
 </dd><dt><i>msg</i></dt>
 <dd>
 warning message (string)
+</dd><dt><i>warningType=</i></dt>
+<dd>
+type of warning message (integer)
 </dd>
 </dl><a NAME="Editor.toggleSyntaxError" ID="Editor.toggleSyntaxError"></a>
 <h4>Editor.toggleSyntaxError</h4>
