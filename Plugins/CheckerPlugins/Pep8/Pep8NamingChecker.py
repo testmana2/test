@@ -60,26 +60,49 @@ class Pep8NamingChecker(object):
             "names 'l', 'O' and 'I' should be avoided"),
     }
     
-    def __init__(self, tree, filename):
+    def __init__(self, tree, filename, options):
         """
-        Constructor (according to pep8.py API)
+        Constructor (according to 'extended' pep8.py API)
         
         @param tree AST tree of the source file
         @param filename name of the source file (string)
+        @param options options as parsed by pep8.StyleGuide
         """
         self.__parents = collections.deque()
         self.__tree = tree
         self.__filename = filename
         
-        self.__checkers = {
-            "classdef": [self.__checkClassName],
-            "functiondef": [self.__checkFuntionName,
-                self.__checkFunctionArgumentNames,
-                            ],
-            "assign": [self.__checkVariablesInFunction],
-            "importfrom": [self.__checkImportAs],
-            "module": [self.__checkModule],
+        self.__checkersWithCodes = {
+            "classdef": [
+                (self.__checkClassName, ("N801",)),
+                (self.__checkNameToBeAvoided, ("N831",)),
+            ],
+            "functiondef": [
+                (self.__checkFuntionName, ("N802",)),
+                (self.__checkFunctionArgumentNames,
+                    ("N803", "N804", "N805", "N806")),
+                (self.__checkNameToBeAvoided, ("N831",)),
+            ],
+            "assign": [
+                (self.__checkVariablesInFunction, ("N821",)),
+                (self.__checkNameToBeAvoided, ("N831",)),
+            ],
+            "importfrom": [
+                (self.__checkImportAs, ("N811", "N812", "N813", "N814")),
+            ],
+            "module": [
+                (self.__checkModule, ("N807", "N808")),
+            ],
         }
+        
+        self.__checkers = {}
+        for key, checkers in self.__checkersWithCodes.items():
+            for checker, codes in checkers:
+                if any(not (code and options.ignore_code(code))
+                        for code in codes):
+                    if key not in self.__checkers:
+                        self.__checkers[key] = []
+                    self.__checkers[key].append(checker)
 
     def run(self):
         """
@@ -244,10 +267,41 @@ class Pep8NamingChecker(object):
         """
         return name in ("l", "O", "I")
     
+    def __checkNameToBeAvoided(self, node, parents):
+        """
+        Private class to check the given node for a name to be avoided (N831).
+        
+        @param node AST note to check
+        @return tuple giving line number, offset within line and error code
+            (integer, integer, string)
+        """
+        if isinstance(node, (ast.ClassDef, ast.FunctionDef)):
+            name = node.name
+            if self.__isNameToBeAvoided(name):
+                yield self.__error(node, "N831")
+                return
+        
+        if isinstance(node, ast.FunctionDef):
+            argNames = self.__getArgNames(node)
+            for arg in argNames:
+                if self.__isNameToBeAvoided(arg):
+                    yield self.__error(node, "N831")
+                    return
+        
+        if isinstance(node, ast.Assign):
+            for target in node.targets:
+                name = isinstance(target, ast.Name) and target.id
+                if not name:
+                    return
+                
+                if self.__isNameToBeAvoided(name):
+                    yield self.__error(node, "N831")
+                    return
+    
     def __checkClassName(self, node, parents):
         """
         Private class to check the given node for class name
-        conventions (N801, N831).
+        conventions (N801).
         
         Almost without exception, class names use the CapWords convention.
         Classes for internal use have a leading underscore in addition.
@@ -256,17 +310,13 @@ class Pep8NamingChecker(object):
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
-        if self.__isNameToBeAvoided(node.name):
-            yield self.__error(node, "N831")
-            return
-
         if not self.CamelcaseRegexp.match(node.name):
             yield self.__error(node, "N801")
     
     def __checkFuntionName(self, node, parents):
         """
         Private class to check the given node for function name
-        conventions (N802, N831).
+        conventions (N802).
         
         Function names should be lowercase, with words separated by underscores
         as necessary to improve readability. Functions <b>not</b> being
@@ -280,10 +330,6 @@ class Pep8NamingChecker(object):
         """
         functionType = getattr(node, "function_type", "function")
         name = node.name
-        if self.__isNameToBeAvoided(name):
-            yield self.__error(node, "N831")
-            return
-
         if (functionType == "function" and "__" in (name[:2], name[-2:])) or \
                 not self.LowercaseRegex.match(name):
             yield self.__error(node, "N802")
@@ -291,7 +337,7 @@ class Pep8NamingChecker(object):
     def __checkFunctionArgumentNames(self, node, parents):
         """
         Private class to check the argument names of functions
-        (N803, N804, N805, N806, N831).
+        (N803, N804, N805, N806).
         
         The argument names of a function should be lowercase, with words
         separated by underscores. A class method should have 'cls' as the
@@ -331,17 +377,13 @@ class Pep8NamingChecker(object):
             if argNames[0] in ("cls", "self"):
                 yield self.__error(node, "N806")
         for arg in argNames:
-            if self.__isNameToBeAvoided(arg):
-                yield self.__error(node, "N831")
-                return
-
             if not self.LowercaseRegex.match(arg):
                 yield self.__error(node, "N803")
                 return
     
     def __checkVariablesInFunction(self, node, parents):
         """
-        Private method to check local variables in functions (N821, N831).
+        Private method to check local variables in functions (N821).
         
         Local variables in functions should be lowercase.
         
@@ -361,10 +403,6 @@ class Pep8NamingChecker(object):
             if not name or name in parentFunc.global_names:
                 return
             
-            if self.__isNameToBeAvoided(name):
-                yield self.__error(node, "N831")
-                return
-
             if not self.LowercaseRegex.match(name) and name[:1] != '_':
                 yield self.__error(target, "N821")
     

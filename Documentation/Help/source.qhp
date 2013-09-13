@@ -8086,6 +8086,7 @@
       <keyword name="Pep8NamingChecker.__checkImportAs" id="Pep8NamingChecker.__checkImportAs" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkImportAs" />
       <keyword name="Pep8NamingChecker.__checkModule" id="Pep8NamingChecker.__checkModule" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkModule" />
       <keyword name="Pep8NamingChecker.__checkModule" id="Pep8NamingChecker.__checkModule" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkModule" />
+      <keyword name="Pep8NamingChecker.__checkNameToBeAvoided" id="Pep8NamingChecker.__checkNameToBeAvoided" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkNameToBeAvoided" />
       <keyword name="Pep8NamingChecker.__checkVariablesInFunction" id="Pep8NamingChecker.__checkVariablesInFunction" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__checkVariablesInFunction" />
       <keyword name="Pep8NamingChecker.__checkVariablesInFunction" id="Pep8NamingChecker.__checkVariablesInFunction" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html#Pep8NamingChecker.__checkVariablesInFunction" />
       <keyword name="Pep8NamingChecker.__error" id="Pep8NamingChecker.__error" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.html#Pep8NamingChecker.__error" />

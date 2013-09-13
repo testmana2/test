@@ -3767,7 +3767,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.MixedcaseR
 eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.UppercaseRegexp?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker.run?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker?1(tree, filename)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8NamingChecker.Pep8NamingChecker?1(tree, filename, options)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
