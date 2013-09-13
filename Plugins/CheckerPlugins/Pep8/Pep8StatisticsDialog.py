@@ -87,6 +87,8 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("E"):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
+        elif code.startswith("N"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignHCenter)
