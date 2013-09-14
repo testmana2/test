@@ -204,7 +204,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param fixer reference to the PEP 8 fixer (Pep8Fixer)
         """
         self.__statistics["_FilesCount"] += 1
-        if statistics:
+        stats = {v: k for v, k in statistics.items() if v[0].isupper()}
+        if stats:
             self.__statistics["_FilesIssues"] += 1
             for key in statistics:
                 if key in self.__statistics:
