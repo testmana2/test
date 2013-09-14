@@ -63,7 +63,7 @@ CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassModel UMLModel
 ClassScope Scope

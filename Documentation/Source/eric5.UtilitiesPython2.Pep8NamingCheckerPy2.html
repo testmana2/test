@@ -58,16 +58,16 @@ object
 <table>
 <tr>
 <td><a href="#Pep8NamingChecker.__init__">Pep8NamingChecker</a></td>
-<td>Constructor (according to pep8.py API)</td>
+<td>Constructor (according to 'extended' pep8.py API)</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__checkClassName">__checkClassName</a></td>
-<td>Private class to check the given node for class name conventions (N801, N831).</td>
+<td>Private class to check the given node for class name conventions (N801).</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__checkFunctionArgumentNames">__checkFunctionArgumentNames</a></td>
-<td>Private class to check the argument names of functions (N803, N804, N805, N806, N831).</td>
+<td>Private class to check the argument names of functions (N803, N804, N805, N806).</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__checkFuntionName">__checkFuntionName</a></td>
-<td>Private class to check the given node for function name conventions (N802, N831).</td>
+<td>Private class to check the given node for function name conventions (N802).</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__checkImportAs">__checkImportAs</a></td>
 <td>Private method to check that imports don't change the naming convention (N811, N812, N813, N814).</td>
@@ -75,8 +75,11 @@ object
 <td><a href="#Pep8NamingChecker.__checkModule">__checkModule</a></td>
 <td>Private method to check module naming conventions (N807, N808).</td>
 </tr><tr>
+<td><a href="#Pep8NamingChecker.__checkNameToBeAvoided">__checkNameToBeAvoided</a></td>
+<td>Private class to check the given node for a name to be avoided (N831).</td>
+</tr><tr>
 <td><a href="#Pep8NamingChecker.__checkVariablesInFunction">__checkVariablesInFunction</a></td>
-<td>Private method to check local variables in functions (N821, N831).</td>
+<td>Private method to check local variables in functions (N821).</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__error">__error</a></td>
 <td>Private method to build the error information</td>
@@ -112,9 +115,9 @@ object
 </table>
 <a NAME="Pep8NamingChecker.__init__" ID="Pep8NamingChecker.__init__"></a>
 <h4>Pep8NamingChecker (Constructor)</h4>
-<b>Pep8NamingChecker</b>(<i>tree, filename</i>)
+<b>Pep8NamingChecker</b>(<i>tree, filename, options</i>)
 <p>
-        Constructor (according to pep8.py API)
+        Constructor (according to 'extended' pep8.py API)
 </p><dl>
 <dt><i>tree</i></dt>
 <dd>
@@ -122,13 +125,16 @@ AST tree of the source file
 </dd><dt><i>filename</i></dt>
 <dd>
 name of the source file (string)
+</dd><dt><i>options</i></dt>
+<dd>
+options as parsed by pep8.StyleGuide
 </dd>
 </dl><a NAME="Pep8NamingChecker.__checkClassName" ID="Pep8NamingChecker.__checkClassName"></a>
 <h4>Pep8NamingChecker.__checkClassName</h4>
 <b>__checkClassName</b>(<i>node, parents</i>)
 <p>
         Private class to check the given node for class name
-        conventions (N801, N831).
+        conventions (N801).
 </p><p>
         Almost without exception, class names use the CapWords convention.
         Classes for internal use have a leading underscore in addition.
@@ -148,7 +154,7 @@ tuple giving line number, offset within line and error code
 <b>__checkFunctionArgumentNames</b>(<i>node, parents</i>)
 <p>
         Private class to check the argument names of functions
-        (N803, N804, N805, N806, N831).
+        (N803, N804, N805, N806).
 </p><p>
         The argument names of a function should be lowercase, with words
         separated by underscores. A class method should have 'cls' as the
@@ -169,7 +175,7 @@ tuple giving line number, offset within line and error code
 <b>__checkFuntionName</b>(<i>node, parents</i>)
 <p>
         Private class to check the given node for function name
-        conventions (N802, N831).
+        conventions (N802).
 </p><p>
         Function names should be lowercase, with words separated by underscores
         as necessary to improve readability. Functions <b>not</b> being
@@ -222,11 +228,27 @@ AST note to check
 tuple giving line number, offset within line and error code
             (integer, integer, string)
 </dd>
+</dl><a NAME="Pep8NamingChecker.__checkNameToBeAvoided" ID="Pep8NamingChecker.__checkNameToBeAvoided"></a>
+<h4>Pep8NamingChecker.__checkNameToBeAvoided</h4>
+<b>__checkNameToBeAvoided</b>(<i>node, parents</i>)
+<p>
+        Private class to check the given node for a name to be avoided (N831).
+</p><dl>
+<dt><i>node</i></dt>
+<dd>
+AST note to check
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple giving line number, offset within line and error code
+            (integer, integer, string)
+</dd>
 </dl><a NAME="Pep8NamingChecker.__checkVariablesInFunction" ID="Pep8NamingChecker.__checkVariablesInFunction"></a>
 <h4>Pep8NamingChecker.__checkVariablesInFunction</h4>
 <b>__checkVariablesInFunction</b>(<i>node, parents</i>)
 <p>
-        Private method to check local variables in functions (N821, N831).
+        Private method to check local variables in functions (N821).
 </p><p>
         Local variables in functions should be lowercase.
 </p><dl>

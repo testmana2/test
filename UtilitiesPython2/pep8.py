@@ -1220,6 +1220,9 @@ class Checker(object):
         self.report = report or options.report
         self.report_error = self.report.error
         self.report_error_args = self.report.error_args
+        
+        # added for eric5 integration
+        self.options = options
 
     def report_invalid_syntax(self):
         exc_type, exc = sys.exc_info()[:2]
@@ -1352,7 +1355,8 @@ class Checker(object):
         except (SyntaxError, TypeError):
             return self.report_invalid_syntax()
         for name, cls, _ in self._ast_checks:
-            checker = cls(tree, self.filename)
+            # extended API for eric5 integration
+            checker = cls(tree, self.filename, self.options)
             for result in checker.run():
                 lineno, offset, code, check = result[:4]
                 args = result[4:]

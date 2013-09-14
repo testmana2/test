@@ -8391,7 +8391,7 @@ eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.MixedcaseRegexp?7
 eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.UppercaseRegexp?7
 eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.run?4()
 eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker.unpackArgs?4()
-eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker?1(tree, filename)
+eric5.UtilitiesPython2.Pep8NamingCheckerPy2.Pep8NamingChecker?1(tree, filename, options)
 eric5.UtilitiesPython2.Py2SyntaxChecker.compile?4(file, codestring)
 eric5.UtilitiesPython2.Py2SyntaxChecker.flakesCheck?4(fileName, codestring, ignoreStarImportWarnings)
 eric5.UtilitiesPython2.Tabnanny.NannyNag.get_line?4()
