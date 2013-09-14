@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PEP 8 Check Result</string>
+   <string>Code Style Check Result</string>
   </property>
   <property name="whatsThis">
-   <string>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
-&lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
+   <string>&lt;b&gt;Code Style Check Results&lt;/b&gt;
+&lt;p&gt;This dialog shows the results of the code style check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</string>
   </property>
   <property name="sizeGripEnabled">
@@ -60,7 +60,7 @@ entry will open an editor window and position the cursor at the respective line 
         <item>
          <widget class="QPushButton" name="startButton">
           <property name="toolTip">
-           <string>Press to start the PEP 8 check run</string>
+           <string>Press to start the code style check run</string>
           </property>
           <property name="text">
            <string>Start</string>
@@ -335,7 +335,7 @@ entry will open an editor window and position the cursor at the respective line 
     <widget class="QTreeWidget" name="resultList">
      <property name="whatsThis">
       <string>&lt;b&gt;Result List&lt;/b&gt;
-&lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
+&lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</string>
      </property>
@@ -368,7 +368,7 @@ the respective line and position.&lt;/p&gt;</string>
    <item>
     <widget class="QProgressBar" name="checkProgress">
      <property name="toolTip">
-      <string>Shows the progress of the PEP 8 check action</string>
+      <string>Shows the progress of the style check check</string>
      </property>
      <property name="value">
       <number>0</number>

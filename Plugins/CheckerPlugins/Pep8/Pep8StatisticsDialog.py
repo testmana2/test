@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog showing statistical data for the last PEP 8 run.
+Module implementing a dialog showing statistical data for the last code
+style checker run.
 """
 
 from PyQt4.QtCore import Qt, QCoreApplication
@@ -21,7 +22,7 @@ import UI.PixmapCache
 class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
     """
     Class implementing a dialog showing statistical data for the last
-    PEP 8 run.
+    code style checker run.
     """
     def __init__(self, statistics, parent=None):
         """

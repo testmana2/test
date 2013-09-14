@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a class to fix certain PEP 8 issues.
+Module implementing a class to fix certain code style issues.
 """
 
 import os
@@ -35,7 +35,7 @@ Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
 
 class Pep8Fixer(QObject):
     """
-    Class implementing a fixer for certain PEP 8 issues.
+    Class implementing a fixer for certain code style issues.
     """
     def __init__(self, project, filename, sourceLines, fixCodes, noFixCodes,
                  maxLineLength, inPlace):
@@ -160,7 +160,7 @@ class Pep8Fixer(QObject):
         except (IOError, Utilities.CodingError, UnicodeError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Fix PEP 8 issues"),
+                self.trUtf8("Fix Code Style Issues"),
                 self.trUtf8(
                     """<p>Could not save the file <b>{0}</b>."""
                     """ Skipping it.</p><p>Reason: {1}</p>""")

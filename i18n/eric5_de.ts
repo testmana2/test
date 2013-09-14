@@ -11626,52 +11626,52 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>EditorSyntaxPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="40"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="55"/>
         <source>Select to enable the online syntax checker</source>
         <translation>Auswählen, um den Online-Syntaxprüfer zu aktivieren</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="58"/>
         <source>&lt;b&gt;Online Syntax Check&lt;/b&gt;&lt;p&gt;Select this to enable syntax checks while typing. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Online-Syntaxprüfer&lt;/b&gt;&lt;p&gt;Wähle die aus, um eine Syntaxprüfung während des Tippens zu aktivieren. Die Prüfung wird durchgeführt, sobald das Tippen für die eingestellte Zeit unterbrochen wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="61"/>
         <source>Online Syntax Check</source>
         <translation>Online-Syntaxprüfer</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="70"/>
         <source>Timeout Interval:</source>
         <translation>Zeitdauer:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="77"/>
         <source>Enter the timeout for the online syntax checker</source>
         <translation>Gib die Zeit bis zur Online-Syntaxprüfung ein</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="80"/>
         <source>&lt;b&gt;Timeout Interval&lt;/b&gt;&lt;p&gt;Enter the timeout interval for the online syntax check. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeitdauer&lt;/b&gt;&lt;p&gt;Gib die Zeit bis zur Online-Syntaxprüfung ein. Die Prüfung wird durchgeführt, sobald das Tippen für die eingestellte Zeit unterbrochen wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="46"/>
         <source>Automatic Syntax Check</source>
         <translation>Automatische Syntaxprüfung</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="40"/>
         <source>Select, whether source files should be checked automatically for syntax errors</source>
         <translation>Auswählen, wenn Quelltextdateien automatisch auf Syntaxfehler überprüft werden sollen</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="43"/>
         <source>&lt;b&gt;Automatic Syntax Check&lt;/b&gt;&lt;p&gt;Select to enable the automatic syntax checker. The syntax is checked, when a file is loaded or saved or the programming language of the editor is selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Automatische Syntaxprüfung&lt;/b&gt;&lt;p&gt;Auswählen, um die automatische Syntaxprüfung zu aktivieren. Die Prüfung wird durchgeführt, wenn eine Datei geladen oder gespeichert wird oder wenn die Programmiersprache des Editors ausgewählt wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="74"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="89"/>
         <source> s</source>
         <translation> s</translation>
     </message>
@@ -11681,27 +11681,27 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;b&gt;Quelltextprüfereinstellungen&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="115"/>
         <source>PyFlakes</source>
         <translation>PyFlakes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="125"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="121"/>
         <source>Select to include a PyFlakes check after the syntax check</source>
         <translation>Auswählen, um nach der Syntaxprüfung eine PyFlakes-Prüfung durchzuführen</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="128"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="124"/>
         <source>Include PyFlakes Checks after syntax check</source>
         <translation>PyFlakes-Prüfung nach der Syntaxprüfung durchführen</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="135"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="131"/>
         <source>Select to suppress star import warnings</source>
         <translation>Auswählen, um Stern-Import-Warnungen zu unterdrücken</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="138"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="134"/>
         <source>Suppress star import warnings</source>
         <translation>Stern-Import-Warnungen unterdrücken</translation>
     </message>
@@ -31720,33 +31720,28 @@ Ursache: {1}</translation>
 <context>
     <name>Pep8CheckerPlugin</name>
     <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="168"/>
-        <source>Check PEP 8 Compliance</source>
-        <translation>Prüfe Einhaltung von PEP 8</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="168"/>
-        <source>PEP &amp;8 Compliance...</source>
-        <translation>PEP &amp;8-Einhaltung...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="78"/>
+        <location filename="../Plugins/PluginPep8Checker.py" line="81"/>
         <source>Check PEP 8 compliance.</source>
         <translation>Prüfe Einhaltung von PEP 8.</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginPep8Checker.py" line="172"/>
-        <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Prüfe Einhaltung von PEP 8...&lt;/b&gt;&lt;p&gt;Dies überprüft Python-Dateien auf Einhaltung der Konventionen aus PEP 8.&lt;/p&gt;</translation>
+        <source>Check Code Style</source>
+        <translation>Quelltextstil püfen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginPep8Checker.py" line="172"/>
+        <source>&amp;Code Style...</source>
+        <translation>&amp;Quelltextstil...</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginPep8Checker.py" line="176"/>
+        <source>&lt;b&gt;Check Code Style...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the code style conventions given in various PEPs.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Quelltextstil prüfen...&lt;/b&gt;&lt;p&gt;Dies überprüft Python-Dateien auf Einhaltung der Konventionen verschiedener PEPs.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
     <name>Pep8CodeSelectionDialog</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
-        <source>PEP 8 Message Codes</source>
-        <translation>PEP 8 Nachrichtenschlüssel</translation>
-    </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
@@ -31767,24 +31762,14 @@ Ursache: {1}</translation>
         <source>Message</source>
         <translation>Nachricht</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
+        <source>Code Style Message Codes</source>
+        <translation>Quelltextstil Nachrichtenschlüssel</translation>
+    </message>
 </context>
 <context>
     <name>Pep8Dialog</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
-        <source>PEP 8 Check Result</source>
-        <translation>PEP 8-Prüfergebnisse</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
-        <source>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
-&lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
-entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;PEP 8-Prüfergebnisse&lt;/b&gt;
-&lt;p&gt;Dieser Dialog zeigt die Resultate der PEP 8-Prüfung. Ein Doppelklick auf
-einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die entsprechende
-Zeile und Position.&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="37"/>
         <source>Exclude Files:</source>
@@ -31794,11 +31779,6 @@ Zeile und Position.&lt;/p&gt;</translation>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="44"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Gib Dateimuster getrennt durch Kommata von Dateien ein, die ignoriert werden sollen</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="63"/>
-        <source>Press to start the PEP 8 check run</source>
-        <translation>Drücken, um die PEP 8-Prüfung zu starten</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="66"/>
@@ -31826,17 +31806,6 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Nachrichten wiederholen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="337"/>
-        <source>&lt;b&gt;Result List&lt;/b&gt;
-&lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
-an entry will open this entry in an editor window and position the cursor at
-the respective line and position.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Resultatliste&lt;/b&gt;
-&lt;p&gt;Diese Liste zeigt die Resultate der PEP 8-Prüfung. Ein Doppelklick auf
-einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die entsprechende
-Zeile und Position.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="353"/>
         <source>File/Line</source>
         <translation>Datei/Zeile</translation>
@@ -31850,11 +31819,6 @@ Zeile und Position.&lt;/p&gt;</translation>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="363"/>
         <source>Message</source>
         <translation>Nachricht</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="371"/>
-        <source>Shows the progress of the PEP 8 check action</source>
-        <translation>Zeigt den Fortschritt der PEP 8-Prüfung an</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="94"/>
@@ -32001,14 +31965,45 @@ Zeile und Position.&lt;/p&gt;</translation>
         <source>Reset Defaults</source>
         <translation>Standards löschen</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
+        <source>Code Style Check Result</source>
+        <translation>Prüfungsergebnisse Quelltextstil</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
+        <source>&lt;b&gt;Code Style Check Results&lt;/b&gt;
+&lt;p&gt;This dialog shows the results of the code style check. Double clicking an
+entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Prüfergebnisse Quelltextstil&lt;/b&gt;
+&lt;p&gt;Dieser Dialog zeigt die Resultate der Prüfung des Quelltextstils. Ein Doppelklick auf
+einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die entsprechende
+Zeile und Position.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="63"/>
+        <source>Press to start the code style check run</source>
+        <translation>Drücken, um die Quelltextstil-Prüfung zu starten</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="337"/>
+        <source>&lt;b&gt;Result List&lt;/b&gt;
+&lt;p&gt;This list shows the results of the code style check. Double clicking
+an entry will open this entry in an editor window and position the cursor at
+the respective line and position.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Resultatliste&lt;/b&gt;
+&lt;p&gt;Diese Liste zeigt die Resultate der Prüfung des Quelltextstils. Ein Doppelklick auf
+einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die entsprechende
+Zeile und Position.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="371"/>
+        <source>Shows the progress of the style check check</source>
+        <translation>Zeigt den Fortschritt der Quelltextstil-Prüfung an</translation>
+    </message>
 </context>
 <context>
     <name>Pep8Fixer</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="161"/>
-        <source>Fix PEP 8 issues</source>
-        <translation>PEP 8-Probleme beheben</translation>
-    </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="161"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
@@ -32160,6 +32155,11 @@ Zeile und Position.&lt;/p&gt;</translation>
         <source>&apos;{0}&apos; argument removed.</source>
         <translation>&apos;{0}&apos; Argument entfernt.</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="161"/>
+        <source>Fix Code Style Issues</source>
+        <translation>Quelltextstil-Probleme beheben</translation>
+    </message>
 </context>
 <context>
     <name>Pep8NamingChecker</name>
@@ -32234,7 +32234,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Namen &apos;l&apos;, &apos;O&apos; und &apos;I&apos; sollten vermieden werden</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="110"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8NamingChecker.py" line="133"/>
         <source>no message for this code defined</source>
         <translation>kein Schlüssel für diesen Code definiert</translation>
     </message>
@@ -32255,11 +32255,6 @@ Zeile und Position.&lt;/p&gt;</translation>
 <context>
     <name>Pep8StatisticsDialog</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
-        <source>PEP 8 Statistics</source>
-        <translation>PEP 8-Statistik</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="30"/>
         <source>Count</source>
         <translation>Anzahl</translation>
@@ -32275,7 +32270,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Nachricht</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="62"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="63"/>
         <source>%n issue(s) found</source>
         <translation>
             <numerusform>%n Problem gefunden</numerusform>
@@ -32283,7 +32278,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="66"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="67"/>
         <source>%n file(s) checked</source>
         <translation>
             <numerusform>%n Datei überprüft</numerusform>
@@ -32291,7 +32286,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="68"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="69"/>
         <source>%n file(s) with issues found</source>
         <translation>
             <numerusform>%n Datei mit Problemen gefunden</numerusform>
@@ -32299,12 +32294,17 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="64"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="65"/>
         <source>%n issue(s) fixed</source>
         <translation>
             <numerusform>%n Problem behoben</numerusform>
             <numerusform>%n Probleme behoben</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
+        <source>Code Styel Checker Statistics</source>
+        <translation>Statistik der Quelltextstil Prüfung</translation>
     </message>
 </context>
 <context>

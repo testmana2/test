@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PEP 8 Statistics</string>
+   <string>Code Styel Checker Statistics</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
