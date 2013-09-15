@@ -13,6 +13,7 @@ from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
+from .Pep257Checker import Pep257Checker
 
 from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
 
@@ -55,6 +56,9 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             elif code in Pep8NamingChecker.Messages:
                 message = QCoreApplication.translate(
                     "Pep8NamingChecker", Pep8NamingChecker.Messages[code])
+            elif code in Pep257Checker.Messages:
+                message = QCoreApplication.translate(
+                    "Pep257Checker", Pep257Checker.Messages[code])
             else:
                 continue
             self.__createItem(stats[code], code, message)
@@ -90,6 +94,8 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         elif code.startswith("N"):
             itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
+        elif code.startswith("D"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("docstringError.png"))
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignHCenter)

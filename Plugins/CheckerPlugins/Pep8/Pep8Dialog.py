@@ -28,6 +28,8 @@ from .Pep8NamingChecker import Pep8NamingChecker
 # register the name checker
 pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 
+from .Pep257Checker import Pep257Checker
+
 
 class Pep8Report(pep8.BaseReport):
     """
@@ -152,6 +154,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("N"):
             itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
+        elif code.startswith("D"):
+            itm.setIcon(1, UI.PixmapCache.getIcon("docstringError.png"))
         else:
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:
@@ -406,6 +410,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             hang_closing=hangClosing,
                         )
                         report.errors.sort(key=lambda a: a[1])
+                        # TODO: add PEP-257 check for Py2
                     else:
                         if includeMessages:
                             select = [s.strip() for s in includeMessages.split(',')
@@ -417,6 +422,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                       if i.strip()]
                         else:
                             ignore = []
+                        
+                        # check PEP-8
                         styleGuide = pep8.StyleGuide(
                             reporter=Pep8Report,
                             repeat=repeatMessages,
@@ -427,8 +434,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         )
                         report = styleGuide.check_files([file])
                         report.errors.sort(key=lambda a: a[1])
+                        
+                        # check PEP-257
+                        pep257Checker = Pep257Checker(
+                            source, file, select, ignore, [], repeatMessages)
+                        pep257Checker.run()
+                        pep257Checker.errors.sort(key=lambda a: a[1])
+                    
                     deferredFixes = {}
-                    for error in report.errors:
+                    for error in report.errors + pep257Checker.errors:
                         fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
@@ -464,7 +478,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             else:
                                 self.__modifyFixedResultItem(itm, "", False)
                         fixer.saveFile(encoding)
-                    self.__updateStatistics(report.counters, fixer)
+                    stats = {}
+                    stats.update(report.counters)
+                    stats.update(pep257Checker.counters)
+                    self.__updateStatistics(stats, fixer)
                     progress += 1
             finally:
                 # reenable updates of the list
