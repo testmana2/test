@@ -31718,24 +31718,127 @@ Ursache: {1}</translation>
     </message>
 </context>
 <context>
+    <name>Pep257Checker</name>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="114"/>
+        <source>module is missing a docstring</source>
+        <translation>Modul hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="116"/>
+        <source>public function/method is missing a docstring</source>
+        <translation>Öffentliche Funktion/Methode hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="118"/>
+        <source>private function/method may be missing a docstring</source>
+        <translation>Private Funktion/Methode hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="121"/>
+        <source>public class is missing a docstring</source>
+        <translation>Öffentliche Klasse hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="123"/>
+        <source>private class may be missing a docstring</source>
+        <translation>Private Klasse hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="125"/>
+        <source>docstring not surrounded by &quot;&quot;&quot;</source>
+        <translation>Docstring nicht durch &quot;&quot;&quot; eingeschlossen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="127"/>
+        <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
+        <translation>Docstring, der \ enthält, nicht durch r&quot;&quot;&quot; eingeschlossen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="129"/>
+        <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
+        <translation>Docstring, der Unicode Zeichen enthält, nicht durch u&quot;&quot;&quot; eingeschlossen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="132"/>
+        <source>one-liner docstring on multiple lines</source>
+        <translation>einzeiliger Docstring über mehrere Zeilen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="134"/>
+        <source>docstring has wrong indentation</source>
+        <translation>Docstring hat falsche Einrückung</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="136"/>
+        <source>docstring summary does not end with a period</source>
+        <translation>Docstring Zusammenfassung endet nicht mit einem Punkt</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="138"/>
+        <source>docstring summary is not in imperative mood (Does instead of Do)</source>
+        <translation>Docstring Zusammenfassung nicht im Imperativ (Tut anstelle Tue)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="142"/>
+        <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
+        <translation>Docstring Zusammenfassung scheint Funktion-/Methodensignatur zu sein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="145"/>
+        <source>docstring does not mention the return value type</source>
+        <translation>Docstring erwähnt nicht den Typ des Rückgabewertes</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="148"/>
+        <source>function/method docstring is separated by a blank line</source>
+        <translation>Funktions-/Methodendocstring ist durch eine Leerzeile abgetrennt</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="151"/>
+        <source>class docstring is not preceded by a blank line</source>
+        <translation>Klassendocstring hat keine führende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="154"/>
+        <source>class docstring is not followed by a blank line</source>
+        <translation>Klassendocstring hat keine nachfolgende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="157"/>
+        <source>docstring summary is not followed by a blank line</source>
+        <translation>Docstring Zusammenfassung hat keine folgende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="160"/>
+        <source>last paragraph of docstring is not followed by a blank line</source>
+        <translation>letzter Abschnitt des Docstring hat keine folgende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="296"/>
+        <source>no message for this code defined</source>
+        <translation>kein Schlüssel für diesen Code definiert</translation>
+    </message>
+</context>
+<context>
     <name>Pep8CheckerPlugin</name>
     <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="81"/>
+        <location filename="../Plugins/PluginPep8Checker.py" line="82"/>
         <source>Check PEP 8 compliance.</source>
         <translation>Prüfe Einhaltung von PEP 8.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="172"/>
+        <location filename="../Plugins/PluginPep8Checker.py" line="173"/>
         <source>Check Code Style</source>
         <translation>Quelltextstil püfen</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="172"/>
+        <location filename="../Plugins/PluginPep8Checker.py" line="173"/>
         <source>&amp;Code Style...</source>
         <translation>&amp;Quelltextstil...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginPep8Checker.py" line="176"/>
+        <location filename="../Plugins/PluginPep8Checker.py" line="177"/>
         <source>&lt;b&gt;Check Code Style...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the code style conventions given in various PEPs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Quelltextstil prüfen...&lt;/b&gt;&lt;p&gt;Dies überprüft Python-Dateien auf Einhaltung der Konventionen verschiedener PEPs.&lt;/p&gt;</translation>
     </message>
@@ -31821,22 +31924,22 @@ Ursache: {1}</translation>
         <translation>Nachricht</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="94"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="96"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="96"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="98"/>
         <source>Press to show all files containing an issue</source>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="375"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="380"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="494"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="514"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -31876,12 +31979,12 @@ Ursache: {1}</translation>
         <translation>Ausgewählte Nachrichten:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="89"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="91"/>
         <source>Statistics...</source>
         <translation>Statistik...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="91"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="93"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Drücken, um eine Statistik für den letzten Lauf zu zeigen</translation>
     </message>
@@ -31911,7 +32014,7 @@ Ursache: {1}</translation>
         <translation>Probleme automatisch beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="820"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="840"/>
         <source>Fix: {0}</source>
         <translation>Lösung: {0}</translation>
     </message>
@@ -32242,12 +32345,12 @@ Zeile und Position.&lt;/p&gt;</translation>
 <context>
     <name>Pep8Py2Checker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="49"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="50"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Kein Python 2-Interpreter konfiguriert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="117"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="120"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>Python 2-Interpreter wurde nicht innerhalb von 15s beendet.</translation>
     </message>
@@ -32270,7 +32373,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Nachricht</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="63"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="67"/>
         <source>%n issue(s) found</source>
         <translation>
             <numerusform>%n Problem gefunden</numerusform>
@@ -32278,7 +32381,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="67"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="71"/>
         <source>%n file(s) checked</source>
         <translation>
             <numerusform>%n Datei überprüft</numerusform>
@@ -32286,7 +32389,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="69"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="73"/>
         <source>%n file(s) with issues found</source>
         <translation>
             <numerusform>%n Datei mit Problemen gefunden</numerusform>
@@ -32294,7 +32397,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="65"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="69"/>
         <source>%n issue(s) fixed</source>
         <translation>
             <numerusform>%n Problem behoben</numerusform>
