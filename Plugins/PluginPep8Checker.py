@@ -27,12 +27,13 @@ className = "Pep8CheckerPlugin"
 packageName = "__core__"
 shortDescription = "Show the Python Code Style Checker dialog."
 longDescription = """This plugin implements the Python Code Style""" \
-    """ Checker dialog. PEP-8 Checker is used to check Python source""" \
-    """ files for compliance to the code style conventions given in PEP-8."""
+    """ Checker dialog. PEP-8 checker is used to check Python source""" \
+    """ files for compliance to the code style conventions given in PEP-8.""" \
+    """ PEP-257 checker is used to check Python source files for""" \
+    """ compliance to docstring conventions given in PEP-257."""
 pyqtApi = 2
 # End-Of-Header
 
-# TODO: modify long description for doc style checking (PEP-257)
 
 error = ""
 

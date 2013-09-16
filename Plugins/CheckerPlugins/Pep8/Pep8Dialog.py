@@ -437,7 +437,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         
                         # check PEP-257
                         pep257Checker = Pep257Checker(
-                            source, file, select, ignore, [], repeatMessages)
+                            source, file, select, ignore, [], repeatMessages,
+                            maxLineLength=maxLineLength)
                         pep257Checker.run()
                         pep257Checker.errors.sort(key=lambda a: a[1])
                     

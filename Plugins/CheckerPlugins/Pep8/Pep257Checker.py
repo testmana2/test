@@ -107,7 +107,7 @@ class Pep257Checker(object):
         "D111", "D112", "D113",
         "D121", "D122",
         "D131", "D132", "D133", "D134",
-        "D141"
+        "D141", "D142", "D143", "D144", "D145",
     ]
     
     Messages = {
@@ -146,10 +146,24 @@ class Pep257Checker(object):
             "Pep257Checker",
             "docstring does not mention the return value type"),
         "D141": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "docstring is separated by a blank line"),
+            "Pep257Checker",
+            "function/method docstring is separated by a blank line"),
+        "D142": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "class docstring is not preceded by a blank line"),
+        "D143": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "class docstring is not followed by a blank line"),
+        "D144": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring summary is not followed by a blank line"),
+        "D145": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "last paragraph of docstring is not followed by a blank line"),
     }
     
-    def __init__(self, source, filename, select, ignore, expected, repeat):
+    def __init__(self, source, filename, select, ignore, expected, repeat,
+                 maxLineLength=79):
         """
         Constructor (according to 'extended' pep8.py API)
         
@@ -160,11 +174,13 @@ class Pep257Checker(object):
         @param expected list of expected codes (list of string)
         @param repeat flag indicating to report each occurrence of a code
             (boolean)
+        @param maxLineLength allowed line length (integer)
         """
         self.__select = tuple(select)
         self.__ignore = tuple(ignore)
         self.__expected = expected[:]
         self.__repeat = repeat
+        self.__maxLineLength = maxLineLength
         self.__filename = filename
         self.__source = source[:]
         self.__isScript = self.__source[0].startswith('#!')
@@ -195,6 +211,7 @@ class Pep257Checker(object):
             ],
             "classDocstring": [
                 (self.__checkClassDocstring, ("D104", "D105")),
+                (self.__checkBlankBeforeAndAfterClass, ("D142", "D143")),
             ],
             "methodDocstring": [
             ],
@@ -212,6 +229,8 @@ class Pep257Checker(object):
                 (self.__checkOneLiner, ("D121",)),
                 (self.__checkIndent, ("D122",)),
                 (self.__checkEndsWithPeriod, ("D131",)),
+                (self.__checkBlankAfterSummary, ("D144",)),
+                (self.__checkBlankAfterLastParagraph, ("D145",)),
             ],
         }
         
@@ -323,15 +342,13 @@ class Pep257Checker(object):
                 .replace('r"""', "", 1)
                 .replace('u"""', "", 1)
                 .replace('"""', "")
+                .replace("r'''", "", 1)
+                .replace("u'''", "", 1)
+                .replace("'''", "")
                 .strip())
         
         if len(lines) == 1 or len(line) > 0:
             return line, 0
-        return lines[1].strip(), 1
-        
-        first_line = lines[0].strip()
-        if len(lines) == 1 or len(first_line) > 0:
-            return first_line, 0
         return lines[1].strip(), 1
     
     ##################################################################
@@ -362,7 +379,7 @@ class Pep257Checker(object):
         @return context of extracted docstring (Pep257Context)
         """
         moduleDocstring = self.__parseModuleDocstring(context.source())
-        if what.startswith('module'):
+        if what.startswith('module') or context.contextType() == "module":
             return moduleDocstring
         if moduleDocstring:
             return moduleDocstring
@@ -642,7 +659,12 @@ class Pep257Checker(object):
         if len(lines) > 1:
             nonEmptyLines = [l for l in lines if l.strip().strip('\'"')]
             if len(nonEmptyLines) == 1:
-                self.__error(docstringContext.start(), 0, "D121")
+                modLen = len(context.indent() + '"""' +
+                             nonEmptyLines[0].strip() + '"""')
+                if context.contextType() != "module":
+                    modLen += 4
+                if modLen <= self.__maxLineLength:
+                    self.__error(docstringContext.start(), 0, "D121")
     
     def __checkIndent(self, docstringContext, context):
         """
@@ -731,7 +753,7 @@ class Pep257Checker(object):
                 tokenize.generate_tokens(StringIO(context.ssource()).readline))
             return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
                        if token[1] == "return"]
-            if (set(return_) - 
+            if (set(return_) -
                     set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
                     set([])):
                 self.__error(docstringContext.end(), 0, "D134")
@@ -744,69 +766,94 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if docstringContext is None or self.__isScript:
+        if docstringContext is None:
             return
         
         contextLines = context.source()
         cti = 0
-        while not contextLines[cti].strip().startswith(
-                ('"""', 'r"""', 'u"""')):
+        while cti < len(contextLines) and \
+                not contextLines[cti].strip().startswith(
+                ('"""', 'r"""', 'u"""', "'''", "r'''", "u'''")):
             cti += 1
+        
+        if cti == len(contextLines):
+            return
+        
         if not contextLines[cti - 1].strip():
             self.__error(docstringContext.start(), 0, "D141")
     
-    # D142: check_blank_before_after_class
-##def check_blank_before_after_class(class_docstring, context, is_script):
-##    """Class docstring should have 1 blank line around them.
-##
-##    Insert a blank line before and after all docstrings (one-line or
-##    multi-line) that document a class -- generally speaking, the class's
-##    methods are separated from each other by a single blank line, and the
-##    docstring needs to be offset from the first method by a blank line;
-##    for symmetry, put a blank line between the class header and the
-##    docstring.
-##
-##    """
-##    if not class_docstring:
-##        return
-##    before, after = context.split(class_docstring)[:2]
-##    before_blanks = [not line.strip() for line in before.split('\n')]
-##    after_blanks = [not line.strip() for line in after.split('\n')]
-##    if before_blanks[-3:] != [False, True, True]:
-##        return True
-##    if not all(after_blanks) and after_blanks[:3] != [True, True, False]:
-##        return True
+    def __checkBlankBeforeAndAfterClass(self, docstringContext, context):
+        """
+        Private method to check, that class docstrings have one
+        blank line around them.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        contextLines = context.source()
+        cti = 0
+        while cti < len(contextLines) and \
+            not contextLines[cti].strip().startswith(
+                ('"""', 'r"""', 'u"""', "'''", "r'''", "u'''")):
+            cti += 1
+        
+        if cti == len(contextLines):
+            return
+        
+        start = cti
+        if contextLines[cti].strip() in (
+                '"""', 'r"""', 'u"""', "'''", "r'''", "u'''"):
+            # it is a multi line docstring
+            cti += 1
+        
+        while cti < len(contextLines) and \
+                not contextLines[cti].strip().endswith(('"""', "'''")):
+            cti += 1
+        end = cti
+        
+        if contextLines[start - 1].strip():
+            self.__error(docstringContext.start(), 0, "D142")
+        if contextLines[end + 1].strip():
+            self.__error(docstringContext.end(), 0, "D143")
     
-    # D143: check_blank_after_summary
-##def check_blank_after_summary(docstring, context, is_script):
-##    """Blank line missing after one-line summary.
-##
-##    Multi-line docstrings consist of a summary line just like a one-line
-##    docstring, followed by a blank line, followed by a more elaborate
-##    description. The summary line may be used by automatic indexing tools;
-##    it is important that it fits on one line and is separated from the
-##    rest of the docstring by a blank line.
-##
-##    """
-##    if not docstring:
-##        return
-##    lines = eval(docstring).split('\n')
-##    if len(lines) > 1:
-##        (summary_line, line_number) = get_summary_line_info(docstring)
-##        if len(lines) <= (line_number+1) or lines[line_number+1].strip() != '':
-##            return True
+    def __checkBlankAfterSummary(self, docstringContext, context):
+        """
+        Private method to check, that docstring summaries are followed
+        by a blank line.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        docstrings = docstringContext.source()
+        if len(docstrings) in [1, 3]:
+            # correct/invalid one-liner
+            return
+        
+        summary, lineNumber = self.__getSummaryLine(docstringContext)
+        if docstrings[lineNumber + 1].strip():
+            self.__error(docstringContext.start() + lineNumber, 0, "D144")
     
-    # D144: check_blank_after_last_paragraph
-##def check_blank_after_last_paragraph(docstring, context, is_script):
-##    """Multiline docstring should end with 1 blank line.
-##
-##    The BDFL recommends inserting a blank line between the last
-##    paragraph in a multi-line docstring and its closing quotes,
-##    placing the closing quotes on a line by themselves.
-##
-##    """
-##    if (not docstring) or len(eval(docstring).split('\n')) == 1:
-##        return
-##    blanks = [not line.strip() for line in eval(docstring).split('\n')]
-##    if blanks[-3:] != [False, True, True]:
-##        return True
+    def __checkBlankAfterLastParagraph(self, docstringContext, context):
+        """
+        Private method to check, that docstring summaries are followed
+        by a blank line.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        docstrings = docstringContext.source()
+        if len(docstrings) in [1, 3]:
+            # correct/invalid one-liner
+            return
+        
+        if docstrings[-2].strip():
+            self.__error(docstringContext.end(), 0, "D145")
