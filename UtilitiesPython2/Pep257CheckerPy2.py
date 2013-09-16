@@ -20,8 +20,6 @@ except ImportError:
     from io import StringIO             # __IGNORE_WARNING__
 import tokenize
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
-
 
 class Pep257Context(object):
     """
@@ -109,58 +107,6 @@ class Pep257Checker(object):
         "D131", "D132", "D133", "D134",
         "D141", "D142", "D143", "D144", "D145",
     ]
-    
-    Messages = {
-        "D101": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "module is missing a docstring"),
-        "D102": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "public function/method is missing a docstring"),
-        "D103": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "private function/method may be missing a docstring"),
-        "D104": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "public class is missing a docstring"),
-        "D105": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "private class may be missing a docstring"),
-        "D111": QT_TRANSLATE_NOOP(
-            "Pep257Checker", 'docstring not surrounded by """'),
-        "D112": QT_TRANSLATE_NOOP(
-            "Pep257Checker", 'docstring containing \\ not surrounded by r"""'),
-        "D113": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            'docstring containing unicode character not surrounded by u"""'),
-        "D121": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "one-liner docstring on multiple lines"),
-        "D122": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "docstring has wrong indentation"),
-        "D131": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "docstring summary does not end with a period"),
-        "D132": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "docstring summary is not in imperative mood"
-            " (Does instead of Do)"),
-        "D133": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "docstring summary looks like a function's/method's signature"),
-        "D134": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "docstring does not mention the return value type"),
-        "D141": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "function/method docstring is separated by a blank line"),
-        "D142": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "class docstring is not preceded by a blank line"),
-        "D143": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "class docstring is not followed by a blank line"),
-        "D144": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "docstring summary is not followed by a blank line"),
-        "D145": QT_TRANSLATE_NOOP(
-            "Pep257Checker",
-            "last paragraph of docstring is not followed by a blank line"),
-    }
     
     def __init__(self, source, filename, select, ignore, expected, repeat,
                  maxLineLength=79):
@@ -275,26 +221,9 @@ class Pep257Checker(object):
             return
         
         if code and (self.counters[code] == 1 or self.__repeat):
-            if code in Pep257Checker.Codes:
-                text = self.getMessage(code, *args)
             # record the issue with one based line number
-            self.errors.append((self.__filename, lineNumber + 1, offset, text))
-    
-    def getMessage(self, code, *args):
-        """
-        Public method to get a translated and formatted message for a
-        given code.
-        
-        @param code message code (string)
-        @param args arguments for a formatted message (list)
-        @return translated and formatted message (string)
-        """
-        if code in Pep257Checker.Messages:
-            return code + " " + QCoreApplication.translate(
-                "Pep257Checker", Pep257Checker.Messages[code]).format(*args)
-        else:
-            return code + " " + QCoreApplication.translate(
-                "Pep257Checker", "no message for this code defined")
+            self.errors.append(
+                (self.__filename, lineNumber + 1, offset, code, args))
     
     def __resetReadline(self):
         """
@@ -857,3 +786,6 @@ class Pep257Checker(object):
         
         if docstrings[-2].strip():
             self.__error(docstringContext.end(), 0, "D145")
+
+#
+# eflag: FileType = Python2

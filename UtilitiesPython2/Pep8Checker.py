@@ -18,6 +18,8 @@ from Pep8NamingCheckerPy2 import Pep8NamingChecker
 # register the name checker
 pep8.register_check(Pep8NamingChecker, Pep8NamingChecker.Codes)
 
+from Pep257CheckerPy2 import Pep257Checker
+
 
 class Pep8Report(pep8.BaseReport):
     """
@@ -93,9 +95,9 @@ if __name__ == "__main__":
                 hang_closing = True
         
         try:
-            codestring = readEncodedFile(filename)[0]
-            codestring = normalizeCode(codestring)
-            codestring = codestring.splitlines(True)
+            source = readEncodedFile(filename)[0]
+            source = normalizeCode(source)
+            source = source.splitlines(True)
         except IOError, msg:
             print "ERROR"
             print filename
@@ -112,6 +114,8 @@ if __name__ == "__main__":
                       if i.strip()]
         else:
             ignore = []
+        
+        # check PEP-8
         styleGuide = pep8.StyleGuide(
             reporter=Pep8Report,
             repeat=repeat,
@@ -121,10 +125,19 @@ if __name__ == "__main__":
             hang_closing=hang_closing,
         )
         report = styleGuide.check_files([filename])
-        report.errors.sort(key=lambda a: a[1])
-        if len(report.errors) > 0:
-            report.errors.sort(key=lambda a: a[1])
-            for error in report.errors:
+        
+        # check PEP-257
+        pep257Checker = Pep257Checker(
+            source, file, select, ignore, [], repeat,
+            maxLineLength=max_line_length)
+        pep257Checker.run()
+        
+        
+        errors = report.errors + pep257Checker.errors
+        
+        if len(errors) > 0:
+            errors.sort(key=lambda a: a[1])
+            for error in errors:
                 fname, lineno, position, code, args = error
                 print "PEP8"
                 print fname

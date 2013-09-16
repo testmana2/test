@@ -13,6 +13,7 @@ from PyQt4.QtCore import QProcess, QCoreApplication
 
 from . import pep8
 from .Pep8NamingChecker import Pep8NamingChecker
+from .Pep257Checker import Pep257Checker
 
 import Preferences
 import Utilities
@@ -106,6 +107,8 @@ class Pep8Py2Checker(object):
                 
                 if code in Pep8NamingChecker.Codes:
                     text = Pep8NamingChecker.getMessage(code, *args)
+                elif code in Pep257Checker.Codes:
+                    text = Pep257Checker.getMessage(code, *args)
                 else:
                     text = pep8.getMessage(code, *args)
                 self.errors.append((fname, lineno, position, text))

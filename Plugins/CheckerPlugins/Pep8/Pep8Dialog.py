@@ -383,6 +383,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         progress += 1
                         continue
                     
+                    stats = {}
                     flags = Utilities.extractFlags(source)
                     ext = os.path.splitext(file)[1]
                     if fixIssues:
@@ -409,7 +410,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             max_line_length=maxLineLength,
                             hang_closing=hangClosing,
                         )
-                        report.errors.sort(key=lambda a: a[1])
+                        errors = report.errors[:]
+                        stats.update(report.counters)
                         # TODO: add PEP-257 check for Py2
                     else:
                         if includeMessages:
@@ -433,17 +435,19 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             hang_closing=hangClosing,
                         )
                         report = styleGuide.check_files([file])
-                        report.errors.sort(key=lambda a: a[1])
+                        stats.update(report.counters)
                         
                         # check PEP-257
                         pep257Checker = Pep257Checker(
                             source, file, select, ignore, [], repeatMessages,
                             maxLineLength=maxLineLength)
                         pep257Checker.run()
-                        pep257Checker.errors.sort(key=lambda a: a[1])
+                        stats.update(pep257Checker.counters)
+                        
+                        errors = report.errors + pep257Checker.errors
                     
                     deferredFixes = {}
-                    for error in report.errors + pep257Checker.errors:
+                    for error in errors:
                         fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
@@ -479,9 +483,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             else:
                                 self.__modifyFixedResultItem(itm, "", False)
                         fixer.saveFile(encoding)
-                    stats = {}
-                    stats.update(report.counters)
-                    stats.update(pep257Checker.counters)
                     self.__updateStatistics(stats, fixer)
                     progress += 1
             finally:
