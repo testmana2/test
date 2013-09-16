@@ -20,6 +20,8 @@ from . import pep8
 
 import Utilities
 
+# TODO: add fixers for some docstring issues
+
 Pep8FixableIssues = ["E101", "E111", "E121", "E122", "E123", "E124",
                      "E125", "E126", "E127", "E128", "E133", "E201",
                      "E202", "E203", "E211", "E221", "E222", "E223",
