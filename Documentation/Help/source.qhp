@@ -454,6 +454,7 @@
             </section>
             <section title="eric5.Plugins.CheckerPlugins" ref="index-eric5.Plugins.CheckerPlugins.html">
               <section title="eric5.Plugins.CheckerPlugins.Pep8" ref="index-eric5.Plugins.CheckerPlugins.Pep8.html">
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
@@ -969,6 +970,7 @@
               <section title="eric5.UtilitiesPython2.py2flakes.checker" ref="eric5.UtilitiesPython2.py2flakes.checker.html" />
               <section title="eric5.UtilitiesPython2.py2flakes.messages" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
             </section>
+            <section title="eric5.UtilitiesPython2.Pep257CheckerPy2" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html" />
             <section title="eric5.UtilitiesPython2.Pep8Checker" ref="eric5.UtilitiesPython2.Pep8Checker.html" />
             <section title="eric5.UtilitiesPython2.Pep8NamingCheckerPy2" ref="eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html" />
             <section title="eric5.UtilitiesPython2.Py2SyntaxChecker" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
@@ -7960,6 +7962,89 @@
       <keyword name="PasswordsDialog (Module)" id="PasswordsDialog (Module)" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html" />
       <keyword name="PasswordsDialog.__calculateHeaderSizes" id="PasswordsDialog.__calculateHeaderSizes" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__calculateHeaderSizes" />
       <keyword name="PasswordsDialog.on_passwordsButton_clicked" id="PasswordsDialog.on_passwordsButton_clicked" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.on_passwordsButton_clicked" />
+      <keyword name="Pep257Checker" id="Pep257Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker" />
+      <keyword name="Pep257Checker" id="Pep257Checker" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker" />
+      <keyword name="Pep257Checker (Constructor)" id="Pep257Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__init__" />
+      <keyword name="Pep257Checker (Constructor)" id="Pep257Checker (Constructor)" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__init__" />
+      <keyword name="Pep257Checker (Module)" id="Pep257Checker (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html" />
+      <keyword name="Pep257Checker.__checkBackslashes" id="Pep257Checker.__checkBackslashes" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkBackslashes" />
+      <keyword name="Pep257Checker.__checkBackslashes" id="Pep257Checker.__checkBackslashes" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkBackslashes" />
+      <keyword name="Pep257Checker.__checkBlankAfterLastParagraph" id="Pep257Checker.__checkBlankAfterLastParagraph" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkBlankAfterLastParagraph" />
+      <keyword name="Pep257Checker.__checkBlankAfterLastParagraph" id="Pep257Checker.__checkBlankAfterLastParagraph" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkBlankAfterLastParagraph" />
+      <keyword name="Pep257Checker.__checkBlankAfterSummary" id="Pep257Checker.__checkBlankAfterSummary" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkBlankAfterSummary" />
+      <keyword name="Pep257Checker.__checkBlankAfterSummary" id="Pep257Checker.__checkBlankAfterSummary" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkBlankAfterSummary" />
+      <keyword name="Pep257Checker.__checkBlankBeforeAndAfterClass" id="Pep257Checker.__checkBlankBeforeAndAfterClass" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkBlankBeforeAndAfterClass" />
+      <keyword name="Pep257Checker.__checkBlankBeforeAndAfterClass" id="Pep257Checker.__checkBlankBeforeAndAfterClass" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkBlankBeforeAndAfterClass" />
+      <keyword name="Pep257Checker.__checkClassDocstring" id="Pep257Checker.__checkClassDocstring" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkClassDocstring" />
+      <keyword name="Pep257Checker.__checkClassDocstring" id="Pep257Checker.__checkClassDocstring" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkClassDocstring" />
+      <keyword name="Pep257Checker.__checkEndsWithPeriod" id="Pep257Checker.__checkEndsWithPeriod" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkEndsWithPeriod" />
+      <keyword name="Pep257Checker.__checkEndsWithPeriod" id="Pep257Checker.__checkEndsWithPeriod" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkEndsWithPeriod" />
+      <keyword name="Pep257Checker.__checkFunctionDocstring" id="Pep257Checker.__checkFunctionDocstring" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkFunctionDocstring" />
+      <keyword name="Pep257Checker.__checkFunctionDocstring" id="Pep257Checker.__checkFunctionDocstring" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkFunctionDocstring" />
+      <keyword name="Pep257Checker.__checkImperativeMood" id="Pep257Checker.__checkImperativeMood" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkImperativeMood" />
+      <keyword name="Pep257Checker.__checkImperativeMood" id="Pep257Checker.__checkImperativeMood" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkImperativeMood" />
+      <keyword name="Pep257Checker.__checkIndent" id="Pep257Checker.__checkIndent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkIndent" />
+      <keyword name="Pep257Checker.__checkIndent" id="Pep257Checker.__checkIndent" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkIndent" />
+      <keyword name="Pep257Checker.__checkModulesDocstrings" id="Pep257Checker.__checkModulesDocstrings" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkModulesDocstrings" />
+      <keyword name="Pep257Checker.__checkModulesDocstrings" id="Pep257Checker.__checkModulesDocstrings" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkModulesDocstrings" />
+      <keyword name="Pep257Checker.__checkNoBlankLineBefore" id="Pep257Checker.__checkNoBlankLineBefore" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkNoBlankLineBefore" />
+      <keyword name="Pep257Checker.__checkNoBlankLineBefore" id="Pep257Checker.__checkNoBlankLineBefore" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkNoBlankLineBefore" />
+      <keyword name="Pep257Checker.__checkNoSignature" id="Pep257Checker.__checkNoSignature" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkNoSignature" />
+      <keyword name="Pep257Checker.__checkNoSignature" id="Pep257Checker.__checkNoSignature" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkNoSignature" />
+      <keyword name="Pep257Checker.__checkOneLiner" id="Pep257Checker.__checkOneLiner" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkOneLiner" />
+      <keyword name="Pep257Checker.__checkOneLiner" id="Pep257Checker.__checkOneLiner" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkOneLiner" />
+      <keyword name="Pep257Checker.__checkReturnType" id="Pep257Checker.__checkReturnType" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkReturnType" />
+      <keyword name="Pep257Checker.__checkReturnType" id="Pep257Checker.__checkReturnType" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkReturnType" />
+      <keyword name="Pep257Checker.__checkTripleDoubleQuotes" id="Pep257Checker.__checkTripleDoubleQuotes" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkTripleDoubleQuotes" />
+      <keyword name="Pep257Checker.__checkTripleDoubleQuotes" id="Pep257Checker.__checkTripleDoubleQuotes" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkTripleDoubleQuotes" />
+      <keyword name="Pep257Checker.__checkUnicode" id="Pep257Checker.__checkUnicode" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__checkUnicode" />
+      <keyword name="Pep257Checker.__checkUnicode" id="Pep257Checker.__checkUnicode" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__checkUnicode" />
+      <keyword name="Pep257Checker.__error" id="Pep257Checker.__error" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__error" />
+      <keyword name="Pep257Checker.__error" id="Pep257Checker.__error" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__error" />
+      <keyword name="Pep257Checker.__getSummaryLine" id="Pep257Checker.__getSummaryLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__getSummaryLine" />
+      <keyword name="Pep257Checker.__getSummaryLine" id="Pep257Checker.__getSummaryLine" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__getSummaryLine" />
+      <keyword name="Pep257Checker.__ignoreCode" id="Pep257Checker.__ignoreCode" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__ignoreCode" />
+      <keyword name="Pep257Checker.__ignoreCode" id="Pep257Checker.__ignoreCode" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__ignoreCode" />
+      <keyword name="Pep257Checker.__parseClasses" id="Pep257Checker.__parseClasses" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseClasses" />
+      <keyword name="Pep257Checker.__parseClasses" id="Pep257Checker.__parseClasses" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseClasses" />
+      <keyword name="Pep257Checker.__parseContexts" id="Pep257Checker.__parseContexts" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseContexts" />
+      <keyword name="Pep257Checker.__parseContexts" id="Pep257Checker.__parseContexts" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseContexts" />
+      <keyword name="Pep257Checker.__parseDocstring" id="Pep257Checker.__parseDocstring" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseDocstring" />
+      <keyword name="Pep257Checker.__parseDocstring" id="Pep257Checker.__parseDocstring" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseDocstring" />
+      <keyword name="Pep257Checker.__parseFunctions" id="Pep257Checker.__parseFunctions" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseFunctions" />
+      <keyword name="Pep257Checker.__parseFunctions" id="Pep257Checker.__parseFunctions" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseFunctions" />
+      <keyword name="Pep257Checker.__parseMethods" id="Pep257Checker.__parseMethods" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseMethods" />
+      <keyword name="Pep257Checker.__parseMethods" id="Pep257Checker.__parseMethods" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseMethods" />
+      <keyword name="Pep257Checker.__parseModuleDocstring" id="Pep257Checker.__parseModuleDocstring" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseModuleDocstring" />
+      <keyword name="Pep257Checker.__parseModuleDocstring" id="Pep257Checker.__parseModuleDocstring" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseModuleDocstring" />
+      <keyword name="Pep257Checker.__parseTopLevel" id="Pep257Checker.__parseTopLevel" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__parseTopLevel" />
+      <keyword name="Pep257Checker.__parseTopLevel" id="Pep257Checker.__parseTopLevel" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__parseTopLevel" />
+      <keyword name="Pep257Checker.__readline" id="Pep257Checker.__readline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__readline" />
+      <keyword name="Pep257Checker.__readline" id="Pep257Checker.__readline" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__readline" />
+      <keyword name="Pep257Checker.__resetReadline" id="Pep257Checker.__resetReadline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__resetReadline" />
+      <keyword name="Pep257Checker.__resetReadline" id="Pep257Checker.__resetReadline" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__resetReadline" />
+      <keyword name="Pep257Checker.__skipIndentedBlock" id="Pep257Checker.__skipIndentedBlock" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.__skipIndentedBlock" />
+      <keyword name="Pep257Checker.__skipIndentedBlock" id="Pep257Checker.__skipIndentedBlock" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.__skipIndentedBlock" />
+      <keyword name="Pep257Checker.getMessage" id="Pep257Checker.getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.getMessage" />
+      <keyword name="Pep257Checker.run" id="Pep257Checker.run" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Checker.run" />
+      <keyword name="Pep257Checker.run" id="Pep257Checker.run" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Checker.run" />
+      <keyword name="Pep257CheckerPy2 (Module)" id="Pep257CheckerPy2 (Module)" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html" />
+      <keyword name="Pep257Context" id="Pep257Context" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context" />
+      <keyword name="Pep257Context" id="Pep257Context" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context" />
+      <keyword name="Pep257Context (Constructor)" id="Pep257Context (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.__init__" />
+      <keyword name="Pep257Context (Constructor)" id="Pep257Context (Constructor)" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.__init__" />
+      <keyword name="Pep257Context.contextType" id="Pep257Context.contextType" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.contextType" />
+      <keyword name="Pep257Context.contextType" id="Pep257Context.contextType" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.contextType" />
+      <keyword name="Pep257Context.end" id="Pep257Context.end" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.end" />
+      <keyword name="Pep257Context.end" id="Pep257Context.end" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.end" />
+      <keyword name="Pep257Context.indent" id="Pep257Context.indent" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.indent" />
+      <keyword name="Pep257Context.indent" id="Pep257Context.indent" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.indent" />
+      <keyword name="Pep257Context.source" id="Pep257Context.source" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.source" />
+      <keyword name="Pep257Context.source" id="Pep257Context.source" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.source" />
+      <keyword name="Pep257Context.ssource" id="Pep257Context.ssource" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.ssource" />
+      <keyword name="Pep257Context.ssource" id="Pep257Context.ssource" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.ssource" />
+      <keyword name="Pep257Context.start" id="Pep257Context.start" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html#Pep257Context.start" />
+      <keyword name="Pep257Context.start" id="Pep257Context.start" ref="eric5.UtilitiesPython2.Pep257CheckerPy2.html#Pep257Context.start" />
       <keyword name="Pep8 (Package)" id="Pep8 (Package)" ref="index-eric5.Plugins.CheckerPlugins.Pep8.html" />
       <keyword name="Pep8Checker (Module)" id="Pep8Checker (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
       <keyword name="Pep8Checker (Module)" id="Pep8Checker (Module)" ref="eric5.UtilitiesPython2.Pep8Checker.html" />
@@ -13635,6 +13720,7 @@
       <file>eric5.PluginManager.PluginRepositoryDialog.html</file>
       <file>eric5.PluginManager.PluginUninstallDialog.html</file>
       <file>eric5.Plugins.AboutPlugin.AboutDialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html</file>
@@ -14040,6 +14126,7 @@
       <file>eric5.Utilities.py3flakes.checker.html</file>
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
+      <file>eric5.UtilitiesPython2.Pep257CheckerPy2.html</file>
       <file>eric5.UtilitiesPython2.Pep8Checker.html</file>
       <file>eric5.UtilitiesPython2.Pep8NamingCheckerPy2.html</file>
       <file>eric5.UtilitiesPython2.Py2SyntaxChecker.html</file>
