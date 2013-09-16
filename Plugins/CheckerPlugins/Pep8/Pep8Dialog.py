@@ -412,7 +412,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         )
                         errors = report.errors[:]
                         stats.update(report.counters)
-                        # TODO: add PEP-257 check for Py2
                     else:
                         if includeMessages:
                             select = [s.strip() for s in includeMessages.split(',')
