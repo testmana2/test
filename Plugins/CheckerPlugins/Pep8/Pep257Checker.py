@@ -349,7 +349,7 @@ class Pep257Checker(object):
         
         if len(lines) == 1 or len(line) > 0:
             return line, 0
-        return lines[1].strip(), 1
+        return lines[1].strip().replace('"""', "").replace("'''", ""), 1
     
     ##################################################################
     ## Parsing functionality below
@@ -663,6 +663,9 @@ class Pep257Checker(object):
                              nonEmptyLines[0].strip() + '"""')
                 if context.contextType() != "module":
                     modLen += 4
+                if not nonEmptyLines[0].strip().endswith("."):
+                    # account for a trailing dot
+                    modLen += 1
                 if modLen <= self.__maxLineLength:
                     self.__error(docstringContext.start(), 0, "D121")
     
@@ -799,7 +802,6 @@ class Pep257Checker(object):
             not contextLines[cti].strip().startswith(
                 ('"""', 'r"""', 'u"""', "'''", "r'''", "u'''")):
             cti += 1
-        
         if cti == len(contextLines):
             return
         
@@ -813,6 +815,8 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().endswith(('"""', "'''")):
             cti += 1
         end = cti
+        if cti == len(contextLines):
+            return
         
         if contextLines[start - 1].strip():
             self.__error(docstringContext.start(), 0, "D142")
@@ -836,8 +840,9 @@ class Pep257Checker(object):
             return
         
         summary, lineNumber = self.__getSummaryLine(docstringContext)
-        if docstrings[lineNumber + 1].strip():
-            self.__error(docstringContext.start() + lineNumber, 0, "D144")
+        if len(docstrings) > 2:
+            if docstrings[lineNumber + 1].strip():
+                self.__error(docstringContext.start() + lineNumber, 0, "D144")
     
     def __checkBlankAfterLastParagraph(self, docstringContext, context):
         """
@@ -851,7 +856,7 @@ class Pep257Checker(object):
             return
         
         docstrings = docstringContext.source()
-        if len(docstrings) in [1, 3]:
+        if len(docstrings) <= 3:
             # correct/invalid one-liner
             return
         

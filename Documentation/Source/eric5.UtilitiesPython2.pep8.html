@@ -57,7 +57,7 @@ a { color: #BA6D36; }
 <td>Parse options and run checks on Python source.</td>
 </tr><tr>
 <td><a href="#blank_lines">blank_lines</a></td>
-<td></td>
+<td>Separate top-level function and class definitions with two blank lines.</td>
 </tr><tr>
 <td><a href="#comparison_to_singleton">comparison_to_singleton</a></td>
 <td>Comparisons to singletons like None should always be done with "is" or "is not", never the equality operators.</td>
@@ -66,16 +66,16 @@ a { color: #BA6D36; }
 <td>Object type comparisons should always use isinstance() instead of comparing types directly.</td>
 </tr><tr>
 <td><a href="#compound_statements">compound_statements</a></td>
-<td></td>
+<td>Compound statements (multiple statements on the same line) are generally discouraged.</td>
 </tr><tr>
 <td><a href="#continued_indentation">continued_indentation</a></td>
-<td></td>
+<td>Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent.</td>
 </tr><tr>
 <td><a href="#expand_indent">expand_indent</a></td>
-<td></td>
+<td>Return the amount of indentation.</td>
 </tr><tr>
 <td><a href="#explicit_line_join">explicit_line_join</a></td>
-<td></td>
+<td>Avoid explicit line join between brackets.</td>
 </tr><tr>
 <td><a href="#extraneous_whitespace">extraneous_whitespace</a></td>
 <td>Avoid extraneous whitespace in the following situations:</td>
@@ -87,10 +87,10 @@ a { color: #BA6D36; }
 <td></td>
 </tr><tr>
 <td><a href="#imports_on_separate_lines">imports_on_separate_lines</a></td>
-<td></td>
+<td>Imports should usually be on separate lines.</td>
 </tr><tr>
 <td><a href="#indentation">indentation</a></td>
-<td></td>
+<td>Use 4 spaces per indentation level.</td>
 </tr><tr>
 <td><a href="#init_checks_registry">init_checks_registry</a></td>
 <td>Register all globally visible functions where the first argument name is 'physical_line' or 'logical_line'.</td>
@@ -105,7 +105,7 @@ a { color: #BA6D36; }
 <td>JCR: Each comma, semicolon or colon should be followed by whitespace.</td>
 </tr><tr>
 <td><a href="#missing_whitespace_around_operator">missing_whitespace_around_operator</a></td>
-<td></td>
+<td>- Always surround these binary operators with a single space on either side: assignment (=), augmented assignment (+=, -= etc.), comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not), Booleans (and, or, not).</td>
 </tr><tr>
 <td><a href="#mute_string">mute_string</a></td>
 <td>Replace contents with 'xxx' to prevent syntax matching.</td>
@@ -120,7 +120,7 @@ a { color: #BA6D36; }
 <td>Backticks are removed in Python 3.</td>
 </tr><tr>
 <td><a href="#python_3000_has_key">python_3000_has_key</a></td>
-<td></td>
+<td>The {}.has_key() method is removed in the Python 3.</td>
 </tr><tr>
 <td><a href="#python_3000_not_equal">python_3000_not_equal</a></td>
 <td>!= can also be written <>, but this is an obsolete usage kept for backwards compatibility only.</td>
@@ -144,22 +144,22 @@ a { color: #BA6D36; }
 <td></td>
 </tr><tr>
 <td><a href="#tabs_obsolete">tabs_obsolete</a></td>
-<td></td>
+<td>For new projects, spaces-only are strongly recommended over tabs.</td>
 </tr><tr>
 <td><a href="#tabs_or_spaces">tabs_or_spaces</a></td>
-<td></td>
+<td>Never mix tabs and spaces.</td>
 </tr><tr>
 <td><a href="#trailing_blank_lines">trailing_blank_lines</a></td>
-<td></td>
+<td>JCR: Trailing blank lines are superfluous.</td>
 </tr><tr>
 <td><a href="#trailing_whitespace">trailing_whitespace</a></td>
-<td></td>
+<td>JCR: Trailing whitespace is superfluous.</td>
 </tr><tr>
 <td><a href="#whitespace_around_comma">whitespace_around_comma</a></td>
 <td>Avoid extraneous whitespace in the following situations:</td>
 </tr><tr>
 <td><a href="#whitespace_around_keywords">whitespace_around_keywords</a></td>
-<td></td>
+<td>Avoid extraneous whitespace around keywords.</td>
 </tr><tr>
 <td><a href="#whitespace_around_named_parameter_equals">whitespace_around_named_parameter_equals</a></td>
 <td>Don't use spaces around the '=' sign when used to indicate a keyword argument or a default parameter value.</td>
@@ -645,7 +645,26 @@ Parse options and run checks on Python source.
 <a NAME="blank_lines" ID="blank_lines"></a>
 <h2>blank_lines</h2>
 <b>blank_lines</b>(<i>logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level</i>)
-
+<p>
+    Separate top-level function and class definitions with two blank lines.
+</p><p>
+    Method definitions inside a class are separated by a single blank line.
+</p><p>
+    Extra blank lines may be used (sparingly) to separate groups of related
+    functions.  Blank lines may be omitted between a bunch of related
+    one-liners (e.g. a set of dummy implementations).
+</p><p>
+    Use blank lines in functions, sparingly, to indicate logical sections.
+</p><p>
+    Okay: def a():\n    pass\n\n\ndef b():\n    pass
+    Okay: def a():\n    pass\n\n\n# Foo\n# Bar\n\ndef b():\n    pass
+</p><p>
+    E301: class Foo:\n    b = 0\n    def bar():\n        pass
+    E302: def a():\n    pass\n\ndef b(n):\n    pass
+    E303: def a():\n    pass\n\n\n\ndef b(n):\n    pass
+    E303: def a():\n\n\n\n    pass
+    E304: @decorator\n\ndef a():\n    pass
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="comparison_to_singleton" ID="comparison_to_singleton"></a>
@@ -688,25 +707,101 @@ Parse options and run checks on Python source.
 <a NAME="compound_statements" ID="compound_statements"></a>
 <h2>compound_statements</h2>
 <b>compound_statements</b>(<i>logical_line</i>)
-
+<p>
+    Compound statements (multiple statements on the same line) are
+    generally discouraged.
+</p><p>
+    While sometimes it's okay to put an if/for/while with a small body
+    on the same line, never do this for multi-clause statements. Also
+    avoid folding such long lines!
+</p><p>
+    Okay: if foo == 'blah':\n    do_blah_thing()
+    Okay: do_one()
+    Okay: do_two()
+    Okay: do_three()
+</p><p>
+    E701: if foo == 'blah': do_blah_thing()
+    E701: for x in lst: total += x
+    E701: while t < 10: t = delay()
+    E701: if foo == 'blah': do_blah_thing()
+    E701: else: do_non_blah_thing()
+    E701: try: something()
+    E701: finally: cleanup()
+    E701: if foo == 'blah': one(); two(); three()
+</p><p>
+    E702: do_one(); do_two(); do_three()
+    E703: do_four();  # useless semicolon
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="continued_indentation" ID="continued_indentation"></a>
 <h2>continued_indentation</h2>
 <b>continued_indentation</b>(<i>logical_line, tokens, indent_level, hang_closing, noqa, verbose</i>)
-
+<p>
+    Continuation lines should align wrapped elements either vertically using
+    Python's implicit line joining inside parentheses, brackets and braces, or
+    using a hanging indent.
+</p><p>
+    When using a hanging indent the following considerations should be applied:
+</p><p>
+    - there should be no arguments on the first line, and
+</p><p>
+    - further indentation should be used to clearly distinguish itself as a
+      continuation line.
+</p><p>
+    Okay: a = (\n)
+    E123: a = (\n    )
+</p><p>
+    Okay: a = (\n    42)
+    E121: a = (\n   42)
+    E122: a = (\n42)
+    E123: a = (\n    42\n    )
+    E124: a = (24,\n     42\n)
+    E125: if (a or\n    b):\n    pass
+    E126: a = (\n        42)
+    E127: a = (24,\n      42)
+    E128: a = (24,\n    42)
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="expand_indent" ID="expand_indent"></a>
 <h2>expand_indent</h2>
 <b>expand_indent</b>(<i>line</i>)
-
+<p>
+    Return the amount of indentation.
+    Tabs are expanded to the next multiple of 8.
+</p><p>
+    >>> expand_indent('    ')
+    4
+    >>> expand_indent('\t')
+    8
+    >>> expand_indent('    \t')
+    8
+    >>> expand_indent('       \t')
+    8
+    >>> expand_indent('        \t')
+    16
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="explicit_line_join" ID="explicit_line_join"></a>
 <h2>explicit_line_join</h2>
 <b>explicit_line_join</b>(<i>logical_line, tokens</i>)
-
+<p>
+    Avoid explicit line join between brackets.
+</p><p>
+    The preferred way of wrapping long lines is by using Python's implied line
+    continuation inside parentheses, brackets and braces.  Long lines can be
+    broken over multiple lines by wrapping expressions in parentheses.  These
+    should be used in preference to using a backslash for line continuation.
+</p><p>
+    E502: aaa = [123, \\n       123]
+    E502: aaa = ("bbb " \\n       "ccc")
+</p><p>
+    Okay: aaa = [123,\n       123]
+    Okay: aaa = ("bbb "\n       "ccc")
+    Okay: aaa = "bbb " \\n    "ccc"
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="extraneous_whitespace" ID="extraneous_whitespace"></a>
@@ -751,13 +846,39 @@ Parse options and run checks on Python source.
 <a NAME="imports_on_separate_lines" ID="imports_on_separate_lines"></a>
 <h2>imports_on_separate_lines</h2>
 <b>imports_on_separate_lines</b>(<i>logical_line</i>)
-
+<p>
+    Imports should usually be on separate lines.
+</p><p>
+    Okay: import os\nimport sys
+    E401: import sys, os
+</p><p>
+    Okay: from subprocess import Popen, PIPE
+    Okay: from myclas import MyClass
+    Okay: from foo.bar.yourclass import YourClass
+    Okay: import myclass
+    Okay: import foo.bar.yourclass
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="indentation" ID="indentation"></a>
 <h2>indentation</h2>
 <b>indentation</b>(<i>logical_line, previous_logical, indent_char, indent_level, previous_indent_level</i>)
-
+<p>
+    Use 4 spaces per indentation level.
+</p><p>
+    For really old code that you don't want to mess up, you can continue to
+    use 8-space tabs.
+</p><p>
+    Okay: a = 1
+    Okay: if a == 0:\n    a = 1
+    E111:   a = 1
+</p><p>
+    Okay: for item in items:\n    pass
+    E112: for item in items:\npass
+</p><p>
+    Okay: a = 1\nb = 2
+    E113: a = 1\n    b = 2
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="init_checks_registry" ID="init_checks_registry"></a>
@@ -817,7 +938,31 @@ Parse options and run checks on Python source.
 <a NAME="missing_whitespace_around_operator" ID="missing_whitespace_around_operator"></a>
 <h2>missing_whitespace_around_operator</h2>
 <b>missing_whitespace_around_operator</b>(<i>logical_line, tokens</i>)
-
+<p>
+    - Always surround these binary operators with a single space on
+      either side: assignment (=), augmented assignment (+=, -= etc.),
+      comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not),
+      Booleans (and, or, not).
+</p><p>
+    - Use spaces around arithmetic operators.
+</p><p>
+    Okay: i = i + 1
+    Okay: submitted += 1
+    Okay: x = x * 2 - 1
+    Okay: hypot2 = x * x + y * y
+    Okay: c = (a + b) * (a - b)
+    Okay: foo(bar, key='word', *args, **kwargs)
+    Okay: alpha[:-i]
+</p><p>
+    E225: i=i+1
+    E225: submitted +=1
+    E225: x = x /2 - 1
+    E225: z = x **y
+    E226: c = (a+b) * (a-b)
+    E226: hypot2 = x*x + y*y
+    E227: c = a|b
+    E228: msg = fmt%(errno, errmsg)
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="mute_string" ID="mute_string"></a>
@@ -866,7 +1011,13 @@ Process options passed either via arglist or via command line args.
 <a NAME="python_3000_has_key" ID="python_3000_has_key"></a>
 <h2>python_3000_has_key</h2>
 <b>python_3000_has_key</b>(<i>logical_line</i>)
-
+<p>
+    The {}.has_key() method is removed in the Python 3.
+    Use the 'in' operation instead.
+</p><p>
+    Okay: if "alph" in d:\n    print d["alph"]
+    W601: assert d.has_key('alph')
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="python_3000_not_equal" ID="python_3000_not_equal"></a>
@@ -936,25 +1087,65 @@ Read both user configuration and local configuration.
 <a NAME="tabs_obsolete" ID="tabs_obsolete"></a>
 <h2>tabs_obsolete</h2>
 <b>tabs_obsolete</b>(<i>physical_line</i>)
-
+<p>
+    For new projects, spaces-only are strongly recommended over tabs.  Most
+    editors have features that make this easy to do.
+</p><p>
+    Okay: if True:\n    return
+    W191: if True:\n\treturn
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="tabs_or_spaces" ID="tabs_or_spaces"></a>
 <h2>tabs_or_spaces</h2>
 <b>tabs_or_spaces</b>(<i>physical_line, indent_char</i>)
-
+<p>
+    Never mix tabs and spaces.
+</p><p>
+    The most popular way of indenting Python is with spaces only.  The
+    second-most popular way is with tabs only.  Code indented with a mixture
+    of tabs and spaces should be converted to using spaces exclusively.  When
+    invoking the Python command line interpreter with the -t option, it issues
+    warnings about code that illegally mixes tabs and spaces.  When using -tt
+    these warnings become errors.  These options are highly recommended!
+</p><p>
+    Okay: if a == 0:\n        a = 1\n        b = 1
+    E101: if a == 0:\n        a = 1\n\tb = 1
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="trailing_blank_lines" ID="trailing_blank_lines"></a>
 <h2>trailing_blank_lines</h2>
 <b>trailing_blank_lines</b>(<i>physical_line, lines, line_number</i>)
-
+<p>
+    JCR: Trailing blank lines are superfluous.
+</p><p>
+    Okay: spam(1)
+    W391: spam(1)\n
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="trailing_whitespace" ID="trailing_whitespace"></a>
 <h2>trailing_whitespace</h2>
 <b>trailing_whitespace</b>(<i>physical_line</i>)
-
+<p>
+    JCR: Trailing whitespace is superfluous.
+    FBM: Except when it occurs as part of a blank line (i.e. the line is
+         nothing but whitespace). According to Python docs[1] a line with only
+         whitespace is considered a blank line, and is to be ignored. However,
+         matching a blank line to its indentation level avoids mistakenly
+         terminating a multi-line statement (e.g. class declaration) when
+         pasting code into the standard Python interpreter.
+</p><p>
+         [1] http://docs.python.org/reference/lexical_analysis.html#blank-lines
+</p><p>
+    The warning returned varies on whether the line itself is blank, for easier
+    filtering for those who want to indent their blank lines.
+</p><p>
+    Okay: spam(1)\n#
+    W291: spam(1) \n#
+    W293: class Foo(object):\n    \n    bang = 12
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="whitespace_around_comma" ID="whitespace_around_comma"></a>
@@ -978,7 +1169,15 @@ Read both user configuration and local configuration.
 <a NAME="whitespace_around_keywords" ID="whitespace_around_keywords"></a>
 <h2>whitespace_around_keywords</h2>
 <b>whitespace_around_keywords</b>(<i>logical_line</i>)
-
+<p>
+    Avoid extraneous whitespace around keywords.
+</p><p>
+    Okay: True and False
+    E271: True and  False
+    E272: True  and False
+    E273: True and\tFalse
+    E274: True\tand False
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="whitespace_around_named_parameter_equals" ID="whitespace_around_named_parameter_equals"></a>
