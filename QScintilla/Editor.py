@@ -2844,7 +2844,7 @@ class Editor(QsciScintillaCompat):
             self.setWindowTitle(self.fileName)
             # get eric specific flags
             self.__processFlags()
-            if self.lexer_ is None and not self.__lexerReset:
+            if not self.__lexerReset:
                 self.setLanguage(self.fileName)
             
             if saveas:
