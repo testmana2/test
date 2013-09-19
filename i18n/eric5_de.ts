@@ -31939,7 +31939,7 @@ Ursache: {1}</translation>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="514"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="513"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -32014,7 +32014,7 @@ Ursache: {1}</translation>
         <translation>Probleme automatisch beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="840"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="839"/>
         <source>Fix: {0}</source>
         <translation>Lösung: {0}</translation>
     </message>
@@ -32108,52 +32108,52 @@ Zeile und Position.&lt;/p&gt;</translation>
 <context>
     <name>Pep8Fixer</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="161"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="173"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gespeichert werden. Überspringe sie.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="481"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="754"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Tabulator in 4 Leerzeichen gewandelt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1284"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1557"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Leerzeichen am Zeilenende entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1298"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1571"/>
         <source>newline added to end of file.</source>
         <translation>Zeilenvorschub am Dateiende angefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1318"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1591"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Überflüssige Leerzeilen am Dateiende gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1333"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1606"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>„&lt;&gt;“ durch „!=“ ersetzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="973"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1246"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Überflüssige Leerzeilen nach Funktionsdekorator gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="945"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1218"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Überflüssige Leerzeilen gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="860"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1133"/>
         <source>One blank line inserted.</source>
         <translation>Eine Leerzeile eingefügt.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="910"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1183"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>%n Leerzeile eingefügt.</numerusform>
@@ -32161,7 +32161,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="913"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1186"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>%n überflüssige Zeile gelöscht</numerusform>
@@ -32169,99 +32169,144 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="788"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1061"/>
         <source>Missing whitespace added.</source>
         <translation>Fehlende Leerzeichen eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="823"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1096"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Überzählige Leerzeichen gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="483"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="756"/>
         <source>Indentation adjusted to be a multiple of four.</source>
         <translation>Einrückung auf ein Vielfaches von vier korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="843"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1116"/>
         <source>Whitespace around comment sign corrected.</source>
         <translation>Leerzeichen um Kommentarzeichen korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1009"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1282"/>
         <source>Imports were put on separate lines.</source>
         <translation>Imports wurden auf separate Zeilen verteilt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1072"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1345"/>
         <source>Redundant backslash in brackets removed.</source>
         <translation>Redundante Backslashes in Klammern entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1130"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1403"/>
         <source>Compound statement corrected.</source>
         <translation>Compund Statement korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1169"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1442"/>
         <source>Comparison to None/True/False corrected.</source>
         <translation>Vergleich mit None/True/False korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="510"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="783"/>
         <source>Indentation of continuation line corrected.</source>
         <translation>Einrückung der Fortsetzungszeile korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="513"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="786"/>
         <source>Indentation of closing bracket corrected.</source>
         <translation>Einrückung der schließenden Klammer korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="548"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="821"/>
         <source>Missing indentation of continuation line corrected.</source>
         <translation>Fehlende Einrückung der Fortsetzungszeile korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="588"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="861"/>
         <source>Closing bracket aligned to opening bracket.</source>
         <translation>Schließende Klammer an öffnender Klammer ausgerichtet.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="621"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="894"/>
         <source>Indentation level changed.</source>
         <translation>Einrückungsebene geändert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="658"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="931"/>
         <source>Indentation level of hanging indentation changed.</source>
         <translation>Einrückungsebene der hängenden Einrückung geändert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="712"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="985"/>
         <source>Visual indentation corrected.</source>
         <translation>Visuelle Einrückung korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1051"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1324"/>
         <source>Long lines have been shortened.</source>
         <translation>Lange Zeilen wurden gekürzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1206"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1479"/>
         <source>&apos;{0}&apos; argument added.</source>
         <translation>&apos;{0}&apos; Argument hinzugefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1265"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="1538"/>
         <source>&apos;{0}&apos; argument removed.</source>
         <translation>&apos;{0}&apos; Argument entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="161"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="173"/>
         <source>Fix Code Style Issues</source>
         <translation>Quelltextstil-Probleme beheben</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="495"/>
+        <source>Triple single quotes converted to triple double quotes.</source>
+        <translation>Dreifache Einfachanführungszeichen in dreifache Doppelanführungszeichen umgewandelt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="524"/>
+        <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
+        <translation>Einleitende Anführungszeichen in {0}&quot;&quot;&quot; korrigiert</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="560"/>
+        <source>Single line docstring put on one line.</source>
+        <translation>Einzeiligen Docstring auf eine Zeile gebracht.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="595"/>
+        <source>Period added to summary line.</source>
+        <translation>Punkt an die Zusammenfassungszeile angefügt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="616"/>
+        <source>Blank line before function/method docstring removed.</source>
+        <translation>Leerzeile vor Funktions-/Methodendocstring entfernt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="643"/>
+        <source>Blank line inserted before class docstring.</source>
+        <translation>Leerzeile vor Klassendocstring eingefügt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="669"/>
+        <source>Blank line inserted after class docstring.</source>
+        <translation>Leerzeile nach Klassendocstring eingefügt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="699"/>
+        <source>Blank line inserted after docstring summary.</source>
+        <translation>Leerzeile nach Docstring Zusammenfassung eingefügt.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="725"/>
+        <source>Blank line inserted after last paragraph of docstring.</source>
+        <translation>Leerzeile nach letztem Abschnitt des Docstring eingefügt.</translation>
     </message>
 </context>
 <context>

@@ -20,10 +20,8 @@ from . import pep8
 
 import Utilities
 
-# TODO: add fixers for some docstring issues
-# D111, D112, D113
-
-Pep8FixableIssues = ["D121", "D131", "D141", "D142", "D143", "D144", "D145", 
+Pep8FixableIssues = ["D111", "D112", "D113", "D121", "D131", "D141",
+                     "D142", "D143", "D144", "D145",
                      "E101", "E111", "E121", "E122", "E123", "E124",
                      "E125", "E126", "E127", "E128", "E133", "E201",
                      "E202", "E203", "E211", "E221", "E222", "E223",
@@ -80,6 +78,9 @@ class Pep8Fixer(QObject):
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
+            "D111": self.__fixD111,
+            "D112": self.__fixD112,
+            "D113": self.__fixD112,
             "D121": self.__fixD121,
             "D131": self.__fixD131,
             "D141": self.__fixD141,
@@ -469,6 +470,267 @@ class Pep8Fixer(QObject):
             return line
         else:
             return left + replacement + right
+    
+    def __fixD111(self, code, line, pos):
+        """
+        Private method to fix docstring enclosed in wrong quotes (D111).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        left, right = self.__source[line].split("'''", 1)
+        self.__source[line] = left + '"""' + right
+        while line < len(self.__source):
+            if self.__source[line].rstrip().endswith("'''"):
+                left, right = self.__source[line].rsplit("'''", 1)
+                self.__source[line] = left + '"""' + right
+                break
+            line += 1
+        
+        return (
+            1,
+            self.trUtf8(
+                "Triple single quotes converted to triple double quotes."),
+            0)
+    
+    def __fixD112(self, code, line, pos):
+        """
+        Private method to fix docstring 'r' or 'u' in leading quotes
+        (D112, D113).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        if code == "D112":
+            insertChar = "r"
+        elif code == "D113":
+            insertChar = "u"
+        else:
+            return (0, "", 0)
+        
+        newText = self.__getIndent(self.__source[line]) + \
+            insertChar + self.__source[line].lstrip()
+        self.__source[line] = newText
+        return (
+            1,
+            self.trUtf8('Introductory quotes corrected to be {0}"""')
+                .format(insertChar),
+            0)
+    
+    def __fixD121(self, code, line, pos, apply=False):
+        """
+        Private method to fix a single line docstring on multiple lines (D121).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            if not self.__source[line].lstrip().startswith(
+                    ('"""', 'r"""', 'u"""')):
+                # only correctly formatted docstrings will be fixed
+                return (0, "", 0)
+            
+            docstring = self.__source[line].rstrip() + \
+                self.__source[line + 1].strip()
+            if docstring.endswith('"""'):
+                docstring += self.__getEol()
+            else:
+                docstring += self.__source[line + 2].lstrip()
+                self.__source[line + 2] = ""
+            
+            self.__source[line] = docstring
+            self.__source[line + 1] = ""
+            return (
+                1,
+                self.trUtf8("Single line docstring put on one line."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD131(self, code, line, pos):
+        """
+        Private method to fix a single line docstring on multiple lines (D121).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        newText = ""
+        if self.__source[line].rstrip().endswith(('"""', "'''")) and \
+           self.__source[line].lstrip().startswith(('"""', 'r"""', 'u"""')):
+            # it is a one-liner
+            newText = self.__source[line].rstrip()[:-3] + "." + \
+                self.__source[line].rstrip()[-3:] + self.__getEol()
+        else:
+            if line < len(self.__source) - 1 and \
+                (not self.__source[line + 1].strip() or
+                    self.__source[line + 1].strip() in ('"""', "'''")):
+                newText = self.__source[line].rstrip() + "." + self.__getEol()
+        
+        if newText:
+            self.__source[line] = newText
+            return (1, self.trUtf8("Period added to summary line."), 0)
+        else:
+            return (0, "", 0)
+    
+    def __fixD141(self, code, line, pos, apply=False):
+        """
+        Private method to fix a function/method docstring preceded by a
+        blank line (D141).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            return (
+                1,
+                self.trUtf8(
+                    "Blank line before function/method docstring removed."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD142(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class docstring not preceded by a
+        blank line (D142).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] = self.__getEol() + self.__source[line]
+            return (
+                1,
+                self.trUtf8("Blank line inserted before class docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD143(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class docstring not followed by a
+        blank line (D143).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] += self.__getEol()
+            return (
+                1,
+                self.trUtf8("Blank line inserted after class docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD144(self, code, line, pos, apply=False):
+        """
+        Private method to fix a docstring summary not followed by a
+        blank line (D144).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            if not self.__source[line].rstrip().endswith("."):
+                # only correct summary lines can be fixed here
+                return (0, "", 0)
+            
+            self.__source[line] += self.__getEol()
+            return (
+                1,
+                self.trUtf8("Blank line inserted after docstring summary."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD145(self, code, line, pos, apply=False):
+        """
+        Private method to fix the last paragraph of a multi-line docstring
+        not followed by a blank line (D143).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line] = self.__getEol() + self.__source[line]
+            return (
+                1,
+                self.trUtf8("Blank line inserted after last paragraph"
+                            " of docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
     
     def __fixE101(self, code, line, pos):
         """
@@ -1342,211 +1604,6 @@ class Pep8Fixer(QObject):
         """
         self.__source[line - 1] = self.__source[line - 1].replace("<>", "!=")
         return (1, self.trUtf8("'<>' replaced by '!='."), 0)
-    
-    def __fixD121(self, code, line, pos, apply=False):
-        """
-        Private method to fix a single line docstring on multiple lines (D121).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            if not self.__source[line].lstrip().startswith(
-                    ('"""', 'r"""', 'u"""')):
-                # only correctly formatted docstrings will be fixed
-                return (0, "", 0)
-            
-            docstring = self.__source[line].rstrip() + \
-                self.__source[line + 1].strip()
-            if docstring.endswith('"""'):
-                docstring += self.__getEol()
-            else:
-                docstring += self.__source[line + 2].lstrip()
-                self.__source[line + 2] = ""
-            
-            self.__source[line] = docstring
-            self.__source[line + 1] = ""
-            return (
-                1,
-                self.trUtf8("Single line docstring put on one line."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
-    
-    def __fixD131(self, code, line, pos):
-        """
-        Private method to fix a single line docstring on multiple lines (D121).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        line = line - 1
-        newText = ""
-        if self.__source[line].rstrip().endswith(('"""', "'''")) and \
-           self.__source[line].lstrip().startswith( ('"""', 'r"""', 'u"""')):
-            # it is a one-liner
-            newText = self.__source[line].rstrip()[:-3] + "." + \
-                self.__source[line].rstrip()[-3:] + self.__getEol()
-        else:
-            if line < len(self.__source) - 1 and \
-                   (not self.__source[line + 1].strip() or
-                    self.__source[line + 1].strip() in ('"""', "'''")):
-                newText = self.__source[line].rstrip() + "." + self.__getEol()
-        
-        if newText:
-            self.__source[line] = newText
-            return (1, self.trUtf8("Period added to summary line."), 0)
-        else:
-            return (0, "", 0)
-    
-    def __fixD141(self, code, line, pos, apply=False):
-        """
-        Private method to fix a function/method docstring preceded by a
-        blank line (D141).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            self.__source[line - 1] = ""
-            return (
-                1,
-                self.trUtf8(
-                    "Blank line before function/method docstring removed."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
-    
-    def __fixD142(self, code, line, pos, apply=False):
-        """
-        Private method to fix a class docstring not preceded by a
-        blank line (D142).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            self.__source[line] = self.__getEol() + self.__source[line]
-            return (
-                1,
-                self.trUtf8("Blank line inserted before class docstring."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
-    
-    def __fixD143(self, code, line, pos, apply=False):
-        """
-        Private method to fix a class docstring not followed by a
-        blank line (D143).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            self.__source[line] += self.__getEol()
-            return (
-                1,
-                self.trUtf8("Blank line inserted after class docstring."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
-    
-    def __fixD144(self, code, line, pos, apply=False):
-        """
-        Private method to fix a docstring summary not followed by a
-        blank line (D144).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            if not self.__source[line].rstrip().endswith("."):
-                # only correct summary lines can be fixed here
-                return (0, "", 0)
-            
-            self.__source[line] += self.__getEol()
-            return (
-                1,
-                self.trUtf8("Blank line inserted after docstring summary."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
-    
-    def __fixD145(self, code, line, pos, apply=False):
-        """
-        Private method to fix the last paragraph of a multi-line docstring
-        not followed by a blank line (D143).
-        
-        @param code code of the issue (string)
-        @param line line number of the issue (integer)
-        @param pos position inside line (integer)
-        @keyparam apply flag indicating, that the fix should be applied
-            (boolean)
-        @return value indicating an applied/deferred fix (-1, 0, 1),
-            a message for the fix (string) and an ID for a deferred
-            fix (integer)
-        """
-        if apply:
-            line = line - 1
-            self.__source[line] = self.__getEol() + self.__source[line]
-            return (
-                1,
-                self.trUtf8("Blank line inserted after last paragraph"
-                            " of docstring."),
-                0)
-        else:
-            id = self.__getID()
-            self.__stack.append((id, code, line, pos))
-            return (-1, "", id)
 
 
 class Pep8Reindenter(object):

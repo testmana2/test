@@ -8100,6 +8100,8 @@
       <keyword name="Pep8Fixer (Module)" id="Pep8Fixer (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
       <keyword name="Pep8Fixer.__codeMatch" id="Pep8Fixer.__codeMatch" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__codeMatch" />
       <keyword name="Pep8Fixer.__findLogical" id="Pep8Fixer.__findLogical" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__findLogical" />
+      <keyword name="Pep8Fixer.__fixD111" id="Pep8Fixer.__fixD111" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixD111" />
+      <keyword name="Pep8Fixer.__fixD112" id="Pep8Fixer.__fixD112" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixD112" />
       <keyword name="Pep8Fixer.__fixD121" id="Pep8Fixer.__fixD121" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixD121" />
       <keyword name="Pep8Fixer.__fixD131" id="Pep8Fixer.__fixD131" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixD131" />
       <keyword name="Pep8Fixer.__fixD141" id="Pep8Fixer.__fixD141" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixD141" />

@@ -778,7 +778,6 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().startswith(
                 ('"""', 'r"""', 'u"""', "'''", "r'''", "u'''")):
             cti += 1
-        
         if cti == len(contextLines):
             return
         
@@ -835,7 +834,7 @@ class Pep257Checker(object):
             return
         
         docstrings = docstringContext.source()
-        if len(docstrings) in [1, 3]:
+        if len(docstrings) <= 3:
             # correct/invalid one-liner
             return
         

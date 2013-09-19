@@ -75,6 +75,12 @@ QObject
 <td><a href="#Pep8Fixer.__findLogical">__findLogical</a></td>
 <td>Private method to extract the index of all the starts and ends of lines.</td>
 </tr><tr>
+<td><a href="#Pep8Fixer.__fixD111">__fixD111</a></td>
+<td>Private method to fix docstring enclosed in wrong quotes (D111).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixD112">__fixD112</a></td>
+<td>Private method to fix docstring 'r' or 'u' in leading quotes (D112, D113).</td>
+</tr><tr>
 <td><a href="#Pep8Fixer.__fixD121">__fixD121</a></td>
 <td>Private method to fix a single line docstring on multiple lines (D121).</td>
 </tr><tr>
@@ -278,6 +284,53 @@ flag indicating it should be fixed (boolean)
 <dd>
 tuple containing two lists of integer with start and end tuples
             of lines
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD111" ID="Pep8Fixer.__fixD111"></a>
+<h4>Pep8Fixer.__fixD111</h4>
+<b>__fixD111</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix docstring enclosed in wrong quotes (D111).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD112" ID="Pep8Fixer.__fixD112"></a>
+<h4>Pep8Fixer.__fixD112</h4>
+<b>__fixD112</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix docstring 'r' or 'u' in leading quotes
+        (D112, D113).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
 </dd>
 </dl><a NAME="Pep8Fixer.__fixD121" ID="Pep8Fixer.__fixD121"></a>
 <h4>Pep8Fixer.__fixD121</h4>
