@@ -19,6 +19,7 @@ except ImportError:
     # Python 3
     from io import StringIO             # __IGNORE_WARNING__
 import tokenize
+import ast
 
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
@@ -108,6 +109,11 @@ class Pep257Checker(object):
         "D121", "D122",
         "D131", "D132", "D133", "D134",
         "D141", "D142", "D143", "D144", "D145",
+        
+        "D203", "D205",
+        "D221",
+        "D231", "D234", "D235", "D236", "D237",
+        "D242", "D243", "D244", "D245",
     ]
     
     Messages = {
@@ -160,12 +166,42 @@ class Pep257Checker(object):
         "D145": QT_TRANSLATE_NOOP(
             "Pep257Checker",
             "last paragraph of docstring is not followed by a blank line"),
+        
+        "D203": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "private function/method is missing a docstring"),
+        "D205": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "private class is missing a docstring"),
+        "D221": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "one-liner docstring not on three lines"),
+        "D231": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "docstring summary does not end with a period"),
+        "D234": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "docstring does not contain a @return line"),
+        "D235": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring does not contain enough @param/@keyparam lines"),
+        "D236": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring contains too many @param/@keyparam lines"),
+        "D237": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "order of @param/@keyparam lines does"
+            " not match the function/method signature"),
+        "D242": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "class docstring is preceded by a blank line"),
+        "D243": QT_TRANSLATE_NOOP(
+            "Pep257Checker", "class docstring is followed by a blank line"),
+        "D244": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring summary is not followed by a blank line"),
+        "D245": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "last paragraph of docstring is followed by a blank line"),
     }
     
     def __init__(self, source, filename, select, ignore, expected, repeat,
-                 maxLineLength=79):
+                 maxLineLength=79, docType="pep257"):
         """
-        Constructor (according to 'extended' pep8.py API)
+        Constructor
         
         @param source source code to be checked (list of string)
         @param filename name of the source file (string)
@@ -174,13 +210,18 @@ class Pep257Checker(object):
         @param expected list of expected codes (list of string)
         @param repeat flag indicating to report each occurrence of a code
             (boolean)
-        @param maxLineLength allowed line length (integer)
+        @keyparam maxLineLength allowed line length (integer)
+        @keyparam docType type of the documentation strings
+            (string, one of 'eric' or 'pep257')
         """
+        assert docType in ("eric", "pep257")
+        
         self.__select = tuple(select)
         self.__ignore = tuple(ignore)
         self.__expected = expected[:]
         self.__repeat = repeat
         self.__maxLineLength = maxLineLength
+        self.__docType = docType
         self.__filename = filename
         self.__source = source[:]
         self.__isScript = self.__source[0].startswith('#!')
@@ -203,39 +244,74 @@ class Pep257Checker(object):
             'classDocstring', 'methodDocstring',
             'defDocstring', 'docstring'
         ]
-        self.__checkersWithCodes = {
-            "moduleDocstring": [
-                (self.__checkModulesDocstrings, ("D101",)),
-            ],
-            "functionDocstring": [
-            ],
-            "classDocstring": [
-                (self.__checkClassDocstring, ("D104", "D105")),
-                (self.__checkBlankBeforeAndAfterClass, ("D142", "D143")),
-            ],
-            "methodDocstring": [
-            ],
-            "defDocstring": [
-                (self.__checkFunctionDocstring, ("D102", "D103")),
-                (self.__checkImperativeMood, ("D132",)),
-                (self.__checkNoSignature, ("D133",)),
-                (self.__checkReturnType, ("D134",)),
-                (self.__checkNoBlankLineBefore, ("D141",)),
-            ],
-            "docstring": [
-                (self.__checkTripleDoubleQuotes, ("D111",)),
-                (self.__checkBackslashes, ("D112",)),
-                (self.__checkUnicode, ("D113",)),
-                (self.__checkOneLiner, ("D121",)),
-                (self.__checkIndent, ("D122",)),
-                (self.__checkEndsWithPeriod, ("D131",)),
-                (self.__checkBlankAfterSummary, ("D144",)),
-                (self.__checkBlankAfterLastParagraph, ("D145",)),
-            ],
-        }
+        if self.__docType == "pep257":
+            checkersWithCodes = {
+                "moduleDocstring": [
+                    (self.__checkModulesDocstrings, ("D101",)),
+                ],
+                "functionDocstring": [
+                ],
+                "classDocstring": [
+                    (self.__checkClassDocstring, ("D104", "D105")),
+                    (self.__checkBlankBeforeAndAfterClass, ("D142", "D143")),
+                ],
+                "methodDocstring": [
+                ],
+                "defDocstring": [
+                    (self.__checkFunctionDocstring, ("D102", "D103")),
+                    (self.__checkImperativeMood, ("D132",)),
+                    (self.__checkNoSignature, ("D133",)),
+                    (self.__checkReturnType, ("D134",)),
+                    (self.__checkNoBlankLineBefore, ("D141",)),
+                ],
+                "docstring": [
+                    (self.__checkTripleDoubleQuotes, ("D111",)),
+                    (self.__checkBackslashes, ("D112",)),
+                    (self.__checkUnicode, ("D113",)),
+                    (self.__checkOneLiner, ("D121",)),
+                    (self.__checkIndent, ("D122",)),
+                    (self.__checkEndsWithPeriod, ("D131",)),
+                    (self.__checkBlankAfterSummary, ("D144",)),
+                    (self.__checkBlankAfterLastParagraph, ("D145",)),
+                ],
+            }
+        elif self.__docType == "eric":
+            checkersWithCodes = {
+                "moduleDocstring": [
+                    (self.__checkModulesDocstrings, ("D101",)),
+                ],
+                "functionDocstring": [
+                ],
+                "classDocstring": [
+                    (self.__checkClassDocstring, ("D104", "D205")),
+                    (self.__checkEricNoBlankBeforeAndAfterClass,
+                     ("D242", "D243")),
+                ],
+                "methodDocstring": [
+                ],
+                "defDocstring": [
+                    (self.__checkFunctionDocstring, ("D102", "D203")),
+                    (self.__checkImperativeMood, ("D132",)),
+                    (self.__checkNoSignature, ("D133",)),
+                    (self.__checkEricReturn, ("D234",)),
+                    (self.__checkEricFunctionArguments,
+                     ("D235", "D236", "D237")),
+                    (self.__checkNoBlankLineBefore, ("D141",)),
+                ],
+                "docstring": [
+                    (self.__checkTripleDoubleQuotes, ("D111",)),
+                    (self.__checkBackslashes, ("D112",)),
+                    (self.__checkUnicode, ("D113",)),
+                    (self.__checkEricOneLiner, ("D221",)),
+                    (self.__checkIndent, ("D122",)),
+                    (self.__checkEricEndsWithPeriod, ("D231",)),
+                    (self.__checkEricBlankAfterSummary, ("D244",)),
+                    (self.__checkEricNBlankAfterLastParagraph, ("D245",)),
+                ],
+            }
         
         self.__checkers = {}
-        for key, checkers in self.__checkersWithCodes.items():
+        for key, checkers in checkersWithCodes.items():
             for checker, codes in checkers:
                 if any(not (code and self.__ignoreCode(code))
                         for code in codes):
@@ -277,6 +353,9 @@ class Pep257Checker(object):
         if code and (self.counters[code] == 1 or self.__repeat):
             if code in Pep257Checker.Codes:
                 text = self.getMessage(code, *args)
+            else:
+                text = code + " " + QCoreApplication.translate("Pep257Checker",
+                    "no message for this code defined")
             # record the issue with one based line number
             self.errors.append((self.__filename, lineNumber + 1, offset, text))
     
@@ -350,6 +429,66 @@ class Pep257Checker(object):
         if len(lines) == 1 or len(line) > 0:
             return line, 0
         return lines[1].strip().replace('"""', "").replace("'''", ""), 1
+    
+    def __getSummaryLines(self, docstringContext):
+        """
+        Private method to extract the summary lines.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @return summary lines (list of string) and the line it was found on
+            (integer)
+        """
+        summaries = []
+        lines = docstringContext.source()
+        
+        line0 = (lines[0]
+                .replace('r"""', "", 1)
+                .replace('u"""', "", 1)
+                .replace('"""', "")
+                .replace("r'''", "", 1)
+                .replace("u'''", "", 1)
+                .replace("'''", "")
+                .strip())
+        if len(lines) > 1:
+            line1 = lines[1].strip().replace('"""', "").replace("'''", "")
+        else:
+            line1 = ""
+        if len(lines) > 2:
+            line2 = lines[2].strip().replace('"""', "").replace("'''", "")
+        else:
+            line2 = ""
+        if line0:
+            lineno = 0
+            summaries.append(line0)
+            if not line0.endswith(".") and line1:
+                # two line summary
+                summaries.append(line1)
+        elif line1:
+            lineno = 1
+            summaries.append(line1)
+            if not line1.endswith(".") and line2:
+                # two line summary
+                summaries.append(line2)
+        else:
+            lineno = 2
+            summaries.append(line2)
+        return summaries, lineno
+    
+    def __getArgNames(self, node):
+        """
+        Private method to get the argument names of a function node.
+        
+        @param node AST node to extract arguments names from
+        @return list of argument names (list of string)
+        """
+        arguments = []
+        arguments.extend([arg.arg for arg in node.args.args])
+        if node.args.vararg is not None:
+            arguments.append(node.args.vararg)
+        arguments.extend([arg.arg for arg in node.args.kwonlyargs])
+        if node.args.kwarg is not None:
+            arguments.append(node.args.kwarg)
+        return arguments
     
     ##################################################################
     ## Parsing functionality below
@@ -525,7 +664,7 @@ class Pep257Checker(object):
         return []       # fall back
     
     ##################################################################
-    ## Checking functionality below
+    ## Checking functionality below (PEP-257)
     ##################################################################
 
     def __checkModulesDocstrings(self, docstringContext, context):
@@ -558,7 +697,10 @@ class Pep257Checker(object):
         
         functionName = context.source()[0].lstrip().split()[1].split("(")[0]
         if functionName.startswith('_') and not functionName.endswith('__'):
-            code = "D103"
+            if self.__docType == "eric":
+                code = "D203"
+            else:
+                code = "D103"
         else:
             code = "D102"
         
@@ -585,7 +727,10 @@ class Pep257Checker(object):
         
         className = context.source()[0].lstrip().split()[1].split("(")[0]
         if className.startswith('_'):
-            code = "D105"
+            if self.__docType == "eric":
+                code = "D205"
+            else:
+                code = "D105"
         else:
             code = "D104"
         
@@ -845,8 +990,8 @@ class Pep257Checker(object):
     
     def __checkBlankAfterLastParagraph(self, docstringContext, context):
         """
-        Private method to check, that docstring summaries are followed
-        by a blank line.
+        Private method to check, that the last paragraph of docstrings is
+        followed by a blank line.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -861,3 +1006,173 @@ class Pep257Checker(object):
         
         if docstrings[-2].strip():
             self.__error(docstringContext.end(), 0, "D145")
+    
+    ##################################################################
+    ## Checking functionality below (eric specific ones)
+    ##################################################################
+
+    def __checkEricOneLiner(self, docstringContext, context):
+        """
+        Private method to check, that one-liner docstrings are on
+        three lines (quotes, docstring, quotes).
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        lines = docstringContext.source()
+        if len(lines) != 3:
+            nonEmptyLines = [l for l in lines if l.strip().strip('\'"')]
+            if len(nonEmptyLines) == 1:
+                self.__error(docstringContext.start(), 0, "D221")
+    
+    def __checkEricEndsWithPeriod(self, docstringContext, context):
+        """
+        Private method to check, that docstring summaries end with a period.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
+        summary = " ".join([s.strip() for s in summaryLines if s])
+        if not summary.endswith(".") and \
+                not summary.split(None, 1)[0].lower() == "constructor":
+            self.__error(
+                docstringContext.start() + lineNumber + len(summaryLines) - 1,
+                0, "D231")
+    
+    def __checkEricReturn(self, docstringContext, context):
+        """
+        Private method to check, that docstrings contain an @return line.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None or self.__isScript:
+            return
+        
+        if "@return" not in docstringContext.ssource():
+            tokens = list(
+                tokenize.generate_tokens(StringIO(context.ssource()).readline))
+            return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+                       if token[1] == "return"]
+            if (set(return_) -
+                    set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
+                    set([])):
+                self.__error(docstringContext.end(), 0, "D234")
+    
+    def __checkEricFunctionArguments(self, docstringContext, context):
+        """
+        Private method to check, that docstrings contain an @param line
+        for each argument.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None or self.__isScript:
+            return
+        
+        try:
+            tree = ast.parse(context.ssource())
+        except (SyntaxError, TypeError):
+            return
+        if (isinstance(tree, ast.Module) and len(tree.body) == 1 and
+                isinstance(tree.body[0], ast.FunctionDef)):
+            functionDef = tree.body[0]
+            argNames = self.__getArgNames(functionDef)
+            if "self" in argNames:
+                argNames.remove("self")
+            if "cls" in argNames:
+                argNames.remove("cls")
+            
+            docstring = docstringContext.ssource()
+            if (docstring.count("@param") + docstring.count("@keyparam") < 
+                    len(argNames)):
+                self.__error(docstringContext.end(), 0, "D235")
+            elif (docstring.count("@param") + docstring.count("@keyparam") > 
+                    len(argNames)):
+                self.__error(docstringContext.end(), 0, "D236")
+            # TODO: check order (args, vararg, kwonlyargs, kwarg
+    
+    def __checkEricBlankAfterSummary(self, docstringContext, context):
+        """
+        Private method to check, that docstring summaries are followed
+        by a blank line.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        docstrings = docstringContext.source()
+        if len(docstrings) <= 3:
+            # correct/invalid one-liner
+            return
+        
+        summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
+        if len(docstrings) > lineNumber + len(summaryLines) - 1:
+            if docstrings[lineNumber + len(summaryLines)].strip():
+                self.__error(docstringContext.start() + lineNumber, 0, "D244")
+    
+    def __checkEricNoBlankBeforeAndAfterClass(self, docstringContext, context):
+        """
+        Private method to check, that class docstrings have no blank line
+        around them.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        contextLines = context.source()
+        cti = 0
+        while cti < len(contextLines) and \
+            not contextLines[cti].strip().startswith(
+                ('"""', 'r"""', 'u"""', "'''", "r'''", "u'''")):
+            cti += 1
+        if cti == len(contextLines):
+            return
+        
+        start = cti
+        if contextLines[cti].strip() in (
+                '"""', 'r"""', 'u"""', "'''", "r'''", "u'''"):
+            # it is a multi line docstring
+            cti += 1
+        
+        while cti < len(contextLines) and \
+                not contextLines[cti].strip().endswith(('"""', "'''")):
+            cti += 1
+        end = cti
+        if cti == len(contextLines):
+            return
+        
+        if not contextLines[start - 1].strip():
+            self.__error(docstringContext.start(), 0, "D242")
+        if not contextLines[end + 1].strip():
+            self.__error(docstringContext.end(), 0, "D243")
+    
+    def __checkEricNBlankAfterLastParagraph(self, docstringContext, context):
+        """
+        Private method to check, that the last paragraph of docstrings is
+        not followed by a blank line.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None:
+            return
+        
+        docstrings = docstringContext.source()
+        if len(docstrings) <= 3:
+            # correct/invalid one-liner
+            return
+        
+        if not docstrings[-2].strip():
+            self.__error(docstringContext.end(), 0, "D245")

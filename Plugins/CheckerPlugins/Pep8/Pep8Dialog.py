@@ -88,6 +88,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
+        self.docTypeComboBox.addItem(self.trUtf8("Eric"), "eric")
+        
         self.statisticsButton = self.buttonBox.addButton(
             self.trUtf8("Statistics..."), QDialogButtonBox.ActionRole)
         self.statisticsButton.setToolTip(
@@ -269,6 +272,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__data["HangClosing"] = False
         if "NoFixCodes" not in self.__data:
             self.__data["NoFixCodes"] = "E501"
+        if "DocstringType" not in self.__data:
+            self.__data["DocstringType"] = "pep257"
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -279,6 +284,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
         self.lineLengthSpinBox.setValue(self.__data["MaxLineLength"])
         self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
+        self.docTypeComboBox.setCurrentIndex(
+            self.docTypeComboBox.findData(self.__data["DocstringType"]))
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -354,6 +361,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             maxLineLength = self.lineLengthSpinBox.value()
             hangClosing = self.hangClosingCheckBox.isChecked()
+            docType = self.docTypeComboBox.itemData(
+                self.docTypeComboBox.currentIndex())
             
             try:
                 # disable updates of the list for speed
@@ -403,6 +412,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
                         from .Pep8Checker import Pep8Py2Checker
+                        # TODO: add the docType into the Py2 variant
                         report = Pep8Py2Checker(file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
@@ -439,7 +449,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         # check PEP-257
                         pep257Checker = Pep257Checker(
                             source, file, select, ignore, [], repeatMessages,
-                            maxLineLength=maxLineLength)
+                            maxLineLength=maxLineLength, docType=docType)
                         pep257Checker.run()
                         stats.update(pep257Checker.counters)
                         
@@ -537,6 +547,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "FixIssues": self.fixIssuesCheckBox.isChecked(),
                 "MaxLineLength": self.lineLengthSpinBox.value(),
                 "HangClosing": self.hangClosingCheckBox.isChecked(),
+                "DocstringType": self.docTypeComboBox.itemData(
+                    self.docTypeComboBox.currentIndex()),
             }
             if data != self.__data:
                 self.__data = data
@@ -698,6 +710,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)))
         self.hangClosingCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/HangClosing")))
+        self.docTypeComboBox.setCurrentIndex(self.docTypeComboBox.findData(
+            Preferences.Prefs.settings.value("PEP8/DocstringType", "pep257")))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -723,13 +737,15 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.lineLengthSpinBox.value())
         Preferences.Prefs.settings.setValue("PEP8/HangClosing",
             self.hangClosingCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue("PEP8/DocstringType",
+            self.docTypeComboBox.itemData(
+                self.docTypeComboBox.currentIndex()))
     
     @pyqtSlot()
     def on_resetDefaultButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to reset the configuration values to their default values.
         """
-        raise NotImplementedError
         Preferences.Prefs.settings.setValue("PEP8/ExcludeFilePatterns", "")
         Preferences.Prefs.settings.setValue("PEP8/ExcludeMessages",
             pep8.DEFAULT_IGNORE)
@@ -741,6 +757,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Preferences.Prefs.settings.setValue("PEP8/MaxLineLength",
             pep8.MAX_LINE_LENGTH)
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
+        Preferences.Prefs.settings.setValue("PEP8/DocstringType", "pep257")
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):
@@ -813,6 +830,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     continue
                 
                 deferredFixes = {}
+                # TODO: add docstring type
                 fixer = Pep8Fixer(self.__project, file, source,
                                   fixCodes, noFixCodes, maxLineLength,
                                   True)  # always fix in place
