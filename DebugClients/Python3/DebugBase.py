@@ -647,66 +647,70 @@ class DebugBase(bdb.Bdb):
                 self._dbgClient.progTerminated(excval.code)
             return
         
-        elif exctype in [SyntaxError, IndentationError]:
+        if exctype in [SyntaxError, IndentationError]:
             try:
                 message, (filename, linenr, charnr, text) = excval[0], excval[1]
             except ValueError:
                 exclist = []
+                realSyntaxError = True
             else:
                 exclist = [message, [filename, linenr, charnr]]
+                realSyntaxError = os.path.exists(filename)
             
-            self._dbgClient.write("{0}{1}\n".format(ResponseSyntax, str(exclist)))
-        
-        else:
-            exctype = self.__extractExceptionName(exctype)
-            
-            if excval is None:
-                excval = ''
-            
-            if unhandled:
-                exctypetxt = "unhandled {0!s}".format(str(exctype))
-            else:
-                exctypetxt = str(exctype)
-            try:
-                exclist = [exctypetxt, str(excval)]
-            except TypeError:
-                exclist = [exctypetxt, str(excval)]
-            
-            if exctb:
-                frlist = self.__extract_stack(exctb)
-                frlist.reverse()
-                
-                self.currentFrame = frlist[0]
-                self.currentFrameLocals = frlist[0].f_locals
-                # remember the locals because it is reinitialized when accessed
-                
-                for fr in frlist:
-                    filename = self._dbgClient.absPath(self.fix_frame_filename(fr))
-                    
-                    if os.path.basename(filename).startswith("DebugClient") or \
-                       os.path.basename(filename) == "bdb.py":
-                        break
-                    
-                    linenr = fr.f_lineno
-                    ffunc = fr.f_code.co_name
-                    
-                    if ffunc == '?':
-                        ffunc = ''
-                    
-                    if ffunc and not ffunc.startswith("<"):
-                        argInfo = inspect.getargvalues(fr)
-                        fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
-                                                        argInfo.keywords, argInfo.locals)
-                    else:
-                        fargs = ""
-                    
-                    exclist.append([filename, linenr, ffunc, fargs])
-            
-            self._dbgClient.write("{0}{1}\n".format(ResponseException, str(exclist)))
-            
-            if exctb is None:
+            if realSyntaxError:
+                self._dbgClient.write("{0}{1}\n".format(ResponseSyntax, str(exclist)))
+                self._dbgClient.eventLoop()
                 return
+        
+        exctype = self.__extractExceptionName(exctype)
+        
+        if excval is None:
+            excval = ''
+        
+        if unhandled:
+            exctypetxt = "unhandled {0!s}".format(str(exctype))
+        else:
+            exctypetxt = str(exctype)
+        try:
+            exclist = [exctypetxt, str(excval)]
+        except TypeError:
+            exclist = [exctypetxt, str(excval)]
+        
+        if exctb:
+            frlist = self.__extract_stack(exctb)
+            frlist.reverse()
             
+            self.currentFrame = frlist[0]
+            self.currentFrameLocals = frlist[0].f_locals
+            # remember the locals because it is reinitialized when accessed
+            
+            for fr in frlist:
+                filename = self._dbgClient.absPath(self.fix_frame_filename(fr))
+                
+                if os.path.basename(filename).startswith("DebugClient") or \
+                   os.path.basename(filename) == "bdb.py":
+                    break
+                
+                linenr = fr.f_lineno
+                ffunc = fr.f_code.co_name
+                
+                if ffunc == '?':
+                    ffunc = ''
+                
+                if ffunc and not ffunc.startswith("<"):
+                    argInfo = inspect.getargvalues(fr)
+                    fargs = inspect.formatargvalues(argInfo.args, argInfo.varargs,
+                                                    argInfo.keywords, argInfo.locals)
+                else:
+                    fargs = ""
+                
+                exclist.append([filename, linenr, ffunc, fargs])
+        
+        self._dbgClient.write("{0}{1}\n".format(ResponseException, str(exclist)))
+        
+        if exctb is None:
+            return
+        
         self._dbgClient.eventLoop()
     
     def __extractExceptionName(self, exctype):
