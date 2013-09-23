@@ -21,6 +21,8 @@ Version 5.4-snapshot-2013mmdd:
 - Checkers
   -- PEP-8
      --- extended the PEP-8 checker and its fixer
+     --- added a checker for naming conventions
+     --- added a checker for docstring conventions
 - Editor
   -- added the capability to preview HTML, Mardown and ReST files
   -- added the capability to sort lines spanned by a rectangular selection

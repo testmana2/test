@@ -62,6 +62,7 @@ if __name__ == "__main__":
     filename = ""
     max_line_length = 79
     hang_closing = False
+    docType = "pep257"
     
     if "-f" not in sys.argv:
         print "ERROR"
@@ -69,7 +70,7 @@ if __name__ == "__main__":
         print "No file name given."
     else:
         try:
-            optlist, args = getopt.getopt(sys.argv[1:], "f:hi:m:rs:")
+            optlist, args = getopt.getopt(sys.argv[1:], "d:f:hi:m:rs:")
         except getopt.GetoptError:
             print "ERROR"
             print ""
@@ -93,6 +94,9 @@ if __name__ == "__main__":
                     pass
             elif opt == "-h":
                 hang_closing = True
+            elif opt == "-d":
+                if arg in ("pep257", "eric"):
+                    docType = arg
         
         try:
             source = readEncodedFile(filename)[0]
@@ -128,8 +132,8 @@ if __name__ == "__main__":
         
         # check PEP-257
         pep257Checker = Pep257Checker(
-            source, file, select, ignore, [], repeat,
-            maxLineLength=max_line_length)
+            source, filename, select, ignore, [], repeat,
+            maxLineLength=max_line_length, docType=docType)
         pep257Checker.run()
         
         
@@ -148,6 +152,7 @@ if __name__ == "__main__":
                 for a in args:
                     print a
             print "PEP8_STATISTICS"
+            # TODO: add statistics for D
             for key in report.counters:
                 if key.startswith(("E", "N", "W")):
                     print key, report.counters[key]

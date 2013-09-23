@@ -20,6 +20,7 @@ except ImportError:
     from io import StringIO             # __IGNORE_WARNING__
 import tokenize
 import ast
+import sys
 
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
 
@@ -112,7 +113,7 @@ class Pep257Checker(object):
         
         "D203", "D205",
         "D221",
-        "D231", "D234", "D235", "D236", "D237",
+        "D231", "D234", "D235", "D236", "D237", "D238",
         "D242", "D243", "D244", "D245",
     ]
     
@@ -184,6 +185,9 @@ class Pep257Checker(object):
             "Pep257Checker",
             "docstring contains too many @param/@keyparam lines"),
         "D237": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "keyword only arguments must be documented with @keyparam lines"),
+        "D238": QT_TRANSLATE_NOOP(
             "Pep257Checker", "order of @param/@keyparam lines does"
             " not match the function/method signature"),
         "D242": QT_TRANSLATE_NOOP(
@@ -295,7 +299,7 @@ class Pep257Checker(object):
                     (self.__checkNoSignature, ("D133",)),
                     (self.__checkEricReturn, ("D234",)),
                     (self.__checkEricFunctionArguments,
-                     ("D235", "D236", "D237")),
+                     ("D235", "D236", "D237", "D238")),
                     (self.__checkNoBlankLineBefore, ("D141",)),
                 ],
                 "docstring": [
@@ -359,9 +363,10 @@ class Pep257Checker(object):
             # record the issue with one based line number
             self.errors.append((self.__filename, lineNumber + 1, offset, text))
     
-    def getMessage(self, code, *args):
+    @classmethod
+    def getMessage(cls, code, *args):
         """
-        Public method to get a translated and formatted message for a
+        Class method to get a translated and formatted message for a
         given code.
         
         @param code message code (string)
@@ -474,21 +479,56 @@ class Pep257Checker(object):
             summaries.append(line2)
         return summaries, lineno
     
-    def __getArgNames(self, node):
-        """
-        Private method to get the argument names of a function node.
-        
-        @param node AST node to extract arguments names from
-        @return list of argument names (list of string)
-        """
-        arguments = []
-        arguments.extend([arg.arg for arg in node.args.args])
-        if node.args.vararg is not None:
-            arguments.append(node.args.vararg)
-        arguments.extend([arg.arg for arg in node.args.kwonlyargs])
-        if node.args.kwarg is not None:
-            arguments.append(node.args.kwarg)
-        return arguments
+    if sys.version_info[0] < 3:
+        def __getArgNames(self, node):
+            """
+            Private method to get the argument names of a function node.
+            
+            @param node AST node to extract arguments names from
+            @return tuple of two list of argument names, one for arguments
+                and one for keyword arguments (tuple of list of string)
+            """
+            def unpackArgs(args):
+                """
+                Local helper function to unpack function argument names.
+                
+                @param args list of AST node arguments
+                @return list of argument names (list of string)
+                """
+                ret = []
+                for arg in args:
+                    if isinstance(arg, ast.Tuple):
+                        ret.extend(unpackArgs(arg.elts))
+                    else:
+                        ret.append(arg.id)
+                return ret
+            
+            arguments = unpackArgs(node.args.args)
+            if node.args.vararg is not None:
+                arguments.append(node.args.vararg)
+            kwarguments = []
+            if node.args.kwarg is not None:
+                kwarguments.append(node.args.kwarg)
+            return arguments, kwarguments
+    else:
+        def __getArgNames(self, node):          # __IGNORE_WARNING__
+            """
+            Private method to get the argument names of a function node.
+            
+            @param node AST node to extract arguments names from
+            @return tuple of two list of argument names, one for arguments
+                and one for keyword arguments (tuple of list of string)
+            """
+            arguments = []
+            arguments.extend([arg.arg for arg in node.args.args])
+            if node.args.vararg is not None:
+                arguments.append(node.args.vararg)
+            
+            kwarguments = []
+            kwarguments.extend([arg.arg for arg in node.args.kwonlyargs])
+            if node.args.kwarg is not None:
+                kwarguments.append(node.args.kwarg)
+            return arguments, kwarguments
     
     ##################################################################
     ## Parsing functionality below
@@ -1084,7 +1124,7 @@ class Pep257Checker(object):
         if (isinstance(tree, ast.Module) and len(tree.body) == 1 and
                 isinstance(tree.body[0], ast.FunctionDef)):
             functionDef = tree.body[0]
-            argNames = self.__getArgNames(functionDef)
+            argNames, kwNames = self.__getArgNames(functionDef)
             if "self" in argNames:
                 argNames.remove("self")
             if "cls" in argNames:
@@ -1092,12 +1132,29 @@ class Pep257Checker(object):
             
             docstring = docstringContext.ssource()
             if (docstring.count("@param") + docstring.count("@keyparam") < 
-                    len(argNames)):
+                    len(argNames + kwNames)):
                 self.__error(docstringContext.end(), 0, "D235")
             elif (docstring.count("@param") + docstring.count("@keyparam") > 
-                    len(argNames)):
+                    len(argNames + kwNames)):
                 self.__error(docstringContext.end(), 0, "D236")
-            # TODO: check order (args, vararg, kwonlyargs, kwarg
+            else:
+                # extract @param and @keyparam from docstring
+                args = []
+                kwargs = []
+                for line in docstringContext.source():
+                    if line.strip().startswith(("@param", "@keyparam")):
+                        at, name, _ = line.strip().split(None, 2)
+                        if at == "@keyparam":
+                            kwargs.append(name)
+                        args.append(name)
+                
+                # do the checks
+                for name in kwNames:
+                    if name not in kwargs:
+                        self.__error(docstringContext.end(), 0, "D237")
+                        return
+                if argNames + kwNames != args:
+                    self.__error(docstringContext.end(), 0, "D238")
     
     def __checkEricBlankAfterSummary(self, docstringContext, context):
         """

@@ -55,19 +55,22 @@ object
 </table>
 <h3>Class Methods</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#Pep257Checker.getMessage">getMessage</a></td>
+<td>Class method to get a translated and formatted message for a given code.</td>
+</tr>
 </table>
 <h3>Methods</h3>
 <table>
 <tr>
 <td><a href="#Pep257Checker.__init__">Pep257Checker</a></td>
-<td>Constructor (according to 'extended' pep8.py API)</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkBackslashes">__checkBackslashes</a></td>
 <td>Private method to check, that all docstrings containing backslashes are surrounded by raw triple double quotes.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkBlankAfterLastParagraph">__checkBlankAfterLastParagraph</a></td>
-<td>Private method to check, that docstring summaries are followed by a blank line.</td>
+<td>Private method to check, that the last paragraph of docstrings is followed by a blank line.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkBlankAfterSummary">__checkBlankAfterSummary</a></td>
 <td>Private method to check, that docstring summaries are followed by a blank line.</td>
@@ -80,6 +83,27 @@ object
 </tr><tr>
 <td><a href="#Pep257Checker.__checkEndsWithPeriod">__checkEndsWithPeriod</a></td>
 <td>Private method to check, that docstring summaries end with a period.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricBlankAfterSummary">__checkEricBlankAfterSummary</a></td>
+<td>Private method to check, that docstring summaries are followed by a blank line.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricEndsWithPeriod">__checkEricEndsWithPeriod</a></td>
+<td>Private method to check, that docstring summaries end with a period.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricFunctionArguments">__checkEricFunctionArguments</a></td>
+<td>Private method to check, that docstrings contain an @param line for each argument.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricNBlankAfterLastParagraph">__checkEricNBlankAfterLastParagraph</a></td>
+<td>Private method to check, that the last paragraph of docstrings is not followed by a blank line.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricNoBlankBeforeAndAfterClass">__checkEricNoBlankBeforeAndAfterClass</a></td>
+<td>Private method to check, that class docstrings have no blank line around them.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricOneLiner">__checkEricOneLiner</a></td>
+<td>Private method to check, that one-liner docstrings are on three lines (quotes, docstring, quotes).</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__checkEricReturn">__checkEricReturn</a></td>
+<td>Private method to check, that docstrings contain an @return line.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkFunctionDocstring">__checkFunctionDocstring</a></td>
 <td>Private method to check, that all public functions and methods have a docstring.</td>
@@ -114,8 +138,14 @@ object
 <td><a href="#Pep257Checker.__error">__error</a></td>
 <td>Private method to record an issue.</td>
 </tr><tr>
+<td><a href="#Pep257Checker.__getArgNames">__getArgNames</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Pep257Checker.__getSummaryLine">__getSummaryLine</a></td>
 <td>Private method to extract the summary line.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.__getSummaryLines">__getSummaryLines</a></td>
+<td>Private method to extract the summary lines.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__ignoreCode">__ignoreCode</a></td>
 <td>Private method to check if the error code should be ignored.</td>
@@ -150,22 +180,41 @@ object
 <td><a href="#Pep257Checker.__skipIndentedBlock">__skipIndentedBlock</a></td>
 <td>Private method to skip over an indented block of source code.</td>
 </tr><tr>
-<td><a href="#Pep257Checker.getMessage">getMessage</a></td>
-<td>Public method to get a translated and formatted message for a given code.</td>
-</tr><tr>
 <td><a href="#Pep257Checker.run">run</a></td>
 <td>Public method to check the given source for violations of doc string conventions according to PEP-257.</td>
+</tr><tr>
+<td><a href="#Pep257Checker.unpackArgs">unpackArgs</a></td>
+<td>Local helper function to unpack function argument names.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="Pep257Checker.__init__" ID="Pep257Checker.__init__"></a>
-<h4>Pep257Checker (Constructor)</h4>
-<b>Pep257Checker</b>(<i>source, filename, select, ignore, expected, repeat, maxLineLength=79</i>)
+<a NAME="Pep257Checker.getMessage" ID="Pep257Checker.getMessage"></a>
+<h4>Pep257Checker.getMessage (class method)</h4>
+<b>getMessage</b>(<i>code, *args</i>)
 <p>
-        Constructor (according to 'extended' pep8.py API)
+        Class method to get a translated and formatted message for a
+        given code.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+message code (string)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments for a formatted message (list)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+translated and formatted message (string)
+</dd>
+</dl><a NAME="Pep257Checker.__init__" ID="Pep257Checker.__init__"></a>
+<h4>Pep257Checker (Constructor)</h4>
+<b>Pep257Checker</b>(<i>source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257"</i>)
+<p>
+        Constructor
 </p><dl>
 <dt><i>source</i></dt>
 <dd>
@@ -186,9 +235,13 @@ list of expected codes (list of string)
 <dd>
 flag indicating to report each occurrence of a code
             (boolean)
-</dd><dt><i>maxLineLength</i></dt>
+</dd><dt><i>maxLineLength=</i></dt>
 <dd>
 allowed line length (integer)
+</dd><dt><i>docType=</i></dt>
+<dd>
+type of the documentation strings
+            (string, one of 'eric' or 'pep257')
 </dd>
 </dl><a NAME="Pep257Checker.__checkBackslashes" ID="Pep257Checker.__checkBackslashes"></a>
 <h4>Pep257Checker.__checkBackslashes</h4>
@@ -208,8 +261,8 @@ context of the docstring (Pep257Context)
 <h4>Pep257Checker.__checkBlankAfterLastParagraph</h4>
 <b>__checkBlankAfterLastParagraph</b>(<i>docstringContext, context</i>)
 <p>
-        Private method to check, that docstring summaries are followed
-        by a blank line.
+        Private method to check, that the last paragraph of docstrings is
+        followed by a blank line.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>
@@ -265,6 +318,102 @@ context of the docstring (Pep257Context)
 <b>__checkEndsWithPeriod</b>(<i>docstringContext, context</i>)
 <p>
         Private method to check, that docstring summaries end with a period.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricBlankAfterSummary" ID="Pep257Checker.__checkEricBlankAfterSummary"></a>
+<h4>Pep257Checker.__checkEricBlankAfterSummary</h4>
+<b>__checkEricBlankAfterSummary</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that docstring summaries are followed
+        by a blank line.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricEndsWithPeriod" ID="Pep257Checker.__checkEricEndsWithPeriod"></a>
+<h4>Pep257Checker.__checkEricEndsWithPeriod</h4>
+<b>__checkEricEndsWithPeriod</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that docstring summaries end with a period.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricFunctionArguments" ID="Pep257Checker.__checkEricFunctionArguments"></a>
+<h4>Pep257Checker.__checkEricFunctionArguments</h4>
+<b>__checkEricFunctionArguments</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that docstrings contain an @param line
+        for each argument.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricNBlankAfterLastParagraph" ID="Pep257Checker.__checkEricNBlankAfterLastParagraph"></a>
+<h4>Pep257Checker.__checkEricNBlankAfterLastParagraph</h4>
+<b>__checkEricNBlankAfterLastParagraph</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that the last paragraph of docstrings is
+        not followed by a blank line.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricNoBlankBeforeAndAfterClass" ID="Pep257Checker.__checkEricNoBlankBeforeAndAfterClass"></a>
+<h4>Pep257Checker.__checkEricNoBlankBeforeAndAfterClass</h4>
+<b>__checkEricNoBlankBeforeAndAfterClass</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that class docstrings have no blank line
+        around them.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricOneLiner" ID="Pep257Checker.__checkEricOneLiner"></a>
+<h4>Pep257Checker.__checkEricOneLiner</h4>
+<b>__checkEricOneLiner</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that one-liner docstrings are on
+        three lines (quotes, docstring, quotes).
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
+</dl><a NAME="Pep257Checker.__checkEricReturn" ID="Pep257Checker.__checkEricReturn"></a>
+<h4>Pep257Checker.__checkEricReturn</h4>
+<b>__checkEricReturn</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that docstrings contain an @return line.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>
@@ -429,7 +578,10 @@ message code (string)
 <dd>
 arguments for the message (list)
 </dd>
-</dl><a NAME="Pep257Checker.__getSummaryLine" ID="Pep257Checker.__getSummaryLine"></a>
+</dl><a NAME="Pep257Checker.__getArgNames" ID="Pep257Checker.__getArgNames"></a>
+<h4>Pep257Checker.__getArgNames</h4>
+<b>__getArgNames</b>(<i>node</i>)
+<a NAME="Pep257Checker.__getSummaryLine" ID="Pep257Checker.__getSummaryLine"></a>
 <h4>Pep257Checker.__getSummaryLine</h4>
 <b>__getSummaryLine</b>(<i>docstringContext</i>)
 <p>
@@ -443,6 +595,22 @@ docstring context (Pep257Context)
 <dt>Returns:</dt>
 <dd>
 summary line (string) and the line it was found on (integer)
+</dd>
+</dl><a NAME="Pep257Checker.__getSummaryLines" ID="Pep257Checker.__getSummaryLines"></a>
+<h4>Pep257Checker.__getSummaryLines</h4>
+<b>__getSummaryLines</b>(<i>docstringContext</i>)
+<p>
+        Private method to extract the summary lines.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+summary lines (list of string) and the line it was found on
+            (integer)
 </dd>
 </dl><a NAME="Pep257Checker.__ignoreCode" ID="Pep257Checker.__ignoreCode"></a>
 <h4>Pep257Checker.__ignoreCode</h4>
@@ -579,32 +747,28 @@ token generator
 <dd>
 last token of the indented block
 </dd>
-</dl><a NAME="Pep257Checker.getMessage" ID="Pep257Checker.getMessage"></a>
-<h4>Pep257Checker.getMessage</h4>
-<b>getMessage</b>(<i>code, *args</i>)
-<p>
-        Public method to get a translated and formatted message for a
-        given code.
-</p><dl>
-<dt><i>code</i></dt>
-<dd>
-message code (string)
-</dd><dt><i>args</i></dt>
-<dd>
-arguments for a formatted message (list)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-translated and formatted message (string)
-</dd>
 </dl><a NAME="Pep257Checker.run" ID="Pep257Checker.run"></a>
 <h4>Pep257Checker.run</h4>
 <b>run</b>(<i></i>)
 <p>
         Public method to check the given source for violations of doc string
         conventions according to PEP-257.
-</p>
+</p><a NAME="Pep257Checker.unpackArgs" ID="Pep257Checker.unpackArgs"></a>
+<h4>Pep257Checker.unpackArgs</h4>
+<b>unpackArgs</b>(<i></i>)
+<p>
+                Local helper function to unpack function argument names.
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+list of AST node arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of argument names (list of string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="Pep257Context" ID="Pep257Context"></a>

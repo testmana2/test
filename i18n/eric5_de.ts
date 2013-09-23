@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1943,8 +1944,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2180,8 +2181,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -14895,8 +14896,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1025"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
@@ -31720,104 +31721,159 @@ Ursache: {1}</translation>
 <context>
     <name>Pep257Checker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="114"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="121"/>
         <source>module is missing a docstring</source>
         <translation>Modul hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="116"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="123"/>
         <source>public function/method is missing a docstring</source>
         <translation>Öffentliche Funktion/Methode hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="118"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="125"/>
         <source>private function/method may be missing a docstring</source>
         <translation>Private Funktion/Methode hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="121"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="128"/>
         <source>public class is missing a docstring</source>
         <translation>Öffentliche Klasse hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="123"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="130"/>
         <source>private class may be missing a docstring</source>
         <translation>Private Klasse hat keinen Docstring</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="125"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="132"/>
         <source>docstring not surrounded by &quot;&quot;&quot;</source>
         <translation>Docstring nicht durch &quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="127"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="134"/>
         <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
         <translation>Docstring, der \ enthält, nicht durch r&quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="129"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="136"/>
         <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
         <translation>Docstring, der Unicode Zeichen enthält, nicht durch u&quot;&quot;&quot; eingeschlossen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="132"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="139"/>
         <source>one-liner docstring on multiple lines</source>
         <translation>einzeiliger Docstring über mehrere Zeilen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="134"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="141"/>
         <source>docstring has wrong indentation</source>
         <translation>Docstring hat falsche Einrückung</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="136"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="177"/>
         <source>docstring summary does not end with a period</source>
         <translation>Docstring Zusammenfassung endet nicht mit einem Punkt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="138"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="145"/>
         <source>docstring summary is not in imperative mood (Does instead of Do)</source>
         <translation>Docstring Zusammenfassung nicht im Imperativ (Tut anstelle Tue)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="142"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="149"/>
         <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
         <translation>Docstring Zusammenfassung scheint Funktion-/Methodensignatur zu sein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="145"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="152"/>
         <source>docstring does not mention the return value type</source>
         <translation>Docstring erwähnt nicht den Typ des Rückgabewertes</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="148"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="155"/>
         <source>function/method docstring is separated by a blank line</source>
         <translation>Funktions-/Methodendocstring ist durch eine Leerzeile abgetrennt</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="151"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="158"/>
         <source>class docstring is not preceded by a blank line</source>
         <translation>Klassendocstring hat keine führende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="154"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="161"/>
         <source>class docstring is not followed by a blank line</source>
         <translation>Klassendocstring hat keine nachfolgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="157"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="197"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation>Docstring Zusammenfassung hat keine folgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="160"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="167"/>
         <source>last paragraph of docstring is not followed by a blank line</source>
         <translation>letzter Abschnitt des Docstring hat keine folgende Leerzeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="296"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="380"/>
         <source>no message for this code defined</source>
         <translation>kein Schlüssel für diesen Code definiert</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="171"/>
+        <source>private function/method is missing a docstring</source>
+        <translation>Private Funktion/Methode hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="173"/>
+        <source>private class is missing a docstring</source>
+        <translation>Private Klasse hat keinen Docstring</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="175"/>
+        <source>one-liner docstring not on three lines</source>
+        <translation>einzeiliger Docstring nicht auf drei Zeilen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="179"/>
+        <source>docstring does not contain a @return line</source>
+        <translation>Docstring enthält keine @return Zeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="181"/>
+        <source>docstring does not contain enough @param/@keyparam lines</source>
+        <translation>Docstring enthält nicht genügend @param/@keyparam Zeilen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="184"/>
+        <source>docstring contains too many @param/@keyparam lines</source>
+        <translation>Docstring enthält zu viele @param/@keyparam Zeilen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="187"/>
+        <source>keyword only arguments must be documented with @keyparam lines</source>
+        <translation>&apos;keyword only&apos; Argumente müssen mit @keyparam Zeilen dokumentiert werden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="190"/>
+        <source>order of @param/@keyparam lines does not match the function/method signature</source>
+        <translation>Reihenfolge der @param/@keyparam Zeilen stimmt nicht mit der Funktions-/Methodensignatur überein</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="193"/>
+        <source>class docstring is preceded by a blank line</source>
+        <translation>Klassendocstring hat eine führende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="195"/>
+        <source>class docstring is followed by a blank line</source>
+        <translation>Klassendocstring hat eine nachfolgende Leerzeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="200"/>
+        <source>last paragraph of docstring is followed by a blank line</source>
+        <translation>letzter Abschnitt des Docstring hat eine folgende Leerzeile</translation>
     </message>
 </context>
 <context>
@@ -31899,47 +31955,47 @@ Ursache: {1}</translation>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="296"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="327"/>
         <source>Select to repeat each message type</source>
         <translation>Auswählen, um Wiederholungen eines Nachrichtentyps zuzulassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="299"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="330"/>
         <source>Repeat messages</source>
         <translation>Nachrichten wiederholen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="353"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="405"/>
         <source>File/Line</source>
         <translation>Datei/Zeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="358"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="410"/>
         <source>Code</source>
         <translation>Schlüssel</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="363"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="415"/>
         <source>Message</source>
         <translation>Nachricht</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="96"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="99"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="98"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="101"/>
         <source>Press to show all files containing an issue</source>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="380"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="389"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="513"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="524"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -31979,12 +32035,12 @@ Ursache: {1}</translation>
         <translation>Ausgewählte Nachrichten:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="91"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="94"/>
         <source>Statistics...</source>
         <translation>Statistik...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="93"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="96"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Drücken, um eine Statistik für den letzten Lauf zu zeigen</translation>
     </message>
@@ -32004,17 +32060,17 @@ Ursache: {1}</translation>
         <translation>Geben Sie die Nachrichtenschlüssel für automatisch zu behebende Probleme ein (leer lassen, um alle zu beheben)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="309"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="340"/>
         <source>Select to fix some issues</source>
         <translation>Auswählen, um ausgewählte Probleme zu beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="312"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="343"/>
         <source>Fix issues automatically</source>
         <translation>Probleme automatisch beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="839"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="858"/>
         <source>Fix: {0}</source>
         <translation>Lösung: {0}</translation>
     </message>
@@ -32029,12 +32085,12 @@ Ursache: {1}</translation>
         <translation>Gib die maximal zulässige Zeilenlänge ein (PEP-8: 79 Zeichen)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="269"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="300"/>
         <source>Select to allow hanging closing brackets</source>
         <translation>Auswählen, um hängende schließende Klammern zuzulassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="272"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="303"/>
         <source>Allow hanging closing brackets</source>
         <translation>Hängende schließende Klammern zulassen</translation>
     </message>
@@ -32089,7 +32145,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Drücken, um die Quelltextstil-Prüfung zu starten</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="337"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="389"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -32100,9 +32156,29 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile und Position.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="371"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="423"/>
         <source>Shows the progress of the style check check</source>
         <translation>Zeigt den Fortschritt der Quelltextstil-Prüfung an</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="267"/>
+        <source>Docstring Type:</source>
+        <translation>Docstring Typ:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="276"/>
+        <source>Select the rule set for docstrings</source>
+        <translation>Wähle den Regelsatz für Docstrings</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="91"/>
+        <source>PEP-257</source>
+        <translation>PEP-257</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="92"/>
+        <source>Eric</source>
+        <translation>Eric</translation>
     </message>
 </context>
 <context>
@@ -32390,12 +32466,12 @@ Zeile und Position.&lt;/p&gt;</translation>
 <context>
     <name>Pep8Py2Checker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="50"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="54"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Kein Python 2-Interpreter konfiguriert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="120"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="126"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>Python 2-Interpreter wurde nicht innerhalb von 15s beendet.</translation>
     </message>

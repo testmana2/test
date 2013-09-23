@@ -419,6 +419,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                             ignore=excludeMessages,
                             max_line_length=maxLineLength,
                             hang_closing=hangClosing,
+                            docType=docType,
                         )
                         errors = report.errors[:]
                         stats.update(report.counters)

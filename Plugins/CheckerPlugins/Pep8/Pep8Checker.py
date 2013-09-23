@@ -27,7 +27,7 @@ class Pep8Py2Checker(object):
     """
     def __init__(self, filename, lines, repeat=False,
                  select="", ignore="", max_line_length=79,
-                 hang_closing=False):
+                 hang_closing=False, docType="pep257"):
         """
         Constructor
         
@@ -41,7 +41,11 @@ class Pep8Py2Checker(object):
         @keyparam max_line_length maximum allowed line length (integer)
         @keyparam hang_closing flag indicating to allow hanging closing
             brackets (boolean)
+        @keyparam docType type of the documentation strings
+            (string, one of 'eric' or 'pep257')
         """
+        assert docType in ("eric", "pep257")
+        
         self.errors = []
         self.counters = {}
         
@@ -68,6 +72,8 @@ class Pep8Py2Checker(object):
         args.append(str(max_line_length))
         if hang_closing:
             args.append("-h")
+        args.append("-d")
+        args.append(docType)
         args.append("-f")
         args.append(filename)
         

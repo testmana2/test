@@ -3720,7 +3720,8 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Codes?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.Messages?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.run?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79)
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker.unpackArgs?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.contextType?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.end?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.indent?4()
@@ -3728,7 +3729,7 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.source?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.ssource?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context.start?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep257Checker.Pep257Context?1(source, startLine, contextType)
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257")
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, showFixCodes, parent=None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.codeRole?7
@@ -8390,7 +8391,8 @@ eric5.Utilities.win32_getRealName?4()
 eric5.Utilities.writeEncodedFile?4(filename, text, orig_coding)
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.Codes?7
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.run?4()
-eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79)
+eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker.unpackArgs?4()
+eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Checker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.contextType?4()
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.end?4()
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.indent?4()
@@ -8398,6 +8400,7 @@ eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.source?4()
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.ssource?4()
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context.start?4()
 eric5.UtilitiesPython2.Pep257CheckerPy2.Pep257Context?1(source, startLine, contextType)
+eric5.UtilitiesPython2.Pep8Checker.Pep8Report.docType?7
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report.error_args?4(line_number, offset, code, check, *args)
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report.filename?7
 eric5.UtilitiesPython2.Pep8Checker.Pep8Report.hang_closing?7
