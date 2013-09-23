@@ -1006,7 +1006,19 @@ class UserInterface(E5MainWindow):
 
         for arg in args:
             # handle a request to start with last session
-            if arg == '--start-session':
+            if arg == '--start-file':
+                self.__openOnStartup("File")
+                # ignore all further arguments
+                return
+            elif arg == '--start-multi':
+                self.__openOnStartup("MultiProject")
+                # ignore all further arguments
+                return
+            elif arg == '--start-project':
+                self.__openOnStartup("Project")
+                # ignore all further arguments
+                return
+            elif arg == '--start-session':
                 self.__openOnStartup("Session")
                 # ignore all further arguments
                 return
