@@ -5522,8 +5522,8 @@ class ViewManager(QObject):
             self.autosaveTimer.stop()
         
         # hide search and replace widgets
-        self.__searchWidget.hide()
-        self.__replaceWidget.hide()
+        self.searchDlg.hide()
+        self.replaceDlg.hide()
         
     def __editorOpened(self):
         """
