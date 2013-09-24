@@ -1109,7 +1109,7 @@ class Checker(object):
                         # Python < 2.6 behaviour, which does not generate NL after
                         # a comment which is on a line by itself.
                         self.tokens = []
-        except tokenize.TokenError as err:
+        except (SyntaxError, tokenize.TokenError) as err:
             msg, (lnum, pos) = err.args
             self.report_error_args(lnum, pos, "E901", "TokenError", msg)
         return self.file_errors
