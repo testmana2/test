@@ -233,8 +233,6 @@ class UserInterface(E5MainWindow):
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
-        app.focusChanged.connect(
-            self.viewmanager.appFocusChanged)
         self.browser.sourceFile[str].connect(
             self.viewmanager.openSourceFile)
         self.browser.sourceFile[str, int].connect(
@@ -447,7 +445,10 @@ class UserInterface(E5MainWindow):
         splash.showMessage(self.trUtf8("Initializing Statusbar..."))
         self.__initStatusbar()
         
-        # Initialise the instance variables.
+        # connect the appFocusChanged signal after all actions are ready
+        app.focusChanged.connect(self.viewmanager.appFocusChanged)
+        
+        # Initialize the instance variables.
         self.currentProg = None
         self.isProg = False
         self.utEditorOpen = False
