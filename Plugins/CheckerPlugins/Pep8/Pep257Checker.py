@@ -306,7 +306,6 @@ class Pep257Checker(object):
                     (self.__checkEricReturn, ("D234",)),
                     (self.__checkEricFunctionArguments,
                      ("D235", "D236", "D237", "D238")),
-##                    (self.__checkNoBlankLineBefore, ("D141",)),
                     (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
                      ("D244", "D245")),
                 ],
