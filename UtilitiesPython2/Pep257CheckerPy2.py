@@ -112,7 +112,7 @@ class Pep257Checker(object):
         "D203", "D205",
         "D221",
         "D231", "D234", "D235", "D236", "D237", "D238",
-        "D242", "D243", "D244", "D245",
+        "D242", "D243", "D244", "D245", "D246", "D247",
     ]
     
     def __init__(self, source, filename, select, ignore, expected, repeat,
@@ -201,7 +201,7 @@ class Pep257Checker(object):
                 ],
                 "classDocstring": [
                     (self.__checkClassDocstring, ("D104", "D205")),
-                    (self.__checkEricNoBlankBeforeAndAfterClass,
+                    (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
                      ("D242", "D243")),
                 ],
                 "methodDocstring": [
@@ -213,7 +213,8 @@ class Pep257Checker(object):
                     (self.__checkEricReturn, ("D234",)),
                     (self.__checkEricFunctionArguments,
                      ("D235", "D236", "D237", "D238")),
-                    (self.__checkNoBlankLineBefore, ("D141",)),
+                    (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
+                     ("D244", "D245")),
                 ],
                 "docstring": [
                     (self.__checkTripleDoubleQuotes, ("D111",)),
@@ -222,8 +223,8 @@ class Pep257Checker(object):
                     (self.__checkEricOneLiner, ("D221",)),
                     (self.__checkIndent, ("D122",)),
                     (self.__checkEricEndsWithPeriod, ("D231",)),
-                    (self.__checkEricBlankAfterSummary, ("D244",)),
-                    (self.__checkEricNBlankAfterLastParagraph, ("D245",)),
+                    (self.__checkEricBlankAfterSummary, ("D246",)),
+                    (self.__checkEricNBlankAfterLastParagraph, ("D247",)),
                 ],
             }
         
@@ -1067,12 +1068,13 @@ class Pep257Checker(object):
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
         if len(docstrings) > lineNumber + len(summaryLines) - 1:
             if docstrings[lineNumber + len(summaryLines)].strip():
-                self.__error(docstringContext.start() + lineNumber, 0, "D244")
+                self.__error(docstringContext.start() + lineNumber, 0, "D246")
     
-    def __checkEricNoBlankBeforeAndAfterClass(self, docstringContext, context):
+    def __checkEricNoBlankBeforeAndAfterClassOrFunction(
+            self, docstringContext, context):
         """
-        Private method to check, that class docstrings have no blank line
-        around them.
+        Private method to check, that class and function/method docstrings
+        have no blank line around them.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -1081,6 +1083,7 @@ class Pep257Checker(object):
             return
         
         contextLines = context.source()
+        isClassContext = contextLines[0].lstrip().startswith("class ")
         cti = 0
         while cti < len(contextLines) and \
             not contextLines[cti].strip().startswith(
@@ -1102,10 +1105,16 @@ class Pep257Checker(object):
         if cti == len(contextLines):
             return
         
-        if not contextLines[start - 1].strip():
-            self.__error(docstringContext.start(), 0, "D242")
-        if not contextLines[end + 1].strip():
-            self.__error(docstringContext.end(), 0, "D243")
+        if isClassContext:
+            if not contextLines[start - 1].strip():
+                self.__error(docstringContext.start(), 0, "D242")
+            if not contextLines[end + 1].strip():
+                self.__error(docstringContext.end(), 0, "D243")
+        else:
+            if not contextLines[start - 1].strip():
+                self.__error(docstringContext.start(), 0, "D244")
+            if not contextLines[end + 1].strip():
+                self.__error(docstringContext.end(), 0, "D245")
     
     def __checkEricNBlankAfterLastParagraph(self, docstringContext, context):
         """
@@ -1124,7 +1133,7 @@ class Pep257Checker(object):
             return
         
         if not docstrings[-2].strip():
-            self.__error(docstringContext.end(), 0, "D245")
+            self.__error(docstringContext.end(), 0, "D247")
 
 #
 # eflag: FileType = Python2
