@@ -20,8 +20,12 @@ from . import pep8
 
 import Utilities
 
+# TODO: add fixers for these issues
+# D221, D231, D246,
+
 Pep8FixableIssues = ["D111", "D112", "D113", "D121", "D131", "D141",
                      "D142", "D143", "D144", "D145",
+                     "D242", "D243", "D244", "D245", "D247",
                      "E101", "E111", "E121", "E122", "E123", "E124",
                      "E125", "E126", "E127", "E128", "E133", "E201",
                      "E202", "E203", "E211", "E221", "E222", "E223",
@@ -88,6 +92,11 @@ class Pep8Fixer(QObject):
             "D143": self.__fixD143,
             "D144": self.__fixD144,
             "D145": self.__fixD145,
+            "D242": self.__fixD242,
+            "D243": self.__fixD243,
+            "D244": self.__fixD242,
+            "D245": self.__fixD243,
+            "D247": self.__fixD247,
             "E101": self.__fixE101,
             "E111": self.__fixE101,
             "E121": self.__fixE121,
@@ -726,6 +735,88 @@ class Pep8Fixer(QObject):
                 1,
                 self.trUtf8("Blank line inserted after last paragraph"
                             " of docstring."),
+                0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD242(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class or function/method docstring preceded
+        by a blank line (D242, D244).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            if code == "D242":
+                msg = self.trUtf8("Blank line before class docstring removed.")
+            else:
+                msg = self.trUtf8(
+                    "Blank line before function/method docstring removed.")
+            return (1, msg, 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD243(self, code, line, pos, apply=False):
+        """
+        Private method to fix a class or function/method docstring followed
+        by a blank line (D243, D245).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line + 1] = ""
+            if code == "D243":
+                msg = self.trUtf8("Blank line after class docstring removed.")
+            else:
+                msg = self.trUtf8(
+                    "Blank line after function/method docstring removed.")
+            return (1, msg, 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD247(self, code, line, pos, apply=False):
+        """
+        Private method to fix a last paragraph of a docstring followed
+        by a blank line (D247).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            self.__source[line - 1] = ""
+            return (
+                1,
+                self.trUtf8("Blank line after last paragraph removed."),
                 0)
         else:
             id = self.__getID()
