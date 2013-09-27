@@ -112,7 +112,7 @@ class Pep257Checker(object):
         "D141", "D142", "D143", "D144", "D145",
         
         "D203", "D205",
-        "D221",
+        "D221", "D222",
         "D231", "D234", "D235", "D236", "D237", "D238",
         "D242", "D243", "D244", "D245", "D246", "D247",
     ]
@@ -173,7 +173,11 @@ class Pep257Checker(object):
         "D205": QT_TRANSLATE_NOOP(
             "Pep257Checker", "private class is missing a docstring"),
         "D221": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "one-liner docstring not on three lines"),
+            "Pep257Checker",
+            "leading quotes of docstring not on separate line"),
+        "D222": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "trailing quotes of docstring not on separate line"),
         "D231": QT_TRANSLATE_NOOP(
             "Pep257Checker", "docstring summary does not end with a period"),
         "D234": QT_TRANSLATE_NOOP(
@@ -313,11 +317,11 @@ class Pep257Checker(object):
                     (self.__checkTripleDoubleQuotes, ("D111",)),
                     (self.__checkBackslashes, ("D112",)),
                     (self.__checkUnicode, ("D113",)),
-                    (self.__checkEricOneLiner, ("D221",)),
                     (self.__checkIndent, ("D122",)),
                     (self.__checkEricEndsWithPeriod, ("D231",)),
                     (self.__checkEricBlankAfterSummary, ("D246",)),
                     (self.__checkEricNBlankAfterLastParagraph, ("D247",)),
+                    (self.__checkEricQuotesOnSeparateLines, ("D222", "D223"))
                 ],
             }
         
@@ -1058,10 +1062,10 @@ class Pep257Checker(object):
     ## Checking functionality below (eric specific ones)
     ##################################################################
 
-    def __checkEricOneLiner(self, docstringContext, context):
+    def __checkEricQuotesOnSeparateLines(self, docstringContext, context):
         """
-        Private method to check, that one-liner docstrings are on
-        three lines (quotes, docstring, quotes).
+        Private method to check, that leading and trailing quotes are on
+        a line by themselves.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -1070,10 +1074,10 @@ class Pep257Checker(object):
             return
         
         lines = docstringContext.source()
-        if len(lines) != 3:
-            nonEmptyLines = [l for l in lines if l.strip().strip('\'"')]
-            if len(nonEmptyLines) == 1:
-                self.__error(docstringContext.start(), 0, "D221")
+        if lines[0].strip().strip('ru"'):
+            self.__error(docstringContext.start(), 0, "D221")
+        if lines[-1].strip().strip('"'):
+            self.__error(docstringContext.end(), 0, "D222")
     
     def __checkEricEndsWithPeriod(self, docstringContext, context):
         """
@@ -1086,6 +1090,8 @@ class Pep257Checker(object):
             return
         
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
+        if summaryLines[-1].lstrip().startswith("@"):
+            summaryLines.pop(-1)
         summary = " ".join([s.strip() for s in summaryLines if s])
         if not summary.endswith(".") and \
                 not summary.split(None, 1)[0].lower() == "constructor":

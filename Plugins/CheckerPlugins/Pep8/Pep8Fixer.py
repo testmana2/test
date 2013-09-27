@@ -20,12 +20,10 @@ from . import pep8
 
 import Utilities
 
-# TODO: add fixers for these issues
-# D221, D231, D246,
-
 Pep8FixableIssues = ["D111", "D112", "D113", "D121", "D131", "D141",
                      "D142", "D143", "D144", "D145",
-                     "D242", "D243", "D244", "D245", "D247",
+                     "D221", "D222", "D231", "D242", "D243", "D244",
+                     "D245", "D246", "D247",
                      "E101", "E111", "E121", "E122", "E123", "E124",
                      "E125", "E126", "E127", "E128", "E133", "E201",
                      "E202", "E203", "E211", "E221", "E222", "E223",
@@ -92,10 +90,14 @@ class Pep8Fixer(QObject):
             "D143": self.__fixD143,
             "D144": self.__fixD144,
             "D145": self.__fixD145,
+            "D221": self.__fixD221,
+            "D222": self.__fixD221,
+            "D231": self.__fixD131,
             "D242": self.__fixD242,
             "D243": self.__fixD243,
             "D244": self.__fixD242,
             "D245": self.__fixD243,
+            "D246": self.__fixD144,
             "D247": self.__fixD247,
             "E101": self.__fixE101,
             "E111": self.__fixE101,
@@ -577,7 +579,8 @@ class Pep8Fixer(QObject):
     
     def __fixD131(self, code, line, pos):
         """
-        Private method to fix a single line docstring on multiple lines (D121).
+        Private method to fix a docstring summary not ending with a
+        period (D131).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -591,12 +594,14 @@ class Pep8Fixer(QObject):
         if self.__source[line].rstrip().endswith(('"""', "'''")) and \
            self.__source[line].lstrip().startswith(('"""', 'r"""', 'u"""')):
             # it is a one-liner
-            newText = self.__source[line].rstrip()[:-3] + "." + \
+            newText = self.__source[line].rstrip()[:-3].rstrip() + "." + \
                 self.__source[line].rstrip()[-3:] + self.__getEol()
         else:
             if line < len(self.__source) - 1 and \
                 (not self.__source[line + 1].strip() or
-                    self.__source[line + 1].strip() in ('"""', "'''")):
+                 self.__source[line + 1].lstrip().startswith("@") or
+                 (self.__source[line + 1].strip() in ('"""', "'''") and
+                  not self.__source[line].lstrip().startswith("@"))):
                 newText = self.__source[line].rstrip() + "." + self.__getEol()
         
         if newText:
@@ -736,6 +741,46 @@ class Pep8Fixer(QObject):
                 self.trUtf8("Blank line inserted after last paragraph"
                             " of docstring."),
                 0)
+        else:
+            id = self.__getID()
+            self.__stack.append((id, code, line, pos))
+            return (-1, "", id)
+    
+    def __fixD221(self, code, line, pos, apply=False):
+        """
+        Private method to fix leading and trailing quotes of docstring
+        not on separate lines (D221, D222).
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        if apply:
+            line = line - 1
+            indent = self.__getIndent(self.__source[line])
+            source = self.__source[line].strip()
+            if code == "D221":
+                # leading
+                if source.startswith(("r", "u")):
+                    first, second = source[:4], source[4:].strip()
+                else:
+                    first, second = source[:3], source[3:].strip()
+            else:
+                # trailing
+                first, second = source[:-3].strip(), source[-3:]
+            newText = indent + first + self.__getEol() + \
+                indent + second + self.__getEol()
+            self.__source[line] = newText
+            if code == "D221":
+                msg = self.trUtf8("Leading quotes put on separate line.")
+            else:
+                msg = self.trUtf8("Trailing quotes put on separate line.")
+            return (1, msg, 0)
         else:
             id = self.__getID()
             self.__stack.append((id, code, line, pos))
