@@ -93,8 +93,8 @@ object
 <td><a href="#Pep257Checker.__checkEricNBlankAfterLastParagraph">__checkEricNBlankAfterLastParagraph</a></td>
 <td>Private method to check, that the last paragraph of docstrings is not followed by a blank line.</td>
 </tr><tr>
-<td><a href="#Pep257Checker.__checkEricNoBlankBeforeAndAfterClass">__checkEricNoBlankBeforeAndAfterClass</a></td>
-<td>Private method to check, that class docstrings have no blank line around them.</td>
+<td><a href="#Pep257Checker.__checkEricNoBlankBeforeAndAfterClassOrFunction">__checkEricNoBlankBeforeAndAfterClassOrFunction</a></td>
+<td>Private method to check, that class and function/method docstrings have no blank line around them.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkEricOneLiner">__checkEricOneLiner</a></td>
 <td>Private method to check, that one-liner docstrings are on three lines (quotes, docstring, quotes).</td>
@@ -359,12 +359,12 @@ docstring context (Pep257Context)
 <dd>
 context of the docstring (Pep257Context)
 </dd>
-</dl><a NAME="Pep257Checker.__checkEricNoBlankBeforeAndAfterClass" ID="Pep257Checker.__checkEricNoBlankBeforeAndAfterClass"></a>
-<h4>Pep257Checker.__checkEricNoBlankBeforeAndAfterClass</h4>
-<b>__checkEricNoBlankBeforeAndAfterClass</b>(<i>docstringContext, context</i>)
+</dl><a NAME="Pep257Checker.__checkEricNoBlankBeforeAndAfterClassOrFunction" ID="Pep257Checker.__checkEricNoBlankBeforeAndAfterClassOrFunction"></a>
+<h4>Pep257Checker.__checkEricNoBlankBeforeAndAfterClassOrFunction</h4>
+<b>__checkEricNoBlankBeforeAndAfterClassOrFunction</b>(<i>docstringContext, context</i>)
 <p>
-        Private method to check, that class docstrings have no blank line
-        around them.
+        Private method to check, that class and function/method docstrings
+        have no blank line around them.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>

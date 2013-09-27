@@ -85,7 +85,7 @@ QObject
 <td>Private method to fix a single line docstring on multiple lines (D121).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixD131">__fixD131</a></td>
-<td>Private method to fix a single line docstring on multiple lines (D121).</td>
+<td>Private method to fix a docstring summary not ending with a period (D131).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixD141">__fixD141</a></td>
 <td>Private method to fix a function/method docstring preceded by a blank line (D141).</td>
@@ -101,6 +101,18 @@ QObject
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixD145">__fixD145</a></td>
 <td>Private method to fix the last paragraph of a multi-line docstring not followed by a blank line (D143).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixD221">__fixD221</a></td>
+<td>Private method to fix leading and trailing quotes of docstring not on separate lines (D221, D222).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixD242">__fixD242</a></td>
+<td>Private method to fix a class or function/method docstring preceded by a blank line (D242, D244).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixD243">__fixD243</a></td>
+<td>Private method to fix a class or function/method docstring followed by a blank line (D243, D245).</td>
+</tr><tr>
+<td><a href="#Pep8Fixer.__fixD247">__fixD247</a></td>
+<td>Private method to fix a last paragraph of a docstring followed by a blank line (D247).</td>
 </tr><tr>
 <td><a href="#Pep8Fixer.__fixE101">__fixE101</a></td>
 <td>Private method to fix obsolete tab usage and indentation errors (E101, E111, W191).</td>
@@ -363,7 +375,8 @@ value indicating an applied/deferred fix (-1, 0, 1),
 <h4>Pep8Fixer.__fixD131</h4>
 <b>__fixD131</b>(<i>code, line, pos</i>)
 <p>
-        Private method to fix a single line docstring on multiple lines (D121).
+        Private method to fix a docstring summary not ending with a
+        period (D131).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
@@ -500,6 +513,118 @@ value indicating an applied/deferred fix (-1, 0, 1),
 <p>
         Private method to fix the last paragraph of a multi-line docstring
         not followed by a blank line (D143).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD221" ID="Pep8Fixer.__fixD221"></a>
+<h4>Pep8Fixer.__fixD221</h4>
+<b>__fixD221</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix leading and trailing quotes of docstring
+        not on separate lines (D221, D222).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD242" ID="Pep8Fixer.__fixD242"></a>
+<h4>Pep8Fixer.__fixD242</h4>
+<b>__fixD242</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a class or function/method docstring preceded
+        by a blank line (D242, D244).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD243" ID="Pep8Fixer.__fixD243"></a>
+<h4>Pep8Fixer.__fixD243</h4>
+<b>__fixD243</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a class or function/method docstring followed
+        by a blank line (D243, D245).
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd><dt><i>apply=</i></dt>
+<dd>
+flag indicating, that the fix should be applied
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="Pep8Fixer.__fixD247" ID="Pep8Fixer.__fixD247"></a>
+<h4>Pep8Fixer.__fixD247</h4>
+<b>__fixD247</b>(<i>code, line, pos, apply=False</i>)
+<p>
+        Private method to fix a last paragraph of a docstring followed
+        by a blank line (D247).
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
