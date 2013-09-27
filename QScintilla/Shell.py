@@ -11,8 +11,8 @@ import sys
 import re
 
 from PyQt4.QtCore import pyqtSignal, QFileInfo, Qt, QEvent
-from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QClipboard, QMenu, \
-    QPalette, QFont, QWidget, QHBoxLayout, QVBoxLayout, QShortcut
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QClipboard, \
+    QMenu, QPalette, QFont, QWidget, QHBoxLayout, QVBoxLayout, QShortcut
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
@@ -60,7 +60,8 @@ class ShellAssembly(QWidget):
         
         self.__searchWidget.searchNext.connect(self.__shell.searchNext)
         self.__searchWidget.searchPrevious.connect(self.__shell.searchPrev)
-        self.__shell.searchStringFound.connect(self.__searchWidget.searchStringFound)
+        self.__shell.searchStringFound.connect(
+            self.__searchWidget.searchStringFound)
     
     def showFind(self, txt=""):
         """
@@ -86,7 +87,8 @@ class Shell(QsciScintillaCompat):
     A user can enter commands that are executed in the remote
     Python interpreter.
     
-    @signal searchStringFound(found) emitted to indicate the search result (boolean)
+    @signal searchStringFound(found) emitted to indicate the search
+        result (boolean)
     """
     searchStringFound = pyqtSignal(bool)
     
@@ -116,27 +118,29 @@ class Shell(QsciScintillaCompat):
         self.setWhatsThis(self.trUtf8(
             """<b>The Shell Window</b>"""
             """<p>This is simply an interpreter running in a window. The"""
-            """ interpreter is the one that is used to run the program being debugged."""
-            """ This means that you can execute any command while the program"""
-            """ being debugged is running.</p>"""
-            """<p>You can use the cursor keys while entering commands. There is also a"""
-            """ history of commands that can be recalled using the up and down cursor"""
-            """ keys. Pressing the up or down key after some text has been entered will"""
-            """ start an incremental search.</p>"""
-            """<p>The shell has some special commands. 'reset' kills the shell"""
-            """ and starts a new one. 'clear' clears the display of the shell window."""
-            """ 'start' is used to switch the shell language and must be followed by"""
-            """ a supported language. Supported languages are listed by the 'languages'"""
-            """ command. These commands (except 'languages') are available through the"""
-            """ context menu as well.</p>"""
-            """<p>Pressing the Tab key after some text has been entered will show"""
-            """ a list of possible commandline completions. The relevant entry may"""
-            """ be selected from this list. If only one entry is available, this will"""
-            """ inserted automatically.</p>"""
-            """<p>In passive debugging mode the shell is only available after the"""
-            """ program to be debugged has connected to the IDE until it has finished."""
-            """ This is indicated by a different prompt and by an indication in the"""
-            """ window caption.</p>"""
+            """ interpreter is the one that is used to run the program"""
+            """ being debugged. This means that you can execute any command"""
+            """ while the program being debugged is running.</p>"""
+            """<p>You can use the cursor keys while entering commands. There"""
+            """ is also a history of commands that can be recalled using the"""
+            """ up and down cursor keys. Pressing the up or down key after"""
+            """ some text has been entered will start an incremental search."""
+            """</p>"""
+            """<p>The shell has some special commands. 'reset' kills the"""
+            """ shell and starts a new one. 'clear' clears the display of"""
+            """ the shell window. 'start' is used to switch the shell"""
+            """ language and must be followed by a supported language."""
+            """ Supported languages are listed by the 'languages' command."""
+            """ These commands (except 'languages') are available through"""
+            """ the context menu as well.</p>"""
+            """<p>Pressing the Tab key after some text has been entered will"""
+            """ show a list of possible commandline completions. The"""
+            """ relevant entry may be selected from this list. If only one"""
+            """ entry is available, this will inserted automatically.</p>"""
+            """<p>In passive debugging mode the shell is only available"""
+            """ after the program to be debugged has connected to the IDE"""
+            """ until it has finished. This is indicated by a different"""
+            """ prompt and by an indication in the window caption.</p>"""
         ))
         
         self.userListActivated.connect(self.__completionListSelected)
@@ -325,8 +329,10 @@ class Shell(QsciScintillaCompat):
         """
         # set the settings for all margins
         self.setMarginsFont(Preferences.getShell("MarginsFont"))
-        self.setMarginsForegroundColor(Preferences.getEditorColour("MarginsForeground"))
-        self.setMarginsBackgroundColor(Preferences.getEditorColour("MarginsBackground"))
+        self.setMarginsForegroundColor(
+            Preferences.getEditorColour("MarginsForeground"))
+        self.setMarginsBackgroundColor(
+            Preferences.getEditorColour("MarginsBackground"))
         
         # set margin 0 settings
         linenoMargin = Preferences.getShell("LinenoMargin")
@@ -449,8 +455,10 @@ class Shell(QsciScintillaCompat):
             calltipsStyle = Preferences.getEditor("CallTipsStyle")
             if calltipsStyle == QsciScintilla.CallTipsNoContext:
                 self.setCallTipsStyle(QsciScintilla.CallTipsNoContext)
-            elif calltipsStyle == QsciScintilla.CallTipsNoAutoCompletionContext:
-                self.setCallTipsStyle(QsciScintilla.CallTipsNoAutoCompletionContext)
+            elif calltipsStyle == \
+                    QsciScintilla.CallTipsNoAutoCompletionContext:
+                self.setCallTipsStyle(
+                    QsciScintilla.CallTipsNoAutoCompletionContext)
             else:
                 self.setCallTipsStyle(QsciScintilla.CallTipsContext)
         else:
@@ -491,8 +499,9 @@ class Shell(QsciScintillaCompat):
             self.__setMargin0()
             self.__setAutoCompletion(clType)
             self.__setCallTips(clType)
-            self.racEnabled = Preferences.getShell("AutoCompletionEnabled") and \
-                              (cap & HasCompleter) > 0
+            self.racEnabled = \
+                Preferences.getShell("AutoCompletionEnabled") and \
+                (cap & HasCompleter) > 0
             
             if clType not in self.historyLists:
                 # load history list
@@ -514,7 +523,8 @@ class Shell(QsciScintillaCompat):
         
     def reloadHistory(self):
         """
-        Public method to reload the history of the currently selected client type.
+        Public method to reload the history of the currently selected client
+        type.
         """
         self.loadHistory(self.clientType)
         self.history = self.historyLists[self.clientType]
@@ -558,7 +568,8 @@ class Shell(QsciScintillaCompat):
         cmd, ok = QInputDialog.getItem(
             self,
             self.trUtf8("Select History"),
-            self.trUtf8("Select the history entry to execute (most recent shown last)."),
+            self.trUtf8("Select the history entry to execute"
+                        " (most recent shown last)."),
             self.history,
             0, False)
         if ok:
@@ -693,8 +704,12 @@ class Shell(QsciScintillaCompat):
         self.__write(s)
         line, col = self.__getEndPos()
         self.setCursorPosition(line, col)
-        self.prompt = self.text(line)\
-                      .replace(sys.ps1, "").replace(sys.ps2, "")
+        buf = self.text(line)
+        if buf.startswith(sys.ps1):
+            buf = buf.replace(sys.ps1, "")
+        if buf.startswith(sys.ps2):
+            buf = buf.replace(sys.ps2, "")
+        self.prompt = buf
         # move cursor to end of line
         self.moveCursorToEOL()
         
@@ -773,7 +788,8 @@ class Shell(QsciScintillaCompat):
         
     def __insertTextNoEcho(self, s):
         """
-        Private method to insert some text at the end of the buffer without echoing it.
+        Private method to insert some text at the end of the buffer without
+        echoing it.
         
         @param s text to be inserted (string)
         """
@@ -899,7 +915,11 @@ class Shell(QsciScintillaCompat):
             self.SendScintilla(cmd)
         elif self.__isCursorOnLastLine():
             line, index = self.getCursorPosition()
-            buf = self.text(line).replace(sys.ps1, "").replace(sys.ps2, "")
+            buf = self.text(line)
+            if buf.startswith(sys.ps1):
+                buf = buf.replace(sys.ps1, "")
+            if buf.startswith(sys.ps2):
+                buf = buf.replace(sys.ps2, "")
             if self.inContinue and not buf[:index - len(sys.ps2)].strip():
                 self.SendScintilla(cmd)
             elif self.racEnabled:
@@ -907,7 +927,8 @@ class Shell(QsciScintillaCompat):
         
     def __QScintillaLeftDeleteCommand(self, method):
         """
-        Private method to handle a QScintilla delete command working to the left.
+        Private method to handle a QScintilla delete command working to
+        the left.
         
         @param method shell method to execute
         """
@@ -996,7 +1017,11 @@ class Shell(QsciScintillaCompat):
                 self.incrementalSearchActive = False
                 line, col = self.__getEndPos()
                 self.setCursorPosition(line, col)
-                buf = self.text(line).replace(sys.ps1, "").replace(sys.ps2, "")
+                buf = self.text(line)
+                if buf.startswith(sys.ps1):
+                    buf = buf.replace(sys.ps1, "")
+                if buf.startswith(sys.ps2):
+                    buf = buf.replace(sys.ps2, "")
                 self.insert('\n')
                 self.__executeCommand(buf)
         
@@ -1103,7 +1128,11 @@ class Shell(QsciScintillaCompat):
             self.SendScintilla(cmd)
         else:
             line, col = self.__getEndPos()
-            buf = self.text(line).replace(sys.ps1, "").replace(sys.ps2, "")
+            buf = self.text(line)
+            if buf.startswith(sys.ps1):
+                buf = buf.replace(sys.ps1, "")
+            if buf.startswith(sys.ps2):
+                buf = buf.replace(sys.ps2, "")
             if buf and self.incrementalSearchActive:
                 if self.incrementalSearchString:
                     idx = self.__rsearchHistory(self.incrementalSearchString,
@@ -1134,10 +1163,15 @@ class Shell(QsciScintillaCompat):
             self.SendScintilla(cmd)
         else:
             line, col = self.__getEndPos()
-            buf = self.text(line).replace(sys.ps1, "").replace(sys.ps2, "")
+            buf = self.text(line)
+            if buf.startswith(sys.ps1):
+                buf = buf.replace(sys.ps1, "")
+            if buf.startswith(sys.ps2):
+                buf = buf.replace(sys.ps2, "")
             if buf and self.incrementalSearchActive:
                 if self.incrementalSearchString:
-                    idx = self.__searchHistory(self.incrementalSearchString, self.histidx)
+                    idx = self.__searchHistory(
+                        self.incrementalSearchString, self.histidx)
                     if idx >= 0:
                         self.histidx = idx
                         self.__useHistory()
@@ -1222,7 +1256,8 @@ class Shell(QsciScintillaCompat):
                         else:
                             # language not supported or typo
                             self.__write(
-                                self.trUtf8('Shell language "{0}" not supported.\n')\
+                                self.trUtf8(
+                                    'Shell language "{0}" not supported.\n')
                                     .format(cmdList[1]))
                             self.__clientStatement(False)
                         return
@@ -1365,7 +1400,8 @@ class Shell(QsciScintillaCompat):
         
     def __startDebugClient(self, action):
         """
-        Private slot to start a debug client accoding to the action triggered[()].
+        Private slot to start a debug client according to the action
+        triggered[()].
         
         @param action context menu action that was triggered (QAction)
         """
@@ -1449,7 +1485,8 @@ class Shell(QsciScintillaCompat):
         
         @param event the drag enter event (QDragEnterEvent)
         """
-        self.inDragDrop = event.mimeData().hasUrls() or event.mimeData().hasText()
+        self.inDragDrop = event.mimeData().hasUrls() or \
+            event.mimeData().hasText()
         if self.inDragDrop:
             event.acceptProposedAction()
         else:
@@ -1517,11 +1554,14 @@ class Shell(QsciScintillaCompat):
             self.addActions(self.vm.editorActGrp.actions())
             self.addActions(self.vm.copyActGrp.actions())
             self.addActions(self.vm.viewActGrp.actions())
-            self.__searchShortcut = QShortcut(self.vm.searchAct.shortcut(), self,
+            self.__searchShortcut = QShortcut(
+                self.vm.searchAct.shortcut(), self,
                 self.__find, self.__find)
-            self.__searchNextShortcut = QShortcut(self.vm.searchNextAct.shortcut(), self,
+            self.__searchNextShortcut = QShortcut(
+                self.vm.searchNextAct.shortcut(), self,
                 self.__searchNext, self.__searchNext)
-            self.__searchPrevShortcut = QShortcut(self.vm.searchPrevAct.shortcut(), self,
+            self.__searchPrevShortcut = QShortcut(
+                self.vm.searchPrevAct.shortcut(), self,
                 self.__searchPrev, self.__searchPrev)
         
         try:
@@ -1602,7 +1642,8 @@ class Shell(QsciScintillaCompat):
             only (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)
-        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False, forward=True)
+        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False,
+            forward=True)
         self.searchStringFound.emit(ok)
     
     def __searchPrev(self):
@@ -1627,6 +1668,7 @@ class Shell(QsciScintillaCompat):
             line, index = self.getSelection()[:2]
         else:
             line, index = -1, -1
-        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False, forward=False,
+        ok = self.findFirst(txt, False, caseSensitive, wholeWord, False,
+            forward=False,
                             line=line, index=index)
         self.searchStringFound.emit(ok)
