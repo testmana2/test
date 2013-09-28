@@ -1183,8 +1183,8 @@ class Pep257Checker(object):
                     if line.strip().startswith(("@param", "@keyparam")):
                         at, name = line.strip().split(None, 2)[:2]
                         if at == "@keyparam":
-                            kwargs.append(name)
-                        args.append(name)
+                            kwargs.append(name.lstrip("*"))
+                        args.append(name.lstrip("*"))
                 
                 # do the checks
                 for name in kwNames:
