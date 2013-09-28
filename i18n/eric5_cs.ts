@@ -33175,7 +33175,7 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="207"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="211"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33185,7 +33185,7 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="391"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="395"/>
         <source>no message for this code defined</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33200,42 +33200,37 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="183"/>
-        <source>docstring does not contain a @return line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="185"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="189"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="188"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="192"/>
         <source>docstring contains too many @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="191"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="195"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="194"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="198"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="197"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="201"/>
         <source>class docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="199"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="203"/>
         <source>class docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="210"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="214"/>
         <source>last paragraph of docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33250,13 +33245,23 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="201"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="205"/>
         <source>function/method docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="208"/>
         <source>function/method docstring is followed by a blank line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="183"/>
+        <source>docstring does not contain a @return line but returns something</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="186"/>
+        <source>docstring contains a @return line but doesn&apos;t return anything</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -44274,139 +44279,139 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
 <context>
     <name>Shell</name>
     <message>
-        <location filename="../QScintilla/Shell.py" line="110"/>
+        <location filename="../QScintilla/Shell.py" line="112"/>
         <source>Shell - Passive</source>
         <translation>Shell - pasivní</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="112"/>
+        <location filename="../QScintilla/Shell.py" line="114"/>
         <source>Shell</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="182"/>
+        <location filename="../QScintilla/Shell.py" line="186"/>
         <source>Passive &gt;&gt;&gt; </source>
         <translation>Pasivní &gt;&gt;&gt; </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="197"/>
+        <location filename="../QScintilla/Shell.py" line="201"/>
         <source>Start</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="214"/>
+        <location filename="../QScintilla/Shell.py" line="218"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="215"/>
+        <location filename="../QScintilla/Shell.py" line="219"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="220"/>
+        <location filename="../QScintilla/Shell.py" line="224"/>
         <source>Clear</source>
         <translation>Vyčistit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="221"/>
+        <location filename="../QScintilla/Shell.py" line="225"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="222"/>
+        <location filename="../QScintilla/Shell.py" line="226"/>
         <source>Reset and Clear</source>
         <translation>Reset a vyčistit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="619"/>
+        <location filename="../QScintilla/Shell.py" line="630"/>
         <source>No.</source>
         <translation>Č.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1503"/>
+        <location filename="../QScintilla/Shell.py" line="1540"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="114"/>
+        <location filename="../QScintilla/Shell.py" line="116"/>
         <source>&lt;b&gt;The Shell Window&lt;/b&gt;&lt;p&gt;This is simply an interpreter running in a window. The interpreter is the one that is used to run the program being debugged. This means that you can execute any command while the program being debugged is running.&lt;/p&gt;&lt;p&gt;You can use the cursor keys while entering commands. There is also a history of commands that can be recalled using the up and down cursor keys. Pressing the up or down key after some text has been entered will start an incremental search.&lt;/p&gt;&lt;p&gt;The shell has some special commands. &apos;reset&apos; kills the shell and starts a new one. &apos;clear&apos; clears the display of the shell window. &apos;start&apos; is used to switch the shell language and must be followed by a supported language. Supported languages are listed by the &apos;languages&apos; command. These commands (except &apos;languages&apos;) are available through the context menu as well.&lt;/p&gt;&lt;p&gt;Pressing the Tab key after some text has been entered will show a list of possible commandline completions. The relevant entry may be selected from this list. If only one entry is available, this will inserted automatically.&lt;/p&gt;&lt;p&gt;In passive debugging mode the shell is only available after the program to be debugged has connected to the IDE until it has finished. This is indicated by a different prompt and by an indication in the window caption.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okno Shellu&lt;/b&gt;&lt;p&gt;Toto je jednoduchý interpretr běžící v okně. Interpretr běží nezávisle na programu, který je debugován. To znamená, že můžete spustit jakýkoliv příkaz i během debugování.&lt;/p&gt;&lt;p&gt;Během vkládání příkazu můžete použít kurzorové klávesy. Je zde také historie příkazů, která se aktivuje klávesami up a down. Stisknutím up nebo down klávesy po textu, který byl zadán se spustí inkrementální vyhledávání.&lt;/p&gt;&lt;p&gt;Shell má několik speciálních příkazů. &apos;reset&apos; zabije shell a spustí nový. &apos;clear&apos; vyčistí obsah shell okna.&apos;start&apos; se používá pro přepnutí shell jazyka a musí za ním následovat jméno podporovaného jazyka. Podporované jazyky jsou zobrazeny v seznamu, který vrací příkaz &apos;languages&apos;. Tyto příkazy (kromě &apos;languages&apos;) jsou také dostupné přes kontextové menu.&lt;/p&gt;&lt;p&gt;Stisknutím tab klávesy po nějakém vloženém textu se zobrazí seznam s nabídkou možných zakončení výrazu. Odpovídající zadání pak může být vybráno z tohoto listu. Pokud je existuje jen jedna možnost, je vložena automaticky.&lt;/p&gt;&lt;p&gt;Dokud se program neukončí, je shell v pasivním módu dostupný jen pokud se debugovaný program připojil k IDE. To je oznámeno odlišným promptem a dále v názvu titulku okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="616"/>
+        <location filename="../QScintilla/Shell.py" line="627"/>
         <source>Passive Debug Mode</source>
         <translation>Pasivní debug mód</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="206"/>
+        <location filename="../QScintilla/Shell.py" line="210"/>
         <source>History</source>
         <translation>Historie</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="207"/>
+        <location filename="../QScintilla/Shell.py" line="211"/>
         <source>Select entry</source>
         <translation>Vybrat vstupy</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="208"/>
+        <location filename="../QScintilla/Shell.py" line="212"/>
         <source>Show</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="566"/>
+        <location filename="../QScintilla/Shell.py" line="576"/>
         <source>Select History</source>
         <translation>Vybrat historii</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="566"/>
+        <location filename="../QScintilla/Shell.py" line="576"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Vybrat vstup historie pro vykonání (nejaktuálnější zobrazen poslední).</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="617"/>
+        <location filename="../QScintilla/Shell.py" line="628"/>
         <source>
 Not connected</source>
         <translation>Nepřipojen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="227"/>
+        <location filename="../QScintilla/Shell.py" line="231"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="213"/>
+        <location filename="../QScintilla/Shell.py" line="217"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="621"/>
+        <location filename="../QScintilla/Shell.py" line="632"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} na {1}, {2}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="682"/>
+        <location filename="../QScintilla/Shell.py" line="693"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="690"/>
+        <location filename="../QScintilla/Shell.py" line="701"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1233"/>
+        <location filename="../QScintilla/Shell.py" line="1267"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Shell jazyk &quot;{0}&quot; není podporován.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1503"/>
+        <location filename="../QScintilla/Shell.py" line="1540"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="218"/>
+        <location filename="../QScintilla/Shell.py" line="222"/>
         <source>Find</source>
         <translation type="unfinished">Hledat</translation>
     </message>

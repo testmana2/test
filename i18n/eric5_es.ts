@@ -31844,7 +31844,7 @@ Razón: {1}</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="207"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="211"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -31854,7 +31854,7 @@ Razón: {1}</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="391"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="395"/>
         <source>no message for this code defined</source>
         <translation type="unfinished">no hay definido un mensaje para este código</translation>
     </message>
@@ -31869,42 +31869,37 @@ Razón: {1}</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="183"/>
-        <source>docstring does not contain a @return line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="185"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="189"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="188"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="192"/>
         <source>docstring contains too many @param/@keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="191"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="195"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="194"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="198"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="197"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="201"/>
         <source>class docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="199"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="203"/>
         <source>class docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="210"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="214"/>
         <source>last paragraph of docstring is followed by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -31919,13 +31914,23 @@ Razón: {1}</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="201"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="205"/>
         <source>function/method docstring is preceded by a blank line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="208"/>
         <source>function/method docstring is followed by a blank line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="183"/>
+        <source>docstring does not contain a @return line but returns something</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Pep8/Pep257Checker.py" line="186"/>
+        <source>docstring contains a @return line but doesn&apos;t return anything</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -42641,140 +42646,140 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
 <context>
     <name>Shell</name>
     <message>
-        <location filename="../QScintilla/Shell.py" line="110"/>
+        <location filename="../QScintilla/Shell.py" line="112"/>
         <source>Shell - Passive</source>
         <translation>Shell - Pasivo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="112"/>
+        <location filename="../QScintilla/Shell.py" line="114"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="114"/>
+        <location filename="../QScintilla/Shell.py" line="116"/>
         <source>&lt;b&gt;The Shell Window&lt;/b&gt;&lt;p&gt;This is simply an interpreter running in a window. The interpreter is the one that is used to run the program being debugged. This means that you can execute any command while the program being debugged is running.&lt;/p&gt;&lt;p&gt;You can use the cursor keys while entering commands. There is also a history of commands that can be recalled using the up and down cursor keys. Pressing the up or down key after some text has been entered will start an incremental search.&lt;/p&gt;&lt;p&gt;The shell has some special commands. &apos;reset&apos; kills the shell and starts a new one. &apos;clear&apos; clears the display of the shell window. &apos;start&apos; is used to switch the shell language and must be followed by a supported language. Supported languages are listed by the &apos;languages&apos; command. These commands (except &apos;languages&apos;) are available through the context menu as well.&lt;/p&gt;&lt;p&gt;Pressing the Tab key after some text has been entered will show a list of possible commandline completions. The relevant entry may be selected from this list. If only one entry is available, this will inserted automatically.&lt;/p&gt;&lt;p&gt;In passive debugging mode the shell is only available after the program to be debugged has connected to the IDE until it has finished. This is indicated by a different prompt and by an indication in the window caption.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ventana de Shell&lt;/b&gt;&lt;p&gt;Es implemente un intérprete ejecutándose en una ventana. El intérprete es el que se usa para ejecutar el programa en depuración. Esto significa que puede ejecutar cualquier comando mientras se ejecuta el programa en depuración&lt;/p&gt;&lt;p&gt;Puede utilizar las teclas del cursor para entrar comandos. Tambien hay un historial de comandos que pueden ser re-invocados utilizando las teclas de cursor arriba y abajo. Presionando las teclas de arriba o abajo despues de que se ha introducido un texto comenzará una búsqueda incremental.&lt;/p&gt;&lt;p&gt;La shell tiene algunos comandos especiales. &apos;reset&apos; mata la shell y comienza una nueva. &apos;clear&apos; limpia la pantalla de la ventana de shell. &apos;start&apos; se utiliza para cambiar el lenguaje de shell y debe estar seguido por un lenguaje soportado. Los lenguajes soportados se listan utilizando el comando &apos;lenguages&apos;. Estos comandos, excepto &apos;lenguages&apos;, están tambien disponibles a traves del menú de contexto.&lt;/p&gt;&lt;p&gt;Presionando la tecla Tab despues de haber introducido texto mostrará una lista de los posibles &apos;completados&apos; de la línea de comandos. La entrada relevante puede ser seleccionada de esta lista. Si sólamente hay disponible una entrada, se inserta automáticamente.&lt;/p&gt;&lt;p&gt;En modo pasivo de depuración la shell sólamente está disponible despues de que el programa en depuración ha conectado con la IDE, y hasta que termina. Esto se indica con un &apos;prompt&apos; distinto y con una indicación en la leyenda de la ventana.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="182"/>
+        <location filename="../QScintilla/Shell.py" line="186"/>
         <source>Passive &gt;&gt;&gt; </source>
         <translation>Pasivo &gt;&gt;&gt; </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="197"/>
+        <location filename="../QScintilla/Shell.py" line="201"/>
         <source>Start</source>
         <translation>Comienzo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="214"/>
+        <location filename="../QScintilla/Shell.py" line="218"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="215"/>
+        <location filename="../QScintilla/Shell.py" line="219"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="220"/>
+        <location filename="../QScintilla/Shell.py" line="224"/>
         <source>Clear</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="221"/>
+        <location filename="../QScintilla/Shell.py" line="225"/>
         <source>Reset</source>
         <translation>Restaurar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="222"/>
+        <location filename="../QScintilla/Shell.py" line="226"/>
         <source>Reset and Clear</source>
         <translation>Restaurar y borrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="616"/>
+        <location filename="../QScintilla/Shell.py" line="627"/>
         <source>Passive Debug Mode</source>
         <translation>Modo de depuración pasiva</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="619"/>
+        <location filename="../QScintilla/Shell.py" line="630"/>
         <source>No.</source>
         <translation>No.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1503"/>
+        <location filename="../QScintilla/Shell.py" line="1540"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="206"/>
+        <location filename="../QScintilla/Shell.py" line="210"/>
         <source>History</source>
         <translation>Historial</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="207"/>
+        <location filename="../QScintilla/Shell.py" line="211"/>
         <source>Select entry</source>
         <translation>Seleccionar entrada</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="208"/>
+        <location filename="../QScintilla/Shell.py" line="212"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="566"/>
+        <location filename="../QScintilla/Shell.py" line="576"/>
         <source>Select History</source>
         <translation>Seleccionar historial</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="566"/>
+        <location filename="../QScintilla/Shell.py" line="576"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Seleccionar la entrada del historial a ejecutar (las más recientes mostradas en último lugar).</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="617"/>
+        <location filename="../QScintilla/Shell.py" line="628"/>
         <source>
 Not connected</source>
         <translation>No conectado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="227"/>
+        <location filename="../QScintilla/Shell.py" line="231"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="213"/>
+        <location filename="../QScintilla/Shell.py" line="217"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="621"/>
+        <location filename="../QScintilla/Shell.py" line="632"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} en {1}, {2}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="682"/>
+        <location filename="../QScintilla/Shell.py" line="693"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="690"/>
+        <location filename="../QScintilla/Shell.py" line="701"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1233"/>
+        <location filename="../QScintilla/Shell.py" line="1267"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Lenguaje de Shell  &quot;{0}&quot; no soportado.
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1503"/>
+        <location filename="../QScintilla/Shell.py" line="1540"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="218"/>
+        <location filename="../QScintilla/Shell.py" line="222"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>

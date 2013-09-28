@@ -113,7 +113,7 @@ class Pep257Checker(object):
         
         "D203", "D205",
         "D221", "D222",
-        "D231", "D234", "D235", "D236", "D237", "D238",
+        "D231", "D234", "D235", "D236", "D237", "D238", "D239",
         "D242", "D243", "D244", "D245", "D246", "D247",
     ]
     
@@ -181,17 +181,21 @@ class Pep257Checker(object):
         "D231": QT_TRANSLATE_NOOP(
             "Pep257Checker", "docstring summary does not end with a period"),
         "D234": QT_TRANSLATE_NOOP(
-            "Pep257Checker", "docstring does not contain a @return line"),
+            "Pep257Checker",
+            "docstring does not contain a @return line but returns something"),
         "D235": QT_TRANSLATE_NOOP(
             "Pep257Checker",
-            "docstring does not contain enough @param/@keyparam lines"),
+            "docstring contains a @return line but doesn't return anything"),
         "D236": QT_TRANSLATE_NOOP(
             "Pep257Checker",
-            "docstring contains too many @param/@keyparam lines"),
+            "docstring does not contain enough @param/@keyparam lines"),
         "D237": QT_TRANSLATE_NOOP(
             "Pep257Checker",
-            "keyword only arguments must be documented with @keyparam lines"),
+            "docstring contains too many @param/@keyparam lines"),
         "D238": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "keyword only arguments must be documented with @keyparam lines"),
+        "D239": QT_TRANSLATE_NOOP(
             "Pep257Checker", "order of @param/@keyparam lines does"
             " not match the function/method signature"),
         "D242": QT_TRANSLATE_NOOP(
@@ -307,9 +311,9 @@ class Pep257Checker(object):
                     (self.__checkFunctionDocstring, ("D102", "D203")),
                     (self.__checkImperativeMood, ("D132",)),
                     (self.__checkNoSignature, ("D133",)),
-                    (self.__checkEricReturn, ("D234",)),
+                    (self.__checkEricReturn, ("D234", "D235")),
                     (self.__checkEricFunctionArguments,
-                     ("D235", "D236", "D237", "D238")),
+                     ("D236", "D237", "D238", "D239")),
                     (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
                      ("D244", "D245")),
                 ],
@@ -1101,7 +1105,8 @@ class Pep257Checker(object):
     
     def __checkEricReturn(self, docstringContext, context):
         """
-        Private method to check, that docstrings contain an @return line.
+        Private method to check, that docstrings contain an @return line
+        if they return anything and don't otherwise.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -1109,15 +1114,20 @@ class Pep257Checker(object):
         if docstringContext is None or self.__isScript:
             return
         
+        tokens = list(
+            tokenize.generate_tokens(StringIO(context.ssource()).readline))
+        return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+                   if token[1] == "return"]
         if "@return" not in docstringContext.ssource():
-            tokens = list(
-                tokenize.generate_tokens(StringIO(context.ssource()).readline))
-            return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
-                       if token[1] == "return"]
             if (set(return_) -
                     set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
                     set([])):
                 self.__error(docstringContext.end(), 0, "D234")
+        else:
+            if (set(return_) -
+                    set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) ==
+                    set([])):
+                self.__error(docstringContext.end(), 0, "D235")
     
     def __checkEricFunctionArguments(self, docstringContext, context):
         """
@@ -1146,10 +1156,10 @@ class Pep257Checker(object):
             docstring = docstringContext.ssource()
             if (docstring.count("@param") + docstring.count("@keyparam") < 
                     len(argNames + kwNames)):
-                self.__error(docstringContext.end(), 0, "D235")
+                self.__error(docstringContext.end(), 0, "D236")
             elif (docstring.count("@param") + docstring.count("@keyparam") > 
                     len(argNames + kwNames)):
-                self.__error(docstringContext.end(), 0, "D236")
+                self.__error(docstringContext.end(), 0, "D237")
             else:
                 # extract @param and @keyparam from docstring
                 args = []
@@ -1164,10 +1174,10 @@ class Pep257Checker(object):
                 # do the checks
                 for name in kwNames:
                     if name not in kwargs:
-                        self.__error(docstringContext.end(), 0, "D237")
+                        self.__error(docstringContext.end(), 0, "D238")
                         return
                 if argNames + kwNames != args:
-                    self.__error(docstringContext.end(), 0, "D238")
+                    self.__error(docstringContext.end(), 0, "D239")
     
     def __checkEricBlankAfterSummary(self, docstringContext, context):
         """
@@ -1186,7 +1196,7 @@ class Pep257Checker(object):
             return
         
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
-        if len(docstrings) > lineNumber + len(summaryLines) - 1:
+        if len(docstrings) - 2 > lineNumber + len(summaryLines) - 1:
             if docstrings[lineNumber + len(summaryLines)].strip():
                 self.__error(docstringContext.start() + lineNumber, 0, "D246")
     
