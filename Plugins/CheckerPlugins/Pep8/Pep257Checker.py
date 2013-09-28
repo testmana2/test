@@ -938,7 +938,9 @@ class Pep257Checker(object):
         
         functionName = context.source()[0].lstrip().split()[1].split("(")[0]
         summary, lineNumber = self.__getSummaryLine(docstringContext)
-        if functionName + "(" in summary.replace(" ", ""):
+        if functionName + "(" in summary.replace(" ", "") and \
+                not functionName + "()" in summary.replace(" ", ""):
+            # report only, if it is not an abbreviated form (i.e. function() )
             self.__error(docstringContext.start() + lineNumber, 0, "D133")
     
     def __checkReturnType(self, docstringContext, context):
@@ -1078,9 +1080,9 @@ class Pep257Checker(object):
             return
         
         lines = docstringContext.source()
-        if lines[0].strip().strip('ru"'):
+        if lines[0].strip().strip('ru"\''):
             self.__error(docstringContext.start(), 0, "D221")
-        if lines[-1].strip().strip('"'):
+        if lines[-1].strip().strip('"\''):
             self.__error(docstringContext.end(), 0, "D222")
     
     def __checkEricEndsWithPeriod(self, docstringContext, context):
