@@ -107,6 +107,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         self.resultList.header().setSortIndicator(0, Qt.AscendingOrder)
         
+        self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
+        self.checkProgressLabel.setMaximumWidth(600)
+        
         self.noResults = True
         self.cancelled = False
         self.__lastFileItem = None
@@ -311,6 +315,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.startButton.setEnabled(False)
         if repeat is not None:
             self.repeatCheckBox.setChecked(repeat)
+        self.checkProgress.setVisible(True)
         QApplication.processEvents()
         
         self.__resetStatistics()
@@ -350,6 +355,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         if len(py3files) + len(py2files) > 0:
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
+            self.checkProgressLabel.setVisible(
+                len(py3files) + len(py2files) > 1)
             QApplication.processEvents()
             
             # extract the configuration values
@@ -371,8 +378,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 
                 # now go through all the files
                 progress = 0
-                for file in py3files + py2files:
+                for file in sorted(py3files + py2files):
                     self.checkProgress.setValue(progress)
+                    self.checkProgressLabel.setPath(file)
                     QApplication.processEvents()
                     
                     if self.cancelled:
@@ -412,7 +420,6 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
                         from .Pep8Checker import Pep8Py2Checker
-                        # TODO: add the docType into the Py2 variant
                         report = Pep8Py2Checker(file, [],
                             repeat=repeatMessages,
                             select=includeMessages,
@@ -500,6 +507,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 self.resultList.setSortingEnabled(True)
                 self.resultList.setUpdatesEnabled(True)
             self.checkProgress.setValue(progress)
+            self.checkProgressLabel.setPath("")
             QApplication.processEvents()
             self.__resort()
         else:
@@ -531,6 +539,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
+        
+        self.checkProgress.setVisible(False)
+        self.checkProgressLabel.setVisible(False)
     
     @pyqtSlot()
     def on_startButton_clicked(self):
