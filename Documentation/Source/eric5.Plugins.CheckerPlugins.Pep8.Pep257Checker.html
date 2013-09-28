@@ -90,8 +90,11 @@ object
 <td><a href="#Pep257Checker.__checkEricEndsWithPeriod">__checkEricEndsWithPeriod</a></td>
 <td>Private method to check, that docstring summaries end with a period.</td>
 </tr><tr>
+<td><a href="#Pep257Checker.__checkEricException">__checkEricException</a></td>
+<td>Private method to check, that docstrings contain an &#64;exception line if they raise an exception and don't otherwise.</td>
+</tr><tr>
 <td><a href="#Pep257Checker.__checkEricFunctionArguments">__checkEricFunctionArguments</a></td>
-<td>Private method to check, that docstrings contain an @param line for each argument.</td>
+<td>Private method to check, that docstrings contain an &#64;param and/or &#64;keyparam line for each argument.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkEricNBlankAfterLastParagraph">__checkEricNBlankAfterLastParagraph</a></td>
 <td>Private method to check, that the last paragraph of docstrings is not followed by a blank line.</td>
@@ -103,7 +106,7 @@ object
 <td>Private method to check, that leading and trailing quotes are on a line by themselves.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkEricReturn">__checkEricReturn</a></td>
-<td>Private method to check, that docstrings contain an @return line.</td>
+<td>Private method to check, that docstrings contain an &#64;return line if they return anything and don't otherwise.</td>
 </tr><tr>
 <td><a href="#Pep257Checker.__checkFunctionDocstring">__checkFunctionDocstring</a></td>
 <td>Private method to check, that all public functions and methods have a docstring.</td>
@@ -353,12 +356,26 @@ docstring context (Pep257Context)
 <dd>
 context of the docstring (Pep257Context)
 </dd>
+</dl><a NAME="Pep257Checker.__checkEricException" ID="Pep257Checker.__checkEricException"></a>
+<h4>Pep257Checker.__checkEricException</h4>
+<b>__checkEricException</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that docstrings contain an &#64;exception line
+        if they raise an exception and don't otherwise.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (Pep257Context)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (Pep257Context)
+</dd>
 </dl><a NAME="Pep257Checker.__checkEricFunctionArguments" ID="Pep257Checker.__checkEricFunctionArguments"></a>
 <h4>Pep257Checker.__checkEricFunctionArguments</h4>
 <b>__checkEricFunctionArguments</b>(<i>docstringContext, context</i>)
 <p>
-        Private method to check, that docstrings contain an @param line
-        for each argument.
+        Private method to check, that docstrings contain an &#64;param and/or
+        &#64;keyparam line for each argument.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>
@@ -413,7 +430,8 @@ context of the docstring (Pep257Context)
 <h4>Pep257Checker.__checkEricReturn</h4>
 <b>__checkEricReturn</b>(<i>docstringContext, context</i>)
 <p>
-        Private method to check, that docstrings contain an @return line.
+        Private method to check, that docstrings contain an &#64;return line
+        if they return anything and don't otherwise.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>
@@ -661,6 +679,9 @@ requested contexts (list of Pep257Context)
 <dt><i>context</i></dt>
 <dd>
 context data to get the docstring from (Pep257Context)
+</dd><dt><i>what</i></dt>
+<dd>
+string denoting what is being parsed (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
