@@ -430,7 +430,7 @@ class DebugViewer(QWidget):
         
     def __setGlobalsFilter(self):
         """
-        Private slot to set the global variable filter
+        Private slot to set the global variable filter.
         """
         filter = self.globalsFilterEdit.text()
         self.debugServer.remoteClientSetFilter(1, filter)
@@ -439,7 +439,7 @@ class DebugViewer(QWidget):
         
     def __setLocalsFilter(self):
         """
-        Private slot to set the local variable filter
+        Private slot to set the local variable filter.
         """
         filter = self.localsFilterEdit.text()
         self.debugServer.remoteClientSetFilter(0, filter)

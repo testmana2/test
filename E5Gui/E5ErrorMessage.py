@@ -142,6 +142,8 @@ def qtHandler():
     """
     Module function to install an E5ErrorMessage dialog as the global
     message handler.
+    
+    @return reference to the message handler dialog (E5ErrorMessage)
     """
     global __msgHandlerDialog, __origMsgHandler
     

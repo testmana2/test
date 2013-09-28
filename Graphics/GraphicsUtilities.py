@@ -12,7 +12,8 @@ class RecursionError(OverflowError, ValueError):
     """
     Unable to calculate result because of recursive structure.
     """
-    
+    pass
+
 
 def sort(nodes, routes, noRecursion=False):
     """

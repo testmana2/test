@@ -29,6 +29,8 @@ def initDebugger(kind="standard"):
     
     @param kind type of debugger ("standard" or "threads")
     @return flag indicating success (boolean)
+    @exception ValueError raised to indicate an invalid debugger kind
+        was requested
     """
     global debugger
     res = 1

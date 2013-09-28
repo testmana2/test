@@ -211,6 +211,7 @@ class ArrayElementVarItem(VariableItem):
         Public method generating the key for this item.
         
         @param column the column to sort on (integer)
+        @return key of the item (string)
         """
         if column == 0:
             return self.arrayElementKey
@@ -249,6 +250,7 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         Public method generating the key for this item.
         
         @param column the column to sort on (integer)
+        @return key of the item (string)
         """
         if column == 0:
             return self.arrayElementKey

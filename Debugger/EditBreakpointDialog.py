@@ -34,9 +34,12 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         @param properties properties for the breakpoint (tuple)
                 (condition, temporary flag, enabled flag, ignore count)
         @param condHistory the list of conditionals history (list of strings)
-        @param parent the parent of this dialog
-        @param name the widget name of this dialog
-        @param modal flag indicating a modal dialog
+        @param parent the parent of this dialog (QWidget)
+        @param name the widget name of this dialog (string)
+        @param modal flag indicating a modal dialog (boolean)
+        @param addMode flag indicating the add mode (boolean)
+        @param filenameHistory list of recently used file names
+            (list of strings)
         """
         super().__init__(parent)
         self.setupUi(self)

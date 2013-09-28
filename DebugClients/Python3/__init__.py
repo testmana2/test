@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing the Python3 debugger
+Package implementing the Python3 debugger.
 
 It consists of different kinds of debug clients.
 """

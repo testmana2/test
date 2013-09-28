@@ -27,7 +27,7 @@ class E5Led(QWidget):
         @param parent reference to parent widget (QWidget)
         @param color color of the LED (QColor)
         @param shape shape of the LED (E5LedCircular, E5LedRectangular)
-        @param rectRation ratio width to height, if shape is rectangular (float)
+        @param rectRatio ratio width to height, if shape is rectangular (float)
         """
         super().__init__(parent)
         
@@ -140,7 +140,7 @@ class E5Led(QWidget):
         
     def ratio(self):
         """
-        Public method to return the LED rectangular ratio (width / height).
+        Public method to return the LED rectangular ratio [= width / height].
         
         @return LED rectangular ratio (float)
         """

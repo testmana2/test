@@ -21,6 +21,7 @@ class AdBlockNetwork(QObject):
         """
         Public method to check for a network block.
         
+        @param request reference to the request object (QNetworkRequest)
         @return reply object (QNetworkReply) or None
         """
         url = request.url()

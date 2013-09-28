@@ -422,6 +422,7 @@ class E5SideBar(QWidget):
     def setOrientation(self, orient):
         """
         Public method to set the orientation of the sidebar.
+
         @param orient orientation of the sidebar (North, East, South, West)
         """
         if orient == E5SideBar.North:
@@ -500,7 +501,7 @@ class E5SideBar(QWidget):
         Public method to set the tooltip text of a tab.
         
         @param index index of the tab (integer)
-        @param tooltip text text to set (string)
+        @param tip tooltip text to set (string)
         """
         self.__tabBar.setTabToolTip(index, tip)
     
@@ -518,7 +519,7 @@ class E5SideBar(QWidget):
         Public method to set the WhatsThis text of a tab.
         
         @param index index of the tab (integer)
-        @param WhatsThis text text to set (string)
+        @param text WhatsThis text to set (string)
         """
         self.__tabBar.setTabWhatsThis(index, text)
     

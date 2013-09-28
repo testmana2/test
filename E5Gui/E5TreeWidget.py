@@ -73,6 +73,8 @@ class E5TreeWidget(QTreeWidget):
             the parent item (QTreeWidgetItem)
         @param item item to be appended (QTreeWidgetItem)
         @return flag indicating success (boolean)
+        @exception RuntimeError raised to indicate an illegal type for
+            the parent
         """
         if isinstance(parent, QTreeWidgetItem):
             if parent is None or parent.treeWidget() != self:
@@ -100,6 +102,8 @@ class E5TreeWidget(QTreeWidget):
             the parent item (QTreeWidgetItem)
         @param item item to be prepended (QTreeWidgetItem)
         @return flag indicating success (boolean)
+        @exception RuntimeError raised to indicate an illegal type for
+            the parent
         """
         if isinstance(parent, QTreeWidgetItem):
             if parent is None or parent.treeWidget() != self:

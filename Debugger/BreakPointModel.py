@@ -20,7 +20,7 @@ class BreakPointModel(QAbstractItemModel):
         """
         Constructor
         
-        @param reference to the parent widget (QObject)
+        @param parent reference to the parent widget (QObject)
         """
         super().__init__(parent)
         
@@ -46,6 +46,7 @@ class BreakPointModel(QAbstractItemModel):
         """
         Public method to get the current column count.
         
+        @param parent reference to parent index (QModelIndex)
         @return column count (integer)
         """
         return len(self.header)
@@ -54,6 +55,7 @@ class BreakPointModel(QAbstractItemModel):
         """
         Public method to get the current row count.
         
+        @param parent reference to parent index (QModelIndex)
         @return row count (integer)
         """
         # we do not have a tree, parent should always be invalid
@@ -284,7 +286,7 @@ class BreakPointModel(QAbstractItemModel):
         Public method to get the index of a breakpoint given by filename and line number.
         
         @param fn filename of the breakpoint (string)
-        @param line line number of the breakpoint (integer)
+        @param lineno line number of the breakpoint (integer)
         @return index (QModelIndex)
         """
         for row in range(len(self.breakpoints)):

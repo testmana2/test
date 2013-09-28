@@ -128,8 +128,8 @@ class E5GraphicsView(QGraphicsView):
         """
         Public method to resize the scene.
         
-        @param isWidth flag indicating width is to be resized (boolean)
         @param amount size increment (integer)
+        @param isWidth flag indicating width is to be resized (boolean)
         """
         sceneRect = self.scene().sceneRect()
         width = sceneRect.width()

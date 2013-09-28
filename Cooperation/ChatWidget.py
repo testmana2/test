@@ -370,6 +370,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
     def getClient(self):
         """
         Public method to get a reference to the cooperation client.
+        
+        @return reference to the cooperation client (CooperationClient)
         """
         return self.__client
     

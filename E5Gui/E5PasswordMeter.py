@@ -63,6 +63,8 @@ class E5PasswordMeter(QProgressBar):
         Public method to set the value.
         
         Overwritten to do nothing.
+        
+        @param value value (integer)
         """
         pass
     
@@ -71,6 +73,8 @@ class E5PasswordMeter(QProgressBar):
         Public method to set the maximum value.
         
         Overwritten to do nothing.
+        
+        @param value maximum value (integer)
         """
         pass
     
@@ -79,6 +83,8 @@ class E5PasswordMeter(QProgressBar):
         Public method to set the minimal value.
         
         Overwritten to do nothing.
+        
+        @param value minimum value (integer)
         """
         pass
 

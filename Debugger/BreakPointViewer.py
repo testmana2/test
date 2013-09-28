@@ -58,7 +58,7 @@ class BreakPointViewer(QTreeView):
         """
         Public slot to set the breakpoint model.
         
-        @param reference to the breakpoint model (BreakPointModel)
+        @param model reference to the breakpoint model (BreakPointModel)
         """
         self.__model = model
         
@@ -105,6 +105,7 @@ class BreakPointViewer(QTreeView):
         Private slot to convert an index to a source index.
         
         @param index index to be converted (QModelIndex)
+        @return mapped index (QModelIndex)
         """
         return self.sortingModel.mapToSource(index)
         
@@ -113,6 +114,7 @@ class BreakPointViewer(QTreeView):
         Private slot to convert a source index to an index.
         
         @param sindex source index to be converted (QModelIndex)
+        @return mapped index (QModelIndex)
         """
         return self.sortingModel.mapFromSource(sindex)
         

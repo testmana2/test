@@ -56,6 +56,10 @@ class AdBlockRule(object):
     def __init__(self, filter="", subscription=None):
         """
         Constructor
+        
+        @param filter filter string of the rule (string)
+        @param subscription reference to the subscription object
+            (AdBlockSubscription)
         """
         self.__subscription = subscription
         

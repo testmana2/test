@@ -220,6 +220,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
             (list of strings)
         @param x x-coordinate (float)
         @param y y-coordinate (float)
+        @return reference to the package item (PackageItem)
         """
         from .PackageItem import PackageItem, PackageModel
         modules.sort()

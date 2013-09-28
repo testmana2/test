@@ -252,7 +252,7 @@ class E5ModelMenu(QMenu):
         
         @param icon icon of the action (QIcon)
         @param text text of the action (string)
-        @param reference to the parent object (QObject)
+        @param parent reference to the parent object (QObject)
         @return reference to the created action (QAction)
         """
         fm = QFontMetrics(self.font())

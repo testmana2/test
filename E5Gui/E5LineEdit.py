@@ -32,7 +32,7 @@ class E5LineEditSideWidget(QWidget):
         """
         Protected method to handle events.
         
-        @param reference to the event (QEvent)
+        @param evt reference to the event (QEvent)
         @return flag indicating, whether the event was recognized (boolean)
         """
         if evt.type() == QEvent.LayoutRequest:
@@ -122,7 +122,7 @@ class E5LineEdit(QLineEdit):
         """
         Protected method to handle events.
         
-        @param reference to the event (QEvent)
+        @param evt reference to the event (QEvent)
         @return flag indicating, whether the event was recognized (boolean)
         """
         if evt.type() == QEvent.LayoutDirectionChange:
@@ -231,6 +231,7 @@ class E5LineEdit(QLineEdit):
         Public method to get the text margin for a side.
         
         @param position side to get margin for (E5LineEdit.LeftSide, E5LineEdit.RightSide)
+        @return text margin (integer)
         """
         spacing = self.__rightLayout.spacing()
         w = 0
@@ -246,7 +247,7 @@ class E5LineEdit(QLineEdit):
         """
         Public method to get the inactive text.
         
-        return inactive text (string)
+        @return inactive text (string)
         """
         if qVersion() < "4.7.0":
             return self.__inactiveText

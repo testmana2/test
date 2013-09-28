@@ -95,6 +95,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @param name name of the attribute (string)
         @param default default value (string)
+        @return value of the requested tag attribute (string)
         """
         att = self.attributes().value(name)
         if att == "":

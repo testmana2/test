@@ -220,6 +220,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
             (list of strings)
         @param x x-coordinate (float)
         @param y y-coordinate (float)
+        @return reference to the imports item (ModuleItem)
         """
         from .ModuleItem import ModuleItem, ModuleModel
         classes.sort()

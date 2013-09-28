@@ -54,6 +54,8 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
     def on_slider_sliderMoved(self, value):
         """
         Public slot to handle changes of the zoom value.
+        
+        @param value value of the slider (integer)
         """
         if self.__mapped:
             self.valueChanged.emit(self.__mapping[value])
@@ -104,7 +106,7 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
         """
         Public method to set the maximum value.
         
-        @param minimum new maximum value (integer)
+        @param maximum new maximum value (integer)
         """
         if not self.__mapped:
             self.slider.setMaximum(maximum)

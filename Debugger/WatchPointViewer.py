@@ -53,7 +53,7 @@ class WatchPointViewer(QTreeView):
         """
         Public slot to set the watch expression model.
         
-        @param reference to the watch expression model (WatchPointModel)
+        @param model reference to the watch expression model (WatchPointModel)
         """
         self.__model = model
         
@@ -100,6 +100,7 @@ class WatchPointViewer(QTreeView):
         Private slot to convert an index to a source index.
         
         @param index index to be converted (QModelIndex)
+        @return mapped index (QModelIndex)
         """
         return self.sortingModel.mapToSource(index)
         
@@ -108,6 +109,7 @@ class WatchPointViewer(QTreeView):
         Private slot to convert a source index to an index.
         
         @param sindex source index to be converted (QModelIndex)
+        @return mapped index (QModelIndex)
         """
         return self.sortingModel.mapFromSource(sindex)
         

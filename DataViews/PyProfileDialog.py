@@ -29,6 +29,7 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
         Private method to get the value to compare on for the first column.
         
         @param itm item to operate on (ProfileTreeWidgetItem)
+        @return comparison value for the first column (integer)
         """
         s = itm.text(0)
         return int(s.split('/')[0])

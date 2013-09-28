@@ -21,6 +21,8 @@ class ArgumentsError(RuntimeError):
     def __init__(self, error):
         """
         Constructor
+        
+        @param error error message of the exception (string)
         """
         self.errorMessage = str(error)
         
@@ -64,6 +66,7 @@ class E5Action(QAction):
                 accelarator (QKeySequence), alternative accelerator (QKeySequence),
                 parent (QObject), name (string)</li>
             </ul>
+        @exception ArgumentsError raised to indicate invalid arguments
         """
         if isinstance(args[1], QIcon):
             icon = args[1]

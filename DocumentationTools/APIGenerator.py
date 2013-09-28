@@ -5,7 +5,6 @@
 
 """
 Module implementing the builtin API generator.
-
 """
 
 
@@ -105,7 +104,7 @@ class APIGenerator(object):
         """
         Private method to generate the api section for class methods.
         
-        @param classname Name of the class containing the method. (string)
+        @param className name of the class containing the method (string)
         """
         from QScintilla.Editor import Editor
         
@@ -140,7 +139,7 @@ class APIGenerator(object):
         """
         Private method to generate class api section for class variables.
         
-        @param classname Name of the class containing the class variables. (string)
+        @param className name of the class containing the class variables (string)
         """
         from QScintilla.Editor import Editor
         

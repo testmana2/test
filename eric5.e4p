@@ -1908,7 +1908,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, E501, W293, N, E</string>
+              <string>E24, E501, W293, N, E, W</string>
             </value>
             <key>
               <string>FixCodes</string>

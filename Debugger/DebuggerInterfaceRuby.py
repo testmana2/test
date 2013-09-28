@@ -439,6 +439,8 @@ class DebuggerInterfaceRuby(QObject):
         @param wd the working directory for the program (string)
         @keyparam erase flag indicating that coverage info should be
             cleared first (boolean)
+        @exception NotImplementedError raised to indicate that this interface
+            is not supported
         """
         raise NotImplementedError("Interface not available.")
 
@@ -450,6 +452,8 @@ class DebuggerInterfaceRuby(QObject):
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
         @keyparam erase flag indicating that timing info should be cleared first (boolean)
+        @exception NotImplementedError raised to indicate that this interface
+            is not supported
         """
         raise NotImplementedError("Interface not available.")
 
@@ -680,18 +684,26 @@ class DebuggerInterfaceRuby(QObject):
         @param covname filename to be used to assemble the coverage caches
                 filename (string)
         @param coverase flag indicating erasure of coverage data is requested (boolean)
+        @exception NotImplementedError raised to indicate that this interface
+            is not supported
         """
         raise NotImplementedError("Interface not available.")
         
     def remoteUTRun(self):
         """
         Public method to start a unittest run.
+        
+        @exception NotImplementedError raised to indicate that this interface
+            is not supported
         """
         raise NotImplementedError("Interface not available.")
         
     def remoteUTStop(self):
         """
-        public method to stop a unittest run.
+        Public method to stop a unittest run.
+        
+        @exception NotImplementedError raised to indicate that this interface
+            is not supported
         """
         raise NotImplementedError("Interface not available.")
         

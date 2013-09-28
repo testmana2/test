@@ -117,6 +117,7 @@ class Connection(QTcpSocket):
         Public method to set the greeting message.
         
         @param message greeting message (string)
+        @param serverPort port number to include in the message (integer)
         """
         self.__greetingMessage = "{0}:{1}".format(message, serverPort)
     

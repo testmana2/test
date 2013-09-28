@@ -35,7 +35,7 @@ class E5ComboBox(QComboBox):
         """
         Public method to get the inactive text.
         
-        return inactive text (string)
+        @return inactive text (string)
         """
         return self.__lineedit.inactiveText()
     

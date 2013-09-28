@@ -38,8 +38,9 @@ def DebugClientRawInput(prompt="", echo=1):
     
     This function works with the split debugger.
     
-    @param prompt The prompt to be shown. (string)
-    @param echo Flag indicating echoing of the input (boolean)
+    @param prompt prompt to be shown. (string)
+    @param echo flag indicating echoing of the input (boolean)
+    @return result of the raw_input() call
     """
     if DebugClientInstance is None or DebugClientInstance.redirect == 0:
         return DebugClientOrigRawInput(prompt)
@@ -64,7 +65,8 @@ def DebugClientInput(prompt=""):
     
     This function works with the split debugger.
     
-    @param prompt The prompt to be shown. (string)
+    @param prompt prompt to be shown (string)
+    @return result of the input() call
     """
     if DebugClientInstance is None or DebugClientInstance.redirect == 0:
         return DebugClientOrigInput(prompt)
@@ -86,6 +88,8 @@ except (AttributeError, KeyError):
 def DebugClientFork():
     """
     Replacement for the standard os.fork().
+    
+    @return result of the fork() call
     """
     if DebugClientInstance is None:
         return DebugClientOrigFork()
@@ -296,7 +300,6 @@ class DebugClientBase(object):
         @param kwargs keyword arguments to pass to target
         @param mainThread non-zero, if we are attaching to the already
               started mainthread of the app
-        @return The identifier of the created thread
         """
         if self.debugging:
             sys.setprofile(self.profile)
@@ -349,7 +352,7 @@ class DebugClientBase(object):
         
     def __exceptionRaised(self):
         """
-        Private method called in the case of an exception
+        Private method called in the case of an exception.
         
         It ensures that the debug server is informed of the raised exception.
         """
@@ -1203,6 +1206,8 @@ class DebugClientBase(object):
     def getRunning(self):
         """
         Public method to return the main script we are currently running.
+        
+        @return flag indicating a running debug session (boolean)
         """
         return self.running
 
@@ -2022,7 +2027,10 @@ class DebugClientBase(object):
         
     def fork(self):
         """
-        Public method implementing a fork routine deciding which branch to follow.
+        Public method implementing a fork routine deciding which branch to
+        follow.
+        
+        @return process ID (integer)
         """
         if not self.fork_auto:
             self.write(DebugProtocol.RequestForkTo + '\n')

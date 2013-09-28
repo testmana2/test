@@ -15,8 +15,6 @@ class AsyncIO(object):
     def __init__(self):
         """
         Constructor
-        
-        @param parent the optional parent of this object (QObject) (ignored)
         """
         # There is no connection yet.
         self.disconnect()

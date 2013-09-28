@@ -50,6 +50,7 @@ class TagError(Exception):
     """
     Exception class raised, if an invalid documentation tag was found.
     """
+    pass
 
 
 class ModuleDocument(object):
@@ -689,8 +690,8 @@ class ModuleDocument(object):
         Private method to check, if the object to be documented contains a
         deprecated flag.
         
-        @param desc The documentation string. (string)
-        @return Flag indicating the deprecation status. (boolean)
+        @param descr documentation string (string)
+        @return flag indicating the deprecation status (boolean)
         """
         dlist = descr.splitlines()
         for desc in dlist:
@@ -819,6 +820,7 @@ class ModuleDocument(object):
         
         @param desc One line of the description (string)
         @return processed line with inline tags expanded (string)
+        @exception TagError raised to indicate an invalid tag
         """
         start = desc.find('{@')
         while start != -1:

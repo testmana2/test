@@ -38,7 +38,7 @@ class Token(object):
         """
         Constructor
         
-        @param **kw list of key, value pairs
+        @keyparam **kw list of key, value pairs
         """
         self.__dict__.update(kw)
 
@@ -126,6 +126,7 @@ class SourceStat(object):
         Public method used to decrement the indentation level.
         
         @param tok the token to be processed (Token)
+        @exception ValueError raised to indicate an invalid indentation level
         """
         self.indent_level -= 1
         if self.indent_level < 0:
@@ -259,10 +260,10 @@ def analyze(filename, total):
 
 def main():
     """
-    Modules main function used when called as a script.
+    Module main function used when called as a script.
     
-    This function simply loops over all files given on the commandline
-    and collects the individual and overall source code statistics.
+    Loop over all files given on the command line and collect the individual
+    and overall source code statistics.
     """
     import sys
     

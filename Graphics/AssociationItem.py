@@ -156,7 +156,7 @@ class AssociationItem(E5ArrowItem):
             self.setPoints(startP.x(), startP.y(), endP.x(), endP.y())
         
     def __calculateEndingPoints_rectangle(self):
-        """
+        r"""
         Private method to calculate the ending points of the association item.
         
         The ending points are calculated by the following method.
@@ -185,8 +185,8 @@ class AssociationItem(E5ArrowItem):
         (lets call it region M). After that the start point will be
         the middle point of rectangle's side contained in region M.
         
-        To calculate the end point we repeat the above but in the opposite direction
-        (from itemB to itemA)
+        To calculate the end point we repeat the above but in the opposite
+        direction (from itemB to itemA)
         """
         if self.itemA is None or self.itemB is None:
             return

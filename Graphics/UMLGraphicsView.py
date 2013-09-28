@@ -443,6 +443,8 @@ class UMLGraphicsView(E5GraphicsView):
     def __printPreviewPrint(self, printer):
         """
         Private slot to generate a print preview.
+        
+        @param printer reference to the printer object (QPrinter)
         """
         super().printDiagram(printer, self.diagramName)
         

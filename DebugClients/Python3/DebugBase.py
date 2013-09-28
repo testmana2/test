@@ -146,9 +146,10 @@ class DebugBase(bdb.Bdb):
         Public method used to trace some stuff independent of the debugger
         trace function.
         
-        @param frame The current stack frame.
-        @param event The trace event (string)
-        @param arg The arguments
+        @param frame current stack frame.
+        @param event trace event (string)
+        @param arg arguments
+        @exception RuntimeError raised to indicate too many recursions
         """
         if event == 'return':
             self.cFrame = frame.f_back
@@ -235,6 +236,7 @@ class DebugBase(bdb.Bdb):
         
         @param frame The current stack frame.
         @return local trace function
+        @exception bdb.BdbQuit raised to indicate the end of the debug session
         """
         if self.stop_here(frame) or self.break_here(frame):
             self.user_line(frame)
@@ -249,6 +251,7 @@ class DebugBase(bdb.Bdb):
         @param frame The current stack frame.
         @param arg The arguments
         @return local trace function
+        @exception bdb.BdbQuit raised to indicate the end of the debug session
         """
         if self.stop_here(frame) or frame == self.returnframe:
             self.user_return(frame, arg)
@@ -263,6 +266,7 @@ class DebugBase(bdb.Bdb):
         @param frame The current stack frame.
         @param arg The arguments
         @return local trace function
+        @exception bdb.BdbQuit raised to indicate the end of the debug session
         """
         if not self.__skip_it(frame):
             self.user_exception(frame, arg)
@@ -318,6 +322,7 @@ class DebugBase(bdb.Bdb):
         code over a network... This logic deals with that.
         
         @param frame the frame object
+        @return fixed up file name (string)
         """
         # get module name from __file__
         if '__file__' in frame.f_globals and \
@@ -378,6 +383,7 @@ class DebugBase(bdb.Bdb):
         Public method to get a watch expression.
         
         @param cond expression of the watch expression to be cleared (string)
+        @return reference to the watch point
         """
         possibles = bdb.Breakpoint.bplist["Watch", 0]
         for i in range(0, len(possibles)):
@@ -719,6 +725,7 @@ class DebugBase(bdb.Bdb):
         type object.
         
         @param exctype type of the exception
+        @return exception name (string)
         """
         return str(exctype).replace("<class '", "").replace("'>", "")
     

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Word completion for the eric5 shell
+Word completion for the eric5 shell.
 
 <h4>NOTE for eric5 variant</h4>
 
@@ -74,8 +74,9 @@ class Completer(object):
         readline.set_completer(Completer(my_namespace).complete)
         
         @param namespace The namespace for the completer.
+        @exception TypeError raised to indicate a wrong data structure of
+            the namespace object
         """
-        
         if namespace and type(namespace) != type({}):
             raise TypeError('namespace must be a dictionary')
 

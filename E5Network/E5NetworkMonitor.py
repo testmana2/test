@@ -46,6 +46,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         
         @param networkAccessManager reference to the network access manager
             (QNetworkAccessManager)
+        @return reference to the network monitor singleton (E5NetworkMonitor)
         """
         if cls._monitor is None:
             cls._monitor = E5NetworkMonitor(networkAccessManager)

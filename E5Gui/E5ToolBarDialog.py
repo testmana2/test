@@ -151,7 +151,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     @pyqtSlot()
     def on_removeButton_clicked(self):
         """
-        Private slot to remove a custom toolbar
+        Private slot to remove a custom toolbar.
         """
         name = self.toolbarComboBox.currentText()
         res = E5MessageBox.yesNo(self,
@@ -253,13 +253,21 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     def on_actionsTree_currentItemChanged(self, current, previous):
         """
         Private slot called, when the currently selected action changes.
+        
+        @param current reference to the current item (QTreeWidgetItem)
+        @param previous reference to the previous current item
+            (QTreeWidgetItem)
         """
         self.__setupButtons()
     
     @pyqtSlot(QListWidgetItem, QListWidgetItem)
     def on_toolbarActionsList_currentItemChanged(self, current, previous):
         """
-        Slot documentation goes here.
+        Private slot to handle a change of the current item.
+        
+        @param current reference to the current item (QListWidgetItem)
+        @param previous reference to the previous current item
+            (QListWidgetItem)
         """
         self.__setupButtons()
     
@@ -358,6 +366,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     def on_buttonBox_clicked(self, button):
         """
         Private slot called, when a button of the button box was clicked.
+        
+        @param button reference to the button clicked (QAbstractButton)
         """
         if button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.reject()
@@ -377,6 +387,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     def __saveToolBars(self):
         """
         Private method to save the configured toolbars.
+        
+        @exception RuntimeError raised to indicate an invalid action
         """
         # step 1: remove toolbars marked for deletion
         for tbID in self.__removedToolBarIDs:

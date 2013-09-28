@@ -25,6 +25,8 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
     def __init__(self, parent=None):
         """
         Constructor
+        
+        @param parent reference to the parent object (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -227,7 +229,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
     
     def __switchSubscriptionEnabled(self):
         """
-        Private slot to switch the enabled state of the selected subscription
+        Private slot to switch the enabled state of the selected subscription.
         """
         newState = not self.__currentSubscription.isEnabled()
         self.__setSubscriptionEnabled(self.__currentSubscription, newState)

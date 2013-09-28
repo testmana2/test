@@ -445,7 +445,8 @@ class DebugServer(QTcpServer):
         """
         Private slot to set changed breakpoints.
         
-        @param indexes indexes of changed breakpoints.
+        @param startIndex starting index of the change breakpoins (QModelIndex)
+        @param endIndex ending index of the change breakpoins (QModelIndex)
         """
         if self.debugging:
             self.__addBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
@@ -1098,7 +1099,7 @@ class DebugServer(QTcpServer):
         """
         Public method to process the client thread list info.
         
-        @param currentID id of the current thread (integer)
+        @param currentId id of the current thread (integer)
         @param threadList list of dictionaries containing the thread data
         """
         self.clientThreadList.emit(currentId, threadList)

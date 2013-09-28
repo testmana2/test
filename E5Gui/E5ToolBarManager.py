@@ -288,6 +288,7 @@ class E5ToolBarManager(QObject):
         Public method to check, if a toolbar was added with addToolBar().
         
         @param toolBar reference to the toolbar to be checked (QToolBar)
+        @return flag indicating an added toolbar (boolean)
         """
         return toolBar is not None and \
                id(toolBar) in self.__defaultToolBars

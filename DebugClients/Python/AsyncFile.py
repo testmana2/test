@@ -60,6 +60,7 @@ class AsyncFile(object):
         the mode of the file. If it is not, an IOError is raised.
         
         @param mode the mode to be checked (string)
+        @exception IOError raised to indicate a bad file descriptor
         """
         if mode != self.mode:
             raise IOError('[Errno 9] Bad file descriptor')
@@ -235,6 +236,8 @@ class AsyncFile(object):
         """
         Public method to move the filepointer.
         
+        @param offset offset to seek for
+        @param whence where to seek from
         @exception IOError This method is not supported and always raises an
         IOError.
         """
@@ -253,6 +256,7 @@ class AsyncFile(object):
         """
         Public method to truncate the file.
         
+        @param size size to truncate to (integer)
         @exception IOError This method is not supported and always raises an
         IOError.
         """
@@ -263,6 +267,7 @@ class AsyncFile(object):
         Public method to write a string to the file.
         
         @param s bytes to be written (string)
+        @exception socket.error raised to indicate too many send attempts
         """
         self.__checkMode('w')
         tries = 0

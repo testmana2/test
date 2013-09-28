@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing the Debugger frontend
+Package implementing the Debugger frontend.
 
 This package implements the graphical debugger. It consists
 of the debugger related HMI part, supporting dialogs and the debug server.

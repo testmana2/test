@@ -23,7 +23,7 @@ class AdBlockTreeWidget(E5TreeWidget):
         Constructor
         
         @param subscription reference to the subscription (AdBlockSubscription)
-        @param parenbt reference to the parent widget (QWidget)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         

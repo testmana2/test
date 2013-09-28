@@ -20,7 +20,7 @@ class WatchPointModel(QAbstractItemModel):
         """
         Constructor
         
-        @param reference to the parent widget (QObject)
+        @param parent reference to the parent widget (QObject)
         """
         super().__init__(parent)
         
@@ -43,6 +43,7 @@ class WatchPointModel(QAbstractItemModel):
         """
         Public method to get the current column count.
         
+        @param parent index of the parent item (QModelIndex)
         @return column count (integer)
         """
         return len(self.header)
@@ -51,6 +52,7 @@ class WatchPointModel(QAbstractItemModel):
         """
         Public method to get the current row count.
         
+        @param parent index of the parent item (QModelIndex)
         @return row count (integer)
         """
         # we do not have a tree, parent should always be invalid

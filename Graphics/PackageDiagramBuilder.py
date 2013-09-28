@@ -271,6 +271,11 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         Private method to arrange the shapes on the canvas.
         
         The algorithm is borrowed from Boa Constructor.
+        
+        @param nodes list of nodes to arrange
+        @param routes list of routes
+        @param whiteSpaceFactor factor to increase whitespace between
+            items (float)
         """
         from . import GraphicsUtilities
         generations = GraphicsUtilities.sort(nodes, routes)

@@ -29,18 +29,19 @@ class UMLDialog(E5MainWindow):
     
     FileVersions = ["1.0"]
     
-    def __init__(self, diagramType, project, path="", parent=None, initBuilder=True,
-                 **kwargs):
+    def __init__(self, diagramType, project, path="", parent=None,
+                 initBuilder=True, **kwargs):
         """
         Constructor
         
-        @param diagramType type of the diagram (one of ApplicationDiagram, ClassDiagram,
-            ImportsDiagram, NoDiagram, PackageDiagram)
+        @param diagramType type of the diagram (one of ApplicationDiagram,
+            ClassDiagram, ImportsDiagram, NoDiagram, PackageDiagram)
         @param project reference to the project object (Project)
         @param path file or directory path to build the diagram from (string)
         @param parent parent widget of the dialog (QWidget)
-        @keyparam initBuilder flag indicating to initialize the diagram builder (boolean)
-        @param kwargs diagram specific data
+        @keyparam initBuilder flag indicating to initialize the diagram
+            builder (boolean)
+        @keyparam kwargs diagram specific data
         """
         super().__init__(parent)
         self.setObjectName("UMLDialog")
@@ -155,7 +156,9 @@ class UMLDialog(E5MainWindow):
         @param diagramType type of the diagram
             (one of ApplicationDiagram, ClassDiagram, ImportsDiagram, PackageDiagram)
         @param path file or directory path to build the diagram from (string)
-        @param kwargs diagram specific data
+        @keyparam kwargs diagram specific data
+        @return reference to the instantiated diagram builder
+        @exception ValueError raised to indicate an illegal diagram type
         """
         if diagramType == UMLDialog.ClassDiagram:
             from .UMLClassDiagramBuilder import UMLClassDiagramBuilder

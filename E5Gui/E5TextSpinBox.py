@@ -3,6 +3,10 @@
 # Copyright (c) 2010 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+"""
+Module implementing a spinbox with textual entries.
+"""
+
 from PyQt4.QtGui import QSpinBox
 
 

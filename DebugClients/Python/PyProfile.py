@@ -111,6 +111,7 @@ class PyProfile(profile.Profile):
         code over a network... This logic deals with that.
         
         @param frame the frame object
+        @return fixed up file name (string)
         """
         # get module name from __file__
         if not isinstance(frame, profile.Profile.fake_frame) and \
@@ -129,6 +130,10 @@ class PyProfile(profile.Profile):
         
         This is a variant of the one found in the standard Python
         profile.py calling fix_frame_filename above.
+        
+        @param frame reference to the call frame
+        @param t arguments of the call
+        @return flag indicating a handled call
         """
         if self.cur and frame.f_back is not self.cur[-2]:
             rpt, rit, ret, rfn, rframe, rcur = self.cur

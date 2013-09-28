@@ -28,7 +28,7 @@ class E5WheelTabBar(QTabBar):
         """
         Protected slot to support wheel events.
         
-        @param reference to the wheel event (QWheelEvent)
+        @param event reference to the wheel event (QWheelEvent)
         """
         try:
             if event.delta() > 0:
@@ -334,7 +334,7 @@ class E5TabWidget(QTabWidget):
         @param index tab index (integer)
         """
         if index == -1:
-            return None
+            return
         
         if hasattr(self.__tabBar, 'tabButton'):
             side = self.__freeSide()

@@ -39,6 +39,9 @@ class UMLDiagramBuilder(QObject):
         Public method to build the diagram.
         
         This class must be implemented in subclasses.
+        
+        @exception NotImplementedError raised to indicate that this class
+            must be subclassed
         """
         raise NotImplementedError(
             "Method 'buildDiagram' must be implemented in subclasses.")
