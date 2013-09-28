@@ -115,6 +115,7 @@ class Pep257Checker(object):
         "D221", "D222",
         "D231", "D234", "D235", "D236", "D237", "D238", "D239",
         "D242", "D243", "D244", "D245", "D246", "D247",
+        "D250", "D251",
     ]
     
     Messages = {
@@ -182,10 +183,12 @@ class Pep257Checker(object):
             "Pep257Checker", "docstring summary does not end with a period"),
         "D234": QT_TRANSLATE_NOOP(
             "Pep257Checker",
-            "docstring does not contain a @return line but returns something"),
+            "docstring does not contain a @return line but function/method"
+            " returns something"),
         "D235": QT_TRANSLATE_NOOP(
             "Pep257Checker",
-            "docstring contains a @return line but doesn't return anything"),
+            "docstring contains a @return line but function/method doesn't"
+            " return anything"),
         "D236": QT_TRANSLATE_NOOP(
             "Pep257Checker",
             "docstring does not contain enough @param/@keyparam lines"),
@@ -214,6 +217,14 @@ class Pep257Checker(object):
         "D247": QT_TRANSLATE_NOOP(
             "Pep257Checker",
             "last paragraph of docstring is followed by a blank line"),
+        "D250": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring does not contain a @exception line but function/method"
+            " raises an exception"),
+        "D251": QT_TRANSLATE_NOOP(
+            "Pep257Checker",
+            "docstring contains a @exception line but function/method doesn't"
+            " raise an exception"),
     }
     
     def __init__(self, source, filename, select, ignore, expected, repeat,
@@ -316,6 +327,7 @@ class Pep257Checker(object):
                      ("D236", "D237", "D238", "D239")),
                     (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
                      ("D244", "D245")),
+                    (self.__checkEricException, ("D250", "D251")),
                 ],
                 "docstring": [
                     (self.__checkTripleDoubleQuotes, ("D111",)),
@@ -373,8 +385,8 @@ class Pep257Checker(object):
             if code in Pep257Checker.Codes:
                 text = self.getMessage(code, *args)
             else:
-                text = code + " " + QCoreApplication.translate("Pep257Checker",
-                    "no message for this code defined")
+                text = code + " " + QCoreApplication.translate(
+                    "Pep257Checker", "no message for this code defined")
             # record the issue with one based line number
             self.errors.append((self.__filename, lineNumber + 1, offset, text))
     
@@ -462,13 +474,13 @@ class Pep257Checker(object):
         lines = docstringContext.source()
         
         line0 = (lines[0]
-                .replace('r"""', "", 1)
-                .replace('u"""', "", 1)
-                .replace('"""', "")
-                .replace("r'''", "", 1)
-                .replace("u'''", "", 1)
-                .replace("'''", "")
-                .strip())
+                 .replace('r"""', "", 1)
+                 .replace('u"""', "", 1)
+                 .replace('"""', "")
+                 .replace("r'''", "", 1)
+                 .replace("u'''", "", 1)
+                 .replace("'''", "")
+                 .strip())
         if len(lines) > 1:
             line1 = lines[1].strip().replace('"""', "").replace("'''", "")
         else:
@@ -570,6 +582,7 @@ class Pep257Checker(object):
         Private method to extract a docstring given `def` or `class` source.
         
         @param context context data to get the docstring from (Pep257Context)
+        @param what string denoting what is being parsed (string)
         @return context of extracted docstring (Pep257Context)
         """
         moduleDocstring = self.__parseModuleDocstring(context.source())
@@ -1107,7 +1120,7 @@ class Pep257Checker(object):
     
     def __checkEricReturn(self, docstringContext, context):
         """
-        Private method to check, that docstrings contain an @return line
+        Private method to check, that docstrings contain an &#64;return line
         if they return anything and don't otherwise.
         
         @param docstringContext docstring context (Pep257Context)
@@ -1133,8 +1146,8 @@ class Pep257Checker(object):
     
     def __checkEricFunctionArguments(self, docstringContext, context):
         """
-        Private method to check, that docstrings contain an @param line
-        for each argument.
+        Private method to check, that docstrings contain an &#64;param and/or
+        &#64;keyparam line for each argument.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -1156,10 +1169,10 @@ class Pep257Checker(object):
                 argNames.remove("cls")
             
             docstring = docstringContext.ssource()
-            if (docstring.count("@param") + docstring.count("@keyparam") < 
+            if (docstring.count("@param") + docstring.count("@keyparam") <
                     len(argNames + kwNames)):
                 self.__error(docstringContext.end(), 0, "D236")
-            elif (docstring.count("@param") + docstring.count("@keyparam") > 
+            elif (docstring.count("@param") + docstring.count("@keyparam") >
                     len(argNames + kwNames)):
                 self.__error(docstringContext.end(), 0, "D237")
             else:
@@ -1180,6 +1193,34 @@ class Pep257Checker(object):
                         return
                 if argNames + kwNames != args:
                     self.__error(docstringContext.end(), 0, "D239")
+    
+    def __checkEricException(self, docstringContext, context):
+        """
+        Private method to check, that docstrings contain an &#64;exception line
+        if they raise an exception and don't otherwise.
+        
+        @param docstringContext docstring context (Pep257Context)
+        @param context context of the docstring (Pep257Context)
+        """
+        if docstringContext is None or self.__isScript:
+            return
+        
+        tokens = list(
+            tokenize.generate_tokens(StringIO(context.ssource()).readline))
+        exception = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+                     if token[1] == "raise"]
+        if "@exception" not in docstringContext.ssource() and \
+                "@throws" not in docstringContext.ssource() and \
+                "@raise" not in docstringContext.ssource():
+            if (set(exception) -
+                    set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
+                    set([])):
+                self.__error(docstringContext.end(), 0, "D250")
+        else:
+            if (set(exception) -
+                    set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) ==
+                    set([])):
+                self.__error(docstringContext.end(), 0, "D251")
     
     def __checkEricBlankAfterSummary(self, docstringContext, context):
         """
