@@ -1010,7 +1010,7 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().endswith(('"""', "'''")):
             cti += 1
         end = cti
-        if cti == len(contextLines):
+        if cti >= len(contextLines) - 1:
             return
         
         if contextLines[start - 1].strip():
@@ -1156,7 +1156,7 @@ class Pep257Checker(object):
                 kwargs = []
                 for line in docstringContext.source():
                     if line.strip().startswith(("@param", "@keyparam")):
-                        at, name, _ = line.strip().split(None, 2)
+                        at, name = line.strip().split(None, 2)[:2]
                         if at == "@keyparam":
                             kwargs.append(name)
                         args.append(name)
@@ -1222,7 +1222,7 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().endswith(('"""', "'''")):
             cti += 1
         end = cti
-        if cti == len(contextLines):
+        if cti >= len(contextLines) - 1:
             return
         
         if isClassContext:

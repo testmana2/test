@@ -1893,6 +1893,12 @@ bindings and the QScintilla2 editor widget.</Description>
         <value>
           <dict>
             <key>
+              <string>DocstringType</string>
+            </key>
+            <value>
+              <string>eric</string>
+            </value>
+            <key>
               <string>ExcludeFiles</string>
             </key>
             <value>
