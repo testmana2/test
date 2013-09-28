@@ -111,7 +111,7 @@ class Pep257Checker(object):
         
         "D203", "D205",
         "D221",
-        "D231", "D234", "D235", "D236", "D237", "D238",
+        "D231", "D234", "D235", "D236", "D237", "D238", "D239",
         "D242", "D243", "D244", "D245", "D246", "D247",
     ]
     
@@ -210,9 +210,9 @@ class Pep257Checker(object):
                     (self.__checkFunctionDocstring, ("D102", "D203")),
                     (self.__checkImperativeMood, ("D132",)),
                     (self.__checkNoSignature, ("D133",)),
-                    (self.__checkEricReturn, ("D234",)),
+                    (self.__checkEricReturn, ("D234", "D235")),
                     (self.__checkEricFunctionArguments,
-                     ("D235", "D236", "D237", "D238")),
+                     ("D236", "D237", "D238", "D239")),
                     (self.__checkEricNoBlankBeforeAndAfterClassOrFunction,
                      ("D244", "D245")),
                 ],
@@ -220,11 +220,11 @@ class Pep257Checker(object):
                     (self.__checkTripleDoubleQuotes, ("D111",)),
                     (self.__checkBackslashes, ("D112",)),
                     (self.__checkUnicode, ("D113",)),
-                    (self.__checkEricOneLiner, ("D221",)),
                     (self.__checkIndent, ("D122",)),
                     (self.__checkEricEndsWithPeriod, ("D231",)),
                     (self.__checkEricBlankAfterSummary, ("D246",)),
                     (self.__checkEricNBlankAfterLastParagraph, ("D247",)),
+                    (self.__checkEricQuotesOnSeparateLines, ("D222", "D223"))
                 ],
             }
         
@@ -892,7 +892,7 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().endswith(('"""', "'''")):
             cti += 1
         end = cti
-        if cti == len(contextLines):
+        if cti >= len(contextLines) - 1:
             return
         
         if contextLines[start - 1].strip():
@@ -944,10 +944,10 @@ class Pep257Checker(object):
     ## Checking functionality below (eric specific ones)
     ##################################################################
 
-    def __checkEricOneLiner(self, docstringContext, context):
+    def __checkEricQuotesOnSeparateLines(self, docstringContext, context):
         """
-        Private method to check, that one-liner docstrings are on
-        three lines (quotes, docstring, quotes).
+        Private method to check, that leading and trailing quotes are on
+        a line by themselves.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -956,10 +956,10 @@ class Pep257Checker(object):
             return
         
         lines = docstringContext.source()
-        if len(lines) != 3:
-            nonEmptyLines = [l for l in lines if l.strip().strip('\'"')]
-            if len(nonEmptyLines) == 1:
-                self.__error(docstringContext.start(), 0, "D221")
+        if lines[0].strip().strip('ru"'):
+            self.__error(docstringContext.start(), 0, "D221")
+        if lines[-1].strip().strip('"'):
+            self.__error(docstringContext.end(), 0, "D222")
     
     def __checkEricEndsWithPeriod(self, docstringContext, context):
         """
@@ -972,6 +972,8 @@ class Pep257Checker(object):
             return
         
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
+        if summaryLines[-1].lstrip().startswith("@"):
+            summaryLines.pop(-1)
         summary = " ".join([s.strip() for s in summaryLines if s])
         if not summary.endswith(".") and \
                 not summary.split(None, 1)[0].lower() == "constructor":
@@ -981,7 +983,8 @@ class Pep257Checker(object):
     
     def __checkEricReturn(self, docstringContext, context):
         """
-        Private method to check, that docstrings contain an @return line.
+        Private method to check, that docstrings contain an @return line
+        if they return anything and don't otherwise.
         
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
@@ -989,15 +992,20 @@ class Pep257Checker(object):
         if docstringContext is None or self.__isScript:
             return
         
+        tokens = list(
+            tokenize.generate_tokens(StringIO(context.ssource()).readline))
+        return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+                   if token[1] == "return"]
         if "@return" not in docstringContext.ssource():
-            tokens = list(
-                tokenize.generate_tokens(StringIO(context.ssource()).readline))
-            return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
-                       if token[1] == "return"]
             if (set(return_) -
                     set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
                     set([])):
                 self.__error(docstringContext.end(), 0, "D234")
+        else:
+            if (set(return_) -
+                    set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) ==
+                    set([])):
+                self.__error(docstringContext.end(), 0, "D235")
     
     def __checkEricFunctionArguments(self, docstringContext, context):
         """
@@ -1026,17 +1034,17 @@ class Pep257Checker(object):
             docstring = docstringContext.ssource()
             if (docstring.count("@param") + docstring.count("@keyparam") < 
                     len(argNames + kwNames)):
-                self.__error(docstringContext.end(), 0, "D235")
+                self.__error(docstringContext.end(), 0, "D236")
             elif (docstring.count("@param") + docstring.count("@keyparam") > 
                     len(argNames + kwNames)):
-                self.__error(docstringContext.end(), 0, "D236")
+                self.__error(docstringContext.end(), 0, "D237")
             else:
                 # extract @param and @keyparam from docstring
                 args = []
                 kwargs = []
                 for line in docstringContext.source():
                     if line.strip().startswith(("@param", "@keyparam")):
-                        at, name, _ = line.strip().split(None, 2)
+                        at, name = line.strip().split(None, 2)[:2]
                         if at == "@keyparam":
                             kwargs.append(name)
                         args.append(name)
@@ -1044,10 +1052,10 @@ class Pep257Checker(object):
                 # do the checks
                 for name in kwNames:
                     if name not in kwargs:
-                        self.__error(docstringContext.end(), 0, "D237")
+                        self.__error(docstringContext.end(), 0, "D238")
                         return
                 if argNames + kwNames != args:
-                    self.__error(docstringContext.end(), 0, "D238")
+                    self.__error(docstringContext.end(), 0, "D239")
     
     def __checkEricBlankAfterSummary(self, docstringContext, context):
         """
@@ -1066,7 +1074,7 @@ class Pep257Checker(object):
             return
         
         summaryLines, lineNumber = self.__getSummaryLines(docstringContext)
-        if len(docstrings) > lineNumber + len(summaryLines) - 1:
+        if len(docstrings) - 2 > lineNumber + len(summaryLines) - 1:
             if docstrings[lineNumber + len(summaryLines)].strip():
                 self.__error(docstringContext.start() + lineNumber, 0, "D246")
     
@@ -1102,7 +1110,7 @@ class Pep257Checker(object):
                 not contextLines[cti].strip().endswith(('"""', "'''")):
             cti += 1
         end = cti
-        if cti == len(contextLines):
+        if cti >= len(contextLines) - 1:
             return
         
         if isClassContext:
