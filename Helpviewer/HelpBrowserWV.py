@@ -501,6 +501,8 @@ class HelpWebPage(QWebPage):
     def showSslInfo(self, pos):
         """
         Public slot to show some SSL information for the loaded page.
+        
+        @param pos position to show the info at (QPoint)
         """
         if SSL_AVAILABLE and self.__sslConfiguration is not None:
             from E5Network.E5SslInfoWidget import E5SslInfoWidget
@@ -1777,6 +1779,8 @@ class HelpBrowser(QWebView):
     def progress(self):
         """
         Public method to get the load progress.
+        
+        @return load progress (integer)
         """
         return self.__progress
     
@@ -2085,15 +2089,16 @@ class HelpBrowser(QWebView):
         self.__accessKeyLabels.append(label)
         self.__accessKeyNodes[accessKey] = element
     
-    ############################################################################
+    ###########################################################################
     ## Miscellaneous methods below
-    ############################################################################
+    ###########################################################################
     
     def createWindow(self, windowType):
         """
         Protected method called, when a new window should be created.
         
         @param windowType type of the requested window (QWebPage.WebWindowType)
+        @return reference to the created browser window (HelpBrowser)
         """
         self.mw.newTab()
         return self.mw.currentBrowser()
@@ -2108,9 +2113,9 @@ class HelpBrowser(QWebView):
         
         self.reload()
     
-    ############################################################################
+    ###########################################################################
     ## RSS related methods below
-    ############################################################################
+    ###########################################################################
     
     def checkRSS(self):
         """
@@ -2305,6 +2310,7 @@ def contentSniff(data):
     """
     Module function to do some content sniffing to check, if the data is HTML.
     
+    @param data data block to sniff at (string)
     @return flag indicating HTML content (boolean)
     """
     if data.contains("<!doctype") or \

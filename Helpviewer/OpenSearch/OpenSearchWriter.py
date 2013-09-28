@@ -28,6 +28,7 @@ class OpenSearchWriter(QXmlStreamWriter):
         
         @param device reference to the device to write to (QIODevice)
         @param engine reference to the engine (OpenSearchEngine)
+        @return flag indicating success (boolean)
         """
         if engine is None:
             return False

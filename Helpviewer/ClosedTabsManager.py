@@ -32,6 +32,7 @@ class ClosedTab(object):
         Special method implementing the equality operator.
         
         @param other reference to the object to compare against (ClosedTab)
+        @return flag indicating equality of the tabs (boolean)
         """
         return self.url == other.url and \
                self.title == other.title and \

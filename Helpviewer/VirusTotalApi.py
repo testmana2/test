@@ -91,8 +91,6 @@ class VirusTotalAPI(QObject):
         
         @param key service key (string)
         @param protocol protocol used to access VirusTotal (string)
-        @return flag indicating validity (boolean) and an error message in
-            case of a network error (string)
         """
         if protocol == "":
             urlStr = self.GetFileReportUrl
@@ -133,7 +131,6 @@ class VirusTotalAPI(QObject):
         Public method to submit an URL to be scanned.
         
         @param url url to be scanned (QUrl)
-        @return flag indicating success (boolean) and the scan ID (string)
         """
         request = QNetworkRequest(QUrl(self.ScanUrlUrl))
         request.setHeader(QNetworkRequest.ContentTypeHeader,
@@ -170,7 +167,6 @@ class VirusTotalAPI(QObject):
         Private method to get the report URL for a file scan.
         
         @param scanId ID of the scan to get the report URL for (string)
-        @return file scan report URL (string)
         """
         request = QNetworkRequest(QUrl(self.GetUrlReportUrl))
         request.setHeader(QNetworkRequest.ContentTypeHeader,

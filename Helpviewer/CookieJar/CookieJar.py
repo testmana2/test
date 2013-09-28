@@ -190,7 +190,7 @@ class CookieJar(QNetworkCookieJar):
     
     def __purgeOldCookies(self):
         """
-        Private method to purge old cookies
+        Private method to purge old cookies.
         """
         cookies = self.allCookies()
         if len(cookies) == 0:
@@ -315,6 +315,8 @@ class CookieJar(QNetworkCookieJar):
     def keepPolicy(self):
         """
         Private method to get the keep policy.
+        
+        @return keep policy
         """
         if not self.__loaded:
             self.load()

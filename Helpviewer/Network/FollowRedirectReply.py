@@ -13,7 +13,7 @@ from PyQt4.QtNetwork import QNetworkRequest
 
 class FollowRedirectReply(QObject):
     """
-    Class implementing a network reply delegate allowing to check redirects
+    Class implementing a network reply delegate allowing to check redirects.
     """
     finished = pyqtSignal()
     

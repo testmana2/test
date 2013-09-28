@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to select the action to be performed on the bookmark.
+Module implementing a dialog to select the action to be performed on the
+bookmark.
 """
 
 from PyQt4.QtCore import pyqtSlot
@@ -17,7 +18,8 @@ import UI.PixmapCache
 
 class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
     """
-    Class implementing a dialog to select the action to be performed on the bookmark.
+    Class implementing a dialog to select the action to be performed on
+    the bookmark.
     """
     Undefined = -1
     AddBookmark = 0
@@ -51,7 +53,8 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
         
         if Helpviewer.HelpWindow.HelpWindow.speedDial().pageForUrl(url).url:
             self.__sdAction = self.RemoveSpeeddial
-            self.speeddialPushButton.setText(self.trUtf8("Remove from Speed Dial"))
+            self.speeddialPushButton.setText(
+                self.trUtf8("Remove from Speed Dial"))
         else:
             self.__sdAction = self.AddSpeeddial
             self.speeddialPushButton.setText(self.trUtf8("Add to Speed Dial"))
@@ -75,5 +78,7 @@ class BookmarkActionSelectionDialog(QDialog, Ui_BookmarkActionSelectionDialog):
     def getAction(self):
         """
         Public method to get the selected action.
+        
+        @return reference to the associated action
         """
         return self.__action

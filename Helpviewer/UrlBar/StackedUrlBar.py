@@ -40,6 +40,7 @@ class StackedUrlBar(QStackedWidget):
         """
         Public method to get a reference to the url bar for a given index.
         
+        @param index index of the url bar (integer)
         @return reference to the url bar for the given index (UrlBar)
         """
         return self.widget(index)

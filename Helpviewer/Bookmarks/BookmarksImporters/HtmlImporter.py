@@ -20,9 +20,11 @@ def getImporterInfo(id):
     """
     Module function to get information for the given HTML source id.
     
+    @param id id of the browser ("chrome" or "chromium")
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
         a prompt (string) and the default directory of the bookmarks file (string)
+    @exception ValueError raised to indicate an invalid browser ID
     """
     if id == "html":
         return (

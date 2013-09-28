@@ -112,6 +112,9 @@ class BookmarksManager(QObject):
     def load(self):
         """
         Public method to load the bookmarks.
+        
+        @exception RuntimeError raised to indicate an error loading the
+            bookmarks
         """
         if self.__loaded:
             return
@@ -260,7 +263,10 @@ class BookmarksManager(QObject):
     
     def setNodeChanged(self, node):
         """
-        Public method to signal changes of bookmarks other than title, URL or timestamp.
+        Public method to signal changes of bookmarks other than title, URL
+        or timestamp.
+        
+        @param node reference to the bookmark (BookmarkNode)
         """
         self.__saveTimer.changeOccurred()
     
@@ -269,8 +275,9 @@ class BookmarksManager(QObject):
         Public method to set the URL of a bookmark.
         
         @param node reference to the node to be changed (BookmarkNode)
-        @param timestampType type of the timestamp to set (BookmarkNode.TsAdded,
-            BookmarkNode.TsModified, BookmarkNode.TsVisited)
+        @param timestampType type of the timestamp to set
+            (BookmarkNode.TsAdded, BookmarkNode.TsModified,
+            BookmarkNode.TsVisited)
         @param timestamp timestamp to set (QDateTime)
         """
         if not self.__loaded:

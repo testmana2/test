@@ -55,6 +55,7 @@ class HistoryCompletionView(QTableView):
         Public method to give a size hint for rows.
         
         @param row row number (integer)
+        @return desired row height (integer)
         """
         metrics = self.fontMetrics()
         return metrics.height()
@@ -131,7 +132,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         """
         Public method to check the model for validity.
         
-        @param flag indicating a valid status (boolean)
+        @return flag indicating a valid status (boolean)
         """
         return self.__isValid
     
@@ -211,6 +212,9 @@ class HistoryCompletionModel(QSortFilterProxyModel):
 
 
 class HistoryCompleter(QCompleter):
+    """
+    Class implementing a completer for the browser history.
+    """
     def __init__(self, model, parent=None):
         """
         Constructor

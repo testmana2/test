@@ -18,7 +18,7 @@ from .Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog
 
 class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
     """
-    Class implementing a dialog to manage the QtHelp filters
+    Class implementing a dialog to manage the QtHelp filters.
     """
     def __init__(self, engine, parent=None):
         """

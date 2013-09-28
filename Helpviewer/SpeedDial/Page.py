@@ -18,6 +18,7 @@ class Page(object):
         
         @param url URL of the page (string)
         @param title title of the page (string)
+        @param broken flag indicating a broken connection (boolean)
         """
         self.url = url
         self.title = title

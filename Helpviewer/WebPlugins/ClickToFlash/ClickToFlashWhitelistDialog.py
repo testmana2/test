@@ -18,7 +18,7 @@ import UI.PixmapCache
 
 class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
     """
-    Class implementing a dialog to manage the ClickToFlash whitelist
+    Class implementing a dialog to manage the ClickToFlash whitelist.
     """
     def __init__(self, whitelist, parent=None):
         """

@@ -31,6 +31,7 @@ class SpeedDialWriter(QXmlStreamWriter):
         @param pages list of speed dial pages (list of Page)
         @param pagesPerRow number of pages per row (integer)
         @param speedDialSize size of the speed dial pages (integer)
+        @return flag indicating success (boolean)
         """
         if isinstance(fileNameOrDevice, QIODevice):
             f = fileNameOrDevice

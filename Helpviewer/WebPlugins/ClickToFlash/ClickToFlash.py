@@ -302,6 +302,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         @param url URL to be checked for (QUrl)
         @param argumentNames argument names to be checked for (list of strings)
         @param argumentValues argument values to be checked for (list of strings)
+        @return flag indicating that this was already accepted (boolean)
         """
         return url == cls._acceptedUrl and \
                argumentNames == cls._acceptedArgNames and \

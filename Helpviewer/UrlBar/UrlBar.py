@@ -111,7 +111,9 @@ class UrlBar(E5LineEdit):
     
     def browser(self):
         """
-        Public method to get the associated browser (HelpBrowser)
+        Public method to get the associated browser.
+       
+        @return reference to the associated browser (HelpBrowser)
         """
         return self.__browser
     

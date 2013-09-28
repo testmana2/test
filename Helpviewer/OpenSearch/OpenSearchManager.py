@@ -122,6 +122,7 @@ class OpenSearchManager(QObject):
         Public method to check, if an engine exists.
         
         @param name name of the engine (string)
+        @return flag indicating an existing engine (boolean)
         """
         return name in self.__engines
     

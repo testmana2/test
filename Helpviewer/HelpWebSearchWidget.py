@@ -166,6 +166,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         Private slot handling the highlighting of an entry of the completer.
         
         @param index index of the item (QModelIndex)
+        @return flah indicating a successful highlighting (boolean)
         """
         if self.__suggestionsItem and \
            self.__suggestionsItem.index().row() == index.row():

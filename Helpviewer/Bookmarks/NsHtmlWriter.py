@@ -33,6 +33,7 @@ class NsHtmlWriter(QObject):
         @param fileNameOrDevice name of the file to write (string)
             or device to write to (QIODevice)
         @param root root node of the bookmark tree (BookmarkNode)
+        @return flag indicating success (boolean)
         """
         if isinstance(fileNameOrDevice, QIODevice):
             f = fileNameOrDevice
@@ -49,6 +50,7 @@ class NsHtmlWriter(QObject):
         Private method to write an Netscape HTML bookmark file.
         
         @param root root node of the bookmark tree (BookmarkNode)
+        @return flag indicating success (boolean)
         """
         self.__dev.write("<!DOCTYPE NETSCAPE-Bookmark-file-1>\n"
             "<!-- This is an automatically generated file.\n"

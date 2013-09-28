@@ -74,7 +74,7 @@ class HelpTabBar(E5WheelTabBar):
         """
         Protected method to handle mouse move events.
         
-        @param reference to the mouse move event (QMouseEvent)
+        @param evt reference to the mouse move event (QMouseEvent)
         """
         if self.count() == 1:
             return

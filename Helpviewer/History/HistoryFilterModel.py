@@ -315,7 +315,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         @param row row of the first entry to remove (integer)
         @param count number of entries to remove (integer)
-        @param index of the parent entry (QModelIndex)
+        @param parent index of the parent entry (QModelIndex)
         @return flag indicating successful removal (boolean)
         """
         if row < 0 or \

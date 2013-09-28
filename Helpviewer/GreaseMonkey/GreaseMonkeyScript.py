@@ -168,6 +168,7 @@ class GreaseMonkeyScript(object):
         """
         Public method to check, if the script matches the given URL.
         
+        @param urlString URL (string)
         @return flag indicating a match (boolean)
         """
         if not self.__enabled:

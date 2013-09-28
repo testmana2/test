@@ -87,6 +87,7 @@ class WebPluginFactory(QWebPluginFactory):
         Public method to get a reference to the named plug-in.
         
         @param name name of the plug-in (string)
+        @return reference to the named plug-in
         """
         if not self.__loaded:
             self.__initialize()

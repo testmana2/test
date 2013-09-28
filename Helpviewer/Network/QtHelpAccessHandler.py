@@ -71,6 +71,7 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         Private method to guess the mime type given an URL.
         
         @param url URL to guess the mime type from (QUrl)
+        @return mime type for the given URL (string)
         """
         path = url.path()
         ext = os.path.splitext(path)[1].lower()

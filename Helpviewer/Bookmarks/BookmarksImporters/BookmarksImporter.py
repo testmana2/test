@@ -34,6 +34,8 @@ class BookmarksImporter(QObject):
         Public method to set the path of the bookmarks file or directory.
         
         @param path bookmarks file or directory (string)
+        @exception NotImplementedError raised to indicate this method must
+            be implemented by a subclass
         """
         raise NotImplementedError
     
@@ -41,7 +43,10 @@ class BookmarksImporter(QObject):
         """
         Public method to open the bookmarks file.
         
-        @return flag indicating success (boolean)
+        It must return a flag indicating success (boolean).
+        
+        @exception NotImplementedError raised to indicate this method must
+            be implemented by a subclass
         """
         raise NotImplementedError
     
@@ -49,7 +54,10 @@ class BookmarksImporter(QObject):
         """
         Public method to get the imported bookmarks.
         
-        @return imported bookmarks (BookmarkNode)
+        It must return the imported bookmarks (BookmarkNode).
+        
+        @exception NotImplementedError raised to indicate this method must
+            be implemented by a subclass
         """
         raise NotImplementedError
     

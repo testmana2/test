@@ -29,6 +29,7 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         """
         Constructor
         
+        @param manager reference to the manager object (GreaseMonkeyManager)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -54,6 +55,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
     def on_downloadLabel_linkActivated(self, link):
         """
         Private slot to open the userscript.org web site.
+        
+        @param link URL (string)
         """
         import Helpviewer.HelpWindow
         Helpviewer.HelpWindow.HelpWindow.mainWindow().newTab(
@@ -64,6 +67,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
     def on_scriptsList_itemDoubleClicked(self, item):
         """
         Private slot to show information about the selected script.
+        
+        @param item reference to the double clicked item (QListWidgetItem)
         """
         script = self.__getScript(item)
         if script is not None:
@@ -77,7 +82,8 @@ class GreaseMonkeyConfigurationDialog(QDialog, Ui_GreaseMonkeyConfigurationDialo
         Private method to load all the available scripts.
         """
         for script in self.__manager.allScripts():
-            itm = QListWidgetItem(UI.PixmapCache.getIcon("greaseMonkeyScript.png"),
+            itm = QListWidgetItem(
+                UI.PixmapCache.getIcon("greaseMonkeyScript.png"),
                 script.name(), self.scriptsList)
             itm.setData(GreaseMonkeyConfigurationDialog.ScriptVersionRole,
                 script.version())

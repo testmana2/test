@@ -117,30 +117,45 @@ class SyncHandler(QObject):
     def syncBookmarks(self):
         """
         Public method to synchronize the bookmarks.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
     def syncHistory(self):
         """
         Public method to synchronize the history.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
     def syncPasswords(self):
         """
         Public method to synchronize the passwords.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
     def syncUserAgents(self):
         """
         Public method to synchronize the user agents.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
     def syncSpeedDial(self):
         """
         Public method to synchronize the speed dial data.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
@@ -149,12 +164,17 @@ class SyncHandler(QObject):
         Public method to do the initial check.
         
         @keyparam forceUpload flag indicating a forced upload of the files (boolean)
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     
     def shutdown(self):
         """
         Public method to shut down the handler.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by subclasses
         """
         raise NotImplementedError
     

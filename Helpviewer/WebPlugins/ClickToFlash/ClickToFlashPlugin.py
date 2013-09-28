@@ -135,6 +135,8 @@ class ClickToFlashPlugin(WebPluginInterface):
     def isAnonymous(self):
         """
         Public method to indicate an anonymous plug-in.
+        
+        @return flag indicating anonymous state (boolean)
         """
         return True
     

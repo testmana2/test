@@ -24,6 +24,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
     def __init__(self, parent=None):
         """
         Constructor
+        
+        @param parent reference to the parent object (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)

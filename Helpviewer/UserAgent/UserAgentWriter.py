@@ -28,7 +28,9 @@ class UserAgentWriter(QXmlStreamWriter):
         
         @param fileNameOrDevice name of the file to write (string)
             or device to write to (QIODevice)
-        @param agents dictionary with user agent data (host as key, agent string as value)
+        @param agents dictionary with user agent data (host as key, agent
+            string as value)
+        @return flag indicating success (boolean)
         """
         if isinstance(fileNameOrDevice, QIODevice):
             f = fileNameOrDevice
@@ -44,7 +46,8 @@ class UserAgentWriter(QXmlStreamWriter):
         """
         Private method to write a user agent file.
         
-        @param agents dictionary with user agent data (host as key, agent string as value)
+        @param agents dictionary with user agent data (host as key, agent
+            string as value)
         @return flag indicating success (boolean)
         """
         self.writeStartDocument()

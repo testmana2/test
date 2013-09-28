@@ -111,7 +111,7 @@ class BookmarksModel(QAbstractItemModel):
         
         @param row row of the first bookmark to remove (integer)
         @param count number of bookmarks to remove (integer)
-        @param index of the parent bookmark node (QModelIndex)
+        @param parent index of the parent bookmark node (QModelIndex)
         @return flag indicating successful removal (boolean)
         """
         if row < 0 or count <= 0 or row + count > self.rowCount(parent):

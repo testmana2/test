@@ -148,9 +148,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
     
     def __getFileName(self):
         """
-        Private method to get the filename to save to from the user.
-        
-        @return flag indicating success (boolean)
+        Private method to get the file name to save to from the user.
         """
         if self.__gettingFileName:
             return

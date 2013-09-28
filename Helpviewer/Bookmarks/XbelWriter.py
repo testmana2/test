@@ -31,6 +31,7 @@ class XbelWriter(QXmlStreamWriter):
         @param fileNameOrDevice name of the file to write (string)
             or device to write to (QIODevice)
         @param root root node of the bookmark tree (BookmarkNode)
+        @return flag indicating success (boolean)
         """
         if isinstance(fileNameOrDevice, QIODevice):
             f = fileNameOrDevice
@@ -47,6 +48,7 @@ class XbelWriter(QXmlStreamWriter):
         Private method to write an XBEL bookmark file.
         
         @param root root node of the bookmark tree (BookmarkNode)
+        @return flag indicating success (boolean)
         """
         self.writeStartDocument()
         self.writeDTD("<!DOCTYPE xbel>")

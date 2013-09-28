@@ -22,7 +22,8 @@ def getImporters():
     """
     importers = []
     importers.append(
-        (UI.PixmapCache.getIcon("ericWeb48.png"), "eric5 Web Browser", "e5browser"))
+        (UI.PixmapCache.getIcon("ericWeb48.png"), "eric5 Web Browser",
+         "e5browser"))
     importers.append(
         (UI.PixmapCache.getIcon("firefox.png"), "Mozilla Firefox", "firefox"))
     importers.append(
@@ -31,14 +32,16 @@ def getImporters():
         importers.append(
             (UI.PixmapCache.getIcon("chromium.png"), "Chromium", "chromium"))
         importers.append(
-            (UI.PixmapCache.getIcon("konqueror.png"), "Konqueror", "konqueror"))
+            (UI.PixmapCache.getIcon("konqueror.png"), "Konqueror",
+             "konqueror"))
     importers.append(
         (UI.PixmapCache.getIcon("opera.png"), "Opera", "opera"))
     importers.append(
         (UI.PixmapCache.getIcon("safari.png"), "Apple Safari", "safari"))
     if Globals.isWindowsPlatform():
         importers.append(
-            (UI.PixmapCache.getIcon("internet_explorer.png"), "Internet Explorer", "ie"))
+            (UI.PixmapCache.getIcon("internet_explorer.png"),
+             "Internet Explorer", "ie"))
     importers.append(
         (UI.PixmapCache.getIcon("xbel.png"),
          QCoreApplication.translate("BookmarksImporters", "XBEL File"),
@@ -57,7 +60,9 @@ def getImporterInfo(id):
     @param id source id to get info for (string)
     @return tuple with an icon (QPixmap), readable name (string), name of
         the default bookmarks file (string), an info text (string),
-        a prompt (string) and the default directory of the bookmarks file (string)
+        a prompt (string) and the default directory of the bookmarks
+        file (string)
+    @exception ValueError raised to indicate an unsupported importer
     """
     if id in ["e5browser", "xbel", "konqueror"]:
         from . import XbelImporter
@@ -91,6 +96,7 @@ def getImporter(id, parent=None):
     @param id source id to get an importer for (string)
     @param parent reference to the parent object (QObject)
     @return bookmarks importer (BookmarksImporter)
+    @exception ValueError raised to indicate an unsupported importer
     """
     if id in ["e5browser", "xbel", "konqueror"]:
         from . import XbelImporter

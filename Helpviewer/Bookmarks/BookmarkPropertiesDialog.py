@@ -20,6 +20,7 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         """
         Constructor
         
+        @param node reference to the bookmark (BookmarkNode)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)

@@ -3,6 +3,10 @@
 # Copyright (c) 2010 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+"""
+Module implementing some utility functions for the Download package.
+"""
+
 from PyQt4.QtCore import QCoreApplication
 
 
@@ -16,9 +20,10 @@ def timeString(timeRemaining):
     if timeRemaining > 60:
         minutes = int(timeRemaining / 60)
         seconds = int(timeRemaining % 60)
-        remaining = QCoreApplication.translate("DownloadUtilities",
-            "%n:{0:02} minutes remaining""", "", QCoreApplication.UnicodeUTF8, minutes)\
-            .format(seconds)
+        remaining = QCoreApplication.translate(
+            "DownloadUtilities",
+            "%n:{0:02} minutes remaining""", "",
+            QCoreApplication.UnicodeUTF8, minutes).format(seconds)
     else:
         seconds = int(timeRemaining)
         remaining = QCoreApplication.translate("DownloadUtilities",

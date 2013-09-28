@@ -24,7 +24,7 @@ import Preferences
 
 class DownloadManager(QDialog, Ui_DownloadManager):
     """
-    Class implementing the download manager
+    Class implementing the download manager.
     """
     RemoveNever = 0
     RemoveExit = 1
@@ -165,13 +165,14 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             mainWindow=mainWindow)
     
     def handleUnsupportedContent(self, reply, requestFileName=False,
-                                 webPage=None, download=False, mainWindow=None):
+                                 webPage=None, download=False,
+                                 mainWindow=None):
         """
         Public method to handle unsupported content by downloading the
         referenced resource.
         
         @param reply reference to the reply object (QNetworkReply)
-        @keyparam requestFilename indicating to ask for a filename
+        @keyparam requestFileName indicating to ask for a filename
             (boolean)
         @keyparam webPage reference to the web page (HelpWebPage)
         @keyparam download flag indicating a download request (boolean)
@@ -185,8 +186,10 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             return
         
         from .DownloadItem import DownloadItem
-        itm = DownloadItem(reply=reply, requestFilename=requestFileName,
-            webPage=webPage, download=download, parent=self, mainWindow=mainWindow)
+        itm = DownloadItem(
+            reply=reply, requestFilename=requestFileName,
+            webPage=webPage, download=download, parent=self,
+            mainWindow=mainWindow)
         self.__addItem(itm)
         
         if itm.canceledFileSelect():

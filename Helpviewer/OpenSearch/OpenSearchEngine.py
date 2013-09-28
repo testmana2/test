@@ -285,7 +285,7 @@ class OpenSearchEngine(QObject):
         """
         Public method to set the engine image URL.
         
-        @param description image URL of the engine (string)
+        @param imageUrl image URL of the engine (string)
         """
         self._imageUrl = imageUrl
     
@@ -293,7 +293,7 @@ class OpenSearchEngine(QObject):
         """
         Public method to set the engine image URL.
         
-        @param description image URL of the engine (string)
+        @param imageUrl image URL of the engine (string)
         """
         self.setImageUrl(imageUrl)
         self.__iconMoved = False

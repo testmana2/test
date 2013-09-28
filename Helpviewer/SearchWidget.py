@@ -94,7 +94,9 @@ class SearchWidget(QWidget, Ui_SearchWidget):
     @pyqtSlot(bool)
     def on_highlightAllCheckBox_toggled(self, checked):
         """
-        Private slot to toggle the highlight of all occurences.
+        Private slot to toggle the highlight of all occurrences.
+        
+        @param checked flag indicating the check box toggle state (boolean)
         """
         cbr = self.__mainWindow.currentBrowser()
         if cbr is None:

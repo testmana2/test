@@ -146,7 +146,7 @@ class HistoryModel(QAbstractTableModel):
         
         @param row row of the first history entry to remove (integer)
         @param count number of history entries to remove (integer)
-        @param index of the parent entry (QModelIndex)
+        @param parent index of the parent entry (QModelIndex)
         @return flag indicating successful removal (boolean)
         """
         if parent.isValid():

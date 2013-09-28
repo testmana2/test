@@ -21,6 +21,8 @@ class FeedEditDialog(QDialog, Ui_FeedEditDialog):
         """
         Constructor
         
+        @param urlString feed URL (string)
+        @param title feed title (string)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -58,7 +60,7 @@ class FeedEditDialog(QDialog, Ui_FeedEditDialog):
         self.__setOkButton()
     
     @pyqtSlot(str)
-    def on_urlEdit_textChanged(self, p0):
+    def on_urlEdit_textChanged(self, txt):
         """
         Private slot to handle changes of the feed URL.
         

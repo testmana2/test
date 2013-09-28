@@ -22,6 +22,9 @@ class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
         """
         Constructor
         
+        @param fileName file name (string)
+        @param mimeType mime type (string)
+        @param baseUrl URL (string)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)

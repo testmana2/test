@@ -19,6 +19,9 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
     def __init__(self, engine, parent=None):
         """
         Constructor
+        
+        @param engine reference to the search engine (OpenSearchEngine)
+        @param parent reference to the parent object (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)

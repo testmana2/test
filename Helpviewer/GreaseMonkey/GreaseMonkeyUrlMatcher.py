@@ -18,6 +18,7 @@ def wildcardMatch(string, pattern):
     
     @param string string to match (string)
     @param pattern pattern to be used (string)
+    @return flag indicating a successful match (boolean)
     """
     stringSize = len(string)
     
@@ -73,6 +74,7 @@ class GreaseMonkeyUrlMatcher(object):
         Public method to match the given URL.
         
         @param urlString URL to match (string)
+        @return flag indicating a successful match (boolean)
         """
         if self.__useRegExp:
             return self.__regExp.indexIn(urlString) != -1
