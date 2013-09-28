@@ -5331,7 +5331,7 @@ class Editor(QsciScintillaCompat):
             if self.markerLine(handle) == line:
                 E5MessageBox.warning(self,
                     self.trUtf8("Warning"),
-                    '\n'.join(self.warnings[handle]))
+                    '\n'.join([w[0] for w in self.warnings[handle]]))
                 break
         else:
             E5MessageBox.warning(self,
