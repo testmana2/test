@@ -350,6 +350,8 @@ class Browser(QTreeView):
     def _gotoAttribute(self, act):
         """
         Protected slot to handle the selection of the goto menu.
+        
+        @param act reference to the action (E5Action)
         """
         fileName, lineno = act.data()
         self.sourceFile[str, int].emit(fileName, lineno)
@@ -517,6 +519,8 @@ class Browser(QTreeView):
     def handleProgramChange(self, fn):
         """
         Public slot to handle the programChange signal.
+        
+        @param fn file name (string)
         """
         self.__model.programChange(os.path.dirname(fn))
         

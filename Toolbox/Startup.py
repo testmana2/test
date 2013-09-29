@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing some startup helper funcions
+Module implementing some startup helper funcions.
 """
 
 import os
@@ -94,7 +94,8 @@ def loadTranslatorForLocale(dirs, tn):
 
     @param dirs Searchpath for the translations. (list of strings)
     @param tn The translation to be loaded. (string)
-    @return Tuple of a status flag and the loaded translator. (int, QTranslator)
+    @return Tuple of a status flag and the loaded translator
+        (int, QTranslator)
     """
     trans = QTranslator(None)
     for dir in dirs:
@@ -187,7 +188,8 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
 def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     app=None, raiseIt=True, installErrorHandler=False):
     """
-    Module function to start up an application that doesn't need a specialized start up.
+    Module function to start up an application that doesn't need a specialized
+    start up.
     
     This function is used by all of eric5's helper programs.
     
@@ -202,9 +204,11 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     @keyparam quitOnLastWindowClosed flag indicating to quit the application,
         if the last window was closed (boolean)
     @keyparam app reference to the application object (QApplication or None)
-    @keyparam raiseIt flag indicating to raise the generated application window (boolean)
+    @keyparam raiseIt flag indicating to raise the generated application
+        window (boolean)
     @keyparam installErrorHandler flag indicating to install an error
         handler dialog (boolean)
+    @return exit result (integer)
     """
     handleArgs(argv, appinfo)
     if app is None:

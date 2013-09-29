@@ -41,8 +41,6 @@ class MiniScintilla(QsciScintillaCompat):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param name name of this instance (string)
-        @param flags window flags
         """
         super().__init__(parent)
         
@@ -218,6 +216,8 @@ class MiniEditor(E5MainWindow):
     def __save(self):
         """
         Private slot to save a file.
+        
+        @return flag indicating success (boolean)
         """
         if not self.__curFile:
             return self.__saveAs()
@@ -227,6 +227,8 @@ class MiniEditor(E5MainWindow):
     def __saveAs(self):
         """
         Private slot to save a file with a new name.
+        
+        @return flag indicating success (boolean)
         """
         fileName = E5FileDialog.getSaveFileName(self)
         if not fileName:
@@ -309,7 +311,6 @@ class MiniEditor(E5MainWindow):
         
         @param act reference to the action object (E5Action)
         @param category category the action belongs to (string)
-        @param prefClass preferences class used as the storage area
         """
         if act.objectName():
             accel = Preferences.Prefs.settings.value(
@@ -2315,7 +2316,7 @@ class MiniEditor(E5MainWindow):
     
     def __initContextMenu(self):
         """
-        Private method used to setup the context menu
+        Private method used to setup the context menu.
         """
         self.contextMenu = QMenu()
         
@@ -2339,6 +2340,8 @@ class MiniEditor(E5MainWindow):
     def __initContextMenuLanguages(self):
         """
         Private method used to setup the Languages context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Languages"))
         
@@ -2585,7 +2588,9 @@ class MiniEditor(E5MainWindow):
         """
         Private method to generate a dummy filename for binding a lexer.
         
-        @param line0 first line of text to use in the generation process (string)
+        @param line0 first line of text to use in the generation process
+            (string)
+        @return dummy file name to be used for binding a lexer (string)
         """
         bindName = self.__curFile
         line0 = line0.lower()

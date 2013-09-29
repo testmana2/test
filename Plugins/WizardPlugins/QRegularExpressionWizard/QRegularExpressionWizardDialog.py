@@ -135,7 +135,7 @@ class QRegularExpressionWizardWidget(QWidget,
         """
         Private method to send a command to the PyQt5 server.
         
-        @param commandDict dictionary with command string and related
+        @param command dictionary with command string and related
             data (dict)
         @keyparam kw parameters for the command
         @return flag indicating a successful transmission (boolean)

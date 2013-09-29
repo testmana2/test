@@ -1227,7 +1227,7 @@ def setVarFilters(filters, prefClass=Prefs):
     """
     Module function to store the variables filter settings.
     
-    qparam filters variable filters to set 
+    @param filters variable filters to set 
     @param prefClass preferences class used as the storage area
     """
     prefClass.settings.setValue("Variables/LocalsFilter", str(filters[0]))

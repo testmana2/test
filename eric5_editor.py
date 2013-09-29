@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Editor
+Eric5 Editor.
 
 This is the main Python script that performs the necessary initialization
 of the MiniEditor module and starts the Qt event loop. This is a standalone

@@ -120,6 +120,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         @param password password (string)
         @param host host name (string)
         @param port port number (integer)
+        @return SQL error object (QSqlError)
         """
         err = QSqlError()
         

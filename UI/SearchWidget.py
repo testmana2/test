@@ -31,6 +31,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         """
         Constructor
         
+        @param mainWindow reference to the main window (QWidget)
         @param parent reference to the parent widget (QWidget)
         @param spacer flag indicating to add a vertical spacer to the
             main layout (boolean)

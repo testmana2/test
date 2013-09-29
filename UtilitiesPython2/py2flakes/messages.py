@@ -7,6 +7,10 @@
 # This module is based on pyflakes for Python2 but was heavily hacked to
 # work within eric5
 
+"""
+Module implementing the messages for pyflakes.
+"""
+
 
 class Message(object):
     """
@@ -244,7 +248,7 @@ class UnusedVariable(Message):
         
         @param filename name of the file (string)
         @param lineno line number (integer)
-        @param name name of the unused variable (string)
+        @param names name of the unused variable (string)
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (names,)

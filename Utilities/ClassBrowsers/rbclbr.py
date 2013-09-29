@@ -242,13 +242,13 @@ class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
 
 
 def readmodule_ex(module, path=[]):
-    '''
+    """
     Read a Ruby file and return a dictionary of classes, functions and modules.
 
     @param module name of the Ruby file (string)
     @param path path the file should be searched in (list of strings)
     @return the resulting dictionary
-    '''
+    """
     global _modules
     
     dict = {}

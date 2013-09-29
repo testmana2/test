@@ -33,15 +33,14 @@ class Task(QTreeWidgetItem):
         """
         Constructor
         
-        @param parent parent widget of the task (QWidget)
         @param summary summary text of the task (string)
         @param priority priority of the task (0=high, 1=normal, 2=low)
         @param filename filename containing the task (string)
         @param lineno line number containing the task (integer)
         @param completed flag indicating completion status (boolean)
         @param _time creation time of the task (float, if 0 use current time)
-        @param isProjectTask flag indicating a task related to the current project
-            (boolean)
+        @param isProjectTask flag indicating a task related to the current
+            project (boolean)
         @param taskType type of the task (one of TypeFixme, TypeTodo,
             TypeWarning, TypeNote)
         @param project reference to the project object (Project)

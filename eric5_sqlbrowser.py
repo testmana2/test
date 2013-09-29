@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 SQL Browser
+Eric5 SQL Browser.
 
 This is the main Python script that performs the necessary initialization
 of the SQL browser and starts the Qt event loop.

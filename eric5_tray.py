@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Tray
+Eric5 Tray.
 
 This is the main Python script that performs the necessary initialization
 of the system-tray application. This acts as a quickstarter by providing a

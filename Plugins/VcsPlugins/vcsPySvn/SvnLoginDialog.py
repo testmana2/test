@@ -24,7 +24,7 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         @param username username as supplied by subversion (string)
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
-        qparam parent reference to the parent widget (QWidget)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)

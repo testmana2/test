@@ -182,6 +182,10 @@ class LogViewerEdit(QTextEdit):
     def searchNext(self, txt, caseSensitive, wholeWord):
         """
         Public method to search the next occurrence of the given text.
+        
+        @param txt text to search for (string)
+        @param caseSensitive flag indicating case sensitivity (boolean)
+        @param wholeWord flag indicating a search for the whole word (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)
         flags = QTextDocument.FindFlags()
@@ -195,6 +199,10 @@ class LogViewerEdit(QTextEdit):
     def searchPrev(self, txt, caseSensitive, wholeWord):
         """
         Public method to search the previous occurrence of the given text.
+        
+        @param txt text to search for (string)
+        @param caseSensitive flag indicating case sensitivity (boolean)
+        @param wholeWord flag indicating a search for the whole word (boolean)
         """
         self.__lastSearch = (txt, caseSensitive, wholeWord)
         flags = QTextDocument.FindFlags(QTextDocument.FindBackward)

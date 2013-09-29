@@ -108,7 +108,7 @@ def unified_diff(a, b, fromfile='', tofile='', fromfiledate='',
 
 def context_diff(a, b, fromfile='', tofile='',
                  fromfiledate='', tofiledate='', n=3, lineterm='\n'):
-    """
+    r"""
     Compare two sequences of lines; generate the delta as a context diff.
 
     Context diffs are a compact way of showing line changes and a few
@@ -161,7 +161,6 @@ def context_diff(a, b, fromfile='', tofile='',
     @param lineterm line termination string (string)
     @return a generator yielding lines of differences
     """
-
     started = False
     prefixmap = {'insert': '+ ', 'delete': '- ', 'replace': '! ', 'equal': '  '}
     for group in SequenceMatcher(None, a, b).get_grouped_opcodes(n):
@@ -201,6 +200,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
     def __init__(self, parent=None):
         """
         Constructor
+        
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)

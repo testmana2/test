@@ -174,6 +174,8 @@ character except an alphabetic character.</td></tr>
     def on_findtextCombo_editTextChanged(self, txt):
         """
         Private slot to enable/disable the find buttons.
+        
+        @param txt text of the find text combo (string)
         """
         if not txt:
             self.ui.findNextButton.setEnabled(False)

@@ -18,6 +18,7 @@ class FtpDirLineParserError(Exception):
     """
     Exception class raised, if a parser issue was detected.
     """
+    pass
 
 
 class FtpDirLineParser(QObject):
@@ -153,10 +154,12 @@ class FtpDirLineParser(QObject):
     
     def __splitUnixLine(self, line):
         """
-        Split a line of a Unix like directory listing into meta data,
-        number of links, user, group, size, month, day, year or time
-        and name.
+        Private method to split a line of a Unix like directory listing.
+       
+        It splits the line into meta data, number of links, user, group, size,
+        month, day, year or time and name.
         
+        @param line directory line to split (string)
         @return tuple of nine strings giving the meta data,
             number of links, user, group, size, month, day, year or time
             and name
@@ -192,8 +195,6 @@ class FtpDirLineParser(QObject):
         
         @param line directory line to be parsed (string)
         @return URL info object containing the valid data (E5UrlInfo)
-        @exception FtpDirLineParserError Raised if the line is not of a
-            recognized Unix format.
         """
         modeString, nlink, user, group, size, month, day, \
           yearOrTime, name = self.__splitUnixLine(line)
@@ -306,8 +307,6 @@ class FtpDirLineParser(QObject):
         
         @param line directory line to be parsed (string)
         @return URL info object containing the valid data (E5UrlInfo)
-        @exception FtpDirLineParserError Raised if the line is not of a
-            recognized format.
         """
         if self.__ignoreLine(line):
             return None

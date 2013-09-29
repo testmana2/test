@@ -22,6 +22,8 @@ class LexerCPP(QsciLexerCPP, Lexer):
         Constructor
         
         @param parent parent widget of this lexer
+        @param caseInsensitiveKeywords flag indicating keywords are case
+            insensitive (boolean)
         """
         super().__init__(parent, caseInsensitiveKeywords)
         Lexer.__init__(self)
@@ -82,6 +84,7 @@ class LexerCPP(QsciLexerCPP, Lexer):
         """
         Public method to check, if a style is a comment style.
         
+        @param style style to check (integer)
         @return flag indicating a comment style (boolean)
         """
         return style in [QsciLexerCPP.Comment,
@@ -93,6 +96,7 @@ class LexerCPP(QsciLexerCPP, Lexer):
         """
         Public method to check, if a style is a string style.
         
+        @param style style to check (integer)
         @return flag indicating a string style (boolean)
         """
         return style in [QsciLexerCPP.DoubleQuotedString,

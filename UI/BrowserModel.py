@@ -728,7 +728,7 @@ class BrowserItem(object):
         Public method to get a child id.
         
         @param row number of child to get the id of (integer)
-        @param return reference to the child item (BrowserItem)
+        @return reference to the child item (BrowserItem)
         """
         return self.childItems[row]
     
@@ -761,7 +761,7 @@ class BrowserItem(object):
         Public method to get a specific data item.
         
         @param column number of the requested data item (integer)
-        @param return the stored data item
+        @return stored data item
         """
         try:
             return self.itemData[column]
@@ -1293,7 +1293,7 @@ class BrowserClassItem(BrowserItem):
         """
         Public method returning the line number defining this object.
         
-        return line number defining the object (integer)
+        @return line number defining the object (integer)
         """
         return self._classObject.lineno
     
@@ -1556,7 +1556,7 @@ class BrowserClassAttributeItem(BrowserItem):
         """
         Public method returning the line number defining this object.
         
-        return line number defining the object (integer)
+        @return line number defining the object (integer)
         """
         return self._attributeObject.lineno
     
@@ -1564,7 +1564,7 @@ class BrowserClassAttributeItem(BrowserItem):
         """
         Public method returning the line numbers this object is assigned to.
         
-        return line number the object is assigned to (list of integers)
+        @return line number the object is assigned to (list of integers)
         """
         return self._attributeObject.linenos[:]
     

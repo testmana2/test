@@ -131,10 +131,12 @@ class Editor(QsciScintillaCompat):
         @param dbs reference to the debug server object
         @param fn name of the file to be opened (string). If it is None,
                 a new (empty) editor is opened
-        @param vm reference to the view manager object (ViewManager.ViewManager)
+        @param vm reference to the view manager object
+            (ViewManager.ViewManager)
         @param filetype type of the source file (string)
         @param editor reference to an Editor object, if this is a cloned view
         @param tv reference to the task viewer object
+        @exception IOError raised to indicate an issue accessing the file
         """
         super().__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
@@ -469,7 +471,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to add a clone to our list.
         
-        @param clone reference to the cloned editor (Editor)
+        @param editor reference to the cloned editor (Editor)
         """
         self.__clones.append(editor)
         
@@ -482,7 +484,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to remove a clone from our list.
         
-        @param clone reference to the cloned editor (Editor)
+        @param editor reference to the cloned editor (Editor)
         """
         if editor in self.__clones:
             editor.editorRenamed.disconnect(self.fileRenamed)
@@ -495,7 +497,9 @@ class Editor(QsciScintillaCompat):
         """
         Private method to generate a dummy filename for binding a lexer.
         
-        @param line0 first line of text to use in the generation process (string)
+        @param line0 first line of text to use in the generation process
+            (string)
+        @return dummy file name to be used for binding a lexer (string)
         """
         bindName = ""
         line0 = line0.lower()
@@ -574,7 +578,7 @@ class Editor(QsciScintillaCompat):
         
     def __initContextMenu(self):
         """
-        Private method used to setup the context menu
+        Private method used to setup the context menu.
         """
         self.miniMenu = Preferences.getEditor("MiniContextMenu")
         
@@ -738,6 +742,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuAutocompletion(self):
         """
         Private method used to setup the Checks context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8('Autocomplete'))
         
@@ -764,6 +770,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuChecks(self):
         """
         Private method used to setup the Checks context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8('Check'))
         menu.aboutToShow.connect(self.__showContextMenuChecks)
@@ -772,6 +780,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuShow(self):
         """
         Private method used to setup the Show context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8('Show'))
         
@@ -794,6 +804,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuGraphics(self):
         """
         Private method used to setup the diagrams context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8('Diagrams'))
         
@@ -817,6 +829,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuLanguages(self):
         """
         Private method used to setup the Languages context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Languages"))
         
@@ -858,6 +872,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuEncodings(self):
         """
         Private method used to setup the Encodings context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         self.supportedEncodings = {}
         
@@ -880,6 +896,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuEol(self):
         """
         Private method to setup the eol context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         self.supportedEols = {}
         
@@ -916,6 +934,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuExporters(self):
         """
         Private method used to setup the Exporters context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Export as"))
         
@@ -932,7 +952,7 @@ class Editor(QsciScintillaCompat):
         
     def __initContextMenuMargins(self):
         """
-        Private method used to setup the context menu for the margins
+        Private method used to setup the context menu for the margins.
         """
         self.marginMenuActs = {}
         
@@ -943,7 +963,7 @@ class Editor(QsciScintillaCompat):
         
     def __initContextMenuSeparateMargins(self):
         """
-        Private method used to setup the context menu for the separated margins
+        Private method used to setup the context menu for the separated margins.
         """
         # bookmark margin
         self.bmMarginMenu = QMenu()
@@ -1040,7 +1060,7 @@ class Editor(QsciScintillaCompat):
         
     def __initContextMenuUnifiedMargins(self):
         """
-        Private method used to setup the context menu for the unified margins
+        Private method used to setup the context menu for the unified margins.
         """
         self.marginMenu = QMenu()
         
@@ -1347,6 +1367,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to handle a change of the encoding.
         
+        @param encoding changed encoding (string)
         @keyparam propagate flag indicating to propagate the change (boolean)
         """
         self.encoding = encoding
@@ -1811,10 +1832,11 @@ class Editor(QsciScintillaCompat):
         
     def highlight(self, line=None, error=False, syntaxError=False):
         """
-        Public method to highlight (or de-highlight) a particular line.
+        Public method to highlight [or de-highlight] a particular line.
         
         @param line line number to highlight (integer)
-        @param error flag indicating whether the error highlight should be used (boolean)
+        @param error flag indicating whether the error highlight should be
+            used (boolean)
         @param syntaxError flag indicating a syntax error (boolean)
         """
         if line is None:
@@ -1911,14 +1933,18 @@ class Editor(QsciScintillaCompat):
         """
         Private slot to set changed breakpoints.
         
-        @param indexes indexes of changed breakpoints.
+        @param startIndex start index of the breakpoints being changed
+            (QModelIndex)
+        @param endIndex end index of the breakpoints being changed
+            (QModelIndex)
         """
         if not self.inLinesChanged:
             self.__addBreakPoints(QModelIndex(), startIndex.row(), endIndex.row())
         
     def __breakPointDataAboutToBeChanged(self, startIndex, endIndex):
         """
-        Private slot to handle the dataAboutToBeChanged signal of the breakpoint model.
+        Private slot to handle the dataAboutToBeChanged signal of the
+        breakpoint model.
         
         @param startIndex start index of the rows to be changed (QModelIndex)
         @param endIndex end index of the rows to be changed (QModelIndex)
@@ -2155,6 +2181,8 @@ class Editor(QsciScintillaCompat):
     def __clearBreakpoints(self, fileName):
         """
         Private slot to clear all breakpoints.
+        
+        @param fileName name of the file (string)
         """
         idxList = []
         for handle, (ln, _, _, _, _) in list(self.breaks.items()):
@@ -3572,7 +3600,7 @@ class Editor(QsciScintillaCompat):
         
     def indentLineOrSelection(self):
         """
-        Public slot to indent the current line or current selection
+        Public slot to indent the current line or current selection.
         """
         if self.hasSelectedText():
             self.__indentSelection(True)
@@ -3653,6 +3681,8 @@ class Editor(QsciScintillaCompat):
     def gotoMethodClass(self, goUp=False):
         """
         Public method to go to the next Python method or class definition.
+        
+        @param goUp flag indicating the move direction (boolean)
         """
         if self.isPy3File() or self.isPy2File() or self.isRubyFile():
             lineNo = self.getCursorPosition()[0]
@@ -5005,6 +5035,8 @@ class Editor(QsciScintillaCompat):
     def hasCoverageMarkers(self):
         """
         Public method to test, if there are coverage markers.
+        
+        @return flag indicating the presence of coverage markers (boolean)
         """
         return len(self.notcoveredMarkers) > 0
         
@@ -5638,6 +5670,7 @@ class Editor(QsciScintillaCompat):
         method.
         
         @param alsoDelete ignored
+        @return flag indicating a successful close of the editor (boolean)
         """
         return self.vm.closeEditor(self)
         
@@ -5764,7 +5797,6 @@ class Editor(QsciScintillaCompat):
         with the QWorkspace.
         
         @param evt the event, that was generated (QEvent)
-        @return flag indicating if the event could be processed (bool)
         """
         if evt.type() == QEvent.WindowStateChange and \
            self.fileName is not None:
@@ -6004,6 +6036,8 @@ class Editor(QsciScintillaCompat):
     def __initContextMenuResources(self):
         """
         Private method used to setup the Resources context sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(self.trUtf8('Resources'))
         
@@ -6639,7 +6673,7 @@ class Editor(QsciScintillaCompat):
     
     def __processStartEditCommand(self, argsString):
         """
-        Private slot to process a remote StartEdit command
+        Private slot to process a remote StartEdit command.
         
         @param argsString string containing the command parameters (string)
         """
@@ -6686,7 +6720,7 @@ class Editor(QsciScintillaCompat):
     
     def __processEndEditCommand(self, argsString):
         """
-        Private slot to process a remote EndEdit command
+        Private slot to process a remote EndEdit command.
         
         @param argsString string containing the command parameters (string)
         """
@@ -6724,7 +6758,7 @@ class Editor(QsciScintillaCompat):
     
     def __processRequestSyncCommand(self, argsString):
         """
-        Private slot to process a remote RequestSync command
+        Private slot to process a remote RequestSync command.
         
         @param argsString string containing the command parameters (string)
         """
@@ -6740,7 +6774,7 @@ class Editor(QsciScintillaCompat):
     
     def __processSyncCommand(self, argsString):
         """
-        Private slot to process a remote Sync command
+        Private slot to process a remote Sync command.
         
         @param argsString string containing the command parameters (string)
         """

@@ -381,13 +381,16 @@ class PreviewProcessingThread(QThread):
     
     def __getHtml(self, language, text, ssiEnabled, filePath, rootPath):
         """
-        Private method to process the given text depending upon the given language.
+        Private method to process the given text depending upon the given
+        language.
         
         @param language language of the text (string)
         @param text to be processed (string)
-        @param ssiEnabled flag indicating to do some (limited) SSI processing (boolean)
+        @param ssiEnabled flag indicating to do some (limited) SSI processing
+            (boolean)
         @param filePath file path of the text (string)
         @param rootPath root path to be used for SSI processing (str)
+        @return processed HTML text (string)
         """
         if language == "HTML":
             if ssiEnabled:

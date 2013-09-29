@@ -4,7 +4,7 @@
 #
 
 """
-Module containing the default configuration of the eric5 installation
+Module containing the default configuration of the eric5 installation.
 """
 
 import sys
@@ -31,14 +31,17 @@ _pkg_config = {
 
 
 def getConfig(name):
-    '''
+    """
     Module function to get a configuration value.
 
     @param name the name of the configuration value (string).
-    '''
+    @return requested config value
+    @exception AttributeError raised to indicate an invalid config entry
+    """
     try:
         return _pkg_config[name]
     except KeyError:
         pass
 
-    raise AttributeError('"{0}" is not a valid configuration value'.format(name))
+    raise AttributeError(
+        '"{0}" is not a valid configuration value'.format(name))

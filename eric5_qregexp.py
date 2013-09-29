@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 QRegExp
+Eric5 QRegExp.
 
 This is the main Python script that performs the necessary initialization
 of the QRegExp wizard module and starts the Qt event loop. This is a standalone

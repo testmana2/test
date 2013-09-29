@@ -22,6 +22,11 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
     def __init__(self, spellChecker, startPos, endPos, parent=None):
         """
         Constructor
+        
+        @param spellChecker reference to the spell checker (SpellChecker)
+        @param startPos position to start spell checking (integer)
+        @param endPos end position for spell checking (integer)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -36,6 +41,8 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
     def __enableButtons(self, enable):
         """
         Private method to set the buttons enabled state.
+        
+        @param enable enable state (boolean)
         """
         self.addButton.setEnabled(enable)
         self.ignoreButton.setEnabled(enable)

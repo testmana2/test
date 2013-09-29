@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Configure
+Eric5 Configure.
 
 This is the main Python script to configure the eric5 IDE from the outside.
 """

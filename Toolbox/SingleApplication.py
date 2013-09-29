@@ -93,6 +93,8 @@ class SingleApplicationServer(QLocalServer):
         
         @param cmd commandstring (string)
         @param params parameterstring (string)
+        @exception RuntimeError raised to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError("'handleCommand' must be overridden")
 
@@ -146,6 +148,8 @@ class SingleApplicationClient(object):
         <b>Note</b>: This method must be overridden by subclasses.
         
         @param args command line args (list of strings)
+        @exception RuntimeError raised to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError("'processArgs' must be overridden")
     

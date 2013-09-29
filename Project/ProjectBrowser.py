@@ -34,7 +34,6 @@ class ProjectBrowser(E5TabWidget):
     that doesn't fit these categories. Optionally it contains an additional
     tab with the file system browser.
     """
-    
     def __init__(self, project, parent=None, embeddedBrowser=True):
         """
         Constructor
@@ -153,7 +152,7 @@ class ProjectBrowser(E5TabWidget):
         
     def __setBrowsersAvailable(self, browserFlags):
         """
-        Private method to add selected browsers to the project browser
+        Private method to add selected browsers to the project browser.
         
         @param browserFlags flags indicating the browsers to add (integer)
         """
@@ -212,6 +211,8 @@ class ProjectBrowser(E5TabWidget):
     def __currentChanged(self, index):
         """
         Private slot to handle the currentChanged(int) signal.
+        
+        @param index index of the tab (integer)
         """
         if index > -1:
             browser = self.widget(index)

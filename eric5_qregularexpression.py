@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 QRegularExpression
+Eric5 QRegularExpression.
 
 This is the main Python script that performs the necessary initialization
 of the QRegularExpression wizard module and starts the Qt event loop. This is a standalone

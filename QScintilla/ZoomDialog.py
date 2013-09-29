@@ -23,6 +23,7 @@ class ZoomDialog(QDialog, Ui_ZoomDialog):
         @param zoom zoom factor to show in the spinbox
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
+        @param modal modal dialog state (boolean)
         """
         super().__init__(parent)
         if name:

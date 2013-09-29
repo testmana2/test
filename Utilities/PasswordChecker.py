@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a checker for password strength
+Module implementing a checker for password strength.
 """
 
 import re

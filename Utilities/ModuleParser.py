@@ -375,9 +375,9 @@ class VisibilityBase(object):
 
 
 class Module(object):
-    '''
+    """
     Class to represent a Python module.
-    '''
+    """
     def __init__(self, name, file=None, type=None):
         """
         Constructor
@@ -1179,9 +1179,9 @@ class Module(object):
 
 
 class Class(VisibilityBase):
-    '''
+    """
     Class to represent a Python class.
-    '''
+    """
     def __init__(self, module, name, super, file, lineno):
         """
         Constructor
@@ -1282,9 +1282,9 @@ class Class(VisibilityBase):
 
 
 class RbModule(Class):
-    '''
+    """
     Class to represent a Ruby module.
-    '''
+    """
     def __init__(self, module, name, file, lineno):
         """
         Constructor
@@ -1308,9 +1308,9 @@ class RbModule(Class):
 
 
 class Function(VisibilityBase):
-    '''
+    """
     Class to represent a Python function or method.
-    '''
+    """
     General = 0
     Static = 1
     Class = 2
@@ -1358,9 +1358,9 @@ class Function(VisibilityBase):
 
 
 class Attribute(VisibilityBase):
-    '''
+    """
     Class to represent a Python function or method.
-    '''
+    """
     def __init__(self, module, name, file, lineno, isSignal=False):
         """
         Constructor
@@ -1391,7 +1391,7 @@ class Attribute(VisibilityBase):
 
 def readModule(module, path=[], inpackage=False, basename="",
                extensions=None, caching=True):
-    '''
+    """
     Function to read a module file and parse it.
 
     The module is searched in path and sys.path, read and parsed.
@@ -1410,7 +1410,7 @@ def readModule(module, path=[], inpackage=False, basename="",
         cached (boolean)
     @return reference to a Module object containing the parsed
         module information (Module)
-    '''
+    """
     global _modules
     
     if extensions is None:

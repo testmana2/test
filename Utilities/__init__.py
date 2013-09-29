@@ -87,11 +87,14 @@ supportedCodecs = ['utf-8',
 
 class CodingError(Exception):
     """
-    Class implementing an exception, which is raised, if a given coding is incorrect.
+    Class implementing an exception, which is raised, if a given coding is
+    incorrect.
     """
     def __init__(self, coding):
         """
         Constructor
+        
+        @param coding coding to include in the message (string)
         """
         self.errorMessage = QCoreApplication.translate("CodingError",
             "The coding '{0}' is wrong for the given text.").format(coding)
@@ -266,6 +269,7 @@ def encode(text, orig_coding):
     @param text text to be encoded (string)
     @param orig_coding type of the original encoding (string)
     @return tuple of encoded text and encoding used (bytes, string)
+    @exception CodingError raised to indicate an invalid encoding
     """
     encoding = None
     if orig_coding == 'utf-8-bom':
@@ -692,6 +696,8 @@ def relpath(path, start=os.path.curdir):
     
     @param path path to make relative (string)
     @param start path to make relative from (string)
+    @return relative path (string)
+    @exception ValueError raised to indicate an invalid path
     """
     if not path:
         raise ValueError("no path specified")
@@ -1191,7 +1197,7 @@ def getRealName():
 
 def getHomeDir():
     """
-    Function to get a users home directory
+    Function to get a users home directory.
     
     @return home directory (string)
     """
@@ -1532,7 +1538,6 @@ def checkPyside():
     @return tuple of two flags indicating the presence of PySide for Python2
         and PySide for Python3 (boolean, boolean)
     """
-
     try:
         # step 1: try Python3 variant of PySide
         import PySide       # __IGNORE_EXCEPTION__
@@ -1680,7 +1685,8 @@ def win32_Kill(pid):
     """
     Function to provide an os.kill equivalent for Win32.
     
-    @param pid process id
+    @param pid process id (integer)
+    @return result of the kill (boolean)
     """
     import win32api
     handle = win32api.OpenProcess(1, 0, pid)

@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Documentation Generator
+Eric5 Documentation Generator.
 
 This is the main Python script of the documentation generator. It is
 this script that gets called via the source documentation interface.
@@ -135,7 +135,6 @@ def main():
     """
     Main entry point into the application.
     """
-
     import getopt
 
     try:

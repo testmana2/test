@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Plugin Installer
+Eric5 Plugin Installer.
 
 This is the main Python script to install eric5 plugins from outside of the IDE.
 """

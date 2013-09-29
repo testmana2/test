@@ -7,6 +7,10 @@
 # This module is based on pyflakes for Python2 but was heavily hacked to
 # work with Python3 and Qt (translatable messages)
 
+"""
+Module implementing the messages for py3flakes.
+"""
+
 from PyQt4.QtCore import QCoreApplication
 
 

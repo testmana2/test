@@ -49,6 +49,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         Constructor
         
         @param project reference to the project object
+        @param replaceMode flag indicating the replace dialog mode (boolean)
         @param parent parent widget of this dialog (QWidget)
         """
         super().__init__(parent)

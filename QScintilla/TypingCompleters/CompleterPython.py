@@ -401,7 +401,7 @@ class CompleterPython(CompleterBase):
     
     def __inComment(self, line, col):
         """
-        Private method to check, if the cursor is inside a comment
+        Private method to check, if the cursor is inside a comment.
         
         @param line current line (integer)
         @param col current position within line (integer)

@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 UI Previewer
+Eric5 UI Previewer.
 
 This is the main Python script that performs the necessary initialization
 of the ui previewer and starts the Qt event loop. This is a standalone version

@@ -756,7 +756,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
     def __generateDialogCode(self):
         """
-        Private method to generate dialog code for the form (Qt4 only)
+        Private method to generate dialog code for the form (Qt4 only).
         """
         itm = self.model().item(self.currentIndex())
         fn = itm.fileName()

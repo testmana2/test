@@ -23,6 +23,7 @@ class AutoSaver(QObject):
         
         @param parent reference to the parent object (QObject)
         @param save slot to be called to perform the save operation
+        @exception RuntimeError raised, if no parent is given
         """
         super().__init__(parent)
         

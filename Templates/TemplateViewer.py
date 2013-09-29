@@ -304,6 +304,7 @@ class TemplateEntry(QTreeWidgetItem):
         @param var template variable name (string)
         @param val value of the template variable (string)
         @param txt template text (string)
+        @return expanded and formatted variable (string)
         """
         t = ""
         for line in txt.splitlines():
@@ -929,7 +930,7 @@ class TemplateViewer(QTreeWidget):
     
     def readTemplates(self, filename=None):
         """
-        Public method to read in the templates file (.e4c)
+        Public method to read in the templates file (.e4c).
         
         @param filename name of a templates file to read (string)
         """

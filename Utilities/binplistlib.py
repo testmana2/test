@@ -106,6 +106,11 @@ class Uid(int):
     This is used in keyed archiving.
     """
     def __repr__(self):
+        """
+        Public method to return an object representation.
+        
+        @return object representation (string)
+        """
         return "Uid(%d)" % self
 
 
@@ -186,7 +191,6 @@ def readPlistFromBytes(data):
     
     @param data plist data (bytes)
     @return reference to the read object
-    @exception InvalidPlistException raised to signal an invalid plist file
     """
     return readPlist(BytesIO(data))
 
@@ -196,7 +200,9 @@ def writePlistToBytes(rootObject, binary=True):
     Module function to write a plist bytes object.
     
     @param rootObject reference to the object to be written
-    @param binary flag indicating the generation of a binary plist bytes object (boolean)
+    @param binary flag indicating the generation of a binary plist bytes
+        object (boolean)
+    @return bytes object containing the plist data
     """
     if not binary:
         return plistlib.writePlistToBytes(rootObject)
@@ -269,6 +275,8 @@ class PlistReader(object):
         Private method to read the root object.
         
         @return unpickled object
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         result = None
         self.reset()
@@ -311,6 +319,8 @@ class PlistReader(object):
         Private method to read the object data.
         
         @return unpickled object
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         result = None
         tmp_byte = self.contents[self.currentOffset:self.currentOffset + 1]
@@ -402,6 +412,8 @@ class PlistReader(object):
         
         @param length length of the object (integer)
         @return float object
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         result = 0.0
         to_read = pow(2, length)
@@ -534,6 +546,9 @@ class PlistReader(object):
         
         @param data data to extract the integer from (bytes)
         @param bytes length of the integer (integer)
+        @return read integer (integer)
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         result = 0
         # 1, 2, and 4 byte integers are unsigned
@@ -555,9 +570,19 @@ class HashableWrapper(object):
     Class wrapping a hashable value.
     """
     def __init__(self, value):
+        """
+        Constructor
+        
+        @param value object value
+        """
         self.value = value
 
     def __repr__(self):
+        """
+        Public method to generate a representation of the object.
+        
+        @return object representation (string)
+        """
         return "<HashableWrapper: %s>" % [self.value]
 
 
@@ -566,9 +591,19 @@ class BoolWrapper(object):
     Class wrapping a boolean value.
     """
     def __init__(self, value):
+        """
+        Constructor
+        
+        @param value object value (boolean)
+        """
         self.value = value
 
     def __repr__(self):
+        """
+        Public method to generate a representation of the object.
+        
+        @return object representation (string)
+        """
         return "<BoolWrapper: %s>" % self.value
 
 
@@ -618,6 +653,7 @@ class PlistWriter(object):
         If the given object has been written already, return its
         position in the offset table. Otherwise, return None.
         
+        @param obj object
         @return position of the object (integer)
         """
         return self.writtenReferences.get(obj)
@@ -704,10 +740,25 @@ class PlistWriter(object):
             return root
 
     def incrementByteCount(self, field, incr=1):
+        """
+        Public method to increment the byte count.
+        
+        @param field field to evaluate
+        @param incr byte count increment (integer)
+        """
         self.byteCounts = self.byteCounts._replace(
             **{field: self.byteCounts.__getattribute__(field) + incr})
 
     def computeOffsets(self, obj, asReference=False, isRoot=False):
+        """
+        Public method to compute offsets of an object.
+        
+        @param obj plist object
+        @param asReference flag indicating offsets as references (boolean)
+        @param isRoot flag indicating a root object (boolean)
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
+        """
         def check_key(key):
             if key is None:
                 raise InvalidPlistException('Dictionary keys cannot be null in plists.')
@@ -720,6 +771,7 @@ class PlistWriter(object):
             if size > 0b1110:
                 size += self.intSize(size)
             return size
+        
         # If this should be a reference, then we keep a record of it in the
         # uniques table.
         if asReference:
@@ -891,6 +943,8 @@ class PlistWriter(object):
         
         @param output current output (bytes)
         @return new output (bytes)
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         all_positions = []
         writtenReferences = list(self.writtenReferences.items())
@@ -923,6 +977,8 @@ class PlistWriter(object):
         @param obj integer to be packed
         @param bytes length the integer should be packed into (integer)
         @return serialized object (bytes)
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         result = ''
         if bytes is None:
@@ -947,6 +1003,8 @@ class PlistWriter(object):
         
         @param obj integer object
         @return number of bytes required (integer)
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
         """
         # SIGNED
         if obj < 0:  # Signed integer, always 8 bytes

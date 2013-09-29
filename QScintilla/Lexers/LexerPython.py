@@ -35,6 +35,8 @@ class LexerPython(QsciLexerPython, Lexer):
     def language(self):
         """
         Public method to get the lexer language.
+        
+        @return lexer language (string)
         """
         if not self.variant:
             return QsciLexerPython.language(self)
@@ -123,6 +125,7 @@ class LexerPython(QsciLexerPython, Lexer):
         """
         Public method to check, if a style is a comment style.
         
+        @param style style to check (integer)
         @return flag indicating a comment style (boolean)
         """
         return style in [QsciLexerPython.Comment,
@@ -132,6 +135,7 @@ class LexerPython(QsciLexerPython, Lexer):
         """
         Public method to check, if a style is a string style.
         
+        @param style style to check (integer)
         @return flag indicating a string style (boolean)
         """
         return style in [QsciLexerPython.DoubleQuotedString,

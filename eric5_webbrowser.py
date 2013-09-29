@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Web Browser
+Eric5 Web Browser.
 
 This is the main Python script that performs the necessary initialization
 of the web browser and starts the Qt event loop. This is a standalone version

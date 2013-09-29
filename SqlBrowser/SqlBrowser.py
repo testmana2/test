@@ -30,7 +30,7 @@ class SqlBrowser(E5MainWindow):
         Constructor
         
         @param connections list of database connections to add (list of strings)
-        @param reference to the parent widget (QWidget)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setObjectName("SqlBrowser")

@@ -397,7 +397,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         Private slot to handle the highlighted signal.
         
-        @param txt current text (string)
+        @param text current text (string)
         """
         if text:
             for pattern in self.rxPatterns:

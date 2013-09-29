@@ -28,9 +28,10 @@ class VersionControl(QObject):
     and the common methods.
     
     @signal vcsStatusMonitorData(list of str) emitted to update the VCS status
-    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of the
-        monitoring thread (ok, nok, op, off) and a status message
-    @signal vcsStatusChanged() emitted to indicate a change of the overall VCS status
+    @signal vcsStatusMonitorStatus(str, str) emitted to signal the status of
+        the monitoring thread (ok, nok, op, off) and a status message
+    @signal vcsStatusChanged() emitted to indicate a change of the overall
+        VCS status
     """
     vcsStatusMonitorData = pyqtSignal(list)
     vcsStatusMonitorStatus = pyqtSignal(str, str)
@@ -75,6 +76,9 @@ class VersionControl(QObject):
     def vcsShutdown(self):
         """
         Public method used to shutdown the vcs interface.
+        
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -82,10 +86,10 @@ class VersionControl(QObject):
         """
         Public method used to test for the presence of the vcs.
         
-        It must return a bool to indicate the existance and a string giving
-        an error message in case of failure.
-        
-        @exception RuntimeError not implemented
+        @ireturn tuple of flag indicating the existence and a string
+            giving an error message in case of failure
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -93,21 +97,23 @@ class VersionControl(QObject):
         """
         Public method used to initialize the vcs.
         
-        It must return a boolean to indicate an execution without errors.
-        
         @param vcsDir name of the VCS directory (string)
         @param noDialog flag indicating quiet operations (boolean)
-        @exception RuntimeError not implemented
+        @ireturn flag indicating success (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
     def vcsConvertProject(self, vcsDataDict, project):
         """
-        Public method to convert an uncontrolled project to a version controlled project.
+        Public method to convert an uncontrolled project to a version
+        controlled project.
         
         @param vcsDataDict dictionary of data required for the conversion
         @param project reference to the project object
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -118,9 +124,10 @@ class VersionControl(QObject):
         @param vcsDataDict dictionary of data required for the import
         @param projectDir project directory (string)
         @param noDialog flag indicating quiet operations
-        @return flag indicating an execution without errors (boolean)
+        @ireturn flag indicating an execution without errors (boolean)
             and a flag indicating the version controll status (boolean)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -131,8 +138,9 @@ class VersionControl(QObject):
         @param vcsDataDict dictionary of data required for the checkout
         @param projectDir project directory to create (string)
         @param noDialog flag indicating quiet operations
-        @return flag indicating an execution without errors (boolean)
-        @exception RuntimeError not implemented
+        @ireturn flag indicating an execution without errors (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -140,25 +148,25 @@ class VersionControl(QObject):
         """
         Public method used to export a directory from the vcs.
         
-        It must return a boolean to indicate an execution without errors.
-        
         @param vcsDataDict dictionary of data required for the export
         @param projectDir project directory to create (string)
-        @return flag indicating an execution without errors (boolean)
-        @exception RuntimeError not implemented
+        @ireturn flag indicating an execution without errors (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
     def vcsCommit(self, name, message, noDialog=False):
         """
-        Public method used to make the change of a file/directory permanent in the vcs.
-        
-        It must return a boolean to indicate an execution without errors.
+        Public method used to make the change of a file/directory permanent in
+        the vcs.
         
         @param name file/directory name to be committed (string)
         @param message message for this operation (string)
-        @param noDialog flag indicating quiet operations
-        @exception RuntimeError not implemented
+        @param noDialog flag indicating quiet operations (boolean)
+        @ireturn flag indicating success (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -166,13 +174,12 @@ class VersionControl(QObject):
         """
         Public method used to update a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to be updated (string)
         @param noDialog flag indicating quiet operations (boolean)
-        @return flag indicating, that the update contained an add
+        @ireturn flag indicating, that the update contained an add
             or delete (boolean)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -180,12 +187,11 @@ class VersionControl(QObject):
         """
         Public method used to add a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to be added (string)
         @param isDir flag indicating name is a directory (boolean)
         @param noDialog flag indicating quiet operations (boolean)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -193,11 +199,10 @@ class VersionControl(QObject):
         """
         Public method used to add a file/directory in binary mode in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to be added (string)
         @param isDir flag indicating name is a directory (boolean)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -205,10 +210,9 @@ class VersionControl(QObject):
         """
         Public method to add a directory tree rooted at path in the vcs.
         
-        It must not return anything.
-        
         @param path root directory of the tree to be added (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -216,12 +220,12 @@ class VersionControl(QObject):
         """
         Public method used to add a file/directory in the vcs.
         
-        It must return a flag indicating successfull operation
-        
         @param name file/directory name to be removed (string)
         @param project flag indicating deletion of a project tree (boolean)
         @param noDialog flag indicating quiet operations
-        @exception RuntimeError not implemented
+        @ireturn flag indicating success (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -233,8 +237,9 @@ class VersionControl(QObject):
         @param project reference to the project object
         @param target new name of the file/directory (string)
         @param noDialog flag indicating quiet operations
-        @return flag indicating successfull operation (boolean)
-        @exception RuntimeError not implemented
+        @ireturn flag indicating successfull operation (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -242,10 +247,9 @@ class VersionControl(QObject):
         """
         Public method used to view the log of a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to show the log for (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -253,10 +257,9 @@ class VersionControl(QObject):
         """
         Public method used to view the diff of a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to be diffed (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -264,10 +267,9 @@ class VersionControl(QObject):
         """
         Public method used to view the history of a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to show the history for (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -275,10 +277,9 @@ class VersionControl(QObject):
         """
         Public method used to view the status of a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to show the status for (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -286,10 +287,9 @@ class VersionControl(QObject):
         """
         Public method used to set the tag of a file/directory in the vcs.
         
-        It must not return anything.
-        
         @param name file/directory name to be tagged (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -297,10 +297,9 @@ class VersionControl(QObject):
         """
         Public method used to revert changes made to a file/directory.
         
-        It must not return anything.
-        
         @param name file/directory name to be reverted (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -308,12 +307,11 @@ class VersionControl(QObject):
         """
         Public method used to switch a directory to a different tag/branch.
         
-        It must not return anything.
-        
         @param name directory name to be switched (string)
-        @return flag indicating, that the switch contained an add
+        @ireturn flag indicating, that the switch contained an add
             or delete (boolean)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -321,10 +319,9 @@ class VersionControl(QObject):
         """
         Public method used to merge a tag/branch into the local project.
         
-        It must not return anything.
-        
         @param name file/directory name to be merged (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -333,21 +330,24 @@ class VersionControl(QObject):
         Public method used to get the registered state of a file in the vcs.
         
         @param name filename to check (string)
-        @return a combination of canBeCommited and canBeAdded or
+        @ireturn a combination of canBeCommited and canBeAdded or
             0 in order to signal an error
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
     def vcsAllRegisteredStates(self, names, dname):
         """
-        Public method used to get the registered states of a number of files in the vcs.
+        Public method used to get the registered states of a number of files
+        in the vcs.
         
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
-        @return the received dictionary completed with a combination of
+        @ireturn the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -355,8 +355,9 @@ class VersionControl(QObject):
         """
         Public method returning the name of the vcs.
         
-        @return name of the vcs (string)
-        @exception RuntimeError not implemented
+        @ireturn name of the vcs (string)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -365,7 +366,8 @@ class VersionControl(QObject):
         Public method used to cleanup the local copy.
         
         @param name directory name to be cleaned up (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -374,7 +376,8 @@ class VersionControl(QObject):
         Public method used to execute arbitrary vcs commands.
         
         @param name directory name of the working directory (string)
-        @exception RuntimeError not implemented
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -384,16 +387,22 @@ class VersionControl(QObject):
         
         @param project reference to the project object
         @param archive name of the project in the repository (string)
-        @param editable flag indicating that the project name is editable (boolean)
+        @param editable flag indicating that the project name is editable
+            (boolean)
         @param parent parent widget (QWidget)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
     def vcsNewProjectOptionsDialog(self, parent=None):
         """
-        Public method to get a dialog to enter repository info for getting a new project.
+        Public method to get a dialog to enter repository info for getting a
+        new project.
         
         @param parent parent widget (QWidget)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -402,19 +411,25 @@ class VersionControl(QObject):
         Public method to retrieve information about the repository.
         
         @param ppath local path to get the repository infos (string)
-        @return string with ready formated info for display (string)
+        @ireturn string with ready formated info for display (string)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
-    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
+    def vcsGetProjectBrowserHelper(self, browser, project,
+                                   isTranslationsBrowser=False):
         """
-        Public method to instanciate a helper object for the different project browsers.
+        Public method to instanciate a helper object for the different
+        project browsers.
         
         @param browser reference to the project browser object
         @param project reference to the project object
-        @param isTranslationsBrowser flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
-        @return the project browser helper object
+        @param isTranslationsBrowser flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
+        @ireturn the project browser helper object
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
         
@@ -423,7 +438,9 @@ class VersionControl(QObject):
         Public method to instanciate a helper object for the project.
         
         @param project reference to the project object
-        @return the project helper object
+        @ireturn the project helper object
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
     
@@ -455,7 +472,8 @@ class VersionControl(QObject):
         @return a dictionary with the vcs operations as key and
             the respective options as values. The key 'global' must contain
             the global options. The other keys must be 'commit', 'update',
-            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and 'export'.
+            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and
+            'export'.
         """
         return self.defaultOptions
         
@@ -525,9 +543,10 @@ class VersionControl(QObject):
     ## below are some utility methods
     #####################################################################
     
-    def startSynchronizedProcess(self, proc, program, arguments, workingDir=None):
+    def startSynchronizedProcess(self, proc, program, arguments,
+                                 workingDir=None):
         """
-        Public method to start a synchroneous process
+        Public method to start a synchroneous process.
         
         This method starts a process and waits
         for its end while still serving the Qt event loop.
@@ -546,7 +565,8 @@ class VersionControl(QObject):
         proc.start(program, arguments)
         procStarted = proc.waitForStarted(5000)
         if not procStarted:
-            E5MessageBox.critical(None,
+            E5MessageBox.critical(
+                None,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
                     'The process {0} could not be started. '
@@ -558,7 +578,8 @@ class VersionControl(QObject):
                 QApplication.processEvents()
                 QThread.msleep(300)
                 QApplication.processEvents()
-            return (proc.exitStatus() == QProcess.NormalExit) and (proc.exitCode() == 0)
+            return (proc.exitStatus() == QProcess.NormalExit) and \
+                (proc.exitCode() == 0)
         
     def splitPath(self, name):
         """
@@ -576,8 +597,8 @@ class VersionControl(QObject):
     
     def splitPathList(self, names):
         """
-        Public method splitting the list of names into a common directory part and
-        a file list.
+        Public method splitting the list of names into a common directory part
+        and a file list.
         
         @param names list of paths (list of strings)
         @return a tuple of string and list of strings (dirname, filenamelist)
@@ -594,7 +615,8 @@ class VersionControl(QObject):
 
     def addArguments(self, args, argslist):
         """
-        Protected method to add an argument list to the already present arguments.
+        Protected method to add an argument list to the already present
+        arguments.
         
         @param args current arguments list (list of strings)
         @param argslist list of arguments (list of strings)
@@ -603,9 +625,9 @@ class VersionControl(QObject):
             if arg != '':
                 args.append(arg)
     
-    ############################################################################
+    ###########################################################################
     ## VCS status monitor thread related methods
-    ############################################################################
+    ###########################################################################
     
     def __statusMonitorStatus(self, status, statusMsg):
         """
@@ -638,12 +660,14 @@ class VersionControl(QObject):
         @return reference to the monitor thread (QThread)
         """
         if project.pudata["VCSSTATUSMONITORINTERVAL"]:
-            vcsStatusMonitorInterval = project.pudata["VCSSTATUSMONITORINTERVAL"][0]
+            vcsStatusMonitorInterval = project.pudata[
+                "VCSSTATUSMONITORINTERVAL"][0]
         else:
-            vcsStatusMonitorInterval = Preferences.getVCS("StatusMonitorInterval")
+            vcsStatusMonitorInterval = Preferences.getVCS(
+                "StatusMonitorInterval")
         if vcsStatusMonitorInterval > 0:
-            self.statusMonitorThread = \
-                self._createStatusMonitorThread(vcsStatusMonitorInterval, project)
+            self.statusMonitorThread = self._createStatusMonitorThread(
+                vcsStatusMonitorInterval, project)
             if self.statusMonitorThread is not None:
                 self.statusMonitorThread.vcsStatusMonitorData.connect(
                     self.__statusMonitorData, Qt.QueuedConnection)
@@ -672,7 +696,8 @@ class VersionControl(QObject):
                 self.statusMonitorThread.terminate()
                 self.statusMonitorThread.wait(10000)
             self.statusMonitorThread = None
-            self.__statusMonitorStatus("off",
+            self.__statusMonitorStatus(
+                "off",
                 self.trUtf8("Repository status checking is switched off"))
     
     def setStatusMonitorInterval(self, interval, project):
@@ -741,12 +766,14 @@ class VersionControl(QObject):
         
     def _createStatusMonitorThread(self, interval, project):
         """
-        Protected method to create an instance of the VCS status monitor thread.
+        Protected method to create an instance of the VCS status monitor
+        thread.
         
-        Note: This method should be overwritten in subclasses in order to support
-        VCS status monitoring.
+        Note: This method should be overwritten in subclasses in order to
+        support VCS status monitoring.
         
-        @param interval check interval for the monitor thread in seconds (integer)
+        @param interval check interval for the monitor thread in seconds
+            (integer)
         @param project reference to the project object
         @return reference to the monitor thread (QThread)
         """

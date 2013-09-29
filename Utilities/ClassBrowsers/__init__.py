@@ -38,16 +38,18 @@ __extensions = {
 
 
 def readmodule(module, path=[], isPyFile=False):
-    '''
-    Read a source file and return a dictionary of classes, functions, modules, etc. .
+    """
+    Read a source file and return a dictionary of classes, functions, modules,
+    etc. .
     
-    The real work of parsing the source file is delegated to the individual file
-    parsers.
+    The real work of parsing the source file is delegated to the individual
+    file parsers.
 
     @param module name of the source file (string)
     @param path path the file should be searched in (list of strings)
+    @param isPyFile flag indicating a Python file (boolean)
     @return the resulting dictionary
-    '''
+    """
     ext = os.path.splitext(module)[1].lower()
     
     if ext in __extensions["IDL"]:
@@ -88,6 +90,7 @@ def find_module(name, path, isPyFile=False):
     
     @param name filename or modulename to search for (string)
     @param path search path (list of strings)
+    @param isPyFile flag indicating a Python file (boolean)
     @return tuple of the open file, pathname and description. Description
         is a tuple of file suffix, file mode and file type)
     @exception ImportError The file or module wasn't found.

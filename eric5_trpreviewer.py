@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 TR Previewer
+Eric5 TR Previewer.
 
 This is the main Python script that performs the necessary initialization
 of the tr previewer and starts the Qt event loop. This is a standalone version

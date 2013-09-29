@@ -275,9 +275,11 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         self.binTable.blockSignals(b)
     
     @pyqtSlot(int)
-    def on_sizeBox_valueChanged(self, index):
+    def on_sizeBox_valueChanged(self, value):
         """
-        Slot documentation goes here.
+        Private slot handling a change of the bit size.
+        
+        @param value selected bit size (integer)
         """
         self.__formatNumbers(10)
     

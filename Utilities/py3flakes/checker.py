@@ -42,6 +42,7 @@ class UnBinding(Binding):
     '''
     Created by the 'del' operator.
     '''
+    pass
 
 
 class Importation(Binding):
@@ -58,6 +59,7 @@ class Argument(Binding):
     """
     Represents binding a name as an argument.
     """
+    pass
 
 
 class Assignment(Binding):
@@ -68,6 +70,7 @@ class Assignment(Binding):
     the checker does not consider assignments in tuple/list unpacking to be
     Assignments, rather it treats them as simple Bindings.
     """
+    pass
 
 
 class FunctionDefinition(Binding):

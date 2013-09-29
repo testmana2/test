@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Snap
+Eric5 Snap.
 
 This is the main Python script that performs the necessary initialization
 of the snapshot module and starts the Qt event loop.

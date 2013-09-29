@@ -44,6 +44,7 @@ class LexerTeX(QsciLexerTeX, Lexer):
         """
         Public method to check, if a style is a comment style.
         
+        @param style style to check (integer)
         @return flag indicating a comment style (boolean)
         """
         return False
@@ -52,6 +53,7 @@ class LexerTeX(QsciLexerTeX, Lexer):
         """
         Public method to check, if a style is a string style.
         
+        @param style style to check (integer)
         @return flag indicating a string style (boolean)
         """
         return style in [QsciLexerTeX.Text]

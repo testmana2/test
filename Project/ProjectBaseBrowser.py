@@ -25,7 +25,8 @@ from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyMod
 
 class ProjectBaseBrowser(Browser):
     """
-    Baseclass implementing common functionality for the various project browsers.
+    Baseclass implementing common functionality for the various project
+    browsers.
     
     @signal closeSourceWindow(str) emitted to close a source file
     """
@@ -36,7 +37,7 @@ class ProjectBaseBrowser(Browser):
         Constructor
         
         @param project reference to the project object
-        @param type project browser type (string)
+        @param type_ project browser type (string)
         @param parent parent widget of this browser
         """
         QTreeView.__init__(self, parent)
@@ -522,26 +523,26 @@ class ProjectBaseBrowser(Browser):
         
     def selectLocalEntries(self):
         """
-        Public slot to handle the select local files context menu entries
+        Public slot to handle the select local files context menu entries.
         """
         self._selectEntries(local=True, filter=[ProjectBrowserFileItem])
         
     def selectVCSEntries(self):
         """
-        Public slot to handle the select VCS files context menu entries
+        Public slot to handle the select VCS files context menu entries.
         """
         self._selectEntries(local=False, filter=[ProjectBrowserFileItem])
         
     def selectLocalDirEntries(self):
         """
-        Public slot to handle the select local directories context menu entries
+        Public slot to handle the select local directories context menu entries.
         """
         self._selectEntries(local=True,
             filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
         
     def selectVCSDirEntries(self):
         """
-        Public slot to handle the select VCS directories context menu entries
+        Public slot to handle the select VCS directories context menu entries.
         """
         self._selectEntries(local=False,
             filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
@@ -630,7 +631,10 @@ class ProjectBaseBrowser(Browser):
         
     def __checkHookKey(self, key):
         """
-        Private method to check a hook key
+        Private method to check a hook key.
+        
+        @param key key of the hook to check (string)
+        @exception KeyError raised to indicate an invalid hook
         """
         if len(self.hooks) == 0:
             raise KeyError("Hooks are not initialized.")

@@ -35,6 +35,7 @@ def factory(parent, ui, dbs, pluginManager):
     @param dbs reference to the debug server object
     @param pluginManager reference to the plugin manager object
     @return the instantiated viewmanager
+    @exception RuntimeError raised if no view manager could be created
     """
     viewManagerStr = Preferences.getViewManager()
     vm = pluginManager.getPluginObject("viewmanager", viewManagerStr)

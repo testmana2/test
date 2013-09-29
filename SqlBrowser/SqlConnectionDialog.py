@@ -26,6 +26,8 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
     def __init__(self, parent=None):
         """
         Constructor
+        
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -73,13 +75,17 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
     def on_driverCombo_activated(self, txt):
         """
         Private slot handling the selection of a database driver.
+        
+        @param txt text of the driver combo (string)
         """
         self.__updateDialog()
     
     @pyqtSlot(str)
-    def on_databaseEdit_textChanged(self, p0):
+    def on_databaseEdit_textChanged(self, txt):
         """
         Private slot handling the change of the database name.
+        
+        @param txt text of the edit (string)
         """
         self.__updateDialog()
     
@@ -102,9 +108,9 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         Public method to retrieve the connection data.
         
-        @return tuple giving the driver name (string), the database name (string),
-            the user name (string), the password (string), the host name (string)
-            and the port (integer)
+        @return tuple giving the driver name (string), the database name
+            (string), the user name (string), the password (string), the
+            host name (string) and the port (integer)
         """
         return (
             self.driverCombo.currentText(),

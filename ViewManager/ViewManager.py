@@ -267,7 +267,7 @@ class ViewManager(QObject):
         """
         Public method to signal if cascading of managed windows is available.
         
-        @return flag indicating cascading of windows is available
+        @ireturn flag indicating cascading of windows is available
         @exception RuntimeError Not implemented
         """
         raise RuntimeError('Not implemented')
@@ -276,7 +276,7 @@ class ViewManager(QObject):
         """
         Public method to signal if tiling of managed windows is available.
         
-        @return flag indicating tiling of windows is available
+        @ireturn flag indicating tiling of windows is available
         @exception RuntimeError Not implemented
         """
         raise RuntimeError('Not implemented')
@@ -301,14 +301,14 @@ class ViewManager(QObject):
         """
         Public method to return the active (i.e. current) window.
         
-        @return reference to the active editor
+        @ireturn reference to the active editor
         @exception RuntimeError Not implemented
         """
         raise RuntimeError('Not implemented')
         
     def _removeAllViews(self):
         """
-        Protected method to remove all views (i.e. windows)
+        Protected method to remove all views (i.e. windows).
         
         @exception RuntimeError Not implemented
         """
@@ -316,7 +316,7 @@ class ViewManager(QObject):
         
     def _removeView(self, win):
         """
-        Protected method to remove a view (i.e. window)
+        Protected method to remove a view (i.e. window).
         
         @param win editor window to be removed
         @exception RuntimeError Not implemented
@@ -325,7 +325,7 @@ class ViewManager(QObject):
         
     def _addView(self, win, fn=None, noName=""):
         """
-        Protected method to add a view (i.e. window)
+        Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor
@@ -336,7 +336,7 @@ class ViewManager(QObject):
         
     def _showView(self, win, fn=None):
         """
-        Protected method to show a view (i.e. window)
+        Protected method to show a view (i.e. window).
         
         @param win editor assembly to be shown
         @param fn filename of this editor
@@ -724,6 +724,8 @@ class ViewManager(QObject):
     def __initContextMenuExporters(self):
         """
         Private method used to setup the Exporters sub menu.
+        
+        @return reference to the generated menu (QMenu)
         """
         menu = QMenu(QApplication.translate('ViewManager', "Export as"))
         
@@ -2310,7 +2312,7 @@ class ViewManager(QObject):
     
     def initEditMenu(self):
         """
-        Public method to create the Edit menu
+        Public method to create the Edit menu.
         
         @return the generated menu
         """
@@ -2390,7 +2392,7 @@ class ViewManager(QObject):
         
     def initEditToolbar(self, toolbarManager):
         """
-        Public method to create the Edit toolbar
+        Public method to create the Edit toolbar.
         
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the generated toolbar
@@ -2773,7 +2775,7 @@ class ViewManager(QObject):
         
     def initSearchToolbars(self, toolbarManager):
         """
-        Public method to create the Search toolbars
+        Public method to create the Search toolbars.
         
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return a tuple of the generated toolbar (search, quicksearch)
@@ -3098,7 +3100,7 @@ class ViewManager(QObject):
         
     def initViewMenu(self):
         """
-        Public method to create the View menu
+        Public method to create the View menu.
         
         @return the generated menu
         """
@@ -3123,7 +3125,7 @@ class ViewManager(QObject):
         
     def initViewToolbar(self, toolbarManager):
         """
-        Public method to create the View toolbar
+        Public method to create the View toolbar.
         
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the generated toolbar
@@ -3234,7 +3236,7 @@ class ViewManager(QObject):
         
     def initMacroMenu(self):
         """
-        Public method to create the Macro menu
+        Public method to create the Macro menu.
         
         @return the generated menu
         """
@@ -3495,7 +3497,7 @@ class ViewManager(QObject):
         
     def initBookmarkMenu(self):
         """
-        Public method to create the Bookmark menu
+        Public method to create the Bookmark menu.
         
         @return the generated menu
         """
@@ -3535,7 +3537,7 @@ class ViewManager(QObject):
         
     def initBookmarkToolbar(self, toolbarManager):
         """
-        Public method to create the Bookmark toolbar
+        Public method to create the Bookmark toolbar.
         
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the generated toolbar
@@ -3628,6 +3630,8 @@ class ViewManager(QObject):
     def addToExtrasMenu(self, menu):
         """
         Public method to add some actions to the extras menu.
+        
+        @param menu reference to the menu to add actions to (QMenu)
         """
         self.__editSpellingMenu = QMenu(QApplication.translate('ViewManager',
             "Edit Dictionary"))
@@ -3653,7 +3657,7 @@ class ViewManager(QObject):
     
     def initSpellingToolbar(self, toolbarManager):
         """
-        Public method to create the Spelling toolbar
+        Public method to create the Spelling toolbar.
         
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the generated toolbar
@@ -3860,6 +3864,7 @@ class ViewManager(QObject):
         @param filetype type of the source file (string)
         @param selStart start of an area to be selected (integer)
         @param selEnd end of an area to be selected (integer)
+        @param pos position within the line to place the cursor at (integer)
         """
         try:
             newWin, editor = self.getEditor(fn, filetype=filetype)
@@ -4602,7 +4607,7 @@ class ViewManager(QObject):
         
     def __editSmartIndent(self):
         """
-        Private method to handle the smart indent action
+        Private method to handle the smart indent action.
         """
         self.activeWindow().smartIndentLineOrSelection()
         
@@ -4694,6 +4699,9 @@ class ViewManager(QObject):
     def __editorAutoCompletionAPIsAvailable(self, available):
         """
         Private method to handle the availability of API autocompletion signal.
+        
+        @param available flag indicating the availability of API
+        autocompletion (boolean)
         """
         self.autoCompleteFromAPIsAct.setEnabled(available)
         
@@ -4709,11 +4717,11 @@ class ViewManager(QObject):
 
     def textForFind(self, getCurrentWord=True):
         """
-        Public method to determine the selection or the current word for the next
-        find operation.
+        Public method to determine the selection or the current word for the
+        next find operation.
         
-        @param getCurrentWord flag indicating to return the current word, if no selected
-            text was found (boolean)
+        @param getCurrentWord flag indicating to return the current word, if
+            no selected text was found (boolean)
         @return selection or current word (string)
         """
         aw = self.activeWindow()
@@ -4766,7 +4774,7 @@ class ViewManager(QObject):
     def __quickSearchEnter(self):
         """
         Private slot to handle the incremental quick search return pressed
-        (jump back to text)
+        (jump back to text).
         """
         if self.quickFindtextCombo.lastActive:
             self.quickFindtextCombo.lastActive.setFocus()
@@ -4777,7 +4785,7 @@ class ViewManager(QObject):
     def __quickSearchEscape(self):
         """
         Private slot to handle the incremental quick search escape pressed
-        (jump back to text)
+        (jump back to text).
         """
         if self.quickFindtextCombo.lastActive:
             self.quickFindtextCombo.lastActive.setFocus()
@@ -5137,6 +5145,9 @@ class ViewManager(QObject):
     def __splitOrientation(self, checked):
         """
         Private method to handle the split orientation action.
+        
+        @param checked flag indicating the checked state of the action
+            (boolean). True means splitting horizontally.
         """
         if checked:
             self.setSplitOrientation(Qt.Horizontal)
@@ -5497,6 +5508,8 @@ class ViewManager(QObject):
     def __editSpellingDictionary(self, dictionaryFile):
         """
         Private slot to edit the given spelling dictionary.
+        
+        @param dictionaryFile file name of the dictionary to edit (string)
         """
         if os.path.exists(dictionaryFile):
             try:
@@ -5999,6 +6012,7 @@ class ViewManager(QObject):
     def getAPIsManager(self):
         """
         Public method to get a reference to the APIs manager.
+
         @return the APIs manager object (eric5.QScintilla.APIsManager)
         """
         return self.apisManager

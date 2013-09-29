@@ -347,7 +347,7 @@ class TaskViewer(QTreeWidget):
         
     def __editTaskProperties(self):
         """
-        Private slot to handle the "Properties" context menu entry
+        Private slot to handle the "Properties" context menu entry.
         """
         from .TaskPropertiesDialog import TaskPropertiesDialog
         task = self.currentItem()

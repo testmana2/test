@@ -23,7 +23,7 @@ def usage(rcode=2):
     """
     Display a usage message and exit.
 
-    rcode is the return code passed back to the calling process.
+    @param rcode return code passed back to the calling process (integer)
     """
     global progName, modDir
     
@@ -44,7 +44,8 @@ def usage(rcode=2):
 
 def initGlobals():
     """
-    Sets the values of globals that need more than a simple assignment.
+    Module function to set the values of globals that need more than a
+    simple assignment.
     """
     global modDir
 
@@ -52,9 +53,10 @@ def initGlobals():
 
 
 def main(argv):
-    """The main function of the script.
+    """
+    The main function of the script.
 
-    argv is the list of command line arguments.
+    @param argv list of command line arguments (list of strings)
     """
     import getopt
 

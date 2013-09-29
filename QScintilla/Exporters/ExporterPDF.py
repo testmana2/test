@@ -56,8 +56,9 @@ class PDFStyle(object):
 
 class PDFObjectTracker(object):
     """
-    Class to conveniently handle the tracking of PDF objects
-    so that the cross-reference table can be built (PDF1.4Ref(p39))
+    Class to conveniently handle the tracking of PDF objects so that the
+    cross-reference table can be built (PDF1.4Ref(p39)).
+    
     All writes to the file are passed through a PDFObjectTracker object.
     """
     def __init__(self, file):
@@ -155,6 +156,7 @@ class PDFRender(object):
         """
         Public method to convert the font size to points.
         
+        @param thousandths font size (integer)
         @return point size of the font (integer)
         """
         return self.fontSize * thousandths / 1000.0

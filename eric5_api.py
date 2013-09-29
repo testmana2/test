@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 API Generator
+Eric5 API Generator.
 
 This is the main Python script of the API generator. It is
 this script that gets called via the API generation interface.

@@ -384,8 +384,6 @@ class EmailDialog(QDialog, Ui_EmailDialog):
     def on_message_textChanged(self):
         """
         Private slot to handle the textChanged signal of the message edit.
-        
-        @param txt changed text (string)
         """
         self.sendButton.setEnabled(
             self.subject.text() != "" and \

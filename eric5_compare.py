@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Compare
+Eric5 Compare.
 
 This is the main Python script that performs the necessary initialization
 of the Compare module and starts the Qt event loop. This is a standalone

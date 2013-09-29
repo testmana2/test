@@ -358,7 +358,7 @@ class SpellChecker(QObject):
     
     def checkDocument(self):
         """
-        Public method to check the complete document
+        Public method to check the complete document.
         """
         self.__checkDocumentPart(0, self.editor.length())
     
@@ -489,6 +489,8 @@ class SpellChecker(QObject):
     def __iter__(self):
         """
         Private method to create an iterator.
+        
+        @return self
         """
         return self
     
@@ -497,6 +499,7 @@ class SpellChecker(QObject):
         Public method to advance to the next error.
         
         @return self
+        @exception StopIteration raised to indicate the end of the iteration
         """
         spell = self._spelling_dict
         if spell:

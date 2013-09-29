@@ -111,7 +111,10 @@ class Visitor(object):
     
     def __visit(self, root):
         """
-        Private method implementing the visit logic delegating to interesting methods.
+        Private method implementing the visit logic delegating to interesting
+        methods.
+        
+        @param root root node to visit
         """
         call = lambda n: getattr(self, "visit_{0}".format(n.type), self.visit_noop)(n)
         call(root)
@@ -252,13 +255,13 @@ class Visitor(object):
 
 
 def readmodule_ex(module, path=[]):
-    '''
+    """
     Read a JavaScript file and return a dictionary of functions and variables.
 
     @param module name of the JavaScript file (string)
     @param path path the file should be searched in (list of strings)
     @return the resulting dictionary
-    '''
+    """
     global _modules
     
     dict = {}

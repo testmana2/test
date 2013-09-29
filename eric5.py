@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Python IDE
+Eric5 Python IDE.
 
 This is the main Python script that performs the necessary initialization
 of the IDE and starts the Qt event loop.

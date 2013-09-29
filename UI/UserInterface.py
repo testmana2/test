@@ -49,7 +49,7 @@ from eric5config import getConfig
 
 class Redirector(QObject):
     """
-    Helper class used to redirect stdout and stderr to the log window
+    Helper class used to redirect stdout and stderr to the log window.
     
     @signal appendStderr(str) emitted to write data to stderr logger
     @signal appendStdout(str) emitted to write data to stdout logger
@@ -534,6 +534,7 @@ class UserInterface(E5MainWindow):
         Private method to create the layout of the various windows.
         
         @param debugServer reference to the debug server object
+        @exception ValueError raised to indicate an invalid layout type
         """
         # Create the view manager depending on the configuration setting
         logging.debug("Creating Viewmanager...")
@@ -2823,9 +2824,9 @@ class UserInterface(E5MainWindow):
         """
         Public method to add actions to the list of actions.
         
+        @param actions list of actions to be added (list of E5Action)
         @param type string denoting the action set to get.
             It must be one of "ui" or "wizards".
-        @param actions list of actions to be added (list of E5Action)
         """
         if type == 'ui':
             self.actions.extend(actions)
@@ -2836,9 +2837,9 @@ class UserInterface(E5MainWindow):
         """
         Public method to remove actions from the list of actions.
         
+        @param actions list of actions (list of E5Action)
         @param type string denoting the action set to get.
             It must be one of "ui" or "wizards".
-        @param actions list of actions (list of E5Action)
         """
         for act in actions:
             try:
@@ -2871,6 +2872,7 @@ class UserInterface(E5MainWindow):
         @param menuName name of the menu to search in (string)
         @param actionName object name of the action to search for
             (string)
+        @return reference to the menu action (QAction)
         """
         try:
             menu = self.__menus[menuName]
@@ -2888,6 +2890,7 @@ class UserInterface(E5MainWindow):
         Public method to get a reference to an action of the main menu.
         
         @param menuName name of the menu to search in (string)
+        @return reference to the menu bar action (QAction)
         """
         try:
             menu = self.__menus[menuName]
@@ -5063,7 +5066,7 @@ class UserInterface(E5MainWindow):
         
     def __readTasks(self):
         """
-        Private slot to read in the tasks file (.e4t)
+        Private slot to read in the tasks file (.e4t).
         """
         fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
         if not os.path.exists(fn):
@@ -5098,7 +5101,7 @@ class UserInterface(E5MainWindow):
         
     def __readSession(self):
         """
-        Private slot to read in the session file (.e4s)
+        Private slot to read in the session file (.e4s).
         """
         fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
         if not os.path.exists(fn):
@@ -5400,7 +5403,7 @@ class UserInterface(E5MainWindow):
         
         @param manual flag indicating an invocation via the menu (boolean)
         @param alternative index of server to download from (integer)
-        @keyparam showVersion flag indicating the show versions mode (boolean)
+        @keyparam showVersions flag indicating the show versions mode (boolean)
         """
         if not manual:
             if Version.startswith("@@"):

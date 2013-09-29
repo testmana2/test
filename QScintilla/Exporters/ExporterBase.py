@@ -35,6 +35,7 @@ class ExporterBase(QObject):
         
         @param filter the filter string to be used (string). The filter for
             "All Files (*)" is appended by this method.
+        @return file name entered by the user (string)
         """
         filter_ = filter
         filter_ += ";;"
@@ -71,5 +72,8 @@ class ExporterBase(QObject):
         Public method performing the export.
         
         This method must be overridden by the real exporters.
+        
+        @exception NotImplementedError raised to indicate that this method
+            must be implemented by a subclass
         """
         raise NotImplementedError

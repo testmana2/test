@@ -23,8 +23,6 @@ class DeleteFilesConfirmationDialog(QDialog, Ui_DeleteFilesConfirmationDialog):
         @param parent parent of this dialog (QWidget)
         @param caption window title for the dialog (string)
         @param message message to be shown (string)
-        @param okLabel label for the OK button (string)
-        @param cancelLabel label for the Cancel button (string)
         @param files list of filenames to be shown (list of strings)
         """
         super().__init__(parent)

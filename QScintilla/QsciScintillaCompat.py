@@ -55,8 +55,6 @@ class QsciScintillaCompat(QsciScintilla):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param name name of this instance (string)
-        @param flags window flags
         """
         super().__init__(parent)
         
@@ -181,6 +179,8 @@ class QsciScintillaCompat(QsciScintilla):
     def getEndStyled(self):
         """
         Public method to get the last styled position.
+        
+        @return end position of the last styling run (integer)
         """
         return self.SendScintilla(QsciScintilla.SCI_GETENDSTYLED)
     
@@ -535,8 +535,10 @@ class QsciScintillaCompat(QsciScintilla):
     
     def getSelectionN(self, index):
         """
-        Public method to get the start and end of a selection given by its index.
+        Public method to get the start and end of a selection given by its
+        index.
         
+        @param index index of the selection (integer)
         @return tuple with start line and index and end line and index
             (tuple of four int) for the given selection
         """
@@ -888,7 +890,6 @@ class QsciScintillaCompat(QsciScintilla):
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param spos position of the indicator start (integer)
         @param length length of the indicator (integer)
-        @exception ValueError the indicator or style are not valid
         """
         self.setCurrentIndicator(indicator)
         self.SendScintilla(QsciScintilla.SCI_INDICATORFILLRANGE, spos, length)
@@ -903,7 +904,6 @@ class QsciScintillaCompat(QsciScintilla):
         @param sindex index of the indicator start (integer)
         @param eline line number of the indicator end (integer)
         @param eindex index of the indicator end (integer)
-        @exception ValueError the indicator or style are not valid
         """
         spos = self.positionFromLineIndex(sline, sindex)
         epos = self.positionFromLineIndex(eline, eindex)
@@ -1096,10 +1096,11 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Protected method to handle events.
         
-        Note: We are not interested in the standard QsciScintilla event handling
-        because we do it our self.
+        Note: We are not interested in the standard QsciScintilla event
+        handling because we do it our self.
         
         @param evt event object to handle (QEvent)
+        @return result of the event handling (boolean)
         """
         return QsciScintillaBase.event(self, evt)
 

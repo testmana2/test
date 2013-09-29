@@ -205,7 +205,7 @@ class Publics(object):
     
 
 def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
-    '''
+    """
     Read a module file and return a dictionary of classes.
 
     Search for MODULE in PATH and sys.path, read and parse the
@@ -215,8 +215,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
     @param module name of the module file (string)
     @param path path the module should be searched in (list of strings)
     @param inpackage flag indicating a module inside a package is scanned
+    @param isPyFile flag indicating a Python file (boolean)
     @return the resulting dictionary
-    '''
+    """
     global _modules
     
     dict = {}

@@ -40,7 +40,7 @@ class ExporterTEX(ExporterBase):
     
     def __getTexRGB(self, color):
         """
-        Private method to convert a color object to a TeX color string
+        Private method to convert a color object to a TeX color string.
         
         @param color color object to convert (QColor)
         @return TeX color string (string)

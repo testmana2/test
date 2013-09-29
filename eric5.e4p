@@ -1902,7 +1902,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py</string>
+              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py,*/py[23]flakes/checker.py</string>
             </value>
             <key>
               <string>ExcludeMessages</string>

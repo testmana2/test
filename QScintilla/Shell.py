@@ -884,6 +884,8 @@ class Shell(QsciScintillaCompat):
     def __isCursorOnLastLine(self):
         """
         Private method to check, if the cursor is on the last line.
+        
+        @return flag indicating that the cursor is on the last line (boolean)
         """
         cline, ccol = self.getCursorPosition()
         return cline == self.lines() - 1

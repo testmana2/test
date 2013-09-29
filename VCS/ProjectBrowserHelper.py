@@ -75,6 +75,8 @@ class VcsProjectBrowserHelper(QObject):
         @param menu reference to the menu to be shown
         @param standardItems array of standard items that need activation/deactivation
             depending on the overall VCS status
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
     
@@ -88,6 +90,8 @@ class VcsProjectBrowserHelper(QObject):
         @param menu reference to the menu to be shown
         @param standardItems array of standard items that need activation/deactivation
             depending on the overall VCS status
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
     
@@ -101,6 +105,8 @@ class VcsProjectBrowserHelper(QObject):
         @param menu reference to the menu to be shown
         @param standardItems array of standard items that need activation/deactivation
             depending on the overall VCS status
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
     
@@ -114,6 +120,8 @@ class VcsProjectBrowserHelper(QObject):
         @param menu reference to the menu to be shown
         @param standardItems array of standard items that need activation/deactivation
             depending on the overall VCS status
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
 

@@ -179,8 +179,10 @@ class VcsStatusMonitorThread(QThread):
             <li>" " path is back at normal</li>
         </ul>
         
-        @return tuple of flag indicating successful operation (boolean) and
+        @ireturn tuple of flag indicating successful operation (boolean) and
             a status message in case of non successful operation (string)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
         """
         raise RuntimeError('Not implemented')
     

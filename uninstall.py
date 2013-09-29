@@ -38,7 +38,8 @@ def exit(rcode=0):
 
 
 def usage(rcode=2):
-    """Display a usage message and exit.
+    """
+    Display a usage message and exit.
 
     rcode is the return code passed back to the calling process.
     """
@@ -54,7 +55,7 @@ def usage(rcode=2):
 
 def initGlobals():
     """
-    Sets the values of globals that need more than a simple assignment.
+    Set the values of globals that need more than a simple assignment.
     """
     global pyModDir
 
@@ -62,7 +63,8 @@ def initGlobals():
 
 
 def wrapperName(dname, wfile):
-    """Create the platform specific name for the wrapper script.
+    """
+    Create the platform specific name for the wrapper script.
     """
     if sys.platform.startswith("win"):
         wname = dname + "\\" + wfile + ".bat"
@@ -158,7 +160,8 @@ def uninstallEric():
 
 
 def main(argv):
-    """The main function of the script.
+    """
+    The main function of the script.
 
     argv is the list of command line arguments.
     """

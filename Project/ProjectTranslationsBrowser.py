@@ -1040,6 +1040,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
     def __releaseTSFileDone(self, exitCode, exitStatus):
         """
         Private slot to handle the finished signal of the lrelease process.
+        
+        @param exitCode exit code of the process (integer)
+        @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
         self.lreleaseProcRunning = False
         if exitStatus == QProcess.NormalExit and exitCode == 0:

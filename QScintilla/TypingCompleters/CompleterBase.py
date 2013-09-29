@@ -38,7 +38,7 @@ class CompleterBase(QObject):
         """
         Public slot to set the enabled state.
         
-        @param enabled flag indicating the new state (boolean)
+        @param enable flag indicating the new enabled state (boolean)
         """
         if enable:
             if not self.enabled:
@@ -51,6 +51,8 @@ class CompleterBase(QObject):
     def isEnabled(self):
         """
         Public method to get the enabled state.
+        
+        @return enabled state (boolean)
         """
         return self.enabled
     

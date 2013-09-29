@@ -16,7 +16,8 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
     """
     Class implementing the authentication dialog for the help browser.
     """
-    def __init__(self, info, username, showSave=False, saveIt=False, parent=None):
+    def __init__(self, info, username, showSave=False, saveIt=False,
+                 parent=None):
         """
         Constructor
         
@@ -24,6 +25,7 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
         @param username username as supplied by subversion (string)
         @param showSave flag to indicate to show the save checkbox (boolean)
         @param saveIt flag indicating the value for the save checkbox (boolean)
+        @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -35,7 +37,8 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
         
         self.iconLabel.setText("")
         self.iconLabel.setPixmap(
-            self.style().standardIcon(QStyle.SP_MessageBoxQuestion).pixmap(32, 32))
+            self.style().standardIcon(QStyle.SP_MessageBoxQuestion).pixmap(
+            32, 32))
     
     def setData(self, username, password):
         """

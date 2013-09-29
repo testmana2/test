@@ -64,6 +64,7 @@ def getPixmap(key, cache=pixCache):
     Module function to retrieve a pixmap.
 
     @param key name of the wanted pixmap (string)
+    @param cache reference to the pixmap cache object (PixmapCache)
     @return the requested pixmap (QPixmap)
     """
     return cache.getPixmap(key)
@@ -74,6 +75,7 @@ def getIcon(key, cache=pixCache):
     Module function to retrieve an icon.
 
     @param key name of the wanted icon (string)
+    @param cache reference to the pixmap cache object (PixmapCache)
     @return the requested icon (QIcon)
     """
     return QIcon(cache.getPixmap(key))
@@ -84,6 +86,7 @@ def getSymlinkIcon(key, cache=pixCache):
     Module function to retrieve a symbolic link icon.
 
     @param key name of the wanted icon (string)
+    @param cache reference to the pixmap cache object (PixmapCache)
     @return the requested icon (QIcon)
     """
     pix1 = QPixmap(cache.getPixmap(key))
@@ -99,5 +102,6 @@ def addSearchPath(path, cache=pixCache):
     Module function to add a path to the search path.
 
     @param path path to add (string)
+    @param cache reference to the pixmap cache object (PixmapCache)
     """
     cache.addSearchPath(path)

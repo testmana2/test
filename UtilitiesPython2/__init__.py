@@ -4,5 +4,5 @@
 #
 
 """
-This package implements some utilities and tools for Python2
+This package implements some utilities and tools for Python2.
 """

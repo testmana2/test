@@ -138,7 +138,8 @@ def usage(rcode=2):
 
 def initGlobals():
     """
-    Sets the values of globals that need more than a simple assignment.
+    Module function to set the values of globals that need more than a
+    simple assignment.
     """
     global platBinDir, modDir, pyModDir, apisDir
 

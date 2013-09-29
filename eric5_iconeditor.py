@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Icon Editor
+Eric5 Icon Editor.
 
 This is the main Python script that performs the necessary initialization
 of the icon editor and starts the Qt event loop. This is a standalone version
