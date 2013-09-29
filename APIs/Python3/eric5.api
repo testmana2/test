@@ -2357,7 +2357,7 @@ eric5.Helpviewer.Download.DownloadUtilities.dataString?4(size)
 eric5.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
 eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.getData?4()
 eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_titleEdit_textChanged?4(txt)
-eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(p0)
+eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(txt)
 eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog?1(urlString, title, parent=None)
 eric5.Helpviewer.Feeds.FeedsDialog.FeedsDialog?1(availableFeeds, browser, parent=None)
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.ErrorDataRole?7

@@ -297,6 +297,9 @@ class Editor(QsciScintillaCompat):
         # set the text display
         self.__setTextDisplay()
         
+        # initialize the online syntax check timer
+        self.__initOnlineSyntaxCheck()
+        
         self.isResourcesFile = False
         if editor is None:
             if self.fileName is not None:
@@ -420,9 +423,6 @@ class Editor(QsciScintillaCompat):
         
         # connect signals after loading the text
         self.textChanged.connect(self.__textChanged)
-        
-        # initialize the online syntax check timer
-        self.__initOnlineSyntaxCheck()
         
         # initialize the online change trace timer
         self.__initOnlineChangeTrace()
@@ -2574,20 +2574,30 @@ class Editor(QsciScintillaCompat):
     def __processFlags(self):
         """
         Private method to extract flags and process them.
+        
+        @return list of change flags (list of string)
         """
         txt = self.text()
         flags = Utilities.extractFlags(txt)
         
+        changedFlags = []
+        
         # Flag 1: FileType
         if "FileType" in flags:
+            oldFiletype = self.filetype
             if isinstance(flags["FileType"], str):
                 self.filetype = flags["FileType"]
                 self.filetypeByFlag = True
+                if oldFiletype != self.filetype:
+                    changedFlags.append("FileType")
         else:
             if self.filetype != "" and self.filetypeByFlag:
                 self.filetype = ""
                 self.filetypeByFlag = False
                 self.__bindName(txt.splitlines()[0])
+                changedFlags.append("FileType")
+        
+        return changedFlags
     
     ############################################################################
     ## File handling methods below
@@ -2843,8 +2853,8 @@ class Editor(QsciScintillaCompat):
             self.setReadOnly(False)
             self.setWindowTitle(self.fileName)
             # get eric specific flags
-            self.__processFlags()
-            if not self.__lexerReset:
+            changedFlags = self.__processFlags()
+            if not self.__lexerReset and "FileType" in changedFlags:
                 self.setLanguage(self.fileName)
             
             if saveas:
@@ -4794,6 +4804,8 @@ class Editor(QsciScintillaCompat):
         Private method to perform an automatic syntax check of the file.
         """
         if Preferences.getEditor("AutoCheckSyntax"):
+            if Preferences.getEditor("OnlineSyntaxCheck"):
+                self.__onlineSyntaxCheckTimer.stop()
             self.clearSyntaxError()
             self.clearFlakesWarnings()
             if self.isPy3File():
@@ -5400,26 +5412,22 @@ class Editor(QsciScintillaCompat):
                         errorAnnotations.append(
                             self.trUtf8("Error: {0}").format(msg))
             
-            wLen = len(warningAnnotations)
-            eLen = len(errorAnnotations)
-            sLen = len(styleAnnotations)
             annotations = []
-            
-            if sLen:
+            if styleAnnotations:
                 annotationStyleTxt = "\n".join(styleAnnotations)
-                if wLen:
+                if warningAnnotations or errorAnnotations:
                     annotationStyleTxt += "\n"
                 annotations.append(QsciStyledText(annotationStyleTxt,
                     self.annotationStyleStyle))
             
-            if wLen:
+            if warningAnnotations:
                 annotationWarningTxt = "\n".join(warningAnnotations)
-                if eLen:
+                if errorAnnotations:
                     annotationWarningTxt += "\n"
                 annotations.append(QsciStyledText(annotationWarningTxt,
                     self.annotationWarningStyle))
             
-            if eLen:
+            if errorAnnotations:
                 annotationErrorTxt = "\n".join(errorAnnotations)
                 annotations.append(QsciStyledText(annotationErrorTxt,
                     self.annotationErrorStyle))
