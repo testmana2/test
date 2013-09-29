@@ -440,7 +440,7 @@ class IconEditorGrid(QWidget):
         
         @param i x-coordinate of the pixel in the image (integer)
         @param j y-coordinate of the pixel in the image (integer)
-        return rectangle for the given pixel coordinates (QRect)
+        @return rectangle for the given pixel coordinates (QRect)
         """
         if self.__zoom >= 3 and self.__gridEnabled:
             return QRect(self.__zoom * i + 1, self.__zoom * j + 1,
@@ -609,11 +609,12 @@ class IconEditorGrid(QWidget):
     
     def __drawTool(self, pos, mark):
         """
-        Public method to perform a draw operation depending of the current tool.
+        Public method to perform a draw operation depending of the current
+        tool.
         
         @param pos widget coordinate to perform the draw operation at (QPoint)
         @param mark flag indicating a mark operation (boolean)
-        @param flag indicating a successful draw (boolean)
+        @return flag indicating a successful draw (boolean)
         """
         self.__unMark()
         

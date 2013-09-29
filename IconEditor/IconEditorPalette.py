@@ -112,12 +112,16 @@ class IconEditorPalette(QWidget):
     def previewChanged(self, pixmap):
         """
         Public slot to update the preview.
+        
+        @param pixmap new preview pixmap (QPixmap)
         """
         self.__preview.setPixmap(pixmap)
     
     def colorChanged(self, color):
         """
         Public slot to update the color preview.
+        
+        @param color new color (QColor)
         """
         self.__currentColor = color
         self.__currentAlpha = color.alpha()

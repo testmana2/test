@@ -992,6 +992,8 @@ class IconEditorWindow(E5MainWindow):
     def __saveIcon(self):
         """
         Private slot to save the icon.
+        
+        @return flag indicating success (boolean)
         """
         if not self.__fileName:
             return self.__saveIconAs()
@@ -1001,6 +1003,8 @@ class IconEditorWindow(E5MainWindow):
     def __saveIconAs(self):
         """
         Private slot to save the icon with a new name.
+        
+        @return flag indicating success (boolean)
         """
         if not self.__lastSavePath:
             if self.__project and self.__project.isOpen():
