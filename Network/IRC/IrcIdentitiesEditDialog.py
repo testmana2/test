@@ -94,6 +94,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     def on_identitiesCombo_currentIndexChanged(self, identity):
         """
         Private slot to handle the selection of an identity.
+        
+        @param identity selected identity (string)
         """
         if identity == IrcIdentity.DefaultIdentityDisplay:
             identity = IrcIdentity.DefaultIdentityName
@@ -343,7 +345,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     
     def __updateNicknameButtons(self):
         """
-        Private slot to update the nick name buttons except the up and down buttons.
+        Private slot to update the nick name buttons except the up and
+        down buttons.
         """
         self.nicknameDeleteButton.setEnabled(
             len(self.nicknamesList.selectedItems()) != 0)
@@ -354,6 +357,8 @@ class IrcIdentitiesEditDialog(QDialog, Ui_IrcIdentitiesEditDialog):
     def on_nicknameEdit_textEdited(self, nick):
         """
         Private slot handling a change of the nick name.
+        
+        @param nick new nick name (string)
         """
         sel = self.nicknamesList.selectedItems()
         if sel:

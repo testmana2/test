@@ -82,16 +82,20 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
                 self.descriptionEdit.toPlainText())
     
     @pyqtSlot(str)
-    def on_nameEdit_textChanged(self, p0):
+    def on_nameEdit_textChanged(self, txt):
         """
         Private slot called when the project name has changed.
+        
+        @param txt text of the edit (string)
         """
         self.__updateUi()
     
     @pyqtSlot(str)
-    def on_filenameEdit_textChanged(self, p0):
+    def on_filenameEdit_textChanged(self, txt):
         """
         Private slot called when the project filename has changed.
+        
+        @param txt text of the edit (string)
         """
         self.__updateUi()
     

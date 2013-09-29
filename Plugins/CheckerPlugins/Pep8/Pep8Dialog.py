@@ -55,6 +55,7 @@ class Pep8Report(pep8.BaseReport):
         @param code message code (string)
         @param check reference to the checker function (function)
         @param args arguments for the message (list)
+        @return error code (string)
         """
         code = super().error_args(line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):

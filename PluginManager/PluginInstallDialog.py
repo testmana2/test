@@ -188,6 +188,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
     def on_buttonBox_clicked(self, button):
         """
         Private slot to handle the click of a button of the button box.
+        
+        @param button reference to the button pressed (QAbstractButton)
         """
         if button == self.__backButton:
             self.__currentIndex -= 1

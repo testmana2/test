@@ -299,7 +299,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to handle a new private connection.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         # group(1)   sender user name
@@ -510,7 +510,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to handle a server message containing a message name.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         name = match.group(2)
@@ -578,7 +578,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to handle a server message containing a numeric code.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         code = int(match.group(2))
@@ -781,7 +781,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to handle a PING message.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         self.__send("PONG " + match.group(1))
@@ -791,7 +791,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         Private method to handle a CTCP command.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         # group(1)   sender user name
@@ -892,8 +892,9 @@ class IrcWidget(QWidget, Ui_IrcWidget):
     
     def isChannelName(self, name):
         """
-        PublicisChannelName method to check, if the given name is a channel name.
+        Public method to check, if the given name is a channel name.
         
+        @param name name to check (string)
         @return flag indicating a channel name (boolean)
         """
         if not name:

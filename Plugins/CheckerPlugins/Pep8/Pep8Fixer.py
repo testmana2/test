@@ -251,6 +251,8 @@ class Pep8Fixer(QObject):
     def finalize(self):
         """
         Public method to apply all deferred fixes.
+        
+        @return dictionary containing the fix results
         """
         results = {}
         
@@ -432,6 +434,7 @@ class Pep8Fixer(QObject):
         
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
+        @param logical logical line structure
         @return flag indicating a change was done (boolean)
         """
         assert logical
@@ -484,7 +487,9 @@ class Pep8Fixer(QObject):
     
     def __fixD111(self, code, line, pos):
         """
-        Private method to fix docstring enclosed in wrong quotes (D111).
+        Private method to fix docstring enclosed in wrong quotes.
+       
+        Codes: D111
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -511,8 +516,9 @@ class Pep8Fixer(QObject):
     
     def __fixD112(self, code, line, pos):
         """
-        Private method to fix docstring 'r' or 'u' in leading quotes
-        (D112, D113).
+        Private method to fix docstring 'r' or 'u' in leading quotes.
+        
+        Codes: D112, D113
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -540,7 +546,9 @@ class Pep8Fixer(QObject):
     
     def __fixD121(self, code, line, pos, apply=False):
         """
-        Private method to fix a single line docstring on multiple lines (D121).
+        Private method to fix a single line docstring on multiple lines.
+       
+        Codes: D121
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -580,7 +588,9 @@ class Pep8Fixer(QObject):
     def __fixD131(self, code, line, pos):
         """
         Private method to fix a docstring summary not ending with a
-        period (D131).
+        period.
+       
+        Codes: D131
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -613,7 +623,9 @@ class Pep8Fixer(QObject):
     def __fixD141(self, code, line, pos, apply=False):
         """
         Private method to fix a function/method docstring preceded by a
-        blank line (D141).
+        blank line.
+       
+        Codes: D141
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -640,7 +652,9 @@ class Pep8Fixer(QObject):
     def __fixD142(self, code, line, pos, apply=False):
         """
         Private method to fix a class docstring not preceded by a
-        blank line (D142).
+        blank line.
+       
+        Codes: D142
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -666,7 +680,9 @@ class Pep8Fixer(QObject):
     def __fixD143(self, code, line, pos, apply=False):
         """
         Private method to fix a class docstring not followed by a
-        blank line (D143).
+        blank line.
+       
+        Codes: D143
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -692,7 +708,9 @@ class Pep8Fixer(QObject):
     def __fixD144(self, code, line, pos, apply=False):
         """
         Private method to fix a docstring summary not followed by a
-        blank line (D144).
+        blank line.
+       
+        Codes: D144
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -722,7 +740,9 @@ class Pep8Fixer(QObject):
     def __fixD145(self, code, line, pos, apply=False):
         """
         Private method to fix the last paragraph of a multi-line docstring
-        not followed by a blank line (D143).
+        not followed by a blank line.
+       
+        Codes: D143
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -749,7 +769,9 @@ class Pep8Fixer(QObject):
     def __fixD221(self, code, line, pos, apply=False):
         """
         Private method to fix leading and trailing quotes of docstring
-        not on separate lines (D221, D222).
+        not on separate lines.
+       
+        Codes: D221, D222
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -789,7 +811,9 @@ class Pep8Fixer(QObject):
     def __fixD242(self, code, line, pos, apply=False):
         """
         Private method to fix a class or function/method docstring preceded
-        by a blank line (D242, D244).
+        by a blank line.
+       
+        Codes: D242, D244
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -817,7 +841,9 @@ class Pep8Fixer(QObject):
     def __fixD243(self, code, line, pos, apply=False):
         """
         Private method to fix a class or function/method docstring followed
-        by a blank line (D243, D245).
+        by a blank line.
+       
+        Codes: D243, D245
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -845,7 +871,9 @@ class Pep8Fixer(QObject):
     def __fixD247(self, code, line, pos, apply=False):
         """
         Private method to fix a last paragraph of a docstring followed
-        by a blank line (D247).
+        by a blank line.
+       
+        Codes: D247
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -870,8 +898,9 @@ class Pep8Fixer(QObject):
     
     def __fixE101(self, code, line, pos):
         """
-        Private method to fix obsolete tab usage and indentation errors
-        (E101, E111, W191).
+        Private method to fix obsolete tab usage and indentation errors.
+        
+        Codes: E101, E111, W191
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -898,7 +927,9 @@ class Pep8Fixer(QObject):
     def __fixE121(self, code, line, pos, apply=False):
         """
         Private method to fix the indentation of continuation lines and
-        closing brackets (E121, E124).
+        closing brackets.
+       
+        Codes: E121, E124
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -930,8 +961,9 @@ class Pep8Fixer(QObject):
     
     def __fixE122(self, code, line, pos, apply=False):
         """
-        Private method to fix a missing indentation of continuation lines
-        (E122).
+        Private method to fix a missing indentation of continuation lines.
+        
+        Codes: E122
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -967,8 +999,9 @@ class Pep8Fixer(QObject):
     
     def __fixE123(self, code, line, pos, apply=False):
         """
-        Private method to fix the indentation of a closing bracket lines
-        (E123).
+        Private method to fix the indentation of a closing bracket lines.
+        
+        Codes: E123
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1006,7 +1039,9 @@ class Pep8Fixer(QObject):
     def __fixE125(self, code, line, pos, apply=False):
         """
         Private method to fix the indentation of continuation lines not
-        distinguishable from next logical line (E125).
+        distinguishable from next logical line.
+       
+        Codes: E125
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1037,7 +1072,9 @@ class Pep8Fixer(QObject):
     def __fixE126(self, code, line, pos, apply=False):
         """
         Private method to fix over-indented/under-indented hanging
-        indentation (E126, E133).
+        indentation.
+       
+        Codes: E126, E133
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1075,7 +1112,9 @@ class Pep8Fixer(QObject):
     
     def __fixE127(self, code, line, pos, apply=False):
         """
-        Private method to fix over/under indented lines (E127, E128).
+        Private method to fix over/under indented lines.
+       
+        Codes: E127, E128
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1127,8 +1166,9 @@ class Pep8Fixer(QObject):
     
     def __fixE201(self, code, line, pos):
         """
-        Private method to fix extraneous whitespace (E201, E202,
-        E203, E211).
+        Private method to fix extraneous whitespace.
+       
+        Codes: E201, E202, E203, E211
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1153,8 +1193,10 @@ class Pep8Fixer(QObject):
     def __fixE221(self, code, line, pos):
         """
         Private method to fix extraneous whitespace around operator or
-        keyword (E221, E222, E223, E224, E225, E226, E227, E228, E241,
-        E242, E271, E272, E273, E274).
+        keyword.
+       
+        Codes: E221, E222, E223, E224, E225, E226, E227, E228, E241,
+               E242, E271, E272, E273, E274).
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1183,6 +1225,8 @@ class Pep8Fixer(QObject):
         """
         Private method to fix missing whitespace after ',;:'.
         
+        Codes: E231
+        
         @param code code of the issue (string)
         @param line line number of the issue (integer)
         @param pos position inside line (integer)
@@ -1199,7 +1243,9 @@ class Pep8Fixer(QObject):
     def __fixE251(self, code, line, pos):
         """
         Private method to fix extraneous whitespace around keyword and
-        default parameter equals (E251).
+        default parameter equals.
+       
+        Codes: E251
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1233,8 +1279,9 @@ class Pep8Fixer(QObject):
     
     def __fixE261(self, code, line, pos):
         """
-        Private method to fix whitespace before or after inline comment
-        (E261, E262).
+        Private method to fix whitespace before or after inline comment.
+        
+        Codes: E261, E262
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1253,7 +1300,9 @@ class Pep8Fixer(QObject):
     
     def __fixE301(self, code, line, pos, apply=False):
         """
-        Private method to fix the need for one blank line (E301).
+        Private method to fix the need for one blank line.
+       
+        Codes: E301
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1274,7 +1323,9 @@ class Pep8Fixer(QObject):
     
     def __fixE302(self, code, line, pos, apply=False):
         """
-        Private method to fix the need for two blank lines (E302).
+        Private method to fix the need for two blank lines.
+       
+        Codes: E302
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1332,7 +1383,9 @@ class Pep8Fixer(QObject):
     
     def __fixE303(self, code, line, pos, apply=False):
         """
-        Private method to fix superfluous blank lines (E303).
+        Private method to fix superfluous blank lines.
+       
+        Codes: E303
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1360,7 +1413,9 @@ class Pep8Fixer(QObject):
     def __fixE304(self, code, line, pos, apply=False):
         """
         Private method to fix superfluous blank lines after a function
-        decorator (E304).
+        decorator.
+       
+        Codes: E304
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1389,7 +1444,9 @@ class Pep8Fixer(QObject):
     
     def __fixE401(self, code, line, pos, apply=False):
         """
-        Private method to fix multiple imports on one line (E401).
+        Private method to fix multiple imports on one line.
+       
+        Codes: E401
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1423,7 +1480,9 @@ class Pep8Fixer(QObject):
     
     def __fixE501(self, code, line, pos, apply=False):
         """
-        Private method to fix the long lines by breaking them (E501).
+        Private method to fix the long lines by breaking them.
+       
+        Codes: E501
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1467,7 +1526,9 @@ class Pep8Fixer(QObject):
     
     def __fixE502(self, code, line, pos):
         """
-        Private method to fix redundant backslash within brackets (E502).
+        Private method to fix redundant backslash within brackets.
+       
+        Codes: E502
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1482,7 +1543,9 @@ class Pep8Fixer(QObject):
     
     def __fixE701(self, code, line, pos, apply=False):
         """
-        Private method to fix colon-separated compound statements (E701).
+        Private method to fix colon-separated compound statements.
+       
+        Codes: E701
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1510,8 +1573,9 @@ class Pep8Fixer(QObject):
     
     def __fixE702(self, code, line, pos, apply=False):
         """
-        Private method to fix semicolon-separated compound statements
-        (E702, E703).
+        Private method to fix semicolon-separated compound statements.
+        
+        Codes: E702, E703
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1544,7 +1608,9 @@ class Pep8Fixer(QObject):
     
     def __fixE711(self, code, line, pos):
         """
-        Private method to fix comparison with None (E711, E712).
+        Private method to fix comparison with None.
+       
+        Codes: E711, E712
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1580,7 +1646,9 @@ class Pep8Fixer(QObject):
     def __fixN804(self, code, line, pos, apply=False):
         """
         Private method to fix a wrong first argument of normal and
-        class methods (N804, N805).
+        class methods.
+       
+        Codes: N804, N805
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1620,8 +1688,9 @@ class Pep8Fixer(QObject):
     
     def __fixN806(self, code, line, pos, apply=False):
         """
-        Private method to fix a wrong first argument of static methods
-        (N806).
+        Private method to fix a wrong first argument of static methods.
+        
+        Codes: N806
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1679,7 +1748,9 @@ class Pep8Fixer(QObject):
     
     def __fixW291(self, code, line, pos):
         """
-        Private method to fix trailing whitespace (W291, W293).
+        Private method to fix trailing whitespace.
+       
+        Codes: W291, W293
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1694,7 +1765,9 @@ class Pep8Fixer(QObject):
     
     def __fixW292(self, code, line, pos):
         """
-        Private method to fix a missing newline at the end of file (W292).
+        Private method to fix a missing newline at the end of file.
+       
+        Codes: W292
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1708,7 +1781,9 @@ class Pep8Fixer(QObject):
     
     def __fixW391(self, code, line, pos):
         """
-        Private method to fix trailing blank lines (W391).
+        Private method to fix trailing blank lines.
+       
+        Codes: W391
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1729,7 +1804,9 @@ class Pep8Fixer(QObject):
     
     def __fixW603(self, code, line, pos):
         """
-        Private method to fix the not equal notation (W603).
+        Private method to fix the not equal notation.
+       
+        Codes: W603
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1777,6 +1854,8 @@ class Pep8Reindenter(object):
     def run(self):
         """
         Public method to run the re-indenter.
+        
+        @return flag indicating that a change was done (boolean)
         """
         try:
             stats = self.__genStats(tokenize.generate_tokens(self.getline))
@@ -1879,6 +1958,7 @@ class Pep8Reindenter(object):
         Private method to generate the re-indent statistics.
         
         @param tokens tokens generator (tokenize._tokenize)
+        @return reference to the generated statistics
         """
         find_stmt = True  # next token begins a fresh stmt?
         level = 0  # current indent level
@@ -1942,7 +2022,6 @@ class Pep8IndentationWrapper(object):
 
     Each instance operates on a single logical line.
     """
-    
     SKIP_TOKENS = frozenset([
         tokenize.COMMENT, tokenize.NL, tokenize.INDENT,
         tokenize.DEDENT, tokenize.NEWLINE, tokenize.ENDMARKER

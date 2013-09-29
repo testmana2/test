@@ -69,7 +69,7 @@ class IrcMessageEdit(E5ClearableLineEdit):
         """
         Protected slot to support wheel events.
         
-        @param reference to the wheel event (QWheelEvent)
+        @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.delta() > 0:
             self.__getHistory(True)

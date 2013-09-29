@@ -23,7 +23,7 @@ class MultiProjectBrowser(QListWidget):
         """
         Constructor
         
-        @param project reference to the multi project object
+        @param multiProject reference to the multi project object
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -107,6 +107,8 @@ class MultiProjectBrowser(QListWidget):
     def __projectOpened(self, projectfile):
         """
         Private slot to handle the opening of a project.
+        
+        @param projectfile file name of the opened project file (string)
         """
         project = {
             'name': "",

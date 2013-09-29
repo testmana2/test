@@ -44,6 +44,8 @@ class IrcChannelEditDialog(QDialog, Ui_IrcChannelEditDialog):
     def on_nameEdit_textChanged(self, txt):
         """
         Private slot to handle changes of the given name.
+        
+        @param txt text of the edit (string)
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(txt != "")
     

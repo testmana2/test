@@ -66,6 +66,7 @@ class PluginManager(QObject):
             be loaded (boolean)
         @keyparam develPlugin filename of a plugin to be loaded for
             development (string)
+        @exception PluginPathError raised to indicate an invalid plug-in path
         """
         super().__init__(parent)
         
@@ -128,6 +129,7 @@ class PluginManager(QObject):
         """
         Public method to get the path of a plugin directory.
         
+        @param key key of the plug-in directory (string)
         @return path of the requested plugin directory (string)
         """
         if key not in ["global", "user"]:
@@ -297,6 +299,8 @@ class PluginManager(QObject):
         @param name name of the module to be loaded (string)
         @param directory name of the plugin directory (string)
         @param reload_ flag indicating to reload the module (boolean)
+        @exception PluginLoadError raised to indicate an issue loading
+            the plug-in
         """
         try:
             fname = "{0}.py".format(os.path.join(directory, name))
@@ -398,13 +402,17 @@ class PluginManager(QObject):
         """
         Public method to create a plugin object for the named on demand plugin.
         
-        Note: The plugin is not activated.
+        Note: The plug-in is not activated.
+        
+        @param name name of the plug-in (string)
+        @exception PluginActivationError raised to indicate an issue during the
+            plug-in activation
         """
         try:
             try:
                 module = self.__onDemandInactiveModules[name]
             except KeyError:
-                return None
+                return
             
             if not self.__canActivatePlugin(module):
                 raise PluginActivationError(module.eric5PluginModuleName)
@@ -419,7 +427,7 @@ class PluginManager(QObject):
                 pluginObject.eric5PluginVersion = version
                 self.__onDemandInactivePlugins[name] = pluginObject
         except PluginActivationError:
-            return None
+            return
     
     def activatePlugins(self):
         """
@@ -445,6 +453,8 @@ class PluginManager(QObject):
         @keyparam onDemand flag indicating activation of an
             on demand plugin (boolean)
         @return reference to the initialized plugin object
+        @exception PluginActivationError raised to indicate an issue during the
+            plug-in activation
         """
         try:
             try:
@@ -513,6 +523,10 @@ class PluginManager(QObject):
         @param module reference to the module to be activated
         @return flag indicating, if the module satisfies all requirements
             for being activated (boolean)
+        @exception PluginModuleFormatError raised to indicate an invalid
+            plug-in module format
+        @exception PluginClassFormatError raised to indicate an invalid
+            plug-in class format
         """
         try:
             if not hasattr(module, "version"):
@@ -855,6 +869,8 @@ class PluginManager(QObject):
           <dt>reference to configuration page</dt>
           <dd>This will be used by the configuration dialog and must always be None</dd>
         </dl>
+        
+        @return plug-in configuration data
         """
         configData = {}
         for module in list(self.__activeModules.values()) + \

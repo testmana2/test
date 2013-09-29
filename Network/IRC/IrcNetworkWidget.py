@@ -25,7 +25,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     """
     Class implementing the network part of the IRC widget.
     
-    @signal connectNetwork(str,bool) emitted to connect or disconnect from a network
+    @signal connectNetwork(str,bool) emitted to connect or disconnect from
+        a network
     @signal editNetwork(str) emitted to edit a network configuration
     @signal joinChannel(str) emitted to join a channel
     @signal nickChanged(str) emitted to change the nick name
@@ -59,7 +60,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.nickCombo.setEnabled(False)
         self.awayButton.setEnabled(False)
         
-        self.channelCombo.lineEdit().returnPressed.connect(self.on_joinButton_clicked)
+        self.channelCombo.lineEdit().returnPressed.connect(
+            self.on_joinButton_clicked)
         self.nickCombo.lineEdit().returnPressed.connect(
             self.on_nickCombo_currentIndexChanged)
         
@@ -133,12 +135,15 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         if self.__away:
             self.sendData.emit("AWAY")
-            self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
+            self.awayButton.setIcon(
+                UI.PixmapCache.getIcon("ircUserPresent.png"))
             self.__away = False
         else:
             networkName = self.networkCombo.currentText()
-            identityName = self.__manager.getNetwork(networkName).getIdentityName()
-            awayMessage = self.__manager.getIdentity(identityName).getAwayMessage()
+            identityName = self.__manager.getNetwork(networkName)\
+                .getIdentityName()
+            awayMessage = self.__manager.getIdentity(identityName)\
+                .getAwayMessage()
             self.sendData.emit("AWAY :" + awayMessage)
             self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserAway.png"))
             self.__away = True
@@ -284,11 +289,13 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         self.__connected = connected
         if self.__connected:
-            self.connectButton.setIcon(UI.PixmapCache.getIcon("ircDisconnect.png"))
+            self.connectButton.setIcon(
+                UI.PixmapCache.getIcon("ircDisconnect.png"))
             self.connectButton.setToolTip(
                 self.trUtf8("Press to disconnect from the network"))
         else:
-            self.connectButton.setIcon(UI.PixmapCache.getIcon("ircConnect.png"))
+            self.connectButton.setIcon(
+                UI.PixmapCache.getIcon("ircConnect.png"))
             self.connectButton.setToolTip(
                 self.trUtf8("Press to connect to the selected network"))
     
@@ -304,7 +311,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         """
         Public slot to set the registered state.
         
-        @param connected flag indicating the connection state (boolean)
+        @param registered flag indicating the registration state (boolean)
         """
         self.__registered = registered
         on = bool(self.channelCombo.currentText()) and self.__registered
@@ -312,7 +319,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.nickCombo.setEnabled(registered)
         self.awayButton.setEnabled(registered)
         if registered:
-            self.awayButton.setIcon(UI.PixmapCache.getIcon("ircUserPresent.png"))
+            self.awayButton.setIcon(
+                UI.PixmapCache.getIcon("ircUserPresent.png"))
             self.__away = False
     
     def __clearMessages(self):
@@ -323,13 +331,15 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     
     def __copyMessages(self):
         """
-        Private slot to copy the selection of the messages display to the clipboard.
+        Private slot to copy the selection of the messages display to
+        the clipboard.
         """
         self.messages.copy()
     
     def __copyAllMessages(self):
         """
-        Private slot to copy the contents of the messages display to the clipboard.
+        Private slot to copy the contents of the messages display to
+        the clipboard.
         """
         txt = self.messages.toPlainText()
         if txt:
@@ -338,7 +348,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     
     def __cutAllMessages(self):
         """
-        Private slot to cut the contents of the messages display to the clipboard.
+        Private slot to cut the contents of the messages display to
+        the clipboard.
         """
         txt = self.messages.toPlainText()
         if txt:
@@ -361,8 +372,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 self.trUtf8("Save Messages"),
                 "",
                 self.trUtf8(
-                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)").format(
-                    htmlExtension),
+                    "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)")
+                    .format(htmlExtension),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -393,8 +404,9 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 except IOError as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Error saving Messages"),
-                        self.trUtf8("""<p>The messages contents could not be written"""
-                                    """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>The messages contents could not be written"""
+                            """ to <b>{0}</b></p><p>Reason: {1}</p>""")\
                             .format(fname, str(err)))
     
     def __initMessagesMenu(self):
@@ -431,7 +443,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     @pyqtSlot(bool)
     def on_messages_copyAvailable(self, yes):
         """
-        Private slot to react to text selection/deselection of the messages edit.
+        Private slot to react to text selection/deselection of the
+        messages edit.
         
         @param yes flag signaling the availability of selected text (boolean)
         """
@@ -441,6 +454,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     def on_messages_customContextMenuRequested(self, pos):
         """
         Private slot to show the context menu of the messages pane.
+        
+        @param pos position the menu should be opened at (QPoint)
         """
         enable = not self.messages.document().isEmpty()
         self.__cutAllMessagesAct.setEnabled(enable)
@@ -452,5 +467,7 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
     def on_messages_anchorClicked(self, url):
         """
         Private slot to open links in the default browser.
+        
+        @param url URL to be opened (QUrl)
         """
         QDesktopServices.openUrl(url)

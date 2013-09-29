@@ -77,17 +77,20 @@ class IrcIdentity(object):
         self.__nickNames = Preferences.toList(settings.value("NickNames", []))
         self.__serviceName = settings.value("ServiceName", "")
         self.__password = settings.value("Password", "")
-        self.__quitMessage = settings.value("QuitMessage", IrcIdentity.DefaultQuitMessage)
-        self.__partMessage = settings.value("PartMessage", IrcIdentity.DefaultPartMessage)
+        self.__quitMessage = settings.value(
+            "QuitMessage", IrcIdentity.DefaultQuitMessage)
+        self.__partMessage = settings.value(
+            "PartMessage", IrcIdentity.DefaultPartMessage)
         self.__rememberPosOnAway = Preferences.toBool(
             settings.value("RememberAwayPosition", True))
-        self.__awayMessage = settings.value("AwayMessage", IrcIdentity.DefaultAwayMessage)
+        self.__awayMessage = settings.value(
+            "AwayMessage", IrcIdentity.DefaultAwayMessage)
     
     def setName(self, name):
         """
         Public method to set the identity name.
         
-        @param identity name (string)
+        @param name identity name (string)
         """
         self.__name = name
     
@@ -135,7 +138,7 @@ class IrcIdentity(object):
         """
         Public method to set the nick names of the identity.
         
-        @param name nick names (list of string)
+        @param names nick names (list of string)
         """
         self.__nickNames = names[:]
     
@@ -340,7 +343,7 @@ class IrcServer(object):
         """
         Public method to set the server port number.
         
-        @param server port number (integer)
+        @param port server port number (integer)
         """
         self.__port = port
     
@@ -520,7 +523,7 @@ class IrcNetwork(object):
         """
         Public method to set the network name.
         
-        @param network name (string)
+        @param name network name (string)
         """
         self.__name = name
     

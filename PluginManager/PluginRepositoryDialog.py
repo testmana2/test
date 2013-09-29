@@ -56,6 +56,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         Constructor
         
         @param parent parent of this dialog (QWidget)
+        @param external flag indicating an instatiation as a main
+            window (boolean)
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -109,6 +111,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     def on_buttonBox_clicked(self, button):
         """
         Private slot to handle the click of a button of the button box.
+        
+        @param button reference to the button pressed (QAbstractButton)
         """
         if button == self.__updateButton:
             self.__updateList()

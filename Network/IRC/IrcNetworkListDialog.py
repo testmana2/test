@@ -156,7 +156,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             networkName = itm.text(0)
             res = E5MessageBox.yesNo(self,
                 self.trUtf8("Delete Irc Network"),
-                self.trUtf8("""Do you really want to delete IRC network <b>{0}</b>?""")\
+                self.trUtf8(
+                    """Do you really want to delete IRC network <b>{0}</b>?""")
                     .format(networkName))
             if res:
                 index = self.networksList.indexOfTopLevelItem(itm)
@@ -169,6 +170,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     def on_networksList_itemExpanded(self, item):
         """
         Private slot handling the expansion of a top level item.
+        
+        @param item reference to the expanded item (QTreeWidgetItem)
         """
         self.__resizeColumns()
     
@@ -176,6 +179,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     def on_networksList_itemCollapsed(self, item):
         """
         Private slot handling the collapse of a top level item.
+        
+        @param item reference to the collapsed item (QTreeWidgetItem)
         """
         self.__resizeColumns()
     

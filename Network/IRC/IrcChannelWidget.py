@@ -129,7 +129,7 @@ class IrcUserItem(QListWidgetItem):
         Private method to convert an icon to an away icon.
         
         @param icon icon to be converted (QIcon)
-        @param away icon (QIcon)
+        @return away icon (QIcon)
         """
         pix1 = icon.pixmap(16, 16)
         pix2 = UI.PixmapCache.getPixmap("ircAway.png")
@@ -936,7 +936,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         """
         Private method to handle a CTCP channel command.
         
-        @param reference to the match object
+        @param match reference to the match object
         @return flag indicating, if the message was handled (boolean)
         """
         # group(1)   sender user name
@@ -1005,7 +1005,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         Private method to extract the user privileges out of the name.
         
         @param name user name and prefixes (string)
-        return list of privileges and user name (list of string, string)
+        @return list of privileges and user name (list of string, string)
         """
         privileges = []
         while name[0] in self.__prefixToPrivilege:
@@ -1023,7 +1023,6 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
         
         @param indicator indicator to be shown (string)
         @param message message to be shown (string)
-        @keyparam isLocal flag indicating a message related to the local user (boolean)
         """
         if indicator == self.JoinIndicator:
             color = Preferences.getIrc("JoinChannelColour")
@@ -1038,6 +1037,8 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     def __appendMessage(self, message):
         """
         Private slot to append a message.
+        
+        @param message message to be appended (string)
         """
         if self.__hidden and \
            self.__markerLine == "" and \
@@ -1688,5 +1689,7 @@ class IrcChannelWidget(QWidget, Ui_IrcChannelWidget):
     def on_messages_anchorClicked(self, url):
         """
         Private slot to open links in the default browser.
+        
+        @param url URL to be opened (QUrl)
         """
         QDesktopServices.openUrl(url)
