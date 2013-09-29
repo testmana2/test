@@ -1132,7 +1132,7 @@ class Pep257Checker(object):
         tokens = list(
             tokenize.generate_tokens(StringIO(context.ssource()).readline))
         return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
-                   if token[1] == "return"]
+                   if token[1] in ("return", "yield")]
         if "@return" not in docstringContext.ssource():
             if (set(return_) -
                     set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
