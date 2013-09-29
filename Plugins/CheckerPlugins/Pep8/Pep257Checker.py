@@ -253,7 +253,6 @@ class Pep257Checker(object):
         self.__docType = docType
         self.__filename = filename
         self.__source = source[:]
-        self.__isScript = self.__source[0].startswith('#!')
         
         # statistics counters
         self.counters = {}
@@ -763,10 +762,6 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if self.__isScript:
-            # assume nothing is exported
-            return
-        
         functionName = context.source()[0].lstrip().split()[1].split("(")[0]
         if functionName.startswith('_') and not functionName.endswith('__'):
             if self.__docType == "eric":
@@ -793,10 +788,6 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if self.__isScript:
-            # assume nothing is exported
-            return
-        
         className = context.source()[0].lstrip().split()[1].split("(")[0]
         if className.startswith('_'):
             if self.__docType == "eric":
@@ -967,7 +958,7 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if docstringContext is None or self.__isScript:
+        if docstringContext is None:
             return
         
         if "return" not in docstringContext.ssource().lower():
@@ -1130,7 +1121,7 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if docstringContext is None or self.__isScript:
+        if docstringContext is None:
             return
         
         tokens = list(
@@ -1156,7 +1147,7 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if docstringContext is None or self.__isScript:
+        if docstringContext is None:
             return
         
         try:
@@ -1206,7 +1197,7 @@ class Pep257Checker(object):
         @param docstringContext docstring context (Pep257Context)
         @param context context of the docstring (Pep257Context)
         """
-        if docstringContext is None or self.__isScript:
+        if docstringContext is None:
             return
         
         tokens = list(
