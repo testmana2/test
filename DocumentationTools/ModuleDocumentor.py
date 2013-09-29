@@ -878,7 +878,7 @@ class ModuleDocument(object):
             ditem = self.__processInlineTags(ditem)
             desc = ditem.strip()
             if desc:
-                if desc.startswith("@param") or desc.startswith("@keyparam"):
+                if desc.startswith(("@param", "@keyparam")):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
@@ -891,16 +891,14 @@ class ModuleDocument(object):
                     except IndexError:
                         paramList.append([paramName, []])
                     lastItem = paramList[-1][1]
-                elif desc.startswith("@return"):
+                elif desc.startswith(("@return", "@ireturn")):
                     inTagSection = True
                     parts = desc.split(None, 1)
                     if len(parts) < 2:
                         raise TagError("Wrong format in {0} line.\n".format(parts[0]))
                     returns = [parts[1]]
                     lastItem = returns
-                elif desc.startswith("@exception") or \
-                     desc.startswith("@throws") or \
-                     desc.startswith("@raise"):
+                elif desc.startswith(("@exception", "@throws", "@raise")):
                     inTagSection = True
                     parts = desc.split(None, 2)
                     if len(parts) < 2:
