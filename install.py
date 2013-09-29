@@ -917,15 +917,15 @@ def doDependancyChecks():
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
-    """
+    """                                                 # __IGNORE_WARNING__
     global sourceDir
     try:
         from PyQt4.uic import compileUiDir
     except ImportError:
         from PyQt4.uic import compileUi
         
-        def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
-            ** compileUi_args):
+        def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
+                         map=None, **compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
@@ -1059,8 +1059,8 @@ def main(argv):
             try:
                 exec(compile(open(arg).read(), arg, 'exec'), globals())
                 if len(cfg) != configLength:
-                    print("The configuration dictionary in '{0}' is incorrect. Aborting"\
-                        .format(arg))
+                    print("The configuration dictionary in '{0}' is incorrect."
+                          " Aborting".format(arg))
                     exit(6)
             except:
                 cfg = {}
@@ -1158,7 +1158,8 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print("""An internal error occured.  Please report all the output of the program,
+        print("""
+An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
 """)
         raise

@@ -51,32 +51,35 @@ directory or directory tree.
 <hr /><hr />
 <a NAME="compileUiDir" ID="compileUiDir"></a>
 <h2>compileUiDir</h2>
-<b>compileUiDir</b>(<i>dir, recurse = False, map = None, ** compileUi_args</i>)
+<b>compileUiDir</b>(<i>dir, recurse=False, map=None, **compileUi_args</i>)
 <p>
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
 </p><p>
-            Note: This function is a modified version of the one found in PyQt4.
+            Note: This function is a modified version of the one found in
+            PyQt4.
 </p><dl>
 <dt><i>dir</i></dt>
 <dd>
-Name of the directory to scan for files whose name ends with
-                '.ui'. By default the generated Python module is created in the same
-                directory ending with '.py'.
+Name of the directory to scan for files whose name ends
+                with '.ui'. By default the generated Python module is created
+                in the same directory ending with '.py'.
 </dd><dt><i>recurse</i></dt>
 <dd>
-flag indicating that any sub-directories should be scanned.
+flag indicating that any sub-directories should be
+                scanned.
 </dd><dt><i>map</i></dt>
 <dd>
-an optional callable that is passed the name of the directory
-                containing the '.ui' file and the name of the Python module that will be
-                created. The callable should return a tuple of the name of the directory
-                in which the Python module will be created and the (possibly modified)
-                name of the module.
+an optional callable that is passed the name of the
+                directory containing the '.ui' file and the name of the Python
+                module that will be created. The callable should return a tuple
+                of the name of the directory in which the Python module will be
+                created and the (possibly modified) name of the module.
 </dd><dt><i>compileUi_args</i></dt>
 <dd>
-any additional keyword arguments that are passed to
-                the compileUi() function that is called to create each Python module.
+any additional keyword arguments that are
+                passed to the compileUi() function that is called to create
+                each Python module.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -85,7 +88,8 @@ any additional keyword arguments that are passed to
 <h2>compileUiFiles</h2>
 <b>compileUiFiles</b>(<i>dir, recurse=False</i>)
 <p>
-    Module function to compile the .ui files of a directory tree to Python sources.
+    Module function to compile the .ui files of a directory tree to Python
+    sources.
 </p><dl>
 <dt><i>dir</i></dt>
 <dd>
@@ -117,7 +121,8 @@ file name of the .ui file (string)
 <h2>pyName</h2>
 <b>pyName</b>(<i>py_dir, py_file</i>)
 <p>
-        Local function to create the Python source file name for the compiled .ui file.
+        Local function to create the Python source file name for the compiled
+        .ui file.
 </p><dl>
 <dt><i>py_dir</i></dt>
 <dd>

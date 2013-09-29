@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2009 - 2013 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -15,31 +15,34 @@ import os
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
-    """
+    """                                                 # __IGNORE_WARNING__
     try:
         from PyQt4.uic import compileUiDir
     except ImportError:
         from PyQt4.uic import compileUi
         
-        def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
-            ** compileUi_args):
+        def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
+                         map=None, **compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
             
-            Note: This function is a modified version of the one found in PyQt4.
+            Note: This function is a modified version of the one found in
+            PyQt4.
 
-            @param dir Name of the directory to scan for files whose name ends with
-                '.ui'. By default the generated Python module is created in the same
-                directory ending with '.py'.
-            @param recurse flag indicating that any sub-directories should be scanned.
-            @param map an optional callable that is passed the name of the directory
-                containing the '.ui' file and the name of the Python module that will be
-                created. The callable should return a tuple of the name of the directory
-                in which the Python module will be created and the (possibly modified)
-                name of the module.
-            @param compileUi_args any additional keyword arguments that are passed to
-                the compileUi() function that is called to create each Python module.
+            @param dir Name of the directory to scan for files whose name ends
+                with '.ui'. By default the generated Python module is created
+                in the same directory ending with '.py'.
+            @param recurse flag indicating that any sub-directories should be
+                scanned.
+            @param map an optional callable that is passed the name of the
+                directory containing the '.ui' file and the name of the Python
+                module that will be created. The callable should return a tuple
+                of the name of the directory in which the Python module will be
+                created and the (possibly modified) name of the module.
+            @param compileUi_args any additional keyword arguments that are
+                passed to the compileUi() function that is called to create
+                each Python module.
             """
             def compile_ui(ui_dir, ui_file):
                 """
@@ -53,8 +56,8 @@ def compileUiFiles():
                     py_dir = ui_dir
                     py_file = ui_file[:-3] + '.py'
 
-                    # Allow the caller to change the name of the .py file or generate
-                    # it in a different directory.
+                    # Allow the caller to change the name of the .py file or
+                    # generate it in a different directory.
                     if map is not None:
                         py_dir, py_file = list(map(py_dir, py_file))
 
@@ -87,7 +90,8 @@ def compileUiFiles():
     
     def pyName(py_dir, py_file):
         """
-        Local function to create the Python source file name for the compiled .ui file.
+        Local function to create the Python source file name for the compiled
+        .ui file.
         
         @param py_dir suggested name of the directory (string)
         @param py_file suggested name for the compile source file (string)
@@ -115,7 +119,8 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except:
-        print("""An internal error occured.  Please report all the output of the program,
+        print("""
+An internal error occured.  Please report all the output of the program,
 including the following traceback, to eric5-bugs@eric-ide.python-projects.org.
 """)
         raise

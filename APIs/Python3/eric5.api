@@ -8380,7 +8380,7 @@ eric5.Utilities.splitPath?4(name)
 eric5.Utilities.supportedCodecs?7
 eric5.Utilities.toBool?4(dataStr)
 eric5.Utilities.toNativeSeparators?4(path)
-eric5.Utilities.uic.compileUiDir?4(dir, recurse = False, map = None, ** compileUi_args)
+eric5.Utilities.uic.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric5.Utilities.uic.compileUiFiles?4(dir, recurse=False)
 eric5.Utilities.uic.compile_ui?4(ui_dir, ui_file)
 eric5.Utilities.uic.pyName?4(py_dir, py_file)
@@ -8889,7 +8889,7 @@ eric5.ViewManager.ViewManager.ViewManager.unhighlight?4(current=False)
 eric5.ViewManager.ViewManager.ViewManager.zoomValueChanged?4(value)
 eric5.ViewManager.ViewManager.ViewManager?1()
 eric5.ViewManager.factory?4(parent, ui, dbs, pluginManager)
-eric5.compileUiFiles.compileUiDir?4(dir, recurse = False, map = None, ** compileUi_args)
+eric5.compileUiFiles.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric5.compileUiFiles.compileUiFiles?4()
 eric5.compileUiFiles.compile_ui?4(ui_dir, ui_file)
 eric5.compileUiFiles.main?4(argv)
@@ -8960,7 +8960,7 @@ eric5.install.PlatformsBlackLists?7
 eric5.install.apisDir?7
 eric5.install.cfg?7
 eric5.install.cleanUp?4()
-eric5.install.compileUiDir?4(dir, recurse = False, map = None, ** compileUi_args)
+eric5.install.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric5.install.compileUiFiles?4()
 eric5.install.compile_ui?4(ui_dir, ui_file)
 eric5.install.configLength?7

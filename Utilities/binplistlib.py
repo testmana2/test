@@ -758,7 +758,7 @@ class PlistWriter(object):
         @param isRoot flag indicating a root object (boolean)
         @exception InvalidPlistException raised to indicate an invalid
             plist file
-        """
+        """                                             # __IGNORE_WARNING__
         def check_key(key):
             if key is None:
                 raise InvalidPlistException('Dictionary keys cannot be null in plists.')
