@@ -92,11 +92,10 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         self.repoTree.header().setStretchLastSection(True)
     
     def __generateItem(self, repopath, revision, author, size, date,
-            nodekind, url):
+                       nodekind, url):
         """
         Private method to generate a tree item in the repository tree.
         
-        @param parent parent of the item to be created (QTreeWidget or QTreeWidgetItem)
         @param repopath path of the item (string)
         @param revision revision info (string)
         @param author author info (string)

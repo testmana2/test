@@ -884,6 +884,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private method to retrieve all entries, that have a locked status.
         
+        @param indicators list of indicators to check against (list of strings)
         @return list of all items with a locked status
         """
         lockitems = []

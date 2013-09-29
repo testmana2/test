@@ -1008,6 +1008,7 @@ class Subversion(VersionControl):
         Public method used to switch a directory to a different tag/branch.
         
         @param name directory name to be switched (string)
+        @return flag indicating added or changed files (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -1435,17 +1436,22 @@ class Subversion(VersionControl):
         
         @param project reference to the project object
         @param archive name of the project in the repository (string)
-        @param editable flag indicating that the project name is editable (boolean)
+        @param editable flag indicating that the project name is editable
+            (boolean)
         @param parent parent widget (QWidget)
+        @return reference to the instantiated options dialog (SvnOptionsDialog)
         """
         from .SvnOptionsDialog import SvnOptionsDialog
         return SvnOptionsDialog(self, project, parent)
         
     def vcsNewProjectOptionsDialog(self, parent=None):
         """
-        Public method to get a dialog to enter repository info for getting a new project.
+        Public method to get a dialog to enter repository info for getting
+        a new project.
         
         @param parent parent widget (QWidget)
+        @return reference to the instantiated options dialog
+            (SvnNewProjectOptionsDialog)
         """
         from .SvnNewProjectOptionsDialog import SvnNewProjectOptionsDialog
         return SvnNewProjectOptionsDialog(self, parent)
@@ -1875,12 +1881,13 @@ class Subversion(VersionControl):
     
     def svnSbsDiff(self, name, extended=False, revisions=None):
         """
-        Public method used to view the difference of a file to the Mercurial repository
-        side-by-side.
+        Public method used to view the difference of a file to the Mercurial
+        repository side-by-side.
         
         @param name file name to be diffed (string)
         @keyparam extended flag indicating the extended variant (boolean)
         @keyparam revisions tuple of two revisions (tuple of strings)
+        @exception ValueError raised to indicate an illegal name parameter type
         """
         if isinstance(name, list):
             raise ValueError("Wrong parameter type")
@@ -2245,8 +2252,8 @@ class Subversion(VersionControl):
         """
         Protected method to create an instance of the VCS status monitor thread.
         
-        @param project reference to the project object
         @param interval check interval for the monitor thread in seconds (integer)
+        @param project reference to the project object
         @return reference to the monitor thread (QThread)
         """
         from .SvnStatusMonitorThread import SvnStatusMonitorThread

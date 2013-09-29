@@ -995,6 +995,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private method to retrieve all emtries, that have a locked status.
         
+        @param indicators list of indicators to check against (list of strings)
         @return list of all items with a locked status
         """
         lockitems = []

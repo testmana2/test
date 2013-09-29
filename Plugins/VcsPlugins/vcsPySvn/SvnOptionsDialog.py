@@ -84,6 +84,8 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
     def on_protocolCombo_activated(self, protocol):
         """
         Private slot to switch the status of the directory selection button.
+        
+        @param protocol selected protocol (string)
         """
         if protocol == "file://":
             self.networkPath = self.vcsUrlEdit.text()

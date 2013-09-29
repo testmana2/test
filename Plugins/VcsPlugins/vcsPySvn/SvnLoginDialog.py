@@ -24,12 +24,14 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         @param username username as supplied by subversion (string)
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
+        qparam parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
         
-        self.realmLabel.setText(self.trUtf8("<b>Enter login data for realm {0}.</b>")\
-                                .format(realm))
+        self.realmLabel.setText(
+            self.trUtf8("<b>Enter login data for realm {0}.</b>")
+            .format(realm))
         self.usernameEdit.setText(username)
         self.saveCheckBox.setEnabled(may_save)
         if not may_save:

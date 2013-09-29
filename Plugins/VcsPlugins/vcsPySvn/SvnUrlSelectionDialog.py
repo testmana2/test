@@ -94,7 +94,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         selected type.
         
         @param labelCombo reference to the labelCombo object (QComboBox)
-        @param type type string (string)
+        @param type_ type string (string)
         """
         if type_ == "trunk/":
             labelCombo.clear()

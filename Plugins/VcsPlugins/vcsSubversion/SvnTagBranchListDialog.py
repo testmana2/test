@@ -72,9 +72,10 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         @param path name of directory to be listed (string)
         @param tags flag indicating a list of tags is requested
-                (False = branches, True = tags)
-        @param tagsList reference to string list receiving the tags (list of strings)
-        @param allsTagsList reference to string list all tags (list of strings)
+            (False = branches, True = tags)
+        @param tagsList reference to string list receiving the tags
+            (list of strings)
+        @param allTagsList reference to string list all tags (list of strings)
         """
         self.errorGroup.hide()
         

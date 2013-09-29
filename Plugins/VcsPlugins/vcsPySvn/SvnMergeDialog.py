@@ -48,8 +48,6 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
     def __enableOkButton(self):
         """
         Private method used to enable/disable the OK-button.
-        
-        @param text ignored
         """
         self.okButton.setDisabled(
             self.tag1Combo.currentText() == "" or \
@@ -64,12 +62,16 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
     def on_tag1Combo_editTextChanged(self, text):
         """
         Private slot to handle the tag1Combo editTextChanged signal.
+        
+        @param text text of the combo (string)
         """
         self.__enableOkButton()
         
     def on_tag2Combo_editTextChanged(self, text):
         """
         Private slot to handle the tag2Combo editTextChanged signal.
+        
+        @param text text of the combo (string)
         """
         self.__enableOkButton()
         
