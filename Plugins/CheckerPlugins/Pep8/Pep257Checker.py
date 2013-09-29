@@ -433,6 +433,10 @@ class Pep257Checker(object):
             # don't do anything, if essential data is missing
             return
         
+        if not self.__checkers:
+            # don't do anything, if no codes were selected
+            return
+        
         for keyword in self.__keywords:
             if keyword in self.__checkers:
                 for check in self.__checkers[keyword]:
