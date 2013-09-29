@@ -747,7 +747,6 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         @keyparam named flag indicating to push/pop until a named patch
             is at the top of the stack (boolean)
         @keyparam force flag indicating a forceful pop (boolean)
-        @return flag indicating that the project should be reread (boolean)
         """
         shouldReopen = self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(name, operation=operation, all=all, named=named,

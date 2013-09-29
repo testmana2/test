@@ -112,7 +112,7 @@ class E5MessageBoxWizard(QObject):
         
     def __handle(self):
         """
-        Private method to handle the wizards action
+        Private method to handle the wizards action.
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         

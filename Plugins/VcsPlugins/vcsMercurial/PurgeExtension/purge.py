@@ -44,7 +44,8 @@ class Purge(HgExtension):
         Public method to get a list of files/directories being purged.
         
         @param repodir directory name of the repository (string)
-        @param all flag indicating to delete all files including ignored ones (boolean)
+        @param all flag indicating to delete all files including ignored ones
+            (boolean)
         @return name of the current patch (string)
         """
         purgeEntries = []
@@ -80,25 +81,28 @@ class Purge(HgExtension):
         Public method to purge files and directories not tracked by Mercurial.
         
         @param name file/directory name (string)
-        @param all flag indicating to delete all files including ignored ones (boolean)
+        @param all flag indicating to delete all files including ignored ones
+            (boolean)
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if os.path.splitdrive(repodir)[1] == os.sep:
-                return False
+                return
         
         if all:
             title = self.trUtf8("Purge All Files")
-            message = self.trUtf8("""Do really want to delete all files not tracked by"""
-                                  """ Mercurial (including ignored ones)?""")
+            message = self.trUtf8(
+                """Do really want to delete all files not tracked by"""
+                """ Mercurial (including ignored ones)?""")
         else:
             title = self.trUtf8("Purge Files")
-            message = self.trUtf8("""Do really want to delete files not tracked by"""
-                                  """ Mercurial?""")
+            message = self.trUtf8(
+                """Do really want to delete files not tracked by Mercurial?""")
         entries = self.__getEntries(repodir, all)
-        from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
+        from UI.DeleteFilesConfirmationDialog import \
+            DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(None, title, message, entries)
         if dlg.exec_() == QDialog.Accepted:
             args = []
@@ -117,14 +121,15 @@ class Purge(HgExtension):
         Public method to list files and directories not tracked by Mercurial.
         
         @param name file/directory name (string)
-        @param all flag indicating to list all files including ignored ones (boolean)
+        @param all flag indicating to list all files including ignored ones
+            (boolean)
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if os.path.splitdrive(repodir)[1] == os.sep:
-                return False
+                return
         
         entries = self.__getEntries(repodir, all)
         from .HgPurgeListDialog import HgPurgeListDialog

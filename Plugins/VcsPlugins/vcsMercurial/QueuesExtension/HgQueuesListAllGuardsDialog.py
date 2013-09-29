@@ -26,6 +26,7 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
         """
         Constructor
         
+        @param vcs reference to the VCS object (Hg)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -68,8 +69,8 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(
+                        process.readAllStandardOutput(), ioEncoding, 'replace')
         
         if output:
             guardsDict = {}

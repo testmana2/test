@@ -237,7 +237,7 @@ class Pep8NamingChecker(object):
     
     def __error(self, node, code):
         """
-        Private method to build the error information
+        Private method to build the error information.
         
         @param node AST node to report an error for
         @param code error code to report (string)
@@ -272,6 +272,7 @@ class Pep8NamingChecker(object):
         Private class to check the given node for a name to be avoided (N831).
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -307,6 +308,7 @@ class Pep8NamingChecker(object):
         Classes for internal use have a leading underscore in addition.
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -325,6 +327,7 @@ class Pep8NamingChecker(object):
         (e.g. threading.py), to retain backwards compatibility.
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -344,6 +347,7 @@ class Pep8NamingChecker(object):
         first argument. A method should have 'self' as the first argument.
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -388,6 +392,7 @@ class Pep8NamingChecker(object):
         Local variables in functions should be lowercase.
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -413,6 +418,7 @@ class Pep8NamingChecker(object):
         Module and package names should be lowercase.
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
@@ -434,6 +440,7 @@ class Pep8NamingChecker(object):
         naming convention (N811, N812, N813, N814).
         
         @param node AST note to check
+        @param parents list of parent nodes
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """

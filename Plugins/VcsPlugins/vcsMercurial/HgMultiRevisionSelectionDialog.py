@@ -106,8 +106,6 @@ class HgMultiRevisionSelectionDialog(QDialog, Ui_HgMultiRevisionSelectionDialog)
     def on_changesetsEdit_textChanged(self):
         """
         Private slot to handle changes of the Changesets edit.
-        
-        @param txt text of the edit (string)
         """
         self.__updateOK()
     

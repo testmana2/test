@@ -82,6 +82,8 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
     def on_archiveEdit_textChanged(self, archive):
         """
         Private slot to handle changes of the archive name.
+        
+        @param archive name of the archive (string)
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(archive != "")
     

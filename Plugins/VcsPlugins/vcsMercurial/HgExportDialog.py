@@ -57,7 +57,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enabled)
     
     @pyqtSlot(str)
-    def on_directoryEdit_textChanged(self, p0):
+    def on_directoryEdit_textChanged(self, txt):
         """
         Private slot to react on changes of the export directory edit.
         
@@ -80,7 +80,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
             self.directoryEdit.setText(Utilities.toNativeSeparators(dn))
     
     @pyqtSlot(str)
-    def on_patternEdit_textChanged(self, p0):
+    def on_patternEdit_textChanged(self, txt):
         """
         Private slot to react on changes of the export file name pattern edit.
         
@@ -92,8 +92,6 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
     def on_changesetsEdit_textChanged(self):
         """
         Private slot to react on changes of the changesets edit.
-        
-        @param txt contents of the line edit (string)
         """
         self.__updateOK()
     
@@ -101,14 +99,16 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         Public method to retrieve the export data.
         
-        @return tuple naming the output file name, the list of revisions to export,
-            and flags indicating to compare against the second parent, to treat all
-            files as text, to omit dates in the diff headers and to use the git extended
-            diff format (string, list of strings, boolean, boolean, boolean, boolean)
+        @return tuple naming the output file name, the list of revisions to
+            export, and flags indicating to compare against the second parent,
+            to treat all files as text, to omit dates in the diff headers and
+            to use the git extended diff format (string, list of strings,
+            boolean, boolean, boolean, boolean)
         """
         return (
-            os.path.join(Utilities.toNativeSeparators(self.directoryEdit.text()),
-                         self.patternEdit.text()),
+            os.path.join(
+                Utilities.toNativeSeparators(self.directoryEdit.text()),
+                self.patternEdit.text()),
             self.changesetsEdit.toPlainText().splitlines(),
             self.switchParentCheckBox.isChecked(),
             self.textCheckBox.isChecked(),

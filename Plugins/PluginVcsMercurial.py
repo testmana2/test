@@ -104,6 +104,7 @@ def createConfigurationPage(configDlg):
     """
     Module function to create the configuration page.
     
+    @param configDlg reference to the configuration dialog (QDialog)
     @return reference to the configuration page
     """
     global mercurialCfgPluginObject

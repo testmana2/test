@@ -2584,7 +2584,7 @@ class Pep8LineShortener(object):
         Private method to remove multiline-related code that will cause syntax
         error.
         
-        @param line code line to work on (string)
+        @param text code line to work on (string)
         @return normalized code line (string)
         """
         for quote in '\'"':

@@ -28,6 +28,7 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
             HgQueuesNewPatchDialog.REFRESH_MODE)
         @param message text to set as the commit message (string)
         @param parent reference to the parent widget (QWidget)
+        @exception ValueError raised to indicate an invalid dialog mode
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -78,8 +79,6 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
     def on_messageEdit_textChanged(self):
         """
         Private slot to handle changes of the patch message.
-        
-        @param txt text of the edit (string)
         """
         self.__updateUI()
     

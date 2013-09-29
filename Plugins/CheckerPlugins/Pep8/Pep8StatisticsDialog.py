@@ -29,7 +29,7 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         """
         Constructor
         
-        @param dictionary with the statistical data
+        @param statistics dictionary with the statistical data
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)

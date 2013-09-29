@@ -41,7 +41,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.vcs = vcs
         self.__hgClient = vcs.getClient()
         
-        self.annotateList.headerItem().setText(self.annotateList.columnCount(), "")
+        self.annotateList.headerItem().setText(
+            self.annotateList.columnCount(), "")
         font = QFont(self.annotateList.font())
         if Utilities.isWindowsPlatform():
             font.setFamily("Lucida Console")
@@ -144,7 +145,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -158,7 +160,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         
@@ -201,10 +204,12 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         @param changeset changeset string (string)
         @param author author of the change (string)
         @param date date of the tag (string)
-        @param name name (path) of the tag (string)
+        @param text name (path) of the tag (string)
         """
-        itm = QTreeWidgetItem(self.annotateList,
-            [revision, changeset, author, date, "{0:d}".format(self.lineno), text])
+        itm = QTreeWidgetItem(
+            self.annotateList,
+            [revision, changeset, author, date, "{0:d}".format(self.lineno),
+             text])
         self.lineno += 1
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(4, Qt.AlignRight)
@@ -219,7 +224,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), self.__ioEncoding, 'replace').strip()
+            s = str(self.process.readLine(), self.__ioEncoding, 'replace')\
+                .strip()
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):

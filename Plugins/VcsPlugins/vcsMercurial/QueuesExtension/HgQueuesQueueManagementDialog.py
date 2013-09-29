@@ -37,6 +37,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         @param repodir name of the repository directory (string)
         @param vcs reference to the vcs object
         @param parent reference to the parent widget (QWidget)
+        @exception ValueError raised to indicate an invalid dialog mode
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -122,6 +123,8 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
     def on_nameEdit_textChanged(self, txt):
         """
         Private slot to handle changes of the entered queue name.
+        
+        @param txt text of the edit (string)
         """
         if self.__mode == HgQueuesQueueManagementDialog.NAME_INPUT:
             self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(txt != "")

@@ -62,7 +62,7 @@ class HgExtensionProjectHelper(QObject):
         Note: Derived class must implement this method.
         
         @param mainMenu reference to the main menu (QMenu)
-        @return populated menu (QMenu)
+        @ireturn populated menu (QMenu)
         @exception NotImplementedError raised if the class has not been reimplemente
         """
         raise NotImplementedError
@@ -73,7 +73,7 @@ class HgExtensionProjectHelper(QObject):
         
         Note: Derived class must implement this method.
         
-        @return title of the menu (string)
+        @ireturn title of the menu (string)
         @exception NotImplementedError raised if the class has not been reimplemente
         """
         raise NotImplementedError

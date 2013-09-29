@@ -4,7 +4,7 @@
 #
 
 """
-Module defining configuration variables for the subversion package
+Module defining configuration variables for the subversion package.
 """
 
 # Available protocols for the repository URL

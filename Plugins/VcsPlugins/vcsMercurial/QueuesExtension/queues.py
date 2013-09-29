@@ -83,6 +83,7 @@ class Queues(HgExtension):
             (Queues.APPLIED_LIST, Queues.UNAPPLIED_LIST, Queues.SERIES_LIST)
         @param withSummary flag indicating to get a summary as well (boolean)
         @return list of patches (list of string)
+        @exception ValueError raised to indicate an invalid patch list type
         """
         patchesList = []
         
@@ -357,6 +358,7 @@ class Queues(HgExtension):
             is at the top of the stack (boolean)
         @keyparam force flag indicating a forceful pop (boolean)
         @return flag indicating that the project should be reread (boolean)
+        @exception ValueError raised to indicate an invalid operation
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]
@@ -811,6 +813,7 @@ class Queues(HgExtension):
         @param name file/directory name (string)
         @param operation operation to be performed (Queues.QUEUE_DELETE,
             Queues.QUEUE_PURGE, Queues.QUEUE_ACTIVATE)
+        @exception ValueError raised to indicate an invalid operation
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]

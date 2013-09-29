@@ -67,7 +67,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         
     def _clientNotifyCallback(self, eventDict):
         """
-        Protected method called by the client to send events
+        Protected method called by the client to send events.
         
         @param eventDict dictionary containing the notification event
         """

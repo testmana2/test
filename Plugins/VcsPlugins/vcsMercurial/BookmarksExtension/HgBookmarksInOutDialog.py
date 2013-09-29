@@ -35,6 +35,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         @param mode mode of the dialog (HgBookmarksInOutDialog.INCOMING,
             HgBookmarksInOutDialog.OUTGOING)
         @param parent reference to the parent widget (QWidget)
+        @exception ValueError raised to indicate an invalid dialog mode
         """
         super().__init__(parent)
         self.setupUi(self)
@@ -87,6 +88,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         Public slot to start the bookmarks command.
         
         @param path name of directory to be listed (string)
+        @exception ValueError raised to indicate an invalid dialog mode
         """
         self.errorGroup.hide()
         

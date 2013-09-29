@@ -1257,7 +1257,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):
         """
-        Private slot called, when the stop on copy/move checkbox is clicked
+        Private slot called, when the stop on copy/move checkbox is clicked.
+        
+        @param checked flag indicating the state of the check box (boolean)
         """
         self.vcs.getPlugin().setPreferences("StopLogOnCopy",
                                             self.stopCheckBox.isChecked())

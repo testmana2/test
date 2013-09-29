@@ -511,7 +511,9 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):
         """
-        Private slot called, when the stop on copy/move checkbox is clicked
+        Private slot called, when the stop on copy/move checkbox is clicked.
+        
+        @param checked flag indicating the check box state (boolean)
         """
         self.vcs.getPlugin().setPreferences("StopLogOnCopy",
                                             int(self.stopCheckBox.isChecked()))

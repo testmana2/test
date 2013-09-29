@@ -4,7 +4,7 @@
 #
 
 """
-Module defining configuration variables for the Mercurial package
+Module defining configuration variables for the Mercurial package.
 """
 
 # Available protocols fpr the repository URL

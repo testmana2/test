@@ -98,6 +98,7 @@ def createConfigurationPage(configDlg):
     """
     Module function to create the configuration page.
     
+    @param configDlg reference to the configuration dialog (QDialog)
     @return reference to the configuration page
     """
     global subversionCfgPluginObject
@@ -189,7 +190,6 @@ class VcsPySvnPlugin(QObject):
         Public method to retrieve the various settings.
         
         @param key the key of the value to get
-        @param prefClass preferences class used as the storage area
         @return the requested refactoring setting
         """
         if key in ["StopLogOnCopy"]:
@@ -210,7 +210,6 @@ class VcsPySvnPlugin(QObject):
         
         @param key the key of the setting to be set
         @param value the value to be set
-        @param prefClass preferences class used as the storage area
         """
         Preferences.Prefs.settings.setValue("Subversion/" + key, value)
     

@@ -91,6 +91,8 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
     def on_nameCombo_activated(self, txt):
         """
         Private slot to handle changes of the selected bookmark name.
+        
+        @param txt selected combo entry (string)
         """
         self.__updateOK()
         self.__updateBookmarksCombo()

@@ -456,7 +456,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.__checkQtHelpOptions()
     
     @pyqtSlot(str)
-    def on_qtHelpTitleEdit_textChanged(self, p0):
+    def on_qtHelpTitleEdit_textChanged(self, txt):
         """
         Private slot to check the title.
         

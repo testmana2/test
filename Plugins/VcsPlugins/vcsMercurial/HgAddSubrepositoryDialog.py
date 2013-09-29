@@ -27,6 +27,7 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         Constructor
         
+        @param projectPath project directory name (string)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)

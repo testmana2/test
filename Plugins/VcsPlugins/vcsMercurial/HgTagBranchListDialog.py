@@ -10,8 +10,8 @@ Module implementing a dialog to show a list of tags or branches.
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -77,9 +77,10 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         
         @param path name of directory to be listed (string)
         @param tags flag indicating a list of tags is requested
-                (False = branches, True = tags)
-        @param tagsList reference to string list receiving the tags (list of strings)
-        @param allsTagsList reference to string list all tags (list of strings)
+            (False = branches, True = tags)
+        @param tagsList reference to string list receiving the tags
+            (list of strings)
+        @param allTagsList reference to string list all tags (list of strings)
         """
         self.errorGroup.hide()
         
@@ -143,7 +144,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -157,7 +159,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(
+            Qt.OtherFocusReason)
         
         self.process = None
         

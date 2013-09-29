@@ -1254,17 +1254,22 @@ class Hg(VersionControl):
         
         @param project reference to the project object
         @param archive name of the project in the repository (string)
-        @param editable flag indicating that the project name is editable (boolean)
+        @param editable flag indicating that the project name is editable
+            (boolean)
         @param parent parent widget (QWidget)
+        @return reference to the instantiated options dialog (HgOptionsDialog)
         """
         from .HgOptionsDialog import HgOptionsDialog
         return HgOptionsDialog(self, project, parent)
     
     def vcsNewProjectOptionsDialog(self, parent=None):
         """
-        Public method to get a dialog to enter repository info for getting a new project.
+        Public method to get a dialog to enter repository info for getting a
+        new project.
         
         @param parent parent widget (QWidget)
+        @return reference to the instantiated options dialog
+            (HgNewProjectOptionsDialog)
         """
         from .HgNewProjectOptionsDialog import HgNewProjectOptionsDialog
         return HgNewProjectOptionsDialog(self, parent)
@@ -1687,6 +1692,7 @@ class Hg(VersionControl):
         @param name file name to be diffed (string)
         @keyparam extended flag indicating the extended variant (boolean)
         @keyparam revisions tuple of two revisions (tuple of strings)
+        @exception ValueError raised to indicate an invalid name parameter
         """
         if isinstance(name, list):
             raise ValueError("Wrong parameter type")
@@ -1985,7 +1991,7 @@ class Hg(VersionControl):
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if os.path.splitdrive(repodir)[1] == os.sep:
-                return False
+                return
         
         dia = HgDialog(self.trUtf8('Resolving files/directories'), self)
         res = dia.startProcess(args, repodir)
@@ -2460,6 +2466,7 @@ class Hg(VersionControl):
         @param name file/directory name (string)
         @param subcommand name of the subcommand (string, one of 'good', 'bad',
             'skip' or 'reset')
+        @exception ValueError raised to indicate an invalid bisect subcommand
         """
         if subcommand not in ("good", "bad", "skip", "reset"):
             raise ValueError(
@@ -2741,6 +2748,7 @@ class Hg(VersionControl):
         @param data tuple giving phase data (list of revisions, phase, flag
             indicating a forced operation) (list of strings, string, boolean)
         @return flag indicating success (boolean)
+        @exception ValueError raised to indicate an invalid phase
         """
         dname, fname = self.splitPath(name)
         
@@ -3189,8 +3197,8 @@ class Hg(VersionControl):
         """
         Protected method to create an instance of the VCS status monitor thread.
         
-        @param project reference to the project object (Project)
         @param interval check interval for the monitor thread in seconds (integer)
+        @param project reference to the project object (Project)
         @return reference to the monitor thread (QThread)
         """
         from .HgStatusMonitorThread import HgStatusMonitorThread

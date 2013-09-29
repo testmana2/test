@@ -10,7 +10,8 @@ Module implementing an interface to the Mercurial command server.
 import struct
 import io
 
-from PyQt4.QtCore import QProcess, QObject, QByteArray, QCoreApplication, QThread
+from PyQt4.QtCore import QProcess, QObject, QByteArray, QCoreApplication, \
+    QThread
 from PyQt4.QtGui import QDialog
 
 from .HgUtilities import prepareProcess
@@ -134,8 +135,9 @@ class HgClient(QObject):
         msg = msg.split("\n")
         
         if not msg[0].startswith("capabilities: "):
-            return False, self.trUtf8("Bad 'hello' message, expected 'capabilities: '"
-                                      " but got '{0}'.").format(msg[0])
+            return False, self.trUtf8(
+                "Bad 'hello' message, expected 'capabilities: '"
+                " but got '{0}'.").format(msg[0])
         self.__capabilities = msg[0][len('capabilities: '):]
         if not self.__capabilities:
             return False, self.trUtf8("'capabilities' message did not contain"
@@ -146,8 +148,9 @@ class HgClient(QObject):
             return False, "'capabilities' did not contain 'runcommand'."
         
         if not msg[1].startswith("encoding: "):
-            return False, self.trUtf8("Bad 'hello' message, expected 'encoding: '"
-                                      " but got '{0}'.").format(msg[1])
+            return False, self.trUtf8(
+                "Bad 'hello' message, expected 'encoding: '"
+                " but got '{0}'.").format(msg[1])
         encoding = msg[1][len('encoding: '):]
         if not encoding:
             return False, self.trUtf8("'encoding' message did not contain"
@@ -206,7 +209,8 @@ class HgClient(QObject):
         """
         if not isinstance(data, bytes):
             data = data.encode(self.__encoding)
-        self.__server.write(QByteArray(struct.pack(HgClient.InputFormat, len(data))))
+        self.__server.write(
+            QByteArray(struct.pack(HgClient.InputFormat, len(data))))
         self.__server.write(QByteArray(data))
         self.__server.waitForBytesWritten()
     
@@ -216,13 +220,15 @@ class HgClient(QObject):
         
         @param args list of arguments for the command (list of string)
         @param inputChannels dictionary of input channels. The dictionary must
-            have the keys 'I' and 'L' and each entry must be a function receiving
-            the number of bytes to write.
-        @param outputChannels dictionary of output channels. The dictionary must
-            have the keys 'o' and 'e' and each entry must be a function receiving
-            the data.
-        @return result code of the command, -1 if the command server wasn't started or
-            -10, if the command was canceled (integer)
+            have the keys 'I' and 'L' and each entry must be a function
+            receiving the number of bytes to write.
+        @param outputChannels dictionary of output channels. The dictionary
+            must have the keys 'o' and 'e' and each entry must be a function
+            receiving the data.
+        @return result code of the command, -1 if the command server wasn't
+            started or -10, if the command was canceled (integer)
+        @exception RuntimeError raised to indicate an unexpected command
+            channel
         """
         if not self.__started:
             return -1
@@ -275,6 +281,7 @@ class HgClient(QObject):
         
         @param size maximum length of the requested input (integer)
         @param message message sent by the server (string)
+        @return data entered by the user (string)
         """
         from .HgClientPromptDialog import HgClientPromptDialog
         input = ""
@@ -283,7 +290,8 @@ class HgClient(QObject):
             input = dlg.getInput() + '\n'
         return input
     
-    def runcommand(self, args, prompt=None, input=None, output=None, error=None):
+    def runcommand(self, args, prompt=None, input=None, output=None,
+                   error=None):
         """
         Public method to execute a command via the command server.
         
@@ -295,10 +303,11 @@ class HgClient(QObject):
             It receives the max number of bytes to return.
         @keyparam output function receiving the data from the server (string).
             If a prompt function is given, this parameter will be ignored.
-        @keyparam error function receiving error messages from the server (string)
-        @return output and errors of the command server (string). In case output
-            and/or error functions were given, the respective return value will
-            be an empty string.
+        @keyparam error function receiving error messages from the server
+            (string)
+        @return output and errors of the command server (string). In case
+            output and/or error functions were given, the respective return
+            value will be an empty string.
         """
         self.__commandRunning = True
         outputChannels = {}
@@ -359,6 +368,8 @@ class HgClient(QObject):
     def wasCanceled(self):
         """
         Public method to check, if the last command was canceled.
+        
+        @return flag indicating the cancel state (boolean)
         """
         return self.__cancel
     
@@ -368,3 +379,4 @@ class HgClient(QObject):
         
         @return flag indicating the execution of a command (boolean)
         """
+        return self.__commandRunning

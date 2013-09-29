@@ -52,6 +52,8 @@ class HgPhaseDialog(QDialog, Ui_HgPhaseDialog):
     def on_phaseCombo_activated(self, txt):
         """
         Private slot to react upon changes of the phase.
+        
+        @param txt activated entry (string)
         """
         self.__updateOk()
     
