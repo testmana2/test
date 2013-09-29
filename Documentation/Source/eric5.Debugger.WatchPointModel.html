@@ -119,9 +119,9 @@ QAbstractItemModel
 <p>
         Constructor
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>parent</i></dt>
 <dd>
-to the parent widget (QObject)
+reference to the parent widget (QObject)
 </dd>
 </dl><a NAME="WatchPointModel.addWatchPoint" ID="WatchPointModel.addWatchPoint"></a>
 <h4>WatchPointModel.addWatchPoint</h4>
@@ -146,6 +146,11 @@ properties of the watch expression
 <p>
         Public method to get the current column count.
 </p><dl>
+<dt><i>parent</i></dt>
+<dd>
+index of the parent item (QModelIndex)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 column count (integer)
@@ -320,6 +325,11 @@ index of parent (QModelIndex)
 <p>
         Public method to get the current row count.
 </p><dl>
+<dt><i>parent</i></dt>
+<dd>
+index of the parent item (QModelIndex)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 row count (integer)

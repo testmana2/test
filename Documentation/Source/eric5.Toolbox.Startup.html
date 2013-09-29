@@ -21,7 +21,7 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Toolbox.Startup</h1>
 <p>
-Module implementing some startup helper funcions
+Module implementing some startup helper funcions.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -107,7 +107,8 @@ The translation to be loaded. (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-Tuple of a status flag and the loaded translator. (int, QTranslator)
+Tuple of a status flag and the loaded translator
+        (int, QTranslator)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -149,7 +150,8 @@ the requested locale (string)
 <h2>simpleAppStartup</h2>
 <b>simpleAppStartup</b>(<i>argv, appinfo, mwFactory, quitOnLastWindowClosed=True, app=None, raiseIt=True, installErrorHandler=False</i>)
 <p>
-    Module function to start up an application that doesn't need a specialized start up.
+    Module function to start up an application that doesn't need a specialized
+    start up.
 </p><p>
     This function is used by all of eric5's helper programs.
 </p><dl>
@@ -176,11 +178,17 @@ flag indicating to quit the application,
 reference to the application object (QApplication or None)
 </dd><dt><i>raiseIt=</i></dt>
 <dd>
-flag indicating to raise the generated application window (boolean)
+flag indicating to raise the generated application
+        window (boolean)
 </dd><dt><i>installErrorHandler=</i></dt>
 <dd>
 flag indicating to install an error
         handler dialog (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+exit result (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -139,6 +139,11 @@ maximum length of the requested input (integer)
 <dd>
 message sent by the server (string)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+data entered by the user (string)
+</dd>
 </dl><a NAME="HgClient.__readChannel" ID="HgClient.__readChannel"></a>
 <h4>HgClient.__readChannel</h4>
 <b>__readChannel</b>(<i></i>)
@@ -173,19 +178,25 @@ list of arguments for the command (list of string)
 </dd><dt><i>inputChannels</i></dt>
 <dd>
 dictionary of input channels. The dictionary must
-            have the keys 'I' and 'L' and each entry must be a function receiving
-            the number of bytes to write.
+            have the keys 'I' and 'L' and each entry must be a function
+            receiving the number of bytes to write.
 </dd><dt><i>outputChannels</i></dt>
 <dd>
-dictionary of output channels. The dictionary must
-            have the keys 'o' and 'e' and each entry must be a function receiving
-            the data.
+dictionary of output channels. The dictionary
+            must have the keys 'o' and 'e' and each entry must be a function
+            receiving the data.
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-result code of the command, -1 if the command server wasn't started or
-            -10, if the command was canceled (integer)
+result code of the command, -1 if the command server wasn't
+            started or -10, if the command was canceled (integer)
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+raised to indicate an unexpected command
+            channel
 </dd>
 </dl><a NAME="HgClient.__serverFinished" ID="HgClient.__serverFinished"></a>
 <h4>HgClient.__serverFinished</h4>
@@ -266,14 +277,15 @@ function receiving the data from the server (string).
             If a prompt function is given, this parameter will be ignored.
 </dd><dt><i>error=</i></dt>
 <dd>
-function receiving error messages from the server (string)
+function receiving error messages from the server
+            (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-output and errors of the command server (string). In case output
-            and/or error functions were given, the respective return value will
-            be an empty string.
+output and errors of the command server (string). In case
+            output and/or error functions were given, the respective return
+            value will be an empty string.
 </dd>
 </dl><a NAME="HgClient.startServer" ID="HgClient.startServer"></a>
 <h4>HgClient.startServer</h4>
@@ -296,7 +308,12 @@ tuple of flag indicating a successful start (boolean) and
 <b>wasCanceled</b>(<i></i>)
 <p>
         Public method to check, if the last command was canceled.
-</p>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the cancel state (boolean)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

@@ -85,7 +85,7 @@ object
 <td>Private method to check local variables in functions (N821).</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__error">__error</a></td>
-<td>Private method to build the error information</td>
+<td>Private method to build the error information.</td>
 </tr><tr>
 <td><a href="#Pep8NamingChecker.__findGlobalDefs">__findGlobalDefs</a></td>
 <td>Private method amend a node with global definitions information.</td>
@@ -161,6 +161,9 @@ options as parsed by pep8.StyleGuide
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -182,6 +185,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -205,6 +211,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -222,6 +231,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -240,6 +252,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -256,6 +271,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -274,6 +292,9 @@ tuple giving line number, offset within line and error code
 <dt><i>node</i></dt>
 <dd>
 AST note to check
+</dd><dt><i>parents</i></dt>
+<dd>
+list of parent nodes
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -285,7 +306,7 @@ tuple giving line number, offset within line and error code
 <h4>Pep8NamingChecker.__error</h4>
 <b>__error</b>(<i>node, code</i>)
 <p>
-        Private method to build the error information
+        Private method to build the error information.
 </p><dl>
 <dt><i>node</i></dt>
 <dd>

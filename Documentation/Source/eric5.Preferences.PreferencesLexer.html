@@ -126,6 +126,12 @@ The lexer language. (string)
 <dd>
 The parent widget of this lexer. (QextScintilla)
 </dd>
+</dl><dl>
+<dt>Raises <b>PreferencesLexerLanguageError</b>:</dt>
+<dd>
+raised to indicate an invalid
+            lexer language
+</dd>
 </dl><a NAME="PreferencesLexer.color" ID="PreferencesLexer.color"></a>
 <h4>PreferencesLexer.color</h4>
 <b>color</b>(<i>style</i>)
@@ -417,7 +423,12 @@ PreferencesLexerError
 <b>PreferencesLexerLanguageError</b>(<i>language</i>)
 <p>
         Constructor
-</p>
+</p><dl>
+<dt><i>language</i></dt>
+<dd>
+lexer language (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

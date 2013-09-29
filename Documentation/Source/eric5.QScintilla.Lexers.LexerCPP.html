@@ -89,6 +89,10 @@ QsciLexerCPP, Lexer
 <dt><i>parent</i></dt>
 <dd>
 parent widget of this lexer
+</dd><dt><i>caseInsensitiveKeywords</i></dt>
+<dd>
+flag indicating keywords are case
+            insensitive (boolean)
 </dd>
 </dl><a NAME="LexerCPP.autoCompletionWordSeparators" ID="LexerCPP.autoCompletionWordSeparators"></a>
 <h4>LexerCPP.autoCompletionWordSeparators</h4>
@@ -126,6 +130,11 @@ string giving the keywords (string) or None
 <p>
         Public method to check, if a style is a comment style.
 </p><dl>
+<dt><i>style</i></dt>
+<dd>
+style to check (integer)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a comment style (boolean)
@@ -136,6 +145,11 @@ flag indicating a comment style (boolean)
 <p>
         Public method to check, if a style is a string style.
 </p><dl>
+<dt><i>style</i></dt>
+<dd>
+style to check (integer)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a string style (boolean)

@@ -86,7 +86,8 @@ reference to the parent object (QObject)
 </p><dl>
 <dt><i>op</i></dt>
 <dd>
-the operation to be performed (QNetworkAccessManager.Operation)
+the operation to be performed
+            (QNetworkAccessManager.Operation)
 </dd><dt><i>request</i></dt>
 <dd>
 reference to the request object (QNetworkRequest)
@@ -99,6 +100,12 @@ reference to an IODevice containing data to be sent
 <dt>Returns:</dt>
 <dd>
 reference to the created reply object (QNetworkReply)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that the method must
+            be implemented by a subclass
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -118,20 +118,26 @@ error description (string)
 <b>importedBookmarks</b>(<i></i>)
 <p>
         Public method to get the imported bookmarks.
+</p><p>
+        It must return the imported bookmarks (BookmarkNode).
 </p><dl>
-<dt>Returns:</dt>
+<dt>Raises <b>NotImplementedError</b>:</dt>
 <dd>
-imported bookmarks (BookmarkNode)
+raised to indicate this method must
+            be implemented by a subclass
 </dd>
 </dl><a NAME="BookmarksImporter.open" ID="BookmarksImporter.open"></a>
 <h4>BookmarksImporter.open</h4>
 <b>open</b>(<i></i>)
 <p>
         Public method to open the bookmarks file.
+</p><p>
+        It must return a flag indicating success (boolean).
 </p><dl>
-<dt>Returns:</dt>
+<dt>Raises <b>NotImplementedError</b>:</dt>
 <dd>
-flag indicating success (boolean)
+raised to indicate this method must
+            be implemented by a subclass
 </dd>
 </dl><a NAME="BookmarksImporter.setPath" ID="BookmarksImporter.setPath"></a>
 <h4>BookmarksImporter.setPath</h4>
@@ -142,6 +148,12 @@ flag indicating success (boolean)
 <dt><i>path</i></dt>
 <dd>
 bookmarks file or directory (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate this method must
+            be implemented by a subclass
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

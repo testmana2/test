@@ -85,7 +85,12 @@ QDialog, Ui_SqlConnectionDialog
 <b>SqlConnectionDialog</b>(<i>parent=None</i>)
 <p>
         Constructor
-</p><a NAME="SqlConnectionDialog.__updateDialog" ID="SqlConnectionDialog.__updateDialog"></a>
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="SqlConnectionDialog.__updateDialog" ID="SqlConnectionDialog.__updateDialog"></a>
 <h4>SqlConnectionDialog.__updateDialog</h4>
 <b>__updateDialog</b>(<i></i>)
 <p>
@@ -98,16 +103,21 @@ QDialog, Ui_SqlConnectionDialog
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple giving the driver name (string), the database name (string),
-            the user name (string), the password (string), the host name (string)
-            and the port (integer)
+tuple giving the driver name (string), the database name
+            (string), the user name (string), the password (string), the
+            host name (string) and the port (integer)
 </dd>
 </dl><a NAME="SqlConnectionDialog.on_databaseEdit_textChanged" ID="SqlConnectionDialog.on_databaseEdit_textChanged"></a>
 <h4>SqlConnectionDialog.on_databaseEdit_textChanged</h4>
-<b>on_databaseEdit_textChanged</b>(<i>p0</i>)
+<b>on_databaseEdit_textChanged</b>(<i>txt</i>)
 <p>
         Private slot handling the change of the database name.
-</p><a NAME="SqlConnectionDialog.on_databaseFileButton_clicked" ID="SqlConnectionDialog.on_databaseFileButton_clicked"></a>
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the edit (string)
+</dd>
+</dl><a NAME="SqlConnectionDialog.on_databaseFileButton_clicked" ID="SqlConnectionDialog.on_databaseFileButton_clicked"></a>
 <h4>SqlConnectionDialog.on_databaseFileButton_clicked</h4>
 <b>on_databaseFileButton_clicked</b>(<i></i>)
 <p>
@@ -117,7 +127,12 @@ tuple giving the driver name (string), the database name (string),
 <b>on_driverCombo_activated</b>(<i>txt</i>)
 <p>
         Private slot handling the selection of a database driver.
-</p>
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the driver combo (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

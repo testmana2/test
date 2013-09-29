@@ -166,7 +166,7 @@ QWidget, Ui_IrcWidget
 <td>Public method to initiate the IRC auto connection.</td>
 </tr><tr>
 <td><a href="#IrcWidget.isChannelName">isChannelName</a></td>
-<td>PublicisChannelName method to check, if the given name is a channel name.</td>
+<td>Public method to check, if the given name is a channel name.</td>
 </tr><tr>
 <td><a href="#IrcWidget.on_channelsWidget_tabCloseRequested">on_channelsWidget_tabCloseRequested</a></td>
 <td>Private slot to close a channel by pressing the close button of the channels widget.</td>
@@ -261,9 +261,9 @@ name of the network to edit (string)
 <p>
         Private method to handle a CTCP command.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -276,9 +276,9 @@ flag indicating, if the message was handled (boolean)
 <p>
         Private method to handle a server message containing a message name.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -301,9 +301,9 @@ flag indicating, if the message was handled (boolean)
 <p>
         Private method to handle a server message containing a numeric code.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -406,9 +406,9 @@ name of the user (string)
 <p>
         Private method to handle a PING message.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -421,9 +421,9 @@ flag indicating, if the message was handled (boolean)
 <p>
         Private method to handle a new private connection.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -521,8 +521,13 @@ error code reported by the socket
 <h4>IrcWidget.isChannelName</h4>
 <b>isChannelName</b>(<i>name</i>)
 <p>
-        PublicisChannelName method to check, if the given name is a channel name.
+        Public method to check, if the given name is a channel name.
 </p><dl>
+<dt><i>name</i></dt>
+<dd>
+name to check (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating a channel name (boolean)

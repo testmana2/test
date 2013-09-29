@@ -106,29 +106,25 @@ reference to the parent widget (QWidget)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple naming the output file name, the list of revisions to export,
-            and flags indicating to compare against the second parent, to treat all
-            files as text, to omit dates in the diff headers and to use the git extended
-            diff format (string, list of strings, boolean, boolean, boolean, boolean)
+tuple naming the output file name, the list of revisions to
+            export, and flags indicating to compare against the second parent,
+            to treat all files as text, to omit dates in the diff headers and
+            to use the git extended diff format (string, list of strings,
+            boolean, boolean, boolean, boolean)
 </dd>
 </dl><a NAME="HgExportDialog.on_changesetsEdit_textChanged" ID="HgExportDialog.on_changesetsEdit_textChanged"></a>
 <h4>HgExportDialog.on_changesetsEdit_textChanged</h4>
 <b>on_changesetsEdit_textChanged</b>(<i></i>)
 <p>
         Private slot to react on changes of the changesets edit.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-contents of the line edit (string)
-</dd>
-</dl><a NAME="HgExportDialog.on_directoryButton_clicked" ID="HgExportDialog.on_directoryButton_clicked"></a>
+</p><a NAME="HgExportDialog.on_directoryButton_clicked" ID="HgExportDialog.on_directoryButton_clicked"></a>
 <h4>HgExportDialog.on_directoryButton_clicked</h4>
 <b>on_directoryButton_clicked</b>(<i></i>)
 <p>
         Private slot called by pressing the export directory selection button.
 </p><a NAME="HgExportDialog.on_directoryEdit_textChanged" ID="HgExportDialog.on_directoryEdit_textChanged"></a>
 <h4>HgExportDialog.on_directoryEdit_textChanged</h4>
-<b>on_directoryEdit_textChanged</b>(<i>p0</i>)
+<b>on_directoryEdit_textChanged</b>(<i>txt</i>)
 <p>
         Private slot to react on changes of the export directory edit.
 </p><dl>
@@ -138,7 +134,7 @@ contents of the line edit (string)
 </dd>
 </dl><a NAME="HgExportDialog.on_patternEdit_textChanged" ID="HgExportDialog.on_patternEdit_textChanged"></a>
 <h4>HgExportDialog.on_patternEdit_textChanged</h4>
-<b>on_patternEdit_textChanged</b>(<i>p0</i>)
+<b>on_patternEdit_textChanged</b>(<i>txt</i>)
 <p>
         Private slot to react on changes of the export file name pattern edit.
 </p><dl>

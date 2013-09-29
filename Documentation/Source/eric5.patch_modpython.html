@@ -35,7 +35,7 @@ Script to patch mod_python for usage with the eric5 IDE.
 <table>
 <tr>
 <td><a href="#initGlobals">initGlobals</a></td>
-<td>Sets the values of globals that need more than a simple assignment.</td>
+<td>Module function to set the values of globals that need more than a simple assignment.</td>
 </tr><tr>
 <td><a href="#main">main</a></td>
 <td>The main function of the script.</td>
@@ -49,7 +49,8 @@ Script to patch mod_python for usage with the eric5 IDE.
 <h2>initGlobals</h2>
 <b>initGlobals</b>(<i></i>)
 <p>
-    Sets the values of globals that need more than a simple assignment.
+    Module function to set the values of globals that need more than a
+    simple assignment.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -57,10 +58,13 @@ Script to patch mod_python for usage with the eric5 IDE.
 <h2>main</h2>
 <b>main</b>(<i>argv</i>)
 <p>
-The main function of the script.
-</p><p>
-    argv is the list of command line arguments.
-</p>
+    The main function of the script.
+</p><dl>
+<dt><i>argv</i></dt>
+<dd>
+list of command line arguments (list of strings)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="usage" ID="usage"></a>
@@ -68,9 +72,12 @@ The main function of the script.
 <b>usage</b>(<i>rcode=2</i>)
 <p>
     Display a usage message and exit.
-</p><p>
-    rcode is the return code passed back to the calling process.
-</p>
+</p><dl>
+<dt><i>rcode</i></dt>
+<dd>
+return code passed back to the calling process (integer)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

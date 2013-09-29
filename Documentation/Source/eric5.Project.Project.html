@@ -204,7 +204,7 @@ QObject
 <td>Private method to create dir entries in the zip file.</td>
 </tr><tr>
 <td><a href="#Project.__deleteDebugProperties">__deleteDebugProperties</a></td>
-<td>Private method to delete the project debugger properties file (.e4d)</td>
+<td>Private method to delete the project debugger properties file (.e4d).</td>
 </tr><tr>
 <td><a href="#Project.__deleteSession">__deleteSession</a></td>
 <td>Private method to delete the session file.</td>
@@ -243,19 +243,19 @@ QObject
 <td>Private method to extract the version number entry.</td>
 </tr><tr>
 <td><a href="#Project.__readDebugProperties">__readDebugProperties</a></td>
-<td>Private method to read in the project debugger properties file (.e4d)</td>
+<td>Private method to read in the project debugger properties file (.e4d).</td>
 </tr><tr>
 <td><a href="#Project.__readProject">__readProject</a></td>
 <td>Private method to read in a project (.e4p) file.</td>
 </tr><tr>
 <td><a href="#Project.__readSession">__readSession</a></td>
-<td>Private method to read in the project session file (.e4s)</td>
+<td>Private method to read in the project session file (.e4s).</td>
 </tr><tr>
 <td><a href="#Project.__readTasks">__readTasks</a></td>
-<td>Private method to read in the project tasks file (.e4t)</td>
+<td>Private method to read in the project tasks file (.e4t).</td>
 </tr><tr>
 <td><a href="#Project.__readUserProperties">__readUserProperties</a></td>
-<td>Private method to read in the user specific project file (.e4q)</td>
+<td>Private method to read in the user specific project file (.e4q).</td>
 </tr><tr>
 <td><a href="#Project.__saveRecent">__saveRecent</a></td>
 <td>Private method to save the list of recently opened filenames.</td>
@@ -327,7 +327,7 @@ QObject
 <td>Private slot to handle a change of the overall VCS status.</td>
 </tr><tr>
 <td><a href="#Project.__writeDebugProperties">__writeDebugProperties</a></td>
-<td>Private method to write the project debugger properties file (.e4d)</td>
+<td>Private method to write the project debugger properties file (.e4d).</td>
 </tr><tr>
 <td><a href="#Project.__writeProject">__writeProject</a></td>
 <td>Private method to save the project infos to a project file.</td>
@@ -812,7 +812,7 @@ open ZipFile object (zipfile.ZipFile)
 <h4>Project.__deleteDebugProperties</h4>
 <b>__deleteDebugProperties</b>(<i></i>)
 <p>
-        Private method to delete the project debugger properties file (.e4d)
+        Private method to delete the project debugger properties file (.e4d).
 </p><a NAME="Project.__deleteSession" ID="Project.__deleteSession"></a>
 <h4>Project.__deleteSession</h4>
 <b>__deleteSession</b>(<i></i>)
@@ -912,7 +912,7 @@ version string (string)
 <h4>Project.__readDebugProperties</h4>
 <b>__readDebugProperties</b>(<i>quiet=False</i>)
 <p>
-        Private method to read in the project debugger properties file (.e4d)
+        Private method to read in the project debugger properties file (.e4d).
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>
@@ -938,7 +938,7 @@ flag indicating success
 <h4>Project.__readSession</h4>
 <b>__readSession</b>(<i>quiet=False, indicator=""</i>)
 <p>
-        Private method to read in the project session file (.e4s)
+        Private method to read in the project session file (.e4s).
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>
@@ -952,12 +952,12 @@ indicator string (string)
 <h4>Project.__readTasks</h4>
 <b>__readTasks</b>(<i></i>)
 <p>
-        Private method to read in the project tasks file (.e4t)
+        Private method to read in the project tasks file (.e4t).
 </p><a NAME="Project.__readUserProperties" ID="Project.__readUserProperties"></a>
 <h4>Project.__readUserProperties</h4>
 <b>__readUserProperties</b>(<i></i>)
 <p>
-        Private method to read in the user specific project file (.e4q)
+        Private method to read in the user specific project file (.e4q).
 </p><a NAME="Project.__saveRecent" ID="Project.__saveRecent"></a>
 <h4>Project.__saveRecent</h4>
 <b>__saveRecent</b>(<i></i>)
@@ -1088,7 +1088,7 @@ explanotory text for the signaled status (string)
 <h4>Project.__writeDebugProperties</h4>
 <b>__writeDebugProperties</b>(<i>quiet=False</i>)
 <p>
-        Private method to write the project debugger properties file (.e4d)
+        Private method to write the project debugger properties file (.e4d).
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>
@@ -1501,6 +1501,11 @@ eol string (string)
 <dt><i>start</i></dt>
 <dd>
 prefix (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of files starting with a common prefix (list of strings)
 </dd>
 </dl><a NAME="Project.getHash" ID="Project.getHash"></a>
 <h4>Project.getHash</h4>
@@ -2332,6 +2337,12 @@ status monitor interval in seconds (integer)
 <dt><i>path</i></dt>
 <dd>
 path to be checked (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the path starts with the project path
+            (boolean)
 </dd>
 </dl><a NAME="Project.stopStatusMonitor" ID="Project.stopStatusMonitor"></a>
 <h4>Project.stopStatusMonitor</h4>

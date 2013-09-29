@@ -157,6 +157,11 @@ name of this file (string)
 <dd>
 the mode to be checked (string)
 </dd>
+</dl><dl>
+<dt>Raises <b>IOError</b>:</dt>
+<dd>
+raised to indicate a bad file descriptor
+</dd>
 </dl><a NAME="AsyncFile.__nWrite" ID="AsyncFile.__nWrite"></a>
 <h4>AsyncFile.__nWrite</h4>
 <b>__nWrite</b>(<i>n</i>)
@@ -375,6 +380,11 @@ flag indicating a writable stream (boolean)
 <dt><i>s</i></dt>
 <dd>
 bytes to be written (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>socket.error</b>:</dt>
+<dd>
+raised to indicate too many send attempts
 </dd>
 </dl><a NAME="AsyncFile.writelines" ID="AsyncFile.writelines"></a>
 <h4>AsyncFile.writelines</h4>

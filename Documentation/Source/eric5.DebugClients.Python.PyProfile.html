@@ -145,6 +145,11 @@ name of the file to write to (string)
 <dd>
 the frame object
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+fixed up file name (string)
+</dd>
 </dl><a NAME="PyProfile.save" ID="PyProfile.save"></a>
 <h4>PyProfile.save</h4>
 <b>save</b>(<i></i>)
@@ -158,7 +163,20 @@ the frame object
 </p><p>
         This is a variant of the one found in the standard Python
         profile.py calling fix_frame_filename above.
-</p>
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+reference to the call frame
+</dd><dt><i>t</i></dt>
+<dd>
+arguments of the call
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a handled call
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

@@ -141,7 +141,8 @@ processed HTML (string)
 <h4>PreviewProcessingThread.__getHtml</h4>
 <b>__getHtml</b>(<i>language, text, ssiEnabled, filePath, rootPath</i>)
 <p>
-        Private method to process the given text depending upon the given language.
+        Private method to process the given text depending upon the given
+        language.
 </p><dl>
 <dt><i>language</i></dt>
 <dd>
@@ -151,13 +152,19 @@ language of the text (string)
 to be processed (string)
 </dd><dt><i>ssiEnabled</i></dt>
 <dd>
-flag indicating to do some (limited) SSI processing (boolean)
+flag indicating to do some (limited) SSI processing
+            (boolean)
 </dd><dt><i>filePath</i></dt>
 <dd>
 file path of the text (string)
 </dd><dt><i>rootPath</i></dt>
 <dd>
 root path to be used for SSI processing (str)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed HTML text (string)
 </dd>
 </dl><a NAME="PreviewProcessingThread.__processSSI" ID="PreviewProcessingThread.__processSSI"></a>
 <h4>PreviewProcessingThread.__processSSI</h4>

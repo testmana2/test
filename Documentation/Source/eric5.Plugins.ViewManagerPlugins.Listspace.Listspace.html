@@ -246,12 +246,6 @@ QSplitter, ViewManager
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
-</dd><dt><i>ui</i></dt>
-<dd>
-reference to the main user interface
-</dd><dt><i>dbs</i></dt>
-<dd>
-reference to the debug server object
 </dd>
 </dl><a NAME="Listspace.__captionChange" ID="Listspace.__captionChange"></a>
 <h4>Listspace.__captionChange</h4>
@@ -342,8 +336,14 @@ line number of the current editor's cursor (zero based)
 <h4>Listspace.__showMenu</h4>
 <b>__showMenu</b>(<i>point</i>)
 <p>
-        Private slot to handle the customContextMenuRequested signal of the viewlist.
-</p><a NAME="Listspace.__showSelectedView" ID="Listspace.__showSelectedView"></a>
+        Private slot to handle the customContextMenuRequested signal of
+        the viewlist.
+</p><dl>
+<dt><i>point</i></dt>
+<dd>
+position to open the menu at (QPoint)
+</dd>
+</dl><a NAME="Listspace.__showSelectedView" ID="Listspace.__showSelectedView"></a>
 <h4>Listspace.__showSelectedView</h4>
 <b>__showSelectedView</b>(<i>row</i>)
 <p>
@@ -357,7 +357,7 @@ row number of the item clicked on (integer)
 <h4>Listspace._addView</h4>
 <b>_addView</b>(<i>win, fn=None, noName=""</i>)
 <p>
-        Protected method to add a view (i.e. window)
+        Protected method to add a view (i.e. window).
 </p><dl>
 <dt><i>win</i></dt>
 <dd>
@@ -391,12 +391,12 @@ editor window changed
 <h4>Listspace._removeAllViews</h4>
 <b>_removeAllViews</b>(<i></i>)
 <p>
-        Protected method to remove all views (i.e. windows)
+        Protected method to remove all views (i.e. windows).
 </p><a NAME="Listspace._removeView" ID="Listspace._removeView"></a>
 <h4>Listspace._removeView</h4>
 <b>_removeView</b>(<i>win</i>)
 <p>
-        Protected method to remove a view (i.e. window)
+        Protected method to remove a view (i.e. window).
 </p><dl>
 <dt><i>win</i></dt>
 <dd>
@@ -406,7 +406,7 @@ editor window to be removed
 <h4>Listspace._showView</h4>
 <b>_showView</b>(<i>win, fn=None</i>)
 <p>
-        Protected method to show a view (i.e. window)
+        Protected method to show a view (i.e. window).
 </p><dl>
 <dt><i>win</i></dt>
 <dd>

@@ -239,6 +239,11 @@ tuple of watch expression and a flag to indicate, that a temporary
 <dd>
 type of the exception
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+exception name (string)
+</dd>
 </dl><a NAME="DebugBase.__extract_stack" ID="DebugBase.__extract_stack"></a>
 <h4>DebugBase.__extract_stack</h4>
 <b>__extract_stack</b>(<i>exctb</i>)
@@ -351,6 +356,11 @@ The arguments
 <dd>
 local trace function
 </dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
+</dd>
 </dl><a NAME="DebugBase.dispatch_line" ID="DebugBase.dispatch_line"></a>
 <h4>DebugBase.dispatch_line</h4>
 <b>dispatch_line</b>(<i>frame</i>)
@@ -370,6 +380,11 @@ The current stack frame.
 <dd>
 local trace function
 </dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
+</dd>
 </dl><a NAME="DebugBase.dispatch_return" ID="DebugBase.dispatch_return"></a>
 <h4>DebugBase.dispatch_return</h4>
 <b>dispatch_return</b>(<i>frame, arg</i>)
@@ -387,6 +402,11 @@ The arguments
 <dt>Returns:</dt>
 <dd>
 local trace function
+</dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
 </dd>
 </dl><a NAME="DebugBase.fix_frame_filename" ID="DebugBase.fix_frame_filename"></a>
 <h4>DebugBase.fix_frame_filename</h4>
@@ -408,6 +428,11 @@ local trace function
 <dt><i>frame</i></dt>
 <dd>
 the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+fixed up file name (string)
 </dd>
 </dl><a NAME="DebugBase.getCurrentFrame" ID="DebugBase.getCurrentFrame"></a>
 <h4>DebugBase.getCurrentFrame</h4>
@@ -481,6 +506,11 @@ breakpoint or None, if there is no bp
 <dd>
 expression of the watch expression to be cleared (string)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the watch point
+</dd>
 </dl><a NAME="DebugBase.go" ID="DebugBase.go"></a>
 <h4>DebugBase.go</h4>
 <b>go</b>(<i>special</i>)
@@ -512,13 +542,18 @@ flag indicating the broken state (boolean)
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
-The current stack frame.
+current stack frame.
 </dd><dt><i>event</i></dt>
 <dd>
-The trace event (string)
+trace event (string)
 </dd><dt><i>arg</i></dt>
 <dd>
-The arguments
+arguments
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+raised to indicate too many recursions
 </dd>
 </dl><a NAME="DebugBase.setRecursionDepth" ID="DebugBase.setRecursionDepth"></a>
 <h4>DebugBase.setRecursionDepth</h4>

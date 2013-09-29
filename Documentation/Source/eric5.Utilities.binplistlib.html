@@ -138,10 +138,10 @@ object
 <table>
 <tr>
 <td><a href="#BoolWrapper.__init__">BoolWrapper</a></td>
-<td></td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#BoolWrapper.__repr__">__repr__</a></td>
-<td></td>
+<td>Public method to generate a representation of the object.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -151,10 +151,24 @@ object
 <a NAME="BoolWrapper.__init__" ID="BoolWrapper.__init__"></a>
 <h4>BoolWrapper (Constructor)</h4>
 <b>BoolWrapper</b>(<i>value</i>)
-<a NAME="BoolWrapper.__repr__" ID="BoolWrapper.__repr__"></a>
+<p>
+        Constructor
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+object value (boolean)
+</dd>
+</dl><a NAME="BoolWrapper.__repr__" ID="BoolWrapper.__repr__"></a>
 <h4>BoolWrapper.__repr__</h4>
 <b>__repr__</b>(<i></i>)
-
+<p>
+        Public method to generate a representation of the object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+object representation (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="Data" ID="Data"></a>
@@ -202,10 +216,10 @@ object
 <table>
 <tr>
 <td><a href="#HashableWrapper.__init__">HashableWrapper</a></td>
-<td></td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#HashableWrapper.__repr__">__repr__</a></td>
-<td></td>
+<td>Public method to generate a representation of the object.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -215,10 +229,24 @@ object
 <a NAME="HashableWrapper.__init__" ID="HashableWrapper.__init__"></a>
 <h4>HashableWrapper (Constructor)</h4>
 <b>HashableWrapper</b>(<i>value</i>)
-<a NAME="HashableWrapper.__repr__" ID="HashableWrapper.__repr__"></a>
+<p>
+        Constructor
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+object value
+</dd>
+</dl><a NAME="HashableWrapper.__repr__" ID="HashableWrapper.__repr__"></a>
 <h4>HashableWrapper.__repr__</h4>
 <b>__repr__</b>(<i></i>)
-
+<p>
+        Public method to generate a representation of the object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+object representation (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="InvalidPlistException" ID="InvalidPlistException"></a>
@@ -373,6 +401,17 @@ data to extract the integer from (bytes)
 <dd>
 length of the integer (integer)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+read integer (integer)
+</dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
 </dl><a NAME="PlistReader.parse" ID="PlistReader.parse"></a>
 <h4>PlistReader.parse</h4>
 <b>parse</b>(<i></i>)
@@ -481,6 +520,12 @@ integer object
 <dd>
 unpickled object
 </dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
 </dl><a NAME="PlistReader.readReal" ID="PlistReader.readReal"></a>
 <h4>PlistReader.readReal</h4>
 <b>readReal</b>(<i>length</i>)
@@ -495,6 +540,12 @@ length of the object (integer)
 <dt>Returns:</dt>
 <dd>
 float object
+</dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
 </dd>
 </dl><a NAME="PlistReader.readRefs" ID="PlistReader.readRefs"></a>
 <h4>PlistReader.readRefs</h4>
@@ -520,6 +571,12 @@ list of references (list of integers)
 <dt>Returns:</dt>
 <dd>
 unpickled object
+</dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
 </dd>
 </dl><a NAME="PlistReader.readUid" ID="PlistReader.readUid"></a>
 <h4>PlistReader.readUid</h4>
@@ -600,10 +657,10 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#PlistWriter.computeOffsets">computeOffsets</a></td>
-<td></td>
+<td>Public method to compute offsets of an object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.incrementByteCount">incrementByteCount</a></td>
-<td></td>
+<td>Public method to increment the byte count.</td>
 </tr><tr>
 <td><a href="#PlistWriter.intSize">intSize</a></td>
 <td>Private method to determine the number of bytes necessary to store the given integer.</td>
@@ -671,6 +728,12 @@ length the integer should be packed into (integer)
 <dd>
 serialized object (bytes)
 </dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
 </dl><a NAME="PlistWriter.binaryReal" ID="PlistWriter.binaryReal"></a>
 <h4>PlistWriter.binaryReal</h4>
 <b>binaryReal</b>(<i>obj</i>)
@@ -692,10 +755,39 @@ serialized object (bytes)
 <a NAME="PlistWriter.computeOffsets" ID="PlistWriter.computeOffsets"></a>
 <h4>PlistWriter.computeOffsets</h4>
 <b>computeOffsets</b>(<i>obj, asReference=False, isRoot=False</i>)
-<a NAME="PlistWriter.incrementByteCount" ID="PlistWriter.incrementByteCount"></a>
+<p>
+        Public method to compute offsets of an object.
+</p><dl>
+<dt><i>obj</i></dt>
+<dd>
+plist object
+</dd><dt><i>asReference</i></dt>
+<dd>
+flag indicating offsets as references (boolean)
+</dd><dt><i>isRoot</i></dt>
+<dd>
+flag indicating a root object (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
+</dl><a NAME="PlistWriter.incrementByteCount" ID="PlistWriter.incrementByteCount"></a>
 <h4>PlistWriter.incrementByteCount</h4>
 <b>incrementByteCount</b>(<i>field, incr=1</i>)
-<a NAME="PlistWriter.intSize" ID="PlistWriter.intSize"></a>
+<p>
+        Public method to increment the byte count.
+</p><dl>
+<dt><i>field</i></dt>
+<dd>
+field to evaluate
+</dd><dt><i>incr</i></dt>
+<dd>
+byte count increment (integer)
+</dd>
+</dl><a NAME="PlistWriter.intSize" ID="PlistWriter.intSize"></a>
 <h4>PlistWriter.intSize</h4>
 <b>intSize</b>(<i>obj</i>)
 <p>
@@ -711,6 +803,12 @@ integer object
 <dd>
 number of bytes required (integer)
 </dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
 </dl><a NAME="PlistWriter.positionOfObjectReference" ID="PlistWriter.positionOfObjectReference"></a>
 <h4>PlistWriter.positionOfObjectReference</h4>
 <b>positionOfObjectReference</b>(<i>obj</i>)
@@ -720,6 +818,11 @@ number of bytes required (integer)
         If the given object has been written already, return its
         position in the offset table. Otherwise, return None.
 </p><dl>
+<dt><i>obj</i></dt>
+<dd>
+object
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 position of the object (integer)
@@ -827,6 +930,12 @@ current output (bytes)
 <dd>
 new output (bytes)
 </dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
 </dl><a NAME="PlistWriter.writeRoot" ID="PlistWriter.writeRoot"></a>
 <h4>PlistWriter.writeRoot</h4>
 <b>writeRoot</b>(<i>root</i>)
@@ -881,7 +990,7 @@ int
 <table>
 <tr>
 <td><a href="#Uid.__repr__">__repr__</a></td>
-<td></td>
+<td>Public method to return an object representation.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -891,7 +1000,14 @@ int
 <a NAME="Uid.__repr__" ID="Uid.__repr__"></a>
 <h4>Uid.__repr__</h4>
 <b>__repr__</b>(<i></i>)
-
+<p>
+        Public method to return an object representation.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+object representation (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="is_stream_binary_plist" ID="is_stream_binary_plist"></a>
@@ -950,11 +1066,6 @@ plist data (bytes)
 <dd>
 reference to the read object
 </dd>
-</dl><dl>
-<dt>Raises <b>InvalidPlistException</b>:</dt>
-<dd>
-raised to signal an invalid plist file
-</dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -988,7 +1099,13 @@ flag indicating the generation of a binary plist file (boolean)
 reference to the object to be written
 </dd><dt><i>binary</i></dt>
 <dd>
-flag indicating the generation of a binary plist bytes object (boolean)
+flag indicating the generation of a binary plist bytes
+        object (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+bytes object containing the plist data
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

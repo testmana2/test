@@ -218,6 +218,11 @@ flag indicating, that plugins should
 filename of a plugin to be loaded for
             development (string)
 </dd>
+</dl><dl>
+<dt>Raises <b>PluginPathError</b>:</dt>
+<dd>
+raised to indicate an invalid plug-in path
+</dd>
 </dl><a NAME="PluginManager.__canActivatePlugin" ID="PluginManager.__canActivatePlugin"></a>
 <h4>PluginManager.__canActivatePlugin</h4>
 <b>__canActivatePlugin</b>(<i>module</i>)
@@ -233,6 +238,16 @@ reference to the module to be activated
 <dd>
 flag indicating, if the module satisfies all requirements
             for being activated (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>PluginClassFormatError</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plug-in class format
+</dd><dt>Raises <b>PluginModuleFormatError</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plug-in module format
 </dd>
 </dl><a NAME="PluginManager.__canDeactivatePlugin" ID="PluginManager.__canDeactivatePlugin"></a>
 <h4>PluginManager.__canDeactivatePlugin</h4>
@@ -324,6 +339,12 @@ flag indicating activation of an
 <dd>
 reference to the initialized plugin object
 </dd>
+</dl><dl>
+<dt>Raises <b>PluginActivationError</b>:</dt>
+<dd>
+raised to indicate an issue during the
+            plug-in activation
+</dd>
 </dl><a NAME="PluginManager.activatePlugins" ID="PluginManager.activatePlugins"></a>
 <h4>PluginManager.activatePlugins</h4>
 <b>activatePlugins</b>(<i></i>)
@@ -402,7 +423,12 @@ list of API filenames (list of string)
           <dt>reference to configuration page</dt>
           <dd>This will be used by the configuration dialog and must always be None</dd>
         </dl>
-</p><a NAME="PluginManager.getPluginDetails" ID="PluginManager.getPluginDetails"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+plug-in configuration data
+</dd>
+</dl><a NAME="PluginManager.getPluginDetails" ID="PluginManager.getPluginDetails"></a>
 <h4>PluginManager.getPluginDetails</h4>
 <b>getPluginDetails</b>(<i>name</i>)
 <p>
@@ -423,6 +449,11 @@ details of the plugin as a dictionary
 <p>
         Public method to get the path of a plugin directory.
 </p><dl>
+<dt><i>key</i></dt>
+<dd>
+key of the plug-in directory (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 path of the requested plugin directory (string)
@@ -566,8 +597,19 @@ dictionary with indicator as key and a list of tuples as values.
 <p>
         Public method to create a plugin object for the named on demand plugin.
 </p><p>
-        Note: The plugin is not activated.
-</p><a NAME="PluginManager.initOnDemandPlugins" ID="PluginManager.initOnDemandPlugins"></a>
+        Note: The plug-in is not activated.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plug-in (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>PluginActivationError</b>:</dt>
+<dd>
+raised to indicate an issue during the
+            plug-in activation
+</dd>
+</dl><a NAME="PluginManager.initOnDemandPlugins" ID="PluginManager.initOnDemandPlugins"></a>
 <h4>PluginManager.initOnDemandPlugins</h4>
 <b>initOnDemandPlugins</b>(<i></i>)
 <p>
@@ -641,6 +683,12 @@ name of the plugin directory (string)
 </dd><dt><i>reload_</i></dt>
 <dd>
 flag indicating to reload the module (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>PluginLoadError</b>:</dt>
+<dd>
+raised to indicate an issue loading
+            the plug-in
 </dd>
 </dl><a NAME="PluginManager.preferencesChanged" ID="PluginManager.preferencesChanged"></a>
 <h4>PluginManager.preferencesChanged</h4>

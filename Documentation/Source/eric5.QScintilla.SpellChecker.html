@@ -102,7 +102,7 @@ QObject
 <td>Private method to check the currently visible page.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkDocument">checkDocument</a></td>
-<td>Public method to check the complete document</td>
+<td>Public method to check the complete document.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkDocumentIncrementally">checkDocumentIncrementally</a></td>
 <td>Public method to check the document incrementally.</td>
@@ -309,7 +309,12 @@ tuple of three values (the extracted word (string),
 <b>__iter__</b>(<i></i>)
 <p>
         Private method to create an iterator.
-</p><a NAME="SpellChecker.__next__" ID="SpellChecker.__next__"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+self
+</dd>
+</dl><a NAME="SpellChecker.__next__" ID="SpellChecker.__next__"></a>
 <h4>SpellChecker.__next__</h4>
 <b>__next__</b>(<i></i>)
 <p>
@@ -318,6 +323,11 @@ tuple of three values (the extracted word (string),
 <dt>Returns:</dt>
 <dd>
 self
+</dd>
+</dl><dl>
+<dt>Raises <b>StopIteration</b>:</dt>
+<dd>
+raised to indicate the end of the iteration
 </dd>
 </dl><a NAME="SpellChecker.add" ID="SpellChecker.add"></a>
 <h4>SpellChecker.add</h4>
@@ -338,7 +348,7 @@ word to add (string)
 <h4>SpellChecker.checkDocument</h4>
 <b>checkDocument</b>(<i></i>)
 <p>
-        Public method to check the complete document
+        Public method to check the complete document.
 </p><a NAME="SpellChecker.checkDocumentIncrementally" ID="SpellChecker.checkDocumentIncrementally"></a>
 <h4>SpellChecker.checkDocumentIncrementally</h4>
 <b>checkDocumentIncrementally</b>(<i></i>)

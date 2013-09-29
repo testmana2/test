@@ -131,6 +131,12 @@ reference to the parent object (QObject)
 <dd>
 flag indicating a forced upload of the files (boolean)
 </dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
 </dl><a NAME="SyncHandler.readFile" ID="SyncHandler.readFile"></a>
 <h4>SyncHandler.readFile</h4>
 <b>readFile</b>(<i>fileName, type_</i>)
@@ -158,32 +164,68 @@ data of the file, optionally encrypted (QByteArray)
 <b>shutdown</b>(<i></i>)
 <p>
         Public method to shut down the handler.
-</p><a NAME="SyncHandler.syncBookmarks" ID="SyncHandler.syncBookmarks"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.syncBookmarks" ID="SyncHandler.syncBookmarks"></a>
 <h4>SyncHandler.syncBookmarks</h4>
 <b>syncBookmarks</b>(<i></i>)
 <p>
         Public method to synchronize the bookmarks.
-</p><a NAME="SyncHandler.syncHistory" ID="SyncHandler.syncHistory"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.syncHistory" ID="SyncHandler.syncHistory"></a>
 <h4>SyncHandler.syncHistory</h4>
 <b>syncHistory</b>(<i></i>)
 <p>
         Public method to synchronize the history.
-</p><a NAME="SyncHandler.syncPasswords" ID="SyncHandler.syncPasswords"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.syncPasswords" ID="SyncHandler.syncPasswords"></a>
 <h4>SyncHandler.syncPasswords</h4>
 <b>syncPasswords</b>(<i></i>)
 <p>
         Public method to synchronize the passwords.
-</p><a NAME="SyncHandler.syncSpeedDial" ID="SyncHandler.syncSpeedDial"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.syncSpeedDial" ID="SyncHandler.syncSpeedDial"></a>
 <h4>SyncHandler.syncSpeedDial</h4>
 <b>syncSpeedDial</b>(<i></i>)
 <p>
         Public method to synchronize the speed dial data.
-</p><a NAME="SyncHandler.syncUserAgents" ID="SyncHandler.syncUserAgents"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.syncUserAgents" ID="SyncHandler.syncUserAgents"></a>
 <h4>SyncHandler.syncUserAgents</h4>
 <b>syncUserAgents</b>(<i></i>)
 <p>
         Public method to synchronize the user agents.
-</p><a NAME="SyncHandler.writeFile" ID="SyncHandler.writeFile"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="SyncHandler.writeFile" ID="SyncHandler.writeFile"></a>
 <h4>SyncHandler.writeFile</h4>
 <b>writeFile</b>(<i>data, fileName, type_, timestamp=0</i>)
 <p>

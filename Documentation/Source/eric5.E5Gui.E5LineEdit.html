@@ -204,9 +204,9 @@ position to add to (E5LineEdit.LeftSide, E5LineEdit.RightSide)
 <p>
         Protected method to handle events.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>evt</i></dt>
 <dd>
-to the event (QEvent)
+reference to the event (QEvent)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -218,9 +218,12 @@ flag indicating, whether the event was recognized (boolean)
 <b>inactiveText</b>(<i></i>)
 <p>
         Public method to get the inactive text.
-</p><p>
-        return inactive text (string)
-</p><a NAME="E5LineEdit.leftMargin" ID="E5LineEdit.leftMargin"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+inactive text (string)
+</dd>
+</dl><a NAME="E5LineEdit.leftMargin" ID="E5LineEdit.leftMargin"></a>
 <h4>E5LineEdit.leftMargin</h4>
 <b>leftMargin</b>(<i></i>)
 <p>
@@ -290,6 +293,11 @@ side widget spacing (integer)
 <dd>
 side to get margin for (E5LineEdit.LeftSide, E5LineEdit.RightSide)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+text margin (integer)
+</dd>
 </dl><a NAME="E5LineEdit.widgetSpacing" ID="E5LineEdit.widgetSpacing"></a>
 <h4>E5LineEdit.widgetSpacing</h4>
 <b>widgetSpacing</b>(<i></i>)
@@ -348,9 +356,9 @@ reference to the parent widget (QWidget)
 <p>
         Protected method to handle events.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>evt</i></dt>
 <dd>
-to the event (QEvent)
+reference to the event (QEvent)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

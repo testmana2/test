@@ -31,7 +31,7 @@ Module implementing the main user interface.
 <table>
 <tr>
 <td><a href="#Redirector">Redirector</a></td>
-<td>Helper class used to redirect stdout and stderr to the log window</td>
+<td>Helper class used to redirect stdout and stderr to the log window.</td>
 </tr><tr>
 <td><a href="#UserInterface">UserInterface</a></td>
 <td>Class implementing the main user interface.</td>
@@ -45,7 +45,7 @@ Module implementing the main user interface.
 <a NAME="Redirector" ID="Redirector"></a>
 <h2>Redirector</h2>
 <p>
-    Helper class used to redirect stdout and stderr to the log window
+    Helper class used to redirect stdout and stderr to the log window.
 </p><h3>Signals</h3>
 <dl>
 <dt>appendStderr(str)</dt>
@@ -404,10 +404,10 @@ E5MainWindow
 <td>Private method to quit the application.</td>
 </tr><tr>
 <td><a href="#UserInterface.__readSession">__readSession</a></td>
-<td>Private slot to read in the session file (.e4s)</td>
+<td>Private slot to read in the session file (.e4s).</td>
 </tr><tr>
 <td><a href="#UserInterface.__readTasks">__readTasks</a></td>
-<td>Private slot to read in the tasks file (.e4t)</td>
+<td>Private slot to read in the tasks file (.e4t).</td>
 </tr><tr>
 <td><a href="#UserInterface.__reloadAPIs">__reloadAPIs</a></td>
 <td>Private slot to reload the api information.</td>
@@ -990,6 +990,11 @@ the generated dock window (QDockWindow)
 <dd>
 reference to the debug server object
 </dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an invalid layout type
+</dd>
 </dl><a NAME="UserInterface.__createSidebarsLayout" ID="UserInterface.__createSidebarsLayout"></a>
 <h4>UserInterface.__createSidebarsLayout</h4>
 <b>__createSidebarsLayout</b>(<i>debugServer</i>)
@@ -1307,12 +1312,12 @@ filename to be set as current prog (string)
 <h4>UserInterface.__readSession</h4>
 <b>__readSession</b>(<i></i>)
 <p>
-        Private slot to read in the session file (.e4s)
+        Private slot to read in the session file (.e4s).
 </p><a NAME="UserInterface.__readTasks" ID="UserInterface.__readTasks"></a>
 <h4>UserInterface.__readTasks</h4>
 <b>__readTasks</b>(<i></i>)
 <p>
-        Private slot to read in the tasks file (.e4t)
+        Private slot to read in the tasks file (.e4t).
 </p><a NAME="UserInterface.__reloadAPIs" ID="UserInterface.__reloadAPIs"></a>
 <h4>UserInterface.__reloadAPIs</h4>
 <b>__reloadAPIs</b>(<i></i>)
@@ -1824,13 +1829,13 @@ full pathname of a file to display (string)
 <p>
         Public method to add actions to the list of actions.
 </p><dl>
-<dt><i>type</i></dt>
+<dt><i>actions</i></dt>
+<dd>
+list of actions to be added (list of E5Action)
+</dd><dt><i>type</i></dt>
 <dd>
 string denoting the action set to get.
             It must be one of "ui" or "wizards".
-</dd><dt><i>actions</i></dt>
-<dd>
-list of actions to be added (list of E5Action)
 </dd>
 </dl><a NAME="UserInterface.addSideWidget" ID="UserInterface.addSideWidget"></a>
 <h4>UserInterface.addSideWidget</h4>
@@ -2017,6 +2022,11 @@ name of the menu to search in (string)
 object name of the action to search for
             (string)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the menu action (QAction)
+</dd>
 </dl><a NAME="UserInterface.getMenuBarAction" ID="UserInterface.getMenuBarAction"></a>
 <h4>UserInterface.getMenuBarAction</h4>
 <b>getMenuBarAction</b>(<i>menuName</i>)
@@ -2026,6 +2036,11 @@ object name of the action to search for
 <dt><i>menuName</i></dt>
 <dd>
 name of the menu to search in (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the menu bar action (QAction)
 </dd>
 </dl><a NAME="UserInterface.getToolBarIconSize" ID="UserInterface.getToolBarIconSize"></a>
 <h4>UserInterface.getToolBarIconSize</h4>
@@ -2100,7 +2115,7 @@ flag indicating an invocation via the menu (boolean)
 </dd><dt><i>alternative</i></dt>
 <dd>
 index of server to download from (integer)
-</dd><dt><i>showVersion=</i></dt>
+</dd><dt><i>showVersions=</i></dt>
 <dd>
 flag indicating the show versions mode (boolean)
 </dd>
@@ -2152,13 +2167,13 @@ raised, if a toolbar with the given name was
 <p>
         Public method to remove actions from the list of actions.
 </p><dl>
-<dt><i>type</i></dt>
+<dt><i>actions</i></dt>
+<dd>
+list of actions (list of E5Action)
+</dd><dt><i>type</i></dt>
 <dd>
 string denoting the action set to get.
             It must be one of "ui" or "wizards".
-</dd><dt><i>actions</i></dt>
-<dd>
-list of actions (list of E5Action)
 </dd>
 </dl><a NAME="UserInterface.removeSideWidget" ID="UserInterface.removeSideWidget"></a>
 <h4>UserInterface.removeSideWidget</h4>

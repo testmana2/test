@@ -82,7 +82,7 @@ QObject
 <td>Private method to parse a Windows date and time indication modifying the given URL info object.</td>
 </tr><tr>
 <td><a href="#FtpDirLineParser.__splitUnixLine">__splitUnixLine</a></td>
-<td>Split a line of a Unix like directory listing into meta data, number of links, user, group, size, month, day, year or time and name.</td>
+<td>Private method to split a line of a Unix like directory listing.</td>
 </tr><tr>
 <td><a href="#FtpDirLineParser.parseLine">parseLine</a></td>
 <td>Private method to parse a directory listing line.</td>
@@ -131,12 +131,6 @@ directory line to be parsed (string)
 <dt>Returns:</dt>
 <dd>
 URL info object containing the valid data (E5UrlInfo)
-</dd>
-</dl><dl>
-<dt>Raises <b>FtpDirLineParserError</b>:</dt>
-<dd>
-Raised if the line is not of a
-            recognized Unix format.
 </dd>
 </dl><a NAME="FtpDirLineParser.__parseUnixMode" ID="FtpDirLineParser.__parseUnixMode"></a>
 <h4>FtpDirLineParser.__parseUnixMode</h4>
@@ -244,10 +238,16 @@ Raised if either of the strings is not
 <h4>FtpDirLineParser.__splitUnixLine</h4>
 <b>__splitUnixLine</b>(<i>line</i>)
 <p>
-        Split a line of a Unix like directory listing into meta data,
-        number of links, user, group, size, month, day, year or time
-        and name.
+        Private method to split a line of a Unix like directory listing.
+</p><p>
+        It splits the line into meta data, number of links, user, group, size,
+        month, day, year or time and name.
 </p><dl>
+<dt><i>line</i></dt>
+<dd>
+directory line to split (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 tuple of nine strings giving the meta data,
@@ -278,12 +278,6 @@ directory line to be parsed (string)
 <dt>Returns:</dt>
 <dd>
 URL info object containing the valid data (E5UrlInfo)
-</dd>
-</dl><dl>
-<dt>Raises <b>FtpDirLineParserError</b>:</dt>
-<dd>
-Raised if the line is not of a
-            recognized format.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -212,6 +212,10 @@ QWidget, Ui_PluginRepositoryDialog
 <dt><i>parent</i></dt>
 <dd>
 parent of this dialog (QWidget)
+</dd><dt><i>external</i></dt>
+<dd>
+flag indicating an instatiation as a main
+            window (boolean)
 </dd>
 </dl><a NAME="PluginRepositoryWidget.__downloadCancel" ID="PluginRepositoryWidget.__downloadCancel"></a>
 <h4>PluginRepositoryWidget.__downloadCancel</h4>
@@ -411,7 +415,12 @@ list of plugin filenames (list of strings)
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
         Private slot to handle the click of a button of the button box.
-</p><a NAME="PluginRepositoryWidget.on_repositoryList_currentItemChanged" ID="PluginRepositoryWidget.on_repositoryList_currentItemChanged"></a>
+</p><dl>
+<dt><i>button</i></dt>
+<dd>
+reference to the button pressed (QAbstractButton)
+</dd>
+</dl><a NAME="PluginRepositoryWidget.on_repositoryList_currentItemChanged" ID="PluginRepositoryWidget.on_repositoryList_currentItemChanged"></a>
 <h4>PluginRepositoryWidget.on_repositoryList_currentItemChanged</h4>
 <b>on_repositoryList_currentItemChanged</b>(<i>current, previous</i>)
 <p>

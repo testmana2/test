@@ -148,6 +148,11 @@ name of this file (string)
 <dd>
 the mode to be checked (string)
 </dd>
+</dl><dl>
+<dt>Raises <b>IOError</b>:</dt>
+<dd>
+raised to indicate a bad file descriptor
+</dd>
 </dl><a NAME="AsyncFile.__nWrite" ID="AsyncFile.__nWrite"></a>
 <h4>AsyncFile.__nWrite</h4>
 <b>__nWrite</b>(<i>n</i>)
@@ -287,6 +292,14 @@ list of lines read (list of strings)
 <p>
         Public method to move the filepointer.
 </p><dl>
+<dt><i>offset</i></dt>
+<dd>
+offset to seek for
+</dd><dt><i>whence</i></dt>
+<dd>
+where to seek from
+</dd>
+</dl><dl>
 <dt>Raises <b>IOError</b>:</dt>
 <dd>
 This method is not supported and always raises an
@@ -309,6 +322,11 @@ This method is not supported and always raises an
 <p>
         Public method to truncate the file.
 </p><dl>
+<dt><i>size</i></dt>
+<dd>
+size to truncate to (integer)
+</dd>
+</dl><dl>
 <dt>Raises <b>IOError</b>:</dt>
 <dd>
 This method is not supported and always raises an
@@ -323,6 +341,11 @@ This method is not supported and always raises an
 <dt><i>s</i></dt>
 <dd>
 bytes to be written (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>socket.error</b>:</dt>
+<dd>
+raised to indicate too many send attempts
 </dd>
 </dl><a NAME="AsyncFile.writelines" ID="AsyncFile.writelines"></a>
 <h4>AsyncFile.writelines</h4>

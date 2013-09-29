@@ -103,8 +103,8 @@ E5MainWindow
 </p><dl>
 <dt><i>diagramType</i></dt>
 <dd>
-type of the diagram (one of ApplicationDiagram, ClassDiagram,
-            ImportsDiagram, NoDiagram, PackageDiagram)
+type of the diagram (one of ApplicationDiagram,
+            ClassDiagram, ImportsDiagram, NoDiagram, PackageDiagram)
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project object (Project)
@@ -116,8 +116,9 @@ file or directory path to build the diagram from (string)
 parent widget of the dialog (QWidget)
 </dd><dt><i>initBuilder=</i></dt>
 <dd>
-flag indicating to initialize the diagram builder (boolean)
-</dd><dt><i>kwargs</i></dt>
+flag indicating to initialize the diagram
+            builder (boolean)
+</dd><dt><i>kwargs=</i></dt>
 <dd>
 diagram specific data
 </dd>
@@ -134,9 +135,19 @@ type of the diagram
 </dd><dt><i>path</i></dt>
 <dd>
 file or directory path to build the diagram from (string)
-</dd><dt><i>kwargs</i></dt>
+</dd><dt><i>kwargs=</i></dt>
 <dd>
 diagram specific data
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the instantiated diagram builder
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an illegal diagram type
 </dd>
 </dl><a NAME="UMLDialog.__diagramTypeString" ID="UMLDialog.__diagramTypeString"></a>
 <h4>UMLDialog.__diagramTypeString</h4>

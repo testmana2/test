@@ -130,7 +130,7 @@ E5MainWindow
 <td>Private method to get the word at a position.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__initContextMenu">__initContextMenu</a></td>
-<td>Private method used to setup the context menu</td>
+<td>Private method used to setup the context menu.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__initContextMenuLanguages">__initContextMenuLanguages</a></td>
 <td>Private method used to setup the Languages context sub menu.</td>
@@ -328,7 +328,13 @@ name of the pygments lexer to use (string)
 </p><dl>
 <dt><i>line0</i></dt>
 <dd>
-first line of text to use in the generation process (string)
+first line of text to use in the generation process
+            (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+dummy file name to be used for binding a lexer (string)
 </dd>
 </dl><a NAME="MiniEditor.__checkActions" ID="MiniEditor.__checkActions"></a>
 <h4>MiniEditor.__checkActions</h4>
@@ -451,13 +457,18 @@ the word at that position (string)
 <h4>MiniEditor.__initContextMenu</h4>
 <b>__initContextMenu</b>(<i></i>)
 <p>
-        Private method used to setup the context menu
+        Private method used to setup the context menu.
 </p><a NAME="MiniEditor.__initContextMenuLanguages" ID="MiniEditor.__initContextMenuLanguages"></a>
 <h4>MiniEditor.__initContextMenuLanguages</h4>
 <b>__initContextMenuLanguages</b>(<i></i>)
 <p>
         Private method used to setup the Languages context sub menu.
-</p><a NAME="MiniEditor.__isPy2File" ID="MiniEditor.__isPy2File"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="MiniEditor.__isPy2File" ID="MiniEditor.__isPy2File"></a>
 <h4>MiniEditor.__isPy2File</h4>
 <b>__isPy2File</b>(<i></i>)
 <p>
@@ -562,9 +573,6 @@ reference to the action object (E5Action)
 </dd><dt><i>category</i></dt>
 <dd>
 category the action belongs to (string)
-</dd><dt><i>prefClass</i></dt>
-<dd>
-preferences class used as the storage area
 </dd>
 </dl><a NAME="MiniEditor.__redo" ID="MiniEditor.__redo"></a>
 <h4>MiniEditor.__redo</h4>
@@ -591,12 +599,22 @@ preferences class used as the storage area
 <b>__save</b>(<i></i>)
 <p>
         Private slot to save a file.
-</p><a NAME="MiniEditor.__saveAs" ID="MiniEditor.__saveAs"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="MiniEditor.__saveAs" ID="MiniEditor.__saveAs"></a>
 <h4>MiniEditor.__saveAs</h4>
 <b>__saveAs</b>(<i></i>)
 <p>
         Private slot to save a file with a new name.
-</p><a NAME="MiniEditor.__saveFile" ID="MiniEditor.__saveFile"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="MiniEditor.__saveFile" ID="MiniEditor.__saveFile"></a>
 <h4>MiniEditor.__saveFile</h4>
 <b>__saveFile</b>(<i>fileName</i>)
 <p>
@@ -890,12 +908,6 @@ QsciScintillaCompat
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of this instance (string)
-</dd><dt><i>flags</i></dt>
-<dd>
-window flags
 </dd>
 </dl><a NAME="MiniScintilla.focusInEvent" ID="MiniScintilla.focusInEvent"></a>
 <h4>MiniScintilla.focusInEvent</h4>

@@ -68,6 +68,9 @@ filename or modulename to search for (string)
 </dd><dt><i>path</i></dt>
 <dd>
 search path (list of strings)
+</dd><dt><i>isPyFile</i></dt>
+<dd>
+flag indicating a Python file (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -87,10 +90,11 @@ The file or module wasn't found.
 <h2>readmodule</h2>
 <b>readmodule</b>(<i>module, path=[], isPyFile=False</i>)
 <p>
-    Read a source file and return a dictionary of classes, functions, modules, etc. .
+    Read a source file and return a dictionary of classes, functions, modules,
+    etc. .
 </p><p>
-    The real work of parsing the source file is delegated to the individual file
-    parsers.
+    The real work of parsing the source file is delegated to the individual
+    file parsers.
 </p><dl>
 <dt><i>module</i></dt>
 <dd>
@@ -98,6 +102,9 @@ name of the source file (string)
 </dd><dt><i>path</i></dt>
 <dd>
 path the file should be searched in (list of strings)
+</dd><dt><i>isPyFile</i></dt>
+<dd>
+flag indicating a Python file (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

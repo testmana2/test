@@ -105,37 +105,47 @@ reference to the lexers dictionary
 <h4>EditorHighlightersPage.on_deleteLexerButton_clicked</h4>
 <b>on_deleteLexerButton_clicked</b>(<i></i>)
 <p>
-        Private slot to delete the currently selected lexer association of the list.
+        Private slot to delete the currently selected lexer association of the
+        list.
 </p><a NAME="EditorHighlightersPage.on_editorLexerCombo_currentIndexChanged" ID="EditorHighlightersPage.on_editorLexerCombo_currentIndexChanged"></a>
 <h4>EditorHighlightersPage.on_editorLexerCombo_currentIndexChanged</h4>
 <b>on_editorLexerCombo_currentIndexChanged</b>(<i>text</i>)
 <p>
         Private slot to handle the selection of a lexer.
-</p><a NAME="EditorHighlightersPage.on_editorLexerList_itemActivated" ID="EditorHighlightersPage.on_editorLexerList_itemActivated"></a>
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text of the lexer combo (string)
+</dd>
+</dl><a NAME="EditorHighlightersPage.on_editorLexerList_itemActivated" ID="EditorHighlightersPage.on_editorLexerList_itemActivated"></a>
 <h4>EditorHighlightersPage.on_editorLexerList_itemActivated</h4>
 <b>on_editorLexerList_itemActivated</b>(<i>itm, column</i>)
 <p>
-        Private slot to handle the activated signal of the lexer association list.
+        Private slot to handle the activated signal of the lexer association
+        list.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
 reference to the selecte item (QTreeWidgetItem)
 </dd><dt><i>column</i></dt>
 <dd>
-column the item was clicked or activated (integer) (ignored)
+column the item was clicked or activated (integer)
+            (ignored)
 </dd>
 </dl><a NAME="EditorHighlightersPage.on_editorLexerList_itemClicked" ID="EditorHighlightersPage.on_editorLexerList_itemClicked"></a>
 <h4>EditorHighlightersPage.on_editorLexerList_itemClicked</h4>
 <b>on_editorLexerList_itemClicked</b>(<i>itm, column</i>)
 <p>
-        Private slot to handle the clicked signal of the lexer association list.
+        Private slot to handle the clicked signal of the lexer association
+        list.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
 reference to the selecte item (QTreeWidgetItem)
 </dd><dt><i>column</i></dt>
 <dd>
-column the item was clicked or activated (integer) (ignored)
+column the item was clicked or activated (integer)
+            (ignored)
 </dd>
 </dl><a NAME="EditorHighlightersPage.save" ID="EditorHighlightersPage.save"></a>
 <h4>EditorHighlightersPage.save</h4>
@@ -154,6 +164,11 @@ column the item was clicked or activated (integer) (ignored)
 <dt><i>dlg</i></dt>
 <dd>
 reference to the configuration dialog
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the instantiated page (ConfigurationPageBase)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -180,14 +180,14 @@ the style to be used for the generated pages (string)
         Private method to check, if the object to be documented contains a
         deprecated flag.
 </p><dl>
-<dt><i>desc</i></dt>
+<dt><i>descr</i></dt>
 <dd>
-The documentation string. (string)
+documentation string (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-Flag indicating the deprecation status. (boolean)
+flag indicating the deprecation status (boolean)
 </dd>
 </dl><a NAME="ModuleDocument.__formatCrossReferenceEntry" ID="ModuleDocument.__formatCrossReferenceEntry"></a>
 <h4>ModuleDocument.__formatCrossReferenceEntry</h4>
@@ -529,6 +529,11 @@ One line of the description (string)
 <dt>Returns:</dt>
 <dd>
 processed line with inline tags expanded (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>TagError</b>:</dt>
+<dd>
+raised to indicate an invalid tag
 </dd>
 </dl><a NAME="ModuleDocument.description" ID="ModuleDocument.description"></a>
 <h4>ModuleDocument.description</h4>

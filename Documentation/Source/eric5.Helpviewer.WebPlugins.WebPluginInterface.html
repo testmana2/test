@@ -79,7 +79,13 @@ object
 <b>configure</b>(<i></i>)
 <p>
         Public method to configure the plug-in.
-</p><a NAME="WebPluginInterface.create" ID="WebPluginInterface.create"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
+</dl><a NAME="WebPluginInterface.create" ID="WebPluginInterface.create"></a>
 <h4>WebPluginInterface.create</h4>
 <b>create</b>(<i>mimeType, url, argumentNames, argumentValues</i>)
 <p>
@@ -103,12 +109,23 @@ list of argument values (list of strings)
 <dd>
 reference to the created object (QWidget)
 </dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
+</dd>
 </dl><a NAME="WebPluginInterface.isAnonymous" ID="WebPluginInterface.isAnonymous"></a>
 <h4>WebPluginInterface.isAnonymous</h4>
 <b>isAnonymous</b>(<i></i>)
 <p>
         Public method to indicate an anonymous plug-in.
-</p><a NAME="WebPluginInterface.metaPlugin" ID="WebPluginInterface.metaPlugin"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating anonymous state (boolean)
+</dd>
+</dl><a NAME="WebPluginInterface.metaPlugin" ID="WebPluginInterface.metaPlugin"></a>
 <h4>WebPluginInterface.metaPlugin</h4>
 <b>metaPlugin</b>(<i></i>)
 <p>
@@ -117,6 +134,12 @@ reference to the created object (QWidget)
 <dt>Returns:</dt>
 <dd>
 meta plug-in object (QWebPluginFactory.Plugin)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by subclasses
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

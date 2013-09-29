@@ -52,7 +52,7 @@ the tokenize module is too old
 <td>Module function used analyze the source of a Python file.</td>
 </tr><tr>
 <td><a href="#main">main</a></td>
-<td>Modules main function used when called as a script.</td>
+<td>Module main function used when called as a script.</td>
 </tr><tr>
 <td><a href="#summarize">summarize</a></td>
 <td>Module function used to collect overall statistics.</td>
@@ -182,6 +182,11 @@ object
 <dd>
 the token to be processed (Token)
 </dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an invalid indentation level
+</dd>
 </dl><a NAME="SourceStat.dump" ID="SourceStat.dump"></a>
 <h4>SourceStat.dump</h4>
 <b>dump</b>(<i></i>)
@@ -276,7 +281,7 @@ object
 <p>
         Constructor
 </p><dl>
-<dt><i>**kw</i></dt>
+<dt><i>**kw=</i></dt>
 <dd>
 list of key, value pairs
 </dd>
@@ -308,10 +313,10 @@ a statistics object with the collected code statistics (SourceStat)
 <h2>main</h2>
 <b>main</b>(<i></i>)
 <p>
-    Modules main function used when called as a script.
+    Module main function used when called as a script.
 </p><p>
-    This function simply loops over all files given on the commandline
-    and collects the individual and overall source code statistics.
+    Loop over all files given on the command line and collect the individual
+    and overall source code statistics.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />

@@ -418,14 +418,16 @@ a combination of canBeCommited and canBeAdded
 <h4>Subversion._createStatusMonitorThread</h4>
 <b>_createStatusMonitorThread</b>(<i>interval, project</i>)
 <p>
-        Protected method to create an instance of the VCS status monitor thread.
+        Protected method to create an instance of the VCS status monitor
+        thread.
 </p><dl>
-<dt><i>project</i></dt>
+<dt><i>interval</i></dt>
+<dd>
+check interval for the monitor thread in seconds
+            (integer)
+</dd><dt><i>project</i></dt>
 <dd>
 reference to the project object
-</dd><dt><i>interval</i></dt>
-<dd>
-check interval for the monitor thread in seconds (integer)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -685,8 +687,8 @@ file/directory name to be resolved (string)
 <h4>Subversion.svnSbsDiff</h4>
 <b>svnSbsDiff</b>(<i>name, extended=False, revisions=None</i>)
 <p>
-        Public method used to view the difference of a file to the Mercurial repository
-        side-by-side.
+        Public method used to view the difference of a file to the Mercurial
+        repository side-by-side.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -697,6 +699,11 @@ flag indicating the extended variant (boolean)
 </dd><dt><i>revisions=</i></dt>
 <dd>
 tuple of two revisions (tuple of strings)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an invalid name parameter type
 </dd>
 </dl><a NAME="Subversion.svnSetProp" ID="Subversion.svnSetProp"></a>
 <h4>Subversion.svnSetProp</h4>
@@ -1086,11 +1093,18 @@ always 'Subversion' (string)
 <h4>Subversion.vcsNewProjectOptionsDialog</h4>
 <b>vcsNewProjectOptionsDialog</b>(<i>parent=None</i>)
 <p>
-        Public method to get a dialog to enter repository info for getting a new project.
+        Public method to get a dialog to enter repository info for getting a
+        new project.
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the instantiated options dialog
+            (SvnNewProjectOptionsDialog)
 </dd>
 </dl><a NAME="Subversion.vcsOptionsDialog" ID="Subversion.vcsOptionsDialog"></a>
 <h4>Subversion.vcsOptionsDialog</h4>
@@ -1106,10 +1120,16 @@ reference to the project object
 name of the project in the repository (string)
 </dd><dt><i>editable</i></dt>
 <dd>
-flag indicating that the project name is editable (boolean)
+flag indicating that the project name is editable
+            (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the instantiated options dialog (SvnOptionsDialog)
 </dd>
 </dl><a NAME="Subversion.vcsRegisteredState" ID="Subversion.vcsRegisteredState"></a>
 <h4>Subversion.vcsRegisteredState</h4>

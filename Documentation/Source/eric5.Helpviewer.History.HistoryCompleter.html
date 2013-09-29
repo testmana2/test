@@ -31,7 +31,7 @@ Module implementing a special completer for the history.
 <table>
 <tr>
 <td><a href="#HistoryCompleter">HistoryCompleter</a></td>
-<td></td>
+<td>Class implementing a completer for the browser history.</td>
 </tr><tr>
 <td><a href="#HistoryCompletionModel">HistoryCompletionModel</a></td>
 <td>Class implementing a special model for history based completions.</td>
@@ -47,7 +47,9 @@ Module implementing a special completer for the history.
 <hr /><hr />
 <a NAME="HistoryCompleter" ID="HistoryCompleter"></a>
 <h2>HistoryCompleter</h2>
-
+<p>
+    Class implementing a completer for the browser history.
+</p>
 <h3>Derived from</h3>
 QCompleter
 <h3>Class Attributes</h3>
@@ -229,9 +231,9 @@ flag indicating acceptance (boolean)
 <p>
         Public method to check the model for validity.
 </p><dl>
-<dt><i>flag</i></dt>
+<dt>Returns:</dt>
 <dd>
-indicating a valid status (boolean)
+flag indicating a valid status (boolean)
 </dd>
 </dl><a NAME="HistoryCompletionModel.lessThan" ID="HistoryCompletionModel.lessThan"></a>
 <h4>HistoryCompletionModel.lessThan</h4>
@@ -353,6 +355,11 @@ reference to the resize event (QResizeEvent)
 <dt><i>row</i></dt>
 <dd>
 row number (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+desired row height (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

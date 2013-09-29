@@ -111,6 +111,11 @@ reference to the vcs object
 <dd>
 reference to the parent widget (QWidget)
 </dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an invalid dialog mode
+</dd>
 </dl><a NAME="HgQueuesQueueManagementDialog.__getQueuesList" ID="HgQueuesQueueManagementDialog.__getQueuesList"></a>
 <h4>HgQueuesQueueManagementDialog.__getQueuesList</h4>
 <b>__getQueuesList</b>(<i></i>)
@@ -147,7 +152,12 @@ button that was clicked (QAbstractButton)
 <b>on_nameEdit_textChanged</b>(<i>txt</i>)
 <p>
         Private slot to handle changes of the entered queue name.
-</p><a NAME="HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged" ID="HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged"></a>
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the edit (string)
+</dd>
+</dl><a NAME="HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged" ID="HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged"></a>
 <h4>HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged</h4>
 <b>on_queuesList_itemSelectionChanged</b>(<i></i>)
 <p>

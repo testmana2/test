@@ -86,7 +86,7 @@ QDialog
 <td>Private slot to handle a change of the preferences.</td>
 </tr><tr>
 <td><a href="#ConfigurationDialog.accept">accept</a></td>
-<td></td>
+<td>Public method to accept the dialog.</td>
 </tr><tr>
 <td><a href="#ConfigurationDialog.getConfigurationPageName">getConfigurationPageName</a></td>
 <td>Public method to get the page name of the current page.</td>
@@ -147,15 +147,17 @@ new master password (string)
 </p><a NAME="ConfigurationDialog.accept" ID="ConfigurationDialog.accept"></a>
 <h4>ConfigurationDialog.accept</h4>
 <b>accept</b>(<i></i>)
-<a NAME="ConfigurationDialog.getConfigurationPageName" ID="ConfigurationDialog.getConfigurationPageName"></a>
+<p>
+        Public method to accept the dialog.
+</p><a NAME="ConfigurationDialog.getConfigurationPageName" ID="ConfigurationDialog.getConfigurationPageName"></a>
 <h4>ConfigurationDialog.getConfigurationPageName</h4>
 <b>getConfigurationPageName</b>(<i></i>)
 <p>
         Public method to get the page name of the current page.
 </p><dl>
-<dt><i>page</i></dt>
+<dt>Returns:</dt>
 <dd>
-name of the current page (string)
+page name of the current page (string)
 </dd>
 </dl><a NAME="ConfigurationDialog.setPreferences" ID="ConfigurationDialog.setPreferences"></a>
 <h4>ConfigurationDialog.setPreferences</h4>
@@ -347,6 +349,11 @@ flag indicating a dialog generation from within the
 mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
 </dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+raised to indicate an invalid dialog mode
+</dd>
 </dl><a NAME="ConfigurationWidget.__filterChildItems" ID="ConfigurationWidget.__filterChildItems"></a>
 <h4>ConfigurationWidget.__filterChildItems</h4>
 <b>__filterChildItems</b>(<i>parent, filter</i>)
@@ -449,9 +456,9 @@ flag indicating invocation from within eric (boolean)
 <p>
         Public method to get the page name of the current page.
 </p><dl>
-<dt><i>page</i></dt>
+<dt>Returns:</dt>
 <dd>
-name of the current page (string)
+page name of the current page (string)
 </dd>
 </dl><a NAME="ConfigurationWidget.getLexers" ID="ConfigurationWidget.getLexers"></a>
 <h4>ConfigurationWidget.getLexers</h4>

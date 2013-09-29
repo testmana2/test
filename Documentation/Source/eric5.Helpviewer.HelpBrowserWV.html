@@ -792,6 +792,11 @@ reference to the context menu event object (QContextMenuEvent)
 <dd>
 type of the requested window (QWebPage.WebWindowType)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the created browser window (HelpBrowser)
+</dd>
 </dl><a NAME="HelpBrowser.documentTitle" ID="HelpBrowser.documentTitle"></a>
 <h4>HelpBrowser.documentTitle</h4>
 <b>documentTitle</b>(<i></i>)
@@ -1029,7 +1034,12 @@ reference to the mouse event (QMouseEvent)
 <b>progress</b>(<i></i>)
 <p>
         Public method to get the load progress.
-</p><a NAME="HelpBrowser.reload" ID="HelpBrowser.reload"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+load progress (integer)
+</dd>
+</dl><a NAME="HelpBrowser.reload" ID="HelpBrowser.reload"></a>
 <h4>HelpBrowser.reload</h4>
 <b>reload</b>(<i></i>)
 <p>
@@ -1389,7 +1399,12 @@ new current user agent string (string)
 <b>showSslInfo</b>(<i>pos</i>)
 <p>
         Public slot to show some SSL information for the loaded page.
-</p><a NAME="HelpWebPage.supportsExtension" ID="HelpWebPage.supportsExtension"></a>
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position to show the info at (QPoint)
+</dd>
+</dl><a NAME="HelpWebPage.supportsExtension" ID="HelpWebPage.supportsExtension"></a>
 <h4>HelpWebPage.supportsExtension</h4>
 <b>supportsExtension</b>(<i>extension</i>)
 <p>
@@ -1634,6 +1649,11 @@ object
 <p>
     Module function to do some content sniffing to check, if the data is HTML.
 </p><dl>
+<dt><i>data</i></dt>
+<dd>
+data block to sniff at (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 flag indicating HTML content (boolean)

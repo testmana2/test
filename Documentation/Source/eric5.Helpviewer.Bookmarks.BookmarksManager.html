@@ -346,7 +346,13 @@ URL of the icon to update (QUrl or string)
 <b>load</b>(<i></i>)
 <p>
         Public method to load the bookmarks.
-</p><a NAME="BookmarksManager.menu" ID="BookmarksManager.menu"></a>
+</p><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+raised to indicate an error loading the
+            bookmarks
+</dd>
+</dl><a NAME="BookmarksManager.menu" ID="BookmarksManager.menu"></a>
 <h4>BookmarksManager.menu</h4>
 <b>menu</b>(<i></i>)
 <p>
@@ -380,8 +386,14 @@ reference to the node to be removed (BookmarkNode)
 <h4>BookmarksManager.setNodeChanged</h4>
 <b>setNodeChanged</b>(<i>node</i>)
 <p>
-        Public method to signal changes of bookmarks other than title, URL or timestamp.
-</p><a NAME="BookmarksManager.setTimestamp" ID="BookmarksManager.setTimestamp"></a>
+        Public method to signal changes of bookmarks other than title, URL
+        or timestamp.
+</p><dl>
+<dt><i>node</i></dt>
+<dd>
+reference to the bookmark (BookmarkNode)
+</dd>
+</dl><a NAME="BookmarksManager.setTimestamp" ID="BookmarksManager.setTimestamp"></a>
 <h4>BookmarksManager.setTimestamp</h4>
 <b>setTimestamp</b>(<i>node, timestampType, timestamp</i>)
 <p>
@@ -392,8 +404,9 @@ reference to the node to be removed (BookmarkNode)
 reference to the node to be changed (BookmarkNode)
 </dd><dt><i>timestampType</i></dt>
 <dd>
-type of the timestamp to set (BookmarkNode.TsAdded,
-            BookmarkNode.TsModified, BookmarkNode.TsVisited)
+type of the timestamp to set
+            (BookmarkNode.TsAdded, BookmarkNode.TsModified,
+            BookmarkNode.TsVisited)
 </dd><dt><i>timestamp</i></dt>
 <dd>
 timestamp to set (QDateTime)

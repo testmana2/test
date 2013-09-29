@@ -354,12 +354,6 @@ QsciScintilla
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
-</dd><dt><i>name</i></dt>
-<dd>
-name of this instance (string)
-</dd><dt><i>flags</i></dt>
-<dd>
-window flags
 </dd>
 </dl><a NAME="QsciScintillaCompat.__doSearchTarget" ID="QsciScintillaCompat.__doSearchTarget"></a>
 <h4>QsciScintillaCompat.__doSearchTarget</h4>
@@ -590,12 +584,17 @@ the scintilla command to be performed (integer)
 <p>
         Protected method to handle events.
 </p><p>
-        Note: We are not interested in the standard QsciScintilla event handling
-        because we do it our self.
+        Note: We are not interested in the standard QsciScintilla event
+        handling because we do it our self.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
 event object to handle (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+result of the event handling (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.extendSelectionLeft" ID="QsciScintillaCompat.extendSelectionLeft"></a>
 <h4>QsciScintillaCompat.extendSelectionLeft</h4>
@@ -772,7 +771,12 @@ flash time of the cursor in milliseconds (integer)
 <b>getEndStyled</b>(<i></i>)
 <p>
         Public method to get the last styled position.
-</p><a NAME="QsciScintillaCompat.getEolIndicator" ID="QsciScintillaCompat.getEolIndicator"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+end position of the last styling run (integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.getEolIndicator" ID="QsciScintillaCompat.getEolIndicator"></a>
 <h4>QsciScintillaCompat.getEolIndicator</h4>
 <b>getEolIndicator</b>(<i></i>)
 <p>
@@ -838,8 +842,14 @@ number of active selection (integer)
 <h4>QsciScintillaCompat.getSelectionN</h4>
 <b>getSelectionN</b>(<i>index</i>)
 <p>
-        Public method to get the start and end of a selection given by its index.
+        Public method to get the start and end of a selection given by its
+        index.
 </p><dl>
+<dt><i>index</i></dt>
+<dd>
+index of the selection (integer)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 tuple with start line and index and end line and index
@@ -1242,11 +1252,6 @@ line number of the indicator end (integer)
 <dd>
 index of the indicator end (integer)
 </dd>
-</dl><dl>
-<dt>Raises <b>ValueError</b>:</dt>
-<dd>
-the indicator or style are not valid
-</dd>
 </dl><a NAME="QsciScintillaCompat.setIndicatorRange" ID="QsciScintillaCompat.setIndicatorRange"></a>
 <h4>QsciScintillaCompat.setIndicatorRange</h4>
 <b>setIndicatorRange</b>(<i>indicator, spos, length</i>)
@@ -1263,11 +1268,6 @@ position of the indicator start (integer)
 </dd><dt><i>length</i></dt>
 <dd>
 length of the indicator (integer)
-</dd>
-</dl><dl>
-<dt>Raises <b>ValueError</b>:</dt>
-<dd>
-the indicator or style are not valid
 </dd>
 </dl><a NAME="QsciScintillaCompat.setLexer" ID="QsciScintillaCompat.setLexer"></a>
 <h4>QsciScintillaCompat.setLexer</h4>

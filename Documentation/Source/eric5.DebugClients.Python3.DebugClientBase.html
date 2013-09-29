@@ -122,7 +122,7 @@ object
 <td>Private method to return the variables of a frame to the debug server.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__exceptionRaised">__exceptionRaised</a></td>
-<td>Private method called in the case of an exception</td>
+<td>Private method called in the case of an exception.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__formatQt4Variable">__formatQt4Variable</a></td>
 <td>Private method to produce a formatted output of a simple Qt4/Qt5 type.</td>
@@ -297,7 +297,7 @@ the indices of variable types to be filtered (list of int)
 <h4>DebugClientBase.__exceptionRaised</h4>
 <b>__exceptionRaised</b>(<i></i>)
 <p>
-        Private method called in the case of an exception
+        Private method called in the case of an exception.
 </p><p>
         It ensures that the debug server is informed of the raised exception.
 </p><a NAME="DebugClientBase.__formatQt4Variable" ID="DebugClientBase.__formatQt4Variable"></a>
@@ -478,11 +478,6 @@ keyword arguments to pass to target
 True, if we are attaching to the already
               started mainthread of the app
 </dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-The identifier of the created thread
-</dd>
 </dl><a NAME="DebugClientBase.close" ID="DebugClientBase.close"></a>
 <h4>DebugClientBase.close</h4>
 <b>close</b>(<i>fd</i>)
@@ -535,8 +530,14 @@ flag indicating to enter an event loop with
 <h4>DebugClientBase.fork</h4>
 <b>fork</b>(<i></i>)
 <p>
-        Public method implementing a fork routine deciding which branch to follow.
-</p><a NAME="DebugClientBase.getCoding" ID="DebugClientBase.getCoding"></a>
+        Public method implementing a fork routine deciding which branch
+        to follow.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+process ID (integer)
+</dd>
+</dl><a NAME="DebugClientBase.getCoding" ID="DebugClientBase.getCoding"></a>
 <h4>DebugClientBase.getCoding</h4>
 <b>getCoding</b>(<i></i>)
 <p>
@@ -551,7 +552,12 @@ codec name (string)
 <b>getRunning</b>(<i></i>)
 <p>
         Public method to return the main script we are currently running.
-</p><a NAME="DebugClientBase.handleLine" ID="DebugClientBase.handleLine"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a running debug session (boolean)
+</dd>
+</dl><a NAME="DebugClientBase.handleLine" ID="DebugClientBase.handleLine"></a>
 <h4>DebugClientBase.handleLine</h4>
 <b>handleLine</b>(<i>line</i>)
 <p>
@@ -731,7 +737,12 @@ open file descriptor to be closed (integer)
 <b>DebugClientFork</b>(<i></i>)
 <p>
     Replacement for the standard os.fork().
-</p>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+result of the fork() call
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="DebugClientInput" ID="DebugClientInput"></a>
@@ -744,7 +755,15 @@ open file descriptor to be closed (integer)
 </p><dl>
 <dt><i>prompt</i></dt>
 <dd>
-The prompt to be shown. (string)
+prompt to be shown (string)
+</dd><dt><i>echo</i></dt>
+<dd>
+flag indicating to echo the output (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+result of the input() call
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -34,7 +34,7 @@ Module implementing an exporter for PDF.
 <td>Class implementing an exporter for PDF.</td>
 </tr><tr>
 <td><a href="#PDFObjectTracker">PDFObjectTracker</a></td>
-<td>Class to conveniently handle the tracking of PDF objects so that the cross-reference table can be built (PDF1.4Ref(p39)) All writes to the file are passed through a PDFObjectTracker object.</td>
+<td>Class to conveniently handle the tracking of PDF objects so that the cross-reference table can be built (PDF1.4Ref(p39)).</td>
 </tr><tr>
 <td><a href="#PDFRender">PDFRender</a></td>
 <td>Class to manage line and page rendering.</td>
@@ -119,8 +119,9 @@ PDF color description (string)
 <a NAME="PDFObjectTracker" ID="PDFObjectTracker"></a>
 <h2>PDFObjectTracker</h2>
 <p>
-    Class to conveniently handle the tracking of PDF objects
-    so that the cross-reference table can be built (PDF1.4Ref(p39))
+    Class to conveniently handle the tracking of PDF objects so that the
+    cross-reference table can be built (PDF1.4Ref(p39)).
+</p><p>
     All writes to the file are passed through a PDFObjectTracker object.
 </p>
 <h3>Derived from</h3>
@@ -296,6 +297,11 @@ number of the style of the character (integer)
 <p>
         Public method to convert the font size to points.
 </p><dl>
+<dt><i>thousandths</i></dt>
+<dd>
+font size (integer)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 point size of the font (integer)

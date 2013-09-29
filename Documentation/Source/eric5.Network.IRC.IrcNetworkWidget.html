@@ -53,7 +53,8 @@ emitted after an automatic connection was initiated
 emitted to indicate the away status
 </dd><dt>connectNetwork(str,bool)</dt>
 <dd>
-emitted to connect or disconnect from a network
+emitted to connect or disconnect from
+        a network
 </dd><dt>editNetwork(str)</dt>
 <dd>
 emitted to edit a network configuration
@@ -192,17 +193,20 @@ reference to the parent widget (QWidget)
 <h4>IrcNetworkWidget.__copyAllMessages</h4>
 <b>__copyAllMessages</b>(<i></i>)
 <p>
-        Private slot to copy the contents of the messages display to the clipboard.
+        Private slot to copy the contents of the messages display to
+        the clipboard.
 </p><a NAME="IrcNetworkWidget.__copyMessages" ID="IrcNetworkWidget.__copyMessages"></a>
 <h4>IrcNetworkWidget.__copyMessages</h4>
 <b>__copyMessages</b>(<i></i>)
 <p>
-        Private slot to copy the selection of the messages display to the clipboard.
+        Private slot to copy the selection of the messages display to
+        the clipboard.
 </p><a NAME="IrcNetworkWidget.__cutAllMessages" ID="IrcNetworkWidget.__cutAllMessages"></a>
 <h4>IrcNetworkWidget.__cutAllMessages</h4>
 <b>__cutAllMessages</b>(<i></i>)
 <p>
-        Private slot to cut the contents of the messages display to the clipboard.
+        Private slot to cut the contents of the messages display to
+        the clipboard.
 </p><a NAME="IrcNetworkWidget.__initMessagesMenu" ID="IrcNetworkWidget.__initMessagesMenu"></a>
 <h4>IrcNetworkWidget.__initMessagesMenu</h4>
 <b>__initMessagesMenu</b>(<i></i>)
@@ -338,11 +342,17 @@ current text of the channel combo (string)
 <b>on_messages_anchorClicked</b>(<i>url</i>)
 <p>
         Private slot to open links in the default browser.
-</p><a NAME="IrcNetworkWidget.on_messages_copyAvailable" ID="IrcNetworkWidget.on_messages_copyAvailable"></a>
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to be opened (QUrl)
+</dd>
+</dl><a NAME="IrcNetworkWidget.on_messages_copyAvailable" ID="IrcNetworkWidget.on_messages_copyAvailable"></a>
 <h4>IrcNetworkWidget.on_messages_copyAvailable</h4>
 <b>on_messages_copyAvailable</b>(<i>yes</i>)
 <p>
-        Private slot to react to text selection/deselection of the messages edit.
+        Private slot to react to text selection/deselection of the
+        messages edit.
 </p><dl>
 <dt><i>yes</i></dt>
 <dd>
@@ -353,7 +363,12 @@ flag signaling the availability of selected text (boolean)
 <b>on_messages_customContextMenuRequested</b>(<i>pos</i>)
 <p>
         Private slot to show the context menu of the messages pane.
-</p><a NAME="IrcNetworkWidget.on_networkCombo_currentIndexChanged" ID="IrcNetworkWidget.on_networkCombo_currentIndexChanged"></a>
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position the menu should be opened at (QPoint)
+</dd>
+</dl><a NAME="IrcNetworkWidget.on_networkCombo_currentIndexChanged" ID="IrcNetworkWidget.on_networkCombo_currentIndexChanged"></a>
 <h4>IrcNetworkWidget.on_networkCombo_currentIndexChanged</h4>
 <b>on_networkCombo_currentIndexChanged</b>(<i>networkName</i>)
 <p>
@@ -399,9 +414,9 @@ nick name in use (string)
 <p>
         Public slot to set the registered state.
 </p><dl>
-<dt><i>connected</i></dt>
+<dt><i>registered</i></dt>
 <dd>
-flag indicating the connection state (boolean)
+flag indicating the registration state (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

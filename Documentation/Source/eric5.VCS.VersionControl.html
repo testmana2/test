@@ -52,14 +52,15 @@ VCS interfaces.
 <dl>
 <dt>vcsStatusChanged()</dt>
 <dd>
-emitted to indicate a change of the overall VCS status
+emitted to indicate a change of the overall
+        VCS status
 </dd><dt>vcsStatusMonitorData(list of str)</dt>
 <dd>
 emitted to update the VCS status
 </dd><dt>vcsStatusMonitorStatus(str, str)</dt>
 <dd>
-emitted to signal the status of the
-        monitoring thread (ok, nok, op, off) and a status message
+emitted to signal the status of
+        the monitoring thread (ok, nok, op, off) and a status message
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -121,7 +122,7 @@ QObject
 <td>Public method to start the VCS status monitor thread.</td>
 </tr><tr>
 <td><a href="#VersionControl.startSynchronizedProcess">startSynchronizedProcess</a></td>
-<td>Public method to start a synchroneous process</td>
+<td>Public method to start a synchroneous process.</td>
 </tr><tr>
 <td><a href="#VersionControl.stopStatusMonitor">stopStatusMonitor</a></td>
 <td>Public method to stop the VCS status monitor thread.</td>
@@ -295,14 +296,16 @@ explanotory text for the signaled status (string)
 <h4>VersionControl._createStatusMonitorThread</h4>
 <b>_createStatusMonitorThread</b>(<i>interval, project</i>)
 <p>
-        Protected method to create an instance of the VCS status monitor thread.
+        Protected method to create an instance of the VCS status monitor
+        thread.
 </p><p>
-        Note: This method should be overwritten in subclasses in order to support
-        VCS status monitoring.
+        Note: This method should be overwritten in subclasses in order to
+        support VCS status monitoring.
 </p><dl>
 <dt><i>interval</i></dt>
 <dd>
-check interval for the monitor thread in seconds (integer)
+check interval for the monitor thread in seconds
+            (integer)
 </dd><dt><i>project</i></dt>
 <dd>
 reference to the project object
@@ -316,7 +319,8 @@ reference to the monitor thread (QThread)
 <h4>VersionControl.addArguments</h4>
 <b>addArguments</b>(<i>args, argslist</i>)
 <p>
-        Protected method to add an argument list to the already present arguments.
+        Protected method to add an argument list to the already present
+        arguments.
 </p><dl>
 <dt><i>args</i></dt>
 <dd>
@@ -407,8 +411,8 @@ a tuple of 2 strings (dirname, filename).
 <h4>VersionControl.splitPathList</h4>
 <b>splitPathList</b>(<i>names</i>)
 <p>
-        Public method splitting the list of names into a common directory part and
-        a file list.
+        Public method splitting the list of names into a common directory part
+        and a file list.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -438,7 +442,7 @@ reference to the monitor thread (QThread)
 <h4>VersionControl.startSynchronizedProcess</h4>
 <b>startSynchronizedProcess</b>(<i>proc, program, arguments, workingDir=None</i>)
 <p>
-        Public method to start a synchroneous process
+        Public method to start a synchroneous process.
 </p><p>
         This method starts a process and waits
         for its end while still serving the Qt event loop.
@@ -471,8 +475,6 @@ flag indicating normal exit (boolean)
 <b>vcsAdd</b>(<i>name, isDir=False, noDialog=False</i>)
 <p>
         Public method used to add a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -487,15 +489,14 @@ flag indicating quiet operations (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsAddBinary" ID="VersionControl.vcsAddBinary"></a>
 <h4>VersionControl.vcsAddBinary</h4>
 <b>vcsAddBinary</b>(<i>name, isDir=False</i>)
 <p>
         Public method used to add a file/directory in binary mode in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -507,15 +508,14 @@ flag indicating name is a directory (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsAddTree" ID="VersionControl.vcsAddTree"></a>
 <h4>VersionControl.vcsAddTree</h4>
 <b>vcsAddTree</b>(<i>path</i>)
 <p>
         Public method to add a directory tree rooted at path in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
@@ -524,13 +524,15 @@ root directory of the tree to be added (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsAllRegisteredStates" ID="VersionControl.vcsAllRegisteredStates"></a>
 <h4>VersionControl.vcsAllRegisteredStates</h4>
 <b>vcsAllRegisteredStates</b>(<i>names, dname</i>)
 <p>
-        Public method used to get the registered states of a number of files in the vcs.
+        Public method used to get the registered states of a number of files
+        in the vcs.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
@@ -548,7 +550,8 @@ the received dictionary completed with a combination of
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsCheckout" ID="VersionControl.vcsCheckout"></a>
 <h4>VersionControl.vcsCheckout</h4>
@@ -574,7 +577,8 @@ flag indicating an execution without errors (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsCleanup" ID="VersionControl.vcsCleanup"></a>
 <h4>VersionControl.vcsCleanup</h4>
@@ -589,7 +593,8 @@ directory name to be cleaned up (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsCommandLine" ID="VersionControl.vcsCommandLine"></a>
 <h4>VersionControl.vcsCommandLine</h4>
@@ -604,15 +609,15 @@ directory name of the working directory (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsCommit" ID="VersionControl.vcsCommit"></a>
 <h4>VersionControl.vcsCommit</h4>
 <b>vcsCommit</b>(<i>name, message, noDialog=False</i>)
 <p>
-        Public method used to make the change of a file/directory permanent in the vcs.
-</p><p>
-        It must return a boolean to indicate an execution without errors.
+        Public method used to make the change of a file/directory permanent in
+        the vcs.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -622,18 +627,25 @@ file/directory name to be committed (string)
 message for this operation (string)
 </dd><dt><i>noDialog</i></dt>
 <dd>
-flag indicating quiet operations
+flag indicating quiet operations (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsConvertProject" ID="VersionControl.vcsConvertProject"></a>
 <h4>VersionControl.vcsConvertProject</h4>
 <b>vcsConvertProject</b>(<i>vcsDataDict, project</i>)
 <p>
-        Public method to convert an uncontrolled project to a version controlled project.
+        Public method to convert an uncontrolled project to a version
+        controlled project.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -645,7 +657,8 @@ reference to the project object
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsDefaultOptions" ID="VersionControl.vcsDefaultOptions"></a>
 <h4>VersionControl.vcsDefaultOptions</h4>
@@ -658,15 +671,14 @@ not implemented
 a dictionary with the vcs operations as key and
             the respective options as values. The key 'global' must contain
             the global options. The other keys must be 'commit', 'update',
-            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and 'export'.
+            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and
+            'export'.
 </dd>
 </dl><a NAME="VersionControl.vcsDiff" ID="VersionControl.vcsDiff"></a>
 <h4>VersionControl.vcsDiff</h4>
 <b>vcsDiff</b>(<i>name</i>)
 <p>
         Public method used to view the diff of a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -675,28 +687,31 @@ file/directory name to be diffed (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsExists" ID="VersionControl.vcsExists"></a>
 <h4>VersionControl.vcsExists</h4>
 <b>vcsExists</b>(<i></i>)
 <p>
         Public method used to test for the presence of the vcs.
-</p><p>
-        It must return a bool to indicate the existance and a string giving
-        an error message in case of failure.
 </p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of flag indicating the existence and a string
+            giving an error message in case of failure
+</dd>
+</dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsExport" ID="VersionControl.vcsExport"></a>
 <h4>VersionControl.vcsExport</h4>
 <b>vcsExport</b>(<i>vcsDataDict, projectDir</i>)
 <p>
         Public method used to export a directory from the vcs.
-</p><p>
-        It must return a boolean to indicate an execution without errors.
 </p><dl>
 <dt><i>vcsDataDict</i></dt>
 <dd>
@@ -713,7 +728,8 @@ flag indicating an execution without errors (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsGetOptions" ID="VersionControl.vcsGetOptions"></a>
 <h4>VersionControl.vcsGetOptions</h4>
@@ -740,7 +756,8 @@ a dictionary of vcs specific data
 <h4>VersionControl.vcsGetProjectBrowserHelper</h4>
 <b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
-        Public method to instanciate a helper object for the different project browsers.
+        Public method to instanciate a helper object for the different
+        project browsers.
 </p><dl>
 <dt><i>browser</i></dt>
 <dd>
@@ -750,13 +767,19 @@ reference to the project browser object
 reference to the project object
 </dd><dt><i>isTranslationsBrowser</i></dt>
 <dd>
-flag indicating, the helper is requested for the
-            translations browser (this needs some special treatment)
+flag indicating, the helper is requested
+            for the translations browser (this needs some special treatment)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 the project browser helper object
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsGetProjectHelper" ID="VersionControl.vcsGetProjectHelper"></a>
 <h4>VersionControl.vcsGetProjectHelper</h4>
@@ -773,13 +796,17 @@ reference to the project object
 <dd>
 the project helper object
 </dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
+</dd>
 </dl><a NAME="VersionControl.vcsHistory" ID="VersionControl.vcsHistory"></a>
 <h4>VersionControl.vcsHistory</h4>
 <b>vcsHistory</b>(<i>name</i>)
 <p>
         Public method used to view the history of a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -788,7 +815,8 @@ file/directory name to show the history for (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsImport" ID="VersionControl.vcsImport"></a>
 <h4>VersionControl.vcsImport</h4>
@@ -815,15 +843,14 @@ flag indicating an execution without errors (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsInit" ID="VersionControl.vcsInit"></a>
 <h4>VersionControl.vcsInit</h4>
 <b>vcsInit</b>(<i>vcsDir, noDialog=False</i>)
 <p>
         Public method used to initialize the vcs.
-</p><p>
-        It must return a boolean to indicate an execution without errors.
 </p><dl>
 <dt><i>vcsDir</i></dt>
 <dd>
@@ -833,9 +860,15 @@ name of the VCS directory (string)
 flag indicating quiet operations (boolean)
 </dd>
 </dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsInitConfig" ID="VersionControl.vcsInitConfig"></a>
 <h4>VersionControl.vcsInitConfig</h4>
@@ -855,8 +888,6 @@ reference to the project (Project)
 <b>vcsLog</b>(<i>name</i>)
 <p>
         Public method used to view the log of a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -865,15 +896,14 @@ file/directory name to show the log for (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsMerge" ID="VersionControl.vcsMerge"></a>
 <h4>VersionControl.vcsMerge</h4>
 <b>vcsMerge</b>(<i>name</i>)
 <p>
         Public method used to merge a tag/branch into the local project.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -882,7 +912,8 @@ file/directory name to be merged (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsMove" ID="VersionControl.vcsMove"></a>
 <h4>VersionControl.vcsMove</h4>
@@ -911,7 +942,8 @@ flag indicating successfull operation (boolean)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsName" ID="VersionControl.vcsName"></a>
 <h4>VersionControl.vcsName</h4>
@@ -926,17 +958,25 @@ name of the vcs (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsNewProjectOptionsDialog" ID="VersionControl.vcsNewProjectOptionsDialog"></a>
 <h4>VersionControl.vcsNewProjectOptionsDialog</h4>
 <b>vcsNewProjectOptionsDialog</b>(<i>parent=None</i>)
 <p>
-        Public method to get a dialog to enter repository info for getting a new project.
+        Public method to get a dialog to enter repository info for getting a
+        new project.
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsOptionsDialog" ID="VersionControl.vcsOptionsDialog"></a>
 <h4>VersionControl.vcsOptionsDialog</h4>
@@ -952,10 +992,17 @@ reference to the project object
 name of the project in the repository (string)
 </dd><dt><i>editable</i></dt>
 <dd>
-flag indicating that the project name is editable (boolean)
+flag indicating that the project name is editable
+            (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsRegisteredState" ID="VersionControl.vcsRegisteredState"></a>
 <h4>VersionControl.vcsRegisteredState</h4>
@@ -976,15 +1023,14 @@ a combination of canBeCommited and canBeAdded or
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsRemove" ID="VersionControl.vcsRemove"></a>
 <h4>VersionControl.vcsRemove</h4>
 <b>vcsRemove</b>(<i>name, project=False, noDialog=False</i>)
 <p>
         Public method used to add a file/directory in the vcs.
-</p><p>
-        It must return a flag indicating successfull operation
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -997,9 +1043,15 @@ flag indicating deletion of a project tree (boolean)
 flag indicating quiet operations
 </dd>
 </dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsRepositoryInfos" ID="VersionControl.vcsRepositoryInfos"></a>
 <h4>VersionControl.vcsRepositoryInfos</h4>
@@ -1016,13 +1068,17 @@ local path to get the repository infos (string)
 <dd>
 string with ready formated info for display (string)
 </dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
+</dd>
 </dl><a NAME="VersionControl.vcsRevert" ID="VersionControl.vcsRevert"></a>
 <h4>VersionControl.vcsRevert</h4>
 <b>vcsRevert</b>(<i>name</i>)
 <p>
         Public method used to revert changes made to a file/directory.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1031,7 +1087,8 @@ file/directory name to be reverted (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsSetData" ID="VersionControl.vcsSetData"></a>
 <h4>VersionControl.vcsSetData</h4>
@@ -1082,13 +1139,17 @@ a dictionary of vcs specific data
 <b>vcsShutdown</b>(<i></i>)
 <p>
         Public method used to shutdown the vcs interface.
-</p><a NAME="VersionControl.vcsStatus" ID="VersionControl.vcsStatus"></a>
+</p><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
+</dd>
+</dl><a NAME="VersionControl.vcsStatus" ID="VersionControl.vcsStatus"></a>
 <h4>VersionControl.vcsStatus</h4>
 <b>vcsStatus</b>(<i>name</i>)
 <p>
         Public method used to view the status of a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1097,15 +1158,14 @@ file/directory name to show the status for (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsSwitch" ID="VersionControl.vcsSwitch"></a>
 <h4>VersionControl.vcsSwitch</h4>
 <b>vcsSwitch</b>(<i>name</i>)
 <p>
         Public method used to switch a directory to a different tag/branch.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1120,15 +1180,14 @@ flag indicating, that the switch contained an add
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsTag" ID="VersionControl.vcsTag"></a>
 <h4>VersionControl.vcsTag</h4>
 <b>vcsTag</b>(<i>name</i>)
 <p>
         Public method used to set the tag of a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1137,15 +1196,14 @@ file/directory name to be tagged (string)
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl><a NAME="VersionControl.vcsUpdate" ID="VersionControl.vcsUpdate"></a>
 <h4>VersionControl.vcsUpdate</h4>
 <b>vcsUpdate</b>(<i>name, noDialog=False</i>)
 <p>
         Public method used to update a file/directory in the vcs.
-</p><p>
-        It must not return anything.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -1163,7 +1221,8 @@ flag indicating, that the update contained an add
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
 <dd>
-not implemented
+to indicate that this method must be
+            implemented by a subclass
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -321,16 +321,18 @@ indicator to be shown (string)
 </dd><dt><i>message</i></dt>
 <dd>
 message to be shown (string)
-</dd><dt><i>isLocal=</i></dt>
-<dd>
-flag indicating a message related to the local user (boolean)
 </dd>
 </dl><a NAME="IrcChannelWidget.__appendMessage" ID="IrcChannelWidget.__appendMessage"></a>
 <h4>IrcChannelWidget.__appendMessage</h4>
 <b>__appendMessage</b>(<i>message</i>)
 <p>
         Private slot to append a message.
-</p><a NAME="IrcChannelWidget.__autoWhoEntry" ID="IrcChannelWidget.__autoWhoEntry"></a>
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message to be appended (string)
+</dd>
+</dl><a NAME="IrcChannelWidget.__autoWhoEntry" ID="IrcChannelWidget.__autoWhoEntry"></a>
 <h4>IrcChannelWidget.__autoWhoEntry</h4>
 <b>__autoWhoEntry</b>(<i>match</i>)
 <p>
@@ -420,7 +422,11 @@ flag indicating whether the message was handled (boolean)
 <dt><i>name</i></dt>
 <dd>
 user name and prefixes (string)
-        return list of privileges and user name (list of string, string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of privileges and user name (list of string, string)
 </dd>
 </dl><a NAME="IrcChannelWidget.__findUser" ID="IrcChannelWidget.__findUser"></a>
 <h4>IrcChannelWidget.__findUser</h4>
@@ -443,9 +449,9 @@ reference to the list entry (QListWidgetItem)
 <p>
         Private method to handle a CTCP channel command.
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>match</i></dt>
 <dd>
-to the match object
+reference to the match object
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -981,7 +987,12 @@ name of the channel (string)
 <b>on_messages_anchorClicked</b>(<i>url</i>)
 <p>
         Private slot to open links in the default browser.
-</p><a NAME="IrcChannelWidget.on_messages_copyAvailable" ID="IrcChannelWidget.on_messages_copyAvailable"></a>
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to be opened (QUrl)
+</dd>
+</dl><a NAME="IrcChannelWidget.on_messages_copyAvailable" ID="IrcChannelWidget.on_messages_copyAvailable"></a>
 <h4>IrcChannelWidget.on_messages_copyAvailable</h4>
 <b>on_messages_copyAvailable</b>(<i>yes</i>)
 <p>
@@ -1194,9 +1205,11 @@ reference to the parent widget (QListWidget or QListWidgetItem)
 <dt><i>icon</i></dt>
 <dd>
 icon to be converted (QIcon)
-</dd><dt><i>away</i></dt>
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
 <dd>
-icon (QIcon)
+away icon (QIcon)
 </dd>
 </dl><a NAME="IrcUserItem.__setIcon" ID="IrcUserItem.__setIcon"></a>
 <h4>IrcUserItem.__setIcon</h4>

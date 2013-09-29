@@ -535,9 +535,12 @@ end index of the rows to be changed (QModelIndex)
 <p>
         Private slot to set changed breakpoints.
 </p><dl>
-<dt><i>indexes</i></dt>
+<dt><i>startIndex</i></dt>
 <dd>
-indexes of changed breakpoints.
+starting index of the change breakpoins (QModelIndex)
+</dd><dt><i>endIndex</i></dt>
+<dd>
+ending index of the change breakpoins (QModelIndex)
 </dd>
 </dl><a NAME="DebugServer.__changeWatchPoints" ID="DebugServer.__changeWatchPoints"></a>
 <h4>DebugServer.__changeWatchPoints</h4>
@@ -1653,7 +1656,7 @@ character number of the syntax error position (integer)
 <p>
         Public method to process the client thread list info.
 </p><dl>
-<dt><i>currentID</i></dt>
+<dt><i>currentId</i></dt>
 <dd>
 id of the current thread (integer)
 </dd><dt><i>threadList</i></dt>

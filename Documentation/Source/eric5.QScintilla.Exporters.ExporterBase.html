@@ -95,6 +95,11 @@ parent object of the exporter (QObject)
 the filter string to be used (string). The filter for
             "All Files (*)" is appended by this method.
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+file name entered by the user (string)
+</dd>
 </dl><a NAME="ExporterBase.exportSource" ID="ExporterBase.exportSource"></a>
 <h4>ExporterBase.exportSource</h4>
 <b>exportSource</b>(<i></i>)
@@ -102,7 +107,13 @@ the filter string to be used (string). The filter for
         Public method performing the export.
 </p><p>
         This method must be overridden by the real exporters.
-</p>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this method
+            must be implemented by a subclass
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

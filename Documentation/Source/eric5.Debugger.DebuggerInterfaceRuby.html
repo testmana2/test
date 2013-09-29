@@ -172,7 +172,7 @@ QObject
 <td>Public method to start a unittest run.</td>
 </tr><tr>
 <td><a href="#DebuggerInterfaceRuby.remoteUTStop">remoteUTStop</a></td>
-<td>public method to stop a unittest run.</td>
+<td>Public method to stop a unittest run.</td>
 </tr><tr>
 <td><a href="#DebuggerInterfaceRuby.remoteWatchpoint">remoteWatchpoint</a></td>
 <td>Public method to set or clear a watch expression.</td>
@@ -480,6 +480,12 @@ the working directory for the program (string)
 flag indicating that coverage info should be
             cleared first (boolean)
 </dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteEnvironment" ID="DebuggerInterfaceRuby.remoteEnvironment"></a>
 <h4>DebuggerInterfaceRuby.remoteEnvironment</h4>
 <b>remoteEnvironment</b>(<i>env</i>)
@@ -559,6 +565,12 @@ the working directory for the program (string)
 </dd><dt><i>erase=</i></dt>
 <dd>
 flag indicating that timing info should be cleared first (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteRawInput" ID="DebuggerInterfaceRuby.remoteRawInput"></a>
 <h4>DebuggerInterfaceRuby.remoteRawInput</h4>
@@ -669,17 +681,35 @@ filename to be used to assemble the coverage caches
 <dd>
 flag indicating erasure of coverage data is requested (boolean)
 </dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteUTRun" ID="DebuggerInterfaceRuby.remoteUTRun"></a>
 <h4>DebuggerInterfaceRuby.remoteUTRun</h4>
 <b>remoteUTRun</b>(<i></i>)
 <p>
         Public method to start a unittest run.
-</p><a NAME="DebuggerInterfaceRuby.remoteUTStop" ID="DebuggerInterfaceRuby.remoteUTStop"></a>
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteUTStop" ID="DebuggerInterfaceRuby.remoteUTStop"></a>
 <h4>DebuggerInterfaceRuby.remoteUTStop</h4>
 <b>remoteUTStop</b>(<i></i>)
 <p>
-        public method to stop a unittest run.
-</p><a NAME="DebuggerInterfaceRuby.remoteWatchpoint" ID="DebuggerInterfaceRuby.remoteWatchpoint"></a>
+        Public method to stop a unittest run.
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteWatchpoint" ID="DebuggerInterfaceRuby.remoteWatchpoint"></a>
 <h4>DebuggerInterfaceRuby.remoteWatchpoint</h4>
 <b>remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
 <p>

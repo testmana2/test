@@ -42,7 +42,8 @@ Module implementing the baseclass for the various project browsers.
 <a NAME="ProjectBaseBrowser" ID="ProjectBaseBrowser"></a>
 <h2>ProjectBaseBrowser</h2>
 <p>
-    Baseclass implementing common functionality for the various project browsers.
+    Baseclass implementing common functionality for the various project
+    browsers.
 </p><h3>Signals</h3>
 <dl>
 <dt>closeSourceWindow(str)</dt>
@@ -67,7 +68,7 @@ Browser
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.__checkHookKey">__checkHookKey</a></td>
-<td>Private method to check a hook key</td>
+<td>Private method to check a hook key.</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.__modelRowsInserted">__modelRowsInserted</a></td>
 <td>Private slot called after rows have been inserted into the model.</td>
@@ -175,16 +176,16 @@ Browser
 <td>Public method to highlight a node given its filename.</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.selectLocalDirEntries">selectLocalDirEntries</a></td>
-<td>Public slot to handle the select local directories context menu entries</td>
+<td>Public slot to handle the select local directories context menu entries.</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.selectLocalEntries">selectLocalEntries</a></td>
-<td>Public slot to handle the select local files context menu entries</td>
+<td>Public slot to handle the select local files context menu entries.</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.selectVCSDirEntries">selectVCSDirEntries</a></td>
-<td>Public slot to handle the select VCS directories context menu entries</td>
+<td>Public slot to handle the select VCS directories context menu entries.</td>
 </tr><tr>
 <td><a href="#ProjectBaseBrowser.selectVCSEntries">selectVCSEntries</a></td>
-<td>Public slot to handle the select VCS files context menu entries</td>
+<td>Public slot to handle the select VCS files context menu entries.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -200,7 +201,7 @@ Browser
 <dt><i>project</i></dt>
 <dd>
 reference to the project object
-</dd><dt><i>type</i></dt>
+</dd><dt><i>type_</i></dt>
 <dd>
 project browser type (string)
 </dd><dt><i>parent</i></dt>
@@ -211,8 +212,18 @@ parent widget of this browser
 <h4>ProjectBaseBrowser.__checkHookKey</h4>
 <b>__checkHookKey</b>(<i>key</i>)
 <p>
-        Private method to check a hook key
-</p><a NAME="ProjectBaseBrowser.__modelRowsInserted" ID="ProjectBaseBrowser.__modelRowsInserted"></a>
+        Private method to check a hook key.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+key of the hook to check (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>KeyError</b>:</dt>
+<dd>
+raised to indicate an invalid hook
+</dd>
+</dl><a NAME="ProjectBaseBrowser.__modelRowsInserted" ID="ProjectBaseBrowser.__modelRowsInserted"></a>
 <h4>ProjectBaseBrowser.__modelRowsInserted</h4>
 <b>__modelRowsInserted</b>(<i>parent, start, end</i>)
 <p>
@@ -533,22 +544,22 @@ one based line number of the item (integer)
 <h4>ProjectBaseBrowser.selectLocalDirEntries</h4>
 <b>selectLocalDirEntries</b>(<i></i>)
 <p>
-        Public slot to handle the select local directories context menu entries
+        Public slot to handle the select local directories context menu entries.
 </p><a NAME="ProjectBaseBrowser.selectLocalEntries" ID="ProjectBaseBrowser.selectLocalEntries"></a>
 <h4>ProjectBaseBrowser.selectLocalEntries</h4>
 <b>selectLocalEntries</b>(<i></i>)
 <p>
-        Public slot to handle the select local files context menu entries
+        Public slot to handle the select local files context menu entries.
 </p><a NAME="ProjectBaseBrowser.selectVCSDirEntries" ID="ProjectBaseBrowser.selectVCSDirEntries"></a>
 <h4>ProjectBaseBrowser.selectVCSDirEntries</h4>
 <b>selectVCSDirEntries</b>(<i></i>)
 <p>
-        Public slot to handle the select VCS directories context menu entries
+        Public slot to handle the select VCS directories context menu entries.
 </p><a NAME="ProjectBaseBrowser.selectVCSEntries" ID="ProjectBaseBrowser.selectVCSEntries"></a>
 <h4>ProjectBaseBrowser.selectVCSEntries</h4>
 <b>selectVCSEntries</b>(<i></i>)
 <p>
-        Public slot to handle the select VCS files context menu entries
+        Public slot to handle the select VCS files context menu entries.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

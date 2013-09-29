@@ -48,7 +48,7 @@ The tokenize module is too old.
 <table>
 <tr>
 <td><a href="#NannyNag">NannyNag</a></td>
-<td>Raised by tokeneater() if detecting an ambiguous indent.</td>
+<td>Class implementing an exception to indicate indentation issues.</td>
 </tr><tr>
 <td><a href="#Whitespace">Whitespace</a></td>
 <td>Class implementing the whitespace checker.</td>
@@ -71,6 +71,8 @@ The tokenize module is too old.
 <a NAME="NannyNag" ID="NannyNag"></a>
 <h2>NannyNag</h2>
 <p>
+    Class implementing an exception to indicate indentation issues.
+</p><p>
     Raised by tokeneater() if detecting an ambiguous indent.
     Captured and handled in check().
 </p>
@@ -356,6 +358,11 @@ A formated string of the witnesses.
 <dt><i>tokens</i></dt>
 <dd>
 list of tokens
+</dd>
+</dl><dl>
+<dt>Raises <b>NannyNag</b>:</dt>
+<dd>
+raised to indicate an indentation issue
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -116,7 +116,7 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td>Function to build all full path of an executable file from the environment.</td>
 </tr><tr>
 <td><a href="#getHomeDir">getHomeDir</a></td>
-<td>Function to get a users home directory</td>
+<td>Function to get a users home directory.</td>
 </tr><tr>
 <td><a href="#getPercentReplacement">getPercentReplacement</a></td>
 <td>Function to get the replacement for code.</td>
@@ -246,7 +246,8 @@ Package implementing various functions/classes needed everywhere within eric5.
 <a NAME="CodingError" ID="CodingError"></a>
 <h2>CodingError</h2>
 <p>
-    Class implementing an exception, which is raised, if a given coding is incorrect.
+    Class implementing an exception, which is raised, if a given coding is
+    incorrect.
 </p>
 <h3>Derived from</h3>
 Exception
@@ -280,7 +281,12 @@ Exception
 <b>CodingError</b>(<i>coding</i>)
 <p>
         Constructor
-</p><a NAME="CodingError.__repr__" ID="CodingError.__repr__"></a>
+</p><dl>
+<dt><i>coding</i></dt>
+<dd>
+coding to include in the message (string)
+</dd>
+</dl><a NAME="CodingError.__repr__" ID="CodingError.__repr__"></a>
 <h4>CodingError.__repr__</h4>
 <b>__repr__</b>(<i></i>)
 <p>
@@ -540,6 +546,11 @@ type of the original encoding (string)
 <dt>Returns:</dt>
 <dd>
 tuple of encoded text and encoding used (bytes, string)
+</dd>
+</dl><dl>
+<dt>Raises <b>CodingError</b>:</dt>
+<dd>
+raised to indicate an invalid encoding
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -847,7 +858,7 @@ list of full executable names (list of strings), if the executable file
 <h2>getHomeDir</h2>
 <b>getHomeDir</b>(<i></i>)
 <p>
-    Function to get a users home directory
+    Function to get a users home directory.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -1442,6 +1453,16 @@ path to make relative (string)
 <dd>
 path to make relative from (string)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+relative path (string)
+</dd>
+</dl><dl>
+<dt>Raises <b>ValueError</b>:</dt>
+<dd>
+raised to indicate an invalid path
+</dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1560,7 +1581,12 @@ user name (string)
 </p><dl>
 <dt><i>pid</i></dt>
 <dd>
-process id
+process id (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+result of the kill (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

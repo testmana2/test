@@ -294,7 +294,7 @@ QsciScintillaCompat
 <td>Private method to indent or unindent the current selection.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenu">__initContextMenu</a></td>
-<td>Private method used to setup the context menu</td>
+<td>Private method used to setup the context menu.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuAutocompletion">__initContextMenuAutocompletion</a></td>
 <td>Private method used to setup the Checks context sub menu.</td>
@@ -318,19 +318,19 @@ QsciScintillaCompat
 <td>Private method used to setup the Languages context sub menu.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuMargins">__initContextMenuMargins</a></td>
-<td>Private method used to setup the context menu for the margins</td>
+<td>Private method used to setup the context menu for the margins.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuResources">__initContextMenuResources</a></td>
 <td>Private method used to setup the Resources context sub menu.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuSeparateMargins">__initContextMenuSeparateMargins</a></td>
-<td>Private method used to setup the context menu for the separated margins</td>
+<td>Private method used to setup the context menu for the separated margins.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuShow">__initContextMenuShow</a></td>
 <td>Private method used to setup the Show context sub menu.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuUnifiedMargins">__initContextMenuUnifiedMargins</a></td>
-<td>Private method used to setup the context menu for the unified margins</td>
+<td>Private method used to setup the context menu for the unified margins.</td>
 </tr><tr>
 <td><a href="#Editor.__initOnlineChangeTrace">__initOnlineChangeTrace</a></td>
 <td>Private slot to initialize the online change trace.</td>
@@ -402,19 +402,19 @@ QsciScintillaCompat
 <td>Private slot to generate a print preview.</td>
 </tr><tr>
 <td><a href="#Editor.__processEndEditCommand">__processEndEditCommand</a></td>
-<td>Private slot to process a remote EndEdit command</td>
+<td>Private slot to process a remote EndEdit command.</td>
 </tr><tr>
 <td><a href="#Editor.__processFlags">__processFlags</a></td>
 <td>Private method to extract flags and process them.</td>
 </tr><tr>
 <td><a href="#Editor.__processRequestSyncCommand">__processRequestSyncCommand</a></td>
-<td>Private slot to process a remote RequestSync command</td>
+<td>Private slot to process a remote RequestSync command.</td>
 </tr><tr>
 <td><a href="#Editor.__processStartEditCommand">__processStartEditCommand</a></td>
-<td>Private slot to process a remote StartEdit command</td>
+<td>Private slot to process a remote StartEdit command.</td>
 </tr><tr>
 <td><a href="#Editor.__processSyncCommand">__processSyncCommand</a></td>
-<td>Private slot to process a remote Sync command</td>
+<td>Private slot to process a remote Sync command.</td>
 </tr><tr>
 <td><a href="#Editor.__projectPropertiesChanged">__projectPropertiesChanged</a></td>
 <td>Private slot to handle changes of the project properties.</td>
@@ -816,13 +816,13 @@ QsciScintillaCompat
 <td>Public method to determine, if this editor contains any task markers.</td>
 </tr><tr>
 <td><a href="#Editor.highlight">highlight</a></td>
-<td>Public method to highlight (or de-highlight) a particular line.</td>
+<td>Public method to highlight [or de-highlight] a particular line.</td>
 </tr><tr>
 <td><a href="#Editor.highlightVisible">highlightVisible</a></td>
 <td>Public method to make sure that the highlight is visible.</td>
 </tr><tr>
 <td><a href="#Editor.indentLineOrSelection">indentLineOrSelection</a></td>
-<td>Public slot to indent the current line or current selection</td>
+<td>Public slot to indent the current line or current selection.</td>
 </tr><tr>
 <td><a href="#Editor.isLastEditPositionAvailable">isLastEditPositionAvailable</a></td>
 <td>Public method to check, if a last edit position is available.</td>
@@ -1090,7 +1090,8 @@ name of the file to be opened (string). If it is None,
                 a new (empty) editor is opened
 </dd><dt><i>vm</i></dt>
 <dd>
-reference to the view manager object (ViewManager.ViewManager)
+reference to the view manager object
+            (ViewManager.ViewManager)
 </dd><dt><i>filetype</i></dt>
 <dd>
 type of the source file (string)
@@ -1100,6 +1101,11 @@ reference to an Editor object, if this is a cloned view
 </dd><dt><i>tv</i></dt>
 <dd>
 reference to the task viewer object
+</dd>
+</dl><dl>
+<dt>Raises <b>IOError</b>:</dt>
+<dd>
+raised to indicate an issue accessing the file
 </dd>
 </dl><a NAME="Editor.__addBreakPoint" ID="Editor.__addBreakPoint"></a>
 <h4>Editor.__addBreakPoint</h4>
@@ -1234,13 +1240,20 @@ name of the pygments lexer to use (string)
 </p><dl>
 <dt><i>line0</i></dt>
 <dd>
-first line of text to use in the generation process (string)
+first line of text to use in the generation process
+            (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+dummy file name to be used for binding a lexer (string)
 </dd>
 </dl><a NAME="Editor.__breakPointDataAboutToBeChanged" ID="Editor.__breakPointDataAboutToBeChanged"></a>
 <h4>Editor.__breakPointDataAboutToBeChanged</h4>
 <b>__breakPointDataAboutToBeChanged</b>(<i>startIndex, endIndex</i>)
 <p>
-        Private slot to handle the dataAboutToBeChanged signal of the breakpoint model.
+        Private slot to handle the dataAboutToBeChanged signal of the
+        breakpoint model.
 </p><dl>
 <dt><i>startIndex</i></dt>
 <dd>
@@ -1279,9 +1292,14 @@ commands to change old into new (string)
 <p>
         Private slot to set changed breakpoints.
 </p><dl>
-<dt><i>indexes</i></dt>
+<dt><i>startIndex</i></dt>
 <dd>
-indexes of changed breakpoints.
+start index of the breakpoints being changed
+            (QModelIndex)
+</dd><dt><i>endIndex</i></dt>
+<dd>
+end index of the breakpoints being changed
+            (QModelIndex)
 </dd>
 </dl><a NAME="Editor.__charAdded" ID="Editor.__charAdded"></a>
 <h4>Editor.__charAdded</h4>
@@ -1323,7 +1341,12 @@ value of the character entered (integer)
 <b>__clearBreakpoints</b>(<i>fileName</i>)
 <p>
         Private slot to clear all breakpoints.
-</p><a NAME="Editor.__codeCoverageHideAnnotations" ID="Editor.__codeCoverageHideAnnotations"></a>
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file (string)
+</dd>
+</dl><a NAME="Editor.__codeCoverageHideAnnotations" ID="Editor.__codeCoverageHideAnnotations"></a>
 <h4>Editor.__codeCoverageHideAnnotations</h4>
 <b>__codeCoverageHideAnnotations</b>(<i></i>)
 <p>
@@ -1450,7 +1473,10 @@ command to be processed (string)
 <p>
         Private slot to handle a change of the encoding.
 </p><dl>
-<dt><i>propagate=</i></dt>
+<dt><i>encoding</i></dt>
+<dd>
+changed encoding (string)
+</dd><dt><i>propagate=</i></dt>
 <dd>
 flag indicating to propagate the change (boolean)
 </dd>
@@ -1560,67 +1586,112 @@ flag indicating an indent operation (boolean)
 <h4>Editor.__initContextMenu</h4>
 <b>__initContextMenu</b>(<i></i>)
 <p>
-        Private method used to setup the context menu
+        Private method used to setup the context menu.
 </p><a NAME="Editor.__initContextMenuAutocompletion" ID="Editor.__initContextMenuAutocompletion"></a>
 <h4>Editor.__initContextMenuAutocompletion</h4>
 <b>__initContextMenuAutocompletion</b>(<i></i>)
 <p>
         Private method used to setup the Checks context sub menu.
-</p><a NAME="Editor.__initContextMenuChecks" ID="Editor.__initContextMenuChecks"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuChecks" ID="Editor.__initContextMenuChecks"></a>
 <h4>Editor.__initContextMenuChecks</h4>
 <b>__initContextMenuChecks</b>(<i></i>)
 <p>
         Private method used to setup the Checks context sub menu.
-</p><a NAME="Editor.__initContextMenuEncodings" ID="Editor.__initContextMenuEncodings"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuEncodings" ID="Editor.__initContextMenuEncodings"></a>
 <h4>Editor.__initContextMenuEncodings</h4>
 <b>__initContextMenuEncodings</b>(<i></i>)
 <p>
         Private method used to setup the Encodings context sub menu.
-</p><a NAME="Editor.__initContextMenuEol" ID="Editor.__initContextMenuEol"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuEol" ID="Editor.__initContextMenuEol"></a>
 <h4>Editor.__initContextMenuEol</h4>
 <b>__initContextMenuEol</b>(<i></i>)
 <p>
         Private method to setup the eol context sub menu.
-</p><a NAME="Editor.__initContextMenuExporters" ID="Editor.__initContextMenuExporters"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuExporters" ID="Editor.__initContextMenuExporters"></a>
 <h4>Editor.__initContextMenuExporters</h4>
 <b>__initContextMenuExporters</b>(<i></i>)
 <p>
         Private method used to setup the Exporters context sub menu.
-</p><a NAME="Editor.__initContextMenuGraphics" ID="Editor.__initContextMenuGraphics"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuGraphics" ID="Editor.__initContextMenuGraphics"></a>
 <h4>Editor.__initContextMenuGraphics</h4>
 <b>__initContextMenuGraphics</b>(<i></i>)
 <p>
         Private method used to setup the diagrams context sub menu.
-</p><a NAME="Editor.__initContextMenuLanguages" ID="Editor.__initContextMenuLanguages"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuLanguages" ID="Editor.__initContextMenuLanguages"></a>
 <h4>Editor.__initContextMenuLanguages</h4>
 <b>__initContextMenuLanguages</b>(<i></i>)
 <p>
         Private method used to setup the Languages context sub menu.
-</p><a NAME="Editor.__initContextMenuMargins" ID="Editor.__initContextMenuMargins"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuMargins" ID="Editor.__initContextMenuMargins"></a>
 <h4>Editor.__initContextMenuMargins</h4>
 <b>__initContextMenuMargins</b>(<i></i>)
 <p>
-        Private method used to setup the context menu for the margins
+        Private method used to setup the context menu for the margins.
 </p><a NAME="Editor.__initContextMenuResources" ID="Editor.__initContextMenuResources"></a>
 <h4>Editor.__initContextMenuResources</h4>
 <b>__initContextMenuResources</b>(<i></i>)
 <p>
         Private method used to setup the Resources context sub menu.
-</p><a NAME="Editor.__initContextMenuSeparateMargins" ID="Editor.__initContextMenuSeparateMargins"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuSeparateMargins" ID="Editor.__initContextMenuSeparateMargins"></a>
 <h4>Editor.__initContextMenuSeparateMargins</h4>
 <b>__initContextMenuSeparateMargins</b>(<i></i>)
 <p>
-        Private method used to setup the context menu for the separated margins
+        Private method used to setup the context menu for the separated margins.
 </p><a NAME="Editor.__initContextMenuShow" ID="Editor.__initContextMenuShow"></a>
 <h4>Editor.__initContextMenuShow</h4>
 <b>__initContextMenuShow</b>(<i></i>)
 <p>
         Private method used to setup the Show context sub menu.
-</p><a NAME="Editor.__initContextMenuUnifiedMargins" ID="Editor.__initContextMenuUnifiedMargins"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuUnifiedMargins" ID="Editor.__initContextMenuUnifiedMargins"></a>
 <h4>Editor.__initContextMenuUnifiedMargins</h4>
 <b>__initContextMenuUnifiedMargins</b>(<i></i>)
 <p>
-        Private method used to setup the context menu for the unified margins
+        Private method used to setup the context menu for the unified margins.
 </p><a NAME="Editor.__initOnlineChangeTrace" ID="Editor.__initOnlineChangeTrace"></a>
 <h4>Editor.__initOnlineChangeTrace</h4>
 <b>__initOnlineChangeTrace</b>(<i></i>)
@@ -1848,7 +1919,7 @@ reference to the printer object (QScintilla.Printer.Printer)
 <h4>Editor.__processEndEditCommand</h4>
 <b>__processEndEditCommand</b>(<i>argsString</i>)
 <p>
-        Private slot to process a remote EndEdit command
+        Private slot to process a remote EndEdit command.
 </p><dl>
 <dt><i>argsString</i></dt>
 <dd>
@@ -1868,7 +1939,7 @@ list of change flags (list of string)
 <h4>Editor.__processRequestSyncCommand</h4>
 <b>__processRequestSyncCommand</b>(<i>argsString</i>)
 <p>
-        Private slot to process a remote RequestSync command
+        Private slot to process a remote RequestSync command.
 </p><dl>
 <dt><i>argsString</i></dt>
 <dd>
@@ -1878,7 +1949,7 @@ string containing the command parameters (string)
 <h4>Editor.__processStartEditCommand</h4>
 <b>__processStartEditCommand</b>(<i>argsString</i>)
 <p>
-        Private slot to process a remote StartEdit command
+        Private slot to process a remote StartEdit command.
 </p><dl>
 <dt><i>argsString</i></dt>
 <dd>
@@ -1888,7 +1959,7 @@ string containing the command parameters (string)
 <h4>Editor.__processSyncCommand</h4>
 <b>__processSyncCommand</b>(<i>argsString</i>)
 <p>
-        Private slot to process a remote Sync command
+        Private slot to process a remote Sync command.
 </p><dl>
 <dt><i>argsString</i></dt>
 <dd>
@@ -2263,7 +2334,7 @@ True to force change, False to only update and emit
 <p>
         Public method to add a clone to our list.
 </p><dl>
-<dt><i>clone</i></dt>
+<dt><i>editor</i></dt>
 <dd>
 reference to the cloned editor (Editor)
 </dd>
@@ -2366,11 +2437,6 @@ flag indicating to send the CancelEdit command (boolean)
 <dd>
 the event, that was generated (QEvent)
 </dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating if the event could be processed (bool)
-</dd>
 </dl><a NAME="Editor.checkDirty" ID="Editor.checkDirty"></a>
 <h4>Editor.checkDirty</h4>
 <b>checkDirty</b>(<i></i>)
@@ -2432,6 +2498,11 @@ linenumber of the breakpoint (integer)
 <dt><i>alsoDelete</i></dt>
 <dd>
 ignored
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a successful close of the editor (boolean)
 </dd>
 </dl><a NAME="Editor.closeIt" ID="Editor.closeIt"></a>
 <h4>Editor.closeIt</h4>
@@ -2949,7 +3020,12 @@ flag indicating to make the line the first
 <b>gotoMethodClass</b>(<i>goUp=False</i>)
 <p>
         Public method to go to the next Python method or class definition.
-</p><a NAME="Editor.gotoSyntaxError" ID="Editor.gotoSyntaxError"></a>
+</p><dl>
+<dt><i>goUp</i></dt>
+<dd>
+flag indicating the move direction (boolean)
+</dd>
+</dl><a NAME="Editor.gotoSyntaxError" ID="Editor.gotoSyntaxError"></a>
 <h4>Editor.gotoSyntaxError</h4>
 <b>gotoSyntaxError</b>(<i></i>)
 <p>
@@ -3004,7 +3080,12 @@ flag indicating the presence of change markers (boolean)
 <b>hasCoverageMarkers</b>(<i></i>)
 <p>
         Public method to test, if there are coverage markers.
-</p><a NAME="Editor.hasFlakesWarnings" ID="Editor.hasFlakesWarnings"></a>
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of coverage markers (boolean)
+</dd>
+</dl><a NAME="Editor.hasFlakesWarnings" ID="Editor.hasFlakesWarnings"></a>
 <h4>Editor.hasFlakesWarnings</h4>
 <b>hasFlakesWarnings</b>(<i></i>)
 <p>
@@ -3048,14 +3129,15 @@ flag indicating the presence of task markers (boolean)
 <h4>Editor.highlight</h4>
 <b>highlight</b>(<i>line=None, error=False, syntaxError=False</i>)
 <p>
-        Public method to highlight (or de-highlight) a particular line.
+        Public method to highlight [or de-highlight] a particular line.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
 line number to highlight (integer)
 </dd><dt><i>error</i></dt>
 <dd>
-flag indicating whether the error highlight should be used (boolean)
+flag indicating whether the error highlight should be
+            used (boolean)
 </dd><dt><i>syntaxError</i></dt>
 <dd>
 flag indicating a syntax error (boolean)
@@ -3069,7 +3151,7 @@ flag indicating a syntax error (boolean)
 <h4>Editor.indentLineOrSelection</h4>
 <b>indentLineOrSelection</b>(<i></i>)
 <p>
-        Public slot to indent the current line or current selection
+        Public slot to indent the current line or current selection.
 </p><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
 <h4>Editor.isLastEditPositionAvailable</h4>
 <b>isLastEditPositionAvailable</b>(<i></i>)
@@ -3350,7 +3432,7 @@ command string (string)
 <p>
         Public method to remove a clone from our list.
 </p><dl>
-<dt><i>clone</i></dt>
+<dt><i>editor</i></dt>
 <dd>
 reference to the cloned editor (Editor)
 </dd>

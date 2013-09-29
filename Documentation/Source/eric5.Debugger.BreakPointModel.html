@@ -125,9 +125,9 @@ QAbstractItemModel
 <p>
         Constructor
 </p><dl>
-<dt><i>reference</i></dt>
+<dt><i>parent</i></dt>
 <dd>
-to the parent widget (QObject)
+reference to the parent widget (QObject)
 </dd>
 </dl><a NAME="BreakPointModel.addBreakPoint" ID="BreakPointModel.addBreakPoint"></a>
 <h4>BreakPointModel.addBreakPoint</h4>
@@ -153,6 +153,11 @@ properties of the breakpoint
 <p>
         Public method to get the current column count.
 </p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to parent index (QModelIndex)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 column count (integer)
@@ -240,7 +245,7 @@ breakpoint (list of seven values (filename, line number,
 <dt><i>fn</i></dt>
 <dd>
 filename of the breakpoint (string)
-</dd><dt><i>line</i></dt>
+</dd><dt><i>lineno</i></dt>
 <dd>
 line number of the breakpoint (integer)
 </dd>
@@ -342,6 +347,11 @@ index of parent (QModelIndex)
 <p>
         Public method to get the current row count.
 </p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to parent index (QModelIndex)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 row count (integer)
